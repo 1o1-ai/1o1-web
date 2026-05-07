@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>K8s + Helm Architecture -- Lean AI Infrastructure | ManjuLAB Datacenter</title>
+<meta name="description" content="Practical Kubernetes and Helm architecture for PersonaPlex-style AI. K3s, GPU operator, vLLM, Qdrant, Redis -- lean production design that starts on 1 GPU and scales incrementally. By ManjuLAB.">
+<meta name="keywords" content="Kubernetes, K3s, Helm, vLLM, GPU, PersonaPlex, conversational AI, Qdrant, Redis, ManjuLAB, AI infrastructure">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#07090f;--bg2:#0d111d;--bg3:#131929;--bg4:#1a2035;--a:#10b981;--a2:#34d399;--b:#3b82f6;--b2:#60a5fa;--y:#f59e0b;--r:#ef4444;--p:#8b5cf6;--p2:#a78bfa;--tx:#e2e8f0;--mt:#94a3b8;--bd:#1e2d45;--mono:'Courier New',monospace}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.7;font-size:15px}
+a{color:var(--b2);text-decoration:none}
+nav{background:var(--bg2);border-bottom:2px solid var(--bd);padding:0 2rem;position:sticky;top:0;z-index:100}
+.ni{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:.95rem}
+.lb{background:linear-gradient(135deg,#10b981,#34d399);padding:.15rem .55rem;border-radius:5px;font-size:.9rem;color:#fff}
+.nl{display:flex;gap:1.5rem;list-style:none}.nl a{color:var(--mt);font-size:.82rem}.nl a:hover{color:var(--tx)}
+.tag{background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.4);border-radius:999px;padding:.2rem .7rem;font-size:.72rem;color:var(--a2);font-weight:700}
+.hero{background:linear-gradient(160deg,#050f0a 0%,var(--bg3) 100%);border-bottom:1px solid var(--bd);padding:3rem 2rem}
+.hero-inner{max-width:1200px;margin:0 auto}
+.breadcrumb{font-size:.78rem;color:var(--mt);margin-bottom:1rem}.breadcrumb a{color:var(--b2)}
+.spec-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);border-radius:6px;padding:.25rem .7rem;font-size:.75rem;color:var(--a2);margin-bottom:.8rem;font-weight:700;font-family:var(--mono)}
+h1{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;margin-bottom:.6rem;line-height:1.2}
+.hero-sub{color:var(--mt);font-size:.95rem;max-width:700px;margin-bottom:1.5rem}
+.philosophy{background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.2);border-radius:12px;padding:1.5rem;margin-top:1.5rem}
+.philosophy h3{font-size:.95rem;font-weight:800;color:var(--a2);margin-bottom:.6rem}
+.philosophy p{color:var(--mt);font-size:.88rem;margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:2rem}
+.two-col{display:grid;grid-template-columns:240px 1fr;gap:2rem;align-items:start}
+.sidebar{position:sticky;top:70px}
+.toc{background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:1.2rem}
+.toc h4{font-size:.75rem;text-transform:uppercase;letter-spacing:1px;color:var(--mt);margin-bottom:.8rem;font-weight:700}
+.toc ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+.toc a{font-size:.8rem;color:var(--mt);padding:.2rem .4rem;border-radius:4px;display:block;transition:.15s}.toc a:hover{color:var(--a2);background:rgba(16,185,129,.08)}
+section{margin-bottom:2.5rem}
+h2{font-size:1.25rem;font-weight:800;padding:.6rem 1rem;background:var(--bg3);border-left:3px solid var(--a);border-radius:0 8px 8px 0;margin-bottom:1.2rem;display:flex;align-items:center;gap:.6rem}
+h3{font-size:1rem;font-weight:700;color:var(--a2);margin:1.2rem 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid var(--bd)}
+h4{font-size:.88rem;font-weight:700;color:var(--b2);margin:.8rem 0 .4rem}
+p{color:var(--mt);font-size:.9rem;margin-bottom:.8rem;line-height:1.7}
+p strong{color:var(--tx)}
+.code-block{background:#050810;border:1px solid var(--bd);border-radius:10px;padding:1.2rem;font-family:var(--mono);font-size:.75rem;line-height:1.7;overflow-x:auto;margin-bottom:1.2rem;color:#a8d8ea;white-space:pre}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:1.2rem}
+.card{background:var(--bg3);border:1px solid var(--bd);border-radius:10px;padding:1.2rem;transition:.2s}.card:hover{border-color:var(--a)}
+.card-icon{font-size:1.5rem;margin-bottom:.5rem}
+.card-title{font-size:.88rem;font-weight:700;margin-bottom:.3rem}
+.card-desc{font-size:.76rem;color:var(--mt);line-height:1.5}
+.tbl-wrap{overflow-x:auto;margin-bottom:1.2rem}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+th{background:var(--bg4);padding:.55rem .8rem;text-align:left;color:var(--mt);font-size:.72rem;text-transform:uppercase;letter-spacing:.4px;border-bottom:2px solid var(--bd)}
+td{padding:.5rem .8rem;border-bottom:1px solid rgba(30,45,69,.6);vertical-align:top}
+tr:hover td{background:rgba(16,185,129,.03)}
+.badge{display:inline-block;padding:.15rem .5rem;border-radius:4px;font-size:.7rem;font-weight:700}
+.bg{background:rgba(16,185,129,.15);color:var(--a2);border:1px solid rgba(16,185,129,.3)}
+.bb{background:rgba(59,130,246,.15);color:var(--b2);border:1px solid rgba(59,130,246,.3)}
+.by{background:rgba(245,158,11,.15);color:var(--y);border:1px solid rgba(245,158,11,.3)}
+.bp{background:rgba(139,92,246,.15);color:var(--p2);border:1px solid rgba(139,92,246,.3)}
+details{background:var(--bg3);border:1px solid var(--bd);border-radius:10px;margin-bottom:.8rem;overflow:hidden}
+summary{padding:.8rem 1.1rem;cursor:pointer;font-size:.88rem;font-weight:700;color:var(--tx);list-style:none;display:flex;align-items:center;justify-content:space-between;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';color:var(--a2);font-size:1rem;font-weight:900}
+details[open] summary::after{content:'-'}
+details[open] summary{border-bottom:1px solid var(--bd)}
+.details-body{padding:1.1rem}
+.alert{border-radius:8px;padding:.8rem 1rem;font-size:.82rem;margin-bottom:1rem;line-height:1.6;display:flex;gap:.6rem}
+.alert-icon{font-size:1rem;flex-shrink:0;margin-top:.1rem}
+.alert-g{background:rgba(16,185,129,.08);border:1px solid rgba(16,185,129,.25);color:var(--a2)}
+.alert-b{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);color:var(--b2)}
+.alert-y{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);color:var(--y)}
+.phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.2rem}
+.phase{background:var(--bg3);border:1px solid var(--bd);border-radius:12px;padding:1.3rem}
+.phase-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mt);margin-bottom:.3rem}
+.phase-title{font-size:.95rem;font-weight:800;margin-bottom:.6rem}
+.phase-items{list-style:none;font-size:.8rem;color:var(--mt);display:flex;flex-direction:column;gap:.3rem}
+.phase-items li::before{content:'-> ';color:var(--a2)}
+.phase-cost{margin-top:.8rem;font-size:.82rem;font-weight:700;color:var(--y);border-top:1px solid var(--bd);padding-top:.6rem}
+.spec-list{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+.spec-list li{display:flex;gap:.6rem;align-items:flex-start;font-size:.85rem}
+.spec-list li::before{content:'> ';color:var(--a2);flex-shrink:0;margin-top:.1rem}
+.spec-list li span{color:var(--mt)}
+footer{background:var(--bg2);border-top:1px solid var(--bd);padding:2rem;text-align:center;font-size:.78rem;color:var(--mt);margin-top:3rem}
+footer a{color:var(--b2)}
+@media(max-width:900px){.two-col{grid-template-columns:1fr}.sidebar{display:none}.phase-grid,.card-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="ni">
+  <div class="logo"><div class="lb">K8s</div> ManjuLAB Architecture</div>
+  <ul class="nl">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../index.html#datacenter">Datacenter</a></li>
+    <li><a href="personaplex-scale-5.html">Scale-5</a></li>
+    <li><a href="personaplex-scale-10-25.html">Scale 10-25</a></li>
+  </ul>
+
+<div class="wrap"><div class="two-col">
+<div class="sidebar">
+  <div class="toc">
+    <h4>Table of Contents</h4>
+    <ul>
+      <li><a href="#overview">System Overview</a></li>
+      <li><a href="#k3s">K3s Setup</a></li>
+      <li><a href="#helm">Helm Structure</a></li>
+      <li><a href="#inference">Inference Engine</a></li>
+      <li><a href="#gpu-operator">GPU Operator</a></li>
+      <li><a href="#api">API Gateway</a></li>
+      <li><a href="#vectordb">Vector DB (Qdrant)</a></li>
+      <li><a href="#redis">Redis Session Memory</a></li>
+      <li><a href="#ingress">Ingress (yogabrata.com)</a></li>
+      <li><a href="#nonlinear">GPU Scaling Non-Linearity</a></li>
+      <li><a href="#hardware">Minimum Hardware</a></li>
+      <li><a href="#roadmap">Phased Roadmap</a></li>
+    </ul>
+  </div>
+</div>
+
+<main>
+
+<section id="overview">
+  <h2>System Architecture</h2>
+  <p>The full stack runs in Kubernetes (K3s for single-node), with one pod per service tier. GPU access is handled by the NVIDIA GPU Operator -- no manual driver configuration required.</p>
+  <div class="code-block">           +------------------+
+           |    Users         |
+           +--------+---------+
+                    | HTTPS / WebSocket (wss://)
+                    v
+        +---------------------+
+        |  Ingress (NGINX)    |  &lt;- SSL termination, WS proxy
+        |  yogabrata.com      |    Rate limit: max sessions
+        +----------+----------+
+                   v
+        +---------------------+
+        |  API Gateway Pod    |  &lt;- FastAPI / Node.js
+        |  Session management |    Voice + text prompt routing
+        |  Auth + rate limits |    Transcript streaming
+        +----------+----------+
+                   v
+     +----------------------------+
+     |  PersonaPlex Inference Pod |  &lt;- vLLM / TensorRT-LLM
+     |  GPU-enabled               |    Moshi 7B INT8 quantized
+     |  Continuous batching       |    Mimi encoder + decoder
+     |  KV cache pool             |    WebSocket audio streaming
+     +--------+-------------------+
+              v              v
+   +--------------+  +---------------+
+   | Qdrant       |  | Redis         |
+   | Vector DB    |  | Session cache |
+   | Voice embeds |  | Prompt config |
+   +--------------+  +---------------+
+
+   All pods run in: namespace=manjulab-ai
+   GPU scheduling: nvidia.com/gpu resource requests
+   Monitoring: Prometheus + Grafana sidecar</div>
+  <div class="alert alert-g"><span class="alert-icon">OK</span><div><strong>Single-cluster simplicity:</strong> All components run in one K3s cluster, one namespace. No service mesh required at this scale. Add Istio only if you need mTLS between pods or advanced traffic shaping at 50+ users.</div></div>
+</section>
+
+<section id="k3s">
+  <h2>K3s -- Lightweight Kubernetes</h2>
+  <p>K3s is a CNCF-certified Kubernetes distribution in a single &lt;70MB binary. It eliminates the overhead of full K8s while remaining 100% API-compatible. Ideal for single-node GPU deployments.</p>
+  <h3>Installation</h3>
+  <div class="code-block"># Install K3s (runs as a systemd service)
+curl -sfL https://get.k3s.io | sh -
+
+# Verify cluster is running
+kubectl get nodes
+# NAME        STATUS   ROLES                  AGE   VERSION
+# gpu-node-1  Ready    control-plane,master   1m    v1.29.0+k3s1
+
+# Set KUBECONFIG for helm/kubectl access
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
+# Create namespace for all ManjuLAB AI services
+kubectl create namespace manjulab-ai</div>
+
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Feature</th><th>K3s</th><th>Full K8s (kubeadm)</th></tr></thead>
+    <tbody>
+      <tr><td>Install time</td><td>&lt;2 minutes</td><td>30-60 minutes</td></tr>
+      <tr><td>RAM overhead</td><td>~512 MB</td><td>~4-6 GB</td></tr>
+      <tr><td>etcd</td><td>SQLite (single node)</td><td>etcd cluster (3+ nodes)</td></tr>
+      <tr><td>GPU support</td><td>Via GPU Operator</td><td>Via GPU Operator</td></tr>
+      <tr><td>API compatibility</td><td>100% K8s API</td><td>100% K8s API</td></tr>
+      <tr><td>Best for</td><td>1-3 node GPU clusters</td><td>5+ node clusters</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="helm">
+  <h2>Helm Chart Structure</h2>
+  <div class="code-block">personaplex-helm/
+|
++-- Chart.yaml                  # Chart metadata, version, dependencies
++-- README.md
+|
++-- charts/                     # Sub-charts (one per service)
+|   +-- inference-engine/       # GPU inference pod (vLLM)
+|   |   +-- Chart.yaml
+|   |   +-- deployment.yaml
+|   |   +-- service.yaml
+|   |   +-- configmap.yaml
+|   +-- api-gateway/            # FastAPI session manager
+|   |   +-- Chart.yaml
+|   |   +-- deployment.yaml
+|   |   +-- service.yaml
+|   +-- vector-db/              # Qdrant vector database
+|   |   +-- Chart.yaml
+|   |   +-- deployment.yaml
+|   |   +-- service.yaml
+|   |   +-- pvc.yaml
+|   +-- redis-memory/           # Redis session cache
+|       +-- Chart.yaml
+|       +-- deployment.yaml
+|       +-- service.yaml
+|
++-- values/
+|   +-- dev.yaml                # 1 GPU, 3 sessions, local only
+|   +-- prod.yaml               # 2-4 GPUs, 25 sessions, public
+|   +-- edge.yaml               # 1 GPU, air-gapped, no internet
+|
++-- templates/
+    +-- ingress.yaml
+    +-- namespace.yaml
+    +-- NOTES.txt</div>
+
+  <h3>Deploy Everything in One Command</h3>
+  <div class="code-block"># Install the full stack (dev environment)
+helm install manjulab-ai ./personaplex-helm \
+  --namespace manjulab-ai \
+  --values values/dev.yaml \
+
+<section id="inference">
+  <h2>Inference Engine Pod (GPU Core)</h2>
+  <div class="code-block"># charts/inference-engine/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: personaplex-inference
+  namespace: manjulab-ai
+spec:
+  replicas: 1  # 1 per GPU node; increase with more nodes
+  selector:
+    matchLabels:
+      app: personaplex
+  template:
+    metadata:
+      labels:
+        app: personaplex
+    spec:
+      containers:
+        - name: inference
+          image: vllm/vllm-openai:latest
+          ports:
+            - containerPort: 8000
+            - containerPort: 8998  # WebSocket audio port
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+              memory: "56Gi"   # L40S: 56Gi / A100: 80Gi
+            requests:
+              memory: "24Gi"
+              cpu: "8"
+          env:
+            - name: MODEL_NAME
+              value: "1o1-ai/moshi-7b-int8"
+            - name: MAX_CONCURRENT_SESSIONS
+              value: "5"
+            - name: SAMPLE_RATE
+              value: "24000"
+            - name: ENABLE_CONTINUOUS_BATCHING
+              value: "true"
+            - name: HF_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-credentials
+                  key: token
+          volumeMounts:
+            - name: model-weights
+              mountPath: /models
+      volumes:
+        - name: model-weights
+          hostPath:
+            path: /data/models  # Pre-downloaded weights on host
+      tolerations:
+        - key: nvidia.com/gpu
+          operator: Exists
+          effect: NoSchedule</div>
+</section>
+
+<section id="gpu-operator">
+  <h2>NVIDIA GPU Operator</h2>
+  <p>The GPU Operator automatically manages all NVIDIA software components on Kubernetes nodes -- drivers, container toolkit, device plugin, and MIG configuration. Zero manual GPU driver installation needed.</p>
+  <div class="code-block"># Add NVIDIA Helm repo
+helm repo add nvidia https://helm.ngc.nvidia.com/nvidia
+helm repo update
+
+# Install GPU Operator (handles drivers, toolkit, device plugin)
+helm install gpu-operator nvidia/gpu-operator \
+  --namespace gpu-operator \
+  --create-namespace \
+  --set driver.enabled=true \
+  --set toolkit.enabled=true \
+  --set devicePlugin.enabled=true \
+  --set mig.strategy=mixed
+
+# Verify GPU is visible to Kubernetes
+kubectl get nodes -o json | jq '.items[].status.capacity'
+# {
+#   "cpu": "32",
+#   "memory": "262144000Ki",
+#   "nvidia.com/gpu": "1"    &lt;- GPU visible to scheduler
+# }</div>
+</section>
+
+<section id="api">
+  <h2>API Gateway Pod (FastAPI)</h2>
+  <div class="code-block"># charts/api-gateway/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: persona-api
+  namespace: manjulab-ai
+spec:
+  replicas: 2  # API is CPU-only; horizontal scale freely
+  selector:
+    matchLabels: {app: persona-api}
+  template:
+    metadata:
+      labels: {app: persona-api}
+    spec:
+      containers:
+        - name: api
+          image: manjulab/1o1-api:latest
+          command: ["uvicorn"]
+          args: ["app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
+          ports:
+            - containerPort: 8000
+          resources:
+            limits: {cpu: "2", memory: "2Gi"}
+            requests: {cpu: "500m", memory: "512Mi"}
+          env:
+            - name: INFERENCE_URL
+              value: "http://personaplex-inference:8998"
+            - name: REDIS_URL
+              value: "redis://redis-memory:6379"
+            - name: QDRANT_URL
+              value: "http://qdrant:6333"</div>
+</section>
+
+<section id="vectordb">
+  <h2>Vector DB -- Qdrant</h2>
+  <p>Qdrant stores voice persona embeddings (audio fingerprints of reference voices). When a user selects a voice or provides a voice sample, Qdrant performs nearest-neighbor search to retrieve the closest matching voice embedding from the library.</p>
+  <div class="code-block">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: qdrant
+  namespace: manjulab-ai
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: qdrant}
+  template:
+    metadata:
+      labels: {app: qdrant}
+    spec:
+      containers:
+        - name: qdrant
+          image: qdrant/qdrant:latest
+          ports:
+            - containerPort: 6333  # REST API
+            - containerPort: 6334  # gRPC
+          resources:
+            limits: {cpu: "2", memory: "8Gi"}
+          volumeMounts:
+            - name: qdrant-storage
+              mountPath: /qdrant/storage
+      volumes:
+        - name: qdrant-storage
+          persistentVolumeClaim:
+            claimName: qdrant-pvc</div>
+</section>
+
+<section id="redis">
+  <h2>Redis -- Session Memory Layer</h2>
+  <div class="code-block">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-memory
+  namespace: manjulab-ai
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: redis}
+  template:
+    metadata:
+      labels: {app: redis}
+    spec:
+      containers:
+        - name: redis
+          image: redis:7-alpine
+          args: ["--maxmemory", "4gb", "--maxmemory-policy", "allkeys-lru"]
+          ports:
+            - containerPort: 6379
+          resources:
+            limits: {memory: "5Gi", cpu: "1"}</div>
+
+<section id="ingress">
+  <h2>Ingress -- Expose to yogabrata.com</h2>
+  <div class="code-block">apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: persona-ingress
+  namespace: manjulab-ai
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-http-version: "1.1"
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+spec:
+  tls:
+    - hosts: [yogabrata.com]
+      secretName: yogabrata-tls
+  rules:
+    - host: yogabrata.com
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: persona-api
+                port: {number: 8000}
+          - path: /ws
+            pathType: Prefix
+            backend:
+              service:
+                name: personaplex-inference
+                port: {number: 8998}  # Direct WS to inference</div>
+  <div class="alert alert-y"><span class="alert-icon">!</span><div><strong>WebSocket timeout:</strong> Set proxy-read-timeout: 3600 on the ingress -- default nginx timeout is 60s which will kill active AI conversations. Full-duplex sessions can run for minutes or hours.</div></div>
+</section>
+
+<section id="nonlinear">
+  <h2>Why GPU Scaling Is NOT Linear for Conversational AI</h2>
+  <p>This is one of the most important concepts for capacity planning. Standard web services scale linearly: 2x servers = 2x capacity. <strong>GPU-based full-duplex AI does not.</strong></p>
+
+  <details open>
+    <summary>1. Memory Bandwidth Contention -- The Primary Bottleneck</summary>
+    <div class="details-body">
+      <p>Each concurrent session requires continuous KV cache reads at every decode step (every ~12ms for 24kHz audio at 100ms chunks). With 5 sessions sharing a single GPU's memory bus, bandwidth per session drops:</p>
+      <div class="code-block">L40S (864 GB/s total):
+1 session: 864 GB/s available -&gt; p99 latency: ~90ms
+3 sessions: 288 GB/s each -&gt; p99 latency: ~130ms
+5 sessions: 173 GB/s each -&gt; p99 latency: ~180ms (+100% vs 1 session)
+6 sessions: 144 GB/s each -&gt; p99 latency: ~240ms (degrades sharply)
+
+# Doubling sessions does NOT halve throughput -- it degrades latency super-linearly</div>
+    </div>
+  </details>
+
+  <details>
+    <summary>2. Continuous Batching Efficiency Curve</summary>
+    <div class="details-body">
+      <p>Continuous batching improves GPU utilization by grouping decode steps across sessions. But efficiency plateaus and then drops: small batches (1-3) are compute-underutilized; optimal batches (4-8) maximize throughput; large batches (10+) introduce head-of-line blocking.</p>
+      <div class="code-block">Batch size vs GPU utilization (empirical, 7B INT8, L40S):
+Batch=1:  GPU util 12%  -- massively underutilized
+Batch=4:  GPU util 55%  -- good efficiency
+Batch=8:  GPU util 72%  -- near optimal (target operating point)
+Batch=12: GPU util 71%  -- plateau; memory BW now bottleneck
+Batch=16: GPU util 68%  -- degrading; HoL blocking starts</div>
+    </div>
+  </details>
+
+  <details>
+    <summary>3. Multi-GPU Does Not Fix Single-Session Latency</summary>
+    <div class="details-body">
+      <p>Adding a second GPU does NOT make any single session faster -- it only increases the number of sessions you can run. Single-session latency is bounded by per-GPU memory bandwidth and compute speed. The only way to reduce single-session latency is: (1) faster GPU memory (H100 HBM3), (2) smaller model (3B vs 7B), or (3) more aggressive quantization (FP8 vs INT8).</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>4. Practical Capacity Rule of Thumb</summary>
+    <div class="details-body">
+      <div class="code-block"># Conservative safe operating limits (p99 &lt; 200ms):
+RTX 4090 24GB:     3 sessions  (VRAM limited)
+L40S 48GB:         4 sessions  (VRAM + BW limited)
+A100 80GB:         6 sessions  (BW limited)
+H100 80GB HBM3:    9 sessions  (BW 3.9x A100; VRAM limited)
+2x H100 NVLink:   12 sessions  (pooled VRAM + NVLink BW)
+4x H100 NVLink:   25 sessions  (MIG partitioned)
+
+# Rule: sessions do not scale linearly with GPU count
+# NVLink-connected GPUs scale better than PCIe-connected due to unified VRAM</div>
+    </div>
+  </details>
+</section>
+
+<section id="hardware">
+  <h2>Minimum Hardware Requirements</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Component</th><th>Dev / MVP</th><th>Small Prod</th><th>Full Scale-25</th></tr></thead>
+    <tbody>
+      <tr><td>GPU</td><td>1x RTX 4090 / L40S</td><td>2x L40S or 1x A100</td><t
+
+<section id="roadmap">
+  <h2>Phased Rollout Roadmap</h2>
+  <div class="phase-grid">
+    <div class="phase">
+      <div class="phase-label" style="color:var(--a2)">Phase 1 -- Now</div>
+      <div class="phase-title">MVP (1 GPU)</div>
+      <ul class="phase-items">
+        <li>1x L40S or RTX 4090</li>
+        <li>K3s single-node</li>
+        <li>3 pods total</li>
+        <li>5 concurrent sessions</li>
+        <li>Dev.yaml values</li>
+        <li>Local or RunPod</li>
+      </ul>
+      <div class="phase-cost">$0-$18K CapEx</div>
+    </div>
+    <div class="phase">
+      <div class="phase-label" style="color:var(--b2)">Phase 2 -- Growth</div>
+      <div class="phase-title">Small Production (2 GPUs)</div>
+      <ul class="phase-items">
+        <li>2x A100 80GB PCIe</li>
+        <li>K3s 2-node cluster</li>
+        <li>Replicated inference pods</li>
+        <li>10-12 concurrent sessions</li>
+        <li>HAProxy load balancer</li>
+        <li>Monitoring + alerting</li>
+      </ul>
+      <div class="phase-cost">$35K-$50K CapEx</div>
+    </div>
+    <div class="phase">
+      <div class="phase-label" style="color:var(--y)">Phase 3 -- Scale</div>
+      <div class="phase-title">Enterprise (4x H100)</div>
+      <ul class="phase-items">
+        <li>4x H100 SXM5 NVLink</li>
+        <li>Spine-leaf networking</li>
+        <li>Liquid cooling + UPS 2N</li>
+        <li>25 concurrent sessions</li>
+        <li>Full K8s (not K3s)</li>
+        <li>Columbus, Ohio DC</li>
+      </ul>
+      <div class="phase-cost">$280K-$420K CapEx</div>
+    </div>
+  </div>
+</section>
+
+</main>
+</div></div>
+
+<footer>
+  &copy; 2026 ManjuLAB &middot; <a href="mailto:whizyoga@manjulab.com">whizyoga@manjulab.com</a> &middot; <a href="tel:+14255021519">+1 425-502-1519</a> &middot;
+  <a href="../index.html">yogabrata.com</a> &middot; <a href="https://github.com/1o1-ai">github.com/1o1-ai</a>
+  <br><span style="font-size:.72rem;display:block;margin-top:.4rem">ManjuLAB Datacenter -- Columbus, Ohio &middot; AI-First Infrastructure Engineering</span>
+</footer>
+</body>
+      </html>d>4x H100 SXM5</td></tr>
+      <tr><td>Sessions</td><td>3-5</td><td>8-12</td><td>20-25</td></tr>
+      <tr><td>CPU</td><td>8-16 cores</td><td>16-32 cores</td><td>64+ cores</td></tr>
+      <tr><td>RAM</td><td>64 GB</td><td>128 GB</td><td>512 GB</td></tr>
+      <tr><td>Storage</td><td>500 GB NVMe</td><td>2 TB NVMe RAID</td><td>10 TB NVMe cluster</td></tr>
+      <tr><td>Network</td><td>1 GbE</td><td>10 GbE</td><td>25 GbE + spine-leaf</td></tr>
+      <tr><td>Est. Cost</td><td>$8K-$18K</td><td>$35K-$70K</td><td>$280K-$420K</td></tr>
+    </tbody>
+  </table></div>
+  <div class="alert alert-g"><span class="alert-icon">OK</span><div><strong>Cloud alternative:</strong> RunPod, Vast.ai, or Lambda Labs rent L40S from ~$1.25/hr or H100 from ~$2.49/hr. For dev and testing, renting is cheaper than buying until you exceed ~800 hrs/month of usage.</div></div>
+</section>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Redis Key Pattern</th><th>TTL</th><th>Content</th></tr></thead>
+    <tbody>
+      <tr><td>session:{id}:config</td><td>30 min</td><td>Voice prompt embedding ID, text prompt, sample rate, chunk size</td></tr>
+      <tr><td>session:{id}:transcript</td><td>30 min</td><td>Running transcript buffer (user + AI turns)</td></tr>
+      <tr><td>session:{id}:metrics</td><td>5 min</td><td>Per-session latency p50/p99, bytes sent/recv</td></tr>
+      <tr><td>gpu:{id}:health</td><td>10 sec</td><td>VRAM %, active sessions, p99 latency -- updated by Prometheus exporter</td></tr>
+    </tbody>
+  </table></div>
+</section>
+  --set inference.modelName="moshi-7b-int8" \
+  --set inference.maxSessions=5
+
+# Upgrade to production (add GPUs, increase sessions)
+helm upgrade manjulab-ai ./personaplex-helm \
+  --namespace manjulab-ai \
+  --values values/prod.yaml \
+  --set inference.replicas=2 \
+  --set inference.maxSessions=25</div>
+</section>
+  <div class="tag">K3s + Helm + GPU</div>
+</div></nav>
+
+<div class="hero"><div class="hero-inner">
+  <div class="breadcrumb"><a href="../index.html">yogabrata.com</a> > <a href="../index.html#datacenter">ManjuLAB Datacenter</a> > Architecture</div>
+  <div class="spec-badge">DOC-DC-003 Rev 1.0 May 2026</div>
+  <h1>PersonaPlex on Kubernetes<br>Lean, Practical AI Infrastructure Design</h1>
+  <p class="hero-sub">A real-world Kubernetes + Helm architecture for PersonaPlex-class conversational AI. Starts on a single GPU machine. Scales incrementally. No over-engineering. Authored by ManjuLAB Infrastructure Engineering.</p>
+  <div class="philosophy">
+    <h3>Core Design Philosophy</h3>
+    <p>Start with 1 GPU machine running K3s. Add complexity only when you have the users to justify it. The GPU is the only expensive unit -- everything else (K3s, vLLM, Qdrant, Redis) is open source and free. No Kafka, no microservice explosion, no enterprise waste.</p>
+  </div>
+</div></div>
