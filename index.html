@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>1o1 AI — Conversational AI With Any Role and Voice | ManjuLAB</title>
+<meta name="description" content="1o1 AI by ManjuLAB: Full-duplex conversational AI with voice and role customization. ManjuLAB Datacenter hosts NVIDIA speech-to-speech AI infrastructure in Columbus, Ohio.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#06060f;--bg2:#0e0e1c;--bg3:#16162a;--a:#7c3aed;--a2:#a855f7;--a3:#06b6d4;--g:#10b981;--g2:#34d399;--tx:#e2e8f0;--mt:#94a3b8;--bd:#2a2a42}
+html{scroll-behavior:smooth}body{background:var(--bg);color:var(--tx);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.7}
+nav{position:fixed;top:0;width:100%;background:rgba(6,6,15,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);z-index:100}
+.ni{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 1.5rem}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--tx)}
+.lb{background:linear-gradient(135deg,var(--a),var(--a2));padding:.15rem .6rem;border-radius:6px;font-weight:900;font-size:1.1rem;color:#fff}
+.lt{font-weight:700;font-size:1rem}.ls{color:var(--mt);font-size:.72rem}
+.nl{display:flex;gap:1.8rem;list-style:none}.nl a{color:var(--mt);text-decoration:none;font-size:.85rem;transition:.2s}.nl a:hover{color:var(--tx)}
+.nc{background:linear-gradient(135deg,var(--a),var(--a2));color:#fff;padding:.4rem 1.1rem;border-radius:8px;text-decoration:none;font-size:.83rem;font-weight:600}
+.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:7rem 1.5rem 4rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 10%,rgba(124,58,237,.2),transparent 70%);pointer-events:none}
+.htag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);border-radius:999px;padding:.35rem 1rem;font-size:.78rem;color:var(--a2);margin-bottom:1.5rem}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--a2);animation:pulse 2s infinite}
+h1{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;line-height:1.1;max-width:800px;background:linear-gradient(135deg,#fff 30%,var(--a2) 70%,var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.2rem}
+.hs{font-size:1.05rem;color:var(--mt);max-width:580px;margin-bottom:.6rem}
+.hby{font-size:.82rem;color:var(--mt);margin-bottom:2rem}.hby a{color:var(--a2);text-decoration:none}
+.btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:3rem}
+.btn{padding:.65rem 1.4rem;border-radius:9px;text-decoration:none;font-weight:600;font-size:.88rem;transition:.2s;display:inline-flex;align-items:center;gap:.5rem}
+.bp{background:linear-gradient(135deg,var(--a),var(--a2));color:#fff}.bp:hover{opacity:.85;transform:translateY(-1px)}
+.bo{border:1px solid var(--bd);color:var(--tx);background:var(--bg2)}.bo:hover{border-color:var(--a2);color:var(--a2)}
+.stats{display:flex;gap:3rem;flex-wrap:wrap;justify-content:center}
+.sn{font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,var(--a2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sl{font-size:.75rem;color:var(--mt);text-transform:uppercase;letter-spacing:.5px}
+.sec{padding:5rem 1.5rem}
+.sec.alt{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.c{max-width:1100px;margin:0 auto}
+.st{font-size:.73rem;color:var(--a2);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:.5rem}
+h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:.8rem;line-height:1.2}
+.sub{color:var(--mt);max-width:600px;margin-bottom:2.5rem;font-size:.95rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.card{background:var(--bg3);border:1px solid var(--bd);border-radius:14px;padding:1.8rem;transition:.25s}
+.card:hover{border-color:var(--a);transform:translateY(-2px)}
+.ci{font-size:2rem;margin-bottom:.8rem}.ct{font-size:1rem;font-weight:700;margin-bottom:.5rem}
+.cd{font-size:.85rem;color:var(--mt);line-height:1.6}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2rem}
+.step{text-align:center;padding:1.5rem 1rem}
+.snum{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--a2));display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;margin:0 auto 1rem}
+.stxt{font-size:.85rem;color:var(--mt)}
+.cta-box{background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(6,182,212,.08));border:1px solid rgba(124,58,237,.3);border-radius:20px;padding:3rem;text-align:center;margin-top:3rem}
+.dc-hero{background:linear-gradient(160deg,#050f0a 0%,var(--bg3) 100%);border:1px solid rgba(16,185,129,.2);border-radius:20px;padding:2.5rem;margin-bottom:2.5rem;position:relative;overflow:hidden}
+.dc-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 50%,rgba(16,185,129,.08),transparent 70%);pointer-events:none}
+.dc-tag{display:inline-flex;align-items:center;gap:.4rem;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);border-radius:999px;padding:.25rem .8rem;font-size:.72rem;color:var(--g2);font-weight:700;margin-bottom:1rem}
+.dc-hero h3{font-size:1.6rem;font-weight:900;margin-bottom:.6rem;background:linear-gradient(135deg,#fff 40%,var(--g2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.dc-hero p{color:var(--mt);font-size:.9rem;max-width:680px;line-height:1.7;margin-bottom:1.5rem}
+.dc-meta{display:flex;flex-wrap:wrap;gap:.8rem}
+.dc-pill{background:var(--bg3);border:1px solid rgba(16,185,129,.25);border-radius:8px;padding:.4rem .9rem;font-size:.78rem;color:var(--g2);font-weight:600}
+.dc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-bottom:2rem}
+.dc-card{background:var(--bg3);border:1px solid var(--bd);border-radius:14px;padding:1.5rem;text-decoration:none;color:var(--tx);transition:.25s;display:block}
+.dc-card:hover{border-color:var(--g);transform:translateY(-3px)}
+.dc-card-tag{font-size:.68rem;text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:.5rem}
+.dc-card-tag.green{color:var(--g2)}.dc-card-tag.blue{color:var(--a3)}.dc-card-tag.purple{color:var(--a2)}
+.dc-card h4{font-size:.95rem;font-weight:800;margin-bottom:.5rem}
+.dc-card p{font-size:.8rem;color:var(--mt);line-height:1.55;margin-bottom:1rem}
+.dc-card-link{font-size:.78rem;font-weight:700;display:inline-flex;align-items:center;gap:.3rem}
+.dc-card-link.green{color:var(--g2)}.dc-card-link.blue{color:var(--a3)}.dc-card-link.purple{color:var(--a2)}
+.ohio-box{background:var(--bg3);border:1px solid var(--bd);border-radius:14px;padding:1.8rem;margin-bottom:1.5rem}
+.ohio-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;margin-top:1.2rem}
+.ohio-facts{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.ohio-facts li{display:flex;gap:.6rem;font-size:.85rem}
+.ohio-facts li span{color:var(--mt)}.ohio-facts li strong{color:var(--tx)}
+.principles{display:flex;flex-direction:column;gap:.7rem}
+.principle{background:var(--bg2);border-left:3px solid var(--g);border-radius:0 8px 8px 0;padding:.7rem 1rem}
+.principle h5{font-size:.83rem;font-weight:700;margin-bottom:.2rem}
+.principle p{font-size:.78rem;color:var(--mt);margin:0}
+.bench{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.bench-card{background:var(--bg3);border:1px solid var(--bd);border-radius:12px;padding:1.5rem;text-align:center}
+.bnum{font-size:2rem;font-weight:900;background:linear-gradient(135deg,var(--a2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.3rem}
+.blabel{font-size:.85rem;font-weight:700;margin-bottom:.3rem}
+.bdesc{font-size:.78rem;color:var(--mt)}
+footer{background:var(--bg2);border-top:1px solid var(--bd);padding:3rem 1.5rem 2rem}
+.fi{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem}
+.fb{font-size:.82rem;color:var(--mt);line-height:1.6;margin:.5rem 0}.fb a{coloes">Features</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#datacenter">Datacenter</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="demo.html">Live Demo</a></li>
+  </ul>
+  <a href="demo.html" class="nc">Try Live Demo &#127899;</a>
+</div></nav>
+<section class="hero">
+  <div class="htag"><div class="dot"></div>ManjuLAB Research &middot; May 2026</div>
+  <h1>A Voice That Listens, Thinks &amp; Responds &#8212; As Anyone.</h1>
+  <p class="hs">1o1 is ManjuLAB's full-duplex conversational AI. Define any persona with a text prompt, choose any voice, and get genuinely natural conversation.</p>
+  <p class="hby">By <a href="mailto:whizyoga@manjulab.com">whizyoga</a> &middot; <a href="https://manjulab.com">ManjuLAB</a> &middot; <a href="research.html">Research Paper</a> &middot; <a href="https://github.com/1o1-ai/1o1-ai">GitHub</a></p>
+  <div class="btns">
+    <a href="demo.html" class="btn bp">&#127899; Try Live Demo</a>
+    <a href="research.html" class="btn bo">&#128196; Read the Paper</a>
+    <a href="https://github.com/1o1-ai/1o1-ai" class="btn bo">&#128187; GitHub</a>
+  </div>
+  <div class="stats">
+    <div><div class="sn">7B</div><div class="sl">Parameters</div></div>
+    <div><div class="sn">24kHz</div><div class="sl">Audio Quality</div></div>
+    <div><div class="sn">152K+</div><div class="sl">Training Convos</div></div>
+    <div><div class="sn">95.3</div><div class="sl">Avg Bench Score</div></div>
+  </div>
+</section>
+<section class="sec alt" id="features"><div class="c">
+  <div class="st">Core Capabilities</div>
+  <h2>What makes 1o1 different</h2>
+  <p class="sub">A single unified model delivering everything conversational AI should be.</p>
+  <div class="grid3">
+    <div class="card"><div class="ci">&#x1F504;</div><div class="ct">Full-Duplex Interaction</div><div class="cd">Listens and speaks simultaneously. Natural backchannels that signal active listening.</div></div>
+    <div class="card"><div class="ci">&#x1F3A4;</div><div class="ct">Voice Persona Control</div><div class="cd">Audio embeddings capture vocal characteristics. Select from diverse voices or provide reference audio.</div></div>
+    <div class="card"><div class="ci">&#x1F4DD;</div><div class="ct">Text Role Prompting</div><div class="cd">Natural language prompts define any role. Zero retraining required.</div></div>
+    <div class="card"><div class="ci">&#x26A1;</div><div class="ct">Ultra-Low Latency</div><div class="cd">Single unified model eliminates cascaded ASR to LLM to TTS delays.</div></div>
+    <div class="card"><div class="ci">&#x1F310;</div><div class="ct">Out-of-Distribution Generalization</div><div class="cd">Handles novel scenarios far beyond training data.</div></div>
+    <div class="card"><div class="ci">&#x1F512;</div><div class="ct">Privacy by Design</div><div class="cd">End-to-end encrypted. Built by ManjuLAB, Columbus Ohio.</div></div>
+  </div>
+</div></section>
+<section class="sec" id="how"><div class="c">
+  <div class="st">How It Works</div>
+  <h2>Hybrid Prompting Architecture</h2>
+  <div class="how">
+    <div class="step"><div class="snum">1</div><div class="ct" style="font-weight:700">Define a Voice</div><div class="stxt">Provide a voice reference audio clip or choose from our library.</div></div>
+    <div class="step"><div class="snum">2</div><div class="ct" style="font-weight:700">Set a Role</div><div class="stxt">Write a text prompt in plain language defining the persona.</div></div>
+    <div class="step"><div class="snum">3</div><div class="ct" style="font-weight:700">Start Talking</div><div class="stxt">1o1 listens and speaks simultaneously. Interrupt naturally.</div></div>
+    <div class="step"><div class="snum">4</div><div class="ct" style="font-weight:700">Real-Time Response</div><div class="stxt">Speech streamed at 24kHz within milliseconds.</div></div>
+  </div>
+  <div class="cta-box">
+    <h3 style="font-size:1.5rem;font-weight:800;margin-bottom:.8rem">Ready to hear 1o1?</h3>
+    <p style="color:var(--mt);margin-bottom:1.5rem">Install the backend locally and connect to the live demo.</p>
+    <a href="demo.html" class="btn bp" style="font-size:1rem">Launch Live Demo</a>
+  </div>
+</div></section>
+<section class="sec alt"><div class="c">
+  <div class="st">Benchmark Results</div>
+  <h2>State-of-the-art across all metrics</h2>
+  <div class="bench">
+    <div class="bench-card"><div class="bnum">90.8</div><div class="blabel">Turn-Taking Score</div><div class="bdesc">Best-in-class natural conversation flow.</div></div>
+    <div class="bench-card"><div class="bnum">95.0</div><div class="blabel">Interruption Handling</div><div class="bdesc">Responds gracefully to user interruptions.</div></div>
+    <div class="bench-card"><div class="bnum">100</div><div class="blabel">Pause Handling</div><div class="bdesc">Perfect score detecting conversation pauses.</div></div>
+  </div>
+</div></section>
+<section class="sec" id="datacenter"><div class="c">
+  <div class="st">Infrastructure</div>
+  <h2>ManjuLAB Datacenter</h2>
+  <p class="sub">ManjuLAB is building an AI-first datacenter in Columbus, Ohio for NVIDIA speech-to-speech solutions at scale.</p>
+  <div class="dc-hero">
+    <div class="dc-tag">Columbus, Ohio &middot; AI-First Datacenter</div>
+    <h3>The ManjuLAB GPU Infrastructure Plan</h3>
+    <p>Enterprise-grade NVIDIA PersonaPlex-class speech-to-speech AI infrastructure. <strong style="color:var(--tx)">1o1.ai is the anchor tenant</strong> deployed on H100 GPU clusters with NVLink fabric, liquid cooling, and 2N power redundancy.</p>
+    <div class="dc-meta">
+      <div class="dc-pill">Columbus, Ohio</div>
+      <div class="dc-pill">H100 SXM5 GPU Cluster</div>
+      <div class="dc-pill">Liquid Cooling</div>
+      <div class="dc-pill">2N Power Redundancy</div>
+      <div class="dc-pill">Kubernetes + Helm</div>
+    </div>
+  </div>
+  <div class="dc-grid">
+    <a href="datacenter/personaplex-scale-5.html" class="dc-card">
+      <div class="dc-card-tag green">Edge Deployment &middot; DOC-DC-001</div>
+      <h4>PersonaPlex Scale-5</h4>
+      <p>Capacity plan for 5 concurrent full-duplex AI sessions. GPU selection, VRAM breakdown, latency model, architecture.</p>
+      <div class="dc-card-link green">View engineering spec &#8594;</div>
+    </a>
+    <a href="datacenter/personaplex-scale-10-25.html" class="dc-card">
+      <div class="dc-card-tag blue">Enterprise Cluster &middot; DOC-DC-002</div>
+      <h4>PersonaPlex Scale 10&#8211;25</h4>
+      <p>H100 GPU cluster for 10&#8211;25 concurrent sessions. NVLink, spine-leaf networking, liquid cooling, phased roadmap.</p>
+      <div class="dc-card-link blue">View engineering spec &#8594;</div>
+    </a>
+    <a href="datacenter/architecture.html" class="dc-card">
+      <div class="dc-card-tag purple">K8s + Helm &middot; DOC-DC-003</div>
+      <h4>Kubernetes Architecture</h4>
+      <p>K3s + Helm design. vLLM inference, Qdrant vector DB, Redis session memory, nginx ingress.</p>
+      <div class="dc-card-link purple">View architecture &#8594;</div>
+    </a>
+  </div>
+  <div class="ohio-box">
+    <div class="st">Location</div>
+    <h3 style="font-size:1.2rem;font-weight:800">ManjuLAB Data Center &#8212; Columbus, Ohio</h3>
+    <div class="ohio-grid">
+      <ul class="ohio-facts">
+        <li><strong>Low power cost:</strong><span>~$0.065/kWh vs $0.14&#8211;0.18 coastal &#8212; up to 64% OpEx savings.</span></li>
+        <li><strong>AEP Ohio grid:</strong><span>99.99% uptime SLA. One of the largest US utility grids.</span></li>
+        <li><strong>Network peering:</strong><span>Midwest fiber backbone. Sub-20ms to Chicago, Detroit, Pittsburgh.</span></li>
+        <li><strong>Talent pipeline:</strong><span>Ohio State University + Columbus State.</span></li>
+        <li><strong>Low disaster risk:</strong><span>Minimal seismic, hurricane, wildfire exposure.</span></li>
+        <li><strong>Tax incentives:</strong><span>Ohio Enterprise Zone and Job Creation Tax Credit.</span></li>
+      </ul>
+<footer><div class="fi">
+  <div class="fl">
+    <div class="logo" style="margin-bottom:.8rem"><div class="lb">1o1</div><div style="margin-left:.6rem"><div class="lt">1o1 AI</div><div class="ls">by ManjuLAB</div></div></div>
+    <p class="fb">Full-duplex conversational AI with voice persona control. Built by <a href="https://manjulab.com">ManjuLAB</a> in Columbus, Ohio.</p>
+    <p class="fb">&#128231; <a href="mailto:whizyoga@manjulab.com">whizyoga@manjulab.com</a></p>
+    <p class="fb">&#128222; +1 425-502-1519</p>
+  </div>
+  <div class="fl">
+    <h4>Product</h4>
+    <ul>
+      <li><a href="demo.html">Live Demo</a></li>
+      <li><a href="research.html">Research Paper</a></li>
+      <li><a href="https://github.com/1o1-ai/1o1-ai">GitHub</a></li>
+      <li><a href="https://github.com/1o1-ai/1o1-ui">UI Repo</a></li>
+    </ul>
+  </div>
+  <div class="fl">
+    <h4>Datacenter</h4>
+    <ul>
+      <li><a href="datacenter/personaplex-scale-5.html">Scale-5 Spec</a></li>
+      <li><a href="datacenter/personaplex-scale-10-25.html">Scale 10-25</a></li>
+      <li><a href="datacenter/architecture.html">K8s Architecture</a></li>
+    </ul>
+  </div>
+  <div class="fl">
+    <h4>ManjuLAB</h4>
+    <ul>
+      <li><a href="https://manjulab.com">manjulab.com</a></li>
+      <li><a href="https://1o1.ai">1o1.ai</a></li>
+      <li><a href="https://github.com/1o1-ai">github.com/1o1-ai</a></li>
+      <li><a href="mailto:whizyoga@manjulab.com">Contact</a></li>
+    </ul>
+  </div>
+</div>
+<div class="fbot">
+  <span>&copy; 2026 ManjuLAB &mdash; Yogabrata Mukhopadhyay. All rights reserved.</span>
+  <span>Renton, WA &amp; Columbus, OH</span>
+</div></footer>
+</body></html>
+      <div class="principles">
+        <div style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mt);margin-bottom:.8rem">AI-First Design Principles</div>
+        <div class="principle"><h5>GPU-Native Architecture</h5><p>Every decision optimized for GPU workloads.</p></div>
+        <div class="principle"><h5>Modular Scaling</h5><p>Start at 5 sessions, scale to 100+ without re-architecting.</p></div>
+        <div class="principle"><h5>Open Source Stack</h5><p>K3s, vLLM, Qdrant, Redis, Prometheus, Grafana.</p></div>
+        <div class="principle"><h5>Lean Operations</h5><p>Operable by a 1&#8211;2 person infrastructure team.</p></div>
+      </div>
+    </div>
+  </div>
+</div></section>r:var(--a2);text-decoration:none}
+.fl h4{font-size:.78rem;font-weight:700;color:var(--mt);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.8rem}
+.fl ul{list-style:none}.fl li{margin-bottom:.5rem}.fl a{font-size:.8rem;color:var(--mt);text-decoration:none}.fl a:hover{color:var(--a2)}
+.fbot{max-width:1100px;margin:1.5rem auto 0;padding-top:1.5rem;border-top:1px solid var(--bd);display:flex;justify-content:space-between;font-size:.77rem;color:var(--mt)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@media(max-width:900px){.grid3,.dc-grid,.ohio-grid,.bench,.how,.fi{grid-template-columns:1fr}.nl{display:none}.stats{gap:1.5rem}}
+</style>
+</head>
+<body>
+<nav><div class="ni">
+  <a href="/" class="logo"><div class="lb">1o1</div><div><div class="lt">1o1 AI</div><div class="ls">by ManjuLAB</div></div></a>
+  <ul class="nl">
+    <li><a href="#featur
