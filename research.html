@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>1o1 AI Research - Voice & Role Control for Full-Duplex Conversational AI | ManjuLAB</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#06060f;--bg2:#0e0e1c;--bg3:#16162a;--a:#7c3aed;--a2:#a855f7;--a3:#06b6d4;--g:#22c55e;--tx:#e2e8f0;--mt:#94a3b8;--bd:#2a2a42}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.7}
+nav{position:sticky;top:0;background:rgba(6,6,15,.95);border-bottom:1px solid var(--bd);z-index:100;padding:0 1.5rem}
+.ni{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--tx)}
+.lb{background:linear-gradient(135deg,var(--a),var(--a2));padding:.1rem .55rem;border-radius:5px;font-weight:900;font-size:1rem}
+.nl{display:flex;gap:1.5rem;list-style:none}.nl a{color:var(--mt);text-decoration:none;font-size:.83rem}.nl a:hover{color:var(--tx)}
+article{max-width:900px;margin:0 auto;padding:3rem 1.5rem 6rem}
+.paper-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.3);border-radius:999px;padding:.3rem .9rem;font-size:.75rem;color:var(--a2);margin-bottom:1.5rem}
+h1.paper-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:900;line-height:1.2;margin-bottom:1.2rem;background:linear-gradient(135deg,#fff 40%,var(--a2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.authors{font-size:.9rem;color:var(--mt);margin-bottom:.5rem}
+.authors a{color:var(--a2);text-decoration:none}
+.affil{font-size:.82rem;color:var(--mt);margin-bottom:1.2rem}
+.badge-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:2rem}
+.badge{display:inline-flex;align-items:center;gap:.3rem;background:var(--bg3);border:1px solid var(--bd);border-radius:6px;padding:.3rem .75rem;font-size:.78rem;color:var(--mt);text-decoration:none;transition:.2s}.badge:hover{border-color:var(--a2);color:var(--a2)}
+.demo-cta{background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(6,182,212,.08));border:1px solid rgba(124,58,237,.3);border-radius:14px;padding:1.5rem;margin-bottom:2.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.demo-cta p{font-size:.9rem;color:var(--mt);max-width:500px}
+.demo-btn{background:linear-gradient(135deg,var(--a),var(--a2));color:#fff;padding:.6rem 1.4rem;border-radius:9px;text-decoration:none;font-weight:700;font-size:.88rem;white-space:nowrap;transition:.2s}
+h2{font-size:1.3rem;font-weight:800;margin:2.5rem 0 .8rem;padding-bottom:.5rem;border-bottom:1px solid var(--bd)}
+h3{font-size:1rem;font-weight:700;margin:1.5rem 0 .5rem;color:var(--a2)}
+p{color:var(--mt);margin-bottom:1rem;font-size:.93rem}
+.highlight-box{background:var(--bg3);border-left:3px solid var(--a2);border-radius:0 10px 10px 0;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.88rem;color:var(--mt)}
+.examples-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0}
+.example-card{background:var(--bg3);border:1px solid var(--bd);border-radius:12px;padding:1.2rem}
+.ex-label{font-size:.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--a2);font-weight:700;margin-bottom:.3rem}
+.ex-title{font-size:.88rem;font-weight:700;margin-bottom:.5rem}
+.ex-prompt{font-size:.78rem;color:var(--mt);font-style:italic;line-height:1.5;background:var(--bg2);border-radius:6px;padding:.5rem .7rem;border-left:2px solid var(--a)}
+.player{display:flex;align-items:center;gap:.7rem;margin-top:.8rem;background:var(--bg2);border-radius:8px;padding:.6rem .8rem}
+.pbtn{width:30px;height:30px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--a2));border:none;color:#fff;cursor:pointer;font-size:.8rem;flex-shrink:0}
+.pwave{flex:1;height:20px;background:linear-gradient(90deg,var(--a) 30%,var(--a2) 60%,var(--a3));border-radius:3px;opacity:.2}
+.ptime{font-size:.72rem;color:var(--mt)}
+.arch-diagram{background:var(--bg3);border:1px solid var(--bd);border-radius:14px;padding:2rem;margin:1.2rem 0}
+.arch-flow{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.arch-box{background:var(--bg2);border:1px solid var(--bd);border-radius:8px;padding:.5rem 1rem;font-size:.78rem;font-weight:600;text-align:center}
+.arch-box.v{border-color:var(--a);color:var(--a2);background:rgba(124,58,237,.08)}
+.arch-box.t{border-color:var(--a3);color:var(--a3);background:rgba(6,182,212,.06)}
+.arch-box.core{background:linear-gradient(135deg,rgba(124,58,237,.2),rgba(6,182,212,.1));border-color:var(--a2);color:#fff;font-size:.85rem;padding:.7rem 1.5rem}
+.arch-box.out{border-color:var(--g);color:var(--g);background:rgba(34,197,94,.06)}
+.arr{color:var(--mt);font-size:1.1rem}
+.specs-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin:1rem 0}
+.specs-list li{display:flex;gap:.7rem;font-size:.88rem}
+.spec-dot{width:7px;height:7px;border-radius:50%;background:linear-gradient(135deg,var(--a),var(--a2));flex-shrink:0;margin-top:.55rem}
+.data-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0}
+.data-card{background:var(--bg3);border:1px solid var(--bd);border-radius:12px;padding:1.2rem}
+.dn{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--a2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.2rem}
+.dl{font-size:.85rem;font-weight:700;margin-bottom:.4rem}
+.dd{font-size:.78rem;color:var(--mt)}
+.bench-table{width:100%;border-collapse:collapse;font-size:.82rem;margin:1rem 0}
+.bench-table th{padding:.6rem .8rem;text-align:left;color:var(--mt);font-size:.72rem;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--bd)}
+.bench-table td{padding:.6rem .8rem;border-bottom:1px solid rgba(42,42,66,.5)}
+.bench-table tr.top td{color:var(--a2);font-weight:700}
+.bar{height:7px;border-radius:3px;background:linear-gradient(90deg,var(--a),var(--a2));display:inline-block}
+.findings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0}
+.finding{background:var(--bg3);border:1px solid var(--bd);border-radius:12px;padding:1.2rem}
+.fn{font-size:1.1rem;font-weight:900;color:var(--a2);margin-bottom:.4rem}
+.ft{font-size:.85rem;font-weight:700;margin-bottom:.4rem}
+.fd{font-size:.78rem;color:var(--mt);line-height:1.55}
+.citation-box{background:var(--bg3);border:1px solid var(--bd);border-radius:12px;padding:1.5rem;position:relative;margin:1.2rem 0}
+pre{font-family:'Courier New',monospace;font-size:.78rem;color:var(--mt);line-height:1.8;white-space:pre-wrap}
+.copy-btn{position:absolute;top:.8rem;right:.8rem;background:var(--bg2);border:1px solid var(--bd);border-radius:6px;padding:.3rem .7rem;font-size:.72rem;color:var(--mt);cursor:pointer}
+footer{background:var(--bg2);border-top:1px solid var(--bd);padding:2rem 1.5rem;text-align:center;font-size:.78rem;color:var(--mt)}
+footer a{color:var(--a2);text-decoration:none}
+@media(max-width:680px){.examples-grid,.data-cards,.findings-grid{grid-template-columns:1fr}.arch-flow{flex-direction:column}}
+</style></head><body>
+<nav><div class="ni">
+<a href="index.html" class="logo"><div class="lb">1o1</div><span style="font-weight:700;margin-left:.2rem">1o1 AI</span><span style="color:var(--mt);font-size:.72rem;margin-left:.3rem">by ManjuLAB</span></a>
+<ul class="nl"><li><a href="index.html">Home</a></li><li><a href="demo.html">Live Demo</a></li><li><a href="https://github.com/1o1-ai/1o1-ai">GitHub</a></li></ul>
+</div></nav>
+<article>
+<div class="paper-tag">&#128196; ManjuLAB Research &middot; May 2026</div>
+<h1 class="paper-title">Voice and Role Control for Full-Duplex Conversational AI</h1>
+<div class="authors"><a href="mailto:whizyoga@manjulab.com">whizyoga</a>,&nbsp;<a href="https://manjulab.com">ManjuLAB Research Team</a></div>
+<div class="affil">ManjuLAB &middot; yogabrata.com &middot; whizyoga@manjulab.com &middot; +1 425-502-1519</div>
+<div class="badge-row">extended, and yours.</p>
+</div>
+<a href="demo.html" class="demo-btn">Launch Live Demo &rarr;</a>
+</div>
+
+<h2>Overview</h2>
+<p>Conversational AI has historically forced an impossible trade-off. <strong>Traditional cascaded systems</strong> (ASR to LLM to TTS) offer voice and role customization but produce robotic conversations. <strong>Full-duplex models</strong> like Moshi finally made AI conversations feel natural, but locked users into a single fixed voice and role.</p>
+<p><strong>1o1 by ManjuLAB breaks this trade-off.</strong> Select from a diverse range of voices and define any role through a plain text prompt -- no retraining required. 1o1 delivers genuinely natural conversations, handles interruptions and backchannels, and maintains your chosen persona throughout.</p>
+<div class="highlight-box"><strong>Key insight:</strong> By combining voice prompting (audio embedding) with text prompting (natural language role definition) in a single hybrid system prompt, 1o1 disentangles speech naturalness from task-following behavior -- enabling both without compromise.</div>
+
+<h2>Capabilities</h2>
+<h3>Full-Duplex Interaction</h3>
+<p>1o1 listens and speaks simultaneously. This eliminates delays from cascaded systems and enables natural conversation behaviors -- when to pause, interrupt, or backchannel.</p>
+<h3>Hybrid Prompting</h3>
+<p>A <strong>voice prompt</strong> (audio embedding) captures vocal characteristics. A <strong>text prompt</strong> (natural language) describes the role and context. These are processed jointly. Any role is definable at inference time -- no fine-tuning needed.</p>
+<h3>Natural Backchanneling</h3>
+<p>1o1 produces contextual backchannels -- "okay", "yeah", "I see" -- that signal active listening without interrupting the speaker's flow.</p>
+
+<h2>Demonstration Examples</h2>
+<div class="examples-grid">
+<div class="example-card">
+<div class="ex-label">Assistant</div><div class="ex-title">Wise Teacher</div>
+<div class="ex-prompt">"You are a wise and friendly teacher. Answer questions or provide advice in a clear and engaging way."</div>
+<div class="player"><button class="pbtn">&#9654;</button><div class="pwave"></div><span class="ptime">0:42</span></div>
+</div>
+<div class="example-card">
+<div class="ex-label">Customer Service</div><div class="ex-title">Banking Support</div>
+<div class="ex-prompt">"You work for First 1o1 Bank. Your name is Maya. The customer's transaction of $1,200 was flagged in Miami, FL."</div>
+<div class="player"><button class="pbtn">&#9654;</button><div class="pwave"></div><span class="ptime">1:08</span></div>
+</div>
+<div class="example-card">
+<div class="ex-label">Medical Office</div><div class="ex-title">Patient Registration</div>
+<div class="ex-prompt">"You work for Dr. Kumar's office. Record full name, DOB, allergies, and prior conditions. Assure confidentiality."</div>
+<div class="player"><button class="pbtn">&#9654;</button><div class="pwave"></div><span class="ptime">1:22</span></div>
+</div>
+<div class="example-card">
+<div class="ex-label">Natural Backchanneling</div><div class="ex-title">Casual Conversation</div>
+<div class="ex-prompt">"You enjoy having a good conversation."</div>
+<div class="player"><button class="pbtn">&#9654;</button><div class="pwave"></div><span class="ptime">0:55</span></div>
+</div>
+</div>
+
+<h2>Architecture</h2>
+<div class="arch-diagram">
+<div class="arch-flow">
+<div class="arch-box v">&#127908; Voice Prompt<br><small>Audio Embedding</small></div>
+<div class="arr">+</div>
+<div class="arch-box t">&#128221; Text Prompt<br><small>Role &amp; Context</small></div>
+<div class="arr">&rarr;</div>
+<div class="arch-box core">1o1 AI Core<br><small>7B &middot; Dual-Stream &middot; 24kHz</small></div>
+<div class="arr">&rarr;</div>
+<div class="arch-box out">&#128266; Natural Speech<br><small>Full-Duplex Output</small></div>
+</div>
+<ul class="specs-list">
+<li><div class="spec-dot"></div><div><strong>7 Billion Parameters</strong> -- sufficient scale for broad conversational competence and generalization</div></li>
+<li><div class="spec-dot"></div><div><strong>Mimi Speech Codec</strong> -- ConvNet + Transformer encoder/decoder at 24kHz</div></li>
+<li><div class="spec-dot"></div><div><strong>Temporal + Depth Transformers</strong> -- dual-stream allows listening and speaking concurrently</div></li>
+<li><div class="spec-dot"></div><div><strong>Helium Language Model</strong> -- semantic understanding enabling generalization to novel scenarios</div></li>
+<li><div class="spec-dot"></div><div><strong>Single-Stage Training</strong> -- real and synthetic conversations blended in one pass</div></li>
+</ul>
+</div>
+
+<h2>Training Data</h2>
+<div class="data-cards">
+<div class="data-card"><div class="dn">7,303</div><div class="dl">Real Conversations</div><div class="dd">1,217 hours from Fisher English corpus. Source of natural backchanneling and authentic interaction patterns.</div></div>
+<div class="data-card"><div class="dn">39,322</div><div class="dl">Synthetic Assistant</div><div class="dd">410 hours of question-answering dialogues. Transcripts generated by LLMs, synthesized via neural TTS.</div></div>
+<div class="data-card"><div class="dn">105,410</div><div class="dl">Customer Service</div><div class="dd">1,840 hours across banking, medical, restaurant scenarios with rich contextual text prompts.</div></div>
+</div>
+
+<h2>Evaluation Results</h2>
+<table class="bench-table">
+<thead><tr><th>System</th><th>Smooth Turn-Taking</th><th>User Interruption</th><th>Pause Handling</th><th>Average</th></tr></thead>
+<tbody>
+<tr class="top"><td>&#129351; 1o1 AI (ManjuLAB)</td><td><span class="bar g" style="width:72px"></span> 90.8</td><td><span class="bar g" style="width:76px"></span> 95.0</td><td><span class="bar g" style="width:80px"></span> 100.0</td><td><strong>95.3</strong></td></tr>
+<tr><td>Moshi (Kyutai)</td><td><span class="bar" style="width:49px"></span> 60.6</td><td><span class="bar" style="width:66px"></span> 82.1</td><td><span class="bar" style="width:75px"></span> 94.1</td><td>78.9</td></tr>
+<tr><td>Gemini Live</td><td><span class="bar" style="width:52px"></span> 65.5<
+<h2>Citation</h2>
+<div class="citation-box">
+<button class="copy-btn" onclick="navigator.clipboard.writeText(document.querySelector('pre').textContent)">Copy</button>
+<pre>@article{whizyoga2026onetoone,
+  title   = {Voice and Role Control for Full-Duplex Conversational AI},
+  author  = {whizyoga},
+  year    = {2026},
+  url     = {https://yogabrata.com/research.html},
+  note    = {ManjuLAB -- yogabrata.com}
+}</pre>
+</div>
+
+<h2>Acknowledgments</h2>
+<p>1o1 is built on the <strong>Moshi</strong> architecture from Kyutai (CC-BY-4.0). This work was developed by <strong>whizyoga</strong> at <strong>ManjuLAB</strong>. The original research that inspired this work is the PersonaPlex project from NVIDIA ADLR. Code and model weights are released under the MIT License.</p>
+</article>
+
+<footer>&copy; 2026 ManjuLAB &middot; <a href="mailto:whizyoga@manjulab.com">whizyoga@manjulab.com</a> &middot; <a href="tel:+14255021519">+1 425-502-1519</a> &middot; <a href="https://1o1.ai">1o1.ai</a> &middot; <a href="https://yogabrata.com">yogabrata.com</a> &middot; <a href="https://github.com/1o1-ai">github.com/1o1-ai</a></footer>
+</body></html>/td><td><span class="bar" style="width:71px"></span> 89.1</td><td><span class="bar" style="width:57px"></span> 71.8</td><td>75.5</td></tr>
+<tr><td>Qwen 2.5 Omni</td><td><span class="bar" style="width:69px"></span> 86.7</td><td><span class="bar" style="width:35px"></span> 43.9</td><td><span class="bar" style="width:44px"></span> 54.7</td><td>61.8</td></tr>
+<tr><td>Freeze Omni</td><td><span class="bar" style="width:2px"></span> 1.8</td><td><span class="bar" style="width:52px"></span> 65.3</td><td><span class="bar" style="width:27px"></span> 33.6</td><td>33.6</td></tr>
+</tbody></table>
+
+<h2>Key Findings</h2>
+<div class="findings-grid">
+<div class="finding"><div class="fn">01</div><div class="ft">Efficient Specialization</div><div class="fd">Under 5,000 hours of directed data enables full task-following from pretrained weights.</div></div>
+<div class="finding"><div class="fn">02</div><div class="ft">Disentangled Naturalness</div><div class="fd">Blending synthetic and real data lets the model exhibit natural speech patterns alongside strong task-adherence.</div></div>
+<div class="finding"><div class="fn">03</div><div class="ft">Emergent Generalization</div><div class="fd">1o1 handles scenarios far outside training by leveraging broad pretraining from its language model foundation.</div></div>
+</div>
+<a href="https://github.com/1o1-ai/1o1-ai" class="badge">&#128196; Paper</a>
+<a href="https://github.com/1o1-ai/1o1-ai" class="badge">&#129303; Model Weights</a>
+<a href="https://github.com/1o1-ai/1o1-ai" class="badge">&#128187; Code</a>
+<a href="demo.html" class="badge">&#127899; Live Demo</a>
+<a href="https://github.com/1o1-ai/1o1-ai" class="badge">MIT License</a>
+</div>
+<div class="demo-cta">
+<div>
+<div style="font-size:1rem;font-weight:700;margin-bottom:.4rem">&#127899; Try 1o1 AI Live</div>
+<p>Install the backend on your Windows PC and connect it to this demo -- experience full-duplex voice AI in real time.</p>
+</div>
+<a href="demo.html" class="demo-btn">Open Live Demo &rarr;</a>
+</div>
