@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>PersonaPlex Scale 10–25 — Enterprise H100 Cluster | ManjuLAB Datacenter</title>
+<meta name="description" content="Enterprise H100 GPU cluster design for 10–25 concurrent PersonaPlex full-duplex AI sessions. Spine-leaf networking, NVLink, liquid cooling, UPS redundancy, and procurement roadmap by ManjuLAB.">
+<meta name="keywords" content="H100 cluster, PersonaPlex enterprise, NVLink, RDMA, spine-leaf, liquid cooling, conversational AI, ManjuLAB, datacenter Columbus Ohio">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#07090f;--bg2:#0d111d;--bg3:#131929;--bg4:#1a2035;--a:#8b5cf6;--a2:#a78bfa;--g:#10b981;--g2:#34d399;--y:#f59e0b;--r:#ef4444;--c:#06b6d4;--c2:#22d3ee;--tx:#e2e8f0;--mt:#94a3b8;--bd:#1e2d45;--mono:'Courier New',monospace}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.7;font-size:15px}
+a{color:var(--a2);text-decoration:none}
+nav{background:var(--bg2);border-bottom:2px solid var(--bd);padding:0 2rem;position:sticky;top:0;z-index:100}
+.ni{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{display:flex;align-items:center;gap:.5rem;font-weight:800;font-size:.95rrong>10–25</strong></div>
+    <div class="meta-item"><span>Primary GPU</span><strong>H100 SXM5 80GB</strong></div>
+    <div class="meta-item"><span>Min GPU Count</span><strong>2× H100 (10 users)</strong></div>
+    <div class="meta-item"><span>Max GPU Count</span><strong>4× H100 (25 users)</strong></div>
+    <div class="meta-item"><span>Interconnect</span><strong>NVLink + RDMA RoCEv2</strong></div>
+    <div class="meta-item"><span>Target Latency</span><strong>&lt;120ms p99</strong></div>
+    <div class="meta-item"><span>Total CapEx</span><strong>$180K–$420K</strong></div>
+  </div>
+</div></div>
+
+<div class="wrap"><div class="two-col">
+<div class="sidebar">
+  <div class="toc">
+    <h4>Table of Contents</h4>
+    <ul>
+      <li><a href="#summary">Executive Summary</a></li>
+      <li><a href="#vram">VRAM Scaling Model</a></li>
+      <li><a href="#h100">H100 Cluster Design</a></li>
+      <li><a href="#nvlink">NVLink + RDMA</a></li>
+      <li><a href="#network">Spine-Leaf Network</a></li>
+      <li><a href="#loadbalance">Load Balancing</a></li>
+      <li><a href="#storage">Storage + Vector DB</a></li>
+      <li><a href="#floorplan">Datacenter Floor Plan</a></li>
+      <li><a href="#cooling">Liquid Cooling Design</a></li>
+      <li><a href="#power">Power Redundancy</a></li>
+      <li><a href="#nonlinear">GPU Scaling Non-Linearity</a></li>
+      <li><a href="#roadmap">Procurement Roadmap</a></li>
+      <li><a href="#expansion">Expansion Beyond 25</a></li>
+    </ul>
+  </div>
+</div>
+
+<main>
+
+<section id="summary">
+  <h2>&#x1F4CB; Executive Summary</h2>
+  <p>The Scale 10–25 configuration is an <strong>enterprise-grade H100 GPU cluster</strong> designed for production PersonaPlex-class workloads. Unlike Scale-5 (single-GPU edge), this design introduces multi-GPU tensor parallelism, NVLink-based inter-GPU communication, spine-leaf networking, and full datacenter infrastructure including liquid cooling and dual-feed power.</p>
+  <div class="alert alert-b"><span class="alert-icon">i</span><div><strong>Design philosophy:</strong> This architecture is intentionally over-provisioned at Phase 1 (10 users) to enable non-disruptive scaling to 25 users by adding GPU nodes with zero architectural changes. All networking, power, and cooling infrastructure is sized for the 25-user ceiling from day one.</div></div>
+  <div class="card-grid">
+    <div class="card"><div class="card-num blue">25</div><div class="card-label">Max Concurrent Sessions</div><div class="card-desc">Full-duplex voice I/O per session at 24kHz</div></div>
+    <div class="card"><div class="card-num green">4x</div><div class="card-label">H100 SXM5 80GB</div><div class="card-desc">NVLink-connected DGX-class compute nodes</div></div>
+    <div class="card"><div class="card-num cyan">900</div><div class="card-label">GB/s NVLink BW</div><div class="card-desc">Per GPU bidirectional -- eliminates KV cache bottleneck</div></div>
+    <div class="card"><div class="card-num yellow">&lt;120ms</div><div class="card-label">p99 Latency</div><div class="card-desc">Under full 25-session contention</div></div>
+    <div class="card"><div class="card-num blue">40kW</div><div class="card-label">Peak IT Load</div><div class="card-desc">4x H100 + networking + storage full load</div></div>
+    <div class="card"><div class="card-num green">2N</div><div class="card-label">Power Redundancy</div><div class="card-desc">Dual UPS + dual utility feed</div></div>
+  </div>
+</section>
+
+<section id="vram">
+  <h2>VRAM Scaling Model: 10-25 Sessions</h2>
+  <p>With H100 SXM5 (80GB HBM3 per GPU) and NVLink 4.0, VRAM is pooled across GPUs using tensor parallelism. The 7B model is sharded across all H100s, dramatically increasing effective capacity per session.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Config</th><th>GPUs</th><th>Total VRAM</th><th>Model Weights</th><th>Available for Sessions</th><th>Max Sessions</th></tr></thead>
+    <tbody>
+      <tr><td>Phase 1</td><td>2x H100</td><td>160 GB</td><td>7 GB (sharded)</td><td>~148 GB</td><td><strong>10-12</strong></td></tr>
+      <tr><td>Phase 2</td><td>3x H100</td><td>240 GB</td><td>7 GB (sharded)</td><td>~228 GB</td><td><strong>16-18</strong></td></tr>
+      <tr style="background:rgba(139,92,246,.06)"><td>Phase 3</td><td>4x H100</td><td>320 GB</td><td>7 GB (sharded)</td><td>~308 GB</td><td><strong>22-25</strong></td></tr>
+    </tbody>
+  </table></div>
+  <div class="alert alert-g"><span class="alert-icon">OK</span><div><strong>NVLink advantage:</strong> KV cache tensors for all sessions live in the pooled 320GB VRAM space. NVLink 4.0's 900 GB/s bidirectional bandwidth means cross-GPU KV reads add only ~2ms latency -- vs ~80ms penalty on PCIe-connected multi-GPU setups.</div></div>
+</section>
+
+<section id="h100">
+  <h2>H100 Cluster Design</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Spec</th><th>H100 SXM5 80GB</th><th>Why It Matters for Full-Duplex AI</th></tr></thead>
+    <tbody>
+      <tr><td>VRAM</td><td>80 GB HBM3</td><td>~8.8 GB/session to 9 sessions per GPU safely</td></tr>
+      <tr><td>Memory Bandwidth</td><td>3,350 GB/s</td><td>3.9x A100 -- eliminates KV cache read bottleneck completely</td></tr>
+      <tr><td>NVLink 4.0</td><td>900 GB/s bidirectional</td><td>Unified VRAM pool across all GPUs in node</td></tr>
+      <tr><td>FP8 TFLOPS</td><td>3,958 TFLOPS</td><td>FP8 quantization reduces model to 3.5GB with no perceptible quality loss</td></tr>
+      <tr><td>MIG Support</td><td>7 instances per GPU</td><td>Isolate sessions in dedicated GPU partitions for SLA enforcement</td></tr>
+      <tr><td>PCIe Gen5 host</td><td>128 GB/s</td><td>Fast weight prefetch from NVMe at startup</td></tr>
+      <tr><td>TDP</td><td>700W per GPU</td><td>Requires liquid cooling -- direct-to-chip preferred</td></tr>
+    </tbody>
+  </table></div>
+
+<section id="nvlink">
+  <h2>NVLink + RDMA Explained</h2>
+  <h3>NVLink 4.0 -- Why It Replaces PCIe for This Workload</h3>
+  <p>In multi-GPU inference, GPUs must frequently exchange <strong>KV cache tensors</strong> between GPUs when a session's context spans multiple GPU partitions. Over PCIe Gen5, this adds 40-80ms latency per transfer. NVLink 4.0 reduces this to &lt;2ms via direct GPU-to-GPU memory access at 900 GB/s.</p>
+  <div class="code-block">PCIe path (SLOW):  GPU0 -&gt; CPU -&gt; PCIe switch -&gt; CPU -&gt; GPU1  (~40-80ms)
+NVLink path (FAST): GPU0 ----------------------------------------- GPU1  (~1-2ms)
+
+# NVLink topology in a 4-GPU DGX H100 node:
+       GPU0 &lt;-- 900 GB/s --&gt; GPU1
+         ^                      ^
+         v                      v
+       GPU2 &lt;-- 900 GB/s --&gt; GPU3
+         \____________________/
+              NVSwitch fabric
+         (any-to-any, full 900 GB/s)</div>
+
+  <h3>RDMA (RoCEv2) -- Cross-Node Communication</h3>
+  <p>When scaling beyond a single DGX node, RDMA over Converged Ethernet v2 provides GPU-to-GPU direct memory access across the network fabric without CPU involvement.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Technology</th><th>Bandwidth</th><th>Latency</th><th>Use Case</th></tr></thead>
+    <tbody>
+      <tr><td>PCIe Gen5 x16</td><td>64 GB/s unidirectional</td><td>~40-80ms cross-GPU</td><td>Host-to-GPU weight loading</td></tr>
+      <tr><td>NVLink 4.0</td><td>900 GB/s bidirectional</td><td>~1-2ms</td><td>Intra-node KV cache sharing</td></tr>
+      <tr><td>RDMA RoCEv2 (400GbE)</td><td>50 GB/s</td><td>~5-10ms</td><td>Inter-node tensor parallelism (Phase 4+)</td></tr>
+      <tr><td>InfiniBand HDR</td><td>50 GB/s</td><td>~1-2ms</td><td>Alternative to RoCEv2; higher cost</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="network">
+  <h2>Spine-Leaf Network Architecture</h2>
+  <p>Spine-leaf topology provides <strong>predictable, non-blocking bandwidth</strong> between all compute nodes.</p>
+  <div class="code-block">+---------------------------------------------------------------+
+|                    INTERNET / WAN                             |
++------------------------------+--------------------------------+
+                               | 10GbE uplink
++------------------------------v--------------------------------+
+|              BORDER / EDGE LAYER                              |
+|  Firewalls (HA pair) + DDoS scrubbing + TLS offload          |
+|  nginx cluster (WebSocket proxy, SSL termination)            |
++--------------+----------------------+-------------------------+
+               | 25GbE                | 25GbE
++--------------v----------------------v-------------------------+
+|                    SPINE LAYER                                |
+|  Spine-1 (Arista 7060X)   Spine-2 (Arista 7060X)            |
+|  100GbE non-blocking       100GbE non-blocking (redundant)   |
++------+------------+------------+------------+----------------+
+       |            |            |            |  100GbE uplinks
++------v--+  +--v------+  +--v------+  +--v--------------------+
+| Leaf-1  |  | Leaf-2  |  | Leaf-3  |  | Leaf-4 (storage)     |
+| H100 x2 |  | H100 x2 |  | API/LB  |  | NVMe + Vector DB     |
+| 25GbE   |  | 25GbE   |  | Monitor |  | 100GbE               |
++---------+  +---------+  +---------+  +----------------------+</div>
+  <div class="alert alert-c"><span class="alert-icon">i</span><div><strong>Why spine-leaf?</strong> Every leaf switch has equal-cost paths to every other leaf via both spines. Any-to-any traffic traverses exactly 2 hops. Adding a new GPU node = add a leaf switch + uplink to both spines. Zero reconfiguration of existing nodes.</div></div>
+</section>
+
+<section id="loadbalance">
+  <h2>Load Balancing Strategy</h2>
+  <h3>Session-Aware Routing (not standard round-robin)</h3>
+  <p>Standard HTTP load balancing is incorrect for WebSocket-based full-duplex audio. Each session is a <strong>persistent bidirectional stream</strong> that must maintain affinity to a single GPU partition for the session duration.</p>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Layer</th><th>Tool</th><th>Strategy</th><th>Notes</th></tr></thead>
+    <tbody>
+      <tr><td>L4 (TCP)</td><td>HAProxy</td><td>Least-connection with session stickiness</td><td>WebSocket-aware; 30-min session timeout</td></tr>
+      <tr><td>L7 (WS)</td><td>nginx + upstream</td><td>IP hash for initial routing; cookie-based affinity</td><td>Sticky sessions critical for KV cache locality</td></tr>
+      <tr><td>GPU-level</td><td>vLLM session router</td><td>Route to GPU with lowest active session count + VRAM headroom</td><td>VRAM-aware scheduler</td></tr>
+      <tr><td>Health checking</td><td>Prometheus + custom exporter</td><td>Per-GPU VRAM %, p99 latency, active sessions</td><td>Remove GPU from pool if VRAM &gt;90% or p99 &gt;200ms</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="storage">
+  <h2>Storage + Vector DB Cluster</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Layer</th><th>Technology</th><th>Capacity</th><th>Purpose</th></tr></thead>
+    <tbody>
+      <tr><td>Model weights</td><td>Local NVMe Gen4 (RAID 1)</td><td>2x 2TB</td><td>7B model weights + voice prompt library (~150GB used). Fast cold-start (&lt;5s).</td></tr>
+      <tr><td>Session state</td><td>Redis 7 (cluster mode)</td><td>3x 32GB RAM nodes</td><td>Voice prompt embeddings, text prompts, transcript buffer. Sub-ms access.</td></tr>
+      <tr><td>Vector DB</td><td>Qdrant (clustered)</td><td>2x nodes, 500GB NVMe each</td><td>Voice persona embeddings, similarity search. Native GPU-accelerated search.</td></tr>
+      <tr><td>Transcript archive</td><td>MinIO (S3-compatible)</td><td>10TB expandable</td><td>Encrypted conversation transcripts for compliance. On-prem S3 API.</td></tr>
+      <tr><td>Metrics</td><td>Prometheus + Thanos</td><td>500GB retention</td><td>VRAM utilization, latency histograms, session count.</td></tr>
+      <tr><td>Dashboards</td><td>Grafana</td><td>--</td><td>Real-time GPU health, latency p50/p99, active sessions per GPU partition.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="floorplan">
+  <h2>Datacenter Floor Plan -- Columbus, Ohio Facility</h2>
+  <p>ManjuLAB's Columbus, Ohio datacenter occupies approximately 800 sq ft of raised-floor space, sized for the 10-25 user scale with pre-provisioned power and cooling for expansion to 100+ users.</p>
+  <h3>Columbus, Ohio -- Location Rationale</h3>
+  <ul class="spec-list">
+    <li><strong>Low power cost:</strong><span>Ohio average commercial rate ~$0.065/kWh vs $0.12-0.18 in coastal markets -- 45-64% savings on OpEx.</span></li>
+    <li><strong>AEP Ohio grid reliability:</strong><span>99.99% uptime SLA from American Electric Power, one of the largest US utility grids.</span></li>
+    <li><strong>Network peering:</strong><span>Columbus is on the Midwest fiber backbone with direct peering to major CDN PoPs. Sub-20ms to Chicago, Detroit, Pittsburgh.</span></li>
+    <li><strong>Talent pool:</strong><span>Ohio State University -- strong CS and datacenter operations talent pipeline.</span></li>
+    <li><strong>Tax incentives:</strong><span>Ohio Enterprise Zone and Job Creation Tax Credit programs applicable to AI/tech infrastructure.</span></li>
+  </ul>
+  <div class="code-block">+------------------------------------------------------------------+
+|         ManjuLAB Columbus -- Floor Plan (~800 sq ft)             |
+|                                                                  |
+|  +-------------+  +-------------+  +------------------------+  |
+|  |  COMPUTE    |  |  COMPUTE    |  |  NETWORKING + MGMT     |  |
+|  |  RACK A     |  |  RACK B     |  |  RACK C                |  |
+|  |  H100 x2   |  |  H100 x2   |  |  Spine switches (2x)   |  |
+|  |  DGX Node  |  |  DGX Node  |  |  Leaf switches (4x)    |  |
+|  |  CDU (liq) |  |  CDU (liq) |  |  OOB mgmt / IPMI       |  |
+|  |  42U rack  |  |  42U rack  |  |  42U rack              |  |
+|  +-------------+  +-------------+  +------------------------+  |
+|       HOT AISLE CONTAINMENT (center)                            |
+|  +-------------+  +-------------+  +------------------------+  |
+
+<section id="cooling">
+  <h2>Cooling Design -- Liquid + Hot Aisle Containment</h2>
+  <p>H100 SXM5 GPUs at 700W TDP each cannot be cooled with standard air cooling in a dense rack. The Scale 10-25 design uses <strong>direct liquid cooling (DLC)</strong> via Cooling Distribution Units (CDUs) with rear-door heat exchangers as supplemental air cooling.</p>
+  <h3>Liquid Cooling Architecture</h3>
+  <ul class="spec-list">
+    <li><strong>Primary: Direct-to-chip (DLC):</strong><span>Manifolds attach directly to H100 cold plates. 30-40C inlet water, 50-55C return. Removes ~85% of GPU heat.</span></li>
+    <li><strong>Secondary: Rear-door heat exchangers (RDHx):</strong><span>Capture residual heat from air moving through the rack. No standalone CRAC required for GPU racks with RDHx.</span></li>
+    <li><strong>Facility cooling plant:</strong><span>2x CRAC units (N+1 redundancy), each 30 kW capacity. Chilled water loop from rooftop chiller. Columbus climate allows economizer cooling 60% of the year.</span></li>
+    <li><strong>Hot aisle containment:</strong><span>Polycarbonate containment caps seal hot exhaust aisle. Prevents hot/cold air mixing. Improves cooling efficiency 20-30%.</span></li>
+    <li><strong>PUE target:</strong><span>1.30 -- significantly better than US datacenter average of 1.58. Achieved via liquid cooling + economizer mode + hot aisle containment.</span></li>
+  </ul>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Component</th><th>Heat Load</th><th>Cooling Method</th></tr></thead>
+    <tbody>
+      <tr><td>4x H100 SXM5 GPU</td><td>4 x 700W = 2,800W</td><td>Direct liquid (DLC cold plate)</td></tr>
+      <tr><td>2x DGX host servers</td><td>2 x 500W = 1,000W</td><td>Air + rear-door HX</td></tr>
+      <tr><td>Network switches</td><td>~600W</td><td>Air (front-to-back)</td></tr>
+      <tr><td>Storage nodes</td><td>~400W</td><td>Air</td></tr>
+      <tr><td>UPS losses (~5%)</td><td>~200W</td><td>Room air</td></tr>
+      <tr style="background:rgba(139,92,246,.06)"><td><strong>Total IT load</strong></td><td><strong>~5,000W (5 kW)</strong></td><td>--</td></tr>
+      <tr><td><strong>Cooling capacity (N+1)</strong></td><td><strong>2x 30 kW CRAC</strong></td><td>6x headroom for Phase 3</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="power">
+  <h2>Power Redundancy Design</h2>
+  <h3>2N Power Architecture</h3>
+  <p>Full 2N (double normal) power redundancy -- every load has two independent power paths, each capable of supporting 100% of the load independently.</p>
+  <div class="code-block">     UTILITY FEED A              UTILITY FEED B
+    (AEP Ohio Grid)              (AEP Ohio Grid)
+           |                            |
+    +------+------+              +------+------+
+    |   UPS-A     |              |   UPS-B     |
+    |  200 kVA    |              |  200 kVA    |
+    |  Li-ion batt|              |  Li-ion batt|
+    |  15 min hold|              |  15 min hold|
+    +------+------+              +------+------+
+           |                            |
+    +------+------+              +------+------+
+    |   PDU-A     |              |   PDU-B     |
+    |  (per rack) |              |  (per rack) |
+    +------+------+              +------+------+
+           |                            |
+    +------+----------------------------+------+
+    |       DUAL-CORDED SERVERS (H100 nodes)   |
+    |    PSU-A &lt;- Feed A   Feed B -&gt; PSU-B    |
+    +------------------------------------------+
+    # If Feed A fails: UPS-A -&gt; Feed B takes over (0ms switchover)
+    # If UPS-A fails: static bypass switch -&gt; utility direct
+    # If utility fails: generator kicks in &lt;10s (future Phase 3)</div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Power Component</th><th>Spec</th><th>Redundancy</th></tr></thead>
+    <tbody>
+      <tr><td>Utility feeds</td><td>2x independent AEP feeds, 480V 3-phase</td><td>Dual utility (separate substations)</td></tr>
+      <tr><td>UPS units</td><td>2x APC Symmetra 200 kVA Li-ion</td><td>2N -- each handles full load independently</td></tr>
+      <tr><td>Battery runtime</td><td>15 min at 100% load</td><td>Sufficient for controlled shutdown or generator start</td></tr>
+      <tr><td>PDUs</td><td>2x per rack, smart monitored (Vertiv)</td><td>A+B feed per rack; per-outlet metering</td></tr>
+      <tr><td>Generator (Phase 3)</td><td>100 kW diesel genset</td><td>N+1 with ATS; extends runtime to indefinite</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="nonlinear">
+  <h2>Why GPU Scaling Is Not Linear for Conversational AI</h2>
+  <p>A common assumption: "2x GPUs = 2x concurrent users." This is false for full-duplex conversational AI workloads. Scaling is sub-linear due to several interacting factors:</p>
+  <details open>
+    <summary>1. Memory Bandwidth Contention (most impactful)</summary>
+    <div class="details-body"><p>Each concurrent session reads from the same KV cache pool on every decode step. As sessions increase, GPU memory bus becomes shared among more readers. <strong>Going from 1 to 5 sessions adds ~5x memory traffic, but bandwidth is fixed.</strong> A single H100 handles ~9 sessions before p99 latency exceeds 150ms.</p></div>
+  </details>
+  <details>
+    <summary>2. NVLink Cross-GPU Overhead</summary>
+    <div class="details-body"><p>When tensor parallelism shards the model across GPUs, each decode step requires AllReduce communication across all participating GPUs via NVLink. At 2 GPUs this adds ~1-2ms per step. At 8 GPUs this grows to ~6-8ms per step.</p></div>
+  </details>
+  <details>
+    <summary>3. Continuous Batching Efficiency Curve</summary>
+    <div class="details-body"><p>GPU utilization improves with batch size up to a saturation point (~60-70% utilization). Adding sessions beyond this point yields diminishing returns. At 25 sessions on 4 H100s, GPU compute utilization is ~55-65%, but memory bandwidth is at ~85-90% -- making memory the binding constraint.</p></div>
+  </details>
+  <details>
+    <summary>4. Practical Scaling Efficiency</summary>
+    <div class="details-body">
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>H100 Count</th><th>Theoretical Max Sessions</th><th>Practical Max (p99 &lt;150ms)</th><th>Efficiency</th></tr></thead>
+        <tbody>
+
+<section id="roadmap">
+  <h2>Procurement Roadmap -- Phase 1, 2, 3</h2>
+  <div class="phase-grid">
+    <div class="phase">
+      <div class="phase-num" style="color:var(--g2)">Phase 1 -- MVP</div>
+      <div class="phase-title">10 Concurrent Users</div>
+      <ul class="phase-list">
+        <li>2x H100 SXM5 80GB (DGX node)</li>
+        <li>256GB DDR5 host RAM</li>
+        <li>2x NVMe 2TB (RAID1)</li>
+        <li>2x Arista 7060X spine</li>
+        <li>2x Leaf switches</li>
+        <li>1x CDU (liquid cooling)</li>
+        <li>2x UPS 200 kVA</li>
+        <li>Redis + Qdrant (single node)</li>
+        <li>nginx + HAProxy</li>
+      </ul>
+      <div class="phase-cost">Est. CapEx: ~$180,000-$220,000</div>
+    </div>
+    <div class="phase">
+      <div class="phase-num" style="color:var(--y)">Phase 2 -- Growth</div>
+      <div class="phase-title">18 Concurrent Users</div>
+      <ul class="phase-list">
+        <li>+1x H100 SXM5 80GB</li>
+        <li>+1 leaf switch</li>
+        <li>Redis cluster (3 nodes)</li>
+        <li>Qdrant second replica</li>
+        <li>Prometheus + Grafana</li>
+        <li>MinIO object storage</li>
+        <li>Expand CDU manifold</li>
+        <li>Zero spine/UPS changes</li>
+      </ul>
+      <div class="phase-cost">Incremental CapEx: ~$90,000-$110,000</div>
+    </div>
+    <div class="phase">
+      <div class="phase-num" style="color:var(--a2)">Phase 3 -- Full Scale</div>
+      <div class="phase-title">25 Concurrent Users</div>
+      <ul class="phase-list">
+        <li>+1x H100 SXM5 80GB</li>
+        <li>100 kW diesel generator</li>
+        <li>ATS (auto transfer switch)</li>
+        <li>Second CDU unit</li>
+        <li>Thanos long-term metrics</li>
+        <li>BGP failover routing</li>
+        <li>DR snapshot to S3</li>
+        <li>24x7 NOC monitoring</li>
+      </ul>
+      <div class="phase-cost">Incremental CapEx: ~$100,000-$130,000</div>
+    </div>
+  </div>
+</section>
+
+<section id="expansion">
+  <h2>Expansion Path Beyond 25 Users</h2>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Target Scale</th><th>H100 Count</th><th>Key Addition</th><th>Est. CapEx</th></tr></thead>
+    <tbody>
+      <tr><td>50 users</td><td>8x H100 (2 DGX nodes)</td><td>Second DGX node, RDMA RoCEv2 inter-node fabric, InfiniBand or 400GbE</td><td>~$350K incremental</td></tr>
+      <tr><td>100 users</td><td>16x H100 (4 DGX nodes)</td><td>Second datacenter room, BGP multi-path, full CEPH distributed storage cluster</td><td>~$600K incremental</td></tr>
+      <tr><td>250+ users</td><td>H100/H200 hybrid farm</td><td>Multi-region deployment, Kubernetes + KubeFlow orchestration, dedicated NOC team</td><td>~$2M+ incremental</td></tr>
+    </tbody>
+  </table></div>
+  <div class="alert alert-b"><span class="alert-icon">i</span><div><strong>ManjuLAB roadmap:</strong> The Phase 1 architecture described in this document is designed so that every component -- networking, power, cooling, monitoring -- scales without replacement to the 250+ user tier. The only additions are more GPU nodes and the software to orchestrate them.</div></div>
+</section>
+
+</main>
+</div></div>
+
+<footer>
+  <p>ManjuLAB Datacenter Engineering &mdash; PersonaPlex Scale 10-25 Capacity Plan &mdash; Rev 1.0 May 2026</p>
+  <p style="margin-top:.4rem"><a href="../index.html">yogabrata.com</a> &bull; <a href="../index.html#datacenter">Datacenter</a> &bull; <a href="personaplex-scale-5.html">Scale-5</a> &bull; <a href="architecture.html">Architecture</a></p>
+</footer>
+</body>
+</html>
+          <tr><td>1x</td><td>9</td><td>6-7</td><td>~72%</td></tr>
+          <tr><td>2x</td><td>18</td><td>11-12</td><td>~63%</td></tr>
+          <tr><td>4x</td><td>36</td><td>22-25</td><td>~62%</td></tr>
+          <tr><td>8x</td><td>72</td><td>40-46</td><td>~57%</td></tr>
+        </tbody>
+      </table></div>
+      <p><strong>Rule of thumb:</strong> Plan for ~60-65% efficiency. A 4x H100 cluster delivers approximately 3.5x the sessions of 1x H100, not 4x.</p>
+    </div>
+  </details>
+</section>
+|  |  STORAGE    |  |  UPS ROOM   |  |  COOLING PLANT         |  |
+|  |  RACK D     |  |  APC x 2   |  |  CRAC units (2x)       |  |
+|  |  NVMe+Redis |  |  200kVA ea |  |  CDU manifolds         |  |
+|  |  Qdrant     |  |  Battery   |  |  CRAC N+1              |  |
+|  |  MinIO      |  |  bypass SW |  |                        |  |
+|  +-------------+  +-------------+  +------------------------+  |
+|  Raised floor: 18" plenum for cold air distribution             |
+|  PUE target: 1.3 (AI-optimized liquid cooling vs avg 1.58)     |
++------------------------------------------------------------------+</div>
+</section>
+  <h3>MIG Partitioning Strategy (per H100)</h3>
+  <div class="code-block"># Each H100 split into MIG instances for session isolation
+GPU 0 (H100 80GB)
++-- MIG 3g.40gb  -&gt; PersonaPlex inference pool (5-6 sessions)
++-- MIG 2g.20gb  -&gt; Mimi codec + audio preprocessing
++-- MIG 1g.10gb  -&gt; Redis GPU-accelerated session cache
+
+# Repeat across all 4 H100s for 20-24 total session slots
+# MIG provides hard memory isolation -&gt; one session OOM cannot affect others</div>
+</section>em}
+.lb{background:linear-gradient(135deg,#8b5cf6,#a78bfa);padding:.15rem .55rem;border-radius:5px;font-size:.9rem;color:#fff}
+.nl{display:flex;gap:1.5rem;list-style:none}.nl a{color:var(--mt);font-size:.82rem}.nl a:hover{color:var(--tx)}
+.tag{background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.4);border-radius:999px;padding:.2rem .7rem;font-size:.72rem;color:var(--a2);font-weight:700}
+.hero{background:linear-gradient(160deg,#0d0a1f 0%,var(--bg3) 100%);border-bottom:1px solid var(--bd);padding:3rem 2rem}
+.hero-inner{max-width:1200px;margin:0 auto}
+.breadcrumb{font-size:.78rem;color:var(--mt);margin-bottom:1rem}.breadcrumb a{color:var(--a2)}
+.spec-badge{display:inline-flex;align-items:center;gap:.4rem;background:rgba(139,92,246,.1);border:1px solid rgba(139,92,246,.3);border-radius:6px;padding:.25rem .7rem;font-size:.75rem;color:var(--a2);margin-bottom:.8rem;font-weight:700;font-family:var(--mono)}
+h1{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;margin-bottom:.6rem;line-height:1.2}
+.hero-sub{color:var(--mt);font-size:.95rem;max-width:700px;margin-bottom:1.5rem}
+.meta-row{display:flex;flex-wrap:wrap;gap:1rem}
+.meta-item{background:var(--bg4);border:1px solid var(--bd);border-radius:8px;padding:.5rem 1rem;font-size:.8rem}
+.meta-item span{color:var(--mt);display:block;font-size:.68rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:.1rem}
+.meta-item strong{color:var(--tx)}
