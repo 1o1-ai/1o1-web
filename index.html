@@ -29,8 +29,7 @@ h1{font-size:clamp(2rem,5vw,3.6rem);font-weight:900;line-height:1.1;max-width:80
 .stats{display:flex;gap:3rem;flex-wrap:wrap;justify-content:center}
 .sn{font-size:1.8rem;font-weight:900;background:linear-gradient(135deg,var(--a2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .sl{font-size:.75rem;color:var(--mt);text-transform:uppercase;letter-spacing:.5px}
-.sec{padding:5rem 1.5rem}
-.sec.alt{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.sec{padding:5rem 1.5rem}.sec.alt{background:var(--bg2);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
 .c{max-width:1100px;margin:0 auto}
 .st{font-size:.73rem;color:var(--a2);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:.5rem}
 h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:.8rem;line-height:1.2}
@@ -65,6 +64,7 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:.8rem;line-h
 .ohio-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;margin-top:1.2rem}
 .ohio-facts{list-style:none;display:flex;flex-direction:column;gap:.6rem}
 .ohio-facts li{display:flex;gap:.6rem;font-size:.85rem}
+.ohio-facts li::before{content:'\25B8';color:var(--g2);flex-shrink:0}
 .ohio-facts li span{color:var(--mt)}.ohio-facts li strong{color:var(--tx)}
 .principles{display:flex;flex-direction:column;gap:.7rem}
 .principle{background:var(--bg2);border-left:3px solid var(--g);border-radius:0 8px 8px 0;padding:.7rem 1rem}
@@ -74,10 +74,10 @@ h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;margin-bottom:.8rem;line-h
 .bench-card{background:var(--bg3);border:1px solid var(--bd);border-radius:12px;padding:1.5rem;text-align:center}
 .bnum{font-size:2rem;font-weight:900;background:linear-gradient(135deg,var(--a2),var(--a3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.3rem}
 .blabel{font-size:.85rem;font-weight:700;margin-bottom:.3rem}
-.bdesc{font-size:.78rem;color:var(--mt)}
-footer{background:var(--bg2);border-top:1px solid var(--bd);padding:3rem 1.5rem 2rem}
-.fi{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem}
-.fb{font-size:.82rem;color:var(--mt);line-height:1.6;margin:.5rem 0}.fb a{coloes">Features</a></li>
+<nav><div class="ni">
+  <a href="/" class="logo"><div class="lb">1o1</div><div><div class="lt">1o1 AI</div><div class="ls">by ManjuLAB</div></div></a>
+  <ul class="nl">
+    <li><a href="#features">Features</a></li>
     <li><a href="#how">How It Works</a></li>
     <li><a href="#datacenter">Datacenter</a></li>
     <li><a href="research.html">Research</a></li>
@@ -87,8 +87,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:3rem 1.5rem 
 </div></nav>
 <section class="hero">
   <div class="htag"><div class="dot"></div>ManjuLAB Research &middot; May 2026</div>
-  <h1>A Voice That Listens, Thinks &amp; Responds &#8212; As Anyone.</h1>
-  <p class="hs">1o1 is ManjuLAB's full-duplex conversational AI. Define any persona with a text prompt, choose any voice, and get genuinely natural conversation.</p>
+  <h1>A Voice That Listens, Thinks &amp; Responds &mdash; As Anyone.</h1>
+  <p class="hs">1o1 is ManjuLAB's full-duplex conversational AI. Define any persona with a text prompt, choose any voice, and get genuinely natural conversation &mdash; interruptions, backchannels, authentic rhythm.</p>
   <p class="hby">By <a href="mailto:whizyoga@manjulab.com">whizyoga</a> &middot; <a href="https://manjulab.com">ManjuLAB</a> &middot; <a href="research.html">Research Paper</a> &middot; <a href="https://github.com/1o1-ai/1o1-ai">GitHub</a></p>
   <div class="btns">
     <a href="demo.html" class="btn bp">&#127899; Try Live Demo</a>
@@ -105,137 +105,137 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:3rem 1.5rem 
 <section class="sec alt" id="features"><div class="c">
   <div class="st">Core Capabilities</div>
   <h2>What makes 1o1 different</h2>
-  <p class="sub">A single unified model delivering everything conversational AI should be.</p>
+  <p class="sub">A single unified model delivering everything conversational AI should be &mdash; at once.</p>
   <div class="grid3">
-    <div class="card"><div class="ci">&#x1F504;</div><div class="ct">Full-Duplex Interaction</div><div class="cd">Listens and speaks simultaneously. Natural backchannels that signal active listening.</div></div>
-    <div class="card"><div class="ci">&#x1F3A4;</div><div class="ct">Voice Persona Control</div><div class="cd">Audio embeddings capture vocal characteristics. Select from diverse voices or provide reference audio.</div></div>
-    <div class="card"><div class="ci">&#x1F4DD;</div><div class="ct">Text Role Prompting</div><div class="cd">Natural language prompts define any role. Zero retraining required.</div></div>
-    <div class="card"><div class="ci">&#x26A1;</div><div class="ct">Ultra-Low Latency</div><div class="cd">Single unified model eliminates cascaded ASR to LLM to TTS delays.</div></div>
-    <div class="card"><div class="ci">&#x1F310;</div><div class="ct">Out-of-Distribution Generalization</div><div class="cd">Handles novel scenarios far beyond training data.</div></div>
-    <div class="card"><div class="ci">&#x1F512;</div><div class="ct">Privacy by Design</div><div class="cd">End-to-end encrypted. Built by ManjuLAB, Columbus Ohio.</div></div>
+    <div class="card"><div class="ci">&#128260;</div><div class="ct">Full-Duplex Interaction</div><div class="cd">Listens and speaks simultaneously. Natural backchannels that signal active listening without interrupting.</div></div>
+    <div class="card"><div class="ci">&#127899;</div><div class="ct">Voice Persona Control</div><div class="cd">Audio embeddings capture vocal characteristics, speaking style, and prosody. Select from diverse voices or provide reference audio.</div></div>
+    <div class="card"><div class="ci">&#128221;</div><div class="ct">Text Role Prompting</div><div class="cd">Natural language prompts define any role &mdash; teacher, banking agent, fantasy character. Zero retraining.</div></div>
+    <div class="card"><div class="ci">&#9889;</div><div class="ct">Ultra-Low Latency</div><div class="cd">Single unified model eliminates cascaded ASR&rarr;LLM&rarr;TTS delays. Streams response immediately.</div></div>
+    <div class="card"><div class="ci">&#127760;</div><div class="ct">Out-of-Distribution Generalization</div><div class="cd">Handles novel scenarios far beyond training data through powerful pretrained language foundations.</div></div>
+    <div class="card"><div class="ci">&#128274;</div><div class="ct">Privacy by Design</div><div class="cd">End-to-end encrypted. No conversation data stored without explicit permission. Built by ManjuLAB, Columbus Ohio.</div></div>
   </div>
 </div></section>
 <section class="sec" id="how"><div class="c">
   <div class="st">How It Works</div>
   <h2>Hybrid Prompting Architecture</h2>
+  <p class="sub">1o1 combines voice and text prompts in a single pass through a 7B-parameter dual-stream model.</p>
   <div class="how">
-    <div class="step"><div class="snum">1</div><div class="ct" style="font-weight:700">Define a Voice</div><div class="stxt">Provide a voice reference audio clip or choose from our library.</div></div>
-    <div class="step"><div class="snum">2</div><div class="ct" style="font-weight:700">Set a Role</div><div class="stxt">Write a text prompt in plain language defining the persona.</div></div>
-    <div class="step"><div class="snum">3</div><div class="ct" style="font-weight:700">Start Talking</div><div class="stxt">1o1 listens and speaks simultaneously. Interrupt naturally.</div></div>
-    <div class="step"><div class="snum">4</div><div class="ct" style="font-weight:700">Real-Time Response</div><div class="stxt">Speech streamed at 24kHz within milliseconds.</div></div>
+    <div class="step"><div class="snum">1</div><div class="ct" style="font-weight:700;margin-bottom:.4rem">Define a Voice</div><div class="stxt">Provide a voice reference audio clip or choose from our library. Audio embeddings capture style and prosody.</div></div>
+    <div class="step"><div class="snum">2</div><div class="ct" style="font-weight:700;margin-bottom:.4rem">Set a Role</div><div class="stxt">Write a text prompt in plain language. "You are a friendly nurse named Sam collecting patient intake information."</div></div>
+    <div class="step"><div class="snum">3</div><div class="ct" style="font-weight:700;margin-bottom:.4rem">Start Talking</div><div class="stxt">1o1 listens and speaks simultaneously. Interrupt naturally. It backchannel-responds while still thinking.</div></div>
+    <div class="step"><div class="snum">4</div><div class="ct" style="font-weight:700;margin-bottom:.4rem">Real-Time Response</div><div class="stxt">Speech streamed at 24kHz. The model processes your voice and responds within milliseconds.</div></div>
   </div>
   <div class="cta-box">
     <h3 style="font-size:1.5rem;font-weight:800;margin-bottom:.8rem">Ready to hear 1o1?</h3>
-    <p style="color:var(--mt);margin-bottom:1.5rem">Install the backend locally and connect to the live demo.</p>
-    <a href="demo.html" class="btn bp" style="font-size:1rem">Launch Live Demo</a>
+    <p style="color:var(--mt);margin-bottom:1.5rem">Install the backend locally and connect it to the live demo &mdash; experience real-time full-duplex AI conversation.</p>
+    <a href="demo.html" class="btn bp" style="font-size:1rem;padding:.8rem 2rem">&#127899; Launch Live Demo</a>
   </div>
 </div></section>
 <section class="sec alt"><div class="c">
-  <div class="st">Benchmark Results</div>
-  <h2>State-of-the-art across all metrics</h2>
-  <div class="bench">
-    <div class="bench-card"><div class="bnum">90.8</div><div class="blabel">Turn-Taking Score</div><div class="bdesc">Best-in-class natural conversation flow.</div></div>
-    <div class="bench-card"><div class="bnum">95.0</div><div class="blabel">Interruption Handling</div><div class="bdesc">Responds gracefully to user interruptions.</div></div>
-    <div class="bench-card"><div class="bnum">100</div><div class="blabel">Pause Handling</div><div class="bdesc">Perfect score detecting conversation pauses.</div></div>
-  </div>
-</div></section>
 <section class="sec" id="datacenter"><div class="c">
   <div class="st">Infrastructure</div>
   <h2>ManjuLAB Datacenter</h2>
-  <p class="sub">ManjuLAB is building an AI-first datacenter in Columbus, Ohio for NVIDIA speech-to-speech solutions at scale.</p>
+  <p class="sub">ManjuLAB is building an AI-first datacenter in Columbus, Ohio &mdash; purpose-built to host NVIDIA speech-to-speech solutions at scale, with 1o1.ai as the first production customer.</p>
   <div class="dc-hero">
-    <div class="dc-tag">Columbus, Ohio &middot; AI-First Datacenter</div>
+    <div class="dc-tag">&#128205; Columbus, Ohio &middot; AI-First Datacenter</div>
     <h3>The ManjuLAB GPU Infrastructure Plan</h3>
-    <p>Enterprise-grade NVIDIA PersonaPlex-class speech-to-speech AI infrastructure. <strong style="color:var(--tx)">1o1.ai is the anchor tenant</strong> deployed on H100 GPU clusters with NVLink fabric, liquid cooling, and 2N power redundancy.</p>
+    <p>ManjuLAB's expansion plan is to host enterprise-grade NVIDIA PersonaPlex-class speech-to-speech AI infrastructure in a purpose-built, AI-optimized Columbus, Ohio facility. <strong style="color:var(--tx)">1o1.ai is the anchor tenant and first customer</strong> &mdash; a full-duplex voice AI platform deployed on H100 GPU clusters with NVLink fabric, liquid cooling, and 2N power redundancy.</p>
+    <p>The datacenter is designed to scale from 5 concurrent AI sessions (edge L40S node) to 25+ sessions (H100 DGX cluster) and beyond &mdash; modular by design, with Kubernetes + Helm orchestration for zero-downtime scaling.</p>
     <div class="dc-meta">
-      <div class="dc-pill">Columbus, Ohio</div>
-      <div class="dc-pill">H100 SXM5 GPU Cluster</div>
-      <div class="dc-pill">Liquid Cooling</div>
-      <div class="dc-pill">2N Power Redundancy</div>
-      <div class="dc-pill">Kubernetes + Helm</div>
+      <div class="dc-pill">&#127970; Columbus, Ohio</div>
+      <div class="dc-pill">&#9889; H100 SXM5 GPU Cluster</div>
+      <div class="dc-pill">&#127777; Liquid Cooling</div>
+      <div class="dc-pill">&#128268; 2N Power Redundancy</div>
+      <div class="dc-pill">&#9096; Kubernetes + Helm</div>
+      <div class="dc-pill">&#127919; 1o1.ai First Customer</div>
     </div>
   </div>
   <div class="dc-grid">
     <a href="datacenter/personaplex-scale-5.html" class="dc-card">
       <div class="dc-card-tag green">Edge Deployment &middot; DOC-DC-001</div>
       <h4>PersonaPlex Scale-5</h4>
-      <p>Capacity plan for 5 concurrent full-duplex AI sessions. GPU selection, VRAM breakdown, latency model, architecture.</p>
-      <div class="dc-card-link green">View engineering spec &#8594;</div>
+      <p>Full capacity plan for 5 concurrent full-duplex AI sessions. GPU selection (L40S vs A100), VRAM breakdown, latency model, system architecture, power and cooling for edge deployment.</p>
+      <div class="dc-card-link green">View engineering spec &rarr;</div>
     </a>
     <a href="datacenter/personaplex-scale-10-25.html" class="dc-card">
       <div class="dc-card-tag blue">Enterprise Cluster &middot; DOC-DC-002</div>
-      <h4>PersonaPlex Scale 10&#8211;25</h4>
-      <p>H100 GPU cluster for 10&#8211;25 concurrent sessions. NVLink, spine-leaf networking, liquid cooling, phased roadmap.</p>
-      <div class="dc-card-link blue">View engineering spec &#8594;</div>
+      <h4>PersonaPlex Scale 10&ndash;25</h4>
+      <p>H100 GPU cluster design for 10&ndash;25 concurrent sessions. NVLink + RDMA, spine-leaf networking, liquid cooling, 2N power, storage cluster, and phased procurement roadmap.</p>
+      <div class="dc-card-link blue">View engineering spec &rarr;</div>
     </a>
     <a href="datacenter/architecture.html" class="dc-card">
       <div class="dc-card-tag purple">K8s + Helm &middot; DOC-DC-003</div>
       <h4>Kubernetes Architecture</h4>
-      <p>K3s + Helm design. vLLM inference, Qdrant vector DB, Redis session memory, nginx ingress.</p>
-      <div class="dc-card-link purple">View architecture &#8594;</div>
+      <p>Practical K3s + Helm infrastructure design. Starts on 1 GPU machine, scales to multi-node clusters. vLLM inference, Qdrant vector DB, Redis session memory, nginx ingress.</p>
+      <div class="dc-card-link purple">View architecture &rarr;</div>
     </a>
   </div>
   <div class="ohio-box">
     <div class="st">Location</div>
-    <h3 style="font-size:1.2rem;font-weight:800">ManjuLAB Data Center &#8212; Columbus, Ohio</h3>
+    <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:.3rem">ManjuLAB Data Center &mdash; Columbus, Ohio</h3>
+    <p style="color:var(--mt);font-size:.88rem;margin-bottom:1.2rem">Why Columbus is the right location for AI-first GPU infrastructure</p>
     <div class="ohio-grid">
       <ul class="ohio-facts">
-        <li><strong>Low power cost:</strong><span>~$0.065/kWh vs $0.14&#8211;0.18 coastal &#8212; up to 64% OpEx savings.</span></li>
-        <li><strong>AEP Ohio grid:</strong><span>99.99% uptime SLA. One of the largest US utility grids.</span></li>
-        <li><strong>Network peering:</strong><span>Midwest fiber backbone. Sub-20ms to Chicago, Detroit, Pittsburgh.</span></li>
-        <li><strong>Talent pipeline:</strong><span>Ohio State University + Columbus State.</span></li>
-        <li><strong>Low disaster risk:</strong><span>Minimal seismic, hurricane, wildfire exposure.</span></li>
-        <li><strong>Tax incentives:</strong><span>Ohio Enterprise Zone and Job Creation Tax Credit.</span></li>
+        <li><strong>Low power cost:</strong><span>~$0.065/kWh (Ohio avg) vs $0.14&ndash;0.18 coastal &mdash; up to 64% OpEx savings on GPU power.</span></li>
+        <li><strong>AEP Ohio grid:</strong><span>99.99% uptime SLA. One of the largest and most reliable US utility grids.</span></li>
+        <li><strong>Network peering:</strong><span>Midwest fiber backbone. Sub-20ms to Chicago, Detroit, Pittsburgh, Indianapolis.</span></li>
+        <li><strong>Talent pipeline:</strong><span>Ohio State University + Columbus State &mdash; strong CS and datacenter ops talent.</span></li>
+        <li><strong>Low disaster risk:</strong><span>Minimal seismic, hurricane, wildfire exposure. Tornado-rated standard construction.</span></li>
+        <li><strong>Tax incentives:</strong><span>Ohio Enterprise Zone and Job Creation Tax Credit applicable to AI/tech infrastructure.</span></li>
       </ul>
-<footer><div class="fi">
-  <div class="fl">
-    <div class="logo" style="margin-bottom:.8rem"><div class="lb">1o1</div><div style="margin-left:.6rem"><div class="lt">1o1 AI</div><div class="ls">by ManjuLAB</div></div></div>
-    <p class="fb">Full-duplex conversational AI with voice persona control. Built by <a href="https://manjulab.com">ManjuLAB</a> in Columbus, Ohio.</p>
-    <p class="fb">&#128231; <a href="mailto:whizyoga@manjulab.com">whizyoga@manjulab.com</a></p>
-    <p class="fb">&#128222; +1 425-502-1519</p>
-  </div>
-  <div class="fl">
-    <h4>Product</h4>
-    <ul>
-      <li><a href="demo.html">Live Demo</a></li>
-      <li><a href="research.html">Research Paper</a></li>
-      <li><a href="https://github.com/1o1-ai/1o1-ai">GitHub</a></li>
-      <li><a href="https://github.com/1o1-ai/1o1-ui">UI Repo</a></li>
-    </ul>
-  </div>
-  <div class="fl">
-    <h4>Datacenter</h4>
-    <ul>
-      <li><a href="datacenter/personaplex-scale-5.html">Scale-5 Spec</a></li>
-      <li><a href="datacenter/personaplex-scale-10-25.html">Scale 10-25</a></li>
-      <li><a href="datacenter/architecture.html">K8s Architecture</a></li>
-    </ul>
-  </div>
-  <div class="fl">
-    <h4>ManjuLAB</h4>
-    <ul>
-      <li><a href="https://manjulab.com">manjulab.com</a></li>
-      <li><a href="https://1o1.ai">1o1.ai</a></li>
-      <li><a href="https://github.com/1o1-ai">github.com/1o1-ai</a></li>
-      <li><a href="mailto:whizyoga@manjulab.com">Contact</a></li>
-    </ul>
-  </div>
-</div>
-<div class="fbot">
-  <span>&copy; 2026 ManjuLAB &mdash; Yogabrata Mukhopadhyay. All rights reserved.</span>
-  <span>Renton, WA &amp; Columbus, OH</span>
-</div></footer>
-</body></html>
       <div class="principles">
         <div style="font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--mt);margin-bottom:.8rem">AI-First Design Principles</div>
-        <div class="principle"><h5>GPU-Native Architecture</h5><p>Every decision optimized for GPU workloads.</p></div>
-        <div class="principle"><h5>Modular Scaling</h5><p>Start at 5 sessions, scale to 100+ without re-architecting.</p></div>
-        <div class="principle"><h5>Open Source Stack</h5><p>K3s, vLLM, Qdrant, Redis, Prometheus, Grafana.</p></div>
-        <div class="principle"><h5>Lean Operations</h5><p>Operable by a 1&#8211;2 person infrastructure team.</p></div>
+        <div class="principle"><h5>GPU-Native Architecture</h5><p>Every infrastructure decision optimized for GPU workloads &mdash; liquid cooling, NVLink, high-bandwidth storage, low-latency networking.</p></div>
+        <div class="principle"><h5>Modular Scaling</h5><p>Start at 5 sessions, scale to 100+ without re-architecting. Add GPU nodes, leaf switches, and CDU manifolds incrementally.</p></div>
+        <div class="principle"><h5>Open Source Stack</h5><p>K3s, vLLM, Qdrant, Redis, Prometheus, Grafana &mdash; no vendor lock-in. GPU hardware is the only CapEx dependency.</p></div>
+        <div class="principle"><h5>Lean Operations</h5><p>No microservice explosion. Single K8s cluster, single namespace, GitOps via Helm. Operable by a 1&ndash;2 person infrastructure team.</p></div>
       </div>
     </div>
   </div>
-</div></section>r:var(--a2);text-decoration:none}
+</div></section>
+<footer><div class="fi">
+  <div>
+    <div style="display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.1rem;margin-bottom:.5rem"><div class="lb">1o1</div>1o1 AI</div>
+    <div class="fb">Full-duplex conversational AI with any role and voice.<br>Developed by <a href="https://manjulab.com">ManjuLAB</a> &middot; by <a href="mailto:whizyoga@manjulab.com">whizyoga</a></div>
+    <div class="fb">&#128222; <a href="tel:+14255021519">+1 425-502-1519</a> &middot; <a href="mailto:whizyoga@manjulab.com">whizyoga@manjulab.com</a></div>
+  </div>
+  <div class="fl"><h4>1o1 AI</h4><ul>
+    <li><a href="research.html">Research Paper</a></li>
+    <li><a href="demo.html">Live Demo</a></li>
+    <li><a href="https://github.com/1o1-ai/1o1-ai">GitHub</a></li>
+    <li><a href="https://github.com/1o1-ai/1o1-ui">1o1-ui</a></li>
+  </ul></div>
+  <div class="fl"><h4>Datacenter</h4><ul>
+    <li><a href="datacenter/personaplex-scale-5.html">Scale-5 Plan</a></li>
+    <li><a href="datacenter/personaplex-scale-10-25.html">Scale 10&ndash;25 Plan</a></li>
+    <li><a href="datacenter/architecture.html">K8s Architecture</a></li>
+  </ul></div>
+  <div class="fl"><h4>ManjuLAB</h4><ul>
+    <li><a href="https://manjulab.com">manjulab.com</a></li>
+    <li><a href="https://1o1.ai">1o1.ai</a></li>
+    <li><a href="mailto:whizyoga@manjulab.com">Contact</a></li>
+  </ul></div>
+</div>
+<div class="fbot">
+  <span>&copy; 2026 ManjuLAB &middot; whizyoga &middot; All rights reserved</span>
+  <span>Hosted on yogabrata.com via GitHub Pages &middot; Columbus, Ohio</span>
+</div>
+</footer>
+</body></html>
+  <div class="st">Benchmark Results</div>
+  <h2>State-of-the-art across all metrics</h2>
+  <p class="sub">1o1 outperforms leading open-source and commercial systems on conversational dynamics benchmarks.</p>
+  <div class="bench">
+    <div class="bench-card"><div class="bnum">90.8</div><div class="blabel">Turn-Taking Score</div><div class="bdesc">FullDuplexBench smooth turn &mdash; best-in-class natural conversation flow.</div></div>
+    <div class="bench-card"><div class="bnum">95.0</div><div class="blabel">Interruption Handling</div><div class="bdesc">Responds gracefully to user interruptions without losing context.</div></div>
+    <div class="bench-card"><div class="bnum">100</div><div class="blabel">Pause Handling</div><div class="bdesc">Perfect score detecting and responding to natural conversation pauses.</div></div>
+  </div>
+  <p style="margin-top:1.5rem;text-align:center"><a href="research.html" style="color:var(--a2);text-decoration:none;font-size:.88rem">View full benchmark methodology and results &rarr;</a></p>
+</div></section>
+.bdesc{font-size:.78rem;color:var(--mt)}
+footer{background:var(--bg2);border-top:1px solid var(--bd);padding:3rem 1.5rem 2rem}
+.fi{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2rem}
+.fb{font-size:.82rem;color:var(--mt);line-height:1.6;margin:.5rem 0}.fb a{color:var(--a2);text-decoration:none}
 .fl h4{font-size:.78rem;font-weight:700;color:var(--mt);text-transform:uppercase;letter-spacing:.5px;margin-bottom:.8rem}
 .fl ul{list-style:none}.fl li{margin-bottom:.5rem}.fl a{font-size:.8rem;color:var(--mt);text-decoration:none}.fl a:hover{color:var(--a2)}
 .fbot{max-width:1100px;margin:1.5rem auto 0;padding-top:1.5rem;border-top:1px solid var(--bd);display:flex;justify-content:space-between;font-size:.77rem;color:var(--mt)}
@@ -244,7 +244,3 @@ footer{background:var(--bg2);border-top:1px solid var(--bd);padding:3rem 1.5rem 
 </style>
 </head>
 <body>
-<nav><div class="ni">
-  <a href="/" class="logo"><div class="lb">1o1</div><div><div class="lt">1o1 AI</div><div class="ls">by ManjuLAB</div></div></a>
-  <ul class="nl">
-    <li><a href="#featur
