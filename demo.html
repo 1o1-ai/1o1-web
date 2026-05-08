@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1o1 AI Demo - Live Voice Chat</title><style>
+*{margin:0;padding:0;box-sizing:border-box}body{background:#06060f;color:#e2e8f0;font-family:system-ui,sans-serif;line-height:1.6}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;border-bottom:1px solid #1e1e3f;background:#06060f}
+.logo{font-size:1.4rem;font-weight:700;background:linear-gradient(135deg,#7c3aed,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+nav a{color:#94a3b8;font-size:.9rem;text-decoration:none;margin-left:1.5rem}nav a:hover{color:#06b6d4}
+.demo-wrap{display:grid;grid-template-columns:320px 1fr;gap:0;height:calc(100vh - 61px)}
+.panel{background:#0d0d1f;border-right:1px solid #1e1e3f;padding:1.5rem;overflow-y:auto}
+.panel h2{font-size:1rem;font-weight:700;color:#a78bfa;margin-bottom:1rem;text-transform:uppercase;letter-spacing:.05em}
+.field{margin-bottom:1.2rem}
+label{display:block;font-size:.8rem;color:#64748b;margin-bottom:.4rem}
+input,textarea,select{width:100%;background:#06060f;border:1px solid #1e1e3f;border-radius:6px;padding:.6rem .8rem;color:#e2e8f0;font-size:.85rem;font-family:inherit}
+input:focus,textarea:focus,select:focus{outline:none;border-color:#7c3aed}
+textarea{resize:vertical;min-height:80px}
+.main{display:flex;flex-direction:column;padding:1.5rem;gap:1rem}
+.viz{background:#0d0d1f;border:1px solid #1e1e3f;border-radius:12px;padding:1rem}
+.viz h3{font-size:.85rem;color:#64748b;margin-bottom:.75rem}
+canvas{width:100%;height:80px;border-radius:6px}
+.transcript{background:#0d0d1f;border:1px solid #1e1e3f;border-radius:12px;padding:1rem;flex:1;overflow-y:auto;min-height:120px}
+.transcript h3{font-size:.85rem;color:#64748b;margin-bottom:.75rem}
+.msg{margin-bottom:.6rem;font-size:.9rem}
+.msg.user{color:#a78bfa}.msg.ai{color:#06b6d4}.msg.sys{color:#64748b;font-style:italic}
+.controls{display:flex;align-items:center;justify-content:center;gap:1.5rem;padding:1rem}
+.mic-btn{width:72px;height:72px;border-radius:50%;border:none;cursor:pointer;font-size:1.8rem;transition:all .2s;background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff;box-shadow:0 0 20px #7c3aed44}
+.mic-btn:hover{transform:scale(1.05)}.mic-btn.active{background:linear-gradient(135deg,#ef4444,#dc2626);animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 20px #ef444466}50%{box-shadow:0 0 40px #ef444499}}
+.stat-bar{display:flex;gap:1.5rem;background:#0d0d1f;border:1px solid #1e1e3f;border-radius:8px;padding:.75rem 1rem}
+.stat{font-size:.8rem}.sk{color:#64748b}.sv{color:#a78bfa;font-weight:600;margin-left:.3rem}
+.status{display:inline-flex;align-items:center;gap:.4rem;font-size:.8rem}
+.dot{width:8px;height:8px;border-radius:50%;background:#374151}
+.dot.connected{background:#22c55e;box-shadow:0 0 8px #22c55e66}
+.dot.connecting{background:#f59e0b;animation:blink .8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.btn-sm{padding:.5rem 1rem;border-radius:6px;border:1px solid #7c3aed;color:#a78bfa;background:transparent;cursor:pointer;font-size:.85rem;transition:all .2s}
+.btn-sm:hover{background:#7c3aed22}.btn-sm.primary{background:#7c3aed;color:#fff;border:none}
+</style></head><body>
+<nav><span class="logo">1o1 AI Demo</span><div><a href="/">Home</a><a href="/research.html">Research</a></div></nav>
+<div class="demo-wrap">
+<div class="panel">
+<h2>Connection</h2>
+<div class="field"><label>WebSocket Server URL</label><input id="wsUrl" value="wss://localhost:8998" /></div>
+<div class="field"><label>Voice Persona</label><select id="persona"><option value="neutral">Neutral</option><option value="assistant">Assistant</option><option value="analyst">Analyst</option><option value="tutor">Tutor</option></select></div>
+<div class="field"><label>System Prompt</label><textarea id="sysPrompt" rows="4">You are 1o1 AI, a helpful full-duplex voice assistant built by ManjuLAB. Be concise and natural.</textarea></div>
+<div class="field"><label>Audio Input</label><select id="audioIn"><option value="default">Default Microphone</option></select></div>
+<div class="field"><label>Sample Rate</label><select id="sampleRate"><option value="24000">24 kHz (recommended)</option><option value="16000">16 kHz</option><option value="48000">48 kHz</option></select></div>
+<div style="display:flex;gap:.75rem;margin-top:.5rem">
+<button class="btn-sm primary" onclick="connect()">Connect</button>
+<button class="btn-sm" onclick="disconnect()">Disconnect</button>
+</div>
+</div>
+<div class="main">
+<div class="stat-bar">
+<div class="stat"><span class="status"><span class="dot" id="connDot"></span><span id="connLabel">Disconnected</span></span></div>
+<div class="stat"><span class="sk">Latency</span><span class="sv" id="latVal">--</span></div>
+<div class="stat"><span class="sk">Sent</span><span class="sv" id="sentVal">0 B</span></div>
+<div class="stat"><span class="sk">Recv</span><span class="sv" id="recvVal">0 B</span></div>
+<div class="stat"><span class="sk">Duration</span><span class="sv" id="durVal">0:00</span></div>
+</div>
+<div class="viz"><h3>Your Voice</h3><canvas id="userWave"></canvas></div>
+<div class="viz"><h3>AI Voice</h3><canvas id="aiWave"></canvas></div>
+<div class="transcript" id="transcript"><h3>Transcript</h3><div class="msg sys">Connect to start a conversation...</div></div>
+<div class="controls">
+<button class="mic-btn" id="micBtn" onclick="toggleMic()">&#127908;</button>
+</div>
+</div>
+</div>
+<script>
+let ws=null,mic=false,stream=null,ctx=null,src=null,analyser=null;
+let sent=0,recv=0,startTime=null,timerInterval=null,pingTime=null;
+const log=(txt,cls)=>{const t=document.getElementById('transcript');const d=document.createElement('div');d.className='msg '+cls;d.textContent=txt;t.appendChild(d);t.scrollTop=t.scrollHeight;};
+const setStatus=(s,label)=>{const dot=document.getElementById('connDot');const lbl=document.getElementById('connLabel');dot.className='dot '+s;lbl.textContent=label;};
+function fmtBytes(b){if(b<1024)return b+' B';if(b<1048576)return (b/1024).toFixed(1)+' KB';return (b/1048576).toFixed(1)+' MB';}
+function fmtDur(s){const m=Math.floor(s/60);return m+':'+(s%60<10?'0':'')+(s%60);}
+function connect(){
+const url=document.getElementById('wsUrl').value;
+if(ws&&ws.readyState<2){log('Already connected','sys');return;}
+setStatus('connecting','Connecting...');
+log('Connecting to '+url+'...','sys');
+try{ws=new WebSocket(url);}catch(e){log('Error: '+e.message,'sys');setStatus('','Disconnected');return;}
+ws.binaryType='arraybuffer';
+ws.onopen=()=>{
+setStatus('connected','Connected');
+log('Connected to 1o1 AI server','sys');
+startTime=Date.now();sent=0;recv=0;
+timerInterval=setInterval(()=>{const s=Math.floor((Date.now()-startTime)/1000);document.getElementById('durVal').textContent=fmtDur(s);},1000);
+const cfg={type:'config',persona:document.getElementById('persona').value,system:document.getElementById('sysPrompt').value,sampleRate:parseInt(document.getElementById('sampleRate').value)};
+ws.send(JSON.stringify(cfg));sent+=JSON.stringify(cfg).length;
+document.getElementById('sentVal').textContent=fmtBytes(sent);
+pingTime=Date.now();ws.send(JSON.stringify({type:'ping'}));
+};
+ws.onmessage=(e)=>{
+if(typeof e.data==='string'){
+const msg=JSON.parse(e.data);recv+=e.data.length;
+document.getElementById('recvVal').textContent=fmtBytes(recv);
+if(msg.type==='pong')document.getElementById('latVal').textContent=(Date.now()-pingTime)+'ms';
+else if(msg.type==='transcript'&&msg.role==='user')log('You: '+msg.text,'user');
+else if(msg.type==='transcript'&&msg.role==='assistant')log('AI: '+msg.text,'ai');
+}else{recv+=e.data.byteLength;document.getElementById('recvVal').textContent=fmtBytes(recv);}
+};
+ws.onerror=()=>{log('Connection error','sys');setStatus('','Disconnected');};
+ws.onclose=()=>{log('Disconnected','sys');setStatus('','Disconnected');clearInterval(timerInterval);stopMic();};
+}
+function disconnect(){if(ws)ws.close();}
+async function toggleMic(){
+if(!mic){
+try{
+stream=await navigator.mediaDevices.getUserMedia({audio:{sampleRate:parseInt(document.getElementById('sampleRate').value),channelCount:1,echoCancellation:true,noiseSuppression:true}});
+ctx=new AudioContext();
+src=ctx.createMediaStreamSource(stream);
+analyser=ctx.createAnalyser();analyser.fftSize=256;
+src.connect(analyser);
+const proc=ctx.createScriptProcessor(2048,1,1);
+src.connect(proc);proc.connect(ctx.destination);
+proc.onaudioprocess=(e)=>{
+if(ws&&ws.readyState===1){
+const pcm=e.inputBuffer.getChannelData(0);
+const int16=new Int16Array(pcm.length);
+for(let i=0;i<pcm.length;i++)int16[i]=Math.max(-32768,Math.min(32767,pcm[i]*32768));
+ws.send(int16.buffer);sent+=int16.buffer.byteLength;
+document.getElementById('sentVal').textContent=fmtBytes(sent);
+}
+};
+drawWave('userWave',analyser);
+mic=true;document.getElementById('micBtn').classList.add('active');document.getElementById('micBtn').textContent=String.fromCodePoint(9209);
+log('Microphone active','sys');
+}catch(e){log('Mic error: '+e.message,'sys');}
+}else{stopMic();}
+}
+function stopMic(){if(stream)stream.getTracks().forEach(t=>t.stop());if(ctx)ctx.close();mic=false;stream=null;ctx=null;src=null;analyser=null;document.getElementById('micBtn').classList.remove('active');document.getElementById('micBtn').textContent=String.fromCodePoint(127908);}
+function drawWave(id,an){
+const canvas=document.getElementById(id);
+const c=canvas.getContext('2d');
+const W=canvas.offsetWidth||300,H=80;
+canvas.width=W;canvas.height=H;
+const buf=new Uint8Array(an.frequencyBinCount);
+const loop=()=>{if(!mic)return;requestAnimationFrame(loop);an.getByteTimeDomainData(buf);
+c.fillStyle='#06060f';c.fillRect(0,0,W,H);
+c.lineWidth=2;c.strokeStyle='#7c3aed';c.beginPath();
+const sl=W/buf.length;let x=0;
+for(let i=0;i<buf.length;i++){const v=buf[i]/128-1;const y=v*(H/2)+(H/2);i===0?c.moveTo(x,y):c.lineTo(x,y);x+=sl;}
+c.stroke();};
+loop();}
+</script>
+</body></html>
