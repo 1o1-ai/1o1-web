@@ -23,7 +23,7 @@ table{width:100%;border-collapse:collapse;font-size:.9rem}th{background:#0d0d1f;
 td{padding:.75rem 1rem;border-bottom:1px solid #1e1e3f;color:#94a3b8}.tdh{color:#06b6d4;font-weight:600}
 .dc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
 .dc-card{background:#0d0d1f;border:1px solid #1e1e3f;border-radius:12px;padding:1.5rem;transition:border-color .2s}
-.dc-card:hover{border-color:#06b6d4}.dc-card h3{color:#06b6d4;margin-bottom:.5rem}.dc-card p{color:#94a3b8;font-size:.85rem;margin-bottom:1rem}
+.dc-card:hover{border-color:#06b6d4}.dc-card h3{color:#06b6d4;margin-bottom:.5rem}.dc-card p{color:#94a3b8;font-size:.85rem;margin-bottom:1rem}.dc-card.bom-card{background:linear-gradient(180deg,#19090d,#0d0d1f);border-color:#7f1d1d;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);padding:2rem 2.25rem;min-height:220px;display:flex;flex-direction:column;justify-content:center}.dc-card.bom-card:hover{border-color:#ef4444}.dc-card.bom-card h3{color:#ef4444}.dc-card.bom-card .btn-o{border-color:#ef4444;color:#fca5a5}.dc-card.bom-card .btn-o:hover{background:#ef444422}
 footer{background:#0d0d1f;text-align:center;padding:2rem;color:#64748b;font-size:.85rem;border-top:1px solid #1e1e3f}
 </style></head><body>
 <nav><span class="logo">1o1 AI</span><ul>
@@ -70,7 +70,7 @@ footer{background:#0d0d1f;text-align:center;padding:2rem;color:#64748b;font-size
 <section id="datacenter"><h2>Datacenter Infrastructure</h2><div class="dc">
 <div class="dc-card"><h3>5-Node Cluster</h3><p>Entry-level deployment - 5 x H100 nodes, ideal for 100 concurrent users.</p><a href="/datacenter/personaplex-scale-5.html" class="btn btn-o" style="font-size:.85rem">View Spec</a></div>
 <div class="dc-card"><h3>10-25 Node Scale</h3><p>Mid-tier expansion for enterprise - 1,000+ concurrent sessions.</p><a href="/datacenter/personaplex-scale-10-25.html" class="btn btn-o" style="font-size:.85rem">View Spec</a></div>
-<div class="dc-card"><h3>Architecture</h3><p>Network topology, failover design, and security architecture details.</p><a href="/datacenter/architecture.html" class="btn btn-o" style="font-size:.85rem">View Design</a></div>
+<div class="dc-card"><h3>Architecture</h3><p>Network topology, failover design, and security architecture details.</p><a href="/datacenter/architecture.html" class="btn btn-o" style="font-size:.85rem">View Design</a></div><div class="dc-card bom-card"><h3>1o1-BOM</h3><p>Detailed datacenter bill of materials for the MANJULAB Ohio deployment.</p><a href="/datacenter/dc-detailing.html" class="btn btn-o" style="font-size:.85rem">View BoM</a></div>
 </div><p style="text-align:center;color:#64748b;margin-top:1.5rem">Primary datacenter: Columbus, Ohio - Operated by ManjuLAB</p>
 </section>
 <footer>
