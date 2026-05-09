@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>DC Detailing — MANJULAB Ohio BoM | PersonaPlex + LLM Brain + RAG | yogabrata.com</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#07090f;--bg2:#0d111d;--bg3:#131929;--bg4:#1a2035;
+  --a:#3b82f6;--a2:#60a5fa;--g:#10b981;--g2:#34d399;
+  --y:#f59e0b;--r:#ef4444;--tx:#e2e8f0;--tx2:#94a3b8;--tx3:#64748b;
+  --violet:#7c3aed;--cyan:#06b6d4;--indigo:#6366f1;
+}
+body{background:var(--bg);color:var(--tx);font-family:system-ui,sans-serif;line-height:1.6}
+a{color:var(--cyan);text-decoration:none}
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;
+  border-bottom:1px solid #1e1e3f;position:sticky;top:0;background:var(--bg);z-index:100}
+.logo{font-size:1.4rem;font-weight:700;
+  background:linear-gradient(135deg,var(--violet),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent}
+nav ul{list-style:none;display:flex;gap:1.5rem}
+nav ul a{color:var(--tx2);font-size:.9rem;transition:color .2s}
+nav ul a:hover{color:var(--cyan)}
+.btn{padding:.4rem 1rem;border-radius:8px;font-weight:600;font-size:.85rem;cursor:pointer;transition:all .2s;display:inline-block}
+.btn-p{background:linear-gradient(135deg,var(--violet),#5b21b6);color:#fff;border:none}
+.btn-p:hover{opacity:.9}
+.btn-o{border:1px solid var(--violet);color:#a78bfa;background:transparent}
+.btn-o:hover{background:#7c3aed22}
+/* PAGE HEADER */
+.page-hero{padding:3rem 2rem 2rem;max-width:1200px;margin:0 auto}
+.breadcrumb{font-size:.8rem;color:var(--tx3);margin-bottom:1rem}
+.breadcrumb a{color:var(--cyan)}.breadcrumb span{margin:0 .4rem}
+h1{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;
+  background:linear-gradient(135deg,var(--violet),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:.5rem}
+.subtitle{color:var(--tx2);font-size:.95rem;max-width:700px}
+/* COST SUMMARY BANNER */
+.cost-banner{display:flex;flex-wrap:wrap;gap:1rem;padding:1.5rem 2rem;
+  background:var(--bg2);border-top:1px solid #1e1e3f;border-bottom:1px solid #1e1e3f}
+.cost-item{flex:1;min-width:160px;text-align:center;padding:.75rem;
+  background:var(--bg3);border-radius:10px;border:1px solid #1e1e3f}
+.cost-val{font-size:1.4rem;font-weight:800;font-family:monospace}
+.cost-lbl{font-size:.75rem;color:var(--tx3);margin-top:.25rem}
+.cv-capex{color:#818cf8}
+.cv-opex{color:var(--y)}
+.cv-total{color:var(--cyan)}
+/* MAIN LAYOUT */
+.bom-layout{display:flex;max-width:1400px;margin:0 auto;padding:2rem;gap:1.5rem}
+/* SIDEBAR */
+.bom-sidebar{width:260px;min-width:200px;flex-shrink:0}
+.section-nav{background:var(--bg2);border:1px solid #1e1e3f;border-radius:12px;overflow:hidden;position:sticky;top:70px}
+.snav-header{padding:.75rem 1rem;background:var(--bg3);border-bottom:1px solid #1e1e3f}
+.snav-header h3{font-size:.75rem;font-weight:600;color:var(--cyan);text-transform:uppercase;letter-spacing:.05em}
+.snav-item{display:flex;justify-content:space-between;align-items:center;
+  padding:.6rem 1rem;border-bottom:1px solid #0d111d;cursor:pointer;
+  transition:background .15s;font-size:.85rem;text-decoration:none;color:var(--tx2)}
+.snav-item:hover{background:var(--bg3);color:var(--tx)}
+.snav-item .scount{font-size:.7rem;background:var(--bg3);border:1px solid #1e1e3f;
+  border-radius:20px;padding:.1rem .5rem;color:var(--tx3)}
+.snav-item .scost{font-size:.7rem;color:var(--cyan);font-family:monospace}
+/* CONTENT */
+.bom-content{flex:1;min-width:0}
+/* SECTION CARD */
+.section-card{background:var(--bg2);border:1px solid #1e1e3f;border-radius:12px;
+  overflow:hidden;margin-bottom:1.5rem;scroll-margin-top:80px}
+.section-header{display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 1.25rem;background:var(--bg3);border-bottom:1px solid #1e1e3f}
+.section-title{font-size:1rem;font-weight:700;color:var(--tx)}
+.section-meta{display:flex;gap:.75rem;align-items:center}
+.section-count{font-size:.75rem;color:var(--tx3)}
+.section-total{font-size:.85rem;font-weight:700;font-family:monospace;color:var(--cyan)}
+/* TABLE */
+.bom-table{width:100%;border-collapse:collapse;font-size:.8rem}
+.bom-table th{background:var(--bg3);color:var(--tx3);padding:.6rem .9rem;
+  text-align:left;font-weight:600;text-transform:uppercase;font-size:.7rem;
+  letter-spacing:.04em;border-bottom:1px solid #1e1e3f;white-space:nowrap}
+.bom-table td{padding:.6rem .9rem;border-bottom:1px solid #0d111d;color:var(--tx2);
+  vertical-align:top}
+.bom-table tr:last-child td{border-bottom:none}
+.bom-table tr:hover td{background:#0d111d55}
+.component-name{color:var(--tx);font-weight:600;font-size:.85rem}
+.subcomponent{color:var(--tx3);font-size:.75rem;margin-top:.2rem}
+.vendor-model{font-size:.75rem}
+.vendor{color:var(--a2)}
+.model{color:var(--tx3)}
+.cost-cell{font-family:monospace;text-align:right}
+.cost-nonzero{color:var(--g2);font-weight:600}
+.cost-zero{color:var(--tx3)}
+.notes-cell{font-size:.72rem;color:var(--tx3);max-width:200px}
+/* STATUS BADGES */
+.badge{display:inline-block;padding:.15rem .5rem;border-radius:20px;
+  font-size:.7rem;font-weight:600;white-space:nowrap}
+.badge-available{background:#064e3b;color:#34d399;border:1px solid #10b981}
+.badge-missing{background:#450a0a;color:#fca5a5;border:1px solid #ef4444}
+.badge-canbuild{background:#451a03;color:#fcd34d;border:1px solid #f59e0b}
+.badge-needsetup{background:#1e1b4b;color:#a5b4fc;border:1px solid #6366f1}
+.badge-planned{background:#1e293b;color:#94a3b8;border:1px solid #334155}
+.badge-active{background:#083344;color:#67e8f9;border:1px solid #06b6d4}
+/* SECTION TOTALS ROW */
+.section-footer{display:flex;justify-content:flex-end;align-items:center;
+  padding:.6rem 1.25rem;background:var(--bg3);border-top:1px solid #1e1e3f;
+  font-size:.8rem;color:var(--tx3)}
+.section-footer strong{color:var(--cyan);font-family:monospace;margin-left:.5rem;font-size:.9rem}
+/* GRAND TOTAL TABLE */
+.grand-total-card{background:var(--bg2);border:1px solid #1e1e3f;border-radius:12px;
+  overflow:hidden;margin-top:2rem}
+.grand-total-card .gt-header{padding:1rem 1.25rem;background:var(--bg3);
+  border-bottom:1px solid #1e1e3f}
+.grand-total-card .gt-header h2{font-size:1rem;font-weight:700;color:var(--tx)}
+.gt-table{width:100%;border-collapse:collapse;font-size:.82rem}
+.gt-table th{background:var(--bg3);color:var(--tx3);padding:.6rem 1.25rem;
+  text-align:left;font-weight:600;font-size:.72rem;text-transform:uppercase;
+  letter-spacing:.04em}
+.gt-table td{padding:.65rem 1.25rem;border-bottom:1px solid #0d111d;color:var(--tx2)}
+.gt-table .budget-tag{display:inline-block;padding:.1rem .5rem;border-radius:20px;
+  font-size:.7rem;font-weight:600}
+.capex-tag{background:#1e1b4b;color:#a5b4fc;border:1px solid #4f46e5}
+.opex-tag{background:#451a03;color:#fcd34d;border:1px solid #d97706}
+.total-tag{background:#083344;color:#67e8f9;border:1px solid #0891b2}
+.amount-col{text-align:right;font-family:monospace;font-weight:600}
+.amount-capex{color:#818cf8}
+.amount-opex{color:var(--y)}
+.amount-total{color:var(--cyan);font-size:1rem}
+.amount-year1{color:var(--g2);font-size:1.05rem}
+.gt-divider td{background:var(--bg4);padding:.3rem 1.25rem;
+  font-size:.7rem;color:var(--tx3);font-style:italic}
+/* EXPANSION NOTES */
+.expansion-card{background:var(--bg2);border:1px solid #1e1e3f;border-radius:12px;
+  padding:1.25rem;margin-top:1.5rem}
+.expansion-card h3{font-size:.85rem;font-weight:700;color:var(--y);margin-bottom:.75rem}
+.expansion-card ol{padding-left:1.25rem}
+.expansion-card li{color:var(--tx3);font-size:.8rem;margin-bottom:.4rem;line-height:1.5}
+.expansion-card li strong{color:var(--tx2)}
+/* FOOTER */
+footer{background:var(--bg2);text-align:center;padding:2rem;color:var(--tx3);
+  font-size:.85rem;border-top:1px solid #1e1e3f}
+/* RESPONSIVE */
+@media(max-width:900px){
+  .bom-layout{flex-direction:column;padding:1rem}
+  .bom-sidebar{width:100%;position:static}
+  .section-nav{position:static}
+  nav ul{gap:.75rem}
+  .cost-banner{gap:.75rem}
+}
+@media(max-width:600px){
+  nav ul{display:none}
+  .bom-table th:nth-child(n+5){display:none}
+  .bom-table td:nth-child(n+5){display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV (matches yogabrata.com style) -->
+<nav>
+  <span class="logo">1o1 AI</span>
+  <ul>
+    <li><a href="/index.html#features">Features</a></li>
+    <li><a href="/index.html#how">How It Works</a></li>
+    <li><a href="/index.html#datacenter">Datacenter</a></li>
+    <li><a href="/research.html">Research</a></li>
+    <li><a href="/demo.html" class="btn btn-p">Live Demo</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-hero">
+  <div class="breadcrumb">
+    <a href="/index.html">Home</a><span>›</span>
+    <a href="/index.html#datacenter">Datacenter</a><span>›</span>
+    DC Detailing
+  </div>
+  <h1>DC Detailing — Bill of Materials</h1>
+  <p class="subtitle">
+    MANJULAB Ohio Data Center · PersonaPlex + LLM Brain + RAG · 5 TPS Scale<br>
+    Complete hardware, software, and service inventory with costs and status tracking.
+  </p>
+</div>
+
+<!-- COST SUMMARY BANNER -->
+<div class="cost-banner">
+  <div class="cost-item">
+    <div class="cost-val cv-capex">$43,400</div>
+    <div class="cost-lbl">Total CapEx (one-time)</div>
+  </div>
+  <div class="cost-item">
+    <div class="cost-val cv-opex">$880/mo</div>
+    <div class="cost-lbl">Monthly OpEx</div>
+  </div>
+  <div class="cost-item">
+    <div class="cost-val cv-opex">$10,560</div>
+    <div class="cost-lbl">Annual OpEx</div>
+  </div>
+  <div class="cost-item">
+    <div class="cost-val cv-total">$53,960</div>
+    <div class="cost-lbl">Year 1 Grand Total</div>
+  </div>
+  <div class="cost-item">
+    <div class="cost-val" style="color:#a78bfa">38</div>
+    <div class="cost-lbl">Total Components</div>
+  </div>
+  <div class="cost-item">
+    <div class="cost-val" style="color:#34d399">10</div>
+    <div class="cost-lbl">Architecture Layers</div>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="bom-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="bom-sidebar">
+    <div class="section-nav">
+      <div class="snav-header"><h3>BoM Sections</h3></div>
+      <a href="#hardware" class="snav-item">
+        <span>Hardware</span>
+        <span class="scost">$43,900</span>
+      </a>
+      <a href="#voice" class="snav-item">
+        <span>Voice Layer</span>
+        <span class="scost">$0</span>
+      </a>
+      <a href="#brain" class="snav-item">
+        <span>Brain Layer (LLM API)</span>
+        <span class="scost">$330</span>
+      </a>
+      <a href="#knowledge" class="snav-item">
+        <span>Knowledge Layer (RAG)</span>
+        <span class="scost">$0</span>
+      </a>
+      <a href="#support" class="snav-item">
+        <span>Support Services</span>
+        <span class="scost">$0</span>
+      </a>
+      <a href="#session" class="snav-item">
+        <span>Session Orchestrator</span>
+        <span class="scost">$0</span>
+      </a>
+      <a href="#gateway" class="snav-item">
+        <span>Gateway Layer</span>
+        <span class="scost">$0</span>
+      </a>
+      <a href="#client" class="snav-item">
+        <span>Client Layer</span>
+        <span class="scost">$50</span>
+      </a>
+      <a href="#security" class="snav-item">
+        <span>Security</span>
+        <span class="scost">$0</span>
+      </a>
+      <a href="#deployment" class="snav-item">
+        <span>Deployment</span>
+        <span class="scost">$0</span>
+      </a>
+      <a href="#summary" class="snav-item" style="border-bottom:none">
+        <span>Cost Summary</span>
+        <span class="scost">▼</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- CONTENT -->
+  <div class="bom-content">
+
+    <!-- ── HARDWARE ── -->
+    <div class="section-card" id="hardware">
+      <div class="section-header">
+        <div class="section-title">🖥️ Hardware — Infrastructure</div>
+        <div class="section-meta">
+          <span class="section-count">7 components</span>
+          <span class="section-total">$43,900</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="bom-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Vendor / Model</th>
+              <th>Qty</th>
+              <th style="text-align:right">Unit Cost</th>
+              <th style="text-align:right">Total</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="component-name">GPU Server</div><div class="subcomponent">NVIDIA A100 Node (48 GB VRAM)</div></td>
+              <td><div class="vendor-model"><span class="vendor">Dell / Supermicro</span><br><span class="model">PowerEdge R750xa + A100 PCIe</span></div></td>
+              <td>2</td>
+              <td class="cost-cell cost-nonzero">$15,000</td>
+              <td class="cost-cell cost-nonzero">$30,000</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">2x nodes for redundancy; primary PersonaPlex 7B INT8 inference</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Rack Application Server</div><div class="subcomponent">CPU App / Support Server (32-core, 128 GB RAM)</div></td>
+              <td><div class="vendor-model"><span class="vendor">Dell</span><br><span class="model">PowerEdge R550</span></div></td>
+              <td>2</td>
+              <td class="cost-cell cost-nonzero">$3,500</td>
+              <td class="cost-cell cost-nonzero">$7,000</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Hosts Redis, PostgreSQL, Prometheus, Grafana, Orchestrator</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">NAS Storage</div><div class="subcomponent">Network Attached Storage (12-bay, 48 TB raw)</div></td>
+              <td><div class="vendor-model"><span class="vendor">Synology</span><br><span class="model">RS1221+ w/ 12x4TB HDD</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-nonzero">$2,500</td>
+              <td class="cost-cell cost-nonzero">$2,500</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">RAG documents, transcript logs, database backups</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Core Switch</div><div class="subcomponent">SFP+ 10GbE Core Switch</div></td>
+              <td><div class="vendor-model"><span class="vendor">MikroTik</span><br><span class="model">CRS326-24S+2Q+</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-nonzero">$800</td>
+              <td class="cost-cell cost-nonzero">$800</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">10GbE fabric; upgrade to 25GbE at &gt;10 TPS</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Firewall / Edge Router</div><div class="subcomponent">Edge Firewall, NAT, VLAN, VPN</div></td>
+              <td><div class="vendor-model"><span class="vendor">Fortinet</span><br><span class="model">FortiGate 60F</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-nonzero">$700</td>
+              <td class="cost-cell cost-nonzero">$700</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">TLS offload, DDoS protection, VLAN segmentation</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">UPS Power</div><div class="subcomponent">Battery Backup Unit (per rack)</div></td>
+              <td><div class="vendor-model"><span class="vendor">APC</span><br><span class="model">Smart-UPS 3000VA RM 2U</span></div></td>
+              <td>2</td>
+              <td class="cost-cell cost-nonzero">$1,200</td>
+              <td class="cost-cell cost-nonzero">$2,400</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">15-min bridge per rack; auto-shutdown on extended outage</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Internet Connectivity</div><div class="subcomponent">Business Fiber ISP — <strong style="color:var(--y)">MONTHLY OpEx</strong></div></td>
+              <td><div class="vendor-model"><span class="vendor">AT&amp;T / Spectrum Business</span><br><span class="model">Business Fiber 1 Gbps</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-nonzero">$500</td>
+              <td class="cost-cell cost-nonzero">$500</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">** MONTHLY recurring; upgrade to 10 Gbps at &gt;10 TPS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-footer">Hardware Subtotal<strong>$43,900</strong></div>
+    </div>
+
+    <!-- ── VOICE LAYER ── -->
+    <div class="section-card" id="voice">
+      <div class="section-header">
+        <div class="section-title">🎙️ Voice Layer</div>
+        <div class="section-meta">
+          <span class="section-count">5 components</span>
+          <span class="section-total" style="color:var(--tx3)">$0</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="bom-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Vendor / Model</th>
+              <th>Qty</th>
+              <th style="text-align:right">Unit Cost</th>
+              <th style="text-align:right">Total</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="component-name">PersonaPlex 7B</div><div class="subcomponent">INT8 Quantized LLM Voice Model</div></td>
+              <td><div class="vendor-model"><span class="vendor">Meta / Community</span><br><span class="model">PersonaPlex 7B INT8</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Full-duplex; 70ms speaker switch; runs on A100 GPU node</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Mimi Encoder</div><div class="subcomponent">Speech to Token Encoder (PCM 24kHz input)</div></td>
+              <td><div class="vendor-model"><span class="vendor">Kyutai / Custom</span><br><span class="model">Mimi Encoder v1</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Converts raw PCM audio frames to discrete speech tokens</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Mimi Decoder</div><div class="subcomponent">Token to Speech Decoder (PCM 24kHz output)</div></td>
+              <td><div class="vendor-model"><span class="vendor">Kyutai / Custom</span><br><span class="model">Mimi Decoder v1</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Synthesizes PCM speech output from token sequence</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Temporal + Depth Transformer</div><div class="subcomponent">Full-duplex Dual-stream Transformer</div></td>
+              <td><div class="vendor-model"><span class="vendor">Custom</span><br><span class="model">Temporal + Depth Transformer</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Simultaneous listen + speak; 70ms context switch</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Text Prompt Injector</div><div class="subcomponent">LLM Answer to Voice Prompt Injector</div></td>
+              <td><div class="vendor-model"><span class="vendor">Custom</span><br><span class="model">Python Prompt Injector</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Injects Brain Layer LLM answer each dialogue turn dynamically</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-footer">Voice Layer Subtotal<strong style="color:var(--tx3)">$0 (OSS)</strong></div>
+    </div>
+
+    <!-- ── BRAIN LAYER ── -->
+    <div class="section-card" id="brain">
+      <div class="section-header">
+        <div class="section-title">🧠 Brain Layer (LLM API)</div>
+        <div class="section-meta">
+          <span class="section-count">5 components</span>
+          <span class="section-total">$330/mo</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="bom-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Vendor / Model</th>
+              <th>Qty</th>
+              <th style="text-align:right">Unit Cost</th>
+              <th style="text-align:right">Total</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="component-name">GPT-4o mini</div><div class="subcomponent">Primary LLM API — 80% of traffic</div></td>
+              <td><div class="vendor-model"><span class="vendor">OpenAI</span><br><span class="model">GPT-4o mini (2024-07-18)</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-nonzero">$50</td>
+              <td class="cost-cell cost-nonzero">$50</td>
+              <td><span class="badge badge-active">Active</span></td>
+              <td class="notes-cell">$0.15 in / $0.60 out per M tokens; majority of routine calls</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Gemini 1.5 Flash</div><div class="subcomponent">Budget LLM API — overflow / cheapest</div></td>
+              <td><div class="vendor-model"><span class="vendor">Google DeepMind</span><br><span class="model">Gemini 1.5 Flash</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-nonzero">$30</td>
+              <td class="cost-cell cost-nonzero">$30</td>
+              <td><span class="badge badge-active">Active</span></td>
+              <td class="notes-cell">$0.075 in / $0.30 out per M tokens; lowest cost at volume</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Claude Haiku</div><div class="subcomponent">Quality LLM API — best quality/price ratio</div></td>
+              <td><div class="vendor-model"><span class="vendor">Anthropic</span><br><span class="model">Claude 3 Haiku</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-nonzero">$50</td>
+              <td class="cost-cell cost-nonzero">$50</td>
+              <td><span class="badge badge-active">Active</span></td>
+              <td class="notes-cell">$0.25 in / $1.25 out per M tokens; nuanced quality tasks</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">GPT-4o / Claude Sonnet</div><div class="subcomponent">Premium LLM API — 20% complex tasks</div></td>
+              <td><div class="vendor-model"><span class="vendor">OpenAI / Anthropic</span><br><span class="model">GPT-4o + Claude Sonnet 3.5</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-nonzero">$200</td>
+              <td class="cost-cell cost-nonzero">$200</td>
+              <td><span class="badge badge-active">Active</span></td>
+              <td class="notes-cell">$2.50+ in / $10+ out per M tokens; complex reasoning</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Smart LLM Router</div><div class="subcomponent">Complexity-based LLM Request Router</div></td>
+              <td><div class="vendor-model"><span class="vendor">Custom</span><br><span class="model">Python Smart Router v1</span></div></td>
+              <td>1</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Routes 80% cheap / 20% premium based on prompt complexity score</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-footer">Brain Layer Subtotal<strong>$330/mo</strong></div>
+    </div>
+
+    <!-- ── KNOWLEDGE LAYER ── -->
+    <div class="section-card" id="knowledge">
+      <div class="section-header">
+        <div class="section-title">📚 Knowledge Layer (RAG)</div>
+        <div class="section-meta">
+          <span class="section-count">5 components</span>
+          <span class="section-total" style="color:var(--tx3)">$0 (OSS)</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="bom-table">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Vendor / Model</th>
+              <th>Qty</th>
+              <th style="text-align:right">Total</th>
+              <th>Status</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="component-name">RAG Pipeline</div><div class="subcomponent">Retrieval-Augmented Generation Orchestrator</div></td>
+              <td><div class="vendor-model"><span class="vendor">Custom</span><br><span class="model">LangChain / LlamaIndex</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Orchestrates embedding, retrieval, re-ranking, answer grounding</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">BGE-small Embedder</div><div class="subcomponent">Text Embedding Model (384-dim vectors)</div></td>
+              <td><div class="vendor-model"><span class="vendor">BAAI</span><br><span class="model">BGE-small-en-v1.5</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Self-hosted; 33M params; CPU-inferrable at low latency</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Qdrant / FAISS</div><div class="subcomponent">Vector Database for Embedding Search</div></td>
+              <td><div class="vendor-model"><span class="vendor">Qdrant / Meta FAIR</span><br><span class="model">Qdrant CE / FAISS v1.7</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Stores 384-dim vectors; ANN search &lt;50ms target</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Re-ranker</div><div class="subcomponent">Cross-encoder Result Re-ranker</div></td>
+              <td><div class="vendor-model"><span class="vendor">HuggingFace / Custom</span><br><span class="model">ms-marco-MiniLM-L-6-v2</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Improves top-K retrieval precision before answer injection</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Document Store</div><div class="subcomponent">Source Docs Ingest (PDF / FAQ / CRM / Webhooks)</div></td>
+              <td><div class="vendor-model"><span class="vendor">Custom / MinIO</span><br><span class="model">MinIO OSS (S3-compatible)</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Holds raw knowledge corpus; event-triggered re-indexing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-footer">Knowledge Layer Subtotal<strong style="color:var(--tx3)">$0 (OSS)</strong></div>
+    </div>
+
+    <!-- ── SUPPORT SERVICES ── -->
+    <div class="section-card" id="support">
+      <div class="section-header">
+        <div class="section-title">🛠️ Support Services</div>
+        <div class="section-meta">
+          <span class="section-count">6 components</span>
+          <span class="section-total" style="color:var(--tx3)">$0 (OSS)</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="bom-table">
+          <thead><tr>
+            <th>Component</th><th>Vendor / Model</th><th>Qty</th>
+            <th style="text-align:right">Total</th><th>Status</th><th>Notes</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="component-name">Redis</div><div class="subcomponent">In-memory Cache &amp; Session Layer</div></td>
+              <td><div class="vendor-model"><span class="vendor">Redis Labs</span><br><span class="model">Redis CE 7.2</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Session state, pub/sub audio events, rate-limit counters</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">PostgreSQL</div><div class="subcomponent">Primary Relational Database</div></td>
+              <td><div class="vendor-model"><span class="vendor">PostgreSQL Global Dev Group</span><br><span class="model">PostgreSQL 16</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Users, transcripts, billing records, system configuration</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Prometheus</div><div class="subcomponent">Metrics Scraping &amp; Alerting</div></td>
+              <td><div class="vendor-model"><span class="vendor">CNCF</span><br><span class="model">Prometheus 2.48</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Scrapes GPU util, latency, token usage; AlertManager integration</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Grafana</div><div class="subcomponent">Metrics Visualization &amp; Ops Dashboard</div></td>
+              <td><div class="vendor-model"><span class="vendor">Grafana Labs</span><br><span class="model">Grafana CE 10.3</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Real-time dashboards: GPU%, p99 latency, LLM cost/min, margin</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Transcript Logger</div><div class="subcomponent">Conversation Analytics &amp; Logging Service</div></td>
+              <td><div class="vendor-model"><span class="vendor">Custom</span><br><span class="model">Python FastAPI Logger</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Stores, indexes, and exports all call transcripts to PostgreSQL</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Admin Dashboard</div><div class="subcomponent">Knowledge-Base Management UI</div></td>
+              <td><div class="vendor-model"><span class="vendor">Custom</span><br><span class="model">React + FastAPI Admin</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Manage KB docs, model routing config, usage reporting</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-footer">Support Services Subtotal<strong style="color:var(--tx3)">$0 (OSS)</strong></div>
+    </div>
+
+    <!-- ── SESSION ORCHESTRATOR ── -->
+    <div class="section-card" id="session">
+      <div class="section-header">
+        <div class="section-title">⚙️ Session Orchestrator</div>
+        <div class="section-meta">
+          <span class="section-count">1 component</span>
+          <span class="section-total" style="color:var(--tx3)">$0</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="bom-table">
+          <thead><tr>
+            <th>Component</th><th>Vendor / Model</th><th>Qty</th>
+            <th style="text-align:right">Total</th><th>Status</th><th>Notes</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="component-name">Session Orchestrator</div><div class="subcomponent">Audio Routing + GPU/LLM Orchestrator</div></td>
+              <td><div class="vendor-model"><span class="vendor">Custom</span><br><span class="model">Python 3.11 AsyncIO Service</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Routes PCM audio, intercepts monologue, injects LLM response dynamically</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-footer">Session Orchestrator Subtotal<strong style="color:var(--tx3)">$0</strong></div>
+    </div>
+
+    <!-- ── GATEWAY LAYER ── -->
+    <div class="section-card" id="gateway">
+      <div class="section-header">
+        <div class="section-title">🌐 Gateway Layer</div>
+        <div class="section-meta">
+          <span class="section-count">1 component</span>
+          <span class="section-total" style="color:var(--tx3)">$0</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="bom-table">
+          <thead><tr>
+            <th>Component</th><th>Vendor / Model</th><th>Qty</th>
+            <th style="text-align:right">Total</th><th>Status</th><th>Notes</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="component-name">nginx Gateway</div><div class="subcomponent">TLS Termination + WebSocket Reverse Proxy</div></td>
+              <td><div class="vendor-model"><span class="vendor">nginx Inc.</span><br><span class="model">nginx OSS 1.25</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Rate limit: 5 concurrent conns; wss:// proxy; upgrade at scale</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-footer">Gateway Layer Subtotal<strong style="color:var(--tx3)">$0 (OSS)</strong></div>
+    </div>
+
+    <!-- ── CLIENT LAYER ── -->
+    <div class="section-card" id="client">
+      <div class="section-header">
+        <div class="section-title">💻 Client Layer</div>
+        <div class="section-meta">
+          <span class="section-count">3 components</span>
+          <span class="section-total">$50/mo</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="bom-table">
+          <thead><tr>
+            <th>Component</th><th>Vendor / Model</th><th>Qty</th>
+            <th style="text-align:right">Total</th><th>Status</th><th>Notes</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="component-name">WebRTC / WebSocket</div><div class="subcomponent">Real-time Browser Voice Interface</div></td>
+              <td><div class="vendor-model"><span class="vendor">W3C / Custom JS</span><br><span class="model">Browser WebRTC + WebSocket Stack</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-active">Active</span></td>
+              <td class="notes-cell">PCM 24kHz bidirectional; target &lt;100ms glass-to-glass latency</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Twilio SIP Trunk</div><div class="subcomponent">PSTN / Phone-In Integration — <strong style="color:var(--y)">MONTHLY OpEx</strong></div></td>
+              <td><div class="vendor-model"><span class="vendor">Twilio</span><br><span class="model">Elastic SIP Trunking</span></div></td>
+              <td>1</td><td class="cost-cell cost-nonzero">$50</td>
+              <td><span class="badge badge-active">Active</span></td>
+              <td class="notes-cell">** MONTHLY; ~$0.01/min inbound PSTN; ~5k min/mo at 5 TPS</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Web Voice Widget</div><div class="subcomponent">Embeddable Browser Voice Widget</div></td>
+              <td><div class="vendor-model"><span class="vendor">Custom</span><br><span class="model">JS / React Embeddable Widget</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Drop-in &lt;script&gt; embed for client websites; mobile-responsive</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-footer">Client Layer Subtotal<strong>$50/mo</strong></div>
+    </div>
+
+    <!-- ── SECURITY ── -->
+    <div class="section-card" id="security">
+      <div class="section-header">
+        <div class="section-title">🔒 Security</div>
+        <div class="section-meta">
+          <span class="section-count">3 components</span>
+          <span class="section-total" style="color:var(--tx3)">$0</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="bom-table">
+          <thead><tr>
+            <th>Component</th><th>Vendor / Model</th><th>Qty</th>
+            <th style="text-align:right">Total</th><th>Status</th><th>Notes</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="component-name">Identity &amp; JWT Auth</div><div class="subcomponent">Authentication, Authorization &amp; RBAC</div></td>
+              <td><div class="vendor-model"><span class="vendor">Custom</span><br><span class="model">Python-jose + FastAPI Auth</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">JWT issuance, refresh, RBAC, per-tenant API key management</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">HashiCorp Vault</div><div class="subcomponent">Secrets &amp; API Key Manager</div></td>
+              <td><div class="vendor-model"><span class="vendor">HashiCorp</span><br><span class="model">Vault CE 1.15</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">Stores LLM API keys, DB creds, TLS private keys securely</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">TLS Certificates</div><div class="subcomponent">SSL/TLS Cert Automation (all layers)</div></td>
+              <td><div class="vendor-model"><span class="vendor">Let's Encrypt / EFF</span><br><span class="model">Certbot + ACME v2</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-active">Active</span></td>
+              <td class="notes-cell">Auto-renewing 90-day wildcard certs via DNS challenge; zero cost</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-footer">Security Subtotal<strong style="color:var(--tx3)">$0 (OSS)</strong></div>
+    </div>
+
+    <!-- ── DEPLOYMENT ── -->
+    <div class="section-card" id="deployment">
+      <div class="section-header">
+        <div class="section-title">🐳 Deployment</div>
+        <div class="section-meta">
+          <span class="section-count">2 components</span>
+          <span class="section-total" style="color:var(--tx3)">$0</span>
+        </div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="bom-table">
+          <thead><tr>
+            <th>Component</th><th>Vendor / Model</th><th>Qty</th>
+            <th style="text-align:right">Total</th><th>Status</th><th>Notes</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <td><div class="component-name">Docker Compose</div><div class="subcomponent">Dev &amp; Staging Container Orchestration</div></td>
+              <td><div class="vendor-model"><span class="vendor">Docker Inc.</span><br><span class="model">Docker CE + Compose v2</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">All services in docker-compose.yml; quick local iteration</td>
+            </tr>
+            <tr>
+              <td><div class="component-name">Kubernetes (K3s)</div><div class="subcomponent">Production Multi-node Container Orchestration</div></td>
+              <td><div class="vendor-model"><span class="vendor">CNCF / Rancher Labs</span><br><span class="model">K3s v1.29 / kubeadm</span></div></td>
+              <td>1</td><td class="cost-cell cost-zero">$0</td>
+              <td><span class="badge badge-planned">Planned</span></td>
+              <td class="notes-cell">HPA for voice pods; rolling deploys; upgrade to 25GbE at 10 TPS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="section-footer">Deployment Subtotal<strong style="color:var(--tx3)">$0 (OSS)</strong></div>
+    </div>
+
+    <!-- ── GRAND TOTAL SUMMARY ── -->
+    <div class="grand-total-card" id="summary">
+      <div class="gt-header">
+        <h2>💰 COST SUMMARY — MANJULAB Ohio DC · PersonaPlex + LLM Brain + RAG · 5 TPS</h2>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="gt-table">
+          <thead>
+            <tr>
+              <th>Cost Category</th>
+              <th>Budget Type</th>
+              <th style="text-align:right">Amount</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hardware — servers, switches, UPS, NAS (ex. ISP monthly)</td>
+              <td><span class="budget-tag capex-tag">CapEx (one-time)</span></td>
+              <td class="amount-col amount-capex">$43,400</td>
+              <td style="font-size:.75rem;color:var(--tx3)">One-time hardware minus monthly ISP</td>
+            </tr>
+            <tr>
+              <td>Voice Layer — model weights (OSS / open source)</td>
+              <td><span class="budget-tag capex-tag">CapEx (one-time)</span></td>
+              <td class="amount-col" style="color:var(--tx3)">$0</td>
+              <td style="font-size:.75rem;color:var(--tx3)">Open-source weights; $0 license cost</td>
+            </tr>
+            <tr>
+              <td>Knowledge Layer — OSS RAG pipeline + vector DB</td>
+              <td><span class="budget-tag capex-tag">CapEx (one-time)</span></td>
+              <td class="amount-col" style="color:var(--tx3)">$0</td>
+              <td style="font-size:.75rem;color:var(--tx3)">LangChain / Qdrant / BGE-small — all OSS</td>
+            </tr>
+            <tr>
+              <td>Support Services — OSS stack (Redis, PG, Prometheus, Grafana)</td>
+              <td><span class="budget-tag capex-tag">CapEx (one-time)</span></td>
+              <td class="amount-col" style="color:var(--tx3)">$0</td>
+              <td style="font-size:.75rem;color:var(--tx3)">All open-source; $0 license</td>
+            </tr>
+            <tr>
+              <td>Session Orchestrator + Gateway + Client + Security + Deployment</td>
+              <td><span class="budget-tag capex-tag">CapEx (one-time)</span></td>
+              <td class="amount-col" style="color:var(--tx3)">$0</td>
+              <td style="font-size:.75rem;color:var(--tx3)">All OSS; dev labor cost separate</td>
+            </tr>
+            <tr style="background:#1e1b4b22">
+              <td style="font-weight:700;color:#a5b4fc">TOTAL CapEx (one-time hardware + setup)</td>
+              <td><span class="budget-tag capex-tag" style="font-weight:700">CapEx</span></td>
+              <td class="amount-col amount-capex" style="font-size:1.05rem">$43,400</td>
+              <td style="font-size:.75rem;color:var(--tx3)">Upfront investment for MANJULAB Ohio</td>
+            </tr>
+            <tr class="gt-divider"><td colspan="4">── Monthly Operating Expenses ──</td></tr>
+            <tr>
+              <td>LLM APIs — GPT-4o mini + Gemini Flash + Claude Haiku + Premium</td>
+              <td><span class="budget-tag opex-tag">OpEx (monthly)</span></td>
+              <td class="amount-col amount-opex">$330</td>
+              <td style="font-size:.75rem;color:var(--tx3)">Monthly API spend at 5 TPS; scales with volume</td>
+            </tr>
+            <tr>
+              <td>Internet / ISP — Business Fiber 1 Gbps</td>
+              <td><span class="budget-tag opex-tag">OpEx (monthly)</span></td>
+              <td class="amount-col amount-opex">$500</td>
+              <td style="font-size:.75rem;color:var(--tx3)">Recurring monthly; upgrade to 10G at &gt;10 TPS</td>
+            </tr>
+            <tr>
+              <td>Twilio SIP — PSTN inbound (monthly estimate)</td>
+              <td><span class="budget-tag opex-tag">OpEx (monthly)</span></td>
+              <td class="amount-col amount-opex">$50</td>
+              <td style="font-size:.75rem;color:var(--tx3)">~$0.01/min; ~5,000 min/mo at 5 TPS</td>
+            </tr>
+            <tr style="background:#451a0322">
+              <td style="font-weight:700;color:#fcd34d">TOTAL Monthly OpEx (APIs + ISP + Twilio)</td>
+              <td><span class="budget-tag opex-tag" style="font-weight:700">OpEx / month</span></td>
+              <td class="amount-col amount-opex" style="font-size:1.05rem">$880</td>
+              <td style="font-size:.75rem;color:var(--tx3)">Monthly recurring spend</td>
+            </tr>
+            <tr>
+              <td style="color:var(--tx3)">TOTAL Annual OpEx (× 12 months)</td>
+              <td><span class="budget-tag opex-tag">OpEx / year</span></td>
+              <td class="amount-col amount-opex">$10,560</td>
+              <td style="font-size:.75rem;color:var(--tx3)">Annual recurring spend estimate</td>
+            </tr>
+            <tr style="background:#07231622;border-top:2px solid #16a34a">
+              <td style="font-weight:800;color:#4ade80;font-size:1rem">YEAR 1 GRAND TOTAL (CapEx + Annual OpEx)</td>
+              <td><span class="budget-tag total-tag" style="font-weight:700">Year 1 Total</span></td>
+              <td class="amount-col amount-year1" style="font-size:1.2rem">$53,960</td>
+              <td style="font-size:.75rem;color:var(--tx3)">Full Year 1: build-out + 12 months operations</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- EXPANSION NOTES -->
+    <div class="expansion-card">
+      <h3>🚀 Future Expansion Notes</h3>
+      <ol>
+        <li><strong>25GbE Network Fabric:</strong> Upgrade MikroTik 10GbE to CRS354 or Arista 7050SX3 at &gt;10 TPS or video workloads.</li>
+        <li><strong>GPU Redundancy:</strong> Add 2nd A100 node for active-active GPU redundancy at 10 TPS.</li>
+        <li><strong>Gateway Scale:</strong> Migrate nginx OSS to nginx Plus or HAProxy Enterprise at &gt;500 concurrent sessions.</li>
+        <li><strong>ISP Upgrade:</strong> Upgrade to 10 Gbps symmetric fiber for low-latency multi-tenant streaming.</li>
+        <li><strong>GPU Operator:</strong> Add Kubernetes GPU Operator for dynamic scheduling across GPU nodes.</li>
+        <li><strong>Global CDN:</strong> Add Cloudflare CDN + TURN/STUN relay for global WebRTC client scale.</li>
+      </ol>
+    </div>
+
+  </div><!-- /bom-content -->
+</div><!-- /bom-layout -->
+
+<footer>
+  <p>2025 ManjuLAB — whizyoga@manjulab.com — +1 425-502-1519</p>
+  <p style="margin-top:.5rem">
+    <a href="https://github.com/1o1-ai">GitHub</a> ·
+    <a href="/research.html">Research</a> ·
+    <a href="/demo.html">Demo</a> ·
+    <a href="/index.html#datacenter">Datacenter</a>
+  </p>
+</footer>
+
+</body>
+</html>
