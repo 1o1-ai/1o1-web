@@ -33,6 +33,7 @@
     <div id="apiStatus" class="api-status offline">
       <span class="dot"></span>
       <span data-i18n="apiChecking">Checking academy API…</span>
+      <span class="api-endpoint" id="apiEndpoint" hidden aria-live="polite"></span>
     </div>
 
     <section class="hero-block">
@@ -51,13 +52,13 @@
         loading="lazy"
       />
       <div>
-        <h2 data-i18n="schoolTitle">উত্তরপাড়া অমরেন্দ্র বিদ্যাপীথ</h2>
+        <h2><a class="school-title-link" href="/uap/" data-i18n="schoolTitle">উত্তরপাড়া অমরেন্দ্র বিদ্যাপীথ</a></h2>
         <p class="meta" data-i18n="schoolMeta">Uttarpara, Hooghly · Est. 1939 · WBBSE / WBCHSE</p>
         <p data-i18n="schoolBody">
           This academy is a student-led attempt from Uttarpara Amarendra Vidyapith — a Bengali-medium boys' school
-          serving Classes I–XII in the Hooghly district. Named after freedom fighter Amarendra Nath Chattopadhyay,
-          the school draws students from Uttarpara, Hindmotor, Bally, Belur, Serampore, and nearby towns.
+          serving Classes I–XII in the Hooghly district.
         </p>
+        <a class="wiki uap-page-link" href="/uap/" data-i18n="schoolPageLink">Student team &amp; school page →</a>
         <a class="wiki" href="https://en.wikipedia.org/wiki/Uttarpara_Amarendra_Vidyapith" target="_blank" rel="noopener" data-i18n="wikiLink">Wikipedia →</a>
         <div class="school-facts">
           <span data-i18n="fact1">~1500 students</span>
@@ -77,11 +78,12 @@
     <section class="tool-panel active" id="panel-practice">
       <p class="footnote" style="margin-bottom:12px" data-i18n="practiceHint">TruthGuard-grounded WBBSE &amp; WBCHSE mock tests.</p>
       <div class="launch-row" style="margin-bottom:16px">
-        <a class="btn-primary" id="openPractice" href="/wb-academy/widget/practice-test.html" target="_blank" rel="noopener" data-i18n="openPractice">Open full practice page</a>
-        <a class="btn-secondary" id="openLabLink" href="/wb-academy/training-lab" target="_blank" rel="noopener" data-i18n="openLab">Training lab</a>
+        <a class="btn-primary" id="openPractice" href="#" data-i18n="openPractice">Open full practice page</a>
+        <a class="btn-secondary" id="openLabLink" href="#" data-i18n="openLab">Training lab</a>
       </div>
       <div class="embed-full">
-        <iframe id="practiceFrame" title="Practice test" src="/wb-academy/widget/practice-test.html?medium=Bengali&track=wbbse"></iframe>
+        <p id="practiceOffline" class="embed-offline" hidden></p>
+        <iframe id="practiceFrame" title="Practice test" hidden></iframe>
       </div>
     </section>
 
@@ -117,7 +119,8 @@
     <section class="tool-panel" id="panel-lab">
       <p data-i18n="labDesc">Human reviewers rate AI answers — training data for TruthGuard. Login: yoga / yoga</p>
       <div class="embed-full" style="margin-top:16px">
-        <iframe id="labFrame" title="Eval lab" src="/wb-academy/training-lab"></iframe>
+        <p id="labOffline" class="embed-offline" hidden></p>
+        <iframe id="labFrame" title="Eval lab" hidden></iframe>
       </div>
     </section>
   </main>

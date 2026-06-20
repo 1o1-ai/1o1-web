@@ -1,19 +1,25 @@
 (function () {
   'use strict';
 
-  var API_BASE = resolveApiBase();
+  var API_FALLBACK = 'https://api.brahmando.com/wb-academy';
+  var API_CANDIDATES = buildCandidates();
 
-  function resolveApiBase() {
+  var API_BASE = '';
+  var lang = localStorage.getItem('rhytoma_lang') || 'bn';
+  var apiOnline = false;
+
+  function buildCandidates() {
     var params = new URLSearchParams(location.search);
     var explicit = params.get('api');
-    if (explicit) return explicit.replace(/\/$/, '');
-    if (location.hostname.endsWith('yogabrata.com')) {
-      return location.origin + '/wb-academy';
-    }
+    if (explicit) return [explicit.replace(/\/$/, '')];
+
+    var list = [];
     if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-      return 'http://127.0.0.1:8140';
+      list.push('http://127.0.0.1:8140');
     }
-    return location.origin + '/wb-academy';
+    list.push(location.origin.replace(/\/$/, '') + '/wb-academy');
+    list.push(API_FALLBACK);
+    return list.filter(function (v, i, a) { return a.indexOf(v) === i; });
   }
 
   var COPY = {
@@ -22,13 +28,15 @@
       pageTitle: 'ঋতমা Academy',
       apiChecking: 'একাডেমি API যাচাই হচ্ছে…',
       apiOnline: 'একাডেমি API সচল',
-      apiOffline: 'API এখনও ডিপ্লয় হচ্ছে — UI কাজ করবে, উত্তর পরে',
+      apiOffline: 'একাডেমি API এখনো সচল নয় — চ্যাট ও পরীক্ষা API চালু হলে কাজ করবে',
+      apiEndpoint: 'API',
       eyebrow: 'পশ্চিমবঙ্গ বোর্ড · TruthGuard',
       heroTitle: 'ঋতমা Academy',
       heroLede: 'WBBSE/WBCHSE — শুধুমাত্র যাচাইকৃত পাঠ্যপুস্তক থেকে AI উত্তর। কোনো ভুয়ো তথ্য নয়।',
       schoolTitle: 'উত্তরপাড়া অমরেন্দ্র বিদ্যাপীথ',
       schoolMeta: 'উত্তরপাড়া, হুগলি · প্রত. ১৯৩৯ · WBBSE / WBCHSE',
-      schoolBody: 'এই একাডেমি উত্তরপাড়া অমরেন্দ্র বিদ্যাপীথের শিক্ষার্থীদের একটি প্রচেষ্টা — বাংলা মাধ্যমিক পাঠ্যক্রম (ক্লাস I–XII)। স্বাধীনতাসংগ্রামী অমরেন্দ্রনাথ চট্টোপাধ্যায়ের নামে প্রতিষ্ঠিত; উত্তরপাড়া, হিন্দমোটর, বেলুর, সিরামপুর ও আশপাশের এলাকা থেকে শিক্ষার্থী আসে।',
+      schoolBody: 'এই একাডেমি উত্তরপাড়া অমরেন্দ্র বিদ্যাপীথের শিক্ষার্থীদের একটি প্রচেষ্টা — প্রশান্ত মুখার্জি, অমরনাথ খাঁ, হারু দাস, যোগোব্রত মুখার্জি ও অন্যান্য সহপাঠীদের নিয়ে গড়ে ওঠা TruthGuard পশ্চিমবঙ্গ বোর্ড শিক্ষা।',
+      schoolPageLink: 'শিক্ষার্থী দল ও বিদ্যালয় পৃষ্ঠা →',
       wikiLink: 'উইকিপিডিয়া →',
       fact1: '~১৫০০ শিক্ষার্থী',
       fact2: 'বাংলা মাধ্যম',
@@ -41,29 +49,33 @@
       openPractice: 'পূর্ণ অভ্যাস পৃষ্ঠা',
       openLab: 'প্রশিক্ষণ ল্যাব',
       labDesc: 'মানুষের রিভিউয়ার AI উত্তর যাচাই করে — TruthGuard প্রশিক্ষণ। লগইন: yoga / yoga',
+      embedOffline: 'একাডেমি API চালু হলে এখানে অভ্যাস পরীক্ষা ও ল্যাব লোড হবে।',
       actorStudent: 'শিক্ষার্থী',
       actorTeacher: 'শিক্ষক',
       actorSchool: 'বিদ্যালয়',
       actorCoaching: 'কোচিং',
       chatPlaceholder: 'WBBSE সিলেবাস, অনুশীলন বা কোনো অধ্যায় সম্পর্কে জিজ্ঞাসা…',
+      chatDisabled: 'API অফলাইন — প্রশ্ন পাঠানো যাবে না',
       sendBtn: 'পাঠান',
       sampleBtn: 'নমুনা প্রশ্ন',
       sampleQ: 'ক্লাস দশ WBBSE বিজ্ঞান — সালোকসংশ্লেষণ সম্পর্কে ৫টি MCQ তৈরি করুন।',
       thinking: 'চিন্তা করছে…',
-      errOffline: 'API অফলাইন। পরে আবার চেষ্টা করুন।',
+      errOffline: 'একাডেমি API পৌঁছানো যায়নি। কিছুক্ষণ পর আবার চেষ্টা করুন।',
     },
     en: {
       back: '← Yogabrata',
       pageTitle: 'Rhytoma Academy',
       apiChecking: 'Checking academy API…',
       apiOnline: 'Academy API online',
-      apiOffline: 'API deploying — UI works; answers when live',
+      apiOffline: 'Academy API not live yet — chat and tests work once the API is up',
+      apiEndpoint: 'API',
       eyebrow: 'West Bengal Board · TruthGuard',
       heroTitle: 'Rhytoma (ঋতমা) Academy',
       heroLede: 'WBBSE/WBCHSE — AI answers from verified textbooks only. No hallucination.',
       schoolTitle: 'Uttarpara Amarendra Vidyapith',
       schoolMeta: 'Uttarpara, Hooghly · Est. 1939 · WBBSE / WBCHSE',
-      schoolBody: 'This academy is a student-led attempt from Uttarpara Amarendra Vidyapith — a Bengali-medium boys\' school (Classes I–XII) in Hooghly. Named for freedom fighter Amarendra Nath Chattopadhyay; students come from Uttarpara, Hindmotor, Bally, Belur, Serampore, and nearby areas.',
+      schoolBody: 'This academy is a student-led attempt from Uttarpara Amarendra Vidyapith — built by Prashant Mukherjee, Amarnath Khan, Haru Das, Yogobrata Mukherjee, and fellow students listed on the school page.',
+      schoolPageLink: 'Student team & school page →',
       wikiLink: 'Wikipedia →',
       fact1: '~1500 students',
       fact2: 'Bengali medium',
@@ -76,24 +88,104 @@
       openPractice: 'Open full practice page',
       openLab: 'Training lab',
       labDesc: 'Human reviewers validate AI answers for TruthGuard training. Login: yoga / yoga',
+      embedOffline: 'Practice test and lab load here when the academy API is online.',
       actorStudent: 'Student',
       actorTeacher: 'Teacher',
       actorSchool: 'School',
       actorCoaching: 'Coaching',
       chatPlaceholder: 'Ask about WBBSE syllabus, practice, or a topic…',
+      chatDisabled: 'API offline — cannot send questions',
       sendBtn: 'Send',
       sampleBtn: 'Sample question',
       sampleQ: 'Generate 5 MCQs on photosynthesis for WBBSE Class 10 Science.',
       thinking: 'Thinking…',
-      errOffline: 'API offline. Try again when deployed.',
+      errOffline: 'Could not reach the academy API. Try again shortly.',
     },
   };
 
-  var lang = localStorage.getItem('rhytoma_lang') || 'bn';
-  var apiOnline = false;
-
   function t(key) {
     return (COPY[lang] || COPY.en)[key] || COPY.en[key] || key;
+  }
+
+  function widgetUrl(path, extraQuery) {
+    var q = extraQuery ? ('?' + extraQuery) : '';
+    if (!API_BASE) return '#';
+    return API_BASE + path + q;
+  }
+
+  function updateApiLinks() {
+    var medium = lang === 'bn' ? 'Bengali' : 'English';
+    var practiceQ = 'medium=' + encodeURIComponent(medium) + '&track=wbbse';
+    if (API_BASE) practiceQ += '&api=' + encodeURIComponent(API_BASE);
+
+    var openPractice = document.getElementById('openPractice');
+    var openLabLink = document.getElementById('openLabLink');
+    if (openPractice) {
+      openPractice.href = apiOnline ? widgetUrl('/widget/practice-test.html', practiceQ) : '#';
+      openPractice.target = apiOnline ? '_blank' : '';
+      openPractice.rel = apiOnline ? 'noopener' : '';
+      openPractice.setAttribute('aria-disabled', apiOnline ? 'false' : 'true');
+      openPractice.classList.toggle('btn-disabled', !apiOnline);
+    }
+    if (openLabLink) {
+      openLabLink.href = apiOnline ? widgetUrl('/training-lab') : '#';
+      openLabLink.target = apiOnline ? '_blank' : '';
+      openLabLink.rel = apiOnline ? 'noopener' : '';
+      openLabLink.setAttribute('aria-disabled', apiOnline ? 'false' : 'true');
+      openLabLink.classList.toggle('btn-disabled', !apiOnline);
+    }
+
+    var pf = document.getElementById('practiceFrame');
+    var lf = document.getElementById('labFrame');
+    var po = document.getElementById('practiceOffline');
+    var lo = document.getElementById('labOffline');
+
+    if (pf) {
+      if (apiOnline) {
+        pf.src = widgetUrl('/widget/practice-test.html', practiceQ);
+        pf.hidden = false;
+        if (po) po.hidden = true;
+      } else {
+        pf.removeAttribute('src');
+        pf.hidden = true;
+        if (po) {
+          po.hidden = false;
+          po.textContent = t('embedOffline');
+        }
+      }
+    }
+    if (lf) {
+      if (apiOnline) {
+        lf.src = widgetUrl('/training-lab');
+        lf.hidden = false;
+        if (lo) lo.hidden = true;
+      } else {
+        lf.removeAttribute('src');
+        lf.hidden = true;
+        if (lo) {
+          lo.hidden = false;
+          lo.textContent = t('embedOffline');
+        }
+      }
+    }
+
+    var chatInput = document.getElementById('chatInput');
+    var sendBtn = document.querySelector('#chatForm button[type="submit"]');
+    if (chatInput) {
+      chatInput.disabled = !apiOnline;
+      chatInput.placeholder = apiOnline ? t('chatPlaceholder') : t('chatDisabled');
+    }
+    if (sendBtn) sendBtn.disabled = !apiOnline;
+
+    var ep = document.getElementById('apiEndpoint');
+    if (ep) {
+      if (apiOnline && API_BASE) {
+        ep.hidden = false;
+        ep.textContent = '· ' + API_BASE.replace(/^https?:\/\//, '');
+      } else {
+        ep.hidden = true;
+      }
+    }
   }
 
   function applyLang() {
@@ -108,16 +200,10 @@
       var k = el.getAttribute('data-i18n-opt');
       if (COPY[lang][k]) el.textContent = COPY[lang][k];
     });
-    var chatInput = document.getElementById('chatInput');
-    if (chatInput) chatInput.placeholder = t('chatPlaceholder');
     document.querySelectorAll('.lang-btn').forEach(function (btn) {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
-    var medium = lang === 'bn' ? 'Bengali' : 'English';
-    var pf = document.getElementById('practiceFrame');
-    if (pf) {
-      pf.src = '/wb-academy/widget/practice-test.html?medium=' + encodeURIComponent(medium) + '&track=wbbse';
-    }
+    updateApiLinks();
     localStorage.setItem('rhytoma_lang', lang);
   }
 
@@ -131,8 +217,8 @@
   document.querySelectorAll('.tool-tab').forEach(function (tab) {
     tab.addEventListener('click', function () {
       var tool = tab.dataset.tool;
-      document.querySelectorAll('.tool-tab').forEach(function (t) {
-        t.classList.toggle('active', t === tab);
+      document.querySelectorAll('.tool-tab').forEach(function (tb) {
+        tb.classList.toggle('active', tb === tab);
       });
       document.querySelectorAll('.tool-panel').forEach(function (p) {
         p.classList.toggle('active', p.id === 'panel-' + tool);
@@ -149,20 +235,59 @@
     log.scrollTop = log.scrollHeight;
   }
 
+  async function probeApi(base) {
+    var res = await fetch(base + '/health', { cache: 'no-store', mode: 'cors' });
+    if (!res.ok) throw new Error('offline');
+    var data = await res.json();
+    if (data.status !== 'ok') throw new Error('offline');
+    return base;
+  }
+
+  async function discoverApi() {
+    var el = document.getElementById('apiStatus');
+    el.classList.add('offline');
+    el.querySelector('[data-i18n]').textContent = t('apiChecking');
+
+    for (var i = 0; i < API_CANDIDATES.length; i++) {
+      try {
+        API_BASE = await probeApi(API_CANDIDATES[i]);
+        apiOnline = true;
+        el.classList.remove('offline');
+        el.classList.add('online');
+        el.querySelector('[data-i18n]').textContent = t('apiOnline');
+        updateApiLinks();
+        return;
+      } catch (e) {
+        /* try next */
+      }
+    }
+
+    API_BASE = API_CANDIDATES[API_CANDIDATES.length - 1] || API_FALLBACK;
+    apiOnline = false;
+    el.classList.add('offline');
+    el.querySelector('[data-i18n]').textContent = t('apiOffline');
+    updateApiLinks();
+  }
+
   async function checkHealth() {
+    if (!API_BASE) return discoverApi();
     var el = document.getElementById('apiStatus');
     try {
-      var res = await fetch(API_BASE + '/health', { cache: 'no-store' });
-      if (!res.ok) throw new Error('offline');
-      var data = await res.json();
-      apiOnline = data.status === 'ok';
-      el.classList.toggle('online', apiOnline);
-      el.classList.toggle('offline', !apiOnline);
-      el.querySelector('[data-i18n]').textContent = apiOnline ? t('apiOnline') : t('apiOffline');
+      await probeApi(API_BASE);
+      if (!apiOnline) {
+        apiOnline = true;
+        el.classList.add('online');
+        el.classList.remove('offline');
+        el.querySelector('[data-i18n]').textContent = t('apiOnline');
+        updateApiLinks();
+      }
     } catch (e) {
       apiOnline = false;
       el.classList.add('offline');
+      el.classList.remove('online');
       el.querySelector('[data-i18n]').textContent = t('apiOffline');
+      updateApiLinks();
+      await discoverApi();
     }
   }
 
@@ -208,6 +333,7 @@
 
   document.getElementById('chatForm').addEventListener('submit', function (e) {
     e.preventDefault();
+    if (!apiOnline) return;
     var input = document.getElementById('chatInput');
     var msg = input.value.trim();
     if (!msg) return;
@@ -216,10 +342,11 @@
   });
 
   document.getElementById('sampleBtn').addEventListener('click', function () {
+    if (!apiOnline) return;
     document.getElementById('chatInput').value = t('sampleQ');
   });
 
   applyLang();
-  checkHealth();
+  discoverApi();
   setInterval(checkHealth, 60000);
 })();
