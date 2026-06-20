@@ -65,7 +65,7 @@
     bn: {
       eyebrow: 'পশ্চিমবঙ্গ বোর্ড · TruthGuard',
       title: 'ঋতমা Academy — West Bengal Board',
-      lede: 'WBBSE মাধ্যমিক ও WBCHSE উচ্চ মাধ্যমিক — বাংলা, ইংরেজি ও হিন্দি মাধ্যমে। AI উত্তর শুধুমাত্র যাচাইকৃত পাঠ্যপুস্তক ও সিলেবাস থেকে — কোনো ভুয়ো তথ্য নয়।',
+      lede: 'WBBSE মাধ্যমিক ও WBCHSE উচ্চ মাধ্যমিক — বাংলা ও ইংরেজি মাধ্যমে। AI উত্তর শুধুমাত্র যাচাইকৃত পাঠ্যপুস্তক ও সিলেবাস থেকে — কোনো ভুয়ো তথ্য নয়।',
       s1: 'মাধ্যমিক V–X', s2: 'উচ্চ মাধ্যমিক', s3: 'মাধ্যম', s4: 'ভুয়ো তথ্য নয়',
       actorsLabel: 'কার জন্য',
       a1t: 'শিক্ষার্থী', a1d: 'অভ্যাস পরীক্ষা, প্রশ্নের ধারা, পড়াশোনা',
@@ -78,7 +78,7 @@
     en: {
       eyebrow: 'West Bengal Board · TruthGuard',
       title: 'Rhytoma (ঋতমা) Academy — WB',
-      lede: 'WBBSE Madhyamik & WBCHSE Higher Secondary — Bengali, English & Hindi mediums. AI answers grounded in verified textbooks only — no hallucination.',
+      lede: 'WBBSE Madhyamik & WBCHSE Higher Secondary — Bengali & English mediums. AI answers grounded in verified textbooks only — no hallucination.',
       s1: 'Madhyamik V–X', s2: 'Higher Secondary', s3: 'Mediums', s4: 'No hallucination',
       actorsLabel: "Who it's for",
       a1t: 'Student', a1d: 'Practice tests, past-paper trends, study help',
@@ -117,7 +117,7 @@
     });
     var iframe = document.querySelector('.preview-frame iframe');
     if (iframe) {
-      var medium = lang === 'bn' ? 'Bengali' : (lang === 'hi' ? 'Hindi' : 'English');
+      var medium = lang === 'bn' ? 'Bengali' : 'English';
       iframe.src = '/wb-academy/widget/practice-test.html?medium=' + encodeURIComponent(medium);
     }
     document.querySelectorAll('.lang-btn').forEach(function (btn) {

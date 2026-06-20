@@ -26,7 +26,7 @@ CHECKS: list[tuple[str, str, int | None]] = [
 
 def get(url: str, method: str = "GET", body: dict | None = None) -> tuple[int, str]:
     data = None
-    headers = {}
+    headers = {"User-Agent": "Mozilla/5.0 (RhytomaSmokeTest/1.0)"}
     if body is not None:
         data = json.dumps(body).encode()
         headers["Content-Type"] = "application/json"

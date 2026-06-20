@@ -103,7 +103,7 @@
       chatDisabled: 'API offline — cannot send questions',
       sendBtn: 'Send',
       sampleBtn: 'Sample question',
-      sampleQ: 'Generate 5 MCQs on photosynthesis for WBBSE Class 10 Science.',
+      sampleQ: 'Generate 5 MCQs on photosynthesis for WBBSE Class 10 Life Science and Environment.',
       thinking: 'Thinking…',
       errOffline: 'Could not reach the academy API. Try again shortly.',
     },
