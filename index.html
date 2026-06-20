@@ -1,89 +1,212 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1o1 AI - Full-Duplex Conversational AI by ManjuLAB</title><style>
-*{margin:0;padding:0;box-sizing:border-box}body{background:#06060f;color:#e2e8f0;font-family:system-ui,sans-serif;line-height:1.6}a{color:#06b6d4;text-decoration:none}
-nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;border-bottom:1px solid #1e1e3f;position:sticky;top:0;background:#06060f;z-index:100}
-.logo{font-size:1.4rem;font-weight:700;background:linear-gradient(135deg,#7c3aed,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-nav ul{list-style:none;display:flex;gap:1.5rem}nav ul a{color:#94a3b8;font-size:.9rem;transition:color .2s}nav ul a:hover{color:#06b6d4}
-.hero{text-align:center;padding:5rem 2rem;max-width:900px;margin:0 auto}
-h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;background:linear-gradient(135deg,#7c3aed,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:1.5rem}
-.sub{font-size:1.1rem;color:#94a3b8;max-width:600px;margin:0 auto 2rem}
-.btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn{padding:.75rem 1.75rem;border-radius:8px;font-weight:600;font-size:.95rem;cursor:pointer;transition:all .2s}
-.btn-p{background:linear-gradient(135deg,#7c3aed,#5b21b6);color:#fff;border:none}.btn-p:hover{opacity:.9}
-.btn-o{border:1px solid #7c3aed;color:#a78bfa;background:transparent}.btn-o:hover{background:#7c3aed22}
-.stats{display:flex;justify-content:center;flex-wrap:wrap;gap:2rem;padding:2rem;background:#0d0d1f;margin:2rem 0}
-.stat{text-align:center}.sv{font-size:2rem;font-weight:800;color:#7c3aed}.sl{color:#64748b;font-size:.85rem}
-section{padding:4rem 2rem;max-width:1100px;margin:0 auto}h2{font-size:1.8rem;font-weight:700;margin-bottom:2rem;text-align:center}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
-.card{background:#0d0d1f;border:1px solid #1e1e3f;border-radius:12px;padding:1.5rem;transition:border-color .2s}
-.card:hover{border-color:#7c3aed}.card h3{color:#a78bfa;margin-bottom:.75rem}.card p{color:#94a3b8;font-size:.9rem}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;counter-reset:step}
-.step{background:#0d0d1f;border-radius:12px;padding:1.5rem;counter-increment:step;position:relative}
-.step::before{content:counter(step);position:absolute;top:-12px;left:1.5rem;background:#7c3aed;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.85rem}
-table{width:100%;border-collapse:collapse;font-size:.9rem}th{background:#0d0d1f;color:#a78bfa;padding:.75rem 1rem;text-align:left}
-td{padding:.75rem 1rem;border-bottom:1px solid #1e1e3f;color:#94a3b8}.tdh{color:#06b6d4;font-weight:600}
-.dc{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
-.dc-card{background:#0d0d1f;border:1px solid #1e1e3f;border-radius:12px;padding:1.5rem;transition:border-color .2s}
-.dc-card:hover{border-color:#06b6d4}.dc-card h3{color:#06b6d4;margin-bottom:.5rem}.dc-card p{color:#94a3b8;font-size:.85rem;margin-bottom:1rem}.dc-card.bom-card{position:relative;background:transparent;border:none;border-radius:0;padding:2rem 2.25rem;min-height:220px;display:flex;flex-direction:column;justify-content:center;isolation:isolate}.dc-card.bom-card::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#19090d,#0d0d1f);border:1px solid #7f1d1d;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%);z-index:-1;transition:border-color .2s,background .2s}.dc-card.bom-card:hover::before{border-color:#ef4444;background:linear-gradient(180deg,#220b10,#0d0d1f)}.dc-card.bom-card h3{color:#ef4444}.dc-card.bom-card .btn-o{border-color:#ef4444;color:#fca5a5}.dc-card.bom-card .btn-o:hover{background:#ef444422}
-footer{background:#0d0d1f;text-align:center;padding:2rem;color:#64748b;font-size:.85rem;border-top:1px solid #1e1e3f}
-</style></head><body>
-<nav><span class="logo">1o1 AI</span><ul>
-<li><a href="#features">Features</a></li><li><a href="#how">How It Works</a></li>
-<li><a href="#datacenter">Datacenter</a></li><li><a href="/research.html">Research</a></li>
-<li><a href="/demo.html" class="btn btn-p" style="padding:.4rem 1rem">Live Demo</a></li>
-</ul></nav>
-<div class="hero">
-<h1>Full-Duplex Conversational AI</h1>
-<p class="sub">1o1 AI by ManjuLAB delivers real-time, natural voice conversations with ultra-low latency - built for enterprise and edge deployment.</p>
-<div class="btns">
-<a href="/demo.html" class="btn btn-p">Try Live Demo</a>
-<a href="/research.html" class="btn btn-o">Read Research</a>
-<a href="https://github.com/1o1-ai" class="btn btn-o">GitHub</a>
-</div></div>
-<div class="stats">
-<div class="stat"><div class="sv">7B</div><div class="sl">Parameters</div></div>
-<div class="stat"><div class="sv">24kHz</div><div class="sl">Audio Quality</div></div>
-<div class="stat"><div class="sv">&lt;300ms</div><div class="sl">Latency</div></div>
-<div class="stat"><div class="sv">Full-Duplex</div><div class="sl">Streaming</div></div>
-</div>
-<section id="features"><h2>Key Features</h2><div class="grid">
-<div class="card"><h3>&#127908; Full-Duplex Voice</h3><p>Simultaneous send and receive - natural conversations without turn-taking delays.</p></div>
-<div class="card"><h3>&#127917; Voice Persona</h3><p>Configurable personality and voice tone for branded AI experiences.</p></div>
-<div class="card"><h3>&#128172; Text Role Play</h3><p>Seamless text-based conversational AI with deep context awareness.</p></div>
-<div class="card"><h3>&#9889; Ultra Low Latency</h3><p>Sub-300ms end-to-end response time for fluid, human-like interactions.</p></div>
-<div class="card"><h3>&#127760; Domain Generalization</h3><p>Works across healthcare, finance, retail, and customer service domains.</p></div>
-<div class="card"><h3>&#128274; Privacy-First</h3><p>On-premise deployment with no data leaving your infrastructure.</p></div>
-</div></section>
-<section id="how"><h2>How It Works</h2><div class="steps">
-<div class="step"><h3>Connect</h3><p>Client connects via WebSocket (wss://). SSL-secured, no VPN needed.</p></div>
-<div class="step"><h3>Stream Audio</h3><p>Raw PCM audio streamed in real-time from microphone to the AI engine.</p></div>
-<div class="step"><h3>Inference</h3><p>7B parameter model processes speech and generates response simultaneously.</p></div>
-<div class="step"><h3>Respond</h3><p>AI audio streamed back instantly - full-duplex, overlapping speech supported.</p></div>
-</div></section>
-<section><h2>Benchmarks</h2>
-<table><thead><tr><th>Metric</th><th>1o1 AI</th><th>OpenAI RT</th><th>Traditional</th></tr></thead>
-<tbody>
-<tr><td>Latency</td><td class="tdh">&lt;300ms</td><td>~500ms</td><td>&gt;1000ms</td></tr>
-<tr><td>Full-Duplex</td><td class="tdh">Native</td><td>Limited</td><td>No</td></tr>
-<tr><td>On-Premise</td><td class="tdh">Yes</td><td>No</td><td>Varies</td></tr>
-<tr><td>Privacy</td><td class="tdh">Complete</td><td>Cloud only</td><td>Varies</td></tr>
-</tbody></table></section>
-<section id="datacenter"><h2>Datacenter Infrastructure</h2><div class="dc">
-<div class="dc-card"><h3>5-Node Cluster</h3><p>Entry-level deployment - 5 x H100 nodes, ideal for 100 concurrent users.</p><a href="/datacenter/personaplex-scale-5.html" class="btn btn-o" style="font-size:.85rem">View Spec</a></div>
-<div class="dc-card"><h3>10-25 Node Scale</h3><p>Mid-tier expansion for enterprise - 1,000+ concurrent sessions.</p><a href="/datacenter/personaplex-scale-10-25.html" class="btn btn-o" style="font-size:.85rem">View Spec</a></div>
-<div class="dc-card"><h3>Architecture</h3><p>Network topology, failover design, and security architecture details.</p><a href="/datacenter/architecture.html" class="btn btn-o" style="font-size:.85rem">View Design</a></div><div class="dc-card bom-card"><h3>1o1-BOM</h3><p>Detailed datacenter bill of materials for the MANJULAB Ohio deployment.</p><a href="/datacenter/dc-detailing.html" class="btn btn-o" style="font-size:.85rem">View BoM</a></div>
-</div><p style="text-align:center;color:#64748b;margin-top:1.5rem">Primary datacenter: Columbus, Ohio - Operated by ManjuLAB</p>
-</section>
-<script
-src="https://chat.brahmando.com/widget/chatbot.js"
-data-tenant="yogabrata"
-data-url="https://chat.brahmando.com"
-data-title="Yogabrata Assistant"
-data-primary-color="#6366f1"
-data-theme="dark"
-data-position="bottom-right">
-</script>
-<footer>
-<p>2025 ManjuLAB - whizyoga@manjulab.com - +1 425-502-1519</p>
-<p style="margin-top:.5rem"><a href="https://github.com/1o1-ai">GitHub</a> - <a href="/research.html">Research</a> - <a href="/demo.html">Demo</a></p>
-</footer>
-</body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yogabrata — 1o1 AI &amp; ঋতমা Academy | Brahmexa · ManjuLAB</title>
+  <meta name="description" content="Yogabrata hosts ManjuLAB offerings: 1o1 full-duplex voice AI and Rhytoma Academy for West Bengal Board education." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/theme.css" />
+</head>
+<body>
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="orb orb-cyan" aria-hidden="true"></div>
+  <div class="orb orb-orange" aria-hidden="true"></div>
+
+  <div class="planet-gap" aria-hidden="true">
+    <svg viewBox="0 0 200 200" class="planet-svg">
+      <defs>
+        <radialGradient id="planetGlow" cx="40%" cy="35%">
+          <stop offset="0%" stop-color="#67e8f9" stop-opacity="0.9"/>
+          <stop offset="45%" stop-color="#0891b2" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#020617" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="planetCore" cx="35%" cy="30%">
+          <stop offset="0%" stop-color="#e0f2fe"/>
+          <stop offset="40%" stop-color="#06b6d4"/>
+          <stop offset="100%" stop-color="#0c4a6e"/>
+        </radialGradient>
+      </defs>
+      <circle cx="100" cy="100" r="88" fill="url(#planetGlow)" opacity="0.5"/>
+      <circle cx="100" cy="100" r="52" fill="url(#planetCore)"/>
+      <ellipse cx="100" cy="118" rx="70" ry="12" fill="none" stroke="rgba(249,115,22,0.35)" stroke-width="2" transform="rotate(-18 100 118)"/>
+      <text x="100" y="168" text-anchor="middle" fill="rgba(148,163,184,0.7)" font-size="9" font-family="Inter,sans-serif" letter-spacing="0.12em">GOD OF THE GAPS</text>
+    </svg>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-brand" href="/">
+        <span class="site-name">Yogabrata</span>
+        <span class="site-tag">A Brahmexa group surface · ManjuLAB R&amp;D</span>
+      </a>
+      <nav class="partner-logos" aria-label="Group brands">
+        <a href="https://manjulab.com" target="_blank" rel="noopener" title="ManjuLAB">
+          <img src="https://brahmando.com/branding/manjulab-logo.png" alt="ManjuLAB" width="36" height="36" />
+        </a>
+        <a href="https://brahmando.com" target="_blank" rel="noopener" title="Brahmexa · Brahmando">
+          <img src="https://brahmando.com/branding/brahmexa-logo.jpeg" alt="Brahmexa" width="36" height="36" />
+        </a>
+        <a href="https://brahmando.com" target="_blank" rel="noopener" title="Brahmando — Intelligence for every gap">
+          <img src="https://brahmando.com/branding/brahmando-logo.jpg" alt="Brahmando" width="36" height="36" />
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-wrap">
+    <section class="hero-intro">
+      <p class="eyebrow">Intelligence for every gap</p>
+      <h1>Two ManjuLAB offerings.<br/><span class="gradient-text">One cosmic home.</span></h1>
+      <p class="lede">Yogabrata publishes enterprise voice AI and West Bengal Board education — built on the same Brahmando universe: TruthGuard, no hallucination, community-first.</p>
+    </section>
+
+    <div class="tab-bar" role="tablist" aria-label="Offerings">
+      <button type="button" class="tab active" role="tab" aria-selected="true" data-tab="1o1" id="tab-1o1">1o1 AI</button>
+      <button type="button" class="tab" role="tab" aria-selected="false" data-tab="rhytoma" id="tab-rhytoma">
+        <span class="bn">ঋতমা Academy</span>
+        <span class="en-sub">Rhytoma · WB</span>
+      </button>
+    </div>
+
+    <!-- ─── 1o1 AI (existing offering) ─── -->
+    <section class="panel active" id="panel-1o1" role="tabpanel" aria-labelledby="tab-1o1">
+      <div class="panel-hero">
+        <h2>Full-Duplex Conversational AI</h2>
+        <p>1o1 AI by ManjuLAB delivers real-time, natural voice conversations with ultra-low latency — built for enterprise and edge deployment.</p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat"><strong>7B</strong><span>Parameters</span></div>
+        <div class="stat"><strong>24kHz</strong><span>Audio Quality</span></div>
+        <div class="stat"><strong>&lt;300ms</strong><span>Latency</span></div>
+        <div class="stat"><strong>Full-Duplex</strong><span>Streaming</span></div>
+      </div>
+
+      <h3 class="section-label">Key Features</h3>
+      <div class="card-grid">
+        <article class="card"><h4>🎤 Full-Duplex Voice</h4><p>Simultaneous send and receive — natural conversations without turn-taking delays.</p></article>
+        <article class="card"><h4>🎭 Voice Persona</h4><p>Configurable personality and voice tone for branded AI experiences.</p></article>
+        <article class="card"><h4>💬 Text Role Play</h4><p>Seamless text-based conversational AI with deep context awareness.</p></article>
+        <article class="card"><h4>⚡ Ultra Low Latency</h4><p>Sub-300ms end-to-end response time for fluid, human-like interactions.</p></article>
+        <article class="card"><h4>🌐 Domain Generalization</h4><p>Healthcare, finance, retail, and customer service domains.</p></article>
+        <article class="card"><h4>🔒 Privacy-First</h4><p>On-premise deployment with no data leaving your infrastructure.</p></article>
+      </div>
+
+      <h3 class="section-label">How It Works</h3>
+      <ol class="steps">
+        <li><strong>Connect</strong> — WebSocket (wss://), SSL-secured.</li>
+        <li><strong>Stream Audio</strong> — Raw PCM in real time to the AI engine.</li>
+        <li><strong>Inference</strong> — 7B model processes speech and generates response simultaneously.</li>
+        <li><strong>Respond</strong> — Full-duplex audio streamed back instantly.</li>
+      </ol>
+
+      <h3 class="section-label">Benchmarks</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Metric</th><th>1o1 AI</th><th>OpenAI RT</th><th>Traditional</th></tr></thead>
+          <tbody>
+            <tr><td>Latency</td><td>&lt;300ms</td><td>~500ms</td><td>&gt;1000ms</td></tr>
+            <tr><td>Full-Duplex</td><td>Native</td><td>Limited</td><td>No</td></tr>
+            <tr><td>On-Premise</td><td>Yes</td><td>No</td><td>Varies</td></tr>
+            <tr><td>Privacy</td><td>Complete</td><td>Cloud only</td><td>Varies</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="launch-row">
+        <a class="btn-primary" href="/demo.html">Try Live Demo</a>
+        <a class="btn-secondary" href="/research.html">Research</a>
+        <a class="btn-secondary" href="https://github.com/1o1-ai" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn-secondary" href="/legacy-1o1.html">Classic 1o1 page</a>
+      </div>
+
+      <h3 class="section-label">Datacenter Infrastructure</h3>
+      <div class="card-grid two-col">
+        <article class="card"><h4>5-Node Cluster</h4><p>5 × H100 nodes — ideal for 100 concurrent users.</p><a class="btn-secondary" href="/datacenter/personaplex-scale-5.html" style="margin-top:12px;display:inline-flex">View Spec</a></article>
+        <article class="card"><h4>10–25 Node Scale</h4><p>Enterprise — 1,000+ concurrent sessions.</p><a class="btn-secondary" href="/datacenter/personaplex-scale-10-25.html" style="margin-top:12px;display:inline-flex">View Spec</a></article>
+        <article class="card"><h4>Architecture</h4><p>Network topology, failover, and security design.</p><a class="btn-secondary" href="/datacenter/architecture.html" style="margin-top:12px;display:inline-flex">View Design</a></article>
+        <article class="card"><h4>1o1-BOM</h4><p>Bill of materials — ManjuLAB Ohio deployment.</p><a class="btn-secondary" href="/datacenter/dc-detailing.html" style="margin-top:12px;display:inline-flex">View BoM</a></article>
+      </div>
+      <p class="footnote">Primary datacenter: Columbus, Ohio · Operated by ManjuLAB</p>
+    </section>
+
+    <!-- ─── Rhytoma Academy WB ─── -->
+    <section class="panel" id="panel-rhytoma" role="tabpanel" aria-labelledby="tab-rhytoma" hidden>
+      <div class="lang-switch" aria-label="Interface language">
+        <button type="button" class="lang-btn active" data-lang="bn">বাংলা</button>
+        <button type="button" class="lang-btn" data-lang="en">English</button>
+        <button type="button" class="lang-btn" data-lang="hi">हिंदी</button>
+      </div>
+
+      <div class="panel-hero rhytoma-hero">
+        <p class="eyebrow accent" data-i18n="eyebrow">পশ্চিমবঙ্গ বোর্ড · TruthGuard</p>
+        <h2 data-i18n="title">ঋতমা Academy — West Bengal Board</h2>
+        <p data-i18n="lede">WBBSE মাধ্যমিক ও WBCHSE উচ্চ মাধ্যমিক — বাংলা, ইংরেজি ও হিন্দি মাধ্যমে। AI উত্তর শুধুমাত্র যাচাইকৃত পাঠ্যপুস্তক ও সিলেবাস থেকে — কোনো ভুয়ো তথ্য নয়।</p>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat"><strong>WBBSE</strong><span data-i18n="s1">Madhyamik V–X</span></div>
+        <div class="stat"><strong>WBCHSE</strong><span data-i18n="s2">Higher Secondary</span></div>
+        <div class="stat"><strong>৩</strong><span data-i18n="s3">Mediums</span></div>
+        <div class="stat"><strong>TruthGuard</strong><span data-i18n="s4">No hallucination</span></div>
+      </div>
+
+      <h3 class="section-label" data-i18n="actorsLabel">Who it's for</h3>
+      <div class="card-grid four-col">
+        <article class="card actor"><h4 data-i18n="a1t">Student</h4><p data-i18n="a1d">Practice tests, past-paper trends, study help</p></article>
+        <article class="card actor"><h4 data-i18n="a2t">Teacher</h4><p data-i18n="a2d">Question papers, lesson plans, grading</p></article>
+        <article class="card actor"><h4 data-i18n="a3t">School</h4><p data-i18n="a3d">Syllabus hours, term planning</p></article>
+        <article class="card actor"><h4 data-i18n="a4t">Coaching</h4><p data-i18n="a4d">Mock tests, diagnostics, batches</p></article>
+      </div>
+
+      <div class="launch-row">
+        <a class="btn-primary" href="/wb-academy/practice" data-i18n-href="practice">📝 Practice Test</a>
+        <a class="btn-secondary" href="/wb-academy/training-lab" data-i18n-href="lab">🔬 TruthGuard Eval Lab</a>
+        <a class="btn-secondary" href="https://brahmando.com/csr" target="_blank" rel="noopener" data-i18n="csr">CSR on Brahmando →</a>
+      </div>
+
+      <div class="preview-frame">
+        <div class="preview-header">
+          <span data-i18n="preview">Live practice preview</span>
+          <small>/wb-academy/widget/practice-test.html</small>
+        </div>
+        <iframe
+          title="Rhytoma practice test"
+          src="/wb-academy/widget/practice-test.html?medium=Bengali"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <p class="preview-note" data-i18n="previewNote">If the preview is empty, the wb-academy API is still deploying — use the buttons above once the cluster is live.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brands">
+      <img src="https://brahmando.com/branding/manjulab-logo.png" alt="" width="28" height="28" />
+      <img src="https://brahmando.com/branding/brahmexa-logo.jpeg" alt="" width="28" height="28" />
+      <img src="https://brahmando.com/branding/brahmando-logo.jpg" alt="" width="28" height="28" />
+    </div>
+    <p>
+      <strong>Brahmexa</strong> group · Developed by <a href="https://manjulab.com">ManjuLAB</a> ·
+      Repository at <a href="https://brahmando.com">brahmando.com</a>
+    </p>
+    <p class="footer-tag">Democratizing Intelligence · Intelligence for every gap</p>
+    <p style="margin-top:10px;font-size:0.82rem">2025 ManjuLAB · whizyoga@manjulab.com · +1 425-502-1519</p>
+  </footer>
+
+  <script
+    src="https://chat.brahmando.com/widget/chatbot.js"
+    data-tenant="yogabrata"
+    data-url="https://chat.brahmando.com"
+    data-title="Yogabrata Assistant"
+    data-primary-color="#06b6d4"
+    data-theme="dark"
+    data-position="bottom-right">
+  </script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
