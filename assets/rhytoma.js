@@ -13,13 +13,17 @@
     var explicit = params.get('api');
     if (explicit) return [explicit.replace(/\/$/, '')];
 
-    var list = [];
     if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
-      list.push('http://127.0.0.1:8140');
+      return ['http://127.0.0.1:8140'];
     }
-    list.push(location.origin.replace(/\/$/, '') + '/wb-academy');
-    list.push(API_FALLBACK);
-    return list.filter(function (v, i, a) { return a.indexOf(v) === i; });
+    /* yogabrata.com is GitHub Pages — API lives on api.brahmando.com */
+    if (location.hostname.endsWith('yogabrata.com')) {
+      return [API_FALLBACK];
+    }
+    return [
+      location.origin.replace(/\/$/, '') + '/wb-academy',
+      API_FALLBACK,
+    ].filter(function (v, i, a) { return a.indexOf(v) === i; });
   }
 
   var COPY = {
@@ -49,7 +53,8 @@
       openPractice: 'পূর্ণ অভ্যাস পৃষ্ঠা',
       openLab: 'প্রশিক্ষণ ল্যাব',
       labDesc: 'মানুষের রিভিউয়ার AI উত্তর যাচাই করে — TruthGuard প্রশিক্ষণ। লগইন: yoga / yoga',
-      embedOffline: 'একাডেমি API চালু হলে এখানে অভ্যাস পরীক্ষা ও ল্যাব লোড হবে।',
+      embedOffline: 'একাডেমি API সংযোগ হচ্ছে…',
+      embedLoading: 'অভ্যাস পরীক্ষা ও ল্যাব লোড হচ্ছে…',
       actorStudent: 'শিক্ষার্থী',
       actorTeacher: 'শিক্ষক',
       actorSchool: 'বিদ্যালয়',
@@ -88,7 +93,8 @@
       openPractice: 'Open full practice page',
       openLab: 'Training lab',
       labDesc: 'Human reviewers validate AI answers for TruthGuard training. Login: yoga / yoga',
-      embedOffline: 'Practice test and lab load here when the academy API is online.',
+      embedOffline: 'Connecting to academy API…',
+      embedLoading: 'Loading practice test and lab…',
       actorStudent: 'Student',
       actorTeacher: 'Teacher',
       actorSchool: 'School',
@@ -121,18 +127,20 @@
     var openPractice = document.getElementById('openPractice');
     var openLabLink = document.getElementById('openLabLink');
     if (openPractice) {
-      openPractice.href = apiOnline ? widgetUrl('/widget/practice-test.html', practiceQ) : '#';
-      openPractice.target = apiOnline ? '_blank' : '';
-      openPractice.rel = apiOnline ? 'noopener' : '';
-      openPractice.setAttribute('aria-disabled', apiOnline ? 'false' : 'true');
-      openPractice.classList.toggle('btn-disabled', !apiOnline);
+      var canOpen = !!API_BASE;
+      openPractice.href = canOpen ? widgetUrl('/widget/practice-test.html', practiceQ) : '#';
+      openPractice.target = canOpen ? '_blank' : '';
+      openPractice.rel = canOpen ? 'noopener' : '';
+      openPractice.setAttribute('aria-disabled', canOpen ? 'false' : 'true');
+      openPractice.classList.toggle('btn-disabled', !canOpen);
     }
     if (openLabLink) {
-      openLabLink.href = apiOnline ? widgetUrl('/training-lab') : '#';
-      openLabLink.target = apiOnline ? '_blank' : '';
-      openLabLink.rel = apiOnline ? 'noopener' : '';
-      openLabLink.setAttribute('aria-disabled', apiOnline ? 'false' : 'true');
-      openLabLink.classList.toggle('btn-disabled', !apiOnline);
+      var canLab = !!API_BASE;
+      openLabLink.href = canLab ? widgetUrl('/training-lab') : '#';
+      openLabLink.target = canLab ? '_blank' : '';
+      openLabLink.rel = canLab ? 'noopener' : '';
+      openLabLink.setAttribute('aria-disabled', canLab ? 'false' : 'true');
+      openLabLink.classList.toggle('btn-disabled', !canLab);
     }
 
     var pf = document.getElementById('practiceFrame');
@@ -141,7 +149,7 @@
     var lo = document.getElementById('labOffline');
 
     if (pf) {
-      if (apiOnline) {
+      if (API_BASE) {
         pf.src = widgetUrl('/widget/practice-test.html', practiceQ);
         pf.hidden = false;
         if (po) po.hidden = true;
@@ -155,7 +163,7 @@
       }
     }
     if (lf) {
-      if (apiOnline) {
+      if (API_BASE) {
         lf.src = widgetUrl('/training-lab');
         lf.hidden = false;
         if (lo) lo.hidden = true;
@@ -248,21 +256,32 @@
     el.classList.add('offline');
     el.querySelector('[data-i18n]').textContent = t('apiChecking');
 
-    for (var i = 0; i < API_CANDIDATES.length; i++) {
-      try {
-        API_BASE = await probeApi(API_CANDIDATES[i]);
-        apiOnline = true;
-        el.classList.remove('offline');
-        el.classList.add('online');
-        el.querySelector('[data-i18n]').textContent = t('apiOnline');
-        updateApiLinks();
-        return;
-      } catch (e) {
-        /* try next */
-      }
+    /* Optimistic: load embeds on yogabrata while health probe runs */
+    if (location.hostname.endsWith('yogabrata.com') && !API_BASE) {
+      API_BASE = API_FALLBACK;
+      var po = document.getElementById('practiceOffline');
+      var lo = document.getElementById('labOffline');
+      if (po) { po.hidden = false; po.textContent = t('embedLoading'); }
+      if (lo) { lo.hidden = false; lo.textContent = t('embedLoading'); }
     }
 
-    API_BASE = API_CANDIDATES[API_CANDIDATES.length - 1] || API_FALLBACK;
+    var probes = API_CANDIDATES.map(function (base) {
+      return probeApi(base).then(function () { return base; });
+    });
+
+    try {
+      API_BASE = await Promise.any(probes);
+      apiOnline = true;
+      el.classList.remove('offline');
+      el.classList.add('online');
+      el.querySelector('[data-i18n]').textContent = t('apiOnline');
+      updateApiLinks();
+      return;
+    } catch (e) {
+      /* all failed */
+    }
+
+    API_BASE = API_CANDIDATES[0] || API_FALLBACK;
     apiOnline = false;
     el.classList.add('offline');
     el.querySelector('[data-i18n]').textContent = t('apiOffline');
@@ -347,6 +366,10 @@
   });
 
   applyLang();
+  if (location.hostname.endsWith('yogabrata.com')) {
+    API_BASE = API_FALLBACK;
+    updateApiLinks();
+  }
   discoverApi();
   setInterval(checkHealth, 60000);
 })();
