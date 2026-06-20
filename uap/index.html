@@ -34,36 +34,62 @@
       <button type="button" class="lang-btn" data-lang="en">English</button>
     </div>
 
-    <section class="hero-block uap-hero">
-      <img
-        class="uap-hero-logo"
-        src="https://upload.wikimedia.org/wikipedia/en/8/88/Uttarpara_Amarendra_Vidyapith_logo.jpg"
-        alt="Uttarpara Amarendra Vidyapith"
-        width="120"
-        height="120"
-        loading="eager"
-      />
-      <div>
-        <p class="eyebrow accent" data-i18n="eyebrow">হুগলি · WBBSE / WBCHSE · Est. 1939</p>
-        <h1 class="hero-bn" data-i18n="heroTitle">উত্তরপাড়া অমরেন্দ্র বিদ্যাপীথ</h1>
-        <p class="lede" data-i18n="heroLede">বাংলা মাধ্যমিক পাঠ্যক্রম (ক্লাস I–XII) — স্বাধীনতাসংগ্রামী অমরেন্দ্রনাথ চট্টোপাধ্যায়ের নামে প্রতিষ্ঠিত।</p>
-        <div class="school-facts uap-facts">
-          <span data-i18n="fact1">~১৫০০ শিক্ষার্থী</span>
-          <span data-i18n="fact2">বাংলা মাধ্যম</span>
-          <span data-i18n="fact3">মাধ্যমিক ও উচ্চ মাধ্যমিক</span>
-          <span data-i18n="fact4">উত্তরপাড়া, হুগলি</span>
+    <section class="uap-hero-wrap" aria-label="School hero">
+      <div id="heroSlides" class="uap-hero-slides" aria-hidden="true"></div>
+      <div class="uap-hero-overlay"></div>
+      <div class="uap-hero uap-hero--layered">
+        <img
+          class="uap-hero-logo"
+          src="https://upload.wikimedia.org/wikipedia/en/8/88/Uttarpara_Amarendra_Vidyapith_logo.jpg"
+          alt="Uttarpara Amarendra Vidyapith"
+          width="120"
+          height="120"
+          loading="eager"
+        />
+        <div>
+          <p class="eyebrow accent" data-i18n="eyebrow">হুগলি · WBBSE / WBCHSE · Est. 1939</p>
+          <h1 class="hero-bn" data-i18n="heroTitle">উত্তরপাড়া অমরেন্দ্র বিদ্যাপীথ</h1>
+          <p class="lede" data-i18n="heroLede">বাংলা মাধ্যমিক পাঠ্যক্রম (ক্লাস I–XII) — স্বাধীনতাসংগ্রামী অমরেন্দ্রনাথ চট্টোপাধ্যায়ের নামে প্রতিষ্ঠিত।</p>
+          <div class="school-facts uap-facts">
+            <span data-i18n="fact1">~১৫০০ শিক্ষার্থী</span>
+            <span data-i18n="fact2">বাংলা মাধ্যম</span>
+            <span data-i18n="fact3">মাধ্যমিক ও উচ্চ মাধ্যমিক</span>
+            <span data-i18n="fact4">উত্তরপাড়া, হুগলি</span>
+          </div>
+          <div class="uap-hero-links">
+            <a class="wiki" href="https://en.wikipedia.org/wiki/Uttarpara_Amarendra_Vidyapith" target="_blank" rel="noopener" data-i18n="wikiLink">উইকিপিডিয়া →</a>
+            <a class="btn-primary uap-rhytoma-btn" href="/rhytoma/" data-i18n="rhytomaLink">ঋতমা Academy খুলুন →</a>
+          </div>
         </div>
-        <div class="uap-hero-links">
-          <a class="wiki" href="https://en.wikipedia.org/wiki/Uttarpara_Amarendra_Vidyapith" target="_blank" rel="noopener" data-i18n="wikiLink">উইকিপিডিয়া →</a>
-          <a class="btn-primary uap-rhytoma-btn" href="/rhytoma/" data-i18n="rhytomaLink">ঋতমা Academy খুলুন →</a>
-        </div>
+        <div id="heroPolaroids" class="uap-polaroid-stack" aria-hidden="true"></div>
       </div>
     </section>
+
+    <div class="uap-filmstrip-wrap" aria-hidden="true">
+      <div id="filmstripA" class="uap-filmstrip"></div>
+      <div id="filmstripB" class="uap-filmstrip uap-filmstrip--reverse"></div>
+    </div>
 
     <article class="uap-about">
       <h2 data-i18n="aboutTitle">বিদ্যালয় সম্পর্কে</h2>
       <p data-i18n="aboutBody">উত্তরপাড়া, হিন্দমোটর, বেলুর, সিরামপুর ও আশপাশের এলাকা থেকে প্রায় ১,৫০০ শিক্ষার্থী এখানে পড়াশোনা করে। ঋতমা Academy এই বিদ্যালয়ের শিক্ষার্থীদের একটি TruthGuard-ভিত্তিক পশ্চিমবঙ্গ বোর্ড শিক্ষা প্রচেষ্টা।</p>
     </article>
+
+    <section class="uap-reunion" aria-labelledby="reunion-heading">
+      <header class="uap-section-head">
+        <h2 id="reunion-heading" data-i18n="reunionTitle">UAV · পুনর্মিলন ও স্মৃতি</h2>
+        <p data-i18n="reunionIntro">অমরেন্দ্র বিদ্যাপীথের শিক্ষার্থীরা — একসাথে, একই ছাত্রাবাস, একই স্কুল প্রাঙ্গণ।</p>
+      </header>
+      <div id="reunionStrip" class="uap-reunion-strip"></div>
+    </section>
+
+    <section class="uap-gallery-section" aria-labelledby="gallery-heading">
+      <header class="uap-section-head">
+        <h2 id="gallery-heading" data-i18n="galleryTitle">গ্যালারি</h2>
+        <p data-i18n="galleryIntro">বিদ্যালয়ের মুহূর্ত — উত্সব, পুনর্মিলন, সহপাঠী।</p>
+      </header>
+      <div id="galleryMasonry" class="uap-masonry"></div>
+    </section>
 
     <section class="uap-team-section" aria-labelledby="team-heading">
       <header class="uap-section-head">
@@ -79,9 +105,14 @@
       </header>
       <div id="rosterAlso" class="uap-roster uap-roster--compact" role="list"></div>
     </section>
-
-    <p class="footnote uap-gallery-hint" data-i18n="galleryHint">ছবি যোগ করতে assets/uap/photos/01.jpg … 27.jpg ফাইল রাখুন।</p>
   </main>
+
+  <div id="lightbox" class="uap-lightbox" hidden role="dialog" aria-modal="true" aria-label="Photo">
+    <button type="button" class="uap-lightbox-close" aria-label="Close">×</button>
+    <button type="button" class="uap-lightbox-prev" aria-label="Previous">‹</button>
+    <button type="button" class="uap-lightbox-next" aria-label="Next">›</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
 
   <footer class="site-footer">
     <p><strong>ManjuLAB</strong> · <a href="https://brahmando.com">Brahmando</a> · <a href="/rhytoma/">Rhytoma Academy</a></p>
