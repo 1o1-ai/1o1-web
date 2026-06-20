@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI-Caregiver · Yogabrata</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/theme.css" />
+  <link rel="stylesheet" href="../assets/rhytoma.css" />
+</head>
+<body>
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="orb orb-cyan" aria-hidden="true"></div>
+  <div class="orb orb-orange" aria-hidden="true"></div>
+
+  <header class="sub-header">
+    <a class="back-link" href="/">← Yogabrata</a>
+    <span class="sub-title">AI-Caregiver</span>
+    <a class="manjulab-mini" href="https://manjulab.com" target="_blank" rel="noopener">
+      <img src="https://brahmando.com/branding/manjulab-logo.png" alt="ManjuLAB" width="32" height="32" />
+    </a>
+  </header>
+
+  <main class="sub-main">
+    <section class="hero-block">
+      <p class="eyebrow">Full-duplex conversational AI</p>
+      <h1>AI-Caregiver</h1>
+      <p class="lede">Real-time, natural voice conversations with ultra-low latency — enterprise and edge deployment by ManjuLAB.</p>
+      <div class="launch-row">
+        <a class="btn-primary" href="/demo.html">Live Demo</a>
+        <a class="btn-secondary" href="/research.html">Research</a>
+        <a class="btn-secondary" href="https://github.com/1o1-ai" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <div class="stat-grid">
+      <div class="stat"><strong>7B</strong><span>Parameters</span></div>
+      <div class="stat"><strong>24kHz</strong><span>Audio</span></div>
+      <div class="stat"><strong>&lt;300ms</strong><span>Latency</span></div>
+      <div class="stat"><strong>Full-Duplex</strong><span>Native</span></div>
+    </div>
+
+    <h3 class="section-label">Capabilities</h3>
+    <div class="card-grid">
+      <article class="card"><h4>🎤 Full-Duplex Voice</h4><p>Simultaneous send and receive — no turn-taking delays.</p></article>
+      <article class="card"><h4>🎭 Voice Persona</h4><p>Configurable personality for branded experiences.</p></article>
+      <article class="card"><h4>🔒 Privacy-First</h4><p>On-premise — data stays in your infrastructure.</p></article>
+      <article class="card"><h4>🌐 Multi-Domain</h4><p>Healthcare, finance, retail, customer service.</p></article>
+    </div>
+
+    <h3 class="section-label">Infrastructure</h3>
+    <div class="card-grid two-col">
+      <article class="card"><h4>5-Node Cluster</h4><p>5 × H100 — 100 concurrent users.</p>
+        <a class="btn-secondary" href="/datacenter/personaplex-scale-5.html" style="margin-top:10px;display:inline-flex">View Spec</a></article>
+      <article class="card"><h4>10–25 Node Scale</h4><p>Enterprise — 1,000+ sessions.</p>
+        <a class="btn-secondary" href="/datacenter/personaplex-scale-10-25.html" style="margin-top:10px;display:inline-flex">View Spec</a></article>
+      <article class="card"><h4>Architecture</h4><p>Network topology &amp; failover.</p>
+        <a class="btn-secondary" href="/datacenter/architecture.html" style="margin-top:10px;display:inline-flex">View Design</a></article>
+      <article class="card"><h4>1o1-BOM</h4><p>Ohio datacenter bill of materials.</p>
+        <a class="btn-secondary" href="/datacenter/dc-detailing.html" style="margin-top:10px;display:inline-flex">View BoM</a></article>
+    </div>
+    <p class="footnote">Columbus, Ohio · ManjuLAB</p>
+  </main>
+
+  <script src="https://chat.brahmando.com/widget/chatbot.js"
+    data-tenant="yogabrata" data-url="https://chat.brahmando.com"
+    data-title="Yogabrata Assistant" data-primary-color="#f97316"
+    data-theme="dark" data-position="bottom-right"></script>
+  <script src="../assets/cosmic.js"></script>
+</body>
+</html>

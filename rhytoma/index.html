@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ঋতমা Academy · Yogabrata</title>
+  <meta name="description" content="Rhytoma Academy — West Bengal Board education by students of Uttarpara Amarendra Vidyapith." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/theme.css" />
+  <link rel="stylesheet" href="../assets/rhytoma.css" />
+</head>
+<body class="lang-bn">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="orb orb-cyan" aria-hidden="true"></div>
+  <div class="orb orb-orange" aria-hidden="true"></div>
+
+  <header class="sub-header">
+    <a class="back-link" href="/" data-i18n="back">← Yogabrata</a>
+    <span class="sub-title bn" data-i18n="pageTitle">ঋতমা Academy</span>
+    <a class="manjulab-mini" href="https://manjulab.com" target="_blank" rel="noopener">
+      <img src="https://brahmando.com/branding/manjulab-logo.png" alt="ManjuLAB" width="32" height="32" />
+    </a>
+  </header>
+
+  <main class="sub-main">
+    <div class="lang-bar">
+      <button type="button" class="lang-btn active" data-lang="bn">বাংলা</button>
+      <button type="button" class="lang-btn" data-lang="en">English</button>
+    </div>
+
+    <div id="apiStatus" class="api-status offline">
+      <span class="dot"></span>
+      <span data-i18n="apiChecking">Checking academy API…</span>
+    </div>
+
+    <section class="hero-block">
+      <p class="eyebrow accent" data-i18n="eyebrow">পশ্চিমবঙ্গ বোর্ড · TruthGuard</p>
+      <h1 class="hero-bn" data-i18n="heroTitle">ঋতমা Academy</h1>
+      <p class="lede" data-i18n="heroLede">WBBSE/WBCHSE — AI answers grounded in verified textbooks only. No hallucination.</p>
+    </section>
+
+    <article class="school-card">
+      <img
+        class="school-logo"
+        src="https://upload.wikimedia.org/wikipedia/en/8/88/Uttarpara_Amarendra_Vidyapith_logo.jpg"
+        alt="Uttarpara Amarendra Vidyapith"
+        width="88"
+        height="88"
+        loading="lazy"
+      />
+      <div>
+        <h2 data-i18n="schoolTitle">উত্তরপাড়া অমরেন্দ্র বিদ্যাপীথ</h2>
+        <p class="meta" data-i18n="schoolMeta">Uttarpara, Hooghly · Est. 1939 · WBBSE / WBCHSE</p>
+        <p data-i18n="schoolBody">
+          This academy is a student-led attempt from Uttarpara Amarendra Vidyapith — a Bengali-medium boys' school
+          serving Classes I–XII in the Hooghly district. Named after freedom fighter Amarendra Nath Chattopadhyay,
+          the school draws students from Uttarpara, Hindmotor, Bally, Belur, Serampore, and nearby towns.
+        </p>
+        <a class="wiki" href="https://en.wikipedia.org/wiki/Uttarpara_Amarendra_Vidyapith" target="_blank" rel="noopener" data-i18n="wikiLink">Wikipedia →</a>
+        <div class="school-facts">
+          <span data-i18n="fact1">~1500 students</span>
+          <span data-i18n="fact2">Bengali medium</span>
+          <span data-i18n="fact3">Madhyamik &amp; HS</span>
+          <span data-i18n="fact4">Uttarpara, WB</span>
+        </div>
+      </div>
+    </article>
+
+    <div class="tool-tabs" role="tablist">
+      <button type="button" class="tool-tab active" data-tool="practice" data-i18n="tabPractice">Practice Test</button>
+      <button type="button" class="tool-tab" data-tool="chat" data-i18n="tabChat">Ask (Student)</button>
+      <button type="button" class="tool-tab" data-tool="lab" data-i18n="tabLab">Eval Lab</button>
+    </div>
+
+    <section class="tool-panel active" id="panel-practice">
+      <p class="footnote" style="margin-bottom:12px" data-i18n="practiceHint">TruthGuard-grounded WBBSE &amp; WBCHSE mock tests.</p>
+      <div class="launch-row" style="margin-bottom:16px">
+        <a class="btn-primary" id="openPractice" href="/wb-academy/widget/practice-test.html" target="_blank" rel="noopener" data-i18n="openPractice">Open full practice page</a>
+        <a class="btn-secondary" id="openLabLink" href="/wb-academy/training-lab" target="_blank" rel="noopener" data-i18n="openLab">Training lab</a>
+      </div>
+      <div class="embed-full">
+        <iframe id="practiceFrame" title="Practice test" src="/wb-academy/widget/practice-test.html?medium=Bengali&track=wbbse"></iframe>
+      </div>
+    </section>
+
+    <section class="tool-panel" id="panel-chat">
+      <div class="chat-panel">
+        <div class="chat-controls">
+          <select id="actorSelect" aria-label="Actor">
+            <option value="student" data-i18n-opt="actorStudent">Student</option>
+            <option value="teacher" data-i18n-opt="actorTeacher">Teacher</option>
+            <option value="school" data-i18n-opt="actorSchool">School</option>
+            <option value="coaching_center" data-i18n-opt="actorCoaching">Coaching</option>
+          </select>
+          <select id="gradeSelect" aria-label="Grade">
+            <option>8</option><option>9</option><option selected>10</option>
+            <option>11</option><option>12</option>
+          </select>
+          <select id="boardSelect" aria-label="Board">
+            <option value="WBBSE">WBBSE</option>
+            <option value="WBCHSE">WBCHSE</option>
+          </select>
+        </div>
+        <div id="chatLog" class="chat-log"></div>
+        <form class="chat-form" id="chatForm">
+          <textarea id="chatInput" placeholder="Ask about WBBSE syllabus, practice, or a topic…" data-i18n-placeholder="chatPlaceholder"></textarea>
+          <div class="actions">
+            <button type="submit" class="btn-primary" data-i18n="sendBtn">Send</button>
+            <button type="button" class="btn-secondary" id="sampleBtn" data-i18n="sampleBtn">Sample question</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="tool-panel" id="panel-lab">
+      <p data-i18n="labDesc">Human reviewers rate AI answers — training data for TruthGuard. Login: yoga / yoga</p>
+      <div class="embed-full" style="margin-top:16px">
+        <iframe id="labFrame" title="Eval lab" src="/wb-academy/training-lab"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>ManjuLAB</strong> · <a href="https://brahmando.com">Brahmando</a> · TruthGuard</p>
+  </footer>
+
+  <script src="../assets/cosmic.js"></script>
+  <script src="../assets/rhytoma.js"></script>
+</body>
+</html>
