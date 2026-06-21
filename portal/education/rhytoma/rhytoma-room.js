@@ -1,7 +1,12 @@
 /**
- * CBSE 10 Core study room — strict subject/chapter/year question bank (no hallucination).
+ * Rhytoma Academy study room — shared shell with CBSE10; WBBSE/WBCHSE Science & Math.
  */
 (function () {
+  const SKU = 'rhytoma-wbbse';
+  const cfg = window.AnyoAcademyConfig ? window.AnyoAcademyConfig.get(SKU) : {};
+  if (window.AnyoBots?.configureForSku) window.AnyoBots.configureForSku(SKU);
+  const mocked = !!(cfg.mocked || window.AnyoBots?.isMocked?.());
+
   const params = new URLSearchParams(location.search);
   const role = params.get('role') || 'student';
   const CURRENT_YEAR = 2026;
@@ -11,11 +16,15 @@
   const CHAPTER_ALIASES = {
     polynomial: 'polynomials',
     polynomials: 'polynomials',
-    'real numbers': 'real-numbers',
-    'real number': 'real-numbers',
-    light: 'light',
-    electricity: 'electricity',
+    algebra: 'algebra',
+    geometry: 'geometry',
     trigonometry: 'trigonometry',
+    'physical science': 'physical-science',
+    'life science': 'life-science',
+    physics: 'physics',
+    chemistry: 'chemistry',
+    biology: 'biology',
+    calculus: 'calculus',
   };
 
   document.body.classList.add(role === 'teacher' ? 'teacher-ambience' : 'student-ambience');
@@ -31,8 +40,9 @@
 
   let curriculum = null;
   let verifiedBank = [];
+  let grade = params.get('grade') || '10';
   let subject = 'science';
-  let chapterId = 'light';
+  let chapterId = 'physical-science';
   let quizQuestions = [];
   let quizIndex = 0;
   let quizAnswers = [];
@@ -51,9 +61,12 @@
   const peersFilter = document.getElementById('peersFilter');
   const onlineBadge = document.getElementById('onlineBadge');
 
+  const curPath = cfg.curriculumPath || '../../data/rhytoma-curriculum.json';
+  const bankPath = cfg.bankPath || '../../data/rhytoma-questions.json';
+
   Promise.all([
-    fetch('../../data/cbse10-curriculum.json').then((r) => r.json()),
-    fetch('../../data/cbse10-verified-questions.json')
+    fetch(curPath).then((r) => r.json()),
+    fetch(bankPath)
       .then((r) => (r.ok ? r.json() : { questions: [] }))
       .catch(() => ({ questions: [] })),
     window.AnyoBots.loadRoster(),
@@ -61,13 +74,15 @@
     .then(([cur, bank, roster]) => {
       curriculum = cur;
       verifiedBank = (bank.questions || cur.verifiedQuestions || []).filter(
-        (q) => q.answer_verified !== false && q.correctIndex != null
+        (q) => q.answer_verified !== false && (q.correctIndex != null || q.correct_index != null)
       );
       allStudents = roster.students || [];
+      initGradeSelector();
       renderIngestBadge();
       renderChapters();
       initPresenceAndPeers();
-      selectChapter('light');
+      const first = chaptersForSubj(subject)[0];
+      selectChapter(first?.id || 'physical-science');
       showAlert();
     })
     .catch(() => {
@@ -124,7 +139,8 @@
     onlineStudentIds = window.AnyoPresence.pickOnlineBotIds(allStudents, counts.studentBotsOnline, 'student');
     if (onlineBadge) {
       onlineBadge.hidden = false;
-      onlineBadge.textContent = `${counts.teachersOnline} teachers · ${counts.studentsOnline} students online (IST ${counts.istLabel})`;
+      const mockNote = mocked ? ' · mock demo' : '';
+      onlineBadge.textContent = `${counts.teachersOnline} teachers · ${counts.studentsOnline} students online${mockNote} (IST ${counts.istLabel})`;
     }
     const lbl = document.getElementById('peersToggleLabel');
     if (lbl) lbl.textContent = `${counts.studentsOnline} students online`;
@@ -155,7 +171,7 @@
       li.innerHTML = `
         <img class="peer-avatar" src="${bot.photo}" alt="" width="36" height="36" loading="lazy" />
         <div class="peer-meta">
-          <strong>${bot.name}</strong>
+          <strong>${window.AnyoBots?.displayName ? window.AnyoBots.displayName(bot) : bot.name}</strong>
           <span class="peer-loc">${bot.city}, ${bot.state}</span>
           <span class="peer-school">${bot.school}</span>
         </div>`;
@@ -247,18 +263,36 @@
     pendingInvites.set(bot.id, { bot, timer });
   }
 
+  function boardForGrade(g) {
+    return String(g) === '11' || String(g) === '12' ? 'WBCHSE' : 'WBBSE';
+  }
+
+  function initGradeSelector() {
+    const sel = document.getElementById('gradeSelect');
+    if (!sel) return;
+    sel.value = grade;
+    sel.addEventListener('change', () => {
+      grade = sel.value;
+      const first = chaptersForSubj(subject)[0];
+      if (first) selectChapter(first.id);
+      else renderChapters();
+      renderPeersRoster();
+    });
+  }
+
   function renderIngestBadge() {
     const stats = curriculum.stats || {};
     const el = document.getElementById('ingestBadge');
     if (!el) return;
     const n = stats.verified_questions || verifiedBank.length || 0;
-    el.textContent = `${n} verified questions (English, linked answers)`;
+    el.textContent = `${n} verified questions · ${boardForGrade(grade)} · Class ${grade}`;
     el.hidden = false;
   }
 
   function chaptersForSubj(sub) {
     const s = curriculum.subjects[sub];
-    return s?.units || s?.chapters || [];
+    const all = s?.units || s?.chapters || [];
+    return all.filter((ch) => !ch.grades || ch.grades.includes(String(grade)));
   }
 
   function subjectKey() {
@@ -287,10 +321,12 @@
         (subj === 'mathematics' && qSub.includes('math')) ||
         (subj === 'science' && qSub === 'science');
       const matchCh = (q.chapter || '') === chapter;
+      const qGrade = q.grade != null ? String(q.grade) : null;
+      const matchGrade = !qGrade || qGrade === String(grade);
       const yr = q.exam_year;
       const matchYear =
         minYear == null || (typeof yr === 'number' ? yr >= minYear : true);
-      return matchSub && matchCh && matchYear;
+      return matchSub && matchCh && matchGrade && matchYear;
     });
     pool.sort((a, b) => (b.exam_year || 0) - (a.exam_year || 0));
     return pool.slice(0, limit);
@@ -305,14 +341,14 @@
   }
 
   function toQuizItem(q) {
-    const prompt = fmt(q.prompt || q.question);
+    const prompt = fmt(q.prompt || q.question || q.text);
     const options = fmtOpts(q.options || []);
     return {
       id: q.id,
       prompt,
       options,
       correctIndex: q.correctIndex != null ? q.correctIndex : q.correct_index,
-      source: q.source || q.paper_pair_id || 'CBSE board',
+      source: q.source || q.paper_pair_id || `${boardForGrade(grade)} board`,
       exam_year: q.exam_year,
       answer_verified: true,
     };
@@ -338,7 +374,7 @@
     const ch = chaptersForSubj(subject).find((c) => c.id === id);
     if (!ch) return;
     chapterTitle.textContent = ch.title;
-    subjectLabel.textContent = subject === 'science' ? 'Science · 086' : 'Mathematics · 041';
+    subjectLabel.textContent = `${subject === 'science' ? 'Science' : 'Mathematics'} · Class ${grade} · ${boardForGrade(grade)}`;
     renderChapters();
     quizPanel.hidden = true;
     chatMessages.innerHTML = '';
@@ -351,7 +387,7 @@
     } else {
       addBubble(
         'tutor',
-        `**${ch.title}** — no verified questions in the bank for this chapter yet. Pick another chapter (e.g. Light, Polynomials) or try again later.`
+        `**${ch.title}** — no verified questions in the bank for this chapter yet. Pick another chapter or try the Practice Test tab.`
       );
     }
   }
@@ -438,7 +474,7 @@
           req.yearsBack > 0 ? ` for the last ${req.yearsBack} years` : '';
         return (
           `No verified ${req.chapter.replace(/-/g, ' ')} questions in the bank${yrNote}. ` +
-          `I only use ingested CBSE papers — I won't make questions up. Try another chapter.`
+          `I only use ingested WBBSE/WBCHSE material — I won't make questions up. Try another chapter.`
         );
       }
       const items = found.slice(0, req.limit).map(toQuizItem);
@@ -568,10 +604,10 @@
 
   document.getElementById('btnQuiz').addEventListener('click', startQuiz);
   document.getElementById('btnBoard').addEventListener('click', () => {
-    addBubble('tutor', 'Board mock draws verified MCQs for the current chapter and subject only — no cross-subject mix.');
+    addBubble('tutor', 'Board mock draws verified MCQs for the current chapter and subject only — WBBSE/WBCHSE corpus.');
   });
   document.getElementById('btnInvite').addEventListener('click', () => {
-    const link = `${location.origin}/portal/education/cbse10/room.html?role=student`;
+    const link = `${location.origin}/portal/education/rhytoma/room.html?role=student&grade=${encodeURIComponent(grade)}`;
     navigator.clipboard?.writeText(link);
     addBubble('peer', 'Study room link copied — share with a real classmate (not for personal contact here).', 'System');
   });

@@ -15,7 +15,8 @@
     if (/\b(not\s+sync|do you agree|wrong|mistake|error)\b/.test(m)) return false;
 
     if (/\b(give|show|get|need|want|fetch|start|practice|attempt)\b.*\b(question|mcq|quiz)/.test(m)) return true;
-    if (/\b(one|two|three|four|five|\d+|a|an)\s+(question|mcq|questions|mcqs)/.test(m)) return true;
+    if (/\b(sample|any)\b.*\b(question|mcq|questions|mcqs)\b/.test(m)) return true;
+    if (/\b(one|two|three|four|five|\d+|a|an)(\s+\w+){0,2}\s+(question|mcq|questions|mcqs)\b/.test(m)) return true;
     if (/\b(question|mcq|questions|mcqs)\s+on\b/.test(m)) return true;
     if (/\bchapter\s+quiz\b/.test(m)) return true;
     if (/\bboard\s+mock\b/.test(m)) return true;
@@ -24,6 +25,7 @@
 
   function parseQuestionCount(msg) {
     const m = msg.toLowerCase();
+    if (/\b(sample|any)\b/.test(m) && /\b(question|mcq)/.test(m)) return 1;
     const digit = m.match(/(\d+)\s*(?:question|mcq|questions|mcqs)/);
     if (digit) return Math.min(20, parseInt(digit[1], 10));
     const word = m.match(/\b(one|two|three|four|five|six|seven|eight|nine|ten|a|an)\s+(?:question|mcq|questions|mcqs)/);

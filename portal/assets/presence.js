@@ -41,22 +41,35 @@
     return 0.35;
   }
 
-  function getOnlineCounts(extraRealStudents, extraRealTeachers) {
-    const now = istNow();
+  function getOnlineCounts(extraRealStudents, extraRealTeachers, overrides) {
+    const cfgOv =
+      overrides ||
+      (global.AnyoAcademyConfig && global.AnyoAcademyConfig.get(global.AnyoAcademyConfig.detectSku()).presence) ||
+      null;
+    const totalStudents = cfgOv?.totalStudents ?? TOTAL_STUDENTS;
+    const totalTeachers = cfgOv?.totalTeachers ?? TOTAL_TEACHERS;
+    const minStudents = cfgOv?.minStudents ?? MIN_STUDENTS;
+    const minTeachers = cfgOv?.minTeachers ?? MIN_TEACHERS;
+    const maxStudentsOnline = cfgOv?.maxStudentsOnline ?? totalStudents;
+    const maxTeachersOnline = cfgOv?.maxTeachersOnline ?? totalTeachers;
+    const tz = cfgOv?.timezone || 'Asia/Kolkata';
+    const now = overrides?.timezone
+      ? new Date(new Date().toLocaleString('en-US', { timeZone: tz }))
+      : istNow();
     const h = istHourDecimal(now);
     const minuteSeed = Math.floor(now.getTime() / 60000);
 
     let studentBots = Math.max(
-      MIN_STUDENTS,
-      Math.round(TOTAL_STUDENTS * attendanceRatio(h) + seeded(minuteSeed) * 8 - 4)
+      minStudents,
+      Math.round(totalStudents * attendanceRatio(h) + seeded(minuteSeed) * 8 - 4)
     );
-    studentBots = Math.min(TOTAL_STUDENTS, studentBots);
+    studentBots = Math.min(totalStudents, studentBots, maxStudentsOnline);
 
     let teacherBots = Math.max(
-      MIN_TEACHERS,
-      Math.round(TOTAL_TEACHERS * teacherRatio(h))
+      minTeachers,
+      Math.round(totalTeachers * teacherRatio(h))
     );
-    teacherBots = Math.min(TOTAL_TEACHERS, teacherBots);
+    teacherBots = Math.min(totalTeachers, teacherBots, maxTeachersOnline);
 
     const realS = extraRealStudents || 0;
     const realT = extraRealTeachers || 0;

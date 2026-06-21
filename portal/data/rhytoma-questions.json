@@ -1,0 +1,25 @@
+{
+  "sku": "rhytoma-wbbse",
+  "questions": [
+    {
+      "id": "rw_q1",
+      "subject_slug": "science",
+      "grade": "10",
+      "chapter": "physical-science",
+      "text": "Which law explains the relation between current, voltage and resistance in a metallic conductor at constant temperature?",
+      "options": ["Ohm's law", "Faraday's law", "Snell's law", "Boyle's law"],
+      "correctIndex": 0,
+      "answer_verified": true
+    },
+    {
+      "id": "rw_q2",
+      "subject_slug": "mathematics",
+      "grade": "10",
+      "chapter": "algebra",
+      "text": "The roots of x² - 5x + 6 = 0 are:",
+      "options": ["2 and 3", "-2 and -3", "1 and 6", "-1 and -6"],
+      "correctIndex": 0,
+      "answer_verified": true
+    }
+  ]
+}

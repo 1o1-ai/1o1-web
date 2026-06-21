@@ -1,0 +1,28 @@
+{
+  "sku": "rhytoma-wbbse",
+  "label": "Rhytoma Academy · WBBSE/WBCHSE",
+  "grades": ["9", "10", "11", "12"],
+  "subjects": {
+    "science": {
+      "label": "Science",
+      "chapters": [
+        { "id": "physical-science", "title": "Physical Science & Environment", "grades": ["9", "10"] },
+        { "id": "life-science", "title": "Life Science & Environment", "grades": ["9", "10"] },
+        { "id": "physics", "title": "Physics", "grades": ["11", "12"] },
+        { "id": "chemistry", "title": "Chemistry", "grades": ["11", "12"] },
+        { "id": "biology", "title": "Biological Sciences", "grades": ["11", "12"] }
+      ]
+    },
+    "mathematics": {
+      "label": "Mathematics",
+      "chapters": [
+        { "id": "algebra", "title": "Algebra & Number Systems", "grades": ["9", "10"] },
+        { "id": "geometry", "title": "Geometry & Mensuration", "grades": ["9", "10"] },
+        { "id": "trigonometry", "title": "Trigonometry", "grades": ["10"] },
+        { "id": "calculus", "title": "Calculus", "grades": ["11", "12"] },
+        { "id": "probability", "title": "Probability & Statistics", "grades": ["11", "12"] }
+      ]
+    }
+  },
+  "verifiedQuestions": []
+}

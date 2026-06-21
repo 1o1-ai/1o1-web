@@ -9,18 +9,26 @@
   const TIMEPASS_BLOCK =
     /\b(bored|timepass|time pass|cricket|movie|netflix|game|gaming|gf|bf|party|weekend plan|what'?s up|wassup|boredom)\b/i;
 
+  const MODERATION_REPLY_DEFAULT =
+    "Let's keep this about prep — no personal contact or off-topic chat here. Ask about the chapter or quiz instead.";
+
+  const TIMEPASS_WARN_DEFAULT =
+    'Casual chat is ok for a minute — but this room is for prep. No personal topics, please.';
+
   const MODERATION_REPLY =
     "Let's keep this about CBSE prep — no personal contact or off-topic chat here. Ask about the chapter or quiz instead.";
 
   const TIMEPASS_WARN =
     "Casual chat is ok for a minute — but this room is for board prep. No personal topics, please.";
 
+  let skuConfig = null;
+
   const STUDY_CHATTER = [
     'Anyone doing the chapter quiz?',
     'Board paper 2024 was tough on MCQs…',
     'Stuck on Q3 — options look similar',
     'Going through polynomials again tonight',
-    'Has anyone tried the 5-question set from last 3 years?',
+    'Has anyone tried the 5-question chapter quiz?',
     'Section A timing is the real challenge',
     "My school pre-board is next month",
   ];
@@ -63,13 +71,29 @@
 
   let roster = null;
 
+  function configureForSku(skuId) {
+    if (global.AnyoAcademyConfig) {
+      skuConfig = global.AnyoAcademyConfig.get(skuId);
+    }
+    roster = null;
+  }
+
+  function cfg(key, fallback) {
+    return (skuConfig && skuConfig[key]) || fallback;
+  }
+
   async function loadRoster() {
     if (roster) return roster;
-    const paths = [
+    const paths = [];
+    const rosterPath = cfg('rosterPath', '');
+    if (rosterPath) paths.push(rosterPath);
+    paths.push(
       '/portal/data/academy-bots.json',
       '../../data/academy-bots.json',
       '../data/academy-bots.json',
-    ];
+      '/portal/data/us-uk-academy-bots.json',
+      '../../data/us-uk-academy-bots.json'
+    );
     for (const p of paths) {
       try {
         const res = await fetch(p);
@@ -102,12 +126,22 @@
     return TIMEPASS_BLOCK.test(text || '');
   }
 
+  function isMocked() {
+    return !!(skuConfig && skuConfig.mocked) || !!(roster && roster.mocked);
+  }
+
+  function displayName(person) {
+    if (!person || !person.name) return '';
+    if (isMocked() && !/\(mock\)/i.test(person.name)) return `${person.name} (mock)`;
+    return person.name;
+  }
+
   function moderationReply() {
-    return MODERATION_REPLY;
+    return cfg('moderationReply', MODERATION_REPLY_DEFAULT);
   }
 
   function timepassWarning() {
-    return TIMEPASS_WARN;
+    return cfg('timepassWarn', TIMEPASS_WARN_DEFAULT);
   }
 
   function randomItem(arr) {
@@ -126,7 +160,8 @@
   }
 
   function pickStudyMessage(subject) {
-    return randomItem(STUDY_CHATTER);
+    const lines = cfg('studyChatter', STUDY_CHATTER);
+    return randomItem(lines);
   }
 
   /** Bot may leave after joining — with or without message */
@@ -166,11 +201,13 @@
     if (isTimepassChat(msg)) {
       return { type: 'timepass', text: randomItem(PEER_TIMEPASS), warn: timepassWarning() };
     }
-    if (/\b(sync|wrong|mistake|minus|sign|agree|error|pdf|typo)\b/.test(m)) {
-      return { type: 'study', text: randomItem(PEER_STUDY_REPLIES) };
+    if (/\b(sync|wrong|mistake|minus|sign|agree|error|pdf|typo|grammar|passage)\b/.test(m)) {
+      const replies = cfg('peerStudyReplies', PEER_STUDY_REPLIES);
+      return { type: 'study', text: randomItem(replies) };
     }
     if (/\b(hi|hello|hey|namaste)\b/.test(m)) {
-      return { type: 'study', text: `Hey — I'm on ${bot.subject === 'science' ? 'Science' : 'Maths'} too. Which MCQ are you on?` };
+      const subj = bot.subject || 'this section';
+      return { type: 'study', text: `Hey — I'm working on ${subj} too. Which question are you on?` };
     }
     if (Math.random() < 0.35) {
       return { type: 'study', text: pickStudyMessage(bot.subject) };
@@ -180,9 +217,12 @@
 
   global.AnyoBots = {
     MAX_PEERS,
+    configureForSku,
     loadRoster,
     getPerson,
     getRoster: () => roster,
+    isMocked,
+    displayName,
     isPersonalQuestion,
     isTimepassChat,
     moderationReply,

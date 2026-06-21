@@ -26,6 +26,32 @@
 .sub-title.bn { font-family: 'Noto Sans Bengali', Inter, sans-serif; }
 .manjulab-mini img { border-radius: 8px; border: 1px solid var(--border); }
 
+.header-uap-portal {
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+}
+.header-portal-mini.portal {
+  width: 56px;
+  height: 56px;
+  display: block;
+}
+.header-portal-mini .portal-core {
+  inset: 10%;
+  padding: 0;
+  overflow: hidden;
+}
+.header-uap-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  background: #fff;
+}
+.school-card--compact {
+  grid-template-columns: 1fr;
+}
+
 .sub-main {
   position: relative;
   z-index: 5;

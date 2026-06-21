@@ -192,27 +192,36 @@
       });
     });
 
+    const SKU_HUBS = {
+      'cbse10-core': { title: 'CBSE 10 Core', path: '/portal/education/cbse10/index.html' },
+      'sat-act': { title: 'SAT / ACT', path: '/portal/education/sat-act/index.html' },
+      'english-tests': { title: 'TOEFL · IELTS · DET', path: '/portal/education/english-tests/index.html' },
+      'rhytoma-wbbse': { title: 'Rhytoma Academy', path: '/portal/education/rhytoma/index.html' },
+    };
+
     document.querySelectorAll('[data-sku-login]').forEach((card) => {
       card.addEventListener('click', () => {
         if (card.disabled) return;
         const live = card.getAttribute('data-live') === 'true';
         if (!live) return;
 
+        const sku = card.getAttribute('data-sku') || 'cbse10-core';
+        const hub = SKU_HUBS[sku] || SKU_HUBS['cbse10-core'];
+
         const session = getSession();
         if (session) {
-          const role = session.role === 'teacher' ? 'teacher' : 'student';
-          window.location.href = `/portal/education/cbse10/index.html`;
+          window.location.href = hub.path;
           return;
         }
 
         openPortalLogin({
-          title: 'CBSE 10 Core',
+          title: hub.title,
           subtitle: `${ACADEMY_NAME} · choose your role`,
           showRoles: true,
           teacherDisabled: false,
           vertical: 'education',
           onSuccess: () => {
-            window.location.href = `/portal/education/cbse10/index.html`;
+            window.location.href = hub.path;
           },
         });
       });

@@ -1,0 +1,65 @@
+{
+  "sku": "rhytoma-wbbse",
+  "mocked": true,
+  "note": "Simulated peers for Rhytoma Academy demo — not real students.",
+  "teachers": [
+    {
+      "id": "t_rw_dutta_910",
+      "name": "Ananya Dutta (mock)",
+      "role": "teacher",
+      "band": "9-10",
+      "school": "Rhytoma Academy · Madhyamik",
+      "subjects": ["science", "mathematics"],
+      "photo": "https://randomuser.me/api/portraits/women/44.jpg"
+    },
+    {
+      "id": "t_rw_ghosh_910",
+      "name": "Deb Ghosh (mock)",
+      "role": "teacher",
+      "band": "9-10",
+      "school": "Rhytoma Academy · Madhyamik",
+      "subjects": ["mathematics"],
+      "photo": "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    {
+      "id": "t_rw_sen_1112",
+      "name": "Mira Sen (mock)",
+      "role": "teacher",
+      "band": "11-12",
+      "school": "Rhytoma Academy · HS Science",
+      "subjects": ["science"],
+      "photo": "https://randomuser.me/api/portraits/women/68.jpg"
+    },
+    {
+      "id": "t_rw_roy_1112",
+      "name": "Subhajit Roy (mock)",
+      "role": "teacher",
+      "band": "11-12",
+      "school": "Rhytoma Academy · HS Science",
+      "subjects": ["mathematics"],
+      "photo": "https://randomuser.me/api/portraits/men/41.jpg"
+    }
+  ],
+  "students": [
+    { "id": "s_rw_01", "name": "Arijit Banerjee (mock)", "grade": "9", "school": "South Point, Kolkata", "subjects": ["science"], "photo": "https://randomuser.me/api/portraits/men/12.jpg" },
+    { "id": "s_rw_02", "name": "Priya Mukherjee (mock)", "grade": "9", "school": "La Martiniere, Kolkata", "subjects": ["mathematics"], "photo": "https://randomuser.me/api/portraits/women/22.jpg" },
+    { "id": "s_rw_03", "name": "Rahul Sen (mock)", "grade": "10", "school": "UAP, Uttarpara", "subjects": ["both"], "photo": "https://randomuser.me/api/portraits/men/18.jpg" },
+    { "id": "s_rw_04", "name": "Sneha Das (mock)", "grade": "10", "school": "DPS Ruby Park", "subjects": ["science"], "photo": "https://randomuser.me/api/portraits/women/29.jpg" },
+    { "id": "s_rw_05", "name": "Kabir Sharma (mock)", "grade": "10", "school": "Modern High, Kolkata", "subjects": ["mathematics"], "photo": "https://randomuser.me/api/portraits/men/25.jpg" },
+    { "id": "s_rw_06", "name": "Isha Gupta (mock)", "grade": "11", "school": "Bhavan's, Kolkata", "subjects": ["science"], "photo": "https://randomuser.me/api/portraits/women/33.jpg" },
+    { "id": "s_rw_07", "name": "Arjun Mehta (mock)", "grade": "11", "school": "Birla High, Kolkata", "subjects": ["mathematics"], "photo": "https://randomuser.me/api/portraits/men/36.jpg" },
+    { "id": "s_rw_08", "name": "Maya Chatterjee (mock)", "grade": "11", "school": "Ashok Hall", "subjects": ["both"], "photo": "https://randomuser.me/api/portraits/women/41.jpg" },
+    { "id": "s_rw_09", "name": "Dev Roy (mock)", "grade": "12", "school": "UAP, Uttarpara", "subjects": ["science"], "photo": "https://randomuser.me/api/portraits/men/48.jpg" },
+    { "id": "s_rw_10", "name": "Kavya Iyer (mock)", "grade": "12", "school": "DPS New Town", "subjects": ["mathematics"], "photo": "https://randomuser.me/api/portraits/women/52.jpg" },
+    { "id": "s_rw_11", "name": "Vihaan Patel (mock)", "grade": "9", "school": "Adam's, Kolkata", "subjects": ["mathematics"], "photo": "https://randomuser.me/api/portraits/men/52.jpg" },
+    { "id": "s_rw_12", "name": "Ananya Bose (mock)", "grade": "10", "school": "Hindu School", "subjects": ["science"], "photo": "https://randomuser.me/api/portraits/women/57.jpg" },
+    { "id": "s_rw_13", "name": "Ritwik Ghosh (mock)", "grade": "11", "school": "Ramakrishna Mission", "subjects": ["science"], "photo": "https://randomuser.me/api/portraits/men/61.jpg" },
+    { "id": "s_rw_14", "name": "Poulomi Das (mock)", "grade": "12", "school": "South Point, Kolkata", "subjects": ["both"], "photo": "https://randomuser.me/api/portraits/women/63.jpg" },
+    { "id": "s_rw_15", "name": "Sayan Banerjee (mock)", "grade": "9", "school": "St. Xavier's Collegiate", "subjects": ["science"], "photo": "https://randomuser.me/api/portraits/men/67.jpg" },
+    { "id": "s_rw_16", "name": "Tania Sarkar (mock)", "grade": "10", "school": "UAP, Uttarpara", "subjects": ["mathematics"], "photo": "https://randomuser.me/api/portraits/women/71.jpg" },
+    { "id": "s_rw_17", "name": "Oishik Mondal (mock)", "grade": "11", "school": "Central Model, Kolkata", "subjects": ["mathematics"], "photo": "https://randomuser.me/api/portraits/men/72.jpg" },
+    { "id": "s_rw_18", "name": "Riya Sen (mock)", "grade": "12", "school": "Bhavan's, Kolkata", "subjects": ["science"], "photo": "https://randomuser.me/api/portraits/women/74.jpg" },
+    { "id": "s_rw_19", "name": "Aditya Paul (mock)", "grade": "9", "school": "Don Bosco, Liluah", "subjects": ["both"], "photo": "https://randomuser.me/api/portraits/men/76.jpg" },
+    { "id": "s_rw_20", "name": "Shreya Mitra (mock)", "grade": "10", "school": "DPS Megacity", "subjects": ["science"], "photo": "https://randomuser.me/api/portraits/women/79.jpg" }
+  ]
+}

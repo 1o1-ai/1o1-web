@@ -121,7 +121,7 @@
 
   function updateApiLinks() {
     var medium = lang === 'bn' ? 'Bengali' : 'English';
-    var practiceQ = 'medium=' + encodeURIComponent(medium) + '&track=wbbse';
+    var practiceQ = 'medium=' + encodeURIComponent(medium) + '&track=rhytoma&grade=' + encodeURIComponent(document.getElementById('gradeSelect')?.value || '10');
     if (API_BASE) practiceQ += '&api=' + encodeURIComponent(API_BASE);
 
     var openPractice = document.getElementById('openPractice');
@@ -233,6 +233,18 @@
       });
     });
   });
+
+  function syncBoardFromGrade() {
+    var gradeEl = document.getElementById('gradeSelect');
+    var boardEl = document.getElementById('boardSelect');
+    if (!gradeEl || !boardEl) return;
+    var g = parseInt(gradeEl.value, 10);
+    var board = g >= 11 ? 'WBCHSE' : 'WBBSE';
+    boardEl.value = board;
+  }
+
+  document.getElementById('gradeSelect')?.addEventListener('change', syncBoardFromGrade);
+  syncBoardFromGrade();
 
   function appendChat(role, text) {
     var log = document.getElementById('chatLog');

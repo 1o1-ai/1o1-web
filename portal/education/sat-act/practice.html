@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Practice Test · SAT / ACT</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+</head>
+<body class="portal-page study-room-page">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <header class="portal-header">
+    <a class="back-link" href="index.html">← SAT / ACT Hub</a>
+    <h1>Practice Test</h1>
+  </header>
+  <main class="portal-main" style="max-width:720px">
+    <section class="practice-card">
+      <h2>Skill drill</h2>
+      <p class="hint">Official ingested items — 5 or 10 per skill (max 15).</p>
+      <label>Track</label>
+      <select id="prTrack"><option value="act">ACT</option><option value="sat">SAT</option></select>
+      <label>Section</label>
+      <select id="prSection"><option value="english">English</option><option value="math">Math</option><option value="reading">Reading</option></select>
+      <label>Questions</label>
+      <input id="prCount" type="number" min="1" max="15" value="5" />
+      <button type="button" class="btn-portal btn-portal-primary" id="btnSkillStart" style="width:100%;margin-top:12px">Start skill practice</button>
+    </section>
+    <section class="practice-card mock-card">
+      <h2>Section mock</h2>
+      <p class="hint">Timed ACT English or SAT Reading &amp; Writing block — same integrity rules as CBSE mock.</p>
+      <button type="button" class="btn-portal btn-portal-primary" id="btnSectionMock" style="width:100%;margin-top:12px">Start section mock (preview)</button>
+    </section>
+    <p class="portal-note">Uses the same <code>portal.css</code> practice cards as CBSE 10 — skin updates apply here automatically.</p>
+  </main>
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/academy-config.js"></script>
+  <script>
+    document.getElementById('btnSkillStart').addEventListener('click', () => {
+      window.location.href = 'room.html?role=student';
+    });
+    document.getElementById('btnSectionMock').addEventListener('click', () => {
+      alert('Section mock wiring in progress — official ACT English block from ingested PDFs.');
+    });
+  </script>
+</body>
+</html>

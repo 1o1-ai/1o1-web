@@ -1,0 +1,104 @@
+{
+  "sku": "sat-act",
+  "title": "SAT / ACT Core",
+  "tracks": {
+    "sat": {
+      "label": "SAT (Digital)",
+      "sections": {
+        "math": {
+          "label": "Math",
+          "skills": [
+            {
+              "id": "sat-math-algebra",
+              "title": "Heart of Algebra"
+            },
+            {
+              "id": "sat-math-advanced",
+              "title": "Passport to Advanced Math"
+            },
+            {
+              "id": "sat-math-psda",
+              "title": "Problem Solving & Data Analysis"
+            },
+            {
+              "id": "sat-math-geometry",
+              "title": "Geometry & Trigonometry"
+            }
+          ]
+        },
+        "reading_writing": {
+          "label": "Reading & Writing",
+          "skills": [
+            {
+              "id": "sat-rw-craft",
+              "title": "Craft and Structure"
+            },
+            {
+              "id": "sat-rw-info",
+              "title": "Information and Ideas"
+            },
+            {
+              "id": "sat-rw-grammar",
+              "title": "Standard English Conventions"
+            },
+            {
+              "id": "sat-rw-expression",
+              "title": "Expression of Ideas"
+            }
+          ]
+        }
+      }
+    },
+    "act": {
+      "label": "ACT",
+      "sections": {
+        "english": {
+          "label": "English",
+          "skills": [
+            {
+              "id": "act-english",
+              "title": "English"
+            }
+          ]
+        },
+        "math": {
+          "label": "Mathematics",
+          "skills": [
+            {
+              "id": "act-math",
+              "title": "Mathematics"
+            }
+          ]
+        },
+        "reading": {
+          "label": "Reading",
+          "skills": [
+            {
+              "id": "act-reading",
+              "title": "Reading"
+            }
+          ]
+        },
+        "science": {
+          "label": "Science",
+          "skills": [
+            {
+              "id": "act-science",
+              "title": "Science"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "sources_note": "Official College Board (Bluebook, linear PDFs, Khan Academy) and ACT.org free prep guides. Bluebook adaptive tests require the desktop app \u2014 not scraped here.",
+  "stats": {
+    "total_questions": 112,
+    "verified_questions": 0,
+    "tracks": {
+      "sat": 0,
+      "act": 112
+    },
+    "updated_at": "2026-06-21T15:16:38.579968+00:00"
+  }
+}

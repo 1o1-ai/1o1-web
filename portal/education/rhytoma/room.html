@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CBSE 10 Core · Study Room</title>
+  <title>Rhytoma Academy · Study Room</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../../assets/theme.css" />
   <link rel="stylesheet" href="../../assets/portal.css" />
 </head>
-<body class="portal-page study-room-page student-ambience">
+<body class="portal-page study-room-page student-ambience" data-sku="rhytoma-wbbse">
   <canvas id="cosmos" aria-hidden="true"></canvas>
   <div class="mesh" aria-hidden="true"></div>
   <div class="lamp-glow" aria-hidden="true"></div>
 
   <header class="portal-header">
-    <a class="back-link" href="/portal/education/">← Anyo Brahmando Academy</a>
-    <h1>CBSE 10 Core <span id="roleBadge" style="font-size:0.75rem;color:#67e8f9"></span></h1>
+    <a class="back-link" href="index.html">← Rhytoma Hub</a>
+    <h1>Rhytoma Academy <span id="roleBadge" style="font-size:0.75rem;color:#67e8f9"></span></h1>
     <span id="ingestBadge" hidden style="font-size:0.65rem;color:#94a3b8;margin-left:8px"></span>
     <span id="onlineBadge" class="online-live-badge" hidden></span>
-    <a class="back-link" href="/portal/education/cbse10/progress.html" style="font-size:0.8rem">Progress</a>
+    <a class="back-link" href="/rhytoma/#panel-practice" style="font-size:0.8rem">Practice</a>
   </header>
 
   <main class="portal-main" style="max-width:1200px">
@@ -28,13 +28,20 @@
     <div id="studentView">
       <div class="study-room-wrap">
         <div class="study-desk">
-        <div class="subject-orbs" aria-label="Class 10 subjects">
-          <div class="subject-orb science" title="Science · 086">🧪</div>
-          <div class="subject-orb math" title="Mathematics · 041">📐</div>
+        <div class="subject-orbs" aria-label="Science and Mathematics">
+          <div class="subject-orb science" title="Science">🧪</div>
+          <div class="subject-orb math" title="Mathematics">📐</div>
         </div>
 
         <div class="study-layout" style="padding:12px">
           <aside>
+            <p style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a3b8;margin-bottom:8px">Class</p>
+            <select id="gradeSelect" style="width:100%;margin-bottom:12px;padding:8px;border-radius:10px;border:1px solid rgba(148,163,184,0.25);background:rgba(15,23,42,0.6);color:#e2e8f0">
+              <option value="9">Class 9</option>
+              <option value="10" selected>Class 10</option>
+              <option value="11">Class 11</option>
+              <option value="12">Class 12</option>
+            </select>
             <p style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a3b8;margin-bottom:8px">Subject</p>
             <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px">
               <button type="button" data-subject="science" class="active" style="padding:8px;border-radius:10px;border:1px solid rgba(103,232,249,0.4);background:rgba(6,182,212,0.12);color:#67e8f9;cursor:pointer">🧪 Science</button>
@@ -65,7 +72,7 @@
             <button type="button" id="btnQuiz" class="btn-portal btn-portal-primary" style="width:100%;margin-bottom:8px">Chapter quiz (5)</button>
             <button type="button" id="btnBoard" class="btn-portal btn-portal-ghost" style="width:100%;margin-bottom:8px">Board mock</button>
             <button type="button" id="btnInvite" class="btn-portal btn-portal-ghost" style="width:100%;margin-bottom:12px">Invite classmate</button>
-            <p style="font-size:0.65rem;color:#64748b;line-height:1.4">Syllabus: CBSE 2026-27 · Verified board MCQs only · Study together is web only.</p>
+            <p style="font-size:0.65rem;color:#64748b;line-height:1.4">WBBSE/WBCHSE · Classes IX–XII · Science &amp; Math · mocked peers for demo.</p>
             <div id="activePeers" class="active-peers" hidden>
               <p class="peers-label">In this room (max 2)</p>
               <ul id="activePeerList"></ul>
@@ -105,12 +112,13 @@
   </main>
 
   <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/academy-config.js"></script>
   <script src="../../assets/presence.js"></script>
   <script src="../../assets/bots.js"></script>
   <script src="../../assets/tutor-intent.js"></script>
   <script src="../../assets/question-format.js"></script>
   <script src="../../assets/portal.js"></script>
-  <script src="cbse10-room.js"></script>
+  <script src="rhytoma-room.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const session = window.getPortalSession();
@@ -119,8 +127,8 @@
       }
       if (!session) {
         window.openPortalLogin({
-          title: 'Anyo Brahmando Academy',
-          subtitle: 'CBSE 10 Core · demo: yoga / yoga',
+          title: 'Rhytoma Academy',
+          subtitle: 'Demo: yoga / yoga · mock peers',
           showRoles: true,
           onSuccess: (s) => {
             location.search = '?role=' + encodeURIComponent(s.role || 'student');

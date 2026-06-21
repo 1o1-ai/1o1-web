@@ -1,0 +1,71 @@
+{
+  "sku": "english-tests",
+  "title": "TOEFL \u00b7 IELTS \u00b7 DET",
+  "status": "planned",
+  "tests": {
+    "toefl": {
+      "label": "TOEFL iBT",
+      "sections": [
+        {
+          "id": "toefl-reading",
+          "title": "Reading"
+        },
+        {
+          "id": "toefl-listening",
+          "title": "Listening"
+        },
+        {
+          "id": "toefl-speaking",
+          "title": "Speaking"
+        },
+        {
+          "id": "toefl-writing",
+          "title": "Writing"
+        }
+      ]
+    },
+    "ielts": {
+      "label": "IELTS Academic",
+      "sections": [
+        {
+          "id": "ielts-listening",
+          "title": "Listening"
+        },
+        {
+          "id": "ielts-reading",
+          "title": "Reading"
+        },
+        {
+          "id": "ielts-writing",
+          "title": "Writing"
+        },
+        {
+          "id": "ielts-speaking",
+          "title": "Speaking"
+        }
+      ]
+    },
+    "det": {
+      "label": "Duolingo English Test",
+      "sections": [
+        {
+          "id": "det-literacy",
+          "title": "Literacy"
+        },
+        {
+          "id": "det-comprehension",
+          "title": "Comprehension"
+        },
+        {
+          "id": "det-conversation",
+          "title": "Conversation"
+        },
+        {
+          "id": "det-production",
+          "title": "Production"
+        }
+      ]
+    }
+  },
+  "sources_note": "Official ETS TOEFL, British Council IELTS, and Duolingo DET materials \u2014 separate ingest pipeline; subscription pricing distinct from SAT/ACT."
+}

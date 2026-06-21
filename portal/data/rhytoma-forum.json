@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "sku": "rhytoma-wbbse",
+  "mocked": true,
+  "assistant": {
+    "id": "truthguard",
+    "name": "TruthGuard",
+    "brand": "ManjuLAB Study Assistant (mock)"
+  },
+  "threads": [
+    {
+      "id": "rw_thr_sci_ps_01",
+      "title": "Ohm's law numericals — Madhyamik Class 10",
+      "subject": "science",
+      "chapter": "physical-science",
+      "chapter_title": "Physical Science & Environment",
+      "grade": "10",
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_rw_03",
+          "author_name": "Rahul Sen (mock)",
+          "author_role": "student",
+          "location": "UAP, Uttarpara",
+          "body": "In a circuit R=4Ω and I=0.5A — is V=2V correct? Our teacher said watch units.",
+          "created_at": "2026-06-20T10:00:00+00:00"
+        },
+        {
+          "author_id": "t_rw_dutta_910",
+          "author_name": "Ananya Dutta (mock)",
+          "author_role": "teacher",
+          "location": "Rhytoma Academy",
+          "body": "Yes — V = IR. Always write SI units in the final answer for WBBSE.",
+          "created_at": "2026-06-20T11:00:00+00:00"
+        },
+        {
+          "author_id": "s_rw_04",
+          "author_name": "Sneha Das (mock)",
+          "author_role": "student",
+          "location": "DPS Ruby Park",
+          "body": "Same doubt here — drawing the circuit diagram helped me.",
+          "created_at": "2026-06-20T12:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "rw_thr_mat_alg_02",
+      "title": "Factorisation tips for quadratic equations?",
+      "subject": "mathematics",
+      "chapter": "algebra",
+      "chapter_title": "Algebra & Number Systems",
+      "grade": "10",
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_rw_05",
+          "author_name": "Kabir Sharma (mock)",
+          "author_role": "student",
+          "location": "Modern High, Kolkata",
+          "body": "How do you quickly split the middle term for x² + 7x + 12?",
+          "created_at": "2026-06-19T14:00:00+00:00"
+        },
+        {
+          "author_id": "t_rw_ghosh_910",
+          "author_name": "Deb Ghosh (mock)",
+          "author_role": "teacher",
+          "location": "Rhytoma Academy",
+          "body": "Find two numbers that multiply to 12 and add to 7 — that's 3 and 4.",
+          "created_at": "2026-06-19T15:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "rw_thr_sci_phy_03",
+      "title": "Class 11 Physics — sign convention in kinematics",
+      "subject": "science",
+      "chapter": "physics",
+      "chapter_title": "Physics",
+      "grade": "11",
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_rw_06",
+          "author_name": "Isha Gupta (mock)",
+          "author_role": "student",
+          "location": "Bhavan's, Kolkata",
+          "body": "When velocity is negative but acceleration is positive — object slowing down?",
+          "created_at": "2026-06-18T09:00:00+00:00"
+        },
+        {
+          "author_id": "t_rw_sen_1112",
+          "author_name": "Mira Sen (mock)",
+          "author_role": "teacher",
+          "location": "Rhytoma Academy HS",
+          "body": "Correct — velocity and acceleration opposite in direction means speed decreases.",
+          "created_at": "2026-06-18T10:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "rw_thr_mat_calc_04",
+      "title": "Differentiation basics for HS — where to start?",
+      "subject": "mathematics",
+      "chapter": "calculus",
+      "chapter_title": "Calculus",
+      "grade": "11",
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_rw_07",
+          "author_name": "Arjun Mehta (mock)",
+          "author_role": "student",
+          "location": "Birla High",
+          "body": "Is it better to master limits before touching derivatives?",
+          "created_at": "2026-06-17T16:00:00+00:00"
+        },
+        {
+          "author_id": "t_rw_roy_1112",
+          "author_name": "Subhajit Roy (mock)",
+          "author_role": "teacher",
+          "location": "Rhytoma Academy HS",
+          "body": "Yes — limits first, then first principles of derivative, then standard formulae.",
+          "created_at": "2026-06-17T17:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "rw_thr_sci_bio_05",
+      "title": "Biological Sciences — mitosis vs meiosis summary?",
+      "subject": "science",
+      "chapter": "biology",
+      "chapter_title": "Biological Sciences",
+      "grade": "12",
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_rw_09",
+          "author_name": "Dev Roy (mock)",
+          "author_role": "student",
+          "location": "UAP, Uttarpara",
+          "body": "One table for board revision — daughter cells count and chromosome number?",
+          "created_at": "2026-06-16T08:00:00+00:00"
+        },
+        {
+          "author_id": "t_rw_sen_1112",
+          "author_name": "Mira Sen (mock)",
+          "author_role": "teacher",
+          "location": "Rhytoma Academy HS",
+          "body": "Mitosis: 2 diploid cells, same chromosome number. Meiosis: 4 haploid gametes. Always cite your textbook diagram for the board table.",
+          "created_at": "2026-06-16T09:00:00+00:00"
+        }
+      ]
+    }
+  ]
+}

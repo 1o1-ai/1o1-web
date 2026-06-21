@@ -21,8 +21,21 @@
   <header class="sub-header">
     <a class="back-link" href="/" data-i18n="back">← Yogabrata</a>
     <span class="sub-title bn" data-i18n="pageTitle">ঋতমা Academy</span>
-    <a class="manjulab-mini" href="https://manjulab.com" target="_blank" rel="noopener">
-      <img src="https://brahmando.com/branding/manjulab-logo.png" alt="ManjuLAB" width="32" height="32" />
+    <a class="header-uap-portal" href="/uap/" title="Uttarpara Amarendra Vidyapith" aria-label="Uttarpara Amarendra Vidyapith">
+      <span class="portal portal--rhytoma header-portal-mini">
+        <span class="portal-ring" aria-hidden="true"></span>
+        <span class="portal-orbit" aria-hidden="true"></span>
+        <span class="portal-core">
+          <img
+            class="header-uap-logo"
+            src="https://upload.wikimedia.org/wikipedia/en/8/88/Uttarpara_Amarendra_Vidyapith_logo.jpg"
+            alt=""
+            width="40"
+            height="40"
+            loading="lazy"
+          />
+        </span>
+      </span>
     </a>
   </header>
 
@@ -44,63 +57,41 @@
       <p class="lede" data-i18n="heroLede">WBBSE/WBCHSE — AI answers grounded in verified textbooks only. No hallucination.</p>
     </section>
 
-    <div class="stream-circle-grid" aria-label="Streams">
-      <div class="portal portal--rhytoma" style="pointer-events:none">
+    <div class="stream-circle-grid" aria-label="Study spaces">
+      <a class="portal portal--rhytoma" href="/portal/education/rhytoma/room.html?role=student">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
           <span class="portal-icon">🔬</span>
           <span class="portal-title">Science</span>
-          <span class="portal-sub">Coming soon</span>
+          <span class="portal-sub">Study room · Classes IX–XII</span>
         </div>
-      </div>
-      <div class="portal portal--caregiver" style="pointer-events:none;opacity:0.85">
+      </a>
+      <a class="portal portal--saas" href="/portal/education/rhytoma/room.html?role=student">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
-          <span class="portal-icon">📈</span>
-          <span class="portal-title">Commerce</span>
-          <span class="portal-sub">Class 11–12 · Soon</span>
+          <span class="portal-icon">📐</span>
+          <span class="portal-title">Mathematics</span>
+          <span class="portal-sub">Study room · mock peers</span>
         </div>
-      </div>
-      <div class="portal portal--saas" style="pointer-events:none;opacity:0.85">
+      </a>
+      <a class="portal portal--caregiver" href="/portal/education/rhytoma/forum.html">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
-          <span class="portal-icon">📜</span>
-          <span class="portal-title">Arts</span>
-          <span class="portal-sub">Coming soon</span>
+          <span class="portal-icon">💬</span>
+          <span class="portal-title">Forum</span>
+          <span class="portal-sub">Science &amp; Math threads</span>
         </div>
-      </div>
+      </a>
     </div>
 
-    <div class="stream-nested">
-      <h3>Science · by class band (preview)</h3>
-      <div class="stream-circle-grid">
-        <div class="portal portal--rhytoma" style="pointer-events:none;width:min(120px,28vw);height:min(120px,28vw)">
-          <div class="portal-ring"></div>
-          <div class="portal-core"><span class="portal-title" style="font-size:0.75rem">Class 8</span></div>
-        </div>
-        <div class="portal portal--rhytoma" style="pointer-events:none;width:min(120px,28vw);height:min(120px,28vw)">
-          <div class="portal-ring"></div>
-          <div class="portal-core"><span class="portal-title" style="font-size:0.75rem">Class 9–10</span></div>
-        </div>
-        <div class="portal portal--rhytoma" style="pointer-events:none;width:min(120px,28vw);height:min(120px,28vw)">
-          <div class="portal-ring"></div>
-          <div class="portal-core"><span class="portal-title" style="font-size:0.75rem">Class 11–12</span></div>
-        </div>
-      </div>
+    <div class="launch-row" style="margin:20px 0 28px">
+      <a class="btn-primary" href="/portal/education/rhytoma/index.html">Open Rhytoma portal hub</a>
     </div>
 
-    <article class="school-card">
-      <img
-        class="school-logo"
-        src="https://upload.wikimedia.org/wikipedia/en/8/88/Uttarpara_Amarendra_Vidyapith_logo.jpg"
-        alt="Uttarpara Amarendra Vidyapith"
-        width="88"
-        height="88"
-        loading="lazy"
-      />
+    <article class="school-card school-card--compact">
       <div>
         <h2><a class="school-title-link" href="/uap/" data-i18n="schoolTitle">উত্তরপাড়া অমরেন্দ্র বিদ্যাপীথ</a></h2>
         <p class="meta" data-i18n="schoolMeta">Uttarpara, Hooghly · Est. 1939 · WBBSE / WBCHSE</p>
@@ -147,12 +138,12 @@
             <option value="coaching_center" data-i18n-opt="actorCoaching">Coaching</option>
           </select>
           <select id="gradeSelect" aria-label="Grade">
-            <option>8</option><option>9</option><option selected>10</option>
+            <option>9</option><option selected>10</option>
             <option>11</option><option>12</option>
           </select>
-          <select id="boardSelect" aria-label="Board">
-            <option value="WBBSE">WBBSE</option>
-            <option value="WBCHSE">WBCHSE</option>
+          <select id="boardSelect" aria-label="Board" disabled title="Board is set automatically from class">
+            <option value="WBBSE">WBBSE (IX–X)</option>
+            <option value="WBCHSE">WBCHSE (XI–XII)</option>
           </select>
         </div>
         <div id="chatLog" class="chat-log"></div>
