@@ -37,20 +37,56 @@
 
   document.getElementById('btnChapterStart').addEventListener('click', () => {
     const count = Math.min(15, Math.max(1, parseInt(document.getElementById('prCount').value, 10) || 5));
-    const figureOnly = document.getElementById('prFigureOnly').checked;
+    const preferFigure = document.getElementById('prFigureOnly').checked;
+    const subject = prSubject.value;
+    const chapter = prChapter.value;
+
     let qs = window.CBSE10Shared.filterBank(bank, {
-      subject: prSubject.value,
-      chapter: prChapter.value,
-      yearsBack: 3,
-      limit: figureOnly ? 99 : count,
-      requireFigure: figureOnly,
+      subject,
+      chapter,
+      limit: count,
+      preferFigure,
     });
-    if (figureOnly) qs = qs.slice(0, count);
+
+    const display = qs.map(window.CBSE10Shared.toDisplayQ);
+    const figCount = display.filter((q) => q.hasFigure).length;
+    const figChapters = window.CBSE10Shared.chaptersWithFigures(bank, subject);
+    const chTitle = chapters(subject).find((c) => c.id === chapter)?.title || chapter;
+
     if (!qs.length) {
-      alert('No verified questions for this filter. Try another chapter or uncheck diagram-only.');
+      alert('No verified questions for this chapter. Try another chapter.');
       return;
     }
-    runQuiz(qs.map(window.CBSE10Shared.toDisplayQ), `Chapter practice · ${count} question(s)`);
+
+    if (preferFigure && figCount === 0) {
+      if (figChapters.size === 0) {
+        alert(
+          'No diagram-style questions in the verified bank for Science yet. ' +
+            'Switch to Mathematics and try Circles or Polynomials, or uncheck the diagram preference.'
+        );
+        return;
+      }
+      const hints = [...figChapters.entries()]
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 4)
+        .map(([id, n]) => {
+          const t = chapters(subject).find((c) => c.id === id)?.title || id;
+          return `${t} (${n})`;
+        })
+        .join(', ');
+      const ok = confirm(
+        `No diagram-style questions in "${chTitle}" right now.\n\n` +
+          `Chapters with figure prompts: ${hints}.\n\n` +
+          'Start anyway with text-only questions from this chapter?'
+      );
+      if (!ok) return;
+    }
+
+    let title = `Chapter practice · ${count} question(s) · ${chTitle}`;
+    if (preferFigure && figCount > 0) {
+      title += ` · ${figCount} with figure/diagram prompt`;
+    }
+    runQuiz(display, title);
   });
 
   document.getElementById('btnMockStart').addEventListener('click', () => {
