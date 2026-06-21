@@ -10,7 +10,11 @@ Static site for ManjuLAB offerings on **yogabrata.com** (GitHub Pages).
 | AI-Caregiver | `/ai-caregiver/` |
 | **ManjuLAB Online Portal** | `/portal/` |
 
-## ManjuLAB Online Portal (SaaS)
+## Anyo Brahmando Academy (Education SaaS)
+
+**Tagline:** *A different path to knowledge, infinite possibility*
+
+**Demo login:** `yoga` / `yoga`
 
 | Path | Description |
 |------|-------------|
