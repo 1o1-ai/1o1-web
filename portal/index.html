@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ManjuLAB Online Portal · Yogabrata</title>
+  <meta name="description" content="ManjuLAB SaaS — Anyo Brahmando Academy, HVAC, Restaurant, Hospital, Events, Landscaping." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/theme.css" />
+  <link rel="stylesheet" href="assets/portal.css" />
+</head>
+<body class="portal-page">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="orb orb-cyan" aria-hidden="true"></div>
+  <div class="orb orb-orange" aria-hidden="true"></div>
+
+  <header class="portal-header">
+    <a class="back-link" href="/">← Yogabrata</a>
+    <h1>ManjuLAB Online Portal</h1>
+    <button type="button" class="back-link" id="btnLogout" style="background:none;border:none;cursor:pointer;font:inherit" hidden>Sign out</button>
+  </header>
+
+  <main class="portal-main">
+    <div class="portal-hero">
+      <p class="eyebrow">SaaS subscriptions</p>
+      <h2>Choose your offering</h2>
+      <p>Live products open after sign-in. Other verticals preview the Brahmando platform catalog.</p>
+    </div>
+
+    <div class="folder-grid">
+      <button type="button" class="folder-card" data-portal-folder="education" data-live="true" data-href="/portal/education/">
+        <div class="folder-icon" data-vertical="education"><span class="folder-emoji">🎓</span></div>
+        <div class="folder-label">Anyo Brahmando Academy</div>
+        <div class="folder-tagline">A different path to knowledge, infinite possibility</div>
+        <span class="folder-badge live">Live</span>
+      </button>
+
+      <button type="button" class="folder-card is-static" data-portal-folder="hvac" data-live="false" data-href="https://brahmando.com/docs">
+        <div class="folder-icon" data-vertical="hvac"><span class="folder-emoji">❄️</span></div>
+        <div class="folder-label">HVAC Support</div>
+        <span class="folder-badge platform">Platform</span>
+      </button>
+
+      <button type="button" class="folder-card is-static" data-portal-folder="restaurant" data-live="false" data-href="https://brahmando.com/workflows">
+        <div class="folder-icon" data-vertical="restaurant"><span class="folder-emoji">🍽️</span></div>
+        <div class="folder-label">Restaurant Management</div>
+        <span class="folder-badge platform">Platform</span>
+      </button>
+
+      <button type="button" class="folder-card is-static" data-portal-folder="hospital" data-live="false" data-href="https://brahmando.com/docs">
+        <div class="folder-icon" data-vertical="hospital"><span class="folder-emoji">🏥</span></div>
+        <div class="folder-label">Hospital Management</div>
+        <span class="folder-badge platform">Platform</span>
+      </button>
+
+      <button type="button" class="folder-card is-static" data-portal-folder="events" data-live="false" data-href="https://brahmando.com/workflows">
+        <div class="folder-icon" data-vertical="events"><span class="folder-emoji">🎪</span></div>
+        <div class="folder-label">Event Organizers</div>
+        <span class="folder-badge platform">Platform</span>
+      </button>
+
+      <button type="button" class="folder-card is-static" data-portal-folder="landscaping" data-live="false" data-href="https://brahmando.com/workflows">
+        <div class="folder-icon" data-vertical="landscaping"><span class="folder-emoji">🌿</span></div>
+        <div class="folder-label">Landscaping Business</div>
+        <span class="folder-badge platform">Platform</span>
+      </button>
+    </div>
+
+    <p class="portal-note">
+      Static verticals reference <a href="https://brahmando.com" target="_blank" rel="noopener">brahmando.com</a> platform offerings.
+      <strong>Anyo Brahmando Academy</strong> runs on subscribed education microservices (one SKU per deployment).
+    </p>
+  </main>
+
+  <script src="../assets/cosmic.js"></script>
+  <script src="assets/portal.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const session = window.getPortalSession && window.getPortalSession();
+      const btn = document.getElementById('btnLogout');
+      if (session && btn) {
+        btn.hidden = false;
+        btn.addEventListener('click', () => window.portalLogout && window.portalLogout());
+      }
+    });
+  </script>
+</body>
+</html>

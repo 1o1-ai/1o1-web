@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CBSE 10 Core · Study Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+</head>
+<body class="portal-page study-room-page student-ambience">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="lamp-glow" aria-hidden="true"></div>
+
+  <header class="portal-header">
+    <a class="back-link" href="/portal/education/">← Anyo Brahmando Academy</a>
+    <h1>CBSE 10 Core <span id="roleBadge" style="font-size:0.75rem;color:#67e8f9"></span></h1>
+    <span id="ingestBadge" hidden style="font-size:0.65rem;color:#94a3b8;margin-left:8px"></span>
+    <a class="back-link" href="/portal/education/cbse10/progress.html" style="font-size:0.8rem">Progress</a>
+  </header>
+
+  <main class="portal-main" style="max-width:1200px">
+    <div id="alertBanner" hidden style="margin-bottom:16px;padding:14px 16px;border-radius:14px;border:1px solid rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);font-size:0.85rem;color:#fde68a"></div>
+
+    <div id="studentView">
+      <div class="study-desk">
+        <div class="book-rack" aria-label="NCERT Class 10">
+          <div class="book-spine sci" title="Science X">SCI X</div>
+          <div class="book-spine math" title="Mathematics X">MATH X</div>
+          <div class="book-spine sci" style="opacity:0.5">LAB</div>
+        </div>
+
+        <div class="study-layout" style="padding:12px">
+          <aside>
+            <p style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a3b8;margin-bottom:8px">Subject</p>
+            <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px">
+              <button type="button" data-subject="science" class="active" style="padding:8px;border-radius:10px;border:1px solid rgba(103,232,249,0.4);background:rgba(6,182,212,0.12);color:#67e8f9;cursor:pointer">🧪 Science</button>
+              <button type="button" data-subject="mathematics" style="padding:8px;border-radius:10px;border:1px solid rgba(148,163,184,0.25);background:transparent;color:#cbd5e1;cursor:pointer">📐 Mathematics</button>
+            </div>
+            <p style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a3b8;margin-bottom:6px">Chapters</p>
+            <ul class="chapter-list" id="chapterList"></ul>
+          </aside>
+
+          <section class="chat-panel">
+            <p id="subjectLabel" style="font-size:0.72rem;color:#94a3b8"></p>
+            <h2 id="chapterTitle" style="font-size:1rem;color:#f1f5f9;margin-bottom:8px">Loading…</h2>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div id="quizPanel" hidden style="margin:8px 0;padding:12px;border-radius:12px;border:1px solid rgba(52,211,153,0.25);background:rgba(16,185,129,0.06)"></div>
+            <div class="chat-input-row">
+              <input id="chatInput" type="text" placeholder="Ask about this chapter…" />
+              <button type="button" id="sendChat" class="btn-portal btn-portal-primary" style="flex:0;padding:8px 16px">Send</button>
+            </div>
+          </section>
+
+          <aside>
+            <p style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a3b8;margin-bottom:8px">Session</p>
+            <button type="button" id="btnQuiz" class="btn-portal btn-portal-primary" style="width:100%;margin-bottom:8px">Chapter quiz (5)</button>
+            <button type="button" id="btnBoard" class="btn-portal btn-portal-ghost" style="width:100%;margin-bottom:8px">Board mock</button>
+            <button type="button" id="btnInvite" class="btn-portal btn-portal-ghost" style="width:100%;margin-bottom:12px">Invite classmate</button>
+            <p style="font-size:0.65rem;color:#64748b;line-height:1.4">Syllabus: CBSE 2026-27 · PQ papers 2023-24 · Study together is SaaS web only.</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <div id="teacherView" hidden>
+      <div class="study-desk teacher-placeholder">
+        <h3>Teacher study room</h3>
+        <p>Review class mastery, student alerts, and mock detail. Student mode is live in this demo.</p>
+        <p style="margin-top:16px;font-size:0.85rem">Switch URL to <code>?role=student</code> for the functional student desk.</p>
+        <a href="?role=student" class="btn-portal btn-portal-primary" style="display:inline-block;margin-top:20px;text-decoration:none">Open student view</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/portal.js"></script>
+  <script src="cbse10-room.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!window.getPortalSession()) {
+        window.openPortalLogin({
+          title: 'Anyo Brahmando Academy',
+          subtitle: 'CBSE 10 Core · demo: yoga / yoga',
+          showRoles: true,
+          onSuccess: (s) => {
+            location.search = '?role=' + encodeURIComponent(s.role || 'student');
+          },
+        });
+      }
+    });
+  </script>
+</body>
+</html>

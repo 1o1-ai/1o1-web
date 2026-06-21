@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Progress · Anyo Brahmando Academy</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+</head>
+<body class="portal-page">
+  <header class="portal-header">
+    <a class="back-link" href="room.html?role=student">← Study room</a>
+    <h1>My Progress</h1>
+    <span style="width:72px"></span>
+  </header>
+  <main class="portal-main">
+    <div class="portal-hero">
+      <h2>Priya K. · mock</h2>
+      <p>Light — 35% mastery (at risk) · Focus 65/100 this week</p>
+    </div>
+    <table style="width:100%;max-width:640px;margin:0 auto;border-collapse:collapse;font-size:0.85rem">
+      <thead><tr style="color:#94a3b8;text-align:left"><th style="padding:8px">Chapter</th><th>Mastery</th><th>Status</th></tr></thead>
+      <tbody style="color:#e2e8f0">
+        <tr style="border-top:1px solid rgba(148,163,184,0.2)"><td style="padding:8px">Light</td><td>35%</td><td style="color:#fca5a5">At risk</td></tr>
+        <tr style="border-top:1px solid rgba(148,163,184,0.2)"><td style="padding:8px">Life Processes</td><td>78%</td><td style="color:#6ee7b7">Strong</td></tr>
+        <tr style="border-top:1px solid rgba(148,163,184,0.2)"><td style="padding:8px">Polynomials</td><td>55%</td><td style="color:#fcd34d">Practice</td></tr>
+        <tr style="border-top:1px solid rgba(148,163,184,0.2)"><td style="padding:8px">Real Numbers</td><td>100%</td><td style="color:#6ee7b7">Strong</td></tr>
+      </tbody>
+    </table>
+    <p class="portal-note"><a href="report.html">Weekly guardian / teacher report (mock)</a></p>
+  </main>
+  <script src="../../assets/portal.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!window.getPortalSession()) location.href = '/portal/education/';
+    });
+  </script>
+</body>
+</html>

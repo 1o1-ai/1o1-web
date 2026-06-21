@@ -142,6 +142,21 @@ body.landing-page {
 .portal-orbit::before { top: 0; left: 50%; transform: translate(-50%, -50%); }
 .portal-orbit::after { bottom: 0; left: 50%; transform: translate(-50%, 50%); animation-delay: -9s; }
 
+.portal--saas .portal-ring {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.38) 0%, rgba(6, 182, 212, 0.1) 55%, transparent 70%);
+  box-shadow: 0 0 60px rgba(16, 185, 129, 0.32), inset 0 0 40px rgba(16, 185, 129, 0.12);
+  animation-delay: -0.8s;
+}
+.portal--saas .portal-core {
+  background: linear-gradient(145deg, rgba(16, 185, 129, 0.5), rgba(15, 23, 42, 0.88));
+  animation-delay: -1s;
+}
+.portal--saas .portal-orbit::before,
+.portal--saas .portal-orbit::after {
+  background: #34d399;
+  box-shadow: 0 0 12px #34d399;
+}
+
 .portal-core {
   position: absolute;
   inset: 14%;
@@ -220,7 +235,17 @@ body.landing-page {
   to { transform: rotate(360deg); }
 }
 
-@media (max-width: 640px) {
+@media (min-width: 900px) {
+  .portal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, min(260px, 28vw));
+    gap: clamp(24px, 4vw, 48px);
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 899px) {
   .portal-grid { flex-direction: column; gap: 40px; }
   .portal { width: min(240px, 72vw); height: min(240px, 72vw); }
 }

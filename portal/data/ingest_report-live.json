@@ -1,0 +1,14 @@
+{
+  "status": "ok",
+  "ingested_at": "2026-06-21T03:49:30.754992+00:00",
+  "source_dir": "C:\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE",
+  "files_processed": 0,
+  "files_skipped": 259,
+  "markdown_written": 0,
+  "questions_added": 0,
+  "questions_in_bank": 40,
+  "rag_chunks": 0,
+  "errors": [],
+  "curriculum_path": "C:\\Users\\whizy\\AppData\\Local\\Temp\\Brahmando\\services\\education-portal\\data\\cbse10\\curriculum.json",
+  "bank_path": "C:\\Users\\whizy\\AppData\\Local\\Temp\\Brahmando\\services\\education-portal\\data\\cbse10\\question_bank.json"
+}
