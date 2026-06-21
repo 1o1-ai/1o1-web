@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Subscribe · CBSE Class 10 · Yogabrata</title>
+  <title>Subscribe · ManjuLab Academy · Yogabrata</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600&display=swap" rel="stylesheet" />
   <style>
     :root { --bg:#0f172a; --card:#1e293b; --ink:#f1f5f9; --muted:#94a3b8; --teal:#2dd4bf; --line:rgba(148,163,184,.15); --emerald:#4ade80; }
@@ -26,6 +26,14 @@
     .tab.on { background:var(--teal); color:#0f172a; }
     .plan { border:2px solid var(--line); border-radius:16px; padding:16px; margin-bottom:10px; cursor:pointer; }
     .plan.on { border-color:var(--teal); background:rgba(45,212,191,.08); }
+    .program { border:2px solid var(--line); border-radius:16px; padding:14px 16px; margin-bottom:10px; cursor:pointer; position:relative; }
+    .program.on { border-color:var(--teal); background:rgba(45,212,191,.08); }
+    .program.disabled { opacity:.55; cursor:not-allowed; }
+    .program .badge { position:absolute; top:10px; right:10px; font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; padding:3px 8px; border-radius:999px; background:#334155; color:var(--muted); }
+    .program .badge.live { background:rgba(74,222,128,.15); color:var(--emerald); }
+    .program .badge.soon { background:rgba(251,191,36,.12); color:#fcd34d; }
+    .program small { color:var(--muted); display:block; margin-top:4px; line-height:1.45; }
+    .brand-eyebrow { font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--teal); margin-bottom:6px; }
     .quote { background:rgba(74,222,128,.08); border:1px solid rgba(74,222,128,.25); border-radius:14px; padding:16px; margin:16px 0; font-size:.9rem; }
     .err { background:rgba(239,68,68,.1); border:1px solid rgba(239,68,68,.3); color:#fca5a5; padding:12px; border-radius:12px; margin-bottom:16px; font-size:.88rem; }
     .steps { display:flex; gap:6px; margin-bottom:24px; }
@@ -53,8 +61,9 @@
     </div>
   </div>
   <div class="wrap">
-    <h1>CBSE Class 10 Core</h1>
-    <p class="sub">First month <strong style="color:var(--emerald)">FREE</strong> · then Rs 1,000/mo (Rs 200 student concession) · Autopay saves 20%</p>
+    <p class="brand-eyebrow">ManjuLab Academy</p>
+    <h1 id="pageTitle">Subscribe</h1>
+    <p class="sub" id="pageSub">Choose a program, create your account, and start your free trial.</p>
     <div class="steps" id="steps"><i class="on"></i><i></i><i></i><i></i></div>
     <div id="err" class="err hidden"></div>
     <div id="app"></div>
@@ -82,7 +91,138 @@
       return location.origin + '/wb-academy/widget';
     })();
 
-    var state = { step: 0, tier: 'standard', autopay: true, checkoutId: '', quote: null, payMethod: 'upi', regCountry: 'India' };
+    var state = {
+      step: 0,
+      tier: 'standard',
+      autopay: true,
+      checkoutId: '',
+      quote: null,
+      payMethod: 'upi',
+      regCountry: 'India',
+      program: 'cbse10',
+      catalog: []
+    };
+
+    var DEFAULT_PROGRAMS = [
+      {
+        id: 'cbse10',
+        name: 'CBSE Class 10 Core',
+        description: 'Mathematics & Science mock exams, verified papers, study room, teacher review.',
+        status: 'available',
+        currency: 'INR',
+        trial_days: 30,
+        standard_price: 'Rs 1,000/mo',
+        concession_price: 'Rs 200/mo',
+        portal_url: '/portal/education/cbse10/practice.html',
+        done_cta: 'Open CBSE Practice Test'
+      },
+      {
+        id: 'sat_act',
+        name: 'SAT / ACT Prep',
+        description: 'US college admissions — official practice, section mocks, study room peers.',
+        status: 'coming_soon',
+        currency: 'USD',
+        trial_days: 14,
+        standard_price: '$24/mo',
+        concession_price: '$12/mo',
+        portal_url: '/portal/education/sat-act/practice.html',
+        done_cta: 'Open SAT/ACT Practice'
+      },
+      {
+        id: 'english_tests',
+        name: 'TOEFL · IELTS · DET',
+        description: 'English proficiency for study abroad — separate from SAT/ACT.',
+        status: 'planned',
+        currency: 'USD',
+        trial_days: 14,
+        standard_price: '$29/mo',
+        concession_price: '$15/mo',
+        portal_url: '/portal/education/english-tests/',
+        done_cta: 'Open English Tests'
+      }
+    ];
+
+    function programs() {
+      return state.catalog.length ? state.catalog : DEFAULT_PROGRAMS;
+    }
+
+    function programById(id) {
+      var list = programs();
+      for (var i = 0; i < list.length; i++) {
+        if (list[i].id === id) return list[i];
+      }
+      return DEFAULT_PROGRAMS[0];
+    }
+
+    function programStatus(p) {
+      return p.status || (p.id === 'cbse10' ? 'available' : 'coming_soon');
+    }
+
+    function programAvailable(p) {
+      return programStatus(p) === 'available';
+    }
+
+    function badgeLabel(status) {
+      if (status === 'available') return 'Available';
+      if (status === 'coming_soon') return 'Coming soon';
+      return 'Planned';
+    }
+
+    function badgeClass(status) {
+      if (status === 'available') return 'live';
+      if (status === 'coming_soon') return 'soon';
+      return '';
+    }
+
+    function syncPageHeader() {
+      var p = programById(state.program);
+      var title = document.getElementById('pageTitle');
+      var sub = document.getElementById('pageSub');
+      if (!title || !sub) return;
+      title.textContent = 'ManjuLab Academy · ' + p.name;
+      if (programAvailable(p)) {
+        sub.innerHTML = 'First month <strong style="color:var(--emerald)">FREE</strong> · then ' +
+          p.standard_price + ' (' + p.concession_price + ' student concession) · Autopay saves 20%';
+      } else {
+        sub.textContent = p.name + ' enrollment opens soon. You can still create an account and subscribe to CBSE Class 10 today.';
+      }
+    }
+
+    function loadCatalog(cb) {
+      fetch(API + '/billing/plans')
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d.plans && d.plans.length) {
+            state.catalog = d.plans.map(function (apiPlan) {
+              var local = DEFAULT_PROGRAMS.filter(function (x) { return x.id === apiPlan.id; })[0] || {};
+              var status = apiPlan.status === 'planned' ? 'planned' : (local.status || (apiPlan.id === 'cbse10' ? 'available' : 'coming_soon'));
+              return {
+                id: apiPlan.id,
+                name: apiPlan.name,
+                description: apiPlan.description || local.description || '',
+                status: status,
+                currency: apiPlan.currency || local.currency || 'INR',
+                trial_days: apiPlan.trial_days || local.trial_days || 30,
+                standard_price: apiPlan.currency === 'USD'
+                  ? ('$' + (apiPlan.standard_monthly_usd || 24) + '/mo')
+                  : ('Rs ' + Number(apiPlan.standard_monthly_inr || 1000).toLocaleString('en-IN') + '/mo'),
+                concession_price: apiPlan.currency === 'USD'
+                  ? ('$' + (apiPlan.concession_monthly_usd || 12) + '/mo')
+                  : ('Rs ' + Number(apiPlan.concession_monthly_inr || 200).toLocaleString('en-IN') + '/mo'),
+                portal_url: local.portal_url || '/portal/education/',
+                done_cta: local.done_cta || 'Open study portal'
+              };
+            });
+          }
+          if (cb) cb();
+        })
+        .catch(function () { if (cb) cb(); });
+    }
+
+    var programParam = params.get('program');
+    if (programParam && DEFAULT_PROGRAMS.some(function (p) { return p.id === programParam; })) {
+      state.program = programParam;
+    }
 
     function token() { return localStorage.getItem(TOKEN); }
     function headers() {
@@ -167,8 +307,38 @@
       });
     }
 
+    function programSelectorHtml() {
+      var html = '<label>Program</label><div id="programList">';
+      programs().forEach(function (p) {
+        var st = programStatus(p);
+        var avail = programAvailable(p);
+        var on = state.program === p.id ? ' on' : '';
+        var dis = avail ? '' : ' disabled';
+        html += '<div class="program' + on + dis + '" data-program="' + p.id + '" data-available="' + (avail ? '1' : '0') + '">' +
+          '<span class="badge ' + badgeClass(st) + '">' + badgeLabel(st) + '</span>' +
+          '<strong>' + p.name + '</strong>' +
+          '<small>' + p.description + '</small>' +
+          (avail ? '' : '<small style="margin-top:6px;color:#fcd34d">Not open for checkout yet</small>') +
+          '</div>';
+      });
+      html += '</div>';
+      return html;
+    }
+
+    function bindProgramSelector() {
+      document.querySelectorAll('#programList .program').forEach(function (el) {
+        el.onclick = function () {
+          if (el.dataset.available !== '1') return;
+          state.program = el.dataset.program;
+          syncPageHeader();
+          renderRegister();
+        };
+      });
+    }
+
     function renderAuth() {
       setSteps(0);
+      syncPageHeader();
       document.getElementById('app').innerHTML =
         '<div class="card"><div class="tabs"><button class="tab on" id="tabReg">Register</button><button class="tab" id="tabLogin">Sign in</button></div>' +
         '<div id="authForm"></div>' +
@@ -180,8 +350,10 @@
 
     function renderRegister() {
       var country = state.regCountry || 'India';
+      syncPageHeader();
       document.getElementById('authForm').innerHTML =
         '<form id="regForm">' +
+        programSelectorHtml() +
         '<label>Full name</label><input name="full_name" required/>' +
         '<label>Email</label><input name="email" type="email" required/>' +
         '<label>Password (8+ chars)</label><input name="password" type="password" minlength="8" required/>' +
@@ -196,6 +368,7 @@
         '<button type="submit" class="btn">Create account</button></form>';
       var form = document.getElementById('regForm');
       fillRegisterForm(form, country);
+      bindProgramSelector();
       document.querySelectorAll('#countryTabs .tab').forEach(function (btn) {
         btn.onclick = function () {
           state.regCountry = btn.dataset.country;
@@ -240,10 +413,27 @@
 
     function renderPlan() {
       setSteps(1);
+      syncPageHeader();
+      var prog = programById(state.program);
+      if (!programAvailable(prog)) {
+        document.getElementById('app').innerHTML =
+          '<div class="card"><h2 style="margin-bottom:12px;font-size:1.1rem">' + prog.name + '</h2>' +
+          '<p style="color:var(--muted);line-height:1.55;margin-bottom:16px">This program is not open for subscription yet. Create your ManjuLab Academy account now and start with CBSE Class 10, or check back soon.</p>' +
+          '<button class="btn" id="switchCbseBtn">Subscribe to CBSE Class 10</button>' +
+          '<button class="btn secondary" id="backAuthBtn" style="margin-top:10px">Back to account</button></div>';
+        document.getElementById('switchCbseBtn').onclick = function () {
+          state.program = 'cbse10';
+          syncPageHeader();
+          renderPlan();
+        };
+        document.getElementById('backAuthBtn').onclick = renderAuth;
+        return;
+      }
       loadQuote(function () {
         var q = state.quote || {};
         document.getElementById('app').innerHTML =
-          '<div class="card"><h2 style="margin-bottom:12px;font-size:1.1rem">Choose your plan</h2>' +
+          '<div class="card"><p style="font-size:.72rem;color:var(--teal);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px">ManjuLab Academy · ' + prog.name + '</p>' +
+          '<h2 style="margin-bottom:12px;font-size:1.1rem">Choose your plan</h2>' +
           '<div class="plan' + (state.tier === 'standard' ? ' on' : '') + '" data-tier="standard"><strong>Standard</strong><br><small style="color:var(--muted)">Rs 1,000/month after trial</small></div>' +
           '<div class="plan' + (state.tier === 'concession' ? ' on' : '') + '" data-tier="concession"><strong>Student concession</strong><br><small style="color:var(--muted)">Rs 200/month for students in need</small></div>' +
           '<div id="concBox" class="' + (state.tier === 'concession' ? '' : 'hidden') + '"><label>Why do you qualify?</label><textarea id="concReason" rows="3" placeholder="Brief explanation…"></textarea></div>' +
@@ -297,26 +487,32 @@
 
     function renderDone(sub) {
       setSteps(3);
-      var practiceUrl = '/portal/education/cbse10/practice.html';
+      var prog = programById(state.program);
+      var practiceUrl = prog.portal_url || '/portal/education/cbse10/practice.html';
+      var cta = prog.done_cta || 'Open study portal';
       document.getElementById('app').innerHTML =
         '<div class="card done"><div class="icon">&#127881;</div><h2>Subscription active!</h2>' +
-        '<p style="color:var(--muted);margin:12px 0 20px">' + (sub && sub.status === 'trial' ? 'First month is free. Mock exams unlocked.' : 'Welcome back.') + '</p>' +
-        '<a class="btn link" href="' + practiceUrl + '" style="display:block;text-align:center;text-decoration:none">Open CBSE Practice Test</a>' +
+        '<p style="color:var(--muted);margin:8px 0 4px;font-size:.82rem">ManjuLab Academy · ' + prog.name + '</p>' +
+        '<p style="color:var(--muted);margin:12px 0 20px">' + (sub && sub.status === 'trial' ? 'First month is free. Your program is unlocked.' : 'Welcome back.') + '</p>' +
+        '<a class="btn link" href="' + practiceUrl + '" style="display:block;text-align:center;text-decoration:none">' + cta + '</a>' +
         '<a href="/account/" style="display:block;text-align:center;margin-top:12px;font-size:.85rem;color:var(--teal)">My account</a></div>';
     }
 
-    if (token()) {
-      fetch(API + '/auth/me', { headers: headers() })
-        .then(function (r) { return r.json(); })
-        .then(function (d) {
-          localStorage.setItem(TOKEN, d.token);
-          if (d.subscription && d.subscription.access_active) renderDone(d.subscription);
-          else renderPlan();
-        })
-        .catch(renderAuth);
-    } else {
-      renderAuth();
-    }
+    loadCatalog(function () {
+      syncPageHeader();
+      if (token()) {
+        fetch(API + '/auth/me', { headers: headers() })
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            localStorage.setItem(TOKEN, d.token);
+            if (d.subscription && d.subscription.access_active) renderDone(d.subscription);
+            else renderPlan();
+          })
+          .catch(renderAuth);
+      } else {
+        renderAuth();
+      }
+    });
   })();
   </script>
 </body>

@@ -124,7 +124,7 @@
       <div class="saas-modal-panel" role="dialog" aria-labelledby="saasLoginTitle">
         <button type="button" class="saas-modal-close" id="saasLoginClose" aria-label="Close">&times;</button>
         <h3 id="saasLoginTitle">Sign in</h3>
-        <p class="saas-modal-sub">Anyo Brahmando Academy · CBSE Class 10 SaaS</p>
+        <p class="saas-modal-sub">ManjuLab Academy · education programs</p>
         <form id="saasLoginForm">
           <label for="saasEmail">Email</label>
           <input id="saasEmail" name="email" type="email" autocomplete="email" required placeholder="you@school.com" />
