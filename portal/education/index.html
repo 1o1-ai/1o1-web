@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/landing.css" />
   <link rel="stylesheet" href="../assets/portal.css" />
 </head>
 <body class="portal-page">
@@ -24,58 +25,71 @@
     <div class="portal-hero">
       <p class="eyebrow">Education · Brahmando SaaS</p>
       <h2>A different path to knowledge, infinite possibility</h2>
-      <p>Each card is a separate education microservice with its own knowledge base and study room.</p>
+      <p>Each circle is a separate education microservice with its own knowledge base and study room.</p>
+      <p class="online-thumb-badge" data-online-badge-short hidden style="margin-top:12px"></p>
     </div>
 
-    <div class="sku-grid">
-      <button type="button" class="sku-card" data-sku-login data-sku="cbse10-core" data-live="true">
-        <span class="sku-icon">📐</span>
-        <div class="sku-body">
-          <strong>CBSE 10 Core</strong>
-          <span>Science &amp; Mathematics · Class X 2026-27 syllabus · Student &amp; Teacher roles</span>
+    <div class="portal-circle-grid">
+      <button type="button" class="portal portal--saas" data-sku-login data-sku="cbse10-core" data-live="true">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon" aria-hidden="true">📐</span>
+          <span class="portal-title">CBSE 10 Core</span>
+          <span class="portal-sub">Science &amp; Math · Live study room</span>
         </div>
-        <span class="folder-badge live">Live</span>
       </button>
 
-      <button type="button" class="sku-card" disabled data-sku="neet-prep">
-        <span class="sku-icon">🧬</span>
-        <div class="sku-body">
-          <strong>NEET Prep</strong>
-          <span>Physics, Chemistry, Biology — coming soon</span>
+      <button type="button" class="portal portal--caregiver" disabled title="Coming soon">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon" aria-hidden="true">🧬</span>
+          <span class="portal-title">NEET Prep</span>
+          <span class="portal-sub">Soon</span>
         </div>
-        <span class="folder-badge platform">Soon</span>
       </button>
 
-      <button type="button" class="sku-card" disabled data-sku="sat-act">
-        <span class="sku-icon">🌎</span>
-        <div class="sku-body">
-          <strong>SAT / ACT</strong>
-          <span>Global college prep — coming soon</span>
+      <button type="button" class="portal portal--rhytoma" disabled title="Coming soon">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon" aria-hidden="true">🌎</span>
+          <span class="portal-title">SAT / ACT</span>
+          <span class="portal-sub">Soon</span>
         </div>
-        <span class="folder-badge platform">Soon</span>
       </button>
 
-      <button type="button" class="sku-card" disabled data-sku="grad-tests">
-        <span class="sku-icon">📊</span>
-        <div class="sku-body">
-          <strong>GRE / GMAT / LSAT</strong>
-          <span>Graduate &amp; law tests — coming soon</span>
+      <button type="button" class="portal portal--saas" disabled style="opacity:0.5" title="Coming soon">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon" aria-hidden="true">📊</span>
+          <span class="portal-title">GRE / GMAT</span>
+          <span class="portal-sub">Soon</span>
         </div>
-        <span class="folder-badge platform">Soon</span>
       </button>
     </div>
 
     <p class="portal-note">
       Curriculum sourced from CBSE Class X 2026-27 syllabi (Science 086, Mathematics 041), official practice papers, and ingested question banks.
+      <a href="/portal/education/admin.html" style="margin-left:8px;font-size:0.7rem;opacity:0.5">Admin</a>
     </p>
   </main>
 
   <script src="../../assets/cosmic.js"></script>
+  <script src="../assets/presence.js"></script>
   <script src="../assets/portal.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('btnLogout')?.addEventListener('click', () => window.portalLogout && window.portalLogout());
-      if (!window.getPortalSession()) {
+      const session = window.getPortalSession();
+      if (session && window.AnyoPresence) {
+        window.AnyoPresence.startHeartbeat(session);
+        window.AnyoPresence.mountOnlineBadges();
+        setInterval(() => window.AnyoPresence.mountOnlineBadges(), 60000);
+      }
+      if (!session) {
         window.openPortalLogin({
           title: 'Anyo Brahmando Academy',
           subtitle: 'A different path to knowledge, infinite possibility',

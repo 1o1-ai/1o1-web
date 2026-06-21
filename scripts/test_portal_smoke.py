@@ -7,9 +7,15 @@ from curl_cffi import requests as cr
 BASE = "http://127.0.0.1:8765"
 CHECKS: list[tuple[str, str, list[str]]] = [
     ("/", "Homepage", ["ManjuLAB Online Portal", "Anyo Brahmando Academy"]),
-    ("/portal/", "SaaS hub", ["Anyo Brahmando Academy", "infinite possibility"]),
+    ("/portal/", "SaaS hub", ["Anyo Brahmando Academy", "different path"]),
     ("/portal/education/", "Academy", ["Anyo Brahmando Academy", "different path"]),
-    ("/portal/education/cbse10/room.html", "Study room", ["CBSE 10 Core", "portal.js"]),
+    ("/portal/education/cbse10/index.html", "CBSE10 hub", ["Study Room", "Practice Test", "Discussion Forum"]),
+    ("/portal/education/cbse10/room.html", "Study room", ["peersOuterPanel", "bots.js"]),
+    ("/portal/education/cbse10/practice.html", "Practice", ["Chapter practice", "board mock"]),
+    ("/portal/education/cbse10/forum.html", "Forum", ["Sahadeva", "Discussion Forum"]),
+    ("/portal/data/cbse10-forum.json", "Forum data", ['"sahadeva"', '"threads"']),
+    ("/portal/education/admin.html", "Admin", ["Presence admin", "admin.js"]),
+    ("/portal/data/academy-bots.json", "Bot roster", ["Sujoy Das", "Don Bosco Liluah"]),
     ("/portal/education/cbse10/progress.html", "Progress", ["My Progress"]),
     ("/portal/education/cbse10/report.html", "Report", ["Guardian"]),
     ("/portal/data/cbse10-curriculum.json", "Curriculum JSON", ['"sku": "cbse10-core"']),

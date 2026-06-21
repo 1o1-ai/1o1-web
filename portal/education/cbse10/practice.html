@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Practice Test · CBSE 10</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+</head>
+<body class="portal-page study-room-page">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <header class="portal-header">
+    <a class="back-link" href="index.html">← CBSE 10 Hub</a>
+    <h1>Practice Test</h1>
+  </header>
+  <main class="portal-main" style="max-width:720px">
+    <section class="practice-card">
+      <h2>Chapter practice</h2>
+      <p class="hint">Verified board MCQs only — 5, 10, or custom (max 15).</p>
+      <label>Subject</label>
+      <select id="prSubject"><option value="science">Science</option><option value="mathematics">Mathematics</option></select>
+      <label>Chapter</label>
+      <select id="prChapter"></select>
+      <label>Number of questions (max 15)</label>
+      <input id="prCount" type="number" min="1" max="15" value="5" />
+      <label><input type="checkbox" id="prFigureOnly" /> Prefer questions with diagrams/figures (when available)</label>
+      <button type="button" class="btn-portal btn-portal-primary" id="btnChapterStart" style="width:100%;margin-top:12px">Start chapter practice</button>
+    </section>
+
+    <section class="practice-card mock-card">
+      <h2>CBSE board mock</h2>
+      <p class="hint">Full 3-hour session · Section A style MCQs · integrity tracking (paste, tab switch, focus).</p>
+      <label>Subject paper</label>
+      <select id="mockSubject"><option value="mathematics">Mathematics Standard · 041</option><option value="science">Science · 086</option></select>
+      <p class="figure-note">Note: geometry/diagram items from your ingested papers are included where the bank has figure-based prompts. Original PDF diagrams are linked by paper ID — image extraction is a separate ingest step.</p>
+      <button type="button" class="btn-portal btn-portal-primary" id="btnMockStart" style="width:100%;margin-top:12px">Start 3-hour mock exam</button>
+    </section>
+
+    <div id="quizArea" hidden></div>
+  </main>
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/question-format.js"></script>
+  <script src="../../assets/cbse10-shared.js"></script>
+  <script src="../../assets/portal.js"></script>
+  <script src="practice.js"></script>
+</body>
+</html>

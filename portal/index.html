@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/theme.css" />
+  <link rel="stylesheet" href="../assets/landing.css" />
   <link rel="stylesheet" href="assets/portal.css" />
 </head>
 <body class="portal-page">
@@ -29,42 +30,66 @@
       <p>Live products open after sign-in. Other verticals preview the Brahmando platform catalog.</p>
     </div>
 
-    <div class="folder-grid">
-      <button type="button" class="folder-card" data-portal-folder="education" data-live="true" data-href="/portal/education/">
-        <div class="folder-icon" data-vertical="education"><span class="folder-emoji">🎓</span></div>
-        <div class="folder-label">Anyo Brahmando Academy</div>
-        <div class="folder-tagline">A different path to knowledge, infinite possibility</div>
-        <span class="folder-badge live">Live</span>
+    <div class="portal-circle-grid">
+      <button type="button" class="portal portal--saas" data-portal-folder="education" data-live="true" data-href="/portal/education/">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon" aria-hidden="true">🎓</span>
+          <span class="portal-title">Anyo Brahmando Academy</span>
+          <span class="portal-sub">A different path to knowledge</span>
+          <span class="online-thumb-badge" data-online-badge-short hidden></span>
+        </div>
       </button>
 
-      <button type="button" class="folder-card is-static" data-portal-folder="hvac" data-live="false" data-href="https://brahmando.com/docs">
-        <div class="folder-icon" data-vertical="hvac"><span class="folder-emoji">❄️</span></div>
-        <div class="folder-label">HVAC Support</div>
-        <span class="folder-badge platform">Platform</span>
+      <button type="button" class="portal portal--caregiver is-static" data-portal-folder="hvac" data-live="false" data-href="https://brahmando.com/docs">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon" aria-hidden="true">❄️</span>
+          <span class="portal-title">HVAC Support</span>
+          <span class="portal-sub">Platform</span>
+        </div>
       </button>
 
-      <button type="button" class="folder-card is-static" data-portal-folder="restaurant" data-live="false" data-href="https://brahmando.com/workflows">
-        <div class="folder-icon" data-vertical="restaurant"><span class="folder-emoji">🍽️</span></div>
-        <div class="folder-label">Restaurant Management</div>
-        <span class="folder-badge platform">Platform</span>
+      <button type="button" class="portal portal--rhytoma is-static" data-portal-folder="restaurant" data-live="false" data-href="https://brahmando.com/workflows">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon" aria-hidden="true">🍽️</span>
+          <span class="portal-title">Restaurant</span>
+          <span class="portal-sub">Platform</span>
+        </div>
       </button>
 
-      <button type="button" class="folder-card is-static" data-portal-folder="hospital" data-live="false" data-href="https://brahmando.com/docs">
-        <div class="folder-icon" data-vertical="hospital"><span class="folder-emoji">🏥</span></div>
-        <div class="folder-label">Hospital Management</div>
-        <span class="folder-badge platform">Platform</span>
+      <button type="button" class="portal portal--caregiver is-static" data-portal-folder="hospital" data-live="false" data-href="https://brahmando.com/docs">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon" aria-hidden="true">🏥</span>
+          <span class="portal-title">Hospital</span>
+          <span class="portal-sub">Platform</span>
+        </div>
       </button>
 
-      <button type="button" class="folder-card is-static" data-portal-folder="events" data-live="false" data-href="https://brahmando.com/workflows">
-        <div class="folder-icon" data-vertical="events"><span class="folder-emoji">🎪</span></div>
-        <div class="folder-label">Event Organizers</div>
-        <span class="folder-badge platform">Platform</span>
+      <button type="button" class="portal portal--rhytoma is-static" data-portal-folder="events" data-live="false" data-href="https://brahmando.com/workflows">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon" aria-hidden="true">🎪</span>
+          <span class="portal-title">Events</span>
+          <span class="portal-sub">Platform</span>
+        </div>
       </button>
 
-      <button type="button" class="folder-card is-static" data-portal-folder="landscaping" data-live="false" data-href="https://brahmando.com/workflows">
-        <div class="folder-icon" data-vertical="landscaping"><span class="folder-emoji">🌿</span></div>
-        <div class="folder-label">Landscaping Business</div>
-        <span class="folder-badge platform">Platform</span>
+      <button type="button" class="portal portal--saas is-static" data-portal-folder="landscaping" data-live="false" data-href="https://brahmando.com/workflows">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon" aria-hidden="true">🌿</span>
+          <span class="portal-title">Landscaping</span>
+          <span class="portal-sub">Platform</span>
+        </div>
       </button>
     </div>
 
@@ -75,6 +100,7 @@
   </main>
 
   <script src="../assets/cosmic.js"></script>
+  <script src="assets/presence.js"></script>
   <script src="assets/portal.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -83,6 +109,13 @@
       if (session && btn) {
         btn.hidden = false;
         btn.addEventListener('click', () => window.portalLogout && window.portalLogout());
+      }
+      if (session && window.AnyoPresence) {
+        window.AnyoPresence.startHeartbeat(session);
+      }
+      if (window.AnyoPresence) {
+        window.AnyoPresence.mountOnlineBadges();
+        setInterval(() => window.AnyoPresence.mountOnlineBadges(), 60000);
       }
     });
   </script>

@@ -18,6 +18,7 @@
     <a class="back-link" href="/portal/education/">← Anyo Brahmando Academy</a>
     <h1>CBSE 10 Core <span id="roleBadge" style="font-size:0.75rem;color:#67e8f9"></span></h1>
     <span id="ingestBadge" hidden style="font-size:0.65rem;color:#94a3b8;margin-left:8px"></span>
+    <span id="onlineBadge" class="online-live-badge" hidden></span>
     <a class="back-link" href="/portal/education/cbse10/progress.html" style="font-size:0.8rem">Progress</a>
   </header>
 
@@ -25,11 +26,11 @@
     <div id="alertBanner" hidden style="margin-bottom:16px;padding:14px 16px;border-radius:14px;border:1px solid rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);font-size:0.85rem;color:#fde68a"></div>
 
     <div id="studentView">
-      <div class="study-desk">
-        <div class="book-rack" aria-label="NCERT Class 10">
-          <div class="book-spine sci" title="Science X">SCI X</div>
-          <div class="book-spine math" title="Mathematics X">MATH X</div>
-          <div class="book-spine sci" style="opacity:0.5">LAB</div>
+      <div class="study-room-wrap">
+        <div class="study-desk">
+        <div class="subject-orbs" aria-label="Class 10 subjects">
+          <div class="subject-orb science" title="Science · 086">🧪</div>
+          <div class="subject-orb math" title="Mathematics · 041">📐</div>
         </div>
 
         <div class="study-layout" style="padding:12px">
@@ -60,8 +61,31 @@
             <button type="button" id="btnBoard" class="btn-portal btn-portal-ghost" style="width:100%;margin-bottom:8px">Board mock</button>
             <button type="button" id="btnInvite" class="btn-portal btn-portal-ghost" style="width:100%;margin-bottom:12px">Invite classmate</button>
             <p style="font-size:0.65rem;color:#64748b;line-height:1.4">Syllabus: CBSE 2026-27 · PQ papers 2023-24 · Study together is SaaS web only.</p>
+            <div id="activePeers" class="active-peers" hidden>
+              <p class="peers-label">In this room (max 2)</p>
+              <ul id="activePeerList"></ul>
+            </div>
           </aside>
         </div>
+        </div>
+
+        <aside class="peers-outer-panel" id="peersOuterPanel">
+          <button type="button" class="peers-outer-toggle" id="peersToggle" aria-expanded="true">
+            <span id="peersToggleLabel">Students online</span>
+            <span class="peers-chevron">▾</span>
+          </button>
+          <div class="peers-outer-body" id="peersOuterBody">
+            <p class="peers-hint">Pick a classmate studying now · request to join (max 2 in your room)</p>
+            <div class="peers-filter-row">
+              <select id="peersFilter" aria-label="Filter by subject">
+                <option value="all">All subjects</option>
+                <option value="science">Science</option>
+                <option value="mathematics">Mathematics</option>
+              </select>
+            </div>
+            <ul class="peers-roster" id="peersRoster"></ul>
+          </div>
+        </aside>
       </div>
     </div>
 
@@ -76,11 +100,19 @@
   </main>
 
   <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/presence.js"></script>
+  <script src="../../assets/bots.js"></script>
+  <script src="../../assets/tutor-intent.js"></script>
+  <script src="../../assets/question-format.js"></script>
   <script src="../../assets/portal.js"></script>
   <script src="cbse10-room.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      if (!window.getPortalSession()) {
+      const session = window.getPortalSession();
+      if (session && window.AnyoPresence) {
+        window.AnyoPresence.startHeartbeat(session);
+      }
+      if (!session) {
         window.openPortalLogin({
           title: 'Anyo Brahmando Academy',
           subtitle: 'CBSE 10 Core · demo: yoga / yoga',

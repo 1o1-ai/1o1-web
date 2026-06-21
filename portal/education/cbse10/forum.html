@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discussion Forum · CBSE 10</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+</head>
+<body class="portal-page">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <header class="portal-header">
+    <a class="back-link" href="index.html">← CBSE 10 Hub</a>
+    <h1>Discussion Forum</h1>
+  </header>
+  <main class="portal-main forum-main">
+    <aside class="forum-sidebar">
+      <div class="sahadeva-card">
+        <div class="sahadeva-avatar">🛡️</div>
+        <strong>Sahadeva</strong>
+        <span>ManjuLAB Study Assistant</span>
+        <p class="hint">AI predictions &amp; chapter guidance — always with disclaimer.</p>
+      </div>
+      <label>Filter subject</label>
+      <select id="forumSubject"><option value="all">All</option><option value="science">Science</option><option value="mathematics">Mathematics</option></select>
+      <label>Filter chapter</label>
+      <select id="forumChapter"><option value="all">All chapters</option></select>
+      <p class="forum-stats" id="forumStats"></p>
+    </aside>
+    <section class="forum-content">
+      <div id="threadList" class="thread-list"></div>
+      <article id="threadDetail" class="thread-detail" hidden>
+        <button type="button" class="back-link" id="btnBackList" style="border:none;background:none;cursor:pointer;margin-bottom:12px">← All threads</button>
+        <h2 id="threadTitle"></h2>
+        <p id="threadMeta" class="hint"></p>
+        <div id="threadPosts"></div>
+      </article>
+    </section>
+  </main>
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/portal.js"></script>
+  <script src="forum.js"></script>
+</body>
+</html>

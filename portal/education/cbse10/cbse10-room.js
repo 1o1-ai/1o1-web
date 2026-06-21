@@ -1,13 +1,23 @@
 /**
- * CBSE 10 Core study room — student (live) / teacher (preview)
- * Curriculum: portal/data/cbse10-curriculum.json (CBSE 2026-27)
+ * CBSE 10 Core study room — strict subject/chapter/year question bank (no hallucination).
  */
 (function () {
   const params = new URLSearchParams(location.search);
   const role = params.get('role') || 'student';
-  const body = document.body;
+  const CURRENT_YEAR = 2026;
+  const YEARS_BACK = 3;
 
-  body.classList.add(role === 'teacher' ? 'teacher-ambience' : 'student-ambience');
+  const CHAPTER_ALIASES = {
+    polynomial: 'polynomials',
+    polynomials: 'polynomials',
+    'real numbers': 'real-numbers',
+    'real number': 'real-numbers',
+    light: 'light',
+    electricity: 'electricity',
+    trigonometry: 'trigonometry',
+  };
+
+  document.body.classList.add(role === 'teacher' ? 'teacher-ambience' : 'student-ambience');
 
   if (role === 'teacher') {
     document.getElementById('teacherView').hidden = false;
@@ -19,12 +29,49 @@
   document.getElementById('roleBadge').textContent = 'Student';
 
   let curriculum = null;
+  let verifiedBank = [];
   let subject = 'science';
   let chapterId = 'light';
-  let quizActive = false;
   let quizQuestions = [];
   let quizIndex = 0;
   let quizAnswers = [];
+  let activePeers = [];
+  let pendingInvites = new Map();
+  let botChatterTimers = [];
+  let onlineStudentIds = new Set();
+  let allStudents = [];
+
+  const peersRoster = document.getElementById('peersRoster');
+  const activePeerList = document.getElementById('activePeerList');
+  const activePeersEl = document.getElementById('activePeers');
+  const peersOuterPanel = document.getElementById('peersOuterPanel');
+  const peersToggle = document.getElementById('peersToggle');
+  const peersOuterBody = document.getElementById('peersOuterBody');
+  const peersFilter = document.getElementById('peersFilter');
+  const onlineBadge = document.getElementById('onlineBadge');
+
+  Promise.all([
+    fetch('../../data/cbse10-curriculum.json').then((r) => r.json()),
+    fetch('../../data/cbse10-verified-questions.json')
+      .then((r) => (r.ok ? r.json() : { questions: [] }))
+      .catch(() => ({ questions: [] })),
+    window.AnyoBots.loadRoster(),
+  ])
+    .then(([cur, bank, roster]) => {
+      curriculum = cur;
+      verifiedBank = (bank.questions || cur.verifiedQuestions || []).filter(
+        (q) => q.answer_verified !== false && q.correctIndex != null
+      );
+      allStudents = roster.students || [];
+      renderIngestBadge();
+      renderChapters();
+      initPresenceAndPeers();
+      selectChapter('light');
+      showAlert();
+    })
+    .catch(() => {
+      chapterList.innerHTML = '<li><em>Could not load curriculum</em></li>';
+    });
 
   const chapterList = document.getElementById('chapterList');
   const chatMessages = document.getElementById('chatMessages');
@@ -34,31 +81,239 @@
   const quizPanel = document.getElementById('quizPanel');
   const alertBanner = document.getElementById('alertBanner');
 
-  fetch('../../data/cbse10-curriculum.json')
-    .then((r) => r.json())
-    .then((data) => {
-      curriculum = data;
-      renderIngestBadge();
-      renderChapters();
-      selectChapter('light');
-      showAlert();
-    })
-    .catch(() => {
-      chapterList.innerHTML = '<li><em>Could not load curriculum</em></li>';
+  function initPresenceAndPeers() {
+    refreshOnlineBadge();
+    renderPeersRoster();
+    setInterval(() => {
+      refreshOnlineBadge();
+      renderPeersRoster();
+    }, 60000);
+
+    if (onlineBadge) {
+      onlineBadge.style.cursor = 'pointer';
+      onlineBadge.title = 'Show online participants';
+      onlineBadge.setAttribute('role', 'button');
+      onlineBadge.tabIndex = 0;
+      onlineBadge.addEventListener('click', openPeersPanel);
+      onlineBadge.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') openPeersPanel();
+      });
+    }
+
+    peersToggle?.addEventListener('click', () => {
+      const collapsed = peersOuterPanel.classList.toggle('collapsed');
+      peersToggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+      peersOuterBody.hidden = collapsed;
+    });
+    peersFilter?.addEventListener('change', renderPeersRoster);
+  }
+
+  function openPeersPanel() {
+    if (!peersOuterPanel) return;
+    peersOuterPanel.classList.remove('collapsed');
+    peersOuterBody.hidden = false;
+    peersToggle?.setAttribute('aria-expanded', 'true');
+    peersOuterPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+
+  function refreshOnlineBadge() {
+    if (!window.AnyoPresence) return;
+    const real = window.AnyoPresence.countRealByRole();
+    const counts = window.AnyoPresence.getOnlineCounts(real.students, real.teachers);
+    onlineStudentIds = window.AnyoPresence.pickOnlineBotIds(allStudents, counts.studentBotsOnline, 'student');
+    if (onlineBadge) {
+      onlineBadge.hidden = false;
+      onlineBadge.textContent = `${counts.teachersOnline} teachers · ${counts.studentsOnline} students online (IST ${counts.istLabel})`;
+    }
+    const lbl = document.getElementById('peersToggleLabel');
+    if (lbl) lbl.textContent = `${counts.studentsOnline} students online`;
+  }
+
+  function renderPeersRoster() {
+    if (!peersRoster) return;
+    const filter = peersFilter?.value || 'all';
+    const inRoom = new Set(activePeers.map((p) => p.id));
+    const pending = new Set(pendingInvites.keys());
+
+    const list = allStudents.filter((s) => {
+      if (!onlineStudentIds.has(s.id)) return false;
+      if (filter === 'all') return true;
+      return s.subject === filter || s.subject === 'both';
     });
 
+    peersRoster.innerHTML = '';
+    if (!list.length) {
+      peersRoster.innerHTML = '<li class="peers-empty"><em>No classmates match this filter right now.</em></li>';
+      return;
+    }
+
+    list.slice(0, 40).forEach((bot) => {
+      const li = document.createElement('li');
+      li.className = 'peer-roster-item';
+      const busy = inRoom.has(bot.id) || pending.has(bot.id);
+      li.innerHTML = `
+        <img class="peer-avatar" src="${bot.photo}" alt="" width="36" height="36" loading="lazy" />
+        <div class="peer-meta">
+          <strong>${bot.name}</strong>
+          <span class="peer-loc">${bot.city}, ${bot.state}</span>
+          <span class="peer-school">${bot.school}</span>
+        </div>`;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'btn-portal btn-portal-ghost peer-invite-btn';
+      if (inRoom.has(bot.id)) {
+        btn.textContent = 'In room';
+        btn.disabled = true;
+      } else if (pending.has(bot.id)) {
+        btn.textContent = 'Pending…';
+        btn.disabled = true;
+      } else if (activePeers.length >= window.AnyoBots.MAX_PEERS) {
+        btn.textContent = 'Room full';
+        btn.disabled = true;
+      } else {
+        btn.textContent = 'Request join';
+        btn.addEventListener('click', () => requestPeerJoin(bot));
+      }
+      li.appendChild(btn);
+      peersRoster.appendChild(li);
+    });
+  }
+
+  let botLifecycleTimers = [];
+
+  function removePeer(bot) {
+    activePeers = activePeers.filter((p) => p.id !== bot.id);
+    renderActivePeers();
+    renderPeersRoster();
+  }
+
+  function onBotLeave(bot, message) {
+    removePeer(bot);
+    if (message) addBubble('peer', message, bot.name);
+    else addBubble('peer', `${bot.name.split(' ')[0]} left the room.`, 'System');
+  }
+
+  function renderActivePeers() {
+    if (!activePeerList || !activePeersEl) return;
+    if (!activePeers.length) {
+      activePeersEl.hidden = true;
+      return;
+    }
+    activePeersEl.hidden = false;
+    activePeerList.innerHTML = '';
+    activePeers.forEach((bot) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<img src="${bot.photo}" alt="" width="28" height="28" /><span>${bot.name}</span>`;
+      activePeerList.appendChild(li);
+    });
+  }
+
+  function requestPeerJoin(bot) {
+    if (activePeers.length >= window.AnyoBots.MAX_PEERS) {
+      addBubble('tutor', 'Your study room is full — max 2 classmates at a time.', 'System');
+      return;
+    }
+    pendingInvites.set(bot.id, bot);
+    renderPeersRoster();
+    addBubble('peer', `Invite sent to ${bot.name} (${bot.city}). Waiting…`, 'You');
+
+    const outcome = window.AnyoBots.simulateInviteResponse(bot);
+    const timer = setTimeout(() => {
+      pendingInvites.delete(bot.id);
+      if (outcome.type === 'accept') {
+        if (activePeers.length < window.AnyoBots.MAX_PEERS && !activePeers.find((p) => p.id === bot.id)) {
+          activePeers.push(bot);
+          addBubble('peer', window.AnyoBots.acceptLine(), bot.name);
+          renderActivePeers();
+          renderPeersRoster();
+          const chatTimers = window.AnyoBots.scheduleBotChatter(
+            bot,
+            (b, msg) => addBubble('peer', msg, b.name),
+            subject
+          );
+          if (chatTimers) botChatterTimers.push(...chatTimers);
+          const leaveT = window.AnyoBots.scheduleBotLeave(bot, onBotLeave);
+          if (leaveT) botLifecycleTimers.push(leaveT);
+        }
+      } else if (outcome.type === 'decline') {
+        addBubble('peer', window.AnyoBots.declineLine(), bot.name);
+        renderPeersRoster();
+      } else {
+        addBubble('peer', 'No response — they may be in another session.', 'System');
+        renderPeersRoster();
+      }
+    }, outcome.delay);
+    pendingInvites.set(bot.id, { bot, timer });
+  }
+
   function renderIngestBadge() {
-    const stats = curriculum.stats;
-    if (!stats) return;
+    const stats = curriculum.stats || {};
     const el = document.getElementById('ingestBadge');
     if (!el) return;
-    el.textContent = `${stats.questions_in_bank || 0} questions · ${stats.files_total || 0} files ingested`;
+    const n = stats.verified_questions || verifiedBank.length || 0;
+    el.textContent = `${n} verified questions (English, linked answers)`;
     el.hidden = false;
   }
 
   function chaptersForSubj(sub) {
     const s = curriculum.subjects[sub];
     return s?.units || s?.chapters || [];
+  }
+
+  function subjectKey() {
+    return subject === 'mathematics' ? 'mathematics' : 'science';
+  }
+
+  function resolveChapterId(text) {
+    const t = text.toLowerCase();
+    for (const [alias, id] of Object.entries(CHAPTER_ALIASES)) {
+      if (t.includes(alias)) return id;
+    }
+    const ch = chaptersForSubj(subject).find(
+      (c) => t.includes(c.id.replace(/-/g, ' ')) || t.includes(c.title.toLowerCase())
+    );
+    return ch ? ch.id : chapterId;
+  }
+
+  function filterQuestions({ chapter, yearsBack, limit }) {
+    const minYear = CURRENT_YEAR - yearsBack;
+    const subj = subjectKey();
+    const pool = verifiedBank.filter((q) => {
+      const qSub = (q.subject_slug || q.subject || '').toLowerCase();
+      const matchSub =
+        qSub === subj ||
+        qSub === subject ||
+        (subj === 'mathematics' && qSub.includes('math')) ||
+        (subj === 'science' && qSub === 'science');
+      const matchCh = (q.chapter || '') === chapter;
+      const yr = q.exam_year;
+      const matchYear = typeof yr === 'number' ? yr >= minYear : false;
+      return matchSub && matchCh && matchYear;
+    });
+    pool.sort((a, b) => (b.exam_year || 0) - (a.exam_year || 0));
+    return pool.slice(0, limit);
+  }
+
+  function fmt(text) {
+    return window.AnyoQuestionFormat ? window.AnyoQuestionFormat.formatMathText(text) : text;
+  }
+
+  function fmtOpts(options) {
+    return window.AnyoQuestionFormat ? window.AnyoQuestionFormat.formatOptions(options) : options;
+  }
+
+  function toQuizItem(q) {
+    const prompt = fmt(q.prompt || q.question);
+    const options = fmtOpts(q.options || []);
+    return {
+      id: q.id,
+      prompt,
+      options,
+      correctIndex: q.correctIndex != null ? q.correctIndex : q.correct_index,
+      source: q.source || q.paper_pair_id || 'CBSE board',
+      exam_year: q.exam_year,
+      answer_verified: true,
+    };
   }
 
   function renderChapters() {
@@ -83,39 +338,22 @@
     chapterTitle.textContent = ch.title;
     subjectLabel.textContent = subject === 'science' ? 'Science · 086' : 'Mathematics · 041';
     renderChapters();
-    quizActive = false;
     quizPanel.hidden = true;
     chatMessages.innerHTML = '';
+    const avail = filterQuestions({ chapter: id, yearsBack: YEARS_BACK, limit: 99 }).length;
     addBubble(
       'tutor',
-      `Welcome to **${ch.title}** (${curriculum.session} syllabus). Ask for an explanation, example, or start a 5-question chapter quiz.`
+      `**${ch.title}** — ${avail} verified board MCQ(s) in the bank from the last ${YEARS_BACK} years. Ask e.g. "5 questions on ${ch.title.toLowerCase()}" or start chapter quiz.`
     );
-    if (id === 'light') {
-      setTimeout(() => {
-        addBubble('peer', 'Arjun: I am revising mirror formula here too — ping me if stuck.', 'Arjun M.');
-      }, 1800);
-    }
   }
 
   function showAlert() {
-    if (chapterId !== 'light') return;
-    alertBanner.hidden = false;
-    alertBanner.innerHTML =
-      '<strong>Light needs attention</strong> — studied 12 &amp; 18 Jun, mock score 25%. ' +
-      '<button type="button" id="alertQuizBtn" style="margin-left:8px;color:#67e8f9;background:none;border:none;cursor:pointer;text-decoration:underline">5-Q drill</button>';
-    document.getElementById('alertQuizBtn')?.addEventListener('click', startQuiz);
+    alertBanner.hidden = true;
   }
 
   document.querySelectorAll('[data-subject]').forEach((btn) => {
     btn.addEventListener('click', () => {
-      subject = btn.getAttribute('data-subject');
-      document.querySelectorAll('[data-subject]').forEach((b) => {
-        const on = b.getAttribute('data-subject') === subject;
-        b.classList.toggle('active', on);
-        b.style.cssText = on
-          ? 'padding:8px;border-radius:10px;border:1px solid rgba(103,232,249,0.4);background:rgba(6,182,212,0.12);color:#67e8f9;cursor:pointer'
-          : 'padding:8px;border-radius:10px;border:1px solid rgba(148,163,184,0.25);background:transparent;color:#cbd5e1;cursor:pointer';
-      });
+      setSubject(btn.getAttribute('data-subject'));
       const first = chaptersForSubj(subject)[0];
       if (first) selectChapter(first.id);
     });
@@ -124,60 +362,173 @@
   function addBubble(kind, text, author) {
     const div = document.createElement('div');
     div.className = `chat-bubble ${kind}`;
-    if (author) div.innerHTML = `<small style="opacity:0.7">${author}</small><br>` + text.replace(/\*\*(.*?)\*\*/g, '$1');
-    else div.textContent = text.replace(/\*\*(.*?)\*\*/g, '$1');
+    if (author) {
+      div.innerHTML = `<small style="opacity:0.7">${author}</small><br>` + text.replace(/\*\*(.*?)\*\*/g, '$1');
+    } else {
+      div.textContent = text.replace(/\*\*(.*?)\*\*/g, '$1');
+    }
     chatMessages.appendChild(div);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
-  function mockTutorReply(msg) {
-    const m = msg.toLowerCase();
-    if (m.includes('example')) return 'NCERT Example: use sign convention for mirrors — u is negative for real objects in standard layout.';
-    if (m.includes('explain')) return 'Core idea from syllabus: reflection laws, mirror/lens formula, magnification — board often asks diagram + numerical.';
-    return 'Good question. In production I pull this from cbse10_kb Qdrant. Try the chapter quiz to check recall.';
+  function setSubject(sub) {
+    subject = sub;
+    document.querySelectorAll('[data-subject]').forEach((b) => {
+      const on = b.getAttribute('data-subject') === subject;
+      b.classList.toggle('active', on);
+      b.style.cssText = on
+        ? 'padding:8px;border-radius:10px;border:1px solid rgba(103,232,249,0.4);background:rgba(6,182,212,0.12);color:#67e8f9;cursor:pointer'
+        : 'padding:8px;border-radius:10px;border:1px solid rgba(148,163,184,0.25);background:transparent;color:#cbd5e1;cursor:pointer';
+    });
   }
 
-  document.getElementById('sendChat').addEventListener('click', () => {
+  function parseQuestionRequest(msg) {
+    if (!window.AnyoTutorIntent.isQuestionFetchIntent(msg)) return null;
+    const m = msg.toLowerCase();
+    const limit = window.AnyoTutorIntent.parseQuestionCount(msg);
+    let yearsBack = YEARS_BACK;
+    const ym = m.match(/last\s+(\d+)\s+year/);
+    if (ym) yearsBack = parseInt(ym[1], 10);
+    let ch = chapterId;
+    if (m.includes('polynomial')) ch = 'polynomials';
+    else ch = resolveChapterId(m) || chapterId;
+    if (m.includes('math') || m.includes('polynomial') || m.includes('trigonometry')) {
+      setSubject('mathematics');
+    } else if (m.includes('science') && !m.includes('math')) {
+      setSubject('science');
+    }
+    return { chapter: ch, yearsBack, limit };
+  }
+
+  function explainReply() {
+    const q = quizQuestions[quizIndex] || quizQuestions[0];
+    if (!q || q.correctIndex == null) {
+      quizPanel.hidden = true;
+      return (
+        'Ask for a verified question first (e.g. "1 question on linear equations"). ' +
+        'Then I can show the linked board answer — I won\'t guess.'
+      );
+    }
+    const letter = String.fromCharCode(65 + q.correctIndex);
+    const opt = q.options[q.correctIndex];
+    quizPanel.hidden = true;
+    return (
+      `Verified answer (${q.exam_year || 'board'}): ${letter}. ${opt}\n\n` +
+      `This is from the ingested marking scheme — not generated. ` +
+      `Full step-by-step working needs more solution text from that paper in the archive.`
+    );
+  }
+
+  function tutorReply(msg) {
+    const req = parseQuestionRequest(msg);
+    if (req) {
+      const found = filterQuestions(req);
+      if (found.length === 0) {
+        quizPanel.hidden = true;
+        return (
+          `No verified ${req.chapter.replace(/-/g, ' ')} questions in the bank for the last ${req.yearsBack} years. ` +
+          `I only use ingested CBSE papers — I won't make questions up. Try another chapter or year range.`
+        );
+      }
+      const items = found.slice(0, req.limit).map(toQuizItem);
+      quizQuestions = items;
+      quizIndex = 0;
+      quizAnswers = [];
+      quizPanel.hidden = false;
+      renderQuizQuestion();
+      const shown = items.length;
+      const yrNote =
+        req.yearsBack === YEARS_BACK
+          ? `(board papers ${CURRENT_YEAR - req.yearsBack}–${CURRENT_YEAR - 1})`
+          : `(last ${req.yearsBack} years)`;
+      if (shown < req.limit) {
+        return `Showing ${shown} verified question(s) on ${req.chapter.replace(/-/g, ' ')} ${yrNote}. Only ${shown} in the bank — not inventing more.`;
+      }
+      return `Showing ${shown} verified question(s) on ${req.chapter.replace(/-/g, ' ')} ${yrNote}.`;
+    }
+
+    if (window.AnyoTutorIntent.isExplainOrAnswerIntent(msg)) {
+      return explainReply();
+    }
+
+    const m = msg.toLowerCase();
+    if (m.includes('example')) {
+      quizPanel.hidden = true;
+      return 'Examples come from your ingested syllabus and board papers for this chapter.';
+    }
+    quizPanel.hidden = true;
+    return 'Ask for verified board questions (e.g. "1 question on polynomials") or "explain" after a question is shown.';
+  }
+
+  function handlePeerChat(msg) {
+    const peer = window.AnyoTutorIntent.findPeerMention(msg, activePeers);
+    if (!peer) return false;
+
+    if (window.AnyoBots.isPersonalQuestion(msg)) {
+      setTimeout(() => {
+        addBubble('peer', window.AnyoBots.moderationReply(), 'Tutor');
+      }, 500);
+      return true;
+    }
+
+    const reply = window.AnyoBots.peerReply(peer, msg);
+    if (reply) {
+      setTimeout(() => {
+        if (reply.warn) addBubble('tutor', reply.warn, 'Tutor');
+        addBubble('peer', reply.text, peer.name);
+      }, 600 + Math.random() * 800);
+      return true;
+    }
+    return true;
+  }
+
+  function handleChatSend() {
     const t = chatInput.value.trim();
     if (!t) return;
     addBubble('student', t);
     chatInput.value = '';
-    setTimeout(() => addBubble('tutor', mockTutorReply(t)), 500);
-  });
-  chatInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') document.getElementById('sendChat').click();
-  });
 
-  function getQuizQuestions() {
-    const bank = curriculum.quizBank[chapterId];
-    if (bank && bank.length) return bank.slice(0, 5);
-    return [
-      {
-        prompt: 'Review question for this chapter — syllabus-aligned recall.',
-        options: ['Option A', 'Option B', 'Option C', 'Option D'],
-        correctIndex: 1,
-        source: 'Generic',
-      },
-    ];
+    if (window.AnyoBots.isPersonalQuestion(t)) {
+      setTimeout(() => addBubble('tutor', window.AnyoBots.moderationReply()), 300);
+      return;
+    }
+    if (window.AnyoBots.isTimepassChat(t) && !window.AnyoTutorIntent.findPeerMention(t, activePeers)) {
+      setTimeout(() => addBubble('tutor', window.AnyoBots.timepassWarning()), 350);
+    }
+    if (handlePeerChat(t)) return;
+    setTimeout(() => addBubble('tutor', tutorReply(t)), 400);
   }
+  document.getElementById('sendChat').addEventListener('click', handleChatSend);
+  chatInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') handleChatSend();
+  });
 
   function startQuiz() {
-    quizQuestions = getQuizQuestions();
-    while (quizQuestions.length < 5 && curriculum.quizBank.light) {
-      quizQuestions.push(curriculum.quizBank.light[quizQuestions.length % curriculum.quizBank.light.length]);
+    const found = filterQuestions({ chapter: chapterId, yearsBack: YEARS_BACK, limit: 5 });
+    if (found.length === 0) {
+      addBubble(
+        'tutor',
+        `No verified questions for **${chapterTitle.textContent}** in the last ${YEARS_BACK} years. Nothing to quiz — add more board papers or pick another chapter.`
+      );
+      return;
     }
-    quizQuestions = quizQuestions.slice(0, 5);
+    quizQuestions = found.map(toQuizItem);
     quizIndex = 0;
     quizAnswers = [];
-    quizActive = true;
     quizPanel.hidden = false;
     renderQuizQuestion();
+    addBubble(
+      'tutor',
+      `Starting quiz: ${quizQuestions.length} verified question(s) on ${chapterTitle.textContent}.` +
+        (quizQuestions.length < 5 ? ' (All available — no filler questions.)' : '')
+    );
   }
 
   function renderQuizQuestion() {
     const q = quizQuestions[quizIndex];
-    quizPanel.innerHTML = `<p style="font-size:0.75rem;color:#94a3b8">Q ${quizIndex + 1}/5 · ${q.source || 'CBSE'}</p>
-      <p style="margin:8px 0 12px;font-weight:500">${q.prompt.replace(/\n/g, '<br>')}</p>
+    const yr = q.exam_year ? ` · ${q.exam_year}` : '';
+    quizPanel.innerHTML = `<p style="font-size:0.75rem;color:#94a3b8">Q ${quizIndex + 1}/${quizQuestions.length}${yr} · verified</p>
+      <p style="margin:8px 0 12px;font-weight:500">${String(q.prompt).replace(/\n/g, '<br>')}</p>
       <div id="quizOpts"></div>`;
     const opts = quizPanel.querySelector('#quizOpts');
     q.options.forEach((opt, i) => {
@@ -191,10 +542,8 @@
         quizIndex++;
         if (quizIndex >= quizQuestions.length) {
           const score = quizAnswers.filter((a, j) => a === quizQuestions[j].correctIndex).length;
-          quizPanel.innerHTML = `<p style="color:#6ee7b7;font-weight:600">Quiz complete: ${score}/${quizQuestions.length}</p>
-            <p style="font-size:0.82rem;color:#94a3b8;margin-top:8px">Logged to your progress report (mock).</p>`;
-          addBubble('tutor', `You scored ${score}/${quizQuestions.length} on ${chapterTitle.textContent}. Review weak items before board mock.`);
-          quizActive = false;
+          quizPanel.innerHTML = `<p style="color:#6ee7b7;font-weight:600">Quiz complete: ${score}/${quizQuestions.length}</p>`;
+          addBubble('tutor', `You scored ${score}/${quizQuestions.length} on ${chapterTitle.textContent} (verified bank only).`);
         } else renderQuizQuestion();
       });
       opts.appendChild(b);
@@ -203,11 +552,11 @@
 
   document.getElementById('btnQuiz').addEventListener('click', startQuiz);
   document.getElementById('btnBoard').addEventListener('click', () => {
-    addBubble('tutor', 'Board mock uses random questions from CBSE 2023-24 practice papers (Science/Math PQ). Timer in next release.');
+    addBubble('tutor', 'Board mock draws verified MCQs for the current chapter and subject only — no cross-subject mix.');
   });
   document.getElementById('btnInvite').addEventListener('click', () => {
-    const link = `${location.origin}/portal/education/cbse10/room.html?role=student&join=sr-mock-a7f2`;
+    const link = `${location.origin}/portal/education/cbse10/room.html?role=student`;
     navigator.clipboard?.writeText(link);
-    addBubble('peer', 'Invite link copied — share with classmates (SaaS web only).', 'System');
+    addBubble('peer', 'Study room link copied — share with a real classmate (not for personal contact here).', 'System');
   });
 })();

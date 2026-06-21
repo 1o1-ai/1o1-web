@@ -8,7 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/theme.css" />
+  <link rel="stylesheet" href="../assets/landing.css" />
   <link rel="stylesheet" href="../assets/rhytoma.css" />
+  <link rel="stylesheet" href="../portal/assets/portal.css" />
 </head>
 <body class="lang-bn">
   <canvas id="cosmos" aria-hidden="true"></canvas>
@@ -41,6 +43,54 @@
       <h1 class="hero-bn" data-i18n="heroTitle">ঋতমা Academy</h1>
       <p class="lede" data-i18n="heroLede">WBBSE/WBCHSE — AI answers grounded in verified textbooks only. No hallucination.</p>
     </section>
+
+    <div class="stream-circle-grid" aria-label="Streams">
+      <div class="portal portal--rhytoma" style="pointer-events:none">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon">🔬</span>
+          <span class="portal-title">Science</span>
+          <span class="portal-sub">Coming soon</span>
+        </div>
+      </div>
+      <div class="portal portal--caregiver" style="pointer-events:none;opacity:0.85">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon">📈</span>
+          <span class="portal-title">Commerce</span>
+          <span class="portal-sub">Class 11–12 · Soon</span>
+        </div>
+      </div>
+      <div class="portal portal--saas" style="pointer-events:none;opacity:0.85">
+        <div class="portal-ring"></div>
+        <div class="portal-orbit"></div>
+        <div class="portal-core">
+          <span class="portal-icon">📜</span>
+          <span class="portal-title">Arts</span>
+          <span class="portal-sub">Coming soon</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stream-nested">
+      <h3>Science · by class band (preview)</h3>
+      <div class="stream-circle-grid">
+        <div class="portal portal--rhytoma" style="pointer-events:none;width:min(120px,28vw);height:min(120px,28vw)">
+          <div class="portal-ring"></div>
+          <div class="portal-core"><span class="portal-title" style="font-size:0.75rem">Class 8</span></div>
+        </div>
+        <div class="portal portal--rhytoma" style="pointer-events:none;width:min(120px,28vw);height:min(120px,28vw)">
+          <div class="portal-ring"></div>
+          <div class="portal-core"><span class="portal-title" style="font-size:0.75rem">Class 9–10</span></div>
+        </div>
+        <div class="portal portal--rhytoma" style="pointer-events:none;width:min(120px,28vw);height:min(120px,28vw)">
+          <div class="portal-ring"></div>
+          <div class="portal-core"><span class="portal-title" style="font-size:0.75rem">Class 11–12</span></div>
+        </div>
+      </div>
+    </div>
 
     <article class="school-card">
       <img

@@ -126,6 +126,9 @@
       }
       const data = { username, role, vertical: opts.vertical || null, ts: Date.now() };
       setSession(data);
+      if (window.AnyoPresence) {
+        window.AnyoPresence.startHeartbeat(data);
+      }
       closeLoginModal();
       if (typeof opts.onSuccess === 'function') opts.onSuccess(data);
     });
@@ -153,6 +156,14 @@
 
   /** Folder cards on SaaS hub */
   document.addEventListener('DOMContentLoaded', () => {
+    const session = getSession();
+    if (session && window.AnyoPresence) {
+      window.AnyoPresence.startHeartbeat(session);
+    }
+    if (window.AnyoPresence && typeof window.AnyoPresence.mountOnlineBadges === 'function') {
+      window.AnyoPresence.mountOnlineBadges();
+    }
+
     document.querySelectorAll('[data-portal-folder]').forEach((card) => {
       card.addEventListener('click', () => {
         const vertical = card.getAttribute('data-portal-folder');
@@ -190,7 +201,7 @@
         const session = getSession();
         if (session) {
           const role = session.role === 'teacher' ? 'teacher' : 'student';
-          window.location.href = `/portal/education/cbse10/room.html?role=${encodeURIComponent(role)}`;
+          window.location.href = `/portal/education/cbse10/index.html`;
           return;
         }
 
@@ -200,9 +211,8 @@
           showRoles: true,
           teacherDisabled: false,
           vertical: 'education',
-          onSuccess: (s) => {
-            const role = s.role || 'student';
-            window.location.href = `/portal/education/cbse10/room.html?role=${encodeURIComponent(role)}`;
+          onSuccess: () => {
+            window.location.href = `/portal/education/cbse10/index.html`;
           },
         });
       });

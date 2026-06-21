@@ -1,0 +1,81 @@
+{
+  "status": "ok",
+  "ingested_at": "2026-06-21T06:35:37.521980+00:00",
+  "supercop_root": "C:\\Knowledge\\EDUCATION\\CBSE-10-SUPERCOP",
+  "pairs_total": 208,
+  "pairs_processed": 208,
+  "pairs_skipped": 0,
+  "questions_total": 390,
+  "questions_verified": 390,
+  "questions_unverified": 0,
+  "answer_keys_total": 1077,
+  "merged_to_main_bank": 390,
+  "errors": [],
+  "sample_pairs": [
+    {
+      "pair_id": "m_2018",
+      "subject": "Mathematics",
+      "year_slug": "Mathematics-2018",
+      "question_rel": "Mathematics/Mathematics-2018/question/m_2018.pdf",
+      "solution_rel": "Mathematics/Mathematics-2018/solution/ans_m_2018.pdf",
+      "mcq_parsed": 0,
+      "answer_keys_section_a": 0,
+      "linked": 0,
+      "unlinked": 0,
+      "digest": "a565d6abbac700469502368a0238a7388de4718f8cdffe3fd6954abf0135f823",
+      "ingested_at": "2026-06-21T06:01:18.728091+00:00"
+    },
+    {
+      "pair_id": "m_2016",
+      "subject": "Mathematics",
+      "year_slug": "Mathematics-2016",
+      "question_rel": "Mathematics/Mathematics-2016/question/m_2016.pdf",
+      "solution_rel": "Mathematics/Mathematics-2016/solution/ans_m_2016.pdf",
+      "mcq_parsed": 0,
+      "answer_keys_section_a": 0,
+      "linked": 0,
+      "unlinked": 0,
+      "digest": "73803a5857617171621dbe7ca4b7d54fc088d2debf450956d8a1c0cbb841b437",
+      "ingested_at": "2026-06-21T06:01:18.736094+00:00"
+    },
+    {
+      "pair_id": "m_2017",
+      "subject": "Mathematics",
+      "year_slug": "Mathematics-2017",
+      "question_rel": "Mathematics/Mathematics-2017/question/m_2017.pdf",
+      "solution_rel": "Mathematics/Mathematics-2017/solution/ans_m_2017.pdf",
+      "mcq_parsed": 0,
+      "answer_keys_section_a": 0,
+      "linked": 0,
+      "unlinked": 0,
+      "digest": "1d8e2725f1b47dc69854dfc9ecaa902d9ac478dc0e59d8c236bd82e496db85f0",
+      "ingested_at": "2026-06-21T06:01:19.585979+00:00"
+    },
+    {
+      "pair_id": "m_2020_430-1-2",
+      "subject": "Mathematics",
+      "year_slug": "Mathematics-Basic-2020",
+      "question_rel": "Mathematics/Mathematics-Basic-2020/question/m_2020_430-1-2.pdf",
+      "solution_rel": "Mathematics/Mathematics-Basic-2020/solution/ans_m_2020_430-1-2.pdf",
+      "mcq_parsed": 7,
+      "answer_keys_section_a": 10,
+      "linked": 7,
+      "unlinked": 0,
+      "digest": "c33398fe5de762a038c9811bbcce64fb5ce3634a7179eed7d2e9794608928e39",
+      "ingested_at": "2026-06-21T06:01:19.719000+00:00"
+    },
+    {
+      "pair_id": "m_d_2017",
+      "subject": "Mathematics",
+      "year_slug": "Mathematics-2017",
+      "question_rel": "Mathematics/Mathematics-2017/question/m_d_2017.pdf",
+      "solution_rel": "Mathematics/Mathematics-2017/solution/ans_m_d_2017.pdf",
+      "mcq_parsed": 0,
+      "answer_keys_section_a": 0,
+      "linked": 0,
+      "unlinked": 0,
+      "digest": "78228a1181bb4d4d6dfeedc6c1d391b8d3e7751a563d30b3d662a58c48b0f2b2",
+      "ingested_at": "2026-06-21T06:01:19.803918+00:00"
+    }
+  ]
+}
