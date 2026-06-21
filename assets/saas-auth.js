@@ -57,7 +57,14 @@
     try {
       const res = await fetch(apiBase() + '/auth/me', { headers: headers() });
       const data = await res.json();
-      if (!res.ok) throw new Error('Session expired');
+      if (!res.ok) {
+        localStorage.removeItem(TOKEN_KEY);
+        localStorage.removeItem(USER_KEY);
+        cachedUser = null;
+        cachedSub = null;
+        const msg = typeof data.detail === 'string' ? data.detail : 'Session expired — please sign in again';
+        throw new Error(msg);
+      }
       if (data.token) localStorage.setItem(TOKEN_KEY, data.token);
       cachedUser = data.user || data;
       cachedSub = data.subscription || null;

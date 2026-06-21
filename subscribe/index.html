@@ -267,14 +267,21 @@
       };
     }
 
+    function clearSession() {
+      localStorage.removeItem(TOKEN);
+      localStorage.removeItem('ml_student_user');
+    }
+
     function apiJson(url, opts) {
       return fetch(url, opts).then(function (r) {
         return r.text().then(function (text) {
           var d;
           try { d = text ? JSON.parse(text) : {}; } catch (e) { d = { detail: text || r.statusText }; }
           if (!r.ok) {
+            if (r.status === 401) clearSession();
             var msg = d.detail;
             if (typeof msg === 'object') msg = (msg && msg.message) || JSON.stringify(msg);
+            if (r.status === 401) msg = (msg || 'Session expired') + ' — please sign in again.';
             throw new Error(msg || ('Request failed (' + r.status + ')'));
           }
           return d;
@@ -406,9 +413,12 @@
     }
 
     function loadQuote(cb) {
-      fetch(API + '/billing/quote', { method: 'POST', headers: headers(), body: JSON.stringify({ tier: state.tier, autopay: state.autopay }) })
-        .then(function (r) { return r.json(); })
-        .then(function (q) { state.quote = q; if (cb) cb(); });
+      apiJson(API + '/billing/quote', { method: 'POST', headers: headers(), body: JSON.stringify({ tier: state.tier, autopay: state.autopay }) })
+        .then(function (q) { state.quote = q; if (cb) cb(); })
+        .catch(function (err) {
+          if (!token()) { renderAuth(); showErr(err.message); return; }
+          showErr(err.message);
+        });
     }
 
     function renderPlan() {
@@ -502,13 +512,17 @@
       syncPageHeader();
       if (token()) {
         fetch(API + '/auth/me', { headers: headers() })
-          .then(function (r) { return r.json(); })
+          .then(function (r) { return r.text().then(function (t) { var d = t ? JSON.parse(t) : {}; if (!r.ok) throw new Error(d.detail || 'Session expired'); return d; }); })
           .then(function (d) {
             localStorage.setItem(TOKEN, d.token);
             if (d.subscription && d.subscription.access_active) renderDone(d.subscription);
             else renderPlan();
           })
-          .catch(renderAuth);
+          .catch(function (err) {
+            clearSession();
+            showErr(typeof err.message === 'string' ? err.message : 'Please sign in again.');
+            renderAuth();
+          });
       } else {
         renderAuth();
       }
