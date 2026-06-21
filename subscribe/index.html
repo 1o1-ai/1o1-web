@@ -36,6 +36,8 @@
     .pay-methods { display:flex; gap:8px; margin-bottom:16px; }
     .pay-methods button { flex:1; padding:10px; border-radius:10px; border:1px solid var(--line); background:transparent; color:var(--muted); font-weight:700; font-size:.72rem; cursor:pointer; text-transform:uppercase; }
     .pay-methods button.on { border-color:var(--teal); color:var(--teal); background:rgba(45,212,191,.1); }
+    .addr-hint { font-size:.75rem; color:var(--muted); margin:-4px 0 12px; line-height:1.5; padding:10px 12px; background:rgba(15,23,42,.6); border-radius:10px; border:1px solid var(--line); }
+    .addr-hint strong { color:var(--ink); }
     .done { text-align:center; padding:24px 0; }
     .done .icon { font-size:3rem; margin-bottom:12px; }
     a.link { color:var(--teal); }
@@ -80,7 +82,7 @@
       return location.origin + '/wb-academy/widget';
     })();
 
-    var state = { step: 0, tier: 'standard', autopay: true, checkoutId: '', quote: null, payMethod: 'upi' };
+    var state = { step: 0, tier: 'standard', autopay: true, checkoutId: '', quote: null, payMethod: 'upi', regCountry: 'India' };
 
     function token() { return localStorage.getItem(TOKEN); }
     function headers() {
@@ -95,18 +97,89 @@
     }
     function inr(n) { return 'Rs ' + Number(n).toLocaleString('en-IN'); }
 
+    function dummyProfile(country) {
+      var ts = Date.now();
+      if (country === 'US') {
+        return {
+          full_name: 'Jordan Smith',
+          email: 'test.us.' + ts + '@yogabrata.com',
+          password: 'Test@2026',
+          phone: '512-555-0142',
+          grade: '10',
+          school_name: 'Austin High School',
+          address_line: '742 Evergreen Terrace',
+          city: 'Austin',
+          state: 'TX',
+          pincode: '78701'
+        };
+      }
+      return {
+        full_name: 'Aarav Mehta',
+        email: 'test.in.' + ts + '@yogabrata.com',
+        password: 'Test@2026',
+        phone: '9876543210',
+        grade: '10',
+        school_name: 'South Point High School',
+        address_line: '42 Park Street, Flat 3B',
+        city: 'Kolkata',
+        state: 'West Bengal',
+        pincode: '700016'
+      };
+    }
+
+    function apiJson(url, opts) {
+      return fetch(url, opts).then(function (r) {
+        return r.text().then(function (text) {
+          var d;
+          try { d = text ? JSON.parse(text) : {}; } catch (e) { d = { detail: text || r.statusText }; }
+          if (!r.ok) {
+            var msg = d.detail;
+            if (typeof msg === 'object') msg = (msg && msg.message) || JSON.stringify(msg);
+            throw new Error(msg || ('Request failed (' + r.status + ')'));
+          }
+          return d;
+        });
+      }).catch(function (err) {
+        if (err.message === 'Failed to fetch' || err.name === 'TypeError') {
+          throw new Error('Cannot reach API at ' + API + '. Use demo login student.amit@yogabrata.com / Test@2026, or wait for API deploy.');
+        }
+        throw err;
+      });
+    }
+
+    function addressFieldsHtml(country) {
+      var isUS = country === 'US';
+      return '<div class="addr-hint">' +
+        '<strong>India format:</strong> Address line, City, State, 6-digit PIN (e.g. 700016)<br>' +
+        '<strong>US format:</strong> Street address, City, State abbr., ZIP (e.g. 78701)</div>' +
+        '<label>' + (isUS ? 'Street address' : 'Address') + '</label><input name="address_line" required/>' +
+        '<label>City</label><input name="city" required/>' +
+        '<label>State</label><input name="state" placeholder="' + (isUS ? 'TX' : 'West Bengal') + '" required/>' +
+        '<label>' + (isUS ? 'ZIP code' : 'PIN code') + '</label>' +
+        '<input name="pincode" pattern="' + (isUS ? '\\d{5}(-\\d{4})?' : '\\d{6}') + '" placeholder="' + (isUS ? '78701' : '700016') + '" required/>';
+    }
+
+    function fillRegisterForm(form, country) {
+      var d = dummyProfile(country);
+      Object.keys(d).forEach(function (k) {
+        var el = form.elements[k];
+        if (el) el.value = d[k];
+      });
+    }
+
     function renderAuth() {
       setSteps(0);
       document.getElementById('app').innerHTML =
         '<div class="card"><div class="tabs"><button class="tab on" id="tabReg">Register</button><button class="tab" id="tabLogin">Sign in</button></div>' +
         '<div id="authForm"></div>' +
-        '<p style="margin-top:16px;font-size:.78rem;color:var(--muted)">Demo: <code>student.amit@yogabrata.com</code> / <code>Test@2026</code></p></div>';
+        '<p style="margin-top:16px;font-size:.78rem;color:var(--muted)">Demo: <code>student.amit@yogabrata.com</code> / <code>Test@2026</code> · Form pre-filled for quick testing</p></div>';
       renderRegister();
       document.getElementById('tabReg').onclick = function () { document.getElementById('tabReg').classList.add('on'); document.getElementById('tabLogin').classList.remove('on'); renderRegister(); };
       document.getElementById('tabLogin').onclick = function () { document.getElementById('tabLogin').classList.add('on'); document.getElementById('tabReg').classList.remove('on'); renderLogin(); };
     }
 
     function renderRegister() {
+      var country = state.regCountry || 'India';
       document.getElementById('authForm').innerHTML =
         '<form id="regForm">' +
         '<label>Full name</label><input name="full_name" required/>' +
@@ -115,18 +188,27 @@
         '<label>Phone</label><input name="phone"/>' +
         '<label>Grade</label><select name="grade"><option>10</option><option>9</option><option>11</option><option>12</option></select>' +
         '<label>School name</label><input name="school_name" required/>' +
-        '<label>Address</label><input name="address_line" required/>' +
-        '<label>City</label><input name="city" required/>' +
-        '<label>State</label><input name="state" value="West Bengal" required/>' +
-        '<label>PIN code</label><input name="pincode" pattern="\\d{6}" required/>' +
+        '<label>Country</label>' +
+        '<div class="tabs" style="margin-bottom:12px" id="countryTabs">' +
+        '<button type="button" class="tab' + (country === 'India' ? ' on' : '') + '" data-country="India">India</button>' +
+        '<button type="button" class="tab' + (country === 'US' ? ' on' : '') + '" data-country="US">United States</button></div>' +
+        '<div id="addrFields">' + addressFieldsHtml(country) + '</div>' +
         '<button type="submit" class="btn">Create account</button></form>';
-      document.getElementById('regForm').onsubmit = function (e) {
+      var form = document.getElementById('regForm');
+      fillRegisterForm(form, country);
+      document.querySelectorAll('#countryTabs .tab').forEach(function (btn) {
+        btn.onclick = function () {
+          state.regCountry = btn.dataset.country;
+          renderRegister();
+        };
+      });
+      form.onsubmit = function (e) {
         e.preventDefault(); clearErr();
         var fd = new FormData(e.target);
         var body = {}; fd.forEach(function (v, k) { body[k] = v; });
-        body.board = 'CBSE'; body.country = 'India';
-        fetch(API + '/auth/register', { method: 'POST', headers: headers(), body: JSON.stringify(body) })
-          .then(function (r) { return r.json().then(function (d) { if (!r.ok) throw new Error(d.detail || (d.detail && d.detail.message) || 'Failed'); return d; }); })
+        body.board = 'CBSE';
+        body.country = state.regCountry === 'US' ? 'United States' : 'India';
+        apiJson(API + '/auth/register', { method: 'POST', headers: headers(), body: JSON.stringify(body) })
           .then(function (d) { localStorage.setItem(TOKEN, d.token); renderPlan(); })
           .catch(function (err) { showErr(err.message); });
       };
@@ -134,14 +216,13 @@
 
     function renderLogin() {
       document.getElementById('authForm').innerHTML =
-        '<form id="loginForm"><label>Email</label><input name="email" type="email" required/>' +
-        '<label>Password</label><input name="password" type="password" required/>' +
+        '<form id="loginForm"><label>Email</label><input name="email" type="email" value="student.amit@yogabrata.com" required/>' +
+        '<label>Password</label><input name="password" type="password" value="Test@2026" required/>' +
         '<button type="submit" class="btn">Sign in</button></form>';
       document.getElementById('loginForm').onsubmit = function (e) {
         e.preventDefault(); clearErr();
         var fd = new FormData(e.target);
-        fetch(API + '/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: fd.get('email'), password: fd.get('password') }) })
-          .then(function (r) { return r.json().then(function (d) { if (!r.ok) throw new Error(d.detail || 'Failed'); return d; }); })
+        apiJson(API + '/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: fd.get('email'), password: fd.get('password') }) })
           .then(function (d) {
             localStorage.setItem(TOKEN, d.token);
             if (d.subscription && d.subscription.access_active) renderDone(d.subscription);
