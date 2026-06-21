@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My account · CBSE Class 10 · Yogabrata</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0f172a; --card:#1e293b; --ink:#f1f5f9; --muted:#94a3b8; --teal:#2dd4bf; --line:rgba(148,163,184,.15); --emerald:#4ade80; --amber:#fbbf24; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'DM Sans',system-ui,sans-serif; background:var(--bg); color:var(--ink); min-height:100vh; }
+    .top { border-bottom:1px solid var(--line); padding:12px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+    .top a { color:var(--teal); text-decoration:none; font-size:.85rem; font-weight:600; }
+    .wrap { max-width:520px; margin:0 auto; padding:32px 20px 64px; }
+    h1 { font-family:Fraunces,serif; font-size:1.6rem; margin-bottom:8px; }
+    .sub { color:var(--muted); font-size:.9rem; margin-bottom:24px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:24px; margin-bottom:16px; }
+    .row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--line); font-size:.9rem; }
+    .row:last-child { border-bottom:none; }
+    .row span:first-child { color:var(--muted); }
+    .btn { display:inline-block; padding:12px 20px; border:none; border-radius:12px; background:linear-gradient(135deg,#14b8a6,#0891b2); color:#fff; font-weight:700; font-size:.9rem; cursor:pointer; text-decoration:none; text-align:center; }
+    .btn.secondary { background:transparent; border:1px solid var(--line); color:var(--ink); }
+    .err { background:rgba(239,68,68,.1); border:1px solid rgba(239,68,68,.3); color:#fca5a5; padding:12px; border-radius:12px; margin-bottom:16px; font-size:.88rem; }
+    .badge { display:inline-block; padding:4px 10px; border-radius:999px; font-size:.75rem; font-weight:700; }
+    .badge.ok { background:rgba(74,222,128,.15); color:var(--emerald); }
+    .badge.warn { background:rgba(251,191,36,.15); color:var(--amber); }
+    .center { text-align:center; padding:40px 20px; }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <a href="/">← Yogabrata</a>
+    <div>
+      <a href="/subscribe/">Subscribe</a>
+      &nbsp;·&nbsp;
+      <a href="/portal/education/">Study portal</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <h1>My account</h1>
+    <p class="sub">CBSE Class 10 Core · Yogabrata</p>
+    <div id="err" class="err hidden"></div>
+    <div id="app"><p class="sub">Loading…</p></div>
+  </div>
+  <script>
+  (function () {
+    var TOKEN = 'ml_student_token';
+    var API = 'https://api.brahmando.com/education';
+
+    function token() { return localStorage.getItem(TOKEN); }
+    function headers() {
+      var h = { 'Content-Type': 'application/json' };
+      if (token()) h.Authorization = 'Bearer ' + token();
+      return h;
+    }
+    function inr(n) { return 'Rs ' + Number(n || 0).toLocaleString('en-IN'); }
+    function showErr(m) { var e = document.getElementById('err'); e.textContent = m; e.classList.remove('hidden'); }
+
+    function renderGuest() {
+      document.getElementById('app').innerHTML =
+        '<div class="card center"><p style="color:var(--muted);margin-bottom:20px">Sign in to view your subscription.</p>' +
+        '<a class="btn" href="/subscribe/">Sign in / Subscribe</a></div>';
+    }
+
+    function renderTeacher(user) {
+      document.getElementById('app').innerHTML =
+        '<div class="card"><h2 style="font-size:1.1rem;margin-bottom:4px">' + user.full_name + '</h2>' +
+        '<p style="color:var(--muted);font-size:.85rem">' + user.email + '</p>' +
+        '<p style="margin-top:16px;font-size:.9rem">Teacher account — no subscription fee.</p>' +
+        '<a class="btn" style="margin-top:20px;display:block" href="' + API + '/widget/teacher-review.html">Teacher review</a>' +
+        '<button class="btn secondary" style="margin-top:12px;width:100%" id="signOut">Sign out</button></div>';
+      document.getElementById('signOut').onclick = signOut;
+    }
+
+    function renderStudent(user, sub) {
+      var active = sub && sub.access_active;
+      var html = '<div class="card"><h2 style="font-size:1.1rem;margin-bottom:4px">' + user.full_name + '</h2>' +
+        '<p style="color:var(--muted);font-size:.85rem">' + user.email + '</p>' +
+        '<p style="margin-top:8px;font-size:.85rem">Class ' + (user.grade || '10') + ' · ' + (user.board || 'CBSE') + '</p>' +
+        '<p style="font-size:.85rem;color:var(--muted)">' + (user.school_name || '') + '</p></div>';
+
+      html += '<div class="card"><h3 style="font-size:1rem;margin-bottom:12px">Subscription</h3>';
+      if (!sub) {
+        html += '<p style="color:var(--muted);margin-bottom:16px">No active plan.</p>' +
+          '<a class="btn" href="/subscribe/">Subscribe now</a>';
+      } else {
+        html += '<div class="row"><span>Status</span><span class="badge ' + (active ? 'ok' : 'warn') + '">' + sub.status + '</span></div>' +
+          '<div class="row"><span>Plan</span><span>' + (sub.tier === 'concession' ? 'Student concession' : 'Standard') + '</span></div>' +
+          '<div class="row"><span>Autopay</span><span>' + (sub.autopay ? 'On (20% off)' : 'Off') + '</span></div>' +
+          '<div class="row"><span>Next billing</span><span>' + inr(sub.next_billing_inr) + '/mo</span></div>';
+        if (!active) {
+          html += '<a class="btn" style="margin-top:16px;display:block" href="subscribe.html">Subscribe</a>';
+        } else if (sub.status !== 'cancelled') {
+          html += '<button class="btn secondary" style="margin-top:16px;width:100%" id="cancelBtn">Cancel subscription</button>';
+        }
+      }
+      html += '</div>';
+      html += '<button class="btn secondary" style="width:100%" id="signOut">Sign out</button>';
+      document.getElementById('app').innerHTML = html;
+      document.getElementById('signOut').onclick = signOut;
+      var cancel = document.getElementById('cancelBtn');
+      if (cancel) {
+        cancel.onclick = function () {
+          if (!confirm('Cancel subscription? You keep access until the current period ends.')) return;
+          fetch(API + '/billing/subscription/cancel', { method: 'POST', headers: headers() })
+            .then(function (r) { return r.json().then(function (d) { if (!r.ok) throw new Error(d.detail || 'Failed'); return d; }); })
+            .then(function () { load(); })
+            .catch(function (e) { showErr(e.message); });
+        };
+      }
+    }
+
+    function signOut() {
+      localStorage.removeItem(TOKEN);
+      localStorage.removeItem('ml_student_user');
+      window.location.href = '/';
+    }
+
+    function load() {
+      if (!token()) { renderGuest(); return; }
+      fetch(API + '/auth/me', { headers: headers() })
+        .then(function (r) { return r.json().then(function (d) { if (!r.ok) throw new Error('Session expired'); return d; }); })
+        .then(function (d) {
+          localStorage.setItem(TOKEN, d.token);
+          if ((d.user && d.user.role) === 'teacher' || d.role === 'teacher') renderTeacher(d.user);
+          else renderStudent(d.user, d.subscription);
+        })
+        .catch(function () { localStorage.removeItem(TOKEN); renderGuest(); });
+    }
+
+    load();
+  })();
+  </script>
+</body>
+</html>

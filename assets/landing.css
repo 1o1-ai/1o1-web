@@ -9,8 +9,6 @@ body.landing-page {
 .landing-header {
   position: relative;
   z-index: 10;
-  padding: 28px 24px 12px;
-  text-align: center;
 }
 .landing-header .manjulab-mark {
   display: inline-flex;

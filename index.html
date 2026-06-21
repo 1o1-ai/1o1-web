@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/theme.css" />
   <link rel="stylesheet" href="assets/landing.css" />
+  <link rel="stylesheet" href="assets/saas-auth.css" />
 </head>
 <body class="landing-page">
   <canvas id="cosmos" aria-hidden="true"></canvas>
@@ -24,6 +25,9 @@
         <span>Democratizing Intelligence</span>
       </div>
     </a>
+    <nav class="saas-header-nav" id="saasAuthNav" aria-label="Account">
+      <!-- filled by saas-auth.js -->
+    </nav>
   </header>
 
   <main class="landing-main">
@@ -31,6 +35,23 @@
       <p>Intelligence for every gap</p>
       <h1>Choose your path</h1>
     </div>
+
+    <section class="saas-promo" aria-labelledby="saasPromoTitle">
+      <div class="saas-promo-card">
+        <p class="eyebrow">Anyo Brahmando Academy · SaaS</p>
+        <h2 id="saasPromoTitle">CBSE Class 10 subscription</h2>
+        <p>Full mock exams, verified board papers, study room, and teacher review. First month <strong style="color:#6ee7b7">free</strong>.</p>
+        <div class="saas-promo-prices">
+          <span>₹1,000/mo standard</span>
+          <span>₹200/mo student concession</span>
+          <span>20% off with autopay</span>
+        </div>
+        <div class="saas-promo-actions">
+          <a class="saas-btn saas-btn-primary" href="/subscribe/">Subscribe now</a>
+          <a class="saas-btn saas-btn-ghost" href="/portal/education/">Open study portal</a>
+        </div>
+      </div>
+    </section>
 
     <div class="portal-grid">
       <a class="portal portal--rhytoma" href="/rhytoma/">
@@ -75,5 +96,6 @@
   </footer>
 
   <script src="assets/cosmic.js"></script>
+  <script src="assets/saas-auth.js"></script>
 </body>
 </html>

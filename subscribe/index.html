@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subscribe · CBSE Class 10 · Yogabrata</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@600&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0f172a; --card:#1e293b; --ink:#f1f5f9; --muted:#94a3b8; --teal:#2dd4bf; --line:rgba(148,163,184,.15); --emerald:#4ade80; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { font-family:'DM Sans',system-ui,sans-serif; background:var(--bg); color:var(--ink); min-height:100vh; }
+    body::before { content:''; position:fixed; inset:0; z-index:-1; background:radial-gradient(ellipse 60% 40% at 20% 0%,rgba(45,212,191,.12),transparent 50%); }
+    .top { border-bottom:1px solid var(--line); padding:12px 20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+    .top a { color:var(--teal); text-decoration:none; font-size:.85rem; font-weight:600; }
+    .top span { font-size:.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
+    .wrap { max-width:560px; margin:0 auto; padding:32px 20px 64px; }
+    h1 { font-family:Fraunces,serif; font-size:1.75rem; margin-bottom:8px; }
+    .sub { color:var(--muted); font-size:.9rem; line-height:1.55; margin-bottom:24px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:20px; padding:24px; margin-bottom:16px; }
+    label { display:block; font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); margin-bottom:4px; }
+    input,select,textarea { width:100%; padding:12px 14px; border-radius:12px; border:1px solid var(--line); background:#0f172a; color:var(--ink); font:inherit; margin-bottom:12px; }
+    .btn { width:100%; padding:14px; border:none; border-radius:14px; background:linear-gradient(135deg,#14b8a6,#0891b2); color:#fff; font-weight:700; font-size:.95rem; cursor:pointer; margin-top:8px; }
+    .btn.secondary { background:transparent; border:1px solid var(--line); color:var(--ink); }
+    .tabs { display:flex; gap:8px; margin-bottom:20px; background:#0f172a; padding:6px; border-radius:999px; }
+    .tab { flex:1; padding:10px; border:none; border-radius:999px; background:transparent; color:var(--muted); font-weight:600; cursor:pointer; }
+    .tab.on { background:var(--teal); color:#0f172a; }
+    .plan { border:2px solid var(--line); border-radius:16px; padding:16px; margin-bottom:10px; cursor:pointer; }
+    .plan.on { border-color:var(--teal); background:rgba(45,212,191,.08); }
+    .quote { background:rgba(74,222,128,.08); border:1px solid rgba(74,222,128,.25); border-radius:14px; padding:16px; margin:16px 0; font-size:.9rem; }
+    .err { background:rgba(239,68,68,.1); border:1px solid rgba(239,68,68,.3); color:#fca5a5; padding:12px; border-radius:12px; margin-bottom:16px; font-size:.88rem; }
+    .steps { display:flex; gap:6px; margin-bottom:24px; }
+    .steps i { flex:1; height:4px; border-radius:99px; background:#334155; }
+    .steps i.on { background:var(--teal); }
+    .pay-amt { font-size:2.5rem; font-weight:700; color:var(--teal); text-align:center; margin:16px 0; }
+    .hidden { display:none !important; }
+    .pay-methods { display:flex; gap:8px; margin-bottom:16px; }
+    .pay-methods button { flex:1; padding:10px; border-radius:10px; border:1px solid var(--line); background:transparent; color:var(--muted); font-weight:700; font-size:.72rem; cursor:pointer; text-transform:uppercase; }
+    .pay-methods button.on { border-color:var(--teal); color:var(--teal); background:rgba(45,212,191,.1); }
+    .done { text-align:center; padding:24px 0; }
+    .done .icon { font-size:3rem; margin-bottom:12px; }
+    a.link { color:var(--teal); }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <a href="/">← Yogabrata</a>
+    <div>
+      <a href="/account/">My account</a>
+      &nbsp;·&nbsp;
+      <a href="/portal/education/">Study portal</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <h1>CBSE Class 10 Core</h1>
+    <p class="sub">First month <strong style="color:var(--emerald)">FREE</strong> · then Rs 1,000/mo (Rs 200 student concession) · Autopay saves 20%</p>
+    <div class="steps" id="steps"><i class="on"></i><i></i><i></i><i></i></div>
+    <div id="err" class="err hidden"></div>
+    <div id="app"></div>
+  </div>
+  <script>
+  (function () {
+    var TOKEN = 'ml_student_token';
+    var params = new URLSearchParams(location.search);
+    var EDUCATION_API = 'https://api.brahmando.com/education';
+
+    function apiBase() {
+      var path = location.pathname || '';
+      if (path.indexOf('/education') !== -1) {
+        return location.origin + path.substring(0, path.indexOf('/education') + '/education'.length);
+      }
+      return EDUCATION_API;
+    }
+    var API = apiBase();
+    var widgetBase = (function () {
+      var i = location.pathname.indexOf('/widget/');
+      if (i !== -1) return location.origin + location.pathname.substring(0, i + '/widget'.length);
+      if (location.pathname.indexOf('/wb-academy') !== -1) {
+        return location.origin + location.pathname.substring(0, location.pathname.indexOf('/wb-academy') + '/wb-academy'.length) + '/widget';
+      }
+      return location.origin + '/wb-academy/widget';
+    })();
+
+    var state = { step: 0, tier: 'standard', autopay: true, checkoutId: '', quote: null, payMethod: 'upi' };
+
+    function token() { return localStorage.getItem(TOKEN); }
+    function headers() {
+      var h = { 'Content-Type': 'application/json' };
+      if (token()) h.Authorization = 'Bearer ' + token();
+      return h;
+    }
+    function showErr(m) { var e = document.getElementById('err'); e.textContent = m; e.classList.remove('hidden'); }
+    function clearErr() { document.getElementById('err').classList.add('hidden'); }
+    function setSteps(n) {
+      document.querySelectorAll('#steps i').forEach(function (el, i) { el.classList.toggle('on', i <= n); });
+    }
+    function inr(n) { return 'Rs ' + Number(n).toLocaleString('en-IN'); }
+
+    function renderAuth() {
+      setSteps(0);
+      document.getElementById('app').innerHTML =
+        '<div class="card"><div class="tabs"><button class="tab on" id="tabReg">Register</button><button class="tab" id="tabLogin">Sign in</button></div>' +
+        '<div id="authForm"></div>' +
+        '<p style="margin-top:16px;font-size:.78rem;color:var(--muted)">Demo: <code>student.amit@yogabrata.com</code> / <code>Test@2026</code></p></div>';
+      renderRegister();
+      document.getElementById('tabReg').onclick = function () { document.getElementById('tabReg').classList.add('on'); document.getElementById('tabLogin').classList.remove('on'); renderRegister(); };
+      document.getElementById('tabLogin').onclick = function () { document.getElementById('tabLogin').classList.add('on'); document.getElementById('tabReg').classList.remove('on'); renderLogin(); };
+    }
+
+    function renderRegister() {
+      document.getElementById('authForm').innerHTML =
+        '<form id="regForm">' +
+        '<label>Full name</label><input name="full_name" required/>' +
+        '<label>Email</label><input name="email" type="email" required/>' +
+        '<label>Password (8+ chars)</label><input name="password" type="password" minlength="8" required/>' +
+        '<label>Phone</label><input name="phone"/>' +
+        '<label>Grade</label><select name="grade"><option>10</option><option>9</option><option>11</option><option>12</option></select>' +
+        '<label>School name</label><input name="school_name" required/>' +
+        '<label>Address</label><input name="address_line" required/>' +
+        '<label>City</label><input name="city" required/>' +
+        '<label>State</label><input name="state" value="West Bengal" required/>' +
+        '<label>PIN code</label><input name="pincode" pattern="\\d{6}" required/>' +
+        '<button type="submit" class="btn">Create account</button></form>';
+      document.getElementById('regForm').onsubmit = function (e) {
+        e.preventDefault(); clearErr();
+        var fd = new FormData(e.target);
+        var body = {}; fd.forEach(function (v, k) { body[k] = v; });
+        body.board = 'CBSE'; body.country = 'India';
+        fetch(API + '/auth/register', { method: 'POST', headers: headers(), body: JSON.stringify(body) })
+          .then(function (r) { return r.json().then(function (d) { if (!r.ok) throw new Error(d.detail || (d.detail && d.detail.message) || 'Failed'); return d; }); })
+          .then(function (d) { localStorage.setItem(TOKEN, d.token); renderPlan(); })
+          .catch(function (err) { showErr(err.message); });
+      };
+    }
+
+    function renderLogin() {
+      document.getElementById('authForm').innerHTML =
+        '<form id="loginForm"><label>Email</label><input name="email" type="email" required/>' +
+        '<label>Password</label><input name="password" type="password" required/>' +
+        '<button type="submit" class="btn">Sign in</button></form>';
+      document.getElementById('loginForm').onsubmit = function (e) {
+        e.preventDefault(); clearErr();
+        var fd = new FormData(e.target);
+        fetch(API + '/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: fd.get('email'), password: fd.get('password') }) })
+          .then(function (r) { return r.json().then(function (d) { if (!r.ok) throw new Error(d.detail || 'Failed'); return d; }); })
+          .then(function (d) {
+            localStorage.setItem(TOKEN, d.token);
+            if (d.subscription && d.subscription.access_active) renderDone(d.subscription);
+            else renderPlan();
+          })
+          .catch(function (err) { showErr(err.message); });
+      };
+    }
+
+    function loadQuote(cb) {
+      fetch(API + '/billing/quote', { method: 'POST', headers: headers(), body: JSON.stringify({ tier: state.tier, autopay: state.autopay }) })
+        .then(function (r) { return r.json(); })
+        .then(function (q) { state.quote = q; if (cb) cb(); });
+    }
+
+    function renderPlan() {
+      setSteps(1);
+      loadQuote(function () {
+        var q = state.quote || {};
+        document.getElementById('app').innerHTML =
+          '<div class="card"><h2 style="margin-bottom:12px;font-size:1.1rem">Choose your plan</h2>' +
+          '<div class="plan' + (state.tier === 'standard' ? ' on' : '') + '" data-tier="standard"><strong>Standard</strong><br><small style="color:var(--muted)">Rs 1,000/month after trial</small></div>' +
+          '<div class="plan' + (state.tier === 'concession' ? ' on' : '') + '" data-tier="concession"><strong>Student concession</strong><br><small style="color:var(--muted)">Rs 200/month for students in need</small></div>' +
+          '<div id="concBox" class="' + (state.tier === 'concession' ? '' : 'hidden') + '"><label>Why do you qualify?</label><textarea id="concReason" rows="3" placeholder="Brief explanation…"></textarea></div>' +
+          '<label style="display:flex;align-items:flex-start;gap:10px;margin:16px 0;cursor:pointer"><input type="checkbox" id="autopayChk" ' + (state.autopay ? 'checked' : '') + ' style="width:auto;margin:4px 0 0"/> <span><strong>Autopay</strong> — save 20% monthly after trial</span></label>' +
+          '<div class="quote"><div style="display:flex;justify-content:space-between"><span>Due today</span><strong>' + inr(q.amount_due_inr || 0) + '</strong></div>' +
+          '<div style="display:flex;justify-content:space-between;margin-top:6px;color:var(--muted);font-size:.85rem"><span>After trial</span><span>' + inr(q.next_billing_inr || 0) + '/mo</span></div></div>' +
+          '<button class="btn" id="checkoutBtn">' + (q.amount_due_inr === 0 ? 'Start free trial' : 'Checkout') + '</button></div>';
+        document.querySelectorAll('.plan').forEach(function (el) {
+          el.onclick = function () { state.tier = el.dataset.tier; renderPlan(); };
+        });
+        document.getElementById('autopayChk').onchange = function () { state.autopay = this.checked; loadQuote(function () {}); };
+        document.getElementById('checkoutBtn').onclick = function () {
+          clearErr();
+          var reason = document.getElementById('concReason') ? document.getElementById('concReason').value : '';
+          fetch(API + '/billing/checkout', { method: 'POST', headers: headers(), body: JSON.stringify({ tier: state.tier, autopay: state.autopay, concession_reason: reason }) })
+            .then(function (r) { return r.json().then(function (d) { if (!r.ok) throw new Error(typeof d.detail === 'string' ? d.detail : (d.detail && d.detail.message) || 'Checkout failed'); return d; }); })
+            .then(function (d) { state.checkoutId = d.checkout_id; state.quote = d.quote; renderPay(); })
+            .catch(function (err) { showErr(err.message); });
+        };
+      });
+    }
+
+    function renderPay() {
+      setSteps(2);
+      var amt = state.quote ? state.quote.amount_due_inr : 0;
+      document.getElementById('app').innerHTML =
+        '<div class="card"><p style="font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em">ManjuLab Pay · Simulated</p>' +
+        '<p class="pay-amt">' + inr(amt) + '</p>' +
+        (amt === 0 ? '<p style="text-align:center;color:var(--emerald);margin-bottom:16px">First month free — confirm to activate</p>' : '') +
+        '<div class="pay-methods"><button data-m="upi" class="on">UPI</button><button data-m="card">Card</button><button data-m="netbanking">Net Banking</button></div>' +
+        '<p style="font-size:.85rem;color:var(--muted);margin-bottom:16px;text-align:center">Demo: student@oksbi / card 4242</p>' +
+        '<button class="btn" id="payBtn">' + (amt === 0 ? 'Confirm & activate' : 'Pay ' + inr(amt)) + '</button></div>';
+      document.querySelectorAll('.pay-methods button').forEach(function (b) {
+        b.onclick = function () { state.payMethod = b.dataset.m; document.querySelectorAll('.pay-methods button').forEach(function (x) { x.classList.remove('on'); }); b.classList.add('on'); };
+      });
+      document.getElementById('payBtn').onclick = function () {
+        clearErr();
+        var btn = document.getElementById('payBtn');
+        btn.textContent = 'Processing…'; btn.disabled = true;
+        setTimeout(function () {
+          fetch(API + '/billing/fake-pay/confirm', {
+            method: 'POST', headers: headers(),
+            body: JSON.stringify({ checkout_id: state.checkoutId, method: state.payMethod, upi_id: 'student@oksbi', card_number: '4111111111114242', card_name: 'Student', simulate: 'success' })
+          })
+            .then(function (r) { return r.json().then(function (d) { if (!r.ok) throw new Error(d.detail || d.message || 'Payment failed'); return d; }); })
+            .then(function (d) { localStorage.setItem(TOKEN, d.token); renderDone(d.subscription); })
+            .catch(function (err) { showErr(err.message); btn.disabled = false; btn.textContent = 'Try again'; });
+        }, 2000);
+      };
+    }
+
+    function renderDone(sub) {
+      setSteps(3);
+      var practiceUrl = '/portal/education/cbse10/practice.html';
+      document.getElementById('app').innerHTML =
+        '<div class="card done"><div class="icon">&#127881;</div><h2>Subscription active!</h2>' +
+        '<p style="color:var(--muted);margin:12px 0 20px">' + (sub && sub.status === 'trial' ? 'First month is free. Mock exams unlocked.' : 'Welcome back.') + '</p>' +
+        '<a class="btn link" href="' + practiceUrl + '" style="display:block;text-align:center;text-decoration:none">Open CBSE Practice Test</a>' +
+        '<a href="/account/" style="display:block;text-align:center;margin-top:12px;font-size:.85rem;color:var(--teal)">My account</a></div>';
+    }
+
+    if (token()) {
+      fetch(API + '/auth/me', { headers: headers() })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          localStorage.setItem(TOKEN, d.token);
+          if (d.subscription && d.subscription.access_active) renderDone(d.subscription);
+          else renderPlan();
+        })
+        .catch(renderAuth);
+    } else {
+      renderAuth();
+    }
+  })();
+  </script>
+</body>
+</html>
