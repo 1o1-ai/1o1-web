@@ -237,33 +237,71 @@
     }
     function inr(n) { return 'Rs ' + Number(n).toLocaleString('en-IN'); }
 
+    function randInt(n) { return Math.floor(Math.random() * n); }
+    function pick(arr) { return arr[randInt(arr.length)]; }
+    function randDigits(n) {
+      var s = '';
+      for (var i = 0; i < n; i++) s += String(randInt(10));
+      if (s.charAt(0) === '0') s = String(randInt(9) + 1) + s.slice(1);
+      return s;
+    }
+
     function dummyProfile(country) {
-      var ts = Date.now();
+      var slug = Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+      var grades = ['9', '10', '11', '12'];
       if (country === 'US') {
+        var usFirst = ['Jordan', 'Morgan', 'Riley', 'Avery', 'Quinn', 'Skyler', 'Casey', 'Dakota', 'Jamie', 'Alex'];
+        var usLast = ['Smith', 'Johnson', 'Williams', 'Brown', 'Davis', 'Miller', 'Wilson', 'Anderson', 'Thomas', 'Martinez'];
+        var usSchools = ['Lincoln High School', 'Riverside Academy', 'Summit Preparatory', 'Oak Park High', 'Westview Charter'];
+        var usCities = [
+          { city: 'Austin', state: 'TX', zip: '787' + randDigits(2) },
+          { city: 'Denver', state: 'CO', zip: '802' + randDigits(2) },
+          { city: 'Seattle', state: 'WA', zip: '981' + randDigits(2) },
+          { city: 'Boston', state: 'MA', zip: '021' + randDigits(2) },
+          { city: 'Portland', state: 'OR', zip: '972' + randDigits(2) }
+        ];
+        var streets = ['Maple Avenue', 'Oak Street', 'Cedar Lane', 'Pine Road', 'Willow Drive', 'Lakeview Blvd'];
+        var loc = pick(usCities);
+        var first = pick(usFirst);
+        var last = pick(usLast);
         return {
-          full_name: 'Jordan Smith',
-          email: 'test.us.' + ts + '@yogabrata.com',
+          full_name: first + ' ' + last,
+          email: first.toLowerCase() + '.' + last.toLowerCase() + '.' + slug + '@yogabrata.com',
           password: 'Test@2026',
-          phone: '512-555-0142',
-          grade: '10',
-          school_name: 'Austin High School',
-          address_line: '742 Evergreen Terrace',
-          city: 'Austin',
-          state: 'TX',
-          pincode: '78701'
+          phone: '512-555-' + randDigits(4),
+          grade: pick(grades),
+          school_name: pick(usSchools) + ', ' + loc.city,
+          address_line: (100 + randInt(900)) + ' ' + pick(streets) + ', Apt ' + (1 + randInt(20)),
+          city: loc.city,
+          state: loc.state,
+          pincode: loc.zip
         };
       }
+      var inFirst = ['Aarav', 'Ananya', 'Rahul', 'Priya', 'Vihaan', 'Isha', 'Arjun', 'Sneha', 'Kabir', 'Maya', 'Dev', 'Kavya'];
+      var inLast = ['Mehta', 'Banerjee', 'Sen', 'Gupta', 'Das', 'Mukherjee', 'Roy', 'Sharma', 'Patel', 'Reddy', 'Iyer', 'Chatterjee'];
+      var inSchools = ['South Point High School', 'Delhi Public School', 'Modern High School', 'La Martiniere for Boys', 'Birla High School'];
+      var inCities = [
+        { city: 'Kolkata', state: 'West Bengal', pin: '700' + randDigits(3) },
+        { city: 'Mumbai', state: 'Maharashtra', pin: '400' + randDigits(3) },
+        { city: 'Bengaluru', state: 'Karnataka', pin: '560' + randDigits(3) },
+        { city: 'Hyderabad', state: 'Telangana', pin: '500' + randDigits(3) },
+        { city: 'Chennai', state: 'Tamil Nadu', pin: '600' + randDigits(3) }
+      ];
+      var inStreets = ['Park Street', 'MG Road', 'Lake Gardens', 'Salt Lake Sector V', 'Ballygunge Place', 'Camac Street'];
+      var iloc = pick(inCities);
+      var ifirst = pick(inFirst);
+      var ilast = pick(inLast);
       return {
-        full_name: 'Aarav Mehta',
-        email: 'test.in.' + ts + '@yogabrata.com',
+        full_name: ifirst + ' ' + ilast,
+        email: ifirst.toLowerCase() + '.' + ilast.toLowerCase() + '.' + slug + '@yogabrata.com',
         password: 'Test@2026',
-        phone: '9876543210',
-        grade: '10',
-        school_name: 'South Point High School',
-        address_line: '42 Park Street, Flat 3B',
-        city: 'Kolkata',
-        state: 'West Bengal',
-        pincode: '700016'
+        phone: '98' + randDigits(8),
+        grade: pick(grades),
+        school_name: pick(inSchools) + ', ' + iloc.city,
+        address_line: (1 + randInt(120)) + ' ' + pick(inStreets) + ', Flat ' + String.fromCharCode(65 + randInt(8)) + randInt(10),
+        city: iloc.city,
+        state: iloc.state,
+        pincode: iloc.pin
       };
     }
 
