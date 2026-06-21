@@ -454,6 +454,15 @@
       return `Showing ${shown} verified question(s) on ${req.chapter.replace(/-/g, ' ')}.`;
     }
 
+    if (window.AnyoTutorIntent.isBankSyncComplaint?.(msg)) {
+      quizPanel.hidden = true;
+      return (
+        'Options and prompts come from ingested CBSE PDFs — sometimes minus signs or symbols are lost in text extraction. ' +
+        'Use **explain** after a verified question for the marking-scheme letter (A–D). ' +
+        'Invite a classmate to compare notes; I will not rewrite the question or guess a new answer.'
+      );
+    }
+
     if (window.AnyoTutorIntent.isExplainOrAnswerIntent(msg)) {
       return explainReply();
     }
@@ -465,7 +474,7 @@
     }
     quizPanel.hidden = true;
     return (
-      'Try **1 sample question** (quick button below), **Chapter quiz (5)**, or ask e.g. "3 questions on this chapter". ' +
+      'Try **1 sample question** (button below), type a number like **3** or **i want 3**, **Chapter quiz (5)**, or ask e.g. "3 questions on this chapter". ' +
       'After a question appears, type **explain** for the verified answer.'
     );
   }
