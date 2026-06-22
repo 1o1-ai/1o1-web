@@ -84,6 +84,8 @@
 
     window.AnyoBots.loadRoster(),
 
+    window.AnyoReferenceAnswer?.loadOverrides?.() || Promise.resolve(),
+
   ]).then(([cur, master, _study, roster]) => {
 
     curriculum = cur;
@@ -698,6 +700,9 @@
       btn.textContent = 'Hide reference answer';
 
       let ref = extractReferenceAnswer(q);
+
+      await (window.AnyoReferenceAnswer?.loadOverrides?.() || Promise.resolve());
+      ref = extractReferenceAnswer(q);
 
       if (!ref && window.Cbse10TutorApi?.chat) {
 

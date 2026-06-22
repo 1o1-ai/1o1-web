@@ -73,6 +73,11 @@
   }
 
   function extractReferenceAnswer(q) {
+    const id = q.id || q.raw?.id;
+    const ov = overridesMap?.[id];
+    if (ov?.text && !ov.error && !isPlaceholderSolution(ov.text)) {
+      return cleanForDisplay(ov.text);
+    }
     if (q.correctIndex != null && q.options?.[q.correctIndex]) {
       const opt = global.AnyoQuestionFormat?.cleanQuestionText?.(q.options[q.correctIndex]);
       if (opt) return opt;
@@ -82,10 +87,40 @@
     return deriveReferenceAnswer(q);
   }
 
+  let overridesMap = null;
+  let overridesPromise = null;
+
+  function loadOverrides() {
+    if (overridesMap) return Promise.resolve(overridesMap);
+    if (overridesPromise) return overridesPromise;
+    const paths = [
+      '/portal/data/cbse10-answer-overrides.json',
+      '../../data/cbse10-answer-overrides.json',
+    ];
+    overridesPromise = (async () => {
+      for (const p of paths) {
+        try {
+          const r = await fetch(p);
+          if (r.ok) {
+            const d = await r.json();
+            overridesMap = d.reviewed || {};
+            return overridesMap;
+          }
+        } catch {
+          /* try next */
+        }
+      }
+      overridesMap = {};
+      return overridesMap;
+    })();
+    return overridesPromise;
+  }
+
   global.AnyoReferenceAnswer = {
     isPlaceholderSolution,
     pickBestSolution,
     deriveReferenceAnswer,
     extractReferenceAnswer,
+    loadOverrides,
   };
 })(typeof window !== 'undefined' ? window : globalThis);
