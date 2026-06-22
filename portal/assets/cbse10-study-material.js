@@ -156,6 +156,12 @@
     utterance = null;
   }
 
+  function buildYouTubeEmbedSrc(videoId) {
+    const params = new URLSearchParams({ rel: '0', modestbranding: '1' });
+    if (global.location?.origin) params.set('origin', global.location.origin);
+    return `https://www.youtube-nocookie.com/embed/${videoId}?${params}`;
+  }
+
   function renderVideoCard(video, idx) {
     const card = document.createElement('div');
     card.className = video.isEmbeddable ? 'sr-video-card' : 'sr-video-card sr-video-placeholder';
@@ -168,14 +174,14 @@
         </div>
         <p class="sr-video-title">${video.title}${video.presenter ? ' · ' + video.presenter : ''}</p>
         <div class="sr-video-embed"></div>
-        <p class="sr-video-note">Handpicked guide aligned with this chapter syllabus.</p>`;
+        <p class="sr-video-note">Handpicked guide aligned with this chapter syllabus. If the player fails, <a href="${video.url}" target="_blank" rel="noopener noreferrer">open on YouTube ↗</a>.</p>`;
       const iframe = document.createElement('iframe');
-      iframe.src = `https://www.youtube-nocookie.com/embed/${video.id}?rel=0&modestbranding=1`;
+      iframe.src = buildYouTubeEmbedSrc(video.id);
       iframe.title = video.title || 'Chapter video lesson';
       iframe.allow =
-        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       iframe.allowFullscreen = true;
-      iframe.referrerPolicy = 'no-referrer';
+      iframe.referrerPolicy = 'strict-origin-when-cross-origin';
       iframe.loading = 'lazy';
       card.querySelector('.sr-video-embed').appendChild(iframe);
     } else {

@@ -1,22 +1,22 @@
 {
   "version": 1,
-  "description": "Curated YouTube corrections when VOLTAIC source material linked the wrong video.",
+  "description": "Curated YouTube corrections when VOLTAIC source material linked the wrong or invalid video.",
   "overrides": {
     "metals": {
-      "wrongIds": ["n9_lnvs1KKY", "lQLws5rA0gs"],
-      "youtubeId": "vd6_VzO7e6U",
-      "title": "Metals and Non-Metals - Class 10 Board Chemistry Revision",
-      "presenter": "Dear Sir",
-      "url": "https://www.youtube.com/watch?v=vd6_VzO7e6U",
-      "reason": "Source IDs pointed to biology or unrelated lectures; use Dear Sir chemistry revision."
+      "wrongIds": ["n9_lnvs1KKY", "lQLws5rA0gs", "vd6_VzO7e6U"],
+      "youtubeId": "YV1BFWi-AWY",
+      "title": "Metals and Non Metals | Class 10 Science | NCERT Covered",
+      "presenter": "Prashant Kirad",
+      "url": "https://www.youtube.com/watch?v=YV1BFWi-AWY",
+      "reason": "Prior IDs were biology lectures or invalid (404); verified chemistry one-shot."
     },
     "human-eye": {
-      "wrongIds": ["H_XJuPOdL1E"],
-      "youtubeId": "ey8uK0g4AoY",
-      "title": "Human Eye and its defects & Colourful World",
-      "presenter": "Magnet Brains",
-      "url": "https://www.youtube.com/watch?v=ey8uK0g4AoY",
-      "reason": "H_XJuPOdL1E is Control & Coordination biology, not human eye optics."
+      "wrongIds": ["H_XJuPOdL1E", "ey8uK0g4AoY"],
+      "youtubeId": "VWNxgkOr55Y",
+      "title": "Human Eye and the Colourful World | Class 10 Science",
+      "presenter": "Prashant Kirad",
+      "url": "https://www.youtube.com/watch?v=VWNxgkOr55Y",
+      "reason": "Prior IDs were control biology or invalid (404); verified optics one-shot."
     }
   }
 }
