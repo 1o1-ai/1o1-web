@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sku": "cbse10-core",
-  "generated_at": "2026-06-21T23:54:24.317253+00:00",
+  "generated_at": "2026-06-22T00:36:42.439093+00:00",
   "source_dir": "C:\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE\\Study Material",
   "content_pack": "cbse10-study-material-v1",
   "source_quality": "ai_generated",
@@ -26,6 +26,7 @@
           "presenter": "Khan Academy India",
           "url": "https://www.youtube.com/watch?v=D8i6uKIFHsY",
           "youtubeId": "D8i6uKIFHsY",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/D8i6uKIFHsY",
           "milestones": [
             "H+ and OH- ion concentration",
@@ -81,6 +82,7 @@
           "presenter": "Physics Wallah Foundation",
           "url": "https://www.youtube.com/watch?v=12qBpf2aIw4",
           "youtubeId": "12qBpf2aIw4",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/12qBpf2aIw4",
           "milestones": [
             "Covalent bonding in Carbon",
@@ -140,6 +142,7 @@
           "presenter": "Physics Wallah Foundation",
           "url": "https://www.youtube.com/watch?v=25334wZluB4",
           "youtubeId": "25334wZluB4",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/25334wZluB4",
           "milestones": [
             "Law of conservation of mass",
@@ -198,6 +201,7 @@
           "presenter": "Magnet Brains",
           "url": "https://www.youtube.com/watch?v=H_XJuPOdL1E",
           "youtubeId": "H_XJuPOdL1E",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/H_XJuPOdL1E",
           "milestones": [
             "Neurons and Synapse transmission",
@@ -253,6 +257,7 @@
           "presenter": "Sankalp Bharat Class 10",
           "url": "https://www.youtube.com/watch?v=hct4zUuA5JI",
           "youtubeId": "hct4zUuA5JI",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/hct4zUuA5JI",
           "milestones": [
             "Ohm's Law verification",
@@ -312,7 +317,8 @@
           "presenter": "Dear Sir Science",
           "url": "https://www.youtube.com/watch?v=Heredity10",
           "youtubeId": "Heredity10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/Heredity10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Mendel’s monohybrid and dihybrid crosses",
             "Law of segregation & Independent Assortment",
@@ -367,6 +373,7 @@
           "presenter": "Magnet Brains",
           "url": "https://www.youtube.com/watch?v=H_XJuPOdL1E",
           "youtubeId": "H_XJuPOdL1E",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/H_XJuPOdL1E",
           "milestones": [
             "Defects of vision: Myopia, Hypermetropia, Presbyopia",
@@ -426,6 +433,7 @@
           "presenter": "Vedantu Class 9 & 10",
           "url": "https://www.youtube.com/watch?v=zdL856iY5jw",
           "youtubeId": "zdL856iY5jw",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/zdL856iY5jw",
           "milestones": [
             "Photosynthesis and autotrophic nutrition",
@@ -481,6 +489,7 @@
           "presenter": "Physics Wallah Class 10",
           "url": "https://www.youtube.com/watch?v=-Eiv6XiUhSc",
           "youtubeId": "-Eiv6XiUhSc",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/-Eiv6XiUhSc",
           "milestones": [
             "Mirror formula vs Lens formula signs",
@@ -541,7 +550,8 @@
           "presenter": "Physics Wallah Foundation",
           "url": "https://www.youtube.com/watch?v=magnetism10",
           "youtubeId": "magnetism10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/magnetism10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Magnetic field and field lines properties",
             "Straight wire, circular loop, and solenoid fields",
@@ -600,6 +610,7 @@
           "presenter": "Dear Sir",
           "url": "https://www.youtube.com/watch?v=n9_lnvs1KKY",
           "youtubeId": "n9_lnvs1KKY",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/n9_lnvs1KKY",
           "milestones": [
             "Physical and chemical properties of metals",
@@ -654,7 +665,8 @@
           "presenter": "Unacademy Class 9 & 10",
           "url": "https://www.youtube.com/watch?v=YmU-1002Y",
           "youtubeId": "YmU-1002Y",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/YmU-1002Y",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Asexual reproduction: Fission, Budding, Vegetative Propagation",
             "Longitudinal Section of flower & Double Fertilization",
@@ -708,7 +720,8 @@
           "presenter": "BYJUS Class 9 & 10",
           "url": "https://www.youtube.com/watch?v=energy10",
           "youtubeId": "energy10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/energy10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Good sources of energy and ideal fuels",
             "Conventional vs Alternative energy sources",
@@ -762,7 +775,8 @@
           "presenter": "Dear Sir Maths",
           "url": "https://www.youtube.com/watch?v=heights10",
           "youtubeId": "heights10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/heights10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Line of sight and elevations",
             "Angle of depression vs Elevation",
@@ -816,7 +830,8 @@
           "presenter": "Unacademy Class 9 & 10",
           "url": "https://www.youtube.com/watch?v=areas_circles10",
           "youtubeId": "areas_circles10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/areas_circles10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Area and perimeter values",
             "Area of minor and major sectors of circles",
@@ -869,7 +884,8 @@
           "title": "Arithmetic Progression One Shot Class 10 Maths",
           "presenter": "Magnet Brains",
           "url": "https://www.youtube.com/watch?v=ap10",
-          "youtubeId": "",
+          "youtubeId": "ap10",
+          "isEmbeddable": false,
           "embedUrl": "",
           "milestones": [
             "First term a and common difference d",
@@ -924,7 +940,8 @@
           "presenter": "BYJUS Class 10",
           "url": "https://www.youtube.com/watch?v=circles10",
           "youtubeId": "circles10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/circles10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Tangent definitions and intersections",
             "Theorem 1: Tangent perpendicular to radius",
@@ -978,7 +995,8 @@
           "presenter": "CBSE Maths Class 10",
           "url": "https://www.youtube.com/watch?v=construct10",
           "youtubeId": "construct10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/construct10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Dividing line segment in ratio internally",
             "Constructing tangent pairs from external coordinates",
@@ -1028,7 +1046,8 @@
           "presenter": "Sankalp Bharat Class 10",
           "url": "https://www.youtube.com/watch?v=coordinates10",
           "youtubeId": "coordinates10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/coordinates10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Distance Formula derivation & applications",
             "Section Formula: Internal divisions",
@@ -1082,6 +1101,7 @@
           "presenter": "Unacademy CBSE Class 10",
           "url": "https://www.youtube.com/watch?v=QVQhF01i6dE",
           "youtubeId": "QVQhF01i6dE",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/QVQhF01i6dE",
           "milestones": [
             "Trigonometric Ratios definitions",
@@ -1136,7 +1156,8 @@
           "presenter": "Unacademy Class 10",
           "url": "https://www.youtube.com/watch?v=linear10",
           "youtubeId": "linear10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/linear10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Graphical method of solving linear systems",
             "Consistency and incompatibility criteria",
@@ -1194,6 +1215,7 @@
           "presenter": "CBSE Class 10 Maths",
           "url": "https://www.youtube.com/watch?v=MlZHwZo33qo",
           "youtubeId": "MlZHwZo33qo",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/MlZHwZo33qo",
           "milestones": [
             "Geometrical meaning of zeroes (intersections with x-axis)",
@@ -1248,7 +1270,8 @@
           "presenter": "Magnet Brains",
           "url": "https://www.youtube.com/watch?v=prob10",
           "youtubeId": "prob10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/prob10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Equally likely outcomes and classical probability",
             "Complementary events math",
@@ -1302,7 +1325,8 @@
           "presenter": "CBSE Class 10 Maths",
           "url": "https://www.youtube.com/watch?v=quadratic10",
           "youtubeId": "quadratic10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/quadratic10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Standard form ax^2 + bx + c = 0",
             "Solving by factorization and Quadratic formula",
@@ -1356,6 +1380,7 @@
           "presenter": "Dear Sir Mathematics",
           "url": "https://www.youtube.com/watch?v=dXMYdUcfb6w",
           "youtubeId": "dXMYdUcfb6w",
+          "isEmbeddable": true,
           "embedUrl": "https://www.youtube-nocookie.com/embed/dXMYdUcfb6w",
           "milestones": [
             "Prime Factorization uniqueness",
@@ -1411,7 +1436,8 @@
           "presenter": "CBSE Class 10 Maths",
           "url": "https://www.youtube.com/watch?v=stats10",
           "youtubeId": "stats10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/stats10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Mean of grouped frequency data (Step-deviation)",
             "Median of grouped frequency data",
@@ -1470,7 +1496,8 @@
           "presenter": "BYJUS Maths Class 10",
           "url": "https://www.youtube.com/watch?v=solids10",
           "youtubeId": "solids10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/solids10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Combinations of solids: Cubes, cylinders, cones, spheres",
             "Surface area of combined shapes",
@@ -1520,7 +1547,8 @@
           "presenter": "Vedantu Class 9 & 10",
           "url": "https://www.youtube.com/watch?v=triangles10",
           "youtubeId": "triangles10",
-          "embedUrl": "https://www.youtube-nocookie.com/embed/triangles10",
+          "isEmbeddable": false,
+          "embedUrl": "",
           "milestones": [
             "Basic Proportionality Theorem study and proof",
             "Similarity Criteria: AAA, SSS, SAS",
