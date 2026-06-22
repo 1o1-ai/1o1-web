@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sku": "cbse10-core",
-  "generated_at": "2026-06-22T01:02:32.155016+00:00",
+  "generated_at": "2026-06-22T01:23:21.603466+00:00",
   "source_dir": "C:\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE\\Study Material",
   "content_pack": "cbse10-study-material-v1",
   "source_quality": "ai_generated",
@@ -371,10 +371,10 @@
         {
           "title": "Human Eye and its defects & Colourful World",
           "presenter": "Magnet Brains",
-          "url": "https://www.youtube.com/watch?v=H_XJuPOdL1E",
-          "youtubeId": "H_XJuPOdL1E",
+          "url": "https://www.youtube.com/watch?v=ey8uK0g4AoY",
+          "youtubeId": "ey8uK0g4AoY",
           "isEmbeddable": true,
-          "embedUrl": "https://www.youtube-nocookie.com/embed/H_XJuPOdL1E",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ey8uK0g4AoY",
           "milestones": [
             "Defects of vision: Myopia, Hypermetropia, Presbyopia",
             "Atmospheric Refraction effects: Twinkling stars, advanced sunrise",
@@ -409,7 +409,7 @@
       "links": [
         {
           "label": "Watch directly on YouTube",
-          "url": "https://www.youtube.com/watch?v=H_XJuPOdL1E"
+          "url": "https://www.youtube.com/watch?v=ey8uK0g4AoY"
         }
       ],
       "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
@@ -606,12 +606,12 @@
       "studySummary": "## Syllabus outline\n- Physical and chemical properties of metals\n- Amphoteric oxides\n- Thermite reaction & Extraction of low/medium/high reactivity metals\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
       "videos": [
         {
-          "title": "Metals and Non Metals in 1 Shot | Class 10 Boards",
-          "presenter": "Physics Wallah Foundation",
-          "url": "https://www.youtube.com/watch?v=lQLws5rA0gs",
-          "youtubeId": "lQLws5rA0gs",
+          "title": "Metals and Non-Metals - Class 10 Board Chemistry Revision",
+          "presenter": "Dear Sir",
+          "url": "https://www.youtube.com/watch?v=vd6_VzO7e6U",
+          "youtubeId": "vd6_VzO7e6U",
           "isEmbeddable": true,
-          "embedUrl": "https://www.youtube-nocookie.com/embed/lQLws5rA0gs",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/vd6_VzO7e6U",
           "milestones": [
             "Physical and chemical properties of metals",
             "Amphoteric oxides",
@@ -641,7 +641,7 @@
       "links": [
         {
           "label": "Watch directly on YouTube",
-          "url": "https://www.youtube.com/watch?v=lQLws5rA0gs"
+          "url": "https://www.youtube.com/watch?v=vd6_VzO7e6U"
         }
       ],
       "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
@@ -1585,5 +1585,5 @@
     }
   },
   "discussion_thread_count": 1400,
-  "voltaic_bot_count": 20
+  "voltaic_bot_count": 21
 }
