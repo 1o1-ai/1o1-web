@@ -579,6 +579,12 @@
 
   function extractReferenceAnswer(q) {
 
+    if (window.AnyoReferenceAnswer?.extractReferenceAnswer) {
+
+      return window.AnyoReferenceAnswer.extractReferenceAnswer(q);
+
+    }
+
     const cleanSol = (t) =>
 
       window.AnyoQuestionFormat?.cleanSolutionText?.(t) || cleanQText(t);
@@ -655,7 +661,7 @@
 
     panel.hidden = true;
 
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
 
       if (panel.dataset.revealed === '1') {
 
@@ -677,35 +683,61 @@
 
       panel.appendChild(disclaimer);
 
-      const ref = extractReferenceAnswer(q);
+      const body = document.createElement('div');
 
-      if (ref) {
+      body.className = 'sr-q-answer-body';
 
-        const body = document.createElement('div');
+      body.textContent = 'Loading reference answer…';
 
-        body.className = 'sr-q-answer-body';
-
-        body.textContent = ref;
-
-        panel.appendChild(body);
-
-      } else {
-
-        const empty = document.createElement('p');
-
-        empty.className = 'sr-eval-hint';
-
-        empty.textContent = 'No reference answer is catalogued for this question yet.';
-
-        panel.appendChild(empty);
-
-      }
+      panel.appendChild(body);
 
       panel.dataset.revealed = '1';
 
       panel.hidden = false;
 
       btn.textContent = 'Hide reference answer';
+
+      let ref = extractReferenceAnswer(q);
+
+      if (!ref && window.Cbse10TutorApi?.chat) {
+
+        try {
+
+          const reply = await window.Cbse10TutorApi.chat(
+
+            `Give a concise worked solution only (numbered steps, no mark scheme, no source tags) for this CBSE Class 10 question:\n\n${q.prompt}`,
+
+            { subject, chapterId, chapterTitle }
+
+          );
+
+          ref = cleanPresentationFeedback(reply) || String(reply || '').trim();
+
+        } catch {
+
+          ref = '';
+
+        }
+
+      }
+
+      if (ref) {
+
+        body.textContent = ref;
+
+      } else {
+
+        body.textContent = '';
+
+        const empty = document.createElement('p');
+
+        empty.className = 'sr-eval-hint';
+
+        empty.textContent = 'No reference answer available yet — try asking in the forum.';
+
+        body.replaceWith(empty);
+
+      }
 
       evalChat.scrollTop = evalChat.scrollHeight;
 
@@ -1079,13 +1111,15 @@
 
     const rawRubric = ans.solutions?.alt_answer_02?.text || ans.solutions?.answer_01?.text || '';
 
-    const referenceAnswer =
+    let referenceAnswer =
+
+      window.AnyoReferenceAnswer?.extractReferenceAnswer?.(ans) ||
 
       window.AnyoQuestionFormat?.cleanSolutionText?.(rawRubric) ||
 
       cleanQText(rawRubric) ||
 
-      'Award partial marks using CBSE marking scheme for Class 10.';
+      '';
 
     try {
 

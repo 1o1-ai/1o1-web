@@ -46,6 +46,7 @@
     t = t.replace(/\*[\d/]+(?:-\d+)?\*[\s\d#]*\*[A-Z]+\*[\s\S]*$/i, '').trim();
     t = t.replace(/\*ECNEICS\*/gi, '').replace(/#\s*\*/g, '').trim();
     t = t.replace(/\s+\?\s*$/,'').trim();
+    t = t.replace(/\s*\[Set-\d+\s+Ref\s+Key\]\s*/gi, ' ').trim();
     return t.replace(/\s{2,}/g, ' ').trim();
   }
 
@@ -62,6 +63,10 @@
     t = t.replace(/Next, we invoke standard formulas\.?\s*/gi, '');
     t = t.replace(/Substituting variables allows calculation step-by-step\.?\s*/gi, '');
     t = t.replace(/The final derived value matches class standards perfectly\.?/gi, '');
+    t = t.replace(/To solve:\s*"[^"]*"\.\s*/gi, '');
+    t = t.replace(/Formula definition\s*&\s*statement verification/gi, '');
+    t = t.replace(/Correct substitution in algebraic equation/gi, '');
+    t = t.replace(/Calculating final numerical response/gi, '');
     t = t
       .split('\n')
       .map((line) => line.replace(/\s{2,}/g, ' ').trim())
