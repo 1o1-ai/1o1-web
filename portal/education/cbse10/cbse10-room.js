@@ -40,6 +40,14 @@
 
   let activeCardEl = null;
 
+  let distractionBound = false;
+
+  let onPasteHandler = null;
+
+  let onBlurHandler = null;
+
+  let onVisibilityHandler = null;
+
 
 
   const phases = {
@@ -94,7 +102,33 @@
 
     showPhase('subject');
 
+  }).catch((err) => {
+
+    showLoadError(
+
+      'Could not load study room data. Check your connection and refresh. ' + (err?.message || err)
+
+    );
+
   });
+
+
+
+  function showLoadError(msg) {
+
+    const el = document.getElementById('srLoadError');
+
+    if (el) {
+
+      el.textContent = msg;
+
+      el.classList.remove('hidden');
+
+    }
+
+    showPhase('subject');
+
+  }
 
 
 
@@ -258,6 +292,14 @@
 
     document.getElementById('backFromLearn')?.addEventListener('click', () => showPhase('intent'));
 
+    document.getElementById('backFromEvaluate')?.addEventListener('click', () => {
+
+      stopEvaluateSession();
+
+      showPhase('intent');
+
+    });
+
     document.getElementById('btnLearn')?.addEventListener('click', () => startLearnSession());
 
     document.getElementById('btnEvaluate')?.addEventListener('click', () => startEvaluateSession());
@@ -391,17 +433,67 @@
 
 
 
-  function trackDistraction() {
+  function stopEvaluateSession() {
 
-    document.addEventListener('paste', () => pasteCount++);
+    if (timerId) {
 
-    window.addEventListener('blur', () => blurCount++);
+      clearInterval(timerId);
 
-    document.addEventListener('visibilitychange', () => {
+      timerId = null;
+
+    }
+
+    unbindDistraction();
+
+  }
+
+
+
+  function bindDistraction() {
+
+    if (distractionBound) return;
+
+    onPasteHandler = () => pasteCount++;
+
+    onBlurHandler = () => blurCount++;
+
+    onVisibilityHandler = () => {
 
       if (document.hidden) blurCount++;
 
-    });
+    };
+
+    document.addEventListener('paste', onPasteHandler);
+
+    window.addEventListener('blur', onBlurHandler);
+
+    document.addEventListener('visibilitychange', onVisibilityHandler);
+
+    distractionBound = true;
+
+  }
+
+
+
+  function unbindDistraction() {
+
+    if (!distractionBound) return;
+
+    if (onPasteHandler) document.removeEventListener('paste', onPasteHandler);
+
+    if (onBlurHandler) window.removeEventListener('blur', onBlurHandler);
+
+    if (onVisibilityHandler) document.removeEventListener('visibilitychange', onVisibilityHandler);
+
+    distractionBound = false;
+
+  }
+
+
+
+  function trackDistraction() {
+
+    bindDistraction();
 
   }
 
@@ -471,6 +563,14 @@
 
 
 
+  function cleanQText(text) {
+
+    return window.AnyoQuestionFormat?.cleanQuestionText?.(text) || String(text || '').trim();
+
+  }
+
+
+
   function showCurrentQuestion() {
 
     freezeActiveCard();
@@ -495,6 +595,10 @@
 
     const q = questionQueue[queueIndex];
 
+    const promptText = cleanQText(q.prompt);
+
+    const options = window.AnyoQuestionFormat?.formatOptions?.(q.options) || q.options || [];
+
     questionShownAt = Date.now();
 
 
@@ -515,7 +619,7 @@
 
 
 
-    card.querySelector('.sr-q-prompt').textContent = q.prompt;
+    card.querySelector('.sr-q-prompt').textContent = promptText;
 
     const diagramEl = card.querySelector('.sr-q-diagram');
 
@@ -541,15 +645,25 @@
 
     const resp = card.querySelector('.sr-q-response');
 
-    if (q.options?.length >= 2) {
+    if (options.length >= 2) {
 
-      q.options.forEach((opt, i) => {
+      options.forEach((opt, i) => {
 
         const lbl = document.createElement('label');
 
         lbl.className = 'sr-opt-label';
 
-        lbl.innerHTML = `<input type="radio" name="curQ" value="${i}" /> ${String.fromCharCode(65 + i)}. ${opt}`;
+        const input = document.createElement('input');
+
+        input.type = 'radio';
+
+        input.name = 'curQ';
+
+        input.value = String(i);
+
+        lbl.appendChild(input);
+
+        lbl.appendChild(document.createTextNode(` ${String.fromCharCode(65 + i)}. ${opt}`));
 
         resp.appendChild(lbl);
 
@@ -980,6 +1094,20 @@
     if (!ul) return;
 
     ul.innerHTML = '';
+
+    if (!students.length) {
+
+      const li = document.createElement('li');
+
+      li.className = 'sr-students-empty';
+
+      li.textContent = 'No classmates listed right now.';
+
+      ul.appendChild(li);
+
+      return;
+
+    }
 
     students.slice(0, 12).forEach((s) => {
 

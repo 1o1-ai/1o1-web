@@ -31,6 +31,7 @@
   <main class="portal-main sr-main">
     <!-- Phase 1: Subject circles -->
     <section id="phaseSubject" class="sr-phase sr-phase-subject">
+      <div id="srLoadError" class="sr-load-error hidden" role="alert"></div>
       <p class="sr-phase-lead">Choose your subject</p>
       <div class="sr-subject-circles">
         <button type="button" class="sr-subject-circle science" data-subject="science">
@@ -124,7 +125,9 @@
             <button type="button" class="btn-portal btn-portal-ghost" id="btnNextQuestion">Next question</button>
             <button type="button" class="btn-portal btn-portal-primary" id="btnEvaluateSubmit">Evaluate my answers</button>
           </div>
-          <p class="sr-distraction" id="distractionStats">Focus: 100% · Time on session: 0:00</p>
+          <div id="evalResults" class="sr-results hidden" aria-live="polite"></div>
+          <p class="sr-distraction" id="distractionStats">Focus: 100% · Session: 0:00 · Tab away: 0 · Answered: 0</p>
+          <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backFromEvaluate">← Back</button>
         </div>
 
         <aside class="sr-students-panel">
@@ -153,8 +156,6 @@
     </form>
   </dialog>
 
-  <div id="evalResults" class="sr-results hidden"></div>
-
   <script src="../../../assets/cosmic.js"></script>
   <script src="../../assets/bots.js"></script>
   <script src="../../assets/question-format.js"></script>
@@ -162,7 +163,7 @@
   <script src="../../assets/diagram-vector.js"></script>
   <script src="../../assets/cbse10-eval-store.js"></script>
   <script src="../../assets/cbse10-tutor-api.js"></script>
-  <script src="../../assets/cbse10-study-material.js?v=3"></script>
-  <script src="cbse10-room.js?v=3"></script>
+  <script src="../../assets/cbse10-study-material.js?v=4"></script>
+  <script src="cbse10-room.js?v=4"></script>
 </body>
 </html>

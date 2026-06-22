@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "generated_at": "2026-06-22T01:59:34.233091+00:00",
+  "source_dir": "C:\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE\\Study Material",
+  "validators": {
+    "heuristics": true,
+    "local_gemma": false,
+    "local_gemma_model": null,
+    "openrouter": true,
+    "openrouter_model": "openai/gpt-4o-mini"
+  },
+  "summary": {
+    "chapters": 1,
+    "heuristic_errors": 0,
+    "heuristic_warnings": 0,
+    "local_gemma_avg_score": null,
+    "openrouter_avg_score": null
+  },
+  "chapters_detail": {
+    "control": {
+      "chapter_id": "control",
+      "title": "Control and Coordination",
+      "subject": "science",
+      "source_file": "control-coordination.md",
+      "heuristic_findings": [
+        {
+          "severity": "info",
+          "code": "youtube_ok",
+          "message": "YouTube OK: Complete PHYSICS in 55 MINUTES🔥|| SCORE 80/80 || Class 10th || PW",
+          "chapter_id": "control",
+          "field": "videos"
+        }
+      ],
+      "local_gemma": null,
+      "openrouter": {
+        "error": "OPENROUTER_API_KEY not set",
+        "skipped": true
+      }
+    }
+  }
+}
