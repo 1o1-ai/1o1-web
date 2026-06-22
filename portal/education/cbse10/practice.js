@@ -1,9 +1,4 @@
 (function () {
-  if (!window.getPortalSession?.()) {
-    location.href = 'index.html';
-    return;
-  }
-
   let curriculum = null;
   let bank = [];
 

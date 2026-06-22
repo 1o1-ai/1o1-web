@@ -43,14 +43,17 @@ def main() -> int:
             print(f"FAIL {name}: {exc}")
             failed += 1
 
-    # portal.js must enforce yoga/yoga
     js = session.get(BASE + "/portal/assets/portal.js", timeout=15).text
-    for token in ["DEMO_USER = 'yoga'", "DEMO_PASS = 'yoga'", "Anyo Brahmando Academy"]:
+    for token in ["Anyo Brahmando Academy", "no demo login gate"]:
         if token not in js:
             print(f"FAIL portal.js: missing {token}")
             failed += 1
         else:
             print(f"OK   portal.js contains {token}")
+    for token in ["DEMO_USER = 'yoga'", "DEMO_PASS = 'yoga'"]:
+        if token in js:
+            print(f"FAIL portal.js: demo login still present ({token})")
+            failed += 1
 
     print(f"\n{'All checks passed' if failed == 0 else f'{failed} check(s) failed'}")
     return 0 if failed == 0 else 1

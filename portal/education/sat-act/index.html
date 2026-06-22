@@ -71,18 +71,7 @@
   <script src="../../assets/portal.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const session = window.getPortalSession();
-      if (!session) {
-        window.openPortalLogin({
-          title: 'SAT / ACT',
-          subtitle: 'Demo: yoga / yoga',
-          showRoles: true,
-          onSuccess: () => location.reload(),
-        });
-        return;
-      }
       if (window.AnyoPresence) {
-        window.AnyoPresence.startHeartbeat(session);
         const badge = document.getElementById('onlineBadge');
         if (badge) {
           const counts = window.AnyoPresence.getOnlineCounts(0, 0, {

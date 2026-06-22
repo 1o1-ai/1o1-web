@@ -1,9 +1,4 @@
 (function () {
-  if (!window.getPortalSession?.()) {
-    location.href = 'index.html';
-    return;
-  }
-
   let forum = null;
   let curriculum = null;
   const threadList = document.getElementById('threadList');

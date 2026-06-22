@@ -107,19 +107,5 @@
   <script src="../../assets/tutor-intent.js"></script>
   <script src="../../assets/portal.js"></script>
   <script src="sat-act-room.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const session = window.getPortalSession();
-      if (session && window.AnyoPresence) window.AnyoPresence.startHeartbeat(session);
-      if (!session) {
-        window.openPortalLogin({
-          title: 'SAT / ACT',
-          subtitle: 'Demo: yoga / yoga',
-          showRoles: true,
-          onSuccess: (s) => { location.search = '?role=' + encodeURIComponent(s.role || 'student'); },
-        });
-      }
-    });
-  </script>
 </body>
 </html>

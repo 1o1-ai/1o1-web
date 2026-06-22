@@ -20,14 +20,14 @@
   <header class="portal-header">
     <a class="back-link" href="/">← Yogabrata</a>
     <h1>ManjuLAB Online Portal</h1>
-    <button type="button" class="back-link" id="btnLogout" style="background:none;border:none;cursor:pointer;font:inherit" hidden>Sign out</button>
+    <button type="button" class="back-link" id="btnLogout" style="background:none;border:none;cursor:pointer;font:inherit" hidden aria-hidden="true">Sign out</button>
   </header>
 
   <main class="portal-main">
     <div class="portal-hero">
       <p class="eyebrow">SaaS subscriptions</p>
       <h2>Choose your offering</h2>
-      <p>Live products open after sign-in. Other verticals preview the Brahmando platform catalog.</p>
+      <p>Live products open directly. Other verticals preview the Brahmando platform catalog.</p>
     </div>
 
     <div class="portal-circle-grid">
@@ -104,15 +104,6 @@
   <script src="assets/portal.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const session = window.getPortalSession && window.getPortalSession();
-      const btn = document.getElementById('btnLogout');
-      if (session && btn) {
-        btn.hidden = false;
-        btn.addEventListener('click', () => window.portalLogout && window.portalLogout());
-      }
-      if (session && window.AnyoPresence) {
-        window.AnyoPresence.startHeartbeat(session);
-      }
       if (window.AnyoPresence) {
         window.AnyoPresence.mountOnlineBadges();
         setInterval(() => window.AnyoPresence.mountOnlineBadges(), 60000);

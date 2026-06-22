@@ -18,7 +18,6 @@
   <header class="portal-header">
     <a class="back-link" href="/portal/">← SaaS offerings</a>
     <h1>Anyo Brahmando Academy</h1>
-    <button type="button" class="back-link" id="btnLogout" style="background:none;border:none;cursor:pointer;font:inherit">Sign out</button>
   </header>
 
   <main class="portal-main">
@@ -30,7 +29,7 @@
     </div>
 
     <div class="portal-circle-grid">
-      <button type="button" class="portal portal--saas" data-sku-login data-sku="cbse10-core" data-live="true">
+      <a class="portal portal--saas" href="/portal/education/cbse10/index.html">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
@@ -38,7 +37,7 @@
           <span class="portal-title">CBSE 10 Core</span>
           <span class="portal-sub">Science &amp; Math · Live study room</span>
         </div>
-      </button>
+      </a>
 
       <button type="button" class="portal portal--caregiver" disabled title="Coming soon">
         <div class="portal-ring"></div>
@@ -50,7 +49,7 @@
         </div>
       </button>
 
-      <button type="button" class="portal portal--rhytoma" data-sku-login data-sku="rhytoma-wbbse" data-live="true">
+      <a class="portal portal--rhytoma" href="/portal/education/rhytoma/index.html">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
@@ -58,9 +57,9 @@
           <span class="portal-title">Rhytoma Academy</span>
           <span class="portal-sub">WBBSE/WBCHSE · IX–XII · mock demo</span>
         </div>
-      </button>
+      </a>
 
-      <button type="button" class="portal portal--rhytoma" data-sku-login data-sku="sat-act" data-live="true">
+      <a class="portal portal--rhytoma" href="/portal/education/sat-act/index.html">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
@@ -68,7 +67,7 @@
           <span class="portal-title">SAT / ACT</span>
           <span class="portal-sub">US college prep · Live preview</span>
         </div>
-      </button>
+      </a>
 
       <button type="button" class="portal portal--saas" disabled title="Coming soon">
         <div class="portal-ring"></div>
@@ -102,20 +101,9 @@
   <script src="../assets/portal.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('btnLogout')?.addEventListener('click', () => window.portalLogout && window.portalLogout());
-      const session = window.getPortalSession();
-      if (session && window.AnyoPresence) {
-        window.AnyoPresence.startHeartbeat(session);
+      if (window.AnyoPresence) {
         window.AnyoPresence.mountOnlineBadges();
         setInterval(() => window.AnyoPresence.mountOnlineBadges(), 60000);
-      }
-      if (!session) {
-        window.openPortalLogin({
-          title: 'Anyo Brahmando Academy',
-          subtitle: 'A different path to knowledge, infinite possibility',
-          vertical: 'education',
-          onSuccess: () => location.reload(),
-        });
       }
     });
   </script>

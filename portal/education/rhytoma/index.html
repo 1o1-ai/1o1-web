@@ -71,18 +71,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       if (window.AnyoBots?.configureForSku) window.AnyoBots.configureForSku('rhytoma-wbbse');
-      const session = window.getPortalSession();
-      if (!session) {
-        window.openPortalLogin({
-          title: 'Rhytoma Academy',
-          subtitle: 'Demo: yoga / yoga',
-          showRoles: true,
-          onSuccess: () => location.reload(),
-        });
-        return;
-      }
       if (window.AnyoPresence) {
-        window.AnyoPresence.startHeartbeat(session);
         const real = window.AnyoPresence.countRealByRole();
         const c = window.AnyoPresence.getOnlineCounts(real.students, real.teachers);
         const el = document.getElementById('onlineBadge');
