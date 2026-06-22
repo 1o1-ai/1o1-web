@@ -260,6 +260,13 @@ body.sr-learn-active .portal-main {
   margin: 0 0 8px;
 }
 
+.sr-section-hint {
+  font-size: 0.68rem;
+  color: #64748b;
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
 .sr-learn-list {
   margin: 0;
   padding-left: 18px;
