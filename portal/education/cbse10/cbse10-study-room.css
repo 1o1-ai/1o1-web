@@ -589,6 +589,37 @@ body.sr-learn-active .portal-main {
   resize: vertical;
 }
 
+.sr-q-actions {
+  margin-top: 12px;
+}
+
+.sr-show-answer-btn {
+  font-size: 0.78rem;
+  padding: 6px 12px;
+}
+
+.sr-q-answer-panel {
+  margin-top: 10px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  background: rgba(251, 191, 36, 0.06);
+}
+
+.sr-answer-disclaimer {
+  margin: 0 0 10px;
+  font-size: 0.72rem;
+  color: #fcd34d;
+  line-height: 1.45;
+}
+
+.sr-q-answer-body {
+  font-size: 0.84rem;
+  color: #e2e8f0;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+
 .sr-eval-actions {
   display: flex;
   gap: 10px;

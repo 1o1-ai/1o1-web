@@ -571,6 +571,124 @@
 
 
 
+  const AI_ANSWER_DISCLAIMER =
+
+    'Computer-generated reference answer — not official CBSE marking. Verify with your NCERT textbook and teacher before relying on this.';
+
+
+
+  function extractReferenceAnswer(q) {
+
+    const parts = [];
+
+    if (q.correctIndex != null && q.options?.[q.correctIndex]) {
+
+      parts.push(
+
+        `Correct option: ${String.fromCharCode(65 + q.correctIndex)}. ${cleanQText(q.options[q.correctIndex])}`
+
+      );
+
+    }
+
+    const sol = q.solutions || {};
+
+    const modelText = sol.alt_answer_02?.text || sol.answer_01?.text || '';
+
+    if (modelText) parts.push(cleanQText(modelText));
+
+    return parts.length ? parts.join('\n\n') : null;
+
+  }
+
+
+
+  function attachShowAnswerButton(card, q) {
+
+    const actions = document.createElement('div');
+
+    actions.className = 'sr-q-actions';
+
+    const btn = document.createElement('button');
+
+    btn.type = 'button';
+
+    btn.className = 'btn-portal btn-portal-ghost sr-show-answer-btn';
+
+    btn.textContent = 'Show reference answer';
+
+    const panel = document.createElement('div');
+
+    panel.className = 'sr-q-answer-panel';
+
+    panel.hidden = true;
+
+    btn.addEventListener('click', () => {
+
+      if (panel.dataset.revealed === '1') {
+
+        panel.hidden = !panel.hidden;
+
+        btn.textContent = panel.hidden ? 'Show reference answer' : 'Hide reference answer';
+
+        return;
+
+      }
+
+      panel.innerHTML = '';
+
+      const disclaimer = document.createElement('p');
+
+      disclaimer.className = 'sr-ai-disclaimer sr-answer-disclaimer';
+
+      disclaimer.textContent = AI_ANSWER_DISCLAIMER;
+
+      panel.appendChild(disclaimer);
+
+      const ref = extractReferenceAnswer(q);
+
+      if (ref) {
+
+        const body = document.createElement('div');
+
+        body.className = 'sr-q-answer-body';
+
+        body.textContent = ref;
+
+        panel.appendChild(body);
+
+      } else {
+
+        const empty = document.createElement('p');
+
+        empty.className = 'sr-eval-hint';
+
+        empty.textContent = 'No reference answer is catalogued for this question yet.';
+
+        panel.appendChild(empty);
+
+      }
+
+      panel.dataset.revealed = '1';
+
+      panel.hidden = false;
+
+      btn.textContent = 'Hide reference answer';
+
+      evalChat.scrollTop = evalChat.scrollHeight;
+
+    });
+
+    actions.appendChild(btn);
+
+    card.appendChild(actions);
+
+    card.appendChild(panel);
+
+  }
+
+
+
   function showCurrentQuestion() {
 
     freezeActiveCard();
@@ -676,6 +794,10 @@
         '<textarea class="sr-text-answer" rows="5" placeholder="Type your answer here…"></textarea>';
 
     }
+
+
+
+    attachShowAnswerButton(card, q);
 
 
 
