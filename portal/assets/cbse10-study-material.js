@@ -5,21 +5,26 @@
   'use strict';
 
   let catalog = null;
+  let videoOverrides = null;
 
   const YOUTUBE_ID_RE =
     /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]+)/g;
 
   function load() {
     if (catalog) return Promise.resolve(catalog);
-    return fetch('../../data/cbse10-study-material.json')
-      .then((r) => {
+    return Promise.all([
+      fetch('../../data/cbse10-study-material.json').then((r) => {
         if (!r.ok) throw new Error('Study material not found');
         return r.json();
-      })
-      .then((data) => {
-        catalog = data;
-        return data;
-      });
+      }),
+      fetch('../../data/cbse10-chapter-video-overrides.json')
+        .then((r) => (r.ok ? r.json() : { overrides: {} }))
+        .catch(() => ({ overrides: {} })),
+    ]).then(([data, overridesData]) => {
+      catalog = data;
+      videoOverrides = overridesData?.overrides || {};
+      return data;
+    });
   }
 
   function chapter(chapterId) {
@@ -52,13 +57,29 @@
     }));
   }
 
+  function applyVideoOverride(chapterId, video) {
+    const ov = videoOverrides?.[chapterId];
+    if (!ov?.youtubeId) return video;
+    const wrongIds = new Set(ov.wrongIds || []);
+    if (!wrongIds.has(video.id) && video.id !== ov.youtubeId) return video;
+    const id = ov.youtubeId;
+    return {
+      ...video,
+      id,
+      isEmbeddable: isEmbeddableYoutubeId(id),
+      title: ov.title || video.title,
+      presenter: ov.presenter || video.presenter,
+      url: ov.url || `https://www.youtube.com/watch?v=${id}`,
+    };
+  }
+
   function collectChapterVideos(ch) {
     const byId = new Map();
 
     (ch.videos || []).forEach((v) => {
       const id = v.youtubeId || '';
       if (!id) return;
-      byId.set(id, {
+      const video = applyVideoOverride(ch.chapterId, {
         id,
         isEmbeddable: v.isEmbeddable != null ? v.isEmbeddable : isEmbeddableYoutubeId(id),
         title: v.title || 'Chapter video lesson',
@@ -66,10 +87,13 @@
         url: v.url || `https://www.youtube.com/watch?v=${id}`,
         transcripts: v.transcripts || [],
       });
+      byId.set(video.id, video);
     });
 
     const blob = [ch.studySummary || '', ...(ch.links || []).map((l) => l.url || '')].join('\n');
+    const wrongIdsForChapter = new Set(videoOverrides?.[ch.chapterId]?.wrongIds || []);
     extractVideosFromText(blob).forEach((v) => {
+      if (wrongIdsForChapter.has(v.id)) return;
       if (!byId.has(v.id)) {
         byId.set(v.id, {
           id: v.id,

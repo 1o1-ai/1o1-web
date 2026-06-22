@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "description": "Curated YouTube corrections when VOLTAIC source material linked the wrong video.",
+  "overrides": {
+    "metals": {
+      "wrongIds": ["n9_lnvs1KKY"],
+      "youtubeId": "lQLws5rA0gs",
+      "title": "Metals and Non Metals in 1 Shot | Class 10 Boards",
+      "presenter": "Physics Wallah Foundation",
+      "url": "https://www.youtube.com/watch?v=lQLws5rA0gs",
+      "reason": "Source ID n9_lnvs1KKY is Class 10 Biology One Shot, not metals chemistry."
+    }
+  }
+}
