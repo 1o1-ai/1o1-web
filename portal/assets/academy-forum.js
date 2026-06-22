@@ -90,7 +90,7 @@
   }
 
   function applyUrlFilters() {
-    const params = new URLSearchParams(global.location.search);
+    const params = new URLSearchParams(window.location.search);
     const sub = params.get('subject');
     const ch = params.get('chapter');
     if (sub && forumSubject.querySelector(`option[value="${sub}"]`)) {
