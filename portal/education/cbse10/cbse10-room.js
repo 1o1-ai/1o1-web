@@ -869,19 +869,53 @@
 
     const text = String(feedback || '');
 
+    if (!text.trim()) return null;
+
     const frac = text.match(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/);
 
     if (frac) return Math.min(maxMarks, parseFloat(frac[1]));
+
+    const pct = text.match(/(?:score|rating)\s*[:\(]?\s*(\d+(?:\.\d+)?)\s*(?:\/\s*100|%|\))/i);
+
+    if (pct) return Math.min(maxMarks, Math.round((parseFloat(pct[1]) / 100) * maxMarks * 10) / 10);
 
     const awarded = text.match(/(?:marks?\s*(?:awarded|scored)?|score)\s*[:\-]?\s*(\d+(?:\.\d+)?)/i);
 
     if (awarded) return Math.min(maxMarks, parseFloat(awarded[1]));
 
-    if (/full\s*marks|correct|perfect/i.test(text)) return maxMarks;
+    if (/full\s*marks|correct|perfect|excellent/i.test(text)) return maxMarks;
 
-    if (/zero|incorrect|wrong|no\s*marks/i.test(text)) return 0;
+    if (/zero|incorrect|wrong|no\s*marks|poor/i.test(text)) return 0;
 
     return null;
+
+  }
+
+
+
+  function localRubricScore(studentAnswer, rubric, maxMarks) {
+
+    const sa = String(studentAnswer || '').toLowerCase().split(/\W+/).filter((w) => w.length > 2);
+
+    const rb = String(rubric || '').toLowerCase().split(/\W+/).filter((w) => w.length > 3);
+
+    if (!sa.length) return { marksAwarded: 0, feedback: 'No answer provided.' };
+
+    if (!rb.length) return { marksAwarded: null, feedback: 'Answer recorded — awaiting rubric match.' };
+
+    const hits = rb.filter((w) => sa.some((t) => t.includes(w) || w.includes(t))).length;
+
+    const ratio = hits / Math.max(Math.min(rb.length, 40), 1);
+
+    const marks = Math.round(ratio * maxMarks * 10) / 10;
+
+    return {
+
+      marksAwarded: Math.min(maxMarks, Math.max(0, marks)),
+
+      feedback: `Offline rubric check: ~${Math.round(ratio * 100)}% keyword overlap (${hits} terms). ${String(rubric).slice(0, 200)}`,
+
+    };
 
   }
 
@@ -925,7 +959,19 @@
 
       const feedback = await window.Cbse10TutorApi.gradeAnswer(ans.prompt, ans.studentAnswer, rubric);
 
-      const marksAwarded = parseMarksFromFeedback(feedback, maxMarks);
+      let marksAwarded = parseMarksFromFeedback(feedback, maxMarks);
+
+      if (marksAwarded == null && feedback) {
+
+        const local = localRubricScore(ans.studentAnswer, rubric, maxMarks);
+
+        if (local.marksAwarded != null) {
+
+          marksAwarded = local.marksAwarded;
+
+        }
+
+      }
 
       return {
 
@@ -933,23 +979,25 @@
 
         maxMarks,
 
-        feedback,
+        feedback: feedback || localRubricScore(ans.studentAnswer, rubric, maxMarks).feedback,
 
-        gradedBy: 'computer_ai',
+        gradedBy: marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative',
 
       };
 
     } catch {
 
+      const local = localRubricScore(ans.studentAnswer, rubric, maxMarks);
+
       return {
 
-        marksAwarded: null,
+        marksAwarded: local.marksAwarded,
 
         maxMarks,
 
-        feedback: 'Computer grading unavailable — answer saved for teacher review.',
+        feedback: local.feedback + ' (API offline — local rubric estimate.)',
 
-        gradedBy: 'fallback',
+        gradedBy: 'local_rubric',
 
       };
 
@@ -1065,7 +1113,7 @@
 
       const marks =
 
-        g.marksAwarded != null ? `${g.marksAwarded}/${g.maxMarks}` : 'Pending / AI narrative';
+        g.marksAwarded != null ? `${g.marksAwarded}/${g.maxMarks}` : `Review · ${(g.feedback || '').slice(0, 120)}`;
 
       html += `<li><strong>Q${i + 1}</strong> ${marks} — ${(g.feedback || 'Sent to teacher').slice(0, 280)}</li>`;
 

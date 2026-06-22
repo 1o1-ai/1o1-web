@@ -96,7 +96,14 @@
     });
     const data = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(data.detail || 'Grading failed');
-    return data.answer || data.message || '';
+    return (
+      data.evaluation ||
+      data.answer ||
+      data.message ||
+      data.content ||
+      (typeof data.response === 'string' ? data.response : '') ||
+      ''
+    );
   }
 
   global.Cbse10TutorApi = {

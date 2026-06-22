@@ -12,7 +12,7 @@ CHECKS: list[tuple[str, str, list[str]]] = [
     ("/portal/education/cbse10/index.html", "CBSE10 hub", ["Study Room", "Mock Tests", "Discussion Forum"]),
     ("/portal/education/cbse10/room.html", "Study room", ["phaseSubject", "cbse10-room.js", "backFromEvaluate", "evalResults"]),
     ("/portal/education/cbse10/practice.html", "Practice", ["Chapter practice", "board mock"]),
-    ("/portal/education/cbse10/forum.html", "Forum", ["Sahadeva", "Discussion Forum"]),
+    ("/portal/education/cbse10/forum.html", "Forum", ["Sahadeva", "Discussion Forum", "forum-main"]),
     ("/portal/data/cbse10-forum.json", "Forum data", ['"sahadeva"', '"threads"']),
     ("/portal/education/admin.html", "Admin", ["Presence admin", "admin.js"]),
     ("/portal/data/academy-bots.json", "Bot roster", ["Sujoy Das", "Don Bosco Liluah"]),

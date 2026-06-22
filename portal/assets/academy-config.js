@@ -31,6 +31,7 @@
         'Same chapter — I got confused on sign too.',
       ],
       curriculumPath: '/portal/data/cbse10-curriculum.json',
+      forumPath: '/portal/data/cbse10-forum.json',
       bankPath: '/portal/data/cbse10-verified-questions.json',
       subjects: [
         { id: 'science', label: 'Science', code: '086', icon: '🧪' },

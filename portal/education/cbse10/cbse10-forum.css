@@ -1,0 +1,100 @@
+/* CBSE 10 Discussion Forum — baseline layout */
+.forum-main {
+  display: grid;
+  grid-template-columns: minmax(220px, 260px) 1fr;
+  gap: 20px;
+  max-width: 1100px;
+  width: 100%;
+  align-items: start;
+}
+
+.forum-sidebar {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 16px;
+  padding: 16px;
+  position: sticky;
+  top: 12px;
+}
+
+.forum-sidebar label {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.forum-sidebar select {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e2e8f0;
+  font-size: 0.85rem;
+}
+
+.forum-stats {
+  margin-top: 14px;
+  font-size: 0.72rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+.forum-guest-banner {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  background: rgba(103, 232, 249, 0.08);
+  border: 1px solid rgba(103, 232, 249, 0.2);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.forum-guest-banner a {
+  color: #67e8f9;
+}
+
+.forum-content {
+  min-width: 0;
+  min-height: 200px;
+}
+
+.forum-empty {
+  padding: 24px 20px;
+  border-radius: 12px;
+  border: 1px dashed rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.45);
+  color: #94a3b8;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.tag-voltaic {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 0.62rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(52, 211, 153, 0.15);
+  color: #6ee7b7;
+}
+
+.thread-row.thread-voltaic {
+  border-left: 3px solid rgba(52, 211, 153, 0.45);
+}
+
+@media (max-width: 768px) {
+  .forum-main {
+    grid-template-columns: 1fr;
+  }
+  .forum-sidebar {
+    position: static;
+  }
+}
