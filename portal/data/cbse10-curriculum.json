@@ -15,7 +15,9 @@
             "balanced equation",
             "displacement",
             "double displacement"
-          ]
+          ],
+          "discipline": "chemistry",
+          "syllabus_order": 1
         },
         {
           "id": "acids-bases",
@@ -25,27 +27,33 @@
             "base",
             "salt",
             "ph scale"
-          ]
+          ],
+          "discipline": "chemistry",
+          "syllabus_order": 2
         },
         {
           "id": "metals",
-          "title": "Metals and Non-metals",
+          "title": "Metals and Non-Metals",
           "keywords": [
             "metal",
             "non-metal",
             "reactivity series",
             "ionic compound"
-          ]
+          ],
+          "discipline": "chemistry",
+          "syllabus_order": 3
         },
         {
           "id": "carbon",
-          "title": "Carbon and its Compounds",
+          "title": "Carbon and Its Compounds",
           "keywords": [
             "carbon compound",
             "covalent",
             "hydrocarbon",
             "ethanol"
-          ]
+          ],
+          "discipline": "chemistry",
+          "syllabus_order": 4
         },
         {
           "id": "life",
@@ -55,7 +63,9 @@
             "nutrition",
             "photosynthesis",
             "respiration"
-          ]
+          ],
+          "discipline": "biology",
+          "syllabus_order": 5
         },
         {
           "id": "control",
@@ -65,17 +75,21 @@
             "nervous system",
             "reflex",
             "hormone"
-          ]
+          ],
+          "discipline": "biology",
+          "syllabus_order": 6
         },
         {
           "id": "reproduction",
-          "title": "How do Organisms Reproduce?",
+          "title": "How Do Organisms Reproduce?",
           "keywords": [
             "reproduction",
             "asexual",
             "sexual reproduction",
             "family planning"
-          ]
+          ],
+          "discipline": "biology",
+          "syllabus_order": 7
         },
         {
           "id": "heredity",
@@ -85,17 +99,33 @@
             "mendel",
             "gene",
             "chromosome"
-          ]
+          ],
+          "discipline": "biology",
+          "syllabus_order": 8
         },
         {
           "id": "light",
-          "title": "Light — Reflection and Refraction",
+          "title": "Light – Reflection and Refraction",
           "keywords": [
             "reflection",
             "refraction",
             "mirror",
             "lens"
-          ]
+          ],
+          "discipline": "physics",
+          "syllabus_order": 9
+        },
+        {
+          "id": "human-eye",
+          "title": "The Human Eye and the Colourful World",
+          "keywords": [
+            "human eye",
+            "colourful world",
+            "myopia",
+            "dispersion"
+          ],
+          "discipline": "physics",
+          "syllabus_order": 10
         },
         {
           "id": "electricity",
@@ -105,7 +135,9 @@
             "ohm's law",
             "resistance",
             "resistivity"
-          ]
+          ],
+          "discipline": "physics",
+          "syllabus_order": 11
         },
         {
           "id": "magnetism",
@@ -115,17 +147,21 @@
             "electromagnet",
             "fleming",
             "solenoid"
-          ]
+          ],
+          "discipline": "physics",
+          "syllabus_order": 12
         },
         {
-          "id": "environment",
-          "title": "Our Environment",
+          "id": "sources-of-energy",
+          "title": "Sources of Energy",
           "keywords": [
-            "ecosystem",
-            "environment",
-            "ozone",
-            "biodegradable"
-          ]
+            "source of energy",
+            "solar energy",
+            "wind energy",
+            "fossil fuel"
+          ],
+          "discipline": "physics",
+          "syllabus_order": 13
         }
       ]
     },
@@ -140,7 +176,9 @@
             "irrational",
             "fundamental theorem",
             "hcf"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 1
         },
         {
           "id": "polynomials",
@@ -150,7 +188,9 @@
             "zeroes of",
             "zeros of",
             "quadratic polynomial"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 2
         },
         {
           "id": "linear-eq",
@@ -160,7 +200,9 @@
             "pair of linear",
             "two variables",
             "consistent"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 3
         },
         {
           "id": "quadratic",
@@ -169,7 +211,9 @@
             "quadratic equation",
             "discriminant",
             "quadratic formula"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 4
         },
         {
           "id": "ap",
@@ -179,17 +223,9 @@
             "common difference",
             "nth term",
             "sum of n terms"
-          ]
-        },
-        {
-          "id": "coordinate",
-          "title": "Coordinate Geometry",
-          "keywords": [
-            "coordinate",
-            "distance formula",
-            "section formula",
-            "area of triangle"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 5
         },
         {
           "id": "triangles",
@@ -199,17 +235,21 @@
             "similar",
             "congruence",
             "pythagoras"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 6
         },
         {
-          "id": "circles",
-          "title": "Circles",
+          "id": "coordinate",
+          "title": "Coordinate Geometry",
           "keywords": [
-            "circle",
-            "tangent",
-            "chord",
-            "arc"
-          ]
+            "coordinate",
+            "distance formula",
+            "section formula",
+            "area of triangle"
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 7
         },
         {
           "id": "trigonometry",
@@ -219,7 +259,9 @@
             "sin",
             "cos",
             "tan"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 8
         },
         {
           "id": "trig-apps",
@@ -228,7 +270,33 @@
             "angle of elevation",
             "angle of depression",
             "height and distance"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 9
+        },
+        {
+          "id": "circles",
+          "title": "Circles",
+          "keywords": [
+            "circle",
+            "tangent",
+            "chord",
+            "arc"
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 10
+        },
+        {
+          "id": "constructions",
+          "title": "Constructions",
+          "keywords": [
+            "construction",
+            "construct a triangle",
+            "divide a line segment",
+            "draw tangents"
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 11
         },
         {
           "id": "areas-circles",
@@ -237,7 +305,9 @@
             "area of sector",
             "area of segment",
             "perimeter of sector"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 12
         },
         {
           "id": "surface-volume",
@@ -247,7 +317,9 @@
             "volume",
             "frustum",
             "hemisphere"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 13
         },
         {
           "id": "statistics",
@@ -257,7 +329,9 @@
             "median",
             "mode",
             "frequency"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 14
         },
         {
           "id": "probability",
@@ -267,7 +341,9 @@
             "random experiment",
             "elementary event",
             "complementary"
-          ]
+          ],
+          "discipline": "miscellaneous",
+          "syllabus_order": 15
         }
       ]
     }
@@ -6811,7 +6887,7 @@
       "correctIndex": 3,
       "answer_verified": true,
       "subject_slug": "science",
-      "chapter": "environment",
+      "chapter": "sources-of-energy",
       "exam_year": 2025,
       "source": "supercop:Science/Science-2025/question/s_2025_31-1-2.pdf",
       "paper_pair_id": "s_2025_31-1-2",
@@ -6829,7 +6905,7 @@
       "correctIndex": 3,
       "answer_verified": true,
       "subject_slug": "science",
-      "chapter": "environment",
+      "chapter": "sources-of-energy",
       "exam_year": 2025,
       "source": "supercop:Science/Science-2025/question/s_2025_31-1-2.pdf",
       "paper_pair_id": "s_2025_31-1-2",
@@ -7045,7 +7121,7 @@
       "correctIndex": 3,
       "answer_verified": true,
       "subject_slug": "science",
-      "chapter": "environment",
+      "chapter": "sources-of-energy",
       "exam_year": 2025,
       "source": "supercop:Science/Science-2025/question/s_2025_31-1-1.pdf",
       "paper_pair_id": "s_2025_31-1-1",
@@ -7261,7 +7337,7 @@
       "correctIndex": 3,
       "answer_verified": true,
       "subject_slug": "science",
-      "chapter": "environment",
+      "chapter": "sources-of-energy",
       "exam_year": 2025,
       "source": "supercop:Science/Science-2025/question/s_2025_31-1-3.pdf",
       "paper_pair_id": "s_2025_31-1-3",
@@ -9739,5 +9815,8 @@
         "question_number": 16
       }
     ]
-  }
+  },
+  "syllabus_source": "C:\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE\\syllabus.txt",
+  "syllabus_official": true,
+  "syllabus_sha_note": "Synced from syllabus.txt"
 }

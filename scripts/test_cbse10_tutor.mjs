@@ -18,6 +18,18 @@ function loadTutorIntent() {
   return sandbox.window.AnyoTutorIntent;
 }
 
+function loadShared() {
+  const src = fs.readFileSync(path.join(ROOT, 'portal/assets/cbse10-shared.js'), 'utf8');
+  const sandbox = { window: {}, globalThis: {} };
+  sandbox.window = sandbox.globalThis;
+  vm.runInNewContext(src, sandbox);
+  return sandbox.window.CBSE10Shared;
+}
+
+function effectiveChapter(q) {
+  return S.normalizeChapterId ? S.normalizeChapterId(q.chapter) : q.chapter;
+}
+
 function loadBank() {
   const raw = JSON.parse(
     fs.readFileSync(path.join(ROOT, 'portal/data/cbse10-verified-questions.json'), 'utf8')
@@ -25,7 +37,7 @@ function loadBank() {
   return (raw.questions || []).filter((q) => q.answer_verified !== false && q.correctIndex != null);
 }
 
-function filterQuestions(bank, { subject, chapter, limit }) {
+function filterQuestions(bank, { subject, chapter, bucket, limit }) {
   const subj = subject === 'mathematics' ? 'mathematics' : 'science';
   const pool = bank.filter((q) => {
     const qSub = (q.subject_slug || q.subject || '').toLowerCase();
@@ -34,14 +46,17 @@ function filterQuestions(bank, { subject, chapter, limit }) {
       qSub === subject ||
       (subj === 'mathematics' && qSub.includes('math')) ||
       (subj === 'science' && qSub === 'science');
-    return matchSub && (q.chapter || '') === chapter;
+    if (bucket) return matchSub && q._bucket === bucket;
+    return matchSub && q._inChapterView && (q.chapter || '') === chapter;
   });
   pool.sort((a, b) => (b.exam_year || 0) - (a.exam_year || 0));
   return pool.slice(0, limit);
 }
 
 const T = loadTutorIntent();
+const S = loadShared();
 const bank = loadBank();
+S.enrichBankWithBuckets(bank);
 let failed = 0;
 
 function ok(label) {
@@ -127,16 +142,30 @@ for (const q of bank) {
 }
 if (failed === 0) ok(`bank integrity (${bank.length} questions)`);
 
-// --- Chapter pools ---
-const lightSci = filterQuestions(bank, { subject: 'science', chapter: 'light', limit: 99 });
-const polyMath = filterQuestions(bank, { subject: 'mathematics', chapter: 'polynomials', limit: 99 });
-if (lightSci.length < 1) fail('light chapter pool empty');
-else ok(`science/light pool ${lightSci.length}`);
-if (polyMath.length < 10) fail('polynomials pool too small', String(polyMath.length));
-else ok(`math/polynomials pool ${polyMath.length}`);
+// --- Chapter pools (bucket model; master catalog = 10 MCQs/chapter) ---
+const lightBucket = filterQuestions(bank, { subject: 'science', bucket: 'physics', limit: 99 });
+const lightChapter = filterQuestions(bank, { subject: 'science', chapter: 'light', limit: 99 });
+if (lightChapter.length !== 0) fail('light chapter view should be empty (≤20 → bucket)');
+else ok('science/light not in chapter sidebar');
+if (lightBucket.length < 1) fail('physics bucket empty');
+else ok(`science/physics bucket ${lightBucket.length}`);
+
+const polyBucket = filterQuestions(bank, { subject: 'mathematics', bucket: 'miscellaneous', limit: 99 });
+const polyChapter = filterQuestions(bank, { subject: 'mathematics', chapter: 'polynomials', limit: 99 });
+if (polyChapter.length !== 0) fail('polynomials chapter view', `expected 0 (bucket only), got ${polyChapter.length}`);
+else ok('math/polynomials in Miscellaneous bucket only');
+if (polyBucket.length < 5) fail('polynomials misc bucket', String(polyBucket.length));
+else ok(`math/miscellaneous bucket includes polynomials (${polyBucket.length} total)`);
+
+const acidsBucket = filterQuestions(bank, { subject: 'science', bucket: 'chemistry', limit: 99 });
+if (acidsBucket.length < 5) fail('chemistry bucket too small', String(acidsBucket.length));
+else ok(`science/chemistry bucket ${acidsBucket.length}`);
 
 // --- Explain must use bank letter ---
-const q = polyMath[0];
+const polyQs = bank.filter(
+  (q) => (q.subject_slug || '').includes('math') && effectiveChapter(q) === 'polynomials'
+);
+const q = polyQs[0] || bank.find((x) => (x.subject_slug || '').includes('math'));
 const letter = String.fromCharCode(65 + q.correctIndex);
 const opt = q.options[q.correctIndex];
 if (!letter || !opt) fail('explain sample missing option');

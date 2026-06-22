@@ -3,131 +3,165 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CBSE 10 Core · Study Room</title>
+  <title>CBSE 10 · Study Room</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../../assets/theme.css" />
   <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="cbse10-study-room.css" />
 </head>
 <body class="portal-page study-room-page student-ambience">
   <canvas id="cosmos" aria-hidden="true"></canvas>
   <div class="mesh" aria-hidden="true"></div>
   <div class="lamp-glow" aria-hidden="true"></div>
 
-  <header class="portal-header">
-    <a class="back-link" href="/portal/education/">← Anyo Brahmando Academy</a>
-    <h1>CBSE 10 Core <span id="roleBadge" style="font-size:0.75rem;color:#67e8f9"></span></h1>
-    <span id="ingestBadge" hidden style="font-size:0.65rem;color:#94a3b8;margin-left:8px"></span>
-    <span id="onlineBadge" class="online-live-badge" hidden></span>
-    <a class="back-link" href="/portal/education/cbse10/progress.html" style="font-size:0.8rem">Progress</a>
+  <header class="portal-header" id="mainHeader">
+    <a class="back-link" href="index.html">← Hub</a>
+    <h1>Study Room</h1>
+    <span class="sr-open-badge">Open</span>
   </header>
 
-  <main class="portal-main" style="max-width:1200px">
-    <div id="alertBanner" hidden style="margin-bottom:16px;padding:14px 16px;border-radius:14px;border:1px solid rgba(251,191,36,0.35);background:rgba(251,191,36,0.08);font-size:0.85rem;color:#fde68a"></div>
+  <!-- Corner subject orbs (evaluate phase) -->
+  <div id="cornerOrbs" class="sr-corner-orbs hidden" aria-hidden="true">
+    <button type="button" class="sr-corner-orb science" id="cornerScience" title="Science">🧪</button>
+    <button type="button" class="sr-corner-orb math" id="cornerMath" title="Mathematics">📐</button>
+  </div>
 
-    <div id="studentView">
-      <div class="study-room-wrap">
-        <div class="study-desk">
-        <div class="subject-orbs" aria-label="Class 10 subjects">
-          <div class="subject-orb science" title="Science · 086">🧪</div>
-          <div class="subject-orb math" title="Mathematics · 041">📐</div>
-        </div>
+  <main class="portal-main sr-main">
+    <!-- Phase 1: Subject circles -->
+    <section id="phaseSubject" class="sr-phase sr-phase-subject">
+      <p class="sr-phase-lead">Choose your subject</p>
+      <div class="sr-subject-circles">
+        <button type="button" class="sr-subject-circle science" data-subject="science">
+          <span class="sr-circle-icon">🧪</span>
+          <span class="sr-circle-title">Science</span>
+          <span class="sr-circle-code">086</span>
+        </button>
+        <button type="button" class="sr-subject-circle math" data-subject="mathematics">
+          <span class="sr-circle-icon">📐</span>
+          <span class="sr-circle-title">Mathematics</span>
+          <span class="sr-circle-code">041</span>
+        </button>
+      </div>
+    </section>
 
-        <div class="study-layout" style="padding:12px">
-          <aside>
-            <p style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a3b8;margin-bottom:8px">Subject</p>
-            <div style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px">
-              <button type="button" data-subject="science" class="active" style="padding:8px;border-radius:10px;border:1px solid rgba(103,232,249,0.4);background:rgba(6,182,212,0.12);color:#67e8f9;cursor:pointer">🧪 Science</button>
-              <button type="button" data-subject="mathematics" style="padding:8px;border-radius:10px;border:1px solid rgba(148,163,184,0.25);background:transparent;color:#cbd5e1;cursor:pointer">📐 Mathematics</button>
-            </div>
-            <p style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a3b8;margin-bottom:6px">Chapters</p>
-            <ul class="chapter-list" id="chapterList"></ul>
-          </aside>
+    <!-- Phase 2: Chapter pick (one only) -->
+    <section id="phaseChapter" class="sr-phase hidden">
+      <p class="sr-phase-lead">Select <strong>one</strong> chapter · CBSE 2026-27 syllabus</p>
+      <div class="sr-chapter-grid" id="chapterGrid"></div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backToSubject">← Change subject</button>
+    </section>
 
-          <section class="chat-panel">
-            <p id="subjectLabel" style="font-size:0.72rem;color:#94a3b8"></p>
-            <h2 id="chapterTitle" style="font-size:1rem;color:#f1f5f9;margin-bottom:8px">Loading…</h2>
-            <div class="study-quick-prompts" id="quickPrompts">
-              <button type="button" class="study-quick-btn" data-prompt="1 sample question">1 sample question</button>
-              <button type="button" class="study-quick-btn" data-prompt="3 questions on this chapter">3 questions</button>
-              <button type="button" class="study-quick-btn" data-prompt="explain">Explain answer</button>
-            </div>
-            <div class="chat-messages" id="chatMessages"></div>
-            <div id="quizPanel" hidden style="margin:8px 0;padding:12px;border-radius:12px;border:1px solid rgba(52,211,153,0.25);background:rgba(16,185,129,0.06)"></div>
-            <div class="chat-input-row">
-              <input id="chatInput" type="text" placeholder="Ask about this chapter…" />
-              <button type="button" id="sendChat" class="btn-portal btn-portal-primary" style="flex:0;padding:8px 16px">Send</button>
-            </div>
-          </section>
+    <!-- Phase 3: Learn vs Evaluate -->
+    <section id="phaseIntent" class="sr-phase hidden">
+      <p class="sr-phase-lead" id="intentChapterLabel">Chapter</p>
+      <div class="sr-intent-circles">
+        <button type="button" class="sr-intent-card" id="btnLearn">
+          <span class="sr-intent-icon">📚</span>
+          <strong>Learn</strong>
+          <small>Study material &amp; explanations</small>
+        </button>
+        <button type="button" class="sr-intent-card primary" id="btnEvaluate">
+          <span class="sr-intent-icon">✅</span>
+          <strong>Evaluate</strong>
+          <small>Test your prep — one question at a time</small>
+        </button>
+      </div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backToChapter">← Change chapter</button>
+    </section>
 
-          <aside>
-            <p style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:#94a3b8;margin-bottom:8px">Session</p>
-            <button type="button" id="btnQuiz" class="btn-portal btn-portal-primary" style="width:100%;margin-bottom:8px">Chapter quiz (5)</button>
-            <button type="button" id="btnBoard" class="btn-portal btn-portal-ghost" style="width:100%;margin-bottom:8px">Board mock</button>
-            <button type="button" id="btnInvite" class="btn-portal btn-portal-ghost" style="width:100%;margin-bottom:12px">Invite classmate</button>
-            <p style="font-size:0.65rem;color:#64748b;line-height:1.4">Syllabus: CBSE 2026-27 · Verified board MCQs only · Study together is web only.</p>
-            <div id="activePeers" class="active-peers" hidden>
-              <p class="peers-label">In this room (max 2)</p>
-              <ul id="activePeerList"></ul>
-            </div>
-          </aside>
-        </div>
-        </div>
-
-        <aside class="peers-outer-panel" id="peersOuterPanel">
-          <button type="button" class="peers-outer-toggle" id="peersToggle" aria-expanded="true">
-            <span id="peersToggleLabel">Students online</span>
-            <span class="peers-chevron">▾</span>
-          </button>
-          <div class="peers-outer-body" id="peersOuterBody">
-            <p class="peers-hint">Pick a classmate studying now · request to join (max 2 in your room)</p>
-            <div class="peers-filter-row">
-              <select id="peersFilter" aria-label="Filter by subject">
-                <option value="all">All subjects</option>
-                <option value="science">Science</option>
-                <option value="mathematics">Mathematics</option>
-              </select>
-            </div>
-            <ul class="peers-roster" id="peersRoster"></ul>
+    <!-- Learn workspace -->
+    <section id="phaseLearn" class="sr-phase hidden">
+      <div class="sr-learn-layout">
+        <div class="sr-learn-main">
+          <div class="sr-eval-header">
+            <h2 id="learnTitle">Chapter</h2>
+            <p id="learnSubtitle" class="sr-chapter-meta">AI study guide · not official CBSE</p>
           </div>
+          <div id="learnContent" class="sr-learn-content">
+            <p class="sr-eval-hint">Loading study material…</p>
+          </div>
+          <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backFromLearn">← Back</button>
+        </div>
+        <aside class="sr-students-panel">
+          <h3>Students online</h3>
+          <p class="sr-students-hint">Classmates in study rooms now</p>
+          <ul id="learnStudentsRoster" class="sr-students-list"></ul>
         </aside>
       </div>
-    </div>
+    </section>
 
-    <div id="teacherView" hidden>
-      <div class="study-desk teacher-placeholder">
-        <h3>Teacher study room</h3>
-        <p>Review class mastery, student alerts, and mock detail. Student mode is live in this demo.</p>
-        <p style="margin-top:16px;font-size:0.85rem">Switch URL to <code>?role=student</code> for the functional student desk.</p>
-        <a href="?role=student" class="btn-portal btn-portal-primary" style="display:inline-block;margin-top:20px;text-decoration:none">Open student view</a>
+    <!-- Phase 4: Evaluate workspace -->
+    <section id="phaseEvaluate" class="sr-phase hidden">
+      <div class="sr-eval-layout">
+        <div class="sr-eval-main">
+          <div class="sr-eval-header">
+            <h2 id="evalTitle">Chapter</h2>
+            <p id="evalSubtitle" class="sr-chapter-meta"></p>
+          </div>
+
+          <div class="sr-question-source">
+            <label class="sr-radio"><input type="radio" name="qSource" value="official" checked /> Official CBSE / board questions</label>
+            <label class="sr-radio"><input type="radio" name="qSource" value="ai" /> AI-generated (wider practice)</label>
+            <label class="sr-diff-label">Difficulty
+              <select id="difficultySelect">
+                <option value="all">All levels</option>
+                <option value="ASKED_BEFORE">Asked before</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="difficult">Difficult</option>
+              </select>
+            </label>
+            <button type="button" class="btn-portal btn-portal-ghost" id="btnReloadQueue" style="margin-left:auto">Refresh questions</button>
+          </div>
+
+          <div class="sr-eval-chat" id="evalChat">
+            <p class="sr-eval-hint">Questions appear here one at a time. Answer each, then use <strong>Next question</strong>. Scoring only when you press <strong>Evaluate</strong>.</p>
+          </div>
+
+          <div class="sr-eval-actions">
+            <button type="button" class="btn-portal btn-portal-ghost" id="btnNextQuestion">Next question</button>
+            <button type="button" class="btn-portal btn-portal-primary" id="btnEvaluateSubmit">Evaluate my answers</button>
+          </div>
+          <p class="sr-distraction" id="distractionStats">Focus: 100% · Time on session: 0:00</p>
+        </div>
+
+        <aside class="sr-students-panel">
+          <h3>Students online</h3>
+          <p class="sr-students-hint">Classmates in study rooms now</p>
+          <ul id="studentsRoster" class="sr-students-list"></ul>
+        </aside>
       </div>
-    </div>
+    </section>
   </main>
 
+  <!-- Evaluate modal -->
+  <dialog id="evalModal" class="sr-modal">
+    <form method="dialog">
+      <h3>Submit for evaluation</h3>
+      <p>Choose how to grade your answer sheet (<span id="evalAnswerCount">0</span> responses).</p>
+      <div class="sr-eval-choices">
+        <label><input type="radio" name="evalMode" value="computer" checked /> Computer (catalog + AI scoring)</label>
+        <label><input type="radio" name="evalMode" value="teacher" /> Real teacher (forum queue)</label>
+        <label><input type="radio" name="evalMode" value="both" /> Both</label>
+      </div>
+      <div class="sr-modal-actions">
+        <button type="button" class="btn-portal btn-portal-ghost" id="evalCancel">Cancel</button>
+        <button type="submit" class="btn-portal btn-portal-primary" id="evalConfirm">Submit</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="evalResults" class="sr-results hidden"></div>
+
   <script src="../../../assets/cosmic.js"></script>
-  <script src="../../assets/presence.js"></script>
   <script src="../../assets/bots.js"></script>
-  <script src="../../assets/tutor-intent.js"></script>
   <script src="../../assets/question-format.js"></script>
-  <script src="../../assets/portal.js"></script>
-  <script src="cbse10-room.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const session = window.getPortalSession();
-      if (session && window.AnyoPresence) {
-        window.AnyoPresence.startHeartbeat(session);
-      }
-      if (!session) {
-        window.openPortalLogin({
-          title: 'Anyo Brahmando Academy',
-          subtitle: 'CBSE 10 Core · demo: yoga / yoga',
-          showRoles: true,
-          onSuccess: (s) => {
-            location.search = '?role=' + encodeURIComponent(s.role || 'student');
-          },
-        });
-      }
-    });
-  </script>
+  <script src="../../assets/cbse10-shared.js"></script>
+  <script src="../../assets/diagram-vector.js"></script>
+  <script src="../../assets/cbse10-eval-store.js"></script>
+  <script src="../../assets/cbse10-tutor-api.js"></script>
+  <script src="../../assets/cbse10-study-material.js"></script>
+  <script src="cbse10-room.js?v=3"></script>
 </body>
 </html>

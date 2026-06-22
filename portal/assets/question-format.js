@@ -36,8 +36,18 @@
 
   function formatOptions(options) {
     if (!Array.isArray(options)) return options;
-    return options.map((o) => formatMathText(o));
+    return options.map((o) => cleanQuestionText(formatMathText(o)));
   }
 
-  global.AnyoQuestionFormat = { formatMathText, formatOptions };
+  /** Strip PDF ingest noise (reversed headers, set codes, empty options). */
+  function cleanQuestionText(text) {
+    if (!text) return '';
+    let t = formatMathText(String(text));
+    t = t.replace(/\*[\d/]+(?:-\d+)?\*[\s\d#]*\*[A-Z]+\*[\s\S]*$/i, '').trim();
+    t = t.replace(/\*ECNEICS\*/gi, '').replace(/#\s*\*/g, '').trim();
+    t = t.replace(/\s+\?\s*$/,'').trim();
+    return t.replace(/\s{2,}/g, ' ').trim();
+  }
+
+  global.AnyoQuestionFormat = { formatMathText, formatOptions, cleanQuestionText };
 })(typeof window !== 'undefined' ? window : globalThis);

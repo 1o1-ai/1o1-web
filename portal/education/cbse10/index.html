@@ -16,35 +16,34 @@
 
   <header class="portal-header">
     <a class="back-link" href="/portal/education/">← Anyo Brahmando Academy</a>
-    <h1>CBSE 10 Core</h1>
-    <span id="onlineBadge" class="online-live-badge" hidden></span>
+    <h1>CBSE 10 Core <span class="sr-open-badge">Open</span></h1>
   </header>
 
   <main class="portal-main">
     <div class="portal-hero">
-      <p class="eyebrow">Class X · Science 086 · Mathematics 041</p>
+      <p class="eyebrow">Class X · Science 086 · Mathematics 041 · Syllabus 2026-27</p>
       <h2>Choose your space</h2>
-      <p>Study together, practice like the board, or discuss chapter doubts — all from verified CBSE material.</p>
+      <p>Study room is open to all — no login required. Master catalog with board &amp; explore questions.</p>
     </div>
 
     <div class="portal-circle-grid cbse10-hub-grid">
-      <a class="portal portal--saas" href="room.html?role=student">
+      <a class="portal portal--saas" href="room.html">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
           <span class="portal-icon">📖</span>
           <span class="portal-title">Study Room</span>
-          <span class="portal-sub">Tutor · peers · chapter chat</span>
+          <span class="portal-sub">Subject → chapter → evaluate prep</span>
         </div>
       </a>
 
-      <a class="portal portal--caregiver" href="practice.html">
+      <a class="portal portal--caregiver" href="mock-exam.html">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
           <span class="portal-icon">📝</span>
-          <span class="portal-title">Practice Test</span>
-          <span class="portal-sub">Chapter quiz · 3 hr board mock</span>
+          <span class="portal-title">Mock Tests</span>
+          <span class="portal-sub">Authentic CBSE-X vs Open explore</span>
         </div>
       </a>
 
@@ -54,44 +53,18 @@
         <div class="portal-core">
           <span class="portal-icon">💬</span>
           <span class="portal-title">Discussion Forum</span>
-          <span class="portal-sub">Math &amp; Science · Sahadeva AI</span>
+          <span class="portal-sub">Chapter threads · Sahadeva AI</span>
         </div>
       </a>
     </div>
 
     <p class="portal-note">
-      <a href="progress.html">Progress</a> ·
-      <a href="report.html">Guardian report</a> ·
-      390 verified board MCQs ingested
+      📚 AI study guides in Study Room ·
+      <a href="progress.html">Progress</a> (optional sign-in)
     </p>
   </main>
 
   <script src="../../../assets/cosmic.js"></script>
-  <script src="../../assets/presence.js"></script>
-  <script src="../../assets/portal.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const session = window.getPortalSession();
-      if (!session) {
-        window.openPortalLogin({
-          title: 'CBSE 10 Core',
-          subtitle: 'Demo: yoga / yoga',
-          showRoles: true,
-          onSuccess: () => location.reload(),
-        });
-        return;
-      }
-      if (window.AnyoPresence) {
-        window.AnyoPresence.startHeartbeat(session);
-        const real = window.AnyoPresence.countRealByRole();
-        const c = window.AnyoPresence.getOnlineCounts(real.students, real.teachers);
-        const el = document.getElementById('onlineBadge');
-        if (el) {
-          el.hidden = false;
-          el.textContent = `${c.teachersOnline} teachers · ${c.studentsOnline} students online (IST ${c.istLabel})`;
-        }
-      }
-    });
-  </script>
+  <link rel="stylesheet" href="cbse10-study-room.css" />
 </body>
 </html>

@@ -26,10 +26,14 @@
   ]).then(([f, cur]) => {
     forum = f;
     curriculum = cur;
+    mergeGradingThreads();
     fillChapterFilter();
+    applyUrlFilters();
+    const pending = (forum.threads || []).filter((t) => t.tags?.includes('grading_request')).length;
+    const voltaic = (forum.threads || []).filter((t) => t.tags?.includes('voltaic_study')).length;
     const mockNote = forum.mocked ? ' · mock demo' : '';
     document.getElementById('forumStats').textContent =
-      `${forum.threads.length} threads · ${label}${mockNote}`;
+      `${forum.threads.length} threads${voltaic ? ' · ' + voltaic + ' VOLTAIC peer' : ''}${pending ? ' · ' + pending + ' awaiting grade' : ''} · ${label}${mockNote}`;
     renderList();
     forumSubject.addEventListener('change', () => {
       fillChapterFilter();
@@ -65,6 +69,28 @@
       });
   }
 
+  function applyUrlFilters() {
+    const params = new URLSearchParams(global.location.search);
+    const sub = params.get('subject');
+    const ch = params.get('chapter');
+    if (sub && forumSubject.querySelector(`option[value="${sub}"]`)) {
+      forumSubject.value = sub;
+      fillChapterFilter();
+    }
+    if (ch && forumChapter.querySelector(`option[value="${ch}"]`)) {
+      forumChapter.value = ch;
+    }
+  }
+
+  function mergeGradingThreads() {
+    const extra = window.CBSE10EvalStore?.loadForumGradingThreads?.()?.threads || [];
+    if (!extra.length) return;
+    const ids = new Set((forum.threads || []).map((t) => t.id));
+    extra.forEach((t) => {
+      if (!ids.has(t.id)) forum.threads.unshift(t);
+    });
+  }
+
   function filteredThreads() {
     return forum.threads.filter((t) => {
       if (forumSubject.value !== 'all' && t.subject !== forumSubject.value) return false;
@@ -79,8 +105,10 @@
     const threads = filteredThreads();
     threadList.innerHTML = threads
       .map(
-        (t) => `<button type="button" class="thread-row" data-id="${t.id}">
+        (t) => `<button type="button" class="thread-row${t.tags?.includes('grading_request') ? ' thread-grade' : ''}${t.tags?.includes('voltaic_study') ? ' thread-voltaic' : ''}" data-id="${t.id}">
           <span class="thread-tag ${t.subject}">${t.subject === 'mathematics' ? 'Math' : 'Sci'}</span>
+          ${t.tags?.includes('grading_request') ? '<span class="tag-pred">Grade me</span>' : ''}
+          ${t.tags?.includes('voltaic_study') ? '<span class="tag-voltaic">Peer study</span>' : ''}
           <strong>${esc(t.title)}</strong>
           <span class="hint">${t.reply_count || t.posts.length} posts · Class ${t.grade || '—'} · ${esc(t.chapter_title || t.chapter)}</span>
         </button>`

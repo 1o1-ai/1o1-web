@@ -1,0 +1,1561 @@
+{
+  "version": 1,
+  "sku": "cbse10-core",
+  "generated_at": "2026-06-21T23:54:24.317253+00:00",
+  "source_dir": "C:\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE\\Study Material",
+  "content_pack": "cbse10-study-material-v1",
+  "source_quality": "ai_generated",
+  "ai_instructions": "# VOLTAIC // AI Tutor Interpretation and Training Specification\n## System Prompt, Student Profiling Rules and Adaptive Workflows (2026 Edition)\n\nThis master instruction set governs how an AI Agent or LLM must interpret the VOLTAIC study guides, video micro-transcripts, past years' questions (previously asked marked as `true`), and the mock student blackboard discussions. Use this spec to constantly train local models to adapt directly to student profiles.\n\n---\n\n## 1. Multi-Modal Schema Parsing & Semantic Triangulation\nThe AI Model must execute three-way triangulation across our multi-module files:\n1. **The Question Bank (`src/data.ts` & `src/generator.ts`):** Standardize evaluations based on exact numerical metadata (Marks, Type, Cognitive Domain).\n2. **The Video Micro-Transcripts:** Extract timestamps from the `reference-videos` section to serve as micro-lessons when a student struggles.\n3. **The Mock Community Boards (`*-discussion.md`):** Match student errors to the real-life struggles, slang terms, and visual misconceptions (e.g., swapping Pop vs Gypsum subscripts) documented in the 50 threads.\n\n---\n\n## 2. Dynamic Cognitive Domain Mastery Model\nThe AI must maintain a persistent state of student mastery across five cognitive levels (based on Bloom's taxonomy in the national CBSE curriculum):\n\n| Cognitive Domain | Diagnosis Signal | Intervention Strategy |\n| :--- | :--- | :--- |\n| **Remembering** | Recalls definitions, formulas, balanced reactions. | Provide flashcards of equations / formulas. |\n| **Understanding** | Explains why a reaction is exothermic or why a lens is diverging. | Recommend video micro-transcripts segments at exact timestamps. |\n| **Applying** | Solves basic numerical problems (using basic series $R = R_1+R_2$). | Generate similar parameter variations. |\n| **Analyzing** | Solves complex double-triangle heights or multi-stage metallurgical runs. | Direct the student to the active brainstorming threads of the chapter. |\n| **Evaluating** | Proves Thales BPT theorem or verifies nature of roots using variables. | Offer a blank-canvas step-by-step master proof challenge. |\n\n### Mastery Score Formula\nFor any chapter $C$ and cognitive domain $D$, maintain a running mastery score $M_{C, D} \\in [0, 100]$ updated after every interaction:\n$$M_{C, D}^{(t+1)} = \\alpha \\cdot \\text{Score}_{\\text{Quiz}} + (1 - \\alpha) \\cdot M_{C, D}^{(t)}$$\nWhere:\n- $\\alpha = 0.3$ is the learning dampening rate.\n- $\\text{Score}_{\\text{Quiz}}$ is weighted by difficulty: `ASKED_BEFORE` past questions multiply scores by $1.2x$ due to board similarity stress.\n\n---\n\n## 3. Persistent Memory State & Student Profiling\nThe AI must initialize and persist a structured JSON memory profile for each student:\n\n```json\n{\n  \"studentId\": \"student-X-2026\",\n  \"subjectPerformance\": {\n    \"Science\": { \"globalMastery\": 72.5 },\n    \"Mathematics\": { \"globalMastery\": 64.2 }\n  },\n  \"chapterTriageList\": [\"light-reflection-refraction\", \"triangles\"],\n  \"misconceptionRegistry\": [\n    {\n      \"chapterId\": \"light-reflection-refraction\",\n      \"concept\": \"Magnification Sign Convention\",\n      \"errorPattern\": \"Treating positive magnification (m>0) as real, inverted images\",\n      \"severity\": \"High\",\n      \"remedialActionCount\": 3\n    }\n  ],\n  \"learningModePreferred\": \"solo_video_summaries\"\n}\n```\n\n---\n\n## 4. Adaptive Intervention Workflows (Real-Time loop)\nWhen a student initiates a session or appears for a mock test, the AI must cycle through this precise loop:\n\n```\n[Student Answers Quiz] -> [Calculate Score by Cognitive Domain]\n                                 |\n                                 v\n[Triage Code: Is Mastery < 60%?]\n  |\n  +-- YES --> [Check Misconception Registry] \n  |             -> [Inject matching Forum Thread discussion as peer fix]\n  |             -> [Provide targeted YouTube timestamp micro-lesson]\n  |\n  +-- NO  --> [Increase Difficulty Level]\n                -> [Promote to \"Evaluating\" category questions]\n```\n\n1. **Step 1: Diagnostics**\n   If the student fails a question on $P(E) + P(\\bar{E}) = 1$, do not repeat the definition. Trigger a section-level check.\n2. **Step 2: Triangulation Search**\n   Scan the chapter's discussion guide. Search for active conversation themes discussing \"at least vs at most\" coin tosses.\n3. **Step 3: Present Peer Solution**\n   Present the debate segment from the matched discussion *proactively* to make it look like a peer explanation:\n   *`\"Hey! I noticed you are struggling with at-least bounds. Look at how @cbse_warrior_10 explained it to @topper_aspirant in our Chapter forum...\"`*\n4. **Step 4: Micro-Lesson Insertion**\n   Provide the exact 1-minute transcript chunk summarizing the coin-toss sample paths from the best-performing YouTube resource.\n5. **Step 5: Master Re-Check**\n   Present a similar, procedurally varied question from the question repository where previous board scores were high to lock in the confidence loop.\n\n---\n\n## 5. Strict Restrictive Rules for the AI Persona\n- **No Retail Clutter**: Never encourage the student with self-praising or commercial tags (e.g. do NOT say \"You are doing outstanding, get our Premium course!\").\n- **Clear Mathematical Output**: Always format mathematical terms cleanly in LaTeX inside paragraphs so they are easy to scan.\n- **Micro-Lessons Over Monoliths**: Never output a massive wall of text. Break down explanations into a **Summary Card**, **The Visual Thread**, and **The Quick Solve**.\n",
+  "chapters": {
+    "acids-bases": {
+      "chapterId": "acids-bases",
+      "subject": "science",
+      "title": "Acids, Bases and Salts",
+      "sourceFile": "acids-bases-salts.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "H+ and OH- ion concentration",
+        "The pH Scale & Its Everyday Importance",
+        "Preparation and Uses of Bleaching Powder, Baking Soda, Washing Soda"
+      ],
+      "studySummary": "## Syllabus outline\n- H+ and OH- ion concentration\n- The pH Scale & Its Everyday Importance\n- Preparation and Uses of Bleaching Powder, Baking Soda, Washing Soda\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Acids, Bases and Salts - Full Revision One Shot",
+          "presenter": "Khan Academy India",
+          "url": "https://www.youtube.com/watch?v=D8i6uKIFHsY",
+          "youtubeId": "D8i6uKIFHsY",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/D8i6uKIFHsY",
+          "milestones": [
+            "H+ and OH- ion concentration",
+            "The pH Scale & Its Everyday Importance",
+            "Preparation and Uses of Bleaching Powder, Baking Soda, Washing Soda",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:10:45",
+              "text": "What makes an acid? It is the release of H+ or H3O+ hydronium ions in aqueous solution."
+            },
+            {
+              "time": "00:48:30",
+              "text": "Tooth decay starts when the pH of our mouth falls below 5.5! Acid digests enamel."
+            },
+            {
+              "time": "01:30:12",
+              "text": "Plaster of Paris gets its name because gypsum was found abundantly in Paris. Remember, it is Calcium Sulphate Hemihydrate."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Don't add water directly to concentrated acid! It is highly exothermic. Always add acid to water slowly, with constant stirring.",
+        "I lost 1 mark last year because I wrote CaSO4.2H2O for Plaster of Paris instead of Gypsum. Remember POP is Hemihydrate (1/2 H2O)!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=D8i6uKIFHsY"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "carbon": {
+      "chapterId": "carbon",
+      "subject": "science",
+      "title": "Carbon and its Compounds",
+      "sourceFile": "carbon-compounds.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Covalent bonding in Carbon",
+        "Catenation and tetravalency",
+        "Homologous series and Functional groups",
+        "Saponification & Soap cleaning action"
+      ],
+      "studySummary": "## Syllabus outline\n- Covalent bonding in Carbon\n- Catenation and tetravalency\n- Homologous series and Functional groups\n- Saponification & Soap cleaning action\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Carbon and its Compounds Class 10 | CBSE Science Chapter 4",
+          "presenter": "Physics Wallah Foundation",
+          "url": "https://www.youtube.com/watch?v=12qBpf2aIw4",
+          "youtubeId": "12qBpf2aIw4",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/12qBpf2aIw4",
+          "milestones": [
+            "Covalent bonding in Carbon",
+            "Catenation and tetravalency",
+            "Homologous series and Functional groups",
+            "Saponification & Soap cleaning action",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:20:10",
+              "text": "Carbon can neither lose 4 electrons nor gain 4 electrons due to energy constraints. It only shares!"
+            },
+            {
+              "time": "01:10:45",
+              "text": "Catenation is carbons superpower. No other element can form such incredibly long stable chains."
+            },
+            {
+              "time": "02:15:30",
+              "text": "Successive members of a homologous series differ by a -CH2- group which translates to 14 unified atomic mass units."
+            },
+            {
+              "time": "03:00:20",
+              "text": "Soap has a bipolar nature: a hydrophilic head that loves water, and a hydrophobic tail that grabs the grease molecule."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Esterification reaction is: Ethanoic acid + Ethanol -> Ethyl Ethanoate (sweet-smelling ester) in presence of acid catalyst.",
+        "Soaps do not work in hard water because they form scum (insoluble precipitate) with Calcium and Magnesium ions. Detergents solve this!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=12qBpf2aIw4"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "chem-reactions": {
+      "chapterId": "chem-reactions",
+      "subject": "science",
+      "title": "Chemical Reactions and Equations",
+      "sourceFile": "chem-reactions.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Law of conservation of mass",
+        "Types of chemical reactions: Combination, Decomposition, Displacement, Double Displacement",
+        "Redox Reactions and Rancidity"
+      ],
+      "studySummary": "## Syllabus outline\n- Law of conservation of mass\n- Types of chemical reactions: Combination, Decomposition, Displacement, Double Displacement\n- Redox Reactions and Rancidity\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Class 10 Chemical Reactions and Equations in One Shot 🎯",
+          "presenter": "Physics Wallah Foundation",
+          "url": "https://www.youtube.com/watch?v=25334wZluB4",
+          "youtubeId": "25334wZluB4",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/25334wZluB4",
+          "milestones": [
+            "Law of conservation of mass",
+            "Types of chemical reactions: Combination, Decomposition, Displacement, Double Displacement",
+            "Redox Reactions and Rancidity",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:01:15",
+              "text": "Hello Baccho! Today we start our most important chapter: Chemical Reactions and Equations."
+            },
+            {
+              "time": "00:15:30",
+              "text": "Remember, balancing is hit-and-trial but always conserve mass. Total mass of reactants = total mass of products."
+            },
+            {
+              "time": "00:45:20",
+              "text": "Look at this displacement reaction of Iron with Copper Sulphate. The blue solution turns pale green because of iron sulfate formation."
+            },
+            {
+              "time": "01:10:15",
+              "text": "Rancidity is nothing but oxidation of oil and fat content in food. Flush it with Nitrogen gas!"
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Alakh sir makes the displacement reaction series so easy to memorize! K, Na, Ca, Mg, Al, Zn, Fe, Pb, H, Cu, Hg, Ag, Au.",
+        "Remember the color of NO2 fumes is brown & PbO precipitate is yellow. They ask this almost every year in MCQs!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=25334wZluB4"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "control": {
+      "chapterId": "control",
+      "subject": "science",
+      "title": "Control and Coordination",
+      "sourceFile": "control-coordination.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Neurons and Synapse transmission",
+        "Reflex action and Reflex Arc flowchart",
+        "Plant Hormones (Auxin, Cytokinin, ABA)"
+      ],
+      "studySummary": "## Syllabus outline\n- Neurons and Synapse transmission\n- Reflex action and Reflex Arc flowchart\n- Plant Hormones (Auxin, Cytokinin, ABA)\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Control and Coordination One Shot CBSE Class 10 Biology",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=H_XJuPOdL1E",
+          "youtubeId": "H_XJuPOdL1E",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/H_XJuPOdL1E",
+          "milestones": [
+            "Neurons and Synapse transmission",
+            "Reflex action and Reflex Arc flowchart",
+            "Plant Hormones (Auxin, Cytokinin, ABA)",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:15:30",
+              "text": "Dendrites receive the signal, which travels via the axon as an electrical impulse to release chemicals at the synapse."
+            },
+            {
+              "time": "00:48:15",
+              "text": "A reflex arc bypasses the conscious brain. Receptor -> Sensory Neuron -> Spinal Cord -> Motor Neuron -> Effector (Muscle)."
+            },
+            {
+              "time": "01:30:45",
+              "text": "Phototropism is caused by Auxin migrating to the shaded side of the shoot, stimulating cell elongation on that side."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Abscisic acid is the antagonist of auxins and gibberellins. It acts as a growth inhibitor, causing wilting of leaves!",
+        "Thyroxine hormone regulates carbohydrate, protein, and fat metabolism. Our body requires iodine to synthesize thyroxine."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=H_XJuPOdL1E"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "electricity": {
+      "chapterId": "electricity",
+      "subject": "science",
+      "title": "Electricity",
+      "sourceFile": "electricity.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Ohm's Law verification",
+        "Factors affecting resistance and resistivity",
+        "Series and Parallel groupings",
+        "Joule's Law of heating & electrical power"
+      ],
+      "studySummary": "## Syllabus outline\n- Ohm's Law verification\n- Factors affecting resistance and resistivity\n- Series and Parallel groupings\n- Joule's Law of heating & electrical power\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Class 10 Physics Chapter 12: Electricity One Shot ⚡",
+          "presenter": "Sankalp Bharat Class 10",
+          "url": "https://www.youtube.com/watch?v=hct4zUuA5JI",
+          "youtubeId": "hct4zUuA5JI",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/hct4zUuA5JI",
+          "milestones": [
+            "Ohm's Law verification",
+            "Factors affecting resistance and resistivity",
+            "Series and Parallel groupings",
+            "Joule's Law of heating & electrical power",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:12:15",
+              "text": "Current is direct flow of charge: I = Q/t, measured in amperes. Potential difference: V = W/Q, measured in volts."
+            },
+            {
+              "time": "00:45:30",
+              "text": "Resistance is directly proportional to length and inversely to cross-section area: R = rho * L/A. Rho is resistivity, a material characteristic."
+            },
+            {
+              "time": "01:25:20",
+              "text": "In series, current is constant. In parallel, voltage is constant. Solve circuit diagrams keeping this in mind."
+            },
+            {
+              "time": "02:05:10",
+              "text": "Power is the rate of doing work. Commercially we measure in kWh. 1 kWh is 1 unit of electricity, which is 3.6 million Joules."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Remember! Resistivity does NOT change when length or thickness of wire is changed, only resistance changes. Resistivity changes only with material and temperature!",
+        "Heating effect is H = I^2 * R * t. Double the current, heat output becomes 4 times!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=hct4zUuA5JI"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "heredity": {
+      "chapterId": "heredity",
+      "subject": "science",
+      "title": "Heredity",
+      "sourceFile": "heredity.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Mendel’s monohybrid and dihybrid crosses",
+        "Law of segregation & Independent Assortment",
+        "Human sex determination"
+      ],
+      "studySummary": "## Syllabus outline\n- Mendel’s monohybrid and dihybrid crosses\n- Law of segregation & Independent Assortment\n- Human sex determination\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Heredity Class 10 Biology Full One Shot",
+          "presenter": "Dear Sir Science",
+          "url": "https://www.youtube.com/watch?v=Heredity10",
+          "youtubeId": "Heredity10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Heredity10",
+          "milestones": [
+            "Mendel’s monohybrid and dihybrid crosses",
+            "Law of segregation & Independent Assortment",
+            "Human sex determination",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:12:40",
+              "text": "In a monohybrid cross of tall and short plants, the F2 generation phenotype ratio is 3:1 (Tall:Dwarf)."
+            },
+            {
+              "time": "00:25:30",
+              "text": "Dihybrid cross (Round-Yellow x Wrinkled-Green) gives the famous 9:3:3:1 ratio, showing traits assort independently."
+            },
+            {
+              "time": "00:40:10",
+              "text": "Sex determination: Human males carry XY chromosomes, females carry XX. Hence, the fathers sperm determines the baby's sex."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "F2 genotypic ratio of monohybrid cross is 1:2:1 (TT:Tt:tt). Phenotypic is 3:1. This is a very common trick question!",
+        "Sex determination is fully probabilistic. A 50% chance of a boy and 50% chance of a girl is maintained at every fertilizing event."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=Heredity10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "human-eye": {
+      "chapterId": "human-eye",
+      "subject": "science",
+      "title": "The Human Eye and the Colourful World",
+      "sourceFile": "human-eye-colourful-world.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Defects of vision: Myopia, Hypermetropia, Presbyopia",
+        "Atmospheric Refraction effects: Twinkling stars, advanced sunrise",
+        "Dispersion through prism",
+        "Scattering of light: Tyndall effect, red sunset"
+      ],
+      "studySummary": "## Syllabus outline\n- Defects of vision: Myopia, Hypermetropia, Presbyopia\n- Atmospheric Refraction effects: Twinkling stars, advanced sunrise\n- Dispersion through prism\n- Scattering of light: Tyndall effect, red sunset\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Human Eye and its defects & Colourful World",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=H_XJuPOdL1E",
+          "youtubeId": "H_XJuPOdL1E",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/H_XJuPOdL1E",
+          "milestones": [
+            "Defects of vision: Myopia, Hypermetropia, Presbyopia",
+            "Atmospheric Refraction effects: Twinkling stars, advanced sunrise",
+            "Dispersion through prism",
+            "Scattering of light: Tyndall effect, red sunset",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:10:20",
+              "text": "Myopia is near-sightedness. Ciliary muscles fail to relax or eyeball is elongated. Corrected by a concave lens."
+            },
+            {
+              "time": "00:48:10",
+              "text": "Hypermetropia is corrected by a convex lens. Presbyopia requires bi-focal lenses."
+            },
+            {
+              "time": "01:15:35",
+              "text": "Stars twinkle but planets do not because star resembles point source while planet acts as an extended source."
+            },
+            {
+              "time": "01:35:50",
+              "text": "Scattering is inversely proportional to wavelength. Red has the longest wavelength, hence it scatters the least, warning signals are red."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Dispersion inside a prism is caused because different colors of light bend at different angles since the velocity of light changes in glass for different wavelengths.",
+        "Tyndall effect is the scattering of light by colloidal particles. This is why a light beam is visible in a dusty room!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=H_XJuPOdL1E"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "life": {
+      "chapterId": "life",
+      "subject": "science",
+      "title": "Life Processes",
+      "sourceFile": "life-processes.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Photosynthesis and autotrophic nutrition",
+        "Breathing & Cell Respiration pathways",
+        "Human Circulatory & Excretory (Nephron) systems"
+      ],
+      "studySummary": "## Syllabus outline\n- Photosynthesis and autotrophic nutrition\n- Breathing & Cell Respiration pathways\n- Human Circulatory & Excretory (Nephron) systems\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Life Processes One Shot Class 10 Science Biology ⚡",
+          "presenter": "Vedantu Class 9 & 10",
+          "url": "https://www.youtube.com/watch?v=zdL856iY5jw",
+          "youtubeId": "zdL856iY5jw",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/zdL856iY5jw",
+          "milestones": [
+            "Photosynthesis and autotrophic nutrition",
+            "Breathing & Cell Respiration pathways",
+            "Human Circulatory & Excretory (Nephron) systems",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:18:40",
+              "text": "Guard cells open and close the stomatal pore. Water entry causes them to swell and arch open."
+            },
+            {
+              "time": "01:05:12",
+              "text": "Glucose breaks down into pyruvate in yeast anaerobically to yield ethanol and carbon dioxide."
+            },
+            {
+              "time": "01:50:35",
+              "text": "Double circulation separates oxygenated and deoxygenated blood. Warm-blooded animals need high energy to maintain constant body heat."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "The breakdown of glucose occurs in cytoplasm (glycolysis to form pyruvate), and further breakdown in mitochondria (aerobic) or cytoplasm (anaerobic).",
+        "For drawing the heart, remember: Left side is for Oxygenated, Right is for Deoxygenated. Keep it clean!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=zdL856iY5jw"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "light": {
+      "chapterId": "light",
+      "subject": "science",
+      "title": "Light – Reflection and Refraction",
+      "sourceFile": "light-reflection-refraction.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Mirror formula vs Lens formula signs",
+        "Spherical mirrors ray diagrams",
+        "Refractive index & Snell’s Law",
+        "Power of lenses"
+      ],
+      "studySummary": "## Syllabus outline\n- Mirror formula vs Lens formula signs\n- Spherical mirrors ray diagrams\n- Refractive index & Snell’s Law\n- Power of lenses\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Light: Reflection and Refraction in One Shot 💡",
+          "presenter": "Physics Wallah Class 10",
+          "url": "https://www.youtube.com/watch?v=-Eiv6XiUhSc",
+          "youtubeId": "-Eiv6XiUhSc",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/-Eiv6XiUhSc",
+          "milestones": [
+            "Mirror formula vs Lens formula signs",
+            "Spherical mirrors ray diagrams",
+            "Refractive index & Snell’s Law",
+            "Power of lenses",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:15:30",
+              "text": "Object distance (u) is always negative for both lenses and mirrors. Keep this as a golden rule."
+            },
+            {
+              "time": "00:45:10",
+              "text": "Concave mirror produces virtual & magnified image only when object is between Pole and Focus."
+            },
+            {
+              "time": "01:30:15",
+              "text": "Refractive index of medium 2 with respect to 1 is speed of light in 1 divided by speed of light in 2."
+            },
+            {
+              "time": "02:10:45",
+              "text": "Lens formula uses minus: 1/f = 1/v - 1/u. Mirror formula uses plus: 1/f = 1/v + 1/u."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "If magnification (m) is negative, image is real & inverted. If (m) is positive, image is virtual & erect. Master this!",
+        "Since power P = 1/f (in meters), focal length must be converted to meters! Do not substitute directly in cm!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=-Eiv6XiUhSc"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "magnetism": {
+      "chapterId": "magnetism",
+      "subject": "science",
+      "title": "Magnetic Effects of Electric Current",
+      "sourceFile": "magnetic-effects-current.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Magnetic field and field lines properties",
+        "Straight wire, circular loop, and solenoid fields",
+        "Fleming’s Left-Hand Rule",
+        "Domestic electrical circuits"
+      ],
+      "studySummary": "## Syllabus outline\n- Magnetic field and field lines properties\n- Straight wire, circular loop, and solenoid fields\n- Fleming’s Left-Hand Rule\n- Domestic electrical circuits\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Magnetic Effects of Electric Current One Shot Class 10",
+          "presenter": "Physics Wallah Foundation",
+          "url": "https://www.youtube.com/watch?v=magnetism10",
+          "youtubeId": "magnetism10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/magnetism10",
+          "milestones": [
+            "Magnetic field and field lines properties",
+            "Straight wire, circular loop, and solenoid fields",
+            "Fleming’s Left-Hand Rule",
+            "Domestic electrical circuits",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:15:10",
+              "text": "Magnetic field lines emerge from North pole and enter South pole outside magnet, and go South to North inside."
+            },
+            {
+              "time": "00:50:35",
+              "text": "Solenoid is a cylindrical coil. Active solenoid behaves exactly like a bar magnet."
+            },
+            {
+              "time": "01:22:15",
+              "text": "Fleming’s Left-Hand Rule: Stretch your thumb, forefinger, and middle finger orthogonal. Father (Force) -> Mother (Magnetic Field) -> Child (Current)."
+            },
+            {
+              "time": "01:55:10",
+              "text": "Domestic circuit has Live (red), Neutral (black), and Earth (green) wires. Fuse is a safety device connected in series with the live wire."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Two magnetic field lines never intersect! Because if they did, the compass at the point of intersection would point in two directions, which is impossible.",
+        "Short-circuiting happens when the Live wire and Neutral wire come into direct contact. Current rises massively, causing fire. Fuse melted = safe!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=magnetism10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "metals": {
+      "chapterId": "metals",
+      "subject": "science",
+      "title": "Metals and Non-metals",
+      "sourceFile": "metals-non-metals.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Physical and chemical properties of metals",
+        "Amphoteric oxides",
+        "Thermite reaction & Extraction of low/medium/high reactivity metals"
+      ],
+      "studySummary": "## Syllabus outline\n- Physical and chemical properties of metals\n- Amphoteric oxides\n- Thermite reaction & Extraction of low/medium/high reactivity metals\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Metals and Non-Metals - Class 10 Board Chemistry Revision",
+          "presenter": "Dear Sir",
+          "url": "https://www.youtube.com/watch?v=n9_lnvs1KKY",
+          "youtubeId": "n9_lnvs1KKY",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/n9_lnvs1KKY",
+          "milestones": [
+            "Physical and chemical properties of metals",
+            "Amphoteric oxides",
+            "Thermite reaction & Extraction of low/medium/high reactivity metals",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:15:20",
+              "text": "Gold and Platinum are lustrous and highly malleable, hence perfect for jewelry."
+            },
+            {
+              "time": "00:55:40",
+              "text": "Amphoteric oxides react with both acids and bases to yield salt and water! Exemplified by Zinc Oxide (ZnO) and Aluminium Oxide (Al2O3)."
+            },
+            {
+              "time": "01:22:15",
+              "text": "In the thermite process, Aluminium reduction of Iron Oxide is so highly exothermic that the iron is obtained in molten state to join rails!"
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Roasting is for Sulphide Ores (heated in excess air) and Calcination is for Carbonate Ores (heated in absence/limited air).",
+        "Aqua regia is a 3:1 mixture of concentrated HCl and HNO3. Extremely powerful, can dissolve even gold!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=n9_lnvs1KKY"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "reproduction": {
+      "chapterId": "reproduction",
+      "subject": "science",
+      "title": "How do Organisms Reproduce?",
+      "sourceFile": "organisms-reproduce.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Asexual reproduction: Fission, Budding, Vegetative Propagation",
+        "Longitudinal Section of flower & Double Fertilization",
+        "Male & Female reproductive health"
+      ],
+      "studySummary": "## Syllabus outline\n- Asexual reproduction: Fission, Budding, Vegetative Propagation\n- Longitudinal Section of flower & Double Fertilization\n- Male & Female reproductive health\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "How Do Organisms Reproduce Class 10 boards Special",
+          "presenter": "Unacademy Class 9 & 10",
+          "url": "https://www.youtube.com/watch?v=YmU-1002Y",
+          "youtubeId": "YmU-1002Y",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/YmU-1002Y",
+          "milestones": [
+            "Asexual reproduction: Fission, Budding, Vegetative Propagation",
+            "Longitudinal Section of flower & Double Fertilization",
+            "Male & Female reproductive health",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:20:15",
+              "text": "Amoeba divides in any plane, but Leishmania has a whip-like structure and divides longitudinally."
+            },
+            {
+              "time": "00:55:30",
+              "text": "Double fertilization is unique to flowers. One male gamete fuses with egg to form zygote, other fuses with polar nuclei to form endosperm."
+            },
+            {
+              "time": "01:40:15",
+              "text": "Contraception is vital. Avoid STDs using barrier methods like condoms."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Do not forget the difference between pollination and fertilization. Pollination is safe transfer, fertilization is the actual fusion!",
+        "Surgical methods like vasectomy (in males) and tubectomy (in females) are permanent blocks."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=YmU-1002Y"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "sources-of-energy": {
+      "chapterId": "sources-of-energy",
+      "subject": "science",
+      "title": "Sources of Energy",
+      "sourceFile": "sources-energy.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Good sources of energy and ideal fuels",
+        "Conventional vs Alternative energy sources",
+        "Biogas plants, hydro plants, wind energy, solar energy"
+      ],
+      "studySummary": "## Syllabus outline\n- Good sources of energy and ideal fuels\n- Conventional vs Alternative energy sources\n- Biogas plants, hydro plants, wind energy, solar energy\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Class 10 Sources of Energy One Shot | Physics",
+          "presenter": "BYJUS Class 9 & 10",
+          "url": "https://www.youtube.com/watch?v=energy10",
+          "youtubeId": "energy10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/energy10",
+          "milestones": [
+            "Good sources of energy and ideal fuels",
+            "Conventional vs Alternative energy sources",
+            "Biogas plants, hydro plants, wind energy, solar energy",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:10:45",
+              "text": "An ideal fuel must possess high calorific value, moderate ignition temperature, and leave no hazardous residues."
+            },
+            {
+              "time": "00:35:12",
+              "text": "Biogas is produced by anaerobic fermentation of organic slurry. It contains 75% methane, making it an excellent fuel."
+            },
+            {
+              "time": "01:10:30",
+              "text": "Solar cells are made of silicon. They have no moving parts, need no maintenance, and are highly eco-friendly."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Hydroelectric power is renewable but construction of large dams has high ecological costs like displacement of communities and loss of biodiversity.",
+        "Wind energy farms require minimum wind speed of 15 km/h to maintain turbine rotation generators."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=energy10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "trig-apps": {
+      "chapterId": "trig-apps",
+      "subject": "mathematics",
+      "title": "Some Applications of Trigonometry",
+      "sourceFile": "applications-trigonometry.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Line of sight and elevations",
+        "Angle of depression vs Elevation",
+        "Solving double-triangle trig equations"
+      ],
+      "studySummary": "## Syllabus outline\n- Line of sight and elevations\n- Angle of depression vs Elevation\n- Solving double-triangle trig equations\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Some Applications of Trigonometry Class 10 One Shot",
+          "presenter": "Dear Sir Maths",
+          "url": "https://www.youtube.com/watch?v=heights10",
+          "youtubeId": "heights10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/heights10",
+          "milestones": [
+            "Line of sight and elevations",
+            "Angle of depression vs Elevation",
+            "Solving double-triangle trig equations",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:10:45",
+              "text": "Angle of elevation is looking up, depression is looking down from horizontal reference."
+            },
+            {
+              "time": "00:45:20",
+              "text": "Real world problems have two right triangles sharing a common vertical pole (h) or horizontal base (x)."
+            },
+            {
+              "time": "01:22:15",
+              "text": "Write down the trigonometric ratio equation for both triangles separately, substitute the common term, and solve."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "95% of heights and distances questions use tan(30) = 1/sqrt(3), tan(45) = 1, or tan(60) = sqrt(3). Keep these values on your fingertips!",
+        "Remember! Angle of depression of a car is always equal to its angle of elevation from ground. Use alternate interior angles to prove it!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=heights10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "areas-circles": {
+      "chapterId": "areas-circles",
+      "subject": "mathematics",
+      "title": "Areas Related to Circles",
+      "sourceFile": "areas-circles.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Area and perimeter values",
+        "Area of minor and major sectors of circles",
+        "Area of segments of circles"
+      ],
+      "studySummary": "## Syllabus outline\n- Area and perimeter values\n- Area of minor and major sectors of circles\n- Area of segments of circles\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Areas Related to Circles Class 10 Maths Chapter 12",
+          "presenter": "Unacademy Class 9 & 10",
+          "url": "https://www.youtube.com/watch?v=areas_circles10",
+          "youtubeId": "areas_circles10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/areas_circles10",
+          "milestones": [
+            "Area and perimeter values",
+            "Area of minor and major sectors of circles",
+            "Area of segments of circles",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:12:15",
+              "text": "Area of circle is pi * r^2. Circumference is 2 * pi * r."
+            },
+            {
+              "time": "00:48:30",
+              "text": "Area of sector of angle theta is (theta / 360) * pi * r^2."
+            },
+            {
+              "time": "01:15:45",
+              "text": "Area of segment = Area of sector - Area of corresponding triangle ($1/2 * r^2 * \\sin \\theta$)."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "For $\\theta = 90$ triangle, area is $1/2 * r^2$. For $\\theta = 60$, it is equilateral triangle with area $\\frac{\\sqrt{3}}{4} * r^2$.",
+        "Be very careful! Read if question asks for Major Segment or Minor Segment or Major Sector!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=areas_circles10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "ap": {
+      "chapterId": "ap",
+      "subject": "mathematics",
+      "title": "Arithmetic Progressions",
+      "sourceFile": "arithmetic-progressions.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "First term a and common difference d",
+        "Computing general n-th term an",
+        "Deriving and applying sum of n terms Sn"
+      ],
+      "studySummary": "## Syllabus outline\n- First term a and common difference d\n- Computing general n-th term an\n- Deriving and applying sum of n terms Sn\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Arithmetic Progression One Shot Class 10 Maths",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=ap10",
+          "youtubeId": "",
+          "embedUrl": "",
+          "milestones": [
+            "First term a and common difference d",
+            "Computing general n-th term an",
+            "Deriving and applying sum of n terms Sn",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:12:30",
+              "text": "An AP must have a constant common difference: d = an - a(n-1). It can be positive, negative, or zero."
+            },
+            {
+              "time": "00:45:15",
+              "text": "General term is an = a + (n-1)d. If they ask from end: an_end = l - (n-1)d."
+            },
+            {
+              "time": "01:25:30",
+              "text": "Sum of n terms is Sn = n/2 * [2a + (n-1)d] or Sn = n/2 * [a + l]."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "If three terms are in AP, always choose them as (a-d), a, (a+d). Their sum is 3a, which instantly yields the middle term! Super secret trick.",
+        "To find n-th term when sum Sn is given, use: an = Sn - S(n-1). This is incredibly elegant!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=ap10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "circles": {
+      "chapterId": "circles",
+      "subject": "mathematics",
+      "title": "Circles",
+      "sourceFile": "circles.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Tangent definitions and intersections",
+        "Theorem 1: Tangent perpendicular to radius",
+        "Theorem 2: Length of external tangents are equal"
+      ],
+      "studySummary": "## Syllabus outline\n- Tangent definitions and intersections\n- Theorem 1: Tangent perpendicular to radius\n- Theorem 2: Length of external tangents are equal\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Circles Geometry Class 10 Maths Chapter 10 ⭕",
+          "presenter": "BYJUS Class 10",
+          "url": "https://www.youtube.com/watch?v=circles10",
+          "youtubeId": "circles10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/circles10",
+          "milestones": [
+            "Tangent definitions and intersections",
+            "Theorem 1: Tangent perpendicular to radius",
+            "Theorem 2: Length of external tangents are equal",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:10:20",
+              "text": "A tangent is a line intersecting circle at exactly one single contact point."
+            },
+            {
+              "time": "00:45:30",
+              "text": "Theorem 1: Tangent is perpendicular to radius at point of contact. (OP is perpendicular to AB)."
+            },
+            {
+              "time": "01:15:40",
+              "text": "Theorem 2: Lengths of tangents from an external point are equal. (PA = PB). Re-proved inside boards constantly!"
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Theorem 2 proof is simple: Join centers to external point. OP is common. radiuses are equal. angles are 90 (Theorem 1). By RHS, triangles are congruent, hence PA = PB!",
+        "Quadrilateral circumscribing a circle: AB + CD = AD + BC. This is highly repeated in board papers!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=circles10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "constructions": {
+      "chapterId": "constructions",
+      "subject": "mathematics",
+      "title": "Constructions",
+      "sourceFile": "constructions.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Dividing line segment in ratio internally",
+        "Constructing tangent pairs from external coordinates",
+        "Steps of construction descriptions"
+      ],
+      "studySummary": "## Syllabus outline\n- Dividing line segment in ratio internally\n- Constructing tangent pairs from external coordinates\n- Steps of construction descriptions\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Constructions One Shot Class 10 Maths Chapter 11",
+          "presenter": "CBSE Maths Class 10",
+          "url": "https://www.youtube.com/watch?v=construct10",
+          "youtubeId": "construct10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/construct10",
+          "milestones": [
+            "Dividing line segment in ratio internally",
+            "Constructing tangent pairs from external coordinates",
+            "Steps of construction descriptions",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:08:45",
+              "text": "Draw an acute angle ray below the line segment. Mark equal segments."
+            },
+            {
+              "time": "00:35:10",
+              "text": "To draw tangents: Draw circle. Mark point P. Join OP. Bisect OP to find midpoint M. Draw new circle with M."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Always write down the steps of construction along with the diagram! It carries 1-2 marks in full-length questions.",
+        "Keep your compass pencil extremely sharp for neat intersections other wise scales might error out."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=construct10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "coordinate": {
+      "chapterId": "coordinate",
+      "subject": "mathematics",
+      "title": "Coordinate Geometry",
+      "sourceFile": "coordinate-geometry.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Distance Formula derivation & applications",
+        "Section Formula: Internal divisions",
+        "Midpoint and area of collinear points"
+      ],
+      "studySummary": "## Syllabus outline\n- Distance Formula derivation & applications\n- Section Formula: Internal divisions\n- Midpoint and area of collinear points\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Coordinate Geometry Class 10 Maths Chapter 7 One Shot",
+          "presenter": "Sankalp Bharat Class 10",
+          "url": "https://www.youtube.com/watch?v=coordinates10",
+          "youtubeId": "coordinates10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/coordinates10",
+          "milestones": [
+            "Distance Formula derivation & applications",
+            "Section Formula: Internal divisions",
+            "Midpoint and area of collinear points",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:10:15",
+              "text": "Distance is d = sqrt[(x2-x1)^2 + (y2-y1)^2]. It is derived from Pythagoras."
+            },
+            {
+              "time": "00:40:35",
+              "text": "Section formula for m1:m2 is x = (m1x2 + m2x1)/(m1+m2), y = (m1y2 + m2y1)/(m1+m2)."
+            },
+            {
+              "time": "01:15:20",
+              "text": "If points are collinear, area of triangle formed by them must be set to ZERO."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "If ratio is not given, always assume it is k:1 instead of m:n. It changes the equation to one single variable k, which is much faster to solve!",
+        "Parallelogram coordinates: opposite diagonals bisect each other! Equate midpoints of diagonals to find missing vertices easily."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=coordinates10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "trigonometry": {
+      "chapterId": "trigonometry",
+      "subject": "mathematics",
+      "title": "Introduction to Trigonometry",
+      "sourceFile": "intro-trigonometry.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Trigonometric Ratios definitions",
+        "Trigonometric table of specific angles",
+        "Trigonometric identity proofs techniques"
+      ],
+      "studySummary": "## Syllabus outline\n- Trigonometric Ratios definitions\n- Trigonometric table of specific angles\n- Trigonometric identity proofs techniques\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Introduction to Trigonometry Class 10 Maths One Shot 📐",
+          "presenter": "Unacademy CBSE Class 10",
+          "url": "https://www.youtube.com/watch?v=QVQhF01i6dE",
+          "youtubeId": "QVQhF01i6dE",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/QVQhF01i6dE",
+          "milestones": [
+            "Trigonometric Ratios definitions",
+            "Trigonometric table of specific angles",
+            "Trigonometric identity proofs techniques",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:15:10",
+              "text": "sin is Perpendicular/Hypotenuse, cos is Base/Hypotenuse, tan is Perpendicular/Base."
+            },
+            {
+              "time": "00:55:45",
+              "text": "Memorize specific angle values! Sin: 0, 1/2, 1/sqrt(2), sqrt(3)/2, 1. Cos is just reverse order!"
+            },
+            {
+              "time": "01:40:20",
+              "text": "Master the three fundamental identities: sin^2 + cos^2 = 1, 1+tan^2 = sec^2, 1+cot^2 = cosec^2."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "To solve identity proof questions, when stuck, write everything in terms of sin and cos first! 90% of identity questions resolve immediately using this approach.",
+        "For standard tables, write 0, 1, 2, 3, 4, divide all by 4 and take square root. You get the sin values! Try it!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=QVQhF01i6dE"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "linear-eq": {
+      "chapterId": "linear-eq",
+      "subject": "mathematics",
+      "title": "Pair of Linear Equations in Two Variables",
+      "sourceFile": "linear-equations.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Graphical method of solving linear systems",
+        "Consistency and incompatibility criteria",
+        "Algebraic methods: Substitution and Elimination"
+      ],
+      "studySummary": "## Syllabus outline\n- Graphical method of solving linear systems\n- Consistency and incompatibility criteria\n- Algebraic methods: Substitution and Elimination\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Pair of Linear Equations in Two Variables Full Class 10 Maths",
+          "presenter": "Unacademy Class 10",
+          "url": "https://www.youtube.com/watch?v=linear10",
+          "youtubeId": "linear10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/linear10",
+          "milestones": [
+            "Graphical method of solving linear systems",
+            "Consistency and incompatibility criteria",
+            "Algebraic methods: Substitution and Elimination",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:15:20",
+              "text": "Consistency is based on ratios. If a1/a2 is not equal to b1/b2, we have intersecting lines with exactly one unique solution."
+            },
+            {
+              "time": "00:45:10",
+              "text": "If a1/a2 = b1/b2 = c1/c2, lines are coincident. Infinitely many solutions."
+            },
+            {
+              "time": "01:15:30",
+              "text": "If a1/a2 = b1/b2 but not equal to c1/c2, lines are parallel. No solution, making system inconsistent."
+            },
+            {
+              "time": "01:45:20",
+              "text": "For solving, elimination is usually much faster than substitution and has fewer calculation error pathways."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Do not forget to rearrange equations into standard form ax + by + c = 0 before taking the ratios!",
+        "In upstream/downstream boat problems, speed upstream is (x-y) and downstream is (x+y) km/h. It reduces to a linear system easily!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=linear10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "polynomials": {
+      "chapterId": "polynomials",
+      "subject": "mathematics",
+      "title": "Polynomials",
+      "sourceFile": "polynomials.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Geometrical meaning of zeroes (intersections with x-axis)",
+        "Relationships between zeroes and coefficients of quadratic polynomials",
+        "Algebraic conversions of symmetric identities like $\\alpha^2 + \\beta^2$"
+      ],
+      "studySummary": "## Syllabus outline\n- Geometrical meaning of zeroes (intersections with x-axis)\n- Relationships between zeroes and coefficients of quadratic polynomials\n- Algebraic conversions of symmetric identities like $\\alpha^2 + \\beta^2$\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Polynomials Full Chapter Revision Class 10 Maths 📐",
+          "presenter": "CBSE Class 10 Maths",
+          "url": "https://www.youtube.com/watch?v=MlZHwZo33qo",
+          "youtubeId": "MlZHwZo33qo",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/MlZHwZo33qo",
+          "milestones": [
+            "Geometrical meaning of zeroes (intersections with x-axis)",
+            "Relationships between zeroes and coefficients of quadratic polynomials",
+            "Algebraic conversions of symmetric identities like $\\alpha^2 + \\beta^2$",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:10:15",
+              "text": "A quadratic polynomial graph is represented by a parabola. The number of times it intersects the x-axis points directly to the number of zeroes."
+            },
+            {
+              "time": "00:35:40",
+              "text": "For any quadratic $ax^2 + bx + c$, the sum of zeroes is $-b/a$ and the product of zeroes is $c/a$. Memorize this!"
+            },
+            {
+              "time": "01:02:15",
+              "text": "If asked to find $\\alpha^2 + \\beta^2$, convert it to algebraic aggregates: $(\\alpha + \\beta)^2 - 2\\alpha\\beta$. Now plug in the coefficients!"
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Identity formulas like alpha^3 + beta^3 can be solved by writing (alpha+beta)^3 - 3*alpha*beta*(alpha+beta). Super useful!",
+        "A parabola opens upwards if a > 0, and downwards if a < 0 in y = ax^2 + bx + c."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=MlZHwZo33qo"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "probability": {
+      "chapterId": "probability",
+      "subject": "mathematics",
+      "title": "Probability",
+      "sourceFile": "probability.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Equally likely outcomes and classical probability",
+        "Complementary events math",
+        "Coins tossing, dice rolling, cards deck outcomes"
+      ],
+      "studySummary": "## Syllabus outline\n- Equally likely outcomes and classical probability\n- Complementary events math\n- Coins tossing, dice rolling, cards deck outcomes\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Probability Class 10 Maths Chapter 15 One Shot 🎲",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=prob10",
+          "youtubeId": "prob10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/prob10",
+          "milestones": [
+            "Equally likely outcomes and classical probability",
+            "Complementary events math",
+            "Coins tossing, dice rolling, cards deck outcomes",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:12:15",
+              "text": "Probability always lies between 0 and 1 inclusive: 0 <= P(E) <= 1."
+            },
+            {
+              "time": "00:35:10",
+              "text": "Complementary probability: P(E) + P(not E) = 1."
+            },
+            {
+              "time": "01:05:35",
+              "text": "Card deck contains 52 cards: 26 red, 26 black. Red: 13 hearts, 13 diamonds. Black: 13 spades, 13 clubs. Face cards: 12 (J, Q, K)."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "When tossing three coins simultaneously, total outcomes is 2^3 = 8. (HHH, HHT, HTH, HTT, THH, THT, TTH, TTT).",
+        "Rolling two dice simultaneously: total outcomes is 6^2 = 36. Sum of 11 holds outcome (5,6), (6,5) = 2/36!"
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=prob10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "quadratic": {
+      "chapterId": "quadratic",
+      "subject": "mathematics",
+      "title": "Quadratic Equations",
+      "sourceFile": "quadratic-equations.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Standard form ax^2 + bx + c = 0",
+        "Solving by factorization and Quadratic formula",
+        "Nature of roots based on discriminant D"
+      ],
+      "studySummary": "## Syllabus outline\n- Standard form ax^2 + bx + c = 0\n- Solving by factorization and Quadratic formula\n- Nature of roots based on discriminant D\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Quadratic Equations One Shot Revision Class 10 🎯",
+          "presenter": "CBSE Class 10 Maths",
+          "url": "https://www.youtube.com/watch?v=quadratic10",
+          "youtubeId": "quadratic10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/quadratic10",
+          "milestones": [
+            "Standard form ax^2 + bx + c = 0",
+            "Solving by factorization and Quadratic formula",
+            "Nature of roots based on discriminant D",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:15:20",
+              "text": "Real life word problems like speed-distance or pipe-fill flows reduce to a quadratic equation."
+            },
+            {
+              "time": "00:50:35",
+              "text": "Quadratic formula (Sridharacharya formula) is x = [-b +/- sqrt(b^2 - 4ac)] / 2a."
+            },
+            {
+              "time": "01:30:15",
+              "text": "Discriminant D = b^2 - 4ac determines nature. D > 0 (Distinct real roots), D = 0 (Equal real roots), D < 0 (Imaginary/no real roots)."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "If they say equation has equal roots, instantly set D = 0 and solve for the unknown parameter k!",
+        "For water tap work problems, rate of filling is 1/x parts per hour. Add individual rates to get joint rate."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=quadratic10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "real-numbers": {
+      "chapterId": "real-numbers",
+      "subject": "mathematics",
+      "title": "Real Numbers",
+      "sourceFile": "real-numbers.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Prime Factorization uniqueness",
+        "HCF and LCM relation for real integers",
+        "Method of contradiction for proving irrationals like $\\sqrt{3}$"
+      ],
+      "studySummary": "## Syllabus outline\n- Prime Factorization uniqueness\n- HCF and LCM relation for real integers\n- Method of contradiction for proving irrationals like $\\sqrt{3}$\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Real Numbers Class 10 Maths Chapter 1 One Shot",
+          "presenter": "Dear Sir Mathematics",
+          "url": "https://www.youtube.com/watch?v=dXMYdUcfb6w",
+          "youtubeId": "dXMYdUcfb6w",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/dXMYdUcfb6w",
+          "milestones": [
+            "Prime Factorization uniqueness",
+            "HCF and LCM relation for real integers",
+            "Method of contradiction for proving irrationals like $\\sqrt{3}$",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:05:20",
+              "text": "Real numbers are rational or irrational. Rationals terminate or repeat. Irrationals simply go on forever without repeat."
+            },
+            {
+              "time": "00:30:15",
+              "text": "Fundamental Theorem of Arithmetic: Every composite number has a unique prime factorization footprints."
+            },
+            {
+              "time": "01:02:40",
+              "text": "Let's prove $\\sqrt{5}$ is irrational. Assume it is rational: $\\sqrt{5} = a/b$ with coprime integers $a$ and $b$. Squaring gives $a^2 = 5b^2$ which leads to contradiction."
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "Always remember: HCF(a,b) * LCM(a,b) = a * b. This is only true for TWO numbers, not three! This is a very common board mistake.",
+        "The co-prime assumption is key in the contradiction proof. If both a and b have 5 as a common factor, they are no longer co-prime, hence proving our assumption wrong."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=dXMYdUcfb6w"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "statistics": {
+      "chapterId": "statistics",
+      "subject": "mathematics",
+      "title": "Statistics",
+      "sourceFile": "statistics.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Mean of grouped frequency data (Step-deviation)",
+        "Median of grouped frequency data",
+        "Mode of grouped frequency data",
+        "Empirical relation between measures"
+      ],
+      "studySummary": "## Syllabus outline\n- Mean of grouped frequency data (Step-deviation)\n- Median of grouped frequency data\n- Mode of grouped frequency data\n- Empirical relation between measures\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Statistics Chapter 14 One Shot Class 10 Maths",
+          "presenter": "CBSE Class 10 Maths",
+          "url": "https://www.youtube.com/watch?v=stats10",
+          "youtubeId": "stats10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/stats10",
+          "milestones": [
+            "Mean of grouped frequency data (Step-deviation)",
+            "Median of grouped frequency data",
+            "Mode of grouped frequency data",
+            "Empirical relation between measures",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:15:20",
+              "text": "Mean: Direct method, assumed mean method, step deviation method."
+            },
+            {
+              "time": "00:55:10",
+              "text": "Mode = l + [(f1 - f0)/(2f1 - f0 - f2)] * h. Modal class has highest frequency."
+            },
+            {
+              "time": "01:30:15",
+              "text": "Median = l + [(n/2 - cf)/f] * h. Cumulative frequency cf is from preceding class."
+            },
+            {
+              "time": "02:00:10",
+              "text": "Empirical relationship: Mode = 3 Median - 2 Mean. Re-checked in board MCQs constantly!"
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "The 'cf' (Cumulative Frequency) term used in Median formula is ALWAYS the cumulative frequency of the CLASS PRECEDING the median class! Double check this!",
+        "Equation holds: 3 Median = Mode + 2 Mean. Easy to remember like alphabetical order: Me-di-an (six letters, multiplied by 3), Mo-de (four letters, multiplied by 1)."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=stats10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "surface-volume": {
+      "chapterId": "surface-volume",
+      "subject": "mathematics",
+      "title": "Surface Areas and Volumes",
+      "sourceFile": "surface-areas-volumes.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Combinations of solids: Cubes, cylinders, cones, spheres",
+        "Surface area of combined shapes",
+        "Volume of combined shapes"
+      ],
+      "studySummary": "## Syllabus outline\n- Combinations of solids: Cubes, cylinders, cones, spheres\n- Surface area of combined shapes\n- Volume of combined shapes\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Surface Areas and Volumes Class 10 Maths Chapter 13 📦",
+          "presenter": "BYJUS Maths Class 10",
+          "url": "https://www.youtube.com/watch?v=solids10",
+          "youtubeId": "solids10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/solids10",
+          "milestones": [
+            "Combinations of solids: Cubes, cylinders, cones, spheres",
+            "Surface area of combined shapes",
+            "Volume of combined shapes",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:15:30",
+              "text": "Solid toy contains hemisphere surmounted by cone. Cumulative volume is Sum of individual volumes."
+            },
+            {
+              "time": "00:48:15",
+              "text": "Surface area of combined shapes is sum of exposed surfaces. For cone on hemisphere, exposed is CSA of cone + CSA of hemisphere. Do not add flat bases!"
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "For combined surface areas, never add total surface areas directly! Look at what surfaces are fused and hidden inside the joint!",
+        "Memorize: sphere volume is 4/3 pi r^3, cylinder is pi r^2 h, cone is 1/3 pi r^2 h."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=solids10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    },
+    "triangles": {
+      "chapterId": "triangles",
+      "subject": "mathematics",
+      "title": "Triangles",
+      "sourceFile": "triangles.md",
+      "sourceQuality": "ai_generated",
+      "contentPack": "cbse10-study-material-v1",
+      "syllabusOutline": [
+        "Basic Proportionality Theorem study and proof",
+        "Similarity Criteria: AAA, SSS, SAS",
+        "Pythagoras theorem proof and derivations"
+      ],
+      "studySummary": "## Syllabus outline\n- Basic Proportionality Theorem study and proof\n- Similarity Criteria: AAA, SSS, SAS\n- Pythagoras theorem proof and derivations\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "videos": [
+        {
+          "title": "Triangles Geometry Class 10 Maths Chapter 6 One Shot",
+          "presenter": "Vedantu Class 9 & 10",
+          "url": "https://www.youtube.com/watch?v=triangles10",
+          "youtubeId": "triangles10",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/triangles10",
+          "milestones": [
+            "Basic Proportionality Theorem study and proof",
+            "Similarity Criteria: AAA, SSS, SAS",
+            "Pythagoras theorem proof and derivations",
+            "🎤 Key Instructional Transcripts Highlights**:"
+          ],
+          "transcripts": [
+            {
+              "time": "00:20:10",
+              "text": "BPT states if a parallel line is drawn to one side of triangle, it cuts other sides in equal ratio. Write down construction steps carefully!"
+            },
+            {
+              "time": "01:15:30",
+              "text": "Similarity is different from congruence. Similar triangles have equal angles and proportional sides."
+            },
+            {
+              "time": "02:10:45",
+              "text": "In boards, they ask you to prove BPT. 5 marks guaranteed. Do not lose this!"
+            }
+          ]
+        }
+      ],
+      "scholarTips": [
+        "For BPT proof, draw perpendiculars from upper vertices to opposite sides. Calculate areas of upper triangle using different bases. Take ratios. It is so easy!",
+        "Remember! Similar triangles area ratio is equal to square of their corresponding side ratios. Extremely useful in 2-mark questions."
+      ],
+      "links": [
+        {
+          "label": "Watch directly on YouTube",
+          "url": "https://www.youtube.com/watch?v=triangles10"
+        }
+      ],
+      "disclaimer": "AI-generated study guide (VOLTAIC). Not official CBSE/NCERT. Verify facts with your textbook and teacher."
+    }
+  },
+  "discussion_thread_count": 1400,
+  "voltaic_bot_count": 20
+}

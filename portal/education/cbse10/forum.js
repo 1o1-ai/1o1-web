@@ -36,6 +36,13 @@
     return out;
   }
 
+  function normChapter(ch) {
+    if (window.CBSE10Shared?.normalizeChapterId) {
+      return window.CBSE10Shared.normalizeChapterId(ch);
+    }
+    return ch === 'environment' ? 'sources-of-energy' : ch;
+  }
+
   function fillChapterFilter() {
     const sub = forumSubject.value;
     forumChapter.innerHTML = '<option value="all">All chapters</option>';
@@ -52,7 +59,7 @@
   function filteredThreads() {
     return forum.threads.filter((t) => {
       if (forumSubject.value !== 'all' && t.subject !== forumSubject.value) return false;
-      if (forumChapter.value !== 'all' && t.chapter !== forumChapter.value) return false;
+      if (forumChapter.value !== 'all' && normChapter(t.chapter) !== forumChapter.value) return false;
       return true;
     });
   }

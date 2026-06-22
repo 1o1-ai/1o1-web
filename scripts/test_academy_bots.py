@@ -20,11 +20,11 @@ def main() -> int:
     teachers = data.get("teachers") or []
     students = data.get("students") or []
 
-    if len(students) != 165:
-        print(f"FAIL expected 165 students, got {len(students)}")
+    if len(students) < 165:
+        print(f"FAIL expected at least 165 students, got {len(students)}")
         failed += 1
     else:
-        print("OK   165 student bots")
+        print(f"OK   {len(students)} student bots (incl. VOLTAIC external)")
 
     if len(teachers) < 8:
         print(f"FAIL expected at least 8 teachers, got {len(teachers)}")
@@ -80,12 +80,12 @@ def main() -> int:
             print(f"OK   {rel}")
 
     room = (ROOT / "portal/education/cbse10/room.html").read_text(encoding="utf-8")
-    for token in ("peersOuterPanel", "presence.js", "bots.js"):
+    for token in ("studentsRoster", "bots.js", "cbse10-room.js"):
         if token not in room:
             print(f"FAIL room.html missing {token}")
             failed += 1
     if failed == 0:
-        print("OK   room.html wired for peers panel")
+        print("OK   room.html wired for study room wizard")
 
     admin_js = (ROOT / "portal/education/admin.js").read_text(encoding="utf-8")
     if "yogabrata" not in admin_js or "aam" not in admin_js:

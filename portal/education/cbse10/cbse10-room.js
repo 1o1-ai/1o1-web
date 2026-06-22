@@ -1,587 +1,1005 @@
 /**
- * CBSE 10 Core study room — strict subject/chapter/year question bank (no hallucination).
+
+ * CBSE 10 Study Room — wizard: subject → chapter → learn|evaluate → one-by-one Q&A.
+
  */
+
 (function () {
-  const params = new URLSearchParams(location.search);
-  const role = params.get('role') || 'student';
-  const CURRENT_YEAR = 2026;
-  /** 0 = full verified bank (no year window shown to students). */
-  const BANK_YEARS = 0;
 
-  const CHAPTER_ALIASES = {
-    polynomial: 'polynomials',
-    polynomials: 'polynomials',
-    'real numbers': 'real-numbers',
-    'real number': 'real-numbers',
-    light: 'light',
-    electricity: 'electricity',
-    trigonometry: 'trigonometry',
-  };
+  'use strict';
 
-  document.body.classList.add(role === 'teacher' ? 'teacher-ambience' : 'student-ambience');
 
-  if (role === 'teacher') {
-    document.getElementById('teacherView').hidden = false;
-    document.getElementById('studentView').hidden = true;
-    document.getElementById('roleBadge').textContent = 'Teacher · preview';
-    return;
-  }
-
-  document.getElementById('roleBadge').textContent = 'Student';
 
   let curriculum = null;
-  let verifiedBank = [];
-  let subject = 'science';
-  let chapterId = 'light';
-  let quizQuestions = [];
-  let quizIndex = 0;
-  let quizAnswers = [];
-  let activePeers = [];
-  let pendingInvites = new Map();
-  let botChatterTimers = [];
-  let onlineStudentIds = new Set();
-  let allStudents = [];
 
-  const peersRoster = document.getElementById('peersRoster');
-  const activePeerList = document.getElementById('activePeerList');
-  const activePeersEl = document.getElementById('activePeers');
-  const peersOuterPanel = document.getElementById('peersOuterPanel');
-  const peersToggle = document.getElementById('peersToggle');
-  const peersOuterBody = document.getElementById('peersOuterBody');
-  const peersFilter = document.getElementById('peersFilter');
-  const onlineBadge = document.getElementById('onlineBadge');
+  let masterQuestions = [];
+
+  let subject = '';
+
+  let chapterId = '';
+
+  let chapterTitle = '';
+
+
+
+  let questionQueue = [];
+
+  let queueIndex = 0;
+
+  let sessionAnswers = [];
+
+  let sessionStart = 0;
+
+  let questionShownAt = 0;
+
+  let pasteCount = 0;
+
+  let blurCount = 0;
+
+  let timerId = null;
+
+  let activeCardEl = null;
+
+
+
+  const phases = {
+
+    subject: document.getElementById('phaseSubject'),
+
+    chapter: document.getElementById('phaseChapter'),
+
+    intent: document.getElementById('phaseIntent'),
+
+    learn: document.getElementById('phaseLearn'),
+
+    evaluate: document.getElementById('phaseEvaluate'),
+
+  };
+
+  const cornerOrbs = document.getElementById('cornerOrbs');
+
+  const evalChat = document.getElementById('evalChat');
+
+  const evalResults = document.getElementById('evalResults');
+
+  const evalModal = document.getElementById('evalModal');
+
+
 
   Promise.all([
-    fetch('../../data/cbse10-curriculum.json').then((r) => r.json()),
-    fetch('../../data/cbse10-verified-questions.json')
-      .then((r) => (r.ok ? r.json() : { questions: [] }))
-      .catch(() => ({ questions: [] })),
+
+    window.CBSE10Shared.loadCurriculum(),
+
+    window.CBSE10Shared.loadMasterCatalog(),
+
+    window.CBSE10StudyMaterial.load().catch(() => null),
+
     window.AnyoBots.loadRoster(),
-  ])
-    .then(([cur, bank, roster]) => {
-      curriculum = cur;
-      verifiedBank = (bank.questions || cur.verifiedQuestions || []).filter(
-        (q) => q.answer_verified !== false && q.correctIndex != null
-      );
-      allStudents = roster.students || [];
-      renderIngestBadge();
-      renderChapters();
-      initPresenceAndPeers();
-      selectChapter('light');
-      showAlert();
-    })
-    .catch(() => {
-      chapterList.innerHTML = '<li><em>Could not load curriculum</em></li>';
-    });
 
-  const chapterList = document.getElementById('chapterList');
-  const chatMessages = document.getElementById('chatMessages');
-  const chatInput = document.getElementById('chatInput');
-  const chapterTitle = document.getElementById('chapterTitle');
-  const subjectLabel = document.getElementById('subjectLabel');
-  const quizPanel = document.getElementById('quizPanel');
-  const alertBanner = document.getElementById('alertBanner');
+  ]).then(([cur, master, _study, roster]) => {
 
-  function initPresenceAndPeers() {
-    refreshOnlineBadge();
-    renderPeersRoster();
-    setInterval(() => {
-      refreshOnlineBadge();
-      renderPeersRoster();
-    }, 60000);
+    curriculum = cur;
 
-    if (onlineBadge) {
-      onlineBadge.style.cursor = 'pointer';
-      onlineBadge.title = 'Show online participants';
-      onlineBadge.setAttribute('role', 'button');
-      onlineBadge.tabIndex = 0;
-      onlineBadge.addEventListener('click', openPeersPanel);
-      onlineBadge.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') openPeersPanel();
-      });
-    }
+    masterQuestions = master?.questions || [];
 
-    peersToggle?.addEventListener('click', () => {
-      const collapsed = peersOuterPanel.classList.toggle('collapsed');
-      peersToggle.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
-      peersOuterBody.hidden = collapsed;
-    });
-    peersFilter?.addEventListener('change', renderPeersRoster);
-  }
+    renderStudents(roster?.students || [], 'studentsRoster');
 
-  function openPeersPanel() {
-    if (!peersOuterPanel) return;
-    peersOuterPanel.classList.remove('collapsed');
-    peersOuterBody.hidden = false;
-    peersToggle?.setAttribute('aria-expanded', 'true');
-    peersOuterPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
+    renderStudents(roster?.students || [], 'learnStudentsRoster');
 
-  function refreshOnlineBadge() {
-    if (!window.AnyoPresence) return;
-    const real = window.AnyoPresence.countRealByRole();
-    const counts = window.AnyoPresence.getOnlineCounts(real.students, real.teachers);
-    onlineStudentIds = window.AnyoPresence.pickOnlineBotIds(allStudents, counts.studentBotsOnline, 'student');
-    if (onlineBadge) {
-      onlineBadge.hidden = false;
-      onlineBadge.textContent = `${counts.teachersOnline} teachers · ${counts.studentsOnline} students online (IST ${counts.istLabel})`;
-    }
-    const lbl = document.getElementById('peersToggleLabel');
-    if (lbl) lbl.textContent = `${counts.studentsOnline} students online`;
-  }
+    bindSubjectCircles();
 
-  function renderPeersRoster() {
-    if (!peersRoster) return;
-    const filter = peersFilter?.value || 'all';
-    const inRoom = new Set(activePeers.map((p) => p.id));
-    const pending = new Set(pendingInvites.keys());
+    bindNavigation();
 
-    const list = allStudents.filter((s) => {
-      if (!onlineStudentIds.has(s.id)) return false;
-      if (filter === 'all') return true;
-      return s.subject === filter || s.subject === 'both';
-    });
+    bindEvaluate();
 
-    peersRoster.innerHTML = '';
-    if (!list.length) {
-      peersRoster.innerHTML = '<li class="peers-empty"><em>No classmates match this filter right now.</em></li>';
-      return;
-    }
+    showPhase('subject');
 
-    list.slice(0, 40).forEach((bot) => {
-      const li = document.createElement('li');
-      li.className = 'peer-roster-item';
-      const busy = inRoom.has(bot.id) || pending.has(bot.id);
-      li.innerHTML = `
-        <img class="peer-avatar" src="${bot.photo}" alt="" width="36" height="36" loading="lazy" />
-        <div class="peer-meta">
-          <strong>${bot.name}</strong>
-          <span class="peer-loc">${bot.city}, ${bot.state}</span>
-          <span class="peer-school">${bot.school}</span>
-        </div>`;
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'btn-portal btn-portal-ghost peer-invite-btn';
-      if (inRoom.has(bot.id)) {
-        btn.textContent = 'In room';
-        btn.disabled = true;
-      } else if (pending.has(bot.id)) {
-        btn.textContent = 'Pending…';
-        btn.disabled = true;
-      } else if (activePeers.length >= window.AnyoBots.MAX_PEERS) {
-        btn.textContent = 'Room full';
-        btn.disabled = true;
-      } else {
-        btn.textContent = 'Request join';
-        btn.addEventListener('click', () => requestPeerJoin(bot));
-      }
-      li.appendChild(btn);
-      peersRoster.appendChild(li);
-    });
-  }
-
-  let botLifecycleTimers = [];
-
-  function removePeer(bot) {
-    activePeers = activePeers.filter((p) => p.id !== bot.id);
-    renderActivePeers();
-    renderPeersRoster();
-  }
-
-  function onBotLeave(bot, message) {
-    removePeer(bot);
-    if (message) addBubble('peer', message, bot.name);
-    else addBubble('peer', `${bot.name.split(' ')[0]} left the room.`, 'System');
-  }
-
-  function renderActivePeers() {
-    if (!activePeerList || !activePeersEl) return;
-    if (!activePeers.length) {
-      activePeersEl.hidden = true;
-      return;
-    }
-    activePeersEl.hidden = false;
-    activePeerList.innerHTML = '';
-    activePeers.forEach((bot) => {
-      const li = document.createElement('li');
-      li.innerHTML = `<img src="${bot.photo}" alt="" width="28" height="28" /><span>${bot.name}</span>`;
-      activePeerList.appendChild(li);
-    });
-  }
-
-  function requestPeerJoin(bot) {
-    if (activePeers.length >= window.AnyoBots.MAX_PEERS) {
-      addBubble('tutor', 'Your study room is full — max 2 classmates at a time.', 'System');
-      return;
-    }
-    pendingInvites.set(bot.id, bot);
-    renderPeersRoster();
-    addBubble('peer', `Invite sent to ${bot.name} (${bot.city}). Waiting…`, 'You');
-
-    const outcome = window.AnyoBots.simulateInviteResponse(bot);
-    const timer = setTimeout(() => {
-      pendingInvites.delete(bot.id);
-      if (outcome.type === 'accept') {
-        if (activePeers.length < window.AnyoBots.MAX_PEERS && !activePeers.find((p) => p.id === bot.id)) {
-          activePeers.push(bot);
-          addBubble('peer', window.AnyoBots.acceptLine(), bot.name);
-          renderActivePeers();
-          renderPeersRoster();
-          const chatTimers = window.AnyoBots.scheduleBotChatter(
-            bot,
-            (b, msg) => addBubble('peer', msg, b.name),
-            subject
-          );
-          if (chatTimers) botChatterTimers.push(...chatTimers);
-          const leaveT = window.AnyoBots.scheduleBotLeave(bot, onBotLeave);
-          if (leaveT) botLifecycleTimers.push(leaveT);
-        }
-      } else if (outcome.type === 'decline') {
-        addBubble('peer', window.AnyoBots.declineLine(), bot.name);
-        renderPeersRoster();
-      } else {
-        addBubble('peer', 'No response — they may be in another session.', 'System');
-        renderPeersRoster();
-      }
-    }, outcome.delay);
-    pendingInvites.set(bot.id, { bot, timer });
-  }
-
-  function renderIngestBadge() {
-    const stats = curriculum.stats || {};
-    const el = document.getElementById('ingestBadge');
-    if (!el) return;
-    const n = stats.verified_questions || verifiedBank.length || 0;
-    el.textContent = `${n} verified questions (English, linked answers)`;
-    el.hidden = false;
-  }
-
-  function chaptersForSubj(sub) {
-    const s = curriculum.subjects[sub];
-    return s?.units || s?.chapters || [];
-  }
-
-  function subjectKey() {
-    return subject === 'mathematics' ? 'mathematics' : 'science';
-  }
-
-  function resolveChapterId(text) {
-    const t = text.toLowerCase();
-    for (const [alias, id] of Object.entries(CHAPTER_ALIASES)) {
-      if (t.includes(alias)) return id;
-    }
-    const ch = chaptersForSubj(subject).find(
-      (c) => t.includes(c.id.replace(/-/g, ' ')) || t.includes(c.title.toLowerCase())
-    );
-    return ch ? ch.id : chapterId;
-  }
-
-  function filterQuestions({ chapter, yearsBack, limit }) {
-    const minYear = yearsBack > 0 ? CURRENT_YEAR - yearsBack : null;
-    const subj = subjectKey();
-    const pool = verifiedBank.filter((q) => {
-      const qSub = (q.subject_slug || q.subject || '').toLowerCase();
-      const matchSub =
-        qSub === subj ||
-        qSub === subject ||
-        (subj === 'mathematics' && qSub.includes('math')) ||
-        (subj === 'science' && qSub === 'science');
-      const matchCh = (q.chapter || '') === chapter;
-      const yr = q.exam_year;
-      const matchYear =
-        minYear == null || (typeof yr === 'number' ? yr >= minYear : true);
-      return matchSub && matchCh && matchYear;
-    });
-    pool.sort((a, b) => (b.exam_year || 0) - (a.exam_year || 0));
-    return pool.slice(0, limit);
-  }
-
-  function fmt(text) {
-    return window.AnyoQuestionFormat ? window.AnyoQuestionFormat.formatMathText(text) : text;
-  }
-
-  function fmtOpts(options) {
-    return window.AnyoQuestionFormat ? window.AnyoQuestionFormat.formatOptions(options) : options;
-  }
-
-  function toQuizItem(q) {
-    const prompt = fmt(q.prompt || q.question);
-    const options = fmtOpts(q.options || []);
-    return {
-      id: q.id,
-      prompt,
-      options,
-      correctIndex: q.correctIndex != null ? q.correctIndex : q.correct_index,
-      source: q.source || q.paper_pair_id || 'CBSE board',
-      exam_year: q.exam_year,
-      answer_verified: true,
-    };
-  }
-
-  function renderChapters() {
-    chapterList.innerHTML = '';
-    chaptersForSubj(subject).forEach((ch) => {
-      const li = document.createElement('li');
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.textContent = ch.title;
-      btn.dataset.id = ch.id;
-      if (ch.id === chapterId) btn.classList.add('active');
-      btn.addEventListener('click', () => selectChapter(ch.id));
-      li.appendChild(btn);
-      chapterList.appendChild(li);
-    });
-  }
-
-  function selectChapter(id) {
-    chapterId = id;
-    const ch = chaptersForSubj(subject).find((c) => c.id === id);
-    if (!ch) return;
-    chapterTitle.textContent = ch.title;
-    subjectLabel.textContent = subject === 'science' ? 'Science · 086' : 'Mathematics · 041';
-    renderChapters();
-    quizPanel.hidden = true;
-    chatMessages.innerHTML = '';
-    const avail = filterQuestions({ chapter: id, yearsBack: BANK_YEARS, limit: 99 }).length;
-    if (avail > 0) {
-      addBubble(
-        'tutor',
-        `**${ch.title}** — ${avail} verified board question(s) ready. Use **1 sample question** below, type how many you want, or start **Chapter quiz**.`
-      );
-    } else {
-      addBubble(
-        'tutor',
-        `**${ch.title}** — no verified questions in the bank for this chapter yet. Pick another chapter (e.g. Light, Polynomials) or try again later.`
-      );
-    }
-  }
-
-  function showAlert() {
-    alertBanner.hidden = true;
-  }
-
-  document.querySelectorAll('[data-subject]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      setSubject(btn.getAttribute('data-subject'));
-      const first = chaptersForSubj(subject)[0];
-      if (first) selectChapter(first.id);
-    });
   });
 
-  function addBubble(kind, text, author) {
-    const div = document.createElement('div');
-    div.className = `chat-bubble ${kind}`;
-    if (author) {
-      div.innerHTML = `<small style="opacity:0.7">${author}</small><br>` + text.replace(/\*\*(.*?)\*\*/g, '$1');
-    } else {
-      div.textContent = text.replace(/\*\*(.*?)\*\*/g, '$1');
-    }
-    chatMessages.appendChild(div);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+
+  function showPhase(name) {
+
+    Object.entries(phases).forEach(([k, el]) => {
+
+      if (el) el.classList.toggle('hidden', k !== name);
+
+    });
+
+    const inEval = name === 'evaluate';
+
+    const inLearn = name === 'learn';
+
+    cornerOrbs?.classList.toggle('hidden', !inEval && !inLearn);
+
+    document.body.classList.toggle('sr-eval-active', inEval);
+
+    document.body.classList.toggle('sr-learn-active', inLearn);
+
+    if (inEval || inLearn) highlightCornerOrb();
+
+    if (!inLearn) window.CBSE10StudyMaterial?.stopReadAloud?.();
+
   }
 
-  function setSubject(sub) {
+
+
+  function chaptersForSubject(sub) {
+
+    const chs = curriculum?.subjects?.[sub]?.chapters || [];
+
+    return [...chs].sort((a, b) => (a.syllabus_order || 99) - (b.syllabus_order || 99));
+
+  }
+
+
+
+  function bindSubjectCircles() {
+
+    document.querySelectorAll('.sr-subject-circle').forEach((btn) => {
+
+      btn.addEventListener('click', () => {
+
+        subject = btn.getAttribute('data-subject') || 'science';
+
+        renderChapterGrid();
+
+        showPhase('chapter');
+
+      });
+
+    });
+
+    document.getElementById('cornerScience')?.addEventListener('click', () => {
+
+      if (subject !== 'science') resetToSubject('science');
+
+    });
+
+    document.getElementById('cornerMath')?.addEventListener('click', () => {
+
+      if (subject !== 'mathematics') resetToSubject('mathematics');
+
+    });
+
+  }
+
+
+
+  function resetToSubject(sub) {
+
     subject = sub;
-    document.querySelectorAll('[data-subject]').forEach((b) => {
-      const on = b.getAttribute('data-subject') === subject;
-      b.classList.toggle('active', on);
-      b.style.cssText = on
-        ? 'padding:8px;border-radius:10px;border:1px solid rgba(103,232,249,0.4);background:rgba(6,182,212,0.12);color:#67e8f9;cursor:pointer'
-        : 'padding:8px;border-radius:10px;border:1px solid rgba(148,163,184,0.25);background:transparent;color:#cbd5e1;cursor:pointer';
-    });
+
+    chapterId = '';
+
+    renderChapterGrid();
+
+    showPhase('chapter');
+
   }
 
-  function parseQuestionRequest(msg) {
-    if (!window.AnyoTutorIntent.isQuestionFetchIntent(msg)) return null;
-    const m = msg.toLowerCase();
-    const limit = window.AnyoTutorIntent.parseQuestionCount(msg);
-    let yearsBack = BANK_YEARS;
-    const ym = m.match(/last\s+(\d+)\s+year/);
-    if (ym) yearsBack = parseInt(ym[1], 10);
-    let ch = chapterId;
-    if (m.includes('polynomial')) ch = 'polynomials';
-    else ch = resolveChapterId(m) || chapterId;
-    if (m.includes('math') || m.includes('polynomial') || m.includes('trigonometry')) {
-      setSubject('mathematics');
-    } else if (m.includes('science') && !m.includes('math')) {
-      setSubject('science');
-    }
-    return { chapter: ch, yearsBack, limit };
+
+
+  function highlightCornerOrb() {
+
+    document.getElementById('cornerScience')?.classList.toggle('active', subject === 'science');
+
+    document.getElementById('cornerMath')?.classList.toggle('active', subject === 'mathematics');
+
   }
 
-  function explainReply() {
-    const q = quizQuestions[quizIndex] || quizQuestions[0];
-    if (!q || q.correctIndex == null) {
-      quizPanel.hidden = true;
-      return (
-        'Ask for a verified question first (e.g. "1 question on linear equations"). ' +
-        'Then I can show the linked board answer — I won\'t guess.'
-      );
-    }
-    const letter = String.fromCharCode(65 + q.correctIndex);
-    const opt = q.options[q.correctIndex];
-    quizPanel.hidden = true;
-    return (
-      `Verified answer (${q.exam_year || 'board'}): ${letter}. ${opt}\n\n` +
-      `This is from the ingested marking scheme — not generated. ` +
-      `Full step-by-step working needs more solution text from that paper in the archive.`
-    );
+
+
+  function countForChapter(chId, mode) {
+
+    return window.CBSE10Shared.filterMasterQuestions(masterQuestions, {
+
+      subject,
+
+      chapter: chId,
+
+      mode: mode || undefined,
+
+      limit: 999,
+
+    }).length;
+
   }
 
-  function tutorReply(msg) {
-    const req = parseQuestionRequest(msg);
-    if (req) {
-      const found = filterQuestions(req);
-      if (found.length === 0) {
-        quizPanel.hidden = true;
-        const yrNote =
-          req.yearsBack > 0 ? ` for the last ${req.yearsBack} years` : '';
-        return (
-          `No verified ${req.chapter.replace(/-/g, ' ')} questions in the bank${yrNote}. ` +
-          `I only use ingested CBSE papers — I won't make questions up. Try another chapter.`
-        );
-      }
-      const items = found.slice(0, req.limit).map(toQuizItem);
-      quizQuestions = items;
-      quizIndex = 0;
-      quizAnswers = [];
-      quizPanel.hidden = false;
-      renderQuizQuestion();
-      const shown = items.length;
-      if (shown < req.limit) {
-        return `Showing ${shown} verified question(s) on ${req.chapter.replace(/-/g, ' ')}. Only ${shown} in the bank — not inventing more.`;
-      }
-      return `Showing ${shown} verified question(s) on ${req.chapter.replace(/-/g, ' ')}.`;
-    }
 
-    if (window.AnyoTutorIntent.isBankSyncComplaint?.(msg)) {
-      quizPanel.hidden = true;
-      return (
-        'Options and prompts come from ingested CBSE PDFs — sometimes minus signs or symbols are lost in text extraction. ' +
-        'Use **explain** after a verified question for the marking-scheme letter (A–D). ' +
-        'Invite a classmate to compare notes; I will not rewrite the question or guess a new answer.'
-      );
-    }
 
-    if (window.AnyoTutorIntent.isExplainOrAnswerIntent(msg)) {
-      return explainReply();
-    }
+  function renderChapterGrid() {
 
-    const m = msg.toLowerCase();
-    if (m.includes('example')) {
-      quizPanel.hidden = true;
-      return 'Examples come from your ingested syllabus and board papers for this chapter.';
-    }
-    quizPanel.hidden = true;
-    return (
-      'Try **1 sample question** (button below), type a number like **3** or **i want 3**, **Chapter quiz (5)**, or ask e.g. "3 questions on this chapter". ' +
-      'After a question appears, type **explain** for the verified answer.'
-    );
-  }
+    const grid = document.getElementById('chapterGrid');
 
-  function handlePeerChat(msg) {
-    const peer = window.AnyoTutorIntent.findPeerMention(msg, activePeers);
-    if (!peer) return false;
+    grid.innerHTML = '';
 
-    if (window.AnyoBots.isPersonalQuestion(msg)) {
-      setTimeout(() => {
-        addBubble('peer', window.AnyoBots.moderationReply(), 'Tutor');
-      }, 500);
-      return true;
-    }
+    chaptersForSubject(subject).forEach((ch) => {
 
-    const reply = window.AnyoBots.peerReply(peer, msg);
-    if (reply) {
-      setTimeout(() => {
-        if (reply.warn) addBubble('tutor', reply.warn, 'Tutor');
-        addBubble('peer', reply.text, peer.name);
-      }, 600 + Math.random() * 800);
-      return true;
-    }
-    return true;
-  }
+      const official = countForChapter(ch.id, 'cbse');
 
-  function handleChatSend() {
-    const t = chatInput.value.trim();
-    if (!t) return;
-    addBubble('student', t);
-    chatInput.value = '';
+      const explore = countForChapter(ch.id, 'ai');
 
-    if (window.AnyoBots.isPersonalQuestion(t)) {
-      setTimeout(() => addBubble('tutor', window.AnyoBots.moderationReply()), 300);
-      return;
-    }
-    if (window.AnyoBots.isTimepassChat(t) && !window.AnyoTutorIntent.findPeerMention(t, activePeers)) {
-      setTimeout(() => addBubble('tutor', window.AnyoBots.timepassWarning()), 350);
-    }
-    if (handlePeerChat(t)) return;
-    setTimeout(() => addBubble('tutor', tutorReply(t)), 400);
-  }
-  document.getElementById('sendChat').addEventListener('click', handleChatSend);
-  chatInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') handleChatSend();
-  });
-  document.querySelectorAll('[data-prompt]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      chatInput.value = btn.getAttribute('data-prompt') || '';
-      handleChatSend();
-    });
-  });
+      const btn = document.createElement('button');
 
-  function startQuiz() {
-    const found = filterQuestions({ chapter: chapterId, yearsBack: BANK_YEARS, limit: 5 });
-    if (found.length === 0) {
-      addBubble(
-        'tutor',
-        `No verified questions for **${chapterTitle.textContent}** yet. Pick another chapter with questions in the bank.`
-      );
-      return;
-    }
-    quizQuestions = found.map(toQuizItem);
-    quizIndex = 0;
-    quizAnswers = [];
-    quizPanel.hidden = false;
-    renderQuizQuestion();
-    addBubble(
-      'tutor',
-      `Starting quiz: ${quizQuestions.length} verified question(s) on ${chapterTitle.textContent}.` +
-        (quizQuestions.length < 5 ? ' (All available — no filler questions.)' : '')
-    );
-  }
+      btn.type = 'button';
 
-  function renderQuizQuestion() {
-    const q = quizQuestions[quizIndex];
-    const yr = q.exam_year ? ` · ${q.exam_year}` : '';
-    quizPanel.innerHTML = `<p style="font-size:0.75rem;color:#94a3b8">Q ${quizIndex + 1}/${quizQuestions.length}${yr} · verified</p>
-      <p style="margin:8px 0 12px;font-weight:500">${String(q.prompt).replace(/\n/g, '<br>')}</p>
-      <div id="quizOpts"></div>`;
-    const opts = quizPanel.querySelector('#quizOpts');
-    q.options.forEach((opt, i) => {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.textContent = `${String.fromCharCode(65 + i)}. ${opt}`;
-      b.style.cssText =
-        'display:block;width:100%;text-align:left;margin:4px 0;padding:10px;border-radius:10px;border:1px solid rgba(148,163,184,0.25);background:rgba(15,23,42,0.6);color:#e2e8f0;cursor:pointer';
-      b.addEventListener('click', () => {
-        quizAnswers.push(i);
-        quizIndex++;
-        if (quizIndex >= quizQuestions.length) {
-          const score = quizAnswers.filter((a, j) => a === quizQuestions[j].correctIndex).length;
-          quizPanel.innerHTML = `<p style="color:#6ee7b7;font-weight:600">Quiz complete: ${score}/${quizQuestions.length}</p>`;
-          addBubble('tutor', `You scored ${score}/${quizQuestions.length} on ${chapterTitle.textContent} (verified bank only).`);
-        } else renderQuizQuestion();
+      btn.className = 'sr-chapter-pick';
+
+      btn.innerHTML = `<span class="sr-ch-num">${ch.syllabus_order || ''}</span><span class="sr-ch-title">${ch.title}</span><span class="sr-ch-count">${official} board · ${explore} explore</span>`;
+
+      btn.addEventListener('click', () => {
+
+        chapterId = ch.id;
+
+        chapterTitle = ch.title;
+
+        document.getElementById('intentChapterLabel').innerHTML =
+
+          `<strong>${chapterTitle}</strong> · ${subject === 'science' ? 'Science' : 'Mathematics'}`;
+
+        showPhase('intent');
+
       });
-      opts.appendChild(b);
+
+      grid.appendChild(btn);
+
     });
+
   }
 
-  document.getElementById('btnQuiz').addEventListener('click', startQuiz);
-  document.getElementById('btnBoard').addEventListener('click', () => {
-    addBubble('tutor', 'Board mock draws verified MCQs for the current chapter and subject only — no cross-subject mix.');
-  });
-  document.getElementById('btnInvite').addEventListener('click', () => {
-    const link = `${location.origin}/portal/education/cbse10/room.html?role=student`;
-    navigator.clipboard?.writeText(link);
-    addBubble('peer', 'Study room link copied — share with a real classmate (not for personal contact here).', 'System');
-  });
+
+
+  function bindNavigation() {
+
+    document.getElementById('backToSubject')?.addEventListener('click', () => showPhase('subject'));
+
+    document.getElementById('backToChapter')?.addEventListener('click', () => showPhase('chapter'));
+
+    document.getElementById('backFromLearn')?.addEventListener('click', () => showPhase('intent'));
+
+    document.getElementById('btnLearn')?.addEventListener('click', () => startLearnSession());
+
+    document.getElementById('btnEvaluate')?.addEventListener('click', () => startEvaluateSession());
+
+    window.addEventListener('cbse10:switch-evaluate', () => startEvaluateSession());
+
+  }
+
+
+
+  function questionSourceMode() {
+
+    const checked = document.querySelector('input[name="qSource"]:checked');
+
+    return checked?.value === 'ai' ? 'ai' : 'cbse';
+
+  }
+
+
+
+  function buildQueue() {
+
+    const mode = questionSourceMode();
+
+    const difficulty = document.getElementById('difficultySelect')?.value || 'all';
+
+    return window.CBSE10Shared.filterMasterQuestions(masterQuestions, {
+
+      subject,
+
+      chapter: chapterId,
+
+      mode,
+
+      difficulty: difficulty === 'all' ? undefined : difficulty,
+
+      limit: 50,
+
+    }).map(window.CBSE10Shared.toDisplayQ);
+
+  }
+
+
+
+  function shuffle(arr) {
+
+    const a = [...arr];
+
+    for (let i = a.length - 1; i > 0; i--) {
+
+      const j = Math.floor(Math.random() * (i + 1));
+
+      [a[i], a[j]] = [a[j], a[i]];
+
+    }
+
+    return a;
+
+  }
+
+
+
+  function startLearnSession() {
+    window.CBSE10StudyMaterial?.stopReadAloud?.();
+    const ch = window.CBSE10StudyMaterial?.chapter?.(chapterId);
+    const root = document.getElementById('learnContent');
+    document.getElementById('learnTitle').textContent = chapterTitle;
+    document.getElementById('learnSubtitle').textContent =
+      `${subject === 'science' ? 'Science · 086' : 'Mathematics · 041'} · AI study guide (not official)`;
+    if (!ch) {
+      root.innerHTML =
+        '<p class="sr-eval-hint">Study material for this chapter is not available yet. Try <strong>Evaluate</strong> or check back later.</p>';
+    } else {
+      window.CBSE10StudyMaterial.renderLearnView(ch, root);
+    }
+    document.body.classList.add('sr-learn-active');
+    showPhase('learn');
+  }
+
+  function startEvaluateSession() {
+
+    questionQueue = shuffle(buildQueue());
+
+    queueIndex = 0;
+
+    sessionAnswers = [];
+
+    sessionStart = Date.now();
+
+    pasteCount = 0;
+
+    blurCount = 0;
+
+    activeCardEl = null;
+
+    evalChat.innerHTML =
+
+      '<p class="sr-eval-hint">One question at a time. Use <strong>Next question</strong> when done. Scoring only when you press <strong>Evaluate my answers</strong>.</p>';
+
+    evalResults.classList.add('hidden');
+
+    document.getElementById('evalTitle').textContent = chapterTitle;
+
+    document.getElementById('evalSubtitle').textContent =
+
+      `${subject === 'science' ? 'Science · 086' : 'Mathematics · 041'} · ${questionQueue.length} question(s) in queue`;
+
+
+
+    if (!questionQueue.length) {
+
+      appendChatLine('system', 'No valid questions for this chapter and source. Try AI-generated or another difficulty.');
+
+    } else {
+
+      showCurrentQuestion();
+
+    }
+
+
+
+    if (timerId) clearInterval(timerId);
+
+    timerId = setInterval(updateDistractionStats, 1000);
+
+    showPhase('evaluate');
+
+    trackDistraction();
+
+  }
+
+
+
+  function trackDistraction() {
+
+    document.addEventListener('paste', () => pasteCount++);
+
+    window.addEventListener('blur', () => blurCount++);
+
+    document.addEventListener('visibilitychange', () => {
+
+      if (document.hidden) blurCount++;
+
+    });
+
+  }
+
+
+
+  function focusScore() {
+
+    return Math.max(0, 100 - pasteCount * 8 - blurCount * 3);
+
+  }
+
+
+
+  function updateDistractionStats() {
+
+    const el = document.getElementById('distractionStats');
+
+    if (!el) return;
+
+    const sec = Math.floor((Date.now() - sessionStart) / 1000);
+
+    const m = Math.floor(sec / 60);
+
+    const s = sec % 60;
+
+    el.textContent = `Focus: ${focusScore()}% · Session: ${m}:${String(s).padStart(2, '0')} · Tab away: ${blurCount} · Answered: ${sessionAnswers.length}`;
+
+  }
+
+
+
+  function appendChatLine(kind, html) {
+
+    const div = document.createElement('div');
+
+    div.className = `sr-chat-line sr-chat-${kind}`;
+
+    div.innerHTML = html;
+
+    evalChat.appendChild(div);
+
+    evalChat.scrollTop = evalChat.scrollHeight;
+
+    return div;
+
+  }
+
+
+
+  function freezeActiveCard() {
+
+    if (!activeCardEl) return;
+
+    activeCardEl.classList.remove('sr-q-active');
+
+    activeCardEl.classList.add('sr-q-done');
+
+    activeCardEl.querySelectorAll('input, textarea, button').forEach((el) => {
+
+      el.disabled = true;
+
+    });
+
+    activeCardEl = null;
+
+  }
+
+
+
+  function showCurrentQuestion() {
+
+    freezeActiveCard();
+
+
+
+    if (queueIndex >= questionQueue.length) {
+
+      appendChatLine(
+
+        'system',
+
+        'No more questions in this queue. Press <strong>Evaluate my answers</strong> or refresh questions.'
+
+      );
+
+      return;
+
+    }
+
+
+
+    const q = questionQueue[queueIndex];
+
+    questionShownAt = Date.now();
+
+
+
+    const card = document.createElement('div');
+
+    card.className = 'sr-q-card sr-q-active';
+
+    card.dataset.qIndex = String(queueIndex);
+
+    card.innerHTML = `<p class="sr-q-meta">Question ${queueIndex + 1} of ${questionQueue.length} · ${q.type || 'Question'} · ${q.marks || '?'} mark(s)${q.exam_year ? ' · ' + q.exam_year : ''}${q.source_kind === 'pdf_catalog' ? ' · board' : ''}</p>
+
+      <div class="sr-q-diagram"></div>
+
+      <p class="sr-q-prompt"></p>
+
+      <div class="sr-q-response"></div>`;
+
+
+
+    card.querySelector('.sr-q-prompt').textContent = q.prompt;
+
+    const diagramEl = card.querySelector('.sr-q-diagram');
+
+    if (q.diagramVector && window.CBSE10DiagramVector) {
+
+      window.CBSE10DiagramVector.renderDiagramVector(q.diagramVector, diagramEl);
+
+    } else if (q.figure_url) {
+
+      const img = document.createElement('img');
+
+      img.src = q.figure_url;
+
+      img.alt = 'Figure';
+
+      img.style.maxWidth = '100%';
+
+      diagramEl.appendChild(img);
+
+    }
+
+
+
+    const resp = card.querySelector('.sr-q-response');
+
+    if (q.options?.length >= 2) {
+
+      q.options.forEach((opt, i) => {
+
+        const lbl = document.createElement('label');
+
+        lbl.className = 'sr-opt-label';
+
+        lbl.innerHTML = `<input type="radio" name="curQ" value="${i}" /> ${String.fromCharCode(65 + i)}. ${opt}`;
+
+        resp.appendChild(lbl);
+
+      });
+
+    } else {
+
+      resp.innerHTML =
+
+        '<textarea class="sr-text-answer" rows="5" placeholder="Type your answer here…"></textarea>';
+
+    }
+
+
+
+    evalChat.appendChild(card);
+
+    activeCardEl = card;
+
+    evalChat.scrollTop = evalChat.scrollHeight;
+
+  }
+
+
+
+  function captureCurrentAnswer() {
+
+    const q = questionQueue[queueIndex];
+
+    if (!q) return null;
+
+    let studentAnswer = '';
+
+    let selectedIndex = null;
+
+    const radio = document.querySelector('.sr-q-active input[name="curQ"]:checked');
+
+    const textarea = document.querySelector('.sr-q-active .sr-text-answer');
+
+    if (radio) {
+
+      selectedIndex = parseInt(radio.value, 10);
+
+      studentAnswer = q.options[selectedIndex] || '';
+
+    } else if (textarea) {
+
+      studentAnswer = textarea.value.trim();
+
+    }
+
+    const timeMs = Date.now() - questionShownAt;
+
+    return {
+
+      questionId: q.id,
+
+      chapterId: q.chapterId,
+
+      chapterTitle,
+
+      subject,
+
+      prompt: q.prompt,
+
+      type: q.type,
+
+      marks: q.marks || 1,
+
+      studentAnswer,
+
+      selectedIndex,
+
+      correctIndex: q.correctIndex,
+
+      timeMs,
+
+      distractionScore: blurCount,
+
+      pasteCount,
+
+      focusScore: focusScore(),
+
+      cognitive_domain: q.cognitive_domain,
+
+      solutions: q.solutions,
+
+    };
+
+  }
+
+
+
+  function saveCurrentAnswerToSession() {
+
+    const ans = captureCurrentAnswer();
+
+    if (!ans || (!ans.studentAnswer && ans.selectedIndex == null)) return null;
+
+    const dup = sessionAnswers.some((a) => a.questionId === ans.questionId);
+
+    if (!dup) sessionAnswers.push(ans);
+
+    return ans;
+
+  }
+
+
+
+  function bindEvaluate() {
+
+    document.querySelectorAll('input[name="qSource"]').forEach((el) => {
+
+      el.addEventListener('change', () => {
+
+        if (phases.evaluate && !phases.evaluate.classList.contains('hidden')) {
+
+          startEvaluateSession();
+
+        }
+
+      });
+
+    });
+
+    document.getElementById('difficultySelect')?.addEventListener('change', () => {
+
+      if (!phases.evaluate.classList.contains('hidden')) startEvaluateSession();
+
+    });
+
+    document.getElementById('btnReloadQueue')?.addEventListener('click', () => startEvaluateSession());
+
+    document.getElementById('btnNextQuestion')?.addEventListener('click', () => {
+
+      const ans = saveCurrentAnswerToSession();
+
+      if (ans) {
+
+        const preview =
+
+          ans.selectedIndex != null
+
+            ? String.fromCharCode(65 + ans.selectedIndex) + '. ' + ans.studentAnswer
+
+            : ans.studentAnswer.slice(0, 160) + (ans.studentAnswer.length > 160 ? '…' : '');
+
+        appendChatLine('student', `<strong>Your answer (Q${queueIndex + 1}):</strong> ${preview}`);
+
+      } else if (activeCardEl) {
+
+        appendChatLine('system', `Skipped Q${queueIndex + 1} — no answer entered.`);
+
+      }
+
+      queueIndex++;
+
+      showCurrentQuestion();
+
+      updateDistractionStats();
+
+    });
+
+    document.getElementById('btnEvaluateSubmit')?.addEventListener('click', () => {
+
+      saveCurrentAnswerToSession();
+
+      freezeActiveCard();
+
+      if (!sessionAnswers.length) {
+
+        appendChatLine('system', 'Answer at least one question before evaluating.');
+
+        return;
+
+      }
+
+      document.getElementById('evalAnswerCount').textContent = String(sessionAnswers.length);
+
+      evalModal.showModal();
+
+    });
+
+    document.getElementById('evalCancel')?.addEventListener('click', () => evalModal.close());
+
+    document.getElementById('evalConfirm')?.addEventListener('click', async (e) => {
+
+      e.preventDefault();
+
+      evalModal.close();
+
+      const mode = document.querySelector('input[name="evalMode"]:checked')?.value || 'computer';
+
+      await runEvaluation(mode);
+
+    });
+
+  }
+
+
+
+  function parseMarksFromFeedback(feedback, maxMarks) {
+
+    const text = String(feedback || '');
+
+    const frac = text.match(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/);
+
+    if (frac) return Math.min(maxMarks, parseFloat(frac[1]));
+
+    const awarded = text.match(/(?:marks?\s*(?:awarded|scored)?|score)\s*[:\-]?\s*(\d+(?:\.\d+)?)/i);
+
+    if (awarded) return Math.min(maxMarks, parseFloat(awarded[1]));
+
+    if (/full\s*marks|correct|perfect/i.test(text)) return maxMarks;
+
+    if (/zero|incorrect|wrong|no\s*marks/i.test(text)) return 0;
+
+    return null;
+
+  }
+
+
+
+  async function scoreOneAnswer(ans) {
+
+    const maxMarks = ans.marks || 1;
+
+    if (ans.selectedIndex != null && ans.correctIndex != null) {
+
+      const correct = ans.selectedIndex === ans.correctIndex;
+
+      return {
+
+        marksAwarded: correct ? maxMarks : 0,
+
+        maxMarks,
+
+        feedback: correct
+
+          ? `Correct (${String.fromCharCode(65 + ans.correctIndex)}).`
+
+          : `Incorrect. Correct option: ${String.fromCharCode(65 + ans.correctIndex)}.`,
+
+        gradedBy: 'catalog_key',
+
+      };
+
+    }
+
+    const rubric =
+
+      ans.solutions?.alt_answer_02?.text ||
+
+      ans.solutions?.answer_01?.text ||
+
+      'Award partial marks using CBSE marking scheme.';
+
+    try {
+
+      const feedback = await window.Cbse10TutorApi.gradeAnswer(ans.prompt, ans.studentAnswer, rubric);
+
+      const marksAwarded = parseMarksFromFeedback(feedback, maxMarks);
+
+      return {
+
+        marksAwarded,
+
+        maxMarks,
+
+        feedback,
+
+        gradedBy: 'computer_ai',
+
+      };
+
+    } catch {
+
+      return {
+
+        marksAwarded: null,
+
+        maxMarks,
+
+        feedback: 'Computer grading unavailable — answer saved for teacher review.',
+
+        gradedBy: 'fallback',
+
+      };
+
+    }
+
+  }
+
+
+
+  async function runEvaluation(mode) {
+
+    appendChatLine('system', 'Evaluating…');
+
+    evalResults.classList.remove('hidden');
+
+    evalResults.innerHTML = '<p>Scoring your answers…</p>';
+
+
+
+    const grades = [];
+
+    if (mode === 'computer' || mode === 'both') {
+
+      for (const ans of sessionAnswers) {
+
+        const g = await scoreOneAnswer(ans);
+
+        grades.push({ ...ans, ...g });
+
+      }
+
+    } else {
+
+      grades.push(...sessionAnswers.map((a) => ({ ...a, gradedBy: 'teacher_pending' })));
+
+    }
+
+
+
+    const totalAwarded = grades.reduce((s, g) => s + (g.marksAwarded != null ? g.marksAwarded : 0), 0);
+
+    const totalMax = grades.reduce((s, g) => s + (g.maxMarks || 1), 0);
+
+
+
+    const attempt = {
+
+      sessionId: 'sess_' + Date.now(),
+
+      subject,
+
+      chapterId,
+
+      chapterTitle,
+
+      questionSource: questionSourceMode(),
+
+      evaluationMode: mode,
+
+      sessionDurationMs: Date.now() - sessionStart,
+
+      focusScore: focusScore(),
+
+      pasteCount,
+
+      blurCount,
+
+      totalAwarded,
+
+      totalMax,
+
+      answers: sessionAnswers.map((a) => ({
+
+        ...a,
+
+        grade: grades.find((g) => g.questionId === a.questionId),
+
+      })),
+
+      grades,
+
+    };
+
+
+
+    window.CBSE10EvalStore.recordAttempt(attempt);
+
+
+
+    let forumThreadId = null;
+
+    if (mode === 'teacher' || mode === 'both') {
+
+      const entry = window.CBSE10EvalStore.submitToTeacherQueue({
+
+        ...attempt,
+
+        status: 'pending_teacher',
+
+        note: 'Submitted from CBSE 10 Study Room — awaiting teacher grade in forum.',
+
+      });
+
+      forumThreadId = entry.forumThreadId;
+
+    }
+
+
+
+    let html = `<h3>Evaluation complete</h3><p>${window.CBSE10EvalStore.DUMMY_USER.name} · ${sessionAnswers.length} answer(s) · Score: ${totalAwarded}/${totalMax}</p><ul class="sr-grade-list">`;
+
+    grades.forEach((g, i) => {
+
+      const marks =
+
+        g.marksAwarded != null ? `${g.marksAwarded}/${g.maxMarks}` : 'Pending / AI narrative';
+
+      html += `<li><strong>Q${i + 1}</strong> ${marks} — ${(g.feedback || 'Sent to teacher').slice(0, 280)}</li>`;
+
+    });
+
+    html += '</ul>';
+
+    if (mode === 'teacher' || mode === 'both') {
+
+      html += `<p class="sr-teacher-note">Answer sheet queued for teacher grading. <a href="forum.html">Open forum</a> — thread <code>${forumThreadId || 'pending'}</code>.</p>`;
+
+    }
+
+    evalResults.innerHTML = html;
+
+    appendChatLine('system', `Evaluation saved · ${totalAwarded}/${totalMax} marks (computer scoring where available).`);
+
+  }
+
+
+
+  function renderStudents(students, listId) {
+
+    const ul = document.getElementById(listId || 'studentsRoster');
+
+    if (!ul) return;
+
+    ul.innerHTML = '';
+
+    students.slice(0, 12).forEach((s) => {
+
+      const li = document.createElement('li');
+
+      li.className = 'sr-student-item';
+
+      li.innerHTML = `<img src="${s.photo}" alt="" width="32" height="32" /><span>${s.name}</span><em>${s.city || ''}</em>`;
+
+      ul.appendChild(li);
+
+    });
+
+    if (!students.length) {
+
+      ul.innerHTML = '<li class="sr-students-empty"><em>Study room open — peers appear when online.</em></li>';
+
+    }
+
+  }
+
 })();
+
