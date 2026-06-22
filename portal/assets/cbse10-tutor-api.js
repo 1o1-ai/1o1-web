@@ -74,19 +74,28 @@
     );
   }
 
-  async function gradeAnswer(question, studentAnswer, rubric) {
+  async function gradeAnswer(question, studentAnswer, rubric, ctx) {
+    ctx = ctx || {};
     const body = {
       actor: 'student',
       message: 'Grade my answer',
       context: {
         grade_submission: true,
+        semantic_grade: true,
         question,
         answer: studentAnswer,
         rubric: rubric || '',
+        reference_answer: ctx.referenceAnswer || rubric || '',
+        max_marks: ctx.maxMarks || 5,
+        marks: ctx.maxMarks || 5,
         grade: '10',
         board: 'CBSE',
         sku: 'cbse10-core',
         study_room: true,
+        subject: ctx.subject || '',
+        chapter: ctx.chapterId || '',
+        chapter_title: ctx.chapterTitle || '',
+        language_medium: 'English',
       },
     };
     const res = await fetch(apiBase() + '/actors/chat', {

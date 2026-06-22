@@ -551,7 +551,7 @@
 
     activeCardEl.classList.add('sr-q-done');
 
-    activeCardEl.querySelectorAll('input, textarea, button').forEach((el) => {
+    activeCardEl.querySelectorAll('input, textarea, button:not(.sr-show-answer-btn)').forEach((el) => {
 
       el.disabled = true;
 
@@ -579,25 +579,57 @@
 
   function extractReferenceAnswer(q) {
 
-    const parts = [];
+    const cleanSol = (t) =>
+
+      window.AnyoQuestionFormat?.cleanSolutionText?.(t) || cleanQText(t);
 
     if (q.correctIndex != null && q.options?.[q.correctIndex]) {
 
-      parts.push(
-
-        `Correct option: ${String.fromCharCode(65 + q.correctIndex)}. ${cleanQText(q.options[q.correctIndex])}`
-
-      );
+      return cleanQText(q.options[q.correctIndex]);
 
     }
 
     const sol = q.solutions || {};
 
-    const modelText = sol.alt_answer_02?.text || sol.answer_01?.text || '';
+    const a = String(sol.alt_answer_02?.text || '');
 
-    if (modelText) parts.push(cleanQText(modelText));
+    const b = String(sol.answer_01?.text || '');
 
-    return parts.length ? parts.join('\n\n') : null;
+    const pick = a.length >= b.length ? a : b;
+
+    return pick ? cleanSol(pick) : null;
+
+  }
+
+
+
+  function cleanPresentationFeedback(feedback) {
+
+    const raw = String(feedback || '');
+
+    if (/offline rubric|keyword overlap|supercop\.in|local rub/i.test(raw)) {
+
+      return '';
+
+    }
+
+    const clean = window.AnyoQuestionFormat?.cleanSolutionText?.(raw) || raw;
+
+    if (/step\s*\d+\s*:/i.test(clean) && clean.length > 120) {
+
+      return '';
+
+    }
+
+    return clean
+
+      .replace(/keyword overlap[\s\S]*/gi, '')
+
+      .replace(/offline rubric[\s\S]*/gi, '')
+
+      .replace(/\(API offline[^)]*\)/gi, '')
+
+      .trim();
 
   }
 
@@ -1005,39 +1037,15 @@
 
     if (awarded) return Math.min(maxMarks, parseFloat(awarded[1]));
 
+    const marksSlash = text.match(/marks?\s*awarded\s*:\s*(\d+(?:\.\d+)?)\s*\/\s*(\d+)/i);
+
+    if (marksSlash) return Math.min(maxMarks, parseFloat(marksSlash[1]));
+
     if (/full\s*marks|correct|perfect|excellent/i.test(text)) return maxMarks;
 
     if (/zero|incorrect|wrong|no\s*marks|poor/i.test(text)) return 0;
 
     return null;
-
-  }
-
-
-
-  function localRubricScore(studentAnswer, rubric, maxMarks) {
-
-    const sa = String(studentAnswer || '').toLowerCase().split(/\W+/).filter((w) => w.length > 2);
-
-    const rb = String(rubric || '').toLowerCase().split(/\W+/).filter((w) => w.length > 3);
-
-    if (!sa.length) return { marksAwarded: 0, feedback: 'No answer provided.' };
-
-    if (!rb.length) return { marksAwarded: null, feedback: 'Answer recorded — awaiting rubric match.' };
-
-    const hits = rb.filter((w) => sa.some((t) => t.includes(w) || w.includes(t))).length;
-
-    const ratio = hits / Math.max(Math.min(rb.length, 40), 1);
-
-    const marks = Math.round(ratio * maxMarks * 10) / 10;
-
-    return {
-
-      marksAwarded: Math.min(maxMarks, Math.max(0, marks)),
-
-      feedback: `Offline rubric check: ~${Math.round(ratio * 100)}% keyword overlap (${hits} terms). ${String(rubric).slice(0, 200)}`,
-
-    };
 
   }
 
@@ -1069,29 +1077,49 @@
 
     }
 
-    const rubric =
+    const rawRubric = ans.solutions?.alt_answer_02?.text || ans.solutions?.answer_01?.text || '';
 
-      ans.solutions?.alt_answer_02?.text ||
+    const referenceAnswer =
 
-      ans.solutions?.answer_01?.text ||
+      window.AnyoQuestionFormat?.cleanSolutionText?.(rawRubric) ||
 
-      'Award partial marks using CBSE marking scheme.';
+      cleanQText(rawRubric) ||
+
+      'Award partial marks using CBSE marking scheme for Class 10.';
 
     try {
 
-      const feedback = await window.Cbse10TutorApi.gradeAnswer(ans.prompt, ans.studentAnswer, rubric);
+      const feedback = await window.Cbse10TutorApi.gradeAnswer(
 
-      let marksAwarded = parseMarksFromFeedback(feedback, maxMarks);
+        ans.prompt,
 
-      if (marksAwarded == null && feedback) {
+        ans.studentAnswer,
 
-        const local = localRubricScore(ans.studentAnswer, rubric, maxMarks);
+        referenceAnswer,
 
-        if (local.marksAwarded != null) {
+        {
 
-          marksAwarded = local.marksAwarded;
+          referenceAnswer,
+
+          maxMarks,
+
+          subject: ans.subject || subject,
+
+          chapterId: ans.chapterId || chapterId,
+
+          chapterTitle: ans.chapterTitle || chapterTitle,
 
         }
+
+      );
+
+      const marksAwarded = parseMarksFromFeedback(feedback, maxMarks);
+
+      let presentation = cleanPresentationFeedback(feedback);
+
+      if (!presentation && marksAwarded != null) {
+
+        presentation = `Scored ${marksAwarded}/${maxMarks}. Detailed feedback will appear when the grading service is online.`;
 
       }
 
@@ -1101,7 +1129,7 @@
 
         maxMarks,
 
-        feedback: feedback || localRubricScore(ans.studentAnswer, rubric, maxMarks).feedback,
+        feedback: presentation || 'Graded by computer tutor.',
 
         gradedBy: marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative',
 
@@ -1109,17 +1137,17 @@
 
     } catch {
 
-      const local = localRubricScore(ans.studentAnswer, rubric, maxMarks);
-
       return {
 
-        marksAwarded: local.marksAwarded,
+        marksAwarded: null,
 
         maxMarks,
 
-        feedback: local.feedback + ' (API offline — local rubric estimate.)',
+        feedback:
 
-        gradedBy: 'local_rubric',
+          'Computer grading is temporarily unavailable. Your answer was saved — retry when online or ask your teacher.',
+
+        gradedBy: 'pending',
 
       };
 
@@ -1233,11 +1261,21 @@
 
     grades.forEach((g, i) => {
 
-      const marks =
+      const note = cleanPresentationFeedback(g.feedback || 'Sent to teacher').slice(0, 280);
 
-        g.marksAwarded != null ? `${g.marksAwarded}/${g.maxMarks}` : `Review · ${(g.feedback || '').slice(0, 120)}`;
+      const label =
 
-      html += `<li><strong>Q${i + 1}</strong> ${marks} — ${(g.feedback || 'Sent to teacher').slice(0, 280)}</li>`;
+        g.marksAwarded != null
+
+          ? `${g.marksAwarded}/${g.maxMarks}`
+
+          : g.gradedBy === 'pending'
+
+            ? 'Pending review'
+
+            : 'Review';
+
+      html += `<li><strong>Q${i + 1}</strong> ${label}${note ? ' — ' + note : ''}</li>`;
 
     });
 

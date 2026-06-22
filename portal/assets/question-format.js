@@ -49,5 +49,31 @@
     return t.replace(/\s{2,}/g, ' ').trim();
   }
 
-  global.AnyoQuestionFormat = { formatMathText, formatOptions, cleanQuestionText };
+  /** Strip AI source tags, mark breakdowns, and step labels from catalog solutions. */
+  function cleanSolutionText(text) {
+    if (!text) return '';
+    let t = String(text);
+    t = t.replace(/\[[^\]]{2,120}\]/g, ' ');
+    t = t.replace(/\(\s*\d+(?:\.\d+)?\s*Marks?\s*\)/gi, '');
+    t = t.replace(/\b\d+(?:\.\d+)?\s*Marks?\b/gi, '');
+    t = t.replace(/Step\s*\d+\s*:\s*/gi, '\n• ');
+    t = t.replace(/Result validated cleanly\.?/gi, '');
+    t = t.replace(/We first write down given quantities\.?\s*/gi, '');
+    t = t.replace(/Next, we invoke standard formulas\.?\s*/gi, '');
+    t = t.replace(/Substituting variables allows calculation step-by-step\.?\s*/gi, '');
+    t = t.replace(/The final derived value matches class standards perfectly\.?/gi, '');
+    t = t
+      .split('\n')
+      .map((line) => line.replace(/\s{2,}/g, ' ').trim())
+      .filter(Boolean)
+      .join('\n');
+    return t.replace(/\n{3,}/g, '\n\n').trim();
+  }
+
+  global.AnyoQuestionFormat = {
+    formatMathText,
+    formatOptions,
+    cleanQuestionText,
+    cleanSolutionText,
+  };
 })(typeof window !== 'undefined' ? window : globalThis);
