@@ -66,6 +66,14 @@
   min-height: 200px;
 }
 
+.forum-hidden {
+  display: none !important;
+}
+
+.thread-detail:not(.forum-hidden) {
+  display: block;
+}
+
 .forum-empty {
   padding: 24px 20px;
   border-radius: 12px;
