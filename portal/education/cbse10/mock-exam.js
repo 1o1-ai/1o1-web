@@ -133,17 +133,44 @@
 
   document.getElementById('btnSubmitMock').addEventListener('click', () => submitMock(false));
 
+  function hasPlayableMcq(q) {
+    const opts = (q.options || [])
+      .map((o) => String(o || '').trim())
+      .filter((o) => o.length > 1);
+    return opts.length >= 2 && window.CBSE10Shared.resolveCorrectIndex(q, opts) != null;
+  }
+
+  function mcqPool(questions, filters) {
+    return window.CBSE10Shared.filterMasterQuestions(questions, filters).filter(hasPlayableMcq);
+  }
+
   Promise.all([window.CBSE10Shared.loadMasterCatalog(), window.CBSE10Shared.loadVerifiedBank()]).then(
     ([master, bank]) => {
       const catalog = master?.questions || [];
-      const mcqs = bank.length ? bank : catalog.filter((q) => q.options && q.answer_verified);
-      let pool = window.CBSE10Shared.filterMasterQuestions(isAuthentic ? mcqs : catalog, {
-        subject,
-        mode: isAuthentic ? 'cbse' : 'explore',
-        type: 'MCQ',
-        limit: 80,
-      });
-      pool = pool.filter((q) => q.options?.length && q.correctIndex != null);
+      const verifiedMcqs = bank.filter((q) => q.options?.length && (q.answer_verified || q.correctIndex != null));
+      const sources = verifiedMcqs.length ? verifiedMcqs : catalog;
+
+      let pool = [];
+      if (isAuthentic) {
+        pool = mcqPool([...verifiedMcqs, ...catalog], {
+          subject,
+          mode: 'cbse',
+          type: 'MCQ',
+          limit: 200,
+        });
+      }
+      if (pool.length < 5) {
+        pool = mcqPool(sources, {
+          subject,
+          mode: 'ai',
+          type: 'MCQ',
+          limit: 200,
+        });
+      }
+      if (pool.length < 5) {
+        pool = mcqPool(catalog, { subject, type: 'MCQ', limit: 200 });
+      }
+
       const shuffled = pool.sort(() => Math.random() - 0.5);
       questions = shuffled.slice(0, 20).map(window.CBSE10Shared.toDisplayQ);
       if (questions.length < 5) {

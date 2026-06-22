@@ -211,7 +211,7 @@
           (subj === 'science' && sub === 'science');
         if (!matchSub) return false;
         if (bucketFilter) return q._bucket === bucketFilter;
-        if (chFilter) return q._inChapterView && effectiveChapter(q) === chFilter;
+        if (chFilter) return effectiveChapter(q) === chFilter;
         if (sourceChapter) return effectiveChapter(q) === sourceChapter;
         if (minYear && typeof q.exam_year === 'number' && q.exam_year < minYear) return false;
         return true;
@@ -303,6 +303,11 @@
       if (mode === 'cbse' && !isAuthenticCbse(q)) return false;
       if (mode === 'ai' && isAuthenticCbse(q)) return false;
       if (type && String(q.type || '').toLowerCase() !== type.toLowerCase()) return false;
+      if (type && String(type).toLowerCase() === 'mcq') {
+        const opts = q.options || [];
+        const good = opts.filter((o) => cleanDisplayText(o).length > 1);
+        if (good.length < 2) return false;
+      }
       if (difficulty && difficulty !== 'all') {
         const d = String(q.difficulty || '').toLowerCase();
         if (d !== difficulty.toLowerCase()) return false;
