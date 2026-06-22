@@ -353,8 +353,10 @@
     var hero = document.getElementById('hero');
     var errorBox = document.getElementById('errorBox');
 
-    function headers() {
-      var h = { 'Content-Type': 'application/json', 'X-Abhyas-Client': 'anyo-internal' };
+    function headers(opts) {
+      opts = opts || {};
+      var h = { 'Content-Type': 'application/json' };
+      if (opts.internal) h['X-Abhyas-Client'] = 'anyo-internal';
       var tokenSel = document.getElementById('userTokenSelect');
       var token = (tokenSel && tokenSel.value) || localStorage.getItem('abhyas_token') || 'abhyas-test-token-sangati-2026';
       h['Authorization'] = 'Bearer ' + token;
@@ -766,7 +768,12 @@
       };
 
       try {
-        var res = await fetch(apiUrl + '/v1/session/start', { method: 'POST', headers: headers(), body: JSON.stringify(body) });
+        var needInternal = isMock && state.paperMode === 'composite';
+        var res = await fetch(apiUrl + '/v1/session/start', {
+          method: 'POST',
+          headers: headers({ internal: needInternal }),
+          body: JSON.stringify(body),
+        });
         var data = await res.json();
         if (!res.ok) {
           var detail = data.detail;
