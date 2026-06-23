@@ -7,7 +7,7 @@
   const DISCLAIMER =
     'AI guidance only — not official CBSE marking. Verify with NCERT and your teacher.';
   const CHAT_STORAGE_KEY = 'sahadeva_chat_cbse10_v2';
-  const SIZE_STORAGE_KEY = 'sahadeva_panel_size_v1';
+  const GEOM_STORAGE_KEY = 'sahadeva_panel_geom_v2';
 
   function esc(s) {
     return String(s || '')
@@ -122,23 +122,24 @@
       '<span class="sahadeva-fab-icon" aria-hidden="true">🛡️</span>' +
       '<span class="sahadeva-fab-label">Sahadeva</span>' +
       '</button>' +
-      '<section class="sahadeva-orbit-panel forum-hidden" id="sahadevaFabPanel" role="dialog" aria-label="Sahadeva study assistant">' +
-      '<div class="sahadeva-orbit-frame">' +
-      '<label class="sahadeva-orbit-filter sahadeva-orbit-subject">Subject' +
-      '<select id="sahadevaSubject"><option value="all">All</option><option value="science">Science</option><option value="mathematics">Mathematics</option></select></label>' +
-      '<label class="sahadeva-orbit-filter sahadeva-orbit-chapter">Chapter' +
-      '<select id="sahadevaChapter"><option value="all">All chapters</option></select></label>' +
-      '<div class="sahadeva-orbit-core">' +
-      '<div class="sahadeva-orbit-circle">' +
-      '<header class="sahadeva-orbit-head"><strong>Sahadeva</strong><span>Study Assistant</span>' +
-      '<button type="button" class="sahadeva-fab-close" id="sahadevaFabClose" aria-label="Minimize chat">−</button></header>' +
-      '<div class="sahadeva-orbit-chat" id="sahadevaFabChat" aria-live="polite"></div>' +
-      '</div></div>' +
-      '<div class="sahadeva-orbit-modes" role="tablist">' +
+      '<section class="sahadeva-panel forum-hidden" id="sahadevaFabPanel" role="dialog" aria-label="Sahadeva study assistant">' +
+      '<div class="sahadeva-panel-ring">' +
+      '<header class="sahadeva-panel-drag" id="sahadevaDrag" title="Drag to move">' +
+      '<span class="sahadeva-drag-title"><span aria-hidden="true">🛡️</span> Sahadeva <small>Study Assistant</small></span>' +
+      '<span class="sahadeva-panel-actions">' +
+      '<button type="button" class="sahadeva-panel-btn" id="sahadevaMaximize" title="Expand to full screen" aria-label="Expand">⛶</button>' +
+      '<button type="button" class="sahadeva-panel-btn" id="sahadevaFabClose" title="Minimize" aria-label="Minimize">−</button>' +
+      '</span></header>' +
+      '<div class="sahadeva-panel-filters">' +
+      '<label>Subject<select id="sahadevaSubject"><option value="all">All</option><option value="science">Science</option><option value="mathematics">Mathematics</option></select></label>' +
+      '<label>Chapter<select id="sahadevaChapter"><option value="all">All chapters</option></select></label>' +
+      '</div>' +
+      '<div class="sahadeva-panel-chat" id="sahadevaFabChat" aria-live="polite"></div>' +
+      '<div class="sahadeva-panel-modes" role="tablist">' +
       '<button type="button" class="sahadeva-mode active" data-mode="predict" role="tab">Prediction</button>' +
       '<button type="button" class="sahadeva-mode" data-mode="search" role="tab">Find threads</button>' +
       '</div>' +
-      '<form class="sahadeva-orbit-form" id="sahadevaFabForm">' +
+      '<form class="sahadeva-panel-form" id="sahadevaFabForm">' +
       '<input type="text" id="sahadevaFabInput" maxlength="400" placeholder="Ask or search discussions…" autocomplete="off" />' +
       '<button type="submit" class="btn-portal btn-portal-primary sahadeva-fab-send">Send</button>' +
       '</form>' +
@@ -159,57 +160,174 @@
     const chapterSel = root.querySelector('#sahadevaChapter');
     const modeBtns = root.querySelectorAll('.sahadeva-mode');
     const resizeHandle = root.querySelector('#sahadevaResize');
+    const maximizeBtn = root.querySelector('#sahadevaMaximize');
+    const dragHandle = root.querySelector('#sahadevaDrag');
 
     let open = false;
+    let maximized = false;
+    let geomBeforeMax = null;
     let mode = 'predict';
     let busy = false;
     let curriculum = null;
     let forumData = null;
     let chatLog = [];
 
-    function loadSavedSize() {
+    function defaultGeometry() {
+      const w = 400;
+      const h = 520;
+      return {
+        x: 16,
+        y: Math.max(16, window.innerHeight - h - 16),
+        w,
+        h,
+      };
+    }
+
+    function applyGeometry(geom) {
+      panel.style.left = geom.x + 'px';
+      panel.style.top = geom.y + 'px';
+      panel.style.width = geom.w + 'px';
+      panel.style.height = geom.h + 'px';
+    }
+
+    function readGeometry() {
+      return {
+        x: panel.offsetLeft,
+        y: panel.offsetTop,
+        w: panel.offsetWidth,
+        h: panel.offsetHeight,
+      };
+    }
+
+    function saveGeometry() {
       try {
-        const raw = sessionStorage.getItem(SIZE_STORAGE_KEY);
-        if (!raw) return;
-        const { w, h } = JSON.parse(raw);
-        if (w) panel.style.setProperty('--sahadeva-w', w + 'px');
-        if (h) panel.style.setProperty('--sahadeva-h', h + 'px');
+        sessionStorage.setItem(
+          GEOM_STORAGE_KEY,
+          JSON.stringify({ ...readGeometry(), maximized })
+        );
       } catch {
         /* */
       }
     }
 
-    function saveSize() {
-      const w = panel.offsetWidth;
-      const h = panel.offsetHeight;
-      sessionStorage.setItem(SIZE_STORAGE_KEY, JSON.stringify({ w, h }));
+    function loadSavedGeometry() {
+      try {
+        const raw = sessionStorage.getItem(GEOM_STORAGE_KEY);
+        if (!raw) {
+          applyGeometry(defaultGeometry());
+          return;
+        }
+        const g = JSON.parse(raw);
+        if (g.maximized) {
+          maximized = true;
+          panel.classList.add('sahadeva-panel-maximized');
+          const pad = 12;
+          applyGeometry({
+            x: pad,
+            y: pad,
+            w: window.innerWidth - pad * 2,
+            h: window.innerHeight - pad * 2,
+          });
+          return;
+        }
+        applyGeometry({
+          x: g.x ?? 16,
+          y: g.y ?? 16,
+          w: Math.min(window.innerWidth - 24, Math.max(280, g.w || 400)),
+          h: Math.min(window.innerHeight - 24, Math.max(320, g.h || 520)),
+        });
+      } catch {
+        applyGeometry(defaultGeometry());
+      }
+    }
+
+    function toggleMaximize() {
+      if (maximized) {
+        if (geomBeforeMax) applyGeometry(geomBeforeMax);
+        maximized = false;
+        panel.classList.remove('sahadeva-panel-maximized');
+        maximizeBtn.textContent = '⛶';
+        maximizeBtn.title = 'Expand to full screen';
+      } else {
+        geomBeforeMax = readGeometry();
+        const pad = 12;
+        applyGeometry({
+          x: pad,
+          y: pad,
+          w: window.innerWidth - pad * 2,
+          h: window.innerHeight - pad * 2,
+        });
+        maximized = true;
+        panel.classList.add('sahadeva-panel-maximized');
+        maximizeBtn.textContent = '⊟';
+        maximizeBtn.title = 'Restore size';
+      }
+      saveGeometry();
+    }
+
+    function bindDrag() {
+      dragHandle.addEventListener('pointerdown', (e) => {
+        if (e.target.closest('button')) return;
+        e.preventDefault();
+        if (maximized) toggleMaximize();
+        const startX = e.clientX;
+        const startY = e.clientY;
+        const startLeft = panel.offsetLeft;
+        const startTop = panel.offsetTop;
+        dragHandle.setPointerCapture(e.pointerId);
+
+        const onMove = (ev) => {
+          const maxX = window.innerWidth - panel.offsetWidth - 8;
+          const maxY = window.innerHeight - panel.offsetHeight - 8;
+          const x = Math.max(8, Math.min(maxX, startLeft + ev.clientX - startX));
+          const y = Math.max(8, Math.min(maxY, startTop + ev.clientY - startY));
+          panel.style.left = x + 'px';
+          panel.style.top = y + 'px';
+        };
+        const onUp = () => {
+          dragHandle.releasePointerCapture(e.pointerId);
+          dragHandle.removeEventListener('pointermove', onMove);
+          dragHandle.removeEventListener('pointerup', onUp);
+          saveGeometry();
+        };
+        dragHandle.addEventListener('pointermove', onMove);
+        dragHandle.addEventListener('pointerup', onUp);
+      });
     }
 
     function bindResize() {
-      let startX = 0;
-      let startY = 0;
-      let startW = 0;
-      let startH = 0;
-
       resizeHandle.addEventListener('pointerdown', (e) => {
         e.preventDefault();
-        startX = e.clientX;
-        startY = e.clientY;
-        startW = panel.offsetWidth;
-        startH = panel.offsetHeight;
+        if (maximized) {
+          maximized = false;
+          panel.classList.remove('sahadeva-panel-maximized');
+          maximizeBtn.textContent = '⛶';
+        }
+        const startX = e.clientX;
+        const startY = e.clientY;
+        const startW = panel.offsetWidth;
+        const startH = panel.offsetHeight;
+        const startLeft = panel.offsetLeft;
+        const startTop = panel.offsetTop;
         resizeHandle.setPointerCapture(e.pointerId);
 
         const onMove = (ev) => {
-          const w = Math.min(520, Math.max(300, startW + (ev.clientX - startX)));
-          const h = Math.min(680, Math.max(360, startH + (ev.clientY - startY)));
-          panel.style.setProperty('--sahadeva-w', w + 'px');
-          panel.style.setProperty('--sahadeva-h', h + 'px');
+          const w = Math.min(
+            window.innerWidth - startLeft - 8,
+            Math.max(280, startW + (ev.clientX - startX))
+          );
+          const h = Math.min(
+            window.innerHeight - startTop - 8,
+            Math.max(320, startH + (ev.clientY - startY))
+          );
+          panel.style.width = w + 'px';
+          panel.style.height = h + 'px';
         };
         const onUp = () => {
           resizeHandle.releasePointerCapture(e.pointerId);
           resizeHandle.removeEventListener('pointermove', onMove);
           resizeHandle.removeEventListener('pointerup', onUp);
-          saveSize();
+          saveGeometry();
         };
         resizeHandle.addEventListener('pointermove', onMove);
         resizeHandle.addEventListener('pointerup', onUp);
@@ -359,7 +477,7 @@
       if (chat.childElementCount) return;
       appendMsg(
         'assistant',
-        'Pick <strong>Subject</strong> and <strong>Chapter</strong> above the circle, then ask for a prediction or search discussions (e.g. <em>Life Processes</em>).',
+        'Pick <strong>Subject</strong> and <strong>Chapter</strong>, then ask for a prediction or search discussions. Drag the header to move; use ⛶ or the corner to resize.',
         true
       );
     }
@@ -537,6 +655,10 @@
 
     launcher.addEventListener('click', () => setOpen(!open));
     closeBtn.addEventListener('click', () => setOpen(false));
+    maximizeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMaximize();
+    });
 
     modeBtns.forEach((btn) => {
       btn.addEventListener('click', () => setMode(btn.getAttribute('data-mode') || 'predict'));
@@ -576,7 +698,19 @@
       }
     });
 
-    loadSavedSize();
+    window.addEventListener('resize', () => {
+      if (!maximized) return;
+      const pad = 12;
+      applyGeometry({
+        x: pad,
+        y: pad,
+        w: window.innerWidth - pad * 2,
+        h: window.innerHeight - pad * 2,
+      });
+    });
+
+    loadSavedGeometry();
+    bindDrag();
     bindResize();
     if (!restoreChat()) appendWelcome();
 
