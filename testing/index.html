@@ -3,7 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <base href="/testing/" />
+  <script>
+    (function () {
+      var path = location.pathname.replace(/\/?index\.html?$/, '');
+      if (!path.endsWith('/')) path += '/';
+      var base = document.createElement('base');
+      base.href = path;
+      document.head.appendChild(base);
+    })();
+  </script>
   <title>Abhyas · Testing — Quick Quiz & Mock Exam</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet" />
@@ -319,11 +327,8 @@
       if (host === 'localhost' || host === '127.0.0.1') {
         return { abhyas: 'http://127.0.0.1:8130', education: 'http://127.0.0.1:8120' };
       }
-      if (host.endsWith('yogabrata.com')) {
+      if (host.endsWith('yogabrata.com') || host.endsWith('brahmando.com') || host.endsWith('manjulab.com')) {
         return { abhyas: 'https://api.brahmando.com/education/abhyas', education: 'https://api.brahmando.com/education' };
-      }
-      if (host.endsWith('brahmando.com') || host.endsWith('manjulab.com')) {
-        return { abhyas: location.origin + '/education/abhyas', education: location.origin + '/education' };
       }
       return { abhyas: 'https://api.brahmando.com/education/abhyas', education: 'https://api.brahmando.com/education' };
     }
