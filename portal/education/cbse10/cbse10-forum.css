@@ -127,8 +127,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 10px 4px;
-  border-radius: 18px;
+  padding: 8px 12px 6px;
+  border-radius: 14px;
   border: 1px solid rgba(20, 184, 166, 0.35);
   background: #000;
   color: #f1f5f9;
@@ -138,8 +138,8 @@
 }
 
 .sahadeva-fab-mark {
-  width: 92px;
-  height: 52px;
+  width: 88px;
+  height: 24px;
   display: block;
 }
 
@@ -153,22 +153,24 @@
   pointer-events: none;
 }
 
-/* SAHADEVA arc band — sits on top of the outer orbit ring */
+/* Thin SAHADEVA ribbon crown — tab handle + banner on outer orbit */
 .sahadeva-display-circular .sahadeva-orbit-crown {
   position: absolute;
   left: 50%;
   top: 2.5%;
-  transform: translate(-50%, -46%);
-  width: 90%;
+  transform: translate(-50%, -54%);
+  width: 52%;
+  min-width: 130px;
+  max-width: 210px;
   z-index: 12;
   pointer-events: none;
 }
 
-.sahadeva-panel-arc-title {
+.sahadeva-panel-crown {
   width: 100%;
   height: auto;
   display: block;
-  filter: drop-shadow(0 0 10px rgba(20, 184, 166, 0.45));
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
 }
 
 .sahadeva-display-normal .sahadeva-orbit-crown {
