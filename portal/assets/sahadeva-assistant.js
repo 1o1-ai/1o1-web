@@ -102,40 +102,32 @@
       .map((x) => x.t);
   }
 
-  /** Arc logo: SAHADEVA curved inside top bend + orbiting universe dot. */
-  function sahadevaArcMarkSvg(className) {
-    const uid = 'sah' + Math.random().toString(36).slice(2, 9);
-    const textPath = uid + 'Text';
-    const orbitPath = uid + 'Orbit';
+  /** Thin crown ribbon + tab handle (panel top of outer orbit). */
+  function sahadevaCrownRibbonSvg(className) {
     return (
       '<svg class="' +
       className +
-      '" viewBox="0 0 128 72" aria-hidden="true" focusable="false">' +
-      '<defs>' +
-      '<path id="' +
-      textPath +
-      '" d="M 24 48 A 40 40 0 0 1 104 48"/>' +
-      '<path id="' +
-      orbitPath +
-      '" d="M 6 52 A 58 58 0 0 1 122 52"/>' +
-      '<filter id="' +
-      uid +
-      'Glow"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
-      '</defs>' +
-      '<path d="M 12 50 A 52 52 0 0 1 116 50" fill="none" stroke="#042f2e" stroke-width="16" stroke-linecap="round"/>' +
-      '<path d="M 12 50 A 52 52 0 0 1 116 50" fill="none" stroke="#0f766e" stroke-width="12" stroke-linecap="round"/>' +
-      '<path d="M 14 50 A 50 50 0 0 1 114 50" fill="none" stroke="#14b8a6" stroke-width="8" stroke-linecap="round"/>' +
-      '<text fill="#ecfdf5" font-size="9.5" font-weight="700" letter-spacing="0.32em" font-family="system-ui,Segoe UI,sans-serif">' +
-      '<textPath href="#' +
-      textPath +
-      '" startOffset="50%" text-anchor="middle">SAHADEVA</textPath></text>' +
-      '<circle r="3.8" fill="#67e8f9" filter="url(#' +
-      uid +
-      'Glow)">' +
-      '<animateMotion dur="16s" repeatCount="indefinite" calcMode="linear">' +
-      '<mpath href="#' +
-      orbitPath +
-      '"/></animateMotion></circle>' +
+      '" viewBox="0 0 200 46" aria-hidden="true" focusable="false">' +
+      '<path d="M 73 21 Q 100 -1 127 21" fill="none" stroke="#1e3a8a" stroke-width="2"/>' +
+      '<path d="M 75 20 Q 100 3 125 20 L 123 20 Q 100 9 77 20 Z" fill="#f9a8a0" stroke="#1e3a8a" stroke-width="1.6"/>' +
+      '<ellipse cx="100" cy="14" rx="8.5" ry="5" fill="#fff" stroke="#1e3a8a" stroke-width="1"/>' +
+      '<path d="M 38 23 H 162 L 158 25.5 Q 152 28.5 146 26.5 Q 100 31 54 26.5 Q 48 28.5 42 25.5 Z" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1.4"/>' +
+      '<text x="100" y="31.5" text-anchor="middle" fill="#ffffff" font-size="9.8" font-weight="700" letter-spacing="0.3em" font-family="system-ui,Segoe UI,sans-serif">SAHADEVA</text>' +
+      '</svg>'
+    );
+  }
+
+  /** Compact ribbon for launcher button. */
+  function sahadevaLauncherMarkSvg(className) {
+    return (
+      '<svg class="' +
+      className +
+      '" viewBox="0 0 120 32" aria-hidden="true" focusable="false">' +
+      '<path d="M 44 14 Q 60 2 76 14" fill="none" stroke="#1e3a8a" stroke-width="1.4"/>' +
+      '<path d="M 45 13.5 Q 60 4 75 13.5 L 74 13.5 Q 60 7 46 13.5 Z" fill="#f9a8a0" stroke="#1e3a8a" stroke-width="1.2"/>' +
+      '<ellipse cx="60" cy="10" rx="5" ry="3" fill="#fff" stroke="#1e3a8a" stroke-width="0.8"/>' +
+      '<path d="M 22 15 H 98 L 96 17 Q 60 20 24 17 Z" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="1"/>' +
+      '<text x="60" y="21" text-anchor="middle" fill="#fff" font-size="7" font-weight="700" letter-spacing="0.22em" font-family="system-ui,sans-serif">SAHADEVA</text>' +
       '</svg>'
     );
   }
@@ -158,11 +150,11 @@
     root.className = 'sahadeva-fab-root';
     root.innerHTML =
       '<button type="button" class="sahadeva-fab-launcher" id="sahadevaFabLauncher" aria-expanded="false" aria-controls="sahadevaFabPanel" aria-label="Open Sahadeva study assistant">' +
-      sahadevaArcMarkSvg('sahadeva-fab-mark') +
+      sahadevaLauncherMarkSvg('sahadeva-fab-mark') +
       '</button>' +
       '<section class="sahadeva-panel forum-hidden sahadeva-display-circular" id="sahadevaFabPanel" role="dialog" aria-label="Sahadeva study assistant">' +
       '<div class="sahadeva-orbit-crown" aria-hidden="true">' +
-      sahadevaArcMarkSvg('sahadeva-panel-arc-title') +
+      sahadevaCrownRibbonSvg('sahadeva-panel-crown') +
       '</div>' +
       '<div class="sahadeva-universe-orbit" id="sahadevaDrag" title="Drag empty ring area to move">' +
       '<div class="sahadeva-orbit-decor" aria-hidden="true">' +
