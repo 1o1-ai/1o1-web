@@ -338,7 +338,7 @@
       sessionKind: params.get('mode') || 'practice',
       evaluationMode: 'answer_pack',
       paperId: params.get('paper_id') || '',
-      paperMode: 'composite',
+      paperMode: 'paper',
       papers: [],
       session: null,
       answers: {},
@@ -352,6 +352,19 @@
     var main = document.getElementById('main');
     var hero = document.getElementById('hero');
     var errorBox = document.getElementById('errorBox');
+
+    function allowsInternalHeader() {
+      var host = (location.hostname || '').toLowerCase();
+      return host === 'localhost' || host === '127.0.0.1' || host.endsWith('brahmando.com') || host.endsWith('manjulab.com');
+    }
+
+    function fetchErrorMessage(err, context) {
+      var msg = (err && err.message) || String(err || 'Request failed');
+      if (msg === 'Failed to fetch') {
+        return context + ' blocked by browser (network/CORS). On yogabrata.com use Official question paper for mock exams; composite mix needs API edge update.';
+      }
+      return msg;
+    }
 
     function headers(opts) {
       opts = opts || {};
@@ -734,10 +747,22 @@
       var isMock = state.sessionKind === 'mock_exam';
       if (isMock) {
         state.studentName = (document.getElementById('studentNameInput') || {}).value || '';
-        state.paperMode = (document.getElementById('paperModeSelect') || {}).value || 'composite';
+        state.paperMode = (document.getElementById('paperModeSelect') || {}).value || 'paper';
         if (state.paperMode === 'paper') {
           state.paperId = (document.getElementById('paperSelect') || {}).value || '';
-          if (!state.paperId) state.paperMode = 'composite';
+          if (!state.paperId) {
+            await loadPapers();
+            state.paperId = (state.papers[0] && state.papers[0].paper_id) || '';
+          }
+          if (!state.paperId) {
+            showError('No official question paper indexed yet. Try quick practice mode or pick another subject.');
+            renderChoose();
+            return;
+          }
+        } else if (!allowsInternalHeader()) {
+          showError('Computer-mix mock requires internal API access. On yogabrata.com choose Official question paper.');
+          renderChoose();
+          return;
         } else {
           state.paperId = '';
         }
@@ -769,7 +794,7 @@
       };
 
       try {
-        var needInternal = isMock && state.paperMode === 'composite';
+        var needInternal = isMock && state.paperMode === 'composite' && allowsInternalHeader();
         var res = await fetch(apiUrl + '/v1/session/start', {
           method: 'POST',
           headers: headers({ internal: needInternal }),
@@ -791,7 +816,7 @@
         }
         renderTest();
       } catch (e) {
-        showError(e.message || 'Failed to start test');
+        showError(fetchErrorMessage(e, 'Start request'));
         renderChoose();
       }
     }
@@ -892,7 +917,7 @@
         state.answerPack = data.answer_pack || null;
         renderResults();
       } catch (e) {
-        showError(e.message || 'Evaluation failed');
+        showError(fetchErrorMessage(e, 'Submit request'));
         renderTest();
       }
     }
