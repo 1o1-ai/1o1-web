@@ -489,7 +489,7 @@
         return;
       }
 
-      applyForumInPage(subject, chapter, message);
+      applyForumInPage(subject, chapter, chapter !== 'all' ? '' : message);
 
       let html =
         '<p class="sahadeva-search-lead">Found ' +
