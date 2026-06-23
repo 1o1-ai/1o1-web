@@ -1,7 +1,7 @@
-/* CBSE 10 Discussion Forum — baseline layout */
+/* CBSE 10 Discussion Forum — baseline layout + Sahadeva chat */
 .forum-main {
   display: grid;
-  grid-template-columns: minmax(220px, 260px) 1fr;
+  grid-template-columns: minmax(220px, 280px) 1fr;
   gap: 20px;
   max-width: 1100px;
   width: 100%;
@@ -57,8 +57,95 @@
   line-height: 1.4;
 }
 
-.forum-guest-banner a {
+.sahadeva-card {
+  text-align: center;
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.sahadeva-avatar {
+  font-size: 2rem;
+}
+
+.sahadeva-card strong {
+  display: block;
+  color: #f1f5f9;
+}
+
+.sahadeva-card > span {
+  font-size: 0.72rem;
   color: #67e8f9;
+}
+
+.sahadeva-tagline {
+  font-size: 0.7rem;
+  margin: 8px 0 10px;
+  text-align: left;
+}
+
+.sahadeva-chat {
+  max-height: 160px;
+  overflow-y: auto;
+  text-align: left;
+  margin-bottom: 8px;
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.sahadeva-msg {
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.sahadeva-msg-user {
+  background: rgba(103, 232, 249, 0.1);
+  color: #e2e8f0;
+}
+
+.sahadeva-msg-assistant {
+  background: rgba(167, 139, 250, 0.12);
+  color: #e9d5ff;
+}
+
+.sahadeva-msg-typing,
+.sahadeva-msg-error {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.sahadeva-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.sahadeva-form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e2e8f0;
+  font-size: 0.8rem;
+}
+
+.sahadeva-send {
+  font-size: 0.78rem;
+  padding: 8px 12px;
+}
+
+.sahadeva-foot {
+  font-size: 0.65rem;
+  text-align: left;
+  margin-top: 4px;
 }
 
 .forum-content {
@@ -96,6 +183,13 @@
 
 .thread-row.thread-voltaic {
   border-left: 3px solid rgba(52, 211, 153, 0.45);
+}
+
+.forum-post.sahadeva {
+  background: rgba(167, 139, 250, 0.06);
+  margin: 0 -12px;
+  padding: 14px 12px;
+  border-radius: 10px;
 }
 
 @media (max-width: 768px) {

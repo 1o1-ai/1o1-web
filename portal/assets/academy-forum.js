@@ -24,8 +24,20 @@
     const banner = document.createElement('p');
     banner.className = 'forum-guest-banner';
     banner.innerHTML =
-      'Browsing as guest · <a href="index.html">Sign in (yoga/yoga)</a> to sync grading submissions from Study Room.';
+      'Open forum — no login required. Pick a chapter and <strong>ask Sahadeva</strong> below. Study Room grading sync uses your local practice profile.';
     document.querySelector('.forum-sidebar')?.prepend(banner);
+  }
+
+  const sahadevaCard = document.querySelector('.sahadeva-card');
+  if (sahadevaCard && window.SahadevaAssistant && sku === 'cbse10-core') {
+    window.SahadevaAssistant.mount(
+      sahadevaCard,
+      () => ({
+        subject: forumSubject?.value || 'all',
+        chapter: forumChapter?.value || 'all',
+      }),
+      cfg
+    );
   }
 
   showListView();
