@@ -126,15 +126,21 @@
 .sahadeva-fab-launcher {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(16, 185, 129, 0.45);
-  background: radial-gradient(circle at 30% 30%, rgba(30, 27, 75, 0.95), rgba(2, 6, 23, 0.98));
+  justify-content: center;
+  padding: 6px 10px 4px;
+  border-radius: 18px;
+  border: 1px solid rgba(20, 184, 166, 0.35);
+  background: #000;
   color: #f1f5f9;
   cursor: pointer;
-  box-shadow: 0 0 24px rgba(6, 182, 212, 0.2), 0 8px 28px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 28px rgba(20, 184, 166, 0.18), 0 8px 28px rgba(0, 0, 0, 0.55);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sahadeva-fab-mark {
+  width: 92px;
+  height: 52px;
+  display: block;
 }
 
 .sahadeva-fab-launcher:hover {
@@ -147,13 +153,52 @@
   pointer-events: none;
 }
 
-.sahadeva-fab-icon {
-  font-size: 1.35rem;
+/* SAHADEVA arc band — sits on top of the outer orbit ring */
+.sahadeva-display-circular .sahadeva-orbit-crown {
+  position: absolute;
+  left: 50%;
+  top: 2.5%;
+  transform: translate(-50%, -46%);
+  width: 90%;
+  z-index: 12;
+  pointer-events: none;
 }
 
-.sahadeva-fab-label {
-  font-weight: 600;
-  font-size: 0.88rem;
+.sahadeva-panel-arc-title {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(20, 184, 166, 0.45));
+}
+
+.sahadeva-display-normal .sahadeva-orbit-crown {
+  display: none;
+}
+
+.sahadeva-orbit-satellite {
+  position: absolute;
+  inset: 2.5%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+  animation: sahadeva-satellite-orbit 22s linear infinite;
+}
+
+.sahadeva-universe-dot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  margin: -4.5px 0 0 -4.5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ecfeff, #22d3ee 55%, #0891b2);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.95), 0 0 24px rgba(6, 182, 212, 0.45);
+}
+
+@keyframes sahadeva-satellite-orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .sahadeva-panel {
@@ -161,6 +206,38 @@
   z-index: 1201;
   overflow: visible;
   filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.55));
+}
+
+.sahadeva-display-normal.sahadeva-panel {
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(20, 184, 166, 0.32);
+  background: #0b1220;
+  filter: drop-shadow(0 16px 36px rgba(0, 0, 0, 0.5));
+}
+
+.sahadeva-display-normal .sahadeva-orbit-decor {
+  display: none;
+}
+
+.sahadeva-display-normal .sahadeva-universe-orbit {
+  border-radius: 0;
+  background: transparent;
+  cursor: default;
+  overflow: hidden;
+}
+
+.sahadeva-display-normal .sahadeva-universe-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  background: linear-gradient(165deg, rgba(15, 23, 42, 0.98) 0%, rgba(2, 6, 23, 0.99) 100%);
+}
+
+.sahadeva-display-normal.sahadeva-panel-maximized {
+  border-radius: 12px;
 }
 
 .sahadeva-panel-maximized .sahadeva-universe-orbit {
@@ -188,6 +265,13 @@
 
 .sahadeva-universe-orbit.sahadeva-dragging {
   cursor: grabbing;
+}
+
+.sahadeva-orbit-decor {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
 }
 
 .sahadeva-orbit-stars {
@@ -333,6 +417,34 @@
   font-size: 0.6rem;
   color: #67e8f9;
   margin-top: 2px;
+}
+
+.sahadeva-display-pick {
+  display: flex;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.sahadeva-display-opt {
+  flex: 1;
+  padding: 4px 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(2, 6, 23, 0.55);
+  color: #94a3b8;
+  font-size: 0.62rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.sahadeva-display-opt.active {
+  border-color: rgba(20, 184, 166, 0.55);
+  background: rgba(20, 184, 166, 0.14);
+  color: #ccfbf1;
+}
+
+.sahadeva-display-opt:hover {
+  color: #e2e8f0;
 }
 
 .sahadeva-panel-filters {
