@@ -148,8 +148,7 @@
       img.onload = function () {
         var w = img.width;
         var h = img.height;
-        if (w <= maxW) { resolve(dataUrl); return; }
-        var scale = maxW / w;
+        var scale = w > maxW ? (maxW / w) : 1;
         var canvas = document.createElement('canvas');
         canvas.width = Math.round(w * scale);
         canvas.height = Math.round(h * scale);
@@ -157,7 +156,7 @@
         ctx.fillStyle = '#ffffff';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
-        resolve(canvas.toDataURL('image/jpeg', quality || 0.88));
+        resolve(canvas.toDataURL('image/jpeg', quality != null ? quality : 0.85));
       };
       img.onerror = reject;
       img.src = dataUrl;
@@ -335,7 +334,7 @@
       }
       var reader = new FileReader();
       reader.onload = function () {
-        resizeDataUrl(reader.result, 960, 0.88).then(function (url) {
+        resizeDataUrl(reader.result, 720, 0.82).then(function (url) {
           addImage(url, { type: 'upload', name: file.name });
         }).catch(function () { alert('Could not read image.'); });
       };
@@ -410,9 +409,9 @@
         alert('Draw something on the canvas first, or upload an image.');
         return;
       }
-      var dataUrl = canvas.toDataURL('image/png');
-      resizeDataUrl(dataUrl, 960, 0.92).then(function (url) {
-        addImage(url, { type: 'drawing', name: 'drawing.png' });
+      var dataUrl = canvas.toDataURL('image/jpeg', 0.82);
+      resizeDataUrl(dataUrl, 720, 0.82).then(function (url) {
+        addImage(url, { type: 'drawing', name: 'drawing.jpg' });
         fillCanvasWhite();
         drawingOpen = false;
         drawPanel.classList.add('hidden');

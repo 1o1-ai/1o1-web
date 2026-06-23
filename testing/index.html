@@ -364,15 +364,23 @@
     var hero = document.getElementById('hero');
     var errorBox = document.getElementById('errorBox');
 
+    function isAllowlistedOrigin() {
+      var host = (location.hostname || '').toLowerCase();
+      return host === 'localhost' || host === '127.0.0.1' || host.endsWith('yogabrata.com') || host.endsWith('brahmando.com') || host.endsWith('manjulab.com');
+    }
+
     function allowsInternalHeader() {
       var host = (location.hostname || '').toLowerCase();
       return host === 'localhost' || host === '127.0.0.1' || host.endsWith('brahmando.com') || host.endsWith('manjulab.com');
     }
 
-    function fetchErrorMessage(err, context) {
+    function fetchErrorMessage(err, context, httpStatus) {
       var msg = (err && err.message) || String(err || 'Request failed');
+      if (httpStatus === 413 || /too large/i.test(msg)) {
+        return context + ' too large — image/diagram attachments make the answer pack exceed the server limit. Remove attachments, use smaller images, or submit text-only answers.';
+      }
       if (msg === 'Failed to fetch') {
-        return context + ' blocked by browser (network/CORS). On yogabrata.com use Official question paper for mock exams; composite mix needs API edge update.';
+        return context + ' failed (network or payload too large). If you attached images, try again with fewer/smaller attachments.';
       }
       return msg;
     }
@@ -391,7 +399,7 @@
       var tokenSel = document.getElementById('userTokenSelect');
       var token = urlToken || (tokenSel && tokenSel.value) || localStorage.getItem('abhyas_token') || 'abhyas-test-token-sangati-2026';
       h['Authorization'] = 'Bearer ' + token;
-      if (embedKey) h['X-Education-Embed-Key'] = embedKey;
+      if (embedKey && !isAllowlistedOrigin()) h['X-Education-Embed-Key'] = embedKey;
       return h;
     }
 
@@ -943,20 +951,27 @@
 
       try {
         var sid = state.session.id || state.session.session_id;
+        var payload = { answers: state.answers, student_name: state.studentName };
+        var bodyStr = JSON.stringify(payload);
+        var bodyKb = Math.round(new Blob([bodyStr]).size / 1024);
+        if (bodyKb > 9000) {
+          throw new Error('Answer pack is ' + bodyKb + ' KB — too large to submit. Remove some image attachments.');
+        }
+        if (bodyKb > 400 && !window.confirm('Answer pack is ' + bodyKb + ' KB (includes images). Submit anyway?')) {
+          renderTest();
+          return;
+        }
         var res = await fetch(apiUrl + '/v1/session/' + sid + '/submit', {
           method: 'POST', headers: headers(),
-          body: JSON.stringify({
-            answers: state.answers,
-            student_name: state.studentName,
-          }),
+          body: bodyStr,
         });
-        var data = await res.json();
-        if (!res.ok) throw new Error(data.detail || 'Submit failed');
+        var data = await res.json().catch(function () { return {}; });
+        if (!res.ok) throw new Error(data.detail || ('Submit failed (HTTP ' + res.status + ')'));
         state.session.evaluation = data.evaluation;
         state.answerPack = data.answer_pack || null;
         renderResults();
       } catch (e) {
-        showError(fetchErrorMessage(e, 'Submit request'));
+        showError(fetchErrorMessage(e, 'Submit request', e.httpStatus));
         renderTest();
       }
     }
