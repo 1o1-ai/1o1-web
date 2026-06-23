@@ -33,6 +33,7 @@
       curriculumPath: '/portal/data/cbse10-curriculum.json',
       forumPath: '/portal/data/cbse10-forum.json',
       bankPath: '/portal/data/cbse10-verified-questions.json',
+      educationApiBase: 'https://api.brahmando.com/education',
       subjects: [
         { id: 'science', label: 'Science', code: '086', icon: '🧪' },
         { id: 'mathematics', label: 'Mathematics', code: '041', icon: '📐' },
