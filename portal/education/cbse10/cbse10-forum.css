@@ -1,36 +1,46 @@
-/* CBSE 10 Discussion Forum — baseline layout + Sahadeva chat */
-.forum-main {
-  display: grid;
-  grid-template-columns: minmax(220px, 280px) 1fr;
-  gap: 20px;
-  max-width: 1100px;
+/* CBSE 10 Discussion Forum — full-width layout + Sahadeva floating chat */
+
+.forum-page-full .forum-main-full {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: min(1200px, 100%);
   width: 100%;
-  align-items: start;
+  margin: 0 auto;
+  padding-bottom: 88px;
 }
 
-.forum-sidebar {
+.forum-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px 20px;
+  padding: 14px 16px;
+  border-radius: 14px;
   background: rgba(15, 23, 42, 0.65);
   border: 1px solid rgba(148, 163, 184, 0.15);
-  border-radius: 16px;
-  padding: 16px;
-  position: sticky;
-  top: 12px;
 }
 
-.forum-sidebar label {
+.forum-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px 16px;
+}
+
+.forum-toolbar label {
   display: block;
-  margin: 12px 0 6px;
-  font-size: 0.72rem;
+  margin-bottom: 4px;
+  font-size: 0.68rem;
   font-weight: 600;
   color: #94a3b8;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
-.forum-sidebar select {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+.forum-toolbar select {
+  min-width: 160px;
   padding: 8px 10px;
   border-radius: 8px;
   border: 1px solid rgba(148, 163, 184, 0.25);
@@ -40,117 +50,29 @@
 }
 
 .forum-stats {
-  margin-top: 14px;
+  margin: 0;
   font-size: 0.72rem;
   color: #64748b;
   line-height: 1.45;
+  text-align: right;
+  flex: 1 1 200px;
 }
 
 .forum-guest-banner {
+  flex: 1 1 100%;
   font-size: 0.72rem;
   color: #94a3b8;
   background: rgba(103, 232, 249, 0.08);
   border: 1px solid rgba(103, 232, 249, 0.2);
   border-radius: 8px;
   padding: 8px 10px;
-  margin-bottom: 12px;
+  margin: 0 0 4px;
   line-height: 1.4;
 }
 
-.sahadeva-card {
-  text-align: center;
-  padding-bottom: 14px;
-  margin-bottom: 14px;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-}
-
-.sahadeva-avatar {
-  font-size: 2rem;
-}
-
-.sahadeva-card strong {
-  display: block;
-  color: #f1f5f9;
-}
-
-.sahadeva-card > span {
-  font-size: 0.72rem;
-  color: #67e8f9;
-}
-
-.sahadeva-tagline {
-  font-size: 0.7rem;
-  margin: 8px 0 10px;
-  text-align: left;
-}
-
-.sahadeva-chat {
-  max-height: 160px;
-  overflow-y: auto;
-  text-align: left;
-  margin-bottom: 8px;
-  padding: 6px;
-  border-radius: 8px;
-  background: rgba(15, 23, 42, 0.5);
-  border: 1px solid rgba(148, 163, 184, 0.12);
-  font-size: 0.78rem;
-  line-height: 1.45;
-}
-
-.sahadeva-msg {
-  margin-bottom: 8px;
-  padding: 6px 8px;
-  border-radius: 8px;
-}
-
-.sahadeva-msg-user {
-  background: rgba(103, 232, 249, 0.1);
-  color: #e2e8f0;
-}
-
-.sahadeva-msg-assistant {
-  background: rgba(167, 139, 250, 0.12);
-  color: #e9d5ff;
-}
-
-.sahadeva-msg-typing,
-.sahadeva-msg-error {
-  color: #94a3b8;
-  font-style: italic;
-}
-
-.sahadeva-form {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-bottom: 6px;
-}
-
-.sahadeva-form input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 8px 10px;
-  border-radius: 8px;
-  border: 1px solid rgba(148, 163, 184, 0.25);
-  background: rgba(15, 23, 42, 0.9);
-  color: #e2e8f0;
-  font-size: 0.8rem;
-}
-
-.sahadeva-send {
-  font-size: 0.78rem;
-  padding: 8px 12px;
-}
-
-.sahadeva-foot {
-  font-size: 0.65rem;
-  text-align: left;
-  margin-top: 4px;
-}
-
-.forum-content {
+.forum-content-full {
   min-width: 0;
-  min-height: 200px;
+  min-height: 280px;
 }
 
 .forum-hidden {
@@ -192,11 +114,288 @@
   border-radius: 10px;
 }
 
+/* —— Sahadeva floating chatbot (bottom-left) —— */
+.sahadeva-fab-root {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  z-index: 1200;
+  font-family: inherit;
+}
+
+.sahadeva-fab-launcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(103, 232, 249, 0.45);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 27, 75, 0.95));
+  color: #f1f5f9;
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sahadeva-fab-launcher:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(103, 232, 249, 0.2);
+}
+
+.sahadeva-fab-open .sahadeva-fab-launcher {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+
+.sahadeva-fab-icon {
+  font-size: 1.35rem;
+}
+
+.sahadeva-fab-label {
+  font-weight: 600;
+  font-size: 0.88rem;
+}
+
+.sahadeva-fab-panel {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: min(380px, calc(100vw - 32px));
+  max-height: min(560px, calc(100vh - 32px));
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  border: 1px solid rgba(103, 232, 249, 0.35);
+  background: rgba(10, 15, 30, 0.97);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.sahadeva-fab-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  background: rgba(30, 27, 75, 0.5);
+}
+
+.sahadeva-fab-head strong {
+  display: block;
+  color: #f1f5f9;
+  font-size: 0.95rem;
+}
+
+.sahadeva-fab-head span {
+  font-size: 0.68rem;
+  color: #67e8f9;
+}
+
+.sahadeva-fab-close {
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.sahadeva-fab-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.sahadeva-fab-filters label {
+  font-size: 0.62rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sahadeva-fab-filters select {
+  width: 100%;
+  margin-top: 4px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e2e8f0;
+  font-size: 0.78rem;
+}
+
+.sahadeva-fab-modes {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+}
+
+.sahadeva-mode {
+  flex: 1;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: transparent;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.sahadeva-mode.active {
+  border-color: rgba(103, 232, 249, 0.45);
+  background: rgba(103, 232, 249, 0.12);
+  color: #e2e8f0;
+}
+
+.sahadeva-fab-chat {
+  flex: 1;
+  min-height: 140px;
+  max-height: 260px;
+  overflow-y: auto;
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.sahadeva-fab-msg {
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.sahadeva-fab-msg-user {
+  background: rgba(103, 232, 249, 0.12);
+  color: #e2e8f0;
+  margin-left: 12px;
+}
+
+.sahadeva-fab-msg-assistant {
+  background: rgba(167, 139, 250, 0.14);
+  color: #ede9fe;
+  margin-right: 12px;
+}
+
+.sahadeva-fab-msg-typing,
+.sahadeva-fab-msg-error {
+  color: #94a3b8;
+  font-style: italic;
+}
+
+.sahadeva-fab-msg-actions {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px dashed rgba(103, 232, 249, 0.25);
+}
+
+.sahadeva-action-lead,
+.sahadeva-search-lead {
+  margin: 0 0 8px;
+  font-size: 0.72rem;
+  color: #94a3b8;
+}
+
+.sahadeva-action-link {
+  display: block;
+  margin-top: 6px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.78rem;
+  color: #67e8f9;
+  border: 1px solid rgba(103, 232, 249, 0.25);
+  background: rgba(103, 232, 249, 0.06);
+}
+
+.sahadeva-action-link:hover {
+  background: rgba(103, 232, 249, 0.14);
+}
+
+.sahadeva-action-primary {
+  color: #c4b5fd;
+  border-color: rgba(167, 139, 250, 0.35);
+  background: rgba(167, 139, 250, 0.1);
+}
+
+.sahadeva-search-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sahadeva-search-list li {
+  margin-bottom: 8px;
+}
+
+.sahadeva-thread-hit {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background: rgba(15, 23, 42, 0.6);
+  color: #e2e8f0;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.sahadeva-thread-hit:hover {
+  border-color: rgba(103, 232, 249, 0.4);
+}
+
+.sahadeva-search-list .hint {
+  display: block;
+  font-size: 0.65rem;
+  margin-top: 2px;
+  color: #64748b;
+}
+
+.sahadeva-fab-form {
+  display: flex;
+  gap: 6px;
+  padding: 8px 12px;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.sahadeva-fab-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.9);
+  color: #e2e8f0;
+  font-size: 0.8rem;
+}
+
+.sahadeva-fab-send {
+  font-size: 0.75rem;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.sahadeva-fab-foot {
+  font-size: 0.62rem;
+  padding: 0 12px 10px;
+  margin: 0;
+  color: #64748b;
+  line-height: 1.35;
+}
+
 @media (max-width: 768px) {
-  .forum-main {
-    grid-template-columns: 1fr;
+  .forum-toolbar {
+    flex-direction: column;
+    align-items: stretch;
   }
-  .forum-sidebar {
-    position: static;
+  .forum-stats {
+    text-align: left;
+  }
+  .sahadeva-fab-root {
+    left: 10px;
+    bottom: 10px;
   }
 }

@@ -102,7 +102,7 @@
 
     bindEvaluate();
 
-    showPhase('subject');
+    if (!applyEntryFromUrl()) showPhase('subject');
 
   }).catch((err) => {
 
@@ -165,6 +165,88 @@
     const chs = curriculum?.subjects?.[sub]?.chapters || [];
 
     return [...chs].sort((a, b) => (a.syllabus_order || 99) - (b.syllabus_order || 99));
+
+  }
+
+
+
+  function normChapterId(ch) {
+
+    if (window.CBSE10Shared?.normalizeChapterId) return window.CBSE10Shared.normalizeChapterId(ch);
+
+    return ch === 'environment' ? 'sources-of-energy' : ch;
+
+  }
+
+
+
+  function applyEntryFromUrl() {
+
+    const p = new URLSearchParams(location.search);
+
+    const sub = p.get('subject');
+
+    const ch = p.get('chapter');
+
+    const intent = p.get('intent');
+
+    if (!sub || (sub !== 'science' && sub !== 'mathematics')) return false;
+
+    subject = sub;
+
+    renderChapterGrid();
+
+    if (!ch) {
+
+      showPhase('chapter');
+
+      return true;
+
+    }
+
+    const found = chaptersForSubject(subject).find((c) => c.id === ch || normChapterId(c.id) === normChapterId(ch));
+
+    if (!found) {
+
+      showPhase('chapter');
+
+      return true;
+
+    }
+
+    chapterId = found.id;
+
+    chapterTitle = found.title;
+
+    const label = document.getElementById('intentChapterLabel');
+
+    if (label) {
+
+      label.innerHTML =
+
+        `<strong>${chapterTitle}</strong> · ${subject === 'science' ? 'Science' : 'Mathematics'}`;
+
+    }
+
+    if (intent === 'learn') {
+
+      startLearnSession();
+
+      return true;
+
+    }
+
+    if (intent === 'evaluate') {
+
+      startEvaluateSession();
+
+      return true;
+
+    }
+
+    showPhase('intent');
+
+    return true;
 
   }
 
