@@ -366,6 +366,13 @@
       return msg;
     }
 
+    function parseQuestionCount(raw) {
+      var n = parseInt(String(raw || '').trim(), 10);
+      if (!n || n < 1) n = 1;
+      if (n > 40) n = 40;
+      return n;
+    }
+
     function headers(opts) {
       opts = opts || {};
       var h = { 'Content-Type': 'application/json' };
@@ -693,11 +700,7 @@
           html += '<option value="' + esc(ch.id) + '"' + (state.chapter === ch.id ? ' selected' : '') + '>' + esc(ch.title) + '</option>';
         });
         html += '</select></div>';
-        html += '<div class="field"><label>Questions</label><select id="countSelect">';
-        (state.config.question_counts || [5,8,10,15]).forEach(function (n) {
-          html += '<option' + (state.count === n ? ' selected' : '') + '>' + n + '</option>';
-        });
-        html += '</select></div>';
+        html += '<div class="field"><label>Questions</label><input id="countInput" type="number" min="1" max="40" step="1" value="' + state.count + '" inputmode="numeric" /><small style="display:block;margin-top:4px;color:var(--muted);font-size:0.75rem">Any count from 1 to 40</small></div>';
         html += '<div class="field"><label>Difficulty' + (currentScope() === 'anyo' ? '' : ' (anyo scope only)') + '</label><select id="diffSelect"' + (currentScope() !== 'anyo' ? ' disabled' : '') + '>';
         (state.config.difficulties || ['easy','medium','hard']).forEach(function (d) {
           html += '<option' + (state.difficulty === d ? ' selected' : '') + '>' + d + '</option>';
@@ -769,7 +772,7 @@
       } else {
         state.chapter = (document.getElementById('chapterSelect') || {}).value || 'mix';
         state.topic = state.chapter === 'mix' ? 'Mix' : '';
-        state.count = parseInt(document.getElementById('countSelect').value, 10);
+        state.count = parseQuestionCount(document.getElementById('countInput').value);
         state.difficulty = currentScope() === 'anyo' ? document.getElementById('diffSelect').value : 'medium';
         state.scope = currentScope();
       }
