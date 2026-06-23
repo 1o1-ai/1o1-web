@@ -121,12 +121,6 @@
   bottom: 16px;
   z-index: 1200;
   font-family: inherit;
-  pointer-events: none;
-}
-
-.sahadeva-fab-root .sahadeva-fab-launcher,
-.sahadeva-fab-root .sahadeva-panel {
-  pointer-events: auto;
 }
 
 .sahadeva-fab-launcher {
@@ -149,9 +143,8 @@
 }
 
 .sahadeva-fab-open .sahadeva-fab-launcher {
-  opacity: 0;
+  display: none;
   pointer-events: none;
-  transform: translateY(8px);
 }
 
 .sahadeva-fab-icon {

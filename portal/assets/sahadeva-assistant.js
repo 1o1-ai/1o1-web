@@ -155,6 +155,7 @@
       '</div></div></section>';
 
     document.body.appendChild(root);
+    document.body.appendChild(panel);
 
     const launcher = root.querySelector('#sahadevaFabLauncher');
     const panel = root.querySelector('#sahadevaFabPanel');
@@ -275,10 +276,12 @@
     }
 
     function bindDrag() {
+      let dragMoved = false;
       dragHandle.addEventListener('pointerdown', (e) => {
-        if (e.target.closest('button, select, input, a, textarea, .sahadeva-panel-chat')) return;
-        if (e.target.closest('.sahadeva-universe-card') && !e.target.closest('.sahadeva-card-head')) return;
+        if (e.target.closest('.sahadeva-universe-card, button, select, input, a, textarea')) return;
         e.preventDefault();
+        e.stopPropagation();
+        dragMoved = false;
         if (maximized) toggleMaximize();
         const startX = e.clientX;
         const startY = e.clientY;
@@ -288,6 +291,9 @@
         dragHandle.classList.add('sahadeva-dragging');
 
         const onMove = (ev) => {
+          if (Math.abs(ev.clientX - startX) > 3 || Math.abs(ev.clientY - startY) > 3) {
+            dragMoved = true;
+          }
           const maxX = window.innerWidth - panel.offsetWidth - 8;
           const maxY = window.innerHeight - panel.offsetHeight - 8;
           const x = Math.max(8, Math.min(maxX, startLeft + ev.clientX - startX));
@@ -300,7 +306,7 @@
           dragHandle.classList.remove('sahadeva-dragging');
           dragHandle.removeEventListener('pointermove', onMove);
           dragHandle.removeEventListener('pointerup', onUp);
-          saveGeometry();
+          if (dragMoved) saveGeometry();
         };
         dragHandle.addEventListener('pointermove', onMove);
         dragHandle.addEventListener('pointerup', onUp);
@@ -660,12 +666,21 @@
       }
     });
 
-    launcher.addEventListener('click', () => setOpen(!open));
-    closeBtn.addEventListener('click', () => setOpen(false));
+    launcher.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (!open) setOpen(true);
+    });
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setOpen(false);
+    });
     maximizeBtn.addEventListener('click', (e) => {
       e.stopPropagation();
       toggleMaximize();
     });
+
+    panel.addEventListener('pointerdown', (e) => e.stopPropagation());
+    panel.addEventListener('click', (e) => e.stopPropagation());
 
     modeBtns.forEach((btn) => {
       btn.addEventListener('click', () => setMode(btn.getAttribute('data-mode') || 'predict'));
