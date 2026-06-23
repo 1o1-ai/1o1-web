@@ -101,6 +101,44 @@
       .map((x) => x.t);
   }
 
+  /** Arc logo: SAHADEVA curved inside top bend + orbiting universe dot. */
+  function sahadevaArcMarkSvg(className) {
+    const uid = 'sah' + Math.random().toString(36).slice(2, 9);
+    const textPath = uid + 'Text';
+    const orbitPath = uid + 'Orbit';
+    return (
+      '<svg class="' +
+      className +
+      '" viewBox="0 0 128 72" aria-hidden="true" focusable="false">' +
+      '<defs>' +
+      '<path id="' +
+      textPath +
+      '" d="M 24 48 A 40 40 0 0 1 104 48"/>' +
+      '<path id="' +
+      orbitPath +
+      '" d="M 6 52 A 58 58 0 0 1 122 52"/>' +
+      '<filter id="' +
+      uid +
+      'Glow"><feGaussianBlur stdDeviation="1.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>' +
+      '</defs>' +
+      '<path d="M 12 50 A 52 52 0 0 1 116 50" fill="none" stroke="#042f2e" stroke-width="16" stroke-linecap="round"/>' +
+      '<path d="M 12 50 A 52 52 0 0 1 116 50" fill="none" stroke="#0f766e" stroke-width="12" stroke-linecap="round"/>' +
+      '<path d="M 14 50 A 50 50 0 0 1 114 50" fill="none" stroke="#14b8a6" stroke-width="8" stroke-linecap="round"/>' +
+      '<text fill="#ecfdf5" font-size="9.5" font-weight="700" letter-spacing="0.32em" font-family="system-ui,Segoe UI,sans-serif">' +
+      '<textPath href="#' +
+      textPath +
+      '" startOffset="50%" text-anchor="middle">SAHADEVA</textPath></text>' +
+      '<circle r="3.8" fill="#67e8f9" filter="url(#' +
+      uid +
+      'Glow)">' +
+      '<animateMotion dur="16s" repeatCount="indefinite" calcMode="linear">' +
+      '<mpath href="#' +
+      orbitPath +
+      '"/></animateMotion></circle>' +
+      '</svg>'
+    );
+  }
+
   function mount(cardEl, getFilters, cfg) {
     mountFloating({ cfg, getFilters, sku: 'cbse10-core' });
     if (cardEl) cardEl.hidden = true;
@@ -118,9 +156,8 @@
     root.id = 'sahadevaFabRoot';
     root.className = 'sahadeva-fab-root';
     root.innerHTML =
-      '<button type="button" class="sahadeva-fab-launcher" id="sahadevaFabLauncher" aria-expanded="false" aria-controls="sahadevaFabPanel">' +
-      '<span class="sahadeva-fab-icon" aria-hidden="true">🛡️</span>' +
-      '<span class="sahadeva-fab-label">Sahadeva</span>' +
+      '<button type="button" class="sahadeva-fab-launcher" id="sahadevaFabLauncher" aria-expanded="false" aria-controls="sahadevaFabPanel" aria-label="Open Sahadeva study assistant">' +
+      sahadevaArcMarkSvg('sahadeva-fab-mark') +
       '</button>' +
       '<section class="sahadeva-panel forum-hidden" id="sahadevaFabPanel" role="dialog" aria-label="Sahadeva study assistant">' +
       '<div class="sahadeva-universe-orbit" id="sahadevaDrag" title="Drag empty ring area to move">' +
@@ -128,6 +165,8 @@
       '<div class="sahadeva-orbit-nebula" aria-hidden="true"></div>' +
       '<div class="sahadeva-orbit-ring sahadeva-orbit-ring-outer" aria-hidden="true"></div>' +
       '<div class="sahadeva-orbit-ring sahadeva-orbit-ring-inner" aria-hidden="true"></div>' +
+      '<div class="sahadeva-orbit-satellite" aria-hidden="true"><span class="sahadeva-universe-dot"></span></div>' +
+      sahadevaArcMarkSvg('sahadeva-panel-arc-title') +
       '<div class="sahadeva-universe-card">' +
       '<div class="sahadeva-window-chrome" role="toolbar" aria-label="Window controls">' +
       '<button type="button" class="sahadeva-chrome-btn" id="sahadevaFabClose" title="Minimize" aria-label="Minimize">−</button>' +
@@ -236,16 +275,12 @@
           });
           return;
         }
-        applyGeometry({
-          x: g.x ?? 16,
-          y: g.y ?? 16,
-          w: Math.min(window.innerWidth - 24, Math.max(320, g.w || 460)),
-          h: Math.min(window.innerHeight - 24, Math.max(320, g.h || 460)),
-        });
-        if (!maximized) {
-          const s = Math.min(panel.offsetWidth, panel.offsetHeight);
-          applyGeometry({ x: panel.offsetLeft, y: panel.offsetTop, w: s, h: s });
-        }
+        const w = Math.min(window.innerWidth - 24, Math.max(320, Number(g.w) || 460));
+        const h = Math.min(window.innerHeight - 24, Math.max(320, Number(g.h) || 460));
+        const size = Math.min(w, h);
+        const x = Math.max(8, Math.min(window.innerWidth - size - 8, Number(g.x) || 16));
+        const y = Math.max(8, Math.min(window.innerHeight - size - 8, Number(g.y) || 16));
+        applyGeometry({ x, y, w: size, h: size });
       } catch {
         applyGeometry(defaultGeometry());
       }
@@ -518,8 +553,16 @@
     function setOpen(next) {
       open = next;
       panel.classList.toggle('forum-hidden', !open);
-      launcher.setAttribute('aria-expanded', open ? 'true' : 'false');
-      root.classList.toggle('sahadeva-fab-open', open);
+      if (open) {
+        const rect = panel.getBoundingClientRect();
+        if (rect.width < 100 || rect.height < 100) {
+          applyGeometry(defaultGeometry());
+          saveGeometry();
+        }
+      }
+      const visible = open && panel.getBoundingClientRect().width >= 100;
+      launcher.setAttribute('aria-expanded', visible ? 'true' : 'false');
+      root.classList.toggle('sahadeva-fab-open', visible);
       if (open) {
         ensureCurriculum().then(() => {
           fillChapterOptions();
