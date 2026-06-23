@@ -20,24 +20,47 @@
 
   if (!threadList || !threadDetail) return;
 
+  const getFilters = () => ({
+    subject: forumSubject?.value || 'all',
+    chapter: forumChapter?.value || 'all',
+  });
+
+  function setFilters({ subject, chapter }) {
+    if (!forumSubject || !forumChapter) return;
+    if (subject && forumSubject.querySelector(`option[value="${subject}"]`)) {
+      forumSubject.value = subject;
+      if (curriculum) fillChapterFilter();
+    }
+    if (chapter && Array.from(forumChapter.options).some((o) => o.value === chapter)) {
+      forumChapter.value = chapter;
+    }
+    if (forum) renderList();
+  }
+
+  window.AcademyForumBridge = {
+    getForum: () => forum,
+    getCurriculum: () => curriculum,
+    getFilters,
+    setFilters,
+    openThread,
+    onReady: null,
+  };
+
   if (!session) {
     const banner = document.createElement('p');
     banner.className = 'forum-guest-banner';
     banner.innerHTML =
-      'Open forum — no login required. Pick a chapter and <strong>ask Sahadeva</strong> below. Study Room grading sync uses your local practice profile.';
-    document.querySelector('.forum-sidebar')?.prepend(banner);
+      'Open forum — no login required. Use <strong>Sahadeva</strong> (bottom left) for predictions or to search threads by topic.';
+    document.querySelector('.forum-toolbar')?.prepend(banner);
   }
 
-  const sahadevaCard = document.querySelector('.sahadeva-card');
-  if (sahadevaCard && window.SahadevaAssistant && sku === 'cbse10-core') {
-    window.SahadevaAssistant.mount(
-      sahadevaCard,
-      () => ({
-        subject: forumSubject?.value || 'all',
-        chapter: forumChapter?.value || 'all',
-      }),
-      cfg
-    );
+  if (window.SahadevaAssistant && sku === 'cbse10-core') {
+    window.SahadevaAssistant.mountFloating({
+      cfg,
+      getFilters,
+      sku,
+      bridge: window.AcademyForumBridge,
+    });
   }
 
   showListView();
@@ -82,6 +105,9 @@
         renderList();
       });
       forumChapter.addEventListener('change', renderList);
+
+      const threadId = new URLSearchParams(window.location.search).get('thread');
+      if (threadId) openThread(threadId);
     })
     .catch((err) => {
       threadList.innerHTML = `<p class="forum-empty">Could not load forum data. ${esc(String(err.message || err))}</p>`;
@@ -141,6 +167,7 @@
     const params = new URLSearchParams(window.location.search);
     const sub = params.get('subject');
     const ch = params.get('chapter');
+    const q = params.get('q');
     if (sub && forumSubject.querySelector(`option[value="${sub}"]`)) {
       forumSubject.value = sub;
       fillChapterFilter();
@@ -150,6 +177,11 @@
     } else if (ch) {
       forumChapter.value = 'all';
     }
+    if (q) threadList.dataset.searchQuery = q;
+  }
+
+  function searchQuery() {
+    return (threadList.dataset.searchQuery || '').trim().toLowerCase();
   }
 
   function mergeGradingThreads() {
@@ -164,11 +196,34 @@
   function filteredThreads() {
     const sub = forumSubject.value;
     const ch = forumChapter.value;
-    return (forum?.threads || []).filter((t) => {
+    const q = searchQuery();
+    const qWords = q ? q.split(/\s+/).filter(Boolean) : [];
+
+    let threads = (forum?.threads || []).filter((t) => {
       if (sub !== 'all' && t.subject !== sub) return false;
       if (ch !== 'all' && normChapter(t.chapter) !== ch) return false;
       return true;
     });
+
+    if (qWords.length) {
+      threads = threads
+        .map((t) => {
+          const title = (t.title || '').toLowerCase();
+          const body = (t.posts || []).map((p) => p.body || '').join(' ').toLowerCase();
+          let score = 0;
+          qWords.forEach((w) => {
+            if (title.includes(w)) score += 4;
+            if (body.includes(w)) score += 1;
+          });
+          if (title.includes(q)) score += 6;
+          return { t, score };
+        })
+        .filter((x) => x.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map((x) => x.t);
+    }
+
+    return threads;
   }
 
   function renderList() {

@@ -8,27 +8,23 @@
   <link rel="stylesheet" href="../../assets/portal.css" />
   <link rel="stylesheet" href="cbse10-forum.css" />
 </head>
-<body class="portal-page" data-sku="cbse10-core">
+<body class="portal-page forum-page-full" data-sku="cbse10-core">
   <canvas id="cosmos" aria-hidden="true"></canvas>
   <header class="portal-header">
     <a class="back-link" href="index.html">← CBSE 10 Hub</a>
     <h1>Discussion Forum</h1>
   </header>
-  <main class="portal-main forum-main">
-    <aside class="forum-sidebar">
-      <div class="sahadeva-card" id="sahadevaCard">
-        <div class="sahadeva-avatar">🛡️</div>
-        <strong>Sahadeva</strong>
-        <span>ManjuLAB Study Assistant</span>
-        <p class="hint">Loading assistant…</p>
+  <main class="portal-main forum-main forum-main-full">
+    <div class="forum-toolbar">
+      <div class="forum-filters">
+        <label for="forumSubject">Subject</label>
+        <select id="forumSubject"><option value="all">All</option><option value="science">Science</option><option value="mathematics">Mathematics</option></select>
+        <label for="forumChapter">Chapter</label>
+        <select id="forumChapter"><option value="all">All chapters</option></select>
       </div>
-      <label for="forumSubject">Filter subject</label>
-      <select id="forumSubject"><option value="all">All</option><option value="science">Science</option><option value="mathematics">Mathematics</option></select>
-      <label for="forumChapter">Filter chapter</label>
-      <select id="forumChapter"><option value="all">All chapters</option></select>
       <p class="forum-stats" id="forumStats"></p>
-    </aside>
-    <section class="forum-content">
+    </div>
+    <section class="forum-content forum-content-full">
       <div id="threadList" class="thread-list"></div>
       <article id="threadDetail" class="thread-detail forum-hidden" aria-hidden="true">
         <button type="button" class="back-link" id="btnBackList" style="border:none;background:none;cursor:pointer;margin-bottom:12px">← All threads</button>
@@ -42,7 +38,7 @@
   <script src="../../assets/academy-config.js"></script>
   <script src="../../assets/portal.js"></script>
   <script src="../../assets/cbse10-eval-store.js"></script>
-  <script src="../../assets/sahadeva-assistant.js"></script>
-  <script src="../../assets/academy-forum.js?v=6"></script>
+  <script src="../../assets/sahadeva-assistant.js?v=2"></script>
+  <script src="../../assets/academy-forum.js?v=7"></script>
 </body>
 </html>
