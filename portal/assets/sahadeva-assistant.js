@@ -123,13 +123,21 @@
       '<span class="sahadeva-fab-label">Sahadeva</span>' +
       '</button>' +
       '<section class="sahadeva-panel forum-hidden" id="sahadevaFabPanel" role="dialog" aria-label="Sahadeva study assistant">' +
-      '<div class="sahadeva-panel-ring">' +
-      '<header class="sahadeva-panel-drag" id="sahadevaDrag" title="Drag to move">' +
-      '<span class="sahadeva-drag-title"><span aria-hidden="true">🛡️</span> Sahadeva <small>Study Assistant</small></span>' +
-      '<span class="sahadeva-panel-actions">' +
-      '<button type="button" class="sahadeva-panel-btn" id="sahadevaMaximize" title="Expand to full screen" aria-label="Expand">⛶</button>' +
-      '<button type="button" class="sahadeva-panel-btn" id="sahadevaFabClose" title="Minimize" aria-label="Minimize">−</button>' +
-      '</span></header>' +
+      '<div class="sahadeva-universe-orbit" id="sahadevaDrag" title="Drag empty ring area to move">' +
+      '<div class="sahadeva-orbit-stars" aria-hidden="true"></div>' +
+      '<div class="sahadeva-orbit-nebula" aria-hidden="true"></div>' +
+      '<div class="sahadeva-orbit-ring sahadeva-orbit-ring-outer" aria-hidden="true"></div>' +
+      '<div class="sahadeva-orbit-ring sahadeva-orbit-ring-inner" aria-hidden="true"></div>' +
+      '<div class="sahadeva-universe-card">' +
+      '<div class="sahadeva-window-chrome" role="toolbar" aria-label="Window controls">' +
+      '<button type="button" class="sahadeva-chrome-btn" id="sahadevaFabClose" title="Minimize" aria-label="Minimize">−</button>' +
+      '<button type="button" class="sahadeva-chrome-btn" id="sahadevaMaximize" title="Expand" aria-label="Expand">□</button>' +
+      '<button type="button" class="sahadeva-chrome-btn" id="sahadevaResize" title="Drag to resize" aria-label="Resize">⤢</button>' +
+      '</div>' +
+      '<header class="sahadeva-card-head">' +
+      '<span class="sahadeva-card-title"><span aria-hidden="true">🛡️</span> Sahadeva</span>' +
+      '<small>ManjuLAB · Cosmos tutor</small>' +
+      '</header>' +
       '<div class="sahadeva-panel-filters">' +
       '<label>Subject<select id="sahadevaSubject"><option value="all">All</option><option value="science">Science</option><option value="mathematics">Mathematics</option></select></label>' +
       '<label>Chapter<select id="sahadevaChapter"><option value="all">All chapters</option></select></label>' +
@@ -144,9 +152,7 @@
       '<button type="submit" class="btn-portal btn-portal-primary sahadeva-fab-send">Send</button>' +
       '</form>' +
       '<p class="disclaimer sahadeva-fab-foot">' + esc(DISCLAIMER) + '</p>' +
-      '</div>' +
-      '<div class="sahadeva-resize-handle" id="sahadevaResize" title="Drag to resize" aria-hidden="true"></div>' +
-      '</section>';
+      '</div></div></section>';
 
     document.body.appendChild(root);
 
@@ -173,13 +179,12 @@
     let chatLog = [];
 
     function defaultGeometry() {
-      const w = 400;
-      const h = 520;
+      const size = 460;
       return {
         x: 16,
-        y: Math.max(16, window.innerHeight - h - 16),
-        w,
-        h,
+        y: Math.max(16, window.innerHeight - size - 16),
+        w: size,
+        h: size,
       };
     }
 
@@ -233,9 +238,13 @@
         applyGeometry({
           x: g.x ?? 16,
           y: g.y ?? 16,
-          w: Math.min(window.innerWidth - 24, Math.max(280, g.w || 400)),
-          h: Math.min(window.innerHeight - 24, Math.max(320, g.h || 520)),
+          w: Math.min(window.innerWidth - 24, Math.max(320, g.w || 460)),
+          h: Math.min(window.innerHeight - 24, Math.max(320, g.h || 460)),
         });
+        if (!maximized) {
+          const s = Math.min(panel.offsetWidth, panel.offsetHeight);
+          applyGeometry({ x: panel.offsetLeft, y: panel.offsetTop, w: s, h: s });
+        }
       } catch {
         applyGeometry(defaultGeometry());
       }
@@ -246,7 +255,7 @@
         if (geomBeforeMax) applyGeometry(geomBeforeMax);
         maximized = false;
         panel.classList.remove('sahadeva-panel-maximized');
-        maximizeBtn.textContent = '⛶';
+        maximizeBtn.textContent = '□';
         maximizeBtn.title = 'Expand to full screen';
       } else {
         geomBeforeMax = readGeometry();
@@ -260,14 +269,15 @@
         maximized = true;
         panel.classList.add('sahadeva-panel-maximized');
         maximizeBtn.textContent = '⊟';
-        maximizeBtn.title = 'Restore size';
+        maximizeBtn.title = 'Restore orbit';
       }
       saveGeometry();
     }
 
     function bindDrag() {
       dragHandle.addEventListener('pointerdown', (e) => {
-        if (e.target.closest('button')) return;
+        if (e.target.closest('button, select, input, a, textarea, .sahadeva-panel-chat')) return;
+        if (e.target.closest('.sahadeva-universe-card') && !e.target.closest('.sahadeva-card-head')) return;
         e.preventDefault();
         if (maximized) toggleMaximize();
         const startX = e.clientX;
@@ -275,6 +285,7 @@
         const startLeft = panel.offsetLeft;
         const startTop = panel.offsetTop;
         dragHandle.setPointerCapture(e.pointerId);
+        dragHandle.classList.add('sahadeva-dragging');
 
         const onMove = (ev) => {
           const maxX = window.innerWidth - panel.offsetWidth - 8;
@@ -286,6 +297,7 @@
         };
         const onUp = () => {
           dragHandle.releasePointerCapture(e.pointerId);
+          dragHandle.classList.remove('sahadeva-dragging');
           dragHandle.removeEventListener('pointermove', onMove);
           dragHandle.removeEventListener('pointerup', onUp);
           saveGeometry();
@@ -298,30 +310,25 @@
     function bindResize() {
       resizeHandle.addEventListener('pointerdown', (e) => {
         e.preventDefault();
+        e.stopPropagation();
         if (maximized) {
           maximized = false;
           panel.classList.remove('sahadeva-panel-maximized');
-          maximizeBtn.textContent = '⛶';
+          maximizeBtn.textContent = '□';
         }
         const startX = e.clientX;
         const startY = e.clientY;
-        const startW = panel.offsetWidth;
-        const startH = panel.offsetHeight;
+        const startSize = panel.offsetWidth;
         const startLeft = panel.offsetLeft;
         const startTop = panel.offsetTop;
         resizeHandle.setPointerCapture(e.pointerId);
 
         const onMove = (ev) => {
-          const w = Math.min(
-            window.innerWidth - startLeft - 8,
-            Math.max(280, startW + (ev.clientX - startX))
-          );
-          const h = Math.min(
-            window.innerHeight - startTop - 8,
-            Math.max(320, startH + (ev.clientY - startY))
-          );
-          panel.style.width = w + 'px';
-          panel.style.height = h + 'px';
+          const delta = Math.max(ev.clientX - startX, ev.clientY - startY);
+          const maxSize = Math.min(window.innerWidth - startLeft - 8, window.innerHeight - startTop - 8);
+          const size = Math.min(maxSize, Math.max(320, startSize + delta));
+          panel.style.width = size + 'px';
+          panel.style.height = size + 'px';
         };
         const onUp = () => {
           resizeHandle.releasePointerCapture(e.pointerId);
@@ -477,7 +484,7 @@
       if (chat.childElementCount) return;
       appendMsg(
         'assistant',
-        'Pick <strong>Subject</strong> and <strong>Chapter</strong>, then ask for a prediction or search discussions. Drag the header to move; use ⛶ or the corner to resize.',
+        'Pick <strong>Subject</strong> and <strong>Chapter</strong>, then ask or search. Drag the star ring to move; use □ or ⤢ to grow the cosmos window.',
         true
       );
     }
