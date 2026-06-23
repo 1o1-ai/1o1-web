@@ -6,6 +6,8 @@
 
   const DISCLAIMER =
     'AI guidance only — not official CBSE marking. Verify with NCERT and your teacher.';
+  const CHAT_STORAGE_KEY = 'sahadeva_chat_cbse10_v2';
+  const SIZE_STORAGE_KEY = 'sahadeva_panel_size_v1';
 
   function esc(s) {
     return String(s || '')
@@ -32,13 +34,38 @@
     return 'room.html?' + p.toString();
   }
 
-  function forumUrl(subject, chapter, q) {
-    const p = new URLSearchParams();
-    if (subject && subject !== 'all') p.set('subject', subject);
-    if (chapter && chapter !== 'all') p.set('chapter', chapter);
-    if (q) p.set('q', q);
-    const qs = p.toString();
-    return 'forum.html' + (qs ? '?' + qs : '');
+  function resolveChapterFromText(text, cur, subjectHint) {
+    if (!cur?.subjects || !text) return null;
+    const q = String(text).toLowerCase().trim();
+    const words = q.split(/\s+/).filter(Boolean);
+    let best = null;
+    let bestScore = 0;
+    const subs =
+      subjectHint && subjectHint !== 'all' ? [subjectHint] : ['science', 'mathematics'];
+
+    subs.forEach((sub) => {
+      (cur.subjects[sub]?.chapters || []).forEach((ch) => {
+        const title = (ch.title || '').toLowerCase();
+        const id = (ch.id || '').toLowerCase();
+        let score = 0;
+        if (title === q || id === q.replace(/\s+/g, '-')) score = 120;
+        else if (title.includes(q) || q.includes(title)) score = 80;
+        words.forEach((w) => {
+          if (w.length < 3) return;
+          if (title.includes(w)) score += 12;
+          if (id.includes(w)) score += 6;
+          (ch.keywords || []).forEach((kw) => {
+            if (String(kw).toLowerCase().includes(w)) score += 10;
+          });
+        });
+        if (score > bestScore) {
+          bestScore = score;
+          best = { id: ch.id, subject: sub, title: ch.title };
+        }
+      });
+    });
+
+    return bestScore >= 12 ? best : null;
   }
 
   function scoreThread(thread, query, subject, chapter) {
@@ -56,10 +83,11 @@
     } else {
       q.split(/\s+/).filter(Boolean).forEach((word) => {
         if (title.includes(word)) score += 4;
-        if (chTitle.includes(word)) score += 2;
+        if (chTitle.includes(word)) score += 3;
         if (body.includes(word)) score += 1;
       });
-      if (title.includes(q)) score += 6;
+      if (title.includes(q)) score += 8;
+      if (chTitle.includes(q)) score += 10;
     }
     return score;
   }
@@ -73,16 +101,11 @@
       .map((x) => x.t);
   }
 
-  /** Legacy sidebar mount — delegates to floating widget. */
   function mount(cardEl, getFilters, cfg) {
     mountFloating({ cfg, getFilters, sku: 'cbse10-core' });
     if (cardEl) cardEl.hidden = true;
   }
 
-  /**
-   * Bottom-left chatbot: predictions + intelligent thread search.
-   * @param {{ cfg?: object, getFilters?: () => object, sku?: string, bridge?: object }} opts
-   */
   function mountFloating(opts) {
     if (document.getElementById('sahadevaFabRoot')) return;
 
@@ -99,25 +122,29 @@
       '<span class="sahadeva-fab-icon" aria-hidden="true">🛡️</span>' +
       '<span class="sahadeva-fab-label">Sahadeva</span>' +
       '</button>' +
-      '<section class="sahadeva-fab-panel forum-hidden" id="sahadevaFabPanel" role="dialog" aria-label="Sahadeva study assistant">' +
-      '<header class="sahadeva-fab-head">' +
-      '<div><strong>Sahadeva</strong><span>ManjuLAB Study Assistant</span></div>' +
-      '<button type="button" class="sahadeva-fab-close" id="sahadevaFabClose" aria-label="Close chat">×</button>' +
-      '</header>' +
-      '<div class="sahadeva-fab-filters">' +
-      '<label>Subject<select id="sahadevaSubject"><option value="all">All</option><option value="science">Science</option><option value="mathematics">Mathematics</option></select></label>' +
-      '<label>Chapter<select id="sahadevaChapter"><option value="all">All chapters</option></select></label>' +
+      '<section class="sahadeva-orbit-panel forum-hidden" id="sahadevaFabPanel" role="dialog" aria-label="Sahadeva study assistant">' +
+      '<div class="sahadeva-orbit-frame">' +
+      '<label class="sahadeva-orbit-filter sahadeva-orbit-subject">Subject' +
+      '<select id="sahadevaSubject"><option value="all">All</option><option value="science">Science</option><option value="mathematics">Mathematics</option></select></label>' +
+      '<label class="sahadeva-orbit-filter sahadeva-orbit-chapter">Chapter' +
+      '<select id="sahadevaChapter"><option value="all">All chapters</option></select></label>' +
+      '<div class="sahadeva-orbit-core">' +
+      '<div class="sahadeva-orbit-circle">' +
+      '<header class="sahadeva-orbit-head"><strong>Sahadeva</strong><span>Study Assistant</span>' +
+      '<button type="button" class="sahadeva-fab-close" id="sahadevaFabClose" aria-label="Minimize chat">−</button></header>' +
+      '<div class="sahadeva-orbit-chat" id="sahadevaFabChat" aria-live="polite"></div>' +
+      '</div></div>' +
+      '<div class="sahadeva-orbit-modes" role="tablist">' +
+      '<button type="button" class="sahadeva-mode active" data-mode="predict" role="tab">Prediction</button>' +
+      '<button type="button" class="sahadeva-mode" data-mode="search" role="tab">Find threads</button>' +
       '</div>' +
-      '<div class="sahadeva-fab-modes" role="tablist">' +
-      '<button type="button" class="sahadeva-mode active" data-mode="predict" role="tab" aria-selected="true">Prediction</button>' +
-      '<button type="button" class="sahadeva-mode" data-mode="search" role="tab" aria-selected="false">Find threads</button>' +
-      '</div>' +
-      '<div class="sahadeva-fab-chat" id="sahadevaFabChat" aria-live="polite"></div>' +
-      '<form class="sahadeva-fab-form" id="sahadevaFabForm">' +
-      '<input type="text" id="sahadevaFabInput" maxlength="400" placeholder="Ask for a prediction or search discussions…" autocomplete="off" />' +
+      '<form class="sahadeva-orbit-form" id="sahadevaFabForm">' +
+      '<input type="text" id="sahadevaFabInput" maxlength="400" placeholder="Ask or search discussions…" autocomplete="off" />' +
       '<button type="submit" class="btn-portal btn-portal-primary sahadeva-fab-send">Send</button>' +
       '</form>' +
       '<p class="disclaimer sahadeva-fab-foot">' + esc(DISCLAIMER) + '</p>' +
+      '</div>' +
+      '<div class="sahadeva-resize-handle" id="sahadevaResize" title="Drag to resize" aria-hidden="true"></div>' +
       '</section>';
 
     document.body.appendChild(root);
@@ -131,22 +158,118 @@
     const subjectSel = root.querySelector('#sahadevaSubject');
     const chapterSel = root.querySelector('#sahadevaChapter');
     const modeBtns = root.querySelectorAll('.sahadeva-mode');
+    const resizeHandle = root.querySelector('#sahadevaResize');
 
     let open = false;
     let mode = 'predict';
     let busy = false;
     let curriculum = null;
     let forumData = null;
+    let chatLog = [];
+
+    function loadSavedSize() {
+      try {
+        const raw = sessionStorage.getItem(SIZE_STORAGE_KEY);
+        if (!raw) return;
+        const { w, h } = JSON.parse(raw);
+        if (w) panel.style.setProperty('--sahadeva-w', w + 'px');
+        if (h) panel.style.setProperty('--sahadeva-h', h + 'px');
+      } catch {
+        /* */
+      }
+    }
+
+    function saveSize() {
+      const w = panel.offsetWidth;
+      const h = panel.offsetHeight;
+      sessionStorage.setItem(SIZE_STORAGE_KEY, JSON.stringify({ w, h }));
+    }
+
+    function bindResize() {
+      let startX = 0;
+      let startY = 0;
+      let startW = 0;
+      let startH = 0;
+
+      resizeHandle.addEventListener('pointerdown', (e) => {
+        e.preventDefault();
+        startX = e.clientX;
+        startY = e.clientY;
+        startW = panel.offsetWidth;
+        startH = panel.offsetHeight;
+        resizeHandle.setPointerCapture(e.pointerId);
+
+        const onMove = (ev) => {
+          const w = Math.min(520, Math.max(300, startW + (ev.clientX - startX)));
+          const h = Math.min(680, Math.max(360, startH + (ev.clientY - startY)));
+          panel.style.setProperty('--sahadeva-w', w + 'px');
+          panel.style.setProperty('--sahadeva-h', h + 'px');
+        };
+        const onUp = () => {
+          resizeHandle.releasePointerCapture(e.pointerId);
+          resizeHandle.removeEventListener('pointermove', onMove);
+          resizeHandle.removeEventListener('pointerup', onUp);
+          saveSize();
+        };
+        resizeHandle.addEventListener('pointermove', onMove);
+        resizeHandle.addEventListener('pointerup', onUp);
+      });
+    }
+
+    async function ensureCurriculum() {
+      if (curriculum?.subjects) return curriculum;
+      const fromBridge = bridge?.getCurriculum?.();
+      if (fromBridge?.subjects) {
+        curriculum = fromBridge;
+        return curriculum;
+      }
+      const path = cfg.curriculumPath || '/portal/data/cbse10-curriculum.json';
+      const res = await fetch(path);
+      if (!res.ok) throw new Error('Curriculum HTTP ' + res.status);
+      curriculum = await res.json();
+      return curriculum;
+    }
+
+    function fillChapterOptions() {
+      const sub = subjectSel.value;
+      const prev = chapterSel.value;
+      chapterSel.innerHTML = '<option value="all">All chapters</option>';
+      if (!curriculum?.subjects) {
+        const hint = document.createElement('option');
+        hint.value = 'all';
+        hint.textContent = 'Loading chapters…';
+        hint.disabled = true;
+        chapterSel.appendChild(hint);
+        return;
+      }
+      const subs = sub === 'all' ? ['science', 'mathematics'] : [sub];
+      subs.forEach((s) => {
+        (curriculum.subjects[s]?.chapters || []).forEach((c) => {
+          const o = document.createElement('option');
+          o.value = c.id;
+          o.textContent = c.title;
+          chapterSel.appendChild(o);
+        });
+      });
+      if (prev !== 'all' && Array.from(chapterSel.options).some((o) => o.value === prev)) {
+        chapterSel.value = prev;
+      }
+    }
+
+    function applyFilterValues(subject, chapter) {
+      if (subject && subjectSel.querySelector(`option[value="${subject}"]`)) {
+        subjectSel.value = subject;
+      }
+      fillChapterOptions();
+      if (chapter && chapter !== 'all' && Array.from(chapterSel.options).some((o) => o.value === chapter)) {
+        chapterSel.value = chapter;
+      }
+      pushToForumFilters();
+    }
 
     function syncFromForumFilters() {
       const f = getFilters();
-      if (f.subject && subjectSel.querySelector(`option[value="${f.subject}"]`)) {
-        subjectSel.value = f.subject;
-      }
-      fillChapterOptions();
-      if (f.chapter && Array.from(chapterSel.options).some((o) => o.value === f.chapter)) {
-        chapterSel.value = f.chapter;
-      }
+      applyFilterValues(f.subject || 'all', f.chapter || 'all');
     }
 
     function pushToForumFilters() {
@@ -164,33 +287,35 @@
       };
     }
 
-    function fillChapterOptions() {
-      const sub = subjectSel.value;
-      const prev = chapterSel.value;
-      chapterSel.innerHTML = '<option value="all">All chapters</option>';
-      const subs = sub === 'all' ? ['science', 'mathematics'] : [sub];
-      subs.forEach((s) => {
-        const chs = curriculum?.subjects?.[s]?.chapters || [];
-        chs.forEach((c) => {
-          const o = document.createElement('option');
-          o.value = c.id;
-          o.textContent = (s === 'science' ? 'Sci' : 'Math') + ' · ' + c.title;
-          chapterSel.appendChild(o);
-        });
-      });
-      if (prev !== 'all' && Array.from(chapterSel.options).some((o) => o.value === prev)) {
-        chapterSel.value = prev;
+    function inferFiltersFromMessage(message) {
+      let { subject, chapter } = currentFilters();
+      const resolved = resolveChapterFromText(message, curriculum, subject);
+      if (resolved) {
+        subject = resolved.subject;
+        chapter = resolved.id;
+        applyFilterValues(subject, chapter);
       }
+      return { subject, chapter, resolved };
     }
 
-    function setOpen(next) {
-      open = next;
-      panel.classList.toggle('forum-hidden', !open);
-      launcher.setAttribute('aria-expanded', open ? 'true' : 'false');
-      root.classList.toggle('sahadeva-fab-open', open);
-      if (open) {
-        syncFromForumFilters();
-        input.focus();
+    function applyForumInPage(subject, chapter, query) {
+      if (bridge?.setFilters) bridge.setFilters({ subject, chapter });
+      if (bridge?.setSearchQuery) bridge.setSearchQuery(query || '');
+      else if (bridge?.setFilters) bridge.setFilters({ subject, chapter });
+      document.querySelector('.forum-content-full')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function openThreadInPage(id, subject, chapter) {
+      if (subject || chapter) applyFilterValues(subject || 'all', chapter || 'all');
+      if (bridge?.openThread && id) bridge.openThread(id);
+      document.querySelector('.forum-content-full')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function persistChat() {
+      try {
+        sessionStorage.setItem(CHAT_STORAGE_KEY, JSON.stringify(chatLog));
+      } catch {
+        /* */
       }
     }
 
@@ -201,13 +326,40 @@
       else row.textContent = htmlOrText;
       chat.appendChild(row);
       chat.scrollTop = chat.scrollHeight;
+      if (role !== 'typing') {
+        chatLog.push({ role, content: htmlOrText, asHtml: !!asHtml });
+        persistChat();
+      }
+      return row;
+    }
+
+    function restoreChat() {
+      try {
+        const raw = sessionStorage.getItem(CHAT_STORAGE_KEY);
+        if (!raw) return false;
+        chatLog = JSON.parse(raw);
+        if (!Array.isArray(chatLog) || !chatLog.length) return false;
+        chat.innerHTML = '';
+        chatLog.forEach((m) => {
+          const row = document.createElement('div');
+          row.className = 'sahadeva-fab-msg sahadeva-fab-msg-' + m.role;
+          if (m.asHtml) row.innerHTML = m.content;
+          else row.textContent = m.content;
+          chat.appendChild(row);
+        });
+        chat.scrollTop = chat.scrollHeight;
+        return true;
+      } catch {
+        chatLog = [];
+        return false;
+      }
     }
 
     function appendWelcome() {
       if (chat.childElementCount) return;
       appendMsg(
         'assistant',
-        'Hi! Pick a subject and chapter, then ask for a <strong>prediction</strong> or switch to <strong>Find threads</strong> to search discussions.',
+        'Pick <strong>Subject</strong> and <strong>Chapter</strong> above the circle, then ask for a prediction or search discussions (e.g. <em>Life Processes</em>).',
         true
       );
     }
@@ -215,19 +367,35 @@
     function appendActionLinks(subject, chapter, query) {
       const sub = subject === 'all' ? 'science' : subject;
       const ch = chapter === 'all' ? '' : chapter;
-      const discussHref = forumUrl(sub, ch, query || '');
-      const studyHref = studyRoomUrl(sub, ch, 'learn');
       appendMsg(
         'actions',
         '<p class="sahadeva-action-lead">Continue your prep:</p>' +
-          '<a class="sahadeva-action-link" href="' +
-          esc(discussHref) +
-          '">💬 View matching discussions</a>' +
+          '<button type="button" class="sahadeva-action-link" data-sahadeva-action="forum" data-subject="' +
+          esc(sub) +
+          '" data-chapter="' +
+          esc(ch || 'all') +
+          '" data-query="' +
+          esc(query || '') +
+          '">💬 Filter discussions here</button>' +
           '<a class="sahadeva-action-link sahadeva-action-primary" href="' +
-          esc(studyHref) +
-          '">📚 Open Study Room (materials)</a>',
+          esc(studyRoomUrl(sub, ch, 'learn')) +
+          '" target="_blank" rel="noopener">📚 Study Room materials</a>',
         true
       );
+    }
+
+    function setOpen(next) {
+      open = next;
+      panel.classList.toggle('forum-hidden', !open);
+      launcher.setAttribute('aria-expanded', open ? 'true' : 'false');
+      root.classList.toggle('sahadeva-fab-open', open);
+      if (open) {
+        ensureCurriculum().then(() => {
+          fillChapterOptions();
+          syncFromForumFilters();
+        });
+        input.focus();
+      }
     }
 
     function setMode(next) {
@@ -239,15 +407,18 @@
       });
       input.placeholder =
         mode === 'search'
-          ? 'Search discussion threads by topic…'
-          : 'e.g. key exam points for this chapter?';
+          ? 'Search threads — e.g. Life Processes'
+          : 'Ask for a chapter prediction…';
     }
 
     async function ensureForumData() {
-      if (forumData) return forumData;
+      if (forumData?.threads) return forumData;
       if (bridge?.getForum) {
-        forumData = bridge.getForum();
-        return forumData;
+        const f = bridge.getForum();
+        if (f?.threads) {
+          forumData = f;
+          return forumData;
+        }
       }
       const path = cfg.forumPath || '/portal/data/cbse10-forum.json';
       const res = await fetch(path);
@@ -256,21 +427,9 @@
       return forumData;
     }
 
-    async function ensureCurriculum() {
-      if (curriculum) return curriculum;
-      if (bridge?.getCurriculum) {
-        curriculum = bridge.getCurriculum();
-        return curriculum;
-      }
-      const path = cfg.curriculumPath || '/portal/data/cbse10-curriculum.json';
-      const res = await fetch(path);
-      if (!res.ok) throw new Error('Curriculum HTTP ' + res.status);
-      curriculum = await res.json();
-      return curriculum;
-    }
-
     async function handlePredict(message) {
-      const { subject, chapter } = currentFilters();
+      const inferred = inferFiltersFromMessage(message);
+      const { subject, chapter } = inferred;
       const context = {
         subject: subject === 'mathematics' ? 'Mathematics' : 'Science',
         chapter: chapter && chapter !== 'all' ? chapter : '',
@@ -296,35 +455,54 @@
         data.message ||
         data.content ||
         (typeof data === 'string' ? data : '');
+      if (inferred.resolved) {
+        appendMsg(
+          'system',
+          'Focused on ' + inferred.resolved.title + ' (' + inferred.resolved.subject + ').',
+          false
+        );
+      }
       appendMsg('assistant', String(reply).slice(0, 2000));
       appendActionLinks(subject, chapter, message);
     }
 
     async function handleSearch(message) {
-      const { subject, chapter } = currentFilters();
+      const inferred = inferFiltersFromMessage(message);
+      const { subject, chapter } = inferred;
       const forum = await ensureForumData();
       const hits = searchThreads(forum.threads, message, subject, chapter);
+
+      if (inferred.resolved) {
+        appendMsg(
+          'system',
+          'Filtering to chapter: ' + inferred.resolved.title + '.',
+          false
+        );
+      }
 
       if (!hits.length) {
         appendMsg(
           'assistant',
-          'No threads matched. Try broader filters or different keywords — or ask Sahadeva for a prediction instead.'
+          'No threads matched. Try selecting Science + chapter from the list above, or broader keywords.'
         );
         appendActionLinks(subject, chapter, message);
         return;
       }
 
-      let html = '<p class="sahadeva-search-lead">Found ' + hits.length + ' discussion(s):</p><ul class="sahadeva-search-list">';
+      applyForumInPage(subject, chapter, message);
+
+      let html =
+        '<p class="sahadeva-search-lead">Found ' +
+        hits.length +
+        ' thread(s) — forum list updated behind this chat:</p><ul class="sahadeva-search-list">';
       hits.forEach((t) => {
-        const p = new URLSearchParams();
-        if (t.subject) p.set('subject', t.subject);
-        if (t.chapter) p.set('chapter', normChapter(t.chapter));
-        if (message) p.set('q', message);
-        if (t.id) p.set('thread', t.id);
-        const threadHref = 'forum.html?' + p.toString();
         html +=
-          '<li><button type="button" class="sahadeva-thread-hit" data-thread-id="' +
+          '<li><button type="button" class="sahadeva-thread-hit" data-sahadeva-action="thread" data-thread-id="' +
           esc(t.id || '') +
+          '" data-subject="' +
+          esc(t.subject || subject) +
+          '" data-chapter="' +
+          esc(normChapter(t.chapter)) +
           '">' +
           esc(t.title || 'Untitled') +
           '</button>' +
@@ -334,21 +512,28 @@
       });
       html += '</ul>';
       appendMsg('assistant', html, true);
-
-      chat.querySelectorAll('.sahadeva-thread-hit').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const id = btn.getAttribute('data-thread-id');
-          if (bridge?.openThread && id) {
-            bridge.openThread(id);
-            setOpen(false);
-          } else if (id) {
-            location.href = forumUrl(subject, chapter, message) + '&thread=' + encodeURIComponent(id);
-          }
-        });
-      });
-
       appendActionLinks(subject, chapter, message);
     }
+
+    chat.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-sahadeva-action]');
+      if (!btn) return;
+      e.preventDefault();
+      const action = btn.getAttribute('data-sahadeva-action');
+      if (action === 'forum') {
+        applyForumInPage(
+          btn.getAttribute('data-subject') || 'all',
+          btn.getAttribute('data-chapter') || 'all',
+          btn.getAttribute('data-query') || ''
+        );
+      } else if (action === 'thread') {
+        openThreadInPage(
+          btn.getAttribute('data-thread-id'),
+          btn.getAttribute('data-subject'),
+          btn.getAttribute('data-chapter')
+        );
+      }
+    });
 
     launcher.addEventListener('click', () => setOpen(!open));
     closeBtn.addEventListener('click', () => setOpen(false));
@@ -357,7 +542,9 @@
       btn.addEventListener('click', () => setMode(btn.getAttribute('data-mode') || 'predict'));
     });
 
-    subjectSel.addEventListener('change', () => {
+    subjectSel.addEventListener('change', async () => {
+      chapterSel.value = 'all';
+      await ensureCurriculum();
       fillChapterOptions();
       pushToForumFilters();
     });
@@ -389,16 +576,32 @@
       }
     });
 
+    loadSavedSize();
+    bindResize();
+    if (!restoreChat()) appendWelcome();
+
     ensureCurriculum()
       .then(() => {
         fillChapterOptions();
         syncFromForumFilters();
-        appendWelcome();
       })
-      .catch(() => appendWelcome());
+      .catch(() => {
+        /* chapters load on subject pick */
+      });
 
-    if (bridge?.onReady) bridge.onReady({ syncFromForumFilters, setOpen });
+    global.SahadevaAssistant._notifyCurriculum = (cur) => {
+      if (cur?.subjects) {
+        curriculum = cur;
+        fillChapterOptions();
+      }
+    };
   }
 
-  global.SahadevaAssistant = { mount, mountFloating, DISCLAIMER, searchThreads };
+  global.SahadevaAssistant = {
+    mount,
+    mountFloating,
+    DISCLAIMER,
+    searchThreads,
+    resolveChapterFromText,
+  };
 })(typeof window !== 'undefined' ? window : globalThis);

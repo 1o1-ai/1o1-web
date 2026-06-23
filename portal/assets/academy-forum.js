@@ -25,7 +25,13 @@
     chapter: forumChapter?.value || 'all',
   });
 
-  function setFilters({ subject, chapter }) {
+  function setSearchQuery(q) {
+    if (q) threadList.dataset.searchQuery = q;
+    else delete threadList.dataset.searchQuery;
+    if (forum) renderList();
+  }
+
+  function setFilters({ subject, chapter, query }) {
     if (!forumSubject || !forumChapter) return;
     if (subject && forumSubject.querySelector(`option[value="${subject}"]`)) {
       forumSubject.value = subject;
@@ -34,6 +40,7 @@
     if (chapter && Array.from(forumChapter.options).some((o) => o.value === chapter)) {
       forumChapter.value = chapter;
     }
+    if (query !== undefined) setSearchQuery(query);
     if (forum) renderList();
   }
 
@@ -42,8 +49,8 @@
     getCurriculum: () => curriculum,
     getFilters,
     setFilters,
+    setSearchQuery,
     openThread,
-    onReady: null,
   };
 
   if (!session) {
@@ -108,6 +115,10 @@
 
       const threadId = new URLSearchParams(window.location.search).get('thread');
       if (threadId) openThread(threadId);
+
+      if (window.SahadevaAssistant?._notifyCurriculum) {
+        window.SahadevaAssistant._notifyCurriculum(curriculum);
+      }
     })
     .catch((err) => {
       threadList.innerHTML = `<p class="forum-empty">Could not load forum data. ${esc(String(err.message || err))}</p>`;
