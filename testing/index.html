@@ -243,7 +243,14 @@
     .paper-select { width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 12px; font-size: 0.9rem; background: var(--bg); margin-bottom: 12px; }
     .pending-hero { text-align: center; padding: 32px 16px; }
     .pending-hero .clock { font-size: 3rem; margin-bottom: 12px; }
+    body.embed-mode .hero,
+    body.embed-mode .footer-tagline { display: none; }
+    body.embed-mode .page { padding-top: 16px; }
+    body.embed-mode .topbar { margin-bottom: 16px; }
+    body.embed-mode .topbar .brand span { display: none; }
+    body.embed-mode #userTokenSelect { display: none; }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js" integrity="sha512-+93f7G/yo8+4N9a4dKK609mQvX6Zs2x/O6777HQ8h8X2Nr29Qi6AE7+G1/xY5lCYwEM+sy2UP1W1X0+0f8KbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
   <div class="page">
@@ -297,6 +304,10 @@
     'use strict';
 
     var params = new URLSearchParams(location.search);
+    var isEmbed = params.get('embed') === '1' || params.get('embed') === 'true';
+    if (isEmbed) document.body.classList.add('embed-mode');
+    var urlToken = params.get('token') || params.get('bearer') || '';
+    if (urlToken) localStorage.setItem('abhyas_token', urlToken);
 
     function resolveApiBases() {
       var explicit = params.get('api');
@@ -378,7 +389,7 @@
       var h = { 'Content-Type': 'application/json' };
       if (opts.internal) h['X-Abhyas-Client'] = 'anyo-internal';
       var tokenSel = document.getElementById('userTokenSelect');
-      var token = (tokenSel && tokenSel.value) || localStorage.getItem('abhyas_token') || 'abhyas-test-token-sangati-2026';
+      var token = urlToken || (tokenSel && tokenSel.value) || localStorage.getItem('abhyas_token') || 'abhyas-test-token-sangati-2026';
       h['Authorization'] = 'Bearer ' + token;
       if (embedKey) h['X-Education-Embed-Key'] = embedKey;
       return h;
@@ -425,6 +436,27 @@
       return el.label || el.content || el.text || '';
     }
 
+    function diagramOpacityAttr(el) {
+      if (el.opacity != null && el.opacity !== '' && !isNaN(Number(el.opacity))) {
+        return ' opacity="' + esc(String(el.opacity)) + '"';
+      }
+      return '';
+    }
+
+    function diagramHasPrecipitateLabel(elements) {
+      return (elements || []).some(function (e) {
+        return String(e.label || e.content || e.text || '').toLowerCase().indexOf('precipitate') >= 0;
+      });
+    }
+
+    function diagramElementFill(d, el) {
+      var fill = el.fill || (el.shape === 'text' ? '' : 'none');
+      if (el.shape === 'ellipse' && d && d.type === 'experimental-setup' && String(fill).toLowerCase() === '#06b6d4') {
+        if (diagramHasPrecipitateLabel(d.elements)) fill = '#eab308';
+      }
+      return fill;
+    }
+
     function renderDiagramSvg(d) {
       if (!d || !d.elements || !d.elements.length) return '';
       if (d.type === 'placeholder-from-catalog') return '';
@@ -432,20 +464,24 @@
       var svg = '<svg class="q-diagram-svg" viewBox="' + esc(vb) + '" xmlns="http://www.w3.org/2000/svg" role="img">';
       d.elements.forEach(function (el) {
         var dash = diagramDashAttr(el);
+        var op = diagramOpacityAttr(el);
         if (el.shape === 'rect') {
-          svg += '<rect x="' + el.x + '" y="' + el.y + '" width="' + el.width + '" height="' + el.height + '" stroke="' + esc(el.stroke || '#64748b') + '" fill="' + esc(el.fill || 'none') + '" stroke-width="' + (el.strokeWidth || 1) + '"' + dash + '/>';
+          var rx = el.rx ? ' rx="' + el.rx + '" ry="' + (el.ry != null ? el.ry : el.rx) + '"' : '';
+          svg += '<rect x="' + el.x + '" y="' + el.y + '" width="' + el.width + '" height="' + el.height + '" stroke="' + esc(el.stroke || '#64748b') + '" fill="' + esc(diagramElementFill(d, el)) + '" stroke-width="' + (el.strokeWidth || 1) + '"' + rx + op + dash + '/>';
+        } else if (el.shape === 'ellipse') {
+          svg += '<ellipse cx="' + el.cx + '" cy="' + el.cy + '" rx="' + el.rx + '" ry="' + el.ry + '" stroke="' + esc(el.stroke || 'none') + '" fill="' + esc(diagramElementFill(d, el)) + '" stroke-width="' + (el.strokeWidth || 0) + '"' + op + dash + '/>';
         } else if (el.shape === 'line') {
-          svg += '<line x1="' + el.x1 + '" y1="' + el.y1 + '" x2="' + el.x2 + '" y2="' + el.y2 + '" stroke="' + esc(el.stroke || '#94a3b8') + '" stroke-width="' + (el.strokeWidth || 1) + '"' + dash + '/>';
+          svg += '<line x1="' + el.x1 + '" y1="' + el.y1 + '" x2="' + el.x2 + '" y2="' + el.y2 + '" stroke="' + esc(el.stroke || '#94a3b8') + '" stroke-width="' + (el.strokeWidth || 1) + '"' + op + dash + '/>';
         } else if (el.shape === 'circle') {
-          svg += '<circle cx="' + el.cx + '" cy="' + el.cy + '" r="' + el.r + '" stroke="' + esc(el.stroke || '#64748b') + '" fill="' + esc(el.fill || 'none') + '" stroke-width="' + (el.strokeWidth || 1) + '"' + dash + '/>';
+          svg += '<circle cx="' + el.cx + '" cy="' + el.cy + '" r="' + el.r + '" stroke="' + esc(el.stroke || '#64748b') + '" fill="' + esc(diagramElementFill(d, el)) + '" stroke-width="' + (el.strokeWidth || 1) + '"' + op + dash + '/>';
         } else if (el.shape === 'polyline' && el.points) {
-          svg += '<polyline points="' + esc(el.points) + '" stroke="' + esc(el.stroke || '#64748b') + '" fill="' + esc(el.fill || 'none') + '" stroke-width="' + (el.strokeWidth || 1) + '"' + dash + '/>';
+          svg += '<polyline points="' + esc(el.points) + '" stroke="' + esc(el.stroke || '#64748b') + '" fill="' + esc(diagramElementFill(d, el)) + '" stroke-width="' + (el.strokeWidth || 1) + '"' + op + dash + '/>';
         } else if (el.shape === 'polygon' && el.points) {
-          svg += '<polygon points="' + esc(el.points) + '" stroke="' + esc(el.stroke || '#64748b') + '" fill="' + esc(el.fill || 'none') + '" stroke-width="' + (el.strokeWidth || 1) + '"' + dash + '/>';
+          svg += '<polygon points="' + esc(el.points) + '" stroke="' + esc(el.stroke || '#64748b') + '" fill="' + esc(diagramElementFill(d, el)) + '" stroke-width="' + (el.strokeWidth || 1) + '"' + op + dash + '/>';
         } else if (el.shape === 'text') {
           var label = diagramTextLabel(el);
           if (label) {
-            svg += '<text x="' + (el.x || 0) + '" y="' + (el.y || 0) + '" fill="' + esc(el.fill || '#e2e8f0') + '" font-size="' + (el.fontSize || 14) + '" font-family="system-ui,sans-serif">' + esc(label) + '</text>';
+            svg += '<text x="' + (el.x || 0) + '" y="' + (el.y || 0) + '" fill="' + esc(el.fill || '#334155') + '" font-size="' + (el.fontSize || 14) + '" font-family="system-ui,sans-serif"' + op + '>' + esc(label) + '</text>';
           }
         }
       });
@@ -925,12 +961,93 @@
       }
     }
 
+    function wrapPdfLines(doc, text, x, y, maxWidth, lineHeight) {
+      var lines = doc.splitTextToSize(String(text || ''), maxWidth);
+      lines.forEach(function (line) {
+        if (y > 780) { doc.addPage(); y = 48; }
+        doc.text(line, x, y);
+        y += lineHeight;
+      });
+      return y;
+    }
+
+    function downloadAnswerSheetPdf() {
+      if (!window.jspdf || !window.jspdf.jsPDF) {
+        alert('PDF library not loaded.');
+        return;
+      }
+      var pack = state.answerPack || {};
+      var ev = state.session.evaluation || {};
+      var qs = state.session.questions || [];
+      var doc = new window.jspdf.jsPDF({ unit: 'pt', format: 'a4' });
+      var y = 48;
+      doc.setFont('helvetica', 'bold');
+      doc.setFontSize(16);
+      doc.text('Abhyas Answer Sheet (CBSE-X)', 40, y);
+      y += 22;
+      doc.setFont('helvetica', 'normal');
+      doc.setFontSize(10);
+      [
+        'Student: ' + (state.studentName || (pack.student && pack.student.name) || '—'),
+        'Subject: ' + (state.session.subject || '—') + ' · Class ' + (state.session.grade || '10'),
+        'Session: ' + (state.session.id || state.session.session_id || '—'),
+        'Pack ID: ' + (pack.pack_id || ev.answer_pack_id || '—'),
+        'Submitted: ' + (pack.submitted_at || new Date().toISOString()),
+        'Phase-1: No evaluation — answer sheet for teacher review only.',
+      ].forEach(function (line) { doc.text(line, 40, y); y += 14; });
+      y += 8;
+      doc.setDrawColor(200);
+      doc.line(40, y, 555, y);
+      y += 18;
+      qs.forEach(function (q, idx) {
+        var header = 'Q' + (q.question_number || (idx + 1)) + ' · ' + (q.type || 'short').toUpperCase() + ' · ' + (q.marks || 1) + ' mark(s)';
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(11);
+        y = wrapPdfLines(doc, header, 40, y, 515, 14);
+        doc.setFont('helvetica', 'normal');
+        doc.setFontSize(10);
+        y = wrapPdfLines(doc, q.question || '', 40, y, 515, 13);
+        y += 4;
+        doc.setFont('helvetica', 'bold');
+        doc.text('Answer:', 40, y);
+        y += 14;
+        doc.setFont('helvetica', 'normal');
+        var ans = state.answers[q.id] || pack.answers && pack.answers[q.id] || '';
+        if (q.type === 'mcq' && ans) {
+          y = wrapPdfLines(doc, 'Option ' + ans, 40, y, 515, 13);
+        } else if (window.AnswerComposer) {
+          y = AnswerComposer.appendToPdf(doc, ans || '(not answered)', 40, y, 515, 13);
+        } else {
+          y = wrapPdfLines(doc, ans || '(not answered)', 40, y, 515, 13);
+        }
+        y += 12;
+      });
+      doc.save('abhyas-answer-sheet-' + (pack.pack_id || 'session') + '.pdf');
+    }
+
+    function downloadAnswerPackJson() {
+      var pack = state.answerPack || {};
+      if (!pack.pack_id) {
+        alert('No answer pack available.');
+        return;
+      }
+      var blob = new Blob([JSON.stringify(pack, null, 2)], { type: 'application/json' });
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'abhyas-answer-pack-' + pack.pack_id + '.json';
+      a.click();
+      URL.revokeObjectURL(a.href);
+    }
+
     function renderResults() {
       setStep('results');
       var ev = state.session.evaluation || {};
       var sum = ev.summary || {};
       var pack = state.answerPack || {};
       var total = sum.total_questions || (state.session.questions || []).length;
+      var hasImageAnswers = Object.keys(state.answers || {}).some(function (qid) {
+        return window.AnswerComposer && AnswerComposer.hasContent && AnswerComposer.parse(state.answers[qid]).images.length;
+      });
 
       var html = '<div class="card">';
       html += '<div class="pending-hero">';
@@ -942,16 +1059,24 @@
       html += '<div class="stat"><strong>' + esc(pack.pack_id || ev.answer_pack_id || '—') + '</strong><span>Pack ID</span></div>';
       html += '</div></div>';
 
+      if (hasImageAnswers) {
+        html += '<p style="margin:16px 0 0;font-size:0.82rem;color:var(--muted);line-height:1.55">Answers with drawings or uploads are stored as JSON strings: <code>{"text":"…","images":[{"type":"upload|draw","name":"…","data":"data:image/png;base64,…"}]}</code>. Download PDF to include embedded images, or JSON for full fidelity.</p>';
+      }
+
       if (pack.pack_id) {
         html += '<h3 style="margin:20px 0 12px;font-size:0.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em">Answer pack JSON</h3>';
         html += '<pre style="background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:0.75rem;max-height:320px">' + esc(JSON.stringify(pack, null, 2)) + '</pre>';
       }
 
       html += '<div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">';
-      html += '<button type="button" class="btn" id="newBtn">Take another test</button>';
+      html += '<button type="button" class="btn" id="pdfBtn">Download PDF answer sheet</button>';
+      html += '<button type="button" class="btn secondary" id="jsonBtn">Download JSON pack</button>';
+      html += '<button type="button" class="btn secondary" id="newBtn">Take another test</button>';
       html += '<button type="button" class="btn secondary" id="homeBtn">Back to setup</button></div></div>';
       main.innerHTML = html;
 
+      document.getElementById('pdfBtn').onclick = downloadAnswerSheetPdf;
+      document.getElementById('jsonBtn').onclick = downloadAnswerPackJson;
       document.getElementById('newBtn').onclick = function () { state.session = null; state.answerPack = null; renderChoose(); };
       document.getElementById('homeBtn').onclick = function () { state.session = null; state.answerPack = null; renderChoose(); };
     }

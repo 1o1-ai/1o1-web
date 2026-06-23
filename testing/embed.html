@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abhyas Testing — Embed guide</title>
+  <style>
+    :root { --teal: #0d9488; --ink: #0f172a; --muted: #64748b; --line: rgba(15,23,42,.08); }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #f8fafc; color: var(--ink); line-height: 1.6; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
+    h1 { font-size: 1.75rem; margin-bottom: 8px; }
+    h2 { font-size: 1.1rem; margin: 28px 0 10px; }
+    p, li { color: var(--muted); margin-bottom: 10px; }
+    code, pre { font-family: ui-monospace, monospace; font-size: 0.85rem; }
+    pre {
+      background: #fff; border: 1px solid var(--line); border-radius: 12px;
+      padding: 14px; overflow: auto; margin: 12px 0 20px; color: var(--ink);
+    }
+    .demo { margin-top: 24px; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #fff; }
+    .demo-head { padding: 12px 16px; border-bottom: 1px solid var(--line); font-size: 0.82rem; color: var(--muted); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 12px 0; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+    th { color: var(--muted); font-weight: 600; }
+    a { color: var(--teal); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Embed Abhyas Testing on your site</h1>
+    <p>Host the same UI as <a href="https://yogabrata.com/testing/">yogabrata.com/testing</a> on your pages. Partners receive a Bearer token and optional embed key from the Brahmando team.</p>
+
+    <h2>Option 1 — iframe (simplest)</h2>
+    <pre>&lt;iframe
+  src="https://yogabrata.com/testing/?embed=1&amp;token=YOUR_TOKEN&amp;subject=Science&amp;count=8"
+  title="Abhyas CBSE Class 10"
+  style="width:100%;min-height:900px;border:0;border-radius:16px"
+  allow="clipboard-write"
+&gt;&lt;/iframe&gt;</pre>
+
+    <h2>Option 2 — script widget</h2>
+    <pre>&lt;div id="abhyas-testing"&gt;&lt;/div&gt;
+&lt;script
+  src="https://yogabrata.com/testing/abhyas-testing-widget.js"
+  data-container="abhyas-testing"
+  data-token="YOUR_TOKEN"
+  data-embed-key="YOUR_EMBED_KEY"
+  data-subject="Science"
+  data-count="8"
+  data-height="920px"&gt;
+&lt;/script&gt;</pre>
+
+    <h2>Query / data attributes</h2>
+    <table>
+      <thead><tr><th>Param</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><code>embed=1</code></td><td>Compact chrome (hides hero/footer; token from URL)</td></tr>
+        <tr><td><code>token</code></td><td>Abhyas Bearer token (required for partner sites)</td></tr>
+        <tr><td><code>embed_key</code></td><td><code>X-Education-Embed-Key</code> for non-allowlisted origins</td></tr>
+        <tr><td><code>api</code></td><td>Override Abhyas API base (default: production)</td></tr>
+        <tr><td><code>subject</code>, <code>chapter</code>, <code>count</code></td><td>Pre-fill practice setup (count 1–40)</td></tr>
+        <tr><td><code>mode</code></td><td><code>practice</code> or <code>mock_exam</code></td></tr>
+        <tr><td><code>scope</code></td><td><code>official</code> (default) or <code>anyo</code></td></tr>
+      </tbody>
+    </table>
+
+    <h2>Answer pack with images</h2>
+    <p>When students draw or upload diagrams, answers serialize as JSON strings in the pack:</p>
+    <pre>{"text":"PbI₂ is yellow precipitate","images":[{"type":"draw","name":"diagram.png","data":"data:image/png;base64,..."}]}</pre>
+    <p>After submit, students can <strong>Download PDF answer sheet</strong> (images embedded) or <strong>Download JSON pack</strong> (full fidelity for backend ingestion).</p>
+
+    <h2>Live demo</h2>
+    <div class="demo">
+      <div class="demo-head">iframe · embed=1 · official scope · demo token</div>
+      <iframe
+        id="demoFrame"
+        src="./?embed=1&amp;subject=Science&amp;count=5"
+        title="Abhyas demo embed"
+        style="width:100%;min-height:880px;border:0;display:block"
+        allow="clipboard-write"></iframe>
+    </div>
+  </div>
+</body>
+</html>
