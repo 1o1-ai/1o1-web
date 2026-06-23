@@ -8,6 +8,7 @@
     'AI guidance only — not official CBSE marking. Verify with NCERT and your teacher.';
   const CHAT_STORAGE_KEY = 'sahadeva_chat_cbse10_v2';
   const GEOM_STORAGE_KEY = 'sahadeva_panel_geom_v2';
+  const DISPLAY_STORAGE_KEY = 'sahadeva_display_mode_v1';
 
   function esc(s) {
     return String(s || '')
@@ -159,14 +160,18 @@
       '<button type="button" class="sahadeva-fab-launcher" id="sahadevaFabLauncher" aria-expanded="false" aria-controls="sahadevaFabPanel" aria-label="Open Sahadeva study assistant">' +
       sahadevaArcMarkSvg('sahadeva-fab-mark') +
       '</button>' +
-      '<section class="sahadeva-panel forum-hidden" id="sahadevaFabPanel" role="dialog" aria-label="Sahadeva study assistant">' +
-      '<div class="sahadeva-universe-orbit" id="sahadevaDrag" title="Drag empty ring area to move">' +
-      '<div class="sahadeva-orbit-stars" aria-hidden="true"></div>' +
-      '<div class="sahadeva-orbit-nebula" aria-hidden="true"></div>' +
-      '<div class="sahadeva-orbit-ring sahadeva-orbit-ring-outer" aria-hidden="true"></div>' +
-      '<div class="sahadeva-orbit-ring sahadeva-orbit-ring-inner" aria-hidden="true"></div>' +
-      '<div class="sahadeva-orbit-satellite" aria-hidden="true"><span class="sahadeva-universe-dot"></span></div>' +
+      '<section class="sahadeva-panel forum-hidden sahadeva-display-circular" id="sahadevaFabPanel" role="dialog" aria-label="Sahadeva study assistant">' +
+      '<div class="sahadeva-orbit-crown" aria-hidden="true">' +
       sahadevaArcMarkSvg('sahadeva-panel-arc-title') +
+      '</div>' +
+      '<div class="sahadeva-universe-orbit" id="sahadevaDrag" title="Drag empty ring area to move">' +
+      '<div class="sahadeva-orbit-decor" aria-hidden="true">' +
+      '<div class="sahadeva-orbit-stars"></div>' +
+      '<div class="sahadeva-orbit-nebula"></div>' +
+      '<div class="sahadeva-orbit-ring sahadeva-orbit-ring-outer"></div>' +
+      '<div class="sahadeva-orbit-ring sahadeva-orbit-ring-inner"></div>' +
+      '<div class="sahadeva-orbit-satellite"><span class="sahadeva-universe-dot"></span></div>' +
+      '</div>' +
       '<div class="sahadeva-universe-card">' +
       '<div class="sahadeva-window-chrome" role="toolbar" aria-label="Window controls">' +
       '<button type="button" class="sahadeva-chrome-btn" id="sahadevaFabClose" title="Minimize" aria-label="Minimize">−</button>' +
@@ -176,6 +181,10 @@
       '<header class="sahadeva-card-head">' +
       '<span class="sahadeva-card-title"><span aria-hidden="true">🛡️</span> Sahadeva</span>' +
       '<small>ManjuLAB · Cosmos tutor</small>' +
+      '<div class="sahadeva-display-pick" role="group" aria-label="Display style">' +
+      '<button type="button" class="sahadeva-display-opt active" data-display="circular" title="Circular orbit window">Orbit</button>' +
+      '<button type="button" class="sahadeva-display-opt" data-display="normal" title="Normal rectangular window">Panel</button>' +
+      '</div>' +
       '</header>' +
       '<div class="sahadeva-panel-filters">' +
       '<label>Subject<select id="sahadevaSubject"><option value="all">All</option><option value="science">Science</option><option value="mathematics">Mathematics</option></select></label>' +
@@ -208,17 +217,31 @@
     const resizeHandle = panel.querySelector('#sahadevaResize');
     const maximizeBtn = panel.querySelector('#sahadevaMaximize');
     const dragHandle = panel.querySelector('#sahadevaDrag');
+    const cardHead = panel.querySelector('.sahadeva-card-head');
+    const displayBtns = panel.querySelectorAll('.sahadeva-display-opt');
 
     let open = false;
     let maximized = false;
     let geomBeforeMax = null;
+    let displayMode = 'circular';
     let mode = 'predict';
     let busy = false;
     let curriculum = null;
     let forumData = null;
     let chatLog = [];
 
-    function defaultGeometry() {
+    function defaultGeometry(mode) {
+      const style = mode || displayMode;
+      if (style === 'normal') {
+        const w = 380;
+        const h = 520;
+        return {
+          x: 16,
+          y: Math.max(16, window.innerHeight - h - 16),
+          w,
+          h,
+        };
+      }
       const size = 460;
       return {
         x: 16,
@@ -226,6 +249,47 @@
         w: size,
         h: size,
       };
+    }
+
+    function isCircular() {
+      return displayMode === 'circular';
+    }
+
+    function loadDisplayMode() {
+      try {
+        const raw = sessionStorage.getItem(DISPLAY_STORAGE_KEY);
+        if (raw === 'normal' || raw === 'circular') displayMode = raw;
+      } catch {
+        /* */
+      }
+      applyDisplayMode(displayMode, false);
+    }
+
+    function saveDisplayMode() {
+      try {
+        sessionStorage.setItem(DISPLAY_STORAGE_KEY, displayMode);
+      } catch {
+        /* */
+      }
+    }
+
+    function applyDisplayMode(next, resizePanel) {
+      displayMode = next === 'normal' ? 'normal' : 'circular';
+      panel.classList.toggle('sahadeva-display-circular', isCircular());
+      panel.classList.toggle('sahadeva-display-normal', !isCircular());
+      displayBtns.forEach((btn) => {
+        const on = btn.getAttribute('data-display') === displayMode;
+        btn.classList.toggle('active', on);
+        btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      dragHandle.title = isCircular()
+        ? 'Drag empty ring area to move'
+        : 'Drag header to move';
+      saveDisplayMode();
+      if (resizePanel && !maximized) {
+        applyGeometry(defaultGeometry());
+        saveGeometry();
+      }
     }
 
     function applyGeometry(geom) {
@@ -248,7 +312,7 @@
       try {
         sessionStorage.setItem(
           GEOM_STORAGE_KEY,
-          JSON.stringify({ ...readGeometry(), maximized })
+          JSON.stringify({ ...readGeometry(), maximized, display: displayMode })
         );
       } catch {
         /* */
@@ -263,6 +327,9 @@
           return;
         }
         const g = JSON.parse(raw);
+        if (g.display === 'normal' || g.display === 'circular') {
+          applyDisplayMode(g.display, false);
+        }
         if (g.maximized) {
           maximized = true;
           panel.classList.add('sahadeva-panel-maximized');
@@ -275,12 +342,16 @@
           });
           return;
         }
-        const w = Math.min(window.innerWidth - 24, Math.max(320, Number(g.w) || 460));
-        const h = Math.min(window.innerHeight - 24, Math.max(320, Number(g.h) || 460));
-        const size = Math.min(w, h);
-        const x = Math.max(8, Math.min(window.innerWidth - size - 8, Number(g.x) || 16));
-        const y = Math.max(8, Math.min(window.innerHeight - size - 8, Number(g.y) || 16));
-        applyGeometry({ x, y, w: size, h: size });
+        const w = Math.min(window.innerWidth - 24, Math.max(320, Number(g.w) || (isCircular() ? 460 : 380)));
+        const h = Math.min(window.innerHeight - 24, Math.max(320, Number(g.h) || (isCircular() ? 460 : 520)));
+        const x = Math.max(8, Math.min(window.innerWidth - w - 8, Number(g.x) || 16));
+        const y = Math.max(8, Math.min(window.innerHeight - h - 8, Number(g.y) || 16));
+        if (isCircular()) {
+          const size = Math.min(w, h);
+          applyGeometry({ x, y, w: size, h: size });
+        } else {
+          applyGeometry({ x, y, w, h });
+        }
       } catch {
         applyGeometry(defaultGeometry());
       }
@@ -312,8 +383,12 @@
 
     function bindDrag() {
       let dragMoved = false;
-      dragHandle.addEventListener('pointerdown', (e) => {
-        if (e.target.closest('.sahadeva-universe-card, button, select, input, a, textarea')) return;
+      const startDrag = (e) => {
+        if (isCircular()) {
+          if (e.target.closest('.sahadeva-universe-card, button, select, input, a, textarea')) return;
+        } else if (!e.target.closest('.sahadeva-card-head') || e.target.closest('button, select, input, a, textarea')) {
+          return;
+        }
         e.preventDefault();
         e.stopPropagation();
         dragMoved = false;
@@ -322,8 +397,9 @@
         const startY = e.clientY;
         const startLeft = panel.offsetLeft;
         const startTop = panel.offsetTop;
-        dragHandle.setPointerCapture(e.pointerId);
-        dragHandle.classList.add('sahadeva-dragging');
+        const handle = isCircular() ? dragHandle : cardHead;
+        handle.setPointerCapture(e.pointerId);
+        handle.classList.add('sahadeva-dragging');
 
         const onMove = (ev) => {
           if (Math.abs(ev.clientX - startX) > 3 || Math.abs(ev.clientY - startY) > 3) {
@@ -337,15 +413,17 @@
           panel.style.top = y + 'px';
         };
         const onUp = () => {
-          dragHandle.releasePointerCapture(e.pointerId);
-          dragHandle.classList.remove('sahadeva-dragging');
-          dragHandle.removeEventListener('pointermove', onMove);
-          dragHandle.removeEventListener('pointerup', onUp);
+          handle.releasePointerCapture(e.pointerId);
+          handle.classList.remove('sahadeva-dragging');
+          handle.removeEventListener('pointermove', onMove);
+          handle.removeEventListener('pointerup', onUp);
           if (dragMoved) saveGeometry();
         };
-        dragHandle.addEventListener('pointermove', onMove);
-        dragHandle.addEventListener('pointerup', onUp);
-      });
+        handle.addEventListener('pointermove', onMove);
+        handle.addEventListener('pointerup', onUp);
+      };
+      dragHandle.addEventListener('pointerdown', startDrag);
+      cardHead.addEventListener('pointerdown', startDrag);
     }
 
     function bindResize() {
@@ -359,17 +437,28 @@
         }
         const startX = e.clientX;
         const startY = e.clientY;
-        const startSize = panel.offsetWidth;
+        const startW = panel.offsetWidth;
+        const startH = panel.offsetHeight;
         const startLeft = panel.offsetLeft;
         const startTop = panel.offsetTop;
         resizeHandle.setPointerCapture(e.pointerId);
 
         const onMove = (ev) => {
-          const delta = Math.max(ev.clientX - startX, ev.clientY - startY);
-          const maxSize = Math.min(window.innerWidth - startLeft - 8, window.innerHeight - startTop - 8);
-          const size = Math.min(maxSize, Math.max(320, startSize + delta));
-          panel.style.width = size + 'px';
-          panel.style.height = size + 'px';
+          const deltaX = ev.clientX - startX;
+          const deltaY = ev.clientY - startY;
+          const maxW = window.innerWidth - startLeft - 8;
+          const maxH = window.innerHeight - startTop - 8;
+          if (isCircular()) {
+            const delta = Math.max(deltaX, deltaY);
+            const size = Math.min(maxW, maxH, Math.max(320, startW + delta));
+            panel.style.width = size + 'px';
+            panel.style.height = size + 'px';
+          } else {
+            const w = Math.min(maxW, Math.max(300, startW + deltaX));
+            const h = Math.min(maxH, Math.max(360, startH + deltaY));
+            panel.style.width = w + 'px';
+            panel.style.height = h + 'px';
+          }
         };
         const onUp = () => {
           resizeHandle.releasePointerCapture(e.pointerId);
@@ -729,6 +818,15 @@
       btn.addEventListener('click', () => setMode(btn.getAttribute('data-mode') || 'predict'));
     });
 
+    displayBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const next = btn.getAttribute('data-display');
+        if (!next || next === displayMode) return;
+        applyDisplayMode(next, true);
+      });
+    });
+
     subjectSel.addEventListener('change', async () => {
       chapterSel.value = 'all';
       await ensureCurriculum();
@@ -774,7 +872,9 @@
       });
     });
 
+    loadDisplayMode();
     loadSavedGeometry();
+    applyDisplayMode(displayMode, false);
     bindDrag();
     bindResize();
     if (!restoreChat()) appendWelcome();
