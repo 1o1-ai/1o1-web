@@ -250,7 +250,7 @@
     body.embed-mode .topbar .brand span { display: none; }
     body.embed-mode #userTokenSelect { display: none; }
   </style>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js" integrity="sha512-+93f7G/yo8+4N9a4dKK609mQvX6Zs2x/O6777HQ8h8X2Nr29Qi6AE7+G1/xY5lCYwEM+sy2UP1W1X0+0f8KbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="vendor/jspdf.umd.min.js"></script>
 </head>
 <body>
   <div class="page">
@@ -986,15 +986,22 @@
       return y;
     }
 
+    function getJsPdfConstructor() {
+      if (window.jspdf && window.jspdf.jsPDF) return window.jspdf.jsPDF;
+      if (typeof window.jsPDF === 'function') return window.jsPDF;
+      return null;
+    }
+
     function downloadAnswerSheetPdf() {
-      if (!window.jspdf || !window.jspdf.jsPDF) {
-        alert('PDF library not loaded.');
+      var JsPDF = getJsPdfConstructor();
+      if (!JsPDF) {
+        alert('PDF library not loaded. Refresh the page and try again.');
         return;
       }
       var pack = state.answerPack || {};
       var ev = state.session.evaluation || {};
       var qs = state.session.questions || [];
-      var doc = new window.jspdf.jsPDF({ unit: 'pt', format: 'a4' });
+      var doc = new JsPDF({ unit: 'pt', format: 'a4' });
       var y = 48;
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(16);
