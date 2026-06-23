@@ -155,20 +155,20 @@
       '</div></div></section>';
 
     document.body.appendChild(root);
-    document.body.appendChild(panel);
-
     const launcher = root.querySelector('#sahadevaFabLauncher');
     const panel = root.querySelector('#sahadevaFabPanel');
-    const closeBtn = root.querySelector('#sahadevaFabClose');
-    const chat = root.querySelector('#sahadevaFabChat');
-    const form = root.querySelector('#sahadevaFabForm');
-    const input = root.querySelector('#sahadevaFabInput');
-    const subjectSel = root.querySelector('#sahadevaSubject');
-    const chapterSel = root.querySelector('#sahadevaChapter');
-    const modeBtns = root.querySelectorAll('.sahadeva-mode');
-    const resizeHandle = root.querySelector('#sahadevaResize');
-    const maximizeBtn = root.querySelector('#sahadevaMaximize');
-    const dragHandle = root.querySelector('#sahadevaDrag');
+    document.body.appendChild(panel);
+
+    const closeBtn = panel.querySelector('#sahadevaFabClose');
+    const chat = panel.querySelector('#sahadevaFabChat');
+    const form = panel.querySelector('#sahadevaFabForm');
+    const input = panel.querySelector('#sahadevaFabInput');
+    const subjectSel = panel.querySelector('#sahadevaSubject');
+    const chapterSel = panel.querySelector('#sahadevaChapter');
+    const modeBtns = panel.querySelectorAll('.sahadeva-mode');
+    const resizeHandle = panel.querySelector('#sahadevaResize');
+    const maximizeBtn = panel.querySelector('#sahadevaMaximize');
+    const dragHandle = panel.querySelector('#sahadevaDrag');
 
     let open = false;
     let maximized = false;
