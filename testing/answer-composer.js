@@ -7,7 +7,8 @@
 
   var STYLE_ID = 'answer-composer-styles';
   var MAX_IMAGES = 3;
-  var MAX_IMAGE_BYTES = 2 * 1024 * 1024;
+  var MAX_IMAGE_BYTES = 800 * 1024;
+  var SUBMIT_BUDGET_BYTES = 55000;
 
   var SYMBOL_GROUPS = [
     {
@@ -334,7 +335,7 @@
       }
       var reader = new FileReader();
       reader.onload = function () {
-        resizeDataUrl(reader.result, 720, 0.82).then(function (url) {
+        resizeDataUrl(reader.result, 640, 0.78).then(function (url) {
           addImage(url, { type: 'upload', name: file.name });
         }).catch(function () { alert('Could not read image.'); });
       };
@@ -481,6 +482,66 @@
     return y;
   }
 
+  function countImagesInAnswers(answers) {
+    var n = 0;
+    Object.keys(answers || {}).forEach(function (qid) {
+      n += (parseAnswer(answers[qid]).images || []).length;
+    });
+    return n;
+  }
+
+  function compressDataUrlToBudget(dataUrl, maxBytes) {
+    return new Promise(function (resolve) {
+      var qualities = [0.78, 0.65, 0.52, 0.42, 0.32];
+      var widths = [640, 520, 420, 340, 280];
+      var idx = 0;
+      function next() {
+        if (idx >= qualities.length) {
+          resolve(dataUrl);
+          return;
+        }
+        resizeDataUrl(dataUrl, widths[idx], qualities[idx]).then(function (url) {
+          if (dataUrlBytes(url) <= maxBytes || idx === qualities.length - 1) {
+            resolve(url);
+          } else {
+            idx += 1;
+            next();
+          }
+        }).catch(function () { resolve(dataUrl); });
+      }
+      next();
+    });
+  }
+
+  function shrinkForSubmit(answers, maxTotalBytes) {
+    maxTotalBytes = maxTotalBytes || SUBMIT_BUDGET_BYTES;
+    var out = {};
+    Object.keys(answers || {}).forEach(function (k) { out[k] = answers[k]; });
+    var imgCount = countImagesInAnswers(out);
+    if (!imgCount) return Promise.resolve(out);
+    var imageBudget = Math.max(14000, Math.floor((maxTotalBytes * 0.72) / imgCount));
+    var chain = Promise.resolve();
+    Object.keys(out).forEach(function (qid) {
+      chain = chain.then(function () {
+        var parsed = parseAnswer(out[qid]);
+        if (!parsed.images.length) return;
+        return Promise.all(parsed.images.map(function (img, i) {
+          if (!img.data) return Promise.resolve();
+          return compressDataUrlToBudget(img.data, imageBudget).then(function (url) {
+            parsed.images[i] = {
+              type: img.type || 'upload',
+              name: String(img.name || 'attachment.jpg').replace(/\.png$/i, '.jpg'),
+              data: url,
+            };
+          });
+        })).then(function () {
+          out[qid] = serializeAnswer(parsed.text, parsed.images);
+        });
+      });
+    });
+    return chain.then(function () { return out; });
+  }
+
   global.AnswerComposer = {
     mount: mount,
     parse: parseAnswer,
@@ -488,5 +549,9 @@
     hasContent: hasContent,
     formatDisplayText: formatDisplayText,
     appendToPdf: appendToPdf,
+    shrinkForSubmit: shrinkForSubmit,
+    estimateBytes: function (answers, studentName) {
+      return new Blob([JSON.stringify({ answers: answers || {}, student_name: studentName || '' })]).size;
+    },
   };
 })(typeof window !== 'undefined' ? window : globalThis);

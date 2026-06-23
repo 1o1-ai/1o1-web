@@ -952,26 +952,30 @@
         }
       }
       var isMockSubmit = state.sessionKind === 'mock_exam' || (state.session && state.session.session_kind === 'mock_exam');
-      main.innerHTML = '<div class="loading"><div class="spinner"></div><p>' + (isMockSubmit ? 'Submitting answer sheet…' : 'Creating answer pack…') + '</p></div>';
+      main.innerHTML = '<div class="loading"><div class="spinner"></div><p>' + (isMockSubmit ? 'Submitting answer sheet…' : 'Creating answer pack…') + (Object.keys(state.answers).some(function (qid) { return AnswerComposer && AnswerComposer.parse(state.answers[qid]).images.length; }) ? ' Compressing attachments…' : '') + '</p></div>';
 
       try {
         var sid = state.session.id || state.session.session_id;
-        var payload = { answers: state.answers, student_name: state.studentName };
+        var answers = state.answers;
+        if (window.AnswerComposer && AnswerComposer.shrinkForSubmit) {
+          answers = await AnswerComposer.shrinkForSubmit(state.answers);
+        }
+        var payload = { answers: answers, student_name: state.studentName };
         var bodyStr = JSON.stringify(payload);
         var bodyKb = Math.round(new Blob([bodyStr]).size / 1024);
-        if (bodyKb > 9000) {
-          throw new Error('Answer pack is ' + bodyKb + ' KB — too large to submit. Remove some image attachments.');
-        }
-        if (bodyKb > 400 && !window.confirm('Answer pack is ' + bodyKb + ' KB (includes images). Submit anyway?')) {
-          renderTest();
-          return;
+        if (bodyKb > 9500) {
+          throw new Error('Answer pack is ' + bodyKb + ' KB after compression — remove an attachment or use a simpler drawing.');
         }
         var res = await fetch(apiUrl + '/v1/session/' + sid + '/submit', {
           method: 'POST', headers: headers(),
           body: bodyStr,
         });
         var data = await res.json().catch(function () { return {}; });
-        if (!res.ok) throw new Error(data.detail || ('Submit failed (HTTP ' + res.status + ')'));
+        if (!res.ok) {
+          var err = new Error(data.detail || ('Submit failed (HTTP ' + res.status + ')'));
+          err.httpStatus = res.status;
+          throw err;
+        }
         state.session.evaluation = data.evaluation;
         state.answerPack = data.answer_pack || null;
         renderResults();
