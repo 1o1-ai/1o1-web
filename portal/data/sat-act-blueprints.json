@@ -1,0 +1,78 @@
+{
+  "sku": "sat-act",
+  "blueprints": [
+    {
+      "topic": "Systems of Linear Equations",
+      "difficulty": "Medium",
+      "question_patterns": [
+        "Given two linear equations, determine the coordinates (x, y) where they intersect.",
+        "Determine the value of a constant 'k' that makes a system of equations have no solutions (slopes equal, y-intercepts unequal).",
+        "Interpret a system of linear equations in a word-problem modeling scenario (e.g., cell phone plan options)."
+      ],
+      "common_mistakes": [
+        "Forgetting to align equations before using elimination method.",
+        "Confusing the condition for 'no solutions' (parallel lines) with 'infinite solutions' (identical lines).",
+        "Making sign errors during subtraction steps."
+      ],
+      "learning_objectives": [
+        "Solve systems using substitution, elimination, or matrix modeling.",
+        "Graph linear systems and locate intersection points.",
+        "Formulate mathematical systems representing real-world problems."
+      ]
+    },
+    {
+      "topic": "Quadratic and Exponential Modeling",
+      "difficulty": "Hard",
+      "question_patterns": [
+        "Find the vertex form of a quadratic equation to locate the minimum/maximum value of a modeled curve.",
+        "Given a growth factor (e.g., doubling every 3 hours), write an exponential equation mapping population size over time.",
+        "Evaluate factors of a quadratic equation and find sum or product of roots using Vieta's formulas."
+      ],
+      "common_mistakes": [
+        "Misinterpreting growth factor as linear rate of change.",
+        "Confusing coordinates of the vertex (h, k) with roots or x-intercepts.",
+        "Forgetting that the denominator in fractional exponents represents the root (e.g., x^(2/3) is the cube root of x^2)."
+      ],
+      "learning_objectives": [
+        "Model nonlinear growth scenarios using exponential equations.",
+        "Find roots, vertices, and intercepts of quadratic functions.",
+        "Manipulate radical and rational exponent expressions."
+      ]
+    },
+    {
+      "topic": "Rhetorical Synthesis (SAT notes)",
+      "difficulty": "Easy",
+      "question_patterns": [
+        "Given a list of bullet points detailing an artist's background and a goal (e.g., 'to emphasize the source of the artist's inspiration'), identify the sentence that achieves this goal using notes.",
+        "Given a set of observations about a geological survey, select a sentence that compares two distinct geographical regions."
+      ],
+      "common_mistakes": [
+        "Selecting a statement that is factually true according to notes but does not satisfy the specified rhetorical goal.",
+        "Choosing overly wordy or redundant options when concise options are available."
+      ],
+      "learning_objectives": [
+        "Integrate facts from multiple sources into a coherent statement.",
+        "Tailor written statements to achieve explicit rhetorical goals."
+      ]
+    },
+    {
+      "topic": "ACT Science Data Interpretation",
+      "difficulty": "Medium",
+      "question_patterns": [
+        "Read values from a scatterplot or multi-line graph containing multiple independent variables.",
+        "Determine the relationship (direct, inverse) between variables across different trials.",
+        "Interpolate a value between two data points or extrapolate a trend beyond the highest tested value."
+      ],
+      "common_mistakes": [
+        "Reading values from the wrong line or curve (mixing up symbol keys).",
+        "Confusing independent variables (manipulated) with dependent variables (measured).",
+        "Failing to observe scale increments on the axes."
+      ],
+      "learning_objectives": [
+        "Extract precise values from scientific charts, tables, and graphs.",
+        "Map correlations and trends mathematically between experimental parameters."
+      ]
+    }
+  ],
+  "source": "C:\\Knowledge\\EDUCATION\\SAT_ACT\\blueprints"
+}

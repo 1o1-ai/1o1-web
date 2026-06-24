@@ -1,0 +1,375 @@
+{
+  "sku": "sat-act",
+  "skills": [
+    {
+      "subject": "Math",
+      "domain": "Algebra",
+      "subdomain": "Linear Equations",
+      "skill_id": "SAT.MATH.ALG.01",
+      "description": "Create, solve, or interpret linear equations in one variable."
+    },
+    {
+      "subject": "Math",
+      "domain": "Algebra",
+      "subdomain": "Linear Equations",
+      "skill_id": "SAT.MATH.ALG.02",
+      "description": "Create, solve, or interpret linear equations in two variables."
+    },
+    {
+      "subject": "Math",
+      "domain": "Algebra",
+      "subdomain": "Systems of Linear Equations",
+      "skill_id": "SAT.MATH.ALG.03",
+      "description": "Create, solve, and analyze systems of two linear equations."
+    },
+    {
+      "subject": "Math",
+      "domain": "Algebra",
+      "subdomain": "Linear Inequalities",
+      "skill_id": "SAT.MATH.ALG.04",
+      "description": "Create, solve, or interpret linear inequalities in one or two variables."
+    },
+    {
+      "subject": "Math",
+      "domain": "Advanced Math",
+      "subdomain": "Equivalent Expressions",
+      "skill_id": "SAT.MATH.ADV.01",
+      "description": "Rewrite algebraic expressions to reveal hidden properties or values."
+    },
+    {
+      "subject": "Math",
+      "domain": "Advanced Math",
+      "subdomain": "Nonlinear Equations",
+      "skill_id": "SAT.MATH.ADV.02",
+      "description": "Create, solve, and analyze quadratic, exponential, and polynomial equations."
+    },
+    {
+      "subject": "Math",
+      "domain": "Advanced Math",
+      "subdomain": "Nonlinear Functions",
+      "skill_id": "SAT.MATH.ADV.03",
+      "description": "Analyze and graph quadratic, exponential, and other nonlinear functions."
+    },
+    {
+      "subject": "Math",
+      "domain": "Problem Solving and Data Analysis",
+      "subdomain": "Ratios and Proportions",
+      "skill_id": "SAT.MATH.PSD.01",
+      "description": "Solve multi-step problems using ratios, rates, proportions, and unit conversions."
+    },
+    {
+      "subject": "Math",
+      "domain": "Problem Solving and Data Analysis",
+      "subdomain": "Percentages",
+      "skill_id": "SAT.MATH.PSD.02",
+      "description": "Solve multi-step problems using percentages and percentage changes."
+    },
+    {
+      "subject": "Math",
+      "domain": "Problem Solving and Data Analysis",
+      "subdomain": "Statistics",
+      "skill_id": "SAT.MATH.PSD.03",
+      "description": "Evaluate measures of center and spread, distributions, and sample metadata."
+    },
+    {
+      "subject": "Math",
+      "domain": "Problem Solving and Data Analysis",
+      "subdomain": "Probability",
+      "skill_id": "SAT.MATH.PSD.04",
+      "description": "Calculate probabilities, including conditional probabilities, from tables or lists."
+    },
+    {
+      "subject": "Math",
+      "domain": "Geometry and Trigonometry",
+      "subdomain": "Area and Volume",
+      "skill_id": "SAT.MATH.GEO.01",
+      "description": "Solve problems involving area, perimeter, surface area, and volume of geometric figures."
+    },
+    {
+      "subject": "Math",
+      "domain": "Geometry and Trigonometry",
+      "subdomain": "Lines, Angles, Triangles",
+      "skill_id": "SAT.MATH.GEO.02",
+      "description": "Apply theorems about lines, angles, and triangles to solve problems."
+    },
+    {
+      "subject": "Math",
+      "domain": "Geometry and Trigonometry",
+      "subdomain": "Right Triangles and Trig",
+      "skill_id": "SAT.MATH.GEO.03",
+      "description": "Apply sine, cosine, tangent, and right triangle properties (Pythagorean Theorem)."
+    },
+    {
+      "subject": "Math",
+      "domain": "Geometry and Trigonometry",
+      "subdomain": "Circles",
+      "skill_id": "SAT.MATH.GEO.04",
+      "description": "Solve problems involving circle equations, arcs, sectors, and theorems."
+    },
+    {
+      "subject": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "subdomain": "Words in Context",
+      "skill_id": "SAT.RW.CAS.01",
+      "description": "Determine the meaning of high-utility academic words or phrases in context."
+    },
+    {
+      "subject": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "subdomain": "Text Structure and Purpose",
+      "skill_id": "SAT.RW.CAS.02",
+      "description": "Analyze the structure of a passage and determine the author's primary purpose."
+    },
+    {
+      "subject": "Reading & Writing",
+      "domain": "Craft and Structure",
+      "subdomain": "Cross-Text Connections",
+      "skill_id": "SAT.RW.CAS.03",
+      "description": "Compare and synthesize points of view or details across two related texts."
+    },
+    {
+      "subject": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "subdomain": "Central Ideas and Details",
+      "skill_id": "SAT.RW.IAI.01",
+      "description": "Identify main themes, explicit details, and overall arguments of a passage."
+    },
+    {
+      "subject": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "subdomain": "Command of Evidence",
+      "skill_id": "SAT.RW.IAI.02",
+      "description": "Locate and use textual or quantitative evidence to support or weaken a claim."
+    },
+    {
+      "subject": "Reading & Writing",
+      "domain": "Information and Ideas",
+      "subdomain": "Inferences",
+      "skill_id": "SAT.RW.IAI.03",
+      "description": "Formulate logical inferences from facts presented in the passage."
+    },
+    {
+      "subject": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "subdomain": "Boundaries",
+      "skill_id": "SAT.RW.SEC.01",
+      "description": "Apply rules for linking clauses (semicolons, colons, dash usage, periods)."
+    },
+    {
+      "subject": "Reading & Writing",
+      "domain": "Standard English Conventions",
+      "subdomain": "Form and Sense",
+      "skill_id": "SAT.RW.SEC.02",
+      "description": "Apply correct verb tenses, subject-verb agreement, pronoun cases, and plurals."
+    },
+    {
+      "subject": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "subdomain": "Rhetorical Synthesis",
+      "skill_id": "SAT.RW.EOI.01",
+      "description": "Synthesize a set of provided student notes to achieve a specified rhetorical goal."
+    },
+    {
+      "subject": "Reading & Writing",
+      "domain": "Expression of Ideas",
+      "subdomain": "Transitions",
+      "skill_id": "SAT.RW.EOI.02",
+      "description": "Select the correct transitional word or phrase to link ideas logically."
+    },
+    {
+      "subject": "Math",
+      "domain": "Preparing for Higher Math",
+      "subdomain": "Number & Quantity",
+      "skill_id": "ACT.MATH.NMQ.01",
+      "description": "Manipulate real and complex numbers, matrices, vectors, and exponents."
+    },
+    {
+      "subject": "Math",
+      "domain": "Preparing for Higher Math",
+      "subdomain": "Algebra",
+      "skill_id": "ACT.MATH.ALG.01",
+      "description": "Solve linear equations, systems of linear equations, and quadratic inequalities."
+    },
+    {
+      "subject": "Math",
+      "domain": "Preparing for Higher Math",
+      "subdomain": "Functions",
+      "skill_id": "ACT.MATH.FUN.01",
+      "description": "Analyze linear, quadratic, piecewise, radical, and exponential functions, domain/range, and composition."
+    },
+    {
+      "subject": "Math",
+      "domain": "Preparing for Higher Math",
+      "subdomain": "Geometry",
+      "skill_id": "ACT.MATH.GEO.01",
+      "description": "Solve geometric issues using shapes, lines, angles, coordinate planes, circles, and trigonometry."
+    },
+    {
+      "subject": "Math",
+      "domain": "Preparing for Higher Math",
+      "subdomain": "Statistics & Probability",
+      "skill_id": "ACT.MATH.STP.01",
+      "description": "Interpret data, compute permutations, combinations, and conditional probabilities."
+    },
+    {
+      "subject": "Math",
+      "domain": "Integrating Essential Skills",
+      "subdomain": "Ratios & Proportions",
+      "skill_id": "ACT.MATH.IES.01",
+      "description": "Solve problems using ratios, proportional relationships, and percentages."
+    },
+    {
+      "subject": "Math",
+      "domain": "Integrating Essential Skills",
+      "subdomain": "Foundational Geometry",
+      "skill_id": "ACT.MATH.IES.02",
+      "description": "Calculate area, perimeter, and volume of simple polygons and prisms."
+    },
+    {
+      "subject": "Math",
+      "domain": "Integrating Essential Skills",
+      "subdomain": "Fractions & Decimals",
+      "skill_id": "ACT.MATH.IES.03",
+      "description": "Perform operations on fractions, decimals, and calculate rates."
+    },
+    {
+      "subject": "English",
+      "domain": "Conventions of Standard English",
+      "subdomain": "Grammar and Usage",
+      "skill_id": "ACT.ENG.CSE.01",
+      "description": "Apply standard conventions for subject-verb agreement, pronoun case, and modifiers."
+    },
+    {
+      "subject": "English",
+      "domain": "Conventions of Standard English",
+      "subdomain": "Sentence Structure",
+      "skill_id": "ACT.ENG.CSE.02",
+      "description": "Correct run-on sentences, comma splices, fragments, and parallel structure."
+    },
+    {
+      "subject": "English",
+      "domain": "Conventions of Standard English",
+      "subdomain": "Punctuation",
+      "skill_id": "ACT.ENG.CSE.03",
+      "description": "Correctly use commas, semicolons, colons, apostrophes, and dashes."
+    },
+    {
+      "subject": "English",
+      "domain": "Production of Writing",
+      "subdomain": "Topic Development",
+      "skill_id": "ACT.ENG.POW.01",
+      "description": "Determine relevance of content, add supporting evidence, and refine paragraphs."
+    },
+    {
+      "subject": "English",
+      "domain": "Production of Writing",
+      "subdomain": "Organization",
+      "skill_id": "ACT.ENG.POW.02",
+      "description": "Optimize transitions and logical flow of sentences and paragraphs."
+    },
+    {
+      "subject": "English",
+      "domain": "Knowledge of Language",
+      "subdomain": "Style and Tone",
+      "skill_id": "ACT.ENG.KOL.01",
+      "description": "Ensure word choice is precise, concise, and maintains a consistent academic tone."
+    },
+    {
+      "subject": "Reading",
+      "domain": "Key Ideas and Details",
+      "subdomain": "Comprehension",
+      "skill_id": "ACT.RDG.KID.01",
+      "description": "Understand main ideas, trace sequence of events, and interpret stated details."
+    },
+    {
+      "subject": "Reading",
+      "domain": "Key Ideas and Details",
+      "subdomain": "Inferences",
+      "skill_id": "ACT.RDG.KID.02",
+      "description": "Formulate logical inferences from implied details in literary and informative texts."
+    },
+    {
+      "subject": "Reading",
+      "domain": "Craft and Structure",
+      "subdomain": "Word Meaning",
+      "skill_id": "ACT.RDG.CAS.01",
+      "description": "Determine word meaning in context of complex reading passages."
+    },
+    {
+      "subject": "Reading",
+      "domain": "Craft and Structure",
+      "subdomain": "Text Analysis",
+      "skill_id": "ACT.RDG.CAS.02",
+      "description": "Evaluate text structure, narrator's point of view, and author's tone."
+    },
+    {
+      "subject": "Reading",
+      "domain": "Integration of Knowledge and Ideas",
+      "subdomain": "Argument Analysis",
+      "skill_id": "ACT.RDG.IKI.01",
+      "description": "Evaluate claims, evidence, and logical reasoning of various viewpoints."
+    },
+    {
+      "subject": "Reading",
+      "domain": "Integration of Knowledge and Ideas",
+      "subdomain": "Data Integration",
+      "skill_id": "ACT.RDG.IKI.02",
+      "description": "Synthesize written text with informational graphics (graphs, charts, tables)."
+    },
+    {
+      "subject": "Science",
+      "domain": "Interpretation of Data",
+      "subdomain": "Data Analysis",
+      "skill_id": "ACT.SCI.IOD.01",
+      "description": "Read, translate, and interpolate/extrapolate trends from scientific charts and tables."
+    },
+    {
+      "subject": "Science",
+      "domain": "Scientific Investigation",
+      "subdomain": "Experiment Design",
+      "skill_id": "ACT.SCI.SIN.01",
+      "description": "Identify independent/dependent variables, control setups, and analyze procedural design."
+    },
+    {
+      "subject": "Science",
+      "domain": "Evaluation of Models, Inferences",
+      "subdomain": "Scientific Reasoning",
+      "skill_id": "ACT.SCI.EMI.01",
+      "description": "Evaluate hypotheses, compare conflicting theories, and assess experimental findings."
+    }
+  ],
+  "crosswalk": [
+    {
+      "sat_skill": "SAT.MATH.ALG.01",
+      "act_skill": "ACT.MATH.ALG.01",
+      "equivalent": true,
+      "notes": "Both evaluate constructing and solving one-variable linear equations. SAT emphasizes context modeling, while ACT contains more straightforward algebra calculations."
+    },
+    {
+      "sat_skill": "SAT.MATH.ALG.03",
+      "act_skill": "ACT.MATH.ALG.01",
+      "equivalent": true,
+      "notes": "Both cover systems of two linear equations. ACT occasionally introduces systems of three linear equations or matrix representation equivalents, which are not tested on the SAT."
+    },
+    {
+      "sat_skill": "SAT.MATH.GEO.03",
+      "act_skill": "ACT.MATH.GEO.01",
+      "equivalent": true,
+      "notes": "Both evaluate basic trigonometry (Sine, Cosine, Tangent) in right triangles. ACT extends trigonometry questions to graphs of trig functions and trig identities (e.g. sin^2(x) + cos^2(x) = 1)."
+    },
+    {
+      "sat_skill": "SAT.RW.SEC.01",
+      "act_skill": "ACT.ENG.CSE.03",
+      "equivalent": true,
+      "notes": "Clause boundary rules (semicolons, colons, dash usage, comma rules) are identical between the exams."
+    },
+    {
+      "sat_skill": "SAT.RW.EOI.02",
+      "act_skill": "ACT.ENG.POW.02",
+      "equivalent": true,
+      "notes": "Both test transitions between sentences or paragraphs (addition, contrast, cause-and-effect transitions)."
+    }
+  ],
+  "skill_count": 48,
+  "source": "C:\\Knowledge\\EDUCATION\\SAT_ACT\\curriculum"
+}

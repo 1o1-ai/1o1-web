@@ -1,0 +1,61 @@
+{
+  "sku": "sat-act",
+  "videos": [
+    {
+      "title": "Digital SAT Reading & Writing Playlist",
+      "url": "https://www.khanacademy.org/test-prep/digital-sat",
+      "provider": "Khan Academy",
+      "subject": "Reading & Writing",
+      "topic": "Craft & Structure, Information & Ideas, Standard English Conventions, Expression of Ideas"
+    },
+    {
+      "title": "Digital SAT Mathematics Prep Course",
+      "url": "https://www.khanacademy.org/test-prep/v2-sat-math",
+      "provider": "Khan Academy",
+      "subject": "Math",
+      "topic": "Algebra, Advanced Math, Problem-Solving and Data Analysis, Geometry & Trigonometry"
+    },
+    {
+      "title": "Official SAT Bluebook Practice App Guide",
+      "url": "https://bluebook.collegeboard.org",
+      "provider": "College Board",
+      "subject": "All",
+      "topic": "Digital Practice Exams and Setup"
+    },
+    {
+      "title": "Official ACT Test Preparation Resources",
+      "url": "https://www.act.org/content/act/en/products-and-services/the-act/test-preparation.html",
+      "provider": "ACT Inc.",
+      "subject": "All",
+      "topic": "ACT Practice Materials and Subject Specifications"
+    },
+    {
+      "title": "PrepPros ACT English Playlist",
+      "url": "https://www.youtube.com/watch?v=preppros_english",
+      "provider": "PrepPros",
+      "subject": "English",
+      "topic": "Comma Rules, Transition Rules, Rhetorical Strategies"
+    },
+    {
+      "title": "Scalar Learning SAT Math Walkthroughs",
+      "url": "https://www.youtube.com/watch?v=scalar_learn",
+      "provider": "Scalar Learning",
+      "subject": "Math",
+      "topic": "Full Length Math Section Walkthroughs"
+    },
+    {
+      "title": "SupertutorTV ACT Math Hacks",
+      "url": "https://www.youtube.com/watch?v=supertutor_v",
+      "provider": "SupertutorTV",
+      "subject": "Math",
+      "topic": "ACT Math Formulas and Pacing Tips"
+    },
+    {
+      "title": "Magoosh SAT Vocabulary Guide",
+      "url": "https://www.youtube.com/watch?v=magoosh_prep",
+      "provider": "Magoosh",
+      "subject": "Reading",
+      "topic": "High-Frequency Words in Context"
+    }
+  ]
+}

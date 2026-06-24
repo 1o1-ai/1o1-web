@@ -1,0 +1,221 @@
+{
+  "sku": "sat-act",
+  "updated_at": "2026-06-24T21:44:51.582293+00:00",
+  "sat_digital": {
+    "test_name": "Digital SAT",
+    "developer": "College Board",
+    "structure": [
+      {
+        "section": "Reading and Writing",
+        "modules": 2,
+        "time_minutes": 64,
+        "questions": 54,
+        "adaptive_details": "Two-stage adaptive testing. Performance on Module 1 determines the difficulty of Module 2 (routing)."
+      },
+      {
+        "section": "Mathematics",
+        "modules": 2,
+        "time_minutes": 70,
+        "questions": 44,
+        "adaptive_details": "Two-stage adaptive testing. Performance on Module 1 determines the difficulty of Module 2 (routing)."
+      }
+    ],
+    "domains": {
+      "Reading and Writing": [
+        {
+          "domain": "Craft and Structure",
+          "percentage": 28,
+          "topics": "Words in Context, Text Structure and Purpose, Cross-Text Connections"
+        },
+        {
+          "domain": "Information and Ideas",
+          "percentage": 26,
+          "topics": "Central Ideas and Details, Command of Evidence, Inferences"
+        },
+        {
+          "domain": "Standard English Conventions",
+          "percentage": 26,
+          "topics": "Boundaries, Form, Structure, and Sense"
+        },
+        {
+          "domain": "Expression of Ideas",
+          "percentage": 20,
+          "topics": "Rhetorical Synthesis, Transitions"
+        }
+      ],
+      "Mathematics": [
+        {
+          "domain": "Algebra",
+          "percentage": 35,
+          "topics": "Linear Equations in One Variable, Linear Equations in Two Variables, Linear Functions, Systems of Two Linear Equations, Linear Inequalities in One or Two Variables"
+        },
+        {
+          "domain": "Advanced Math",
+          "percentage": 35,
+          "topics": "Equivalent Expressions, Nonlinear Equations in One Variable and Systems of Equations in Two Variables, Nonlinear Functions"
+        },
+        {
+          "domain": "Problem-Solving and Data Analysis",
+          "percentage": 15,
+          "topics": "Ratios, Rates, Proportional Relationships, and Units, Percentages, One-Variable Data, Two-Variable Data, Probability, Inference from Sample Data, Evaluating Statistical Claims"
+        },
+        {
+          "domain": "Geometry and Trigonometry",
+          "percentage": 15,
+          "topics": "Area and Volume, Lines, Angles, and Triangles, Right Triangles and Trigonometry, Circles"
+        }
+      ]
+    },
+    "scoring": {
+      "scale": "400-1600 (200-800 per section)",
+      "methodology": "Item Response Theory (IRT). Question difficulties are weighted, no penalty for guessing."
+    },
+    "calculator_policy": "Graphing calculator allowed on all math sections. Built-in Desmos calculator is provided.",
+    "formula_sheet": "Reference formulas provided for geometry: area of circle/triangle/rectangle, volume of sphere/cone/cylinder/prism, special right triangle ratios, circle degrees/radians."
+  },
+  "act_enhanced_2025": {
+    "test_name": "Enhanced ACT",
+    "developer": "ACT Inc.",
+    "structure": [
+      {
+        "section": "English",
+        "time_minutes": 35,
+        "questions": 50,
+        "optional": false,
+        "description": "Assesses standard English conventions, grammar, usage, and rhetorical skills."
+      },
+      {
+        "section": "Mathematics",
+        "time_minutes": 50,
+        "questions": 45,
+        "optional": false,
+        "description": "Covers high school math subjects with four-option multiple choice questions."
+      },
+      {
+        "section": "Reading",
+        "time_minutes": 40,
+        "questions": 36,
+        "optional": false,
+        "description": "Comprehend and analyze literary and informational texts with integrated visual data."
+      },
+      {
+        "section": "Science",
+        "time_minutes": 40,
+        "questions": 40,
+        "optional": true,
+        "description": "Assesses interpretation, analysis, and reasoning using scientific experiments and viewpoints."
+      },
+      {
+        "section": "Writing",
+        "time_minutes": 40,
+        "questions": 1,
+        "optional": true,
+        "description": "One essay topic requesting evaluation of multiple perspectives on an issue."
+      }
+    ],
+    "domains": {
+      "English": [
+        {
+          "domain": "Conventions of Standard English",
+          "percentage": 53,
+          "topics": "Grammar, Usage, and Mechanics, Sentence Structure, Punctuation"
+        },
+        {
+          "domain": "Production of Writing",
+          "percentage": 30,
+          "topics": "Topic Development, Organization, Unity, and Cohesion"
+        },
+        {
+          "domain": "Knowledge of Language",
+          "percentage": 17,
+          "topics": "Style, Tone, and Word Choice"
+        }
+      ],
+      "Mathematics": [
+        {
+          "domain": "Preparing for Higher Math",
+          "percentage": 80,
+          "topics": "Number & Quantity, Algebra, Functions, Geometry, Statistics & Probability"
+        },
+        {
+          "domain": "Integrating Essential Skills",
+          "percentage": 20,
+          "topics": "Ratios, Percentages, and Proportions, Basic Area and Volume, Fractions and Decimals"
+        }
+      ],
+      "Reading": [
+        {
+          "domain": "Key Ideas and Details",
+          "percentage": 50,
+          "topics": "Central Ideas/Themes, Sequences, Interpreting Details"
+        },
+        {
+          "domain": "Craft and Structure",
+          "percentage": 30,
+          "topics": "Word Meaning in Context, Text Structure, Author's Purpose"
+        },
+        {
+          "domain": "Integration of Knowledge and Ideas",
+          "percentage": 20,
+          "topics": "Analyzing Claims and Evidence, Integrating Multiple Texts, Visual/Quantitative Data Integration"
+        }
+      ],
+      "Science": [
+        {
+          "domain": "Interpretation of Data",
+          "percentage": 44,
+          "topics": "Reading Trends, Analyzing Tables and Graphs"
+        },
+        {
+          "domain": "Scientific Investigation",
+          "percentage": 25,
+          "topics": "Experimental Tools, Procedures and Variables"
+        },
+        {
+          "domain": "Evaluation of Models, Inferences, and Experimental Results",
+          "percentage": 31,
+          "topics": "Judging Validity of Models, Formulating Conclusions"
+        }
+      ],
+      "Writing": [
+        {
+          "domain": "Essay Evaluation",
+          "percentage": 100,
+          "topics": "Ideas and Analysis, Development and Support, Organization, Language Use and Conventions"
+        }
+      ]
+    },
+    "scoring": {
+      "scale": "1-36 composite (average of English, Math, and Reading). Essay scored 2-12.",
+      "methodology": "Number of correct answers converted to scale score. No penalty for guessing."
+    },
+    "calculator_policy": "Permitted on Mathematics section. Approved calculators only (no CAS features unless disabled)."
+  },
+  "act_classic_pdf": {
+    "test_name": "ACT (Classic — ingested PDFs)",
+    "note": "Preparing for the ACT 2024-25 uses classic timing",
+    "structure": [
+      {
+        "section": "English",
+        "time_minutes": 45,
+        "questions": 75
+      },
+      {
+        "section": "Mathematics",
+        "time_minutes": 60,
+        "questions": 60
+      },
+      {
+        "section": "Reading",
+        "time_minutes": 35,
+        "questions": 40
+      },
+      {
+        "section": "Science",
+        "time_minutes": 35,
+        "questions": 40
+      }
+    ]
+  },
+  "portal_default_mock": "act_classic_pdf"
+}

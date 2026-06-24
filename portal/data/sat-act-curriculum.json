@@ -1,97 +1,1602 @@
 {
   "sku": "sat-act",
-  "title": "SAT / ACT Core",
-  "tracks": {
-    "sat": {
-      "label": "SAT (Digital)",
-      "sections": {
-        "math": {
-          "label": "Math",
+  "title": "SAT / ACT Preparation Suite",
+  "displayName": "SAT / ACT Preparation Suite",
+  "locale": "en-US",
+  "subjects": {
+    "sat-reading-writing": {
+      "label": "SAT Reading & Writing",
+      "track": "sat",
+      "section": "reading_writing",
+      "chapters": [
+        {
+          "id": "sat-rw-central-ideas",
+          "title": "Central Ideas and Details",
+          "unit": "Information and Ideas",
+          "unitId": "sat-rw-info",
           "skills": [
             {
-              "id": "sat-math-algebra",
-              "title": "Heart of Algebra"
+              "id": "sat-rw-central-ideas-1",
+              "title": "Main idea"
             },
             {
-              "id": "sat-math-advanced",
-              "title": "Passport to Advanced Math"
-            },
-            {
-              "id": "sat-math-psda",
-              "title": "Problem Solving & Data Analysis"
-            },
-            {
-              "id": "sat-math-geometry",
-              "title": "Geometry & Trigonometry"
+              "id": "sat-rw-central-ideas-2",
+              "title": "Supporting details"
             }
+          ],
+          "keywords": [
+            "main idea",
+            "supporting details"
           ]
         },
-        "reading_writing": {
-          "label": "Reading & Writing",
+        {
+          "id": "sat-rw-evidence",
+          "title": "Command of Evidence",
+          "unit": "Information and Ideas",
+          "unitId": "sat-rw-info",
           "skills": [
             {
-              "id": "sat-rw-craft",
-              "title": "Craft and Structure"
+              "id": "sat-rw-evidence-1",
+              "title": "Textual evidence"
             },
             {
-              "id": "sat-rw-info",
-              "title": "Information and Ideas"
-            },
-            {
-              "id": "sat-rw-grammar",
-              "title": "Standard English Conventions"
-            },
-            {
-              "id": "sat-rw-expression",
-              "title": "Expression of Ideas"
+              "id": "sat-rw-evidence-2",
+              "title": "Quantitative evidence"
             }
+          ],
+          "keywords": [
+            "textual evidence",
+            "quantitative evidence"
+          ]
+        },
+        {
+          "id": "sat-rw-inference",
+          "title": "Inferences",
+          "unit": "Information and Ideas",
+          "unitId": "sat-rw-info",
+          "skills": [
+            {
+              "id": "sat-rw-inference-1",
+              "title": "Logical inference"
+            },
+            {
+              "id": "sat-rw-inference-2",
+              "title": "Implicit meaning"
+            }
+          ],
+          "keywords": [
+            "logical inference",
+            "implicit meaning"
+          ]
+        },
+        {
+          "id": "sat-rw-words-context",
+          "title": "Words in Context",
+          "unit": "Craft and Structure",
+          "unitId": "sat-rw-craft",
+          "skills": [
+            {
+              "id": "sat-rw-words-context-1",
+              "title": "Vocabulary in context"
+            },
+            {
+              "id": "sat-rw-words-context-2",
+              "title": "Precision and tone"
+            }
+          ],
+          "keywords": [
+            "vocabulary in context",
+            "precision and tone"
+          ]
+        },
+        {
+          "id": "sat-rw-text-structure",
+          "title": "Text Structure",
+          "unit": "Craft and Structure",
+          "unitId": "sat-rw-craft",
+          "skills": [
+            {
+              "id": "sat-rw-text-structure-1",
+              "title": "Purpose of text"
+            },
+            {
+              "id": "sat-rw-text-structure-2",
+              "title": "Text structure analysis"
+            }
+          ],
+          "keywords": [
+            "purpose of text",
+            "text structure analysis"
+          ]
+        },
+        {
+          "id": "sat-rw-cross-text",
+          "title": "Cross-Text Connections",
+          "unit": "Craft and Structure",
+          "unitId": "sat-rw-craft",
+          "skills": [
+            {
+              "id": "sat-rw-cross-text-1",
+              "title": "Compare passages"
+            },
+            {
+              "id": "sat-rw-cross-text-2",
+              "title": "Synthesize viewpoints"
+            }
+          ],
+          "keywords": [
+            "compare passages",
+            "synthesize viewpoints"
+          ]
+        },
+        {
+          "id": "sat-rw-rhetorical",
+          "title": "Rhetorical Synthesis",
+          "unit": "Expression of Ideas",
+          "unitId": "sat-rw-expression",
+          "skills": [
+            {
+              "id": "sat-rw-rhetorical-1",
+              "title": "Clarity and concision"
+            },
+            {
+              "id": "sat-rw-rhetorical-2",
+              "title": "Rhetorical effectiveness"
+            }
+          ],
+          "keywords": [
+            "clarity and concision",
+            "rhetorical effectiveness"
+          ]
+        },
+        {
+          "id": "sat-rw-organization",
+          "title": "Organization",
+          "unit": "Expression of Ideas",
+          "unitId": "sat-rw-expression",
+          "skills": [
+            {
+              "id": "sat-rw-organization-1",
+              "title": "Transitions"
+            },
+            {
+              "id": "sat-rw-organization-2",
+              "title": "Logical sequence"
+            }
+          ],
+          "keywords": [
+            "transitions",
+            "logical sequence"
+          ]
+        },
+        {
+          "id": "sat-rw-boundaries",
+          "title": "Boundaries",
+          "unit": "Standard English Conventions",
+          "unitId": "sat-rw-conventions",
+          "skills": [
+            {
+              "id": "sat-rw-boundaries-1",
+              "title": "Comma usage"
+            },
+            {
+              "id": "sat-rw-boundaries-2",
+              "title": "Colon and semicolon"
+            }
+          ],
+          "keywords": [
+            "comma usage",
+            "colon and semicolon"
+          ]
+        },
+        {
+          "id": "sat-rw-form-sense",
+          "title": "Form Structure and Sense",
+          "unit": "Standard English Conventions",
+          "unitId": "sat-rw-conventions",
+          "skills": [
+            {
+              "id": "sat-rw-form-sense-1",
+              "title": "Subject-verb agreement"
+            },
+            {
+              "id": "sat-rw-form-sense-2",
+              "title": "Pronouns and modifiers"
+            }
+          ],
+          "keywords": [
+            "subject-verb agreement",
+            "pronouns and modifiers"
           ]
         }
-      }
+      ]
     },
-    "act": {
-      "label": "ACT",
-      "sections": {
-        "english": {
-          "label": "English",
+    "sat-math": {
+      "label": "SAT Math",
+      "track": "sat",
+      "section": "math",
+      "chapters": [
+        {
+          "id": "sat-math-linear",
+          "title": "Linear Equations",
+          "unit": "Algebra",
+          "unitId": "sat-math-algebra",
           "skills": [
             {
-              "id": "act-english",
-              "title": "English"
+              "id": "sat-math-linear-1",
+              "title": "Solve linear equations"
+            },
+            {
+              "id": "sat-math-linear-2",
+              "title": "Linear functions"
             }
+          ],
+          "keywords": [
+            "solve linear equations",
+            "linear functions"
           ]
         },
-        "math": {
-          "label": "Mathematics",
+        {
+          "id": "sat-math-systems",
+          "title": "Systems of Equations",
+          "unit": "Algebra",
+          "unitId": "sat-math-algebra",
           "skills": [
             {
-              "id": "act-math",
-              "title": "Mathematics"
+              "id": "sat-math-systems-1",
+              "title": "Substitution"
+            },
+            {
+              "id": "sat-math-systems-2",
+              "title": "Elimination"
             }
+          ],
+          "keywords": [
+            "substitution",
+            "elimination"
           ]
         },
-        "reading": {
-          "label": "Reading",
+        {
+          "id": "sat-math-inequalities",
+          "title": "Inequalities",
+          "unit": "Algebra",
+          "unitId": "sat-math-algebra",
           "skills": [
             {
-              "id": "act-reading",
-              "title": "Reading"
+              "id": "sat-math-inequalities-1",
+              "title": "Linear inequalities"
+            },
+            {
+              "id": "sat-math-inequalities-2",
+              "title": "Graphing inequalities"
             }
+          ],
+          "keywords": [
+            "linear inequalities",
+            "graphing inequalities"
           ]
         },
-        "science": {
-          "label": "Science",
+        {
+          "id": "sat-math-quadratic",
+          "title": "Quadratic Equations",
+          "unit": "Advanced Math",
+          "unitId": "sat-math-advanced",
           "skills": [
             {
-              "id": "act-science",
-              "title": "Science"
+              "id": "sat-math-quadratic-1",
+              "title": "Factoring"
+            },
+            {
+              "id": "sat-math-quadratic-2",
+              "title": "Quadratic formula"
             }
+          ],
+          "keywords": [
+            "factoring",
+            "quadratic formula"
+          ]
+        },
+        {
+          "id": "sat-math-polynomial",
+          "title": "Polynomial Functions",
+          "unit": "Advanced Math",
+          "unitId": "sat-math-advanced",
+          "skills": [
+            {
+              "id": "sat-math-polynomial-1",
+              "title": "Polynomial operations"
+            },
+            {
+              "id": "sat-math-polynomial-2",
+              "title": "Zeros and factors"
+            }
+          ],
+          "keywords": [
+            "polynomial operations",
+            "zeros and factors"
+          ]
+        },
+        {
+          "id": "sat-math-exponential",
+          "title": "Exponential Functions",
+          "unit": "Advanced Math",
+          "unitId": "sat-math-advanced",
+          "skills": [
+            {
+              "id": "sat-math-exponential-1",
+              "title": "Growth and decay"
+            },
+            {
+              "id": "sat-math-exponential-2",
+              "title": "Function transformations"
+            }
+          ],
+          "keywords": [
+            "growth and decay",
+            "function transformations"
+          ]
+        },
+        {
+          "id": "sat-math-ratios",
+          "title": "Ratios",
+          "unit": "Problem Solving and Data Analysis",
+          "unitId": "sat-math-psda",
+          "skills": [
+            {
+              "id": "sat-math-ratios-1",
+              "title": "Proportions"
+            },
+            {
+              "id": "sat-math-ratios-2",
+              "title": "Unit rates"
+            }
+          ],
+          "keywords": [
+            "proportions",
+            "unit rates"
+          ]
+        },
+        {
+          "id": "sat-math-percent",
+          "title": "Percentages",
+          "unit": "Problem Solving and Data Analysis",
+          "unitId": "sat-math-psda",
+          "skills": [
+            {
+              "id": "sat-math-percent-1",
+              "title": "Percent change"
+            },
+            {
+              "id": "sat-math-percent-2",
+              "title": "Applications"
+            }
+          ],
+          "keywords": [
+            "percent change",
+            "applications"
+          ]
+        },
+        {
+          "id": "sat-math-stats",
+          "title": "Statistics",
+          "unit": "Problem Solving and Data Analysis",
+          "unitId": "sat-math-psda",
+          "skills": [
+            {
+              "id": "sat-math-stats-1",
+              "title": "Mean median mode"
+            },
+            {
+              "id": "sat-math-stats-2",
+              "title": "Scatterplots and trend lines"
+            }
+          ],
+          "keywords": [
+            "mean median mode",
+            "scatterplots and trend lines"
+          ]
+        },
+        {
+          "id": "sat-math-probability",
+          "title": "Probability",
+          "unit": "Problem Solving and Data Analysis",
+          "unitId": "sat-math-psda",
+          "skills": [
+            {
+              "id": "sat-math-probability-1",
+              "title": "Basic probability"
+            },
+            {
+              "id": "sat-math-probability-2",
+              "title": "Conditional probability"
+            }
+          ],
+          "keywords": [
+            "basic probability",
+            "conditional probability"
+          ]
+        },
+        {
+          "id": "sat-math-area-volume",
+          "title": "Area and Volume",
+          "unit": "Geometry and Trigonometry",
+          "unitId": "sat-math-geometry",
+          "skills": [
+            {
+              "id": "sat-math-area-volume-1",
+              "title": "Area formulas"
+            },
+            {
+              "id": "sat-math-area-volume-2",
+              "title": "Volume formulas"
+            }
+          ],
+          "keywords": [
+            "area formulas",
+            "volume formulas"
+          ]
+        },
+        {
+          "id": "sat-math-triangles",
+          "title": "Triangles",
+          "unit": "Geometry and Trigonometry",
+          "unitId": "sat-math-geometry",
+          "skills": [
+            {
+              "id": "sat-math-triangles-1",
+              "title": "Angles"
+            },
+            {
+              "id": "sat-math-triangles-2",
+              "title": "Similarity and congruence"
+            }
+          ],
+          "keywords": [
+            "angles",
+            "similarity and congruence"
+          ]
+        },
+        {
+          "id": "sat-math-circles",
+          "title": "Circles",
+          "unit": "Geometry and Trigonometry",
+          "unitId": "sat-math-geometry",
+          "skills": [
+            {
+              "id": "sat-math-circles-1",
+              "title": "Arcs and sectors"
+            },
+            {
+              "id": "sat-math-circles-2",
+              "title": "Circle equations"
+            }
+          ],
+          "keywords": [
+            "arcs and sectors",
+            "circle equations"
+          ]
+        },
+        {
+          "id": "sat-math-trig",
+          "title": "Trigonometry",
+          "unit": "Geometry and Trigonometry",
+          "unitId": "sat-math-geometry",
+          "skills": [
+            {
+              "id": "sat-math-trig-1",
+              "title": "Sin cos tan"
+            },
+            {
+              "id": "sat-math-trig-2",
+              "title": "Right-triangle trig"
+            }
+          ],
+          "keywords": [
+            "sin cos tan",
+            "right-triangle trig"
           ]
         }
+      ]
+    },
+    "act-english": {
+      "label": "ACT English",
+      "track": "act",
+      "section": "english",
+      "chapters": [
+        {
+          "id": "act-eng-organization",
+          "title": "Organization",
+          "unit": "Production of Writing",
+          "unitId": "act-eng-production",
+          "skills": [
+            {
+              "id": "act-eng-organization-1",
+              "title": "Topic development"
+            },
+            {
+              "id": "act-eng-organization-2",
+              "title": "Paragraph unity"
+            }
+          ],
+          "keywords": [
+            "topic development",
+            "paragraph unity"
+          ]
+        },
+        {
+          "id": "act-eng-strategy",
+          "title": "Strategy",
+          "unit": "Production of Writing",
+          "unitId": "act-eng-production",
+          "skills": [
+            {
+              "id": "act-eng-strategy-1",
+              "title": "Purpose and focus"
+            },
+            {
+              "id": "act-eng-strategy-2",
+              "title": "Supporting material"
+            }
+          ],
+          "keywords": [
+            "purpose and focus",
+            "supporting material"
+          ]
+        },
+        {
+          "id": "act-eng-style",
+          "title": "Style and Tone",
+          "unit": "Knowledge of Language",
+          "unitId": "act-eng-language",
+          "skills": [
+            {
+              "id": "act-eng-style-1",
+              "title": "Word choice"
+            },
+            {
+              "id": "act-eng-style-2",
+              "title": "Consistency of style"
+            }
+          ],
+          "keywords": [
+            "word choice",
+            "consistency of style"
+          ]
+        },
+        {
+          "id": "act-eng-grammar",
+          "title": "Grammar",
+          "unit": "Conventions of Standard English",
+          "unitId": "act-eng-conventions",
+          "skills": [
+            {
+              "id": "act-eng-grammar-1",
+              "title": "Sentence structure"
+            },
+            {
+              "id": "act-eng-grammar-2",
+              "title": "Agreement"
+            }
+          ],
+          "keywords": [
+            "sentence structure",
+            "agreement"
+          ]
+        },
+        {
+          "id": "act-eng-punctuation",
+          "title": "Punctuation",
+          "unit": "Conventions of Standard English",
+          "unitId": "act-eng-conventions",
+          "skills": [
+            {
+              "id": "act-eng-punctuation-1",
+              "title": "Comma rules"
+            },
+            {
+              "id": "act-eng-punctuation-2",
+              "title": "Apostrophes and dashes"
+            }
+          ],
+          "keywords": [
+            "comma rules",
+            "apostrophes and dashes"
+          ]
+        }
+      ]
+    },
+    "act-math": {
+      "label": "ACT Math",
+      "track": "act",
+      "section": "math",
+      "chapters": [
+        {
+          "id": "act-math-numbers",
+          "title": "Number Systems",
+          "unit": "Pre-Algebra",
+          "unitId": "act-math-pre",
+          "skills": [
+            {
+              "id": "act-math-numbers-1",
+              "title": "Fractions decimals"
+            },
+            {
+              "id": "act-math-numbers-2",
+              "title": "Exponents and roots"
+            }
+          ],
+          "keywords": [
+            "fractions decimals",
+            "exponents and roots"
+          ]
+        },
+        {
+          "id": "act-math-linear",
+          "title": "Linear Equations",
+          "unit": "Elementary & Intermediate Algebra",
+          "unitId": "act-math-algebra",
+          "skills": [
+            {
+              "id": "act-math-linear-1",
+              "title": "Quadratic equations"
+            },
+            {
+              "id": "act-math-linear-2",
+              "title": "Polynomials and inequalities"
+            }
+          ],
+          "keywords": [
+            "quadratic equations",
+            "polynomials and inequalities"
+          ]
+        },
+        {
+          "id": "act-math-graphs",
+          "title": "Graphs and Slopes",
+          "unit": "Coordinate Geometry",
+          "unitId": "act-math-coord",
+          "skills": [
+            {
+              "id": "act-math-graphs-1",
+              "title": "Distance and midpoint"
+            }
+          ],
+          "keywords": [
+            "distance and midpoint"
+          ]
+        },
+        {
+          "id": "act-math-geometry",
+          "title": "Angles and Triangles",
+          "unit": "Plane Geometry",
+          "unitId": "act-math-plane",
+          "skills": [
+            {
+              "id": "act-math-geometry-1",
+              "title": "Circles and polygons"
+            }
+          ],
+          "keywords": [
+            "circles and polygons"
+          ]
+        },
+        {
+          "id": "act-math-trig",
+          "title": "Trig Ratios",
+          "unit": "Trigonometry",
+          "unitId": "act-math-trig",
+          "skills": [
+            {
+              "id": "act-math-trig-1",
+              "title": "Basic identities"
+            }
+          ],
+          "keywords": [
+            "basic identities"
+          ]
+        }
+      ]
+    },
+    "act-reading": {
+      "label": "ACT Reading",
+      "track": "act",
+      "section": "reading",
+      "chapters": [
+        {
+          "id": "act-read-main",
+          "title": "Main Idea",
+          "unit": "Key Ideas",
+          "unitId": "act-read-key",
+          "skills": [
+            {
+              "id": "act-read-main-1",
+              "title": "Supporting details"
+            },
+            {
+              "id": "act-read-main-2",
+              "title": "Sequential relationships"
+            }
+          ],
+          "keywords": [
+            "supporting details",
+            "sequential relationships"
+          ]
+        },
+        {
+          "id": "act-read-purpose",
+          "title": "Author Purpose",
+          "unit": "Craft and Structure",
+          "unitId": "act-read-craft",
+          "skills": [
+            {
+              "id": "act-read-purpose-1",
+              "title": "Word meaning"
+            },
+            {
+              "id": "act-read-purpose-2",
+              "title": "Text structure"
+            }
+          ],
+          "keywords": [
+            "word meaning",
+            "text structure"
+          ]
+        },
+        {
+          "id": "act-read-evidence",
+          "title": "Evidence-Based Reasoning",
+          "unit": "Integration of Knowledge",
+          "unitId": "act-read-integration",
+          "skills": [
+            {
+              "id": "act-read-evidence-1",
+              "title": "Compare viewpoints"
+            },
+            {
+              "id": "act-read-evidence-2",
+              "title": "Generalizations"
+            }
+          ],
+          "keywords": [
+            "compare viewpoints",
+            "generalizations"
+          ]
+        }
+      ]
+    },
+    "act-science": {
+      "label": "ACT Science",
+      "track": "act",
+      "section": "science",
+      "chapters": [
+        {
+          "id": "act-sci-graphs",
+          "title": "Graphs and Tables",
+          "unit": "Data Representation",
+          "unitId": "act-sci-data",
+          "skills": [
+            {
+              "id": "act-sci-graphs-1",
+              "title": "Trend interpretation"
+            },
+            {
+              "id": "act-sci-graphs-2",
+              "title": "Unit conversion"
+            }
+          ],
+          "keywords": [
+            "trend interpretation",
+            "unit conversion"
+          ]
+        },
+        {
+          "id": "act-sci-experiments",
+          "title": "Experiments",
+          "unit": "Research Summaries",
+          "unitId": "act-sci-research",
+          "skills": [
+            {
+              "id": "act-sci-experiments-1",
+              "title": "Variables and controls"
+            },
+            {
+              "id": "act-sci-experiments-2",
+              "title": "Hypothesis evaluation"
+            }
+          ],
+          "keywords": [
+            "variables and controls",
+            "hypothesis evaluation"
+          ]
+        },
+        {
+          "id": "act-sci-compare",
+          "title": "Compare Models",
+          "unit": "Conflicting Viewpoints",
+          "unitId": "act-sci-viewpoints",
+          "skills": [
+            {
+              "id": "act-sci-compare-1",
+              "title": "Evaluate arguments"
+            },
+            {
+              "id": "act-sci-compare-2",
+              "title": "Predict outcomes"
+            }
+          ],
+          "keywords": [
+            "evaluate arguments",
+            "predict outcomes"
+          ]
+        }
+      ]
+    }
+  },
+  "taxonomy": {
+    "sku": "sat-act",
+    "version": "v1",
+    "structure": "domain-unit-chapter-skill",
+    "domains": [
+      {
+        "id": "sat-reading-writing",
+        "title": "SAT Reading & Writing",
+        "exam": "sat",
+        "section": "reading_writing",
+        "units": [
+          {
+            "id": "sat-rw-info",
+            "title": "Information and Ideas",
+            "chapters": [
+              {
+                "id": "sat-rw-central-ideas",
+                "title": "Central Ideas and Details",
+                "skills": [
+                  {
+                    "id": "sat-rw-central-ideas-1",
+                    "title": "Main idea"
+                  },
+                  {
+                    "id": "sat-rw-central-ideas-2",
+                    "title": "Supporting details"
+                  }
+                ]
+              },
+              {
+                "id": "sat-rw-evidence",
+                "title": "Command of Evidence",
+                "skills": [
+                  {
+                    "id": "sat-rw-evidence-1",
+                    "title": "Textual evidence"
+                  },
+                  {
+                    "id": "sat-rw-evidence-2",
+                    "title": "Quantitative evidence"
+                  }
+                ]
+              },
+              {
+                "id": "sat-rw-inference",
+                "title": "Inferences",
+                "skills": [
+                  {
+                    "id": "sat-rw-inference-1",
+                    "title": "Logical inference"
+                  },
+                  {
+                    "id": "sat-rw-inference-2",
+                    "title": "Implicit meaning"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sat-rw-craft",
+            "title": "Craft and Structure",
+            "chapters": [
+              {
+                "id": "sat-rw-words-context",
+                "title": "Words in Context",
+                "skills": [
+                  {
+                    "id": "sat-rw-words-context-1",
+                    "title": "Vocabulary in context"
+                  },
+                  {
+                    "id": "sat-rw-words-context-2",
+                    "title": "Precision and tone"
+                  }
+                ]
+              },
+              {
+                "id": "sat-rw-text-structure",
+                "title": "Text Structure",
+                "skills": [
+                  {
+                    "id": "sat-rw-text-structure-1",
+                    "title": "Purpose of text"
+                  },
+                  {
+                    "id": "sat-rw-text-structure-2",
+                    "title": "Text structure analysis"
+                  }
+                ]
+              },
+              {
+                "id": "sat-rw-cross-text",
+                "title": "Cross-Text Connections",
+                "skills": [
+                  {
+                    "id": "sat-rw-cross-text-1",
+                    "title": "Compare passages"
+                  },
+                  {
+                    "id": "sat-rw-cross-text-2",
+                    "title": "Synthesize viewpoints"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sat-rw-expression",
+            "title": "Expression of Ideas",
+            "chapters": [
+              {
+                "id": "sat-rw-rhetorical",
+                "title": "Rhetorical Synthesis",
+                "skills": [
+                  {
+                    "id": "sat-rw-rhetorical-1",
+                    "title": "Clarity and concision"
+                  },
+                  {
+                    "id": "sat-rw-rhetorical-2",
+                    "title": "Rhetorical effectiveness"
+                  }
+                ]
+              },
+              {
+                "id": "sat-rw-organization",
+                "title": "Organization",
+                "skills": [
+                  {
+                    "id": "sat-rw-organization-1",
+                    "title": "Transitions"
+                  },
+                  {
+                    "id": "sat-rw-organization-2",
+                    "title": "Logical sequence"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sat-rw-conventions",
+            "title": "Standard English Conventions",
+            "chapters": [
+              {
+                "id": "sat-rw-boundaries",
+                "title": "Boundaries",
+                "skills": [
+                  {
+                    "id": "sat-rw-boundaries-1",
+                    "title": "Comma usage"
+                  },
+                  {
+                    "id": "sat-rw-boundaries-2",
+                    "title": "Colon and semicolon"
+                  }
+                ]
+              },
+              {
+                "id": "sat-rw-form-sense",
+                "title": "Form Structure and Sense",
+                "skills": [
+                  {
+                    "id": "sat-rw-form-sense-1",
+                    "title": "Subject-verb agreement"
+                  },
+                  {
+                    "id": "sat-rw-form-sense-2",
+                    "title": "Pronouns and modifiers"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sat-math",
+        "title": "SAT Math",
+        "exam": "sat",
+        "section": "math",
+        "units": [
+          {
+            "id": "sat-math-algebra",
+            "title": "Algebra",
+            "chapters": [
+              {
+                "id": "sat-math-linear",
+                "title": "Linear Equations",
+                "skills": [
+                  {
+                    "id": "sat-math-linear-1",
+                    "title": "Solve linear equations"
+                  },
+                  {
+                    "id": "sat-math-linear-2",
+                    "title": "Linear functions"
+                  }
+                ]
+              },
+              {
+                "id": "sat-math-systems",
+                "title": "Systems of Equations",
+                "skills": [
+                  {
+                    "id": "sat-math-systems-1",
+                    "title": "Substitution"
+                  },
+                  {
+                    "id": "sat-math-systems-2",
+                    "title": "Elimination"
+                  }
+                ]
+              },
+              {
+                "id": "sat-math-inequalities",
+                "title": "Inequalities",
+                "skills": [
+                  {
+                    "id": "sat-math-inequalities-1",
+                    "title": "Linear inequalities"
+                  },
+                  {
+                    "id": "sat-math-inequalities-2",
+                    "title": "Graphing inequalities"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sat-math-advanced",
+            "title": "Advanced Math",
+            "chapters": [
+              {
+                "id": "sat-math-quadratic",
+                "title": "Quadratic Equations",
+                "skills": [
+                  {
+                    "id": "sat-math-quadratic-1",
+                    "title": "Factoring"
+                  },
+                  {
+                    "id": "sat-math-quadratic-2",
+                    "title": "Quadratic formula"
+                  }
+                ]
+              },
+              {
+                "id": "sat-math-polynomial",
+                "title": "Polynomial Functions",
+                "skills": [
+                  {
+                    "id": "sat-math-polynomial-1",
+                    "title": "Polynomial operations"
+                  },
+                  {
+                    "id": "sat-math-polynomial-2",
+                    "title": "Zeros and factors"
+                  }
+                ]
+              },
+              {
+                "id": "sat-math-exponential",
+                "title": "Exponential Functions",
+                "skills": [
+                  {
+                    "id": "sat-math-exponential-1",
+                    "title": "Growth and decay"
+                  },
+                  {
+                    "id": "sat-math-exponential-2",
+                    "title": "Function transformations"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sat-math-psda",
+            "title": "Problem Solving and Data Analysis",
+            "chapters": [
+              {
+                "id": "sat-math-ratios",
+                "title": "Ratios",
+                "skills": [
+                  {
+                    "id": "sat-math-ratios-1",
+                    "title": "Proportions"
+                  },
+                  {
+                    "id": "sat-math-ratios-2",
+                    "title": "Unit rates"
+                  }
+                ]
+              },
+              {
+                "id": "sat-math-percent",
+                "title": "Percentages",
+                "skills": [
+                  {
+                    "id": "sat-math-percent-1",
+                    "title": "Percent change"
+                  },
+                  {
+                    "id": "sat-math-percent-2",
+                    "title": "Applications"
+                  }
+                ]
+              },
+              {
+                "id": "sat-math-stats",
+                "title": "Statistics",
+                "skills": [
+                  {
+                    "id": "sat-math-stats-1",
+                    "title": "Mean median mode"
+                  },
+                  {
+                    "id": "sat-math-stats-2",
+                    "title": "Scatterplots and trend lines"
+                  }
+                ]
+              },
+              {
+                "id": "sat-math-probability",
+                "title": "Probability",
+                "skills": [
+                  {
+                    "id": "sat-math-probability-1",
+                    "title": "Basic probability"
+                  },
+                  {
+                    "id": "sat-math-probability-2",
+                    "title": "Conditional probability"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sat-math-geometry",
+            "title": "Geometry and Trigonometry",
+            "chapters": [
+              {
+                "id": "sat-math-area-volume",
+                "title": "Area and Volume",
+                "skills": [
+                  {
+                    "id": "sat-math-area-volume-1",
+                    "title": "Area formulas"
+                  },
+                  {
+                    "id": "sat-math-area-volume-2",
+                    "title": "Volume formulas"
+                  }
+                ]
+              },
+              {
+                "id": "sat-math-triangles",
+                "title": "Triangles",
+                "skills": [
+                  {
+                    "id": "sat-math-triangles-1",
+                    "title": "Angles"
+                  },
+                  {
+                    "id": "sat-math-triangles-2",
+                    "title": "Similarity and congruence"
+                  }
+                ]
+              },
+              {
+                "id": "sat-math-circles",
+                "title": "Circles",
+                "skills": [
+                  {
+                    "id": "sat-math-circles-1",
+                    "title": "Arcs and sectors"
+                  },
+                  {
+                    "id": "sat-math-circles-2",
+                    "title": "Circle equations"
+                  }
+                ]
+              },
+              {
+                "id": "sat-math-trig",
+                "title": "Trigonometry",
+                "skills": [
+                  {
+                    "id": "sat-math-trig-1",
+                    "title": "Sin cos tan"
+                  },
+                  {
+                    "id": "sat-math-trig-2",
+                    "title": "Right-triangle trig"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "act-english",
+        "title": "ACT English",
+        "exam": "act",
+        "section": "english",
+        "units": [
+          {
+            "id": "act-eng-production",
+            "title": "Production of Writing",
+            "chapters": [
+              {
+                "id": "act-eng-organization",
+                "title": "Organization",
+                "skills": [
+                  {
+                    "id": "act-eng-organization-1",
+                    "title": "Topic development"
+                  },
+                  {
+                    "id": "act-eng-organization-2",
+                    "title": "Paragraph unity"
+                  }
+                ]
+              },
+              {
+                "id": "act-eng-strategy",
+                "title": "Strategy",
+                "skills": [
+                  {
+                    "id": "act-eng-strategy-1",
+                    "title": "Purpose and focus"
+                  },
+                  {
+                    "id": "act-eng-strategy-2",
+                    "title": "Supporting material"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "act-eng-language",
+            "title": "Knowledge of Language",
+            "chapters": [
+              {
+                "id": "act-eng-style",
+                "title": "Style and Tone",
+                "skills": [
+                  {
+                    "id": "act-eng-style-1",
+                    "title": "Word choice"
+                  },
+                  {
+                    "id": "act-eng-style-2",
+                    "title": "Consistency of style"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "act-eng-conventions",
+            "title": "Conventions of Standard English",
+            "chapters": [
+              {
+                "id": "act-eng-grammar",
+                "title": "Grammar",
+                "skills": [
+                  {
+                    "id": "act-eng-grammar-1",
+                    "title": "Sentence structure"
+                  },
+                  {
+                    "id": "act-eng-grammar-2",
+                    "title": "Agreement"
+                  }
+                ]
+              },
+              {
+                "id": "act-eng-punctuation",
+                "title": "Punctuation",
+                "skills": [
+                  {
+                    "id": "act-eng-punctuation-1",
+                    "title": "Comma rules"
+                  },
+                  {
+                    "id": "act-eng-punctuation-2",
+                    "title": "Apostrophes and dashes"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "act-math",
+        "title": "ACT Math",
+        "exam": "act",
+        "section": "math",
+        "units": [
+          {
+            "id": "act-math-pre",
+            "title": "Pre-Algebra",
+            "chapters": [
+              {
+                "id": "act-math-numbers",
+                "title": "Number Systems",
+                "skills": [
+                  {
+                    "id": "act-math-numbers-1",
+                    "title": "Fractions decimals"
+                  },
+                  {
+                    "id": "act-math-numbers-2",
+                    "title": "Exponents and roots"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "act-math-algebra",
+            "title": "Elementary & Intermediate Algebra",
+            "chapters": [
+              {
+                "id": "act-math-linear",
+                "title": "Linear Equations",
+                "skills": [
+                  {
+                    "id": "act-math-linear-1",
+                    "title": "Quadratic equations"
+                  },
+                  {
+                    "id": "act-math-linear-2",
+                    "title": "Polynomials and inequalities"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "act-math-coord",
+            "title": "Coordinate Geometry",
+            "chapters": [
+              {
+                "id": "act-math-graphs",
+                "title": "Graphs and Slopes",
+                "skills": [
+                  {
+                    "id": "act-math-graphs-1",
+                    "title": "Distance and midpoint"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "act-math-plane",
+            "title": "Plane Geometry",
+            "chapters": [
+              {
+                "id": "act-math-geometry",
+                "title": "Angles and Triangles",
+                "skills": [
+                  {
+                    "id": "act-math-geometry-1",
+                    "title": "Circles and polygons"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "act-math-trig",
+            "title": "Trigonometry",
+            "chapters": [
+              {
+                "id": "act-math-trig",
+                "title": "Trig Ratios",
+                "skills": [
+                  {
+                    "id": "act-math-trig-1",
+                    "title": "Basic identities"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "act-reading",
+        "title": "ACT Reading",
+        "exam": "act",
+        "section": "reading",
+        "units": [
+          {
+            "id": "act-read-key",
+            "title": "Key Ideas",
+            "chapters": [
+              {
+                "id": "act-read-main",
+                "title": "Main Idea",
+                "skills": [
+                  {
+                    "id": "act-read-main-1",
+                    "title": "Supporting details"
+                  },
+                  {
+                    "id": "act-read-main-2",
+                    "title": "Sequential relationships"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "act-read-craft",
+            "title": "Craft and Structure",
+            "chapters": [
+              {
+                "id": "act-read-purpose",
+                "title": "Author Purpose",
+                "skills": [
+                  {
+                    "id": "act-read-purpose-1",
+                    "title": "Word meaning"
+                  },
+                  {
+                    "id": "act-read-purpose-2",
+                    "title": "Text structure"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "act-read-integration",
+            "title": "Integration of Knowledge",
+            "chapters": [
+              {
+                "id": "act-read-evidence",
+                "title": "Evidence-Based Reasoning",
+                "skills": [
+                  {
+                    "id": "act-read-evidence-1",
+                    "title": "Compare viewpoints"
+                  },
+                  {
+                    "id": "act-read-evidence-2",
+                    "title": "Generalizations"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "act-science",
+        "title": "ACT Science",
+        "exam": "act",
+        "section": "science",
+        "units": [
+          {
+            "id": "act-sci-data",
+            "title": "Data Representation",
+            "chapters": [
+              {
+                "id": "act-sci-graphs",
+                "title": "Graphs and Tables",
+                "skills": [
+                  {
+                    "id": "act-sci-graphs-1",
+                    "title": "Trend interpretation"
+                  },
+                  {
+                    "id": "act-sci-graphs-2",
+                    "title": "Unit conversion"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "act-sci-research",
+            "title": "Research Summaries",
+            "chapters": [
+              {
+                "id": "act-sci-experiments",
+                "title": "Experiments",
+                "skills": [
+                  {
+                    "id": "act-sci-experiments-1",
+                    "title": "Variables and controls"
+                  },
+                  {
+                    "id": "act-sci-experiments-2",
+                    "title": "Hypothesis evaluation"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "act-sci-viewpoints",
+            "title": "Conflicting Viewpoints",
+            "chapters": [
+              {
+                "id": "act-sci-compare",
+                "title": "Compare Models",
+                "skills": [
+                  {
+                    "id": "act-sci-compare-1",
+                    "title": "Evaluate arguments"
+                  },
+                  {
+                    "id": "act-sci-compare-2",
+                    "title": "Predict outcomes"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "examComparison": {
+      "sat": {
+        "sections": 2,
+        "science": false,
+        "essay": false
+      },
+      "act": {
+        "sections": 4,
+        "science": true,
+        "essay": "optional"
       }
     }
   },
-  "sources_note": "Official College Board (Bluebook, linear PDFs, Khan Academy) and ACT.org free prep guides. Bluebook adaptive tests require the desktop app — not scraped here.",
+  "tracks": {
+    "sat": {
+      "label": "SAT (Digital)",
+      "domains": [
+        "sat-reading-writing",
+        "sat-math"
+      ]
+    },
+    "act": {
+      "label": "ACT",
+      "domains": [
+        "act-english",
+        "act-math",
+        "act-reading",
+        "act-science"
+      ]
+    }
+  },
   "stats": {
     "total_questions": 125,
     "verified_questions": 125,
@@ -99,6 +1604,9 @@
       "sat": 0,
       "act": 125
     },
-    "updated_at": "2026-06-24T21:24:25.670510+00:00"
-  }
+    "updated_at": "2026-06-24T21:44:52.245869+00:00"
+  },
+  "sources_note": "Official College Board (Bluebook, linear PDFs, Khan Academy) and ACT.org free prep guides. Bluebook adaptive tests require the desktop app — not scraped here.",
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\SAT_ACT",
+  "exam_specs_path": "/portal/data/sat-act-exam-specs.json"
 }
