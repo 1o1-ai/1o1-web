@@ -1,6 +1,8 @@
 /**
  * SAT / ACT Study Room — wizard: exam → section → chapter → learn|evaluate
- * Same flow as CBSE 10; section cards use official Digital SAT / ACT timing notes.
+ * Works with both curriculum shapes:
+ *   • tracks.sat.sections (yogabrata portal export)
+ *   • subjects.sat-reading-writing.chapters (full taxonomy export)
  */
 (function () {
   'use strict';
@@ -9,35 +11,47 @@
   const cfg = window.AnyoAcademyConfig ? window.AnyoAcademyConfig.get(SKU) : {};
   if (window.AnyoBots?.configureForSku) window.AnyoBots.configureForSku(SKU);
 
+  /** Official section cards — always shown (sat-suite.md / act-prep.md). */
+  const SECTION_ORDER = {
+    sat: ['sat-reading-writing', 'sat-math'],
+    act: ['act-english', 'act-math', 'act-reading', 'act-science'],
+  };
+
   const SECTION_META = {
     sat: {
       'sat-reading-writing': {
         label: 'Reading and Writing Section',
         note:
           '2 modules · 64 minutes total · 54 questions. Craft, structure, and standard grammar conventions.',
+        legacySection: 'reading_writing',
       },
       'sat-math': {
         label: 'Mathematics Section',
         note:
           '2 modules · 70 minutes total · 44 questions. Calculator allowed — built-in Desmos graphing calculator.',
+        legacySection: 'math',
       },
     },
     act: {
       'act-english': {
         label: 'English',
         note: '75 questions · 45 minutes. Usage, mechanics, and rhetorical flow.',
+        legacySection: 'english',
       },
       'act-math': {
         label: 'Math',
-        note: '60 questions · 60 minutes. Pre-algebra through trigonometry.',
+        note: '60 questions · 60 minutes. Pre-algebra, algebra, geometry, trigonometry.',
+        legacySection: 'math',
       },
       'act-reading': {
         label: 'Reading',
-        note: '40 questions · 35 minutes. Prose, humanities, social & natural science passages.',
+        note: '40 questions · 35 minutes. Social sciences, humanities, literature.',
+        legacySection: 'reading',
       },
       'act-science': {
         label: 'Science',
-        note: '40 questions · 35 minutes. Data representation, research summaries, conflicting viewpoints.',
+        note: '40 questions · 35 minutes. Data analysis, experiments, scientific theories.',
+        legacySection: 'science',
       },
     },
   };
@@ -85,6 +99,16 @@
     })
     .catch((err) => showLoadError('Could not load SAT/ACT curriculum. ' + (err?.message || err)));
 
+  function sectionMeta() {
+    return SECTION_META[track]?.[subjectId] || null;
+  }
+
+  function legacySectionKey() {
+    const meta = sectionMeta();
+    if (meta?.legacySection) return meta.legacySection;
+    return curriculum?.subjects?.[subjectId]?.section || '';
+  }
+
   function showLoadError(msg) {
     const el = document.getElementById('srLoadError');
     if (el) {
@@ -102,14 +126,24 @@
     document.body.classList.toggle('sr-learn-active', name === 'learn');
   }
 
-  function subjectsForTrack() {
-    return Object.entries(curriculum?.subjects || {}).filter(
-      ([, s]) => (s.track || '').toLowerCase() === track
-    );
-  }
-
   function chaptersForSubject() {
-    return curriculum?.subjects?.[subjectId]?.chapters || [];
+    const fromSubjects = curriculum?.subjects?.[subjectId]?.chapters;
+    if (Array.isArray(fromSubjects) && fromSubjects.length) return fromSubjects;
+
+    const leg = legacySectionKey();
+    const sec = curriculum?.tracks?.[track]?.sections?.[leg];
+    if (sec?.skills?.length) {
+      return sec.skills.map((sk) => ({
+        id: sk.id,
+        title: sk.title,
+        unit: sec.label || sectionMeta()?.label || leg,
+        skills: sk.skills || [],
+        keywords: sk.keywords || [],
+      }));
+    }
+    if (sec?.chapters?.length) return sec.chapters;
+
+    return [];
   }
 
   function currentChapter() {
@@ -135,8 +169,10 @@
         ? 'Digital SAT — choose a section (official timing)'
         : 'ACT — choose a section (official timing)';
     grid.innerHTML = '';
-    subjectsForTrack().forEach(([id]) => {
-      const meta = SECTION_META[track]?.[id] || { label: id, note: '' };
+    const ids = SECTION_ORDER[track] || [];
+    ids.forEach((id) => {
+      const meta = SECTION_META[track]?.[id];
+      if (!meta) return;
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'sr-section-card';
@@ -148,13 +184,23 @@
       });
       grid.appendChild(btn);
     });
+    if (!grid.children.length) {
+      grid.innerHTML =
+        '<p class="sr-eval-hint">Sections could not load — refresh or try again later.</p>';
+    }
   }
 
   function renderChapterGrid() {
     const grid = document.getElementById('chapterGrid');
     if (!grid) return;
     grid.innerHTML = '';
-    chaptersForSubject().forEach((ch) => {
+    const chapters = chaptersForSubject();
+    if (!chapters.length) {
+      grid.innerHTML =
+        '<p class="sr-eval-hint">No skill chapters in curriculum yet for this section.</p>';
+      return;
+    }
+    chapters.forEach((ch) => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'sr-chapter-pick';
@@ -171,7 +217,10 @@
 
   function bindNavigation() {
     document.getElementById('backToTrack')?.addEventListener('click', () => showPhase('track'));
-    document.getElementById('backToSection')?.addEventListener('click', () => showPhase('section'));
+    document.getElementById('backToSection')?.addEventListener('click', () => {
+      renderSectionGrid();
+      showPhase('section');
+    });
     document.getElementById('backToChapter')?.addEventListener('click', () => showPhase('chapter'));
     document.getElementById('backFromLearn')?.addEventListener('click', () => showPhase('intent'));
     document.getElementById('backFromEvaluate')?.addEventListener('click', () => showPhase('intent'));
@@ -183,7 +232,7 @@
   }
 
   function sectionLabel() {
-    return SECTION_META[track]?.[subjectId]?.label || curriculum?.subjects?.[subjectId]?.label || subjectId;
+    return sectionMeta()?.label || curriculum?.subjects?.[subjectId]?.label || subjectId;
   }
 
   function metaLine() {
@@ -195,14 +244,14 @@
     document.getElementById('learnTitle').textContent = chapterTitle;
     document.getElementById('learnSubtitle').textContent = metaLine();
     const box = document.getElementById('learnContent');
-    const skills = (ch?.skills || []).map((s) => `<li>${s.title}</li>`).join('');
+    const nestedSkills = (ch?.skills || []).map((s) => `<li>${s.title || s}</li>`).join('');
     box.innerHTML = `
-      <p><strong>${ch?.unit || 'Skill chapter'}</strong></p>
+      <p><strong>${ch?.unit || sectionLabel()}</strong></p>
       <p style="color:#94a3b8;font-size:0.9rem;margin:12px 0">
-        Official College Board / ACT-aligned skill drill. Study the concepts below, then use
-        <strong>Evaluate</strong> for verified practice items.
+        Official College Board / ACT-aligned skill area. Study the concepts below, then use
+        <strong>Evaluate</strong> for verified practice items from ingested official PDFs.
       </p>
-      ${skills ? `<ul class="sr-skill-list">${skills}</ul>` : ''}
+      ${nestedSkills ? `<ul class="sr-skill-list">${nestedSkills}</ul>` : ''}
       <p style="color:#64748b;font-size:0.8rem;margin-top:16px">
         Keywords: ${(ch?.keywords || []).join(' · ') || '—'}
       </p>`;
@@ -215,7 +264,7 @@
     const chat = document.getElementById('evalChat');
     const avail = filterQuestions(99).length;
     chat.innerHTML = `<p class="sr-eval-hint">
-      ${avail > 0 ? `${avail} official item(s) available for this chapter.` : 'No verified items yet — try ACT English or check back after the next crawl.'}
+      ${avail > 0 ? `${avail} official item(s) available for this skill.` : 'No verified items yet for this skill — try ACT English or check back after the next crawl.'}
       Press <strong>Start 5-question drill</strong> when ready.
     </p>`;
     quizQuestions = [];
@@ -229,17 +278,26 @@
   }
 
   function filterQuestions(limit) {
-    const sub = curriculum?.subjects?.[subjectId];
-    const pool = verifiedBank.filter((q) => {
+    const legSec = legacySectionKey().toLowerCase();
+    const subSection = (curriculum?.subjects?.[subjectId]?.section || '').toLowerCase();
+    const sectionKey = subSection || legSec;
+
+    let pool = verifiedBank.filter((q) => {
       const matchTrack = !track || (q.track || '').toLowerCase() === track;
-      const matchSec = !sub?.section || (q.section || '').toLowerCase() === (sub.section || '').toLowerCase();
+      const matchSec = !sectionKey || (q.section || '').toLowerCase() === sectionKey;
       const matchCh = !chapterId || (q.chapter || '') === chapterId;
       return matchTrack && matchSec && matchCh;
     });
-    if (pool.length >= 2) return pool.slice(0, limit);
-    return verifiedBank
-      .filter((q) => (q.track || '').toLowerCase() === track && (!sub?.section || (q.section || '').toLowerCase() === (sub.section || '').toLowerCase()))
-      .slice(0, limit);
+
+    if (pool.length < 2 && chapterId) {
+      pool = verifiedBank.filter(
+        (q) =>
+          (q.track || '').toLowerCase() === track &&
+          (!sectionKey || (q.section || '').toLowerCase() === sectionKey)
+      );
+    }
+
+    return pool.slice(0, limit);
   }
 
   function toQuizItem(q) {
@@ -254,7 +312,7 @@
     const found = filterQuestions(5);
     if (!found.length) {
       document.getElementById('evalChat').innerHTML =
-        '<p class="sr-eval-hint">No official items for this chapter yet. Try ACT English or another section.</p>';
+        '<p class="sr-eval-hint">No official items for this skill yet. Try ACT English or another section.</p>';
       return;
     }
     quizQuestions = found.map(toQuizItem);
@@ -317,8 +375,16 @@
     track = t;
     renderSectionGrid();
     const sub = p.get('section');
-    if (sub && curriculum?.subjects?.[sub]) {
-      subjectId = sub;
+    const resolvedSub =
+      sub && SECTION_META[track]?.[sub]
+        ? sub
+        : sub
+          ? Object.keys(SECTION_META[track] || {}).find(
+              (k) => SECTION_META[track][k].legacySection === sub
+            )
+          : null;
+    if (resolvedSub) {
+      subjectId = resolvedSub;
       renderChapterGrid();
       const ch = p.get('chapter');
       if (ch) {
