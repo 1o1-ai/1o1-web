@@ -245,7 +245,7 @@
     document.getElementById('learnSubtitle').textContent = metaLine();
     const box = document.getElementById('learnContent');
     const nestedSkills = (ch?.skills || []).map((s) => `<li>${s.title || s}</li>`).join('');
-    box.innerHTML = `
+    const fallback = `
       <p><strong>${ch?.unit || sectionLabel()}</strong></p>
       <p style="color:#94a3b8;font-size:0.9rem;margin:12px 0">
         Official College Board / ACT-aligned skill area. Study the concepts below, then use
@@ -256,6 +256,21 @@
         Keywords: ${(ch?.keywords || []).join(' · ') || '—'}
       </p>`;
     showPhase('learn');
+    const render = () => {
+      const guide = window.SatActStudyMaterial?.skill?.(chapterId);
+      if (window.SatActStudyMaterial?.renderLearn) {
+        window.SatActStudyMaterial.renderLearn(box, guide, fallback);
+        return;
+      }
+      box.innerHTML = fallback;
+    };
+    if (window.SatActStudyMaterial?.load) {
+      window.SatActStudyMaterial.load().then(render).catch(() => {
+        box.innerHTML = fallback;
+      });
+    } else {
+      box.innerHTML = fallback;
+    }
   }
 
   function openEvaluate() {
@@ -361,9 +376,18 @@
     const ul = document.getElementById(listId);
     if (!ul) return;
     ul.innerHTML = '';
-    students.slice(0, 16).forEach((s) => {
+    if (!students.length) {
       const li = document.createElement('li');
-      li.textContent = `${s.name} · ${s.city || ''} ${s.country || ''}`.trim();
+      li.className = 'sr-students-empty';
+      li.textContent = 'No classmates listed right now.';
+      ul.appendChild(li);
+      return;
+    }
+    students.slice(0, 12).forEach((s) => {
+      const li = document.createElement('li');
+      li.className = 'sr-student-item';
+      const loc = [s.city, s.country].filter(Boolean).join(' ');
+      li.innerHTML = `<img src="${s.photo || ''}" alt="" width="32" height="32" /><span>${s.name}</span><em>${loc}</em>`;
       ul.appendChild(li);
     });
   }

@@ -1,0 +1,78 @@
+{
+  "sku": "sat-act",
+  "generatedFrom": "C:\\Knowledge\\EDUCATION\\SAT & ACT",
+  "chapters": {
+    "sat-rw-craft": {
+      "skillId": "sat-rw-craft",
+      "title": "SAT Study Guide: Craft & Structure",
+      "studySummary": "# SAT Study Guide: Craft & Structure\nCritical reading techniques for Digital SAT vocabulary and structural flow.\n\n## 1. Vocabulary in Context\n- **Strategy:** Read sentences carefully, ignoring options. Draft a simple, context-fitting synonym, then look for the option that represents that meaning.\n- **Alert:** Avoid picking complex words simply because they sound smart if they do not fit the sentence context.\n\n## 2. Author's Tone\n- Locate descriptors that show emotional bias (e.g., *critical, enthusiastic, skeptical, objective*).",
+      "source": "Knowledge/EDUCATION/SAT & ACT/sat-reading-writing/sat-craft-structure.md"
+    },
+    "sat-rw-info": {
+      "skillId": "sat-rw-info",
+      "title": "SAT Study Guide: Information & Ideas",
+      "studySummary": "# SAT Study Guide: Information & Ideas\nThis chapter reviews reading comprehension, claim verification, and data charts.\n\n## 1. Claims and Evidence\n- **Rule:** A valid conclusion MUST be explicitly supported by facts in the passage. Avoid choices that require assumptions or jump to conclusions.\n\n## 2. Tables and Diagrams\n- Confirm axes labels and legends before answering detail questions!",
+      "source": "Knowledge/EDUCATION/SAT & ACT/sat-reading-writing/sat-info-ideas.md"
+    },
+    "sat-rw-grammar": {
+      "skillId": "sat-rw-grammar",
+      "title": "SAT Study Guide: Standard English Conventions",
+      "studySummary": "# SAT Study Guide: Standard English Conventions\nFocuses on punctuation rules (commas, dashes, semicolons, colons) and subject-verb agreement.\n\n## 1. Subject-Verb Concord\n- Collective singular subjects (e.g., *the crew, the class, the committee*) require singular verbs.\n\n## 2. Semicolons vs. Commas\n- **Semicolon ( ; ):** Used to link two independent clauses without a coordinating conjunction.\n- **Comma ( , ):** Cannot link independent clauses without a conjunction (avoid comma splices!).",
+      "source": "Knowledge/EDUCATION/SAT & ACT/sat-reading-writing/sat-std-english.md"
+    },
+    "sat-rw-expression": {
+      "skillId": "sat-rw-expression",
+      "title": "SAT Study Guide: Expression of Ideas",
+      "studySummary": "# SAT Study Guide: Expression of Ideas\nFocuses on correct sentence flow, modifiers, transition connectors, and notes synthesis.\n\n## 1. Rhetorical Synthesis Notes\n- Summary questions give a series of bullet points. Read the specific goal (e.g., *the student wants to emphasize the contrast between the two studies*) and choose the option that directly accomplishes that goal.\n\n## 2. Modifiers\n- Keep modifiers near the nouns they explain (e.g., \"While walking, the dog...\" instead of \"While walking, the bone was found...\").",
+      "source": "Knowledge/EDUCATION/SAT & ACT/sat-reading-writing/sat-expression-ideas.md"
+    },
+    "sat-math-algebra": {
+      "skillId": "sat-math-algebra",
+      "title": "SAT Study Guide: Heart of Algebra and Systems",
+      "studySummary": "# SAT Study Guide: Heart of Algebra and Systems\nThis booklet targets Core Algebra parameters mandated by the US College Board.\n\n## 1. Linear Equations and Slope\nThe equation of a line can be stated in three primary ways:\n- **Slope-Intercept Form:** $y = mx + b$ (where $m$ is the slope, $b$ is the y-intercept).\n- **Point-Slope Form:** $y - y_1 = m(x - x_1)$.\n- **Standard Form:** $Ax + By = C$.\n\n*Tip:* Under the Digital SAT format, use the Desmos Graphing Calculator built right into the exam platform to find intersections instantly!\n\n## 2. Solving Systems of Equations\nTo find where two linear expressions intersect:\n1. **Substitution Method:** Solve for one variable in one equation and substitute.\n2. **Elimination Method:** Add or subtract equations to eliminate a variable.\n\n## 3. Practice Checklist\n- Define systems with no solutions (slopes equal, intercepts vary).\n- Learn simple linear mathematical modeling (e.g., $cost = rate \\times units + overhead$).",
+      "source": "Knowledge/EDUCATION/SAT & ACT/sat-math/sat-alg.md"
+    },
+    "sat-math-advanced": {
+      "skillId": "sat-math-advanced",
+      "title": "SAT Study Guide: Passport to Advanced Math",
+      "studySummary": "# SAT Study Guide: Passport to Advanced Math\nThis chapter introduces higher-level quadratic and exponential equations.\n\n## 1. Quadratic Vertex Forms\nParabola modeling typically employs vertex form to find maximums or minimums:\n$$y = a(x - h)^2 + k$$\nWhere:\n- $(h, k)$ is the vertex coordinate of the curve.\n- If $a > 0$, the parabola opens upward, having a minimum.\n- If $a < 0$, the parabola opens downward, having a maximum.\n\n## 2. Rational Expressions\nWhen factoring, look for the difference of squares:\n$$(x^2 - y^2) = (x - y)(x + y)$$\nThis occurs in 5-8% of advanced SAT math sections!",
+      "source": "Knowledge/EDUCATION/SAT & ACT/sat-math/sat-adv-math.md"
+    },
+    "sat-math-psda": {
+      "skillId": "sat-math-psda",
+      "title": "SAT Study Guide: Problem Solving and Data Analysis",
+      "studySummary": "# SAT Study Guide: Problem Solving and Data Analysis\nCore statistics and probability calculations used on official assessments.\n\n## 1. Ratios and Scaling\nUse dimensional analysis to convert units accurately:\n$$\\text{Rate} = \\frac{\\text{Quantity}}{\\text{Time}}$$\n\n## 2. Standard Deviation and Statistics\n- **Mean:** The mathematical average of a dataset.\n- **Median:** The middle value when sorted.\n- **Range:** Maximum value minus minimum value.\n- **Standard Deviation:** A measure of data dispersion. A wider spread means a higher standard deviation.",
+      "source": "Knowledge/EDUCATION/SAT & ACT/sat-math/sat-problem-solving.md"
+    },
+    "sat-math-geometry": {
+      "skillId": "sat-math-geometry",
+      "title": "SAT Study Guide: Geometry and Trigonometry",
+      "studySummary": "# SAT Study Guide: Geometry and Trigonometry\nReview of core formulas which may or may not be provided on the official test reference sheet.\n\n## 1. Circle Coordinate Equations\nA circle plotted in the xy-coordinate plane has the formula:\n$$(x - h)^2 + (y - k)^2 = r^2$$\nWhere:\n- $(h, k)$ are the coordinates of the circle's center.\n- $r$ is the length of the radius.\n\n## 2. Trigonometric Principles\nIn right-angled triangle calculations, remember the **SOH CAH TOA** mnemonic:\n- $\\sin(\\theta) = \\frac{\\text{Opposite}}{\\text{Hypotenuse}}$\n- $\\cos(\\theta) = \\frac{\\text{Adjacent}}{\\text{Hypotenuse}}$\n- $\\tan(\\theta) = \\frac{\\text{Opposite}}{\\text{Adjacent}}$\n\n*Sine-Cosine Complementarity:*\n$$\\sin(x^\\circ) = \\cos(90^\\circ - x^\\circ)$$\nUseful for matching tricky trigonometric equivalency options quickly!",
+      "source": "Knowledge/EDUCATION/SAT & ACT/sat-math/sat-geom-trig.md"
+    },
+    "act-english": {
+      "skillId": "act-english",
+      "title": "ACT English Guide: Grammar, Concord and Punctuation",
+      "studySummary": "# ACT English Guide: Grammar, Concord and Punctuation\nComprehensive review of commas, colons, dashes, and verb agreement.\n\n## 1. Dashes and Parentheses\n- Double dashes ($--$) isolate parenthetical descriptive information. The sentence MUST remain grammatically correct if the phrase between the dashes is removed.\n\n## 2. Semicolons\n- Connects two independent clauses. Equivalent to a period:\n$$\\text{Clause 1} ; \\text{Clause 2}$$",
+      "source": "Knowledge/EDUCATION/SAT & ACT/act-english/act-eng-grammar.md"
+    },
+    "act-math": {
+      "skillId": "act-math",
+      "title": "ACT Study Guide: Intermediate Algebra & Coordinates",
+      "studySummary": "# ACT Study Guide: Intermediate Algebra & Coordinates\nA deeper dive on logarithms, coordinates, and quadratic forms.\n\n## 1. Base Logarithm Calculations\nRemember standard algebraic logarithmic definitions:\n$$\\log_b(x) = y \\iff b^y = x$$\n\n## 2. Distance and Midpoint Coordinates\nGiven $(x_1, y_1)$ and $(x_2, y_2)$:\n- **Midpoint:** $(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2})$\n- **Distance:** $\\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$",
+      "source": "Knowledge/EDUCATION/SAT & ACT/act-math/act-math-int-alg.md"
+    },
+    "act-reading": {
+      "skillId": "act-reading",
+      "title": "ACT Reading Guide: Literary Narrative",
+      "studySummary": "# ACT Reading Guide: Literary Narrative\nStrategies to approach literature and character development passages.\n\n## 1. Emotional Nuance\n- Look for descriptions of character expressions, tones, and subtextual cues.\n\n## 2. Narrative Arc\n- Track the chronological order of events, especially when flash-backs are used.",
+      "source": "Knowledge/EDUCATION/SAT & ACT/act-reading/act-reading-lit.md"
+    },
+    "act-science": {
+      "skillId": "act-science",
+      "title": "ACT Science Guide: Data Representation & Graphs",
+      "studySummary": "# ACT Science Guide: Data Representation & Graphs\nThis chapter covers skills needed to crack the heavily-timed ACT Science section.\n\n## 1. Interpolation and Extrapolation\n- **Interpolation:** Finding a value *inside* the range of plotted points. Just read the trend line.\n- **Extrapolation:** Estimating a value *beyond* the plotted dataset. Extend the trend lines by following the slope's trajectory.\n\n## 2. Analyzing Trends and Direct vs. Inverse Ratios\n- **Direct Proportion:** $Y$ increases as $X$ increases (positive slope).\n- **Inverse Proportion:** $Y$ decreases as $X$ increases (hyperbolic curve, e.g. $P = k/V$).\n- **Independent Variables:** Plotted on the horizontal $X$-axis.\n- **Dependent Variables:** Plotted on the vertical $Y$-axis.\n\n*Execution Rule:* Spend no more than 40 seconds per passage reading text! Move straight to graphs and tables.",
+      "source": "Knowledge/EDUCATION/SAT & ACT/act-science/act-data-rep.md"
+    }
+  }
+}

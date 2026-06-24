@@ -39,6 +39,32 @@
         { id: 'mathematics', label: 'Mathematics', code: '041', icon: '📐' },
       ],
     },
+    'cbse12-science': {
+      id: 'cbse12-science',
+      label: 'CBSE XII Science',
+      hubPath: '/portal/education/cbse12-science/index.html',
+      rosterPath: '/portal/data/academy-bots.json',
+      locale: 'in',
+      currency: 'INR',
+      moderationReply:
+        "Let's keep this about CBSE Class 12 prep — no personal contact or off-topic chat. Ask about Physics, Chemistry, Biology, or Math.",
+      timepassWarn: 'This room is for board prep. Please stay on syllabus topics.',
+      studyChatter: [
+        'Anyone on Electrostatics numericals tonight?',
+        'Organic Chemistry naming is killing me',
+        'Board practical dates announced — revising ray optics',
+        'Integration by parts — need a shortcut',
+        'Previous year paper had a tricky Current Electricity MCQ',
+      ],
+      curriculumPath: '/portal/data/cbse12-science-curriculum.json',
+      bankPath: '/portal/data/cbse12-science-questions.json',
+      subjects: [
+        { id: 'physics', label: 'Physics', code: '042', icon: '⚛️' },
+        { id: 'chemistry', label: 'Chemistry', code: '043', icon: '🧪' },
+        { id: 'biology', label: 'Biology', code: '044', icon: '🧬' },
+        { id: 'mathematics', label: 'Mathematics', code: '041', icon: '📐' },
+      ],
+    },
     'sat-act': {
       id: 'sat-act',
       label: 'SAT / ACT',
@@ -157,6 +183,7 @@
     if (p.includes('/sat-act/')) return 'sat-act';
     if (p.includes('/english-tests/')) return 'english-tests';
     if (p.includes('/rhytoma/')) return 'rhytoma-wbbse';
+    if (p.includes('/cbse12-science/')) return 'cbse12-science';
     if (p.includes('/cbse10/')) return 'cbse10-core';
     const q = new URLSearchParams(global.location.search || '');
     return q.get('sku') || 'cbse10-core';

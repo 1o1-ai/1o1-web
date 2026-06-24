@@ -1,0 +1,20 @@
+/* CBSE XII Science — four-subject study room accents */
+.sr-subject-circle.physics { --sr-accent: #38bdf8; }
+.sr-subject-circle.chemistry { --sr-accent: #a78bfa; }
+.sr-subject-circle.biology { --sr-accent: #34d399; }
+.sr-subject-circle.mathematics { --sr-accent: #fbbf24; }
+
+.sr-subject-circle.physics,
+.sr-subject-circle.chemistry,
+.sr-subject-circle.biology,
+.sr-subject-circle.mathematics {
+  border-color: color-mix(in srgb, var(--sr-accent) 45%, transparent);
+  box-shadow: 0 0 32px color-mix(in srgb, var(--sr-accent) 18%, transparent);
+}
+
+.sr-chapter-pick small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.72rem;
+  color: #64748b;
+}

@@ -1,0 +1,301 @@
+{
+  "sku": "cbse12-science",
+  "title": "CBSE XII Science",
+  "displayName": "CBSE Class 12 Science",
+  "locale": "en-IN",
+  "session": "2025-26",
+  "subjects": {
+    "physics": {
+      "label": "Physics",
+      "icon": "⚛️",
+      "code": "042",
+      "grade": "12",
+      "chapters": [
+        {
+          "id": "alternating-current",
+          "title": "Alternating Current",
+          "questionCount": 13
+        },
+        {
+          "id": "atoms",
+          "title": "Atoms",
+          "questionCount": 60
+        },
+        {
+          "id": "current-electricity",
+          "title": "Current Electricity",
+          "questionCount": 407
+        },
+        {
+          "id": "dual-nature-radiation",
+          "title": "Dual Nature of Radiation and Matter",
+          "questionCount": 116
+        },
+        {
+          "id": "electric-charges-fields",
+          "title": "Electric Charges and Fields",
+          "questionCount": 664
+        },
+        {
+          "id": "electromagnetic-induction",
+          "title": "Electromagnetic Induction",
+          "questionCount": 2
+        },
+        {
+          "id": "electromagnetic-waves",
+          "title": "Electromagnetic Waves",
+          "questionCount": 83
+        },
+        {
+          "id": "electrostatic-potential-capacitance",
+          "title": "Electrostatic Potential and Capacitance",
+          "questionCount": 213
+        },
+        {
+          "id": "magnetism-matter",
+          "title": "Magnetism and Matter",
+          "questionCount": 27
+        },
+        {
+          "id": "moving-charges-magnetism",
+          "title": "Moving Charges and Magnetism",
+          "questionCount": 48
+        },
+        {
+          "id": "nuclei",
+          "title": "Nuclei",
+          "questionCount": 57
+        },
+        {
+          "id": "ray-optics-instruments",
+          "title": "Ray Optics and Optical Instruments",
+          "questionCount": 220
+        },
+        {
+          "id": "semiconductor-electronics",
+          "title": "Semiconductor Electronics",
+          "questionCount": 127
+        },
+        {
+          "id": "wave-optics",
+          "title": "Wave Optics",
+          "questionCount": 91
+        }
+      ]
+    },
+    "chemistry": {
+      "label": "Chemistry",
+      "icon": "🧪",
+      "code": "043",
+      "grade": "12",
+      "chapters": [
+        {
+          "id": "alcohols-phenols-ethers",
+          "title": "Alcohols, Phenols and Ethers",
+          "questionCount": 176
+        },
+        {
+          "id": "aldehydes-ketones-carboxylic-acids",
+          "title": "Aldehydes, Ketones and Carboxylic Acids",
+          "questionCount": 86
+        },
+        {
+          "id": "amines",
+          "title": "Amines",
+          "questionCount": 76
+        },
+        {
+          "id": "biomolecules",
+          "title": "Biomolecules",
+          "questionCount": 176
+        },
+        {
+          "id": "chemical-kinetics",
+          "title": "Chemical Kinetics",
+          "questionCount": 218
+        },
+        {
+          "id": "coordination-compounds",
+          "title": "Coordination Compounds",
+          "questionCount": 167
+        },
+        {
+          "id": "electrochemistry",
+          "title": "Electrochemistry",
+          "questionCount": 162
+        },
+        {
+          "id": "haloalkanes-haloarenes",
+          "title": "Haloalkanes and Haloarenes",
+          "questionCount": 121
+        },
+        {
+          "id": "solutions",
+          "title": "Solutions",
+          "questionCount": 1146
+        },
+        {
+          "id": "d-f-block-elements",
+          "title": "d and f Block Elements",
+          "questionCount": 123
+        }
+      ]
+    },
+    "biology": {
+      "label": "Biology",
+      "icon": "🧬",
+      "code": "044",
+      "grade": "12",
+      "chapters": [
+        {
+          "id": "biodiversity-conservation",
+          "title": "Biodiversity and Conservation",
+          "questionCount": 46
+        },
+        {
+          "id": "biotechnology-principles",
+          "title": "Biotechnology - Principles and Processes",
+          "questionCount": 160
+        },
+        {
+          "id": "biotechnology-applications",
+          "title": "Biotechnology and its Application",
+          "questionCount": 53
+        },
+        {
+          "id": "ecosystem",
+          "title": "Ecosystem",
+          "questionCount": 74
+        },
+        {
+          "id": "evolution",
+          "title": "Evolution",
+          "questionCount": 57
+        },
+        {
+          "id": "human-health-diseases",
+          "title": "Human Health and Diseases",
+          "questionCount": 159
+        },
+        {
+          "id": "human-reproduction",
+          "title": "Human Reproduction",
+          "questionCount": 91
+        },
+        {
+          "id": "microbes-human-welfare",
+          "title": "Microbes in Human Welfare",
+          "questionCount": 71
+        },
+        {
+          "id": "molecular-basis-inheritance",
+          "title": "Molecular Basis of Inheritance",
+          "questionCount": 121
+        },
+        {
+          "id": "organisms-populations",
+          "title": "Organisms and Populations",
+          "questionCount": 102
+        },
+        {
+          "id": "principles-inheritance-variation",
+          "title": "Principles of Inheritance and Variation",
+          "questionCount": 164
+        },
+        {
+          "id": "reproductive-health",
+          "title": "Reproductive Health",
+          "questionCount": 52
+        },
+        {
+          "id": "sexual-reproduction-flowering-plants",
+          "title": "Sexual Reproduction in Flowering Plants",
+          "questionCount": 960
+        }
+      ]
+    },
+    "mathematics": {
+      "label": "Mathematics",
+      "icon": "📐",
+      "code": "041",
+      "grade": "12",
+      "chapters": [
+        {
+          "id": "application-derivatives",
+          "title": "Application of Derivatives",
+          "questionCount": 17
+        },
+        {
+          "id": "application-integrals",
+          "title": "Application of Integrals",
+          "questionCount": 10
+        },
+        {
+          "id": "continuity-differentiability",
+          "title": "Continuity and Differentiability",
+          "questionCount": 29
+        },
+        {
+          "id": "determinants",
+          "title": "Determinants",
+          "questionCount": 33
+        },
+        {
+          "id": "differential-equations",
+          "title": "Differential Equations",
+          "questionCount": 145
+        },
+        {
+          "id": "integrals",
+          "title": "Integrals",
+          "questionCount": 46
+        },
+        {
+          "id": "inverse-trig-functions",
+          "title": "Inverse Trigonometric Functions",
+          "questionCount": 14
+        },
+        {
+          "id": "linear-programming",
+          "title": "Linear Programming",
+          "questionCount": 67
+        },
+        {
+          "id": "matrices",
+          "title": "Matrices",
+          "questionCount": 146
+        },
+        {
+          "id": "probability",
+          "title": "Probability",
+          "questionCount": 136
+        },
+        {
+          "id": "relations-functions",
+          "title": "Relations and Functions",
+          "questionCount": 1065
+        },
+        {
+          "id": "three-dimensional-geometry",
+          "title": "Three Dimensional Geometry",
+          "questionCount": 69
+        },
+        {
+          "id": "vector-algebra",
+          "title": "Vector Algebra",
+          "questionCount": 202
+        }
+      ]
+    }
+  },
+  "stats": {
+    "total_questions": 8668,
+    "by_subject": {
+      "physics": 2128,
+      "chemistry": 2451,
+      "biology": 2110,
+      "mathematics": 1979
+    }
+  },
+  "sources_note": "C:\\Knowledge\\EDUCATION\\CBSE-11-12-SCIENCE\\Question Bank"
+}
