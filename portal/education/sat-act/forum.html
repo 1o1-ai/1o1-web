@@ -6,42 +6,45 @@
   <title>Discussion Forum · SAT / ACT</title>
   <link rel="stylesheet" href="../../../assets/theme.css" />
   <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="../cbse10/cbse10-forum.css" />
 </head>
-<body class="portal-page">
+<body class="portal-page forum-page-full" data-sku="sat-act">
   <canvas id="cosmos" aria-hidden="true"></canvas>
   <header class="portal-header">
     <a class="back-link" href="index.html">← SAT / ACT Hub</a>
     <h1>Discussion Forum</h1>
   </header>
-  <main class="portal-main forum-main">
-    <aside class="forum-sidebar">
-      <div class="sahadeva-card">
-        <div class="sahadeva-avatar">🛡️</div>
-        <strong>Study Assistant</strong>
-        <span>TruthGuard · US admissions</span>
-        <p class="hint">Skill predictions &amp; passage tips — grounded in official materials.</p>
+  <main class="portal-main forum-main forum-main-full">
+    <div class="forum-toolbar">
+      <div class="forum-filters">
+        <label for="forumSubject">Section</label>
+        <select id="forumSubject">
+          <option value="all">All sections</option>
+          <option value="sat-reading-writing">SAT Reading &amp; Writing</option>
+          <option value="sat-math">SAT Mathematics</option>
+          <option value="act-english">ACT English</option>
+          <option value="act-math">ACT Mathematics</option>
+          <option value="act-reading">ACT Reading</option>
+          <option value="act-science">ACT Science</option>
+        </select>
+        <label for="forumChapter">Skill chapter</label>
+        <select id="forumChapter"><option value="all">All chapters</option></select>
       </div>
-      <label>Filter track</label>
-      <select id="forumTrack"><option value="all">All</option><option value="sat">SAT</option><option value="act">ACT</option></select>
-      <p class="forum-stats">Forum threads share the same layout as CBSE — US/UK student personas.</p>
-    </aside>
-    <section class="forum-content">
-      <div class="thread-list">
-        <article class="thread-card">
-          <h3>ACT English — comma vs semicolon on passage 2</h3>
-          <p class="hint">Emma Wilson · Portland, OR · 12 replies</p>
-        </article>
-        <article class="thread-card">
-          <h3>SAT Math — quadratic word problems timing</h3>
-          <p class="hint">Oliver Hall · Manchester, UK · 8 replies</p>
-        </article>
-        <article class="thread-card">
-          <h3>Bluebook vs Khan — which to trust for score estimate?</h3>
-          <p class="hint">Liam Anderson · Austin, TX · 24 replies</p>
-        </article>
-      </div>
+      <p class="forum-stats" id="forumStats"></p>
+    </div>
+    <section class="forum-content forum-content-full">
+      <div id="threadList" class="thread-list"></div>
+      <article id="threadDetail" class="thread-detail forum-hidden" aria-hidden="true">
+        <button type="button" class="back-link" id="btnBackList" style="border:none;background:none;cursor:pointer;margin-bottom:12px">← All threads</button>
+        <h2 id="threadTitle"></h2>
+        <p id="threadMeta" class="hint"></p>
+        <div id="threadPosts"></div>
+      </article>
     </section>
   </main>
   <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/academy-config.js"></script>
+  <script src="../../assets/portal.js"></script>
+  <script src="../../assets/academy-forum.js?v=9"></script>
 </body>
 </html>

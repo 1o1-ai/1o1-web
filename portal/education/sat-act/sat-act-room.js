@@ -80,14 +80,16 @@
 
   Promise.all([
     fetch(curPath).then((r) => r.json()),
-    fetch(bankPath)
-      .then((r) => (r.ok ? r.json() : { questions: [] }))
-      .catch(() => ({ questions: [] })),
+    window.SatActShared?.loadVerifiedBank?.() ||
+      fetch(bankPath)
+        .then((r) => (r.ok ? r.json() : { questions: [] }))
+        .catch(() => ({ questions: [] }))
+        .then((d) => (d.questions || []).filter((q) => q.answer_verified)),
     window.AnyoBots?.loadRoster?.() || Promise.resolve({ students: [] }),
   ])
     .then(([cur, bank, roster]) => {
       curriculum = cur;
-      verifiedBank = (bank.questions || []).filter((q) => (q.options || []).length >= 2);
+      verifiedBank = Array.isArray(bank) ? bank : (bank.questions || []).filter((q) => (q.options || []).length >= 2);
       renderStudents(roster?.students || [], 'studentsRoster');
       renderStudents(roster?.students || [], 'learnStudentsRoster');
       renderIngestBadge();
@@ -293,6 +295,15 @@
   }
 
   function filterQuestions(limit) {
+    if (window.SatActShared?.filterQuestions) {
+      const pool = window.SatActShared.filterQuestions(verifiedBank, {
+        track,
+        section: legacySectionKey(),
+        chapter: chapterId,
+        limit,
+      });
+      if (pool.length) return pool;
+    }
     const legSec = legacySectionKey().toLowerCase();
     const subSection = (curriculum?.subjects?.[subjectId]?.section || '').toLowerCase();
     const sectionKey = subSection || legSec;
@@ -316,10 +327,18 @@
   }
 
   function toQuizItem(q) {
+    const display = window.SatActShared?.toDisplayQ ? window.SatActShared.toDisplayQ(q) : q;
     return {
-      prompt: q.question || q.prompt,
-      options: q.options || [],
-      correctIndex: q.correctIndex != null ? q.correctIndex : q.correct_index,
+      prompt: display.prompt || q.question || q.prompt,
+      options: display.options || q.options || [],
+      optionLabels: display.optionLabels || q.option_labels,
+      correctIndex:
+        display.correctIndex != null
+          ? display.correctIndex
+          : q.correctIndex != null
+            ? q.correctIndex
+            : q.correct_index,
+      passageContext: display.passageContext || q.passage_context,
     };
   }
 
@@ -340,7 +359,11 @@
     const chat = document.getElementById('evalChat');
     const q = quizQuestions[quizIndex];
     if (!q) return;
-    chat.innerHTML = `<p style="font-size:0.75rem;color:#94a3b8">Question ${quizIndex + 1} of ${quizQuestions.length}</p>
+    let passageHtml = '';
+    if (q.passageContext) {
+      passageHtml = `<div class="mock-passage-block" style="max-height:180px;margin-bottom:12px"><h4>Passage</h4><p>${String(q.passageContext).replace(/\n/g, '<br>')}</p></div>`;
+    }
+    chat.innerHTML = `${passageHtml}<p style="font-size:0.75rem;color:#94a3b8">Question ${quizIndex + 1} of ${quizQuestions.length}</p>
       <p style="margin:12px 0;font-weight:500">${String(q.prompt).replace(/\n/g, '<br>')}</p>
       <div id="quizOpts"></div>`;
     const opts = chat.querySelector('#quizOpts');
@@ -348,7 +371,8 @@
       const b = document.createElement('button');
       b.type = 'button';
       b.className = 'quiz-option';
-      b.textContent = `${String.fromCharCode(65 + i)}. ${opt}`;
+      const letter = q.optionLabels?.[i] || String.fromCharCode(65 + i);
+      b.textContent = `${letter}. ${opt}`;
       b.addEventListener('click', () => {
         quizAnswers.push(i);
         quizIndex++;

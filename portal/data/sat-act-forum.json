@@ -1,0 +1,1006 @@
+{
+  "version": 1,
+  "sku": "sat-act",
+  "generated_at": "2026-06-24T21:24:25.671416+00:00",
+  "assistant": {
+    "id": "truthguard",
+    "name": "TruthGuard",
+    "brand": "ManjuLAB Study Assistant · US admissions"
+  },
+  "threads": [
+    {
+      "id": "thr_act_act-english_0000",
+      "title": "ACT English pacing — how do you finish all 75 questions in 45 minutes?",
+      "subject": "act-english",
+      "chapter": "act-english",
+      "chapter_title": "ACT English",
+      "track": "act",
+      "grade": "11-12",
+      "tags": [
+        "pacing",
+        "timing",
+        "english",
+        "voltaic_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_noah_taylor",
+          "author_name": "Noah Taylor",
+          "author_role": "student",
+          "location": "Wilmington, US",
+          "photo": "https://randomuser.me/api/portraits/men/23.jpg",
+          "body": "I always run out of time on passage 4. Should I skip and come back or answer every line?",
+          "created_at": "2026-06-13T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_olivia_clark",
+          "author_name": "Olivia Clark",
+          "author_role": "student",
+          "location": "Greenwood Village, US",
+          "photo": "https://randomuser.me/api/portraits/women/28.jpg",
+          "body": "Our counselor says 45 seconds per question max. I underline transitions first then scan options.",
+          "created_at": "2026-06-14T06:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_michael_brooks",
+          "author_name": "Michael Brooks",
+          "author_role": "teacher",
+          "location": "Newton North High School, MA",
+          "photo": "https://randomuser.me/api/portraits/men/13.jpg",
+          "body": "Official ACT strategy: work passage-by-passage. Never leave blanks — no penalty for guessing.",
+          "created_at": "2026-06-14T09:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_noah_taylor",
+          "author_name": "Noah Taylor",
+          "author_role": "student",
+          "location": "Wilmington, US",
+          "photo": "https://randomuser.me/api/portraits/men/23.jpg",
+          "body": "The ingested Preparing for the ACT PDF has the exact 75-question layout. Practice with that timing.",
+          "created_at": "2026-06-14T09:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_act_act-english_0001",
+      "title": "Comma vs semicolon vs period — ACT Standard English traps",
+      "subject": "act-english",
+      "chapter": "act-english",
+      "chapter_title": "ACT English",
+      "track": "act",
+      "grade": "11-12",
+      "tags": [
+        "grammar",
+        "punctuation",
+        "voltaic_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_harry_king",
+          "author_name": "Harry King",
+          "author_role": "student",
+          "location": "Windsor, UK",
+          "photo": "https://randomuser.me/api/portraits/men/33.jpg",
+          "body": "Passage 2 Q7 had NO CHANGE vs DELETE — both looked fine. How do you pick?",
+          "created_at": "2026-06-14T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_emma_wilson",
+          "author_name": "Emma Wilson",
+          "author_role": "student",
+          "location": "Portland, US",
+          "photo": "https://randomuser.me/api/portraits/women/20.jpg",
+          "body": "If two independent clauses, you need period or semicolon. Comma alone is usually wrong on ACT.",
+          "created_at": "2026-06-15T01:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_michael_brooks",
+          "author_name": "Michael Brooks",
+          "author_role": "teacher",
+          "location": "Newton North High School, MA",
+          "photo": "https://randomuser.me/api/portraits/men/13.jpg",
+          "body": "Read the sentence without the underlined portion. If it still makes sense, DELETE is often correct.",
+          "created_at": "2026-06-15T15:24:25.671416+00:00"
+        },
+        {
+          "author_id": "truthguard",
+          "author_name": "TruthGuard",
+          "author_role": "assistant",
+          "location": "ManjuLAB · Official materials only",
+          "photo": "",
+          "disclaimer": "AI study assistant — verify against College Board / ACT.org sources.",
+          "body": "ACT English tests concise, clear writing. Shorter is often better when grammar stays correct.",
+          "created_at": "2026-06-17T03:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-rw-craft_0002",
+      "title": "SAT vocabulary in context — eliminate fancy words that don't fit",
+      "subject": "sat-reading-writing",
+      "chapter": "sat-rw-craft",
+      "chapter_title": "Craft and Structure",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "vocabulary",
+        "reading",
+        "voltaic_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_emma_wilson",
+          "author_name": "Emma Wilson",
+          "author_role": "student",
+          "location": "Portland, US",
+          "photo": "https://randomuser.me/api/portraits/women/20.jpg",
+          "body": "Digital SAT loves near-synonyms. I draft my own word before looking at choices.",
+          "created_at": "2026-06-14T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_william_baker",
+          "author_name": "William Baker",
+          "author_role": "student",
+          "location": "Hinsdale, US",
+          "photo": "https://randomuser.me/api/portraits/men/37.jpg",
+          "body": "If the passage tone is skeptical, don't pick enthusiastic even if it's a real word.",
+          "created_at": "2026-06-15T12:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_michael_brooks",
+          "author_name": "Michael Brooks",
+          "author_role": "teacher",
+          "location": "Newton North High School, MA",
+          "photo": "https://randomuser.me/api/portraits/men/13.jpg",
+          "body": "College Board skill: Craft & Structure. Link word choice to author's purpose, not dictionary definition.",
+          "created_at": "2026-06-16T05:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_emily_nelson",
+          "author_name": "Emily Nelson",
+          "author_role": "student",
+          "location": "Edina, US",
+          "photo": "https://randomuser.me/api/portraits/women/38.jpg",
+          "body": "Bluebook adaptive module 2 felt harder — anyone else see harder vocab?",
+          "created_at": "2026-06-16T03:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-rw-info_0003",
+      "title": "Main idea vs supporting detail on Digital SAT short passages",
+      "subject": "sat-reading-writing",
+      "chapter": "sat-rw-info",
+      "chapter_title": "Information and Ideas",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "main-idea",
+        "reading",
+        "voltaic_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_emma_wilson",
+          "author_name": "Emma Wilson",
+          "author_role": "student",
+          "location": "Portland, US",
+          "photo": "https://randomuser.me/api/portraits/women/20.jpg",
+          "body": "How do you tell 'central claim' from 'evidence' when both answers quote the passage?",
+          "created_at": "2026-06-11T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_harry_king",
+          "author_name": "Harry King",
+          "author_role": "student",
+          "location": "Windsor, UK",
+          "photo": "https://randomuser.me/api/portraits/men/33.jpg",
+          "body": "Central claim = what author wants you to believe. Evidence = the data or example backing it.",
+          "created_at": "2026-06-12T09:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "King Edward VI School, Birmingham, UK",
+          "photo": "https://randomuser.me/api/portraits/women/14.jpg",
+          "body": "Cross out answers that are true but too narrow or too broad — classic SAT trap.",
+          "created_at": "2026-06-12T09:24:25.671416+00:00"
+        },
+        {
+          "author_id": "truthguard",
+          "author_name": "TruthGuard",
+          "author_role": "assistant",
+          "location": "ManjuLAB · Official materials only",
+          "photo": "",
+          "disclaimer": "AI study assistant — verify against College Board / ACT.org sources.",
+          "body": "Information and Ideas items often pair a chart with text. Read the chart title first.",
+          "created_at": "2026-06-12T21:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-rw-grammar_0004",
+      "title": "Subject-verb agreement when the subject is buried in a long clause",
+      "subject": "sat-reading-writing",
+      "chapter": "sat-rw-grammar",
+      "chapter_title": "Standard English Conventions",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "grammar",
+        "conventions",
+        "voltaic_study"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_charlotte_walker",
+          "author_name": "Charlotte Walker",
+          "author_role": "student",
+          "location": "Birmingham, UK",
+          "photo": "https://randomuser.me/api/portraits/women/30.jpg",
+          "body": "The SAT puts the verb far from the subject. I bracket the true subject now.",
+          "created_at": "2026-06-11T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_sophia_martin",
+          "author_name": "Sophia Martin",
+          "author_role": "student",
+          "location": "Newton, US",
+          "photo": "https://randomuser.me/api/portraits/women/22.jpg",
+          "body": "Collective nouns (team, group) are usually singular on SAT unless context says individuals.",
+          "created_at": "2026-06-12T11:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_james_mitchell",
+          "author_name": "James Mitchell",
+          "author_role": "teacher",
+          "location": "Westlake Academy, Austin, TX",
+          "photo": "https://randomuser.me/api/portraits/men/11.jpg",
+          "body": "Standard English Conventions = same rules as ACT but shorter passages. Trust your ear after rules check.",
+          "created_at": "2026-06-12T23:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-rw-expression_0005",
+      "title": "Transition words for Expression of Ideas — however vs therefore vs moreover",
+      "subject": "sat-reading-writing",
+      "chapter": "sat-rw-expression",
+      "chapter_title": "Expression of Ideas",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "transitions",
+        "writing",
+        "voltaic_study"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_oliver_hall",
+          "author_name": "Oliver Hall",
+          "author_role": "student",
+          "location": "Manchester, UK",
+          "photo": "https://randomuser.me/api/portraits/men/31.jpg",
+          "body": "I mix up contrast vs cause-effect transitions. Any mnemonic?",
+          "created_at": "2026-06-10T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_liam_anderson",
+          "author_name": "Liam Anderson",
+          "author_role": "student",
+          "location": "Austin, US",
+          "photo": "https://randomuser.me/api/portraits/men/21.jpg",
+          "body": "However/but = contrast. Therefore/thus = result. Moreover/furthermore = add similar point.",
+          "created_at": "2026-06-11T13:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_james_mitchell",
+          "author_name": "James Mitchell",
+          "author_role": "teacher",
+          "location": "Westlake Academy, Austin, TX",
+          "photo": "https://randomuser.me/api/portraits/men/11.jpg",
+          "body": "Expression of Ideas also tests sentence order — read paragraph as story flow.",
+          "created_at": "2026-06-12T01:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-math-algebra_0006",
+      "title": "Systems of equations on SAT — substitution vs elimination?",
+      "subject": "sat-math",
+      "chapter": "sat-math-algebra",
+      "chapter_title": "Heart of Algebra",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "algebra",
+        "systems"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_william_baker",
+          "author_name": "William Baker",
+          "author_role": "student",
+          "location": "Hinsdale, US",
+          "photo": "https://randomuser.me/api/portraits/men/37.jpg",
+          "body": "When one equation is already y=..., I substitute. Otherwise elimination for coefficients.",
+          "created_at": "2026-06-22T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_oliver_wright",
+          "author_name": "Oliver Wright",
+          "author_role": "teacher",
+          "location": "Manchester Grammar School, UK",
+          "photo": "https://randomuser.me/api/portraits/men/15.jpg",
+          "body": "Desmos on Digital SAT: graph both lines, intersection is solution. Official calculator allowed entire math section.",
+          "created_at": "2026-06-23T05:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_sophia_martin",
+          "author_name": "Sophia Martin",
+          "author_role": "student",
+          "location": "Newton, US",
+          "photo": "https://randomuser.me/api/portraits/women/22.jpg",
+          "body": "Heart of Algebra is ~30% of SAT math. Linear functions and inequalities show up every test.",
+          "created_at": "2026-06-23T03:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-math-advanced_0007",
+      "title": "Quadratic word problems — setting up the equation from English",
+      "subject": "sat-math",
+      "chapter": "sat-math-advanced",
+      "chapter_title": "Passport to Advanced Math",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "quadratics",
+        "word-problems"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_lucas_harris",
+          "author_name": "Lucas Harris",
+          "author_role": "student",
+          "location": "Orlando, US",
+          "photo": "https://randomuser.me/api/portraits/men/27.jpg",
+          "body": "I lose points translating 'product of two consecutive integers' into algebra.",
+          "created_at": "2026-06-13T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_sophia_martin",
+          "author_name": "Sophia Martin",
+          "author_role": "student",
+          "location": "Newton, US",
+          "photo": "https://randomuser.me/api/portraits/women/22.jpg",
+          "body": "Define variable first. Consecutive = n and n+1. Product = multiply. Area = length × width.",
+          "created_at": "2026-06-14T06:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_james_mitchell",
+          "author_name": "James Mitchell",
+          "author_role": "teacher",
+          "location": "Westlake Academy, Austin, TX",
+          "photo": "https://randomuser.me/api/portraits/men/11.jpg",
+          "body": "Advanced Math includes exponentials and polynomials. Factor when possible before quadratic formula.",
+          "created_at": "2026-06-15T01:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-math-psda_0008",
+      "title": "Ratios, percentages, and unit conversion — PSDA drill thread",
+      "subject": "sat-math",
+      "chapter": "sat-math-psda",
+      "chapter_title": "Problem Solving & Data Analysis",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "ratios",
+        "data"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_grace_scott",
+          "author_name": "Grace Scott",
+          "author_role": "student",
+          "location": "High Wycombe, UK",
+          "photo": "https://randomuser.me/api/portraits/women/34.jpg",
+          "body": "Table questions: do you read row-first or column-first?",
+          "created_at": "2026-06-19T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_ethan_jackson",
+          "author_name": "Ethan Jackson",
+          "author_role": "student",
+          "location": "New York, US",
+          "photo": "https://randomuser.me/api/portraits/men/25.jpg",
+          "body": "Label units on every step. PSDA loves percent increase vs percent of confusion.",
+          "created_at": "2026-06-20T10:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_oliver_wright",
+          "author_name": "Oliver Wright",
+          "author_role": "teacher",
+          "location": "Manchester Grammar School, UK",
+          "photo": "https://randomuser.me/api/portraits/men/15.jpg",
+          "body": "Problem Solving & Data Analysis = real-world stats. Check if answer should be bigger or smaller than start.",
+          "created_at": "2026-06-20T13:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-math-geometry_0009",
+      "title": "Circle equations and arc length — geometry thread",
+      "subject": "sat-math",
+      "chapter": "sat-math-geometry",
+      "chapter_title": "Geometry & Trigonometry",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "geometry",
+        "trig"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_olivia_clark",
+          "author_name": "Olivia Clark",
+          "author_role": "student",
+          "location": "Greenwood Village, US",
+          "photo": "https://randomuser.me/api/portraits/women/28.jpg",
+          "body": "Memorized SOHCAHTOA but SAT also gives sine in unit circle form. Which shows up more?",
+          "created_at": "2026-06-13T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_sarah_thompson",
+          "author_name": "Sarah Thompson",
+          "author_role": "teacher",
+          "location": "Charter School of Wilmington, DE",
+          "photo": "https://randomuser.me/api/portraits/women/12.jpg",
+          "body": "Geometry & Trig is smaller slice but high yield. Know special right triangles 30-60-90 and 45-45-90.",
+          "created_at": "2026-06-14T06:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_ethan_jackson",
+          "author_name": "Ethan Jackson",
+          "author_role": "student",
+          "location": "New York, US",
+          "photo": "https://randomuser.me/api/portraits/men/25.jpg",
+          "body": "For diagrams: College Board uses clean figures — sketch on scratch paper if no diagram given.",
+          "created_at": "2026-06-15T05:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_act_act-math_0010",
+      "title": "ACT Math calculator policy — when to mental-math vs TI-84",
+      "subject": "act-math",
+      "chapter": "act-math",
+      "chapter_title": "ACT Mathematics",
+      "track": "act",
+      "grade": "11-12",
+      "tags": [
+        "calculator",
+        "math"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_olivia_clark",
+          "author_name": "Olivia Clark",
+          "author_role": "student",
+          "location": "Greenwood Village, US",
+          "photo": "https://randomuser.me/api/portraits/women/28.jpg",
+          "body": "ACT allows calculator entire section unlike old SAT. Still, easy arithmetic faster in head.",
+          "created_at": "2026-06-17T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_oliver_wright",
+          "author_name": "Oliver Wright",
+          "author_role": "teacher",
+          "location": "Manchester Grammar School, UK",
+          "photo": "https://randomuser.me/api/portraits/men/15.jpg",
+          "body": "60 questions in 60 minutes = 1 min each. Skip hard ones, bubble back.",
+          "created_at": "2026-06-18T00:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_lucas_harris",
+          "author_name": "Lucas Harris",
+          "author_role": "student",
+          "location": "Orlando, US",
+          "photo": "https://randomuser.me/api/portraits/men/27.jpg",
+          "body": "Pre-algebra through trig all fair game. Matrices show up rarely.",
+          "created_at": "2026-06-18T03:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_act_act-reading_0011",
+      "title": "Prose fiction vs social science passages — different strategies?",
+      "subject": "act-reading",
+      "chapter": "act-reading",
+      "chapter_title": "ACT Reading",
+      "track": "act",
+      "grade": "11-12",
+      "tags": [
+        "reading",
+        "passages"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_charlotte_walker",
+          "author_name": "Charlotte Walker",
+          "author_role": "student",
+          "location": "Birmingham, UK",
+          "photo": "https://randomuser.me/api/portraits/women/30.jpg",
+          "body": "Fiction: track character motivation. Social science: find thesis in first paragraph.",
+          "created_at": "2026-06-11T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "King Edward VI School, Birmingham, UK",
+          "photo": "https://randomuser.me/api/portraits/women/14.jpg",
+          "body": "40 questions, 35 minutes — don't read every word. Map paragraph purpose.",
+          "created_at": "2026-06-12T01:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_mia_white",
+          "author_name": "Mia White",
+          "author_role": "student",
+          "location": "Beverly Hills, US",
+          "photo": "https://randomuser.me/api/portraits/women/26.jpg",
+          "body": "Line reference questions: read 2 sentences before and after the cited line.",
+          "created_at": "2026-06-12T21:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_act_act-science_0012",
+      "title": "ACT Science data representation — graphs without reading full passage",
+      "subject": "act-science",
+      "chapter": "act-science",
+      "chapter_title": "ACT Science",
+      "track": "act",
+      "grade": "11-12",
+      "tags": [
+        "science",
+        "graphs"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_jack_green",
+          "author_name": "Jack Green",
+          "author_role": "student",
+          "location": "London, UK",
+          "photo": "https://randomuser.me/api/portraits/men/35.jpg",
+          "body": "Is ACT Science really reading comprehension? Feels like chart literacy.",
+          "created_at": "2026-06-20T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_daniel_foster",
+          "author_name": "Daniel Foster",
+          "author_role": "teacher",
+          "location": "Phillips Exeter Academy, NH",
+          "photo": "https://randomuser.me/api/portraits/men/17.jpg",
+          "body": "Correct — minimal outside science knowledge. Focus on trends, axes, and conflicting viewpoints.",
+          "created_at": "2026-06-21T03:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_olivia_clark",
+          "author_name": "Olivia Clark",
+          "author_role": "student",
+          "location": "Greenwood Village, US",
+          "photo": "https://randomuser.me/api/portraits/women/28.jpg",
+          "body": "For diagram items: vector-first sketches help — label axes before answering.",
+          "created_at": "2026-06-21T09:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-rw-craft_0013",
+      "title": "Bluebook vs Khan Academy — which predicts my real SAT score?",
+      "subject": "sat-reading-writing",
+      "chapter": "sat-rw-craft",
+      "chapter_title": "Craft and Structure",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "bluebook",
+        "khan",
+        "score"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_william_baker",
+          "author_name": "William Baker",
+          "author_role": "student",
+          "location": "Hinsdale, US",
+          "photo": "https://randomuser.me/api/portraits/men/37.jpg",
+          "body": "Khan felt easier than Bluebook module 2. Is that normal adaptive difficulty?",
+          "created_at": "2026-06-20T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_hannah_clark",
+          "author_name": "Hannah Clark",
+          "author_role": "teacher",
+          "location": "St Paul's School, London, UK",
+          "photo": "https://randomuser.me/api/portraits/women/16.jpg",
+          "body": "College Board says Bluebook full practice tests are best predictors. Khan good for skill drills.",
+          "created_at": "2026-06-21T11:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_oliver_hall",
+          "author_name": "Oliver Hall",
+          "author_role": "student",
+          "location": "Manchester, UK",
+          "photo": "https://randomuser.me/api/portraits/men/31.jpg",
+          "body": "Our school uses linear PDF practice tests for timing — adaptive is different beast.",
+          "created_at": "2026-06-21T15:24:25.671416+00:00"
+        },
+        {
+          "author_id": "truthguard",
+          "author_name": "TruthGuard",
+          "author_role": "assistant",
+          "location": "ManjuLAB · Official materials only",
+          "photo": "",
+          "disclaimer": "AI study assistant — verify against College Board / ACT.org sources.",
+          "body": "Use official linear PDFs for paper-style timing; Bluebook app for digital interface practice.",
+          "created_at": "2026-06-21T15:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_act_act-english_0014",
+      "title": "Official Preparing for the ACT PDF — how to use the 3 practice tests",
+      "subject": "act-english",
+      "chapter": "act-english",
+      "chapter_title": "ACT English",
+      "track": "act",
+      "grade": "11-12",
+      "tags": [
+        "official",
+        "pdf",
+        "practice"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_jack_green",
+          "author_name": "Jack Green",
+          "author_role": "student",
+          "location": "London, UK",
+          "photo": "https://randomuser.me/api/portraits/men/35.jpg",
+          "body": "We ingested 125+ verified ACT English items from act.org PDFs. Scoring keys on pages 72+.",
+          "created_at": "2026-06-15T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_emily_hart",
+          "author_name": "Emily Hart",
+          "author_role": "teacher",
+          "location": "Lincoln High School, Portland, OR",
+          "photo": "https://randomuser.me/api/portraits/women/10.jpg",
+          "body": "Take Test 1 timed. Review every wrong answer against the official scoring guide.",
+          "created_at": "2026-06-16T02:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_ava_thomas",
+          "author_name": "Ava Thomas",
+          "author_role": "student",
+          "location": "Exeter, US",
+          "photo": "https://randomuser.me/api/portraits/women/24.jpg",
+          "body": "Passage context matters — same passage has 15 linked questions. Don't skim between Qs.",
+          "created_at": "2026-06-16T11:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-math-geometry_0015",
+      "title": "Desmos graphing calculator tips for SAT Math",
+      "subject": "sat-math",
+      "chapter": "sat-math-geometry",
+      "chapter_title": "Geometry & Trigonometry",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "desmos",
+        "calculator"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_harry_king",
+          "author_name": "Harry King",
+          "author_role": "student",
+          "location": "Windsor, UK",
+          "photo": "https://randomuser.me/api/portraits/men/33.jpg",
+          "body": "Built-in Desmos can solve systems graphically — game changer for module 2.",
+          "created_at": "2026-06-11T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_hannah_clark",
+          "author_name": "Hannah Clark",
+          "author_role": "teacher",
+          "location": "St Paul's School, London, UK",
+          "photo": "https://randomuser.me/api/portraits/women/16.jpg",
+          "body": "Official Digital SAT: calculator allowed all math. Still show work for grid-ins mentally.",
+          "created_at": "2026-06-12T11:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_henry_carter",
+          "author_name": "Henry Carter",
+          "author_role": "student",
+          "location": "Rugby, UK",
+          "photo": "https://randomuser.me/api/portraits/men/39.jpg",
+          "body": "Regression line on scatter plot — use Desmos table feature for line of best fit.",
+          "created_at": "2026-06-13T05:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_act_act-math_0016",
+      "title": "ACT composite score math — how sections combine to 1–36",
+      "subject": "act-math",
+      "chapter": "act-math",
+      "chapter_title": "ACT Mathematics",
+      "track": "act",
+      "grade": "11-12",
+      "tags": [
+        "scoring",
+        "composite"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_olivia_clark",
+          "author_name": "Olivia Clark",
+          "author_role": "student",
+          "location": "Greenwood Village, US",
+          "photo": "https://randomuser.me/api/portraits/women/28.jpg",
+          "body": "English raw 65/75 — what's that scaled? Conversion table changes each test.",
+          "created_at": "2026-06-15T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_james_mitchell",
+          "author_name": "James Mitchell",
+          "author_role": "teacher",
+          "location": "Westlake Academy, Austin, TX",
+          "photo": "https://randomuser.me/api/portraits/men/11.jpg",
+          "body": "ACT publishes rough conversion in Preparing guide. Focus on consistent raw improvement.",
+          "created_at": "2026-06-16T07:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_charlotte_walker",
+          "author_name": "Charlotte Walker",
+          "author_role": "student",
+          "location": "Birmingham, UK",
+          "photo": "https://randomuser.me/api/portraits/women/30.jpg",
+          "body": "Section mock here shows raw + estimated scaled when we have enough items.",
+          "created_at": "2026-06-16T07:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-rw-info_0017",
+      "title": "Dual passages — comparing two authors on SAT Reading & Writing",
+      "subject": "sat-reading-writing",
+      "chapter": "sat-rw-info",
+      "chapter_title": "Information and Ideas",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "dual-passage",
+        "comparison"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_harry_king",
+          "author_name": "Harry King",
+          "author_role": "student",
+          "location": "Windsor, UK",
+          "photo": "https://randomuser.me/api/portraits/men/33.jpg",
+          "body": "Do you read passage A fully before B or alternate paragraphs?",
+          "created_at": "2026-06-19T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_grace_scott",
+          "author_name": "Grace Scott",
+          "author_role": "student",
+          "location": "High Wycombe, UK",
+          "photo": "https://randomuser.me/api/portraits/women/34.jpg",
+          "body": "Read A for main idea, then B noting agreement/disagreement. Comparison Qs need both.",
+          "created_at": "2026-06-19T23:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "King Edward VI School, Birmingham, UK",
+          "photo": "https://randomuser.me/api/portraits/women/14.jpg",
+          "body": "Information and Ideas includes quantitative paired passages — chart + opposing views.",
+          "created_at": "2026-06-21T09:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_act_act-reading_0018",
+      "title": "Humanities passage strategy — arts and literary narrative",
+      "subject": "act-reading",
+      "chapter": "act-reading",
+      "chapter_title": "ACT Reading",
+      "track": "act",
+      "grade": "11-12",
+      "tags": [
+        "humanities",
+        "literature"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_ethan_jackson",
+          "author_name": "Ethan Jackson",
+          "author_role": "student",
+          "location": "New York, US",
+          "photo": "https://randomuser.me/api/portraits/men/25.jpg",
+          "body": "Literature passages have more tone questions. I annotate emotional words.",
+          "created_at": "2026-06-11T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_james_mitchell",
+          "author_name": "James Mitchell",
+          "author_role": "teacher",
+          "location": "Westlake Academy, Austin, TX",
+          "photo": "https://randomuser.me/api/portraits/men/11.jpg",
+          "body": "ACT Reading humanities = author's attitude. Look for evaluative adjectives.",
+          "created_at": "2026-06-12T08:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_act_act-science_0019",
+      "title": "Conflicting viewpoints passage — scientist debate strategy",
+      "subject": "act-science",
+      "chapter": "act-science",
+      "chapter_title": "ACT Science",
+      "track": "act",
+      "grade": "11-12",
+      "tags": [
+        "conflicting-viewpoints",
+        "science"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_isabella_adams",
+          "author_name": "Isabella Adams",
+          "author_role": "student",
+          "location": "Alexandria, US",
+          "photo": "https://randomuser.me/api/portraits/women/36.jpg",
+          "body": "Last passage always conflicting viewpoints. I make a 2-column agree/disagree table.",
+          "created_at": "2026-06-10T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "t_sarah_thompson",
+          "author_name": "Sarah Thompson",
+          "author_role": "teacher",
+          "location": "Charter School of Wilmington, DE",
+          "photo": "https://randomuser.me/api/portraits/women/12.jpg",
+          "body": "Each scientist usually has one unique claim. Match questions to who said what.",
+          "created_at": "2026-06-11T10:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_ethan_jackson",
+          "author_name": "Ethan Jackson",
+          "author_role": "student",
+          "location": "New York, US",
+          "photo": "https://randomuser.me/api/portraits/men/25.jpg",
+          "body": "Diagram rule: redraw simplified experiment setup — vector sketch, not screenshot.",
+          "created_at": "2026-06-12T09:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_sat_sat-rw-grammar_0020",
+      "title": "Test day checklist — Digital SAT (Bluebook) vs paper linear",
+      "subject": "sat-reading-writing",
+      "chapter": "sat-rw-grammar",
+      "chapter_title": "Standard English Conventions",
+      "track": "sat",
+      "grade": "11-12",
+      "tags": [
+        "test-day",
+        "bluebook"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "t_oliver_wright",
+          "author_name": "Oliver Wright",
+          "author_role": "teacher",
+          "location": "Manchester Grammar School, UK",
+          "photo": "https://randomuser.me/api/portraits/men/15.jpg",
+          "body": "Digital SAT: charged laptop, admission ticket, ID. Bluebook installed and practice login done.",
+          "created_at": "2026-06-23T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_emma_wilson",
+          "author_name": "Emma Wilson",
+          "author_role": "student",
+          "location": "Portland, US",
+          "photo": "https://randomuser.me/api/portraits/women/20.jpg",
+          "body": "Linear PDF tests good for weekend timing drills. Bluebook for interface and Desmos.",
+          "created_at": "2026-06-24T02:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_oliver_hall",
+          "author_name": "Oliver Hall",
+          "author_role": "student",
+          "location": "Manchester, UK",
+          "photo": "https://randomuser.me/api/portraits/men/31.jpg",
+          "body": "64 min RW + 10 min break + 70 min Math = ~2h14 plus check-in.",
+          "created_at": "2026-06-24T19:24:25.671416+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_act_act-english_0021",
+      "title": "Full ACT timing breakdown — 175 minutes + optional writing",
+      "subject": "act-english",
+      "chapter": "act-english",
+      "chapter_title": "ACT English",
+      "track": "act",
+      "grade": "11-12",
+      "tags": [
+        "timing",
+        "full-test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "t_emily_hart",
+          "author_name": "Emily Hart",
+          "author_role": "teacher",
+          "location": "Lincoln High School, Portland, OR",
+          "photo": "https://randomuser.me/api/portraits/women/10.jpg",
+          "body": "English 45m, Math 60m, Reading 35m, Science 35m. Optional 40m Writing after.",
+          "created_at": "2026-06-20T21:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_emily_nelson",
+          "author_name": "Emily Nelson",
+          "author_role": "student",
+          "location": "Edina, US",
+          "photo": "https://randomuser.me/api/portraits/women/38.jpg",
+          "body": "Section mocks in portal match official durations. Full mock chains all four.",
+          "created_at": "2026-06-21T01:24:25.671416+00:00"
+        },
+        {
+          "author_id": "s_sophia_martin",
+          "author_name": "Sophia Martin",
+          "author_role": "student",
+          "location": "Newton, US",
+          "photo": "https://randomuser.me/api/portraits/women/22.jpg",
+          "body": "10–15 min break after Math before Reading — hydrate, no phone if test center rules.",
+          "created_at": "2026-06-22T07:24:25.671416+00:00"
+        }
+      ]
+    }
+  ]
+}

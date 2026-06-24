@@ -151,6 +151,22 @@
 
   function allChapters() {
     const out = [];
+    if (curriculum?.tracks) {
+      Object.entries(curriculum.tracks).forEach(([trackId, track]) => {
+        Object.entries(track.sections || {}).forEach(([secKey, sec]) => {
+          const subjectId =
+            trackId === 'sat'
+              ? secKey === 'reading_writing'
+                ? 'sat-reading-writing'
+                : 'sat-math'
+              : `act-${secKey}`;
+          (sec.skills || []).forEach((sk) => {
+            out.push({ id: sk.id, title: sk.title, subject: subjectId });
+          });
+        });
+      });
+      return out;
+    }
     const keys = subjectKeys().length ? subjectKeys() : Object.keys(curriculum?.subjects || {});
     keys.forEach((sub) => {
       const chs = curriculum?.subjects?.[sub]?.chapters || [];
@@ -259,7 +275,11 @@
 
       const tag = document.createElement('span');
       tag.className = `thread-tag ${t.subject || ''}`;
-      tag.textContent = t.subject === 'mathematics' ? 'Math' : 'Sci';
+      if (sku === 'sat-act') {
+        tag.textContent = (t.track || '').toUpperCase() === 'SAT' ? 'SAT' : 'ACT';
+      } else {
+        tag.textContent = t.subject === 'mathematics' ? 'Math' : 'Sci';
+      }
       btn.appendChild(tag);
 
       if (t.tags?.includes('grading_request')) {
@@ -307,7 +327,9 @@
     showDetailView();
     document.getElementById('threadTitle').textContent = t.title || 'Discussion';
     document.getElementById('threadMeta').textContent =
-      `${t.chapter_title || t.chapter} · ${t.subject} · Class ${t.grade || '10'} · ${(t.posts || []).length} posts`;
+      sku === 'sat-act'
+        ? `${t.chapter_title || t.chapter} · ${t.subject || ''} · ${(t.posts || []).length} posts`
+        : `${t.chapter_title || t.chapter} · ${t.subject} · Class ${t.grade || '10'} · ${(t.posts || []).length} posts`;
 
     const posts = document.getElementById('threadPosts');
     posts.innerHTML = '';

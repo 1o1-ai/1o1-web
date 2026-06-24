@@ -94,6 +94,15 @@
       ],
       curriculumPath: '/portal/data/sat-act-curriculum.json',
       bankPath: '/portal/data/sat-act-questions.json',
+      forumPath: '/portal/data/sat-act-forum.json',
+      subjects: [
+        { id: 'sat-reading-writing', label: 'SAT Reading & Writing', icon: '📖' },
+        { id: 'sat-math', label: 'SAT Mathematics', icon: '📐' },
+        { id: 'act-english', label: 'ACT English', icon: '✏️' },
+        { id: 'act-math', label: 'ACT Mathematics', icon: '🔢' },
+        { id: 'act-reading', label: 'ACT Reading', icon: '📚' },
+        { id: 'act-science', label: 'ACT Science', icon: '🔬' },
+      ],
       tracks: [
         {
           id: 'sat',
