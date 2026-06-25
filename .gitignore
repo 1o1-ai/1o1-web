@@ -5,6 +5,8 @@ portal/data/ingest_report-live.json
 portal/data/question_bank-live.json
 qa/
 portal/education/**/*.old.js
+portal/assets/generated-sku-config.json
+portal/data/cbse10-core-curriculum.json
 *.log
 __pycache__/
 .DS_Store
