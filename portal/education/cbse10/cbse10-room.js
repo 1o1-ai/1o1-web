@@ -503,25 +503,29 @@
 
       chapterTitle,
 
-      initialTab: initialTab || 'official',
+      initialTab: initialTab === 'random' ? 'quiz' : initialTab || 'official',
 
       showPhase,
 
-      filterQuestions: ({ difficulty, limit }) =>
+      listChapters: () =>
+        chaptersForSubject(subject).map((c) => ({ id: c.id, title: c.title })),
 
-        window.CBSE10Shared.filterMasterQuestions(masterQuestions, {
-
-          subject,
-
-          chapter: chapterId,
-
-          mode: 'cbse',
-
-          difficulty,
-
-          limit: limit || 4,
-
-        }).map(window.CBSE10Shared.toDisplayQ),
+      filterQuestions: ({ difficulty, limit, chapterIds }) => {
+        const ids = chapterIds?.length ? chapterIds : [chapterId];
+        const out = [];
+        ids.forEach((ch) => {
+          window.CBSE10Shared.filterMasterQuestions(masterQuestions, {
+            subject,
+            chapter: ch,
+            mode: 'cbse',
+            difficulty,
+            limit: limit || 6,
+          })
+            .map(window.CBSE10Shared.toDisplayQ)
+            .forEach((q) => out.push(q));
+        });
+        return out.slice(0, (limit || 6) * ids.length);
+      },
 
       onBeforePractice: () => {
 

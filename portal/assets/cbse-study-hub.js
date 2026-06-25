@@ -9,7 +9,7 @@
     { id: 'advanced', label: 'Advanced Study', icon: '🚀', hint: 'Deep-dive concepts' },
     { id: 'regular', label: 'Regular Study', icon: '📚', hint: 'Study guides & videos' },
     { id: 'practice', label: 'Q & A Practice', icon: '✅', hint: 'Board-style drills' },
-    { id: 'random', label: 'Random Quiz', icon: '🎲', hint: 'Coming soon' },
+    { id: 'quiz', label: 'Quiz', icon: '🎯', hint: 'ManjuLAB WordHunter' },
   ];
 
   let activeCtx = null;
@@ -84,14 +84,9 @@
     const panel = document.getElementById('studyTabPanel');
     if (embed) embed.classList.add('hidden');
     if (panel) panel.classList.remove('hidden');
-    if (tabId === 'random') {
-      container.innerHTML = `
-        <div class="cbse-wip-panel">
-          <span class="cbse-wip-icon">🎲</span>
-          <h3>Random Quiz</h3>
-          <p>Mix easy, medium &amp; hard questions across chapters — work in progress.</p>
-          <p class="cbse-wip-note">Try <strong>Q &amp; A Practice</strong> or the <strong>Word Hunt</strong> game in Official Books for now.</p>
-        </div>`;
+    if (tabId === 'quiz') {
+      global.ManjuLABWordHunter?.mountQuizTab(container, ctx);
+      return;
     }
   }
 

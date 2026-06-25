@@ -1,6 +1,6 @@
 {
   "sku": "cbse10",
-  "generatedAt": "2026-06-25T01:47:31.157225+00:00",
+  "generatedAt": "2026-06-25T02:08:43.512388+00:00",
   "sourceRoot": "C:\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE",
   "subjects": {
     "science": {
@@ -47,49 +47,64 @@
                 "role": "student",
                 "speaker": "Amit - Interrupting",
                 "text": "What are the main types of reactions we need to know?"
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha - Interrupting",
+                "text": "Ma'am, can you give an example of a combination reaction we see every day?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya - Interrupting",
+                "text": "What about decomposition? Is thermal decomposition the same as electrolytic decomposition?"
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul - Interrupting",
+                "text": "Sir, how do we balance Fe + H₂O → Fe₃O₄ + H₂ quickly in exams?"
+              },
+              {
+                "role": "student",
+                "speaker": "Amit - Interrupting",
+                "text": "You mentioned corrosion earlier — is it only about iron rusting?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya - Interrupting",
+                "text": "How can we prevent corrosion of iron?"
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul - Interrupting",
+                "text": "What is rancidity? My mother always keeps chips in airtight jars."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha - Interrupting",
+                "text": "So both rusting and rancidity are oxidation in daily life?"
               }
             ],
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Chemical Reactions and Equations",
                   "Key Syllabus Standards**:",
                   "Chemical equation - balanced and unbalanced.",
-                  "Types of chemical reactions: Combination, Decomposition, Displacement, Double Displacement.",
-                  "Effects of oxidation reactions in everyday life: Corrosion and Rancidity."
+                  "Types of chemical reactions: Combination, Decomposition, Displacement, Double Displacement."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Good morning, class! Today we are diving into Chemical Reactions and Equations. Why does food get spoiled, or why does iron rust? These are chemical changes."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "Is rusting a reaction with oxygen, Teacher?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "Why do we have to balance chemical equations?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "What are the main types of reactions we need to know?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Effects of oxidation reactions in everyday life: Corrosion and Rancidity."
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 11
           },
           "title": "CBSE Class 10 Science: Chemical Reactions and Equations"
         },
@@ -134,35 +149,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Acids, Bases and Salts",
                   "Key Syllabus Standards**:",
                   "Chemical properties of acids and bases (reactions with metals, carbonates).",
-                  "pH scale and its importance in everyday life.",
-                  "Preparation and uses of sodium hydroxide, bleaching powder, baking soda, washing soda."
+                  "pH scale and its importance in everyday life."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we talk about Acids, Bases and Salts. Acids taste sour and turn blue litmus red. Bases taste bitter, feel soapy, and turn red litmus blue."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "How do they react with metals?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "What is pH?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Preparation and uses of sodium hydroxide, bleaching powder, baking soda, washing soda."
                 ]
               }
             ],
@@ -211,35 +211,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Metals and Non-metals",
                   "Key Syllabus Standards**:",
                   "Physical properties of metals and non-metals.",
-                  "Reactivity series and formation of ionic compounds.",
-                  "Metallurgical processes: Extraction of metals and prevention of corrosion."
+                  "Reactivity series and formation of ionic compounds."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Class, let's explore Metals and Non-metals. Metals are lustrous, malleable, ductile, and good conductors of heat and electricity. Non-metals are the opposite."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "Are there exceptions? Like mercury is liquid?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "How do metals react with non-metals?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Metallurgical processes: Extraction of metals and prevention of corrosion."
                 ]
               }
             ],
@@ -288,35 +273,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Carbon and its Compounds",
                   "Key Syllabus Standards**:",
                   "Covalent bonding in carbon compounds.",
-                  "Versatile nature of carbon (catenation, tetravalency).",
-                  "Homologous series and functional groups."
+                  "Versatile nature of carbon (catenation, tetravalency)."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we study Carbon and its Compounds. Carbon has atomic number 6, meaning it has 4 valence electrons. To achieve stability, it shares electrons, forming covalent bonds."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "Why are there so many carbon compounds in nature?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "What is a homologous series?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Homologous series and functional groups."
                 ]
               }
             ],
@@ -365,35 +335,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Life Processes",
                   "Key Syllabus Standards**:",
                   "Nutrition in plants and animals (photosynthesis, digestion).",
-                  "Respiration: Aerobic and anaerobic pathways.",
-                  "Transportation and Excretion in humans (circulatory system, kidneys)."
+                  "Respiration: Aerobic and anaerobic pathways."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we study Life Processes—the basic processes needed for organisms to maintain life. We will cover nutrition, respiration, transportation, and excretion."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "What is the main difference between aerobic and anaerobic respiration?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "How do our kidneys filter waste?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Transportation and Excretion in humans (circulatory system, kidneys)."
                 ]
               }
             ],
@@ -442,35 +397,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Control and Coordination",
                   "Key Syllabus Standards**:",
                   "Tropic movements in plants, plant hormones.",
-                  "Control and co-ordination in animals: Nervous system, reflex action.",
-                  "Chemical co-ordination: Animal hormones."
+                  "Control and co-ordination in animals: Nervous system, reflex action."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we study Control and Coordination, which allows organisms to respond to stimuli. In animals, this is done by the nervous system and hormones. In plants, it is done solely by plant hormones or phytohormones."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Sneha - Interrupting",
-                    "text": "What are the main plant hormones we need to know?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "What is a reflex action?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Chemical co-ordination: Animal hormones."
                 ]
               }
             ],
@@ -524,40 +464,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: How do Organisms Reproduce?",
                   "Key Syllabus Standards**:",
                   "Reproduction in plants and animals (asexual and sexual).",
-                  "Sexual reproduction in flowering plants.",
-                  "Reproductive health: family planning, prevention of STDs."
+                  "Sexual reproduction in flowering plants."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we cover reproduction—the process by which organisms produce new individuals of their own kind. It can be asexual (involving a single parent) or sexual (involving two parents and fusion of gametes)."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "What are the common methods of asexual reproduction?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "How does sexual reproduction occur in flowering plants?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Sneha - Interrupting",
-                    "text": "Why is reproductive health and contraception important in humans?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Reproductive health: family planning, prevention of STDs."
                 ]
               }
             ],
@@ -605,34 +525,13 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Heredity",
                   "Key Syllabus Standards**:",
                   "Heredity; Mendel's contribution- Laws for inheritance of traits.",
                   "Sex determination: brief introduction."
-                ]
-              },
-              {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we study Heredity—the transmission of traits from parents to offspring. Gregor Mendel, the father of genetics, conducted experiments on garden pea plants (*Pisum sativum*) and formulated the laws of inheritance."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "Why did Mendel choose pea plants?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "How is sex determined in human babies?"
-                  }
                 ]
               }
             ],
@@ -687,41 +586,21 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Light - Reflection and Refraction",
                   "Key Syllabus Standards**:",
                   "Reflection of light by curved surfaces; Images formed by spherical mirrors.",
-                  "Mirror formula and magnification.",
-                  "Refraction; Laws of refraction, refractive index.",
-                  "Refraction of light by spherical lens; Images formed by spherical lenses; Lens formula and magnification; Power of a lens."
+                  "Mirror formula and magnification."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Class, let's explore Light. We cover reflection by spherical mirrors and refraction by lenses."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "What is the difference between real and virtual images?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "What about lenses? Is the formula different?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "What is the power of a lens?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Refraction; Laws of refraction, refractive index.",
+                  "Refraction of light by spherical lens; Images formed by spherical lenses; Lens formula and magnification; Power of a lens."
                 ]
               }
             ],
@@ -774,39 +653,13 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: The Human Eye and the Colorful World",
                   "Key Syllabus Standards**:",
                   "Functioning of a lens in human eye, defects of vision and their corrections.",
                   "Refraction of light through a prism, dispersion of light, scattering of light."
-                ]
-              },
-              {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we study the Human Eye and natural optical phenomena. The eye lens adjusts its focal length to focus objects at different distances on the retina—a property called accommodation."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Sneha - Interrupting",
-                    "text": "What are the main vision defects?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "Why does a prism split white light into a rainbow of colors?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "Why is the sky blue?"
-                  }
                 ]
               }
             ],
@@ -861,41 +714,21 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Electricity",
                   "Key Syllabus Standards**:",
                   "Electric current, potential difference and electric current.",
-                  "Ohm's law; Resistance, Resistivity, factors on which resistance depends.",
-                  "Series and parallel combination of resistors.",
-                  "Heating effect of electric current and its applications in daily life; Electric power."
+                  "Ohm's law; Resistance, Resistivity, factors on which resistance depends."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we study Electricity. Electric current $I$ is the flow of charge: $I = Q/t$. Potential difference $V$ is the work done to move a unit charge: $V = W/Q$. These are related by Ohm's Law: $V = IR$ at constant temperature."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "What determines the resistance $R$ of a wire?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "How do we combine resistors?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "What is the heating effect of current?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Series and parallel combination of resistors.",
+                  "Heating effect of electric current and its applications in daily life; Electric power."
                 ]
               }
             ],
@@ -950,41 +783,21 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Magnetic Effects of Electric Current",
                   "Key Syllabus Standards**:",
                   "Magnetic field, field lines, field due to a current carrying conductor.",
-                  "Force on current carrying conductor, Fleming's Left Hand Rule.",
-                  "Direct current. Alternating current: frequency of AC. Advantage of AC over DC.",
-                  "Domestic electric circuits."
+                  "Force on current carrying conductor, Fleming's Left Hand Rule."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Class, let's explore the link between electricity and magnetism. Oersted discovered that a current-carrying wire produces a magnetic field around it."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "How do we find the direction of this magnetic field?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "What happens if we place a current-carrying wire inside a magnetic field?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Sneha - Interrupting",
-                    "text": "Why do we use Alternating Current (AC) in our homes instead of Direct Current (DC)?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Direct current. Alternating current: frequency of AC. Advantage of AC over DC.",
+                  "Domestic electric circuits."
                 ]
               }
             ],
@@ -1032,34 +845,13 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Science",
                   "Chapter**: Our Environment",
                   "Key Syllabus Standards**:",
                   "Eco-system, Environmental problems, Ozone depletion, waste production and their solutions.",
                   "Biodegradable and non-biodegradable substances."
-                ]
-              },
-              {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we discuss Our Environment, focusing on ecosystems. An ecosystem consists of biotic (living) and abiotic (non-living) components. Energy flows through food chains: producers $\\to$ herbivores $\\to$ carnivores."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Sneha - Interrupting",
-                    "text": "Why is the energy transfer between trophic levels so low?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "What is ozone depletion, and why is it dangerous?"
-                  }
                 ]
               }
             ],
@@ -1118,40 +910,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Real Numbers",
                   "Key Syllabus Standards**:",
                   "Fundamental Theorem of Arithmetic - statement and illustration.",
-                  "Revisiting irrational numbers (proving √2, √3, √5 are irrational).",
-                  "Rational numbers and decimal expansions (terminating and non-terminating repeating)."
+                  "Revisiting irrational numbers (proving √2, √3, √5 are irrational)."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Hello class! Today, we are opening the door to Chapter 1 of Class 10 Mathematics: Real Numbers. Let's start with a simple question: what makes a number 'real'? Amit, what do you think?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "Is it any number we can write on a number line, Teacher? Like integers and fractions?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "Teacher, what about irrational numbers like √2? How do we prove they are irrational?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "Oh, so because the assumption leads to a logical failure, the opposite must be true?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Rational numbers and decimal expansions (terminating and non-terminating repeating)."
                 ]
               }
             ],
@@ -1200,35 +972,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Polynomials",
                   "Key Syllabus Standards**:",
                   "Geometrical meaning of the zeroes of a polynomial.",
-                  "Relationship between zeroes and coefficients of a quadratic polynomial.",
-                  "Division algorithm for polynomials (optional/conceptual overview)."
+                  "Relationship between zeroes and coefficients of a quadratic polynomial."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Welcome back, class. Today we are studying Polynomials. A polynomial is an algebraic expression consisting of variables and coefficients. The highest power of the variable is called the degree of the polynomial."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "So, a quadratic polynomial always has a degree of 2, right?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "How do we find the relation between these zeroes and the coefficients a, b, and c?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Division algorithm for polynomials (optional/conceptual overview)."
                 ]
               }
             ],
@@ -1277,35 +1034,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Pair of Linear Equations in Two Variables",
                   "Key Syllabus Standards**:",
                   "Graphical method of solution of a pair of linear equations.",
-                  "Algebraic methods: Substitution, Elimination, and Cross-multiplication.",
-                  "Consistency and inconsistency conditions (a1/a2, b1/b2, c1/c2)."
+                  "Algebraic methods: Substitution, Elimination, and Cross-multiplication."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we are discussing systems of linear equations in two variables, represented as a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "How do we know if they have a solution without drawing them?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "Which algebraic method is the most efficient to solve them? Substitution or Elimination?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Consistency and inconsistency conditions (a1/a2, b1/b2, c1/c2)."
                 ]
               }
             ],
@@ -1354,35 +1096,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Quadratic Equations",
                   "Key Syllabus Standards**:",
                   "Standard form of a quadratic equation ax2 + bx + c = 0.",
-                  "Solutions by factorization, and by using the quadratic formula.",
-                  "Relationship between discriminant and nature of roots."
+                  "Solutions by factorization, and by using the quadratic formula."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we cover Quadratic Equations. The standard form is ax² + bx + c = 0. To solve it, we can factorize it by splitting the middle term, or we can use the universal quadratic formula: x = [-b ± √(b² - 4ac)] / 2a."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "What is that term under the square root, b² - 4ac?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "So if D is negative, we can't solve it in real numbers?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Relationship between discriminant and nature of roots."
                 ]
               }
             ],
@@ -1431,35 +1158,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Arithmetic Progressions",
                   "Key Syllabus Standards**:",
                   "Derivation of the nth term of an AP.",
-                  "Sum of the first n terms of an AP formula.",
-                  "Real-life applications of AP in daily life."
+                  "Sum of the first n terms of an AP formula."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Class, let's talk about patterns. An Arithmetic Progression, or AP, is a sequence of numbers in which the difference between consecutive terms is constant. We call this the common difference, 'd'."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "Can 'd' be negative?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "How do we find the sum of all terms in an AP?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Real-life applications of AP in daily life."
                 ]
               }
             ],
@@ -1513,40 +1225,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Triangles",
                   "Key Syllabus Standards**:",
                   "Definitions, examples, counter examples of similar triangles.",
-                  "Basic Proportionality Theorem (Thales Theorem) and its proof.",
-                  "Criteria for similarity of triangles: AAA, SSS, and SAS."
+                  "Basic Proportionality Theorem (Thales Theorem) and its proof."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we study Triangles, specifically similar triangles. Two triangles are similar if their corresponding angles are equal and their corresponding sides are in the same ratio."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "Is similarity different from congruence?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Sneha - Interrupting",
-                    "text": "How do we prove this theorem?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "What are the similarity criteria?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Criteria for similarity of triangles: AAA, SSS, and SAS."
                 ]
               }
             ],
@@ -1600,40 +1292,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Coordinate Geometry",
                   "Key Syllabus Standards**:",
                   "Review: Concepts of coordinate geometry, graphs of linear equations.",
-                  "Distance formula and its applications.",
-                  "Section formula (internal division) and midpoint formula."
+                  "Distance formula and its applications."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we discuss Coordinate Geometry, which links algebra and geometry. Any point on the Cartesian plane is represented by coordinates $(x, y)$."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "How do we calculate the distance between two points, say $(x_1, y_1)$ and $(x_2, y_2)$?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "What if we want to find a point that divides a line segment in a specific ratio?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "What if $P$ is the exact midpoint?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Section formula (internal division) and midpoint formula."
                 ]
               }
             ],
@@ -1687,40 +1359,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Introduction to Trigonometry",
                   "Key Syllabus Standards**:",
                   "Trigonometric ratios of an acute angle of a right-angled triangle.",
-                  "Values of the trigonometric ratios of 30, 45, 60, 90 degrees.",
-                  "Relationships between the ratios and trigonometric identities."
+                  "Values of the trigonometric ratios of 30, 45, 60, 90 degrees."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we introduce Trigonometry—the study of relationships between sides and angles of triangles. Let's look at a right-angled triangle. We define six ratios relative to an acute angle $\\theta$: $\\sin \\theta = \\text{Opposite}/\\text{Hypotenuse}$, $\\cos \\theta = \\text{Adjacent}/\\text{Hypotenuse}$, and $\\tan \\theta = \\text{Opposite}/\\text{Adjacent}$."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "Are the other three ratios just the reciprocals?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "What are the key values we must memorize?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "What is the most important identity in trigonometry?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Relationships between the ratios and trigonometric identities."
                 ]
               }
             ],
@@ -1768,34 +1420,13 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Some Applications of Trigonometry",
                   "Key Syllabus Standards**:",
                   "Simple problems on heights and distances.",
                   "Angles of elevation and depression (30, 45, 60 degrees)."
-                ]
-              },
-              {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we study Heights and Distances, applying trigonometry to real life, like finding the height of a tower or tree without measuring it directly. We define two key angles: 1. Angle of Elevation: The angle formed by the line of sight with the horizontal when looking up. 2. Angle of Depression: The angle formed by the line of sight when looking down."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Sneha - Interrupting",
-                    "text": "How do we solve these problems? Which ratio do we use most?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "If we look down from a lighthouse, is the angle of depression equal to the angle of elevation from the boat?"
-                  }
                 ]
               }
             ],
@@ -1844,35 +1475,20 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Circles",
                   "Key Syllabus Standards**:",
                   "Tangent to a circle at point of contact.",
-                  "Theorem: The tangent at any point of a circle is perpendicular to the radius.",
-                  "Theorem: The lengths of tangents drawn from an external point to a circle are equal."
+                  "Theorem: The tangent at any point of a circle is perpendicular to the radius."
                 ]
               },
               {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we study Circles, focusing on tangents. A tangent is a line that intersects a circle at exactly one point, called the point of contact."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "Can we draw multiple tangents from a single point?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "What about the lengths of the two tangents drawn from an external point?"
-                  }
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
+                  "Theorem: The lengths of tangents drawn from an external point to a circle are equal."
                 ]
               }
             ],
@@ -1920,34 +1536,13 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Areas Related to Circles",
                   "Key Syllabus Standards**:",
                   "Area of a sector and segment of a circle.",
                   "Problems based on areas and perimeter / circumference of circles."
-                ]
-              },
-              {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we calculate areas related to parts of a circle—specifically, sectors and segments. A sector is the region bounded by two radii and an arc. The area of a sector with angle $\\theta$ is $\\text{Area} = \\frac{\\theta}{360^\\circ} \\times \\pi r^2$."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Sneha - Interrupting",
-                    "text": "What about a segment of a circle?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "How do we find the area of $\\Delta OAB$ if the angle $\\theta$ is $120^\\circ$?"
-                  }
                 ]
               }
             ],
@@ -1994,33 +1589,12 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Surface Areas and Volumes",
                   "Key Syllabus Standards**:",
                   "Surface areas and volumes of combinations of any two of: cubes, cuboids, spheres, hemispheres, right circular cylinders/cones."
-                ]
-              },
-              {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Class, let's study Surface Areas and Volumes of solid shapes. In Class 9 we learned about individual shapes. In Class 10 we study combinations of these shapes, like a toy made of a cone on a hemisphere."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "When combining solids, do we add their surface areas directly?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "What about the total volume of combined solids? Is that added directly?"
-                  }
                 ]
               }
             ],
@@ -2073,39 +1647,13 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Statistics",
                   "Key Syllabus Standards**:",
                   "Mean, median and mode of grouped data.",
                   "Cumulative frequency graph (ogive) - brief conceptual review."
-                ]
-              },
-              {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we cover Statistics. We will calculate the measures of central tendency for grouped data: Mean, Median, and Mode."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Rahul - Interrupting",
-                    "text": "Which formula do we use for the Mean of grouped data?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Sneha - Interrupting",
-                    "text": "How do we find the Mode of grouped data?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "Is there a relation between mean, median, and mode?"
-                  }
                 ]
               }
             ],
@@ -2153,34 +1701,13 @@
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 10 Mathematics",
                   "Chapter**: Probability",
                   "Key Syllabus Standards**:",
                   "Classical definition of probability.",
                   "Simple problems on finding the probability of an event."
-                ]
-              },
-              {
-                "type": "lecture",
-                "title": "Classroom Lecture",
-                "beats": [
-                  {
-                    "role": "teacher",
-                    "speaker": "Teacher",
-                    "text": "Today we study Probability—the measure of likelihood that an event will occur. The classical probability of an event $E$ is $P(E) = \\frac{\\text{Number of outcomes favorable to } E}{\\text{Total number of possible outcomes}}$."
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Amit - Interrupting",
-                    "text": "What is the range of probability values? Can it be greater than 1?"
-                  },
-                  {
-                    "role": "student",
-                    "speaker": "Priya - Interrupting",
-                    "text": "What are complementary events?"
-                  }
                 ]
               }
             ],

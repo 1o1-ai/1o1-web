@@ -86,8 +86,10 @@
       subjectLabel: metaLine(),
       chapterId,
       chapterTitle,
-      initialTab: initialTab || 'official',
+      initialTab: initialTab === 'random' ? 'quiz' : initialTab || 'official',
       showPhase,
+      listChapters: () =>
+        chaptersForSubject().map((c) => ({ id: c.id, title: c.title })),
       filterQuestions: () => [],
       onBeforePractice: () => {
         const embed = document.getElementById('studyPracticeEmbed');

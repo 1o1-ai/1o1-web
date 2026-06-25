@@ -417,3 +417,146 @@
 body.cbse-study-active .sr-corner-orbs {
   display: flex !important;
 }
+
+/* ManjuLAB WordHunter */
+.manjulab-launcher {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.manjulab-brand {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.manjulab-logo {
+  font-size: 2.5rem;
+}
+
+.manjulab-brand h3 {
+  margin: 0 0 4px;
+  color: #a5f3fc;
+  font-size: 1.25rem;
+}
+
+.manjulab-brand p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.88rem;
+}
+
+.manjulab-whole-subject {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 14px;
+  background: rgba(30, 41, 59, 0.6);
+  border-radius: 10px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  color: #e2e8f0;
+}
+
+.manjulab-ch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.manjulab-ch-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(51, 65, 85, 0.6);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.manjulab-start {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.manjulab-summary {
+  text-align: center;
+  padding: 32px;
+}
+
+.manjulab-score {
+  font-size: 1.1rem;
+  color: #6ee7b7;
+}
+
+/* Audio-only lecture */
+.cbse-lecture-audio-only .cbse-sketch-large {
+  min-height: 220px;
+}
+
+.cbse-lecture-note {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0 0 10px;
+}
+
+.cbse-speaker-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: #e0f2fe;
+  margin-bottom: 10px;
+  animation: cbse-pulse-speaker 1.2s ease infinite;
+}
+
+.cbse-speaker-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #38bdf8;
+}
+
+@keyframes cbse-pulse-speaker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.65;
+  }
+}
+
+.cbse-progress-bar {
+  height: 6px;
+  background: rgba(51, 65, 85, 0.8);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.cbse-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  transition: width 0.3s;
+}
+
+.cbse-lecture-progress {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-bottom: 12px;
+}
+
+.cbse-dialogue {
+  display: none;
+}
