@@ -51,6 +51,20 @@ QUESTION_RE = re.compile(
     re.MULTILINE,
 )
 
+PLACEHOLDER_MCQ_OPTS = frozenset(
+    {
+        "Real and distinct rational roots",
+        "Value calculated as zero with infinite sets",
+        "Empty baseline answer",
+        "Fully symmetric integral coefficients",
+    }
+)
+
+
+def is_placeholder_mcq_block(md: str, start: int) -> bool:
+    snippet = md[start : start + 800]
+    return "Real and distinct rational roots" in snippet and "MCQ Selection Choices" in snippet
+
 THREAD_TITLE_RE = re.compile(r"^#### Thread #\d+: (.+)$", re.MULTILINE)
 THREAD_QUERY_RE = re.compile(
     r'💬 \*\*Original Query \(@[^)]+\)\*\*:\s*\n> "([^"]+)"',
@@ -60,10 +74,13 @@ THREAD_QUERY_RE = re.compile(
 
 def parse_board_questions(md: str, subject: str, chapter_id: str) -> list[dict]:
     out: list[dict] = []
-    for qid, prompt, marks_s, qtype in QUESTION_RE.findall(md):
+    for match in QUESTION_RE.finditer(md):
+        qid, prompt, marks_s, qtype = match.groups()
+        if is_placeholder_mcq_block(md, match.start()):
+            continue
         marks = int(marks_s)
         qtype_clean = qtype.strip()
-        is_mcq = "mcq" in qtype_clean.lower()
+        is_mcq = "mcq" in qtype_clean.lower() and not is_placeholder_mcq_block(md, match.start())
         out.append(
             {
                 "id": qid,

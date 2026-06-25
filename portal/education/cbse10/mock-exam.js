@@ -121,6 +121,7 @@
   });
 
   function hasPlayableMcq(q) {
+    if (global.CBSE10Shared?.isProceduralPlaceholderMcq?.(q)) return false;
     const opts = (q.options || []).map((o) => String(o || '').trim()).filter((o) => o.length > 1);
     return opts.length >= 2 && global.CBSE10Shared?.resolveCorrectIndex(q, opts) != null;
   }

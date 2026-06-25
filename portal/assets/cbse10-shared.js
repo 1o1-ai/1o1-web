@@ -278,7 +278,22 @@
     return String(text || '').trim();
   }
 
+  function isProceduralPlaceholderMcq(q) {
+    if (q.source_kind === 'procedural_ai') return true;
+    if (/Procedural Syllabus AI Generator/i.test(String(q.source || ''))) return true;
+    const opts = (q.options || []).map((o) => cleanDisplayText(o));
+    if (
+      opts.length >= 4 &&
+      opts[0] === 'Real and distinct rational roots' &&
+      opts.includes('Empty baseline answer')
+    ) {
+      return true;
+    }
+    return false;
+  }
+
   function isValidCatalogQuestion(q) {
+    if (isProceduralPlaceholderMcq(q)) return false;
     const text = cleanDisplayText(q.text || q.prompt || '');
     if (!text || text.length < 8) return false;
     if (/\*31\/|ECNEICS|\*ECNEICS\*/i.test(text) && text.length < 40) return false;
@@ -396,6 +411,7 @@
     countMasterByChapter,
     isAuthenticCbse,
     isValidCatalogQuestion,
+    isProceduralPlaceholderMcq,
     resolveCorrectIndex,
     letterToIndex,
     cleanDisplayText,
