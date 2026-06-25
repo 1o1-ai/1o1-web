@@ -1,15 +1,26 @@
 (function () {
+  const shared = window.CBSE10Shared;
   let curriculum = null;
-  let bank = [];
+  let verifiedBank = [];
+  let catalogQuestions = [];
 
   const prSubject = document.getElementById('prSubject');
   const prChapter = document.getElementById('prChapter');
+  const prCount = document.getElementById('prCount');
   const quizArea = document.getElementById('quizArea');
 
-  Promise.all([window.CBSE10Shared.loadCurriculum(), window.CBSE10Shared.loadVerifiedBank()]).then(
-    ([cur, b]) => {
+  const urlParams = new URLSearchParams(location.search);
+
+  Promise.all([shared.loadCurriculum(), shared.loadVerifiedBank(), shared.loadMasterCatalog()]).then(
+    ([cur, verified, catalog]) => {
       curriculum = cur;
-      bank = b;
+      verifiedBank = verified.filter((q) => !shared.isProceduralPlaceholderMcq(q));
+      catalogQuestions = catalog?.questions || [];
+      if (urlParams.get('subject')) prSubject.value = urlParams.get('subject');
+      if (urlParams.get('count')) {
+        const n = Math.min(15, Math.max(1, parseInt(urlParams.get('count'), 10) || 5));
+        prCount.value = String(n);
+      }
       fillChapters();
       prSubject.addEventListener('change', fillChapters);
     }
@@ -30,34 +41,75 @@
     });
   }
 
+  function isPlayableMcq(q) {
+    if (shared.isProceduralPlaceholderMcq(q)) return false;
+    const d = shared.toDisplayQ(q);
+    return d.options.length >= 2 && d.correctIndex != null;
+  }
+
+  function pickPracticeQuestions(subject, chapter, count, preferFigure) {
+    const fromVerified = shared.filterBank(verifiedBank, {
+      subject,
+      chapter,
+      limit: 500,
+      preferFigure,
+    });
+    const fromCatalog = shared.filterMasterQuestions(catalogQuestions, {
+      subject,
+      chapter,
+      type: 'mcq',
+      limit: 500,
+    });
+
+    const seen = new Set();
+    let pool = [];
+    for (const q of [...fromVerified, ...fromCatalog]) {
+      if (!isPlayableMcq(q)) continue;
+      const key = q.id || shared.toDisplayQ(q).prompt;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      pool.push(q);
+    }
+
+    if (preferFigure) {
+      const fig = pool.filter((q) => shared.hasFigure(q));
+      const rest = pool.filter((q) => !shared.hasFigure(q));
+      pool = [...fig, ...rest];
+    }
+
+    pool.sort(() => Math.random() - 0.5);
+    return pool.slice(0, count);
+  }
+
   document.getElementById('btnChapterStart').addEventListener('click', () => {
-    const count = Math.min(15, Math.max(1, parseInt(document.getElementById('prCount').value, 10) || 5));
+    const count = Math.min(15, Math.max(1, parseInt(prCount.value, 10) || 5));
     const preferFigure = document.getElementById('prFigureOnly').checked;
     const subject = prSubject.value;
     const chapter = prChapter.value;
 
-    let qs = window.CBSE10Shared.filterBank(bank, {
-      subject,
-      chapter,
-      limit: count,
-      preferFigure,
-    });
-
-    const display = qs.map(window.CBSE10Shared.toDisplayQ);
+    const qs = pickPracticeQuestions(subject, chapter, count, preferFigure);
+    const display = qs.map(shared.toDisplayQ);
     const figCount = display.filter((q) => q.hasFigure).length;
-    const figChapters = window.CBSE10Shared.chaptersWithFigures(bank, subject);
+    const figChapters = shared.chaptersWithFigures([...verifiedBank, ...catalogQuestions], subject);
     const chTitle = chapters(subject).find((c) => c.id === chapter)?.title || chapter;
 
     if (!qs.length) {
-      alert('No verified questions for this chapter. Try another chapter.');
+      alert('No playable MCQs for this chapter. Try another chapter or subject.');
       return;
+    }
+
+    if (qs.length < count) {
+      const ok = confirm(
+        `Only ${qs.length} playable question(s) available for "${chTitle}" (requested ${count}). Start with ${qs.length}?`
+      );
+      if (!ok) return;
     }
 
     if (preferFigure && figCount === 0) {
       if (figChapters.size === 0) {
         alert(
-          'No diagram-style questions in the verified bank for Science yet. ' +
-            'Switch to Mathematics and try Circles or Polynomials, or uncheck the diagram preference.'
+          'No diagram-style questions in the bank for this subject yet. ' +
+            'Try Mathematics → Circles or Polynomials, or uncheck the diagram preference.'
         );
         return;
       }
@@ -77,16 +129,11 @@
       if (!ok) return;
     }
 
-    let title = `Chapter practice · ${count} question(s) · ${chTitle}`;
+    let title = `Chapter practice · ${display.length} question(s) · ${chTitle}`;
     if (preferFigure && figCount > 0) {
       title += ` · ${figCount} with figure/diagram prompt`;
     }
     runQuiz(display, title);
-  });
-
-  document.getElementById('btnMockStart').addEventListener('click', () => {
-    const sub = document.getElementById('mockSubject').value;
-    location.href = `mock-exam.html?subject=${encodeURIComponent(sub)}`;
   });
 
   function runQuiz(questions, title) {
@@ -98,6 +145,14 @@
 
     function render() {
       const q = questions[idx];
+      if (!q.options?.length) {
+        idx++;
+        if (idx >= questions.length) {
+          const score = answers.filter((a, j) => a === questions[j].correctIndex).length;
+          box.innerHTML = `<p style="color:#6ee7b7;font-weight:600">Score: ${score}/${questions.length}</p>`;
+        } else render();
+        return;
+      }
       const fig = q.hasFigure
         ? '<p class="figure-badge">📐 Diagram/Figure question — see original board paper scan for image</p>'
         : '';

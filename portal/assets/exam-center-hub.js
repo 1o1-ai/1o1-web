@@ -113,7 +113,10 @@
     document.getElementById('ecPractice').addEventListener('click', (e) => {
       e.preventDefault();
       const sub = subEl?.value || '';
-      const q = sub ? `?subject=${encodeURIComponent(sub)}` : '';
+      const params = new URLSearchParams();
+      if (sub) params.set('subject', sub);
+      if (sku === 'cbse10') params.set('count', '10');
+      const q = params.toString() ? `?${params.toString()}` : '';
       location.href = cfg.practice + q;
     });
     document.getElementById('ecMock').addEventListener('click', (e) => {
