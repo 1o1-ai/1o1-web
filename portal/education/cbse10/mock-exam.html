@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Board Mock · CBSE 10</title>
+  <title>Board Mock · CBSE</title>
   <link rel="stylesheet" href="../../../assets/theme.css" />
   <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="../../assets/exam-center.css" />
 </head>
-<body class="portal-page mock-exam-page">
+<body class="portal-page mock-exam-page exam-paper-page" data-sku="cbse10">
   <header class="mock-exam-header">
-    <a class="back-link" href="room.html">← Study room</a>
+    <a class="back-link" href="exam-center.html">← Exam Center</a>
     <div class="mock-clock-wrap">
       <div class="mock-clock" id="mockClock">03:00:00</div>
-      <div class="mock-clock-label">Time remaining · 3 hr board session</div>
+      <div class="mock-clock-label">Time remaining · 3 hour board session</div>
     </div>
     <div class="mock-integrity" id="integrityPanel">
       <span>Focus: <strong id="focusScore">100</strong>%</span>
@@ -21,15 +22,17 @@
     </div>
   </header>
   <main class="portal-main mock-exam-main">
-    <div class="mock-paper-header">
-      <h1 id="paperTitle">CBSE Class X · Mathematics Standard</h1>
-      <p id="paperMeta">Section A — Multiple Choice Questions · Verified from ingested board papers</p>
+    <div class="exam-paper-sheet">
+      <header class="exam-board-header" id="boardHeader"></header>
+      <div class="exam-marks-box" id="marksBox"></div>
+      <div class="exam-general-instructions" id="instructions"></div>
+      <div id="mockSections"></div>
     </div>
-    <div id="mockQuestions"></div>
     <button type="button" class="btn-portal btn-portal-primary" id="btnSubmitMock" style="margin:24px auto;display:block">Submit paper</button>
     <div id="mockReport" hidden></div>
   </main>
   <script src="../../assets/diagram-vector.js"></script>
+  <script src="../../assets/exam-schema.js"></script>
   <script src="../../assets/cbse10-shared.js"></script>
   <script src="mock-exam.js"></script>
 </body>
