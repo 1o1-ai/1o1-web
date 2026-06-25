@@ -1,6 +1,6 @@
 {
   "sku": "cbse12-science",
-  "generatedAt": "2026-06-25T01:47:31.674270+00:00",
+  "generatedAt": "2026-06-25T05:03:51.867630+00:00",
   "sourceRoot": "C:\\Knowledge\\EDUCATION\\CBSE-11-12-SCIENCE",
   "subjects": {
     "physics": {
@@ -18,26 +18,81 @@
             "fileSize": "297944 bytes"
           },
           "transcript": {
-            "title": "CBSE Class 11-12 Physics: Electrostatics",
+            "title": "CBSE Class 11 Physics: Electrostatics",
             "concepts": [
-              "Subject**: CBSE Class 11-12 Physics",
-              "Chapter Topic**: Electrostatics",
-              "Key Syllabus Standards**:",
               "Electric charges, conservation of charge, Coulomb's law force between two point charges.",
               "Electric field, electric field due to a point charge, electric dipole, electric field due to a dipole.",
               "Gauss's law statement and its applications to find field due to infinitely long straight wire, uniformly charged infinite plane sheet.",
               "Electric potential, potential difference, electric potential due to a point charge, potential energy of a system of charges.",
               "Capacitors and capacitance, combination of capacitors in series and in parallel, capacitance of a parallel plate capacitor."
             ],
-            "beats": [],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Electrostatics from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Electric charges, conservation of charge, Coulomb's law force between two point charges with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Electric charges, conservation of charge, Coulomb's law force between two point charges, focus on definitions, units, and one NCERT worked example. This point is central to Electrostatics in Class 11 Physics."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Electric field, electric field due to a point charge, electric dipole, electric field due to a dipole with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Rahul. In Electric field, electric field due to a point charge, electric dipole, electric field due to a dipole, focus on definitions, units, and one NCERT worked example. This point is central to Electrostatics in Class 11 Physics."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Gauss's law statement and its applications to find field due to infinitely long straight wire, uniformly charged infinite plane sheet with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Amit. In Gauss's law statement and its applications to find field due to infinitely long straight wire, uniformly charged infinite plane sheet, focus on definitions, units, and one NCERT worked example. This point is central to Electrostatics in Class 11 Physics."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Electric potential, potential difference, electric potential due to a point charge, potential energy of a system of charges with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Sneha. In Electric potential, potential difference, electric potential due to a point charge, potential energy of a system of charges, focus on definitions, units, and one NCERT worked example. This point is central to Electrostatics in Class 11 Physics."
+              },
+              {
+                "role": "student",
+                "speaker": "Kavya",
+                "text": "Ma'am, could you explain Capacitors and capacitance, combination of capacitors in series and in parallel, capacitance of a parallel plate capacitor with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Kavya. In Capacitors and capacitance, combination of capacitors in series and in parallel, capacitance of a parallel plate capacitor, focus on definitions, units, and one NCERT worked example. This point is central to Electrostatics in Class 11 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Electrostatics. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
-                  "Subject**: CBSE Class 11-12 Physics",
-                  "Chapter Topic**: Electrostatics",
-                  "Key Syllabus Standards**:",
                   "Electric charges, conservation of charge, Coulomb's law force between two point charges.",
                   "Electric field, electric field due to a point charge, electric dipole, electric field due to a dipole.",
                   "Gauss's law statement and its applications to find field due to infinitely long straight wire, uniformly charged infinite plane sheet.",
@@ -46,93 +101,366 @@
                 ]
               }
             ],
-            "beatCount": 0
+            "beatCount": 12
           },
-          "title": "CBSE Class 11-12 Physics: Electrostatics"
+          "title": "Electrostatics"
         },
         "electrostatic-potential-capacitance": {
           "chapterId": "electrostatic-potential-capacitance",
           "ncertCode": "keph102",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "keph102",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph102.pdf",
             "sha256": "c31f38d16a9cf3a22b5ef0f36f9a3c942471d184f15a4d6a77ace80ca9991b97",
             "fileSize": "481226 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Physics: Electrostatic Potential Capacitance",
+            "concepts": [
+              "Electrostatic Potential Capacitance"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Electrostatic Potential Capacitance from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Electrostatic Potential Capacitance with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Electrostatic Potential Capacitance, focus on definitions, units, and one NCERT worked example. This point is central to Electrostatic Potential Capacitance in Class 11 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Electrostatic Potential Capacitance. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Electrostatic Potential Capacitance"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Electrostatic Potential Capacitance"
         },
         "current-electricity": {
           "chapterId": "current-electricity",
           "ncertCode": "keph103",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "keph103",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph103.pdf",
             "sha256": "da4e770a189938de44432d0e0e0e385f969e0c97ec77e7384d50d6cbe1093e52",
             "fileSize": "662552 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Physics: Current Electricity",
+            "concepts": [
+              "Current Electricity"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Current Electricity from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Current Electricity with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Current Electricity, focus on definitions, units, and one NCERT worked example. This point is central to Current Electricity in Class 11 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Current Electricity. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Current Electricity"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Current Electricity"
         },
         "moving-charges-magnetism": {
           "chapterId": "moving-charges-magnetism",
           "ncertCode": "keph104",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "keph104",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph104.pdf",
             "sha256": "a5cc8738ff0da2b5d62fc4a7aad84c6de4a24ee979305c4d3b668f2ba8174c2b",
             "fileSize": "547521 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Physics: Moving Charges Magnetism",
+            "concepts": [
+              "Moving Charges Magnetism"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Moving Charges Magnetism from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Moving Charges Magnetism with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Moving Charges Magnetism, focus on definitions, units, and one NCERT worked example. This point is central to Moving Charges Magnetism in Class 11 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Moving Charges Magnetism. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Moving Charges Magnetism"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Moving Charges Magnetism"
         },
         "magnetism-matter": {
           "chapterId": "magnetism-matter",
           "ncertCode": "keph105",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "keph105",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph105.pdf",
             "sha256": "3d7cbd6057c11d9cd3658bc78ea552e0613e6777b7365f84cc2bfd1592c9dfbf",
             "fileSize": "567127 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Physics: Magnetism Matter",
+            "concepts": [
+              "Magnetism Matter"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Magnetism Matter from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Magnetism Matter with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Magnetism Matter, focus on definitions, units, and one NCERT worked example. This point is central to Magnetism Matter in Class 11 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Magnetism Matter. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Magnetism Matter"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Magnetism Matter"
         },
         "electromagnetic-induction": {
           "chapterId": "electromagnetic-induction",
           "ncertCode": "keph106",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "keph106",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph106.pdf",
             "sha256": "1f04703948918e5c6fd5aa768aa5022537640248414e4daf0934e814fa096d58",
             "fileSize": "1641274 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Physics: Electromagnetic Induction",
+            "concepts": [
+              "Electromagnetic Induction"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Electromagnetic Induction from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Electromagnetic Induction with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Electromagnetic Induction, focus on definitions, units, and one NCERT worked example. This point is central to Electromagnetic Induction in Class 11 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Electromagnetic Induction. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Electromagnetic Induction"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Electromagnetic Induction"
         },
         "alternating-current": {
           "chapterId": "alternating-current",
           "ncertCode": "keph107",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "keph107",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph107.pdf",
             "sha256": "2780b4af8cad795d2360f849eb6d387ce399e6dc4f4bd1523f72b4048e6c5067",
             "fileSize": "446209 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Physics: Alternating Current",
+            "concepts": [
+              "Alternating Current"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Alternating Current from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Alternating Current with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Alternating Current, focus on definitions, units, and one NCERT worked example. This point is central to Alternating Current in Class 11 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Alternating Current. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Alternating Current"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Alternating Current"
         },
         "electromagnetic-waves": {
           "chapterId": "electromagnetic-waves",
           "ncertCode": "keph108",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "keph108",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph108.pdf",
             "sha256": "2aa2388407449c22313829c373ef1a9929894fbf40aab7e81ef4707f1c05090f",
             "fileSize": "2354112 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Physics: Electromagnetic Waves",
+            "concepts": [
+              "Electromagnetic Waves"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Electromagnetic Waves from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Electromagnetic Waves with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Electromagnetic Waves, focus on definitions, units, and one NCERT worked example. This point is central to Electromagnetic Waves in Class 11 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Electromagnetic Waves. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Electromagnetic Waves"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Electromagnetic Waves"
         },
         "ray-optics-instruments": {
           "chapterId": "ray-optics-instruments",
@@ -146,26 +474,81 @@
             "fileSize": "1155961 bytes"
           },
           "transcript": {
-            "title": "CBSE Class 11-12 Physics: Ray Optics and Optical Instruments",
+            "title": "CBSE Class 12 Physics: Ray Optics and Optical Instruments",
             "concepts": [
-              "Subject**: CBSE Class 11-12 Physics",
-              "Chapter Topic**: Ray Optics and Optical Instruments",
-              "Key Syllabus Standards**:",
               "Refraction of light, total internal reflection and its applications, optical fibers.",
               "Refraction at spherical surfaces, lenses, thin lens formula, lens maker's formula.",
               "Magnification, power of a lens, combination of thin lenses in contact.",
               "Refraction of light through a prism, derivation of prism formula.",
               "Optical instruments: Microscopes and astronomical telescopes (reflecting and refracting)."
             ],
-            "beats": [],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Ray Optics and Optical Instruments from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Refraction of light, total internal reflection and its applications, optical fibers with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Refraction of light, total internal reflection and its applications, optical fibers, focus on definitions, units, and one NCERT worked example. This point is central to Ray Optics and Optical Instruments in Class 12 Physics."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Refraction at spherical surfaces, lenses, thin lens formula, lens maker's formula with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Rahul. In Refraction at spherical surfaces, lenses, thin lens formula, lens maker's formula, focus on definitions, units, and one NCERT worked example. This point is central to Ray Optics and Optical Instruments in Class 12 Physics."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Magnification, power of a lens, combination of thin lenses in contact with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Amit. In Magnification, power of a lens, combination of thin lenses in contact, focus on definitions, units, and one NCERT worked example. This point is central to Ray Optics and Optical Instruments in Class 12 Physics."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Refraction of light through a prism, derivation of prism formula with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Sneha. In Refraction of light through a prism, derivation of prism formula, focus on definitions, units, and one NCERT worked example. This point is central to Ray Optics and Optical Instruments in Class 12 Physics."
+              },
+              {
+                "role": "student",
+                "speaker": "Kavya",
+                "text": "Ma'am, could you explain Optical instruments with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Kavya. In Optical instruments: Microscopes and astronomical telescopes (reflecting and refracting), focus on definitions, units, and one NCERT worked example. This point is central to Ray Optics and Optical Instruments in Class 12 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Ray Optics and Optical Instruments. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
-                  "Subject**: CBSE Class 11-12 Physics",
-                  "Chapter Topic**: Ray Optics and Optical Instruments",
-                  "Key Syllabus Standards**:",
                   "Refraction of light, total internal reflection and its applications, optical fibers.",
                   "Refraction at spherical surfaces, lenses, thin lens formula, lens maker's formula.",
                   "Magnification, power of a lens, combination of thin lenses in contact.",
@@ -174,69 +557,264 @@
                 ]
               }
             ],
-            "beatCount": 0
+            "beatCount": 12
           },
-          "title": "CBSE Class 11-12 Physics: Ray Optics and Optical Instruments"
+          "title": "Ray Optics and Optical Instruments"
         },
         "wave-optics": {
           "chapterId": "wave-optics",
           "ncertCode": "leph102",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "leph102",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph102.pdf",
             "sha256": "5d712142677459e6160c6ea722ff913b059d8bebac161cd6446da5810de511bb",
             "fileSize": "1601221 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Physics: Wave Optics",
+            "concepts": [
+              "Wave Optics"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Wave Optics from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Wave Optics with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Wave Optics, focus on definitions, units, and one NCERT worked example. This point is central to Wave Optics in Class 12 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Wave Optics. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Wave Optics"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Wave Optics"
         },
         "dual-nature-radiation": {
           "chapterId": "dual-nature-radiation",
           "ncertCode": "leph103",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "leph103",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph103.pdf",
             "sha256": "2c37c3fd670c6be0d3f16b98f925f77fc29a7061c8f58e0ae4234bce51a5a685",
             "fileSize": "464682 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Physics: Dual Nature Radiation",
+            "concepts": [
+              "Dual Nature Radiation"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Dual Nature Radiation from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Dual Nature Radiation with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Dual Nature Radiation, focus on definitions, units, and one NCERT worked example. This point is central to Dual Nature Radiation in Class 12 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Dual Nature Radiation. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Dual Nature Radiation"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Dual Nature Radiation"
         },
         "atoms": {
           "chapterId": "atoms",
           "ncertCode": "leph104",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "leph104",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph104.pdf",
             "sha256": "f72f73e0b2317167ed2a4012409e7d7113aa97195ee5f8bea95487370c4bc0c2",
             "fileSize": "1289612 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Physics: Atoms",
+            "concepts": [
+              "Atoms"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Atoms from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Atoms with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Atoms, focus on definitions, units, and one NCERT worked example. This point is central to Atoms in Class 12 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Atoms. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Atoms"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Atoms"
         },
         "nuclei": {
           "chapterId": "nuclei",
           "ncertCode": "leph105",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "leph105",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph105.pdf",
             "sha256": "1421852f49fd6ef24e11cdcf4b5c71122966c2213d86f2aff1b16a30938f0ac7",
             "fileSize": "638749 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Physics: Nuclei",
+            "concepts": [
+              "Nuclei"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Nuclei from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Nuclei with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Nuclei, focus on definitions, units, and one NCERT worked example. This point is central to Nuclei in Class 12 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Nuclei. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Nuclei"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Nuclei"
         },
         "semiconductor-electronics": {
           "chapterId": "semiconductor-electronics",
           "ncertCode": "leph106",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "leph106",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph106.pdf",
             "sha256": "5ff69b74898e4fff8232a5f6fc9a21c8762a767711105e3a74b5411530a87cbf",
             "fileSize": "893365 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Physics: Semiconductor Electronics",
+            "concepts": [
+              "Semiconductor Electronics"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Semiconductor Electronics from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Semiconductor Electronics with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Semiconductor Electronics, focus on definitions, units, and one NCERT worked example. This point is central to Semiconductor Electronics in Class 12 Physics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Semiconductor Electronics. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Semiconductor Electronics"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Semiconductor Electronics"
         }
       }
     },
@@ -246,38 +824,155 @@
         "solid-state": {
           "chapterId": "solid-state",
           "ncertCode": "kech101",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kech101",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech101.pdf",
             "sha256": "ee9984b205b090ae2e1b3d6996ace5dd345ac810af3e334f89cc01a53044db6d",
             "fileSize": "1478215 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Chemistry: Solid State",
+            "concepts": [
+              "Solid State"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Solid State from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Solid State with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Solid State, focus on definitions, units, and one NCERT worked example. This point is central to Solid State in Class 11 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Solid State. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Solid State"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Solid State"
         },
         "solutions": {
           "chapterId": "solutions",
           "ncertCode": "kech102",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kech102",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech102.pdf",
             "sha256": "4acdef30ac4709a233821b9daba9e0c18cdfe3b0424969756953edf85a34eaf6",
             "fileSize": "1867299 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Chemistry: Solutions",
+            "concepts": [
+              "Solutions"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Solutions from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Solutions with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Solutions, focus on definitions, units, and one NCERT worked example. This point is central to Solutions in Class 11 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Solutions. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Solutions"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Solutions"
         },
         "electrochemistry": {
           "chapterId": "electrochemistry",
           "ncertCode": "kech103",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kech103",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech103.pdf",
             "sha256": "49716d6206b4b3629f7e7d5168cb0aaa9cbc2273fbe2bb2aa312eae3f6a3411e",
             "fileSize": "1090300 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Chemistry: Electrochemistry",
+            "concepts": [
+              "Electrochemistry"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Electrochemistry from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Electrochemistry with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Electrochemistry, focus on definitions, units, and one NCERT worked example. This point is central to Electrochemistry in Class 11 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Electrochemistry. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Electrochemistry"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Electrochemistry"
         },
         "chemical-kinetics": {
           "chapterId": "chemical-kinetics",
@@ -291,26 +986,81 @@
             "fileSize": "1995804 bytes"
           },
           "transcript": {
-            "title": "CBSE Class 11-12 Chemistry: Chemical Kinetics",
+            "title": "CBSE Class 11 Chemistry: Chemical Kinetics",
             "concepts": [
-              "Subject**: CBSE Class 11-12 Chemistry",
-              "Chapter Topic**: Chemical Kinetics",
-              "Key Syllabus Standards**:",
               "Rate of a reaction (average and instantaneous), factors affecting rates of reaction.",
               "Rate law, specific rate constant, order and molecularity of a reaction.",
               "Integrated rate equations and half-life (only for zero and first order reactions).",
               "Concept of collision theory (elementary idea, no mathematical treatment).",
               "Activation energy, Arrhenius equation."
             ],
-            "beats": [],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Chemical Kinetics from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Rate of a reaction (average and instantaneous), factors affecting rates of reaction with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Rate of a reaction (average and instantaneous), factors affecting rates of reaction, focus on definitions, units, and one NCERT worked example. This point is central to Chemical Kinetics in Class 11 Chemistry."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Rate law, specific rate constant, order and molecularity of a reaction with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Rahul. In Rate law, specific rate constant, order and molecularity of a reaction, focus on definitions, units, and one NCERT worked example. This point is central to Chemical Kinetics in Class 11 Chemistry."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Integrated rate equations and half-life (only for zero and first order reactions) with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Amit. In Integrated rate equations and half-life (only for zero and first order reactions), focus on definitions, units, and one NCERT worked example. This point is central to Chemical Kinetics in Class 11 Chemistry."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Concept of collision theory (elementary idea, no mathematical treatment) with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Sneha. In Concept of collision theory (elementary idea, no mathematical treatment), focus on definitions, units, and one NCERT worked example. This point is central to Chemical Kinetics in Class 11 Chemistry."
+              },
+              {
+                "role": "student",
+                "speaker": "Kavya",
+                "text": "Ma'am, could you explain Activation energy, Arrhenius equation with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Kavya. In Activation energy, Arrhenius equation, focus on definitions, units, and one NCERT worked example. This point is central to Chemical Kinetics in Class 11 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Chemical Kinetics. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
-                  "Subject**: CBSE Class 11-12 Chemistry",
-                  "Chapter Topic**: Chemical Kinetics",
-                  "Key Syllabus Standards**:",
                   "Rate of a reaction (average and instantaneous), factors affecting rates of reaction.",
                   "Rate law, specific rate constant, order and molecularity of a reaction.",
                   "Integrated rate equations and half-life (only for zero and first order reactions).",
@@ -319,57 +1069,213 @@
                 ]
               }
             ],
-            "beatCount": 0
+            "beatCount": 12
           },
-          "title": "CBSE Class 11-12 Chemistry: Chemical Kinetics"
+          "title": "Chemical Kinetics"
         },
         "surface-chemistry": {
           "chapterId": "surface-chemistry",
           "ncertCode": "kech105",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kech105",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech105.pdf",
             "sha256": "461df1ee2d9153df605965e7b3daa5691a5fcff9384face1756b112dcf7155c6",
             "fileSize": "3363018 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Chemistry: Surface Chemistry",
+            "concepts": [
+              "Surface Chemistry"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Surface Chemistry from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Surface Chemistry with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Surface Chemistry, focus on definitions, units, and one NCERT worked example. This point is central to Surface Chemistry in Class 11 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Surface Chemistry. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Surface Chemistry"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Surface Chemistry"
         },
         "general-principles-isolation-elements": {
           "chapterId": "general-principles-isolation-elements",
           "ncertCode": "kech106",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kech106",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech106.pdf",
             "sha256": "b773ebea12a452027782a2b1baf22540e72736ab9bdf7ac51dabfcb31c1161c4",
             "fileSize": "1556555 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Chemistry: General Principles Isolation Elements",
+            "concepts": [
+              "General Principles Isolation Elements"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover General Principles Isolation Elements from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain General Principles Isolation Elements with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In General Principles Isolation Elements, focus on definitions, units, and one NCERT worked example. This point is central to General Principles Isolation Elements in Class 11 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for General Principles Isolation Elements. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "General Principles Isolation Elements"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "General Principles Isolation Elements"
         },
         "p-block-elements": {
           "chapterId": "p-block-elements",
           "ncertCode": "kech107",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kech107",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech107.pdf",
             "sha256": "a2a525b417fb6af41934da2dc79666d86be61011190dd23a44323587cf1d0527",
             "fileSize": "274173 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Chemistry: P Block Elements",
+            "concepts": [
+              "P Block Elements"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover P Block Elements from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain P Block Elements with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In P Block Elements, focus on definitions, units, and one NCERT worked example. This point is central to P Block Elements in Class 11 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for P Block Elements. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "P Block Elements"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "P Block Elements"
         },
         "d-f-block-elements": {
           "chapterId": "d-f-block-elements",
           "ncertCode": "kech108",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kech108",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech108.pdf",
             "sha256": "096066df64f5d2e2e05ee372263efc40985ee6db0654af4c75412f82ba2cfb22",
             "fileSize": "162375 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Chemistry: D F Block Elements",
+            "concepts": [
+              "D F Block Elements"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover D F Block Elements from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain D F Block Elements with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In D F Block Elements, focus on definitions, units, and one NCERT worked example. This point is central to D F Block Elements in Class 11 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for D F Block Elements. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "D F Block Elements"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "D F Block Elements"
         },
         "coordination-compounds": {
           "chapterId": "coordination-compounds",
@@ -388,110 +1294,475 @@
               "Valence Bond Theory (VBT): hybridization, magnetic behavior (high spin and low spin).",
               "Crystal Field Theory (CFT): d-orbital splitting in octahedral and tetrahedral fields, CFSE."
             ],
-            "beats": [],
+            "beats": [
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 11-12 Chemistry Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 11-12 Chemistry: Coordination Compounds."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter Topic** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter Topic**: Coordination Compounds Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 11-12 Chemistry: Coordination Compounds."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 11-12 Chemistry: Coordination Compounds."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Coordination compounds - Introduction, ligands, coordination number, color, magnetic properties in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Coordination compounds - Introduction, ligands, coordination number, color, magnetic properties. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 11-12 Chemistry: Coordination Compounds."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Werner's theory of coordination compounds, IUPAC nomenclature of mononuclear coordination compounds in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Werner's theory of coordination compounds, IUPAC nomenclature of mononuclear coordination compounds. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 11-12 Chemistry: Coordination Compounds."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Isomerism (structural and stereo) in coordination compounds in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Isomerism (structural and stereo) in coordination compounds. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 11-12 Chemistry: Coordination Compounds."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Valence Bond Theory (VBT) in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Valence Bond Theory (VBT): hybridization, magnetic behavior (high spin and low spin). Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 11-12 Chemistry: Coordination Compounds."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Crystal Field Theory (CFT) in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Crystal Field Theory (CFT): d-orbital splitting in octahedral and tetrahedral fields, CFSE. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 11-12 Chemistry: Coordination Compounds."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 11-12 Chemistry: Coordination Compounds. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
+              }
+            ],
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
                   "Subject**: CBSE Class 11-12 Chemistry",
                   "Chapter Topic**: Coordination Compounds",
                   "Key Syllabus Standards**:",
                   "Coordination compounds - Introduction, ligands, coordination number, color, magnetic properties.",
-                  "Werner's theory of coordination compounds, IUPAC nomenclature of mononuclear coordination compounds.",
+                  "Werner's theory of coordination compounds, IUPAC nomenclature of mononuclear coordination compounds."
+                ]
+              },
+              {
+                "type": "syllabus",
+                "title": "Chapter essentials",
+                "bullets": [
                   "Isomerism (structural and stereo) in coordination compounds.",
                   "Valence Bond Theory (VBT): hybridization, magnetic behavior (high spin and low spin).",
                   "Crystal Field Theory (CFT): d-orbital splitting in octahedral and tetrahedral fields, CFSE."
                 ]
               }
             ],
-            "beatCount": 0
+            "beatCount": 17
           },
           "title": "CBSE Class 11-12 Chemistry: Coordination Compounds"
         },
         "haloalkanes-haloarenes": {
           "chapterId": "haloalkanes-haloarenes",
           "ncertCode": "lech101",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "lech101",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech101.pdf",
             "sha256": "27e8d8c0dea764c55c708fdb72767fe19503c2e60fd38cf856ff2b5424cf88dc",
             "fileSize": "1163700 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Chemistry: Haloalkanes Haloarenes",
+            "concepts": [
+              "Haloalkanes Haloarenes"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Haloalkanes Haloarenes from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Haloalkanes Haloarenes with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Haloalkanes Haloarenes, focus on definitions, units, and one NCERT worked example. This point is central to Haloalkanes Haloarenes in Class 12 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Haloalkanes Haloarenes. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Haloalkanes Haloarenes"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Haloalkanes Haloarenes"
         },
         "alcohols-phenols-ethers": {
           "chapterId": "alcohols-phenols-ethers",
           "ncertCode": "lech102",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "lech102",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech102.pdf",
             "sha256": "256b5cb0ec4e26686a5c57f18c5c3bbfe4f8694f5d0e5110573a62276d92d788",
             "fileSize": "1237204 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Chemistry: Alcohols Phenols Ethers",
+            "concepts": [
+              "Alcohols Phenols Ethers"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Alcohols Phenols Ethers from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Alcohols Phenols Ethers with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Alcohols Phenols Ethers, focus on definitions, units, and one NCERT worked example. This point is central to Alcohols Phenols Ethers in Class 12 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Alcohols Phenols Ethers. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Alcohols Phenols Ethers"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Alcohols Phenols Ethers"
         },
         "aldehydes-ketones-carboxylic-acids": {
           "chapterId": "aldehydes-ketones-carboxylic-acids",
           "ncertCode": "lech103",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "lech103",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech103.pdf",
             "sha256": "aaf6f16075ab274ea86938a83b45a9c27afd5c3931339e79ecf083ef8dd67155",
             "fileSize": "747046 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Chemistry: Aldehydes Ketones Carboxylic Acids",
+            "concepts": [
+              "Aldehydes Ketones Carboxylic Acids"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Aldehydes Ketones Carboxylic Acids from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Aldehydes Ketones Carboxylic Acids with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Aldehydes Ketones Carboxylic Acids, focus on definitions, units, and one NCERT worked example. This point is central to Aldehydes Ketones Carboxylic Acids in Class 12 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Aldehydes Ketones Carboxylic Acids. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Aldehydes Ketones Carboxylic Acids"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Aldehydes Ketones Carboxylic Acids"
         },
         "amines": {
           "chapterId": "amines",
           "ncertCode": "lech104",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "lech104",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech104.pdf",
             "sha256": "1bf2fd00a80320f5ae0faa64ea0f239f81bc3b32ac192a88b58343a1280cc01f",
             "fileSize": "1281310 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Chemistry: Amines",
+            "concepts": [
+              "Amines"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Amines from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Amines with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Amines, focus on definitions, units, and one NCERT worked example. This point is central to Amines in Class 12 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Amines. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Amines"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Amines"
         },
         "biomolecules": {
           "chapterId": "biomolecules",
           "ncertCode": "lech105",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "lech105",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech105.pdf",
             "sha256": "0028cf5a41f0e79955f93b3ca5a9902677ad74ea3c86cd88bd84e855f8468447",
             "fileSize": "1003193 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Chemistry: Biomolecules",
+            "concepts": [
+              "Biomolecules"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Biomolecules from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Biomolecules with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Biomolecules, focus on definitions, units, and one NCERT worked example. This point is central to Biomolecules in Class 12 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Biomolecules. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Biomolecules"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Biomolecules"
         },
         "polymers": {
           "chapterId": "polymers",
           "ncertCode": "lech106",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "lech106",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech106.pdf",
             "sha256": "5176f64fca459db4aeef1b0b0dae706ef8313592dcb9aa1c1aad880a6a18f06c",
             "fileSize": "139985 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Chemistry: Polymers",
+            "concepts": [
+              "Polymers"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Polymers from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Polymers with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Polymers, focus on definitions, units, and one NCERT worked example. This point is central to Polymers in Class 12 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Polymers. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Polymers"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Polymers"
         },
         "chemistry-everyday-life": {
           "chapterId": "chemistry-everyday-life",
           "ncertCode": "lech107",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "lech107",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech107.pdf",
             "sha256": "48adf123a3b7ff34f8579701de695b4bf0beecc959332f13ec4a9c7ced28fb85",
             "fileSize": "85188 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 12 Chemistry: Chemistry Everyday Life",
+            "concepts": [
+              "Chemistry Everyday Life"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Chemistry Everyday Life from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Chemistry Everyday Life with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Chemistry Everyday Life, focus on definitions, units, and one NCERT worked example. This point is central to Chemistry Everyday Life in Class 12 Chemistry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Chemistry Everyday Life. Revise NCERT intext questions and attempt two previous-year CBSE Class 12 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Chemistry Everyday Life"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Chemistry Everyday Life"
         }
       }
     },
@@ -501,62 +1772,257 @@
         "reproduction": {
           "chapterId": "reproduction",
           "ncertCode": "kebo101",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo101",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo101.pdf",
             "sha256": "e1f1685179957d4799faa90035acf1bf5cf2517dfbea90d151f1060d0b701a8c",
             "fileSize": "190637 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Reproduction",
+            "concepts": [
+              "Reproduction"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Reproduction from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Reproduction with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Reproduction, focus on definitions, units, and one NCERT worked example. This point is central to Reproduction in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Reproduction. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Reproduction"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Reproduction"
         },
         "sexual-reproduction-flowering-plants": {
           "chapterId": "sexual-reproduction-flowering-plants",
           "ncertCode": "kebo102",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo102",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo102.pdf",
             "sha256": "60b096645590e1026029eec114b31b80f1c5aa6ef806cb8af95b600b05b1dfcc",
             "fileSize": "1916422 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Sexual Reproduction Flowering Plants",
+            "concepts": [
+              "Sexual Reproduction Flowering Plants"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Sexual Reproduction Flowering Plants from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Sexual Reproduction Flowering Plants with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Sexual Reproduction Flowering Plants, focus on definitions, units, and one NCERT worked example. This point is central to Sexual Reproduction Flowering Plants in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Sexual Reproduction Flowering Plants. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Sexual Reproduction Flowering Plants"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Sexual Reproduction Flowering Plants"
         },
         "human-reproduction": {
           "chapterId": "human-reproduction",
           "ncertCode": "kebo103",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo103",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo103.pdf",
             "sha256": "884166aa4de3628fc8c1340359352f8e10e454367396085c45782487097d6fab",
             "fileSize": "3564831 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Human Reproduction",
+            "concepts": [
+              "Human Reproduction"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Human Reproduction from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Human Reproduction with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Human Reproduction, focus on definitions, units, and one NCERT worked example. This point is central to Human Reproduction in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Human Reproduction. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Human Reproduction"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Human Reproduction"
         },
         "reproductive-health": {
           "chapterId": "reproductive-health",
           "ncertCode": "kebo104",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo104",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo104.pdf",
             "sha256": "393b252f21f6b4f997d0e6b14b4837c3a7f04da9fe591c4a4402be37bcea1c7c",
             "fileSize": "3500181 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Reproductive Health",
+            "concepts": [
+              "Reproductive Health"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Reproductive Health from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Reproductive Health with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Reproductive Health, focus on definitions, units, and one NCERT worked example. This point is central to Reproductive Health in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Reproductive Health. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Reproductive Health"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Reproductive Health"
         },
         "principles-inheritance-variation": {
           "chapterId": "principles-inheritance-variation",
           "ncertCode": "kebo105",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo105",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo105.pdf",
             "sha256": "58c8ec9dda47933634fe041b6e0ce46b6d368646188c8e4c3b89e9989e5eb296",
             "fileSize": "1611342 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Principles Inheritance Variation",
+            "concepts": [
+              "Principles Inheritance Variation"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Principles Inheritance Variation from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Principles Inheritance Variation with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Principles Inheritance Variation, focus on definitions, units, and one NCERT worked example. This point is central to Principles Inheritance Variation in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Principles Inheritance Variation. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Principles Inheritance Variation"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Principles Inheritance Variation"
         },
         "molecular-basis-inheritance": {
           "chapterId": "molecular-basis-inheritance",
@@ -570,25 +2036,70 @@
             "fileSize": "910104 bytes"
           },
           "transcript": {
-            "title": "CBSE Class 11-12 Biology: Molecular Basis of Inheritance",
+            "title": "CBSE Class 11 Biology: Molecular Basis of Inheritance",
             "concepts": [
-              "Subject**: CBSE Class 11-12 Biology",
-              "Chapter Topic**: Molecular Basis of Inheritance",
-              "Key Syllabus Standards**:",
               "Structure of DNA and RNA, DNA packaging, DNA replication.",
               "Transcription, genetic code, translation.",
               "Gene expression and regulation - Lac Operon.",
               "Genome projects: Human Genome Project, DNA fingerprinting."
             ],
-            "beats": [],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Molecular Basis of Inheritance from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Structure of DNA and RNA, DNA packaging, DNA replication with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Structure of DNA and RNA, DNA packaging, DNA replication, focus on definitions, units, and one NCERT worked example. This point is central to Molecular Basis of Inheritance in Class 11 Biology."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Transcription, genetic code, translation with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Rahul. In Transcription, genetic code, translation, focus on definitions, units, and one NCERT worked example. This point is central to Molecular Basis of Inheritance in Class 11 Biology."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Gene expression and regulation - Lac Operon with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Amit. In Gene expression and regulation - Lac Operon, focus on definitions, units, and one NCERT worked example. This point is central to Molecular Basis of Inheritance in Class 11 Biology."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Genome projects with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Sneha. In Genome projects: Human Genome Project, DNA fingerprinting, focus on definitions, units, and one NCERT worked example. This point is central to Molecular Basis of Inheritance in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Molecular Basis of Inheritance. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
-                  "Subject**: CBSE Class 11-12 Biology",
-                  "Chapter Topic**: Molecular Basis of Inheritance",
-                  "Key Syllabus Standards**:",
                   "Structure of DNA and RNA, DNA packaging, DNA replication.",
                   "Transcription, genetic code, translation.",
                   "Gene expression and regulation - Lac Operon.",
@@ -596,45 +2107,162 @@
                 ]
               }
             ],
-            "beatCount": 0
+            "beatCount": 10
           },
-          "title": "CBSE Class 11-12 Biology: Molecular Basis of Inheritance"
+          "title": "Molecular Basis of Inheritance"
         },
         "evolution": {
           "chapterId": "evolution",
           "ncertCode": "kebo107",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo107",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo107.pdf",
             "sha256": "852db24d7ce00df4a10beca6d27102f7c72c9f3c853628421d39c42a458a6803",
             "fileSize": "190481 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Evolution",
+            "concepts": [
+              "Evolution"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Evolution from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Evolution with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Evolution, focus on definitions, units, and one NCERT worked example. This point is central to Evolution in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Evolution. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Evolution"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Evolution"
         },
         "human-health-disease": {
           "chapterId": "human-health-disease",
           "ncertCode": "kebo108",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo108",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo108.pdf",
             "sha256": "ee6c5000fee0dc561149065f6d1fc68ac94bd5e43e79d5f171463e7c7ffc8150",
             "fileSize": "4998900 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Human Health Disease",
+            "concepts": [
+              "Human Health Disease"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Human Health Disease from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Human Health Disease with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Human Health Disease, focus on definitions, units, and one NCERT worked example. This point is central to Human Health Disease in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Human Health Disease. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Human Health Disease"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Human Health Disease"
         },
         "microbes-human-welfare": {
           "chapterId": "microbes-human-welfare",
           "ncertCode": "kebo109",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo109",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo109.pdf",
             "sha256": "56c40574560ba37a14a1c98c6be5d095bf906bcc65aa75b828cf5551da01ab22",
             "fileSize": "319786 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Microbes Human Welfare",
+            "concepts": [
+              "Microbes Human Welfare"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Microbes Human Welfare from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Microbes Human Welfare with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Microbes Human Welfare, focus on definitions, units, and one NCERT worked example. This point is central to Microbes Human Welfare in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Microbes Human Welfare. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Microbes Human Welfare"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Microbes Human Welfare"
         },
         "biotechnology-principles-processes": {
           "chapterId": "biotechnology-principles-processes",
@@ -648,25 +2276,70 @@
             "fileSize": "1271925 bytes"
           },
           "transcript": {
-            "title": "CBSE Class 11-12 Biology: Biotechnology: Principles and Processes",
+            "title": "CBSE Class 11 Biology: Biotechnology: Principles and Processes",
             "concepts": [
-              "Subject**: CBSE Class 11-12 Biology",
-              "Chapter Topic**: Biotechnology: Principles and Processes",
-              "Key Syllabus Standards**:",
               "Genetic engineering (Recombinant DNA technology).",
               "Tools of recombinant DNA technology: Restriction enzymes, polymerases, ligases, vectors.",
               "Processes of Recombinant DNA Technology: Isolation of DNA, PCR, Gel electrophoresis.",
               "Downstream processing."
             ],
-            "beats": [],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Biotechnology: Principles and Processes from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Genetic engineering (Recombinant DNA technology) with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Genetic engineering (Recombinant DNA technology), focus on definitions, units, and one NCERT worked example. This point is central to Biotechnology: Principles and Processes in Class 11 Biology."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Tools of recombinant DNA technology with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Rahul. In Tools of recombinant DNA technology: Restriction enzymes, polymerases, ligases, vectors, focus on definitions, units, and one NCERT worked example. This point is central to Biotechnology: Principles and Processes in Class 11 Biology."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Processes of Recombinant DNA Technology with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Amit. In Processes of Recombinant DNA Technology: Isolation of DNA, PCR, Gel electrophoresis, focus on definitions, units, and one NCERT worked example. This point is central to Biotechnology: Principles and Processes in Class 11 Biology."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Downstream processing with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Sneha. In Downstream processing, focus on definitions, units, and one NCERT worked example. This point is central to Biotechnology: Principles and Processes in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Biotechnology: Principles and Processes. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
-                  "Subject**: CBSE Class 11-12 Biology",
-                  "Chapter Topic**: Biotechnology: Principles and Processes",
-                  "Key Syllabus Standards**:",
                   "Genetic engineering (Recombinant DNA technology).",
                   "Tools of recombinant DNA technology: Restriction enzymes, polymerases, ligases, vectors.",
                   "Processes of Recombinant DNA Technology: Isolation of DNA, PCR, Gel electrophoresis.",
@@ -674,57 +2347,213 @@
                 ]
               }
             ],
-            "beatCount": 0
+            "beatCount": 10
           },
-          "title": "CBSE Class 11-12 Biology: Biotechnology: Principles and Processes"
+          "title": "Biotechnology: Principles and Processes"
         },
         "biotechnology-applications": {
           "chapterId": "biotechnology-applications",
           "ncertCode": "kebo111",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo111",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo111.pdf",
             "sha256": "37e3667c2d045cd9fd384620cb495095c1217be14188fcaf9a2e9cc9fb3b4427",
             "fileSize": "631600 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Biotechnology Applications",
+            "concepts": [
+              "Biotechnology Applications"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Biotechnology Applications from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Biotechnology Applications with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Biotechnology Applications, focus on definitions, units, and one NCERT worked example. This point is central to Biotechnology Applications in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Biotechnology Applications. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Biotechnology Applications"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Biotechnology Applications"
         },
         "organisms-populations": {
           "chapterId": "organisms-populations",
           "ncertCode": "kebo112",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo112",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo112.pdf",
             "sha256": "974897b8ed1bbae6658be4e54a4bae3ba4b1098a5e2eb1a8b7680fc0da75907e",
             "fileSize": "293670 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Organisms Populations",
+            "concepts": [
+              "Organisms Populations"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Organisms Populations from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Organisms Populations with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Organisms Populations, focus on definitions, units, and one NCERT worked example. This point is central to Organisms Populations in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Organisms Populations. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Organisms Populations"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Organisms Populations"
         },
         "ecosystem": {
           "chapterId": "ecosystem",
           "ncertCode": "kebo113",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo113",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo113.pdf",
             "sha256": "2b036c2b950f9d0e93065a7e98ec76a8c1ad57fe3c05711013fa1b9d452e46ec",
             "fileSize": "515333 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Ecosystem",
+            "concepts": [
+              "Ecosystem"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Ecosystem from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Ecosystem with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Ecosystem, focus on definitions, units, and one NCERT worked example. This point is central to Ecosystem in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Ecosystem. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Ecosystem"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Ecosystem"
         },
         "biodiversity-conservation": {
           "chapterId": "biodiversity-conservation",
           "ncertCode": "kebo114",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kebo114",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo114.pdf",
             "sha256": "bd9ee6c5a844dd3fe87af87b595a89c4734c05f03fb923e05b5f7e43d5a215f5",
             "fileSize": "798269 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Biology: Biodiversity Conservation",
+            "concepts": [
+              "Biodiversity Conservation"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Biodiversity Conservation from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Biodiversity Conservation with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Biodiversity Conservation, focus on definitions, units, and one NCERT worked example. This point is central to Biodiversity Conservation in Class 11 Biology."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Biodiversity Conservation. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Biodiversity Conservation"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Biodiversity Conservation"
         }
       }
     },
@@ -743,69 +2572,221 @@
             "fileSize": "297785 bytes"
           },
           "transcript": {
-            "title": "CBSE Class 11-12 Mathematics: Relations and Functions",
+            "title": "CBSE Class 11 Mathematics: Relations and Functions",
             "concepts": [
-              "Subject**: CBSE Class 11-12 Mathematics",
-              "Chapter Topic**: Relations and Functions",
-              "Key Syllabus Standards**:",
               "Types of relations: reflexive, symmetric, transitive and equivalence relations.",
               "One to one (injective) and onto (surjective) functions.",
               "Composite functions, inverse of a function (bijective functions)."
             ],
-            "beats": [],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Relations and Functions from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Types of relations with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Types of relations: reflexive, symmetric, transitive and equivalence relations, focus on definitions, units, and one NCERT worked example. This point is central to Relations and Functions in Class 11 Mathematics."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain One to one (injective) and onto (surjective) functions with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Rahul. In One to one (injective) and onto (surjective) functions, focus on definitions, units, and one NCERT worked example. This point is central to Relations and Functions in Class 11 Mathematics."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Composite functions, inverse of a function (bijective functions) with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Amit. In Composite functions, inverse of a function (bijective functions), focus on definitions, units, and one NCERT worked example. This point is central to Relations and Functions in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Relations and Functions. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
-                  "Subject**: CBSE Class 11-12 Mathematics",
-                  "Chapter Topic**: Relations and Functions",
-                  "Key Syllabus Standards**:",
                   "Types of relations: reflexive, symmetric, transitive and equivalence relations.",
                   "One to one (injective) and onto (surjective) functions.",
                   "Composite functions, inverse of a function (bijective functions)."
                 ]
               }
             ],
-            "beatCount": 0
+            "beatCount": 8
           },
-          "title": "CBSE Class 11-12 Mathematics: Relations and Functions"
+          "title": "Relations and Functions"
         },
         "inverse-trigonometric-functions": {
           "chapterId": "inverse-trigonometric-functions",
           "ncertCode": "kemh102",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kemh102",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh102.pdf",
             "sha256": "992138346a0b7485772884000a9f147c2408c51b932c5d265f099345edfc5ee9",
             "fileSize": "328132 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Mathematics: Inverse Trigonometric Functions",
+            "concepts": [
+              "Inverse Trigonometric Functions"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Inverse Trigonometric Functions from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Inverse Trigonometric Functions with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Inverse Trigonometric Functions, focus on definitions, units, and one NCERT worked example. This point is central to Inverse Trigonometric Functions in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Inverse Trigonometric Functions. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Inverse Trigonometric Functions"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Inverse Trigonometric Functions"
         },
         "matrices": {
           "chapterId": "matrices",
           "ncertCode": "kemh103",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kemh103",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh103.pdf",
             "sha256": "2d531de9945a8aa6d457e1a97b6d61ecbb5c81e231acfe318a7f76cdca973f0e",
             "fileSize": "483627 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Mathematics: Matrices",
+            "concepts": [
+              "Matrices"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Matrices from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Matrices with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Matrices, focus on definitions, units, and one NCERT worked example. This point is central to Matrices in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Matrices. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Matrices"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Matrices"
         },
         "determinants": {
           "chapterId": "determinants",
           "ncertCode": "kemh104",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kemh104",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh104.pdf",
             "sha256": "f1abaa48a725b7b72cd99a6f3173d7e3f649632782549ff80e7f61d5ab3e7809",
             "fileSize": "252430 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Mathematics: Determinants",
+            "concepts": [
+              "Determinants"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Determinants from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Determinants with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Determinants, focus on definitions, units, and one NCERT worked example. This point is central to Determinants in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Determinants. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Determinants"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Determinants"
         },
         "continuity-differentiability": {
           "chapterId": "continuity-differentiability",
@@ -819,26 +2800,81 @@
             "fileSize": "181681 bytes"
           },
           "transcript": {
-            "title": "CBSE Class 11-12 Mathematics: Continuity and Differentiability",
+            "title": "CBSE Class 11 Mathematics: Continuity and Differentiability",
             "concepts": [
-              "Subject**: CBSE Class 11-12 Mathematics",
-              "Chapter Topic**: Continuity and Differentiability",
-              "Key Syllabus Standards**:",
               "Continuity and differentiability, derivative of composite functions, chain rule.",
               "Derivatives of inverse trigonometric functions, derivative of implicit functions.",
               "Concept of exponential and logarithmic functions, logarithmic differentiation.",
               "Derivatives of functions expressed in parametric forms, Second order derivatives.",
               "Rolle's and Lagrange's Mean Value Theorems (geometric interpretation)."
             ],
-            "beats": [],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Continuity and Differentiability from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Continuity and differentiability, derivative of composite functions, chain rule with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Continuity and differentiability, derivative of composite functions, chain rule, focus on definitions, units, and one NCERT worked example. This point is central to Continuity and Differentiability in Class 11 Mathematics."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Derivatives of inverse trigonometric functions, derivative of implicit functions with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Rahul. In Derivatives of inverse trigonometric functions, derivative of implicit functions, focus on definitions, units, and one NCERT worked example. This point is central to Continuity and Differentiability in Class 11 Mathematics."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Concept of exponential and logarithmic functions, logarithmic differentiation with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Amit. In Concept of exponential and logarithmic functions, logarithmic differentiation, focus on definitions, units, and one NCERT worked example. This point is central to Continuity and Differentiability in Class 11 Mathematics."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Derivatives of functions expressed in parametric forms, Second order derivatives with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Sneha. In Derivatives of functions expressed in parametric forms, Second order derivatives, focus on definitions, units, and one NCERT worked example. This point is central to Continuity and Differentiability in Class 11 Mathematics."
+              },
+              {
+                "role": "student",
+                "speaker": "Kavya",
+                "text": "Ma'am, could you explain Rolle's and Lagrange's Mean Value Theorems (geometric interpretation) with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Kavya. In Rolle's and Lagrange's Mean Value Theorems (geometric interpretation), focus on definitions, units, and one NCERT worked example. This point is central to Continuity and Differentiability in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Continuity and Differentiability. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
-                  "Subject**: CBSE Class 11-12 Mathematics",
-                  "Chapter Topic**: Continuity and Differentiability",
-                  "Key Syllabus Standards**:",
                   "Continuity and differentiability, derivative of composite functions, chain rule.",
                   "Derivatives of inverse trigonometric functions, derivative of implicit functions.",
                   "Concept of exponential and logarithmic functions, logarithmic differentiation.",
@@ -847,21 +2883,60 @@
                 ]
               }
             ],
-            "beatCount": 0
+            "beatCount": 12
           },
-          "title": "CBSE Class 11-12 Mathematics: Continuity and Differentiability"
+          "title": "Continuity and Differentiability"
         },
         "application-derivatives": {
           "chapterId": "application-derivatives",
           "ncertCode": "kemh106",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kemh106",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh106.pdf",
             "sha256": "675cb54e5ef51020559656ff3f45a59e2d2e852e57a7f1976e91df8203a81e06",
             "fileSize": "287776 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Mathematics: Application Derivatives",
+            "concepts": [
+              "Application Derivatives"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Application Derivatives from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Application Derivatives with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Application Derivatives, focus on definitions, units, and one NCERT worked example. This point is central to Application Derivatives in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Application Derivatives. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Application Derivatives"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Application Derivatives"
         },
         "integrals": {
           "chapterId": "integrals",
@@ -875,26 +2950,81 @@
             "fileSize": "219288 bytes"
           },
           "transcript": {
-            "title": "CBSE Class 11-12 Mathematics: Integrals",
+            "title": "CBSE Class 11 Mathematics: Integrals",
             "concepts": [
-              "Subject**: CBSE Class 11-12 Mathematics",
-              "Chapter Topic**: Integrals",
-              "Key Syllabus Standards**:",
               "Integration as inverse process of differentiation.",
               "Integration of a variety of functions by substitution, by partial fractions and by parts.",
               "Evaluation of simple integrals of standard forms.",
               "Fundamental Theorem of Calculus (without proof).",
               "Basic properties of definite integrals and evaluation of definite integrals."
             ],
-            "beats": [],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Integrals from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Integration as inverse process of differentiation with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Integration as inverse process of differentiation, focus on definitions, units, and one NCERT worked example. This point is central to Integrals in Class 11 Mathematics."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Integration of a variety of functions by substitution, by partial fractions and by parts with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Rahul. In Integration of a variety of functions by substitution, by partial fractions and by parts, focus on definitions, units, and one NCERT worked example. This point is central to Integrals in Class 11 Mathematics."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Evaluation of simple integrals of standard forms with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Amit. In Evaluation of simple integrals of standard forms, focus on definitions, units, and one NCERT worked example. This point is central to Integrals in Class 11 Mathematics."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Fundamental Theorem of Calculus (without proof) with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Sneha. In Fundamental Theorem of Calculus (without proof), focus on definitions, units, and one NCERT worked example. This point is central to Integrals in Class 11 Mathematics."
+              },
+              {
+                "role": "student",
+                "speaker": "Kavya",
+                "text": "Ma'am, could you explain Basic properties of definite integrals and evaluation of definite integrals with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Kavya. In Basic properties of definite integrals and evaluation of definite integrals, focus on definitions, units, and one NCERT worked example. This point is central to Integrals in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Integrals. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
             "pages": [
               {
                 "type": "syllabus",
-                "title": "Syllabus & Core Concepts",
+                "title": "NCERT syllabus focus",
                 "bullets": [
-                  "Subject**: CBSE Class 11-12 Mathematics",
-                  "Chapter Topic**: Integrals",
-                  "Key Syllabus Standards**:",
                   "Integration as inverse process of differentiation.",
                   "Integration of a variety of functions by substitution, by partial fractions and by parts.",
                   "Evaluation of simple integrals of standard forms.",
@@ -903,81 +3033,315 @@
                 ]
               }
             ],
-            "beatCount": 0
+            "beatCount": 12
           },
-          "title": "CBSE Class 11-12 Mathematics: Integrals"
+          "title": "Integrals"
         },
         "application-integrals": {
           "chapterId": "application-integrals",
           "ncertCode": "kemh108",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kemh108",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh108.pdf",
             "sha256": "2075e430261306660d4fde9d42792214dbf9bce97ba29168d5a7acdb7f7dc521",
             "fileSize": "232017 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Mathematics: Application Integrals",
+            "concepts": [
+              "Application Integrals"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Application Integrals from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Application Integrals with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Application Integrals, focus on definitions, units, and one NCERT worked example. This point is central to Application Integrals in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Application Integrals. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Application Integrals"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Application Integrals"
         },
         "differential-equations": {
           "chapterId": "differential-equations",
           "ncertCode": "kemh109",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kemh109",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh109.pdf",
             "sha256": "d77ee938a66c6626e1f2535160624ad396e4da1b1bdd60e0928ab9b9fc7a76bf",
             "fileSize": "415931 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Mathematics: Differential Equations",
+            "concepts": [
+              "Differential Equations"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Differential Equations from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Differential Equations with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Differential Equations, focus on definitions, units, and one NCERT worked example. This point is central to Differential Equations in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Differential Equations. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Differential Equations"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Differential Equations"
         },
         "vector-algebra": {
           "chapterId": "vector-algebra",
           "ncertCode": "kemh110",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kemh110",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh110.pdf",
             "sha256": "050d09dcc5963d04b640938806e2f7b36886dccdf378ddead5dd811c744babd3",
             "fileSize": "540755 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Mathematics: Vector Algebra",
+            "concepts": [
+              "Vector Algebra"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Vector Algebra from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Vector Algebra with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Vector Algebra, focus on definitions, units, and one NCERT worked example. This point is central to Vector Algebra in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Vector Algebra. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Vector Algebra"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Vector Algebra"
         },
         "three-dimensional-geometry": {
           "chapterId": "three-dimensional-geometry",
           "ncertCode": "kemh111",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kemh111",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh111.pdf",
             "sha256": "afd138353515dfc534204c862bf3b98e7352976e41923b1399427f10eb7b4790",
             "fileSize": "198776 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Mathematics: Three Dimensional Geometry",
+            "concepts": [
+              "Three Dimensional Geometry"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Three Dimensional Geometry from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Three Dimensional Geometry with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Three Dimensional Geometry, focus on definitions, units, and one NCERT worked example. This point is central to Three Dimensional Geometry in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Three Dimensional Geometry. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Three Dimensional Geometry"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Three Dimensional Geometry"
         },
         "linear-programming": {
           "chapterId": "linear-programming",
           "ncertCode": "kemh112",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kemh112",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh112.pdf",
             "sha256": "b4db83c8b28fd9649387edfb9fe81c1c67961c9cdbd797458b1f7b1e24d02348",
             "fileSize": "443624 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Mathematics: Linear Programming",
+            "concepts": [
+              "Linear Programming"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Linear Programming from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Linear Programming with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Linear Programming, focus on definitions, units, and one NCERT worked example. This point is central to Linear Programming in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Linear Programming. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Linear Programming"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Linear Programming"
         },
         "probability": {
           "chapterId": "probability",
           "ncertCode": "kemh113",
-          "hasTranscript": false,
+          "hasTranscript": true,
           "hasPdf": true,
           "pdf": {
             "ncertCode": "kemh113",
             "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh113.pdf",
             "sha256": "cecc2e97e21c24afebc682948364981fedd4db884413d540928015f55f15601e",
             "fileSize": "364041 bytes"
-          }
+          },
+          "transcript": {
+            "title": "CBSE Class 11 Mathematics: Probability",
+            "concepts": [
+              "Probability"
+            ],
+            "beats": [
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Today we cover Probability from your NCERT textbook. Open the official book on the left and follow along on the board."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Probability with a board sketch?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Good question, Priya. In Probability, focus on definitions, units, and one NCERT worked example. This point is central to Probability in Class 11 Mathematics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That covers the core syllabus for Probability. Revise NCERT intext questions and attempt two previous-year CBSE Class 11 items before your test."
+              }
+            ],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "NCERT syllabus focus",
+                "bullets": [
+                  "Probability"
+                ]
+              }
+            ],
+            "beatCount": 4
+          },
+          "title": "Probability"
         }
       }
     }
@@ -985,6 +3349,6 @@
   "stats": {
     "subjects": 4,
     "chaptersWithPdf": 56,
-    "chaptersWithTranscript": 9
+    "chaptersWithTranscript": 57
   }
 }

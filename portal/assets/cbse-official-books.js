@@ -8,7 +8,13 @@
 
   'use strict';
 
-
+  function escHtml(s) {
+    return String(s || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
 
   let lectureTimer = null;
 
@@ -328,44 +334,65 @@
 
 
 
+    function drawBiology(p, pal) {
+      const w = canvas.width / (global.devicePixelRatio || 1);
+      const h = canvas.height / (global.devicePixelRatio || 1);
+      ctx.strokeStyle = pal.stroke;
+      ctx.lineWidth = 2;
+      const cx = w / 2;
+      const cy = h / 2;
+      const t = Math.min(p, 1);
+      if (t > 0.05) {
+        ctx.beginPath();
+        ctx.ellipse(cx, cy, w * 0.24 * Math.min(t * 1.4, 1), h * 0.18 * Math.min(t * 1.4, 1), 0, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+      if (t > 0.35) {
+        ctx.fillStyle = pal.fill;
+        ctx.beginPath();
+        ctx.arc(cx, cy, 14 * Math.min((t - 0.35) * 2, 1), 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      }
+      if (t > 0.55) {
+        ctx.beginPath();
+        ctx.moveTo(cx - w * 0.08, cy - h * 0.04);
+        ctx.quadraticCurveTo(cx, cy - h * 0.18 * Math.min((t - 0.55) * 2, 1), cx + w * 0.08, cy - h * 0.04);
+        ctx.stroke();
+      }
+    }
+
+    let activeMode = 'default';
+
+    function pickDrawFn(mode) {
+      if (mode === 'mathematics') return drawTriangle;
+      if (mode === 'physics') return drawAtom;
+      if (mode === 'biology') return drawBiology;
+      return drawBeaker;
+    }
+
     return {
 
       start(mode) {
-
+        activeMode = mode || activeMode || 'default';
         resize();
-
         progress = 0;
-
-        const pal = palettes[mode] || palettes.default;
-
-        const drawFn = mode === 'mathematics' ? drawTriangle : mode === 'physics' ? drawAtom : drawBeaker;
-
+        const pal = palettes[activeMode] || palettes.default;
+        const drawFn = pickDrawFn(activeMode);
         if (animId) cancelAnimationFrame(animId);
-
         const tick = () => {
-
           ctx.clearRect(0, 0, canvas.width, canvas.height);
-
           ctx.fillStyle = 'rgba(15,23,42,0.4)';
-
           ctx.fillRect(0, 0, canvas.width, canvas.height);
-
           drawFn(progress, pal);
-
           progress += 0.008;
-
           if (progress < 1.2) animId = requestAnimationFrame(tick);
-
         };
-
         tick();
-
       },
 
       pulse() {
-
-        progress = 0.2;
-
+        this.start(activeMode);
       },
 
       stop() {
@@ -382,13 +409,59 @@
 
 
 
+  function resolveDiscipline(ctx) {
+    const sid = (ctx.subjectId || '').toLowerCase();
+    if (sid === 'mathematics' || sid === 'math') return 'mathematics';
+    if (sid === 'physics') return 'physics';
+    if (sid === 'chemistry') return 'chemistry';
+    if (sid === 'biology') return 'biology';
+    if (sid === 'science') {
+      const ch = (ctx.chapterId || '').toLowerCase();
+      if (/life|control|repro|hered|source|human-eye/.test(ch)) return 'biology';
+      if (/chem|acid|metal|carbon|electric|magnet|light/.test(ch)) return 'chemistry';
+      return 'physics';
+    }
+    return 'chemistry';
+  }
+
+  function synthesizeBeatsFromPages(entry, ctx) {
+    const pages = entry?.transcript?.pages || [];
+    const concepts = pages.flatMap((p) => p.bullets || []).filter((b) => b && String(b).length > 8);
+    const title = entry?.title || ctx.chapterTitle || 'this chapter';
+    if (!concepts.length) return [];
+    const beats = [
+      {
+        role: 'teacher',
+        speaker: 'Teacher',
+        text: `Let us walk through ${title}. Follow the NCERT pages and watch the board animation for each idea.`,
+      },
+    ];
+    concepts.slice(0, 6).forEach((concept, i) => {
+      const student = ['Priya', 'Rahul', 'Amit', 'Sneha'][i % 4];
+      const topic = String(concept).split('.')[0].trim();
+      beats.push({ role: 'student', speaker: student, text: `Ma'am, please explain ${topic}.` });
+      beats.push({
+        role: 'teacher',
+        speaker: 'Teacher',
+        text: `${topic}: note the definition, SI units if any, and one NCERT example. This is a favourite CBSE board checkpoint.`,
+      });
+    });
+    return beats;
+  }
+
   function renderBookSpread(host, entry, ctx) {
 
     const pages = entry?.transcript?.pages || [];
 
     const pdfUrl = entry?.pdf?.pdfUrl || '';
 
-    const beatCount = entry?.transcript?.beatCount || entry?.transcript?.beats?.length || 0;
+    const discipline = resolveDiscipline(ctx);
+
+    let beats = (entry?.transcript?.beats || []).length
+      ? entry.transcript.beats
+      : synthesizeBeatsFromPages(entry, ctx);
+
+    const effectiveBeatCount = beats.length;
 
 
 
@@ -416,8 +489,6 @@
 
             <span class="cbse-book-reader-page" id="cbseBookPageLabel">Loading…</span>
 
-            <button type="button" class="cbse-book-close" id="cbseCloseBook" aria-label="Close official book">✕ Close</button>
-
           </div>
 
           <div class="cbse-book-scroll" id="cbseBookScroll" tabindex="0" aria-label="Official book pages"></div>
@@ -444,13 +515,17 @@
 
           <canvas id="cbseSketchCanvas" class="cbse-sketch-canvas"></canvas>
 
-          <span class="cbse-sketch-label">Teacher board · listen &amp; watch</span>
+          <span class="cbse-sketch-label">Teacher board · ${discipline} animation</span>
 
         </div>
 
         <div class="cbse-lecture-controls">
 
-          <p class="cbse-lecture-note">🎧 Classroom explanation — ${beatCount} exchanges · Indian English voices · transcript hidden</p>
+          <p class="cbse-lecture-note">🎧 Classroom explanation — ${effectiveBeatCount} exchanges · Indian English voices</p>
+
+          <div class="cbse-lecture-caption" id="cbseLectureCaption" aria-live="polite">
+            <p class="cbse-caption-hint">${effectiveBeatCount ? 'Press Play to hear the teacher walk through this chapter.' : 'Teacher script is being indexed for this chapter — use Regular Study for video guides.'}</p>
+          </div>
 
           <div class="cbse-speaker-pill hidden" id="cbseSpeakerPill">
 
@@ -486,31 +561,15 @@
 
     const speakerName = host.querySelector('#cbseSpeakerName');
 
+    const captionEl = host.querySelector('#cbseLectureCaption');
+
     const progressEl = host.querySelector('#cbseLectureProgress');
 
     const canvas = host.querySelector('#cbseSketchCanvas');
 
     const sketch = SketchBoard(canvas);
 
-    const discipline =
-
-      ctx.subjectId === 'mathematics' || ctx.subjectId === 'math'
-
-        ? 'mathematics'
-
-        : ctx.subjectId === 'physics'
-
-          ? 'physics'
-
-          : ctx.subjectId === 'chemistry'
-
-            ? 'chemistry'
-
-            : ctx.subjectId === 'biology'
-
-              ? 'biology'
-
-              : 'chemistry';
+    global.requestAnimationFrame(() => sketch.start(discipline));
 
 
 
@@ -660,31 +719,9 @@
 
 
 
-    host.querySelector('#cbseCloseBook')?.addEventListener('click', () => {
+    const beatsRef = beats;
 
-      reader?.classList.add('hidden');
-
-      openBtn?.classList.remove('hidden');
-
-    });
-
-
-
-    const rawBeats = entry?.transcript?.beats || [];
-
-    const lectureSteps = global.CBSELectureFlow?.prepareLectureBeats?.(
-
-      rawBeats,
-
-      entry?.title || ctx.chapterTitle
-
-    ) || rawBeats.map((beat) => ({ kind: 'speak', beat }));
-
-
-
-    let stepIdx = 0;
-
-    const speakSteps = lectureSteps.filter((s) => s.kind === 'speak');
+    let beatIdx = 0;
 
     const playBtn = host.querySelector('#cbsePlayLecture');
 
@@ -692,25 +729,32 @@
 
 
 
+    function showCaption(beat) {
+      if (!captionEl || !beat?.text) return;
+      const roleLabel =
+        beat.role === 'teacher'
+          ? beat.speaker || 'Teacher'
+          : beat.speaker || 'Student';
+      captionEl.innerHTML = `<p class="cbse-caption-role">${escHtml(roleLabel)}</p><p class="cbse-caption-text">${escHtml(beat.text)}</p>`;
+    }
+
+    if (beatsRef[0]) showCaption(beatsRef[0]);
+
     function updateProgress() {
 
       if (!progressEl) return;
 
-      const spoken = lectureSteps.slice(0, stepIdx).filter((s) => s.kind === 'speak').length;
+      const pct = beatsRef.length ? Math.round((beatIdx / beatsRef.length) * 100) : 0;
 
-      const total = speakSteps.length || 1;
-
-      const pct = Math.round((spoken / total) * 100);
-
-      progressEl.innerHTML = `<div class="cbse-progress-bar"><div class="cbse-progress-fill" style="width:${pct}%"></div></div><span>${spoken} / ${total}</span>`;
+      progressEl.innerHTML = `<div class="cbse-progress-bar"><div class="cbse-progress-fill" style="width:${pct}%"></div></div><span>${beatIdx} / ${beatsRef.length}</span>`;
 
     }
 
 
 
-    function playNextStep() {
+    function playNextBeat() {
 
-      if (stepIdx >= lectureSteps.length) {
+      if (beatIdx >= beatsRef.length) {
 
         playBtn.classList.remove('hidden');
 
@@ -718,47 +762,17 @@
 
         speakerPill?.classList.add('hidden');
 
-        progressEl.innerHTML = '<p class="cbse-lecture-done">✓ Lecture complete — try the Quiz tab when you are ready!</p>';
+        progressEl.innerHTML = '<p class="cbse-lecture-done">✓ Lecture complete</p>';
 
         return;
 
       }
 
-      const step = lectureSteps[stepIdx];
-
-      stepIdx += 1;
-
-
-
-      if (step.kind === 'pause') {
-
-        lectureTimer = setTimeout(playNextStep, step.ms || 500);
-
-        updateProgress();
-
-        return;
-
-      }
-
-
-
-      if (step.kind === 'chime') {
-
-        const engine = global.CBSEVoiceEngine;
-
-        if (engine?.playChime) engine.playChime(playNextStep);
-
-        else lectureTimer = setTimeout(playNextStep, 200);
-
-        return;
-
-      }
-
-
-
-      const b = step.beat;
+      const b = beatsRef[beatIdx];
 
       speakerPill?.classList.remove('hidden');
+
+      showCaption(b);
 
       if (speakerName && global.CBSEVoiceEngine) {
 
@@ -776,7 +790,9 @@
 
       const done = () => {
 
-        lectureTimer = setTimeout(playNextStep, 380);
+        beatIdx += 1;
+
+        lectureTimer = setTimeout(playNextBeat, 350);
 
       };
 
@@ -794,7 +810,7 @@
 
       global.CBSEVoiceEngine?.resetTeacher?.();
 
-      stepIdx = 0;
+      beatIdx = 0;
 
       playBtn.classList.add('hidden');
 
@@ -804,7 +820,7 @@
 
       updateProgress();
 
-      playNextStep();
+      playNextBeat();
 
     });
 

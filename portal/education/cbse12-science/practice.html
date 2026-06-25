@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Practice Test · CBSE XII Science</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="../../assets/exam-center.css" />
+</head>
+<body class="portal-page study-room-page">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <header class="portal-header">
+    <a class="back-link" href="exam-center.html">← Exam Center</a>
+    <h1>Practice Test</h1>
+  </header>
+  <main class="portal-main" style="max-width:960px">
+    <div class="portal-hero" style="margin-bottom:20px">
+      <p class="eyebrow">Topic practice · competency mix</p>
+      <h2 style="font-size:1.25rem;margin:8px 0">Chapter drills from question bank</h2>
+      <p style="color:#94a3b8;font-size:0.9rem">Use Study Room Q &amp; A for chapter drills, or Abhyas when Class 12 track is indexed.</p>
+    </div>
+    <div id="abhyasRoot"></div>
+    <p class="portal-note" style="margin-top:16px">
+      Prefer chapter-scoped drills? Open <a href="room.html">Study Room</a> → chapter → Q &amp; A Practice.
+    </p>
+  </main>
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/abhyas-practice.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var params = new URLSearchParams(location.search);
+      AbhyasPractice.mount(document.getElementById('abhyasRoot'), {
+        subject: params.get('subject') || undefined,
+        count: params.get('count') ? parseInt(params.get('count'), 10) : 10,
+        mode: 'practice',
+        grade: '12',
+      });
+    });
+  </script>
+</body>
+</html>

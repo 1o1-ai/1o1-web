@@ -1,0 +1,180 @@
+/* CBSE Sample Question Paper — board-style exam UI */
+.exam-paper-page {
+  background: #f4f1ea;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.exam-paper-page .mock-exam-header {
+  background: #fff;
+  border-bottom: 2px solid #1a1a1a;
+  color: #1a1a1a;
+}
+
+.exam-paper-page .back-link {
+  color: #334155;
+}
+
+.exam-paper-page .mock-clock {
+  color: #b91c1c;
+  font-weight: 700;
+}
+
+.exam-paper-sheet {
+  max-width: 820px;
+  margin: 0 auto 48px;
+  background: #fff;
+  border: 2px solid #1a1a1a;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  padding: 28px 32px 40px;
+}
+
+.exam-board-header {
+  text-align: center;
+  border-bottom: 2px double #1a1a1a;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+}
+
+.exam-board-header .board-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.exam-board-header .paper-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 8px 0 4px;
+}
+
+.exam-board-header .paper-meta {
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.exam-marks-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+  font-size: 0.82rem;
+  margin: 16px 0;
+  padding: 12px 16px;
+  border: 1px solid #333;
+}
+
+.exam-general-instructions {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  margin-bottom: 24px;
+  padding: 12px 16px;
+  background: #fafafa;
+  border-left: 4px solid #1a1a1a;
+}
+
+.exam-general-instructions ol {
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+
+.exam-section-head {
+  margin: 28px 0 12px;
+  padding: 8px 12px;
+  background: #eef2ff;
+  border: 1px solid #94a3b8;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.exam-section-head small {
+  display: block;
+  font-weight: 500;
+  color: #475569;
+  margin-top: 4px;
+}
+
+.exam-paper-page .mock-q-block {
+  border-bottom: 1px dotted #cbd5e1;
+  padding: 14px 0;
+  color: #1a1a1a;
+}
+
+.exam-paper-page .mock-q-num {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+.exam-paper-page .verified-tag {
+  font-size: 0.72rem;
+  background: #e2e8f0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin-left: 8px;
+}
+
+.exam-paper-page .mock-opt {
+  display: block;
+  margin: 6px 0;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+.exam-paper-page .mock-opt:hover {
+  background: #f1f5f9;
+}
+
+/* Exam Center hub */
+.exam-center-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.exam-center-card {
+  background: var(--portal-surface, #121a16);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.exam-center-card:hover {
+  border-color: rgba(110, 231, 168, 0.45);
+  transform: translateY(-2px);
+}
+
+.exam-center-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.exam-center-card p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.exam-center-card .ec-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.cbse-tab.dormant {
+  opacity: 0.45;
+  pointer-events: none;
+  filter: grayscale(0.6);
+}
+
+.cbse-tab.dormant::after {
+  content: ' (NCERT pending)';
+  font-size: 0.65rem;
+  font-weight: 500;
+}
