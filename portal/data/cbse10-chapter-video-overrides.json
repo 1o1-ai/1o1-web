@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "description": "Curated YouTube corrections when VOLTAIC source material linked the wrong or invalid video.",
+  "version": 2,
+  "description": "Curated YouTube videos for CBSE Class 10 chapters (Prashant Kirad, Physics Wallah, Magnet Brains, eSaral).",
   "overrides": {
     "metals": {
       "wrongIds": ["n9_lnvs1KKY", "lQLws5rA0gs", "vd6_VzO7e6U"],
@@ -17,6 +17,134 @@
       "presenter": "Prashant Kirad",
       "url": "https://www.youtube.com/watch?v=VWNxgkOr55Y",
       "reason": "Prior IDs were control biology or invalid (404); verified optics one-shot."
+    },
+    "heredity": {
+      "wrongIds": ["Heredity10"],
+      "youtubeId": "LE3PUf5ueS4",
+      "title": "Heredity | Class 10 Science | NCERT Covered",
+      "presenter": "Prashant Kirad",
+      "url": "https://www.youtube.com/watch?v=LE3PUf5ueS4",
+      "reason": "Placeholder ID replaced with Prashant Kirad heredity one-shot."
+    },
+    "magnetism": {
+      "wrongIds": ["magnetism10"],
+      "youtubeId": "DugfjpGoOVs",
+      "title": "Magnetic Effects of Electric Current | Class 10 Science",
+      "presenter": "Prashant Kirad",
+      "url": "https://www.youtube.com/watch?v=DugfjpGoOVs",
+      "reason": "Placeholder ID replaced with Prashant Kirad magnetism one-shot."
+    },
+    "reproduction": {
+      "wrongIds": ["YmU-1002Y"],
+      "youtubeId": "RxXsUm8pwaA",
+      "title": "How do Organisms Reproduce? | Class 10 Science",
+      "presenter": "Prashant Kirad",
+      "url": "https://www.youtube.com/watch?v=RxXsUm8pwaA",
+      "reason": "Invalid placeholder replaced with Prashant Kirad reproduction one-shot."
+    },
+    "sources-of-energy": {
+      "wrongIds": ["energy10"],
+      "youtubeId": "0Ckq7S0syGU",
+      "title": "Sources of Energy | Class 10 Physics",
+      "presenter": "eSaral",
+      "url": "https://www.youtube.com/watch?v=0Ckq7S0syGU",
+      "reason": "Placeholder ID replaced with NCERT sources-of-energy lecture."
+    },
+    "ap": {
+      "wrongIds": ["ap10"],
+      "youtubeId": "xoEFWJNjG-k",
+      "title": "Arithmetic Progressions | Class 10 Maths Chapter 5",
+      "presenter": "Physics Wallah",
+      "url": "https://www.youtube.com/watch?v=xoEFWJNjG-k",
+      "reason": "Placeholder ID replaced with PW AP one-shot revision."
+    },
+    "triangles": {
+      "wrongIds": ["triangles10"],
+      "youtubeId": "6Pqq3CCsdbk",
+      "title": "Triangles | Class 10 Maths | Project 45",
+      "presenter": "Ritik Sir (Physics Wallah)",
+      "url": "https://www.youtube.com/watch?v=6Pqq3CCsdbk",
+      "reason": "Placeholder ID replaced with PW triangles one-shot."
+    },
+    "circles": {
+      "wrongIds": ["circles10"],
+      "youtubeId": "hloROOKa-zY",
+      "title": "Circles | Class 10 Maths | Full Chapter One Shot",
+      "presenter": "Physics Wallah",
+      "url": "https://www.youtube.com/watch?v=hloROOKa-zY",
+      "reason": "Placeholder ID replaced with PW circles one-shot."
+    },
+    "coordinate": {
+      "wrongIds": ["coordinates10"],
+      "youtubeId": "oOj3ycajZiw",
+      "title": "Coordinate Geometry | Class 10 Maths One Shot",
+      "presenter": "Physics Wallah",
+      "url": "https://www.youtube.com/watch?v=oOj3ycajZiw",
+      "reason": "Placeholder ID replaced with coordinate geometry one-shot."
+    },
+    "linear-eq": {
+      "wrongIds": ["linear10"],
+      "youtubeId": "Ty1IucUAupY",
+      "title": "Pair of Linear Equations in Two Variables | Class 10 Maths",
+      "presenter": "CBSE One Shot",
+      "url": "https://www.youtube.com/watch?v=Ty1IucUAupY",
+      "reason": "Placeholder ID replaced with linear equations one-shot."
+    },
+    "quadratic": {
+      "wrongIds": ["quadratic10"],
+      "youtubeId": "1E3pEG_kVLA",
+      "title": "Quadratic Equations | Class 10 Maths",
+      "presenter": "CBSE Maths",
+      "url": "https://www.youtube.com/watch?v=1E3pEG_kVLA",
+      "reason": "Placeholder ID replaced with quadratic equations full chapter."
+    },
+    "probability": {
+      "wrongIds": ["prob10"],
+      "youtubeId": "yCC8x4fLd30",
+      "title": "Probability | Class 10 Maths One Shot",
+      "presenter": "Physics Wallah",
+      "url": "https://www.youtube.com/watch?v=yCC8x4fLd30",
+      "reason": "Placeholder ID replaced with PW probability one-shot."
+    },
+    "statistics": {
+      "wrongIds": ["stats10"],
+      "youtubeId": "xKr_GcdrmwM",
+      "title": "Statistics | Class 10 Maths NCERT One Shot",
+      "presenter": "Ushank Sir (Physics Wallah)",
+      "url": "https://www.youtube.com/watch?v=xKr_GcdrmwM",
+      "reason": "Placeholder ID replaced with PW statistics one-shot."
+    },
+    "trig-apps": {
+      "wrongIds": ["heights10"],
+      "youtubeId": "PujmnI1ncjc",
+      "title": "Some Applications of Trigonometry | Class 10 Maths",
+      "presenter": "CBSE One Shot",
+      "url": "https://www.youtube.com/watch?v=PujmnI1ncjc",
+      "reason": "Placeholder ID replaced with applications of trigonometry one-shot."
+    },
+    "areas-circles": {
+      "wrongIds": ["areas_circles10"],
+      "youtubeId": "i-GT-lA0074",
+      "title": "Areas Related to Circles | Class 10 Maths",
+      "presenter": "Ushank Sir (Physics Wallah)",
+      "url": "https://www.youtube.com/watch?v=i-GT-lA0074",
+      "reason": "Placeholder ID replaced with PW areas-related-to-circles one-shot."
+    },
+    "surface-volume": {
+      "wrongIds": ["solids10"],
+      "youtubeId": "Ypt6LgTNHgA",
+      "title": "Surface Areas and Volumes | Class 10 Maths",
+      "presenter": "Ritik Mishra (Physics Wallah)",
+      "url": "https://www.youtube.com/watch?v=Ypt6LgTNHgA",
+      "reason": "Placeholder ID replaced with PW surface areas and volumes one-shot."
+    },
+    "constructions": {
+      "wrongIds": ["construct10"],
+      "youtubeId": "PDRfD4_NpTE",
+      "title": "Constructions | Class 10 Maths (reference)",
+      "presenter": "Maths Board Prep",
+      "url": "https://www.youtube.com/watch?v=PDRfD4_NpTE",
+      "reason": "Chapter removed from latest CBSE syllabus; reference video for tangents and constructions."
     }
   }
 }

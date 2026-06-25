@@ -17,7 +17,7 @@
         if (!r.ok) throw new Error('Study material not found');
         return r.json();
       }),
-      fetch('../../data/cbse10-chapter-video-overrides.json')
+      fetch('../../data/cbse10-chapter-video-overrides.json?v=2')
         .then((r) => (r.ok ? r.json() : { overrides: {} }))
         .catch(() => ({ overrides: {} })),
     ]).then(([data, overridesData]) => {
