@@ -86,7 +86,7 @@
       subjectLabel: metaLine(),
       chapterId,
       chapterTitle,
-      initialTab: initialTab === 'random' ? 'quiz' : initialTab || 'official',
+      initialTab: initialTab === 'random' ? 'quiz' : initialTab || 'regular',
       showPhase,
       listChapters: () =>
         chaptersForSubject().map((c) => ({ id: c.id, title: c.title })),
@@ -158,7 +158,7 @@
         chapterId = ch.id;
         chapterTitle = ch.title;
         document.getElementById('intentChapterLabel').textContent = ch.title;
-        openStudyHub('official');
+        openStudyHub('regular');
       });
       grid.appendChild(btn);
     });
@@ -258,7 +258,7 @@
         openStudyHub('practice');
         return true;
       }
-      openStudyHub('official');
+      openStudyHub('regular');
       return true;
     }
     showPhase('chapter');

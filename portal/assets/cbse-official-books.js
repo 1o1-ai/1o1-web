@@ -416,6 +416,8 @@
 
             <span class="cbse-book-reader-page" id="cbseBookPageLabel">Loading…</span>
 
+            <button type="button" class="cbse-book-close" id="cbseCloseBook" aria-label="Close official book">✕ Close</button>
+
           </div>
 
           <div class="cbse-book-scroll" id="cbseBookScroll" tabindex="0" aria-label="Official book pages"></div>
@@ -658,9 +660,31 @@
 
 
 
-    const beats = entry?.transcript?.beats || [];
+    host.querySelector('#cbseCloseBook')?.addEventListener('click', () => {
 
-    let beatIdx = 0;
+      reader?.classList.add('hidden');
+
+      openBtn?.classList.remove('hidden');
+
+    });
+
+
+
+    const rawBeats = entry?.transcript?.beats || [];
+
+    const lectureSteps = global.CBSELectureFlow?.prepareLectureBeats?.(
+
+      rawBeats,
+
+      entry?.title || ctx.chapterTitle
+
+    ) || rawBeats.map((beat) => ({ kind: 'speak', beat }));
+
+
+
+    let stepIdx = 0;
+
+    const speakSteps = lectureSteps.filter((s) => s.kind === 'speak');
 
     const playBtn = host.querySelector('#cbsePlayLecture');
 
@@ -672,17 +696,21 @@
 
       if (!progressEl) return;
 
-      const pct = beats.length ? Math.round((beatIdx / beats.length) * 100) : 0;
+      const spoken = lectureSteps.slice(0, stepIdx).filter((s) => s.kind === 'speak').length;
 
-      progressEl.innerHTML = `<div class="cbse-progress-bar"><div class="cbse-progress-fill" style="width:${pct}%"></div></div><span>${beatIdx} / ${beats.length}</span>`;
+      const total = speakSteps.length || 1;
+
+      const pct = Math.round((spoken / total) * 100);
+
+      progressEl.innerHTML = `<div class="cbse-progress-bar"><div class="cbse-progress-fill" style="width:${pct}%"></div></div><span>${spoken} / ${total}</span>`;
 
     }
 
 
 
-    function playNextBeat() {
+    function playNextStep() {
 
-      if (beatIdx >= beats.length) {
+      if (stepIdx >= lectureSteps.length) {
 
         playBtn.classList.remove('hidden');
 
@@ -690,13 +718,45 @@
 
         speakerPill?.classList.add('hidden');
 
-        progressEl.innerHTML = '<p class="cbse-lecture-done">✓ Lecture complete</p>';
+        progressEl.innerHTML = '<p class="cbse-lecture-done">✓ Lecture complete — try the Quiz tab when you are ready!</p>';
 
         return;
 
       }
 
-      const b = beats[beatIdx];
+      const step = lectureSteps[stepIdx];
+
+      stepIdx += 1;
+
+
+
+      if (step.kind === 'pause') {
+
+        lectureTimer = setTimeout(playNextStep, step.ms || 500);
+
+        updateProgress();
+
+        return;
+
+      }
+
+
+
+      if (step.kind === 'chime') {
+
+        const engine = global.CBSEVoiceEngine;
+
+        if (engine?.playChime) engine.playChime(playNextStep);
+
+        else lectureTimer = setTimeout(playNextStep, 200);
+
+        return;
+
+      }
+
+
+
+      const b = step.beat;
 
       speakerPill?.classList.remove('hidden');
 
@@ -716,9 +776,7 @@
 
       const done = () => {
 
-        beatIdx += 1;
-
-        lectureTimer = setTimeout(playNextBeat, 350);
+        lectureTimer = setTimeout(playNextStep, 380);
 
       };
 
@@ -736,7 +794,7 @@
 
       global.CBSEVoiceEngine?.resetTeacher?.();
 
-      beatIdx = 0;
+      stepIdx = 0;
 
       playBtn.classList.add('hidden');
 
@@ -746,7 +804,7 @@
 
       updateProgress();
 
-      playNextBeat();
+      playNextStep();
 
     });
 

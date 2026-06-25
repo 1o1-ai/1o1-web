@@ -169,6 +169,71 @@
   font-size: 0.78rem;
   margin: 8px 0 0;
 }
+
+.portal-login-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(2, 6, 23, 0.88);
+  backdrop-filter: blur(8px);
+}
+
+.portal-login-card {
+  width: min(100%, 380px);
+  padding: 28px 24px;
+  border-radius: 16px;
+  background: linear-gradient(160deg, rgba(30, 41, 59, 0.98), rgba(15, 23, 42, 0.98));
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.portal-login-card h2 {
+  margin: 8px 0 6px;
+  color: #f8fafc;
+  font-size: 1.2rem;
+}
+
+.portal-login-lead {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin: 0 0 18px;
+}
+
+.portal-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.portal-login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.78rem;
+  color: #cbd5e1;
+}
+
+.portal-login-form input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(15, 23, 42, 0.8);
+  color: #f1f5f9;
+  font: inherit;
+}
+
+body.portal-login-locked .portal-main,
+body.portal-login-locked .portal-header {
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+}
 .folder-badge {
   display: inline-block;
   margin-top: 6px;

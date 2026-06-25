@@ -252,7 +252,7 @@
 
     }
 
-    openStudyHub('official');
+    openStudyHub('regular');
 
     return true;
 
@@ -364,7 +364,7 @@
 
           `<strong>${chapterTitle}</strong> · ${subject === 'science' ? 'Science' : 'Mathematics'}`;
 
-        openStudyHub('official');
+        openStudyHub('regular');
 
       });
 
@@ -503,7 +503,7 @@
 
       chapterTitle,
 
-      initialTab: initialTab === 'random' ? 'quiz' : initialTab || 'official',
+      initialTab: initialTab === 'random' ? 'quiz' : initialTab || 'regular',
 
       showPhase,
 

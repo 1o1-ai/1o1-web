@@ -119,6 +119,36 @@
     global.speechSynthesis?.cancel();
   }
 
+  function playChime(onEnd) {
+    try {
+      const Ctx = global.AudioContext || global.webkitAudioContext;
+      if (!Ctx) {
+        onEnd?.();
+        return;
+      }
+      const ctx = new Ctx();
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+      osc.type = 'sine';
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      const t = ctx.currentTime;
+      osc.frequency.setValueAtTime(920, t);
+      osc.frequency.exponentialRampToValueAtTime(520, t + 0.12);
+      gain.gain.setValueAtTime(0.0001, t);
+      gain.gain.exponentialRampToValueAtTime(0.14, t + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.32);
+      osc.start(t);
+      osc.stop(t + 0.34);
+      osc.onended = () => {
+        ctx.close().catch(() => {});
+        onEnd?.();
+      };
+    } catch {
+      onEnd?.();
+    }
+  }
+
   function speakerLabel(beat) {
     if (beat.role === 'teacher') {
       return teacherGender === 'female' ? 'Teacher (Ma\'am)' : 'Teacher (Sir)';
@@ -132,6 +162,7 @@
     loadVoices,
     speakBeat,
     stop,
+    playChime,
     resetTeacher,
     speakerLabel,
     get teacherGender() {

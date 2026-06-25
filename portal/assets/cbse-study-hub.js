@@ -13,7 +13,7 @@
   ];
 
   let activeCtx = null;
-  let activeTab = 'official';
+  let activeTab = 'regular';
   let booksCatalog = null;
 
   function loadBooks(sku) {
@@ -135,7 +135,7 @@
 
   function open(ctx) {
     activeCtx = ctx;
-    activeTab = ctx.initialTab || 'official';
+    activeTab = ctx.initialTab || 'regular';
     const phase = document.getElementById('phaseStudy');
     if (!phase) {
       ctx.legacyIntent?.();

@@ -144,6 +144,22 @@
   border-bottom: 1px solid rgba(148, 163, 184, 0.12);
   font-size: 0.82rem;
   color: #cbd5e1;
+  flex-wrap: wrap;
+}
+
+.cbse-book-close {
+  margin-left: auto;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(51, 65, 85, 0.6);
+  color: #e2e8f0;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.cbse-book-close:hover {
+  background: rgba(71, 85, 105, 0.9);
 }
 
 .cbse-book-reader-title {

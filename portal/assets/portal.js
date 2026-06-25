@@ -1,5 +1,5 @@
 /**
- * ManjuLAB Online Portal — open navigation (no demo login gate).
+ * ManjuLAB Online Portal — navigation; auth via portal-auth.js
  */
 (function () {
   const ACADEMY_NAME = 'Anyo Brahmando Academy';
@@ -7,18 +7,14 @@
 
   window.PORTAL_ACADEMY = { name: ACADEMY_NAME, tagline: ACADEMY_TAGLINE };
 
-  window.getPortalSession = function getPortalSession() {
+  window.openPortalLogin = function openPortalLogin() {
+    if (window.PortalAuth?.getSession?.()) return window.PortalAuth.getSession();
+    window.PortalAuth?.mountLoginGate?.();
     return null;
   };
-
-  window.openPortalLogin = function openPortalLogin() {};
 
   window.requirePortalLogin = function requirePortalLogin() {
-    return null;
-  };
-
-  window.portalLogout = function portalLogout() {
-    window.location.href = '/portal/';
+    return window.PortalAuth?.getSession?.() || null;
   };
 
   const SKU_HUBS = {
