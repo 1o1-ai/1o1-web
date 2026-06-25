@@ -1,0 +1,1637 @@
+{
+  "version": 1,
+  "sku": "cbse12-science",
+  "generated_at": "2026-06-25T03:09:53.415562+00:00",
+  "content_pack": "cbse12-science-study-material-v1",
+  "source_quality": "curated_videos",
+  "chapters": {
+    "electric-charges-fields": {
+      "chapterId": "electric-charges-fields",
+      "subject": "physics",
+      "title": "Electrostatics",
+      "grade": "11",
+      "ncertCode": "keph101",
+      "syllabusOutline": [
+        "Electric charges, conservation of charge, Coulomb's law force between two point charges.",
+        "Electric field, electric field due to a point charge, electric dipole, electric field due to a dipole.",
+        "Gauss's law statement and its applications to find field due to infinitely long straight wire, uniformly charged infinite plane sheet.",
+        "Electric potential, potential difference, electric potential due to a point charge, potential energy of a system of charges.",
+        "Capacitors and capacitance, combination of capacitors in series and in parallel, capacitance of a parallel plate capacitor."
+      ],
+      "studySummary": "## Syllabus outline\n- Electric charges, conservation of charge, Coulomb's law force between two point charges.\n- Electric field, electric field due to a point charge, electric dipole, electric field due to a dipole.\n- Gauss's law statement and its applications to find field due to infinitely long straight wire, uniformly charged infinite plane sheet.\n- Electric potential, potential difference, electric potential due to a point charge, potential energy of a system of charges.\n- Capacitors and capacitance, combination of capacitors in series and in parallel, capacitance of a parallel plate capacitor.\n\nBoard-oriented study guide for CBSE Class 11 Physics — Electrostatics.",
+      "videos": [
+        {
+          "title": "Electric Charges And Fields One Shot | Physics | Class 12th Boards",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=hgk8CxXZvjo",
+          "youtubeId": "hgk8CxXZvjo",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/hgk8CxXZvjo",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=hgk8CxXZvjo"
+        }
+      ]
+    },
+    "electrostatic-potential-capacitance": {
+      "chapterId": "electrostatic-potential-capacitance",
+      "subject": "physics",
+      "title": "Electrostatic Potential Capacitance",
+      "grade": "11",
+      "ncertCode": "keph102",
+      "syllabusOutline": [
+        "Electrostatic Potential Capacitance"
+      ],
+      "studySummary": "## Syllabus outline\n- Electrostatic Potential Capacitance\n\nBoard-oriented study guide for CBSE Class 11 Physics — Electrostatic Potential Capacitance.",
+      "videos": [
+        {
+          "title": "Electrostatic Potential and Capacitance One Shot | Physics | Class 12th Boards",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=qvVAoVq_zAg",
+          "youtubeId": "qvVAoVq_zAg",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/qvVAoVq_zAg",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=qvVAoVq_zAg"
+        }
+      ]
+    },
+    "current-electricity": {
+      "chapterId": "current-electricity",
+      "subject": "physics",
+      "title": "Current Electricity",
+      "grade": "11",
+      "ncertCode": "keph103",
+      "syllabusOutline": [
+        "Current Electricity"
+      ],
+      "studySummary": "## Syllabus outline\n- Current Electricity\n\nBoard-oriented study guide for CBSE Class 11 Physics — Current Electricity.",
+      "videos": [
+        {
+          "title": "Current Electricity Class 12 One Shot | NCERT + Derivations + PYQs",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=MBkJmR2qii0",
+          "youtubeId": "MBkJmR2qii0",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/MBkJmR2qii0",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=MBkJmR2qii0"
+        }
+      ]
+    },
+    "moving-charges-magnetism": {
+      "chapterId": "moving-charges-magnetism",
+      "subject": "physics",
+      "title": "Moving Charges Magnetism",
+      "grade": "11",
+      "ncertCode": "keph104",
+      "syllabusOutline": [
+        "Moving Charges Magnetism"
+      ],
+      "studySummary": "## Syllabus outline\n- Moving Charges Magnetism\n\nBoard-oriented study guide for CBSE Class 11 Physics — Moving Charges Magnetism.",
+      "videos": [
+        {
+          "title": "Moving Charges And Magnetism Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=xWMT4Ue0cgU",
+          "youtubeId": "xWMT4Ue0cgU",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/xWMT4Ue0cgU",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=xWMT4Ue0cgU"
+        }
+      ]
+    },
+    "magnetism-matter": {
+      "chapterId": "magnetism-matter",
+      "subject": "physics",
+      "title": "Magnetism Matter",
+      "grade": "11",
+      "ncertCode": "keph105",
+      "syllabusOutline": [
+        "Magnetism Matter"
+      ],
+      "studySummary": "## Syllabus outline\n- Magnetism Matter\n\nBoard-oriented study guide for CBSE Class 11 Physics — Magnetism Matter.",
+      "videos": [
+        {
+          "title": "Magnetism And Matter Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=4IuRD2B6OME",
+          "youtubeId": "4IuRD2B6OME",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/4IuRD2B6OME",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=4IuRD2B6OME"
+        }
+      ]
+    },
+    "electromagnetic-induction": {
+      "chapterId": "electromagnetic-induction",
+      "subject": "physics",
+      "title": "Electromagnetic Induction",
+      "grade": "11",
+      "ncertCode": "keph106",
+      "syllabusOutline": [
+        "Electromagnetic Induction"
+      ],
+      "studySummary": "## Syllabus outline\n- Electromagnetic Induction\n\nBoard-oriented study guide for CBSE Class 11 Physics — Electromagnetic Induction.",
+      "videos": [
+        {
+          "title": "Electromagnetic Induction Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=9OWhVAKzoig",
+          "youtubeId": "9OWhVAKzoig",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/9OWhVAKzoig",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=9OWhVAKzoig"
+        }
+      ]
+    },
+    "alternating-current": {
+      "chapterId": "alternating-current",
+      "subject": "physics",
+      "title": "Alternating Current",
+      "grade": "11",
+      "ncertCode": "keph107",
+      "syllabusOutline": [
+        "Alternating Current"
+      ],
+      "studySummary": "## Syllabus outline\n- Alternating Current\n\nBoard-oriented study guide for CBSE Class 11 Physics — Alternating Current.",
+      "videos": [
+        {
+          "title": "Alternating Current Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=j5wR8pfqyh4",
+          "youtubeId": "j5wR8pfqyh4",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/j5wR8pfqyh4",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=j5wR8pfqyh4"
+        }
+      ]
+    },
+    "electromagnetic-waves": {
+      "chapterId": "electromagnetic-waves",
+      "subject": "physics",
+      "title": "Electromagnetic Waves",
+      "grade": "11",
+      "ncertCode": "keph108",
+      "syllabusOutline": [
+        "Electromagnetic Waves"
+      ],
+      "studySummary": "## Syllabus outline\n- Electromagnetic Waves\n\nBoard-oriented study guide for CBSE Class 11 Physics — Electromagnetic Waves.",
+      "videos": [
+        {
+          "title": "Electromagnetic Waves Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=mnB0XYcD6y4",
+          "youtubeId": "mnB0XYcD6y4",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/mnB0XYcD6y4",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=mnB0XYcD6y4"
+        }
+      ]
+    },
+    "ray-optics-instruments": {
+      "chapterId": "ray-optics-instruments",
+      "subject": "physics",
+      "title": "Ray Optics and Optical Instruments",
+      "grade": "12",
+      "ncertCode": "leph101",
+      "syllabusOutline": [
+        "Refraction of light, total internal reflection and its applications, optical fibers.",
+        "Refraction at spherical surfaces, lenses, thin lens formula, lens maker's formula.",
+        "Magnification, power of a lens, combination of thin lenses in contact.",
+        "Refraction of light through a prism, derivation of prism formula.",
+        "Optical instruments: Microscopes and astronomical telescopes (reflecting and refracting)."
+      ],
+      "studySummary": "## Syllabus outline\n- Refraction of light, total internal reflection and its applications, optical fibers.\n- Refraction at spherical surfaces, lenses, thin lens formula, lens maker's formula.\n- Magnification, power of a lens, combination of thin lenses in contact.\n- Refraction of light through a prism, derivation of prism formula.\n- Optical instruments: Microscopes and astronomical telescopes (reflecting and refracting).\n\nBoard-oriented study guide for CBSE Class 12 Physics — Ray Optics and Optical Instruments.",
+      "videos": [
+        {
+          "title": "Ray Optics And Optical Instruments Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=aWZrNhD2S3k",
+          "youtubeId": "aWZrNhD2S3k",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/aWZrNhD2S3k",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=aWZrNhD2S3k"
+        }
+      ]
+    },
+    "wave-optics": {
+      "chapterId": "wave-optics",
+      "subject": "physics",
+      "title": "Wave Optics",
+      "grade": "12",
+      "ncertCode": "leph102",
+      "syllabusOutline": [
+        "Wave Optics"
+      ],
+      "studySummary": "## Syllabus outline\n- Wave Optics\n\nBoard-oriented study guide for CBSE Class 12 Physics — Wave Optics.",
+      "videos": [
+        {
+          "title": "Wave Optics Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=yY6ChKn7thM",
+          "youtubeId": "yY6ChKn7thM",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/yY6ChKn7thM",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=yY6ChKn7thM"
+        }
+      ]
+    },
+    "dual-nature-radiation": {
+      "chapterId": "dual-nature-radiation",
+      "subject": "physics",
+      "title": "Dual Nature Radiation",
+      "grade": "12",
+      "ncertCode": "leph103",
+      "syllabusOutline": [
+        "Dual Nature Radiation"
+      ],
+      "studySummary": "## Syllabus outline\n- Dual Nature Radiation\n\nBoard-oriented study guide for CBSE Class 12 Physics — Dual Nature Radiation.",
+      "videos": [
+        {
+          "title": "Dual Nature Of Matter And Radiation Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=7naR68Z6xEs",
+          "youtubeId": "7naR68Z6xEs",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/7naR68Z6xEs",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=7naR68Z6xEs"
+        }
+      ]
+    },
+    "atoms": {
+      "chapterId": "atoms",
+      "subject": "physics",
+      "title": "Atoms",
+      "grade": "12",
+      "ncertCode": "leph104",
+      "syllabusOutline": [
+        "Atoms"
+      ],
+      "studySummary": "## Syllabus outline\n- Atoms\n\nBoard-oriented study guide for CBSE Class 12 Physics — Atoms.",
+      "videos": [
+        {
+          "title": "Atoms in 60 Minutes | Physics Chapter 12",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=jtx_7XD8y7s",
+          "youtubeId": "jtx_7XD8y7s",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/jtx_7XD8y7s",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=jtx_7XD8y7s"
+        }
+      ]
+    },
+    "nuclei": {
+      "chapterId": "nuclei",
+      "subject": "physics",
+      "title": "Nuclei",
+      "grade": "12",
+      "ncertCode": "leph105",
+      "syllabusOutline": [
+        "Nuclei"
+      ],
+      "studySummary": "## Syllabus outline\n- Nuclei\n\nBoard-oriented study guide for CBSE Class 12 Physics — Nuclei.",
+      "videos": [
+        {
+          "title": "Nuclei in 29 Minutes | Physics Chapter 13",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=Ux5x9Vofrv4",
+          "youtubeId": "Ux5x9Vofrv4",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Ux5x9Vofrv4",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Ux5x9Vofrv4"
+        }
+      ]
+    },
+    "semiconductor-electronics": {
+      "chapterId": "semiconductor-electronics",
+      "subject": "physics",
+      "title": "Semiconductor Electronics",
+      "grade": "12",
+      "ncertCode": "leph106",
+      "syllabusOutline": [
+        "Semiconductor Electronics"
+      ],
+      "studySummary": "## Syllabus outline\n- Semiconductor Electronics\n\nBoard-oriented study guide for CBSE Class 12 Physics — Semiconductor Electronics.",
+      "videos": [
+        {
+          "title": "Semiconductor Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=YGWiJ3xcxCA",
+          "youtubeId": "YGWiJ3xcxCA",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/YGWiJ3xcxCA",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=YGWiJ3xcxCA"
+        }
+      ]
+    },
+    "solid-state": {
+      "chapterId": "solid-state",
+      "subject": "chemistry",
+      "title": "Solid State",
+      "grade": "11",
+      "ncertCode": "kech101",
+      "syllabusOutline": [
+        "Solid State"
+      ],
+      "studySummary": "## Syllabus outline\n- Solid State\n\nBoard-oriented study guide for CBSE Class 11 Chemistry — Solid State.",
+      "videos": [
+        {
+          "title": "Solid State | Class 12 Chemistry Chapter 1",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=o-YlinG72h0",
+          "youtubeId": "o-YlinG72h0",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/o-YlinG72h0",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=o-YlinG72h0"
+        }
+      ]
+    },
+    "solutions": {
+      "chapterId": "solutions",
+      "subject": "chemistry",
+      "title": "Solutions",
+      "grade": "11",
+      "ncertCode": "kech102",
+      "syllabusOutline": [
+        "Solutions"
+      ],
+      "studySummary": "## Syllabus outline\n- Solutions\n\nBoard-oriented study guide for CBSE Class 11 Chemistry — Solutions.",
+      "videos": [
+        {
+          "title": "Solutions One Shot Revision | Class 12 Chemistry",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=tuO9Vmz496w",
+          "youtubeId": "tuO9Vmz496w",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/tuO9Vmz496w",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=tuO9Vmz496w"
+        }
+      ]
+    },
+    "electrochemistry": {
+      "chapterId": "electrochemistry",
+      "subject": "chemistry",
+      "title": "Electrochemistry",
+      "grade": "11",
+      "ncertCode": "kech103",
+      "syllabusOutline": [
+        "Electrochemistry"
+      ],
+      "studySummary": "## Syllabus outline\n- Electrochemistry\n\nBoard-oriented study guide for CBSE Class 11 Chemistry — Electrochemistry.",
+      "videos": [
+        {
+          "title": "Electrochemistry One Shot Revision | Class 12 Chemistry",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=qtqu3LH-EH8",
+          "youtubeId": "qtqu3LH-EH8",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/qtqu3LH-EH8",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=qtqu3LH-EH8"
+        }
+      ]
+    },
+    "chemical-kinetics": {
+      "chapterId": "chemical-kinetics",
+      "subject": "chemistry",
+      "title": "Chemical Kinetics",
+      "grade": "11",
+      "ncertCode": "kech104",
+      "syllabusOutline": [
+        "Rate of a reaction (average and instantaneous), factors affecting rates of reaction.",
+        "Rate law, specific rate constant, order and molecularity of a reaction.",
+        "Integrated rate equations and half-life (only for zero and first order reactions).",
+        "Concept of collision theory (elementary idea, no mathematical treatment).",
+        "Activation energy, Arrhenius equation."
+      ],
+      "studySummary": "## Syllabus outline\n- Rate of a reaction (average and instantaneous), factors affecting rates of reaction.\n- Rate law, specific rate constant, order and molecularity of a reaction.\n- Integrated rate equations and half-life (only for zero and first order reactions).\n- Concept of collision theory (elementary idea, no mathematical treatment).\n- Activation energy, Arrhenius equation.\n\nBoard-oriented study guide for CBSE Class 11 Chemistry — Chemical Kinetics.",
+      "videos": [
+        {
+          "title": "Chemical Kinetics One Shot Revision | Class 12 Chemistry",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=74m8SRgJ8v0",
+          "youtubeId": "74m8SRgJ8v0",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/74m8SRgJ8v0",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=74m8SRgJ8v0"
+        }
+      ]
+    },
+    "surface-chemistry": {
+      "chapterId": "surface-chemistry",
+      "subject": "chemistry",
+      "title": "Surface Chemistry",
+      "grade": "11",
+      "ncertCode": "kech105",
+      "syllabusOutline": [
+        "Surface Chemistry"
+      ],
+      "studySummary": "## Syllabus outline\n- Surface Chemistry\n\nBoard-oriented study guide for CBSE Class 11 Chemistry — Surface Chemistry.",
+      "videos": [
+        {
+          "title": "Surface Chemistry One Shot Revision | Class 12 Chemistry",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=t6LdYkstEXo",
+          "youtubeId": "t6LdYkstEXo",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/t6LdYkstEXo",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=t6LdYkstEXo"
+        }
+      ]
+    },
+    "general-principles-isolation-elements": {
+      "chapterId": "general-principles-isolation-elements",
+      "subject": "chemistry",
+      "title": "General Principles Isolation Elements",
+      "grade": "11",
+      "ncertCode": "kech106",
+      "syllabusOutline": [
+        "General Principles Isolation Elements"
+      ],
+      "studySummary": "## Syllabus outline\n- General Principles Isolation Elements\n\nBoard-oriented study guide for CBSE Class 11 Chemistry — General Principles Isolation Elements.",
+      "videos": [
+        {
+          "title": "General Principles and Processes of Isolation of Elements",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=_GY9nz7cBK4",
+          "youtubeId": "_GY9nz7cBK4",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/_GY9nz7cBK4",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=_GY9nz7cBK4"
+        }
+      ]
+    },
+    "p-block-elements": {
+      "chapterId": "p-block-elements",
+      "subject": "chemistry",
+      "title": "P Block Elements",
+      "grade": "11",
+      "ncertCode": "kech107",
+      "syllabusOutline": [
+        "P Block Elements"
+      ],
+      "studySummary": "## Syllabus outline\n- P Block Elements\n\nBoard-oriented study guide for CBSE Class 11 Chemistry — P Block Elements.",
+      "videos": [
+        {
+          "title": "P-Block Elements One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=pHlw63Dwdjc",
+          "youtubeId": "pHlw63Dwdjc",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/pHlw63Dwdjc",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=pHlw63Dwdjc"
+        }
+      ]
+    },
+    "d-f-block-elements": {
+      "chapterId": "d-f-block-elements",
+      "subject": "chemistry",
+      "title": "D F Block Elements",
+      "grade": "11",
+      "ncertCode": "kech108",
+      "syllabusOutline": [
+        "D F Block Elements"
+      ],
+      "studySummary": "## Syllabus outline\n- D F Block Elements\n\nBoard-oriented study guide for CBSE Class 11 Chemistry — D F Block Elements.",
+      "videos": [
+        {
+          "title": "The d and f Block Elements One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=NkjRe_4KO_Y",
+          "youtubeId": "NkjRe_4KO_Y",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/NkjRe_4KO_Y",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=NkjRe_4KO_Y"
+        }
+      ]
+    },
+    "coordination-compounds": {
+      "chapterId": "coordination-compounds",
+      "subject": "chemistry",
+      "title": "Coordination Compounds",
+      "grade": "11",
+      "ncertCode": "kech109",
+      "syllabusOutline": [
+        "Coordination compounds - Introduction, ligands, coordination number, color, magnetic properties.",
+        "Werner's theory of coordination compounds, IUPAC nomenclature of mononuclear coordination compounds.",
+        "Isomerism (structural and stereo) in coordination compounds.",
+        "Valence Bond Theory (VBT): hybridization, magnetic behavior (high spin and low spin).",
+        "Crystal Field Theory (CFT): d-orbital splitting in octahedral and tetrahedral fields, CFSE."
+      ],
+      "studySummary": "## Syllabus outline\n- Coordination compounds - Introduction, ligands, coordination number, color, magnetic properties.\n- Werner's theory of coordination compounds, IUPAC nomenclature of mononuclear coordination compounds.\n- Isomerism (structural and stereo) in coordination compounds.\n- Valence Bond Theory (VBT): hybridization, magnetic behavior (high spin and low spin).\n- Crystal Field Theory (CFT): d-orbital splitting in octahedral and tetrahedral fields, CFSE.\n\nBoard-oriented study guide for CBSE Class 11 Chemistry — Coordination Compounds.",
+      "videos": [
+        {
+          "title": "Coordination Compounds One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=Dab4Qn7Py_U",
+          "youtubeId": "Dab4Qn7Py_U",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Dab4Qn7Py_U",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Dab4Qn7Py_U"
+        }
+      ]
+    },
+    "haloalkanes-haloarenes": {
+      "chapterId": "haloalkanes-haloarenes",
+      "subject": "chemistry",
+      "title": "Haloalkanes Haloarenes",
+      "grade": "12",
+      "ncertCode": "lech101",
+      "syllabusOutline": [
+        "Haloalkanes Haloarenes"
+      ],
+      "studySummary": "## Syllabus outline\n- Haloalkanes Haloarenes\n\nBoard-oriented study guide for CBSE Class 12 Chemistry — Haloalkanes Haloarenes.",
+      "videos": [
+        {
+          "title": "Haloalkanes And Haloarenes One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=S3FVrwbDF-o",
+          "youtubeId": "S3FVrwbDF-o",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/S3FVrwbDF-o",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=S3FVrwbDF-o"
+        }
+      ]
+    },
+    "alcohols-phenols-ethers": {
+      "chapterId": "alcohols-phenols-ethers",
+      "subject": "chemistry",
+      "title": "Alcohols Phenols Ethers",
+      "grade": "12",
+      "ncertCode": "lech102",
+      "syllabusOutline": [
+        "Alcohols Phenols Ethers"
+      ],
+      "studySummary": "## Syllabus outline\n- Alcohols Phenols Ethers\n\nBoard-oriented study guide for CBSE Class 12 Chemistry — Alcohols Phenols Ethers.",
+      "videos": [
+        {
+          "title": "Alcohols, Phenols and Ethers One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=-p5x_QJyJ8Y",
+          "youtubeId": "-p5x_QJyJ8Y",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/-p5x_QJyJ8Y",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=-p5x_QJyJ8Y"
+        }
+      ]
+    },
+    "aldehydes-ketones-carboxylic-acids": {
+      "chapterId": "aldehydes-ketones-carboxylic-acids",
+      "subject": "chemistry",
+      "title": "Aldehydes Ketones Carboxylic Acids",
+      "grade": "12",
+      "ncertCode": "lech103",
+      "syllabusOutline": [
+        "Aldehydes Ketones Carboxylic Acids"
+      ],
+      "studySummary": "## Syllabus outline\n- Aldehydes Ketones Carboxylic Acids\n\nBoard-oriented study guide for CBSE Class 12 Chemistry — Aldehydes Ketones Carboxylic Acids.",
+      "videos": [
+        {
+          "title": "Aldehydes, Ketones & Carboxylic Acids One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=7EhL0v-ltQk",
+          "youtubeId": "7EhL0v-ltQk",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/7EhL0v-ltQk",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=7EhL0v-ltQk"
+        }
+      ]
+    },
+    "amines": {
+      "chapterId": "amines",
+      "subject": "chemistry",
+      "title": "Amines",
+      "grade": "12",
+      "ncertCode": "lech104",
+      "syllabusOutline": [
+        "Amines"
+      ],
+      "studySummary": "## Syllabus outline\n- Amines\n\nBoard-oriented study guide for CBSE Class 12 Chemistry — Amines.",
+      "videos": [
+        {
+          "title": "Amines One Shot Revision",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=NOIOMQ2Cj_g",
+          "youtubeId": "NOIOMQ2Cj_g",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/NOIOMQ2Cj_g",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=NOIOMQ2Cj_g"
+        }
+      ]
+    },
+    "biomolecules": {
+      "chapterId": "biomolecules",
+      "subject": "chemistry",
+      "title": "Biomolecules",
+      "grade": "12",
+      "ncertCode": "lech105",
+      "syllabusOutline": [
+        "Biomolecules"
+      ],
+      "studySummary": "## Syllabus outline\n- Biomolecules\n\nBoard-oriented study guide for CBSE Class 12 Chemistry — Biomolecules.",
+      "videos": [
+        {
+          "title": "Biomolecules One Shot Revision",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=FchBgbqr41c",
+          "youtubeId": "FchBgbqr41c",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/FchBgbqr41c",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=FchBgbqr41c"
+        }
+      ]
+    },
+    "polymers": {
+      "chapterId": "polymers",
+      "subject": "chemistry",
+      "title": "Polymers",
+      "grade": "12",
+      "ncertCode": "lech106",
+      "syllabusOutline": [
+        "Polymers"
+      ],
+      "studySummary": "## Syllabus outline\n- Polymers\n\nBoard-oriented study guide for CBSE Class 12 Chemistry — Polymers.",
+      "videos": [
+        {
+          "title": "Polymers One Shot Revision",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=MTuoGwN-LCA",
+          "youtubeId": "MTuoGwN-LCA",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/MTuoGwN-LCA",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=MTuoGwN-LCA"
+        }
+      ]
+    },
+    "chemistry-everyday-life": {
+      "chapterId": "chemistry-everyday-life",
+      "subject": "chemistry",
+      "title": "Chemistry Everyday Life",
+      "grade": "12",
+      "ncertCode": "lech107",
+      "syllabusOutline": [
+        "Chemistry Everyday Life"
+      ],
+      "studySummary": "## Syllabus outline\n- Chemistry Everyday Life\n\nBoard-oriented study guide for CBSE Class 12 Chemistry — Chemistry Everyday Life.",
+      "videos": [
+        {
+          "title": "Chemistry in Everyday Life One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=RQkoq2C2PDA",
+          "youtubeId": "RQkoq2C2PDA",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/RQkoq2C2PDA",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=RQkoq2C2PDA"
+        }
+      ]
+    },
+    "reproduction": {
+      "chapterId": "reproduction",
+      "subject": "biology",
+      "title": "Reproduction",
+      "grade": "11",
+      "ncertCode": "kebo101",
+      "syllabusOutline": [
+        "Reproduction"
+      ],
+      "studySummary": "## Syllabus outline\n- Reproduction\n\nBoard-oriented study guide for CBSE Class 11 Biology — Reproduction.",
+      "videos": [
+        {
+          "title": "Reproduction in Organisms | Class 12 Biology",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=yBAiJm-n_U4",
+          "youtubeId": "yBAiJm-n_U4",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/yBAiJm-n_U4",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=yBAiJm-n_U4"
+        }
+      ]
+    },
+    "sexual-reproduction-flowering-plants": {
+      "chapterId": "sexual-reproduction-flowering-plants",
+      "subject": "biology",
+      "title": "Sexual Reproduction Flowering Plants",
+      "grade": "11",
+      "ncertCode": "kebo102",
+      "syllabusOutline": [
+        "Sexual Reproduction Flowering Plants"
+      ],
+      "studySummary": "## Syllabus outline\n- Sexual Reproduction Flowering Plants\n\nBoard-oriented study guide for CBSE Class 11 Biology — Sexual Reproduction Flowering Plants.",
+      "videos": [
+        {
+          "title": "Sexual Reproduction in Flowering Plants One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=gJ7fWXlk_4E",
+          "youtubeId": "gJ7fWXlk_4E",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/gJ7fWXlk_4E",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=gJ7fWXlk_4E"
+        }
+      ]
+    },
+    "human-reproduction": {
+      "chapterId": "human-reproduction",
+      "subject": "biology",
+      "title": "Human Reproduction",
+      "grade": "11",
+      "ncertCode": "kebo103",
+      "syllabusOutline": [
+        "Human Reproduction"
+      ],
+      "studySummary": "## Syllabus outline\n- Human Reproduction\n\nBoard-oriented study guide for CBSE Class 11 Biology — Human Reproduction.",
+      "videos": [
+        {
+          "title": "Human Reproduction Quick Revision",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=SPyUdyKL3PY",
+          "youtubeId": "SPyUdyKL3PY",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/SPyUdyKL3PY",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=SPyUdyKL3PY"
+        }
+      ]
+    },
+    "reproductive-health": {
+      "chapterId": "reproductive-health",
+      "subject": "biology",
+      "title": "Reproductive Health",
+      "grade": "11",
+      "ncertCode": "kebo104",
+      "syllabusOutline": [
+        "Reproductive Health"
+      ],
+      "studySummary": "## Syllabus outline\n- Reproductive Health\n\nBoard-oriented study guide for CBSE Class 11 Biology — Reproductive Health.",
+      "videos": [
+        {
+          "title": "Reproductive Health One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=7LCkPzAouuA",
+          "youtubeId": "7LCkPzAouuA",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/7LCkPzAouuA",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=7LCkPzAouuA"
+        }
+      ]
+    },
+    "principles-inheritance-variation": {
+      "chapterId": "principles-inheritance-variation",
+      "subject": "biology",
+      "title": "Principles Inheritance Variation",
+      "grade": "11",
+      "ncertCode": "kebo105",
+      "syllabusOutline": [
+        "Principles Inheritance Variation"
+      ],
+      "studySummary": "## Syllabus outline\n- Principles Inheritance Variation\n\nBoard-oriented study guide for CBSE Class 11 Biology — Principles Inheritance Variation.",
+      "videos": [
+        {
+          "title": "Principles of Inheritance and Variation One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=_naYC_PN1G8",
+          "youtubeId": "_naYC_PN1G8",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/_naYC_PN1G8",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=_naYC_PN1G8"
+        }
+      ]
+    },
+    "molecular-basis-inheritance": {
+      "chapterId": "molecular-basis-inheritance",
+      "subject": "biology",
+      "title": "Molecular Basis of Inheritance",
+      "grade": "11",
+      "ncertCode": "kebo106",
+      "syllabusOutline": [
+        "Structure of DNA and RNA, DNA packaging, DNA replication.",
+        "Transcription, genetic code, translation.",
+        "Gene expression and regulation - Lac Operon.",
+        "Genome projects: Human Genome Project, DNA fingerprinting."
+      ],
+      "studySummary": "## Syllabus outline\n- Structure of DNA and RNA, DNA packaging, DNA replication.\n- Transcription, genetic code, translation.\n- Gene expression and regulation - Lac Operon.\n- Genome projects: Human Genome Project, DNA fingerprinting.\n\nBoard-oriented study guide for CBSE Class 11 Biology — Molecular Basis of Inheritance.",
+      "videos": [
+        {
+          "title": "Molecular Basis of Inheritance Quick Revision",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=CuojhBCd7fo",
+          "youtubeId": "CuojhBCd7fo",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/CuojhBCd7fo",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=CuojhBCd7fo"
+        }
+      ]
+    },
+    "evolution": {
+      "chapterId": "evolution",
+      "subject": "biology",
+      "title": "Evolution",
+      "grade": "11",
+      "ncertCode": "kebo107",
+      "syllabusOutline": [
+        "Evolution"
+      ],
+      "studySummary": "## Syllabus outline\n- Evolution\n\nBoard-oriented study guide for CBSE Class 11 Biology — Evolution.",
+      "videos": [
+        {
+          "title": "Evolution Quick Revision",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=1-RqAk4MzuY",
+          "youtubeId": "1-RqAk4MzuY",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/1-RqAk4MzuY",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=1-RqAk4MzuY"
+        }
+      ]
+    },
+    "human-health-disease": {
+      "chapterId": "human-health-disease",
+      "subject": "biology",
+      "title": "Human Health Disease",
+      "grade": "11",
+      "ncertCode": "kebo108",
+      "syllabusOutline": [
+        "Human Health Disease"
+      ],
+      "studySummary": "## Syllabus outline\n- Human Health Disease\n\nBoard-oriented study guide for CBSE Class 11 Biology — Human Health Disease.",
+      "videos": [
+        {
+          "title": "Human Health & Disease One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=EOf4kTFs6lY",
+          "youtubeId": "EOf4kTFs6lY",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/EOf4kTFs6lY",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=EOf4kTFs6lY"
+        }
+      ]
+    },
+    "microbes-human-welfare": {
+      "chapterId": "microbes-human-welfare",
+      "subject": "biology",
+      "title": "Microbes Human Welfare",
+      "grade": "11",
+      "ncertCode": "kebo109",
+      "syllabusOutline": [
+        "Microbes Human Welfare"
+      ],
+      "studySummary": "## Syllabus outline\n- Microbes Human Welfare\n\nBoard-oriented study guide for CBSE Class 11 Biology — Microbes Human Welfare.",
+      "videos": [
+        {
+          "title": "Microbes in Human Welfare One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=RnOdqRI8K9U",
+          "youtubeId": "RnOdqRI8K9U",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/RnOdqRI8K9U",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=RnOdqRI8K9U"
+        }
+      ]
+    },
+    "biotechnology-principles-processes": {
+      "chapterId": "biotechnology-principles-processes",
+      "subject": "biology",
+      "title": "Biotechnology: Principles and Processes",
+      "grade": "11",
+      "ncertCode": "kebo110",
+      "syllabusOutline": [
+        "Genetic engineering (Recombinant DNA technology).",
+        "Tools of recombinant DNA technology: Restriction enzymes, polymerases, ligases, vectors.",
+        "Processes of Recombinant DNA Technology: Isolation of DNA, PCR, Gel electrophoresis.",
+        "Downstream processing."
+      ],
+      "studySummary": "## Syllabus outline\n- Genetic engineering (Recombinant DNA technology).\n- Tools of recombinant DNA technology: Restriction enzymes, polymerases, ligases, vectors.\n- Processes of Recombinant DNA Technology: Isolation of DNA, PCR, Gel electrophoresis.\n- Downstream processing.\n\nBoard-oriented study guide for CBSE Class 11 Biology — Biotechnology: Principles and Processes.",
+      "videos": [
+        {
+          "title": "Biotechnology: Principles & Processes Quick Revision",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=9mXYwAbMHMc",
+          "youtubeId": "9mXYwAbMHMc",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/9mXYwAbMHMc",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=9mXYwAbMHMc"
+        }
+      ]
+    },
+    "biotechnology-applications": {
+      "chapterId": "biotechnology-applications",
+      "subject": "biology",
+      "title": "Biotechnology Applications",
+      "grade": "11",
+      "ncertCode": "kebo111",
+      "syllabusOutline": [
+        "Biotechnology Applications"
+      ],
+      "studySummary": "## Syllabus outline\n- Biotechnology Applications\n\nBoard-oriented study guide for CBSE Class 11 Biology — Biotechnology Applications.",
+      "videos": [
+        {
+          "title": "Biotechnology and its Applications One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=CZ9mEuMIB1w",
+          "youtubeId": "CZ9mEuMIB1w",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/CZ9mEuMIB1w",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=CZ9mEuMIB1w"
+        }
+      ]
+    },
+    "organisms-populations": {
+      "chapterId": "organisms-populations",
+      "subject": "biology",
+      "title": "Organisms Populations",
+      "grade": "11",
+      "ncertCode": "kebo112",
+      "syllabusOutline": [
+        "Organisms Populations"
+      ],
+      "studySummary": "## Syllabus outline\n- Organisms Populations\n\nBoard-oriented study guide for CBSE Class 11 Biology — Organisms Populations.",
+      "videos": [
+        {
+          "title": "Organisms and Populations One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=P2ytL019MtU",
+          "youtubeId": "P2ytL019MtU",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/P2ytL019MtU",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=P2ytL019MtU"
+        }
+      ]
+    },
+    "ecosystem": {
+      "chapterId": "ecosystem",
+      "subject": "biology",
+      "title": "Ecosystem",
+      "grade": "11",
+      "ncertCode": "kebo113",
+      "syllabusOutline": [
+        "Ecosystem"
+      ],
+      "studySummary": "## Syllabus outline\n- Ecosystem\n\nBoard-oriented study guide for CBSE Class 11 Biology — Ecosystem.",
+      "videos": [
+        {
+          "title": "Ecosystem One Shot Revision",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=peOLJv1ASaQ",
+          "youtubeId": "peOLJv1ASaQ",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/peOLJv1ASaQ",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=peOLJv1ASaQ"
+        }
+      ]
+    },
+    "biodiversity-conservation": {
+      "chapterId": "biodiversity-conservation",
+      "subject": "biology",
+      "title": "Biodiversity Conservation",
+      "grade": "11",
+      "ncertCode": "kebo114",
+      "syllabusOutline": [
+        "Biodiversity Conservation"
+      ],
+      "studySummary": "## Syllabus outline\n- Biodiversity Conservation\n\nBoard-oriented study guide for CBSE Class 11 Biology — Biodiversity Conservation.",
+      "videos": [
+        {
+          "title": "Biodiversity and Conservation One Shot",
+          "presenter": "Magnet Brains",
+          "url": "https://www.youtube.com/watch?v=jeC1ik6DGxk",
+          "youtubeId": "jeC1ik6DGxk",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/jeC1ik6DGxk",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=jeC1ik6DGxk"
+        }
+      ]
+    },
+    "relations-functions": {
+      "chapterId": "relations-functions",
+      "subject": "mathematics",
+      "title": "Relations and Functions",
+      "grade": "11",
+      "ncertCode": "kemh101",
+      "syllabusOutline": [
+        "Types of relations: reflexive, symmetric, transitive and equivalence relations.",
+        "One to one (injective) and onto (surjective) functions.",
+        "Composite functions, inverse of a function (bijective functions)."
+      ],
+      "studySummary": "## Syllabus outline\n- Types of relations: reflexive, symmetric, transitive and equivalence relations.\n- One to one (injective) and onto (surjective) functions.\n- Composite functions, inverse of a function (bijective functions).\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Relations and Functions.",
+      "videos": [
+        {
+          "title": "Relations and Functions Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=pncuQ7bVNz4",
+          "youtubeId": "pncuQ7bVNz4",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/pncuQ7bVNz4",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=pncuQ7bVNz4"
+        }
+      ]
+    },
+    "inverse-trigonometric-functions": {
+      "chapterId": "inverse-trigonometric-functions",
+      "subject": "mathematics",
+      "title": "Inverse Trigonometric Functions",
+      "grade": "11",
+      "ncertCode": "kemh102",
+      "syllabusOutline": [
+        "Inverse Trigonometric Functions"
+      ],
+      "studySummary": "## Syllabus outline\n- Inverse Trigonometric Functions\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Inverse Trigonometric Functions.",
+      "videos": [
+        {
+          "title": "Inverse Trigonometric Functions Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=Cg1gJNaWIsc",
+          "youtubeId": "Cg1gJNaWIsc",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Cg1gJNaWIsc",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=Cg1gJNaWIsc"
+        }
+      ]
+    },
+    "matrices": {
+      "chapterId": "matrices",
+      "subject": "mathematics",
+      "title": "Matrices",
+      "grade": "11",
+      "ncertCode": "kemh103",
+      "syllabusOutline": [
+        "Matrices"
+      ],
+      "studySummary": "## Syllabus outline\n- Matrices\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Matrices.",
+      "videos": [
+        {
+          "title": "Matrices Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=ZNe1ksaqvvk",
+          "youtubeId": "ZNe1ksaqvvk",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ZNe1ksaqvvk",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ZNe1ksaqvvk"
+        }
+      ]
+    },
+    "determinants": {
+      "chapterId": "determinants",
+      "subject": "mathematics",
+      "title": "Determinants",
+      "grade": "11",
+      "ncertCode": "kemh104",
+      "syllabusOutline": [
+        "Determinants"
+      ],
+      "studySummary": "## Syllabus outline\n- Determinants\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Determinants.",
+      "videos": [
+        {
+          "title": "Determinants Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=o7cCBgYmKzU",
+          "youtubeId": "o7cCBgYmKzU",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/o7cCBgYmKzU",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=o7cCBgYmKzU"
+        }
+      ]
+    },
+    "continuity-differentiability": {
+      "chapterId": "continuity-differentiability",
+      "subject": "mathematics",
+      "title": "Continuity and Differentiability",
+      "grade": "11",
+      "ncertCode": "kemh105",
+      "syllabusOutline": [
+        "Continuity and differentiability, derivative of composite functions, chain rule.",
+        "Derivatives of inverse trigonometric functions, derivative of implicit functions.",
+        "Concept of exponential and logarithmic functions, logarithmic differentiation.",
+        "Derivatives of functions expressed in parametric forms, Second order derivatives.",
+        "Rolle's and Lagrange's Mean Value Theorems (geometric interpretation)."
+      ],
+      "studySummary": "## Syllabus outline\n- Continuity and differentiability, derivative of composite functions, chain rule.\n- Derivatives of inverse trigonometric functions, derivative of implicit functions.\n- Concept of exponential and logarithmic functions, logarithmic differentiation.\n- Derivatives of functions expressed in parametric forms, Second order derivatives.\n- Rolle's and Lagrange's Mean Value Theorems (geometric interpretation).\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Continuity and Differentiability.",
+      "videos": [
+        {
+          "title": "Continuity And Differentiability Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=aY_Fu4VwFiI",
+          "youtubeId": "aY_Fu4VwFiI",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/aY_Fu4VwFiI",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=aY_Fu4VwFiI"
+        }
+      ]
+    },
+    "application-derivatives": {
+      "chapterId": "application-derivatives",
+      "subject": "mathematics",
+      "title": "Application Derivatives",
+      "grade": "11",
+      "ncertCode": "kemh106",
+      "syllabusOutline": [
+        "Application Derivatives"
+      ],
+      "studySummary": "## Syllabus outline\n- Application Derivatives\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Application Derivatives.",
+      "videos": [
+        {
+          "title": "Application Of Derivatives Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=-02uCNZ8wD8",
+          "youtubeId": "-02uCNZ8wD8",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/-02uCNZ8wD8",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=-02uCNZ8wD8"
+        }
+      ]
+    },
+    "integrals": {
+      "chapterId": "integrals",
+      "subject": "mathematics",
+      "title": "Integrals",
+      "grade": "11",
+      "ncertCode": "kemh107",
+      "syllabusOutline": [
+        "Integration as inverse process of differentiation.",
+        "Integration of a variety of functions by substitution, by partial fractions and by parts.",
+        "Evaluation of simple integrals of standard forms.",
+        "Fundamental Theorem of Calculus (without proof).",
+        "Basic properties of definite integrals and evaluation of definite integrals."
+      ],
+      "studySummary": "## Syllabus outline\n- Integration as inverse process of differentiation.\n- Integration of a variety of functions by substitution, by partial fractions and by parts.\n- Evaluation of simple integrals of standard forms.\n- Fundamental Theorem of Calculus (without proof).\n- Basic properties of definite integrals and evaluation of definite integrals.\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Integrals.",
+      "videos": [
+        {
+          "title": "Integrals in 1 Shot | Class 12th Boards",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=lV6oNc10j6Y",
+          "youtubeId": "lV6oNc10j6Y",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/lV6oNc10j6Y",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=lV6oNc10j6Y"
+        }
+      ]
+    },
+    "application-integrals": {
+      "chapterId": "application-integrals",
+      "subject": "mathematics",
+      "title": "Application Integrals",
+      "grade": "11",
+      "ncertCode": "kemh108",
+      "syllabusOutline": [
+        "Application Integrals"
+      ],
+      "studySummary": "## Syllabus outline\n- Application Integrals\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Application Integrals.",
+      "videos": [
+        {
+          "title": "Application Of Integrals Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=QSuDfXsemkU",
+          "youtubeId": "QSuDfXsemkU",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/QSuDfXsemkU",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=QSuDfXsemkU"
+        }
+      ]
+    },
+    "differential-equations": {
+      "chapterId": "differential-equations",
+      "subject": "mathematics",
+      "title": "Differential Equations",
+      "grade": "11",
+      "ncertCode": "kemh109",
+      "syllabusOutline": [
+        "Differential Equations"
+      ],
+      "studySummary": "## Syllabus outline\n- Differential Equations\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Differential Equations.",
+      "videos": [
+        {
+          "title": "Differential Equations Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=_RikqAm6RA0",
+          "youtubeId": "_RikqAm6RA0",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/_RikqAm6RA0",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=_RikqAm6RA0"
+        }
+      ]
+    },
+    "vector-algebra": {
+      "chapterId": "vector-algebra",
+      "subject": "mathematics",
+      "title": "Vector Algebra",
+      "grade": "11",
+      "ncertCode": "kemh110",
+      "syllabusOutline": [
+        "Vector Algebra"
+      ],
+      "studySummary": "## Syllabus outline\n- Vector Algebra\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Vector Algebra.",
+      "videos": [
+        {
+          "title": "Vector Algebra Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=o5ZJD08fcUI",
+          "youtubeId": "o5ZJD08fcUI",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/o5ZJD08fcUI",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=o5ZJD08fcUI"
+        }
+      ]
+    },
+    "three-dimensional-geometry": {
+      "chapterId": "three-dimensional-geometry",
+      "subject": "mathematics",
+      "title": "Three Dimensional Geometry",
+      "grade": "11",
+      "ncertCode": "kemh111",
+      "syllabusOutline": [
+        "Three Dimensional Geometry"
+      ],
+      "studySummary": "## Syllabus outline\n- Three Dimensional Geometry\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Three Dimensional Geometry.",
+      "videos": [
+        {
+          "title": "3D Geometry Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=ZVNjOmJCOLI",
+          "youtubeId": "ZVNjOmJCOLI",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ZVNjOmJCOLI",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=ZVNjOmJCOLI"
+        }
+      ]
+    },
+    "linear-programming": {
+      "chapterId": "linear-programming",
+      "subject": "mathematics",
+      "title": "Linear Programming",
+      "grade": "11",
+      "ncertCode": "kemh112",
+      "syllabusOutline": [
+        "Linear Programming"
+      ],
+      "studySummary": "## Syllabus outline\n- Linear Programming\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Linear Programming.",
+      "videos": [
+        {
+          "title": "Linear Programming Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=HWD_SGXlLF4",
+          "youtubeId": "HWD_SGXlLF4",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/HWD_SGXlLF4",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=HWD_SGXlLF4"
+        }
+      ]
+    },
+    "probability": {
+      "chapterId": "probability",
+      "subject": "mathematics",
+      "title": "Probability",
+      "grade": "11",
+      "ncertCode": "kemh113",
+      "syllabusOutline": [
+        "Probability"
+      ],
+      "studySummary": "## Syllabus outline\n- Probability\n\nBoard-oriented study guide for CBSE Class 11 Mathematics — Probability.",
+      "videos": [
+        {
+          "title": "Probability Class 12 One Shot",
+          "presenter": "NCERT Wallah",
+          "url": "https://www.youtube.com/watch?v=oqQDUjpI4BU",
+          "youtubeId": "oqQDUjpI4BU",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/oqQDUjpI4BU",
+          "transcripts": []
+        }
+      ],
+      "links": [
+        {
+          "label": "Watch on YouTube",
+          "url": "https://www.youtube.com/watch?v=oqQDUjpI4BU"
+        }
+      ]
+    }
+  }
+}

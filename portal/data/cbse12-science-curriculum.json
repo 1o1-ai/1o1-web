@@ -1,7 +1,7 @@
 {
   "sku": "cbse12-science",
-  "title": "CBSE XII Science",
-  "displayName": "CBSE Class 12 Science",
+  "title": "CBSE XI–XII Science",
+  "displayName": "CBSE Class 11–12 Science",
   "locale": "en-IN",
   "session": "2025-26",
   "subjects": {
@@ -9,77 +9,105 @@
       "label": "Physics",
       "icon": "⚛️",
       "code": "042",
-      "grade": "12",
+      "grade": "11-12",
       "chapters": [
-        {
-          "id": "alternating-current",
-          "title": "Alternating Current",
-          "questionCount": 13
-        },
-        {
-          "id": "atoms",
-          "title": "Atoms",
-          "questionCount": 60
-        },
-        {
-          "id": "current-electricity",
-          "title": "Current Electricity",
-          "questionCount": 407
-        },
-        {
-          "id": "dual-nature-radiation",
-          "title": "Dual Nature of Radiation and Matter",
-          "questionCount": 116
-        },
         {
           "id": "electric-charges-fields",
           "title": "Electric Charges and Fields",
+          "grade": "11",
+          "ncertCode": "keph101",
           "questionCount": 664
-        },
-        {
-          "id": "electromagnetic-induction",
-          "title": "Electromagnetic Induction",
-          "questionCount": 2
-        },
-        {
-          "id": "electromagnetic-waves",
-          "title": "Electromagnetic Waves",
-          "questionCount": 83
         },
         {
           "id": "electrostatic-potential-capacitance",
           "title": "Electrostatic Potential and Capacitance",
+          "grade": "11",
+          "ncertCode": "keph102",
           "questionCount": 213
         },
         {
-          "id": "magnetism-matter",
-          "title": "Magnetism and Matter",
-          "questionCount": 27
+          "id": "current-electricity",
+          "title": "Current Electricity",
+          "grade": "11",
+          "ncertCode": "keph103",
+          "questionCount": 407
         },
         {
           "id": "moving-charges-magnetism",
           "title": "Moving Charges and Magnetism",
+          "grade": "11",
+          "ncertCode": "keph104",
           "questionCount": 48
         },
         {
-          "id": "nuclei",
-          "title": "Nuclei",
-          "questionCount": 57
+          "id": "magnetism-matter",
+          "title": "Magnetism and Matter",
+          "grade": "11",
+          "ncertCode": "keph105",
+          "questionCount": 27
+        },
+        {
+          "id": "electromagnetic-induction",
+          "title": "Electromagnetic Induction",
+          "grade": "11",
+          "ncertCode": "keph106",
+          "questionCount": 2
+        },
+        {
+          "id": "alternating-current",
+          "title": "Alternating Current",
+          "grade": "11",
+          "ncertCode": "keph107",
+          "questionCount": 13
+        },
+        {
+          "id": "electromagnetic-waves",
+          "title": "Electromagnetic Waves",
+          "grade": "11",
+          "ncertCode": "keph108",
+          "questionCount": 83
         },
         {
           "id": "ray-optics-instruments",
           "title": "Ray Optics and Optical Instruments",
+          "grade": "12",
+          "ncertCode": "leph101",
           "questionCount": 220
-        },
-        {
-          "id": "semiconductor-electronics",
-          "title": "Semiconductor Electronics",
-          "questionCount": 127
         },
         {
           "id": "wave-optics",
           "title": "Wave Optics",
+          "grade": "12",
+          "ncertCode": "leph102",
           "questionCount": 91
+        },
+        {
+          "id": "dual-nature-radiation",
+          "title": "Dual Nature of Radiation and Matter",
+          "grade": "12",
+          "ncertCode": "leph103",
+          "questionCount": 116
+        },
+        {
+          "id": "atoms",
+          "title": "Atoms",
+          "grade": "12",
+          "ncertCode": "leph104",
+          "questionCount": 60
+        },
+        {
+          "id": "nuclei",
+          "title": "Nuclei",
+          "grade": "12",
+          "ncertCode": "leph105",
+          "questionCount": 57
+        },
+        {
+          "id": "semiconductor-electronics",
+          "title": "Semiconductor Electronics",
+          "grade": "12",
+          "ncertCode": "leph106",
+          "questionCount": 127
         }
       ]
     },
@@ -87,57 +115,119 @@
       "label": "Chemistry",
       "icon": "🧪",
       "code": "043",
-      "grade": "12",
+      "grade": "11-12",
       "chapters": [
+        {
+          "id": "solid-state",
+          "title": "Solid State",
+          "grade": "11",
+          "ncertCode": "kech101",
+          "questionCount": 0
+        },
+        {
+          "id": "solutions",
+          "title": "Solutions",
+          "grade": "11",
+          "ncertCode": "kech102",
+          "questionCount": 1146
+        },
+        {
+          "id": "electrochemistry",
+          "title": "Electrochemistry",
+          "grade": "11",
+          "ncertCode": "kech103",
+          "questionCount": 162
+        },
+        {
+          "id": "chemical-kinetics",
+          "title": "Chemical Kinetics",
+          "grade": "11",
+          "ncertCode": "kech104",
+          "questionCount": 218
+        },
+        {
+          "id": "surface-chemistry",
+          "title": "Surface Chemistry",
+          "grade": "11",
+          "ncertCode": "kech105",
+          "questionCount": 0
+        },
+        {
+          "id": "general-principles-isolation-elements",
+          "title": "General Principles Isolation Elements",
+          "grade": "11",
+          "ncertCode": "kech106",
+          "questionCount": 0
+        },
+        {
+          "id": "p-block-elements",
+          "title": "P Block Elements",
+          "grade": "11",
+          "ncertCode": "kech107",
+          "questionCount": 0
+        },
+        {
+          "id": "d-f-block-elements",
+          "title": "d and f Block Elements",
+          "grade": "11",
+          "ncertCode": "kech108",
+          "questionCount": 123
+        },
+        {
+          "id": "coordination-compounds",
+          "title": "Coordination Compounds",
+          "grade": "11",
+          "ncertCode": "kech109",
+          "questionCount": 167
+        },
+        {
+          "id": "haloalkanes-haloarenes",
+          "title": "Haloalkanes and Haloarenes",
+          "grade": "12",
+          "ncertCode": "lech101",
+          "questionCount": 121
+        },
         {
           "id": "alcohols-phenols-ethers",
           "title": "Alcohols, Phenols and Ethers",
+          "grade": "12",
+          "ncertCode": "lech102",
           "questionCount": 176
         },
         {
           "id": "aldehydes-ketones-carboxylic-acids",
           "title": "Aldehydes, Ketones and Carboxylic Acids",
+          "grade": "12",
+          "ncertCode": "lech103",
           "questionCount": 86
         },
         {
           "id": "amines",
           "title": "Amines",
+          "grade": "12",
+          "ncertCode": "lech104",
           "questionCount": 76
         },
         {
           "id": "biomolecules",
           "title": "Biomolecules",
+          "grade": "12",
+          "ncertCode": "lech105",
           "questionCount": 176
         },
         {
-          "id": "chemical-kinetics",
-          "title": "Chemical Kinetics",
-          "questionCount": 218
+          "id": "polymers",
+          "title": "Polymers",
+          "grade": "12",
+          "ncertCode": "lech106",
+          "questionCount": 0
         },
         {
-          "id": "coordination-compounds",
-          "title": "Coordination Compounds",
-          "questionCount": 167
-        },
-        {
-          "id": "electrochemistry",
-          "title": "Electrochemistry",
-          "questionCount": 162
-        },
-        {
-          "id": "haloalkanes-haloarenes",
-          "title": "Haloalkanes and Haloarenes",
-          "questionCount": 121
-        },
-        {
-          "id": "solutions",
-          "title": "Solutions",
-          "questionCount": 1146
-        },
-        {
-          "id": "d-f-block-elements",
-          "title": "d and f Block Elements",
-          "questionCount": 123
+          "id": "chemistry-everyday-life",
+          "title": "Chemistry Everyday Life",
+          "grade": "12",
+          "ncertCode": "lech107",
+          "questionCount": 0
         }
       ]
     },
@@ -145,72 +235,105 @@
       "label": "Biology",
       "icon": "🧬",
       "code": "044",
-      "grade": "12",
+      "grade": "11-12",
       "chapters": [
         {
-          "id": "biodiversity-conservation",
-          "title": "Biodiversity and Conservation",
-          "questionCount": 46
-        },
-        {
-          "id": "biotechnology-principles",
-          "title": "Biotechnology - Principles and Processes",
-          "questionCount": 160
-        },
-        {
-          "id": "biotechnology-applications",
-          "title": "Biotechnology and its Application",
-          "questionCount": 53
-        },
-        {
-          "id": "ecosystem",
-          "title": "Ecosystem",
-          "questionCount": 74
-        },
-        {
-          "id": "evolution",
-          "title": "Evolution",
-          "questionCount": 57
-        },
-        {
-          "id": "human-health-diseases",
-          "title": "Human Health and Diseases",
-          "questionCount": 159
-        },
-        {
-          "id": "human-reproduction",
-          "title": "Human Reproduction",
-          "questionCount": 91
-        },
-        {
-          "id": "microbes-human-welfare",
-          "title": "Microbes in Human Welfare",
-          "questionCount": 71
-        },
-        {
-          "id": "molecular-basis-inheritance",
-          "title": "Molecular Basis of Inheritance",
-          "questionCount": 121
-        },
-        {
-          "id": "organisms-populations",
-          "title": "Organisms and Populations",
-          "questionCount": 102
-        },
-        {
-          "id": "principles-inheritance-variation",
-          "title": "Principles of Inheritance and Variation",
-          "questionCount": 164
-        },
-        {
-          "id": "reproductive-health",
-          "title": "Reproductive Health",
-          "questionCount": 52
+          "id": "reproduction",
+          "title": "Reproduction",
+          "grade": "11",
+          "ncertCode": "kebo101",
+          "questionCount": 0
         },
         {
           "id": "sexual-reproduction-flowering-plants",
           "title": "Sexual Reproduction in Flowering Plants",
+          "grade": "11",
+          "ncertCode": "kebo102",
           "questionCount": 960
+        },
+        {
+          "id": "human-reproduction",
+          "title": "Human Reproduction",
+          "grade": "11",
+          "ncertCode": "kebo103",
+          "questionCount": 91
+        },
+        {
+          "id": "reproductive-health",
+          "title": "Reproductive Health",
+          "grade": "11",
+          "ncertCode": "kebo104",
+          "questionCount": 52
+        },
+        {
+          "id": "principles-inheritance-variation",
+          "title": "Principles of Inheritance and Variation",
+          "grade": "11",
+          "ncertCode": "kebo105",
+          "questionCount": 164
+        },
+        {
+          "id": "molecular-basis-inheritance",
+          "title": "Molecular Basis of Inheritance",
+          "grade": "11",
+          "ncertCode": "kebo106",
+          "questionCount": 121
+        },
+        {
+          "id": "evolution",
+          "title": "Evolution",
+          "grade": "11",
+          "ncertCode": "kebo107",
+          "questionCount": 57
+        },
+        {
+          "id": "human-health-disease",
+          "title": "Human Health Disease",
+          "grade": "11",
+          "ncertCode": "kebo108",
+          "questionCount": 0
+        },
+        {
+          "id": "microbes-human-welfare",
+          "title": "Microbes in Human Welfare",
+          "grade": "11",
+          "ncertCode": "kebo109",
+          "questionCount": 71
+        },
+        {
+          "id": "biotechnology-principles-processes",
+          "title": "Biotechnology: Principles and Processes",
+          "grade": "11",
+          "ncertCode": "kebo110",
+          "questionCount": 0
+        },
+        {
+          "id": "biotechnology-applications",
+          "title": "Biotechnology and its Application",
+          "grade": "11",
+          "ncertCode": "kebo111",
+          "questionCount": 53
+        },
+        {
+          "id": "organisms-populations",
+          "title": "Organisms and Populations",
+          "grade": "11",
+          "ncertCode": "kebo112",
+          "questionCount": 102
+        },
+        {
+          "id": "ecosystem",
+          "title": "Ecosystem",
+          "grade": "11",
+          "ncertCode": "kebo113",
+          "questionCount": 74
+        },
+        {
+          "id": "biodiversity-conservation",
+          "title": "Biodiversity and Conservation",
+          "grade": "11",
+          "ncertCode": "kebo114",
+          "questionCount": 46
         }
       ]
     },
@@ -218,72 +341,98 @@
       "label": "Mathematics",
       "icon": "📐",
       "code": "041",
-      "grade": "12",
+      "grade": "11-12",
       "chapters": [
         {
-          "id": "application-derivatives",
-          "title": "Application of Derivatives",
-          "questionCount": 17
+          "id": "relations-functions",
+          "title": "Relations and Functions",
+          "grade": "11",
+          "ncertCode": "kemh101",
+          "questionCount": 1065
         },
         {
-          "id": "application-integrals",
-          "title": "Application of Integrals",
-          "questionCount": 10
-        },
-        {
-          "id": "continuity-differentiability",
-          "title": "Continuity and Differentiability",
-          "questionCount": 29
-        },
-        {
-          "id": "determinants",
-          "title": "Determinants",
-          "questionCount": 33
-        },
-        {
-          "id": "differential-equations",
-          "title": "Differential Equations",
-          "questionCount": 145
-        },
-        {
-          "id": "integrals",
-          "title": "Integrals",
-          "questionCount": 46
-        },
-        {
-          "id": "inverse-trig-functions",
+          "id": "inverse-trigonometric-functions",
           "title": "Inverse Trigonometric Functions",
-          "questionCount": 14
-        },
-        {
-          "id": "linear-programming",
-          "title": "Linear Programming",
-          "questionCount": 67
+          "grade": "11",
+          "ncertCode": "kemh102",
+          "questionCount": 0
         },
         {
           "id": "matrices",
           "title": "Matrices",
+          "grade": "11",
+          "ncertCode": "kemh103",
           "questionCount": 146
         },
         {
-          "id": "probability",
-          "title": "Probability",
-          "questionCount": 136
+          "id": "determinants",
+          "title": "Determinants",
+          "grade": "11",
+          "ncertCode": "kemh104",
+          "questionCount": 33
         },
         {
-          "id": "relations-functions",
-          "title": "Relations and Functions",
-          "questionCount": 1065
+          "id": "continuity-differentiability",
+          "title": "Continuity and Differentiability",
+          "grade": "11",
+          "ncertCode": "kemh105",
+          "questionCount": 29
         },
         {
-          "id": "three-dimensional-geometry",
-          "title": "Three Dimensional Geometry",
-          "questionCount": 69
+          "id": "application-derivatives",
+          "title": "Application of Derivatives",
+          "grade": "11",
+          "ncertCode": "kemh106",
+          "questionCount": 17
+        },
+        {
+          "id": "integrals",
+          "title": "Integrals",
+          "grade": "11",
+          "ncertCode": "kemh107",
+          "questionCount": 46
+        },
+        {
+          "id": "application-integrals",
+          "title": "Application of Integrals",
+          "grade": "11",
+          "ncertCode": "kemh108",
+          "questionCount": 10
+        },
+        {
+          "id": "differential-equations",
+          "title": "Differential Equations",
+          "grade": "11",
+          "ncertCode": "kemh109",
+          "questionCount": 145
         },
         {
           "id": "vector-algebra",
           "title": "Vector Algebra",
+          "grade": "11",
+          "ncertCode": "kemh110",
           "questionCount": 202
+        },
+        {
+          "id": "three-dimensional-geometry",
+          "title": "Three Dimensional Geometry",
+          "grade": "11",
+          "ncertCode": "kemh111",
+          "questionCount": 69
+        },
+        {
+          "id": "linear-programming",
+          "title": "Linear Programming",
+          "grade": "11",
+          "ncertCode": "kemh112",
+          "questionCount": 67
+        },
+        {
+          "id": "probability",
+          "title": "Probability",
+          "grade": "11",
+          "ncertCode": "kemh113",
+          "questionCount": 136
         }
       ]
     }
@@ -297,5 +446,5 @@
       "mathematics": 1979
     }
   },
-  "sources_note": "C:\\Knowledge\\EDUCATION\\CBSE-11-12-SCIENCE\\Question Bank"
+  "sources_note": "NCERT Class 11 (ke*) + Class 12 (le*) — merged curriculum with question bank counts where available."
 }

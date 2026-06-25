@@ -1,0 +1,576 @@
+{
+  "version": 1,
+  "description": "Curated YouTube videos for CBSE Class 11-12 Science (NCERT Wallah, Magnet Brains).",
+  "overrides": {
+    "electric-charges-fields": {
+      "wrongIds": [
+        "electric_charges_fields_11"
+      ],
+      "youtubeId": "hgk8CxXZvjo",
+      "title": "Electric Charges And Fields One Shot | Physics | Class 12th Boards",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=hgk8CxXZvjo",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "electrostatic-potential-capacitance": {
+      "wrongIds": [
+        "electrostatic_potential_capacitance_11"
+      ],
+      "youtubeId": "qvVAoVq_zAg",
+      "title": "Electrostatic Potential and Capacitance One Shot | Physics | Class 12th Boards",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=qvVAoVq_zAg",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "current-electricity": {
+      "wrongIds": [
+        "current_electricity_11"
+      ],
+      "youtubeId": "MBkJmR2qii0",
+      "title": "Current Electricity Class 12 One Shot | NCERT + Derivations + PYQs",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=MBkJmR2qii0",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "moving-charges-magnetism": {
+      "wrongIds": [
+        "moving_charges_magnetism_11"
+      ],
+      "youtubeId": "xWMT4Ue0cgU",
+      "title": "Moving Charges And Magnetism Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=xWMT4Ue0cgU",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "magnetism-matter": {
+      "wrongIds": [
+        "magnetism_matter_11"
+      ],
+      "youtubeId": "4IuRD2B6OME",
+      "title": "Magnetism And Matter Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=4IuRD2B6OME",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "electromagnetic-induction": {
+      "wrongIds": [
+        "electromagnetic_induction_11"
+      ],
+      "youtubeId": "9OWhVAKzoig",
+      "title": "Electromagnetic Induction Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=9OWhVAKzoig",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "alternating-current": {
+      "wrongIds": [
+        "alternating_current_11"
+      ],
+      "youtubeId": "j5wR8pfqyh4",
+      "title": "Alternating Current Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=j5wR8pfqyh4",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "electromagnetic-waves": {
+      "wrongIds": [
+        "electromagnetic_waves_11"
+      ],
+      "youtubeId": "mnB0XYcD6y4",
+      "title": "Electromagnetic Waves Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=mnB0XYcD6y4",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "ray-optics-instruments": {
+      "wrongIds": [
+        "ray_optics_instruments_12"
+      ],
+      "youtubeId": "aWZrNhD2S3k",
+      "title": "Ray Optics And Optical Instruments Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=aWZrNhD2S3k",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "wave-optics": {
+      "wrongIds": [
+        "wave_optics_12"
+      ],
+      "youtubeId": "yY6ChKn7thM",
+      "title": "Wave Optics Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=yY6ChKn7thM",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "dual-nature-radiation": {
+      "wrongIds": [
+        "dual_nature_radiation_12"
+      ],
+      "youtubeId": "7naR68Z6xEs",
+      "title": "Dual Nature Of Matter And Radiation Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=7naR68Z6xEs",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "atoms": {
+      "wrongIds": [
+        "atoms_12"
+      ],
+      "youtubeId": "jtx_7XD8y7s",
+      "title": "Atoms in 60 Minutes | Physics Chapter 12",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=jtx_7XD8y7s",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "nuclei": {
+      "wrongIds": [
+        "nuclei_12"
+      ],
+      "youtubeId": "Ux5x9Vofrv4",
+      "title": "Nuclei in 29 Minutes | Physics Chapter 13",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=Ux5x9Vofrv4",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "semiconductor-electronics": {
+      "wrongIds": [
+        "semiconductor_electronics_12"
+      ],
+      "youtubeId": "YGWiJ3xcxCA",
+      "title": "Semiconductor Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=YGWiJ3xcxCA",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "solid-state": {
+      "wrongIds": [
+        "solid_state_11"
+      ],
+      "youtubeId": "o-YlinG72h0",
+      "title": "Solid State | Class 12 Chemistry Chapter 1",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=o-YlinG72h0",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "solutions": {
+      "wrongIds": [
+        "solutions_11"
+      ],
+      "youtubeId": "tuO9Vmz496w",
+      "title": "Solutions One Shot Revision | Class 12 Chemistry",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=tuO9Vmz496w",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "electrochemistry": {
+      "wrongIds": [
+        "electrochemistry_11"
+      ],
+      "youtubeId": "qtqu3LH-EH8",
+      "title": "Electrochemistry One Shot Revision | Class 12 Chemistry",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=qtqu3LH-EH8",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "chemical-kinetics": {
+      "wrongIds": [
+        "chemical_kinetics_11"
+      ],
+      "youtubeId": "74m8SRgJ8v0",
+      "title": "Chemical Kinetics One Shot Revision | Class 12 Chemistry",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=74m8SRgJ8v0",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "surface-chemistry": {
+      "wrongIds": [
+        "surface_chemistry_11"
+      ],
+      "youtubeId": "t6LdYkstEXo",
+      "title": "Surface Chemistry One Shot Revision | Class 12 Chemistry",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=t6LdYkstEXo",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "general-principles-isolation-elements": {
+      "wrongIds": [
+        "general_principles_isolation_elements_11"
+      ],
+      "youtubeId": "_GY9nz7cBK4",
+      "title": "General Principles and Processes of Isolation of Elements",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=_GY9nz7cBK4",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "p-block-elements": {
+      "wrongIds": [
+        "p_block_elements_11"
+      ],
+      "youtubeId": "pHlw63Dwdjc",
+      "title": "P-Block Elements One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=pHlw63Dwdjc",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "d-f-block-elements": {
+      "wrongIds": [
+        "d_f_block_elements_11"
+      ],
+      "youtubeId": "NkjRe_4KO_Y",
+      "title": "The d and f Block Elements One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=NkjRe_4KO_Y",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "coordination-compounds": {
+      "wrongIds": [
+        "coordination_compounds_11"
+      ],
+      "youtubeId": "Dab4Qn7Py_U",
+      "title": "Coordination Compounds One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=Dab4Qn7Py_U",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "haloalkanes-haloarenes": {
+      "wrongIds": [
+        "haloalkanes_haloarenes_12"
+      ],
+      "youtubeId": "S3FVrwbDF-o",
+      "title": "Haloalkanes And Haloarenes One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=S3FVrwbDF-o",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "alcohols-phenols-ethers": {
+      "wrongIds": [
+        "alcohols_phenols_ethers_12"
+      ],
+      "youtubeId": "-p5x_QJyJ8Y",
+      "title": "Alcohols, Phenols and Ethers One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=-p5x_QJyJ8Y",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "aldehydes-ketones-carboxylic-acids": {
+      "wrongIds": [
+        "aldehydes_ketones_carboxylic_acids_12"
+      ],
+      "youtubeId": "7EhL0v-ltQk",
+      "title": "Aldehydes, Ketones & Carboxylic Acids One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=7EhL0v-ltQk",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "amines": {
+      "wrongIds": [
+        "amines_12"
+      ],
+      "youtubeId": "NOIOMQ2Cj_g",
+      "title": "Amines One Shot Revision",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=NOIOMQ2Cj_g",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "biomolecules": {
+      "wrongIds": [
+        "biomolecules_12"
+      ],
+      "youtubeId": "FchBgbqr41c",
+      "title": "Biomolecules One Shot Revision",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=FchBgbqr41c",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "polymers": {
+      "wrongIds": [
+        "polymers_12"
+      ],
+      "youtubeId": "MTuoGwN-LCA",
+      "title": "Polymers One Shot Revision",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=MTuoGwN-LCA",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "chemistry-everyday-life": {
+      "wrongIds": [
+        "chemistry_everyday_life_12"
+      ],
+      "youtubeId": "RQkoq2C2PDA",
+      "title": "Chemistry in Everyday Life One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=RQkoq2C2PDA",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "reproduction": {
+      "wrongIds": [
+        "reproduction_11"
+      ],
+      "youtubeId": "yBAiJm-n_U4",
+      "title": "Reproduction in Organisms | Class 12 Biology",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=yBAiJm-n_U4",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "sexual-reproduction-flowering-plants": {
+      "wrongIds": [
+        "sexual_reproduction_flowering_plants_11"
+      ],
+      "youtubeId": "gJ7fWXlk_4E",
+      "title": "Sexual Reproduction in Flowering Plants One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=gJ7fWXlk_4E",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "human-reproduction": {
+      "wrongIds": [
+        "human_reproduction_11"
+      ],
+      "youtubeId": "SPyUdyKL3PY",
+      "title": "Human Reproduction Quick Revision",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=SPyUdyKL3PY",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "reproductive-health": {
+      "wrongIds": [
+        "reproductive_health_11"
+      ],
+      "youtubeId": "7LCkPzAouuA",
+      "title": "Reproductive Health One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=7LCkPzAouuA",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "principles-inheritance-variation": {
+      "wrongIds": [
+        "principles_inheritance_variation_11"
+      ],
+      "youtubeId": "_naYC_PN1G8",
+      "title": "Principles of Inheritance and Variation One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=_naYC_PN1G8",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "molecular-basis-inheritance": {
+      "wrongIds": [
+        "molecular_basis_inheritance_11"
+      ],
+      "youtubeId": "CuojhBCd7fo",
+      "title": "Molecular Basis of Inheritance Quick Revision",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=CuojhBCd7fo",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "evolution": {
+      "wrongIds": [
+        "evolution_11"
+      ],
+      "youtubeId": "1-RqAk4MzuY",
+      "title": "Evolution Quick Revision",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=1-RqAk4MzuY",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "human-health-disease": {
+      "wrongIds": [
+        "human_health_disease_11"
+      ],
+      "youtubeId": "EOf4kTFs6lY",
+      "title": "Human Health & Disease One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=EOf4kTFs6lY",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "microbes-human-welfare": {
+      "wrongIds": [
+        "microbes_human_welfare_11"
+      ],
+      "youtubeId": "RnOdqRI8K9U",
+      "title": "Microbes in Human Welfare One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=RnOdqRI8K9U",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "biotechnology-principles-processes": {
+      "wrongIds": [
+        "biotechnology_principles_processes_11"
+      ],
+      "youtubeId": "9mXYwAbMHMc",
+      "title": "Biotechnology: Principles & Processes Quick Revision",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=9mXYwAbMHMc",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "biotechnology-applications": {
+      "wrongIds": [
+        "biotechnology_applications_11"
+      ],
+      "youtubeId": "CZ9mEuMIB1w",
+      "title": "Biotechnology and its Applications One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=CZ9mEuMIB1w",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "organisms-populations": {
+      "wrongIds": [
+        "organisms_populations_11"
+      ],
+      "youtubeId": "P2ytL019MtU",
+      "title": "Organisms and Populations One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=P2ytL019MtU",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "ecosystem": {
+      "wrongIds": [
+        "ecosystem_11"
+      ],
+      "youtubeId": "peOLJv1ASaQ",
+      "title": "Ecosystem One Shot Revision",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=peOLJv1ASaQ",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "biodiversity-conservation": {
+      "wrongIds": [
+        "biodiversity_conservation_11"
+      ],
+      "youtubeId": "jeC1ik6DGxk",
+      "title": "Biodiversity and Conservation One Shot",
+      "presenter": "Magnet Brains",
+      "url": "https://www.youtube.com/watch?v=jeC1ik6DGxk",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "relations-functions": {
+      "wrongIds": [
+        "relations_functions_11"
+      ],
+      "youtubeId": "pncuQ7bVNz4",
+      "title": "Relations and Functions Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=pncuQ7bVNz4",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "inverse-trigonometric-functions": {
+      "wrongIds": [
+        "inverse_trigonometric_functions_11"
+      ],
+      "youtubeId": "Cg1gJNaWIsc",
+      "title": "Inverse Trigonometric Functions Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=Cg1gJNaWIsc",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "matrices": {
+      "wrongIds": [
+        "matrices_11"
+      ],
+      "youtubeId": "ZNe1ksaqvvk",
+      "title": "Matrices Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=ZNe1ksaqvvk",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "determinants": {
+      "wrongIds": [
+        "determinants_11"
+      ],
+      "youtubeId": "o7cCBgYmKzU",
+      "title": "Determinants Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=o7cCBgYmKzU",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "continuity-differentiability": {
+      "wrongIds": [
+        "continuity_differentiability_11"
+      ],
+      "youtubeId": "aY_Fu4VwFiI",
+      "title": "Continuity And Differentiability Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=aY_Fu4VwFiI",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "application-derivatives": {
+      "wrongIds": [
+        "application_derivatives_11"
+      ],
+      "youtubeId": "-02uCNZ8wD8",
+      "title": "Application Of Derivatives Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=-02uCNZ8wD8",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "integrals": {
+      "wrongIds": [
+        "integrals_11"
+      ],
+      "youtubeId": "lV6oNc10j6Y",
+      "title": "Integrals in 1 Shot | Class 12th Boards",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=lV6oNc10j6Y",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "application-integrals": {
+      "wrongIds": [
+        "application_integrals_11"
+      ],
+      "youtubeId": "QSuDfXsemkU",
+      "title": "Application Of Integrals Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=QSuDfXsemkU",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "differential-equations": {
+      "wrongIds": [
+        "differential_equations_11"
+      ],
+      "youtubeId": "_RikqAm6RA0",
+      "title": "Differential Equations Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=_RikqAm6RA0",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "vector-algebra": {
+      "wrongIds": [
+        "vector_algebra_11"
+      ],
+      "youtubeId": "o5ZJD08fcUI",
+      "title": "Vector Algebra Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=o5ZJD08fcUI",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "three-dimensional-geometry": {
+      "wrongIds": [
+        "three_dimensional_geometry_11"
+      ],
+      "youtubeId": "ZVNjOmJCOLI",
+      "title": "3D Geometry Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=ZVNjOmJCOLI",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "linear-programming": {
+      "wrongIds": [
+        "linear_programming_11"
+      ],
+      "youtubeId": "HWD_SGXlLF4",
+      "title": "Linear Programming Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=HWD_SGXlLF4",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    },
+    "probability": {
+      "wrongIds": [
+        "probability_11"
+      ],
+      "youtubeId": "oqQDUjpI4BU",
+      "title": "Probability Class 12 One Shot",
+      "presenter": "NCERT Wallah",
+      "url": "https://www.youtube.com/watch?v=oqQDUjpI4BU",
+      "reason": "Curated NCERT Wallah / Magnet Brains one-shot for CBSE 11-12."
+    }
+  }
+}

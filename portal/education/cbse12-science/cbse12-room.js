@@ -170,6 +170,9 @@
     document.getElementById('backFromStudy')?.addEventListener('click', () => showPhase('chapter'));
     document.getElementById('backFromLearn')?.addEventListener('click', () => showPhase('study'));
     document.getElementById('backFromEvaluate')?.addEventListener('click', () => showPhase('study'));
+    window.addEventListener('cbse12:switch-practice', () => {
+      document.querySelector('#studyTabBar .cbse-tab[data-tab="practice"]')?.click();
+    });
   }
 
   function bindIntent() {

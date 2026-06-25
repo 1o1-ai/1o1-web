@@ -120,6 +120,17 @@
       });
       return;
     }
+    if (ctx.sku === 'cbse12-science' && global.CBSE12StudyMaterial) {
+      global.CBSE12StudyMaterial.load().then(() => {
+        const ch = global.CBSE12StudyMaterial.chapter(ctx.chapterId);
+        if (!ch) {
+          mount.innerHTML = '<p class="sr-eval-hint">Study material for this chapter is not available yet.</p>';
+          return;
+        }
+        global.CBSE12StudyMaterial.renderLearnView(ch, mount);
+      });
+      return;
+    }
     mount.innerHTML = `
       <div class="cbse-regular-fallback">
         <h3>${ctx.chapterTitle}</h3>
