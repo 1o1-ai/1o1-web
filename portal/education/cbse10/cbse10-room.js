@@ -58,6 +58,8 @@
 
     intent: document.getElementById('phaseIntent'),
 
+    study: document.getElementById('phaseStudy'),
+
     learn: document.getElementById('phaseLearn'),
 
     evaluate: document.getElementById('phaseEvaluate'),
@@ -146,15 +148,21 @@
 
     const inLearn = name === 'learn';
 
-    cornerOrbs?.classList.toggle('hidden', !inEval && !inLearn);
+    const inStudy = name === 'study';
+
+    cornerOrbs?.classList.toggle('hidden', !inEval && !inLearn && !inStudy);
 
     document.body.classList.toggle('sr-eval-active', inEval);
 
     document.body.classList.toggle('sr-learn-active', inLearn);
 
-    if (inEval || inLearn) highlightCornerOrb();
+    document.body.classList.toggle('cbse-study-active', inStudy);
 
-    if (!inLearn) window.CBSE10StudyMaterial?.stopReadAloud?.();
+    if (inEval || inLearn || inStudy) highlightCornerOrb();
+
+    if (!inLearn && !inStudy) window.CBSE10StudyMaterial?.stopReadAloud?.();
+
+    if (inStudy === false && name !== 'evaluate') window.CBSEOfficialBooks?.stopLecture?.();
 
   }
 
@@ -230,7 +238,7 @@
 
     if (intent === 'learn') {
 
-      startLearnSession();
+      openStudyHub('regular');
 
       return true;
 
@@ -238,13 +246,13 @@
 
     if (intent === 'evaluate') {
 
-      startEvaluateSession();
+      openStudyHub('practice');
 
       return true;
 
     }
 
-    showPhase('intent');
+    openStudyHub('official');
 
     return true;
 
@@ -356,7 +364,7 @@
 
           `<strong>${chapterTitle}</strong> · ${subject === 'science' ? 'Science' : 'Mathematics'}`;
 
-        showPhase('intent');
+        openStudyHub('official');
 
       });
 
@@ -374,13 +382,19 @@
 
     document.getElementById('backToChapter')?.addEventListener('click', () => showPhase('chapter'));
 
-    document.getElementById('backFromLearn')?.addEventListener('click', () => showPhase('intent'));
+    document.getElementById('backFromStudy')?.addEventListener('click', () => {
+      window.CBSEOfficialBooks?.stopLecture?.();
+      stopEvaluateSession();
+      showPhase('chapter');
+    });
+
+    document.getElementById('backFromLearn')?.addEventListener('click', () => showPhase('study'));
 
     document.getElementById('backFromEvaluate')?.addEventListener('click', () => {
 
       stopEvaluateSession();
 
-      showPhase('intent');
+      showPhase('study');
 
     });
 
@@ -463,7 +477,109 @@
     showPhase('learn');
   }
 
-  function startEvaluateSession() {
+  function openStudyHub(initialTab) {
+
+    if (!window.CBSEStudyHub) {
+
+      showPhase('intent');
+
+      return;
+
+    }
+
+    const subjectLabel = subject === 'science' ? 'Science · 086' : 'Mathematics · 041';
+
+    let evalHome = null;
+
+    window.CBSEStudyHub.open({
+
+      sku: 'cbse10',
+
+      subjectId: subject,
+
+      subjectLabel,
+
+      chapterId,
+
+      chapterTitle,
+
+      initialTab: initialTab || 'official',
+
+      showPhase,
+
+      filterQuestions: ({ difficulty, limit }) =>
+
+        window.CBSE10Shared.filterMasterQuestions(masterQuestions, {
+
+          subject,
+
+          chapter: chapterId,
+
+          mode: 'cbse',
+
+          difficulty,
+
+          limit: limit || 4,
+
+        }).map(window.CBSE10Shared.toDisplayQ),
+
+      onBeforePractice: () => {
+
+        const embed = document.getElementById('studyPracticeEmbed');
+
+        const evalPhase = document.getElementById('phaseEvaluate');
+
+        if (embed && evalPhase && !evalHome) {
+
+          evalHome = evalPhase;
+
+          embed.classList.remove('hidden');
+
+          embed.appendChild(evalPhase);
+
+          evalPhase.classList.remove('hidden');
+
+        }
+
+        startEvaluateSession({ embedded: true });
+
+      },
+
+      onLeavePractice: () => {
+
+        const embed = document.getElementById('studyPracticeEmbed');
+
+        const panel = document.getElementById('studyTabPanel');
+
+        if (embed && evalHome && panel) {
+
+          embed.classList.add('hidden');
+
+          panel.after(evalHome);
+
+          evalHome.classList.add('hidden');
+
+        }
+
+        stopEvaluateSession();
+
+      },
+
+      onMountPractice: (mount) => {
+
+        mount.innerHTML = '<p class="sr-eval-hint">Loading Q &amp; A workspace…</p>';
+
+      },
+
+      legacyIntent: () => showPhase('intent'),
+
+    });
+
+  }
+
+
+
+  function startEvaluateSession(opts) {
 
     questionQueue = shuffle(buildQueue());
 
@@ -509,9 +625,9 @@
 
     timerId = setInterval(updateDistractionStats, 1000);
 
-    showPhase('evaluate');
-
     trackDistraction();
+
+    if (!opts?.embedded) showPhase('evaluate');
 
   }
 

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../../assets/portal.css" />
   <link rel="stylesheet" href="../cbse10/cbse10-study-room.css" />
   <link rel="stylesheet" href="cbse12-study-room.css" />
+  <link rel="stylesheet" href="../../assets/cbse-official-books.css" />
 </head>
 <body class="portal-page study-room-page student-ambience">
   <canvas id="cosmos" aria-hidden="true"></canvas>
@@ -36,7 +37,18 @@
       <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backToSubject">← Change subject</button>
     </section>
 
-    <section id="phaseIntent" class="sr-phase hidden">
+    <section id="phaseStudy" class="sr-phase hidden">
+      <div class="cbse-study-header">
+        <h2 id="studyHubTitle">Chapter</h2>
+        <p id="studyHubSubtitle" class="sr-chapter-meta"></p>
+      </div>
+      <div id="studyTabBar"></div>
+      <div id="studyTabPanel"></div>
+      <div id="studyPracticeEmbed" class="cbse-practice-embed hidden"></div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backFromStudy">← Change chapter</button>
+    </section>
+
+    <section id="phaseIntent" class="sr-phase hidden" hidden aria-hidden="true">
       <p class="sr-phase-lead" id="intentChapterLabel">Chapter</p>
       <div class="sr-intent-circles">
         <button type="button" class="sr-intent-card" id="btnLearn">
@@ -93,6 +105,9 @@
   <script src="../../../assets/cosmic.js"></script>
   <script src="../../assets/academy-config.js"></script>
   <script src="../../assets/bots.js"></script>
+  <script src="../../assets/cbse-hangman-quiz.js"></script>
+  <script src="../../assets/cbse-official-books.js"></script>
+  <script src="../../assets/cbse-study-hub.js"></script>
   <script src="cbse12-room.js"></script>
 </body>
 </html>

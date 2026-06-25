@@ -1,0 +1,990 @@
+{
+  "sku": "cbse12-science",
+  "generatedAt": "2026-06-25T01:47:31.674270+00:00",
+  "sourceRoot": "C:\\Knowledge\\EDUCATION\\CBSE-11-12-SCIENCE",
+  "subjects": {
+    "physics": {
+      "label": "Physics",
+      "chapters": {
+        "electric-charges-fields": {
+          "chapterId": "electric-charges-fields",
+          "ncertCode": "keph101",
+          "hasTranscript": true,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "keph101",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph101.pdf",
+            "sha256": "99983e1dda5e6221be1d9ffe17964051106c23b08e8e3a99ede7d2622dd73bcc",
+            "fileSize": "297944 bytes"
+          },
+          "transcript": {
+            "title": "CBSE Class 11-12 Physics: Electrostatics",
+            "concepts": [
+              "Subject**: CBSE Class 11-12 Physics",
+              "Chapter Topic**: Electrostatics",
+              "Key Syllabus Standards**:",
+              "Electric charges, conservation of charge, Coulomb's law force between two point charges.",
+              "Electric field, electric field due to a point charge, electric dipole, electric field due to a dipole.",
+              "Gauss's law statement and its applications to find field due to infinitely long straight wire, uniformly charged infinite plane sheet.",
+              "Electric potential, potential difference, electric potential due to a point charge, potential energy of a system of charges.",
+              "Capacitors and capacitance, combination of capacitors in series and in parallel, capacitance of a parallel plate capacitor."
+            ],
+            "beats": [],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "Syllabus & Core Concepts",
+                "bullets": [
+                  "Subject**: CBSE Class 11-12 Physics",
+                  "Chapter Topic**: Electrostatics",
+                  "Key Syllabus Standards**:",
+                  "Electric charges, conservation of charge, Coulomb's law force between two point charges.",
+                  "Electric field, electric field due to a point charge, electric dipole, electric field due to a dipole.",
+                  "Gauss's law statement and its applications to find field due to infinitely long straight wire, uniformly charged infinite plane sheet.",
+                  "Electric potential, potential difference, electric potential due to a point charge, potential energy of a system of charges.",
+                  "Capacitors and capacitance, combination of capacitors in series and in parallel, capacitance of a parallel plate capacitor."
+                ]
+              }
+            ],
+            "beatCount": 0
+          },
+          "title": "CBSE Class 11-12 Physics: Electrostatics"
+        },
+        "electrostatic-potential-capacitance": {
+          "chapterId": "electrostatic-potential-capacitance",
+          "ncertCode": "keph102",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "keph102",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph102.pdf",
+            "sha256": "c31f38d16a9cf3a22b5ef0f36f9a3c942471d184f15a4d6a77ace80ca9991b97",
+            "fileSize": "481226 bytes"
+          }
+        },
+        "current-electricity": {
+          "chapterId": "current-electricity",
+          "ncertCode": "keph103",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "keph103",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph103.pdf",
+            "sha256": "da4e770a189938de44432d0e0e0e385f969e0c97ec77e7384d50d6cbe1093e52",
+            "fileSize": "662552 bytes"
+          }
+        },
+        "moving-charges-magnetism": {
+          "chapterId": "moving-charges-magnetism",
+          "ncertCode": "keph104",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "keph104",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph104.pdf",
+            "sha256": "a5cc8738ff0da2b5d62fc4a7aad84c6de4a24ee979305c4d3b668f2ba8174c2b",
+            "fileSize": "547521 bytes"
+          }
+        },
+        "magnetism-matter": {
+          "chapterId": "magnetism-matter",
+          "ncertCode": "keph105",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "keph105",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph105.pdf",
+            "sha256": "3d7cbd6057c11d9cd3658bc78ea552e0613e6777b7365f84cc2bfd1592c9dfbf",
+            "fileSize": "567127 bytes"
+          }
+        },
+        "electromagnetic-induction": {
+          "chapterId": "electromagnetic-induction",
+          "ncertCode": "keph106",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "keph106",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph106.pdf",
+            "sha256": "1f04703948918e5c6fd5aa768aa5022537640248414e4daf0934e814fa096d58",
+            "fileSize": "1641274 bytes"
+          }
+        },
+        "alternating-current": {
+          "chapterId": "alternating-current",
+          "ncertCode": "keph107",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "keph107",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph107.pdf",
+            "sha256": "2780b4af8cad795d2360f849eb6d387ce399e6dc4f4bd1523f72b4048e6c5067",
+            "fileSize": "446209 bytes"
+          }
+        },
+        "electromagnetic-waves": {
+          "chapterId": "electromagnetic-waves",
+          "ncertCode": "keph108",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "keph108",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/keph108.pdf",
+            "sha256": "2aa2388407449c22313829c373ef1a9929894fbf40aab7e81ef4707f1c05090f",
+            "fileSize": "2354112 bytes"
+          }
+        },
+        "ray-optics-instruments": {
+          "chapterId": "ray-optics-instruments",
+          "ncertCode": "leph101",
+          "hasTranscript": true,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "leph101",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph101.pdf",
+            "sha256": "933985fe1117abf83a41e5f6d316fefdaa35fd14c2b0890925747f0a8baaa583",
+            "fileSize": "1155961 bytes"
+          },
+          "transcript": {
+            "title": "CBSE Class 11-12 Physics: Ray Optics and Optical Instruments",
+            "concepts": [
+              "Subject**: CBSE Class 11-12 Physics",
+              "Chapter Topic**: Ray Optics and Optical Instruments",
+              "Key Syllabus Standards**:",
+              "Refraction of light, total internal reflection and its applications, optical fibers.",
+              "Refraction at spherical surfaces, lenses, thin lens formula, lens maker's formula.",
+              "Magnification, power of a lens, combination of thin lenses in contact.",
+              "Refraction of light through a prism, derivation of prism formula.",
+              "Optical instruments: Microscopes and astronomical telescopes (reflecting and refracting)."
+            ],
+            "beats": [],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "Syllabus & Core Concepts",
+                "bullets": [
+                  "Subject**: CBSE Class 11-12 Physics",
+                  "Chapter Topic**: Ray Optics and Optical Instruments",
+                  "Key Syllabus Standards**:",
+                  "Refraction of light, total internal reflection and its applications, optical fibers.",
+                  "Refraction at spherical surfaces, lenses, thin lens formula, lens maker's formula.",
+                  "Magnification, power of a lens, combination of thin lenses in contact.",
+                  "Refraction of light through a prism, derivation of prism formula.",
+                  "Optical instruments: Microscopes and astronomical telescopes (reflecting and refracting)."
+                ]
+              }
+            ],
+            "beatCount": 0
+          },
+          "title": "CBSE Class 11-12 Physics: Ray Optics and Optical Instruments"
+        },
+        "wave-optics": {
+          "chapterId": "wave-optics",
+          "ncertCode": "leph102",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "leph102",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph102.pdf",
+            "sha256": "5d712142677459e6160c6ea722ff913b059d8bebac161cd6446da5810de511bb",
+            "fileSize": "1601221 bytes"
+          }
+        },
+        "dual-nature-radiation": {
+          "chapterId": "dual-nature-radiation",
+          "ncertCode": "leph103",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "leph103",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph103.pdf",
+            "sha256": "2c37c3fd670c6be0d3f16b98f925f77fc29a7061c8f58e0ae4234bce51a5a685",
+            "fileSize": "464682 bytes"
+          }
+        },
+        "atoms": {
+          "chapterId": "atoms",
+          "ncertCode": "leph104",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "leph104",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph104.pdf",
+            "sha256": "f72f73e0b2317167ed2a4012409e7d7113aa97195ee5f8bea95487370c4bc0c2",
+            "fileSize": "1289612 bytes"
+          }
+        },
+        "nuclei": {
+          "chapterId": "nuclei",
+          "ncertCode": "leph105",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "leph105",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph105.pdf",
+            "sha256": "1421852f49fd6ef24e11cdcf4b5c71122966c2213d86f2aff1b16a30938f0ac7",
+            "fileSize": "638749 bytes"
+          }
+        },
+        "semiconductor-electronics": {
+          "chapterId": "semiconductor-electronics",
+          "ncertCode": "leph106",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "leph106",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/leph106.pdf",
+            "sha256": "5ff69b74898e4fff8232a5f6fc9a21c8762a767711105e3a74b5411530a87cbf",
+            "fileSize": "893365 bytes"
+          }
+        }
+      }
+    },
+    "chemistry": {
+      "label": "Chemistry",
+      "chapters": {
+        "solid-state": {
+          "chapterId": "solid-state",
+          "ncertCode": "kech101",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kech101",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech101.pdf",
+            "sha256": "ee9984b205b090ae2e1b3d6996ace5dd345ac810af3e334f89cc01a53044db6d",
+            "fileSize": "1478215 bytes"
+          }
+        },
+        "solutions": {
+          "chapterId": "solutions",
+          "ncertCode": "kech102",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kech102",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech102.pdf",
+            "sha256": "4acdef30ac4709a233821b9daba9e0c18cdfe3b0424969756953edf85a34eaf6",
+            "fileSize": "1867299 bytes"
+          }
+        },
+        "electrochemistry": {
+          "chapterId": "electrochemistry",
+          "ncertCode": "kech103",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kech103",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech103.pdf",
+            "sha256": "49716d6206b4b3629f7e7d5168cb0aaa9cbc2273fbe2bb2aa312eae3f6a3411e",
+            "fileSize": "1090300 bytes"
+          }
+        },
+        "chemical-kinetics": {
+          "chapterId": "chemical-kinetics",
+          "ncertCode": "kech104",
+          "hasTranscript": true,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kech104",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech104.pdf",
+            "sha256": "3ee11ef5018437e9705922fc8ed5767b9adc1c3d9eadf668752cea57b452c34a",
+            "fileSize": "1995804 bytes"
+          },
+          "transcript": {
+            "title": "CBSE Class 11-12 Chemistry: Chemical Kinetics",
+            "concepts": [
+              "Subject**: CBSE Class 11-12 Chemistry",
+              "Chapter Topic**: Chemical Kinetics",
+              "Key Syllabus Standards**:",
+              "Rate of a reaction (average and instantaneous), factors affecting rates of reaction.",
+              "Rate law, specific rate constant, order and molecularity of a reaction.",
+              "Integrated rate equations and half-life (only for zero and first order reactions).",
+              "Concept of collision theory (elementary idea, no mathematical treatment).",
+              "Activation energy, Arrhenius equation."
+            ],
+            "beats": [],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "Syllabus & Core Concepts",
+                "bullets": [
+                  "Subject**: CBSE Class 11-12 Chemistry",
+                  "Chapter Topic**: Chemical Kinetics",
+                  "Key Syllabus Standards**:",
+                  "Rate of a reaction (average and instantaneous), factors affecting rates of reaction.",
+                  "Rate law, specific rate constant, order and molecularity of a reaction.",
+                  "Integrated rate equations and half-life (only for zero and first order reactions).",
+                  "Concept of collision theory (elementary idea, no mathematical treatment).",
+                  "Activation energy, Arrhenius equation."
+                ]
+              }
+            ],
+            "beatCount": 0
+          },
+          "title": "CBSE Class 11-12 Chemistry: Chemical Kinetics"
+        },
+        "surface-chemistry": {
+          "chapterId": "surface-chemistry",
+          "ncertCode": "kech105",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kech105",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech105.pdf",
+            "sha256": "461df1ee2d9153df605965e7b3daa5691a5fcff9384face1756b112dcf7155c6",
+            "fileSize": "3363018 bytes"
+          }
+        },
+        "general-principles-isolation-elements": {
+          "chapterId": "general-principles-isolation-elements",
+          "ncertCode": "kech106",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kech106",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech106.pdf",
+            "sha256": "b773ebea12a452027782a2b1baf22540e72736ab9bdf7ac51dabfcb31c1161c4",
+            "fileSize": "1556555 bytes"
+          }
+        },
+        "p-block-elements": {
+          "chapterId": "p-block-elements",
+          "ncertCode": "kech107",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kech107",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech107.pdf",
+            "sha256": "a2a525b417fb6af41934da2dc79666d86be61011190dd23a44323587cf1d0527",
+            "fileSize": "274173 bytes"
+          }
+        },
+        "d-f-block-elements": {
+          "chapterId": "d-f-block-elements",
+          "ncertCode": "kech108",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kech108",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kech108.pdf",
+            "sha256": "096066df64f5d2e2e05ee372263efc40985ee6db0654af4c75412f82ba2cfb22",
+            "fileSize": "162375 bytes"
+          }
+        },
+        "coordination-compounds": {
+          "chapterId": "coordination-compounds",
+          "ncertCode": "kech109",
+          "hasTranscript": true,
+          "hasPdf": false,
+          "transcript": {
+            "title": "CBSE Class 11-12 Chemistry: Coordination Compounds",
+            "concepts": [
+              "Subject**: CBSE Class 11-12 Chemistry",
+              "Chapter Topic**: Coordination Compounds",
+              "Key Syllabus Standards**:",
+              "Coordination compounds - Introduction, ligands, coordination number, color, magnetic properties.",
+              "Werner's theory of coordination compounds, IUPAC nomenclature of mononuclear coordination compounds.",
+              "Isomerism (structural and stereo) in coordination compounds.",
+              "Valence Bond Theory (VBT): hybridization, magnetic behavior (high spin and low spin).",
+              "Crystal Field Theory (CFT): d-orbital splitting in octahedral and tetrahedral fields, CFSE."
+            ],
+            "beats": [],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "Syllabus & Core Concepts",
+                "bullets": [
+                  "Subject**: CBSE Class 11-12 Chemistry",
+                  "Chapter Topic**: Coordination Compounds",
+                  "Key Syllabus Standards**:",
+                  "Coordination compounds - Introduction, ligands, coordination number, color, magnetic properties.",
+                  "Werner's theory of coordination compounds, IUPAC nomenclature of mononuclear coordination compounds.",
+                  "Isomerism (structural and stereo) in coordination compounds.",
+                  "Valence Bond Theory (VBT): hybridization, magnetic behavior (high spin and low spin).",
+                  "Crystal Field Theory (CFT): d-orbital splitting in octahedral and tetrahedral fields, CFSE."
+                ]
+              }
+            ],
+            "beatCount": 0
+          },
+          "title": "CBSE Class 11-12 Chemistry: Coordination Compounds"
+        },
+        "haloalkanes-haloarenes": {
+          "chapterId": "haloalkanes-haloarenes",
+          "ncertCode": "lech101",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "lech101",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech101.pdf",
+            "sha256": "27e8d8c0dea764c55c708fdb72767fe19503c2e60fd38cf856ff2b5424cf88dc",
+            "fileSize": "1163700 bytes"
+          }
+        },
+        "alcohols-phenols-ethers": {
+          "chapterId": "alcohols-phenols-ethers",
+          "ncertCode": "lech102",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "lech102",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech102.pdf",
+            "sha256": "256b5cb0ec4e26686a5c57f18c5c3bbfe4f8694f5d0e5110573a62276d92d788",
+            "fileSize": "1237204 bytes"
+          }
+        },
+        "aldehydes-ketones-carboxylic-acids": {
+          "chapterId": "aldehydes-ketones-carboxylic-acids",
+          "ncertCode": "lech103",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "lech103",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech103.pdf",
+            "sha256": "aaf6f16075ab274ea86938a83b45a9c27afd5c3931339e79ecf083ef8dd67155",
+            "fileSize": "747046 bytes"
+          }
+        },
+        "amines": {
+          "chapterId": "amines",
+          "ncertCode": "lech104",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "lech104",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech104.pdf",
+            "sha256": "1bf2fd00a80320f5ae0faa64ea0f239f81bc3b32ac192a88b58343a1280cc01f",
+            "fileSize": "1281310 bytes"
+          }
+        },
+        "biomolecules": {
+          "chapterId": "biomolecules",
+          "ncertCode": "lech105",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "lech105",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech105.pdf",
+            "sha256": "0028cf5a41f0e79955f93b3ca5a9902677ad74ea3c86cd88bd84e855f8468447",
+            "fileSize": "1003193 bytes"
+          }
+        },
+        "polymers": {
+          "chapterId": "polymers",
+          "ncertCode": "lech106",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "lech106",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech106.pdf",
+            "sha256": "5176f64fca459db4aeef1b0b0dae706ef8313592dcb9aa1c1aad880a6a18f06c",
+            "fileSize": "139985 bytes"
+          }
+        },
+        "chemistry-everyday-life": {
+          "chapterId": "chemistry-everyday-life",
+          "ncertCode": "lech107",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "lech107",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class12/lech107.pdf",
+            "sha256": "48adf123a3b7ff34f8579701de695b4bf0beecc959332f13ec4a9c7ced28fb85",
+            "fileSize": "85188 bytes"
+          }
+        }
+      }
+    },
+    "biology": {
+      "label": "Biology",
+      "chapters": {
+        "reproduction": {
+          "chapterId": "reproduction",
+          "ncertCode": "kebo101",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo101",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo101.pdf",
+            "sha256": "e1f1685179957d4799faa90035acf1bf5cf2517dfbea90d151f1060d0b701a8c",
+            "fileSize": "190637 bytes"
+          }
+        },
+        "sexual-reproduction-flowering-plants": {
+          "chapterId": "sexual-reproduction-flowering-plants",
+          "ncertCode": "kebo102",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo102",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo102.pdf",
+            "sha256": "60b096645590e1026029eec114b31b80f1c5aa6ef806cb8af95b600b05b1dfcc",
+            "fileSize": "1916422 bytes"
+          }
+        },
+        "human-reproduction": {
+          "chapterId": "human-reproduction",
+          "ncertCode": "kebo103",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo103",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo103.pdf",
+            "sha256": "884166aa4de3628fc8c1340359352f8e10e454367396085c45782487097d6fab",
+            "fileSize": "3564831 bytes"
+          }
+        },
+        "reproductive-health": {
+          "chapterId": "reproductive-health",
+          "ncertCode": "kebo104",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo104",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo104.pdf",
+            "sha256": "393b252f21f6b4f997d0e6b14b4837c3a7f04da9fe591c4a4402be37bcea1c7c",
+            "fileSize": "3500181 bytes"
+          }
+        },
+        "principles-inheritance-variation": {
+          "chapterId": "principles-inheritance-variation",
+          "ncertCode": "kebo105",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo105",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo105.pdf",
+            "sha256": "58c8ec9dda47933634fe041b6e0ce46b6d368646188c8e4c3b89e9989e5eb296",
+            "fileSize": "1611342 bytes"
+          }
+        },
+        "molecular-basis-inheritance": {
+          "chapterId": "molecular-basis-inheritance",
+          "ncertCode": "kebo106",
+          "hasTranscript": true,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo106",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo106.pdf",
+            "sha256": "afc31fc38e454df1b30c8b207d04c7a66e84bca07bfbe58c2f167004afe976cb",
+            "fileSize": "910104 bytes"
+          },
+          "transcript": {
+            "title": "CBSE Class 11-12 Biology: Molecular Basis of Inheritance",
+            "concepts": [
+              "Subject**: CBSE Class 11-12 Biology",
+              "Chapter Topic**: Molecular Basis of Inheritance",
+              "Key Syllabus Standards**:",
+              "Structure of DNA and RNA, DNA packaging, DNA replication.",
+              "Transcription, genetic code, translation.",
+              "Gene expression and regulation - Lac Operon.",
+              "Genome projects: Human Genome Project, DNA fingerprinting."
+            ],
+            "beats": [],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "Syllabus & Core Concepts",
+                "bullets": [
+                  "Subject**: CBSE Class 11-12 Biology",
+                  "Chapter Topic**: Molecular Basis of Inheritance",
+                  "Key Syllabus Standards**:",
+                  "Structure of DNA and RNA, DNA packaging, DNA replication.",
+                  "Transcription, genetic code, translation.",
+                  "Gene expression and regulation - Lac Operon.",
+                  "Genome projects: Human Genome Project, DNA fingerprinting."
+                ]
+              }
+            ],
+            "beatCount": 0
+          },
+          "title": "CBSE Class 11-12 Biology: Molecular Basis of Inheritance"
+        },
+        "evolution": {
+          "chapterId": "evolution",
+          "ncertCode": "kebo107",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo107",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo107.pdf",
+            "sha256": "852db24d7ce00df4a10beca6d27102f7c72c9f3c853628421d39c42a458a6803",
+            "fileSize": "190481 bytes"
+          }
+        },
+        "human-health-disease": {
+          "chapterId": "human-health-disease",
+          "ncertCode": "kebo108",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo108",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo108.pdf",
+            "sha256": "ee6c5000fee0dc561149065f6d1fc68ac94bd5e43e79d5f171463e7c7ffc8150",
+            "fileSize": "4998900 bytes"
+          }
+        },
+        "microbes-human-welfare": {
+          "chapterId": "microbes-human-welfare",
+          "ncertCode": "kebo109",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo109",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo109.pdf",
+            "sha256": "56c40574560ba37a14a1c98c6be5d095bf906bcc65aa75b828cf5551da01ab22",
+            "fileSize": "319786 bytes"
+          }
+        },
+        "biotechnology-principles-processes": {
+          "chapterId": "biotechnology-principles-processes",
+          "ncertCode": "kebo110",
+          "hasTranscript": true,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo110",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo110.pdf",
+            "sha256": "14c322efe2c30c3a8c3487f3dc1b4acd5c84b2ee4bceb866c9d58d4b9bbeda23",
+            "fileSize": "1271925 bytes"
+          },
+          "transcript": {
+            "title": "CBSE Class 11-12 Biology: Biotechnology: Principles and Processes",
+            "concepts": [
+              "Subject**: CBSE Class 11-12 Biology",
+              "Chapter Topic**: Biotechnology: Principles and Processes",
+              "Key Syllabus Standards**:",
+              "Genetic engineering (Recombinant DNA technology).",
+              "Tools of recombinant DNA technology: Restriction enzymes, polymerases, ligases, vectors.",
+              "Processes of Recombinant DNA Technology: Isolation of DNA, PCR, Gel electrophoresis.",
+              "Downstream processing."
+            ],
+            "beats": [],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "Syllabus & Core Concepts",
+                "bullets": [
+                  "Subject**: CBSE Class 11-12 Biology",
+                  "Chapter Topic**: Biotechnology: Principles and Processes",
+                  "Key Syllabus Standards**:",
+                  "Genetic engineering (Recombinant DNA technology).",
+                  "Tools of recombinant DNA technology: Restriction enzymes, polymerases, ligases, vectors.",
+                  "Processes of Recombinant DNA Technology: Isolation of DNA, PCR, Gel electrophoresis.",
+                  "Downstream processing."
+                ]
+              }
+            ],
+            "beatCount": 0
+          },
+          "title": "CBSE Class 11-12 Biology: Biotechnology: Principles and Processes"
+        },
+        "biotechnology-applications": {
+          "chapterId": "biotechnology-applications",
+          "ncertCode": "kebo111",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo111",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo111.pdf",
+            "sha256": "37e3667c2d045cd9fd384620cb495095c1217be14188fcaf9a2e9cc9fb3b4427",
+            "fileSize": "631600 bytes"
+          }
+        },
+        "organisms-populations": {
+          "chapterId": "organisms-populations",
+          "ncertCode": "kebo112",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo112",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo112.pdf",
+            "sha256": "974897b8ed1bbae6658be4e54a4bae3ba4b1098a5e2eb1a8b7680fc0da75907e",
+            "fileSize": "293670 bytes"
+          }
+        },
+        "ecosystem": {
+          "chapterId": "ecosystem",
+          "ncertCode": "kebo113",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo113",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo113.pdf",
+            "sha256": "2b036c2b950f9d0e93065a7e98ec76a8c1ad57fe3c05711013fa1b9d452e46ec",
+            "fileSize": "515333 bytes"
+          }
+        },
+        "biodiversity-conservation": {
+          "chapterId": "biodiversity-conservation",
+          "ncertCode": "kebo114",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kebo114",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kebo114.pdf",
+            "sha256": "bd9ee6c5a844dd3fe87af87b595a89c4734c05f03fb923e05b5f7e43d5a215f5",
+            "fileSize": "798269 bytes"
+          }
+        }
+      }
+    },
+    "mathematics": {
+      "label": "Mathematics",
+      "chapters": {
+        "relations-functions": {
+          "chapterId": "relations-functions",
+          "ncertCode": "kemh101",
+          "hasTranscript": true,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh101",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh101.pdf",
+            "sha256": "227b9ddf8460dd01e051ba745afd3005940525b49c12601bb5f949e57f1566af",
+            "fileSize": "297785 bytes"
+          },
+          "transcript": {
+            "title": "CBSE Class 11-12 Mathematics: Relations and Functions",
+            "concepts": [
+              "Subject**: CBSE Class 11-12 Mathematics",
+              "Chapter Topic**: Relations and Functions",
+              "Key Syllabus Standards**:",
+              "Types of relations: reflexive, symmetric, transitive and equivalence relations.",
+              "One to one (injective) and onto (surjective) functions.",
+              "Composite functions, inverse of a function (bijective functions)."
+            ],
+            "beats": [],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "Syllabus & Core Concepts",
+                "bullets": [
+                  "Subject**: CBSE Class 11-12 Mathematics",
+                  "Chapter Topic**: Relations and Functions",
+                  "Key Syllabus Standards**:",
+                  "Types of relations: reflexive, symmetric, transitive and equivalence relations.",
+                  "One to one (injective) and onto (surjective) functions.",
+                  "Composite functions, inverse of a function (bijective functions)."
+                ]
+              }
+            ],
+            "beatCount": 0
+          },
+          "title": "CBSE Class 11-12 Mathematics: Relations and Functions"
+        },
+        "inverse-trigonometric-functions": {
+          "chapterId": "inverse-trigonometric-functions",
+          "ncertCode": "kemh102",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh102",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh102.pdf",
+            "sha256": "992138346a0b7485772884000a9f147c2408c51b932c5d265f099345edfc5ee9",
+            "fileSize": "328132 bytes"
+          }
+        },
+        "matrices": {
+          "chapterId": "matrices",
+          "ncertCode": "kemh103",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh103",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh103.pdf",
+            "sha256": "2d531de9945a8aa6d457e1a97b6d61ecbb5c81e231acfe318a7f76cdca973f0e",
+            "fileSize": "483627 bytes"
+          }
+        },
+        "determinants": {
+          "chapterId": "determinants",
+          "ncertCode": "kemh104",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh104",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh104.pdf",
+            "sha256": "f1abaa48a725b7b72cd99a6f3173d7e3f649632782549ff80e7f61d5ab3e7809",
+            "fileSize": "252430 bytes"
+          }
+        },
+        "continuity-differentiability": {
+          "chapterId": "continuity-differentiability",
+          "ncertCode": "kemh105",
+          "hasTranscript": true,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh105",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh105.pdf",
+            "sha256": "1bedf2282d71acdd1a38090ea8f9b52c0bfe5cfa8c2b14a6c8392056ba6db81c",
+            "fileSize": "181681 bytes"
+          },
+          "transcript": {
+            "title": "CBSE Class 11-12 Mathematics: Continuity and Differentiability",
+            "concepts": [
+              "Subject**: CBSE Class 11-12 Mathematics",
+              "Chapter Topic**: Continuity and Differentiability",
+              "Key Syllabus Standards**:",
+              "Continuity and differentiability, derivative of composite functions, chain rule.",
+              "Derivatives of inverse trigonometric functions, derivative of implicit functions.",
+              "Concept of exponential and logarithmic functions, logarithmic differentiation.",
+              "Derivatives of functions expressed in parametric forms, Second order derivatives.",
+              "Rolle's and Lagrange's Mean Value Theorems (geometric interpretation)."
+            ],
+            "beats": [],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "Syllabus & Core Concepts",
+                "bullets": [
+                  "Subject**: CBSE Class 11-12 Mathematics",
+                  "Chapter Topic**: Continuity and Differentiability",
+                  "Key Syllabus Standards**:",
+                  "Continuity and differentiability, derivative of composite functions, chain rule.",
+                  "Derivatives of inverse trigonometric functions, derivative of implicit functions.",
+                  "Concept of exponential and logarithmic functions, logarithmic differentiation.",
+                  "Derivatives of functions expressed in parametric forms, Second order derivatives.",
+                  "Rolle's and Lagrange's Mean Value Theorems (geometric interpretation)."
+                ]
+              }
+            ],
+            "beatCount": 0
+          },
+          "title": "CBSE Class 11-12 Mathematics: Continuity and Differentiability"
+        },
+        "application-derivatives": {
+          "chapterId": "application-derivatives",
+          "ncertCode": "kemh106",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh106",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh106.pdf",
+            "sha256": "675cb54e5ef51020559656ff3f45a59e2d2e852e57a7f1976e91df8203a81e06",
+            "fileSize": "287776 bytes"
+          }
+        },
+        "integrals": {
+          "chapterId": "integrals",
+          "ncertCode": "kemh107",
+          "hasTranscript": true,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh107",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh107.pdf",
+            "sha256": "799e984f24d42d7be7869b2d37b01d1dc180c5e7b0b43757ccf22ed694720510",
+            "fileSize": "219288 bytes"
+          },
+          "transcript": {
+            "title": "CBSE Class 11-12 Mathematics: Integrals",
+            "concepts": [
+              "Subject**: CBSE Class 11-12 Mathematics",
+              "Chapter Topic**: Integrals",
+              "Key Syllabus Standards**:",
+              "Integration as inverse process of differentiation.",
+              "Integration of a variety of functions by substitution, by partial fractions and by parts.",
+              "Evaluation of simple integrals of standard forms.",
+              "Fundamental Theorem of Calculus (without proof).",
+              "Basic properties of definite integrals and evaluation of definite integrals."
+            ],
+            "beats": [],
+            "pages": [
+              {
+                "type": "syllabus",
+                "title": "Syllabus & Core Concepts",
+                "bullets": [
+                  "Subject**: CBSE Class 11-12 Mathematics",
+                  "Chapter Topic**: Integrals",
+                  "Key Syllabus Standards**:",
+                  "Integration as inverse process of differentiation.",
+                  "Integration of a variety of functions by substitution, by partial fractions and by parts.",
+                  "Evaluation of simple integrals of standard forms.",
+                  "Fundamental Theorem of Calculus (without proof).",
+                  "Basic properties of definite integrals and evaluation of definite integrals."
+                ]
+              }
+            ],
+            "beatCount": 0
+          },
+          "title": "CBSE Class 11-12 Mathematics: Integrals"
+        },
+        "application-integrals": {
+          "chapterId": "application-integrals",
+          "ncertCode": "kemh108",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh108",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh108.pdf",
+            "sha256": "2075e430261306660d4fde9d42792214dbf9bce97ba29168d5a7acdb7f7dc521",
+            "fileSize": "232017 bytes"
+          }
+        },
+        "differential-equations": {
+          "chapterId": "differential-equations",
+          "ncertCode": "kemh109",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh109",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh109.pdf",
+            "sha256": "d77ee938a66c6626e1f2535160624ad396e4da1b1bdd60e0928ab9b9fc7a76bf",
+            "fileSize": "415931 bytes"
+          }
+        },
+        "vector-algebra": {
+          "chapterId": "vector-algebra",
+          "ncertCode": "kemh110",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh110",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh110.pdf",
+            "sha256": "050d09dcc5963d04b640938806e2f7b36886dccdf378ddead5dd811c744babd3",
+            "fileSize": "540755 bytes"
+          }
+        },
+        "three-dimensional-geometry": {
+          "chapterId": "three-dimensional-geometry",
+          "ncertCode": "kemh111",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh111",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh111.pdf",
+            "sha256": "afd138353515dfc534204c862bf3b98e7352976e41923b1399427f10eb7b4790",
+            "fileSize": "198776 bytes"
+          }
+        },
+        "linear-programming": {
+          "chapterId": "linear-programming",
+          "ncertCode": "kemh112",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh112",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh112.pdf",
+            "sha256": "b4db83c8b28fd9649387edfb9fe81c1c67961c9cdbd797458b1f7b1e24d02348",
+            "fileSize": "443624 bytes"
+          }
+        },
+        "probability": {
+          "chapterId": "probability",
+          "ncertCode": "kemh113",
+          "hasTranscript": false,
+          "hasPdf": true,
+          "pdf": {
+            "ncertCode": "kemh113",
+            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class11/kemh113.pdf",
+            "sha256": "cecc2e97e21c24afebc682948364981fedd4db884413d540928015f55f15601e",
+            "fileSize": "364041 bytes"
+          }
+        }
+      }
+    }
+  },
+  "stats": {
+    "subjects": 4,
+    "chaptersWithPdf": 56,
+    "chaptersWithTranscript": 9
+  }
+}

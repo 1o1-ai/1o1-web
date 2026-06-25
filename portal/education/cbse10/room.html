@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="../../../assets/theme.css" />
   <link rel="stylesheet" href="../../assets/portal.css" />
   <link rel="stylesheet" href="cbse10-study-room.css" />
+  <link rel="stylesheet" href="../../assets/cbse-official-books.css" />
 </head>
 <body class="portal-page study-room-page student-ambience" data-sr-baseline="2026-06-22">
   <canvas id="cosmos" aria-hidden="true"></canvas>
@@ -54,8 +55,20 @@
       <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backToSubject">← Change subject</button>
     </section>
 
-    <!-- Phase 3: Learn vs Evaluate -->
-    <section id="phaseIntent" class="sr-phase hidden">
+    <!-- Phase 3: Study hub (5 tabs) -->
+    <section id="phaseStudy" class="sr-phase hidden">
+      <div class="cbse-study-header">
+        <h2 id="studyHubTitle">Chapter</h2>
+        <p id="studyHubSubtitle" class="sr-chapter-meta"></p>
+      </div>
+      <div id="studyTabBar"></div>
+      <div id="studyTabPanel"></div>
+      <div id="studyPracticeEmbed" class="cbse-practice-embed hidden"></div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backFromStudy">← Change chapter</button>
+    </section>
+
+    <!-- Legacy intent (hidden — replaced by study hub) -->
+    <section id="phaseIntent" class="sr-phase hidden" hidden aria-hidden="true">
       <p class="sr-phase-lead" id="intentChapterLabel">Chapter</p>
       <div class="sr-intent-circles">
         <button type="button" class="sr-intent-card" id="btnLearn">
@@ -165,6 +178,9 @@
   <script src="../../assets/cbse10-eval-store.js"></script>
   <script src="../../assets/cbse10-tutor-api.js?v=6"></script>
   <script src="../../assets/cbse10-study-material.js?v=4"></script>
-  <script src="cbse10-room.js?v=8"></script>
+  <script src="../../assets/cbse-hangman-quiz.js"></script>
+  <script src="../../assets/cbse-official-books.js"></script>
+  <script src="../../assets/cbse-study-hub.js"></script>
+  <script src="cbse10-room.js?v=9"></script>
 </body>
 </html>

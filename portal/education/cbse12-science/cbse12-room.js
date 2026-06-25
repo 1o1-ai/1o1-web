@@ -17,6 +17,7 @@
     subject: document.getElementById('phaseSubject'),
     chapter: document.getElementById('phaseChapter'),
     intent: document.getElementById('phaseIntent'),
+    study: document.getElementById('phaseStudy'),
     learn: document.getElementById('phaseLearn'),
     evaluate: document.getElementById('phaseEvaluate'),
   };
@@ -70,6 +71,46 @@
     });
     document.body.classList.toggle('sr-learn-active', name === 'learn');
     document.body.classList.toggle('sr-eval-active', name === 'evaluate');
+    document.body.classList.toggle('cbse-study-active', name === 'study');
+    if (name !== 'study') window.CBSEOfficialBooks?.stopLecture?.();
+  }
+
+  function openStudyHub(initialTab) {
+    if (!window.CBSEStudyHub) {
+      showPhase('intent');
+      return;
+    }
+    window.CBSEStudyHub.open({
+      sku: 'cbse12-science',
+      subjectId,
+      subjectLabel: metaLine(),
+      chapterId,
+      chapterTitle,
+      initialTab: initialTab || 'official',
+      showPhase,
+      filterQuestions: () => [],
+      onBeforePractice: () => {
+        const embed = document.getElementById('studyPracticeEmbed');
+        const evalPhase = document.getElementById('phaseEvaluate');
+        if (embed && evalPhase) {
+          embed.classList.remove('hidden');
+          embed.appendChild(evalPhase);
+          evalPhase.classList.remove('hidden');
+        }
+        openEvaluate();
+      },
+      onLeavePractice: () => {
+        const embed = document.getElementById('studyPracticeEmbed');
+        const panel = document.getElementById('studyTabPanel');
+        const evalPhase = document.getElementById('phaseEvaluate');
+        if (embed) embed.classList.add('hidden');
+        if (panel && evalPhase) {
+          panel.after(evalPhase);
+          evalPhase.classList.add('hidden');
+        }
+      },
+      legacyIntent: () => showPhase('intent'),
+    });
   }
 
   function renderSubjectCircles() {
@@ -115,7 +156,7 @@
         chapterId = ch.id;
         chapterTitle = ch.title;
         document.getElementById('intentChapterLabel').textContent = ch.title;
-        showPhase('intent');
+        openStudyHub('official');
       });
       grid.appendChild(btn);
     });
@@ -124,8 +165,9 @@
   function bindNavigation() {
     document.getElementById('backToSubject')?.addEventListener('click', () => showPhase('subject'));
     document.getElementById('backToChapter')?.addEventListener('click', () => showPhase('chapter'));
-    document.getElementById('backFromLearn')?.addEventListener('click', () => showPhase('intent'));
-    document.getElementById('backFromEvaluate')?.addEventListener('click', () => showPhase('intent'));
+    document.getElementById('backFromStudy')?.addEventListener('click', () => showPhase('chapter'));
+    document.getElementById('backFromLearn')?.addEventListener('click', () => showPhase('study'));
+    document.getElementById('backFromEvaluate')?.addEventListener('click', () => showPhase('study'));
   }
 
   function bindIntent() {
@@ -164,10 +206,8 @@
     document.getElementById('evalChat').innerHTML = `
       <p class="sr-eval-hint">
         <strong>${ch?.questionCount || 0}</strong> questions available in the source bank for
-        <em>${chapterTitle}</em>. Portal export and 5-question drills are the next build step —
-        taxonomy and study room shell are live.
+        <em>${chapterTitle}</em>. Full drill export is the next pipeline step — taxonomy and study room shell are live.
       </p>`;
-    showPhase('evaluate');
   }
 
   function renderStatsBadge() {
@@ -209,14 +249,14 @@
       chapterTitle = found?.title || ch;
       document.getElementById('intentChapterLabel').textContent = chapterTitle;
       if (p.get('intent') === 'learn') {
-        openLearn();
+        openStudyHub('regular');
         return true;
       }
       if (p.get('intent') === 'evaluate') {
-        openEvaluate();
+        openStudyHub('practice');
         return true;
       }
-      showPhase('intent');
+      openStudyHub('official');
       return true;
     }
     showPhase('chapter');
