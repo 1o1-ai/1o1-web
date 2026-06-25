@@ -21,7 +21,7 @@
     return {
       role: 'teacher',
       speaker: 'Teacher',
-      text: `Thank you, ${name}. ${topic} — let me answer clearly. This is important for ${chapterTitle || 'your board exam'}; note the NCERT definition and one solved example in your notebook.`,
+      text: `Thank you, ${name}. ${topic} — let me answer clearly. This is important for your board exam; note the NCERT definition and one solved example in your notebook.`,
     };
   }
 
@@ -94,7 +94,7 @@
         beat: {
           role: 'teacher',
           speaker: 'Teacher',
-          text: `To summarise ${chapterTitle || "today's lesson"}: revise the NCERT examples and intext questions we discussed. When you are ready, open the Quiz tab for a short WordHunter round to test yourself.`,
+          text: `To summarise ${chapterTitle || "today's lesson"}: revise the NCERT examples and intext questions we discussed. When you are ready, open the Quiz tab for a short WordHunter round.`,
         },
       });
       steps.push({ kind: 'pause', ms: 600 });

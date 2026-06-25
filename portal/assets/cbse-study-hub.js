@@ -90,7 +90,7 @@
     }
   }
 
-  function renderAdvanced(host, ctx) {
+  function renderAdvancedFallback(host, ctx) {
     const entry = chapterEntry(ctx);
     const rawConcepts = entry?.transcript?.concepts || [];
     const concepts = rawConcepts
@@ -102,22 +102,44 @@
         if (/JEE|NEET|olympiad|IIT|competitive exam/i.test(s)) return false;
         return true;
       });
-    const isCbse10 = ctx.sku === 'cbse10' || !ctx.sku;
     host.innerHTML = `
       <div class="cbse-advanced-panel">
-        <h3>${isCbse10 ? 'NCERT focus' : 'Advanced'} · ${ctx.chapterTitle}</h3>
-        <p class="cbse-advanced-lead">${
-          isCbse10
-            ? 'Board-level extensions from the official NCERT syllabus — stay within Class 10 scope.'
-            : 'Extension topics beyond NCERT basics.'
-        }</p>
-        <ul class="cbse-concept-list">${concepts.map((c) => `<li>${c}</li>`).join('') || '<li>Use <strong>Regular Study</strong> for chapter notes and <strong>Official Books</strong> for the NCERT walkthrough.</li>'}</ul>
-        <div class="cbse-advanced-cards">
-          <article class="cbse-adv-card"><strong>🔗 Previous years</strong><p>Connect this chapter to past CBSE board questions via <strong>Q &amp; A Practice</strong>.</p></article>
-          <article class="cbse-adv-card"><strong>🧪 Numericals</strong><p>Multi-step problems — filter <em>Difficult</em> in Q &amp; A when available.</p></article>
-          <article class="cbse-adv-card"><strong>📖 NCERT Exemplar</strong><p>${entry?.pdf?.pdfUrl ? 'Use <strong>Official Books</strong> → Open Official Book for in-text examples.' : 'Official book available in Official Books tab.'}</p></article>
-        </div>
+        <h3>NCERT Plus · ${ctx.chapterTitle}</h3>
+        <p class="cbse-advanced-lead">Board-level extensions from the NCERT syllabus — Class 10 scope only.</p>
+        <ul class="cbse-concept-list">${concepts.map((c) => `<li>${c}</li>`).join('') || '<li>Open <strong>Regular Study</strong> for the full chapter guide.</li>'}</ul>
       </div>`;
+  }
+
+  function mountAdvanced(host, ctx) {
+    host.innerHTML =
+      '<div class="cbse-advanced-mount"><p class="sr-eval-hint">Loading NCERT Plus…</p></div>';
+    const mount = host.querySelector('.cbse-advanced-mount');
+    global.CBSEOfficialBooks?.stopLecture?.();
+    global.CBSE10StudyMaterial?.stopReadAloud?.();
+
+    if (ctx.sku === 'cbse10' && global.CBSE10StudyMaterial?.renderAdvancedView) {
+      const loadCh = global.CBSE10StudyMaterial.loadChapter
+        ? () => global.CBSE10StudyMaterial.loadChapter(ctx.chapterId)
+        : () =>
+            global.CBSE10StudyMaterial.load().then(() =>
+              global.CBSE10StudyMaterial.chapter(ctx.chapterId)
+            );
+      loadCh()
+        .then((ch) => {
+          if (!ch) {
+            renderAdvancedFallback(mount, ctx);
+            return;
+          }
+          global.CBSE10StudyMaterial.renderAdvancedView(ch, mount, ctx);
+        })
+        .catch(() => renderAdvancedFallback(mount, ctx));
+      return;
+    }
+    renderAdvancedFallback(mount, ctx);
+  }
+
+  function renderAdvanced(host, ctx) {
+    mountAdvanced(host, ctx);
   }
 
   function mountRegularStudy(host, ctx) {
@@ -181,6 +203,10 @@
 
       tabHost.innerHTML = '';
       renderTabBar(tabHost, (tabId) => {
+        if (activeTab === 'official' && tabId !== 'official') {
+          global.CBSEOfficialBooks?.stopLecture?.();
+        }
+        global.CBSE10StudyMaterial?.stopReadAloud?.();
         activeTab = tabId;
         tabHost.querySelectorAll('.cbse-tab').forEach((b) => {
           b.classList.toggle('active', b.dataset.tab === tabId);

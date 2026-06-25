@@ -17,17 +17,26 @@
   }
 
   let lectureTimer = null;
+  let lectureActive = false;
 
-
+  function sanitizeLectureText(text, ctx) {
+    const subj =
+      (ctx?.subjectId || '').toLowerCase() === 'mathematics' ? 'Mathematics' : 'Science';
+    let t = String(text || '');
+    t = t.replace(/CBSE Class 10 Science(?::[^.]*)?/gi, subj);
+    t = t.replace(/CBSE Class 10 Mathematics(?::[^.]*)?/gi, 'Mathematics');
+    t = t.replace(/CBSE Class 10/gi, subj);
+    t = t.replace(/Class 12 boards?/gi, 'board exams');
+    t = t.replace(/important for board exams in[^.]*\./gi, 'important for your board exam.');
+    t = t.replace(/Ma'am, could you explain Chapter with/gi, "Sir, could you explain this chapter with");
+    return t.replace(/\s{2,}/g, ' ').trim();
+  }
 
   function stopLecture() {
-
+    lectureActive = false;
     if (lectureTimer) clearTimeout(lectureTimer);
-
     lectureTimer = null;
-
     global.CBSEVoiceEngine?.stop?.();
-
   }
 
 
@@ -443,7 +452,7 @@
       beats.push({
         role: 'teacher',
         speaker: 'Teacher',
-        text: `${topic}: note the definition, SI units if any, and one NCERT example. This is a favourite CBSE board checkpoint.`,
+        text: `${topic}: note the definition, SI units if any, and one NCERT example. This is a favourite board checkpoint.`,
       });
     });
     return beats;
@@ -460,6 +469,11 @@
     let beats = (entry?.transcript?.beats || []).length
       ? entry.transcript.beats
       : synthesizeBeatsFromPages(entry, ctx);
+
+    beats = beats.map((b) => ({
+      ...b,
+      text: sanitizeLectureText(b.text, ctx),
+    }));
 
     const chapterTitle = entry?.title || ctx.chapterTitle || 'this chapter';
     const steps = global.CBSELectureFlow?.prepareLectureBeats
@@ -762,6 +776,8 @@
 
     function playNextStep() {
 
+      if (!lectureActive) return;
+
       if (stepIdx >= stepsRef.length) {
 
         playBtn.classList.remove('hidden');
@@ -828,9 +844,8 @@
 
       stopLecture();
 
-      global.CBSEVoiceEngine?.resetTeacher?.();
-
       stepIdx = 0;
+      lectureActive = true;
 
       playBtn.classList.add('hidden');
 

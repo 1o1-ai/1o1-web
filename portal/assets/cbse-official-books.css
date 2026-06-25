@@ -499,6 +499,24 @@
   color: #e2e8f0;
 }
 
+.cbse-advanced-lead {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin: 0 0 12px;
+}
+
+.cbse-adv-q-marks {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #5eead4;
+  margin-right: 6px;
+}
+
+.cbse-advanced-q-list li {
+  margin-bottom: 10px;
+}
+
 .cbse-concept-list {
   margin: 12px 0 20px;
   padding-left: 1.2rem;

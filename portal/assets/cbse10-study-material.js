@@ -227,6 +227,82 @@
     return card;
   }
 
+  function renderAdvancedView(ch, root, ctx) {
+    if (!root || !ch) return;
+    root.innerHTML = '';
+    const shared = global.CBSE10Shared;
+    const clean = (t) => shared?.cleanDisplayText?.(t) || String(t || '').trim();
+    const skipQ = (t) => shared?.isInternalQaPrompt?.(t);
+
+    const head = document.createElement('div');
+    head.className = 'cbse-advanced-panel';
+    head.innerHTML = `<h3>NCERT Plus · ${ch.title || ctx.chapterTitle}</h3>
+      <p class="cbse-advanced-lead">Board-style depth for ${ch.subject === 'mathematics' ? 'Mathematics' : 'Science'} — NCERT syllabus only.</p>`;
+    root.appendChild(head);
+
+    if (ch.syllabusOutline?.length) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = '<h3>Key syllabus points</h3><ul class="sr-learn-list"></ul>';
+      ch.syllabusOutline.forEach((item) => {
+        const li = document.createElement('li');
+        li.textContent = clean(item);
+        sec.querySelector('ul').appendChild(li);
+      });
+      root.appendChild(sec);
+    }
+
+    if (ch.scholarTips?.length) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = '<h3>Exam focus tips</h3><ul class="sr-learn-list"></ul>';
+      ch.scholarTips.forEach((tip) => {
+        const li = document.createElement('li');
+        li.textContent = clean(tip);
+        sec.querySelector('ul').appendChild(li);
+      });
+      root.appendChild(sec);
+    }
+
+    const seen = new Set();
+    const samples = (ch.boardQuestions || [])
+      .map((q) => ({ ...q, prompt: clean(q.prompt) }))
+      .filter((q) => q.prompt && q.prompt.length >= 15 && !skipQ(q.prompt))
+      .filter((q) => {
+        if (seen.has(q.prompt)) return false;
+        seen.add(q.prompt);
+        return true;
+      })
+      .slice(0, 6);
+
+    if (samples.length) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = `<h3>Board-style questions (${ch.boardQuestionCount || samples.length} in pool)</h3><ol class="sr-learn-list cbse-advanced-q-list"></ol>`;
+      const ol = sec.querySelector('ol');
+      samples.forEach((q) => {
+        const li = document.createElement('li');
+        li.innerHTML = `<span class="cbse-adv-q-marks">${q.marks || '?'} mark(s)</span> ${q.prompt}`;
+        ol.appendChild(li);
+      });
+      root.appendChild(sec);
+    }
+
+    const cards = document.createElement('div');
+    cards.className = 'cbse-advanced-cards';
+    cards.innerHTML = `
+      <article class="cbse-adv-card"><strong>✅ Q &amp; A Practice</strong><p>Run timed drills from the question bank for this chapter.</p></article>
+      <article class="cbse-adv-card"><strong>📖 Official Books</strong><p>NCERT PDF + teacher walkthrough with board animation.</p></article>
+      <article class="cbse-adv-card"><strong>📚 Regular Study</strong><p>Video companions and full study guide for this chapter.</p></article>`;
+    root.appendChild(cards);
+
+    const disclaimer = document.createElement('p');
+    disclaimer.className = 'sr-ai-disclaimer';
+    disclaimer.textContent =
+      ch.disclaimer || 'AI-generated study material — verify with NCERT and your teacher.';
+    root.appendChild(disclaimer);
+  }
+
   function renderLearnView(ch, root) {
     if (!root || !ch) return;
     root.innerHTML = '';
@@ -347,6 +423,7 @@
     loadChapter,
     chapter,
     renderLearnView,
+    renderAdvancedView,
     readAloud,
     stopReadAloud,
     isValidYoutubeId,

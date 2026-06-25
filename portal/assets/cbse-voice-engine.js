@@ -1,119 +1,118 @@
 /**
- * CBSE classroom voices — prefer Indian English (en-IN); role-based pitch/rate.
+ * CBSE classroom voices — British male teacher; student gender matched to name.
  */
 (function (global) {
   'use strict';
 
   let voicesReady = null;
-  let teacherGender = Math.random() < 0.5 ? 'female' : 'male';
+  let speakGen = 0;
+  const TEACHER_GENDER = 'male';
+
+  const FEMALE_STUDENTS = ['priya', 'sneha', 'ananya', 'kavya', 'meera', 'dia', 'neha'];
+  const MALE_STUDENTS = ['rahul', 'amit', 'arjun', 'rohan', 'vikram', 'dev', 'aditya'];
 
   function loadVoices() {
     if (voicesReady) return voicesReady;
     voicesReady = new Promise((resolve) => {
-      const pick = () => {
-        const v = global.speechSynthesis?.getVoices() || [];
-        resolve(v);
-      };
+      const pick = () => resolve(global.speechSynthesis?.getVoices() || []);
       pick();
       if (global.speechSynthesis) {
         global.speechSynthesis.onvoiceschanged = pick;
-        setTimeout(pick, 400);
+        setTimeout(pick, 500);
       }
     });
     return voicesReady;
   }
 
-  function scoreVoice(v) {
+  function scoreTeacherVoice(v) {
     const n = (v.name || '').toLowerCase();
     const lang = (v.lang || '').toLowerCase();
     let s = 0;
-    if (lang.includes('en-in') || lang.includes('hi-in')) s += 100;
-    if (n.includes('india') || n.includes('indian')) s += 80;
-    if (n.includes('neerja') || n.includes('prabhat') || n.includes('kavya')) s += 90;
-    if (n.includes('english') && n.includes('india')) s += 70;
-    if (lang.startsWith('en') && !lang.includes('gb') && !lang.includes('uk')) s += 20;
-    if (n.includes('google') && lang.includes('in')) s += 60;
-    if (n.includes('microsoft')) s += 10;
-    if (lang.includes('en-gb') || n.includes('british') || n.includes('uk english')) s -= 40;
-    if (n.includes('us ') || lang.includes('en-us')) s -= 15;
+    if (lang.includes('en-gb')) s += 120;
+    if (n.includes('british') || n.includes('uk english') || n.includes('en-gb')) s += 90;
+    if (n.includes('daniel') || n.includes('george') || n.includes('ryan') || n.includes('thomas') || n.includes('arthur')) s += 80;
+    if (n.includes('male') || n.includes('david') || n.includes('james') || n.includes('mark')) s += 30;
+    if (n.includes('female') || n.includes('zira') || n.includes('samantha') || n.includes('hazel')) s -= 200;
+    if (lang.includes('en-in')) s -= 30;
+    if (lang.includes('en-us') && !lang.includes('gb')) s -= 10;
     return s;
   }
 
-  function poolByGender(voices, gender) {
-    const indian = voices.filter((v) => scoreVoice(v) > 30).sort((a, b) => scoreVoice(b) - scoreVoice(a));
-    const fallback = voices.filter((v) => (v.lang || '').startsWith('en')).sort((a, b) => scoreVoice(b) - scoreVoice(a));
-    const pool = indian.length ? indian : fallback;
-
-    const femaleHints = ['neerja', 'kavya', 'female', 'woman', 'zira', 'samantha', 'priya'];
-    const maleHints = ['prabhat', 'male', 'man', 'david', 'ravi', 'amit'];
-
-    const isFemale = (v) => {
-      const n = v.name.toLowerCase();
-      return femaleHints.some((h) => n.includes(h));
-    };
-    const isMale = (v) => {
-      const n = v.name.toLowerCase();
-      return maleHints.some((h) => n.includes(h)) || (!isFemale(v) && !n.includes('female'));
-    };
-
+  function scoreStudentVoice(v, gender) {
+    const n = (v.name || '').toLowerCase();
+    const lang = (v.lang || '').toLowerCase();
+    let s = 0;
+    if (lang.startsWith('en')) s += 20;
     if (gender === 'female') {
-      const f = pool.filter(isFemale);
-      return f.length ? f : pool;
+      if (n.includes('female') || n.includes('zira') || n.includes('samantha') || n.includes('hazel') || n.includes('susan')) s += 80;
+      if (n.includes('male') || n.includes('david') || n.includes('george')) s -= 60;
+    } else {
+      if (n.includes('male') || n.includes('david') || n.includes('george') || n.includes('daniel')) s += 60;
+      if (n.includes('female') || n.includes('zira') || n.includes('samantha')) s -= 80;
     }
-    const m = pool.filter(isMale);
-    return m.length ? m : pool;
+    if (lang.includes('en-gb')) s += 15;
+    return s;
   }
 
-  function pickVoice(voices, gender, seed) {
-    const pool = poolByGender(voices, gender);
-    if (!pool.length) return voices.find((v) => v.default) || voices[0];
-    const idx = Math.abs(seed.split('').reduce((a, c) => a + c.charCodeAt(0), 0)) % pool.length;
+  function poolByGender(voices, gender, role) {
+    const scoreFn = role === 'teacher' ? scoreTeacherVoice : (v) => scoreStudentVoice(v, gender);
+    const english = voices.filter((v) => (v.lang || '').toLowerCase().startsWith('en'));
+    const pool = (english.length ? english : voices)
+      .map((v) => ({ v, s: scoreFn(v) }))
+      .sort((a, b) => b.s - a.s)
+      .map((x) => x.v);
+    return pool.length ? pool : voices;
+  }
+
+  function pickVoice(voices, gender, seed, role) {
+    const pool = poolByGender(voices, gender, role);
+    const idx = Math.abs(String(seed).split('').reduce((a, c) => a + c.charCodeAt(0), 0)) % pool.length;
     return pool[idx] || voices.find((v) => v.default) || voices[0];
   }
 
-  function speakUtterance(u, voices, onEnd) {
+  function studentGender(speaker) {
+    const s = String(speaker || '')
+      .toLowerCase()
+      .replace(/\(.*\)/g, ' ')
+      .replace(/[^a-z\s]/g, ' ');
+    if (FEMALE_STUDENTS.some((n) => s.includes(n))) return 'female';
+    if (MALE_STUDENTS.some((n) => s.includes(n))) return 'male';
+    return 'male';
+  }
+
+  function resetTeacher() {
+    /* Teacher voice is fixed — British male. */
+  }
+
+  function stop() {
+    speakGen += 1;
+    global.speechSynthesis?.cancel();
+  }
+
+  function speakUtterance(u, voices, onEnd, gen) {
     u.volume = 1;
     let attempts = 0;
-    const fallbacks = [
-      u.voice,
-      voices.find((v) => v.default),
-      voices.find((v) => (v.lang || '').toLowerCase().startsWith('en')),
-      voices[0],
-    ].filter(Boolean);
+    const fallbacks = [u.voice, ...poolByGender(voices, TEACHER_GENDER, 'teacher').slice(0, 4), voices[0]].filter(Boolean);
 
     const trySpeak = () => {
-      const voice = fallbacks[attempts] || fallbacks[fallbacks.length - 1];
-      u.voice = voice;
-      u.onend = () => onEnd?.();
-      u.onerror = () => {
-        attempts += 1;
-        if (attempts < fallbacks.length) {
-          trySpeak();
-          return;
-        }
+      if (gen !== speakGen) return;
+      u.voice = fallbacks[attempts] || fallbacks[fallbacks.length - 1];
+      u.onend = () => {
+        if (gen !== speakGen) return;
         onEnd?.();
+      };
+      u.onerror = () => {
+        if (gen !== speakGen) return;
+        attempts += 1;
+        if (attempts < fallbacks.length) trySpeak();
+        else onEnd?.();
       };
       global.speechSynthesis.speak(u);
     };
 
-    global.speechSynthesis.cancel();
     trySpeak();
   }
 
-  function studentGender(speaker) {
-    const s = (speaker || '').toLowerCase();
-    if (s.includes('priya') || s.includes('sneha') || s.includes('ananya') || s.includes('female')) return 'female';
-    if (s.includes('rahul') || s.includes('amit') || s.includes('arjun') || s.includes('male')) return 'male';
-    return Math.random() < 0.5 ? 'female' : 'male';
-  }
-
-  function resetTeacher() {
-    teacherGender = Math.random() < 0.5 ? 'female' : 'male';
-  }
-
-  /**
-   * @param {{ role: 'teacher'|'student', speaker?: string, text: string }} beat
-   */
   function speakBeat(beat, onEnd) {
     if (!global.speechSynthesis) {
       onEnd?.();
@@ -124,8 +123,9 @@
       onEnd?.();
       return;
     }
+    const gen = ++speakGen;
     loadVoices().then((voices) => {
-      if (!voices.length) {
+      if (!voices.length || gen !== speakGen) {
         onEnd?.();
         return;
       }
@@ -133,22 +133,19 @@
       const isTeacher = beat.role === 'teacher';
 
       if (isTeacher) {
-        u.voice = pickVoice(voices, teacherGender, 'teacher-' + teacherGender);
-        u.pitch = teacherGender === 'female' ? 1.05 : 0.96;
-        u.rate = 0.92;
-      } else {
-        const sg = studentGender(beat.speaker);
-        u.voice = pickVoice(voices, sg, beat.speaker || 'student');
-        u.pitch = sg === 'female' ? 1.18 : 1.05;
-        u.rate = 0.96;
+        u.voice = pickVoice(voices, TEACHER_GENDER, 'teacher-gb-male', 'teacher');
+        u.pitch = 0.98;
+        u.rate = 0.9;
+        speakUtterance(u, voices, onEnd, gen);
+        return;
       }
 
-      speakUtterance(u, voices, onEnd);
+      const sg = studentGender(beat.speaker);
+      u.voice = pickVoice(voices, sg, beat.speaker || 'student', 'student');
+      u.pitch = sg === 'female' ? 1.12 : 1.0;
+      u.rate = 0.95;
+      speakUtterance(u, voices, onEnd, gen);
     });
-  }
-
-  function stop() {
-    global.speechSynthesis?.cancel();
   }
 
   function playChime(onEnd) {
@@ -182,12 +179,12 @@
   }
 
   function speakerLabel(beat) {
-    if (beat.role === 'teacher') {
-      return teacherGender === 'female' ? 'Teacher (Ma\'am)' : 'Teacher (Sir)';
-    }
-    const sg = studentGender(beat.speaker);
-    const name = (beat.speaker || 'Student').replace(/\(.*\)/, '').trim();
-    return sg === 'female' ? `${name} · student` : `${name} · student`;
+    if (beat.role === 'teacher') return 'Teacher (Sir)';
+    const name = String(beat.speaker || 'Student')
+      .replace(/\s*-\s*Interrupting/gi, '')
+      .replace(/\(.*\)/, '')
+      .trim();
+    return `${name} · student`;
   }
 
   global.CBSEVoiceEngine = {
@@ -198,7 +195,7 @@
     resetTeacher,
     speakerLabel,
     get teacherGender() {
-      return teacherGender;
+      return TEACHER_GENDER;
     },
   };
 })(typeof window !== 'undefined' ? window : globalThis);
