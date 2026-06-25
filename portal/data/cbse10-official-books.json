@@ -1,6 +1,6 @@
 {
   "sku": "cbse10",
-  "generatedAt": "2026-06-25T02:09:14.514010+00:00",
+  "generatedAt": "2026-06-25T02:16:45.883672+00:00",
   "sourceRoot": "C:\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE",
   "subjects": {
     "science": {
@@ -82,6 +82,31 @@
                 "role": "student",
                 "speaker": "Sneha - Interrupting",
                 "text": "So both rusting and rancidity are oxidation in daily life?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Chemical Reactions and Equations."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Chemical Reactions and Equations."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Chemical Reactions and Equations. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -104,7 +129,7 @@
                 ]
               }
             ],
-            "beatCount": 11
+            "beatCount": 16
           },
           "title": "CBSE Class 10 Science: Chemical Reactions and Equations"
         },
@@ -159,6 +184,51 @@
                 "role": "student",
                 "speaker": "Rahul - Interrupting",
                 "text": "Why is soil pH important for farmers?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Acids, Bases and Salts."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Acids, Bases and Salts."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain pH scale and its importance in everyday life in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. pH scale and its importance in everyday life. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Acids, Bases and Salts."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Preparation and uses of sodium hydroxide, bleaching powder, baking soda, washing soda in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Preparation and uses of sodium hydroxide, bleaching powder, baking soda, washing soda. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Acids, Bases and Salts."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Acids, Bases and Salts. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -181,7 +251,7 @@
                 ]
               }
             ],
-            "beatCount": 6
+            "beatCount": 15
           },
           "title": "CBSE Class 10 Science: Acids, Bases and Salts"
         },
@@ -221,6 +291,51 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "How do metals react with non-metals?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Metals and Non-metals."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Metals and Non-metals."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Reactivity series and formation of ionic compounds in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Reactivity series and formation of ionic compounds. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Metals and Non-metals."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Metallurgical processes in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Metallurgical processes: Extraction of metals and prevention of corrosion. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Metals and Non-metals."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Metals and Non-metals. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -243,7 +358,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 12
           },
           "title": "CBSE Class 10 Science: Metals and Non-metals"
         },
@@ -283,6 +398,31 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "What is a homologous series?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Carbon and its Compounds."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Carbon and its Compounds."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Carbon and its Compounds. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -305,7 +445,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 8
           },
           "title": "CBSE Class 10 Science: Carbon and its Compounds"
         },
@@ -345,6 +485,51 @@
                 "role": "student",
                 "speaker": "Rahul - Interrupting",
                 "text": "How do our kidneys filter waste?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Life Processes."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Life Processes Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Life Processes."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Life Processes."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Nutrition in plants and animals (photosynthesis, digestion) in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Nutrition in plants and animals (photosynthesis, digestion). Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Life Processes."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Life Processes. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -367,7 +552,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 12
           },
           "title": "CBSE Class 10 Science: Life Processes"
         },
@@ -407,6 +592,31 @@
                 "role": "student",
                 "speaker": "Rahul - Interrupting",
                 "text": "What is a reflex action?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Control and Coordination."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Control and Coordination."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Control and Coordination. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -429,7 +639,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 8
           },
           "title": "CBSE Class 10 Science: Control and Coordination"
         },
@@ -474,6 +684,41 @@
                 "role": "student",
                 "speaker": "Sneha - Interrupting",
                 "text": "Why is reproductive health and contraception important in humans?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: How do Organisms Reproduce?."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: How do Organisms Reproduce? Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: How do Organisms Reproduce?."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: How do Organisms Reproduce?."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: How do Organisms Reproduce?. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -496,7 +741,7 @@
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 11
           },
           "title": "CBSE Class 10 Science: How do Organisms Reproduce?"
         },
@@ -535,6 +780,51 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "How is sex determined in human babies?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Heredity."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Heredity Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Heredity."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Heredity."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Sex determination in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Sex determination: brief introduction. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Heredity."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Heredity. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -550,7 +840,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 12
           },
           "title": "CBSE Class 10 Science: Heredity"
         },
@@ -596,6 +886,31 @@
                 "role": "student",
                 "speaker": "Rahul - Interrupting",
                 "text": "What is the power of a lens?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Light - Reflection and Refraction."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Light - Reflection and Refraction."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Light - Reflection and Refraction. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -619,7 +934,7 @@
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 9
           },
           "title": "CBSE Class 10 Science: Light - Reflection and Refraction"
         },
@@ -663,6 +978,41 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "Why is the sky blue?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: The Human Eye and the Colorful World."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: The Human Eye and the Colorful World Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: The Human Eye and the Colorful World."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: The Human Eye and the Colorful World."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: The Human Eye and the Colorful World. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -678,7 +1028,7 @@
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 11
           },
           "title": "CBSE Class 10 Science: The Human Eye and the Colorful World"
         },
@@ -724,6 +1074,61 @@
                 "role": "student",
                 "speaker": "Amit - Interrupting",
                 "text": "What is the heating effect of current?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Electricity."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Electricity Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Electricity."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Electricity."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Ohm's law; Resistance, Resistivity, factors on which resistance depends in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Ohm's law; Resistance, Resistivity, factors on which resistance depends. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Electricity."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Series and parallel combination of resistors in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Series and parallel combination of resistors. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Electricity."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Electricity. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -747,7 +1152,7 @@
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 15
           },
           "title": "CBSE Class 10 Science: Electricity"
         },
@@ -793,6 +1198,41 @@
                 "role": "student",
                 "speaker": "Sneha - Interrupting",
                 "text": "Why do we use Alternating Current (AC) in our homes instead of Direct Current (DC)?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Magnetic Effects of Electric Current."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Magnetic Effects of Electric Current."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Domestic electric circuits in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Domestic electric circuits. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Magnetic Effects of Electric Current."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Magnetic Effects of Electric Current. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -816,7 +1256,7 @@
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 11
           },
           "title": "CBSE Class 10 Science: Magnetic Effects of Electric Current"
         },
@@ -855,6 +1295,51 @@
                 "role": "student",
                 "speaker": "Amit - Interrupting",
                 "text": "What is ozone depletion, and why is it dangerous?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Science Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Our Environment."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Our Environment Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Our Environment."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Our Environment."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Biodegradable and non-biodegradable substances in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Biodegradable and non-biodegradable substances. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Science: Our Environment."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Science: Our Environment. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -870,7 +1355,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 12
           },
           "title": "CBSE Class 10 Science: Our Environment"
         }
@@ -920,6 +1405,31 @@
                 "role": "student",
                 "speaker": "Rahul - Interrupting",
                 "text": "Oh, so because the assumption leads to a logical failure, the opposite must be true?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Real Numbers."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Fundamental Theorem of Arithmetic - statement and illustration in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Fundamental Theorem of Arithmetic - statement and illustration. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Real Numbers."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Real Numbers. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -942,7 +1452,7 @@
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 9
           },
           "title": "CBSE Class 10 Mathematics: Real Numbers"
         },
@@ -982,6 +1492,51 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "How do we find the relation between these zeroes and the coefficients a, b, and c?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Polynomials."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Polynomials Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Polynomials."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Polynomials."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Division algorithm for polynomials (optional/conceptual overview) in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Division algorithm for polynomials (optional/conceptual overview). Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Polynomials."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Polynomials. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1004,7 +1559,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 12
           },
           "title": "CBSE Class 10 Mathematics: Polynomials"
         },
@@ -1044,6 +1599,41 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "Which algebraic method is the most efficient to solve them? Substitution or Elimination?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Pair of Linear Equations in Two Variables."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Pair of Linear Equations in Two Variables."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Consistency and inconsistency conditions (a1/a2, b1/b2, c1/c2) in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Consistency and inconsistency conditions (a1/a2, b1/b2, c1/c2). Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Pair of Linear Equations in Two Variables."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Pair of Linear Equations in Two Variables. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1066,7 +1656,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 10
           },
           "title": "CBSE Class 10 Mathematics: Pair of Linear Equations in Two Variables"
         },
@@ -1106,6 +1696,51 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "So if D is negative, we can't solve it in real numbers?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Quadratic Equations."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Quadratic Equations."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Solutions by factorization, and by using the quadratic formula in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Solutions by factorization, and by using the quadratic formula. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Quadratic Equations."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Relationship between discriminant and nature of roots in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Relationship between discriminant and nature of roots. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Quadratic Equations."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Quadratic Equations. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1128,7 +1763,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 12
           },
           "title": "CBSE Class 10 Mathematics: Quadratic Equations"
         },
@@ -1168,6 +1803,71 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "How do we find the sum of all terms in an AP?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Arithmetic Progressions."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Arithmetic Progressions Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Arithmetic Progressions."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Arithmetic Progressions."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Derivation of the nth term of an AP in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Derivation of the nth term of an AP. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Arithmetic Progressions."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Sum of the first n terms of an AP formula in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Sum of the first n terms of an AP formula. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Arithmetic Progressions."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Real-life applications of AP in daily life in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Real-life applications of AP in daily life. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Arithmetic Progressions."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Arithmetic Progressions. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1190,7 +1890,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 16
           },
           "title": "CBSE Class 10 Mathematics: Arithmetic Progressions"
         },
@@ -1235,6 +1935,61 @@
                 "role": "student",
                 "speaker": "Amit - Interrupting",
                 "text": "What are the similarity criteria?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Triangles."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Triangles Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Triangles."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Triangles."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Definitions, examples, counter examples of similar triangles in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Definitions, examples, counter examples of similar triangles. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Triangles."
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Basic Proportionality Theorem (Thales Theorem) and its proof in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Basic Proportionality Theorem (Thales Theorem) and its proof. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Triangles."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Triangles. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1257,7 +2012,7 @@
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 15
           },
           "title": "CBSE Class 10 Mathematics: Triangles"
         },
@@ -1302,6 +2057,51 @@
                 "role": "student",
                 "speaker": "Rahul - Interrupting",
                 "text": "What if $P$ is the exact midpoint?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Coordinate Geometry."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Coordinate Geometry."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Distance formula and its applications in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Distance formula and its applications. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Coordinate Geometry."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Section formula (internal division) and midpoint formula in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Section formula (internal division) and midpoint formula. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Coordinate Geometry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Coordinate Geometry. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1324,7 +2124,7 @@
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 13
           },
           "title": "CBSE Class 10 Mathematics: Coordinate Geometry"
         },
@@ -1369,6 +2169,41 @@
                 "role": "student",
                 "speaker": "Amit - Interrupting",
                 "text": "What is the most important identity in trigonometry?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Introduction to Trigonometry."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Introduction to Trigonometry Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Introduction to Trigonometry."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Introduction to Trigonometry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Introduction to Trigonometry. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1391,7 +2226,7 @@
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 11
           },
           "title": "CBSE Class 10 Mathematics: Introduction to Trigonometry"
         },
@@ -1430,6 +2265,41 @@
                 "role": "student",
                 "speaker": "Rahul - Interrupting",
                 "text": "If we look down from a lighthouse, is the angle of depression equal to the angle of elevation from the boat?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Some Applications of Trigonometry."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Some Applications of Trigonometry Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Some Applications of Trigonometry."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Some Applications of Trigonometry."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Some Applications of Trigonometry. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1445,7 +2315,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 10
           },
           "title": "CBSE Class 10 Mathematics: Some Applications of Trigonometry"
         },
@@ -1485,6 +2355,41 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "What about the lengths of the two tangents drawn from an external point?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Circles."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Circles Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Circles."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Circles."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Circles. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1507,7 +2412,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 10
           },
           "title": "CBSE Class 10 Mathematics: Circles"
         },
@@ -1546,6 +2451,41 @@
                 "role": "student",
                 "speaker": "Rahul - Interrupting",
                 "text": "How do we find the area of $\\Delta OAB$ if the angle $\\theta$ is $120^\\circ$?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Areas Related to Circles."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Areas Related to Circles."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Problems based on areas and perimeter / circumference of circles in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Problems based on areas and perimeter / circumference of circles. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Areas Related to Circles."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Areas Related to Circles. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1561,7 +2501,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 10
           },
           "title": "CBSE Class 10 Mathematics: Areas Related to Circles"
         },
@@ -1599,6 +2539,31 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "What about the total volume of combined solids? Is that added directly?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Surface Areas and Volumes."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Surface Areas and Volumes."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Surface Areas and Volumes. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1613,7 +2578,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 8
           },
           "title": "CBSE Class 10 Mathematics: Surface Areas and Volumes"
         },
@@ -1657,6 +2622,51 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "Is there a relation between mean, median, and mode?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Statistics."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Statistics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Statistics."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Statistics."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Cumulative frequency graph (ogive) - brief conceptual review in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Cumulative frequency graph (ogive) - brief conceptual review. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Statistics."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Statistics. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1672,7 +2682,7 @@
                 ]
               }
             ],
-            "beatCount": 4
+            "beatCount": 13
           },
           "title": "CBSE Class 10 Mathematics: Statistics"
         },
@@ -1711,6 +2721,51 @@
                 "role": "student",
                 "speaker": "Priya - Interrupting",
                 "text": "What are complementary events?"
+              },
+              {
+                "role": "student",
+                "speaker": "Priya",
+                "text": "Ma'am, could you explain Subject** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Priya. Subject**: CBSE Class 10 Mathematics Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Probability."
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul",
+                "text": "Ma'am, could you explain Chapter** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Rahul. Chapter**: Probability Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Probability."
+              },
+              {
+                "role": "student",
+                "speaker": "Amit",
+                "text": "Ma'am, could you explain Key Syllabus Standards** in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Amit. Key Syllabus Standards**: Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Probability."
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha",
+                "text": "Ma'am, could you explain Simple problems on finding the probability of an event in simpler words?"
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "Of course, Sneha. Simple problems on finding the probability of an event. Write this in your notebook — it often appears in CBSE Class 10 papers on CBSE Class 10 Mathematics: Probability."
+              },
+              {
+                "role": "teacher",
+                "speaker": "Teacher",
+                "text": "That completes our coverage of CBSE Class 10 Mathematics: Probability. Revise NCERT examples and try the intext questions before your test. Any final doubts?"
               }
             ],
             "pages": [
@@ -1726,7 +2781,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 12
           },
           "title": "CBSE Class 10 Mathematics: Probability"
         }

@@ -24,7 +24,17 @@
     triangles: { word: 'SIMILAR', hint: 'Same shape, proportional sides' },
     trigonometry: { word: 'SINE', hint: 'Opposite over hypotenuse' },
     'electric-charges-fields': { word: 'COULOMB', hint: 'SI unit of charge' },
-    'chemical-kinetics': { word: 'CATALYST', hint: 'Speeds reaction, unchanged itself' },
+    'human-eye': { word: 'DISPERSION', hint: 'Splitting of white light in a prism' },
+    control: { word: 'REFLEX', hint: 'Automatic rapid response without thinking' },
+    reproduction: { word: 'MEIOSIS', hint: 'Cell division forming gametes' },
+    heredity: { word: 'CHROMOSOME', hint: 'Thread-like structure carrying genes' },
+    'trig-apps': { word: 'ELEVATION', hint: 'Angle looking up at an object' },
+    coordinate: { word: 'DISTANCE', hint: 'Length between two coordinate points' },
+    'areas-circles': { word: 'SECTOR', hint: 'Pie-shaped part of a circle' },
+    'surface-vol': { word: 'HEMISPHERE', hint: 'Half of a sphere' },
+    statistics: { word: 'MEDIAN', hint: 'Middle value of ordered data' },
+    probability: { word: 'OUTCOME', hint: 'Single result of a random experiment' },
+    'chemical-kinetics': { word: 'CATALYST', hint: 'Speeds reaction without being consumed' },
   };
 
   function pickWord(chapterId, title) {
@@ -43,49 +53,73 @@
     return a;
   }
 
+  function normalizeQ(q) {
+    const opts = (q.options || []).map((o) => String(o || '').trim()).filter((o) => o.length > 0);
+    const prompt = (q.prompt || q.question || q.text || '').trim();
+    let correctIndex = q.correctIndex ?? q.correct_index ?? 0;
+    if (correctIndex < 0 || correctIndex >= opts.length) correctIndex = 0;
+    return { prompt, options: opts, correctIndex, pool: q.pool || 'mixed' };
+  }
+
   function buildQuestions(ctx, wordPack, limit) {
     const qs = [];
     const filter = ctx.filterQuestions;
     const chapterIds = wordPack.chapterIds || [wordPack.chapterId];
     if (filter) {
       ['easy', 'medium', 'difficult', 'ASKED_BEFORE'].forEach((d) => {
-        const batch = filter({ difficulty: d, limit: 3, chapterIds });
-        batch.forEach((q) => qs.push({ ...q, pool: d }));
+        const batch = filter({ difficulty: d, limit: 4, chapterIds }) || [];
+        batch.forEach((raw) => {
+          const q = normalizeQ({ ...raw, pool: d });
+          if (q.prompt && q.options.length >= 2) qs.push(q);
+        });
       });
     }
-    if (qs.length < 4) {
-      qs.push(
-        {
-          question: `Which term matches: "${wordPack.hint}"?`,
-          options: [
-            wordPack.word.charAt(0) + wordPack.word.slice(1).toLowerCase(),
-            'Velocity',
-            'Fraction',
-            'Photosynthesis',
-          ],
-          correct_index: 0,
-          pool: 'easy',
-        },
-        {
-          question: `The hidden word has how many letters?`,
-          options: [
-            String(wordPack.word.replace(/\s/g, '').length),
-            String(wordPack.word.length + 2),
-            String(wordPack.word.length - 1),
-            '10',
-          ],
-          correct_index: 0,
-          pool: 'medium',
-        },
-        {
-          question: 'In CBSE exams, balanced equations follow which law?',
-          options: ['Conservation of mass', 'Conservation of momentum only', 'Boyles law', 'Ohms law'],
-          correct_index: 0,
-          pool: 'hard',
-        }
-      );
-    }
-    return shuffle(qs).slice(0, limit || 10);
+    const fallbacks = [
+      {
+        prompt: `Which term best matches this clue: "${wordPack.hint}"?`,
+        options: [
+          wordPack.word.charAt(0) + wordPack.word.slice(1).toLowerCase(),
+          'Velocity',
+          'Fraction',
+          'Photosynthesis',
+        ],
+        correctIndex: 0,
+        pool: 'easy',
+      },
+      {
+        prompt: `How many letters are in the hidden keyword?`,
+        options: [
+          String(wordPack.word.replace(/\s/g, '').length),
+          String(wordPack.word.length + 2),
+          String(Math.max(1, wordPack.word.length - 1)),
+          '10',
+        ],
+        correctIndex: 0,
+        pool: 'medium',
+      },
+      {
+        prompt: 'Balanced chemical equations must satisfy which law?',
+        options: ['Conservation of mass', 'Conservation of charge only', "Boyle's law", "Snell's law"],
+        correctIndex: 0,
+        pool: 'hard',
+      },
+      {
+        prompt: `For this chapter, the secret word relates to:`,
+        options: [wordPack.hint, 'Random guessing', 'None of the above', 'Skip this round'],
+        correctIndex: 0,
+        pool: 'easy',
+      },
+    ].map(normalizeQ);
+
+    const merged = shuffle([...qs, ...fallbacks]);
+    const seen = new Set();
+    const unique = merged.filter((q) => {
+      const key = q.prompt.slice(0, 80);
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return q.options.length >= 2;
+    });
+    return unique.slice(0, limit || 10);
   }
 
   function hangmanSvg() {
@@ -168,10 +202,16 @@
         return;
       }
       const opts = q.options || [];
+      if (!q.prompt || opts.length < 2) {
+        qIdx += 1;
+        showQuestion();
+        return;
+      }
       qEl.innerHTML = `
-        <p class="hg-q-pool">${(q.pool || 'mixed').replace('_', ' ')}</p>
-        <p class="hg-q-text">${q.question}</p>
+        <p class="hg-q-pool">${String(q.pool || 'mixed').replace(/_/g, ' ')}</p>
+        <p class="hg-q-text">${q.prompt}</p>
         <div class="hg-opts">${opts
+          .slice(0, 4)
           .map(
             (o, i) =>
               `<button type="button" class="quiz-option hg-opt" data-i="${i}">${String.fromCharCode(65 + i)}. ${o}</button>`
@@ -180,7 +220,7 @@
       qEl.querySelectorAll('.hg-opt').forEach((btn) => {
         btn.addEventListener('click', () => {
           const i = parseInt(btn.dataset.i, 10);
-          const correct = q.correct_index === i || q.correctIndex === i;
+          const correct = q.correctIndex === i;
           if (correct) {
             revealRandomLetter();
             statusEl.textContent = '✓ Correct — letter revealed!';
