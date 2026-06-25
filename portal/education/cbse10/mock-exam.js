@@ -1,4 +1,4 @@
-(function () {
+(function (global) {
   'use strict';
 
   const params = new URLSearchParams(location.search);
@@ -419,4 +419,4 @@
   }).catch((err) => {
     sectionsEl.innerHTML = `<p>Could not load question bank: ${err.message || err}. <a href="exam-center.html">Back to Exam Center</a></p>`;
   });
-})();
+})(typeof window !== 'undefined' ? window : globalThis);
