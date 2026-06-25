@@ -1071,9 +1071,6 @@
     } else {
 
       resp.innerHTML =
-
-        '<div class="answer-hint" style="font-size:0.78rem;color:#94a3b8;margin-bottom:8px">Use symbols for math/science · draw or upload diagrams</div>' +
-
         '<div class="answer-composer-host sr-answer-composer"></div>';
 
       const host = resp.querySelector('.answer-composer-host');

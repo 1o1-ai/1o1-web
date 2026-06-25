@@ -60,10 +60,7 @@
       )
       .join('');
 
-    const approvedNote =
-      sku === 'cbse10' && approvedCount
-        ? `<li><strong>Sections B–E approved:</strong> ${approvedCount} VOLTAIC board questions from Study Material (past-paper weightage + master solutions).</li>`
-        : '';
+    const approvedNote = '';
 
     document.getElementById('instructions').innerHTML = `
       <strong>General Instructions:</strong>
@@ -147,11 +144,15 @@
 
   function toDisplayQ(q, section) {
     const approved = q.approved === true;
-    const base = global.CBSE10Shared && !approved
+    const base = global.CBSE10Shared
       ? global.CBSE10Shared.toDisplayQ(q)
       : {
-          prompt: q.question || q.prompt,
-          options: q.options || [],
+          prompt: global.AnyoQuestionFormat?.cleanQuestionText
+            ? global.AnyoQuestionFormat.cleanQuestionText(q.question || q.prompt || '')
+            : String(q.question || q.prompt || ''),
+          options: (q.options || []).map((o) =>
+            global.AnyoQuestionFormat?.cleanQuestionText ? global.AnyoQuestionFormat.cleanQuestionText(o) : o
+          ),
           correctIndex: q.correctIndex,
           diagramVector: q.diagramVector,
           figure_url: q.figure_url,
@@ -159,16 +160,7 @@
     base.marks = approved ? q.marks || section.marksEach : section.marksEach;
     base.approved = approved;
     base.chapterId = q.chapterId;
-    if (section.id !== 'A' && !approved) {
-      const lead =
-        section.marksEach >= 5
-          ? `[${section.marksEach} marks] Answer with steps / derivation: `
-          : section.marksEach >= 3
-            ? `[${section.marksEach} marks] Answer in detail: `
-            : `[${section.marksEach} marks] Answer briefly: `;
-      if (!String(base.prompt).startsWith('[')) base.prompt = lead + base.prompt;
-      base.options = [];
-    } else if (section.id !== 'A') {
+    if (section.id !== 'A') {
       base.options = [];
     } else if (!base.options?.length) {
       base.options = [];
@@ -251,13 +243,10 @@
         const div = document.createElement('div');
         div.className = 'mock-q-block';
         const marks = q.marks || section.marksEach;
-        const tagClass = q.approved ? 'verified-tag approved-tag' : 'verified-tag';
-        const tagLabel = q.approved
-          ? `Approved · Section ${section.id}`
-          : `${isAuthentic ? 'CBSE' : 'Open'} · ${marks} mark(s)`;
-        div.innerHTML = `<p class="mock-q-num">Q${qNum}. <span class="${tagClass}">${tagLabel}</span></p>
+        div.innerHTML = `<p class="mock-q-num">Q${qNum}.<span class="mock-q-marks">${marks} mark${marks === 1 ? '' : 's'}</span></p>
           <div class="mock-q-diagram"></div>
-          <p class="mock-q-prompt">${q.prompt}</p><div class="mock-q-opts" data-qi="${idx}"></div>`;
+          <p class="mock-q-prompt"></p><div class="mock-q-opts" data-qi="${idx}"></div>`;
+        div.querySelector('.mock-q-prompt').textContent = q.prompt || '';
         renderDiagram(div.querySelector('.mock-q-diagram'), q);
         const opts = div.querySelector('.mock-q-opts');
         if (q.options?.length >= 2) {
@@ -272,11 +261,7 @@
           });
         } else {
           const isLong = marks >= 3;
-          opts.innerHTML = `
-            <div class="answer-hint" style="font-size:0.78rem;color:#64748b;margin-bottom:8px">
-              Use symbols for math/science · draw or upload diagrams (${marks} marks)
-            </div>
-            <div class="answer-composer-host" data-qi="${idx}" data-long="${isLong ? '1' : '0'}"></div>`;
+          opts.innerHTML = `<div class="answer-composer-host" data-qi="${idx}" data-long="${isLong ? '1' : '0'}"></div>`;
         }
         sectionsEl.appendChild(div);
       });

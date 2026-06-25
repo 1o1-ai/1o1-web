@@ -70,7 +70,12 @@
     css.id = STYLE_ID;
     css.textContent = [
       '.answer-composer { margin-top: 4px; }',
-      '.ac-toolbar { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; }',
+      '.ac-toolbar { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }',
+      '.ac-tools-toggle { width: 100%; text-align: left; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--line, rgba(15,23,42,.12)); background: var(--surface, #fff); font-size: 0.78rem; font-weight: 700; color: var(--muted, #475569); cursor: pointer; }',
+      '.ac-tools-toggle:hover { border-color: var(--teal, #0d9488); color: var(--teal, #0d9488); }',
+      '.ac-tools-toggle[aria-expanded="true"] { border-color: var(--teal, #0d9488); background: #f0fdfa; color: #0f766e; }',
+      '.ac-toolbar-body { display: none; flex-direction: column; gap: 8px; margin-top: 4px; }',
+      '.ac-toolbar-body.open { display: flex; }',
       '.ac-sym-groups { display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-start; }',
       '.ac-sym-group { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; padding: 6px 8px; border-radius: 12px; background: var(--bg, #f8fafc); border: 1px solid var(--line, rgba(15,23,42,.08)); }',
       '.ac-sym-group-label { font-size: 0.62rem; font-weight: 800; color: var(--muted, #64748b); text-transform: uppercase; letter-spacing: 0.05em; margin-right: 2px; }',
@@ -187,6 +192,16 @@
     var toolbar = document.createElement('div');
     toolbar.className = 'ac-toolbar';
 
+    var toolsToggle = document.createElement('button');
+    toolsToggle.type = 'button';
+    toolsToggle.className = 'ac-tools-toggle';
+    toolsToggle.setAttribute('aria-expanded', options.expandTools ? 'true' : 'false');
+    toolsToggle.textContent = (options.expandTools ? '▾' : '▸') + ' Math & science tools (symbols · draw · upload)';
+    toolbar.appendChild(toolsToggle);
+
+    var toolbarBody = document.createElement('div');
+    toolbarBody.className = 'ac-toolbar-body' + (options.expandTools ? ' open' : '');
+
     var symWrap = document.createElement('div');
     symWrap.className = 'ac-sym-groups';
     SYMBOL_GROUPS.forEach(function (group) {
@@ -207,7 +222,7 @@
       });
       symWrap.appendChild(g);
     });
-    toolbar.appendChild(symWrap);
+    toolbarBody.appendChild(symWrap);
 
     var actions = document.createElement('div');
     actions.className = 'ac-actions';
@@ -226,8 +241,15 @@
     actions.appendChild(drawBtn);
     actions.appendChild(uploadBtn);
     actions.appendChild(fileInput);
-    toolbar.appendChild(actions);
+    toolbarBody.appendChild(actions);
+    toolbar.appendChild(toolbarBody);
     container.appendChild(toolbar);
+
+    toolsToggle.onclick = function () {
+      var open = toolbarBody.classList.toggle('open');
+      toolsToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toolsToggle.textContent = (open ? '▾' : '▸') + ' Math & science tools (symbols · draw · upload)';
+    };
 
     var textarea = document.createElement('textarea');
     textarea.className = 'ac-textarea' + (options.isLong ? ' long' : '');

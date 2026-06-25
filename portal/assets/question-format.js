@@ -47,6 +47,9 @@
     t = t.replace(/\*ECNEICS\*/gi, '').replace(/#\s*\*/g, '').trim();
     t = t.replace(/\s+\?\s*$/,'').trim();
     t = t.replace(/\s*\[Set-\d+\s+Ref\s+Key\]\s*/gi, ' ').trim();
+    t = t.replace(/\s*\[(?:Set-\d+\s*)?(?:Ref\s*)?Key\]\s*/gi, ' ').trim();
+    t = t.replace(/\s*\[Approved[^\]]*\]\s*/gi, ' ').trim();
+    t = t.replace(/\s*\[(?:VOLTAIC|CBSE|internal)[^\]]*\]\s*/gi, ' ').trim();
     return t.replace(/\s{2,}/g, ' ').trim();
   }
 
