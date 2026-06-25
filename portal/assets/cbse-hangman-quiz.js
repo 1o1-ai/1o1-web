@@ -66,7 +66,7 @@
     const filter = ctx.filterQuestions;
     const chapterIds = wordPack.chapterIds || [wordPack.chapterId];
     if (filter) {
-      ['easy', 'medium', 'difficult', 'ASKED_BEFORE'].forEach((d) => {
+      ['easy', 'medium', 'difficult'].forEach((d) => {
         const batch = filter({ difficulty: d, limit: 4, chapterIds }) || [];
         batch.forEach((raw) => {
           const q = normalizeQ({ ...raw, pool: d });
@@ -208,7 +208,6 @@
         return;
       }
       qEl.innerHTML = `
-        <p class="hg-q-pool">${String(q.pool || 'mixed').replace(/_/g, ' ')}</p>
         <p class="hg-q-text">${q.prompt}</p>
         <div class="hg-opts">${opts
           .slice(0, 4)

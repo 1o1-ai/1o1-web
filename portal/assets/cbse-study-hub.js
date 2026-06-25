@@ -101,7 +101,7 @@
         <div class="cbse-advanced-cards">
           <article class="cbse-adv-card"><strong>🔗 Cross-links</strong><p>Connect this chapter to previous years &amp; JEE/NEET patterns.</p></article>
           <article class="cbse-adv-card"><strong>🧪 Numericals</strong><p>Focus on multi-step problems from the question bank — use Q &amp; A with difficulty <em>Difficult</em>.</p></article>
-          <article class="cbse-adv-card"><strong>📖 NCERT Exemplar</strong><p>${entry?.pdf?.pdfUrl ? `<a href="${entry.pdf.pdfUrl}" target="_blank" rel="noopener">Open official PDF</a> for in-text examples.` : 'Official PDF linked in Official Books tab.'}</p></article>
+          <article class="cbse-adv-card"><strong>📖 NCERT Exemplar</strong><p>${entry?.pdf?.pdfUrl ? 'Use <strong>Official Books</strong> → Open Official Book for in-text examples.' : 'Official book available in Official Books tab.'}</p></article>
         </div>
       </div>`;
   }
