@@ -1,6 +1,6 @@
 {
   "sku": "cbse10",
-  "generatedAt": "2026-06-25T02:08:43.512388+00:00",
+  "generatedAt": "2026-06-25T02:09:14.514010+00:00",
   "sourceRoot": "C:\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE",
   "subjects": {
     "science": {
@@ -144,6 +144,21 @@
                 "role": "student",
                 "speaker": "Rahul - Interrupting",
                 "text": "What is pH?"
+              },
+              {
+                "role": "student",
+                "speaker": "Amit - Interrupting",
+                "text": "What happens when acids react with metal carbonates?"
+              },
+              {
+                "role": "student",
+                "speaker": "Sneha - Interrupting",
+                "text": "Ma'am, what are important salts we must know for boards?"
+              },
+              {
+                "role": "student",
+                "speaker": "Rahul - Interrupting",
+                "text": "Why is soil pH important for farmers?"
               }
             ],
             "pages": [
@@ -166,7 +181,7 @@
                 ]
               }
             ],
-            "beatCount": 3
+            "beatCount": 6
           },
           "title": "CBSE Class 10 Science: Acids, Bases and Salts"
         },
