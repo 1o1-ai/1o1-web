@@ -582,7 +582,7 @@
 
 
 
-    function updateVisiblePage() {
+    async function openOfficialBook() {
 
       if (!pdfUrl || !reader || !scrollEl) return;
 
