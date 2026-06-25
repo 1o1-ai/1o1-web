@@ -46,6 +46,7 @@
   function isUsableQuestion(q) {
     if (shared.isProceduralPlaceholderMcq(q)) return false;
     const text = shared.cleanDisplayText(q.text || q.prompt || q.question || '');
+    if (shared.isInternalQaPrompt?.(text)) return false;
     return text.length >= 8;
   }
 

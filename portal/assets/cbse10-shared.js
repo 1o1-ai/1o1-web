@@ -271,6 +271,14 @@
     return normalizeChapterId(q.chapterId || q.chapter || '');
   }
 
+  function isInternalQaPrompt(text) {
+    const t = String(text || '');
+    if (/\(Verify with Class 10 Board/i.test(t)) return true;
+    if (/\(Verify with[^)]*Test-Set/i.test(t)) return true;
+    if (/Detail chemical equation for the observation when Zinc metal granulated/i.test(t)) return true;
+    return false;
+  }
+
   function cleanDisplayText(text) {
     if (global.AnyoQuestionFormat?.cleanQuestionText) {
       return global.AnyoQuestionFormat.cleanQuestionText(text);
@@ -300,6 +308,7 @@
   function isValidCatalogQuestion(q) {
     if (isProceduralPlaceholderMcq(q)) return false;
     const text = cleanDisplayText(q.text || q.prompt || '');
+    if (isInternalQaPrompt(text)) return false;
     if (!text || text.length < 8) return false;
     if (/\*31\/|ECNEICS|\*ECNEICS\*/i.test(text) && text.length < 40) return false;
     const opts = q.options || [];
@@ -417,6 +426,7 @@
     isAuthenticCbse,
     isValidCatalogQuestion,
     isProceduralPlaceholderMcq,
+    isInternalQaPrompt,
     resolveCorrectIndex,
     letterToIndex,
     cleanDisplayText,

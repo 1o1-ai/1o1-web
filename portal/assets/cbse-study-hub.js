@@ -6,7 +6,7 @@
 
   const TABS = [
     { id: 'official', label: 'Official Books', icon: '📖', hint: 'NCERT + teacher lecture' },
-    { id: 'advanced', label: 'Advanced Study', icon: '🚀', hint: 'Deep-dive concepts' },
+    { id: 'advanced', label: 'NCERT Plus', icon: '📝', hint: 'Syllabus extensions' },
     { id: 'regular', label: 'Regular Study', icon: '📚', hint: 'Study guides & videos' },
     { id: 'practice', label: 'Q & A Practice', icon: '✅', hint: 'Board-style drills' },
     { id: 'quiz', label: 'Quiz', icon: '🎯', hint: 'ManjuLAB WordHunter' },
@@ -92,15 +92,29 @@
 
   function renderAdvanced(host, ctx) {
     const entry = chapterEntry(ctx);
-    const concepts = entry?.transcript?.concepts || [];
+    const rawConcepts = entry?.transcript?.concepts || [];
+    const concepts = rawConcepts
+      .map((c) => String(c || '').trim())
+      .filter((s) => {
+        if (!s || s.length < 10) return false;
+        if (/^CBSE Class 10/i.test(s)) return false;
+        if (/^Chapter:/i.test(s)) return false;
+        if (/JEE|NEET|olympiad|IIT|competitive exam/i.test(s)) return false;
+        return true;
+      });
+    const isCbse10 = ctx.sku === 'cbse10' || !ctx.sku;
     host.innerHTML = `
       <div class="cbse-advanced-panel">
-        <h3>Advanced · ${ctx.chapterTitle}</h3>
-        <p class="cbse-advanced-lead">Extension topics beyond NCERT basics — ideal before competitive exams.</p>
-        <ul class="cbse-concept-list">${concepts.map((c) => `<li>${c}</li>`).join('') || '<li>Advanced notes loading from official transcript…</li>'}</ul>
+        <h3>${isCbse10 ? 'NCERT focus' : 'Advanced'} · ${ctx.chapterTitle}</h3>
+        <p class="cbse-advanced-lead">${
+          isCbse10
+            ? 'Board-level extensions from the official NCERT syllabus — stay within Class 10 scope.'
+            : 'Extension topics beyond NCERT basics.'
+        }</p>
+        <ul class="cbse-concept-list">${concepts.map((c) => `<li>${c}</li>`).join('') || '<li>Use <strong>Regular Study</strong> for chapter notes and <strong>Official Books</strong> for the NCERT walkthrough.</li>'}</ul>
         <div class="cbse-advanced-cards">
-          <article class="cbse-adv-card"><strong>🔗 Cross-links</strong><p>Connect this chapter to previous years &amp; JEE/NEET patterns.</p></article>
-          <article class="cbse-adv-card"><strong>🧪 Numericals</strong><p>Focus on multi-step problems from the question bank — use Q &amp; A with difficulty <em>Difficult</em>.</p></article>
+          <article class="cbse-adv-card"><strong>🔗 Previous years</strong><p>Connect this chapter to past CBSE board questions via <strong>Q &amp; A Practice</strong>.</p></article>
+          <article class="cbse-adv-card"><strong>🧪 Numericals</strong><p>Multi-step problems — filter <em>Difficult</em> in Q &amp; A when available.</p></article>
           <article class="cbse-adv-card"><strong>📖 NCERT Exemplar</strong><p>${entry?.pdf?.pdfUrl ? 'Use <strong>Official Books</strong> → Open Official Book for in-text examples.' : 'Official book available in Official Books tab.'}</p></article>
         </div>
       </div>`;

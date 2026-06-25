@@ -461,7 +461,12 @@
       ? entry.transcript.beats
       : synthesizeBeatsFromPages(entry, ctx);
 
-    const effectiveBeatCount = beats.length;
+    const chapterTitle = entry?.title || ctx.chapterTitle || 'this chapter';
+    const steps = global.CBSELectureFlow?.prepareLectureBeats
+      ? global.CBSELectureFlow.prepareLectureBeats(beats, chapterTitle)
+      : beats.map((beat) => ({ kind: 'speak', beat }));
+
+    const effectiveBeatCount = steps.filter((s) => s.kind === 'speak').length;
 
 
 
@@ -719,9 +724,9 @@
 
 
 
-    const beatsRef = beats;
+    const stepsRef = steps;
 
-    let beatIdx = 0;
+    let stepIdx = 0;
 
     const playBtn = host.querySelector('#cbsePlayLecture');
 
@@ -738,23 +743,26 @@
       captionEl.innerHTML = `<p class="cbse-caption-role">${escHtml(roleLabel)}</p><p class="cbse-caption-text">${escHtml(beat.text)}</p>`;
     }
 
-    if (beatsRef[0]) showCaption(beatsRef[0]);
+    const firstSpeak = stepsRef.find((s) => s.kind === 'speak')?.beat;
+    if (firstSpeak) showCaption(firstSpeak);
 
     function updateProgress() {
 
       if (!progressEl) return;
 
-      const pct = beatsRef.length ? Math.round((beatIdx / beatsRef.length) * 100) : 0;
+      const speakTotal = stepsRef.filter((s) => s.kind === 'speak').length || 1;
+      const spoken = stepsRef.slice(0, stepIdx).filter((s) => s.kind === 'speak').length;
+      const pct = Math.round((spoken / speakTotal) * 100);
 
-      progressEl.innerHTML = `<div class="cbse-progress-bar"><div class="cbse-progress-fill" style="width:${pct}%"></div></div><span>${beatIdx} / ${beatsRef.length}</span>`;
+      progressEl.innerHTML = `<div class="cbse-progress-bar"><div class="cbse-progress-fill" style="width:${pct}%"></div></div><span>${spoken} / ${speakTotal}</span>`;
 
     }
 
 
 
-    function playNextBeat() {
+    function playNextStep() {
 
-      if (beatIdx >= beatsRef.length) {
+      if (stepIdx >= stepsRef.length) {
 
         playBtn.classList.remove('hidden');
 
@@ -768,7 +776,27 @@
 
       }
 
-      const b = beatsRef[beatIdx];
+      const step = stepsRef[stepIdx++];
+
+      if (step.kind === 'pause') {
+
+        lectureTimer = setTimeout(playNextStep, step.ms || 400);
+
+        return;
+
+      }
+
+      if (step.kind === 'chime') {
+
+        if (global.CBSEVoiceEngine?.playChime) global.CBSEVoiceEngine.playChime(playNextStep);
+
+        else playNextStep();
+
+        return;
+
+      }
+
+      const b = step.beat;
 
       speakerPill?.classList.remove('hidden');
 
@@ -788,17 +816,9 @@
 
       const engine = global.CBSEVoiceEngine;
 
-      const done = () => {
+      if (engine) engine.speakBeat(b, playNextStep);
 
-        beatIdx += 1;
-
-        lectureTimer = setTimeout(playNextBeat, 350);
-
-      };
-
-      if (engine) engine.speakBeat(b, done);
-
-      else done();
+      else playNextStep();
 
     }
 
@@ -810,7 +830,7 @@
 
       global.CBSEVoiceEngine?.resetTeacher?.();
 
-      beatIdx = 0;
+      stepIdx = 0;
 
       playBtn.classList.add('hidden');
 
@@ -820,7 +840,7 @@
 
       updateProgress();
 
-      playNextBeat();
+      playNextStep();
 
     });
 

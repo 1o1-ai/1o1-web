@@ -52,6 +52,12 @@
     t = t.replace(/\s*\[Approved[^\]]*\]\s*/gi, ' ').trim();
     t = t.replace(/\s*\[(?:VOLTAIC|CBSE|internal|ingest)[^\]]*\]\s*/gi, ' ').trim();
     t = t.replace(/\s*\[Set-\d+\]\s*/gi, ' ').trim();
+    t = t.replace(/\s*\(Verify with[^)]*\)\s*/gi, ' ').trim();
+    t = t.replace(/\s*\(Batch\s+\d+\)\s*/gi, ' ').trim();
+    t = t.replace(
+      /^Detail chemical equation for the observation when Zinc metal granulated is reacted with hydrochloric acid\.\s*/gi,
+      ''
+    ).trim();
     return t.replace(/\s{2,}/g, ' ').trim();
   }
 

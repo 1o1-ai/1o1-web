@@ -66,8 +66,38 @@
 
   function pickVoice(voices, gender, seed) {
     const pool = poolByGender(voices, gender);
+    if (!pool.length) return voices.find((v) => v.default) || voices[0];
     const idx = Math.abs(seed.split('').reduce((a, c) => a + c.charCodeAt(0), 0)) % pool.length;
-    return pool[idx] || voices[0];
+    return pool[idx] || voices.find((v) => v.default) || voices[0];
+  }
+
+  function speakUtterance(u, voices, onEnd) {
+    u.volume = 1;
+    let attempts = 0;
+    const fallbacks = [
+      u.voice,
+      voices.find((v) => v.default),
+      voices.find((v) => (v.lang || '').toLowerCase().startsWith('en')),
+      voices[0],
+    ].filter(Boolean);
+
+    const trySpeak = () => {
+      const voice = fallbacks[attempts] || fallbacks[fallbacks.length - 1];
+      u.voice = voice;
+      u.onend = () => onEnd?.();
+      u.onerror = () => {
+        attempts += 1;
+        if (attempts < fallbacks.length) {
+          trySpeak();
+          return;
+        }
+        onEnd?.();
+      };
+      global.speechSynthesis.speak(u);
+    };
+
+    global.speechSynthesis.cancel();
+    trySpeak();
   }
 
   function studentGender(speaker) {
@@ -89,29 +119,31 @@
       onEnd?.();
       return;
     }
+    const text = String(beat?.text || '').trim();
+    if (!text) {
+      onEnd?.();
+      return;
+    }
     loadVoices().then((voices) => {
       if (!voices.length) {
         onEnd?.();
         return;
       }
-      global.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(beat.text);
+      const u = new SpeechSynthesisUtterance(text);
       const isTeacher = beat.role === 'teacher';
 
       if (isTeacher) {
         u.voice = pickVoice(voices, teacherGender, 'teacher-' + teacherGender);
-        u.pitch = teacherGender === 'female' ? 1.02 : 0.88;
-        u.rate = 0.88;
+        u.pitch = teacherGender === 'female' ? 1.05 : 0.96;
+        u.rate = 0.92;
       } else {
         const sg = studentGender(beat.speaker);
         u.voice = pickVoice(voices, sg, beat.speaker || 'student');
-        u.pitch = sg === 'female' ? 1.22 : 1.08;
+        u.pitch = sg === 'female' ? 1.18 : 1.05;
         u.rate = 0.96;
       }
 
-      u.onend = () => onEnd?.();
-      u.onerror = () => onEnd?.();
-      global.speechSynthesis.speak(u);
+      speakUtterance(u, voices, onEnd);
     });
   }
 
