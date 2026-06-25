@@ -9,7 +9,7 @@ CHECKS: list[tuple[str, str, list[str]]] = [
     ("/", "Homepage", ["ManjuLAB Online Portal", "Anyo Brahmando Academy"]),
     ("/portal/", "SaaS hub", ["Anyo Brahmando Academy", "different path"]),
     ("/portal/education/", "Academy", ["Anyo Brahmando Academy", "different path"]),
-    ("/portal/education/cbse10/index.html", "CBSE10 hub", ["Study Room", "Mock Tests", "Discussion Forum"]),
+    ("/portal/education/cbse10/index.html", "CBSE10 hub", ["Study Room", "Exam Center", "Discussion Forum"]),
     ("/portal/education/cbse10/room.html", "Study room", ["phaseSubject", "cbse10-room.js", "backFromEvaluate", "evalResults"]),
     ("/portal/education/cbse10/practice.html", "Practice", ["Chapter practice", "board mock"]),
     ("/portal/education/cbse10/forum.html", "Forum", ["Sahadeva", "Discussion Forum", "forum-main"]),

@@ -3,6 +3,8 @@ portal/data/cbse10_extract.txt
 portal/data/cbse10_questions_sample.txt
 portal/data/ingest_report-live.json
 portal/data/question_bank-live.json
+qa/
+portal/education/**/*.old.js
 *.log
 __pycache__/
 .DS_Store

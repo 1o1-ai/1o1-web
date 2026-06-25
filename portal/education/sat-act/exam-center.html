@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exam Center · SAT / ACT</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="../../assets/exam-center.css" />
+</head>
+<body class="portal-page" data-sku="sat-act">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <header class="portal-header">
+    <a class="back-link" href="index.html">← SAT / ACT Hub</a>
+    <h1>Exam Center</h1>
+  </header>
+  <main class="portal-main" id="examCenterRoot"></main>
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/exam-center-hub.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      ExamCenterHub.mount(document.getElementById('examCenterRoot'), document.body.dataset.sku);
+    });
+  </script>
+</body>
+</html>
