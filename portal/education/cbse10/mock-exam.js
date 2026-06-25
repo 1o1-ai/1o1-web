@@ -107,6 +107,20 @@
     return opts.length >= 2 && global.CBSE10Shared?.resolveCorrectIndex(q, opts) != null;
   }
 
+  function normalizeBankRow(q) {
+    const prompt = q.prompt || q.text || q.question || '';
+    return {
+      ...q,
+      prompt,
+      marks: q.marks ?? q.mark ?? 1,
+      subject: (q.subject || q.subject_id || '').toLowerCase(),
+    };
+  }
+
+  function sectionRequiresPlayableMcq(section) {
+    return section.id === 'A' && sku === 'cbse10';
+  }
+
   function questionKey(q, suffix) {
     return String(q.id || q.prompt || q.question || 'q') + (suffix || '');
   }
@@ -135,16 +149,20 @@
     return base;
   }
 
-  /** Fill every section to schema count; Section A = MCQs only, B–E = constructed response. */
+  /** Fill every section to schema count; Class X Section A = MCQs; Class XII Section A = 1-mark competency items. */
   function pickForSection(pool, section, used) {
     const picked = [];
     const shuffled = [...pool].sort(() => Math.random() - 0.5);
-    const requireMcq = section.id === 'A';
+    const requireMcq = sectionRequiresPlayableMcq(section);
 
     function take(q, suffix) {
       const key = questionKey(q, suffix);
       if (used.has(key)) return false;
       if (requireMcq && !hasPlayableMcq(q)) return false;
+      if (section.id === 'A' && sku === 'cbse12-science') {
+        const marks = q.marks || q.mark || 1;
+        if (marks !== 1) return false;
+      }
       picked.push({ raw: q, suffix });
       used.add(key);
       return true;
@@ -246,6 +264,7 @@
       });
     });
     const usedMin = Math.round((DURATION_SEC - remaining) / 60);
+    const constructedLabel = sku === 'cbse12-science' ? 'Sections B–C' : 'Sections B–E';
     const report = document.getElementById('mockReport');
     report.hidden = false;
     report.innerHTML = `
@@ -254,7 +273,7 @@
         <p>Auto-scored MCQs: <strong>${score}/${mcqTotal || '—'}</strong></p>
         <p>Total paper marks: <strong>${paper.totalMarks}</strong> · Questions: <strong>${expectedQuestionCount}</strong> · Mode: ${isAuthentic ? 'Authentic CBSE' : 'Open explore'}</p>
         <p>Time used: ${usedMin} min · Concentration: ${focusScore}%</p>
-        <p class="hint">Constructed responses (Sections B–E) require teacher review (Abhyas workflow).</p>
+        <p class="hint">Constructed responses (${constructedLabel}) require teacher review (Abhyas workflow).</p>
         <a href="exam-center.html" class="btn-portal btn-portal-ghost">Back to Exam Center</a>
       </div>`;
     document.getElementById('btnSubmitMock').disabled = true;
@@ -268,15 +287,22 @@
     sku === 'cbse10'
       ? Promise.all([global.CBSE10Shared.loadMasterCatalog(), global.CBSE10Shared.loadVerifiedBank()])
       : fetch('../../data/cbse12-science-questions.json')
-          .then((r) => (r.ok ? r.json() : []))
-          .then((bank) => [{ questions: [] }, bank]);
+          .then((r) => {
+            if (!r.ok) throw new Error('Question bank not found (cbse12-science-questions.json)');
+            return r.json();
+          })
+          .then((payload) => {
+            const bank = Array.isArray(payload) ? payload : payload.questions || [];
+            return [{ questions: [] }, bank];
+          });
 
   loadPromise.then(([master, bank]) => {
     const catalog = master?.questions || [];
-    const verifiedMcqs = (bank || []).filter(
+    let normalizedBank = (bank || []).map(normalizeBankRow);
+    const verifiedMcqs = normalizedBank.filter(
       (q) => q.options?.length && (q.answer_verified || q.correctIndex != null)
     );
-    const sources = verifiedMcqs.length ? verifiedMcqs : catalog;
+    const sources = verifiedMcqs.length ? verifiedMcqs : normalizedBank;
     const filters = { subject, mode: isAuthentic ? 'cbse' : 'ai' };
 
     let allPool;
@@ -299,22 +325,37 @@
       }
     }
 
-    const mcqPool = allPool.filter(hasPlayableMcq);
+    const mcqPool = sku === 'cbse12-science'
+      ? allPool.filter((q) => (q.marks || 1) === 1)
+      : allPool.filter(hasPlayableMcq);
     const used = new Set();
 
     paper.sections.forEach((section) => {
-      const poolForSection = section.id === 'A' ? mcqPool : allPool.length ? allPool : mcqPool;
+      const poolForSection =
+        section.id === 'A'
+          ? mcqPool.length
+            ? mcqPool
+            : allPool
+          : allPool.length
+            ? allPool
+            : mcqPool;
       const qs = pickForSection(poolForSection, section, used);
       paperQuestions.push({ section, questions: qs });
     });
 
     const totalQ = paperQuestions.reduce((n, s) => n + s.questions.length, 0);
     if (totalQ < Math.min(20, expectedQuestionCount * 0.5)) {
-      sectionsEl.innerHTML = `<p>Not enough questions for this mock (${totalQ}/${expectedQuestionCount}). Try Practice Test or another subject.</p>`;
+      sectionsEl.innerHTML = `<p>Not enough questions for this mock (${totalQ}/${expectedQuestionCount}). ${
+        sku === 'cbse12-science'
+          ? 'Run <code>scripts/export_portal_study_assets.py</code> to publish the question bank.'
+          : 'Try Practice Test or another subject.'
+      }</p>`;
       return;
     }
     renderPaper();
     renderClock();
     timerId = setInterval(tick, 1000);
+  }).catch((err) => {
+    sectionsEl.innerHTML = `<p>Could not load question bank: ${err.message || err}. <a href="exam-center.html">Back to Exam Center</a></p>`;
   });
 })();

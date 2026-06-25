@@ -27,11 +27,23 @@
 | E | LA | 3 × 5 = 15 |
 
 ## Class XI–XII Science (70 or 80 marks)
+
 Competency split: **20% MCQ · 50% application · 30% constructed response**
 
+| Subject | Total marks | Section A (20%) | Section B (50%) | Section C (30%) |
+|---------|-------------|-----------------|-----------------|-----------------|
+| Physics | 70 | 14 × 1 | 18 × 2 | 8 × 3 |
+| Chemistry | 70 | 14 × 1 | 18 × 2 | 8 × 3 |
+| Biology | 70 | 14 × 1 | 18 × 2 | 8 × 3 |
+| Mathematics | 80 | 16 × 1 | 20 × 2 | 9 × 3 |
+
+Question bank: `portal/data/cbse12-science-questions.json` (export via `scripts/export_portal_study_assets.py`).
+
+Mock entry: `education/cbse12-science/mock-exam.html` → shared `education/cbse10/mock-exam.js` with `data-sku="cbse12-science"`.
+
 ## Mock generator requirements
-1. Always render **all sections** (A–E for Class X).
+1. Always render **all sections** (A–E for Class X; A–C for Class XII).
 2. Enforce **3-hour** timer and **total marks** on paper header.
 3. Section A: MCQs from verified bank.
 4. Sections B–E: constructed-response UI (textarea); reuse bank prompts when needed.
-5. Entry: `education/cbse10/mock-exam.js` + `exam-schema.js` (shared by cbse12 via `../cbse10/mock-exam.js`).
+5. Entry: `education/cbse10/mock-exam.js` + `exam-schema.js` (Class XII: `cbse12-science/mock-exam.html` sets `data-sku`).
