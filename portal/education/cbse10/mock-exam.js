@@ -24,6 +24,7 @@
   let timerId = null;
   const paperQuestions = [];
   const answers = {};
+  const composers = {};
 
   const clockEl = document.getElementById('mockClock');
   const sectionsEl = document.getElementById('mockSections');
@@ -270,19 +271,55 @@
             opts.appendChild(lbl);
           });
         } else {
-          const rows = marks >= 5 ? 6 : marks >= 3 ? 4 : 3;
-          opts.innerHTML = `<textarea rows="${rows}" style="width:100%;padding:8px;font-family:inherit" placeholder="Write your answer (${marks} marks)…"></textarea>`;
-          opts.querySelector('textarea').addEventListener('input', (e) => {
-            answers[idx] = e.target.value;
-          });
+          const isLong = marks >= 3;
+          opts.innerHTML = `
+            <div class="answer-hint" style="font-size:0.78rem;color:#64748b;margin-bottom:8px">
+              Use symbols for math/science · draw or upload diagrams (${marks} marks)
+            </div>
+            <div class="answer-composer-host" data-qi="${idx}" data-long="${isLong ? '1' : '0'}"></div>`;
         }
         sectionsEl.appendChild(div);
       });
+    });
+
+    if (global.AnswerComposer) {
+      sectionsEl.querySelectorAll('.answer-composer-host').forEach((host) => {
+        const qi = host.dataset.qi;
+        const isLong = host.dataset.long === '1';
+        composers[qi] = AnswerComposer.mount(host, {
+          qid: qi,
+          isLong,
+          value: answers[qi] || '',
+          placeholder: isLong
+            ? 'Write a full explanation with steps, formulas, and diagrams if needed…'
+            : 'Type your answer — use symbols, draw, or upload an image…',
+          onChange: (val) => {
+            answers[qi] = val;
+          },
+        });
+      });
+    } else {
+      sectionsEl.querySelectorAll('.answer-composer-host').forEach((host) => {
+        const qi = host.dataset.qi;
+        host.innerHTML = `<textarea rows="4" style="width:100%;padding:8px;font-family:inherit" placeholder="Write your answer…"></textarea>`;
+        const ta = host.querySelector('textarea');
+        ta.value = answers[qi] || '';
+        ta.addEventListener('input', (e) => {
+          answers[qi] = e.target.value;
+        });
+      });
+    }
+  }
+
+  function collectWrittenAnswers() {
+    Object.keys(composers).forEach((qi) => {
+      answers[qi] = composers[qi].getValue();
     });
   }
 
   function submitMock(auto) {
     clearInterval(timerId);
+    collectWrittenAnswers();
     let score = 0;
     let mcqTotal = 0;
     let qIdx = 0;

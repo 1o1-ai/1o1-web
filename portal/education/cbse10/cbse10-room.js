@@ -40,6 +40,8 @@
 
   let activeCardEl = null;
 
+  let activeComposer = null;
+
   let distractionBound = false;
 
   let onPasteHandler = null;
@@ -755,11 +757,19 @@
 
     activeCardEl.classList.add('sr-q-done');
 
-    activeCardEl.querySelectorAll('input, textarea, button:not(.sr-show-answer-btn)').forEach((el) => {
+    activeCardEl.querySelectorAll('input, textarea, .answer-composer button, .answer-composer .ac-sym-btn, .answer-composer .ac-action-btn').forEach((el) => {
 
       el.disabled = true;
 
     });
+
+    if (activeComposer) {
+
+      activeComposer.destroy();
+
+      activeComposer = null;
+
+    }
 
     activeCardEl = null;
 
@@ -1062,7 +1072,31 @@
 
       resp.innerHTML =
 
-        '<textarea class="sr-text-answer" rows="5" placeholder="Type your answer here…"></textarea>';
+        '<div class="answer-hint" style="font-size:0.78rem;color:#94a3b8;margin-bottom:8px">Use symbols for math/science · draw or upload diagrams</div>' +
+
+        '<div class="answer-composer-host sr-answer-composer"></div>';
+
+      const host = resp.querySelector('.answer-composer-host');
+
+      if (window.AnswerComposer && host) {
+
+        activeComposer = AnswerComposer.mount(host, {
+
+          qid: String(q.id || queueIndex),
+
+          isLong: (q.marks || 0) >= 3,
+
+          value: '',
+
+          placeholder: 'Type your answer — use symbols, draw, or upload an image…',
+
+        });
+
+      } else if (host) {
+
+        host.innerHTML = '<textarea class="sr-text-answer" rows="5" placeholder="Type your answer here…"></textarea>';
+
+      }
 
     }
 
@@ -1101,6 +1135,10 @@
       selectedIndex = parseInt(radio.value, 10);
 
       studentAnswer = q.options[selectedIndex] || '';
+
+    } else if (activeComposer) {
+
+      studentAnswer = activeComposer.getValue();
 
     } else if (textarea) {
 
