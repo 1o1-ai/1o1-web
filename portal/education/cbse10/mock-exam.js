@@ -28,7 +28,19 @@
   const clockEl = document.getElementById('mockClock');
   const sectionsEl = document.getElementById('mockSections');
 
-  function renderBoardHeader() {
+  function subjectKey(s) {
+    const x = (s || '').toLowerCase();
+    if (x === 'math' || x === 'maths') return 'mathematics';
+    if (x === 'sci') return 'science';
+    return x;
+  }
+
+  function filterBySubject(pool, subj) {
+    const key = subjectKey(subj);
+    return pool.filter((q) => subjectKey(q.subject || q.subject_id) === key);
+  }
+
+  function renderBoardHeader(approvedCount) {
     document.getElementById('boardHeader').innerHTML = `
       <div class="board-name">Central Board of Secondary Education</div>
       <div class="paper-title">${paper.classLabel} · ${paper.title} (${paper.code})</div>
@@ -47,6 +59,11 @@
       )
       .join('');
 
+    const approvedNote =
+      sku === 'cbse10' && approvedCount
+        ? `<li><strong>Sections B–E approved:</strong> ${approvedCount} VOLTAIC board questions from Study Material (past-paper weightage + master solutions).</li>`
+        : '';
+
     document.getElementById('instructions').innerHTML = `
       <strong>General Instructions:</strong>
       <ol>
@@ -54,6 +71,7 @@
         <li>Read each question carefully before answering.</li>
         <li>${paper.note}</li>
         <li>Internal assessment / practical marks are not included in this mock.</li>
+        ${approvedNote}
       </ol>
       <strong>Mark distribution:</strong><ul style="margin:8px 0 0 18px">${sectionSummary}</ul>`;
   }
@@ -126,7 +144,8 @@
   }
 
   function toDisplayQ(q, section) {
-    const base = global.CBSE10Shared
+    const approved = q.approved === true;
+    const base = global.CBSE10Shared && !approved
       ? global.CBSE10Shared.toDisplayQ(q)
       : {
           prompt: q.question || q.prompt,
@@ -135,8 +154,10 @@
           diagramVector: q.diagramVector,
           figure_url: q.figure_url,
         };
-    base.marks = section.marksEach;
-    if (section.id !== 'A') {
+    base.marks = approved ? q.marks || section.marksEach : section.marksEach;
+    base.approved = approved;
+    base.chapterId = q.chapterId;
+    if (section.id !== 'A' && !approved) {
       const lead =
         section.marksEach >= 5
           ? `[${section.marksEach} marks] Answer with steps / derivation: `
@@ -144,6 +165,8 @@
             ? `[${section.marksEach} marks] Answer in detail: `
             : `[${section.marksEach} marks] Answer briefly: `;
       if (!String(base.prompt).startsWith('[')) base.prompt = lead + base.prompt;
+      base.options = [];
+    } else if (section.id !== 'A') {
       base.options = [];
     }
     return base;
@@ -173,7 +196,8 @@
       if (requireMcq) take(q, '');
       else {
         const marks = q.marks || q.mark || 1;
-        if (Math.abs(marks - section.marksEach) <= 1 || section.marksEach <= 2) take(q, '');
+        if (q.approved && marks === section.marksEach) take(q, '');
+        else if (Math.abs(marks - section.marksEach) <= 1 || section.marksEach <= 2) take(q, '');
       }
     }
 
@@ -222,7 +246,11 @@
         const div = document.createElement('div');
         div.className = 'mock-q-block';
         const marks = q.marks || section.marksEach;
-        div.innerHTML = `<p class="mock-q-num">Q${qNum}. <span class="verified-tag">${isAuthentic ? 'CBSE' : 'Open'} · ${marks} mark(s)</span></p>
+        const tagClass = q.approved ? 'verified-tag approved-tag' : 'verified-tag';
+        const tagLabel = q.approved
+          ? `Approved · Section ${section.id}`
+          : `${isAuthentic ? 'CBSE' : 'Open'} · ${marks} mark(s)`;
+        div.innerHTML = `<p class="mock-q-num">Q${qNum}. <span class="${tagClass}">${tagLabel}</span></p>
           <div class="mock-q-diagram"></div>
           <p class="mock-q-prompt">${q.prompt}</p><div class="mock-q-opts" data-qi="${idx}"></div>`;
         renderDiagram(div.querySelector('.mock-q-diagram'), q);
@@ -281,11 +309,13 @@
 
   document.getElementById('btnSubmitMock').addEventListener('click', () => submitMock(false));
 
-  renderBoardHeader();
-
   const loadPromise =
     sku === 'cbse10'
-      ? Promise.all([global.CBSE10Shared.loadMasterCatalog(), global.CBSE10Shared.loadVerifiedBank()])
+      ? Promise.all([
+          global.CBSE10Shared.loadMasterCatalog(),
+          global.CBSE10Shared.loadVerifiedBank(),
+          fetch('../../data/cbse10-board-questions.json').then((r) => (r.ok ? r.json() : { questions: [] })),
+        ])
       : fetch('../../data/cbse12-science-questions.json')
           .then((r) => {
             if (!r.ok) throw new Error('Question bank not found (cbse12-science-questions.json)');
@@ -293,12 +323,13 @@
           })
           .then((payload) => {
             const bank = Array.isArray(payload) ? payload : payload.questions || [];
-            return [{ questions: [] }, bank];
+            return [{ questions: [] }, bank, { questions: [] }];
           });
 
-  loadPromise.then(([master, bank]) => {
+  loadPromise.then(([master, bank, boardPayload]) => {
     const catalog = master?.questions || [];
     let normalizedBank = (bank || []).map(normalizeBankRow);
+    const approvedBank = filterBySubject((boardPayload?.questions || []).map(normalizeBankRow), subject);
     const verifiedMcqs = normalizedBank.filter(
       (q) => q.options?.length && (q.answer_verified || q.correctIndex != null)
     );
@@ -331,17 +362,21 @@
     const used = new Set();
 
     paper.sections.forEach((section) => {
-      const poolForSection =
-        section.id === 'A'
-          ? mcqPool.length
-            ? mcqPool
-            : allPool
-          : allPool.length
-            ? allPool
-            : mcqPool;
+      let poolForSection;
+      if (section.id === 'A') {
+        poolForSection = mcqPool.length ? mcqPool : filterBySubject(approvedBank, subject).filter((q) => (q.marks || 1) === 1);
+        if (!poolForSection.length) poolForSection = allPool;
+      } else if (sku === 'cbse10' && approvedBank.length) {
+        const exact = approvedBank.filter((q) => (q.marks || 1) === section.marksEach);
+        poolForSection = exact.length >= section.count ? exact : approvedBank;
+      } else {
+        poolForSection = allPool.length ? allPool : mcqPool;
+      }
       const qs = pickForSection(poolForSection, section, used);
       paperQuestions.push({ section, questions: qs });
     });
+
+    renderBoardHeader(approvedBank.length);
 
     const totalQ = paperQuestions.reduce((n, s) => n + s.questions.length, 0);
     if (totalQ < Math.min(20, expectedQuestionCount * 0.5)) {

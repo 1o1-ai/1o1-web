@@ -253,6 +253,26 @@
       root.appendChild(sec);
     }
 
+    if (ch.boardQuestionCount) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = `<h3>Board mock pool</h3><p class="sr-section-hint">${ch.boardQuestionCount} approved past-paper questions (Sections B–E) from VOLTAIC Study Material.</p>`;
+      root.appendChild(sec);
+    }
+
+    if (ch.discussionThreadCount) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = `<h3>Peer discussion board</h3><p class="sr-section-hint">${ch.discussionThreadCount} chapter threads from Study Material — open Forum for full debate.</p><ul class="sr-learn-list"></ul>`;
+      const ul = sec.querySelector('ul');
+      (ch.discussionThreads || []).slice(0, 3).forEach((t) => {
+        const li = document.createElement('li');
+        li.textContent = t.title || t.preview || 'Thread';
+        ul.appendChild(li);
+      });
+      root.appendChild(sec);
+    }
+
     if (ch.scholarTips?.length) {
       const sec = document.createElement('section');
       sec.className = 'sr-learn-section';

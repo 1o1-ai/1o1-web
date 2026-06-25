@@ -41,6 +41,16 @@ Question bank: `portal/data/cbse12-science-questions.json` (export via `scripts/
 
 Mock entry: `education/cbse12-science/mock-exam.html` → shared `education/cbse10/mock-exam.js` with `data-sku="cbse12-science"`.
 
+## Class X — Mock question sources
+| Section | Source | Status |
+|---------|--------|--------|
+| A | Verified MCQ bank + approved 1-mark items | Live |
+| B–E | `cbse10-board-questions.json` from `Study Material/*.md` | **Approved** |
+
+Export: `python scripts/export_cbse10_voltaic_assets.py` (reads `C:\Knowledge\EDUCATION\CBSE-10-MATH-SCIENCE\Study Material`).
+
+Discussion boards: `*-discussion.md` → `discussionThreads` per chapter in `cbse10-study-material.json`.
+
 ## Mock generator requirements
 1. Always render **all sections** (A–E for Class X; A–C for Class XII).
 2. Enforce **3-hour** timer and **total marks** on paper header.
