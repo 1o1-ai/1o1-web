@@ -17,7 +17,7 @@
   <main class="portal-main practice-test-main" style="max-width:840px">
     <section class="practice-card">
       <h2>Chapter practice</h2>
-      <p class="hint">Board-style questions from master catalog — MCQs auto-scored, written answers for self-review.</p>
+      <p class="hint">Board-style questions from master catalog — MCQs auto-scored, written answers with answer sheet &amp; evaluation.</p>
       <label>Subject</label>
       <select id="prSubject"><option value="science">Science</option><option value="mathematics">Mathematics</option></select>
       <label>Chapter</label>
@@ -33,12 +33,40 @@
 
     <div id="quizArea" hidden></div>
   </main>
+
+  <dialog id="practiceEvalModal" class="practice-eval-modal">
+    <form method="dialog">
+      <h3>Submit for evaluation</h3>
+      <p>Choose how to grade your answer sheet (<span id="practiceEvalCount">0</span> responses).</p>
+      <div class="practice-eval-choices">
+        <label><input type="radio" name="practiceEvalMode" value="computer" checked /> ManjuLAB computer agent (AI marks + best answer)</label>
+        <label><input type="radio" name="practiceEvalMode" value="teacher" /> Real teacher (forum queue)</label>
+        <label><input type="radio" name="practiceEvalMode" value="both" /> Both</label>
+      </div>
+      <p class="practice-eval-hint">Computer agent provides indicative marks and a reference solution with disclaimer — not official CBSE marking.</p>
+      <div class="practice-eval-modal-actions">
+        <button type="button" class="btn-portal btn-portal-ghost" id="practiceEvalCancel">Cancel</button>
+        <button type="submit" class="btn-portal btn-portal-primary" id="practiceEvalConfirm">Submit</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" crossorigin="anonymous"></script>
   <script src="../../../assets/cosmic.js"></script>
   <script src="../../assets/question-format.js"></script>
+  <script src="../../assets/reference-answer.js"></script>
   <script src="../../assets/cbse10-shared.js"></script>
+  <script src="../../assets/cbse10-eval-store.js"></script>
+  <script src="../../assets/cbse10-tutor-api.js"></script>
   <script src="../../assets/answer-composer.js"></script>
+  <script src="../../assets/cbse-practice-eval.js"></script>
   <script src="../../assets/portal-auth.js"></script>
   <script src="../../assets/portal.js"></script>
   <script src="practice.js"></script>
+  <script>
+    document.getElementById('practiceEvalCancel')?.addEventListener('click', function () {
+      document.getElementById('practiceEvalModal')?.close();
+    });
+  </script>
 </body>
 </html>

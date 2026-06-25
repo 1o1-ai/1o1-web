@@ -205,3 +205,179 @@
   font-size: 0.65rem;
   font-weight: 500;
 }
+
+/* Chapter practice — answer sheet & evaluation */
+.practice-results-header {
+  margin-bottom: 20px;
+}
+
+.practice-results-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.practice-answer-sheet {
+  margin-top: 8px;
+}
+
+.practice-sheet-q {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 16px 0;
+}
+
+.practice-sheet-q:last-child {
+  border-bottom: none;
+}
+
+.practice-sheet-answer {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: #f8fafc;
+  border-left: 3px solid #0d9488;
+  font-size: 0.9rem;
+  color: #1a1a1a;
+}
+
+.practice-sheet-answer strong {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.practice-sheet-answer-body {
+  white-space: pre-wrap;
+  line-height: 1.55;
+}
+
+.practice-answer-img {
+  display: block;
+  max-width: 100%;
+  max-height: 200px;
+  margin-top: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.practice-sheet-grade {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #ecfdf5;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  color: #065f46;
+}
+
+.practice-score strong {
+  color: #047857;
+}
+
+.practice-pending {
+  color: #92400e;
+  background: #fffbeb;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.practice-sheet-ref {
+  margin-top: 12px;
+  padding: 12px 14px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 10px;
+}
+
+.practice-ref-label {
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: #0369a1;
+  margin: 0 0 6px;
+}
+
+.practice-ref-body {
+  white-space: pre-wrap;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #1e293b;
+}
+
+.practice-ai-disclaimer {
+  font-size: 0.75rem;
+  color: #b45309;
+  background: #fffbeb;
+  border-left: 3px solid #f59e0b;
+  padding: 8px 10px;
+  margin: 8px 0;
+  line-height: 1.45;
+}
+
+.practice-eval-results {
+  margin-top: 20px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(110, 231, 183, 0.35);
+  background: rgba(15, 23, 42, 0.6);
+  color: #d1fae5;
+  font-size: 0.88rem;
+}
+
+.practice-eval-results.hidden {
+  display: none;
+}
+
+.practice-results-title {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.practice-teacher-note {
+  margin-top: 10px;
+  font-size: 0.85rem;
+}
+
+.practice-teacher-note a {
+  color: #6ee7b7;
+}
+
+.practice-eval-loading {
+  color: #94a3b8;
+}
+
+.practice-eval-modal {
+  border: none;
+  border-radius: 16px;
+  padding: 22px 24px;
+  background: #1e293b;
+  color: #f1f5f9;
+  max-width: 440px;
+}
+
+.practice-eval-modal::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.practice-eval-choices label {
+  display: block;
+  margin: 10px 0;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+
+.practice-eval-hint {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin: 12px 0 0;
+  line-height: 1.45;
+}
+
+.practice-eval-modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 18px;
+}

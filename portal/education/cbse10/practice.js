@@ -147,14 +147,16 @@
     if (mcqCount < questions.length) {
       title += ` · ${mcqCount} auto-scored MCQ · ${questions.length - mcqCount} written`;
     }
-    runQuiz(questions, title);
+    runQuiz(questions, title, { subject, chapter, chapterTitle: chTitle, grade: '10' });
   });
 
-  function runQuiz(questions, title) {
+  function runQuiz(questions, title, meta) {
     quizArea.hidden = false;
     let idx = 0;
     const answers = [];
     let composer = null;
+    const sessionStart = Date.now();
+    const sessionId = 'prac_' + sessionStart;
 
     quizArea.innerHTML = `<h2 style="color:#f1f5f9;font-size:1rem">${title}</h2><div id="qBox"></div>`;
     const box = document.getElementById('qBox');
@@ -168,14 +170,29 @@
 
     function finish() {
       destroyComposer();
-      const mcqIdx = [];
-      questions.forEach((q, i) => {
-        if (q.options?.length >= 2 && q.correctIndex != null) mcqIdx.push(i);
-      });
-      const mcqScore = mcqIdx.filter((i) => answers[i] === questions[i].correctIndex).length;
-      const written = questions.length - mcqIdx.length;
-      box.innerHTML = `<p style="color:#6ee7b7;font-weight:600">MCQ score: ${mcqScore}/${mcqIdx.length || '—'}</p>
-        <p style="color:#94a3b8;font-size:0.85rem">${written ? `${written} written answer(s) — review with your teacher or Study Room solutions.` : ''}</p>`;
+      const ctx = {
+        grade: meta?.grade || '10',
+        subject: meta?.subject || prSubject.value,
+        chapterId: meta?.chapter || prChapter.value,
+        chapterTitle: meta?.chapterTitle || '',
+        sessionTitle: title,
+        sessionId,
+        sessionStart,
+        questions,
+        answers: answers.slice(),
+      };
+      if (window.CBSEPracticeEval?.showResults) {
+        window.CBSEPracticeEval.showResults(quizArea, ctx);
+      } else {
+        const mcqIdx = [];
+        questions.forEach((q, i) => {
+          if (q.options?.length >= 2 && q.correctIndex != null) mcqIdx.push(i);
+        });
+        const mcqScore = mcqIdx.filter((i) => answers[i] === questions[i].correctIndex).length;
+        const written = questions.length - mcqIdx.length;
+        box.innerHTML = `<p style="color:#6ee7b7;font-weight:600">MCQ score: ${mcqScore}/${mcqIdx.length || '—'}</p>
+          <p style="color:#94a3b8;font-size:0.85rem">${written ? `${written} written answer(s) — review with your teacher or Study Room solutions.` : ''}</p>`;
+      }
     }
 
     function render() {
