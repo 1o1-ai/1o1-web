@@ -275,7 +275,12 @@
     if (global.AnyoQuestionFormat?.cleanQuestionText) {
       return global.AnyoQuestionFormat.cleanQuestionText(text);
     }
-    return String(text || '').trim();
+    return String(text || '')
+      .replace(/\s*\[Set-\d+(?:\s+Ref(?:erence)?\s+Key)?\]\s*/gi, ' ')
+      .replace(/\s*\[Set-\d+\]\s*/gi, ' ')
+      .replace(/\s*\[(?:Ref(?:erence)?\s+Key|Approved|internal)[^\]]*\]\s*/gi, ' ')
+      .replace(/\s{2,}/g, ' ')
+      .trim();
   }
 
   function isProceduralPlaceholderMcq(q) {

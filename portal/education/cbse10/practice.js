@@ -181,18 +181,29 @@
         questions,
         answers: answers.slice(),
       };
-      if (window.CBSEPracticeEval?.showResults) {
-        window.CBSEPracticeEval.showResults(quizArea, ctx);
-      } else {
-        const mcqIdx = [];
-        questions.forEach((q, i) => {
-          if (q.options?.length >= 2 && q.correctIndex != null) mcqIdx.push(i);
-        });
-        const mcqScore = mcqIdx.filter((i) => answers[i] === questions[i].correctIndex).length;
-        const written = questions.length - mcqIdx.length;
-        box.innerHTML = `<p style="color:#6ee7b7;font-weight:600">MCQ score: ${mcqScore}/${mcqIdx.length || '—'}</p>
-          <p style="color:#94a3b8;font-size:0.85rem">${written ? `${written} written answer(s) — review with your teacher or Study Room solutions.` : ''}</p>`;
+      const practiceCard = document.querySelector('.practice-card');
+      if (practiceCard) practiceCard.hidden = true;
+      try {
+        if (window.CBSEPracticeEval?.showResults) {
+          window.CBSEPracticeEval.showResults(quizArea, ctx);
+          return;
+        }
+      } catch (err) {
+        console.error('Practice results failed:', err);
       }
+      const mcqIdx = [];
+      questions.forEach((q, i) => {
+        if (q.options?.length >= 2 && q.correctIndex != null) mcqIdx.push(i);
+      });
+      const mcqScore = mcqIdx.filter((i) => answers[i] === questions[i].correctIndex).length;
+      const written = questions.length - mcqIdx.length;
+      quizArea.hidden = false;
+      quizArea.innerHTML = `<div class="practice-results-fallback">
+        <p style="color:#6ee7b7;font-weight:600">Practice complete · MCQ score: ${mcqScore}/${mcqIdx.length || '—'}</p>
+        <p style="color:#94a3b8;font-size:0.85rem">${written ? `${written} written answer(s) saved.` : ''}</p>
+        <p style="color:#fca5a5;font-size:0.82rem">Answer sheet module did not load — hard-refresh (Ctrl+Shift+R) and try again.</p>
+      </div>`;
+      quizArea.scrollIntoView({ behavior: 'smooth' });
     }
 
     function render() {

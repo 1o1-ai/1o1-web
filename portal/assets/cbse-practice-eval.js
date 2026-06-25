@@ -456,7 +456,9 @@
     });
 
     bindEvalModal();
-    container.scrollIntoView({ behavior: 'smooth' });
+    const sheet = container.querySelector('.practice-answer-sheet');
+    if (sheet) sheet.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    else container.scrollIntoView({ behavior: 'smooth' });
   }
 
   if (document.readyState === 'loading') {

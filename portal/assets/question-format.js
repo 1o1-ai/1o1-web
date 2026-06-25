@@ -46,10 +46,12 @@
     t = t.replace(/\*[\d/]+(?:-\d+)?\*[\s\d#]*\*[A-Z]+\*[\s\S]*$/i, '').trim();
     t = t.replace(/\*ECNEICS\*/gi, '').replace(/#\s*\*/g, '').trim();
     t = t.replace(/\s+\?\s*$/,'').trim();
-    t = t.replace(/\s*\[Set-\d+\s+Ref\s+Key\]\s*/gi, ' ').trim();
-    t = t.replace(/\s*\[(?:Set-\d+\s*)?(?:Ref\s*)?Key\]\s*/gi, ' ').trim();
+    t = t.replace(/\s*\[Set-\d+(?:\s+Ref(?:erence)?\s+Key)?\]\s*/gi, ' ').trim();
+    t = t.replace(/\s*\[(?:Set-\d+\s*)?(?:Ref(?:erence)?\s*)?Key\]\s*/gi, ' ').trim();
+    t = t.replace(/\s*\[Batch\s+\d+\]\s*/gi, ' ').trim();
     t = t.replace(/\s*\[Approved[^\]]*\]\s*/gi, ' ').trim();
-    t = t.replace(/\s*\[(?:VOLTAIC|CBSE|internal)[^\]]*\]\s*/gi, ' ').trim();
+    t = t.replace(/\s*\[(?:VOLTAIC|CBSE|internal|ingest)[^\]]*\]\s*/gi, ' ').trim();
+    t = t.replace(/\s*\[Set-\d+\]\s*/gi, ' ').trim();
     return t.replace(/\s{2,}/g, ' ').trim();
   }
 

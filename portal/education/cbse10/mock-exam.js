@@ -142,21 +142,34 @@
     return String(q.id || q.prompt || q.question || 'q') + (suffix || '');
   }
 
+  function cleanPrompt(text) {
+    if (global.CBSE10Shared?.cleanDisplayText) {
+      return global.CBSE10Shared.cleanDisplayText(text);
+    }
+    if (global.AnyoQuestionFormat?.cleanQuestionText) {
+      return global.AnyoQuestionFormat.cleanQuestionText(text);
+    }
+    return String(text || '')
+      .replace(/\s*\[Set-\d+(?:\s+Ref(?:erence)?\s+Key)?\]\s*/gi, ' ')
+      .replace(/\s*\[Set-\d+\]\s*/gi, ' ')
+      .trim();
+  }
+
   function toDisplayQ(q, section) {
     const approved = q.approved === true;
     const base = global.CBSE10Shared
       ? global.CBSE10Shared.toDisplayQ(q)
       : {
-          prompt: global.AnyoQuestionFormat?.cleanQuestionText
-            ? global.AnyoQuestionFormat.cleanQuestionText(q.question || q.prompt || '')
-            : String(q.question || q.prompt || ''),
-          options: (q.options || []).map((o) =>
-            global.AnyoQuestionFormat?.cleanQuestionText ? global.AnyoQuestionFormat.cleanQuestionText(o) : o
-          ),
+          prompt: cleanPrompt(q.question || q.prompt || ''),
+          options: (q.options || []).map((o) => cleanPrompt(o)),
           correctIndex: q.correctIndex,
           diagramVector: q.diagramVector,
           figure_url: q.figure_url,
         };
+    base.prompt = cleanPrompt(base.prompt);
+    if (base.options?.length) {
+      base.options = base.options.map((o) => cleanPrompt(o));
+    }
     base.marks = approved ? q.marks || section.marksEach : section.marksEach;
     base.approved = approved;
     base.chapterId = q.chapterId;
@@ -246,7 +259,7 @@
         div.innerHTML = `<p class="mock-q-num">Q${qNum}.<span class="mock-q-marks">${marks} mark${marks === 1 ? '' : 's'}</span></p>
           <div class="mock-q-diagram"></div>
           <p class="mock-q-prompt"></p><div class="mock-q-opts" data-qi="${idx}"></div>`;
-        div.querySelector('.mock-q-prompt').textContent = q.prompt || '';
+        div.querySelector('.mock-q-prompt').textContent = cleanPrompt(q.prompt || '');
         renderDiagram(div.querySelector('.mock-q-diagram'), q);
         const opts = div.querySelector('.mock-q-opts');
         if (q.options?.length >= 2) {
