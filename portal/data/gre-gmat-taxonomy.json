@@ -4,119 +4,119 @@
     {
       "id": "gre-awa-iss",
       "skill_prefix": "GRE.AWA.ISS",
-      "label": "GRE Issue Analytical Essay",
+      "label": "GRE.AWA.ISS Topic: Thesis Formulation",
       "track": "gre",
       "section_id": "gre-awa"
     },
     {
       "id": "gre-qnt-alg",
       "skill_prefix": "GRE.QNT.ALG",
-      "label": "GRE Quantitative Algebra",
+      "label": "GRE.QNT.ALG Topic: Simplifying Algebraic Expressions",
       "track": "gre",
       "section_id": "gre-quantitative"
     },
     {
       "id": "gre-qnt-ari",
       "skill_prefix": "GRE.QNT.ARI",
-      "label": "GRE Quantitative Arithmetic",
+      "label": "GRE.QNT.ARI Topic: Integers and Factors",
       "track": "gre",
       "section_id": "gre-quantitative"
     },
     {
       "id": "gre-qnt-dat",
       "skill_prefix": "GRE.QNT.DAT",
-      "label": "GRE Quantitative Data Analysis",
+      "label": "GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median",
       "track": "gre",
       "section_id": "gre-quantitative"
     },
     {
       "id": "gre-qnt-geo",
       "skill_prefix": "GRE.QNT.GEO",
-      "label": "GRE Quantitative Geometry",
+      "label": "GRE.QNT.GEO Topic: Lines and Angles",
       "track": "gre",
       "section_id": "gre-quantitative"
     },
     {
       "id": "gre-vbl-rc",
       "skill_prefix": "GRE.VBL.RC",
-      "label": "GRE Reading Comprehension",
+      "label": "GRE.VBL.RC Topic: Identifying Main Idea",
       "track": "gre",
       "section_id": "gre-verbal"
     },
     {
       "id": "gre-vbl-se",
       "skill_prefix": "GRE.VBL.SE",
-      "label": "GRE Sentence Equivalence",
+      "label": "GRE.VBL.SE Topic: Synonym Pair Selection",
       "track": "gre",
       "section_id": "gre-verbal"
     },
     {
       "id": "gre-vbl-tc",
       "skill_prefix": "GRE.VBL.TC",
-      "label": "GRE Text Completion",
+      "label": "GRE.VBL.TC Topic: Single Blank: Sentence Analysis",
       "track": "gre",
       "section_id": "gre-verbal"
     },
     {
       "id": "gmat-di-ds",
       "skill_prefix": "GMAT.DI.DS",
-      "label": "GMAT Data Insights Sufficiency",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions",
       "track": "gmat",
       "section_id": "gmat-data-insights"
     },
     {
       "id": "gmat-di-gi",
       "skill_prefix": "GMAT.DI.GI",
-      "label": "GMAT Data Insights Graphical",
+      "label": "GMAT.DI.GI Topic: Bar Charts Interpretation",
       "track": "gmat",
       "section_id": "gmat-data-insights"
     },
     {
       "id": "gmat-di-msr",
       "skill_prefix": "GMAT.DI.MSR",
-      "label": "GMAT Data Insights Multi Source",
+      "label": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure",
       "track": "gmat",
       "section_id": "gmat-data-insights"
     },
     {
       "id": "gmat-di-tpa",
       "skill_prefix": "GMAT.DI.TPA",
-      "label": "GMAT Data Insights Two Part",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure",
       "track": "gmat",
       "section_id": "gmat-data-insights"
     },
     {
       "id": "gmat-qnt-ds",
       "skill_prefix": "GMAT.QNT.DS",
-      "label": "GMAT Data Sufficiency",
+      "label": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions",
       "track": "gmat",
       "section_id": "gmat-quantitative"
     },
     {
       "id": "gmat-qnt-ps",
       "skill_prefix": "GMAT.QNT.PS",
-      "label": "GMAT Problem Solving",
+      "label": "GMAT.QNT.PS Topic: Problem Solving: Integers & Prime Factors",
       "track": "gmat",
       "section_id": "gmat-quantitative"
     },
     {
       "id": "gmat-vbl-cr",
       "skill_prefix": "GMAT.VBL.CR",
-      "label": "GMAT Critical Reasoning",
+      "label": "GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure",
       "track": "gmat",
       "section_id": "gmat-verbal"
     },
     {
       "id": "gmat-vbl-rc",
       "skill_prefix": "GMAT.VBL.RC",
-      "label": "GMAT Reading Comprehension",
+      "label": "GMAT.VBL.RC Topic: Reading Comprehension: Active Reading",
       "track": "gmat",
       "section_id": "gmat-verbal"
     },
     {
       "id": "gmat-vbl-sc",
       "skill_prefix": "GMAT.VBL.SC",
-      "label": "GMAT Sentence Correction",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement",
       "track": "gmat",
       "section_id": "gmat-verbal"
     }

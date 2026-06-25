@@ -55,37 +55,45 @@
       },
     };
 
-    const res = await fetch(apiBase() + '/actors/chat', {
-      method: 'POST',
-      headers: headers(),
-      body: JSON.stringify(body),
-    });
-    const data = await res.json().catch(() => ({}));
-    if (!res.ok) {
-      const detail = typeof data.detail === 'string' ? data.detail : data.error || 'Tutor API error';
-      throw new Error(detail);
+    const run = async () => {
+      const res = await fetch(apiBase() + '/actors/chat', {
+        method: 'POST',
+        headers: headers(),
+        body: JSON.stringify(body),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        const detail = typeof data.detail === 'string' ? data.detail : data.error || 'Tutor API error';
+        throw new Error(detail);
+      }
+      return (
+        data.answer ||
+        data.message ||
+        data.content ||
+        (typeof data.response === 'string' ? data.response : null) ||
+        'I could not form a reply — try rephrasing your question.'
+      );
+    };
+
+    if (global.EducationPerf?.timed) {
+      return global.EducationPerf.timed('tutor_chat', run, { usedAi: true, sku: 'cbse10-core' });
     }
-    return (
-      data.answer ||
-      data.message ||
-      data.content ||
-      (typeof data.response === 'string' ? data.response : null) ||
-      'I could not form a reply — try rephrasing your question.'
-    );
+    return run();
   }
 
   async function gradeAnswer(question, studentAnswer, rubric, ctx) {
     ctx = ctx || {};
+    const referenceAnswer = String(ctx.referenceAnswer || rubric || '').trim();
     const body = {
       actor: 'student',
       message: 'Grade my answer',
       context: {
         grade_submission: true,
-        semantic_grade: true,
+        semantic_grade: Boolean(ctx.forceSemanticGrade) && !referenceAnswer,
         question,
         answer: studentAnswer,
-        rubric: rubric || '',
-        reference_answer: ctx.referenceAnswer || rubric || '',
+        rubric: referenceAnswer,
+        reference_answer: referenceAnswer,
         max_marks: ctx.maxMarks || 5,
         marks: ctx.maxMarks || 5,
         grade: '10',
@@ -98,21 +106,34 @@
         language_medium: 'English',
       },
     };
-    const res = await fetch(apiBase() + '/actors/chat', {
-      method: 'POST',
-      headers: headers(),
-      body: JSON.stringify(body),
-    });
-    const data = await res.json().catch(() => ({}));
-    if (!res.ok) throw new Error(data.detail || 'Grading failed');
-    return (
-      data.evaluation ||
-      data.answer ||
-      data.message ||
-      data.content ||
-      (typeof data.response === 'string' ? data.response : '') ||
-      ''
-    );
+
+    const run = async () => {
+      const res = await fetch(apiBase() + '/actors/chat', {
+        method: 'POST',
+        headers: headers(),
+        body: JSON.stringify(body),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.detail || 'Grading failed');
+      return (
+        data.evaluation ||
+        data.answer ||
+        data.message ||
+        data.content ||
+        (typeof data.response === 'string' ? data.response : '') ||
+        ''
+      );
+    };
+
+    const meta = {
+      usedAi: !referenceAnswer || Boolean(ctx.forceSemanticGrade),
+      sku: 'cbse10-core',
+      gradedBy: referenceAnswer && !ctx.forceSemanticGrade ? 'server_deterministic' : 'llm',
+    };
+    if (global.EducationPerf?.timed) {
+      return global.EducationPerf.timed('grade_answer_api', run, meta);
+    }
+    return run();
   }
 
   global.Cbse10TutorApi = {

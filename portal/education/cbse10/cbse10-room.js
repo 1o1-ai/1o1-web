@@ -911,10 +911,14 @@
 
       btn.textContent = 'Hide reference answer';
 
+      const t0 = window.performance?.now?.() ?? Date.now();
+
       let ref = extractReferenceAnswer(q);
 
       await (window.AnyoReferenceAnswer?.loadOverrides?.() || Promise.resolve());
       ref = extractReferenceAnswer(q);
+
+      let source = ref ? 'catalog' : '';
 
       if (!ref && window.Cbse10TutorApi?.chat) {
 
@@ -930,6 +934,8 @@
 
           ref = cleanPresentationFeedback(reply) || String(reply || '').trim();
 
+          source = 'ai_chat';
+
         } catch {
 
           ref = '';
@@ -937,6 +943,14 @@
         }
 
       }
+
+      window.EducationPerf?.record?.('reference_answer', {
+        durationMs: (window.performance?.now?.() ?? Date.now()) - t0,
+        usedAi: source === 'ai_chat',
+        source: source || 'none',
+        sku: 'cbse10-core',
+        questionId: q.id || '',
+      });
 
       if (ref) {
 
@@ -1329,9 +1343,18 @@
 
     const maxMarks = ans.marks || 1;
 
+    const t0 = window.performance?.now?.() ?? Date.now();
+
     if (ans.selectedIndex != null && ans.correctIndex != null) {
 
       const correct = ans.selectedIndex === ans.correctIndex;
+
+      window.EducationPerf?.record?.('grade_answer', {
+        durationMs: (window.performance?.now?.() ?? Date.now()) - t0,
+        usedAi: false,
+        gradedBy: 'catalog_key',
+        sku: 'cbse10-core',
+      });
 
       return {
 
@@ -1362,6 +1385,44 @@
       cleanQText(rawRubric) ||
 
       '';
+
+    if (referenceAnswer && window.EducationDeterministicGrade?.gradeWritten) {
+
+      const local = window.EducationDeterministicGrade.gradeWritten(
+
+        ans.studentAnswer,
+
+        referenceAnswer,
+
+        maxMarks
+
+      );
+
+      if (local) {
+
+        window.EducationPerf?.record?.('grade_answer', {
+          durationMs: (window.performance?.now?.() ?? Date.now()) - t0,
+          usedAi: false,
+          gradedBy: local.gradedBy,
+          source: 'catalog_reference',
+          sku: 'cbse10-core',
+        });
+
+        return {
+
+          marksAwarded: local.marksAwarded,
+
+          maxMarks: local.maxMarks,
+
+          feedback: local.feedback,
+
+          gradedBy: local.gradedBy,
+
+        };
+
+      }
+
+    }
 
     try {
 
@@ -1399,6 +1460,13 @@
 
       }
 
+      window.EducationPerf?.record?.('grade_answer', {
+        durationMs: (window.performance?.now?.() ?? Date.now()) - t0,
+        usedAi: true,
+        gradedBy: referenceAnswer ? 'server_deterministic_or_llm' : 'llm',
+        sku: 'cbse10-core',
+      });
+
       return {
 
         marksAwarded,
@@ -1412,6 +1480,14 @@
       };
 
     } catch {
+
+      window.EducationPerf?.record?.('grade_answer', {
+        durationMs: (window.performance?.now?.() ?? Date.now()) - t0,
+        usedAi: false,
+        gradedBy: 'pending',
+        ok: false,
+        sku: 'cbse10-core',
+      });
 
       return {
 

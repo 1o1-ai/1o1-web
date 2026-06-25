@@ -1,6 +1,6 @@
 {
   "sku": "english-tests",
-  "chunk_count": 72,
+  "chunk_count": 77,
   "manifest": [
     {
       "chunk_id": "chk_0001",
@@ -645,6 +645,51 @@
       "chunk_id": "chk_0072",
       "source_id": "PDF_toefl-ibt-full-length-practice-test-1_speaking",
       "file_path": "rag_chunks/chk_0072_PDF_toefl-ibt-full-length-practice-test-1_speaking.txt",
+      "word_count": "475",
+      "preview": "Speaking Section In the speaking section, you will answer up to 11 questions to demonstrate how well you can speak English. There are two types of tasks. Type of Task Description Listen and Repeat Listen and repeat what you heard Take an Interview Answer quest",
+      "exam": "TOEFL",
+      "section": "speaking"
+    },
+    {
+      "chunk_id": "chk_0073",
+      "source_id": "PDF_toefl-ibt-full-length-practice-test-1_reading",
+      "file_path": "rag_chunks/chk_0073_PDF_toefl-ibt-full-length-practice-test-1_reading.txt",
+      "word_count": "1584",
+      "preview": "Reading Section In an actual test, you will answer up to 50 questions to demonstrate how well you understand academic and non-academic texts in English. There are three types of tasks. Type of Task Description Complete the Words Fill in the missing letters in ",
+      "exam": "TOEFL",
+      "section": "reading"
+    },
+    {
+      "chunk_id": "chk_0074",
+      "source_id": "PDF_toefl-ibt-full-length-practice-test-1_reading",
+      "file_path": "rag_chunks/chk_0074_PDF_toefl-ibt-full-length-practice-test-1_reading.txt",
+      "word_count": "527",
+      "preview": "9 The Paradox of Choice The paradox of choice, a concept popularized by psychologist Barry Schwartz, suggests that more options can lead to less satisfaction. While the freedom to choose is fundamental to consumer culture, an overabundance of choices—from groc",
+      "exam": "TOEFL",
+      "section": "reading"
+    },
+    {
+      "chunk_id": "chk_0075",
+      "source_id": "PDF_toefl-ibt-full-length-practice-test-1_listening",
+      "file_path": "rag_chunks/chk_0075_PDF_toefl-ibt-full-length-practice-test-1_listening.txt",
+      "word_count": "2378",
+      "preview": "Listening Section In the listening section, you will answer up to 47 questions to demonstrate how well you understand spoken English. There are three types of tasks. Type of Task Description Listen and Choose a Response Select the best response to the question",
+      "exam": "TOEFL",
+      "section": "listening"
+    },
+    {
+      "chunk_id": "chk_0076",
+      "source_id": "PDF_toefl-ibt-full-length-practice-test-1_writing",
+      "file_path": "rag_chunks/chk_0076_PDF_toefl-ibt-full-length-practice-test-1_writing.txt",
+      "word_count": "907",
+      "preview": "Writing Section In the writing section, you will answer up to 12 questions to demonstrate how well you can write in English. There are three types of tasks. Type of Task Description Build a Sentence Create a grammatical sentence. Write an Email Write an email ",
+      "exam": "TOEFL",
+      "section": "writing"
+    },
+    {
+      "chunk_id": "chk_0077",
+      "source_id": "PDF_toefl-ibt-full-length-practice-test-1_speaking",
+      "file_path": "rag_chunks/chk_0077_PDF_toefl-ibt-full-length-practice-test-1_speaking.txt",
       "word_count": "475",
       "preview": "Speaking Section In the speaking section, you will answer up to 11 questions to demonstrate how well you can speak English. There are two types of tasks. Type of Task Description Listen and Repeat Listen and repeat what you heard Take an Interview Answer quest",
       "exam": "TOEFL",

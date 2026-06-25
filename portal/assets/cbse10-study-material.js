@@ -27,6 +27,21 @@
     });
   }
 
+  /** Load one chapter — prefers shard + IndexedDB cache; uses monolith as fallback. */
+  async function loadChapter(chapterId) {
+    if (global.EducationContentCache?.getChapterStudyMaterial) {
+      const monolith = catalog || (await load().catch(() => null));
+      const ch = await global.EducationContentCache.getChapterStudyMaterial(
+        'cbse10',
+        chapterId,
+        monolith
+      );
+      if (ch) return ch;
+    }
+    if (!catalog) await load();
+    return chapter(chapterId);
+  }
+
   function chapter(chapterId) {
     return catalog?.chapters?.[chapterId] || null;
   }
@@ -329,6 +344,7 @@
 
   global.CBSE10StudyMaterial = {
     load,
+    loadChapter,
     chapter,
     renderLearnView,
     readAloud,

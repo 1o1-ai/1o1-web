@@ -234,9 +234,10 @@
 
   async function scoreOneAnswer(ans, ctx) {
     const maxMarks = ans.marks || 1;
+    const t0 = global.performance?.now?.() ?? Date.now();
     if (ans.selectedIndex != null && ans.correctIndex != null) {
       const correct = ans.selectedIndex === ans.correctIndex;
-      return {
+      const result = {
         marksAwarded: correct ? maxMarks : 0,
         maxMarks,
         feedback: correct
@@ -245,11 +246,42 @@
         referenceAnswer: ans.options?.[ans.correctIndex] || '',
         gradedBy: 'catalog_key',
       };
+      global.EducationPerf?.record?.('grade_answer', {
+        durationMs: (global.performance?.now?.() ?? Date.now()) - t0,
+        usedAi: false,
+        gradedBy: 'catalog_key',
+        sku: 'cbse10-core',
+      });
+      return result;
     }
 
     let referenceAnswer = extractReferenceAnswer(ans);
     await (global.AnyoReferenceAnswer?.loadOverrides?.() || Promise.resolve());
     referenceAnswer = extractReferenceAnswer(ans) || referenceAnswer;
+
+    if (referenceAnswer && global.EducationDeterministicGrade?.gradeWritten) {
+      const local = global.EducationDeterministicGrade.gradeWritten(
+        ans.studentAnswer,
+        referenceAnswer,
+        maxMarks
+      );
+      if (local) {
+        global.EducationPerf?.record?.('grade_answer', {
+          durationMs: (global.performance?.now?.() ?? Date.now()) - t0,
+          usedAi: false,
+          gradedBy: local.gradedBy,
+          source: 'catalog_reference',
+          sku: 'cbse10-core',
+        });
+        return {
+          marksAwarded: local.marksAwarded,
+          maxMarks: local.maxMarks,
+          feedback: local.feedback,
+          referenceAnswer,
+          gradedBy: local.gradedBy,
+        };
+      }
+    }
 
     if (!referenceAnswer && global.Cbse10TutorApi?.chat) {
       try {
@@ -268,6 +300,12 @@
     }
 
     if (!global.Cbse10TutorApi?.gradeAnswer) {
+      global.EducationPerf?.record?.('grade_answer', {
+        durationMs: (global.performance?.now?.() ?? Date.now()) - t0,
+        usedAi: false,
+        gradedBy: 'pending',
+        sku: 'cbse10-core',
+      });
       return {
         marksAwarded: null,
         maxMarks,
@@ -290,6 +328,12 @@
       if (!presentation && marksAwarded != null) {
         presentation = `Scored ${marksAwarded}/${maxMarks}.`;
       }
+      global.EducationPerf?.record?.('grade_answer', {
+        durationMs: (global.performance?.now?.() ?? Date.now()) - t0,
+        usedAi: true,
+        gradedBy: referenceAnswer ? 'server_deterministic_or_llm' : 'llm',
+        sku: 'cbse10-core',
+      });
       return {
         marksAwarded,
         maxMarks,
@@ -298,6 +342,13 @@
         gradedBy: marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative',
       };
     } catch {
+      global.EducationPerf?.record?.('grade_answer', {
+        durationMs: (global.performance?.now?.() ?? Date.now()) - t0,
+        usedAi: false,
+        gradedBy: 'pending',
+        ok: false,
+        sku: 'cbse10-core',
+      });
       return {
         marksAwarded: null,
         maxMarks,

@@ -69,6 +69,10 @@
     return meta?.legacySection || curriculum?.subjects?.[subjectId]?.section || '';
   }
 
+  function sectionLabel() {
+    return sectionMeta()?.label || curriculum?.subjects?.[subjectId]?.label || subjectId;
+  }
+
   function showLoadError(msg) {
     const el = document.getElementById('srLoadError');
     if (el) {

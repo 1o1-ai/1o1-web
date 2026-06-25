@@ -1,0 +1,235 @@
+{
+  "version": 1,
+  "sku": "cbse10-core",
+  "content_pack": "cbse10-study-material-v1",
+  "generated_at": "2026-06-25T19:54:26.628430+00:00",
+  "source_monolith": "cbse10-study-material.json",
+  "monolith_bytes": 2007786,
+  "chapter_count": 28,
+  "chapters": [
+    {
+      "chapterId": "acids-bases",
+      "title": "Acids, Bases and Salts",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/acids-bases.json",
+      "bytes": 57100,
+      "sha256": "2fe5f13f8f386490ba4b90eb81c7b0d19aee9554855e3b014996f7bd334d2162"
+    },
+    {
+      "chapterId": "ap",
+      "title": "Arithmetic Progressions",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/ap.json",
+      "bytes": 48567,
+      "sha256": "dcbd07f2e29f00316bf26e6d2c99a1e548be8bbd39d2e1f80fdd6ab2a7251572"
+    },
+    {
+      "chapterId": "areas-circles",
+      "title": "Areas Related to Circles",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/areas-circles.json",
+      "bytes": 50756,
+      "sha256": "214d5cef4dcb74b1973e21ec64a56dd555847d7f4dbf2f3a566b044978087d7c"
+    },
+    {
+      "chapterId": "carbon",
+      "title": "Carbon and its Compounds",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/carbon.json",
+      "bytes": 54172,
+      "sha256": "dff2a4f82301afe1fd1ea78e2d02d3501e7755ebcfe7a0980009a5971a11e888"
+    },
+    {
+      "chapterId": "chem-reactions",
+      "title": "Chemical Reactions and Equations",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/chem-reactions.json",
+      "bytes": 57165,
+      "sha256": "d8b526f67621476fffa0c1c8bef41591ab7bc8134ffce2bba37b7513e204c8d0"
+    },
+    {
+      "chapterId": "circles",
+      "title": "Circles",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/circles.json",
+      "bytes": 50181,
+      "sha256": "650aa84c8941f0fa8695e7435c6f1a2029b22c888cf8583892c1a2360c9ceaa6"
+    },
+    {
+      "chapterId": "constructions",
+      "title": "Constructions",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/constructions.json",
+      "bytes": 52559,
+      "sha256": "e037fe864a2efd00dee7cd7f857b5b86f479129071d7d8852fe7a618f09ae3f1"
+    },
+    {
+      "chapterId": "control",
+      "title": "Control and Coordination",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/control.json",
+      "bytes": 55477,
+      "sha256": "7ad22aecfa524897c53ce7bcbfbae18437dd33e834929c50a17744003d167729"
+    },
+    {
+      "chapterId": "coordinate",
+      "title": "Coordinate Geometry",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/coordinate.json",
+      "bytes": 51697,
+      "sha256": "b5f383ac1ffa97a2b0f4d949e0719beff32d6d29c0bb81f866b952e6c59f4119"
+    },
+    {
+      "chapterId": "electricity",
+      "title": "Electricity",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/electricity.json",
+      "bytes": 58912,
+      "sha256": "7763f2d7c4e5ec96f4e731b0b3360e525bf37d50bafe407ef8871c7fd78eba88"
+    },
+    {
+      "chapterId": "heredity",
+      "title": "Heredity",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/heredity.json",
+      "bytes": 54836,
+      "sha256": "64e5eae9f68ba2f3219d70b59e432071e26ab57f75fcf570874d2eb18db5c5f1"
+    },
+    {
+      "chapterId": "human-eye",
+      "title": "The Human Eye and the Colourful World",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/human-eye.json",
+      "bytes": 59623,
+      "sha256": "ffa14cf6bb1e87564db3708fef9cf92ae44e7c70cd0b9fc1b9b7ea204a5dc11e"
+    },
+    {
+      "chapterId": "life",
+      "title": "Life Processes",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/life.json",
+      "bytes": 54753,
+      "sha256": "f9cf88c266e3c62ce27b983c43e5438aa40a9ac56d4a79e71b48c14cdb094f5a"
+    },
+    {
+      "chapterId": "light",
+      "title": "Light – Reflection and Refraction",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/light.json",
+      "bytes": 57627,
+      "sha256": "0131b7a44c83c172b55176bfd2026cc03deab74856bf82489c6168a404aff064"
+    },
+    {
+      "chapterId": "linear-eq",
+      "title": "Pair of Linear Equations in Two Variables",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/linear-eq.json",
+      "bytes": 52599,
+      "sha256": "b7fcf06050184ee7ec4a5782f85620b60eacbfdda9025c41b8d4dd4531de75b0"
+    },
+    {
+      "chapterId": "magnetism",
+      "title": "Magnetic Effects of Electric Current",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/magnetism.json",
+      "bytes": 58392,
+      "sha256": "42d5a47c79deb93b16658a8ab0a4e9e7114d10cedcb728dabcfad5cfa6692abe"
+    },
+    {
+      "chapterId": "metals",
+      "title": "Metals and Non-metals",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/metals.json",
+      "bytes": 55121,
+      "sha256": "e821267405723a8978ae846edad2a5db51a0b417e857b387cd70706accf12e48"
+    },
+    {
+      "chapterId": "polynomials",
+      "title": "Polynomials",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/polynomials.json",
+      "bytes": 51401,
+      "sha256": "f33f9e5fe89f2e908c13c07acf91e5fb37b49bffb5552d13040ffdc78ccd2df9"
+    },
+    {
+      "chapterId": "probability",
+      "title": "Probability",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/probability.json",
+      "bytes": 53268,
+      "sha256": "c21b3fc2a7a3abe9f4001866c4c098fd76cc99c2b7051c184702dd6b9bf017a5"
+    },
+    {
+      "chapterId": "quadratic",
+      "title": "Quadratic Equations",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/quadratic.json",
+      "bytes": 52133,
+      "sha256": "f47d9489d1f0dffdd59a953339c767e1b3c65506782c3bbcb03f02f61a1b948b"
+    },
+    {
+      "chapterId": "real-numbers",
+      "title": "Real Numbers",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/real-numbers.json",
+      "bytes": 50451,
+      "sha256": "12c22777476b646b9417aa9834c9fee23ad33ca7ebfcd6f2a4b100797834bdae"
+    },
+    {
+      "chapterId": "reproduction",
+      "title": "How do Organisms Reproduce?",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/reproduction.json",
+      "bytes": 55932,
+      "sha256": "519c38b0830da7d72dd47cdddcec0ead14511a19556ebdfbf9941868c05b8f70"
+    },
+    {
+      "chapterId": "sources-of-energy",
+      "title": "Sources of Energy",
+      "subject": "science",
+      "path": "cbse10/study-material/chapters/sources-of-energy.json",
+      "bytes": 56909,
+      "sha256": "6bbff8f2077536e8a5d751b1517b33e162f13c6b4258ac1229c2ec78bc1b22a6"
+    },
+    {
+      "chapterId": "statistics",
+      "title": "Statistics",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/statistics.json",
+      "bytes": 52843,
+      "sha256": "db541415fb4f7d31f447126abcbec16afb4ddf6e0a701b159f8f979cc69b12c6"
+    },
+    {
+      "chapterId": "surface-volume",
+      "title": "Surface Areas and Volumes",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/surface-volume.json",
+      "bytes": 54194,
+      "sha256": "53b98042b13f68b65247ce86d2976ad0f18c0c4a4092a87c5bdc7f94efc32f20"
+    },
+    {
+      "chapterId": "triangles",
+      "title": "Triangles",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/triangles.json",
+      "bytes": 53296,
+      "sha256": "b26241fc59d07d968048816ad6c31cdf2eddbc57bffd90382161ddc01ae353ba"
+    },
+    {
+      "chapterId": "trig-apps",
+      "title": "Some Applications of Trigonometry",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/trig-apps.json",
+      "bytes": 59266,
+      "sha256": "7ebafef9268e48397dc87f6c0c59aaa20f76220208b7c095a2b851f52eb32471"
+    },
+    {
+      "chapterId": "trigonometry",
+      "title": "Introduction to Trigonometry",
+      "subject": "mathematics",
+      "path": "cbse10/study-material/chapters/trigonometry.json",
+      "bytes": 48593,
+      "sha256": "9e0d10a348d58199328959a79f834a8d1f26e04bcf087399346e32420f76d666"
+    }
+  ]
+}

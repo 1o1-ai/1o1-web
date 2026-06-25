@@ -1,18 +1,18 @@
 {
   "sku": "gre-gmat",
-  "updated_at": "2026-06-25T00:23:06.846468+00:00",
+  "updated_at": "2026-06-25T20:06:42.998744+00:00",
   "questions": [
     {
-      "id": "827a4cee4f78b2a4",
+      "id": "145b7582a6b49adb",
       "track": "gre",
       "section": "awa",
       "chapter": "gre-awa-iss",
-      "question": "Which learning objective best matches GRE Issue Analytical Essay?",
+      "question": "Which learning objective best matches GRE.AWA.ISS Topic: Thesis Formulation?",
       "options": [
-        "Learn concept details of GRE Issue Analytical Essay Focus Topic 13",
-        "Learn concept details of GRE Issue Analytical Essay Focus Topic 01",
-        "Learn concept details of GRE Quantitative Algebra Focus Topic 28",
-        "Learn concept details of GMAT Data Insights Multi Source Focus Topic 28"
+        "Understand the theoretical foundations of Rhetorical Devices.",
+        "Understand the theoretical foundations of Thesis Formulation.",
+        "Understand the theoretical foundations of Mixture and Concentration Problems.",
+        "Apply strategies and formulas related to Flaws: Scope Shifts to solve exam-style questions."
       ],
       "option_labels": [
         "A",
@@ -29,16 +29,16 @@
       ]
     },
     {
-      "id": "e5dcf392557690a3",
+      "id": "932e1c164baf73d9",
       "track": "gre",
       "section": "awa",
       "chapter": "gre-awa-iss",
-      "question": "Which is a common mistake students make on GRE Issue Analytical Essay?",
+      "question": "Which is a common mistake students make on GRE.AWA.ISS Topic: Thesis Formulation?",
       "options": [
-        "Common error in GMAT Data Insights Graphical Focus Topic 18",
-        "Common error in GMAT Data Sufficiency Focus Topic 07",
-        "Common error in GRE Issue Analytical Essay Focus Topic 01",
-        "Common error in GRE Quantitative Data Analysis Focus Topic 12"
+        "Falling for distractor options specifically designed around common misconceptions of Rectangular Solids: Surface Area & Volume.",
+        "Falling for distractor options specifically designed around common misconceptions of Sentence Correction: Logical Meaning & Clarity.",
+        "Misapplying core principles of Quant DS: Word Problems: Distance/Speed.",
+        "Misapplying core principles of Thesis Formulation."
       ],
       "option_labels": [
         "A",
@@ -46,8 +46,8 @@
         "C",
         "D"
       ],
-      "correct_index": 2,
-      "answer_key": "C",
+      "correct_index": 3,
+      "answer_key": "D",
       "answer_verified": true,
       "source": "topic:GRE.AWA.ISS.T01",
       "tags": [
@@ -55,11 +55,11 @@
       ]
     },
     {
-      "id": "63467844176fa4af",
+      "id": "566bc75b481c7ab1",
       "track": "gre",
       "section": "awa",
       "chapter": "gre-awa-iss",
-      "question": "What is the recommended first difficulty level when practicing GRE Issue Analytical Essay?",
+      "question": "What is the recommended first difficulty level when practicing GRE.AWA.ISS Topic: Thesis Formulation?",
       "options": [
         "Easy",
         "Medium",
@@ -81,16 +81,94 @@
       ]
     },
     {
-      "id": "66bd02cb8911d988",
+      "id": "2a1d3e8d749f49c5",
       "track": "gre",
       "section": "quantitative",
       "chapter": "gre-qnt-alg",
-      "question": "Which learning objective best matches GRE Quantitative Algebra?",
+      "question": "Which learning objective best matches GRE.QNT.ALG Topic: Simplifying Algebraic Expressions?",
       "options": [
-        "Learn concept details of GMAT Problem Solving Focus Topic 01",
-        "Learn concept details of GMAT Sentence Correction Focus Topic 11",
-        "Learn concept details of GRE Quantitative Algebra Focus Topic 01",
-        "Learn concept details of GRE Reading Comprehension Focus Topic 23"
+        "Understand the theoretical foundations of Data Sufficiency: Number Properties.",
+        "Understand the theoretical foundations of Problem Solving: Geometry: Solids & Volumes.",
+        "Avoid common errors and pitfalls associated with Using process of elimination under timed conditions.",
+        "Understand the theoretical foundations of Simplifying Algebraic Expressions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 3,
+      "answer_key": "D",
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.ALG.T01",
+      "tags": [
+        "learning-objective"
+      ]
+    },
+    {
+      "id": "e477c43464cf9663",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-alg",
+      "question": "Which is a common mistake students make on GRE.QNT.ALG Topic: Simplifying Algebraic Expressions?",
+      "options": [
+        "Falling for distractor options specifically designed around common misconceptions of Active Reading Techniques.",
+        "Misapplying core principles of Simplifying Algebraic Expressions.",
+        "Arithmetical or logical errors under exam time constraints for Factoring Cubic Polynomials.",
+        "Arithmetical or logical errors under exam time constraints for Conjunctions and Transitions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 1,
+      "answer_key": "B",
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.ALG.T01",
+      "tags": [
+        "common-error"
+      ]
+    },
+    {
+      "id": "20a2c70d3704aea6",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-alg",
+      "question": "What is the recommended first difficulty level when practicing GRE.QNT.ALG Topic: Simplifying Algebraic Expressions?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.ALG.T01",
+      "tags": [
+        "difficulty"
+      ]
+    },
+    {
+      "id": "f13b93ad08964aff",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-ari",
+      "question": "Which learning objective best matches GRE.QNT.ARI Topic: Integers and Factors?",
+      "options": [
+        "Understand the theoretical foundations of Data Sufficiency: Rates and Work.",
+        "Apply strategies and formulas related to Probability: Complementary Events to solve exam-style questions.",
+        "Understand the theoretical foundations of Integers and Factors.",
+        "Apply strategies and formulas related to Evaluating proposed policies to solve exam-style questions."
       ],
       "option_labels": [
         "A",
@@ -101,100 +179,22 @@
       "correct_index": 2,
       "answer_key": "C",
       "answer_verified": true,
-      "source": "topic:GRE.QNT.ALG.T01",
-      "tags": [
-        "learning-objective"
-      ]
-    },
-    {
-      "id": "e0cefd2771044064",
-      "track": "gre",
-      "section": "quantitative",
-      "chapter": "gre-qnt-alg",
-      "question": "Which is a common mistake students make on GRE Quantitative Algebra?",
-      "options": [
-        "Common error in GMAT Data Insights Multi Source Focus Topic 17",
-        "Common error in GMAT Data Insights Multi Source Focus Topic 22",
-        "Common error in GMAT Critical Reasoning Focus Topic 05",
-        "Common error in GRE Quantitative Algebra Focus Topic 01"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "correct_index": 3,
-      "answer_key": "D",
-      "answer_verified": true,
-      "source": "topic:GRE.QNT.ALG.T01",
-      "tags": [
-        "common-error"
-      ]
-    },
-    {
-      "id": "cf78d2b713e19d79",
-      "track": "gre",
-      "section": "quantitative",
-      "chapter": "gre-qnt-alg",
-      "question": "What is the recommended first difficulty level when practicing GRE Quantitative Algebra?",
-      "options": [
-        "Easy",
-        "Medium",
-        "Hard",
-        "Expert"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "correct_index": 0,
-      "answer_key": "A",
-      "answer_verified": true,
-      "source": "topic:GRE.QNT.ALG.T01",
-      "tags": [
-        "difficulty"
-      ]
-    },
-    {
-      "id": "319fa3a011db1e00",
-      "track": "gre",
-      "section": "quantitative",
-      "chapter": "gre-qnt-ari",
-      "question": "Which learning objective best matches GRE Quantitative Arithmetic?",
-      "options": [
-        "Learn concept details of GRE Quantitative Arithmetic Focus Topic 01",
-        "Learn concept details of GMAT Data Insights Multi Source Focus Topic 26",
-        "Learn concept details of GMAT Critical Reasoning Focus Topic 08",
-        "Learn concept details of GRE Text Completion Focus Topic 23"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "correct_index": 0,
-      "answer_key": "A",
-      "answer_verified": true,
       "source": "topic:GRE.QNT.ARI.T01",
       "tags": [
         "learning-objective"
       ]
     },
     {
-      "id": "d9abe0863508a400",
+      "id": "5173c72784b86e8b",
       "track": "gre",
       "section": "quantitative",
       "chapter": "gre-qnt-ari",
-      "question": "Which is a common mistake students make on GRE Quantitative Arithmetic?",
+      "question": "Which is a common mistake students make on GRE.QNT.ARI Topic: Integers and Factors?",
       "options": [
-        "Common error in GMAT Sentence Correction Focus Topic 27",
-        "Common error in GRE Quantitative Geometry Focus Topic 19",
-        "Common error in GMAT Reading Comprehension Focus Topic 24",
-        "Common error in GRE Quantitative Arithmetic Focus Topic 01"
+        "Misapplying core principles of Bar Charts Interpretation.",
+        "Falling for distractor options specifically designed around common misconceptions of Critical Reasoning: Pacing.",
+        "Misapplying core principles of Integers and Factors.",
+        "Misapplying core principles of Comparing statements in different tabs."
       ],
       "option_labels": [
         "A",
@@ -202,8 +202,8 @@
         "C",
         "D"
       ],
-      "correct_index": 3,
-      "answer_key": "D",
+      "correct_index": 2,
+      "answer_key": "C",
       "answer_verified": true,
       "source": "topic:GRE.QNT.ARI.T01",
       "tags": [
@@ -211,11 +211,11 @@
       ]
     },
     {
-      "id": "fce858dd5c74d702",
+      "id": "b6bbc995e5d61b49",
       "track": "gre",
       "section": "quantitative",
       "chapter": "gre-qnt-ari",
-      "question": "What is the recommended first difficulty level when practicing GRE Quantitative Arithmetic?",
+      "question": "What is the recommended first difficulty level when practicing GRE.QNT.ARI Topic: Integers and Factors?",
       "options": [
         "Easy",
         "Medium",
@@ -237,16 +237,16 @@
       ]
     },
     {
-      "id": "bdd0d06698e9c599",
+      "id": "3cd4ba536b32e5e9",
       "track": "gre",
       "section": "quantitative",
       "chapter": "gre-qnt-dat",
-      "question": "Which learning objective best matches GRE Quantitative Data Analysis?",
+      "question": "Which learning objective best matches GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median?",
       "options": [
-        "Learn concept details of GMAT Data Insights Two Part Focus Topic 06",
-        "Learn concept details of GRE Quantitative Data Analysis Focus Topic 01",
-        "Learn concept details of GRE Quantitative Data Analysis Focus Topic 19",
-        "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 16"
+        "Understand the theoretical foundations of Descriptive Statistics: Mean & Median.",
+        "Avoid common errors and pitfalls associated with Estimation and Rounding under timed conditions.",
+        "Apply strategies and formulas related to Boldface Questions: Role of Sentences to solve exam-style questions.",
+        "Apply strategies and formulas related to Reading Line Graphs to solve exam-style questions."
       ],
       "option_labels": [
         "A",
@@ -254,8 +254,8 @@
         "C",
         "D"
       ],
-      "correct_index": 1,
-      "answer_key": "B",
+      "correct_index": 0,
+      "answer_key": "A",
       "answer_verified": true,
       "source": "topic:GRE.QNT.DAT.T01",
       "tags": [
@@ -263,16 +263,16 @@
       ]
     },
     {
-      "id": "d1346b708805f9d8",
+      "id": "91924535530906fa",
       "track": "gre",
       "section": "quantitative",
       "chapter": "gre-qnt-dat",
-      "question": "Which is a common mistake students make on GRE Quantitative Data Analysis?",
+      "question": "Which is a common mistake students make on GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median?",
       "options": [
-        "Common error in GRE Quantitative Arithmetic Focus Topic 11",
-        "Common error in GRE Quantitative Data Analysis Focus Topic 01",
-        "Common error in GMAT Data Insights Sufficiency Focus Topic 13",
-        "Common error in GMAT Data Insights Sufficiency Focus Topic 21"
+        "Falling for distractor options specifically designed around common misconceptions of Locating data points quickly.",
+        "Misapplying core principles of Descriptive Statistics: Mean & Median.",
+        "Arithmetical or logical errors under exam time constraints for Context clues: Restatement.",
+        "Misapplying core principles of Mixture and Concentration Problems."
       ],
       "option_labels": [
         "A",
@@ -289,11 +289,11 @@
       ]
     },
     {
-      "id": "db3b15401adee57e",
+      "id": "914ed2123d906b3f",
       "track": "gre",
       "section": "quantitative",
       "chapter": "gre-qnt-dat",
-      "question": "What is the recommended first difficulty level when practicing GRE Quantitative Data Analysis?",
+      "question": "What is the recommended first difficulty level when practicing GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median?",
       "options": [
         "Easy",
         "Medium",
@@ -315,16 +315,16 @@
       ]
     },
     {
-      "id": "d8078a43fbe9fb13",
+      "id": "aaa8bd47c26d620e",
       "track": "gre",
       "section": "quantitative",
       "chapter": "gre-qnt-geo",
-      "question": "Which learning objective best matches GRE Quantitative Geometry?",
+      "question": "Which learning objective best matches GRE.QNT.GEO Topic: Lines and Angles?",
       "options": [
-        "Learn concept details of GMAT Data Insights Two Part Focus Topic 19",
-        "Learn concept details of GRE Quantitative Geometry Focus Topic 01",
-        "Learn concept details of GRE Quantitative Algebra Focus Topic 29",
-        "Learn concept details of GMAT Data Sufficiency Focus Topic 10"
+        "Avoid common errors and pitfalls associated with Problem Solving: Geometry: Angles & Lines under timed conditions.",
+        "Understand the theoretical foundations of Lines and Angles.",
+        "Understand the theoretical foundations of Defining Blank in Own Words first.",
+        "Apply strategies and formulas related to Systems of equations in TPA to solve exam-style questions."
       ],
       "option_labels": [
         "A",
@@ -341,16 +341,16 @@
       ]
     },
     {
-      "id": "b84686cb61b8449b",
+      "id": "5ace5ca8119392ff",
       "track": "gre",
       "section": "quantitative",
       "chapter": "gre-qnt-geo",
-      "question": "Which is a common mistake students make on GRE Quantitative Geometry?",
+      "question": "Which is a common mistake students make on GRE.QNT.GEO Topic: Lines and Angles?",
       "options": [
-        "Common error in GRE Quantitative Algebra Focus Topic 25",
-        "Common error in GMAT Data Insights Sufficiency Focus Topic 20",
-        "Common error in GMAT Reading Comprehension Focus Topic 18",
-        "Common error in GRE Quantitative Geometry Focus Topic 01"
+        "Misapplying core principles of Data Sufficiency (Quant): Yes/No Questions.",
+        "Misapplying core principles of Problem Solving: Coordinate Geometry: Circles & Intersections.",
+        "Misapplying core principles of Lines and Angles.",
+        "Falling for distractor options specifically designed around common misconceptions of Synonym Pair Selection."
       ],
       "option_labels": [
         "A",
@@ -358,8 +358,8 @@
         "C",
         "D"
       ],
-      "correct_index": 3,
-      "answer_key": "D",
+      "correct_index": 2,
+      "answer_key": "C",
       "answer_verified": true,
       "source": "topic:GRE.QNT.GEO.T01",
       "tags": [
@@ -367,11 +367,11 @@
       ]
     },
     {
-      "id": "a758dcd0a8612ef8",
+      "id": "a092f6f48f709d49",
       "track": "gre",
       "section": "quantitative",
       "chapter": "gre-qnt-geo",
-      "question": "What is the recommended first difficulty level when practicing GRE Quantitative Geometry?",
+      "question": "What is the recommended first difficulty level when practicing GRE.QNT.GEO Topic: Lines and Angles?",
       "options": [
         "Easy",
         "Medium",
@@ -393,16 +393,42 @@
       ]
     },
     {
-      "id": "d90451ada9542dbc",
+      "id": "99ee39d726e28f50",
       "track": "gre",
       "section": "verbal",
       "chapter": "gre-vbl-rc",
-      "question": "Which learning objective best matches GRE Reading Comprehension?",
+      "question": "Which learning objective best matches GRE.VBL.RC Topic: Identifying Main Idea?",
       "options": [
-        "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 11",
-        "Learn concept details of GRE Quantitative Algebra Focus Topic 28",
-        "Learn concept details of GRE Issue Analytical Essay Focus Topic 10",
-        "Learn concept details of GRE Reading Comprehension Focus Topic 01"
+        "Understand the theoretical foundations of Quant DS: Statistics: Std Dev.",
+        "Understand the theoretical foundations of Identifying Main Idea.",
+        "Apply strategies and formulas related to Problem Solving: Overlapping Sets to solve exam-style questions.",
+        "Apply strategies and formulas related to Identifying Underlying Assumptions to solve exam-style questions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 1,
+      "answer_key": "B",
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.RC.T01",
+      "tags": [
+        "learning-objective"
+      ]
+    },
+    {
+      "id": "34186e524f276f9a",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-rc",
+      "question": "Which is a common mistake students make on GRE.VBL.RC Topic: Identifying Main Idea?",
+      "options": [
+        "Falling for distractor options specifically designed around common misconceptions of GMAT Quant DS General Strategy.",
+        "Falling for distractor options specifically designed around common misconceptions of SC: Misplaced Modifiers.",
+        "Arithmetical or logical errors under exam time constraints for Problem Solving: Percentages & Interest.",
+        "Misapplying core principles of Identifying Main Idea."
       ],
       "option_labels": [
         "A",
@@ -415,41 +441,15 @@
       "answer_verified": true,
       "source": "topic:GRE.VBL.RC.T01",
       "tags": [
-        "learning-objective"
-      ]
-    },
-    {
-      "id": "7d580acd6682f90c",
-      "track": "gre",
-      "section": "verbal",
-      "chapter": "gre-vbl-rc",
-      "question": "Which is a common mistake students make on GRE Reading Comprehension?",
-      "options": [
-        "Common error in GRE Reading Comprehension Focus Topic 01",
-        "Common error in GMAT Data Insights Sufficiency Focus Topic 04",
-        "Common error in GRE Quantitative Arithmetic Focus Topic 06",
-        "Common error in GMAT Data Insights Two Part Focus Topic 08"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "correct_index": 0,
-      "answer_key": "A",
-      "answer_verified": true,
-      "source": "topic:GRE.VBL.RC.T01",
-      "tags": [
         "common-error"
       ]
     },
     {
-      "id": "7a2e5fbfa408181e",
+      "id": "a08e649afea38080",
       "track": "gre",
       "section": "verbal",
       "chapter": "gre-vbl-rc",
-      "question": "What is the recommended first difficulty level when practicing GRE Reading Comprehension?",
+      "question": "What is the recommended first difficulty level when practicing GRE.VBL.RC Topic: Identifying Main Idea?",
       "options": [
         "Easy",
         "Medium",
@@ -471,16 +471,16 @@
       ]
     },
     {
-      "id": "708c88fa9cdfe5a8",
+      "id": "7ae0972997ff46d4",
       "track": "gre",
       "section": "verbal",
       "chapter": "gre-vbl-se",
-      "question": "Which learning objective best matches GRE Sentence Equivalence?",
+      "question": "Which learning objective best matches GRE.VBL.SE Topic: Synonym Pair Selection?",
       "options": [
-        "Learn concept details of GMAT Reading Comprehension Focus Topic 11",
-        "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 25",
-        "Learn concept details of GRE Text Completion Focus Topic 15",
-        "Learn concept details of GRE Sentence Equivalence Focus Topic 01"
+        "Understand the theoretical foundations of SC: Verbals (Gerunds/Infinitives).",
+        "Apply strategies and formulas related to Understanding logical consistency to solve exam-style questions.",
+        "Apply strategies and formulas related to Estimation and Rounding to solve exam-style questions.",
+        "Understand the theoretical foundations of Synonym Pair Selection."
       ],
       "option_labels": [
         "A",
@@ -497,16 +497,16 @@
       ]
     },
     {
-      "id": "784e42bda6a71de6",
+      "id": "1f81d8ce0490172f",
       "track": "gre",
       "section": "verbal",
       "chapter": "gre-vbl-se",
-      "question": "Which is a common mistake students make on GRE Sentence Equivalence?",
+      "question": "Which is a common mistake students make on GRE.VBL.SE Topic: Synonym Pair Selection?",
       "options": [
-        "Common error in GRE Quantitative Geometry Focus Topic 23",
-        "Common error in GMAT Data Insights Sufficiency Focus Topic 24",
-        "Common error in GRE Quantitative Geometry Focus Topic 02",
-        "Common error in GRE Sentence Equivalence Focus Topic 01"
+        "Arithmetical or logical errors under exam time constraints for Comparing Mean and Median.",
+        "Arithmetical or logical errors under exam time constraints for Finding Correlations.",
+        "Misapplying core principles of Synonym Pair Selection.",
+        "Arithmetical or logical errors under exam time constraints for Quantitative relationships in TPA."
       ],
       "option_labels": [
         "A",
@@ -514,8 +514,8 @@
         "C",
         "D"
       ],
-      "correct_index": 3,
-      "answer_key": "D",
+      "correct_index": 2,
+      "answer_key": "C",
       "answer_verified": true,
       "source": "topic:GRE.VBL.SE.T01",
       "tags": [
@@ -523,11 +523,11 @@
       ]
     },
     {
-      "id": "08a4a59be7b473e2",
+      "id": "936e8e147cd17052",
       "track": "gre",
       "section": "verbal",
       "chapter": "gre-vbl-se",
-      "question": "What is the recommended first difficulty level when practicing GRE Sentence Equivalence?",
+      "question": "What is the recommended first difficulty level when practicing GRE.VBL.SE Topic: Synonym Pair Selection?",
       "options": [
         "Easy",
         "Medium",
@@ -549,42 +549,16 @@
       ]
     },
     {
-      "id": "bd1d76861e8993b0",
+      "id": "7a152b7c8d063818",
       "track": "gre",
       "section": "verbal",
       "chapter": "gre-vbl-tc",
-      "question": "Which learning objective best matches GRE Text Completion?",
+      "question": "Which learning objective best matches GRE.VBL.TC Topic: Single Blank: Sentence Analysis?",
       "options": [
-        "Learn concept details of GRE Text Completion Focus Topic 07",
-        "Learn concept details of GRE Text Completion Focus Topic 30",
-        "Learn concept details of GRE Text Completion Focus Topic 01",
-        "Learn concept details of GRE Sentence Equivalence Focus Topic 02"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "correct_index": 2,
-      "answer_key": "C",
-      "answer_verified": true,
-      "source": "topic:GRE.VBL.TC.T01",
-      "tags": [
-        "learning-objective"
-      ]
-    },
-    {
-      "id": "4abd3fbd4c250a47",
-      "track": "gre",
-      "section": "verbal",
-      "chapter": "gre-vbl-tc",
-      "question": "Which is a common mistake students make on GRE Text Completion?",
-      "options": [
-        "Common error in GRE Quantitative Arithmetic Focus Topic 12",
-        "Common error in GRE Text Completion Focus Topic 07",
-        "Common error in GRE Quantitative Data Analysis Focus Topic 04",
-        "Common error in GRE Text Completion Focus Topic 01"
+        "Apply strategies and formulas related to Pacing in Sentence Equivalence to solve exam-style questions.",
+        "Avoid common errors and pitfalls associated with Factoring Algebraic Identities under timed conditions.",
+        "Apply strategies and formulas related to Triangles: Inequality Theorem to solve exam-style questions.",
+        "Understand the theoretical foundations of Single Blank: Sentence Analysis."
       ],
       "option_labels": [
         "A",
@@ -597,15 +571,41 @@
       "answer_verified": true,
       "source": "topic:GRE.VBL.TC.T01",
       "tags": [
+        "learning-objective"
+      ]
+    },
+    {
+      "id": "261119cc69949d09",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-tc",
+      "question": "Which is a common mistake students make on GRE.VBL.TC Topic: Single Blank: Sentence Analysis?",
+      "options": [
+        "Misapplying core principles of Single Blank: Sentence Analysis.",
+        "Falling for distractor options specifically designed around common misconceptions of Factorials and Permutations.",
+        "Falling for distractor options specifically designed around common misconceptions of Quant DS: Advanced Geometry.",
+        "Arithmetical or logical errors under exam time constraints for Interpreting Tables."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.TC.T01",
+      "tags": [
         "common-error"
       ]
     },
     {
-      "id": "1ea002f670464d28",
+      "id": "fc100b6a5caa5055",
       "track": "gre",
       "section": "verbal",
       "chapter": "gre-vbl-tc",
-      "question": "What is the recommended first difficulty level when practicing GRE Text Completion?",
+      "question": "What is the recommended first difficulty level when practicing GRE.VBL.TC Topic: Single Blank: Sentence Analysis?",
       "options": [
         "Easy",
         "Medium",
@@ -627,16 +627,16 @@
       ]
     },
     {
-      "id": "31a8c8b9e79865e0",
+      "id": "7c5c754b602747cc",
       "track": "gmat",
       "section": "data_insights",
       "chapter": "gmat-di-ds",
-      "question": "Which learning objective best matches GMAT Data Insights Sufficiency?",
+      "question": "Which learning objective best matches GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions?",
       "options": [
-        "Learn concept details of GRE Sentence Equivalence Focus Topic 29",
-        "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 09",
-        "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 01",
-        "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 07"
+        "Understand the theoretical foundations of Data Sufficiency: Yes/No Questions.",
+        "Apply strategies and formulas related to RC Strategies: Short Passages to solve exam-style questions.",
+        "Apply strategies and formulas related to Identifying Outliers in CR Options to solve exam-style questions.",
+        "Apply strategies and formulas related to Mental Math Shortcuts to solve exam-style questions."
       ],
       "option_labels": [
         "A",
@@ -644,8 +644,8 @@
         "C",
         "D"
       ],
-      "correct_index": 2,
-      "answer_key": "C",
+      "correct_index": 0,
+      "answer_key": "A",
       "answer_verified": true,
       "source": "topic:GMAT.DI.DS.T01",
       "tags": [
@@ -653,16 +653,16 @@
       ]
     },
     {
-      "id": "c3b6fe14b3922c66",
+      "id": "b4a3dac2a10da48c",
       "track": "gmat",
       "section": "data_insights",
       "chapter": "gmat-di-ds",
-      "question": "Which is a common mistake students make on GMAT Data Insights Sufficiency?",
+      "question": "Which is a common mistake students make on GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions?",
       "options": [
-        "Common error in GRE Reading Comprehension Focus Topic 02",
-        "Common error in GRE Quantitative Data Analysis Focus Topic 22",
-        "Common error in GMAT Sentence Correction Focus Topic 16",
-        "Common error in GMAT Data Insights Sufficiency Focus Topic 01"
+        "Misapplying core principles of Data Sufficiency: Yes/No Questions.",
+        "Misapplying core principles of Graphical Interpretation General Strategy.",
+        "Falling for distractor options specifically designed around common misconceptions of Quant DS: Algebra & Equations.",
+        "Falling for distractor options specifically designed around common misconceptions of Reading Frequency Distributions."
       ],
       "option_labels": [
         "A",
@@ -670,8 +670,8 @@
         "C",
         "D"
       ],
-      "correct_index": 3,
-      "answer_key": "D",
+      "correct_index": 0,
+      "answer_key": "A",
       "answer_verified": true,
       "source": "topic:GMAT.DI.DS.T01",
       "tags": [
@@ -679,11 +679,11 @@
       ]
     },
     {
-      "id": "04f4c60dfb7a0f67",
+      "id": "9f19d2f84d60ee51",
       "track": "gmat",
       "section": "data_insights",
       "chapter": "gmat-di-ds",
-      "question": "What is the recommended first difficulty level when practicing GMAT Data Insights Sufficiency?",
+      "question": "What is the recommended first difficulty level when practicing GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions?",
       "options": [
         "Easy",
         "Medium",
@@ -705,16 +705,94 @@
       ]
     },
     {
-      "id": "fba68ee3dfbb2c1b",
+      "id": "8c627c2d8676fa62",
       "track": "gmat",
       "section": "data_insights",
       "chapter": "gmat-di-gi",
-      "question": "Which learning objective best matches GMAT Data Insights Graphical?",
+      "question": "Which learning objective best matches GMAT.DI.GI Topic: Bar Charts Interpretation?",
       "options": [
-        "Learn concept details of GMAT Data Insights Two Part Focus Topic 16",
-        "Learn concept details of GMAT Data Insights Graphical Focus Topic 01",
-        "Learn concept details of GMAT Data Insights Multi Source Focus Topic 05",
-        "Learn concept details of GRE Quantitative Algebra Focus Topic 05"
+        "Avoid common errors and pitfalls associated with Sentence Correction: Active vs Passive Voice under timed conditions.",
+        "Avoid common errors and pitfalls associated with Problem Solving: Geometry: Solids & Volumes under timed conditions.",
+        "Understand the theoretical foundations of Bar Charts Interpretation.",
+        "Avoid common errors and pitfalls associated with Coordinate Geometry: Parallel/Perp Lines under timed conditions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 2,
+      "answer_key": "C",
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.GI.T01",
+      "tags": [
+        "learning-objective"
+      ]
+    },
+    {
+      "id": "6c9130a27acec738",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-gi",
+      "question": "Which is a common mistake students make on GMAT.DI.GI Topic: Bar Charts Interpretation?",
+      "options": [
+        "Falling for distractor options specifically designed around common misconceptions of Sentence Correction: Pronoun Reference.",
+        "Falling for distractor options specifically designed around common misconceptions of Rate of change calculation.",
+        "Arithmetical or logical errors under exam time constraints for Quant DS: Overlapping Sets.",
+        "Misapplying core principles of Bar Charts Interpretation."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 3,
+      "answer_key": "D",
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.GI.T01",
+      "tags": [
+        "common-error"
+      ]
+    },
+    {
+      "id": "588dfccf7a8f4962",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-gi",
+      "question": "What is the recommended first difficulty level when practicing GMAT.DI.GI Topic: Bar Charts Interpretation?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.GI.T01",
+      "tags": [
+        "difficulty"
+      ]
+    },
+    {
+      "id": "c308afdd07105a63",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-msr",
+      "question": "Which learning objective best matches GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure?",
+      "options": [
+        "Apply strategies and formulas related to Evaluating Logical Flow to solve exam-style questions.",
+        "Understand the theoretical foundations of Multi-Source Reasoning: Tab Structure.",
+        "Understand the theoretical foundations of Determining Function of a Paragraph.",
+        "Apply strategies and formulas related to Mapping the Passage in your head to solve exam-style questions."
       ],
       "option_labels": [
         "A",
@@ -725,100 +803,22 @@
       "correct_index": 1,
       "answer_key": "B",
       "answer_verified": true,
-      "source": "topic:GMAT.DI.GI.T01",
-      "tags": [
-        "learning-objective"
-      ]
-    },
-    {
-      "id": "cd355b79aa05567d",
-      "track": "gmat",
-      "section": "data_insights",
-      "chapter": "gmat-di-gi",
-      "question": "Which is a common mistake students make on GMAT Data Insights Graphical?",
-      "options": [
-        "Common error in GMAT Data Insights Two Part Focus Topic 13",
-        "Common error in GRE Reading Comprehension Focus Topic 11",
-        "Common error in GMAT Data Sufficiency Focus Topic 07",
-        "Common error in GMAT Data Insights Graphical Focus Topic 01"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "correct_index": 3,
-      "answer_key": "D",
-      "answer_verified": true,
-      "source": "topic:GMAT.DI.GI.T01",
-      "tags": [
-        "common-error"
-      ]
-    },
-    {
-      "id": "08c3a981cf2e48b5",
-      "track": "gmat",
-      "section": "data_insights",
-      "chapter": "gmat-di-gi",
-      "question": "What is the recommended first difficulty level when practicing GMAT Data Insights Graphical?",
-      "options": [
-        "Easy",
-        "Medium",
-        "Hard",
-        "Expert"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "correct_index": 0,
-      "answer_key": "A",
-      "answer_verified": true,
-      "source": "topic:GMAT.DI.GI.T01",
-      "tags": [
-        "difficulty"
-      ]
-    },
-    {
-      "id": "20a71cb1f7ea4557",
-      "track": "gmat",
-      "section": "data_insights",
-      "chapter": "gmat-di-msr",
-      "question": "Which learning objective best matches GMAT Data Insights Multi Source?",
-      "options": [
-        "Learn concept details of GRE Quantitative Arithmetic Focus Topic 08",
-        "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 20",
-        "Learn concept details of GRE Quantitative Geometry Focus Topic 16",
-        "Learn concept details of GMAT Data Insights Multi Source Focus Topic 01"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "correct_index": 3,
-      "answer_key": "D",
-      "answer_verified": true,
       "source": "topic:GMAT.DI.MSR.T01",
       "tags": [
         "learning-objective"
       ]
     },
     {
-      "id": "8e9e70277ac449ac",
+      "id": "9c3700fcde9c28bd",
       "track": "gmat",
       "section": "data_insights",
       "chapter": "gmat-di-msr",
-      "question": "Which is a common mistake students make on GMAT Data Insights Multi Source?",
+      "question": "Which is a common mistake students make on GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure?",
       "options": [
-        "Common error in GMAT Data Insights Multi Source Focus Topic 01",
-        "Common error in GMAT Reading Comprehension Focus Topic 28",
-        "Common error in GRE Quantitative Algebra Focus Topic 24",
-        "Common error in GMAT Data Insights Two Part Focus Topic 10"
+        "Misapplying core principles of Multi-Source Reasoning: Tab Structure.",
+        "Falling for distractor options specifically designed around common misconceptions of GMAT Verbal RC Practice.",
+        "Misapplying core principles of Data Sufficiency: Consecutive Integers.",
+        "Falling for distractor options specifically designed around common misconceptions of Rational and Irrational Numbers."
       ],
       "option_labels": [
         "A",
@@ -835,11 +835,11 @@
       ]
     },
     {
-      "id": "443a73fe2669c626",
+      "id": "ff2f579368b72c2f",
       "track": "gmat",
       "section": "data_insights",
       "chapter": "gmat-di-msr",
-      "question": "What is the recommended first difficulty level when practicing GMAT Data Insights Multi Source?",
+      "question": "What is the recommended first difficulty level when practicing GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure?",
       "options": [
         "Easy",
         "Medium",
@@ -861,16 +861,42 @@
       ]
     },
     {
-      "id": "3b33208c6ecee277",
+      "id": "6461ea802debc0a3",
       "track": "gmat",
       "section": "data_insights",
       "chapter": "gmat-di-tpa",
-      "question": "Which learning objective best matches GMAT Data Insights Two Part?",
+      "question": "Which learning objective best matches GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure?",
       "options": [
-        "Learn concept details of GMAT Data Insights Two Part Focus Topic 01",
-        "Learn concept details of GRE Quantitative Geometry Focus Topic 09",
-        "Learn concept details of GMAT Reading Comprehension Focus Topic 14",
-        "Learn concept details of GMAT Reading Comprehension Focus Topic 15"
+        "Understand the theoretical foundations of Quant DS: Decimals & Fractions.",
+        "Understand the theoretical foundations of Two-Part Analysis: Columns Structure.",
+        "Understand the theoretical foundations of Vocabulary in Context: Verbs.",
+        "Avoid common errors and pitfalls associated with Reading Comprehension: Pacing under timed conditions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 1,
+      "answer_key": "B",
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.TPA.T01",
+      "tags": [
+        "learning-objective"
+      ]
+    },
+    {
+      "id": "e1c4d7006f32541a",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-tpa",
+      "question": "Which is a common mistake students make on GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure?",
+      "options": [
+        "Misapplying core principles of Two-Part Analysis: Columns Structure.",
+        "Falling for distractor options specifically designed around common misconceptions of Sentence Correction: Parallelism.",
+        "Misapplying core principles of Essay Structuring.",
+        "Falling for distractor options specifically designed around common misconceptions of Data Insights: Visual Reasoning."
       ],
       "option_labels": [
         "A",
@@ -883,41 +909,15 @@
       "answer_verified": true,
       "source": "topic:GMAT.DI.TPA.T01",
       "tags": [
-        "learning-objective"
-      ]
-    },
-    {
-      "id": "725a3ef3aff8686e",
-      "track": "gmat",
-      "section": "data_insights",
-      "chapter": "gmat-di-tpa",
-      "question": "Which is a common mistake students make on GMAT Data Insights Two Part?",
-      "options": [
-        "Common error in GRE Quantitative Algebra Focus Topic 28",
-        "Common error in GMAT Data Insights Graphical Focus Topic 18",
-        "Common error in GMAT Data Insights Two Part Focus Topic 01",
-        "Common error in GRE Issue Analytical Essay Focus Topic 05"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "correct_index": 2,
-      "answer_key": "C",
-      "answer_verified": true,
-      "source": "topic:GMAT.DI.TPA.T01",
-      "tags": [
         "common-error"
       ]
     },
     {
-      "id": "33860adce0435652",
+      "id": "5b861625ebda947a",
       "track": "gmat",
       "section": "data_insights",
       "chapter": "gmat-di-tpa",
-      "question": "What is the recommended first difficulty level when practicing GMAT Data Insights Two Part?",
+      "question": "What is the recommended first difficulty level when practicing GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure?",
       "options": [
         "Easy",
         "Medium",
@@ -939,16 +939,16 @@
       ]
     },
     {
-      "id": "d73252810f0a2594",
+      "id": "a7d8bf89448d7b7a",
       "track": "gmat",
       "section": "quantitative",
       "chapter": "gmat-qnt-ds",
-      "question": "Which learning objective best matches GMAT Data Sufficiency?",
+      "question": "Which learning objective best matches GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions?",
       "options": [
-        "Learn concept details of GMAT Data Insights Two Part Focus Topic 20",
-        "Learn concept details of GMAT Data Sufficiency Focus Topic 01",
-        "Learn concept details of GRE Quantitative Geometry Focus Topic 08",
-        "Learn concept details of GRE Quantitative Data Analysis Focus Topic 18"
+        "Avoid common errors and pitfalls associated with Analyzing Tone and Charge under timed conditions.",
+        "Understand the theoretical foundations of Data Sufficiency (Quant): Yes/No Questions.",
+        "Understand the theoretical foundations of Determining Function of a Paragraph.",
+        "Avoid common errors and pitfalls associated with Sorting Data in Tables under timed conditions."
       ],
       "option_labels": [
         "A",
@@ -965,16 +965,16 @@
       ]
     },
     {
-      "id": "a588a4a0a410541c",
+      "id": "1d300d016bfece5f",
       "track": "gmat",
       "section": "quantitative",
       "chapter": "gmat-qnt-ds",
-      "question": "Which is a common mistake students make on GMAT Data Sufficiency?",
+      "question": "Which is a common mistake students make on GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions?",
       "options": [
-        "Common error in GMAT Data Sufficiency Focus Topic 18",
-        "Common error in GMAT Reading Comprehension Focus Topic 24",
-        "Common error in GRE Quantitative Data Analysis Focus Topic 02",
-        "Common error in GMAT Data Sufficiency Focus Topic 01"
+        "Arithmetical or logical errors under exam time constraints for Histogram interpretation.",
+        "Misapplying core principles of Problem Solving: Coordinate Geometry: Circles & Intersections.",
+        "Misapplying core principles of Data Sufficiency (Quant): Yes/No Questions.",
+        "Falling for distractor options specifically designed around common misconceptions of Problem Solving: Linear Equations."
       ],
       "option_labels": [
         "A",
@@ -982,8 +982,8 @@
         "C",
         "D"
       ],
-      "correct_index": 3,
-      "answer_key": "D",
+      "correct_index": 2,
+      "answer_key": "C",
       "answer_verified": true,
       "source": "topic:GMAT.QNT.DS.T01",
       "tags": [
@@ -991,11 +991,11 @@
       ]
     },
     {
-      "id": "309837edd186e2b3",
+      "id": "b7ceff9a3e20e172",
       "track": "gmat",
       "section": "quantitative",
       "chapter": "gmat-qnt-ds",
-      "question": "What is the recommended first difficulty level when practicing GMAT Data Sufficiency?",
+      "question": "What is the recommended first difficulty level when practicing GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions?",
       "options": [
         "Easy",
         "Medium",
@@ -1017,16 +1017,16 @@
       ]
     },
     {
-      "id": "f9bc3727550b21bc",
+      "id": "1ff9b5fcdbe370e5",
       "track": "gmat",
       "section": "quantitative",
       "chapter": "gmat-qnt-ps",
-      "question": "Which learning objective best matches GMAT Problem Solving?",
+      "question": "Which learning objective best matches GMAT.QNT.PS Topic: Problem Solving: Integers & Prime Factors?",
       "options": [
-        "Learn concept details of GMAT Problem Solving Focus Topic 01",
-        "Learn concept details of GMAT Reading Comprehension Focus Topic 21",
-        "Learn concept details of GRE Quantitative Data Analysis Focus Topic 13",
-        "Learn concept details of GMAT Problem Solving Focus Topic 29"
+        "Understand the theoretical foundations of RC Strategies: Long Passages.",
+        "Avoid common errors and pitfalls associated with Single Blank: Clue Words under timed conditions.",
+        "Understand the theoretical foundations of Problem Solving: Integers & Prime Factors.",
+        "Apply strategies and formulas related to Drawing Inferences to solve exam-style questions."
       ],
       "option_labels": [
         "A",
@@ -1034,8 +1034,8 @@
         "C",
         "D"
       ],
-      "correct_index": 0,
-      "answer_key": "A",
+      "correct_index": 2,
+      "answer_key": "C",
       "answer_verified": true,
       "source": "topic:GMAT.QNT.PS.T01",
       "tags": [
@@ -1043,16 +1043,16 @@
       ]
     },
     {
-      "id": "c12246f18365f27e",
+      "id": "2b081779519f5059",
       "track": "gmat",
       "section": "quantitative",
       "chapter": "gmat-qnt-ps",
-      "question": "Which is a common mistake students make on GMAT Problem Solving?",
+      "question": "Which is a common mistake students make on GMAT.QNT.PS Topic: Problem Solving: Integers & Prime Factors?",
       "options": [
-        "Common error in GMAT Problem Solving Focus Topic 01",
-        "Common error in GMAT Data Insights Two Part Focus Topic 18",
-        "Common error in GMAT Critical Reasoning Focus Topic 12",
-        "Common error in GMAT Sentence Correction Focus Topic 23"
+        "Misapplying core principles of Problem Solving: Integers & Prime Factors.",
+        "Falling for distractor options specifically designed around common misconceptions of Evidence Selection.",
+        "Falling for distractor options specifically designed around common misconceptions of Identifying circular reasoning.",
+        "Arithmetical or logical errors under exam time constraints for Identifying Author's opinion vs sources."
       ],
       "option_labels": [
         "A",
@@ -1069,11 +1069,11 @@
       ]
     },
     {
-      "id": "bf327a7e5972cebe",
+      "id": "97cb0356314a3ddd",
       "track": "gmat",
       "section": "quantitative",
       "chapter": "gmat-qnt-ps",
-      "question": "What is the recommended first difficulty level when practicing GMAT Problem Solving?",
+      "question": "What is the recommended first difficulty level when practicing GMAT.QNT.PS Topic: Problem Solving: Integers & Prime Factors?",
       "options": [
         "Easy",
         "Medium",
@@ -1095,16 +1095,16 @@
       ]
     },
     {
-      "id": "941679613baa295e",
+      "id": "f40854ca3362cc22",
       "track": "gmat",
       "section": "verbal",
       "chapter": "gmat-vbl-cr",
-      "question": "Which learning objective best matches GMAT Critical Reasoning?",
+      "question": "Which learning objective best matches GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure?",
       "options": [
-        "Learn concept details of GMAT Critical Reasoning Focus Topic 01",
-        "Learn concept details of GMAT Data Insights Multi Source Focus Topic 11",
-        "Learn concept details of GMAT Sentence Correction Focus Topic 24",
-        "Learn concept details of GRE Text Completion Focus Topic 14"
+        "Understand the theoretical foundations of Critical Reasoning: Argument Structure.",
+        "Apply strategies and formulas related to Data Interpretation Strategies to solve exam-style questions.",
+        "Understand the theoretical foundations of Quant DS: Geometry: Polygons & Circles.",
+        "Apply strategies and formulas related to Graphic-Text consistency checks to solve exam-style questions."
       ],
       "option_labels": [
         "A",
@@ -1121,16 +1121,16 @@
       ]
     },
     {
-      "id": "f81d03073146d276",
+      "id": "6e4649948fa0fd0f",
       "track": "gmat",
       "section": "verbal",
       "chapter": "gmat-vbl-cr",
-      "question": "Which is a common mistake students make on GMAT Critical Reasoning?",
+      "question": "Which is a common mistake students make on GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure?",
       "options": [
-        "Common error in GRE Quantitative Algebra Focus Topic 06",
-        "Common error in GMAT Critical Reasoning Focus Topic 01",
-        "Common error in GMAT Data Insights Two Part Focus Topic 11",
-        "Common error in GMAT Sentence Correction Focus Topic 06"
+        "Falling for distractor options specifically designed around common misconceptions of Quant DS: Percentages.",
+        "Misapplying core principles of Critical Reasoning: Argument Structure.",
+        "Misapplying core principles of Intersections of Lines and Curves.",
+        "Arithmetical or logical errors under exam time constraints for Box Plots and Data Ranges."
       ],
       "option_labels": [
         "A",
@@ -1147,11 +1147,11 @@
       ]
     },
     {
-      "id": "73e3e3d69e4f32be",
+      "id": "ae3093eb4efbe8e6",
       "track": "gmat",
       "section": "verbal",
       "chapter": "gmat-vbl-cr",
-      "question": "What is the recommended first difficulty level when practicing GMAT Critical Reasoning?",
+      "question": "What is the recommended first difficulty level when practicing GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure?",
       "options": [
         "Easy",
         "Medium",
@@ -1173,16 +1173,16 @@
       ]
     },
     {
-      "id": "ea74ec1e586fb0c4",
+      "id": "f7cae2462971c2d4",
       "track": "gmat",
       "section": "verbal",
       "chapter": "gmat-vbl-rc",
-      "question": "Which learning objective best matches GMAT Reading Comprehension?",
+      "question": "Which learning objective best matches GMAT.VBL.RC Topic: Reading Comprehension: Active Reading?",
       "options": [
-        "Learn concept details of GMAT Reading Comprehension Focus Topic 01",
-        "Learn concept details of GMAT Data Insights Two Part Focus Topic 11",
-        "Learn concept details of GRE Quantitative Data Analysis Focus Topic 09",
-        "Learn concept details of GRE Text Completion Focus Topic 06"
+        "Understand the theoretical foundations of Reading Comprehension: Active Reading.",
+        "Understand the theoretical foundations of Problem Solving: Percentages & Interest.",
+        "Apply strategies and formulas related to Multi-Source Reasoning: Verbal parts to solve exam-style questions.",
+        "Avoid common errors and pitfalls associated with Data Sufficiency: Rates and Work under timed conditions."
       ],
       "option_labels": [
         "A",
@@ -1199,16 +1199,16 @@
       ]
     },
     {
-      "id": "771aa5d538999f8c",
+      "id": "be7a43c44d03915a",
       "track": "gmat",
       "section": "verbal",
       "chapter": "gmat-vbl-rc",
-      "question": "Which is a common mistake students make on GMAT Reading Comprehension?",
+      "question": "Which is a common mistake students make on GMAT.VBL.RC Topic: Reading Comprehension: Active Reading?",
       "options": [
-        "Common error in GMAT Reading Comprehension Focus Topic 01",
-        "Common error in GRE Quantitative Data Analysis Focus Topic 20",
-        "Common error in GMAT Data Insights Two Part Focus Topic 16",
-        "Common error in GRE Text Completion Focus Topic 17"
+        "Misapplying core principles of Synthesizing economics tabs.",
+        "Arithmetical or logical errors under exam time constraints for SC: Correlative Conjunctions.",
+        "Misapplying core principles of Reading Comprehension: Active Reading.",
+        "Falling for distractor options specifically designed around common misconceptions of Mean of Grouped Data."
       ],
       "option_labels": [
         "A",
@@ -1216,8 +1216,8 @@
         "C",
         "D"
       ],
-      "correct_index": 0,
-      "answer_key": "A",
+      "correct_index": 2,
+      "answer_key": "C",
       "answer_verified": true,
       "source": "topic:GMAT.VBL.RC.T01",
       "tags": [
@@ -1225,11 +1225,11 @@
       ]
     },
     {
-      "id": "486d50fa6a603eef",
+      "id": "63e9d1b934da322b",
       "track": "gmat",
       "section": "verbal",
       "chapter": "gmat-vbl-rc",
-      "question": "What is the recommended first difficulty level when practicing GMAT Reading Comprehension?",
+      "question": "What is the recommended first difficulty level when practicing GMAT.VBL.RC Topic: Reading Comprehension: Active Reading?",
       "options": [
         "Easy",
         "Medium",
@@ -1251,42 +1251,16 @@
       ]
     },
     {
-      "id": "159b729523e592b9",
+      "id": "5392fc3b2b02dc51",
       "track": "gmat",
       "section": "verbal",
       "chapter": "gmat-vbl-sc",
-      "question": "Which learning objective best matches GMAT Sentence Correction?",
+      "question": "Which learning objective best matches GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement?",
       "options": [
-        "Learn concept details of GMAT Sentence Correction Focus Topic 01",
-        "Learn concept details of GMAT Problem Solving Focus Topic 23",
-        "Learn concept details of GRE Quantitative Data Analysis Focus Topic 26",
-        "Learn concept details of GRE Quantitative Data Analysis Focus Topic 12"
-      ],
-      "option_labels": [
-        "A",
-        "B",
-        "C",
-        "D"
-      ],
-      "correct_index": 0,
-      "answer_key": "A",
-      "answer_verified": true,
-      "source": "topic:GMAT.VBL.SC.T01",
-      "tags": [
-        "learning-objective"
-      ]
-    },
-    {
-      "id": "05f3a7abfc5854f1",
-      "track": "gmat",
-      "section": "verbal",
-      "chapter": "gmat-vbl-sc",
-      "question": "Which is a common mistake students make on GMAT Sentence Correction?",
-      "options": [
-        "Common error in GRE Quantitative Geometry Focus Topic 05",
-        "Common error in GMAT Data Insights Two Part Focus Topic 06",
-        "Common error in GRE Quantitative Arithmetic Focus Topic 16",
-        "Common error in GMAT Sentence Correction Focus Topic 01"
+        "Understand the theoretical foundations of Verifying Final Choices.",
+        "Avoid common errors and pitfalls associated with Common Traps: Diagram constraints under timed conditions.",
+        "Apply strategies and formulas related to Shift in Meaning detection to solve exam-style questions.",
+        "Understand the theoretical foundations of Sentence Correction: Subject-Verb Agreement."
       ],
       "option_labels": [
         "A",
@@ -1299,15 +1273,41 @@
       "answer_verified": true,
       "source": "topic:GMAT.VBL.SC.T01",
       "tags": [
+        "learning-objective"
+      ]
+    },
+    {
+      "id": "c66168865e546c39",
+      "track": "gmat",
+      "section": "verbal",
+      "chapter": "gmat-vbl-sc",
+      "question": "Which is a common mistake students make on GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement?",
+      "options": [
+        "Misapplying core principles of Sentence Correction: Subject-Verb Agreement.",
+        "Falling for distractor options specifically designed around common misconceptions of Weakening arguments in RC.",
+        "Misapplying core principles of Reading Case Studies.",
+        "Misapplying core principles of Profit, Loss, and discount."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:GMAT.VBL.SC.T01",
+      "tags": [
         "common-error"
       ]
     },
     {
-      "id": "3f4a653f07bd68c5",
+      "id": "6374fa8cccd94699",
       "track": "gmat",
       "section": "verbal",
       "chapter": "gmat-vbl-sc",
-      "question": "What is the recommended first difficulty level when practicing GMAT Sentence Correction?",
+      "question": "What is the recommended first difficulty level when practicing GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement?",
       "options": [
         "Easy",
         "Medium",

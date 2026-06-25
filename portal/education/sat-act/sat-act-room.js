@@ -327,7 +327,12 @@
   }
 
   function toQuizItem(q) {
-    const display = window.SatActShared?.toDisplayQ ? window.SatActShared.toDisplayQ(q) : q;
+    const alreadyDisplay = q && q.passageContext != null && q.prompt != null && !q.passage_context;
+    const display = alreadyDisplay
+      ? q
+      : window.SatActShared?.toDisplayQ
+        ? window.SatActShared.toDisplayQ(q)
+        : q;
     return {
       prompt: display.prompt || q.question || q.prompt,
       options: display.options || q.options || [],
@@ -338,7 +343,7 @@
           : q.correctIndex != null
             ? q.correctIndex
             : q.correct_index,
-      passageContext: display.passageContext || q.passage_context,
+      passageContext: display.passageContext || q.passageContext || q.passage_context || '',
     };
   }
 
