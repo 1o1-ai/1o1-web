@@ -162,6 +162,7 @@
         chapterId = ch.id;
         chapterTitle = ch.title;
         document.getElementById('intentChapterLabel').textContent = ch.title;
+        updateIntentUi();
         showPhase('intent');
       });
       grid.appendChild(btn);
@@ -184,8 +185,38 @@
     document.getElementById('btnEvaluate')?.addEventListener('click', openEvaluate);
   }
 
-  function sectionLabel() {
-    return sectionMeta()?.label || curriculum?.subjects?.[subjectId]?.label || subjectId;
+  function buildCtx() {
+    return {
+      sku: SKU,
+      track,
+      subjectId,
+      chapterId,
+      chapterTitle,
+      sectionLabel: sectionLabel(),
+      legacySection: legacySectionKey(),
+    };
+  }
+
+  function updateIntentUi() {
+    const ctx = buildCtx();
+    const strip = document.getElementById('srProvStrip');
+    if (window.StudyRoomProvision?.mountMediaStrip) {
+      window.StudyRoomProvision.mountMediaStrip(strip, ctx);
+    }
+    const labels = window.StudyRoomProvision?.intentLabels?.(ctx);
+    const btnLearn = document.getElementById('btnLearn');
+    const btnEval = document.getElementById('btnEvaluate');
+    if (labels && btnLearn && btnEval) {
+      btnLearn.querySelector('strong').textContent = labels.learn;
+      btnLearn.querySelector('small').textContent = labels.learnSub;
+      btnEval.querySelector('strong').textContent = labels.practice;
+      btnEval.querySelector('small').textContent = labels.practiceSub;
+    } else if (btnLearn && btnEval) {
+      btnLearn.querySelector('strong').textContent = 'Learn';
+      btnLearn.querySelector('small').textContent = 'Study guides & skill walkthrough';
+      btnEval.querySelector('strong').textContent = 'Evaluate';
+      btnEval.querySelector('small').textContent = 'Practice items when available';
+    }
   }
 
   function metaLine() {
@@ -197,9 +228,21 @@
     document.getElementById('learnSubtitle').textContent = metaLine();
     const box = document.getElementById('learnContent');
     const ch = currentChapter();
+    const ctx = buildCtx();
     const fallback = `<p><strong>${sectionLabel()}</strong></p>
       <p style="color:#94a3b8;font-size:0.9rem">${ch?.topic_count || 0} topic(s) in this chapter.</p>`;
     showPhase('learn');
+    updateIntentUi();
+
+    const provisioned = window.StudyRoomProvision?.renderLearn?.(box, ctx);
+    if (provisioned === true) return;
+    if (provisioned && typeof provisioned.then === 'function') {
+      provisioned.catch(() => {
+        box.innerHTML = fallback;
+      });
+      return;
+    }
+
     const render = () => {
       const guide = window.MultiTrackStudyMaterial?.skill?.(chapterId);
       if (window.MultiTrackStudyMaterial?.renderLearn) {
@@ -221,6 +264,25 @@
     document.getElementById('evalTitle').textContent = chapterTitle;
     document.getElementById('evalSubtitle').textContent = metaLine();
     const chat = document.getElementById('evalChat');
+    const ctx = buildCtx();
+    showPhase('evaluate');
+    updateIntentUi();
+
+    const provisioned = window.StudyRoomProvision?.renderPractice?.(chat, ctx);
+    if (provisioned === true) {
+      document.querySelector('.sr-eval-actions')?.classList.add('hidden');
+      return;
+    }
+    if (provisioned && typeof provisioned.then === 'function') {
+      document.querySelector('.sr-eval-actions')?.classList.add('hidden');
+      provisioned.catch(() => {
+        document.querySelector('.sr-eval-actions')?.classList.remove('hidden');
+        chat.innerHTML = '<p class="sr-eval-hint">Practice lab unavailable — use quiz drill below.</p>';
+      });
+      return;
+    }
+    document.querySelector('.sr-eval-actions')?.classList.remove('hidden');
+
     const avail = filterQuestions(99).length;
     chat.innerHTML = `<p class="sr-eval-hint">${
       avail > 0
@@ -228,7 +290,6 @@
         : 'Question bank coming soon — use Learn mode for study guides and RAG excerpts.'
     }</p>`;
     quizQuestions = [];
-    showPhase('evaluate');
   }
 
   function bindEvaluate() {

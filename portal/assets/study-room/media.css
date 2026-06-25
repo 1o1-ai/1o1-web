@@ -1,0 +1,190 @@
+/* Study Room Media + TOEFL lab UI */
+
+.sr-prov-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(103, 232, 249, 0.22);
+  background: rgba(6, 182, 212, 0.06);
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.sr-prov-strip.hidden {
+  display: none;
+}
+
+.sr-prov-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.65);
+  color: #e2e8f0;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.sr-lab-panel {
+  margin-top: 20px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(15, 23, 42, 0.55);
+}
+
+.sr-lab-panel h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  color: #f1f5f9;
+}
+
+.sr-lab-panel .sr-lab-meta {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+.sr-lab-passage {
+  max-height: 280px;
+  overflow-y: auto;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(2, 6, 23, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+  margin-bottom: 14px;
+}
+
+.sr-lab-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  color: #fde68a;
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 12px;
+}
+
+.sr-lab-timer.running {
+  background: rgba(248, 113, 113, 0.12);
+  border-color: rgba(248, 113, 113, 0.4);
+  color: #fecaca;
+}
+
+.sr-lab-notes,
+.sr-lab-essay {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(2, 6, 23, 0.45);
+  color: #e2e8f0;
+  font-family: inherit;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.sr-lab-essay {
+  min-height: 200px;
+}
+
+.srm-mic-bar,
+.srm-audio-player {
+  margin: 12px 0;
+}
+
+.srm-mic-status,
+.srm-audio-note {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  margin: 0 0 10px;
+}
+
+.srm-level-meter {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: 48px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background: rgba(2, 6, 23, 0.4);
+}
+
+.srm-mic-controls,
+.srm-audio-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.srm-timer,
+.srm-listen-count {
+  font-size: 0.85rem;
+  color: #67e8f9;
+  font-variant-numeric: tabular-nums;
+}
+
+.srm-recording-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  font-size: 0.78rem;
+  color: #64748b;
+}
+
+.srm-btn-record.hidden,
+.srm-btn-stop.hidden {
+  display: none;
+}
+
+.sr-lab-task-steps {
+  margin: 0 0 14px;
+  padding-left: 18px;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+.sr-lab-q {
+  margin: 14px 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.sr-lab-q p {
+  margin: 0 0 10px;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+.sr-intent-card.sr-intent-practice .sr-intent-icon {
+  filter: none;
+}
+
+.sr-eval-chat .sr-lab-panel,
+.sr-eval-chat .sr-lab-essay {
+  max-width: 100%;
+}
+
+body.sr-eval-active .sr-eval-chat {
+  max-height: min(72vh, 900px);
+  overflow-y: auto;
+}
+
+
+.sr-learn-section + .sr-lab-panel {
+  margin-top: 24px;
+}
