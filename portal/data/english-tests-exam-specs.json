@@ -1,0 +1,82 @@
+{
+  "sku": "english-tests",
+  "updated_at": "2026-06-25T00:26:38.499615+00:00",
+  "tests": {
+    "toefl": {
+      "test_name": "TOEFL iBT",
+      "sections": [
+        {
+          "section": "Reading",
+          "time_minutes": 35,
+          "questions": 20
+        },
+        {
+          "section": "Listening",
+          "time_minutes": 36,
+          "questions": 28
+        },
+        {
+          "section": "Speaking",
+          "time_minutes": 16,
+          "questions": 4
+        },
+        {
+          "section": "Writing",
+          "time_minutes": 29,
+          "questions": 2
+        }
+      ]
+    },
+    "ielts": {
+      "test_name": "IELTS Academic",
+      "sections": [
+        {
+          "section": "Listening",
+          "time_minutes": 30,
+          "questions": 40
+        },
+        {
+          "section": "Reading",
+          "time_minutes": 60,
+          "questions": 40
+        },
+        {
+          "section": "Writing",
+          "time_minutes": 60,
+          "questions": 2
+        },
+        {
+          "section": "Speaking",
+          "time_minutes": 14,
+          "questions": 3
+        }
+      ]
+    },
+    "det": {
+      "test_name": "Duolingo English Test",
+      "sections": [
+        {
+          "section": "Literacy",
+          "time_minutes": 15,
+          "questions": "adaptive"
+        },
+        {
+          "section": "Comprehension",
+          "time_minutes": 15,
+          "questions": "adaptive"
+        },
+        {
+          "section": "Conversation",
+          "time_minutes": 10,
+          "questions": "adaptive"
+        },
+        {
+          "section": "Production",
+          "time_minutes": 10,
+          "questions": "adaptive"
+        }
+      ]
+    }
+  },
+  "portal_default_mock": "toefl"
+}

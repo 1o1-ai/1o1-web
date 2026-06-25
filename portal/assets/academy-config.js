@@ -142,7 +142,44 @@
       ],
       curriculumPath: '/portal/data/english-tests-curriculum.json',
       bankPath: '/portal/data/english-tests-questions.json',
-      comingSoon: true,
+      forumPath: '/portal/data/english-tests-forum.json',
+      studyMaterialPath: '/portal/data/english-tests-study-material.json',
+      subjects: [
+        { id: 'toefl-reading', label: 'TOEFL Reading', icon: '📖' },
+        { id: 'toefl-listening', label: 'TOEFL Listening', icon: '🎧' },
+        { id: 'toefl-speaking', label: 'TOEFL Speaking', icon: '🗣️' },
+        { id: 'toefl-writing', label: 'TOEFL Writing', icon: '✍️' },
+        { id: 'ielts-reading', label: 'IELTS Reading', icon: '📚' },
+        { id: 'det-literacy', label: 'DET Literacy', icon: '🦉' },
+      ],
+    },
+    'gre-gmat': {
+      id: 'gre-gmat',
+      label: 'GRE / GMAT',
+      hubPath: '/portal/education/gre-gmat/index.html',
+      rosterPath: '/portal/data/us-uk-academy-bots.json',
+      locale: 'us-uk',
+      currency: 'USD',
+      moderationReply:
+        "Let's keep this about GRE/GMAT prep — no personal contact or off-topic chat.",
+      timepassWarn: 'This room is for graduate test prep. Please stay on topic.',
+      studyChatter: [
+        'Anyone grinding GRE Quant tonight?',
+        'GMAT Data Insights multi-source is brutal',
+        'Verbal timing on GMAT Focus — 45 min for 23 Qs',
+        'AWA issue essay outline templates help',
+      ],
+      curriculumPath: '/portal/data/gre-gmat-curriculum.json',
+      bankPath: '/portal/data/gre-gmat-questions.json',
+      forumPath: '/portal/data/gre-gmat-forum.json',
+      studyMaterialPath: '/portal/data/gre-gmat-study-material.json',
+      subjects: [
+        { id: 'gre-verbal', label: 'GRE Verbal', icon: '📖' },
+        { id: 'gre-quantitative', label: 'GRE Quant', icon: '📐' },
+        { id: 'gmat-quantitative', label: 'GMAT Quant', icon: '🔢' },
+        { id: 'gmat-verbal', label: 'GMAT Verbal', icon: '✏️' },
+        { id: 'gmat-data-insights', label: 'GMAT Data Insights', icon: '📊' },
+      ],
     },
     'rhytoma-wbbse': {
       id: 'rhytoma-wbbse',
@@ -191,6 +228,7 @@
     const p = (global.location && global.location.pathname) || '';
     if (p.includes('/sat-act/')) return 'sat-act';
     if (p.includes('/english-tests/')) return 'english-tests';
+    if (p.includes('/gre-gmat/')) return 'gre-gmat';
     if (p.includes('/rhytoma/')) return 'rhytoma-wbbse';
     if (p.includes('/cbse12-science/')) return 'cbse12-science';
     if (p.includes('/cbse10/')) return 'cbse10-core';

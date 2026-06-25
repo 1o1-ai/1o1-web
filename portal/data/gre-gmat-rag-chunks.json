@@ -1,0 +1,748 @@
+{
+  "sku": "gre-gmat",
+  "chunk_count": 106,
+  "manifest": [
+    {
+      "chunk_id": "chk_0001",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0001_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "GRE® Verbal Reasoning and Quantitative Reasoning Sample Questions with Explanations Math Review for the GRE General Test..."
+    },
+    {
+      "chunk_id": "chk_0002",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0002_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "are 1, 2, 4, 5, 10, 20, 25, 50, and 100. GRE Math Review 4 Example 1.1.2: 25 is a multiple of only six integers: 1, 5, 2..."
+    },
+    {
+      "chunk_id": "chk_0003",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0003_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "− Here are five more examples. Example 1.1.10: 100 divided by 3 is 33 remainder 1, since ( )( ) 100 33 3 1. = + Example ..."
+    },
+    {
+      "chunk_id": "chk_0004",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0004_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "denominator, you add the numerators and keep the same denominator. Example 1.2.4: 8 5 11 11   8 5 11   3 11   3 1..."
+    },
+    {
+      "chunk_id": "chk_0005",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0005_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "243.  A negative number raised to an even power is always positive, and a negative number raised to an odd power is alw..."
+    },
+    {
+      "chunk_id": "chk_0006",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0006_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "  Example 1.4.3: 612 0.612 1,000  Conversely, every fraction with integers in the numerator and denominator can be co..."
+    },
+    {
+      "chunk_id": "chk_0007",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0007_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "4 x  The entire real number line is also considered to be an interval. Absolute Value The distance between a number x a..."
+    },
+    {
+      "chunk_id": "chk_0008",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0008_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "20. This ratio can be reduced to 1 to 6 to 4 by dividing each number by the greatest common divisor of 5, 30, and 20, wh..."
+    },
+    {
+      "chunk_id": "chk_0009",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0009_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "than the whole. In general, the whole is called the base of the percent. When the numerator of a percent is greater than..."
+    },
+    {
+      "chunk_id": "chk_0010",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0010_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "September 1, 2012 to September 1, 2014, is a 2.48% decrease. GRE Math Review 28 ARITHMETIC EXERCISES Exercise 1. Evaluat..."
+    },
+    {
+      "chunk_id": "chk_0011",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0011_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "share Exercise 13. 8 cats Exercise 14. (a) 2 c d + is even. (b) 2c d + is odd. GRE Math Review 35 (d) d c is even. (e) (..."
+    },
+    {
+      "chunk_id": "chk_0012",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0012_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "= − Example 2.1.13: For values of x where it is defined, the algebraic expression 2 7 14 2 4 x x x + + can be simplified..."
+    },
+    {
+      "chunk_id": "chk_0013",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0013_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "x x − − = = Example A: 7 7 4 4 5 5 5 − = 3 5 125 = = Example B: 3 5 8 5 1 t t t t − = = Rule 4: 0 1 x = Example A: 0 7 1..."
+    },
+    {
+      "chunk_id": "chk_0014",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0014_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "10 9 3 x y z − − = are linear equations, but 2 0 x y + = and 3 xz = are not. Linear Equations in One Variable To solve a..."
+    },
+    {
+      "chunk_id": "chk_0015",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0015_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "the expression is substituted in the other equation. Example 2.3.2: Use substitution to solve the following system of tw..."
+    },
+    {
+      "chunk_id": "chk_0016",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0016_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "x x + + = we have 1, a = 1, b = and 5. c = Therefore, the quadratic formula yields ( ) ( )( ) ( ) 2 1 1 4 1 5 2 1 x −± −..."
+    },
+    {
+      "chunk_id": "chk_0017",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0017_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "is substituted in the expression above, the result is ( ) (1) 3 1 5 8. f = + = It might be helpful to think of a functio..."
+    },
+    {
+      "chunk_id": "chk_0018",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0018_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "number of grams of the new mixture will be 12 ,x + and the total number of grams of vinegar in the new mixture will be (..."
+    },
+    {
+      "chunk_id": "chk_0019",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0019_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "all of them will be sold. What must be the selling price per radio to ensure that the profit (revenue from the sales min..."
+    },
+    {
+      "chunk_id": "chk_0020",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0020_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "x = This allows us to compute the positive fourth root of 1.05 by taking the positive square root of 1.05 and then takin..."
+    },
+    {
+      "chunk_id": "chk_0021",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0021_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "of all points whose ordered pairs ( ) ,x y satisfy the equation. The graph of a linear equation of the form y mx b = + i..."
+    },
+    {
+      "chunk_id": "chk_0022",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0022_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "68 Algebra Figure 4 Example 2.8.3: Consider the following system of two linear inequalities. 3 6 2 1 x y x y − ≥− + ≥− S..."
+    },
+    {
+      "chunk_id": "chk_0023",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0023_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "5 − and radius 3, so its equation is ( ) ( ) 2 2 6 5 9. x y − + + = Algebra Figure 8 2.9 Graphs of Functions The coordin..."
+    },
+    {
+      "chunk_id": "chk_0024",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0024_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "Figure 12 Similarly, the graph of the function ( ) 5 k x x = − is the graph of y x = shifted downward by 5 units. (The g..."
+    },
+    {
+      "chunk_id": "chk_0025",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0025_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "all nonzero numbers y by ( ) , y g y y = find the value of each of the following. (a) ( ) 2 g (b) ( ) 2 g − (c) ( ) ( ) ..."
+    },
+    {
+      "chunk_id": "chk_0026",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0026_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "85 Exercise 19. For the parabola 2 4 12 y x x = − − in the xy-plane, find the following. (a) The x-intercepts (b) The y-..."
+    },
+    {
+      "chunk_id": "chk_0027",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0027_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "PART 3. GEOMETRY The review of geometry begins with lines and angles and progresses to other plane figures, such as poly..."
+    },
+    {
+      "chunk_id": "chk_0028",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0028_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "interior angles of a triangle is 180 , it follows that the sum of the measures of the interior angles of an n-sided pol..."
+    },
+    {
+      "chunk_id": "chk_0029",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0029_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "  Therefore 2 2 2 y x  and 2 . y x  So the lengths of the sides are in the ratio x to x to 2 ,x which is the same as..."
+    },
+    {
+      "chunk_id": "chk_0030",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0030_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "up so that the corresponding angles are congruent or, equivalently, the lengths of the corresponding sides have the same..."
+    },
+    {
+      "chunk_id": "chk_0031",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0031_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "a diameter, as well as a chord. Geometry Figure 21 The distance around a circle is called the circumference of the circl..."
+    },
+    {
+      "chunk_id": "chk_0032",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0032_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "is, if a radius and a line intersect at a point on the circle and the line is perpendicular to the radius, then the line..."
+    },
+    {
+      "chunk_id": "chk_0033",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0033_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "of the two bases and the area of its lateral surface, or   2 2 2 A r rh p p   For example, if a right circular cylin..."
+    },
+    {
+      "chunk_id": "chk_0034",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0034_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "are collected from a population by observing one or more variables. The distribution of a variable, or distribution of d..."
+    },
+    {
+      "chunk_id": "chk_0035",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0035_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "is represented by a rectangular bar, and the height of each bar is proportional to the corresponding frequency or relati..."
+    },
+    {
+      "chunk_id": "chk_0036",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0036_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "Data Analysis Figure 4 Histograms are useful for identifying the general shape of a distribution of data. Also evident a..."
+    },
+    {
+      "chunk_id": "chk_0037",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0037_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "a bicyclist will lower his or her finishing time for each increase of 10 training index units. This prediction is derive..."
+    },
+    {
+      "chunk_id": "chk_0038",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0038_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "2, 1, 6, 2, and 4. Note that the sum of the weights is the number of numbers in the list, 16. The mean can be affected b..."
+    },
+    {
+      "chunk_id": "chk_0039",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0039_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "are already listed in increasing order), first divide the numbers in GRE Math Review 143 the list into two groups of 8 n..."
+    },
+    {
+      "chunk_id": "chk_0040",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0040_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "measures are approximately 520 and 430, respectively, and for list 2, they are approximately 500 and 220, respectively. ..."
+    },
+    {
+      "chunk_id": "chk_0041",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0041_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "0.4,  and 1.8  from the last example are all between 3  and 3; that is, the corresponding ratings 48, 30, and 20 are ..."
+    },
+    {
+      "chunk_id": "chk_0042",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0042_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "B and C are mutually exclusive, often written as . B C ∩ = ∅ The last example can be used to illustrate an elementary co..."
+    },
+    {
+      "chunk_id": "chk_0043",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0043_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "nth object. Thus, applying the multiplication principle, the number of ways to order the n objects is equal to the produ..."
+    },
+    {
+      "chunk_id": "chk_0044",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0044_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "selec t with order) number of ways to select without ord er  (number of ways to o rder ) GRE Math Review 155 GRE Math..."
+    },
+    {
+      "chunk_id": "chk_0045",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0045_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "( ) . 15 P J = In general, for a random experiment with a finite number of possible outcomes, if each outcome is equally..."
+    },
+    {
+      "chunk_id": "chk_0046",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0046_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": " and P E F  P E P F  if E and F are independent. Example 4.4.2: If a fair 6-sided die is rolled once, let E be the..."
+    },
+    {
+      "chunk_id": "chk_0047",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0047_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "4 6 7 P P P P     Then,   first roll is odd and second roll is even P    odd even P P   3 4 7 7  12 . 49..."
+    },
+    {
+      "chunk_id": "chk_0048",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0048_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "can be modeled by a smooth curve that is close to the tops of the bars. Such a model retains the shape of the distributi..."
+    },
+    {
+      "chunk_id": "chk_0049",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0049_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "  P X 0 0.12 1 0.20 2 0.28 3 0.24 4 0.12 5 0.04 Note that the probabilities are simply the relative frequencies of the..."
+    },
+    {
+      "chunk_id": "chk_0050",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0050_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "the bars of a histogram and the probabilities of a discrete random variable. Fundamental Link: In a histogram representi..."
+    },
+    {
+      "chunk_id": "chk_0051",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0051_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "of the corresponding events. (Consequently, the probability of an event such as 3 X  would correspond to the area of a ..."
+    },
+    {
+      "chunk_id": "chk_0052",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0052_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "Math Review 182 statement 3, the percents shown in the table for flight problems do in fact increase by more than 2 perc..."
+    },
+    {
+      "chunk_id": "chk_0053",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0053_PDF_gre-math-review_pdf.txt",
+      "word_count": "900",
+      "preview": "as many passengers, what would have been the mean, median, mode, range, interquartile range, and standard deviation of t..."
+    },
+    {
+      "chunk_id": "chk_0054",
+      "source_id": "PDF_gre-math-review_pdf",
+      "file_path": "rag_chunks/chk_0054_PDF_gre-math-review_pdf.txt",
+      "word_count": "531",
+      "preview": "standard deviation of 5 centimeters. (a) Approximately how many of the adult penguins are between 65 centimeters and 75 ..."
+    },
+    {
+      "chunk_id": "chk_0055",
+      "source_id": "YT_TR_vid_gen_yt_01",
+      "file_path": "rag_chunks/chk_0055_YT_TR_vid_gen_yt_01.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0056",
+      "source_id": "YT_TR_vid_gen_yt_02",
+      "file_path": "rag_chunks/chk_0056_YT_TR_vid_gen_yt_02.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GRE, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0057",
+      "source_id": "YT_TR_vid_gen_yt_03",
+      "file_path": "rag_chunks/chk_0057_YT_TR_vid_gen_yt_03.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GRE, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0058",
+      "source_id": "YT_TR_vid_gen_yt_04",
+      "file_path": "rag_chunks/chk_0058_YT_TR_vid_gen_yt_04.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0059",
+      "source_id": "YT_TR_vid_gen_yt_05",
+      "file_path": "rag_chunks/chk_0059_YT_TR_vid_gen_yt_05.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0060",
+      "source_id": "YT_TR_vid_gen_yt_06",
+      "file_path": "rag_chunks/chk_0060_YT_TR_vid_gen_yt_06.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GRE, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0061",
+      "source_id": "YT_TR_vid_gen_yt_07",
+      "file_path": "rag_chunks/chk_0061_YT_TR_vid_gen_yt_07.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0062",
+      "source_id": "YT_TR_vid_gen_yt_08",
+      "file_path": "rag_chunks/chk_0062_YT_TR_vid_gen_yt_08.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0063",
+      "source_id": "YT_TR_vid_gen_yt_09",
+      "file_path": "rag_chunks/chk_0063_YT_TR_vid_gen_yt_09.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GRE, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0064",
+      "source_id": "YT_TR_vid_gen_yt_10",
+      "file_path": "rag_chunks/chk_0064_YT_TR_vid_gen_yt_10.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0065",
+      "source_id": "YT_TR_vid_gen_yt_11",
+      "file_path": "rag_chunks/chk_0065_YT_TR_vid_gen_yt_11.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GRE, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0066",
+      "source_id": "YT_TR_vid_gen_yt_12",
+      "file_path": "rag_chunks/chk_0066_YT_TR_vid_gen_yt_12.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0067",
+      "source_id": "YT_TR_vid_gen_yt_13",
+      "file_path": "rag_chunks/chk_0067_YT_TR_vid_gen_yt_13.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0068",
+      "source_id": "YT_TR_vid_gen_yt_14",
+      "file_path": "rag_chunks/chk_0068_YT_TR_vid_gen_yt_14.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0069",
+      "source_id": "YT_TR_vid_gen_yt_15",
+      "file_path": "rag_chunks/chk_0069_YT_TR_vid_gen_yt_15.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GRE, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0070",
+      "source_id": "YT_TR_vid_gen_yt_16",
+      "file_path": "rag_chunks/chk_0070_YT_TR_vid_gen_yt_16.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0071",
+      "source_id": "YT_TR_vid_gen_yt_17",
+      "file_path": "rag_chunks/chk_0071_YT_TR_vid_gen_yt_17.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GRE, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0072",
+      "source_id": "YT_TR_vid_gen_yt_18",
+      "file_path": "rag_chunks/chk_0072_YT_TR_vid_gen_yt_18.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0073",
+      "source_id": "YT_TR_vid_gen_yt_19",
+      "file_path": "rag_chunks/chk_0073_YT_TR_vid_gen_yt_19.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GRE, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0074",
+      "source_id": "YT_TR_vid_gen_yt_20",
+      "file_path": "rag_chunks/chk_0074_YT_TR_vid_gen_yt_20.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GRE, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0075",
+      "source_id": "YT_TR_vid_gen_yt_21",
+      "file_path": "rag_chunks/chk_0075_YT_TR_vid_gen_yt_21.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0076",
+      "source_id": "YT_TR_vid_gen_yt_22",
+      "file_path": "rag_chunks/chk_0076_YT_TR_vid_gen_yt_22.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0077",
+      "source_id": "YT_TR_vid_gen_yt_23",
+      "file_path": "rag_chunks/chk_0077_YT_TR_vid_gen_yt_23.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GRE, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0078",
+      "source_id": "YT_TR_vid_gen_yt_24",
+      "file_path": "rag_chunks/chk_0078_YT_TR_vid_gen_yt_24.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0079",
+      "source_id": "YT_TR_vid_gen_yt_25",
+      "file_path": "rag_chunks/chk_0079_YT_TR_vid_gen_yt_25.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0080",
+      "source_id": "YT_TR_vid_gen_yt_26",
+      "file_path": "rag_chunks/chk_0080_YT_TR_vid_gen_yt_26.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from GMAT, we explore important test specifications and curriculum concepts. We ..."
+    },
+    {
+      "chunk_id": "chk_0081",
+      "source_id": "YT_SM_vid_gen_yt_01",
+      "file_path": "rag_chunks/chk_0081_YT_SM_vid_gen_yt_01.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0082",
+      "source_id": "YT_SM_vid_gen_yt_02",
+      "file_path": "rag_chunks/chk_0082_YT_SM_vid_gen_yt_02.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GRE covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0083",
+      "source_id": "YT_SM_vid_gen_yt_03",
+      "file_path": "rag_chunks/chk_0083_YT_SM_vid_gen_yt_03.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GRE covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0084",
+      "source_id": "YT_SM_vid_gen_yt_04",
+      "file_path": "rag_chunks/chk_0084_YT_SM_vid_gen_yt_04.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0085",
+      "source_id": "YT_SM_vid_gen_yt_05",
+      "file_path": "rag_chunks/chk_0085_YT_SM_vid_gen_yt_05.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0086",
+      "source_id": "YT_SM_vid_gen_yt_06",
+      "file_path": "rag_chunks/chk_0086_YT_SM_vid_gen_yt_06.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GRE covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0087",
+      "source_id": "YT_SM_vid_gen_yt_07",
+      "file_path": "rag_chunks/chk_0087_YT_SM_vid_gen_yt_07.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0088",
+      "source_id": "YT_SM_vid_gen_yt_08",
+      "file_path": "rag_chunks/chk_0088_YT_SM_vid_gen_yt_08.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0089",
+      "source_id": "YT_SM_vid_gen_yt_09",
+      "file_path": "rag_chunks/chk_0089_YT_SM_vid_gen_yt_09.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GRE covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0090",
+      "source_id": "YT_SM_vid_gen_yt_10",
+      "file_path": "rag_chunks/chk_0090_YT_SM_vid_gen_yt_10.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0091",
+      "source_id": "YT_SM_vid_gen_yt_11",
+      "file_path": "rag_chunks/chk_0091_YT_SM_vid_gen_yt_11.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GRE covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0092",
+      "source_id": "YT_SM_vid_gen_yt_12",
+      "file_path": "rag_chunks/chk_0092_YT_SM_vid_gen_yt_12.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0093",
+      "source_id": "YT_SM_vid_gen_yt_13",
+      "file_path": "rag_chunks/chk_0093_YT_SM_vid_gen_yt_13.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0094",
+      "source_id": "YT_SM_vid_gen_yt_14",
+      "file_path": "rag_chunks/chk_0094_YT_SM_vid_gen_yt_14.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0095",
+      "source_id": "YT_SM_vid_gen_yt_15",
+      "file_path": "rag_chunks/chk_0095_YT_SM_vid_gen_yt_15.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GRE covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0096",
+      "source_id": "YT_SM_vid_gen_yt_16",
+      "file_path": "rag_chunks/chk_0096_YT_SM_vid_gen_yt_16.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0097",
+      "source_id": "YT_SM_vid_gen_yt_17",
+      "file_path": "rag_chunks/chk_0097_YT_SM_vid_gen_yt_17.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GRE covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0098",
+      "source_id": "YT_SM_vid_gen_yt_18",
+      "file_path": "rag_chunks/chk_0098_YT_SM_vid_gen_yt_18.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0099",
+      "source_id": "YT_SM_vid_gen_yt_19",
+      "file_path": "rag_chunks/chk_0099_YT_SM_vid_gen_yt_19.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GRE covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0100",
+      "source_id": "YT_SM_vid_gen_yt_20",
+      "file_path": "rag_chunks/chk_0100_YT_SM_vid_gen_yt_20.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GRE covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0101",
+      "source_id": "YT_SM_vid_gen_yt_21",
+      "file_path": "rag_chunks/chk_0101_YT_SM_vid_gen_yt_21.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0102",
+      "source_id": "YT_SM_vid_gen_yt_22",
+      "file_path": "rag_chunks/chk_0102_YT_SM_vid_gen_yt_22.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0103",
+      "source_id": "YT_SM_vid_gen_yt_23",
+      "file_path": "rag_chunks/chk_0103_YT_SM_vid_gen_yt_23.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GRE covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0104",
+      "source_id": "YT_SM_vid_gen_yt_24",
+      "file_path": "rag_chunks/chk_0104_YT_SM_vid_gen_yt_24.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0105",
+      "source_id": "YT_SM_vid_gen_yt_25",
+      "file_path": "rag_chunks/chk_0105_YT_SM_vid_gen_yt_25.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0106",
+      "source_id": "YT_SM_vid_gen_yt_26",
+      "file_path": "rag_chunks/chk_0106_YT_SM_vid_gen_yt_26.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from GMAT covering foundational curriculum concepts and diagnostic practice questions...."
+    }
+  ]
+}

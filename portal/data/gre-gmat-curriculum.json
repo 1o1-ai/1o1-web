@@ -1,0 +1,1851 @@
+{
+  "sku": "gre-gmat",
+  "title": "GRE / GMAT Preparation Suite",
+  "displayName": "GRE / GMAT",
+  "locale": "en-US",
+  "subjects": {
+    "gre-verbal": {
+      "id": "gre-verbal",
+      "label": "Verbal Reasoning",
+      "track": "gre",
+      "section": "verbal",
+      "chapters": [
+        {
+          "id": "gre-vbl-rc",
+          "title": "GRE Reading Comprehension",
+          "topic_id": "GRE.VBL.RC.T01",
+          "skill_prefix": "GRE.VBL.RC",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GRE Reading Comprehension Focus Topic 13",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 17",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 04",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 24",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 14",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 19",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 18",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 26",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 27",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 30",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 12",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 25",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 22",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 05",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 20",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 29",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 28",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 03",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 23",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 11",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 10",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 21",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 06",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 16",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 09",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 07",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 01",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 02",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 15",
+            "Learn concept details of GRE Reading Comprehension Focus Topic 08"
+          ],
+          "skills": [
+            {
+              "id": "GRE.VBL.RC.T01",
+              "title": "GRE Reading Comprehension Focus Topic 01"
+            },
+            {
+              "id": "GRE.VBL.RC.T02",
+              "title": "GRE Reading Comprehension Focus Topic 02"
+            },
+            {
+              "id": "GRE.VBL.RC.T03",
+              "title": "GRE Reading Comprehension Focus Topic 03"
+            },
+            {
+              "id": "GRE.VBL.RC.T04",
+              "title": "GRE Reading Comprehension Focus Topic 04"
+            },
+            {
+              "id": "GRE.VBL.RC.T05",
+              "title": "GRE Reading Comprehension Focus Topic 05"
+            },
+            {
+              "id": "GRE.VBL.RC.T06",
+              "title": "GRE Reading Comprehension Focus Topic 06"
+            },
+            {
+              "id": "GRE.VBL.RC.T07",
+              "title": "GRE Reading Comprehension Focus Topic 07"
+            },
+            {
+              "id": "GRE.VBL.RC.T08",
+              "title": "GRE Reading Comprehension Focus Topic 08"
+            },
+            {
+              "id": "GRE.VBL.RC.T09",
+              "title": "GRE Reading Comprehension Focus Topic 09"
+            },
+            {
+              "id": "GRE.VBL.RC.T10",
+              "title": "GRE Reading Comprehension Focus Topic 10"
+            },
+            {
+              "id": "GRE.VBL.RC.T11",
+              "title": "GRE Reading Comprehension Focus Topic 11"
+            },
+            {
+              "id": "GRE.VBL.RC.T12",
+              "title": "GRE Reading Comprehension Focus Topic 12"
+            },
+            {
+              "id": "gre-vbl-rc-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gre-vbl-se",
+          "title": "GRE Sentence Equivalence",
+          "topic_id": "GRE.VBL.SE.T01",
+          "skill_prefix": "GRE.VBL.SE",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 13",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 27",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 19",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 28",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 21",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 12",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 02",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 04",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 01",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 20",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 30",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 14",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 26",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 08",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 05",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 15",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 22",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 03",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 07",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 16",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 06",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 10",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 24",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 25",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 18",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 17",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 23",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 29",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 09",
+            "Learn concept details of GRE Sentence Equivalence Focus Topic 11"
+          ],
+          "skills": [
+            {
+              "id": "GRE.VBL.SE.T01",
+              "title": "GRE Sentence Equivalence Focus Topic 01"
+            },
+            {
+              "id": "GRE.VBL.SE.T02",
+              "title": "GRE Sentence Equivalence Focus Topic 02"
+            },
+            {
+              "id": "GRE.VBL.SE.T03",
+              "title": "GRE Sentence Equivalence Focus Topic 03"
+            },
+            {
+              "id": "GRE.VBL.SE.T04",
+              "title": "GRE Sentence Equivalence Focus Topic 04"
+            },
+            {
+              "id": "GRE.VBL.SE.T05",
+              "title": "GRE Sentence Equivalence Focus Topic 05"
+            },
+            {
+              "id": "GRE.VBL.SE.T06",
+              "title": "GRE Sentence Equivalence Focus Topic 06"
+            },
+            {
+              "id": "GRE.VBL.SE.T07",
+              "title": "GRE Sentence Equivalence Focus Topic 07"
+            },
+            {
+              "id": "GRE.VBL.SE.T08",
+              "title": "GRE Sentence Equivalence Focus Topic 08"
+            },
+            {
+              "id": "GRE.VBL.SE.T09",
+              "title": "GRE Sentence Equivalence Focus Topic 09"
+            },
+            {
+              "id": "GRE.VBL.SE.T10",
+              "title": "GRE Sentence Equivalence Focus Topic 10"
+            },
+            {
+              "id": "GRE.VBL.SE.T11",
+              "title": "GRE Sentence Equivalence Focus Topic 11"
+            },
+            {
+              "id": "GRE.VBL.SE.T12",
+              "title": "GRE Sentence Equivalence Focus Topic 12"
+            },
+            {
+              "id": "gre-vbl-se-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gre-vbl-tc",
+          "title": "GRE Text Completion",
+          "topic_id": "GRE.VBL.TC.T01",
+          "skill_prefix": "GRE.VBL.TC",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GRE Text Completion Focus Topic 05",
+            "Learn concept details of GRE Text Completion Focus Topic 28",
+            "Learn concept details of GRE Text Completion Focus Topic 11",
+            "Learn concept details of GRE Text Completion Focus Topic 06",
+            "Learn concept details of GRE Text Completion Focus Topic 09",
+            "Learn concept details of GRE Text Completion Focus Topic 04",
+            "Learn concept details of GRE Text Completion Focus Topic 12",
+            "Learn concept details of GRE Text Completion Focus Topic 16",
+            "Learn concept details of GRE Text Completion Focus Topic 25",
+            "Learn concept details of GRE Text Completion Focus Topic 02",
+            "Learn concept details of GRE Text Completion Focus Topic 14",
+            "Learn concept details of GRE Text Completion Focus Topic 26",
+            "Learn concept details of GRE Text Completion Focus Topic 15",
+            "Learn concept details of GRE Text Completion Focus Topic 23",
+            "Learn concept details of GRE Text Completion Focus Topic 13",
+            "Learn concept details of GRE Text Completion Focus Topic 29",
+            "Learn concept details of GRE Text Completion Focus Topic 27",
+            "Learn concept details of GRE Text Completion Focus Topic 07",
+            "Learn concept details of GRE Text Completion Focus Topic 17",
+            "Learn concept details of GRE Text Completion Focus Topic 08",
+            "Learn concept details of GRE Text Completion Focus Topic 01",
+            "Learn concept details of GRE Text Completion Focus Topic 30",
+            "Learn concept details of GRE Text Completion Focus Topic 19",
+            "Learn concept details of GRE Text Completion Focus Topic 22",
+            "Learn concept details of GRE Text Completion Focus Topic 20",
+            "Learn concept details of GRE Text Completion Focus Topic 10",
+            "Learn concept details of GRE Text Completion Focus Topic 21",
+            "Learn concept details of GRE Text Completion Focus Topic 03",
+            "Learn concept details of GRE Text Completion Focus Topic 18",
+            "Learn concept details of GRE Text Completion Focus Topic 24"
+          ],
+          "skills": [
+            {
+              "id": "GRE.VBL.TC.T01",
+              "title": "GRE Text Completion Focus Topic 01"
+            },
+            {
+              "id": "GRE.VBL.TC.T02",
+              "title": "GRE Text Completion Focus Topic 02"
+            },
+            {
+              "id": "GRE.VBL.TC.T03",
+              "title": "GRE Text Completion Focus Topic 03"
+            },
+            {
+              "id": "GRE.VBL.TC.T04",
+              "title": "GRE Text Completion Focus Topic 04"
+            },
+            {
+              "id": "GRE.VBL.TC.T05",
+              "title": "GRE Text Completion Focus Topic 05"
+            },
+            {
+              "id": "GRE.VBL.TC.T06",
+              "title": "GRE Text Completion Focus Topic 06"
+            },
+            {
+              "id": "GRE.VBL.TC.T07",
+              "title": "GRE Text Completion Focus Topic 07"
+            },
+            {
+              "id": "GRE.VBL.TC.T08",
+              "title": "GRE Text Completion Focus Topic 08"
+            },
+            {
+              "id": "GRE.VBL.TC.T09",
+              "title": "GRE Text Completion Focus Topic 09"
+            },
+            {
+              "id": "GRE.VBL.TC.T10",
+              "title": "GRE Text Completion Focus Topic 10"
+            },
+            {
+              "id": "GRE.VBL.TC.T11",
+              "title": "GRE Text Completion Focus Topic 11"
+            },
+            {
+              "id": "GRE.VBL.TC.T12",
+              "title": "GRE Text Completion Focus Topic 12"
+            },
+            {
+              "id": "gre-vbl-tc-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        }
+      ]
+    },
+    "gre-quantitative": {
+      "id": "gre-quantitative",
+      "label": "Quantitative Reasoning",
+      "track": "gre",
+      "section": "quantitative",
+      "chapters": [
+        {
+          "id": "gre-qnt-alg",
+          "title": "GRE Quantitative Algebra",
+          "topic_id": "GRE.QNT.ALG.T01",
+          "skill_prefix": "GRE.QNT.ALG",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 02",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 05",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 03",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 23",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 19",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 09",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 15",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 08",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 22",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 21",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 29",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 12",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 01",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 18",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 06",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 16",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 10",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 13",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 24",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 30",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 20",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 04",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 17",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 27",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 28",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 11",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 14",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 07",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 25",
+            "Learn concept details of GRE Quantitative Algebra Focus Topic 26"
+          ],
+          "skills": [
+            {
+              "id": "GRE.QNT.ALG.T01",
+              "title": "GRE Quantitative Algebra Focus Topic 01"
+            },
+            {
+              "id": "GRE.QNT.ALG.T02",
+              "title": "GRE Quantitative Algebra Focus Topic 02"
+            },
+            {
+              "id": "GRE.QNT.ALG.T03",
+              "title": "GRE Quantitative Algebra Focus Topic 03"
+            },
+            {
+              "id": "GRE.QNT.ALG.T04",
+              "title": "GRE Quantitative Algebra Focus Topic 04"
+            },
+            {
+              "id": "GRE.QNT.ALG.T05",
+              "title": "GRE Quantitative Algebra Focus Topic 05"
+            },
+            {
+              "id": "GRE.QNT.ALG.T06",
+              "title": "GRE Quantitative Algebra Focus Topic 06"
+            },
+            {
+              "id": "GRE.QNT.ALG.T07",
+              "title": "GRE Quantitative Algebra Focus Topic 07"
+            },
+            {
+              "id": "GRE.QNT.ALG.T08",
+              "title": "GRE Quantitative Algebra Focus Topic 08"
+            },
+            {
+              "id": "GRE.QNT.ALG.T09",
+              "title": "GRE Quantitative Algebra Focus Topic 09"
+            },
+            {
+              "id": "GRE.QNT.ALG.T10",
+              "title": "GRE Quantitative Algebra Focus Topic 10"
+            },
+            {
+              "id": "GRE.QNT.ALG.T11",
+              "title": "GRE Quantitative Algebra Focus Topic 11"
+            },
+            {
+              "id": "GRE.QNT.ALG.T12",
+              "title": "GRE Quantitative Algebra Focus Topic 12"
+            },
+            {
+              "id": "gre-qnt-alg-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gre-qnt-ari",
+          "title": "GRE Quantitative Arithmetic",
+          "topic_id": "GRE.QNT.ARI.T01",
+          "skill_prefix": "GRE.QNT.ARI",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 08",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 04",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 11",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 13",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 02",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 25",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 03",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 16",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 20",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 29",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 07",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 26",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 06",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 01",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 05",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 28",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 12",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 21",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 09",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 24",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 14",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 30",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 18",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 23",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 15",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 17",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 27",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 10",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 22",
+            "Learn concept details of GRE Quantitative Arithmetic Focus Topic 19"
+          ],
+          "skills": [
+            {
+              "id": "GRE.QNT.ARI.T01",
+              "title": "GRE Quantitative Arithmetic Focus Topic 01"
+            },
+            {
+              "id": "GRE.QNT.ARI.T02",
+              "title": "GRE Quantitative Arithmetic Focus Topic 02"
+            },
+            {
+              "id": "GRE.QNT.ARI.T03",
+              "title": "GRE Quantitative Arithmetic Focus Topic 03"
+            },
+            {
+              "id": "GRE.QNT.ARI.T04",
+              "title": "GRE Quantitative Arithmetic Focus Topic 04"
+            },
+            {
+              "id": "GRE.QNT.ARI.T05",
+              "title": "GRE Quantitative Arithmetic Focus Topic 05"
+            },
+            {
+              "id": "GRE.QNT.ARI.T06",
+              "title": "GRE Quantitative Arithmetic Focus Topic 06"
+            },
+            {
+              "id": "GRE.QNT.ARI.T07",
+              "title": "GRE Quantitative Arithmetic Focus Topic 07"
+            },
+            {
+              "id": "GRE.QNT.ARI.T08",
+              "title": "GRE Quantitative Arithmetic Focus Topic 08"
+            },
+            {
+              "id": "GRE.QNT.ARI.T09",
+              "title": "GRE Quantitative Arithmetic Focus Topic 09"
+            },
+            {
+              "id": "GRE.QNT.ARI.T10",
+              "title": "GRE Quantitative Arithmetic Focus Topic 10"
+            },
+            {
+              "id": "GRE.QNT.ARI.T11",
+              "title": "GRE Quantitative Arithmetic Focus Topic 11"
+            },
+            {
+              "id": "GRE.QNT.ARI.T12",
+              "title": "GRE Quantitative Arithmetic Focus Topic 12"
+            },
+            {
+              "id": "gre-qnt-ari-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gre-qnt-dat",
+          "title": "GRE Quantitative Data Analysis",
+          "topic_id": "GRE.QNT.DAT.T01",
+          "skill_prefix": "GRE.QNT.DAT",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 01",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 13",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 07",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 04",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 03",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 17",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 21",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 30",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 09",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 15",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 16",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 10",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 02",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 14",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 23",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 24",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 28",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 29",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 12",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 19",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 20",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 26",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 22",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 25",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 11",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 08",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 06",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 05",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 18",
+            "Learn concept details of GRE Quantitative Data Analysis Focus Topic 27"
+          ],
+          "skills": [
+            {
+              "id": "GRE.QNT.DAT.T01",
+              "title": "GRE Quantitative Data Analysis Focus Topic 01"
+            },
+            {
+              "id": "GRE.QNT.DAT.T02",
+              "title": "GRE Quantitative Data Analysis Focus Topic 02"
+            },
+            {
+              "id": "GRE.QNT.DAT.T03",
+              "title": "GRE Quantitative Data Analysis Focus Topic 03"
+            },
+            {
+              "id": "GRE.QNT.DAT.T04",
+              "title": "GRE Quantitative Data Analysis Focus Topic 04"
+            },
+            {
+              "id": "GRE.QNT.DAT.T05",
+              "title": "GRE Quantitative Data Analysis Focus Topic 05"
+            },
+            {
+              "id": "GRE.QNT.DAT.T06",
+              "title": "GRE Quantitative Data Analysis Focus Topic 06"
+            },
+            {
+              "id": "GRE.QNT.DAT.T07",
+              "title": "GRE Quantitative Data Analysis Focus Topic 07"
+            },
+            {
+              "id": "GRE.QNT.DAT.T08",
+              "title": "GRE Quantitative Data Analysis Focus Topic 08"
+            },
+            {
+              "id": "GRE.QNT.DAT.T09",
+              "title": "GRE Quantitative Data Analysis Focus Topic 09"
+            },
+            {
+              "id": "GRE.QNT.DAT.T10",
+              "title": "GRE Quantitative Data Analysis Focus Topic 10"
+            },
+            {
+              "id": "GRE.QNT.DAT.T11",
+              "title": "GRE Quantitative Data Analysis Focus Topic 11"
+            },
+            {
+              "id": "GRE.QNT.DAT.T12",
+              "title": "GRE Quantitative Data Analysis Focus Topic 12"
+            },
+            {
+              "id": "gre-qnt-dat-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gre-qnt-geo",
+          "title": "GRE Quantitative Geometry",
+          "topic_id": "GRE.QNT.GEO.T01",
+          "skill_prefix": "GRE.QNT.GEO",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 01",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 16",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 25",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 05",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 21",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 15",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 30",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 22",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 04",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 10",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 18",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 13",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 20",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 11",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 24",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 12",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 19",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 17",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 28",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 27",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 02",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 07",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 08",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 14",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 03",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 26",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 06",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 29",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 23",
+            "Learn concept details of GRE Quantitative Geometry Focus Topic 09"
+          ],
+          "skills": [
+            {
+              "id": "GRE.QNT.GEO.T01",
+              "title": "GRE Quantitative Geometry Focus Topic 01"
+            },
+            {
+              "id": "GRE.QNT.GEO.T02",
+              "title": "GRE Quantitative Geometry Focus Topic 02"
+            },
+            {
+              "id": "GRE.QNT.GEO.T03",
+              "title": "GRE Quantitative Geometry Focus Topic 03"
+            },
+            {
+              "id": "GRE.QNT.GEO.T04",
+              "title": "GRE Quantitative Geometry Focus Topic 04"
+            },
+            {
+              "id": "GRE.QNT.GEO.T05",
+              "title": "GRE Quantitative Geometry Focus Topic 05"
+            },
+            {
+              "id": "GRE.QNT.GEO.T06",
+              "title": "GRE Quantitative Geometry Focus Topic 06"
+            },
+            {
+              "id": "GRE.QNT.GEO.T07",
+              "title": "GRE Quantitative Geometry Focus Topic 07"
+            },
+            {
+              "id": "GRE.QNT.GEO.T08",
+              "title": "GRE Quantitative Geometry Focus Topic 08"
+            },
+            {
+              "id": "GRE.QNT.GEO.T09",
+              "title": "GRE Quantitative Geometry Focus Topic 09"
+            },
+            {
+              "id": "GRE.QNT.GEO.T10",
+              "title": "GRE Quantitative Geometry Focus Topic 10"
+            },
+            {
+              "id": "GRE.QNT.GEO.T11",
+              "title": "GRE Quantitative Geometry Focus Topic 11"
+            },
+            {
+              "id": "GRE.QNT.GEO.T12",
+              "title": "GRE Quantitative Geometry Focus Topic 12"
+            },
+            {
+              "id": "gre-qnt-geo-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        }
+      ]
+    },
+    "gre-awa": {
+      "id": "gre-awa",
+      "label": "Analytical Writing",
+      "track": "gre",
+      "section": "awa",
+      "chapters": [
+        {
+          "id": "gre-awa-iss",
+          "title": "GRE Issue Analytical Essay",
+          "topic_id": "GRE.AWA.ISS.T01",
+          "skill_prefix": "GRE.AWA.ISS",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 25",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 15",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 27",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 02",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 06",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 03",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 05",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 09",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 01",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 19",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 22",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 16",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 23",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 26",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 14",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 20",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 13",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 24",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 18",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 28",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 04",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 12",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 17",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 11",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 29",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 07",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 30",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 21",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 08",
+            "Learn concept details of GRE Issue Analytical Essay Focus Topic 10"
+          ],
+          "skills": [
+            {
+              "id": "GRE.AWA.ISS.T01",
+              "title": "GRE Issue Analytical Essay Focus Topic 01"
+            },
+            {
+              "id": "GRE.AWA.ISS.T02",
+              "title": "GRE Issue Analytical Essay Focus Topic 02"
+            },
+            {
+              "id": "GRE.AWA.ISS.T03",
+              "title": "GRE Issue Analytical Essay Focus Topic 03"
+            },
+            {
+              "id": "GRE.AWA.ISS.T04",
+              "title": "GRE Issue Analytical Essay Focus Topic 04"
+            },
+            {
+              "id": "GRE.AWA.ISS.T05",
+              "title": "GRE Issue Analytical Essay Focus Topic 05"
+            },
+            {
+              "id": "GRE.AWA.ISS.T06",
+              "title": "GRE Issue Analytical Essay Focus Topic 06"
+            },
+            {
+              "id": "GRE.AWA.ISS.T07",
+              "title": "GRE Issue Analytical Essay Focus Topic 07"
+            },
+            {
+              "id": "GRE.AWA.ISS.T08",
+              "title": "GRE Issue Analytical Essay Focus Topic 08"
+            },
+            {
+              "id": "GRE.AWA.ISS.T09",
+              "title": "GRE Issue Analytical Essay Focus Topic 09"
+            },
+            {
+              "id": "GRE.AWA.ISS.T10",
+              "title": "GRE Issue Analytical Essay Focus Topic 10"
+            },
+            {
+              "id": "GRE.AWA.ISS.T11",
+              "title": "GRE Issue Analytical Essay Focus Topic 11"
+            },
+            {
+              "id": "GRE.AWA.ISS.T12",
+              "title": "GRE Issue Analytical Essay Focus Topic 12"
+            },
+            {
+              "id": "gre-awa-iss-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        }
+      ]
+    },
+    "gmat-quantitative": {
+      "id": "gmat-quantitative",
+      "label": "Quantitative Reasoning",
+      "track": "gmat",
+      "section": "quantitative",
+      "chapters": [
+        {
+          "id": "gmat-qnt-ds",
+          "title": "GMAT Data Sufficiency",
+          "topic_id": "GMAT.QNT.DS.T01",
+          "skill_prefix": "GMAT.QNT.DS",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 03",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 06",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 28",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 02",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 19",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 24",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 30",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 04",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 25",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 29",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 13",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 10",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 05",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 16",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 21",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 26",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 01",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 11",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 15",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 08",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 14",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 12",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 20",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 27",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 07",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 17",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 23",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 18",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 09",
+            "Learn concept details of GMAT Data Sufficiency Focus Topic 22"
+          ],
+          "skills": [
+            {
+              "id": "GMAT.QNT.DS.T01",
+              "title": "GMAT Data Sufficiency Focus Topic 01"
+            },
+            {
+              "id": "GMAT.QNT.DS.T02",
+              "title": "GMAT Data Sufficiency Focus Topic 02"
+            },
+            {
+              "id": "GMAT.QNT.DS.T03",
+              "title": "GMAT Data Sufficiency Focus Topic 03"
+            },
+            {
+              "id": "GMAT.QNT.DS.T04",
+              "title": "GMAT Data Sufficiency Focus Topic 04"
+            },
+            {
+              "id": "GMAT.QNT.DS.T05",
+              "title": "GMAT Data Sufficiency Focus Topic 05"
+            },
+            {
+              "id": "GMAT.QNT.DS.T06",
+              "title": "GMAT Data Sufficiency Focus Topic 06"
+            },
+            {
+              "id": "GMAT.QNT.DS.T07",
+              "title": "GMAT Data Sufficiency Focus Topic 07"
+            },
+            {
+              "id": "GMAT.QNT.DS.T08",
+              "title": "GMAT Data Sufficiency Focus Topic 08"
+            },
+            {
+              "id": "GMAT.QNT.DS.T09",
+              "title": "GMAT Data Sufficiency Focus Topic 09"
+            },
+            {
+              "id": "GMAT.QNT.DS.T10",
+              "title": "GMAT Data Sufficiency Focus Topic 10"
+            },
+            {
+              "id": "GMAT.QNT.DS.T11",
+              "title": "GMAT Data Sufficiency Focus Topic 11"
+            },
+            {
+              "id": "GMAT.QNT.DS.T12",
+              "title": "GMAT Data Sufficiency Focus Topic 12"
+            },
+            {
+              "id": "gmat-qnt-ds-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gmat-qnt-ps",
+          "title": "GMAT Problem Solving",
+          "topic_id": "GMAT.QNT.PS.T01",
+          "skill_prefix": "GMAT.QNT.PS",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GMAT Problem Solving Focus Topic 06",
+            "Learn concept details of GMAT Problem Solving Focus Topic 10",
+            "Learn concept details of GMAT Problem Solving Focus Topic 07",
+            "Learn concept details of GMAT Problem Solving Focus Topic 13",
+            "Learn concept details of GMAT Problem Solving Focus Topic 22",
+            "Learn concept details of GMAT Problem Solving Focus Topic 04",
+            "Learn concept details of GMAT Problem Solving Focus Topic 18",
+            "Learn concept details of GMAT Problem Solving Focus Topic 17",
+            "Learn concept details of GMAT Problem Solving Focus Topic 30",
+            "Learn concept details of GMAT Problem Solving Focus Topic 21",
+            "Learn concept details of GMAT Problem Solving Focus Topic 15",
+            "Learn concept details of GMAT Problem Solving Focus Topic 23",
+            "Learn concept details of GMAT Problem Solving Focus Topic 26",
+            "Learn concept details of GMAT Problem Solving Focus Topic 01",
+            "Learn concept details of GMAT Problem Solving Focus Topic 14",
+            "Learn concept details of GMAT Problem Solving Focus Topic 12",
+            "Learn concept details of GMAT Problem Solving Focus Topic 24",
+            "Learn concept details of GMAT Problem Solving Focus Topic 05",
+            "Learn concept details of GMAT Problem Solving Focus Topic 28",
+            "Learn concept details of GMAT Problem Solving Focus Topic 03",
+            "Learn concept details of GMAT Problem Solving Focus Topic 11",
+            "Learn concept details of GMAT Problem Solving Focus Topic 08",
+            "Learn concept details of GMAT Problem Solving Focus Topic 16",
+            "Learn concept details of GMAT Problem Solving Focus Topic 09",
+            "Learn concept details of GMAT Problem Solving Focus Topic 20",
+            "Learn concept details of GMAT Problem Solving Focus Topic 02",
+            "Learn concept details of GMAT Problem Solving Focus Topic 25",
+            "Learn concept details of GMAT Problem Solving Focus Topic 19",
+            "Learn concept details of GMAT Problem Solving Focus Topic 27",
+            "Learn concept details of GMAT Problem Solving Focus Topic 29"
+          ],
+          "skills": [
+            {
+              "id": "GMAT.QNT.PS.T01",
+              "title": "GMAT Problem Solving Focus Topic 01"
+            },
+            {
+              "id": "GMAT.QNT.PS.T02",
+              "title": "GMAT Problem Solving Focus Topic 02"
+            },
+            {
+              "id": "GMAT.QNT.PS.T03",
+              "title": "GMAT Problem Solving Focus Topic 03"
+            },
+            {
+              "id": "GMAT.QNT.PS.T04",
+              "title": "GMAT Problem Solving Focus Topic 04"
+            },
+            {
+              "id": "GMAT.QNT.PS.T05",
+              "title": "GMAT Problem Solving Focus Topic 05"
+            },
+            {
+              "id": "GMAT.QNT.PS.T06",
+              "title": "GMAT Problem Solving Focus Topic 06"
+            },
+            {
+              "id": "GMAT.QNT.PS.T07",
+              "title": "GMAT Problem Solving Focus Topic 07"
+            },
+            {
+              "id": "GMAT.QNT.PS.T08",
+              "title": "GMAT Problem Solving Focus Topic 08"
+            },
+            {
+              "id": "GMAT.QNT.PS.T09",
+              "title": "GMAT Problem Solving Focus Topic 09"
+            },
+            {
+              "id": "GMAT.QNT.PS.T10",
+              "title": "GMAT Problem Solving Focus Topic 10"
+            },
+            {
+              "id": "GMAT.QNT.PS.T11",
+              "title": "GMAT Problem Solving Focus Topic 11"
+            },
+            {
+              "id": "GMAT.QNT.PS.T12",
+              "title": "GMAT Problem Solving Focus Topic 12"
+            },
+            {
+              "id": "gmat-qnt-ps-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        }
+      ]
+    },
+    "gmat-verbal": {
+      "id": "gmat-verbal",
+      "label": "Verbal Reasoning",
+      "track": "gmat",
+      "section": "verbal",
+      "chapters": [
+        {
+          "id": "gmat-vbl-cr",
+          "title": "GMAT Critical Reasoning",
+          "topic_id": "GMAT.VBL.CR.T01",
+          "skill_prefix": "GMAT.VBL.CR",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 19",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 10",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 12",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 28",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 24",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 02",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 14",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 07",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 16",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 20",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 26",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 01",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 29",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 03",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 08",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 11",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 06",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 30",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 23",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 09",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 17",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 27",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 22",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 04",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 21",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 15",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 13",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 18",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 05",
+            "Learn concept details of GMAT Critical Reasoning Focus Topic 25"
+          ],
+          "skills": [
+            {
+              "id": "GMAT.VBL.CR.T01",
+              "title": "GMAT Critical Reasoning Focus Topic 01"
+            },
+            {
+              "id": "GMAT.VBL.CR.T02",
+              "title": "GMAT Critical Reasoning Focus Topic 02"
+            },
+            {
+              "id": "GMAT.VBL.CR.T03",
+              "title": "GMAT Critical Reasoning Focus Topic 03"
+            },
+            {
+              "id": "GMAT.VBL.CR.T04",
+              "title": "GMAT Critical Reasoning Focus Topic 04"
+            },
+            {
+              "id": "GMAT.VBL.CR.T05",
+              "title": "GMAT Critical Reasoning Focus Topic 05"
+            },
+            {
+              "id": "GMAT.VBL.CR.T06",
+              "title": "GMAT Critical Reasoning Focus Topic 06"
+            },
+            {
+              "id": "GMAT.VBL.CR.T07",
+              "title": "GMAT Critical Reasoning Focus Topic 07"
+            },
+            {
+              "id": "GMAT.VBL.CR.T08",
+              "title": "GMAT Critical Reasoning Focus Topic 08"
+            },
+            {
+              "id": "GMAT.VBL.CR.T09",
+              "title": "GMAT Critical Reasoning Focus Topic 09"
+            },
+            {
+              "id": "GMAT.VBL.CR.T10",
+              "title": "GMAT Critical Reasoning Focus Topic 10"
+            },
+            {
+              "id": "GMAT.VBL.CR.T11",
+              "title": "GMAT Critical Reasoning Focus Topic 11"
+            },
+            {
+              "id": "GMAT.VBL.CR.T12",
+              "title": "GMAT Critical Reasoning Focus Topic 12"
+            },
+            {
+              "id": "gmat-vbl-cr-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gmat-vbl-rc",
+          "title": "GMAT Reading Comprehension",
+          "topic_id": "GMAT.VBL.RC.T01",
+          "skill_prefix": "GMAT.VBL.RC",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 29",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 22",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 30",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 01",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 25",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 10",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 27",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 24",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 17",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 18",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 06",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 04",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 02",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 14",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 03",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 16",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 07",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 20",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 11",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 15",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 08",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 28",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 05",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 21",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 09",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 19",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 23",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 13",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 26",
+            "Learn concept details of GMAT Reading Comprehension Focus Topic 12"
+          ],
+          "skills": [
+            {
+              "id": "GMAT.VBL.RC.T01",
+              "title": "GMAT Reading Comprehension Focus Topic 01"
+            },
+            {
+              "id": "GMAT.VBL.RC.T02",
+              "title": "GMAT Reading Comprehension Focus Topic 02"
+            },
+            {
+              "id": "GMAT.VBL.RC.T03",
+              "title": "GMAT Reading Comprehension Focus Topic 03"
+            },
+            {
+              "id": "GMAT.VBL.RC.T04",
+              "title": "GMAT Reading Comprehension Focus Topic 04"
+            },
+            {
+              "id": "GMAT.VBL.RC.T05",
+              "title": "GMAT Reading Comprehension Focus Topic 05"
+            },
+            {
+              "id": "GMAT.VBL.RC.T06",
+              "title": "GMAT Reading Comprehension Focus Topic 06"
+            },
+            {
+              "id": "GMAT.VBL.RC.T07",
+              "title": "GMAT Reading Comprehension Focus Topic 07"
+            },
+            {
+              "id": "GMAT.VBL.RC.T08",
+              "title": "GMAT Reading Comprehension Focus Topic 08"
+            },
+            {
+              "id": "GMAT.VBL.RC.T09",
+              "title": "GMAT Reading Comprehension Focus Topic 09"
+            },
+            {
+              "id": "GMAT.VBL.RC.T10",
+              "title": "GMAT Reading Comprehension Focus Topic 10"
+            },
+            {
+              "id": "GMAT.VBL.RC.T11",
+              "title": "GMAT Reading Comprehension Focus Topic 11"
+            },
+            {
+              "id": "GMAT.VBL.RC.T12",
+              "title": "GMAT Reading Comprehension Focus Topic 12"
+            },
+            {
+              "id": "gmat-vbl-rc-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gmat-vbl-sc",
+          "title": "GMAT Sentence Correction",
+          "topic_id": "GMAT.VBL.SC.T01",
+          "skill_prefix": "GMAT.VBL.SC",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GMAT Sentence Correction Focus Topic 05",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 07",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 09",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 10",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 11",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 02",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 18",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 01",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 16",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 03",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 06",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 08",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 25",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 14",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 19",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 27",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 22",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 17",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 30",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 15",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 12",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 28",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 24",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 20",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 29",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 13",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 26",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 04",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 23",
+            "Learn concept details of GMAT Sentence Correction Focus Topic 21"
+          ],
+          "skills": [
+            {
+              "id": "GMAT.VBL.SC.T01",
+              "title": "GMAT Sentence Correction Focus Topic 01"
+            },
+            {
+              "id": "GMAT.VBL.SC.T02",
+              "title": "GMAT Sentence Correction Focus Topic 02"
+            },
+            {
+              "id": "GMAT.VBL.SC.T03",
+              "title": "GMAT Sentence Correction Focus Topic 03"
+            },
+            {
+              "id": "GMAT.VBL.SC.T04",
+              "title": "GMAT Sentence Correction Focus Topic 04"
+            },
+            {
+              "id": "GMAT.VBL.SC.T05",
+              "title": "GMAT Sentence Correction Focus Topic 05"
+            },
+            {
+              "id": "GMAT.VBL.SC.T06",
+              "title": "GMAT Sentence Correction Focus Topic 06"
+            },
+            {
+              "id": "GMAT.VBL.SC.T07",
+              "title": "GMAT Sentence Correction Focus Topic 07"
+            },
+            {
+              "id": "GMAT.VBL.SC.T08",
+              "title": "GMAT Sentence Correction Focus Topic 08"
+            },
+            {
+              "id": "GMAT.VBL.SC.T09",
+              "title": "GMAT Sentence Correction Focus Topic 09"
+            },
+            {
+              "id": "GMAT.VBL.SC.T10",
+              "title": "GMAT Sentence Correction Focus Topic 10"
+            },
+            {
+              "id": "GMAT.VBL.SC.T11",
+              "title": "GMAT Sentence Correction Focus Topic 11"
+            },
+            {
+              "id": "GMAT.VBL.SC.T12",
+              "title": "GMAT Sentence Correction Focus Topic 12"
+            },
+            {
+              "id": "gmat-vbl-sc-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        }
+      ]
+    },
+    "gmat-data-insights": {
+      "id": "gmat-data-insights",
+      "label": "Data Insights",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapters": [
+        {
+          "id": "gmat-di-gi",
+          "title": "GMAT Data Insights Graphical",
+          "topic_id": "GMAT.DI.GI.T01",
+          "skill_prefix": "GMAT.DI.GI",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 22",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 19",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 25",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 12",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 08",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 17",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 21",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 11",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 20",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 28",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 26",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 13",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 27",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 07",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 14",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 29",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 01",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 15",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 16",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 23",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 09",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 24",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 03",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 04",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 30",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 05",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 06",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 18",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 10",
+            "Learn concept details of GMAT Data Insights Graphical Focus Topic 02"
+          ],
+          "skills": [
+            {
+              "id": "GMAT.DI.GI.T01",
+              "title": "GMAT Data Insights Graphical Focus Topic 01"
+            },
+            {
+              "id": "GMAT.DI.GI.T02",
+              "title": "GMAT Data Insights Graphical Focus Topic 02"
+            },
+            {
+              "id": "GMAT.DI.GI.T03",
+              "title": "GMAT Data Insights Graphical Focus Topic 03"
+            },
+            {
+              "id": "GMAT.DI.GI.T04",
+              "title": "GMAT Data Insights Graphical Focus Topic 04"
+            },
+            {
+              "id": "GMAT.DI.GI.T05",
+              "title": "GMAT Data Insights Graphical Focus Topic 05"
+            },
+            {
+              "id": "GMAT.DI.GI.T06",
+              "title": "GMAT Data Insights Graphical Focus Topic 06"
+            },
+            {
+              "id": "GMAT.DI.GI.T07",
+              "title": "GMAT Data Insights Graphical Focus Topic 07"
+            },
+            {
+              "id": "GMAT.DI.GI.T08",
+              "title": "GMAT Data Insights Graphical Focus Topic 08"
+            },
+            {
+              "id": "GMAT.DI.GI.T09",
+              "title": "GMAT Data Insights Graphical Focus Topic 09"
+            },
+            {
+              "id": "GMAT.DI.GI.T10",
+              "title": "GMAT Data Insights Graphical Focus Topic 10"
+            },
+            {
+              "id": "GMAT.DI.GI.T11",
+              "title": "GMAT Data Insights Graphical Focus Topic 11"
+            },
+            {
+              "id": "GMAT.DI.GI.T12",
+              "title": "GMAT Data Insights Graphical Focus Topic 12"
+            },
+            {
+              "id": "gmat-di-gi-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gmat-di-msr",
+          "title": "GMAT Data Insights Multi Source",
+          "topic_id": "GMAT.DI.MSR.T01",
+          "skill_prefix": "GMAT.DI.MSR",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 12",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 27",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 13",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 16",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 26",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 30",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 08",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 04",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 15",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 25",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 17",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 11",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 05",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 21",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 20",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 01",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 02",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 29",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 06",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 18",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 23",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 03",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 14",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 19",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 28",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 07",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 24",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 22",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 09",
+            "Learn concept details of GMAT Data Insights Multi Source Focus Topic 10"
+          ],
+          "skills": [
+            {
+              "id": "GMAT.DI.MSR.T01",
+              "title": "GMAT Data Insights Multi Source Focus Topic 01"
+            },
+            {
+              "id": "GMAT.DI.MSR.T02",
+              "title": "GMAT Data Insights Multi Source Focus Topic 02"
+            },
+            {
+              "id": "GMAT.DI.MSR.T03",
+              "title": "GMAT Data Insights Multi Source Focus Topic 03"
+            },
+            {
+              "id": "GMAT.DI.MSR.T04",
+              "title": "GMAT Data Insights Multi Source Focus Topic 04"
+            },
+            {
+              "id": "GMAT.DI.MSR.T05",
+              "title": "GMAT Data Insights Multi Source Focus Topic 05"
+            },
+            {
+              "id": "GMAT.DI.MSR.T06",
+              "title": "GMAT Data Insights Multi Source Focus Topic 06"
+            },
+            {
+              "id": "GMAT.DI.MSR.T07",
+              "title": "GMAT Data Insights Multi Source Focus Topic 07"
+            },
+            {
+              "id": "GMAT.DI.MSR.T08",
+              "title": "GMAT Data Insights Multi Source Focus Topic 08"
+            },
+            {
+              "id": "GMAT.DI.MSR.T09",
+              "title": "GMAT Data Insights Multi Source Focus Topic 09"
+            },
+            {
+              "id": "GMAT.DI.MSR.T10",
+              "title": "GMAT Data Insights Multi Source Focus Topic 10"
+            },
+            {
+              "id": "GMAT.DI.MSR.T11",
+              "title": "GMAT Data Insights Multi Source Focus Topic 11"
+            },
+            {
+              "id": "GMAT.DI.MSR.T12",
+              "title": "GMAT Data Insights Multi Source Focus Topic 12"
+            },
+            {
+              "id": "gmat-di-msr-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gmat-di-ds",
+          "title": "GMAT Data Insights Sufficiency",
+          "topic_id": "GMAT.DI.DS.T01",
+          "skill_prefix": "GMAT.DI.DS",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 17",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 23",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 06",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 07",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 26",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 30",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 09",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 13",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 29",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 21",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 04",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 24",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 15",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 05",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 12",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 25",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 19",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 02",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 16",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 10",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 27",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 01",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 14",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 08",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 22",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 28",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 03",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 11",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 20",
+            "Learn concept details of GMAT Data Insights Sufficiency Focus Topic 18"
+          ],
+          "skills": [
+            {
+              "id": "GMAT.DI.DS.T01",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 01"
+            },
+            {
+              "id": "GMAT.DI.DS.T02",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 02"
+            },
+            {
+              "id": "GMAT.DI.DS.T03",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 03"
+            },
+            {
+              "id": "GMAT.DI.DS.T04",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 04"
+            },
+            {
+              "id": "GMAT.DI.DS.T05",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 05"
+            },
+            {
+              "id": "GMAT.DI.DS.T06",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 06"
+            },
+            {
+              "id": "GMAT.DI.DS.T07",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 07"
+            },
+            {
+              "id": "GMAT.DI.DS.T08",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 08"
+            },
+            {
+              "id": "GMAT.DI.DS.T09",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 09"
+            },
+            {
+              "id": "GMAT.DI.DS.T10",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 10"
+            },
+            {
+              "id": "GMAT.DI.DS.T11",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 11"
+            },
+            {
+              "id": "GMAT.DI.DS.T12",
+              "title": "GMAT Data Insights Sufficiency Focus Topic 12"
+            },
+            {
+              "id": "gmat-di-ds-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        },
+        {
+          "id": "gmat-di-tpa",
+          "title": "GMAT Data Insights Two Part",
+          "topic_id": "GMAT.DI.TPA.T01",
+          "skill_prefix": "GMAT.DI.TPA",
+          "topic_count": 30,
+          "keywords": [
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 27",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 15",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 19",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 30",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 08",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 21",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 20",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 22",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 14",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 04",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 28",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 23",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 10",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 29",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 05",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 24",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 09",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 01",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 03",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 13",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 17",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 11",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 26",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 02",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 07",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 16",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 18",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 12",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 25",
+            "Learn concept details of GMAT Data Insights Two Part Focus Topic 06"
+          ],
+          "skills": [
+            {
+              "id": "GMAT.DI.TPA.T01",
+              "title": "GMAT Data Insights Two Part Focus Topic 01"
+            },
+            {
+              "id": "GMAT.DI.TPA.T02",
+              "title": "GMAT Data Insights Two Part Focus Topic 02"
+            },
+            {
+              "id": "GMAT.DI.TPA.T03",
+              "title": "GMAT Data Insights Two Part Focus Topic 03"
+            },
+            {
+              "id": "GMAT.DI.TPA.T04",
+              "title": "GMAT Data Insights Two Part Focus Topic 04"
+            },
+            {
+              "id": "GMAT.DI.TPA.T05",
+              "title": "GMAT Data Insights Two Part Focus Topic 05"
+            },
+            {
+              "id": "GMAT.DI.TPA.T06",
+              "title": "GMAT Data Insights Two Part Focus Topic 06"
+            },
+            {
+              "id": "GMAT.DI.TPA.T07",
+              "title": "GMAT Data Insights Two Part Focus Topic 07"
+            },
+            {
+              "id": "GMAT.DI.TPA.T08",
+              "title": "GMAT Data Insights Two Part Focus Topic 08"
+            },
+            {
+              "id": "GMAT.DI.TPA.T09",
+              "title": "GMAT Data Insights Two Part Focus Topic 09"
+            },
+            {
+              "id": "GMAT.DI.TPA.T10",
+              "title": "GMAT Data Insights Two Part Focus Topic 10"
+            },
+            {
+              "id": "GMAT.DI.TPA.T11",
+              "title": "GMAT Data Insights Two Part Focus Topic 11"
+            },
+            {
+              "id": "GMAT.DI.TPA.T12",
+              "title": "GMAT Data Insights Two Part Focus Topic 12"
+            },
+            {
+              "id": "gmat-di-tpa-more",
+              "title": "+ 18 more topics"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "sectionOrder": {
+    "gre": [
+      "gre-verbal",
+      "gre-quantitative",
+      "gre-awa"
+    ],
+    "gmat": [
+      "gmat-quantitative",
+      "gmat-verbal",
+      "gmat-data-insights"
+    ]
+  },
+  "sectionMeta": {
+    "gre": {
+      "gre-verbal": {
+        "label": "Verbal Reasoning",
+        "note": "2 sections · 27 questions each · 23 minutes per section.",
+        "legacySection": "verbal"
+      },
+      "gre-quantitative": {
+        "label": "Quantitative Reasoning",
+        "note": "2 sections · 27 questions each · 26 minutes per section.",
+        "legacySection": "quantitative"
+      },
+      "gre-awa": {
+        "label": "Analytical Writing",
+        "note": "1 Issue essay · 30 minutes.",
+        "legacySection": "awa"
+      }
+    },
+    "gmat": {
+      "gmat-quantitative": {
+        "label": "Quantitative Reasoning",
+        "note": "21 questions · 45 minutes · Problem Solving & Data Sufficiency.",
+        "legacySection": "quantitative"
+      },
+      "gmat-verbal": {
+        "label": "Verbal Reasoning",
+        "note": "23 questions · 45 minutes · Reading, Critical Reasoning, Sentence Correction.",
+        "legacySection": "verbal"
+      },
+      "gmat-data-insights": {
+        "label": "Data Insights",
+        "note": "20 questions · 45 minutes · Multi-source, graphics, two-part analysis.",
+        "legacySection": "data_insights"
+      }
+    }
+  },
+  "trackButtons": {
+    "gre": {
+      "label": "GRE",
+      "subtitle": "ETS · General Test",
+      "cssClass": "gre"
+    },
+    "gmat": {
+      "label": "GMAT",
+      "subtitle": "GMAC · GMAT Focus",
+      "cssClass": "gmat"
+    }
+  },
+  "tracks": {
+    "gre": {
+      "label": "GRE",
+      "exam_dir": "GRE",
+      "sections": [
+        "gre-verbal",
+        "gre-quantitative",
+        "gre-awa"
+      ]
+    },
+    "gmat": {
+      "label": "GMAT",
+      "exam_dir": "GMAT",
+      "sections": [
+        "gmat-quantitative",
+        "gmat-verbal",
+        "gmat-data-insights"
+      ]
+    }
+  },
+  "stats": {
+    "topics": 510,
+    "sections": 6,
+    "chapters": 17,
+    "skills": 17,
+    "verified_questions": 55,
+    "updated_at": "2026-06-25T00:23:04.639507+00:00",
+    "total_questions": 55
+  },
+  "taxonomy": {
+    "skills": [
+      {
+        "id": "gre-awa-iss",
+        "skill_prefix": "GRE.AWA.ISS",
+        "label": "GRE Issue Analytical Essay",
+        "track": "gre",
+        "section_id": "gre-awa"
+      },
+      {
+        "id": "gre-qnt-alg",
+        "skill_prefix": "GRE.QNT.ALG",
+        "label": "GRE Quantitative Algebra",
+        "track": "gre",
+        "section_id": "gre-quantitative"
+      },
+      {
+        "id": "gre-qnt-ari",
+        "skill_prefix": "GRE.QNT.ARI",
+        "label": "GRE Quantitative Arithmetic",
+        "track": "gre",
+        "section_id": "gre-quantitative"
+      },
+      {
+        "id": "gre-qnt-dat",
+        "skill_prefix": "GRE.QNT.DAT",
+        "label": "GRE Quantitative Data Analysis",
+        "track": "gre",
+        "section_id": "gre-quantitative"
+      },
+      {
+        "id": "gre-qnt-geo",
+        "skill_prefix": "GRE.QNT.GEO",
+        "label": "GRE Quantitative Geometry",
+        "track": "gre",
+        "section_id": "gre-quantitative"
+      },
+      {
+        "id": "gre-vbl-rc",
+        "skill_prefix": "GRE.VBL.RC",
+        "label": "GRE Reading Comprehension",
+        "track": "gre",
+        "section_id": "gre-verbal"
+      },
+      {
+        "id": "gre-vbl-se",
+        "skill_prefix": "GRE.VBL.SE",
+        "label": "GRE Sentence Equivalence",
+        "track": "gre",
+        "section_id": "gre-verbal"
+      },
+      {
+        "id": "gre-vbl-tc",
+        "skill_prefix": "GRE.VBL.TC",
+        "label": "GRE Text Completion",
+        "track": "gre",
+        "section_id": "gre-verbal"
+      },
+      {
+        "id": "gmat-di-ds",
+        "skill_prefix": "GMAT.DI.DS",
+        "label": "GMAT Data Insights Sufficiency",
+        "track": "gmat",
+        "section_id": "gmat-data-insights"
+      },
+      {
+        "id": "gmat-di-gi",
+        "skill_prefix": "GMAT.DI.GI",
+        "label": "GMAT Data Insights Graphical",
+        "track": "gmat",
+        "section_id": "gmat-data-insights"
+      },
+      {
+        "id": "gmat-di-msr",
+        "skill_prefix": "GMAT.DI.MSR",
+        "label": "GMAT Data Insights Multi Source",
+        "track": "gmat",
+        "section_id": "gmat-data-insights"
+      },
+      {
+        "id": "gmat-di-tpa",
+        "skill_prefix": "GMAT.DI.TPA",
+        "label": "GMAT Data Insights Two Part",
+        "track": "gmat",
+        "section_id": "gmat-data-insights"
+      },
+      {
+        "id": "gmat-qnt-ds",
+        "skill_prefix": "GMAT.QNT.DS",
+        "label": "GMAT Data Sufficiency",
+        "track": "gmat",
+        "section_id": "gmat-quantitative"
+      },
+      {
+        "id": "gmat-qnt-ps",
+        "skill_prefix": "GMAT.QNT.PS",
+        "label": "GMAT Problem Solving",
+        "track": "gmat",
+        "section_id": "gmat-quantitative"
+      },
+      {
+        "id": "gmat-vbl-cr",
+        "skill_prefix": "GMAT.VBL.CR",
+        "label": "GMAT Critical Reasoning",
+        "track": "gmat",
+        "section_id": "gmat-verbal"
+      },
+      {
+        "id": "gmat-vbl-rc",
+        "skill_prefix": "GMAT.VBL.RC",
+        "label": "GMAT Reading Comprehension",
+        "track": "gmat",
+        "section_id": "gmat-verbal"
+      },
+      {
+        "id": "gmat-vbl-sc",
+        "skill_prefix": "GMAT.VBL.SC",
+        "label": "GMAT Sentence Correction",
+        "track": "gmat",
+        "section_id": "gmat-verbal"
+      }
+    ],
+    "topic_count": 510
+  },
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\GRE_GMAT"
+}

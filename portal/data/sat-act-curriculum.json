@@ -1598,13 +1598,13 @@
     }
   },
   "stats": {
-    "total_questions": 50,
-    "verified_questions": 50,
+    "total_questions": 125,
+    "verified_questions": 125,
     "tracks": {
       "sat": 0,
-      "act": 50
+      "act": 125
     },
-    "updated_at": "2026-06-24T22:22:08.435336+00:00"
+    "updated_at": "2026-06-24T22:49:30.669786+00:00"
   },
   "sources_note": "Official College Board (Bluebook, linear PDFs, Khan Academy) and ACT.org free prep guides. Bluebook adaptive tests require the desktop app — not scraped here.",
   "knowledge_root": "C:\\Knowledge\\EDUCATION\\SAT_ACT",

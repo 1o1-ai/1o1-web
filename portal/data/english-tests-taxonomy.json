@@ -1,0 +1,92 @@
+{
+  "sku": "english-tests",
+  "skills": [
+    {
+      "id": "toefl-lis",
+      "skill_prefix": "TOEFL.LIS",
+      "label": "TOEFL Listening Section",
+      "track": "toefl",
+      "section_id": "toefl-listening"
+    },
+    {
+      "id": "toefl-rdg",
+      "skill_prefix": "TOEFL.RDG",
+      "label": "TOEFL Reading Section",
+      "track": "toefl",
+      "section_id": "toefl-reading"
+    },
+    {
+      "id": "toefl-spk",
+      "skill_prefix": "TOEFL.SPK",
+      "label": "TOEFL Speaking Section",
+      "track": "toefl",
+      "section_id": "toefl-speaking"
+    },
+    {
+      "id": "toefl-wrt",
+      "skill_prefix": "TOEFL.WRT",
+      "label": "TOEFL Writing Section",
+      "track": "toefl",
+      "section_id": "toefl-writing"
+    },
+    {
+      "id": "ielts-lis",
+      "skill_prefix": "IELTS.LIS",
+      "label": "IELTS Academic Listening",
+      "track": "ielts",
+      "section_id": "ielts-listening"
+    },
+    {
+      "id": "ielts-rdg",
+      "skill_prefix": "IELTS.RDG",
+      "label": "IELTS Academic Reading",
+      "track": "ielts",
+      "section_id": "ielts-reading"
+    },
+    {
+      "id": "ielts-spk",
+      "skill_prefix": "IELTS.SPK",
+      "label": "IELTS Speaking Interview",
+      "track": "ielts",
+      "section_id": "ielts-speaking"
+    },
+    {
+      "id": "ielts-wrt",
+      "skill_prefix": "IELTS.WRT",
+      "label": "IELTS Writing Tasks",
+      "track": "ielts",
+      "section_id": "ielts-writing"
+    },
+    {
+      "id": "det-cmp",
+      "skill_prefix": "DET.CMP",
+      "label": "Duolingo Comprehension Skills",
+      "track": "det",
+      "section_id": "det-comprehension"
+    },
+    {
+      "id": "det-con",
+      "skill_prefix": "DET.CON",
+      "label": "Duolingo Conversation Skills",
+      "track": "det",
+      "section_id": "det-conversation"
+    },
+    {
+      "id": "det-lit",
+      "skill_prefix": "DET.LIT",
+      "label": "Duolingo Literacy Skills",
+      "track": "det",
+      "section_id": "det-literacy"
+    },
+    {
+      "id": "det-prd",
+      "skill_prefix": "DET.PRD",
+      "label": "Duolingo Production Skills",
+      "track": "det",
+      "section_id": "det-production"
+    }
+  ],
+  "topics": [],
+  "topic_count": 504,
+  "source": "C:\\Knowledge\\EDUCATION\\TOEFL-IELTS-DET"
+}

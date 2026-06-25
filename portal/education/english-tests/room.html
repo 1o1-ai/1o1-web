@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TOEFL · IELTS · DET · Study Room</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="../cbse10/cbse10-study-room.css" />
+  <link rel="stylesheet" href="../sat-act/sat-act-study-room.css" />
+</head>
+<body class="portal-page study-room-page student-ambience" data-sku="english-tests">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <header class="portal-header">
+    <a class="back-link" href="index.html">← TOEFL · IELTS · DET Hub</a>
+    <h1>Study Room</h1>
+    <span id="ingestBadge" class="sr-open-badge" hidden></span>
+  </header>
+  <main class="portal-main sr-main">
+    <section id="phaseTrack" class="sr-phase sr-phase-subject">
+      <div id="srLoadError" class="sr-load-error hidden" role="alert"></div>
+      <p class="sr-phase-lead">Choose your exam</p>
+      <div class="sr-subject-circles sr-track-circles" id="trackCircles"></div>
+    </section>
+    <section id="phaseSection" class="sr-phase hidden">
+      <p class="sr-phase-lead" id="sectionLead">Choose section</p>
+      <div class="sr-section-grid" id="sectionGrid"></div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backToTrack">← Change exam</button>
+    </section>
+    <section id="phaseChapter" class="sr-phase hidden">
+      <p class="sr-phase-lead">Select <strong>one</strong> skill chapter</p>
+      <div class="sr-chapter-grid" id="chapterGrid"></div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backToSection">← Change section</button>
+    </section>
+    <section id="phaseIntent" class="sr-phase hidden">
+      <p class="sr-phase-lead" id="intentChapterLabel">Chapter</p>
+      <div class="sr-intent-circles">
+        <button type="button" class="sr-intent-card" id="btnLearn"><span class="sr-intent-icon">📚</span><strong>Learn</strong><small>Study guides &amp; skill walkthrough</small></button>
+        <button type="button" class="sr-intent-card primary" id="btnEvaluate"><span class="sr-intent-icon">✅</span><strong>Evaluate</strong><small>Practice items when available</small></button>
+      </div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backToChapter">← Change chapter</button>
+    </section>
+    <section id="phaseLearn" class="sr-phase hidden">
+      <div class="sr-learn-layout">
+        <div class="sr-learn-main">
+          <div class="sr-eval-header"><h2 id="learnTitle">Chapter</h2><p id="learnSubtitle" class="sr-chapter-meta"></p></div>
+          <div id="learnContent" class="sr-learn-content"></div>
+          <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backFromLearn">← Back</button>
+        </div>
+        <aside class="sr-students-panel"><h3>Students online</h3><ul id="learnStudentsRoster" class="sr-students-list"></ul></aside>
+      </div>
+    </section>
+    <section id="phaseEvaluate" class="sr-phase hidden">
+      <div class="sr-eval-layout">
+        <div class="sr-eval-main">
+          <div class="sr-eval-header"><h2 id="evalTitle">Chapter</h2><p id="evalSubtitle" class="sr-chapter-meta"></p></div>
+          <div class="sr-eval-chat" id="evalChat"><p class="sr-eval-hint">Practice items will appear here when the question bank is populated.</p></div>
+          <div class="sr-eval-actions"><button type="button" class="btn-portal btn-portal-primary" id="btnStartQuiz">Start 5-question drill</button></div>
+          <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backFromEvaluate">← Back</button>
+        </div>
+        <aside class="sr-students-panel"><h3>Students online</h3><ul id="studentsRoster" class="sr-students-list"></ul></aside>
+      </div>
+    </section>
+  </main>
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/academy-config.js"></script>
+  <script src="../../assets/bots.js"></script>
+  <script src="../../assets/multi-track-study-material.js"></script>
+  <script src="../../assets/multi-track-shared.js"></script>
+  <script src="../../assets/multi-track-room.js"></script>
+</body>
+</html>

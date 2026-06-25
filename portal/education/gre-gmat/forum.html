@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discussion Forum · GRE / GMAT</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="../cbse10/cbse10-forum.css" />
+</head>
+<body class="portal-page forum-page-full" data-sku="gre-gmat">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <header class="portal-header">
+    <a class="back-link" href="index.html">← GRE / GMAT Hub</a>
+    <h1>Discussion Forum</h1>
+  </header>
+  <main class="portal-main forum-main forum-main-full">
+    <div class="forum-toolbar">
+      <div class="forum-filters">
+        <label for="forumSubject">Section</label>
+        <select id="forumSubject"><option value="all">All sections</option></select>
+        <label for="forumChapter">Chapter</label>
+        <select id="forumChapter"><option value="all">All chapters</option></select>
+      </div>
+      <p class="forum-stats" id="forumStats"></p>
+    </div>
+    <section class="forum-content forum-content-full">
+      <div id="threadList" class="thread-list"></div>
+      <article id="threadDetail" class="thread-detail forum-hidden" aria-hidden="true">
+        <button type="button" class="back-link" id="btnBackList" style="border:none;background:none;cursor:pointer;margin-bottom:12px">← All threads</button>
+        <h2 id="threadTitle"></h2>
+        <p id="threadMeta" class="hint"></p>
+        <div id="threadPosts"></div>
+      </article>
+    </section>
+  </main>
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/academy-config.js"></script>
+  <script src="../../assets/academy-forum.js"></script>
+</body>
+</html>

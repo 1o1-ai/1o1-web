@@ -25,6 +25,7 @@
     'cbse10-core': { title: 'CBSE 10 Core', path: '/portal/education/cbse10/index.html' },
     'sat-act': { title: 'SAT / ACT', path: '/portal/education/sat-act/index.html' },
     'english-tests': { title: 'TOEFL · IELTS · DET', path: '/portal/education/english-tests/index.html' },
+    'gre-gmat': { title: 'GRE / GMAT', path: '/portal/education/gre-gmat/index.html' },
     'rhytoma-wbbse': { title: 'Rhytoma Academy', path: '/portal/education/rhytoma/index.html' },
   };
 

@@ -1,0 +1,47 @@
+{
+  "sku": "gre-gmat",
+  "updated_at": "2026-06-25T00:23:06.844368+00:00",
+  "tests": {
+    "gre": {
+      "test_name": "GRE General Test",
+      "sections": [
+        {
+          "section": "Analytical Writing",
+          "time_minutes": 30,
+          "questions": 1
+        },
+        {
+          "section": "Verbal Reasoning",
+          "time_minutes": 46,
+          "questions": 54
+        },
+        {
+          "section": "Quantitative Reasoning",
+          "time_minutes": 52,
+          "questions": 54
+        }
+      ]
+    },
+    "gmat": {
+      "test_name": "GMAT Focus Edition",
+      "sections": [
+        {
+          "section": "Quantitative",
+          "time_minutes": 45,
+          "questions": 21
+        },
+        {
+          "section": "Verbal",
+          "time_minutes": 45,
+          "questions": 23
+        },
+        {
+          "section": "Data Insights",
+          "time_minutes": 45,
+          "questions": 20
+        }
+      ]
+    }
+  },
+  "portal_default_mock": "gre"
+}

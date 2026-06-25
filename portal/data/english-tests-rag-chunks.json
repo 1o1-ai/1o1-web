@@ -1,0 +1,370 @@
+{
+  "sku": "english-tests",
+  "chunk_count": 52,
+  "manifest": [
+    {
+      "chunk_id": "chk_0001",
+      "source_id": "YT_TR_vid_gen_yt_01",
+      "file_path": "rag_chunks/chk_0001_YT_TR_vid_gen_yt_01.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from DET, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0002",
+      "source_id": "YT_TR_vid_gen_yt_02",
+      "file_path": "rag_chunks/chk_0002_YT_TR_vid_gen_yt_02.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from TOEFL, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0003",
+      "source_id": "YT_TR_vid_gen_yt_03",
+      "file_path": "rag_chunks/chk_0003_YT_TR_vid_gen_yt_03.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from TOEFL, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0004",
+      "source_id": "YT_TR_vid_gen_yt_04",
+      "file_path": "rag_chunks/chk_0004_YT_TR_vid_gen_yt_04.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from DET, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0005",
+      "source_id": "YT_TR_vid_gen_yt_05",
+      "file_path": "rag_chunks/chk_0005_YT_TR_vid_gen_yt_05.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from TOEFL, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0006",
+      "source_id": "YT_TR_vid_gen_yt_06",
+      "file_path": "rag_chunks/chk_0006_YT_TR_vid_gen_yt_06.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from TOEFL, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0007",
+      "source_id": "YT_TR_vid_gen_yt_07",
+      "file_path": "rag_chunks/chk_0007_YT_TR_vid_gen_yt_07.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from DET, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0008",
+      "source_id": "YT_TR_vid_gen_yt_08",
+      "file_path": "rag_chunks/chk_0008_YT_TR_vid_gen_yt_08.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from DET, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0009",
+      "source_id": "YT_TR_vid_gen_yt_09",
+      "file_path": "rag_chunks/chk_0009_YT_TR_vid_gen_yt_09.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from IELTS, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0010",
+      "source_id": "YT_TR_vid_gen_yt_10",
+      "file_path": "rag_chunks/chk_0010_YT_TR_vid_gen_yt_10.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from TOEFL, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0011",
+      "source_id": "YT_TR_vid_gen_yt_11",
+      "file_path": "rag_chunks/chk_0011_YT_TR_vid_gen_yt_11.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from DET, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0012",
+      "source_id": "YT_TR_vid_gen_yt_12",
+      "file_path": "rag_chunks/chk_0012_YT_TR_vid_gen_yt_12.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from IELTS, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0013",
+      "source_id": "YT_TR_vid_gen_yt_13",
+      "file_path": "rag_chunks/chk_0013_YT_TR_vid_gen_yt_13.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from TOEFL, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0014",
+      "source_id": "YT_TR_vid_gen_yt_14",
+      "file_path": "rag_chunks/chk_0014_YT_TR_vid_gen_yt_14.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from TOEFL, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0015",
+      "source_id": "YT_TR_vid_gen_yt_15",
+      "file_path": "rag_chunks/chk_0015_YT_TR_vid_gen_yt_15.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from TOEFL, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0016",
+      "source_id": "YT_TR_vid_gen_yt_16",
+      "file_path": "rag_chunks/chk_0016_YT_TR_vid_gen_yt_16.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from DET, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0017",
+      "source_id": "YT_TR_vid_gen_yt_17",
+      "file_path": "rag_chunks/chk_0017_YT_TR_vid_gen_yt_17.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from IELTS, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0018",
+      "source_id": "YT_TR_vid_gen_yt_18",
+      "file_path": "rag_chunks/chk_0018_YT_TR_vid_gen_yt_18.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from DET, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0019",
+      "source_id": "YT_TR_vid_gen_yt_19",
+      "file_path": "rag_chunks/chk_0019_YT_TR_vid_gen_yt_19.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from IELTS, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0020",
+      "source_id": "YT_TR_vid_gen_yt_20",
+      "file_path": "rag_chunks/chk_0020_YT_TR_vid_gen_yt_20.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from IELTS, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0021",
+      "source_id": "YT_TR_vid_gen_yt_21",
+      "file_path": "rag_chunks/chk_0021_YT_TR_vid_gen_yt_21.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from TOEFL, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0022",
+      "source_id": "YT_TR_vid_gen_yt_22",
+      "file_path": "rag_chunks/chk_0022_YT_TR_vid_gen_yt_22.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from TOEFL, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0023",
+      "source_id": "YT_TR_vid_gen_yt_23",
+      "file_path": "rag_chunks/chk_0023_YT_TR_vid_gen_yt_23.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from IELTS, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0024",
+      "source_id": "YT_TR_vid_gen_yt_24",
+      "file_path": "rag_chunks/chk_0024_YT_TR_vid_gen_yt_24.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from DET, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0025",
+      "source_id": "YT_TR_vid_gen_yt_25",
+      "file_path": "rag_chunks/chk_0025_YT_TR_vid_gen_yt_25.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from DET, we explore important test specifications and curriculum concepts. We c..."
+    },
+    {
+      "chunk_id": "chk_0026",
+      "source_id": "YT_TR_vid_gen_yt_26",
+      "file_path": "rag_chunks/chk_0026_YT_TR_vid_gen_yt_26.txt",
+      "word_count": "50",
+      "preview": "Hello and welcome. In this video lesson from IELTS, we explore important test specifications and curriculum concepts. We..."
+    },
+    {
+      "chunk_id": "chk_0027",
+      "source_id": "YT_SM_vid_gen_yt_01",
+      "file_path": "rag_chunks/chk_0027_YT_SM_vid_gen_yt_01.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from DET covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0028",
+      "source_id": "YT_SM_vid_gen_yt_02",
+      "file_path": "rag_chunks/chk_0028_YT_SM_vid_gen_yt_02.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from TOEFL covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0029",
+      "source_id": "YT_SM_vid_gen_yt_03",
+      "file_path": "rag_chunks/chk_0029_YT_SM_vid_gen_yt_03.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from TOEFL covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0030",
+      "source_id": "YT_SM_vid_gen_yt_04",
+      "file_path": "rag_chunks/chk_0030_YT_SM_vid_gen_yt_04.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from DET covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0031",
+      "source_id": "YT_SM_vid_gen_yt_05",
+      "file_path": "rag_chunks/chk_0031_YT_SM_vid_gen_yt_05.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from TOEFL covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0032",
+      "source_id": "YT_SM_vid_gen_yt_06",
+      "file_path": "rag_chunks/chk_0032_YT_SM_vid_gen_yt_06.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from TOEFL covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0033",
+      "source_id": "YT_SM_vid_gen_yt_07",
+      "file_path": "rag_chunks/chk_0033_YT_SM_vid_gen_yt_07.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from DET covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0034",
+      "source_id": "YT_SM_vid_gen_yt_08",
+      "file_path": "rag_chunks/chk_0034_YT_SM_vid_gen_yt_08.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from DET covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0035",
+      "source_id": "YT_SM_vid_gen_yt_09",
+      "file_path": "rag_chunks/chk_0035_YT_SM_vid_gen_yt_09.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from IELTS covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0036",
+      "source_id": "YT_SM_vid_gen_yt_10",
+      "file_path": "rag_chunks/chk_0036_YT_SM_vid_gen_yt_10.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from TOEFL covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0037",
+      "source_id": "YT_SM_vid_gen_yt_11",
+      "file_path": "rag_chunks/chk_0037_YT_SM_vid_gen_yt_11.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from DET covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0038",
+      "source_id": "YT_SM_vid_gen_yt_12",
+      "file_path": "rag_chunks/chk_0038_YT_SM_vid_gen_yt_12.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from IELTS covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0039",
+      "source_id": "YT_SM_vid_gen_yt_13",
+      "file_path": "rag_chunks/chk_0039_YT_SM_vid_gen_yt_13.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from TOEFL covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0040",
+      "source_id": "YT_SM_vid_gen_yt_14",
+      "file_path": "rag_chunks/chk_0040_YT_SM_vid_gen_yt_14.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from TOEFL covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0041",
+      "source_id": "YT_SM_vid_gen_yt_15",
+      "file_path": "rag_chunks/chk_0041_YT_SM_vid_gen_yt_15.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from TOEFL covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0042",
+      "source_id": "YT_SM_vid_gen_yt_16",
+      "file_path": "rag_chunks/chk_0042_YT_SM_vid_gen_yt_16.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from DET covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0043",
+      "source_id": "YT_SM_vid_gen_yt_17",
+      "file_path": "rag_chunks/chk_0043_YT_SM_vid_gen_yt_17.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from IELTS covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0044",
+      "source_id": "YT_SM_vid_gen_yt_18",
+      "file_path": "rag_chunks/chk_0044_YT_SM_vid_gen_yt_18.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from DET covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0045",
+      "source_id": "YT_SM_vid_gen_yt_19",
+      "file_path": "rag_chunks/chk_0045_YT_SM_vid_gen_yt_19.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from IELTS covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0046",
+      "source_id": "YT_SM_vid_gen_yt_20",
+      "file_path": "rag_chunks/chk_0046_YT_SM_vid_gen_yt_20.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from IELTS covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0047",
+      "source_id": "YT_SM_vid_gen_yt_21",
+      "file_path": "rag_chunks/chk_0047_YT_SM_vid_gen_yt_21.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from TOEFL covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0048",
+      "source_id": "YT_SM_vid_gen_yt_22",
+      "file_path": "rag_chunks/chk_0048_YT_SM_vid_gen_yt_22.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from TOEFL covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0049",
+      "source_id": "YT_SM_vid_gen_yt_23",
+      "file_path": "rag_chunks/chk_0049_YT_SM_vid_gen_yt_23.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from IELTS covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0050",
+      "source_id": "YT_SM_vid_gen_yt_24",
+      "file_path": "rag_chunks/chk_0050_YT_SM_vid_gen_yt_24.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from DET covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0051",
+      "source_id": "YT_SM_vid_gen_yt_25",
+      "file_path": "rag_chunks/chk_0051_YT_SM_vid_gen_yt_25.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from DET covering foundational curriculum concepts and diagnostic practice questions...."
+    },
+    {
+      "chunk_id": "chk_0052",
+      "source_id": "YT_SM_vid_gen_yt_26",
+      "file_path": "rag_chunks/chk_0052_YT_SM_vid_gen_yt_26.txt",
+      "word_count": "13",
+      "preview": "A targeted tutorial from IELTS covering foundational curriculum concepts and diagnostic practice questions...."
+    }
+  ]
+}
