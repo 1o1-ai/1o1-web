@@ -75,8 +75,13 @@
     },
   };
 
+  function resolveSku(sku) {
+    if (sku === 'rhytoma-wbbse') return 'rhytoma';
+    return sku;
+  }
+
   function mount(root, sku) {
-    const cfg = SKU_CONFIG[sku] || SKU_CONFIG.cbse10;
+    const cfg = SKU_CONFIG[resolveSku(sku)] || SKU_CONFIG.cbse10;
     const subjectSelect =
       cfg.subjects.length > 0
         ? `<label class="field" style="display:block;margin:10px 0 6px;font-size:0.85rem;color:#94a3b8">Subject / paper

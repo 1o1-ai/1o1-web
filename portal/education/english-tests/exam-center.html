@@ -6,18 +6,22 @@
   <title>Exam Center · English Tests</title>
   <link rel="stylesheet" href="../../../assets/theme.css" />
   <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="../../assets/education-layout.css" />
   <link rel="stylesheet" href="../../assets/exam-center.css" />
 </head>
-<body class="portal-page" data-sku="english-tests">
+<body class="portal-page education-compact education-ambient" data-sku="english-tests">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
   <header class="portal-header">
     <a class="back-link" href="index.html">← English Tests Hub</a>
     <h1>Exam Center</h1>
   </header>
   <main class="portal-main" id="examCenterRoot"></main>
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/education-ambient.js"></script>
   <script src="../../assets/exam-center-hub.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      ExamCenterHub.mount(document.getElementById('examCenterRoot'), 'english-tests');
+      ExamCenterHub.mount(document.getElementById('examCenterRoot'), document.body.dataset.sku);
     });
   </script>
 </body>

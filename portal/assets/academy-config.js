@@ -57,7 +57,9 @@
         'Previous year paper had a tricky Current Electricity MCQ',
       ],
       curriculumPath: '/portal/data/cbse12-science-curriculum.json',
+      forumPath: '/portal/data/cbse12-science-forum.json',
       bankPath: '/portal/data/cbse12-science-questions.json',
+      educationApiBase: 'https://api.brahmando.com/education',
       subjects: [
         { id: 'physics', label: 'Physics', code: '042', icon: '⚛️' },
         { id: 'chemistry', label: 'Chemistry', code: '043', icon: '🧪' },
@@ -95,6 +97,13 @@
       curriculumPath: '/portal/data/sat-act-curriculum.json',
       bankPath: '/portal/data/sat-act-questions.json',
       forumPath: '/portal/data/sat-act-forum.json',
+      educationApiBase: 'https://api.brahmando.com/education',
+      presence: {
+        totalStudents: 142,
+        totalTeachers: 8,
+        minStudents: 48,
+        timezone: 'America/New_York',
+      },
       subjects: [
         { id: 'sat-reading-writing', label: 'SAT Reading & Writing', icon: '📖' },
         { id: 'sat-math', label: 'SAT Mathematics', icon: '📐' },
@@ -143,6 +152,7 @@
       curriculumPath: '/portal/data/english-tests-curriculum.json',
       bankPath: '/portal/data/english-tests-questions.json',
       forumPath: '/portal/data/english-tests-forum.json',
+      educationApiBase: 'https://api.brahmando.com/education',
       studyMaterialPath: '/portal/data/english-tests-study-material.json',
       subjects: [
         { id: 'toefl-reading', label: 'TOEFL Reading', icon: '📖' },
@@ -172,6 +182,7 @@
       curriculumPath: '/portal/data/gre-gmat-curriculum.json',
       bankPath: '/portal/data/gre-gmat-questions.json',
       forumPath: '/portal/data/gre-gmat-forum.json',
+      educationApiBase: 'https://api.brahmando.com/education',
       studyMaterialPath: '/portal/data/gre-gmat-study-material.json',
       subjects: [
         { id: 'gre-verbal', label: 'GRE Verbal', icon: '📖' },
@@ -216,6 +227,7 @@
       curriculumPath: '/portal/data/rhytoma-curriculum.json',
       bankPath: '/portal/data/rhytoma-questions.json',
       forumPath: '/portal/data/rhytoma-forum.json',
+      educationApiBase: 'https://api.brahmando.com/education',
       grades: ['9', '10', '11', '12'],
       subjects: [
         { id: 'science', label: 'Science', icon: '🧪' },

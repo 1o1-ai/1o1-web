@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "sku": "cbse12-science",
+  "generated_at": "2026-06-27T08:00:00+00:00",
+  "assistant": {
+    "id": "sahadeva",
+    "name": "Sahadeva",
+    "brand": "ManjuLAB Study Assistant"
+  },
+  "threads": [
+    {
+      "id": "thr_phy_electrostatics_0001",
+      "title": "Coulomb's law — when do we use vector form vs scalar?",
+      "subject": "physics",
+      "chapter": "electrostatics",
+      "chapter_title": "Electrostatic Potential and Capacitance",
+      "tags": ["coulomb", "vectors"],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_cbse12_001",
+          "author_name": "Riya Sharma",
+          "author_role": "student",
+          "location": "Delhi Public School, Delhi",
+          "body": "Board numericals always mix multiple charges — should I resolve components first?",
+          "created_at": "2026-06-25T18:00:00+00:00"
+        },
+        {
+          "author_id": "t_cbse12_001",
+          "author_name": "Dr. Mehta",
+          "author_role": "teacher",
+          "location": "Kendriya Vidyalaya, Pune",
+          "body": "Yes — draw FBD, use unit vector r̂ along the line joining charges, then add vectorially.",
+          "created_at": "2026-06-25T19:30:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_chem_organic_0001",
+      "title": "IUPAC naming — priority order when both halogen and double bond present?",
+      "subject": "chemistry",
+      "chapter": "organic-chemistry",
+      "chapter_title": "Aldehydes, Ketones and Carboxylic Acids",
+      "tags": ["iupac", "nomenclature"],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_cbse12_002",
+          "author_name": "Arjun Patel",
+          "author_role": "student",
+          "location": "Ryan International, Mumbai",
+          "body": "My answer key says carboxylic acid gets priority — is that always true for Class 12?",
+          "created_at": "2026-06-24T14:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bio_genetics_0001",
+      "title": "Dihybrid cross — how to explain 9:3:3:1 ratio in words?",
+      "subject": "biology",
+      "chapter": "genetics",
+      "chapter_title": "Principles of Inheritance and Variation",
+      "tags": ["mendel", "ratio"],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_cbse12_003",
+          "author_name": "Sneha Das",
+          "author_role": "student",
+          "location": "South Point High School, Kolkata",
+          "body": "Teacher wants a short explanation without Punnett square — any mnemonic?",
+          "created_at": "2026-06-23T11:00:00+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_math_integrals_0001",
+      "title": "Integration by parts — how to choose u and dv quickly?",
+      "subject": "mathematics",
+      "chapter": "integrals",
+      "chapter_title": "Integrals",
+      "tags": ["calculus", "ibp"],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_cbse12_004",
+          "author_name": "Karan Singh",
+          "author_role": "student",
+          "location": "DAV Public School, Chandigarh",
+          "body": "LIATE rule helps but ln x · sin x still trips me up.",
+          "created_at": "2026-06-22T16:00:00+00:00"
+        }
+      ]
+    }
+  ]
+}

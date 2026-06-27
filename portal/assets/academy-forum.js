@@ -61,7 +61,7 @@
     document.querySelector('.forum-toolbar')?.prepend(banner);
   }
 
-  if (window.SahadevaAssistant && sku === 'cbse10-core') {
+  if (window.SahadevaAssistant && cfg.forumPath) {
     window.SahadevaAssistant.mountFloating({
       cfg,
       getFilters,
