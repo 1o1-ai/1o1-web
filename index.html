@@ -54,25 +54,27 @@
     </section>
 
     <div class="portal-grid">
-      <a class="portal portal--rhytoma" href="/rhytoma/">
+      <button type="button" class="portal portal--rhytoma is-dormant" data-dormant="true" title="WIP — coming soon" aria-label="Rhytoma Academy — work in progress">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
           <span class="portal-icon" aria-hidden="true">📚</span>
           <span class="portal-title bn">ঋতমা Academy</span>
           <span class="portal-sub">West Bengal Board · TruthGuard</span>
+          <span class="portal-wip-badge" aria-hidden="true">WIP</span>
         </div>
-      </a>
+      </button>
 
-      <a class="portal portal--caregiver" href="/ai-caregiver/">
+      <button type="button" class="portal portal--caregiver is-dormant" data-dormant="true" title="WIP — coming soon" aria-label="AI-Caregiver — work in progress">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
           <span class="portal-icon" aria-hidden="true">🎙️</span>
           <span class="portal-title">AI-Caregiver</span>
           <span class="portal-sub">Full-duplex voice AI</span>
+          <span class="portal-wip-badge" aria-hidden="true">WIP</span>
         </div>
-      </a>
+      </button>
 
       <a class="portal portal--saas" href="/portal/">
         <div class="portal-ring"></div>
@@ -97,5 +99,12 @@
 
   <script src="assets/cosmic.js"></script>
   <script src="assets/saas-auth.js"></script>
+  <script>
+    document.querySelectorAll('[data-dormant="true"]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.preventDefault();
+      });
+    });
+  </script>
 </body>
 </html>

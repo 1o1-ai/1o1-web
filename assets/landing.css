@@ -199,6 +199,36 @@ body.landing-page {
   letter-spacing: 0.04em;
 }
 
+/* Dormant offerings — visible but not navigable (tooltip: WIP) */
+.portal.is-dormant {
+  cursor: not-allowed;
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  opacity: 0.88;
+}
+.portal.is-dormant:hover {
+  transform: scale(1.02);
+}
+.portal.is-dormant .portal-ring {
+  opacity: 0.72;
+  filter: saturate(0.65);
+}
+.portal-wip-badge {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fde68a;
+  background: rgba(251, 191, 36, 0.18);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+}
+
 .landing-footer {
   position: relative;
   z-index: 10;
