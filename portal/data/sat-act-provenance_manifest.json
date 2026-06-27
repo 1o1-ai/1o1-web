@@ -1,0 +1,27 @@
+{
+  "schema_version": "education_provenance_v2",
+  "sku": "sat-act",
+  "built_at": "2026-06-26T16:11:27.393698+00:00",
+  "stats": {
+    "input_rows": 175,
+    "dropped_no_id": 0,
+    "dropped_duplicate": 129,
+    "board": 46,
+    "synthetic": 0,
+    "answers_board": 46,
+    "answers_synthetic": 0
+  },
+  "counts": {
+    "board_questions": 46,
+    "synthetic_questions": 0,
+    "board_question_answers": 46,
+    "synthetic_question_answers": 0
+  },
+  "files": {
+    "board_questions.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\sat_act\\board_questions.json",
+    "synthetic_questions.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\sat_act\\synthetic_questions.json",
+    "board_question_answers.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\sat_act\\board_question_answers.json",
+    "synthetic_question_answers.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\sat_act\\synthetic_question_answers.json"
+  },
+  "note": "Board bucket = exam-body official items. All answers are synthetic rationales only (answer_origin=synthetic). Questions never embed reference_answer."
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CBSE 10 · Game Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../../assets/landing.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="../../assets/education-layout.css" />
+  <link rel="stylesheet" href="cbse10-study-room.css" />
+  <link rel="stylesheet" href="game-room.css" />
+</head>
+<body class="portal-page education-compact education-ambient">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="mesh" aria-hidden="true"></div>
+
+  <header class="portal-header">
+    <a class="back-link" href="index.html">← CBSE 10 Core</a>
+    <h1>Game Room <span class="sr-open-badge">Learn</span></h1>
+  </header>
+
+  <main class="portal-main">
+    <div class="game-room-hero portal-hero">
+      <p class="eyebrow">ManjuLAB · Curriculum games · No login</p>
+      <h2>Pick a game</h2>
+      <p>Vocabulary, formulas, and concepts generated from your CBSE 10 syllabus — not random entertainment.</p>
+    </div>
+
+    <div class="game-subject-bar">
+      <label for="gameSubject">Default subject for new games</label>
+      <select id="gameSubject" aria-label="Subject">
+        <option value="science" selected>Science (086)</option>
+        <option value="mathematics">Mathematics (041)</option>
+      </select>
+    </div>
+
+    <div class="game-room-grid" id="gameGrid"></div>
+  </main>
+
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/education-ambient.js"></script>
+  <script src="game-room.js"></script>
+</body>
+</html>

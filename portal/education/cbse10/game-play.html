@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curriculum Game · CBSE 10</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="game-room.css" />
+  <link rel="stylesheet" href="games/dist/games.css" />
+</head>
+<body class="portal-page education-compact">
+  <header class="portal-header">
+    <a class="back-link" href="game-room.html">← Game Room</a>
+    <h1 id="gameTitle">Curriculum Game</h1>
+  </header>
+  <main class="portal-main">
+    <div class="game-play-toolbar">
+      <label for="playSubject">Subject</label>
+      <select id="playSubject" aria-label="Subject">
+        <option value="science" selected>Science</option>
+        <option value="mathematics">Mathematics</option>
+      </select>
+    </div>
+    <div id="gameRoot" class="game-play-host" role="main"></div>
+  </main>
+  <script type="module" src="games/dist/curriculum-games.js"></script>
+</body>
+</html>

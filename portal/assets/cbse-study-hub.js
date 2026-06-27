@@ -1,15 +1,15 @@
 /**
- * CBSE Study Hub — tabbed workspace: Official Books · Advanced · Regular · Q&A · Random Quiz
+ * CBSE Study Hub — tabbed workspace: Official Books · Advanced · Regular · Q&A
  */
 (function (global) {
   'use strict';
 
   const TABS = [
     { id: 'official', label: 'Official Books', icon: '📖', hint: 'NCERT + teacher lecture' },
-    { id: 'advanced', label: 'NCERT Plus', icon: '📝', hint: 'Syllabus extensions' },
+    { id: 'ncert-plus', label: 'NCERT Plus Syllabus Extension', icon: '📝', hint: 'Beyond NCERT outline' },
+    { id: 'advance-material', label: 'Advance Material', icon: '🌍', hint: 'Master solutions' },
     { id: 'regular', label: 'Regular Study', icon: '📚', hint: 'Study guides & videos' },
     { id: 'practice', label: 'Q & A Practice', icon: '✅', hint: 'Board-style drills' },
-    { id: 'quiz', label: 'Quiz', icon: '🎯', hint: 'ManjuLAB WordHunter' },
   ];
 
   let activeCtx = null;
@@ -60,8 +60,16 @@
       global.CBSEOfficialBooks?.render(container, ctx, chapterEntry(ctx));
       return;
     }
+    if (tabId === 'ncert-plus') {
+      mountNcertPlus(container, ctx);
+      return;
+    }
+    if (tabId === 'advance-material') {
+      mountAdvanceMaterial(container, ctx);
+      return;
+    }
     if (tabId === 'advanced') {
-      renderAdvanced(container, ctx);
+      mountNcertPlus(container, ctx);
       return;
     }
     if (tabId === 'regular') {
@@ -84,13 +92,69 @@
     const panel = document.getElementById('studyTabPanel');
     if (embed) embed.classList.add('hidden');
     if (panel) panel.classList.remove('hidden');
-    if (tabId === 'quiz') {
-      global.ManjuLABWordHunter?.mountQuizTab(container, ctx);
-      return;
-    }
   }
 
-  function renderAdvancedFallback(host, ctx) {
+  function mountNcertPlus(host, ctx) {
+    host.innerHTML =
+      '<div class="cbse-advanced-mount"><p class="sr-eval-hint">Loading NCERT Plus…</p></div>';
+    const mount = host.querySelector('.cbse-advanced-mount');
+    global.CBSEOfficialBooks?.stopLecture?.();
+    global.CBSE10StudyMaterial?.stopReadAloud?.();
+
+    if (ctx.sku === 'cbse10' && global.CBSE10StudyMaterial?.renderNcertPlusView) {
+      const loadCh = global.CBSE10StudyMaterial.loadChapter
+        ? () => global.CBSE10StudyMaterial.loadChapter(ctx.chapterId)
+        : () =>
+            global.CBSE10StudyMaterial.load().then(() =>
+              global.CBSE10StudyMaterial.chapter(ctx.chapterId)
+            );
+      loadCh()
+        .then((ch) => {
+          if (!ch) {
+            renderNcertPlusFallback(mount, ctx);
+            return;
+          }
+          global.CBSE10StudyMaterial.renderNcertPlusView(ch, mount, ctx);
+        })
+        .catch(() => renderNcertPlusFallback(mount, ctx));
+      return;
+    }
+    renderNcertPlusFallback(mount, ctx);
+  }
+
+  function mountAdvanceMaterial(host, ctx) {
+    host.innerHTML =
+      '<div class="cbse-advanced-mount"><p class="sr-eval-hint">Loading Advance Material…</p></div>';
+    const mount = host.querySelector('.cbse-advanced-mount');
+    global.CBSEOfficialBooks?.stopLecture?.();
+    global.CBSE10StudyMaterial?.stopReadAloud?.();
+
+    if (ctx.sku === 'cbse10' && global.CBSE10StudyMaterial?.renderAdvanceMaterialView) {
+      const loadCh = global.CBSE10StudyMaterial.loadChapter
+        ? () => global.CBSE10StudyMaterial.loadChapter(ctx.chapterId)
+        : () =>
+            global.CBSE10StudyMaterial.load().then(() =>
+              global.CBSE10StudyMaterial.chapter(ctx.chapterId)
+            );
+      loadCh()
+        .then((ch) => {
+          if (!ch) {
+            mount.innerHTML =
+              '<p class="sr-eval-hint">Advance material for this chapter is not available yet.</p>';
+            return;
+          }
+          global.CBSE10StudyMaterial.renderAdvanceMaterialView(ch, mount, ctx);
+        })
+        .catch(() => {
+          mount.innerHTML =
+            '<p class="sr-eval-hint">Could not load advance material. Try again later.</p>';
+        });
+      return;
+    }
+    mount.innerHTML = '<p class="sr-eval-hint">Advance Material is available for CBSE 10 only.</p>';
+  }
+
+  function renderNcertPlusFallback(host, ctx) {
     const entry = chapterEntry(ctx);
     const rawConcepts = entry?.transcript?.concepts || [];
     const concepts = rawConcepts
@@ -104,42 +168,19 @@
       });
     host.innerHTML = `
       <div class="cbse-advanced-panel">
-        <h3>NCERT Plus · ${ctx.chapterTitle}</h3>
+        <h3>NCERT Plus Syllabus Extension · ${ctx.chapterTitle}</h3>
         <p class="cbse-advanced-lead">Board-level extensions from the NCERT syllabus — Class 10 scope only.</p>
         <ul class="cbse-concept-list">${concepts.map((c) => `<li>${c}</li>`).join('') || '<li>Open <strong>Regular Study</strong> for the full chapter guide.</li>'}</ul>
       </div>`;
   }
 
+  /** @deprecated use mountNcertPlus */
   function mountAdvanced(host, ctx) {
-    host.innerHTML =
-      '<div class="cbse-advanced-mount"><p class="sr-eval-hint">Loading NCERT Plus…</p></div>';
-    const mount = host.querySelector('.cbse-advanced-mount');
-    global.CBSEOfficialBooks?.stopLecture?.();
-    global.CBSE10StudyMaterial?.stopReadAloud?.();
-
-    if (ctx.sku === 'cbse10' && global.CBSE10StudyMaterial?.renderAdvancedView) {
-      const loadCh = global.CBSE10StudyMaterial.loadChapter
-        ? () => global.CBSE10StudyMaterial.loadChapter(ctx.chapterId)
-        : () =>
-            global.CBSE10StudyMaterial.load().then(() =>
-              global.CBSE10StudyMaterial.chapter(ctx.chapterId)
-            );
-      loadCh()
-        .then((ch) => {
-          if (!ch) {
-            renderAdvancedFallback(mount, ctx);
-            return;
-          }
-          global.CBSE10StudyMaterial.renderAdvancedView(ch, mount, ctx);
-        })
-        .catch(() => renderAdvancedFallback(mount, ctx));
-      return;
-    }
-    renderAdvancedFallback(mount, ctx);
+    mountNcertPlus(host, ctx);
   }
 
   function renderAdvanced(host, ctx) {
-    mountAdvanced(host, ctx);
+    mountNcertPlus(host, ctx);
   }
 
   function mountRegularStudy(host, ctx) {

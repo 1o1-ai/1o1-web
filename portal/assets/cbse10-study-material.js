@@ -227,24 +227,26 @@
     return card;
   }
 
-  function renderAdvancedView(ch, root, ctx) {
+  function renderNcertPlusView(ch, root, ctx) {
     if (!root || !ch) return;
     root.innerHTML = '';
     const shared = global.CBSE10Shared;
     const clean = (t) => shared?.cleanDisplayText?.(t) || String(t || '').trim();
-    const skipQ = (t) => shared?.isInternalQaPrompt?.(t);
+    const ext = ch.ncertPlusExtension || {};
+    const subjectLabel = ch.subject === 'mathematics' ? 'Mathematics' : 'Science';
 
     const head = document.createElement('div');
     head.className = 'cbse-advanced-panel';
-    head.innerHTML = `<h3>NCERT Plus · ${ch.title || ctx.chapterTitle}</h3>
-      <p class="cbse-advanced-lead">Board-style depth for ${ch.subject === 'mathematics' ? 'Mathematics' : 'Science'} — NCERT syllabus only.</p>`;
+    head.innerHTML = `<h3>NCERT Plus Syllabus Extension · ${ch.title || ctx.chapterTitle}</h3>
+      <p class="cbse-advanced-lead">${ext.summary || `Board-style depth for ${subjectLabel} — NCERT syllabus extensions and exam shortcuts.`}</p>`;
     root.appendChild(head);
 
-    if (ch.syllabusOutline?.length) {
+    const outline = ext.syllabusOutline?.length ? ext.syllabusOutline : ch.syllabusOutline;
+    if (outline?.length) {
       const sec = document.createElement('section');
       sec.className = 'sr-learn-section';
       sec.innerHTML = '<h3>Key syllabus points</h3><ul class="sr-learn-list"></ul>';
-      ch.syllabusOutline.forEach((item) => {
+      outline.forEach((item) => {
         const li = document.createElement('li');
         li.textContent = clean(item);
         sec.querySelector('ul').appendChild(li);
@@ -252,66 +254,84 @@
       root.appendChild(sec);
     }
 
-    if (ch.scholarTips?.length) {
+    const tips = ext.scholarTips?.length ? ext.scholarTips : ch.scholarTips;
+    if (tips?.length) {
       const sec = document.createElement('section');
       sec.className = 'sr-learn-section';
       sec.innerHTML = '<h3>Exam focus tips</h3><ul class="sr-learn-list"></ul>';
-      ch.scholarTips.forEach((tip) => {
+      tips.forEach((tip) => {
         const li = document.createElement('li');
         li.textContent = clean(tip);
         sec.querySelector('ul').appendChild(li);
       });
       root.appendChild(sec);
     }
+  }
 
-    const seen = new Set();
-    const samples = (ch.boardQuestions || [])
-      .map((q) => ({ ...q, prompt: clean(q.prompt) }))
-      .filter((q) => q.prompt && q.prompt.length >= 15 && !skipQ(q.prompt))
-      .filter((q) => {
-        if (seen.has(q.prompt)) return false;
-        seen.add(q.prompt);
-        return true;
-      })
-      .slice(0, 6);
+  function renderAdvanceMaterialView(ch, root, ctx) {
+    if (!root || !ch) return;
+    root.innerHTML = '';
+    const shared = global.CBSE10Shared;
+    const clean = (t) => shared?.cleanDisplayText?.(t) || String(t || '').trim();
+    const mat = ch.advanceMaterial || {};
+    const plus = ch.advancedStudy;
 
-    if (samples.length) {
+    const head = document.createElement('div');
+    head.className = 'cbse-advanced-panel';
+    head.innerHTML = `<h3>Advance Material · ${ch.title || ctx.chapterTitle}</h3>
+      <p class="cbse-advanced-lead">${mat.summary || plus?.summary || 'Worked solutions and enrichment beyond the NCERT outline.'}</p>`;
+    root.appendChild(head);
+
+    const solutions = mat.solutions || [];
+    if (solutions.length) {
       const sec = document.createElement('section');
       sec.className = 'sr-learn-section';
-      sec.innerHTML = `<h3>Board-style questions (${ch.boardQuestionCount || samples.length} in pool)</h3><ol class="sr-learn-list cbse-advanced-q-list"></ol>`;
-      const ol = sec.querySelector('ol');
-      samples.forEach((q) => {
-        const li = document.createElement('li');
-        li.innerHTML = `<span class="cbse-adv-q-marks">${q.marks || '?'} mark(s)</span> ${q.prompt}`;
-        ol.appendChild(li);
+      sec.innerHTML = `<h3>Master solutions (${mat.solutionCount || solutions.length})</h3><div class="cbse-adv-solutions"></div>`;
+      const wrap = sec.querySelector('.cbse-adv-solutions');
+      solutions.slice(0, 8).forEach((sol) => {
+        const card = document.createElement('article');
+        card.className = 'cbse-adv-solution-card';
+        let stepsHtml = '';
+        (sol.steps || []).forEach((st) => {
+          stepsHtml += `<li><strong>${st.heading || 'Step'}:</strong> ${st.detail || ''}</li>`;
+        });
+        card.innerHTML = `<p class="cbse-adv-sol-prompt"><span class="cbse-adv-q-marks">${sol.marks || '?'} mark(s)</span> ${clean(sol.prompt)}</p>${stepsHtml ? `<ol class="sr-learn-list">${stepsHtml}</ol>` : ''}`;
+        wrap.appendChild(card);
       });
       root.appendChild(sec);
     }
 
-    const cards = document.createElement('div');
-    cards.className = 'cbse-advanced-cards';
-    cards.innerHTML = `
-      <article class="cbse-adv-card"><strong>✅ Q &amp; A Practice</strong><p>Run timed drills from the question bank for this chapter.</p></article>
-      <article class="cbse-adv-card"><strong>📖 Official Books</strong><p>NCERT PDF + teacher walkthrough with board animation.</p></article>
-      <article class="cbse-adv-card"><strong>📚 Regular Study</strong><p>Video companions and full study guide for this chapter.</p></article>`;
-    root.appendChild(cards);
+    if (plus?.modules?.length) {
+      plus.modules.forEach((mod) => {
+        const sec = document.createElement('section');
+        sec.className = 'sr-learn-section cbse-plus-module';
+        sec.innerHTML = `<div class="cbse-plus-module-head"><h3>${mod.title || 'Module'}</h3></div>`;
+        if (mod.body) {
+          const body = document.createElement('div');
+          body.className = 'sr-learn-body cbse-plus-body';
+          body.innerHTML = mdToHtml(mod.body);
+          sec.appendChild(body);
+        }
+        root.appendChild(sec);
+      });
+    }
 
-    const disclaimer = document.createElement('p');
-    disclaimer.className = 'sr-ai-disclaimer';
-    disclaimer.textContent =
-      ch.disclaimer || 'AI-generated study material — verify with NCERT and your teacher.';
-    root.appendChild(disclaimer);
+    if (!solutions.length && !plus?.modules?.length) {
+      const empty = document.createElement('p');
+      empty.className = 'sr-eval-hint';
+      empty.textContent = 'Advance material for this chapter is being curated.';
+      root.appendChild(empty);
+    }
+  }
+
+  /** @deprecated use renderNcertPlusView or renderAdvanceMaterialView */
+  function renderAdvancedView(ch, root, ctx) {
+    renderAdvanceMaterialView(ch, root, ctx);
   }
 
   function renderLearnView(ch, root) {
     if (!root || !ch) return;
     root.innerHTML = '';
-
-    const disclaimer = document.createElement('p');
-    disclaimer.className = 'sr-ai-disclaimer';
-    disclaimer.textContent =
-      ch.disclaimer || 'AI-generated study guide — verify with NCERT and your teacher.';
-    root.appendChild(disclaimer);
 
     const videos = collectChapterVideos(ch);
 
@@ -347,14 +367,14 @@
     if (ch.boardQuestionCount) {
       const sec = document.createElement('section');
       sec.className = 'sr-learn-section';
-      sec.innerHTML = `<h3>Board mock pool</h3><p class="sr-section-hint">${ch.boardQuestionCount} approved past-paper questions (Sections B–E) from VOLTAIC Study Material.</p>`;
+      sec.innerHTML = `<h3>Mock question pool</h3><p class="sr-section-hint">${ch.boardQuestionCount} past-paper style questions (Sections B–E).</p>`;
       root.appendChild(sec);
     }
 
     if (ch.discussionThreadCount) {
       const sec = document.createElement('section');
       sec.className = 'sr-learn-section';
-      sec.innerHTML = `<h3>Peer discussion board</h3><p class="sr-section-hint">${ch.discussionThreadCount} chapter threads from Study Material — open Forum for full debate.</p><ul class="sr-learn-list"></ul>`;
+      sec.innerHTML = `<h3>Peer discussion board</h3><p class="sr-section-hint">${ch.discussionThreadCount} chapter threads — open Forum for full debate.</p><ul class="sr-learn-list"></ul>`;
       const ul = sec.querySelector('ul');
       (ch.discussionThreads || []).slice(0, 3).forEach((t) => {
         const li = document.createElement('li');
@@ -368,7 +388,7 @@
       const sec = document.createElement('section');
       sec.className = 'sr-learn-section';
       sec.innerHTML =
-        '<h3>Quick study tips</h3><p class="sr-section-hint">Short exam shortcuts from this chapter guide (English · AI-generated, not official CBSE).</p><ul class="sr-learn-list"></ul>';
+        '<h3>Quick study tips</h3><p class="sr-section-hint">Short exam shortcuts for this chapter.</p><ul class="sr-learn-list"></ul>';
       const ul = sec.querySelector('ul');
       ch.scholarTips.forEach((tip) => {
         const li = document.createElement('li');
@@ -423,6 +443,8 @@
     loadChapter,
     chapter,
     renderLearnView,
+    renderNcertPlusView,
+    renderAdvanceMaterialView,
     renderAdvancedView,
     readAloud,
     stopReadAloud,

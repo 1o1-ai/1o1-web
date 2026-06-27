@@ -171,6 +171,61 @@
     return null;
   }
 
+  async function loadSyntheticBank() {
+    const paths = [
+      '../../data/synthetic_questions.json',
+      '/portal/data/synthetic_questions.json',
+    ];
+    for (const p of paths) {
+      try {
+        const r = await fetch(p);
+        if (r.ok) {
+          const d = await r.json();
+          return (d.questions || []).map((q) => ({ ...q, chapter: normalizeChapterId(q.chapter) }));
+        }
+      } catch {
+        /* */
+      }
+    }
+    return [];
+  }
+
+  async function loadAdvancedComplexityBank() {
+    const paths = [
+      '../../data/advanced_complexity_questions.json',
+      '/portal/data/advanced_complexity_questions.json',
+    ];
+    for (const p of paths) {
+      try {
+        const r = await fetch(p);
+        if (r.ok) {
+          const d = await r.json();
+          return (d.questions || []).map((q) => ({ ...q, chapter: normalizeChapterId(q.chapter) }));
+        }
+      } catch {
+        /* */
+      }
+    }
+    return [];
+  }
+
+  function isAdvancedComplexity(q) {
+    return (
+      q.question_provenance === 'advanced_complexity' ||
+      q.complexity_tier === 'advanced' ||
+      String(q.difficulty || '').toLowerCase() === 'advanced'
+    );
+  }
+
+  function shuffleArray(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
   async function loadVerifiedBank() {
     const paths = ['../../data/cbse10-verified-questions.json', '/portal/data/cbse10-verified-questions.json'];
     for (const p of paths) {
@@ -292,8 +347,16 @@
   }
 
   function isProceduralPlaceholderMcq(q) {
-    if (q.source_kind === 'procedural_ai') return true;
-    if (/Procedural Syllabus AI Generator/i.test(String(q.source || ''))) return true;
+    if (/Procedural Syllabus AI Generator/i.test(String(q.source || ''))) {
+      const opts = (q.options || []).map((o) => cleanDisplayText(o));
+      if (
+        opts.length >= 4 &&
+        opts[0] === 'Real and distinct rational roots' &&
+        opts.includes('Empty baseline answer')
+      ) {
+        return true;
+      }
+    }
     const opts = (q.options || []).map((o) => cleanDisplayText(o));
     if (
       opts.length >= 4 &&
@@ -322,6 +385,12 @@
   function filterMasterQuestions(questions, { subject, chapter, mode, type, difficulty, limit }) {
     const subj = subject === 'mathematics' ? 'mathematics' : 'science';
     let pool = questions.filter((q) => {
+      const advanced = isAdvancedComplexity(q);
+      if (mode === 'advanced') {
+        if (!advanced) return false;
+      } else if (advanced) {
+        return false;
+      }
       const sub = (q.subject_slug || '').toLowerCase();
       const matchSub =
         sub === subj ||
@@ -339,12 +408,16 @@
       }
       if (difficulty && difficulty !== 'all') {
         const d = String(q.difficulty || '').toLowerCase();
-        if (d !== difficulty.toLowerCase()) return false;
+        const want = difficulty.toLowerCase();
+        if (want === 'difficult' || want === 'hard') {
+          if (d !== 'difficult' && d !== 'hard' && d !== 'advanced') return false;
+        } else if (d !== want) {
+          return false;
+        }
       }
       return isValidCatalogQuestion(q);
     });
-    pool.sort((a, b) => String(a.id || '').localeCompare(String(b.id || '')));
-    return pool.slice(0, limit || 9999);
+    return shuffleArray(pool).slice(0, limit || 9999);
   }
 
   function countMasterByChapter(questions, subject, mode) {
@@ -411,6 +484,10 @@
     loadCurriculum,
     loadVerifiedBank,
     loadMasterCatalog,
+    loadSyntheticBank,
+    loadAdvancedComplexityBank,
+    isAdvancedComplexity,
+    shuffleArray,
     hasFigure,
     filterBank,
     chaptersWithFigures,
@@ -435,6 +512,7 @@
     effectiveChapter,
     LEGACY_CHAPTER_ALIASES,
     SCIENCE_DISCIPLINE,
+    scienceDiscipline,
     FIGURE_RE,
   };
 })(typeof window !== 'undefined' ? window : globalThis);

@@ -94,7 +94,7 @@
         beat: {
           role: 'teacher',
           speaker: 'Teacher',
-          text: `To summarise ${chapterTitle || "today's lesson"}: revise the NCERT examples and intext questions we discussed. When you are ready, open the Quiz tab for a short WordHunter round.`,
+          text: `To summarise ${chapterTitle || "today's lesson"}: revise the NCERT examples and intext questions we discussed. When you are ready, open the Game Room from the CBSE 10 home screen for WordHunter and other drills.`,
         },
       });
       steps.push({ kind: 'pause', ms: 600 });

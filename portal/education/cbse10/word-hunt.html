@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Word Hunter · CBSE 10 Game Room</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="cbse10-study-room.css" />
+  <link rel="stylesheet" href="game-room.css" />
+  <link rel="stylesheet" href="games/dist/games.css" />
+  <link rel="stylesheet" href="../../assets/cbse-official-books.css" />
+</head>
+<body class="portal-page education-compact">
+  <header class="portal-header">
+    <a class="back-link" href="game-room.html">← Game Room</a>
+    <h1>ManjuLAB Word Hunter</h1>
+  </header>
+  <main class="portal-main">
+    <div class="game-subject-bar">
+      <label for="whSubject">Subject</label>
+      <select id="whSubject" aria-label="Subject">
+        <option value="science" selected>Science (086)</option>
+        <option value="mathematics">Mathematics (041)</option>
+      </select>
+      <button type="button" class="btn-portal btn-portal-primary" id="whRestart">Restart</button>
+    </div>
+    <div id="whHost" class="game-play-host"></div>
+  </main>
+  <script src="../../assets/cbse10-shared.js"></script>
+  <script src="../../assets/game-answer-explain.js"></script>
+  <script src="../../assets/cbse-hangman-quiz.js?v=5"></script>
+  <script src="word-hunt.js"></script>
+</body>
+</html>

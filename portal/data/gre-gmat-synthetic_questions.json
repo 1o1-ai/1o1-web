@@ -1,0 +1,1442 @@
+{
+  "schema_version": "education_provenance_v2",
+  "sku": "gre-gmat",
+  "built_at": "2026-06-26T16:11:27.412150+00:00",
+  "count": 55,
+  "questions": [
+    {
+      "id": "145b7582a6b49adb",
+      "track": "gre",
+      "section": "awa",
+      "chapter": "gre-awa-iss",
+      "question": "Which learning objective best matches GRE.AWA.ISS Topic: Thesis Formulation?",
+      "options": [
+        "Understand the theoretical foundations of Rhetorical Devices.",
+        "Understand the theoretical foundations of Thesis Formulation.",
+        "Understand the theoretical foundations of Mixture and Concentration Problems.",
+        "Apply strategies and formulas related to Flaws: Scope Shifts to solve exam-style questions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.AWA.ISS.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "932e1c164baf73d9",
+      "track": "gre",
+      "section": "awa",
+      "chapter": "gre-awa-iss",
+      "question": "Which is a common mistake students make on GRE.AWA.ISS Topic: Thesis Formulation?",
+      "options": [
+        "Falling for distractor options specifically designed around common misconceptions of Rectangular Solids: Surface Area & Volume.",
+        "Falling for distractor options specifically designed around common misconceptions of Sentence Correction: Logical Meaning & Clarity.",
+        "Misapplying core principles of Quant DS: Word Problems: Distance/Speed.",
+        "Misapplying core principles of Thesis Formulation."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.AWA.ISS.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "566bc75b481c7ab1",
+      "track": "gre",
+      "section": "awa",
+      "chapter": "gre-awa-iss",
+      "question": "What is the recommended first difficulty level when practicing GRE.AWA.ISS Topic: Thesis Formulation?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.AWA.ISS.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "2a1d3e8d749f49c5",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-alg",
+      "question": "Which learning objective best matches GRE.QNT.ALG Topic: Simplifying Algebraic Expressions?",
+      "options": [
+        "Understand the theoretical foundations of Data Sufficiency: Number Properties.",
+        "Understand the theoretical foundations of Problem Solving: Geometry: Solids & Volumes.",
+        "Avoid common errors and pitfalls associated with Using process of elimination under timed conditions.",
+        "Understand the theoretical foundations of Simplifying Algebraic Expressions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.ALG.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "e477c43464cf9663",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-alg",
+      "question": "Which is a common mistake students make on GRE.QNT.ALG Topic: Simplifying Algebraic Expressions?",
+      "options": [
+        "Falling for distractor options specifically designed around common misconceptions of Active Reading Techniques.",
+        "Misapplying core principles of Simplifying Algebraic Expressions.",
+        "Arithmetical or logical errors under exam time constraints for Factoring Cubic Polynomials.",
+        "Arithmetical or logical errors under exam time constraints for Conjunctions and Transitions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.ALG.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "20a2c70d3704aea6",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-alg",
+      "question": "What is the recommended first difficulty level when practicing GRE.QNT.ALG Topic: Simplifying Algebraic Expressions?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.ALG.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "f13b93ad08964aff",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-ari",
+      "question": "Which learning objective best matches GRE.QNT.ARI Topic: Integers and Factors?",
+      "options": [
+        "Understand the theoretical foundations of Data Sufficiency: Rates and Work.",
+        "Apply strategies and formulas related to Probability: Complementary Events to solve exam-style questions.",
+        "Understand the theoretical foundations of Integers and Factors.",
+        "Apply strategies and formulas related to Evaluating proposed policies to solve exam-style questions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.ARI.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "5173c72784b86e8b",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-ari",
+      "question": "Which is a common mistake students make on GRE.QNT.ARI Topic: Integers and Factors?",
+      "options": [
+        "Misapplying core principles of Bar Charts Interpretation.",
+        "Falling for distractor options specifically designed around common misconceptions of Critical Reasoning: Pacing.",
+        "Misapplying core principles of Integers and Factors.",
+        "Misapplying core principles of Comparing statements in different tabs."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.ARI.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "b6bbc995e5d61b49",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-ari",
+      "question": "What is the recommended first difficulty level when practicing GRE.QNT.ARI Topic: Integers and Factors?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.ARI.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "3cd4ba536b32e5e9",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-dat",
+      "question": "Which learning objective best matches GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median?",
+      "options": [
+        "Understand the theoretical foundations of Descriptive Statistics: Mean & Median.",
+        "Avoid common errors and pitfalls associated with Estimation and Rounding under timed conditions.",
+        "Apply strategies and formulas related to Boldface Questions: Role of Sentences to solve exam-style questions.",
+        "Apply strategies and formulas related to Reading Line Graphs to solve exam-style questions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.DAT.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "91924535530906fa",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-dat",
+      "question": "Which is a common mistake students make on GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median?",
+      "options": [
+        "Falling for distractor options specifically designed around common misconceptions of Locating data points quickly.",
+        "Misapplying core principles of Descriptive Statistics: Mean & Median.",
+        "Arithmetical or logical errors under exam time constraints for Context clues: Restatement.",
+        "Misapplying core principles of Mixture and Concentration Problems."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.DAT.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "914ed2123d906b3f",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-dat",
+      "question": "What is the recommended first difficulty level when practicing GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.DAT.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "aaa8bd47c26d620e",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-geo",
+      "question": "Which learning objective best matches GRE.QNT.GEO Topic: Lines and Angles?",
+      "options": [
+        "Avoid common errors and pitfalls associated with Problem Solving: Geometry: Angles & Lines under timed conditions.",
+        "Understand the theoretical foundations of Lines and Angles.",
+        "Understand the theoretical foundations of Defining Blank in Own Words first.",
+        "Apply strategies and formulas related to Systems of equations in TPA to solve exam-style questions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.GEO.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "5ace5ca8119392ff",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-geo",
+      "question": "Which is a common mistake students make on GRE.QNT.GEO Topic: Lines and Angles?",
+      "options": [
+        "Misapplying core principles of Data Sufficiency (Quant): Yes/No Questions.",
+        "Misapplying core principles of Problem Solving: Coordinate Geometry: Circles & Intersections.",
+        "Misapplying core principles of Lines and Angles.",
+        "Falling for distractor options specifically designed around common misconceptions of Synonym Pair Selection."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.GEO.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "a092f6f48f709d49",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-geo",
+      "question": "What is the recommended first difficulty level when practicing GRE.QNT.GEO Topic: Lines and Angles?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.QNT.GEO.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "99ee39d726e28f50",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-rc",
+      "question": "Which learning objective best matches GRE.VBL.RC Topic: Identifying Main Idea?",
+      "options": [
+        "Understand the theoretical foundations of Quant DS: Statistics: Std Dev.",
+        "Understand the theoretical foundations of Identifying Main Idea.",
+        "Apply strategies and formulas related to Problem Solving: Overlapping Sets to solve exam-style questions.",
+        "Apply strategies and formulas related to Identifying Underlying Assumptions to solve exam-style questions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.RC.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "34186e524f276f9a",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-rc",
+      "question": "Which is a common mistake students make on GRE.VBL.RC Topic: Identifying Main Idea?",
+      "options": [
+        "Falling for distractor options specifically designed around common misconceptions of GMAT Quant DS General Strategy.",
+        "Falling for distractor options specifically designed around common misconceptions of SC: Misplaced Modifiers.",
+        "Arithmetical or logical errors under exam time constraints for Problem Solving: Percentages & Interest.",
+        "Misapplying core principles of Identifying Main Idea."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.RC.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "a08e649afea38080",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-rc",
+      "question": "What is the recommended first difficulty level when practicing GRE.VBL.RC Topic: Identifying Main Idea?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.RC.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "7ae0972997ff46d4",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-se",
+      "question": "Which learning objective best matches GRE.VBL.SE Topic: Synonym Pair Selection?",
+      "options": [
+        "Understand the theoretical foundations of SC: Verbals (Gerunds/Infinitives).",
+        "Apply strategies and formulas related to Understanding logical consistency to solve exam-style questions.",
+        "Apply strategies and formulas related to Estimation and Rounding to solve exam-style questions.",
+        "Understand the theoretical foundations of Synonym Pair Selection."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.SE.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "1f81d8ce0490172f",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-se",
+      "question": "Which is a common mistake students make on GRE.VBL.SE Topic: Synonym Pair Selection?",
+      "options": [
+        "Arithmetical or logical errors under exam time constraints for Comparing Mean and Median.",
+        "Arithmetical or logical errors under exam time constraints for Finding Correlations.",
+        "Misapplying core principles of Synonym Pair Selection.",
+        "Arithmetical or logical errors under exam time constraints for Quantitative relationships in TPA."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.SE.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "936e8e147cd17052",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-se",
+      "question": "What is the recommended first difficulty level when practicing GRE.VBL.SE Topic: Synonym Pair Selection?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.SE.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "7a152b7c8d063818",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-tc",
+      "question": "Which learning objective best matches GRE.VBL.TC Topic: Single Blank: Sentence Analysis?",
+      "options": [
+        "Apply strategies and formulas related to Pacing in Sentence Equivalence to solve exam-style questions.",
+        "Avoid common errors and pitfalls associated with Factoring Algebraic Identities under timed conditions.",
+        "Apply strategies and formulas related to Triangles: Inequality Theorem to solve exam-style questions.",
+        "Understand the theoretical foundations of Single Blank: Sentence Analysis."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.TC.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "261119cc69949d09",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-tc",
+      "question": "Which is a common mistake students make on GRE.VBL.TC Topic: Single Blank: Sentence Analysis?",
+      "options": [
+        "Misapplying core principles of Single Blank: Sentence Analysis.",
+        "Falling for distractor options specifically designed around common misconceptions of Factorials and Permutations.",
+        "Falling for distractor options specifically designed around common misconceptions of Quant DS: Advanced Geometry.",
+        "Arithmetical or logical errors under exam time constraints for Interpreting Tables."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.TC.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "fc100b6a5caa5055",
+      "track": "gre",
+      "section": "verbal",
+      "chapter": "gre-vbl-tc",
+      "question": "What is the recommended first difficulty level when practicing GRE.VBL.TC Topic: Single Blank: Sentence Analysis?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GRE.VBL.TC.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "7c5c754b602747cc",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-ds",
+      "question": "Which learning objective best matches GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions?",
+      "options": [
+        "Understand the theoretical foundations of Data Sufficiency: Yes/No Questions.",
+        "Apply strategies and formulas related to RC Strategies: Short Passages to solve exam-style questions.",
+        "Apply strategies and formulas related to Identifying Outliers in CR Options to solve exam-style questions.",
+        "Apply strategies and formulas related to Mental Math Shortcuts to solve exam-style questions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.DS.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "b4a3dac2a10da48c",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-ds",
+      "question": "Which is a common mistake students make on GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions?",
+      "options": [
+        "Misapplying core principles of Data Sufficiency: Yes/No Questions.",
+        "Misapplying core principles of Graphical Interpretation General Strategy.",
+        "Falling for distractor options specifically designed around common misconceptions of Quant DS: Algebra & Equations.",
+        "Falling for distractor options specifically designed around common misconceptions of Reading Frequency Distributions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.DS.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "9f19d2f84d60ee51",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-ds",
+      "question": "What is the recommended first difficulty level when practicing GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.DS.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "8c627c2d8676fa62",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-gi",
+      "question": "Which learning objective best matches GMAT.DI.GI Topic: Bar Charts Interpretation?",
+      "options": [
+        "Avoid common errors and pitfalls associated with Sentence Correction: Active vs Passive Voice under timed conditions.",
+        "Avoid common errors and pitfalls associated with Problem Solving: Geometry: Solids & Volumes under timed conditions.",
+        "Understand the theoretical foundations of Bar Charts Interpretation.",
+        "Avoid common errors and pitfalls associated with Coordinate Geometry: Parallel/Perp Lines under timed conditions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.GI.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "6c9130a27acec738",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-gi",
+      "question": "Which is a common mistake students make on GMAT.DI.GI Topic: Bar Charts Interpretation?",
+      "options": [
+        "Falling for distractor options specifically designed around common misconceptions of Sentence Correction: Pronoun Reference.",
+        "Falling for distractor options specifically designed around common misconceptions of Rate of change calculation.",
+        "Arithmetical or logical errors under exam time constraints for Quant DS: Overlapping Sets.",
+        "Misapplying core principles of Bar Charts Interpretation."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.GI.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "588dfccf7a8f4962",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-gi",
+      "question": "What is the recommended first difficulty level when practicing GMAT.DI.GI Topic: Bar Charts Interpretation?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.GI.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "c308afdd07105a63",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-msr",
+      "question": "Which learning objective best matches GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure?",
+      "options": [
+        "Apply strategies and formulas related to Evaluating Logical Flow to solve exam-style questions.",
+        "Understand the theoretical foundations of Multi-Source Reasoning: Tab Structure.",
+        "Understand the theoretical foundations of Determining Function of a Paragraph.",
+        "Apply strategies and formulas related to Mapping the Passage in your head to solve exam-style questions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.MSR.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "9c3700fcde9c28bd",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-msr",
+      "question": "Which is a common mistake students make on GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure?",
+      "options": [
+        "Misapplying core principles of Multi-Source Reasoning: Tab Structure.",
+        "Falling for distractor options specifically designed around common misconceptions of GMAT Verbal RC Practice.",
+        "Misapplying core principles of Data Sufficiency: Consecutive Integers.",
+        "Falling for distractor options specifically designed around common misconceptions of Rational and Irrational Numbers."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.MSR.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "ff2f579368b72c2f",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-msr",
+      "question": "What is the recommended first difficulty level when practicing GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.MSR.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "6461ea802debc0a3",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-tpa",
+      "question": "Which learning objective best matches GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure?",
+      "options": [
+        "Understand the theoretical foundations of Quant DS: Decimals & Fractions.",
+        "Understand the theoretical foundations of Two-Part Analysis: Columns Structure.",
+        "Understand the theoretical foundations of Vocabulary in Context: Verbs.",
+        "Avoid common errors and pitfalls associated with Reading Comprehension: Pacing under timed conditions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.TPA.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "e1c4d7006f32541a",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-tpa",
+      "question": "Which is a common mistake students make on GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure?",
+      "options": [
+        "Misapplying core principles of Two-Part Analysis: Columns Structure.",
+        "Falling for distractor options specifically designed around common misconceptions of Sentence Correction: Parallelism.",
+        "Misapplying core principles of Essay Structuring.",
+        "Falling for distractor options specifically designed around common misconceptions of Data Insights: Visual Reasoning."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.TPA.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "5b861625ebda947a",
+      "track": "gmat",
+      "section": "data_insights",
+      "chapter": "gmat-di-tpa",
+      "question": "What is the recommended first difficulty level when practicing GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.DI.TPA.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "a7d8bf89448d7b7a",
+      "track": "gmat",
+      "section": "quantitative",
+      "chapter": "gmat-qnt-ds",
+      "question": "Which learning objective best matches GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions?",
+      "options": [
+        "Avoid common errors and pitfalls associated with Analyzing Tone and Charge under timed conditions.",
+        "Understand the theoretical foundations of Data Sufficiency (Quant): Yes/No Questions.",
+        "Understand the theoretical foundations of Determining Function of a Paragraph.",
+        "Avoid common errors and pitfalls associated with Sorting Data in Tables under timed conditions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.QNT.DS.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "1d300d016bfece5f",
+      "track": "gmat",
+      "section": "quantitative",
+      "chapter": "gmat-qnt-ds",
+      "question": "Which is a common mistake students make on GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions?",
+      "options": [
+        "Arithmetical or logical errors under exam time constraints for Histogram interpretation.",
+        "Misapplying core principles of Problem Solving: Coordinate Geometry: Circles & Intersections.",
+        "Misapplying core principles of Data Sufficiency (Quant): Yes/No Questions.",
+        "Falling for distractor options specifically designed around common misconceptions of Problem Solving: Linear Equations."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.QNT.DS.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "b7ceff9a3e20e172",
+      "track": "gmat",
+      "section": "quantitative",
+      "chapter": "gmat-qnt-ds",
+      "question": "What is the recommended first difficulty level when practicing GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.QNT.DS.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "1ff9b5fcdbe370e5",
+      "track": "gmat",
+      "section": "quantitative",
+      "chapter": "gmat-qnt-ps",
+      "question": "Which learning objective best matches GMAT.QNT.PS Topic: Problem Solving: Integers & Prime Factors?",
+      "options": [
+        "Understand the theoretical foundations of RC Strategies: Long Passages.",
+        "Avoid common errors and pitfalls associated with Single Blank: Clue Words under timed conditions.",
+        "Understand the theoretical foundations of Problem Solving: Integers & Prime Factors.",
+        "Apply strategies and formulas related to Drawing Inferences to solve exam-style questions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.QNT.PS.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "2b081779519f5059",
+      "track": "gmat",
+      "section": "quantitative",
+      "chapter": "gmat-qnt-ps",
+      "question": "Which is a common mistake students make on GMAT.QNT.PS Topic: Problem Solving: Integers & Prime Factors?",
+      "options": [
+        "Misapplying core principles of Problem Solving: Integers & Prime Factors.",
+        "Falling for distractor options specifically designed around common misconceptions of Evidence Selection.",
+        "Falling for distractor options specifically designed around common misconceptions of Identifying circular reasoning.",
+        "Arithmetical or logical errors under exam time constraints for Identifying Author's opinion vs sources."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.QNT.PS.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "97cb0356314a3ddd",
+      "track": "gmat",
+      "section": "quantitative",
+      "chapter": "gmat-qnt-ps",
+      "question": "What is the recommended first difficulty level when practicing GMAT.QNT.PS Topic: Problem Solving: Integers & Prime Factors?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.QNT.PS.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "f40854ca3362cc22",
+      "track": "gmat",
+      "section": "verbal",
+      "chapter": "gmat-vbl-cr",
+      "question": "Which learning objective best matches GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure?",
+      "options": [
+        "Understand the theoretical foundations of Critical Reasoning: Argument Structure.",
+        "Apply strategies and formulas related to Data Interpretation Strategies to solve exam-style questions.",
+        "Understand the theoretical foundations of Quant DS: Geometry: Polygons & Circles.",
+        "Apply strategies and formulas related to Graphic-Text consistency checks to solve exam-style questions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.VBL.CR.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "6e4649948fa0fd0f",
+      "track": "gmat",
+      "section": "verbal",
+      "chapter": "gmat-vbl-cr",
+      "question": "Which is a common mistake students make on GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure?",
+      "options": [
+        "Falling for distractor options specifically designed around common misconceptions of Quant DS: Percentages.",
+        "Misapplying core principles of Critical Reasoning: Argument Structure.",
+        "Misapplying core principles of Intersections of Lines and Curves.",
+        "Arithmetical or logical errors under exam time constraints for Box Plots and Data Ranges."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.VBL.CR.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "ae3093eb4efbe8e6",
+      "track": "gmat",
+      "section": "verbal",
+      "chapter": "gmat-vbl-cr",
+      "question": "What is the recommended first difficulty level when practicing GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.VBL.CR.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "f7cae2462971c2d4",
+      "track": "gmat",
+      "section": "verbal",
+      "chapter": "gmat-vbl-rc",
+      "question": "Which learning objective best matches GMAT.VBL.RC Topic: Reading Comprehension: Active Reading?",
+      "options": [
+        "Understand the theoretical foundations of Reading Comprehension: Active Reading.",
+        "Understand the theoretical foundations of Problem Solving: Percentages & Interest.",
+        "Apply strategies and formulas related to Multi-Source Reasoning: Verbal parts to solve exam-style questions.",
+        "Avoid common errors and pitfalls associated with Data Sufficiency: Rates and Work under timed conditions."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.VBL.RC.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "be7a43c44d03915a",
+      "track": "gmat",
+      "section": "verbal",
+      "chapter": "gmat-vbl-rc",
+      "question": "Which is a common mistake students make on GMAT.VBL.RC Topic: Reading Comprehension: Active Reading?",
+      "options": [
+        "Misapplying core principles of Synthesizing economics tabs.",
+        "Arithmetical or logical errors under exam time constraints for SC: Correlative Conjunctions.",
+        "Misapplying core principles of Reading Comprehension: Active Reading.",
+        "Falling for distractor options specifically designed around common misconceptions of Mean of Grouped Data."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.VBL.RC.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "63e9d1b934da322b",
+      "track": "gmat",
+      "section": "verbal",
+      "chapter": "gmat-vbl-rc",
+      "question": "What is the recommended first difficulty level when practicing GMAT.VBL.RC Topic: Reading Comprehension: Active Reading?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.VBL.RC.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "5392fc3b2b02dc51",
+      "track": "gmat",
+      "section": "verbal",
+      "chapter": "gmat-vbl-sc",
+      "question": "Which learning objective best matches GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement?",
+      "options": [
+        "Understand the theoretical foundations of Verifying Final Choices.",
+        "Avoid common errors and pitfalls associated with Common Traps: Diagram constraints under timed conditions.",
+        "Apply strategies and formulas related to Shift in Meaning detection to solve exam-style questions.",
+        "Understand the theoretical foundations of Sentence Correction: Subject-Verb Agreement."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.VBL.SC.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "c66168865e546c39",
+      "track": "gmat",
+      "section": "verbal",
+      "chapter": "gmat-vbl-sc",
+      "question": "Which is a common mistake students make on GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement?",
+      "options": [
+        "Misapplying core principles of Sentence Correction: Subject-Verb Agreement.",
+        "Falling for distractor options specifically designed around common misconceptions of Weakening arguments in RC.",
+        "Misapplying core principles of Reading Case Studies.",
+        "Misapplying core principles of Profit, Loss, and discount."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.VBL.SC.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "6374fa8cccd94699",
+      "track": "gmat",
+      "section": "verbal",
+      "chapter": "gmat-vbl-sc",
+      "question": "What is the recommended first difficulty level when practicing GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:GMAT.VBL.SC.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "5ad25292c9d2aa8d",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-ari",
+      "question": "If a person's salary increases from $200 per week to $234 per week, what is the percent increase?",
+      "options": [
+        "17%",
+        "12%",
+        "34%",
+        "8%"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "ets:gre-math-review Exercise 10",
+      "tags": [
+        "gre-quant",
+        "word-problem"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "b19fda0ccaca7bc9",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-ari",
+      "question": "If an athlete's weight decreases from 160 pounds to 152 pounds, what is the percent decrease?",
+      "options": [
+        "5%",
+        "10%",
+        "8%",
+        "15%"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "ets:gre-math-review Exercise 11",
+      "tags": [
+        "gre-quant",
+        "word-problem"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "8b4498b12501ba30",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-ari",
+      "question": "A stock at $40 increases 20% then decreases 25%. What is the final value per share?",
+      "options": [
+        "$36",
+        "$38",
+        "$32",
+        "$42"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "ets:gre-math-review Exercise 12",
+      "tags": [
+        "gre-quant",
+        "word-problem"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "d127f6b05c9fab56",
+      "track": "gre",
+      "section": "quantitative",
+      "chapter": "gre-qnt-ari",
+      "question": "20 dogs and cats; ratio of dogs to cats is 3:2. How many cats are at the kennel?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "6"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "ets:gre-math-review Exercise 13",
+      "tags": [
+        "gre-quant",
+        "word-problem"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    }
+  ]
+}

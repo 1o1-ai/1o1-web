@@ -5,6 +5,18 @@
   'use strict';
 
   const BRAND = 'ManjuLAB WordHunter';
+  const MAX_WRONG = 6;
+
+  const EASY_WORDS = [
+    { word: 'LAW', hint: 'Statement proved by experiment' },
+    { word: 'RAY', hint: 'Line of light' },
+    { word: 'DNA', hint: 'Genetic material' },
+    { word: 'ION', hint: 'Charged atom' },
+    { word: 'LOG', hint: 'Math function or wood piece' },
+    { word: 'ARC', hint: 'Part of a circle' },
+    { word: 'SUM', hint: 'Result of addition' },
+    { word: 'SET', hint: 'Collection in maths' },
+  ];
 
   const CHAPTER_WORDS = {
     'chem-reactions': { word: 'REACTION', hint: 'Chemical change forming new substances' },
@@ -13,7 +25,7 @@
     carbon: { word: 'COVALENT', hint: 'Carbon shares electrons' },
     life: { word: 'PHOTOSYNTHESIS', hint: 'Plants make food using sunlight' },
     light: { word: 'REFRACTION', hint: 'Bending of light at a boundary' },
-    electricity: { word: 'RESISTANCE', hint: "Opposes electric current" },
+    electricity: { word: 'RESISTANCE', hint: 'Opposes electric current' },
     magnetism: { word: 'SOLENOID', hint: 'Coil that acts like a magnet' },
     'sources-of-energy': { word: 'BIOGAS', hint: 'Fuel from cow dung and waste' },
     'real-numbers': { word: 'IRRATIONAL', hint: 'Cannot be written as p/q' },
@@ -23,25 +35,27 @@
     ap: { word: 'PROGRESSION', hint: 'Sequence with constant difference' },
     triangles: { word: 'SIMILAR', hint: 'Same shape, proportional sides' },
     trigonometry: { word: 'SINE', hint: 'Opposite over hypotenuse' },
-    'electric-charges-fields': { word: 'COULOMB', hint: 'SI unit of charge' },
     'human-eye': { word: 'DISPERSION', hint: 'Splitting of white light in a prism' },
-    control: { word: 'REFLEX', hint: 'Automatic rapid response without thinking' },
+    control: { word: 'REFLEX', hint: 'Automatic rapid response' },
     reproduction: { word: 'MEIOSIS', hint: 'Cell division forming gametes' },
     heredity: { word: 'CHROMOSOME', hint: 'Thread-like structure carrying genes' },
     'trig-apps': { word: 'ELEVATION', hint: 'Angle looking up at an object' },
     coordinate: { word: 'DISTANCE', hint: 'Length between two coordinate points' },
     'areas-circles': { word: 'SECTOR', hint: 'Pie-shaped part of a circle' },
-    'surface-vol': { word: 'HEMISPHERE', hint: 'Half of a sphere' },
+    'surface-volume': { word: 'HEMISPHERE', hint: 'Half of a sphere' },
     statistics: { word: 'MEDIAN', hint: 'Middle value of ordered data' },
     probability: { word: 'OUTCOME', hint: 'Single result of a random experiment' },
-    'chemical-kinetics': { word: 'CATALYST', hint: 'Speeds reaction without being consumed' },
   };
 
-  function pickWord(chapterId, title) {
-    if (CHAPTER_WORDS[chapterId]) return { ...CHAPTER_WORDS[chapterId], chapterId };
+  function pickWord(chapterId, title, roundIndex) {
+    if (roundIndex < 2) {
+      const easy = EASY_WORDS[roundIndex % EASY_WORDS.length];
+      return { ...easy, chapterId, chapterTitle: title, easy: true };
+    }
+    if (CHAPTER_WORDS[chapterId]) return { ...CHAPTER_WORDS[chapterId], chapterId, chapterTitle: title };
     const clean = (title || chapterId).replace(/[^a-zA-Z]/g, '').toUpperCase();
     const word = clean.length >= 5 ? clean.slice(0, Math.min(12, clean.length)) : 'STUDY';
-    return { word, hint: `Keyword from ${title || chapterId}`, chapterId };
+    return { word, hint: `Keyword from ${title || chapterId}`, chapterId, chapterTitle: title };
   }
 
   function shuffle(arr) {
@@ -61,65 +75,59 @@
     return { prompt, options: opts, correctIndex, pool: q.pool || 'mixed' };
   }
 
-  function buildQuestions(ctx, wordPack, limit) {
+  function buildQuestionPool(ctx, wordPack, limit) {
     const qs = [];
     const filter = ctx.filterQuestions;
     const chapterIds = wordPack.chapterIds || [wordPack.chapterId];
     if (filter) {
-      ['easy', 'medium', 'difficult'].forEach((d) => {
-        const batch = filter({ difficulty: d, limit: 4, chapterIds }) || [];
+      const tiers = wordPack.easy
+        ? ['easy', 'medium']
+        : ['easy', 'medium', 'difficult', 'advanced'];
+      tiers.forEach((d) => {
+        const batch = filter({ difficulty: d, limit: 6, chapterIds }) || [];
         batch.forEach((raw) => {
           const q = normalizeQ({ ...raw, pool: d });
           if (q.prompt && q.options.length >= 2) qs.push(q);
         });
       });
     }
-    const fallbacks = [
-      {
-        prompt: `Which term best matches this clue: "${wordPack.hint}"?`,
-        options: [
-          wordPack.word.charAt(0) + wordPack.word.slice(1).toLowerCase(),
-          'Velocity',
-          'Fraction',
-          'Photosynthesis',
-        ],
-        correctIndex: 0,
-        pool: 'easy',
-      },
-      {
-        prompt: `How many letters are in the hidden keyword?`,
-        options: [
-          String(wordPack.word.replace(/\s/g, '').length),
-          String(wordPack.word.length + 2),
-          String(Math.max(1, wordPack.word.length - 1)),
-          '10',
-        ],
-        correctIndex: 0,
-        pool: 'medium',
-      },
-      {
-        prompt: 'Balanced chemical equations must satisfy which law?',
-        options: ['Conservation of mass', 'Conservation of charge only', "Boyle's law", "Snell's law"],
-        correctIndex: 0,
-        pool: 'hard',
-      },
-      {
-        prompt: `For this chapter, the secret word relates to:`,
-        options: [wordPack.hint, 'Random guessing', 'None of the above', 'Skip this round'],
-        correctIndex: 0,
-        pool: 'easy',
-      },
-    ].map(normalizeQ);
+    return shuffle(qs).slice(0, limit || 20);
+  }
 
-    const merged = shuffle([...qs, ...fallbacks]);
-    const seen = new Set();
-    const unique = merged.filter((q) => {
-      const key = q.prompt.slice(0, 80);
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return q.options.length >= 2;
+  function makeLetterQuestion(word, revealed) {
+    const hidden = word.split('').filter((c) => /[A-Z]/.test(c) && !revealed.has(c));
+    const target = hidden[Math.floor(Math.random() * hidden.length)] || word[0];
+    const decoys = shuffle('ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').filter((c) => c !== target && !revealed.has(c))).slice(
+      0,
+      3
+    );
+    const options = shuffle([target, ...decoys]);
+    return normalizeQ({
+      prompt: `Which letter is still hidden in the keyword?`,
+      options,
+      correctIndex: options.indexOf(target),
+      pool: 'letter',
     });
-    return unique.slice(0, limit || 10);
+  }
+
+  function makeHintQuestion(wordPack) {
+    return normalizeQ({
+      prompt: `Which clue best matches the hidden word?`,
+      options: shuffle([
+        wordPack.hint,
+        'Random guessing only',
+        'None of the above',
+        'Skip this round',
+      ]),
+      correctIndex: 0,
+      pool: 'hint',
+    });
+  }
+
+  function nextQuestion(pool, wordPack, revealed, qIndex) {
+    if (pool.length && pool[qIndex]) return pool[qIndex];
+    if (qIndex % 3 === 2) return makeHintQuestion(wordPack);
+    return makeLetterQuestion(wordPack.word.replace(/\s/g, ''), revealed);
   }
 
   function hangmanSvg() {
@@ -141,15 +149,19 @@
     const word = wordPack.word.replace(/\s/g, '');
     const revealed = new Set();
     let wrong = 0;
-    const maxWrong = 6;
     let qIdx = 0;
-    const questions = buildQuestions(ctx, { ...wordPack, word }, 10);
+    const pool = buildQuestionPool(ctx, { ...wordPack, word }, 24);
+    let roundOver = false;
+    let awaitingNext = false;
 
     host.innerHTML = `
       <div class="cbse-hangman-game manjulab-round">
+        <pre class="cg-brand" aria-label="ManjuLAB"> ╭─ManjuLAB─╮
+ │ ⚗ ★ LEARN│
+ ╰──────────╯</pre>
         <header class="cbse-hangman-head">
           <h4>🎯 ${BRAND}</h4>
-          <p>Round ${roundNum} / ${totalRounds} · ${wordPack.chapterTitle || wordPack.chapterId || 'Chapter'}</p>
+          <p>Round ${roundNum} / ${totalRounds} · ${wordPack.chapterTitle || wordPack.chapterId || 'Chapter'}${wordPack.easy ? ' · Easy' : ''}</p>
         </header>
         <div class="cbse-hangman-stage">
           ${hangmanSvg()}
@@ -192,21 +204,58 @@
     }
 
     function finishRound(won) {
-      setTimeout(() => onComplete(won), won ? 1200 : 1800);
+      if (roundOver) return;
+      roundOver = true;
+      word.split('').forEach((c) => revealed.add(c));
+      renderWord();
+      qEl.innerHTML = won
+        ? `<p class="cbse-hangman-win">🎉 Word decoded: <strong>${word}</strong></p>`
+        : `<p class="cbse-hangman-lose">Word was: <strong>${word}</strong></p>`;
+      setTimeout(() => onComplete(won), won ? 1400 : 2000);
+    }
+
+    function showAnswerReveal(correct, answerText, onNext) {
+      awaitingNext = true;
+      const subject = ctx.subjectId === 'mathematics' ? 'mathematics' : 'science';
+      const meta = {
+        chapter: wordPack.chapterTitle || '',
+        chapterId: wordPack.chapterId || '',
+        term: word,
+      };
+      let learnHtml = '';
+      if (ctx.curriculum && global.GameAnswerExplain) {
+        learnHtml = global.GameAnswerExplain.explainAnswer(answerText, subject, ctx.curriculum, meta);
+      } else {
+        learnHtml = '<strong>' + answerText + '</strong> — review this in your chapter notes.';
+      }
+      qEl.innerHTML = `
+        <div class="cg-reveal" data-ok="${correct ? '1' : '0'}">
+          <p class="cg-reveal-verdict">${correct ? '✓ Correct — letter revealed!' : '✗ Not quite — learn the answer'}</p>
+          <p class="cg-reveal-answer"><span>Answer:</span> <strong>${answerText}</strong></p>
+          <div class="cg-reveal-learn"><p>${learnHtml}</p></div>
+          <button type="button" class="cg-btn cg-btn-next" id="hgNext">Next →</button>
+        </div>`;
+      statusEl.textContent = '';
+      statusEl.className = 'cbse-hangman-status';
+      qEl.querySelector('#hgNext').addEventListener('click', () => {
+        awaitingNext = false;
+        onNext();
+      });
     }
 
     function showQuestion() {
-      const q = questions[qIdx];
-      if (!q) {
-        qEl.innerHTML = '<p class="cbse-hangman-done">No more questions in this round.</p>';
+      if (roundOver || awaitingNext) return;
+      if (checkWin()) {
+        finishRound(true);
         return;
       }
+      if (wrong >= MAX_WRONG) {
+        finishRound(false);
+        return;
+      }
+
+      const q = nextQuestion(pool, { ...wordPack, word }, revealed, qIdx);
       const opts = q.options || [];
-      if (!q.prompt || opts.length < 2) {
-        qIdx += 1;
-        showQuestion();
-        return;
-      }
       qEl.innerHTML = `
         <p class="hg-q-text">${q.prompt}</p>
         <div class="hg-opts">${opts
@@ -216,34 +265,32 @@
               `<button type="button" class="quiz-option hg-opt" data-i="${i}">${String.fromCharCode(65 + i)}. ${o}</button>`
           )
           .join('')}</div>`;
+
       qEl.querySelectorAll('.hg-opt').forEach((btn) => {
         btn.addEventListener('click', () => {
+          if (roundOver || awaitingNext) return;
           const i = parseInt(btn.dataset.i, 10);
           const correct = q.correctIndex === i;
+          const answerText = opts[q.correctIndex] ?? opts[i];
+          qEl.querySelectorAll('.hg-opt').forEach((b) => {
+            b.disabled = true;
+          });
+
           if (correct) {
             revealRandomLetter();
-            statusEl.textContent = '✓ Correct — letter revealed!';
             statusEl.className = 'cbse-hangman-status ok';
           } else {
             wrong += 1;
             drawPart();
-            statusEl.textContent = '✗ Wrong answer…';
             statusEl.className = 'cbse-hangman-status bad';
           }
-          qIdx += 1;
-          if (checkWin()) {
-            qEl.innerHTML = '<p class="cbse-hangman-win">🎉 Word decoded!</p>';
-            finishRound(true);
-            return;
-          }
-          if (wrong >= maxWrong) {
-            qEl.innerHTML = `<p class="cbse-hangman-lose">Word was: <strong>${word}</strong></p>`;
-            word.split('').forEach((c) => revealed.add(c));
-            renderWord();
-            finishRound(false);
-            return;
-          }
-          setTimeout(showQuestion, 500);
+
+          showAnswerReveal(correct, answerText, () => {
+            qIdx += 1;
+            if (checkWin()) finishRound(true);
+            else if (wrong >= MAX_WRONG) finishRound(false);
+            else showQuestion();
+          });
         });
       });
     }
@@ -260,7 +307,7 @@
           <span class="manjulab-logo">🧪</span>
           <div>
             <h3>${BRAND}</h3>
-            <p>Decode chapter keywords · MCQs reveal letters · wrong answers draw the figure</p>
+            <p>Decode keywords · MCQs reveal letters · starts with easy 3-letter words</p>
           </div>
         </header>
         <label class="manjulab-whole-subject">
@@ -311,12 +358,12 @@
   }
 
   function startGame(host, ctx, chapterIds, allChapters) {
-    const rounds = shuffle(
-      chapterIds.map((id) => {
+    const rounds = shuffle(chapterIds)
+      .slice(0, Math.min(8, chapterIds.length))
+      .map((id, idx) => {
         const meta = allChapters.find((c) => c.id === id) || {};
-        return pickWord(id, meta.title);
-      })
-    ).slice(0, Math.min(8, chapterIds.length));
+        return pickWord(id, meta.title, idx);
+      });
 
     rounds.forEach((r) => {
       const meta = allChapters.find((c) => c.id === r.chapterId);
@@ -348,16 +395,36 @@
     nextRound();
   }
 
+  function mountSubjectGame(host, options) {
+    if (!host) return;
+    const subject = options?.subject === 'mathematics' ? 'mathematics' : 'science';
+    const chapters = (options?.listChapters?.() || []).filter(Boolean);
+    if (!chapters.length) {
+      host.innerHTML = '<p class="sr-eval-hint">No chapters loaded for this subject.</p>';
+      return;
+    }
+    const ctx = {
+      subjectId: subject,
+      subjectLabel: subject === 'science' ? 'Science · 086' : 'Mathematics · 041',
+      chapterId: chapters[0].id,
+      chapterTitle: chapters[0].title,
+      curriculum: options?.curriculum || null,
+      listChapters: () => chapters,
+      filterQuestions: options?.filterQuestions,
+    };
+    const ids = chapters.map((c) => c.id);
+    startGame(host, ctx, ids, chapters);
+  }
+
   function mountQuizTab(host, ctx) {
     if (!host) return;
     renderLauncher(host, ctx);
   }
 
-  /** @deprecated use mountQuizTab */
   function mount(host, ctx) {
     mountQuizTab(host, ctx);
   }
 
-  global.ManjuLABWordHunter = { mountQuizTab, mount, pickWord, BRAND };
+  global.ManjuLABWordHunter = { mountQuizTab, mountSubjectGame, mount, pickWord, BRAND };
   global.CBSEHangmanQuiz = global.ManjuLABWordHunter;
 })(typeof window !== 'undefined' ? window : globalThis);

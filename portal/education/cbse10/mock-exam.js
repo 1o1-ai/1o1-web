@@ -15,7 +15,12 @@
     return;
   }
 
-  const expectedQuestionCount = paper.sections.reduce((n, s) => n + s.count, 0);
+  const expectedQuestionCount =
+    paper.questionCount ||
+    paper.sections.reduce((n, s) => {
+      if (s.blocks?.length) return n + s.blocks.reduce((m, b) => m + b.count, 0);
+      return n + s.count;
+    }, 0);
 
   let remaining = DURATION_SEC;
   let pasteCount = 0;
@@ -41,26 +46,66 @@
     return pool.filter((q) => subjectKey(q.subject || q.subject_id) === key);
   }
 
+  function filterByScienceDomain(pool, domain) {
+    const map = global.CBSE10Shared?.SCIENCE_DISCIPLINE || {};
+    return pool.filter((q) => {
+      const ch = global.CBSE10Shared?.masterChapterId?.(q) || q.chapterId || q.chapter || '';
+      return (map[ch] || 'biology') === domain;
+    });
+  }
+
+  function sectionBlocks(section) {
+    if (section.blocks?.length) return section.blocks;
+    return [{ marksEach: section.marksEach, count: section.count, types: section.types || ['MCQ'] }];
+  }
+
   function renderBoardHeader(approvedCount) {
-    document.getElementById('boardHeader').innerHTML = `
+    const isOfficialScience = paper.officialFormat === 'cbse_science_x';
+    const qpCode = paper.qpCode || '31/1/1';
+
+    document.getElementById('boardHeader').innerHTML = isOfficialScience
+      ? `
+      <div class="board-name">Central Board of Secondary Education</div>
+      <div class="paper-title">${paper.classLabel} · ${paper.title}</div>
+      <div class="paper-meta">Q.P. Code <strong>${qpCode}</strong> · Time allowed: ${paper.durationHours} hours · Maximum Marks: ${paper.totalMarks}</div>
+      <div class="paper-meta subtle">This question paper contains <strong>${expectedQuestionCount}</strong> questions.</div>`
+      : `
       <div class="board-name">Central Board of Secondary Education</div>
       <div class="paper-title">${paper.classLabel} · ${paper.title} (${paper.code})</div>
       <div class="paper-meta">Sample Question Paper · ${paper.durationHours} Hours · Maximum Marks: ${paper.totalMarks}</div>`;
 
-    document.getElementById('marksBox').innerHTML = `
+    document.getElementById('marksBox').innerHTML = isOfficialScience
+      ? `
+      <div><strong>Roll No.</strong> _______________</div>
+      <div><strong>Q.P. Code</strong> ${qpCode}</div>
+      <div><strong>Time Allowed:</strong> ${paper.durationHours} Hours</div>
+      <div><strong>Maximum Marks:</strong> ${paper.totalMarks}</div>`
+      : `
       <div><strong>Time Allowed:</strong> ${paper.durationHours} Hours</div>
       <div><strong>Maximum Marks:</strong> ${paper.totalMarks}</div>
       <div><strong>Subject Code:</strong> ${paper.code}</div>
       <div><strong>Passing:</strong> ${paper.passingPercent}% (theory)</div>`;
 
-    const sectionSummary = paper.sections
-      .map(
-        (s) =>
-          `<li><strong>${s.label}</strong> — ${s.instruction} (${s.count} × ${s.marksEach} = ${s.count * s.marksEach} marks)</li>`
-      )
-      .join('');
+    const sectionSummary = isOfficialScience
+      ? paper.sections
+          .map(
+            (s) =>
+              `<li><strong>${s.label}</strong> — ${s.instruction} (${s.totalMarks || sectionBlocks(s).reduce((n, b) => n + b.count * b.marksEach, 0)} marks)</li>`
+          )
+          .join('')
+      : paper.sections
+          .map(
+            (s) =>
+              `<li><strong>${s.label}</strong> — ${s.instruction} (${s.count} × ${s.marksEach} = ${s.count * s.marksEach} marks)</li>`
+          )
+          .join('');
 
-    const approvedNote = '';
+    const officialNotes = isOfficialScience
+      ? `<li>Question paper is divided into <strong>THREE</strong> sections — A (Biology), B (Chemistry), C (Physics).</li>
+        <li>Divide your answer sheet into three sections. Do not mix answers across sections.</li>
+        <li>Includes MCQs, VSAs, SAs, LAs and case-based questions (4 marks each).</li>
+        <li>Internal choice is provided in some questions — attempt only one option.</li>`
+      : '';
 
     document.getElementById('instructions').innerHTML = `
       <strong>General Instructions:</strong>
@@ -69,7 +114,7 @@
         <li>Read each question carefully before answering.</li>
         <li>${paper.note}</li>
         <li>Internal assessment / practical marks are not included in this mock.</li>
-        ${approvedNote}
+        ${officialNotes}
       </ol>
       <strong>Mark distribution:</strong><ul style="margin:8px 0 0 18px">${sectionSummary}</ul>`;
   }
@@ -135,7 +180,9 @@
   }
 
   function sectionRequiresPlayableMcq(section) {
-    return section.id === 'A' && sku === 'cbse10';
+    if (sku !== 'cbse10') return false;
+    if (section.marksEach === 1 && (section.types || []).includes('MCQ')) return true;
+    return section.id === 'A';
   }
 
   function questionKey(q, suffix) {
@@ -247,7 +294,8 @@
     paperQuestions.forEach(({ section, questions }) => {
       const secHead = document.createElement('div');
       secHead.className = 'exam-section-head';
-      secHead.innerHTML = `${section.label}<small>${section.instruction} · ${section.count * section.marksEach} marks</small>`;
+      const blockMarks = sectionBlocks(section).reduce((n, b) => n + b.count * b.marksEach, 0);
+      secHead.innerHTML = `${section.label}<small>${section.instruction} · ${section.totalMarks || blockMarks} marks</small>`;
       sectionsEl.appendChild(secHead);
 
       questions.forEach((q) => {
@@ -331,7 +379,12 @@
       });
     });
     const usedMin = Math.round((DURATION_SEC - remaining) / 60);
-    const constructedLabel = sku === 'cbse12-science' ? 'Sections B–C' : 'Sections B–E';
+    const constructedLabel =
+      paper.officialFormat === 'cbse_science_x'
+        ? 'Sections A–C (constructed items)'
+        : sku === 'cbse12-science'
+          ? 'Sections B–C'
+          : 'Sections B–E';
     const report = document.getElementById('mockReport');
     report.hidden = false;
     report.innerHTML = `
@@ -420,6 +473,32 @@
     paper.sections.forEach((section) => {
       let poolForSection;
       let pickOpts = {};
+      const domainPool =
+        section.domain && sku === 'cbse10' ? filterByScienceDomain(allPool, section.domain) : allPool;
+
+      if (section.blocks?.length) {
+        const sectionQs = [];
+        section.blocks.forEach((block) => {
+          const blockSection = { ...section, marksEach: block.marksEach, count: block.count, types: block.types };
+          let blockPool = domainPool.length ? domainPool : allPool;
+          if (block.marksEach === 1 && mcqPool.length) {
+            const domainMcqs = section.domain ? filterByScienceDomain(mcqPool, section.domain) : mcqPool;
+            blockPool = domainMcqs.length ? domainMcqs : mcqPool;
+          } else if (sku === 'cbse10' && approvedBank.length) {
+            const exact = filterByScienceDomain(approvedBank, section.domain || '').filter(
+              (q) => (q.marks || 1) === block.marksEach
+            );
+            blockPool = exact.length >= block.count ? exact : domainPool.length ? domainPool : approvedBank;
+          }
+          const qs = pickForSection(blockPool, blockSection, used, {
+            allowConstructed: block.marksEach > 1,
+          });
+          sectionQs.push(...qs);
+        });
+        paperQuestions.push({ section, questions: sectionQs });
+        return;
+      }
+
       if (section.id === 'A') {
         if (mcqPool.length) poolForSection = mcqPool;
         else {

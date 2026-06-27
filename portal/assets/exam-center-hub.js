@@ -15,8 +15,8 @@
         { id: 'mathematics', label: 'Mathematics Standard (041)' },
         { id: 'science', label: 'Science (086)' },
       ],
-      practiceNote: 'Chapter drills via Abhyas API — 1–40 questions, official outsider contract.',
-      mockNote: 'Full 3-hour board paper · 80 marks · CBSE section format (Sections A–E).',
+      practiceNote: 'Chapter drills — 1–40 questions with competency mix.',
+      mockNote: 'Full 3-hour mock · 80 marks · Math: Sections A–E · Science: Biology / Chemistry / Physics (39 Q).',
     },
     'cbse12-science': {
       label: 'CBSE Class XI–XII Science',
@@ -79,7 +79,7 @@
     const cfg = SKU_CONFIG[sku] || SKU_CONFIG.cbse10;
     const subjectSelect =
       cfg.subjects.length > 0
-        ? `<label class="field" style="display:block;margin:20px 0 8px;font-size:0.85rem;color:#94a3b8">Subject / paper
+        ? `<label class="field" style="display:block;margin:10px 0 6px;font-size:0.85rem;color:#94a3b8">Subject / paper
            <select id="ecSubject" style="width:100%;margin-top:6px;padding:10px;border-radius:8px;background:#0a0f0d;color:#e2e8f0;border:1px solid #334155">
              ${cfg.subjects.map((s) => `<option value="${s.id}">${s.label}</option>`).join('')}
            </select></label>`
@@ -104,7 +104,7 @@
           <p>${cfg.mockNote}</p>
         </a>
       </div>
-      <p class="portal-note" style="margin-top:24px">
+      <p class="portal-note" style="margin-top:14px">
         Passing: 33% theory minimum · Internal/practical marks excluded ·
         <a href="${cfg.hub}">← Back to hub</a>
       </p>`;

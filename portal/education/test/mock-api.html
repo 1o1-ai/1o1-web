@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SKU Mock API Test</title>
+  <style>
+    :root { --bg:#0f172a; --panel:#1e293b; --ink:#f1f5f9; --muted:#94a3b8; --teal:#2dd4bf; --line:rgba(148,163,184,.2); }
+    body { font-family: system-ui,sans-serif; background:var(--bg); color:var(--ink); margin:0; padding:24px 16px 64px; }
+    .wrap { max-width:900px; margin:0 auto; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px; margin-bottom:16px; }
+    input,select,button { font:inherit; }
+    select,input { background:#0b1220; border:1px solid var(--line); color:var(--ink); border-radius:8px; padding:10px; margin:4px 8px 4px 0; }
+    button { background:linear-gradient(135deg,#0d9488,#0891b2); color:#fff; border:none; border-radius:10px; padding:10px 16px; font-weight:600; cursor:pointer; }
+    pre { background:#0b1220; border:1px solid var(--line); border-radius:10px; padding:12px; overflow:auto; font-size:0.78rem; max-height:420px; }
+    .muted { color:var(--muted); font-size:0.88rem; }
+    a { color:var(--teal); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <p class="muted"><a href="index.html">← Test hub</a></p>
+    <h1 id="title">Mock API test</h1>
+    <div class="card">
+      <label>SKU</label>
+      <select id="sku"></select>
+      <label>Pool</label>
+      <select id="pool"><option value="mix">Mix</option><option value="official">Official</option><option value="ai">AI</option></select>
+      <label>Token</label>
+      <select id="token"><option value="abhyas-test-token-sangati-2026">Sangati (yoga)</option></select>
+      <div style="margin-top:12px">
+        <button type="button" id="btnGap">Fetch gap report</button>
+        <button type="button" id="btnMock">Generate mock</button>
+        <button type="button" id="btnDownload">Download JSON</button>
+      </div>
+      <p id="status" class="muted" style="margin-top:10px"></p>
+    </div>
+    <div class="card">
+      <h2 style="font-size:0.9rem;margin-bottom:8px">Response</h2>
+      <pre id="out">Sign in via test hub (yoga/yoga) then run an action.</pre>
+    </div>
+  </div>
+  <script>
+    (function () {
+      if (sessionStorage.getItem('edu_test_hub_v1') !== 'yoga') {
+        location.href = 'index.html';
+        return;
+      }
+      var params = new URLSearchParams(location.search);
+      var SKUS = ['cbse10-core','cbse12-science','sat-act','gre-gmat','english-tests','rhytoma-wbbse'];
+      var sel = document.getElementById('sku');
+      SKUS.forEach(function (id) {
+        var o = document.createElement('option');
+        o.value = id; o.textContent = id;
+        if (id === (params.get('sku') || 'cbse10-core')) o.selected = true;
+        sel.appendChild(o);
+      });
+      document.getElementById('title').textContent = 'Mock API · ' + sel.value;
+
+      function apiBase() {
+        return location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+          ? 'https://api.brahmando.com/education/abhyas'
+          : (location.origin.indexOf('api.brahmando.com') >= 0 ? location.origin + '/education/abhyas' : 'https://api.brahmando.com/education/abhyas');
+      }
+
+      var last = null;
+      async function call(path, method, body) {
+        var res = await fetch(apiBase() + path, {
+          method: method || 'GET',
+          headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + document.getElementById('token').value },
+          body: body ? JSON.stringify(body) : undefined,
+        });
+        var data = await res.json();
+        if (!res.ok) throw new Error((data.detail && (data.detail.message || data.detail)) || data.message || res.status);
+        return data.data != null ? data.data : data;
+      }
+
+      function show(data) {
+        last = data;
+        document.getElementById('out').textContent = JSON.stringify(data, null, 2);
+      }
+
+      document.getElementById('btnGap').onclick = async function () {
+        document.getElementById('status').textContent = 'Loading gap…';
+        try {
+          show(await call('/v1/education/gap/' + encodeURIComponent(sel.value)));
+          document.getElementById('status').textContent = 'Gap report loaded.';
+        } catch (e) {
+          document.getElementById('status').textContent = e.message;
+        }
+      };
+
+      document.getElementById('btnMock').onclick = async function () {
+        document.getElementById('status').textContent = 'Generating…';
+        var sku = sel.value;
+        var body = {
+          sku: sku,
+          mock_source: 'guideline_2026',
+          session_kind: 'mock_exam',
+          subject: sku === 'cbse10-core' ? 'Science' : 'General',
+          grade: '10',
+          class: '10',
+          count: 20,
+          question_pool: document.getElementById('pool').value,
+        };
+        try {
+          show(await call('/v1/mock/generate', 'POST', body));
+          document.getElementById('status').textContent = 'Done.';
+        } catch (e) {
+          document.getElementById('status').textContent = e.message;
+        }
+      };
+
+      document.getElementById('btnDownload').onclick = function () {
+        if (!last) return;
+        var blob = new Blob([JSON.stringify(last, null, 2)], { type: 'application/json' });
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = sel.value + '-mock-response.json';
+        a.click();
+      };
+    })();
+  </script>
+</body>
+</html>

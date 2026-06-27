@@ -1,0 +1,45 @@
+{
+  "schema_version": "cbse10_provenance_v2",
+  "sku": "cbse10-core",
+  "built_at": "2026-06-26T16:53:42.416676+00:00",
+  "stats": {
+    "master_rows": 2548,
+    "verified_mcq_rows": 390,
+    "dropped_invalid": 95,
+    "dropped_duplicate_board": 749,
+    "dropped_duplicate_synthetic": 1106,
+    "dropped_duplicate_advanced": 0,
+    "board_from_master_flag": 241,
+    "board_from_verified_mcq": 193,
+    "synthetic_from_master": 574,
+    "synthetic_from_ai_tag": 0,
+    "synthetic_from_gemini": 443,
+    "advanced_from_gemini": 317,
+    "answers_board": 434,
+    "answers_synthetic": 1017,
+    "answers_advanced": 317
+  },
+  "counts": {
+    "board_questions": 434,
+    "synthetic_questions": 1017,
+    "advanced_complexity_questions": 317,
+    "board_question_answers": 434,
+    "synthetic_question_answers": 1017,
+    "advanced_complexity_question_answers": 317,
+    "board_science": 77,
+    "board_mathematics": 357,
+    "synthetic_science": 156,
+    "synthetic_mathematics": 861,
+    "advanced_science": 65,
+    "advanced_mathematics": 252
+  },
+  "files": {
+    "board_questions.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\cbse10\\board_questions.json",
+    "synthetic_questions.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\cbse10\\synthetic_questions.json",
+    "board_question_answers.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\cbse10\\board_question_answers.json",
+    "synthetic_question_answers.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\cbse10\\synthetic_question_answers.json",
+    "advanced_complexity_questions.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\cbse10\\advanced_complexity_questions.json",
+    "advanced_complexity_question_answers.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\cbse10\\advanced_complexity_question_answers.json"
+  },
+  "note": "Board bucket = exam-body official items. Synthetic = AI/Gemini catalog (practice mix). Advanced Complexity = Advanced* Gemini files (study room + WordHunt complex only; excluded from mock/practice). All answers are synthetic rationales only."
+}

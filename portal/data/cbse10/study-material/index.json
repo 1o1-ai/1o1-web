@@ -1,10 +1,10 @@
 {
   "version": 1,
   "sku": "cbse10-core",
-  "content_pack": "cbse10-study-material-v1",
-  "generated_at": "2026-06-25T19:54:26.628430+00:00",
+  "content_pack": "cbse10-study-material-v3-advance",
+  "generated_at": "2026-06-26T08:54:36.262039+00:00",
   "source_monolith": "cbse10-study-material.json",
-  "monolith_bytes": 2007786,
+  "monolith_bytes": 3055779,
   "chapter_count": 28,
   "chapters": [
     {
@@ -12,224 +12,224 @@
       "title": "Acids, Bases and Salts",
       "subject": "science",
       "path": "cbse10/study-material/chapters/acids-bases.json",
-      "bytes": 57100,
-      "sha256": "2fe5f13f8f386490ba4b90eb81c7b0d19aee9554855e3b014996f7bd334d2162"
+      "bytes": 84824,
+      "sha256": "7da3a9b434147f3b0217411899a1a62af97b6cd78990ce85ef116836a630dd52"
     },
     {
       "chapterId": "ap",
       "title": "Arithmetic Progressions",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/ap.json",
-      "bytes": 48567,
-      "sha256": "dcbd07f2e29f00316bf26e6d2c99a1e548be8bbd39d2e1f80fdd6ab2a7251572"
+      "bytes": 74275,
+      "sha256": "c752ee5ef4cf3b82e5ebeb20719480cc909abeb8fa923bbbf350091b4af97211"
     },
     {
       "chapterId": "areas-circles",
       "title": "Areas Related to Circles",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/areas-circles.json",
-      "bytes": 50756,
-      "sha256": "214d5cef4dcb74b1973e21ec64a56dd555847d7f4dbf2f3a566b044978087d7c"
+      "bytes": 76920,
+      "sha256": "75623e02aa41480d2ad487d3fda1da1cde29d950526ba0a364c7527d8d7f06c2"
     },
     {
       "chapterId": "carbon",
       "title": "Carbon and its Compounds",
       "subject": "science",
       "path": "cbse10/study-material/chapters/carbon.json",
-      "bytes": 54172,
-      "sha256": "dff2a4f82301afe1fd1ea78e2d02d3501e7755ebcfe7a0980009a5971a11e888"
+      "bytes": 81541,
+      "sha256": "5cf7bce3a29623a99decee467c1ed7afe4bfd65be426c75e31497d72aa6da391"
     },
     {
       "chapterId": "chem-reactions",
       "title": "Chemical Reactions and Equations",
       "subject": "science",
       "path": "cbse10/study-material/chapters/chem-reactions.json",
-      "bytes": 57165,
-      "sha256": "d8b526f67621476fffa0c1c8bef41591ab7bc8134ffce2bba37b7513e204c8d0"
+      "bytes": 85155,
+      "sha256": "7bcb8f02824aa5dd7726591a51824ddd3b994ef98ae252cc5fb3844646a82deb"
     },
     {
       "chapterId": "circles",
       "title": "Circles",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/circles.json",
-      "bytes": 50181,
-      "sha256": "650aa84c8941f0fa8695e7435c6f1a2029b22c888cf8583892c1a2360c9ceaa6"
+      "bytes": 76445,
+      "sha256": "0beb23a7f2f680bdacb9524dad8e96fed2db3b3b5a418103265f0d558dcbb5e0"
     },
     {
       "chapterId": "constructions",
       "title": "Constructions",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/constructions.json",
-      "bytes": 52559,
-      "sha256": "e037fe864a2efd00dee7cd7f857b5b86f479129071d7d8852fe7a618f09ae3f1"
+      "bytes": 79919,
+      "sha256": "c525cdf96ab69fcca447ec0b20a5ce00023e55ac213dcb7b9aa1efac1b9021c2"
     },
     {
       "chapterId": "control",
       "title": "Control and Coordination",
       "subject": "science",
       "path": "cbse10/study-material/chapters/control.json",
-      "bytes": 55477,
-      "sha256": "7ad22aecfa524897c53ce7bcbfbae18437dd33e834929c50a17744003d167729"
+      "bytes": 83266,
+      "sha256": "36d6d1d6e6171aa77d31ab9d61846bf9ca3b616f8bda0d090fcfcb4c5c00e4df"
     },
     {
       "chapterId": "coordinate",
       "title": "Coordinate Geometry",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/coordinate.json",
-      "bytes": 51697,
-      "sha256": "b5f383ac1ffa97a2b0f4d949e0719beff32d6d29c0bb81f866b952e6c59f4119"
+      "bytes": 78171,
+      "sha256": "f89f37c6809fd6c5c7c7e241f14b4f7bdd88cc2f3042c253ceb8f35111ee1c86"
     },
     {
       "chapterId": "electricity",
       "title": "Electricity",
       "subject": "science",
       "path": "cbse10/study-material/chapters/electricity.json",
-      "bytes": 58912,
-      "sha256": "7763f2d7c4e5ec96f4e731b0b3360e525bf37d50bafe407ef8871c7fd78eba88"
+      "bytes": 86923,
+      "sha256": "4318a0e54fbf1eaa739a66e573e3e1aab8753a56f69b6ad786513d5628f50c60"
     },
     {
       "chapterId": "heredity",
       "title": "Heredity",
       "subject": "science",
       "path": "cbse10/study-material/chapters/heredity.json",
-      "bytes": 54836,
-      "sha256": "64e5eae9f68ba2f3219d70b59e432071e26ab57f75fcf570874d2eb18db5c5f1"
+      "bytes": 82536,
+      "sha256": "3cb3c6abf2faeefb201fb6be1821cef5b58b7c56e4298ea05f3641bbeddb5ab5"
     },
     {
       "chapterId": "human-eye",
       "title": "The Human Eye and the Colourful World",
       "subject": "science",
       "path": "cbse10/study-material/chapters/human-eye.json",
-      "bytes": 59623,
-      "sha256": "ffa14cf6bb1e87564db3708fef9cf92ae44e7c70cd0b9fc1b9b7ea204a5dc11e"
+      "bytes": 87874,
+      "sha256": "ad716abb02a6baf6c806e080e54bb02f6f5e18f7de85e03718f9a38ec3922551"
     },
     {
       "chapterId": "life",
       "title": "Life Processes",
       "subject": "science",
       "path": "cbse10/study-material/chapters/life.json",
-      "bytes": 54753,
-      "sha256": "f9cf88c266e3c62ce27b983c43e5438aa40a9ac56d4a79e71b48c14cdb094f5a"
+      "bytes": 82349,
+      "sha256": "8a90fec83bc00bfce4c66902376d7a60eb0a1a73d68d23ed3cbe809b5e531094"
     },
     {
       "chapterId": "light",
       "title": "Light – Reflection and Refraction",
       "subject": "science",
       "path": "cbse10/study-material/chapters/light.json",
-      "bytes": 57627,
-      "sha256": "0131b7a44c83c172b55176bfd2026cc03deab74856bf82489c6168a404aff064"
+      "bytes": 85639,
+      "sha256": "8e046d5447584698c660d55908624cbb442c078cbff80ddab7d76704d3dcbff8"
     },
     {
       "chapterId": "linear-eq",
       "title": "Pair of Linear Equations in Two Variables",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/linear-eq.json",
-      "bytes": 52599,
-      "sha256": "b7fcf06050184ee7ec4a5782f85620b60eacbfdda9025c41b8d4dd4531de75b0"
+      "bytes": 79172,
+      "sha256": "0c33a155f3c4afd8d139effe68dedb33a3bca96359b2c7f23ab866aecf9e9a23"
     },
     {
       "chapterId": "magnetism",
       "title": "Magnetic Effects of Electric Current",
       "subject": "science",
       "path": "cbse10/study-material/chapters/magnetism.json",
-      "bytes": 58392,
-      "sha256": "42d5a47c79deb93b16658a8ab0a4e9e7114d10cedcb728dabcfad5cfa6692abe"
+      "bytes": 86549,
+      "sha256": "6db179c8011cc7c38854114c02ac6cc21b49e2bf66a12baac0724c2f6c9eccf7"
     },
     {
       "chapterId": "metals",
       "title": "Metals and Non-metals",
       "subject": "science",
       "path": "cbse10/study-material/chapters/metals.json",
-      "bytes": 55121,
-      "sha256": "e821267405723a8978ae846edad2a5db51a0b417e857b387cd70706accf12e48"
+      "bytes": 82639,
+      "sha256": "4fd0cb21e1549843d00532e9b6d1e318f79a2aa9a57ecffa55d3e90ef7579068"
     },
     {
       "chapterId": "polynomials",
       "title": "Polynomials",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/polynomials.json",
-      "bytes": 51401,
-      "sha256": "f33f9e5fe89f2e908c13c07acf91e5fb37b49bffb5552d13040ffdc78ccd2df9"
+      "bytes": 78173,
+      "sha256": "6ec6965422ad635457271fb1639cbdf1726108fd5d9aa764af62d2f7bc070bcb"
     },
     {
       "chapterId": "probability",
       "title": "Probability",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/probability.json",
-      "bytes": 53268,
-      "sha256": "c21b3fc2a7a3abe9f4001866c4c098fd76cc99c2b7051c184702dd6b9bf017a5"
+      "bytes": 79943,
+      "sha256": "deb2346446e856fc479a87c18c43fa0d7bd010552c700354a81f56ae32475be4"
     },
     {
       "chapterId": "quadratic",
       "title": "Quadratic Equations",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/quadratic.json",
-      "bytes": 52133,
-      "sha256": "f47d9489d1f0dffdd59a953339c767e1b3c65506782c3bbcb03f02f61a1b948b"
+      "bytes": 78508,
+      "sha256": "3679d38fba56a1bd9a7495da46b03a1a55e06b8068b57131d7e844f34b941fff"
     },
     {
       "chapterId": "real-numbers",
       "title": "Real Numbers",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/real-numbers.json",
-      "bytes": 50451,
-      "sha256": "12c22777476b646b9417aa9834c9fee23ad33ca7ebfcd6f2a4b100797834bdae"
+      "bytes": 76427,
+      "sha256": "5d10179c98bc867d35240d4e78fe15e2b4f62a5689b7c05bc32b7ade82d9ec5f"
     },
     {
       "chapterId": "reproduction",
       "title": "How do Organisms Reproduce?",
       "subject": "science",
       "path": "cbse10/study-material/chapters/reproduction.json",
-      "bytes": 55932,
-      "sha256": "519c38b0830da7d72dd47cdddcec0ead14511a19556ebdfbf9941868c05b8f70"
+      "bytes": 83717,
+      "sha256": "4937da115360c4997082c0c1c88530ef0c68a282a6fe5937fc13e5480e4c19b3"
     },
     {
       "chapterId": "sources-of-energy",
       "title": "Sources of Energy",
       "subject": "science",
       "path": "cbse10/study-material/chapters/sources-of-energy.json",
-      "bytes": 56909,
-      "sha256": "6bbff8f2077536e8a5d751b1517b33e162f13c6b4258ac1229c2ec78bc1b22a6"
+      "bytes": 84923,
+      "sha256": "9f78f7a40aba68b25335fc4f5693469cb9ef478b0a10a05054a82cf44449319f"
     },
     {
       "chapterId": "statistics",
       "title": "Statistics",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/statistics.json",
-      "bytes": 52843,
-      "sha256": "db541415fb4f7d31f447126abcbec16afb4ddf6e0a701b159f8f979cc69b12c6"
+      "bytes": 78770,
+      "sha256": "42a0d524e1d4821576773fd00a6d6e36a26102b1cfc8f13d2fe0684868ffdba3"
     },
     {
       "chapterId": "surface-volume",
       "title": "Surface Areas and Volumes",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/surface-volume.json",
-      "bytes": 54194,
-      "sha256": "53b98042b13f68b65247ce86d2976ad0f18c0c4a4092a87c5bdc7f94efc32f20"
+      "bytes": 81406,
+      "sha256": "b6a504203be95b25cc7719dd28d01122f488fba2cd231f8e294631960bfb7687"
     },
     {
       "chapterId": "triangles",
       "title": "Triangles",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/triangles.json",
-      "bytes": 53296,
-      "sha256": "b26241fc59d07d968048816ad6c31cdf2eddbc57bffd90382161ddc01ae353ba"
+      "bytes": 80939,
+      "sha256": "d50c69c783a7a740fc3c38118104900050d72e679b412945faa7eeebe66c5536"
     },
     {
       "chapterId": "trig-apps",
       "title": "Some Applications of Trigonometry",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/trig-apps.json",
-      "bytes": 59266,
-      "sha256": "7ebafef9268e48397dc87f6c0c59aaa20f76220208b7c095a2b851f52eb32471"
+      "bytes": 86360,
+      "sha256": "510e46f30bce67e4882d49c40cf00889fa63d69214c7d19193b2dd6c715f60db"
     },
     {
       "chapterId": "trigonometry",
       "title": "Introduction to Trigonometry",
       "subject": "mathematics",
       "path": "cbse10/study-material/chapters/trigonometry.json",
-      "bytes": 48593,
-      "sha256": "9e0d10a348d58199328959a79f834a8d1f26e04bcf087399346e32420f76d666"
+      "bytes": 74337,
+      "sha256": "e6d5941fb96a90f3becd84bd804d37cf3e13461279a7595a67a8bbb962634da4"
     }
   ]
 }

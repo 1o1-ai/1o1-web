@@ -1,0 +1,144 @@
+/* Shared education portal — compact layout + slow ambient doodles */
+.education-compact .portal-header {
+  padding: 10px 20px;
+}
+
+.education-compact .portal-main {
+  padding: 4px 20px 36px;
+}
+
+.education-compact .portal-hero {
+  margin-bottom: 14px;
+}
+
+.education-compact .portal-hero h2 {
+  font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+  margin-top: 4px;
+}
+
+.education-compact .portal-hero p {
+  font-size: 0.86rem;
+  margin: 6px auto 0;
+}
+
+.education-compact .portal-note {
+  margin-top: 14px;
+  font-size: 0.8rem;
+}
+
+.education-compact .sr-main {
+  padding-bottom: 28px;
+}
+
+.education-compact .sr-phase-lead {
+  margin: 6px 0 10px;
+  font-size: 0.84rem;
+}
+
+.education-compact .sr-subject-circles {
+  padding: 4px 0 12px;
+  gap: 20px;
+}
+
+.education-compact .sr-subject-circle {
+  width: 148px;
+  height: 148px;
+}
+
+.education-compact .sr-circle-icon {
+  font-size: 2rem;
+}
+
+.education-compact .exam-center-grid {
+  gap: 14px;
+  max-width: 680px;
+}
+
+.education-compact .exam-center-card {
+  padding: 18px 20px;
+}
+
+.education-compact .exam-center-card .ec-icon {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+/* Ambient layer — fixed behind content, very slow motion */
+.edu-ambient-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.edu-ambient-layer svg {
+  position: absolute;
+  opacity: 0.11;
+}
+
+.edu-ambient-atom {
+  top: 12%;
+  right: 8%;
+  width: 120px;
+  height: 120px;
+  animation: edu-orbit 48s linear infinite;
+}
+
+.edu-ambient-triangle {
+  top: 18%;
+  left: 6%;
+  width: 90px;
+  height: 90px;
+  animation: edu-float 36s ease-in-out infinite;
+}
+
+.edu-ambient-wave {
+  bottom: 14%;
+  right: 12%;
+  width: 160px;
+  height: 48px;
+  animation: edu-drift 42s ease-in-out infinite;
+}
+
+.edu-ambient-formula {
+  bottom: 22%;
+  left: 10%;
+  width: 100px;
+  height: 100px;
+  animation: edu-orbit 56s linear infinite reverse;
+}
+
+@keyframes edu-orbit {
+  from { transform: rotate(0deg) translateY(0); }
+  50% { transform: rotate(180deg) translateY(-6px); }
+  to { transform: rotate(360deg) translateY(0); }
+}
+
+@keyframes edu-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(8px, -10px) scale(1.04); }
+  66% { transform: translate(-6px, 6px) scale(0.96); }
+}
+
+@keyframes edu-drift {
+  0%, 100% { transform: translateX(0); opacity: 0.11; }
+  50% { transform: translateX(-18px); opacity: 0.16; }
+}
+
+.edu-ambient-wave path {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  animation: edu-draw 28s ease-in-out infinite alternate;
+}
+
+@keyframes edu-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@media (max-width: 640px) {
+  .edu-ambient-layer svg {
+    opacity: 0.07;
+    transform: scale(0.75);
+  }
+}

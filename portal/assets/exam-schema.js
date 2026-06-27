@@ -33,6 +33,7 @@
     ],
   };
 
+  /** Official CBSE Class X Science layout (Paper 66 · Q.P. Code 31/1/1 · 39 questions). */
   const CLASS_X_SCIENCE = {
     sku: 'cbse10',
     subject: 'science',
@@ -42,6 +43,9 @@
     durationHours: 3,
     totalMarks: 80,
     passingPercent: 33,
+    questionCount: 39,
+    qpCode: '31/1/1',
+    officialFormat: 'cbse_science_x',
     note: 'Internal assessment ignored · 3 hours · Maximum Marks: 80',
     unitWeightage: [
       ['Chemical Substances – Nature & Behaviour', 25],
@@ -51,11 +55,48 @@
       ['Natural Resources', 5],
     ],
     sections: [
-      { id: 'A', label: 'Section A', instruction: 'MCQs · 1 mark each', marksEach: 1, count: 20, types: ['MCQ'] },
-      { id: 'B', label: 'Section B', instruction: 'Very Short Answer · 2 marks each', marksEach: 2, count: 6, types: ['short', 'MCQ'] },
-      { id: 'C', label: 'Section C', instruction: 'Short Answer · 3 marks each', marksEach: 3, count: 7, types: ['short', 'MCQ'] },
-      { id: 'D', label: 'Section D', instruction: 'Long Answer · 4 marks each', marksEach: 4, count: 3, types: ['short', 'long'] },
-      { id: 'E', label: 'Section E', instruction: 'Long Answer · 5 marks each', marksEach: 5, count: 3, types: ['long', 'short'] },
+      {
+        id: 'A',
+        label: 'Section A',
+        instruction: 'Biology (30 Marks)',
+        domain: 'biology',
+        totalMarks: 30,
+        blocks: [
+          { marksEach: 1, count: 9, types: ['MCQ'] },
+          { marksEach: 2, count: 3, types: ['short', 'MCQ'] },
+          { marksEach: 3, count: 2, types: ['short'] },
+          { marksEach: 4, count: 1, types: ['short', 'long'] },
+          { marksEach: 5, count: 1, types: ['long', 'short'] },
+        ],
+      },
+      {
+        id: 'B',
+        label: 'Section B',
+        instruction: 'Chemistry (25 Marks)',
+        domain: 'chemistry',
+        totalMarks: 25,
+        blocks: [
+          { marksEach: 1, count: 8, types: ['MCQ'] },
+          { marksEach: 2, count: 1, types: ['short', 'MCQ'] },
+          { marksEach: 3, count: 2, types: ['short'] },
+          { marksEach: 4, count: 1, types: ['short', 'long'] },
+          { marksEach: 5, count: 1, types: ['long', 'short'] },
+        ],
+      },
+      {
+        id: 'C',
+        label: 'Section C',
+        instruction: 'Physics (25 Marks)',
+        domain: 'physics',
+        totalMarks: 25,
+        blocks: [
+          { marksEach: 1, count: 2, types: ['MCQ'] },
+          { marksEach: 2, count: 4, types: ['short', 'MCQ'] },
+          { marksEach: 3, count: 2, types: ['short'] },
+          { marksEach: 4, count: 1, types: ['short', 'long'] },
+          { marksEach: 5, count: 1, types: ['long', 'short'] },
+        ],
+      },
     ],
   };
 

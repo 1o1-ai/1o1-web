@@ -1,0 +1,338 @@
+{
+  "schema_version": "education_provenance_v2",
+  "sku": "gre-gmat",
+  "built_at": "2026-06-26T16:11:27.412150+00:00",
+  "count": 55,
+  "answers": [
+    {
+      "question_id": "145b7582a6b49adb",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Thesis Formulation."
+    },
+    {
+      "question_id": "932e1c164baf73d9",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Thesis Formulation."
+    },
+    {
+      "question_id": "566bc75b481c7ab1",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "2a1d3e8d749f49c5",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Simplifying Algebraic Expressions."
+    },
+    {
+      "question_id": "e477c43464cf9663",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Simplifying Algebraic Expressions."
+    },
+    {
+      "question_id": "20a2c70d3704aea6",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "f13b93ad08964aff",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Integers and Factors."
+    },
+    {
+      "question_id": "5173c72784b86e8b",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Integers and Factors."
+    },
+    {
+      "question_id": "b6bbc995e5d61b49",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "3cd4ba536b32e5e9",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Descriptive Statistics: Mean & Median."
+    },
+    {
+      "question_id": "91924535530906fa",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Descriptive Statistics: Mean & Median."
+    },
+    {
+      "question_id": "914ed2123d906b3f",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "aaa8bd47c26d620e",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Lines and Angles."
+    },
+    {
+      "question_id": "5ace5ca8119392ff",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Lines and Angles."
+    },
+    {
+      "question_id": "a092f6f48f709d49",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "99ee39d726e28f50",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Identifying Main Idea."
+    },
+    {
+      "question_id": "34186e524f276f9a",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Identifying Main Idea."
+    },
+    {
+      "question_id": "a08e649afea38080",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "7ae0972997ff46d4",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Synonym Pair Selection."
+    },
+    {
+      "question_id": "1f81d8ce0490172f",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Synonym Pair Selection."
+    },
+    {
+      "question_id": "936e8e147cd17052",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "7a152b7c8d063818",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Single Blank: Sentence Analysis."
+    },
+    {
+      "question_id": "261119cc69949d09",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Single Blank: Sentence Analysis."
+    },
+    {
+      "question_id": "fc100b6a5caa5055",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "7c5c754b602747cc",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Data Sufficiency: Yes/No Questions."
+    },
+    {
+      "question_id": "b4a3dac2a10da48c",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Data Sufficiency: Yes/No Questions."
+    },
+    {
+      "question_id": "9f19d2f84d60ee51",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "8c627c2d8676fa62",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Bar Charts Interpretation."
+    },
+    {
+      "question_id": "6c9130a27acec738",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Bar Charts Interpretation."
+    },
+    {
+      "question_id": "588dfccf7a8f4962",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "c308afdd07105a63",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Multi-Source Reasoning: Tab Structure."
+    },
+    {
+      "question_id": "9c3700fcde9c28bd",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Multi-Source Reasoning: Tab Structure."
+    },
+    {
+      "question_id": "ff2f579368b72c2f",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "6461ea802debc0a3",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Two-Part Analysis: Columns Structure."
+    },
+    {
+      "question_id": "e1c4d7006f32541a",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Two-Part Analysis: Columns Structure."
+    },
+    {
+      "question_id": "5b861625ebda947a",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "a7d8bf89448d7b7a",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Data Sufficiency (Quant): Yes/No Questions."
+    },
+    {
+      "question_id": "1d300d016bfece5f",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Data Sufficiency (Quant): Yes/No Questions."
+    },
+    {
+      "question_id": "b7ceff9a3e20e172",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "1ff9b5fcdbe370e5",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Problem Solving: Integers & Prime Factors."
+    },
+    {
+      "question_id": "2b081779519f5059",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Problem Solving: Integers & Prime Factors."
+    },
+    {
+      "question_id": "97cb0356314a3ddd",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "f40854ca3362cc22",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Critical Reasoning: Argument Structure."
+    },
+    {
+      "question_id": "6e4649948fa0fd0f",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Critical Reasoning: Argument Structure."
+    },
+    {
+      "question_id": "ae3093eb4efbe8e6",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "f7cae2462971c2d4",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Reading Comprehension: Active Reading."
+    },
+    {
+      "question_id": "be7a43c44d03915a",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Reading Comprehension: Active Reading."
+    },
+    {
+      "question_id": "63e9d1b934da322b",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "5392fc3b2b02dc51",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Understand the theoretical foundations of Sentence Correction: Subject-Verb Agreement."
+    },
+    {
+      "question_id": "c66168865e546c39",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Misapplying core principles of Sentence Correction: Subject-Verb Agreement."
+    },
+    {
+      "question_id": "6374fa8cccd94699",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Easy"
+    },
+    {
+      "question_id": "5ad25292c9d2aa8d",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] 17%"
+    },
+    {
+      "question_id": "b19fda0ccaca7bc9",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] 5%"
+    },
+    {
+      "question_id": "8b4498b12501ba30",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] $36"
+    },
+    {
+      "question_id": "d127f6b05c9fab56",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] 8"
+    }
+  ]
+}

@@ -1,0 +1,1526 @@
+{
+  "schema_version": "education_provenance_v2",
+  "sku": "sat-act",
+  "built_at": "2026-06-26T16:11:27.393698+00:00",
+  "count": 46,
+  "questions": [
+    {
+      "id": "preparing-for-the-act-24-25-eng-1",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 1,
+      "question": "Select the best alternative for the underlined portion.",
+      "options": [
+        "NO CHANGE",
+        "students, Norman Woodland and Bernard Silver",
+        "students Norman Woodland and Bernard Silver",
+        "students Norman Woodland and Bernard Silver,"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-4",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 4,
+      "question": "The writer is considering deleting the preceding sentence. Should the sentence be kept or deleted?",
+      "options": [
+        "Kept, because it begins the description that is completed in the sentence that follows.",
+        "Kept, because it gives a clear image of what the first bar code looked like.",
+        "Deleted, because it provides an extra detail that is not rel eva nt to the subject of the paragraph.",
+        "Deleted, because it contradicts a point made later"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-14",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 14,
+      "question": "For the sake of the logic and coherence of the essay, Paragraph 3 should be placed:",
+      "options": [
+        "where it is now.",
+        "before Paragraph 1.",
+        "after Paragraph 1.",
+        "after Paragraph 5."
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-10",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 10,
+      "question": "Which of the following true statements, if added here, would most effe ctive lylead into the news ubject of the paragraph?",
+      "options": [
+        "In the 1940s, Woodland and Silver were graduate students at the Drexel Institute of Technology in Philadelphia.",
+        "Woodland and Silver were granted a patent for their bar code on October 7, 1952.",
+        "Bar code equipment has been available for retail use since 1970.",
+        "Bar codes themselves have advan ced as well."
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-15",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 15,
+      "question": "Suppose the writer ’sprimary purpose had been to describe how a specific technological advancement changed business practices. Would this essay accomplish that purpose?",
+      "options": [
+        "Yes, because it offers an overview of current bar code technology and indicates theva riety of ways in which bar codes are used by specific businesses.",
+        "Yes, because it explains howb arcodes and scanners made it easier for stores to keep track of their i nventories.",
+        "No, because it focuses primarily on the development of bar codes and only briefly mentions how businesses have implemented the use of bar codes.",
+        "No, because it focuses on why businesses needed"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-21",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 21,
+      "question": "At this point, the writer wants to emphasize the idea that the narrator found the woman ’scomment peculiar. Which of the following best accomplishes that goal?",
+      "options": [
+        "I figured she had been to the caves before.",
+        "Surprised, I hesitantly turned tow ard her.",
+        "She had a notepad in her hand.",
+        "I happened to agree."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-28",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 28,
+      "question": "Which of the following choices, if added here, would best conclude the paragraph and refer back to the conversation at the beginning of the essay?",
+      "options": [
+        "Insects are likely attracted to the light because the skylike appearance of the glowworms fools the i nsects into beli eving they are outdoors.",
+        "She told me that the cave is usually quiet, with only occasional noises, such as tour boats passing through the water.",
+        "A camera flash, she reminded me, may also spell danger, and the gloww orms ’ light is doused.",
+        "The light is also brighter in a hungry lar vat han in"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-29",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 29,
+      "question": "The writer is considering rev ising the underlined portion to the fol lowing: soaring tow ard the light. Should the writer make this rev ision?",
+      "options": [
+        "Yes, because the rev ised phrase more specifically describes the dragonfly ’sactions to help support t he narrator ’sclaim that she knew what its fate would be.",
+        "Yes, because the revised phrase adds information that explains why the light of the gloww orms was suddenly dim.",
+        "No, because the original phrase more clearly establishes that the trip is ending and that the narrator sees the dragonfly as they exit the cave.",
+        "No, because the original phrase builds on the sus -"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-33",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 33,
+      "question": "Which choice most closely maintains the sentence pattern the writer establishes after the semicolon?",
+      "options": [
+        "NO CHANGE",
+        "I will see new buds that have been sprouting,",
+        "foll owe d by the buds, which have sprouted,",
+        "then come the sprouting buds after that,"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-38",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 38,
+      "question": "The writer wants to add a detail here that best completes the contrast to hybridtea roses in the first part of the sentence. Which choice best accomplishes that goal?",
+      "options": [
+        "NO CHANGE",
+        "are lush and shapely,",
+        "can grow quite large,",
+        "tend to be less thorny,"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-39",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 39,
+      "question": "Which choice best introduces the main focus of the paragraph?",
+      "options": [
+        "NO CHANGE",
+        "The varieties of antique roses are numerous, the most popular of which are the silken peach Mutabilis and the crimso nLouis Phillippe.",
+        "Aside from the rose ’sbeauty, what gardeners like memost appreciate is that antiques are incredibly durable and low maintenance.",
+        "While I am fond of bush var ieties, I am also drawn"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-43",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 43,
+      "question": "The writer wants to add a detail here that emphasizes t he antique rose ’sability to survive without human c are. Which choice best accomplishes that goal?",
+      "options": [
+        "NO CHANGE",
+        "blooming year after yea reven at abandoned sites.",
+        "making them more popular among gardeners.",
+        "often blooming between midspring and fall."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-44",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 44,
+      "question": "Which sequence of sentences makes this paragraph most logical?",
+      "options": [
+        "NO CHANGE",
+        "2, 1, 3",
+        "3, 1, 2",
+        "1, 3, 2"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-45",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 45,
+      "question": "Suppose the writer ’sprimary purpose had been to describe the process of planting a particular flower. Would this essay accomplish that purpose?",
+      "options": [
+        "Yes, because the essay discusses the steps involved in growing and maintaining antique rosebushes.",
+        "Yes, because the writer explains the specific conditions needed to plant antique roses and howl ong it takes for new buds to sprout.",
+        "No, because the essay is more focused on compari ng the qualities and cultivation of antique an d hybridtea roses.",
+        "No, because while the writer mentions growing"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-51",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 51,
+      "question": "If the writer were to DELETE the underlined portion, the essay would primarily lose:",
+      "options": [
+        "an indication that Frey honors Passamaquoddy cultural heritage by creating baskets that look nearly i dentical to traditional pieces.",
+        "a mention of a physical characteristic of the earliest baskets used by Passamaquoddy fishermen.",
+        "a detail that connects Frey ’sbasketry work to longstanding Passamaquoddy traditions.",
+        "a point revealing that Frey ’sbaskets are used by"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-52",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 52,
+      "question": "Which choice provides the clearest and most specific i nformation about which parts of Frey ’sbaskets are being referred to in the sentence and about Frey ’smanner of weaving those parts?",
+      "options": [
+        "NO CHANGE",
+        "a remarkable leve l of detail on certain sections, the",
+        "intricately woven interiors and bottoms,",
+        "characteristic interiors and bottoms,"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-53",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 53,
+      "question": "Which placement of the underlined portion makes clear that the art that decorates the lid, not the lid i tself, is made of porcupine quill?",
+      "options": [
+        "Where it is now",
+        "After the word are",
+        "After the word often",
+        "After the word with"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-56",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 56,
+      "question": "Which choice provides the clearest and most specific reason that grass is woven into ash baskets?",
+      "options": [
+        "NO CHANGE",
+        "for the sake of the objects,",
+        "for a useful purpose,",
+        "to strengthen them,"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-60",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 60,
+      "question": "The writer is considering adding the following sentence to the essay: T he black stripes were woven flat, sharply setting off the white stripes, which were woven to form raised columns of perfectly even points that seemed to cascade down the piece. If the writer were to add this sentence, it would most logically be placed at:",
+      "options": [
+        "Point A in Paragraph 1.",
+        "Point B in Paragraph 1.",
+        "Point C in Paragraph 2.",
+        "Point D in Paragraph 2."
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "Bar Codes: A Linear History [1] In 1948, graduate students, Norman Woodland and Bernard Silver, took on a problem that had troubled retailers for years: how to keep track of store inventories. Inspired by the dots and dashes of Morse code, however, Woodland and Silver created a system of lines that could encode data. Called a symbology, the pattern created by the spacing and widths of the lines encodes information by representing different characters.A. NO CHANGE B. students, Norman Woodland and Bernard Silver C. students Norman Woodland and Bernard Silver D. students Norman Woodland and Bernard Silver,F. NO CHANGE G. in other words, H. consequently, J. DELETE the underlined portion. ENGLISH TEST 45 Minutes—75 Questions DIRECTIONS: In the five passages that follow, certain words and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-66",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 66,
+      "question": "Given that all the choices are accurate, which one best i ndicates that SuSong relied on engineering achi evements from earlier times?",
+      "options": [
+        "NO CHANGE",
+        "Building on centuries of Chinese clockmaking knowl edge,",
+        "While authoring his treatise on astronomical clockwork,",
+        "After first crafting a working smallscale wooden"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "T he Flow of T ime Nine hundred years ago, Emperor Zhezong of China, ordered the design and construction of a clock built to keep time more accurately than other clocks. T his would be no simple timepiece and because Chinese dynasties continuedto astrology, they relied on complicated clocks that not only kept time but also helped track stars, planets, the sun, and the moon. An eminent scientist and bureaucrat named SuSong lead Zhezong ’sambitious project. Using his expertise in calendrical science, SuSong created a spectacular timepiece housed within an ornate fortyfoottall tow er. At the towe r ’stop sat an a rmillary sphere, ora nest of metal rings representing celestial reference points such as the horizon an dt he sun ’spath — that rotated in sync with the earth, enabling precise…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "preparing-for-the-act-24-25-eng-70",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 70,
+      "question": "Which of the following alternatives to the underlined portion would NOT be acceptable?",
+      "options": [
+        "bells, which served to announce",
+        "bells, they announced",
+        "bells that announced",
+        "bells, announcing"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-24-25.pdf",
+      "paper_pair_id": "preparing-for-the-act-24-25",
+      "passage_context": "T he Flow of T ime Nine hundred years ago, Emperor Zhezong of China, ordered the design and construction of a clock built to keep time more accurately than other clocks. T his would be no simple timepiece and because Chinese dynasties continuedto astrology, they relied on complicated clocks that not only kept time but also helped track stars, planets, the sun, and the moon. An eminent scientist and bureaucrat named SuSong lead Zhezong ’sambitious project. Using his expertise in calendrical science, SuSong created a spectacular timepiece housed within an ornate fortyfoottall tow er. At the towe r ’stop sat an a rmillary sphere, ora nest of metal rings representing celestial reference points such as the horizon an dt he sun ’spath — that rotated in sync with the earth, enabling precise…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "preparing-for-the-act-24-25"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-1",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 1,
+      "question": "Which choice makes the sentence most grammatically acceptable?",
+      "options": [
+        "NO CHANGE",
+        "Years ago,",
+        "When",
+        "DELETE the underlined portion."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "Alex Atala and Brazilian Cuisine At first, Brazilian chef Alex Atala opened his restaurant in São Paulo in 1999, people told him he’dnever succeed. In a country where European cuisine was held in the highest regard, they said, no one would patronize a restaurant serving Brazilian food. Atala, whose restaurant has consistently ranked among the world’sbest, has long disproven the naysayers. Using traditional Brazilian ingredients, such as, manioc root and even ants—in innovative ways, he has thrilled diners from around the world. Still, Atala felt he could do more for his country and its cuisine. In 2012, he founded Instituto Atá to help promote lesserknown ingredients, particularly those of the Amazon basin, while working to protect Brazil’sbiodiversity. Hearts of palm, for example, were…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-3",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 3,
+      "question": "The writer wants to emphasize the positive experience diners have had at Atala’srestaurant. Which choice best accomplishes that goal?",
+      "options": [
+        "NO CHANGE",
+        "mystified",
+        "shocked",
+        "startled"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "Alex Atala and Brazilian Cuisine At first, Brazilian chef Alex Atala opened his restaurant in São Paulo in 1999, people told him he’dnever succeed. In a country where European cuisine was held in the highest regard, they said, no one would patronize a restaurant serving Brazilian food. Atala, whose restaurant has consistently ranked among the world’sbest, has long disproven the naysayers. Using traditional Brazilian ingredients, such as, manioc root and even ants—in innovative ways, he has thrilled diners from around the world. Still, Atala felt he could do more for his country and its cuisine. In 2012, he founded Instituto Atá to help promote lesserknown ingredients, particularly those of the Amazon basin, while working to protect Brazil’sbiodiversity. Hearts of palm, for example, were…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-4",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 4,
+      "question": "Given that all the choices are accurate, which one provides the best transition from the preceding paragraph to this paragraph?",
+      "options": [
+        "NO CHANGE",
+        "Atala is known for sometimes incorporating fragrances into his dishes as well.",
+        "In fact, Atala’sculinary training took place in classic European restaurants.",
+        "Atala’sobvious affection for his homeland is said"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "Alex Atala and Brazilian Cuisine At first, Brazilian chef Alex Atala opened his restaurant in São Paulo in 1999, people told him he’dnever succeed. In a country where European cuisine was held in the highest regard, they said, no one would patronize a restaurant serving Brazilian food. Atala, whose restaurant has consistently ranked among the world’sbest, has long disproven the naysayers. Using traditional Brazilian ingredients, such as, manioc root and even ants—in innovative ways, he has thrilled diners from around the world. Still, Atala felt he could do more for his country and its cuisine. In 2012, he founded Instituto Atá to help promote lesserknown ingredients, particularly those of the Amazon basin, while working to protect Brazil’sbiodiversity. Hearts of palm, for example, were…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-6",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 6,
+      "question": "Which choice most effectively maintains the essay’stone?",
+      "options": [
+        "NO CHANGE",
+        "pull through and spawn",
+        "continue to churn out",
+        "keep doling out"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "Alex Atala and Brazilian Cuisine At first, Brazilian chef Alex Atala opened his restaurant in São Paulo in 1999, people told him he’dnever succeed. In a country where European cuisine was held in the highest regard, they said, no one would patronize a restaurant serving Brazilian food. Atala, whose restaurant has consistently ranked among the world’sbest, has long disproven the naysayers. Using traditional Brazilian ingredients, such as, manioc root and even ants—in innovative ways, he has thrilled diners from around the world. Still, Atala felt he could do more for his country and its cuisine. In 2012, he founded Instituto Atá to help promote lesserknown ingredients, particularly those of the Amazon basin, while working to protect Brazil’sbiodiversity. Hearts of palm, for example, were…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-7",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 7,
+      "question": "Which choice is least redundant in context?",
+      "options": [
+        "NO CHANGE",
+        "knowledge that tribe members know about local plants,",
+        "knowledge of local plants in the area,",
+        "knowledge of local plants,"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "Alex Atala and Brazilian Cuisine At first, Brazilian chef Alex Atala opened his restaurant in São Paulo in 1999, people told him he’dnever succeed. In a country where European cuisine was held in the highest regard, they said, no one would patronize a restaurant serving Brazilian food. Atala, whose restaurant has consistently ranked among the world’sbest, has long disproven the naysayers. Using traditional Brazilian ingredients, such as, manioc root and even ants—in innovative ways, he has thrilled diners from around the world. Still, Atala felt he could do more for his country and its cuisine. In 2012, he founded Instituto Atá to help promote lesserknown ingredients, particularly those of the Amazon basin, while working to protect Brazil’sbiodiversity. Hearts of palm, for example, were…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-10",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 10,
+      "question": "Which choice is clearest and most precise in context?",
+      "options": [
+        "NO CHANGE",
+        "transforming",
+        "dislocating",
+        "contorting"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "Alex Atala and Brazilian Cuisine At first, Brazilian chef Alex Atala opened his restaurant in São Paulo in 1999, people told him he’dnever succeed. In a country where European cuisine was held in the highest regard, they said, no one would patronize a restaurant serving Brazilian food. Atala, whose restaurant has consistently ranked among the world’sbest, has long disproven the naysayers. Using traditional Brazilian ingredients, such as, manioc root and even ants—in innovative ways, he has thrilled diners from around the world. Still, Atala felt he could do more for his country and its cuisine. In 2012, he founded Instituto Atá to help promote lesserknown ingredients, particularly those of the Amazon basin, while working to protect Brazil’sbiodiversity. Hearts of palm, for example, were…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-14",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 14,
+      "question": "Which transition word or phrase is most logical in context?",
+      "options": [
+        "NO CHANGE",
+        "On the other hand,",
+        "As a result,",
+        "In contrast,"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "Rediscovering Hrosvitha Hrosvitha, a medieval author and dramatist—is one of the earliest known European women playwrights. Although little is known about her life, scholars agree Hrosvitha was born to a noble family around 935 CE. As a relation of Holy Roman Emperor Otto I, she most likely spent her early years as part of his court. Later, sometime before 959 CE, she entered the abbey at Gandersheim, it was well known as a significant center of learning. Hrosvitha entered Gandersheim as a canoness rather than a nun. Her title did not require a vow of poverty, but Hrosvitha did take the abbey’scustomary vow of chastity, which absolved her of an obligation to marry. This circumstance made it okay for her to keep her financial status without incurring responsibilities to a husband and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-15",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 15,
+      "question": "Which choice best helps indicate that each historical epic covered different subject matter?",
+      "options": [
+        "NO CHANGE",
+        "(each focused on the court of Otto I and",
+        "(focusing on the court of Otto I as well as",
+        "(one about the court of Otto I, the other about"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "Rediscovering Hrosvitha Hrosvitha, a medieval author and dramatist—is one of the earliest known European women playwrights. Although little is known about her life, scholars agree Hrosvitha was born to a noble family around 935 CE. As a relation of Holy Roman Emperor Otto I, she most likely spent her early years as part of his court. Later, sometime before 959 CE, she entered the abbey at Gandersheim, it was well known as a significant center of learning. Hrosvitha entered Gandersheim as a canoness rather than a nun. Her title did not require a vow of poverty, but Hrosvitha did take the abbey’scustomary vow of chastity, which absolved her of an obligation to marry. This circumstance made it okay for her to keep her financial status without incurring responsibilities to a husband and…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-18",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-punctuation",
+      "subject_slug": "act-english",
+      "question_number": 18,
+      "question": "If the writer were to DELETE the underlined portion (adjusting the punctuation as needed), the paragraph would primarily lose:",
+      "options": [
+        "information that indicates how prevalent rumble strips are on roadways.",
+        "a detail that reveals the narrator’sopinion of distracted drivers.",
+        "information that clarifies a primary function of rumble strips.",
+        "a detail that indicates what the rumble strips look"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "A Musical Detour [1] Every night while driving home from a hectic day at work, mythreeyearold twins quarreling in the backseat, I take a short detour. I turn off the gridlocked highway, onto a stretch of Route 66 that is, surrounded by arid New Mexico hills. When we’renearly three miles into our detour, I roll down the windows. Looking pointedly into the rearview mirror, windows rolled down, I say something about not throwing anything out of the car, but neither boy is listening. I check myspeed. [ A] Carefully, I steer toward the fog line. “Here it is, boys!” I yell at the backseat, the passengerside tires finding the rumble strips etched into the asphalt. [2] Normal rumble strips create that loud, grating noise when you drive over them—like a builtin alarm for drivers who drift too…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-20",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 20,
+      "question": "Given that all the choices are accurate, which one most effectively leads into the rest of the essay?",
+      "options": [
+        "NO CHANGE",
+        "lots of other drivers, not just me, still make this detour to hear the tune.",
+        "sometimes drivers will turn around and drive over the strips again.",
+        "this detour on our drive home never fails to buoy"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "A Musical Detour [1] Every night while driving home from a hectic day at work, mythreeyearold twins quarreling in the backseat, I take a short detour. I turn off the gridlocked highway, onto a stretch of Route 66 that is, surrounded by arid New Mexico hills. When we’renearly three miles into our detour, I roll down the windows. Looking pointedly into the rearview mirror, windows rolled down, I say something about not throwing anything out of the car, but neither boy is listening. I check myspeed. [ A] Carefully, I steer toward the fog line. “Here it is, boys!” I yell at the backseat, the passengerside tires finding the rumble strips etched into the asphalt. [2] Normal rumble strips create that loud, grating noise when you drive over them—like a builtin alarm for drivers who drift too…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-24",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 24,
+      "question": "At this point, the writer is considering adding the following accurate sentence: I hear there is another musical road in the US, somewhere in California. Should the writer make this addition?",
+      "options": [
+        "Yes, because it makes clear that the narrator has plans to travel on other musical roads.",
+        "Yes, because it indicates that the musical road in New Mexico is not unique.",
+        "No, because it draws the focus away from the New Mexico musical road and its effect on the narrator.",
+        "No, because it fails to provide specific details"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "A Musical Detour [1] Every night while driving home from a hectic day at work, mythreeyearold twins quarreling in the backseat, I take a short detour. I turn off the gridlocked highway, onto a stretch of Route 66 that is, surrounded by arid New Mexico hills. When we’renearly three miles into our detour, I roll down the windows. Looking pointedly into the rearview mirror, windows rolled down, I say something about not throwing anything out of the car, but neither boy is listening. I check myspeed. [ A] Carefully, I steer toward the fog line. “Here it is, boys!” I yell at the backseat, the passengerside tires finding the rumble strips etched into the asphalt. [2] Normal rumble strips create that loud, grating noise when you drive over them—like a builtin alarm for drivers who drift too…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-25",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 25,
+      "question": "The writer wants to add the following sentence to the essay: It is marvelously quiet. The sentence would most logically be placed at:",
+      "options": [
+        "Point A in Paragraph 1.",
+        "Point B in Paragraph 2.",
+        "Point C in Paragraph 3.",
+        "Point D in Paragraph 4."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "A Musical Detour [1] Every night while driving home from a hectic day at work, mythreeyearold twins quarreling in the backseat, I take a short detour. I turn off the gridlocked highway, onto a stretch of Route 66 that is, surrounded by arid New Mexico hills. When we’renearly three miles into our detour, I roll down the windows. Looking pointedly into the rearview mirror, windows rolled down, I say something about not throwing anything out of the car, but neither boy is listening. I check myspeed. [ A] Carefully, I steer toward the fog line. “Here it is, boys!” I yell at the backseat, the passengerside tires finding the rumble strips etched into the asphalt. [2] Normal rumble strips create that loud, grating noise when you drive over them—like a builtin alarm for drivers who drift too…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-26",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 26,
+      "question": "If the writer were to DELETE the underlined portion, the essay would primarily losea:",
+      "options": [
+        "suggestion that not all public museums provide proper stewardship for their artifacts.",
+        "clarification of what public museum stewardship entails.",
+        "list of reasons for educating the public on stewardship.",
+        "description of the daily tasks performed by"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "A Musical Detour [1] Every night while driving home from a hectic day at work, mythreeyearold twins quarreling in the backseat, I take a short detour. I turn off the gridlocked highway, onto a stretch of Route 66 that is, surrounded by arid New Mexico hills. When we’renearly three miles into our detour, I roll down the windows. Looking pointedly into the rearview mirror, windows rolled down, I say something about not throwing anything out of the car, but neither boy is listening. I check myspeed. [ A] Carefully, I steer toward the fog line. “Here it is, boys!” I yell at the backseat, the passengerside tires finding the rumble strips etched into the asphalt. [2] Normal rumble strips create that loud, grating noise when you drive over them—like a builtin alarm for drivers who drift too…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-30",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 30,
+      "question": "Which transition word is most logical in context?",
+      "options": [
+        "NO CHANGE",
+        "Conversely,",
+        "Namely,",
+        "Granted,"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "A Musical Detour [1] Every night while driving home from a hectic day at work, mythreeyearold twins quarreling in the backseat, I take a short detour. I turn off the gridlocked highway, onto a stretch of Route 66 that is, surrounded by arid New Mexico hills. When we’renearly three miles into our detour, I roll down the windows. Looking pointedly into the rearview mirror, windows rolled down, I say something about not throwing anything out of the car, but neither boy is listening. I check myspeed. [ A] Carefully, I steer toward the fog line. “Here it is, boys!” I yell at the backseat, the passengerside tires finding the rumble strips etched into the asphalt. [2] Normal rumble strips create that loud, grating noise when you drive over them—like a builtin alarm for drivers who drift too…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-32",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 32,
+      "question": "At this point, the writer is considering adding the following parenthetical phrase: (whether because of light sensitivity or the request of a donor) Given that the information is accurate, should the writer make this addition here?",
+      "options": [
+        "Yes, because it gives specific examples to help explain why some objects can never be displayed in a museum.",
+        "Yes, because it offers specific examples of items that require special storage.",
+        "No, because it detracts from the paragraph’sfocus on the ideal museum layout.",
+        "No, because it diminishes the role museums play"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "A Musical Detour [1] Every night while driving home from a hectic day at work, mythreeyearold twins quarreling in the backseat, I take a short detour. I turn off the gridlocked highway, onto a stretch of Route 66 that is, surrounded by arid New Mexico hills. When we’renearly three miles into our detour, I roll down the windows. Looking pointedly into the rearview mirror, windows rolled down, I say something about not throwing anything out of the car, but neither boy is listening. I check myspeed. [ A] Carefully, I steer toward the fog line. “Here it is, boys!” I yell at the backseat, the passengerside tires finding the rumble strips etched into the asphalt. [2] Normal rumble strips create that loud, grating noise when you drive over them—like a builtin alarm for drivers who drift too…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-35",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 35,
+      "question": "The writer wants to add the following sentence to the essay: This potentially compromises stewardship. For the sake of logic and cohesion, the sentence should be placed at:",
+      "options": [
+        "Point A in Paragraph 1.",
+        "Point B in Paragraph 2.",
+        "Point C in Paragraph 2.",
+        "Point D in Paragraph 3."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "The Sociable Weavers’ Complex Nest In the sparse yet relatively green environment of the Kalahari Desert, birds known as sociable weavers build their enormous nests atop the desert’ssignature camelthorn trees. Slung across the branches, each nest—which can measure up to thirteen feet wide and seven feet thick—is a sprawling community home to hundreds of birds. DWhich choice is clearest and most precise in context? F. NO CHANGE G. Although H. When J. Since",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-36",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-punctuation",
+      "subject_slug": "act-english",
+      "question_number": 36,
+      "question": "If the writer were to DELETE the phrase “which can measure up to thirteen feet wide and seven feet thick” from the preceding sentence (adjusting the punctuation as needed), the sentence would primarily lose:",
+      "options": [
+        "specific information that illustrates the minimum height at which the weavers begin building their nests.",
+        "specific information that underscores the enormousness of the weavers’ nests.",
+        "details that clarify how the weavers are able to survive in the Kalahari Desert.",
+        "details that explain how the weavers’ nests differ"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "The Sociable Weavers’ Complex Nest In the sparse yet relatively green environment of the Kalahari Desert, birds known as sociable weavers build their enormous nests atop the desert’ssignature camelthorn trees. Slung across the branches, each nest—which can measure up to thirteen feet wide and seven feet thick—is a sprawling community home to hundreds of birds. DWhich choice is clearest and most precise in context? F. NO CHANGE G. Although H. When J. SinceThe writer wants to add the following sentence to the essay: This potentially compromises stewardship. For the sake of logic and cohesion, the sentence should be placed at: A. Point A in Paragraph 1. B. Point B in Paragraph 2. C. Point C in Paragraph 2. D. Point D in Paragraph 3.",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-37",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 37,
+      "question": "The writer wants to emphasize the unusual appearance of the weavers’ nests by using playful language to evoke a specific image. Which choice best accomplishes this goal?",
+      "options": [
+        "NO CHANGE",
+        "carelessly plunkeddown haystacks.",
+        "collections of disparate items.",
+        "large knots."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "The Sociable Weavers’ Complex Nest In the sparse yet relatively green environment of the Kalahari Desert, birds known as sociable weavers build their enormous nests atop the desert’ssignature camelthorn trees. Slung across the branches, each nest—which can measure up to thirteen feet wide and seven feet thick—is a sprawling community home to hundreds of birds. DWhich choice is clearest and most precise in context? F. NO CHANGE G. Although H. When J. SinceThe writer wants to add the following sentence to the essay: This potentially compromises stewardship. For the sake of logic and cohesion, the sentence should be placed at: A. Point A in Paragraph 1. B. Point B in Paragraph 2. C. Point C in Paragraph 2. D. Point D in Paragraph 3.If the writer were to DELETE the phrase “which can measure…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-41",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 41,
+      "question": "Which choice best maintains the stylistic pattern of descriptions established earlier in the sentence?",
+      "options": [
+        "NO CHANGE",
+        "something with a dizzying effect—",
+        "mazes that she creates—",
+        "so many lines—"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "The Artful Stitch of Paj Ntaub She depicts flowers with layers of petals, intricate spirals and rosettes, teardrops bending within circles, and dizzying mazes of lines—embroidering them in vibrant reds, blues, pinks, yellows, and greens on fabric of delicate silk or cotton. Pang Xiong Sirirathasuk Sikoun is a master of paj ntaub, or “flower cloth” embroidery, the most difficult of the century’soldest Hmong needlework arts. Paj ntaub is increasingly made in lighter, softer shades today. She’s been creating stitched textiles since she was a young woman living in northern Laos. For the past several decades, she’s been designing paj ntaub in Philadelphia, Pennsylvania, where she also teaches her craft. Flower cloth (commonly as a shirt, dress, coat, or collar) is made to be worn as clothing…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-43",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 43,
+      "question": "The writer is considering deleting the underlined sentence. Should the sentence be kept or deleted?",
+      "options": [
+        "Kept, because it compares Pang Xiong’sembroidery style with that of modern paj ntaub.",
+        "Kept, because it places the subject of the essay in a modern context.",
+        "Deleted, because it detracts from the paragraph’sfocus on the various styles of ancient Hmong needle work arts.",
+        "Deleted, because it adds a detail that is irrelevant"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "The Artful Stitch of Paj Ntaub She depicts flowers with layers of petals, intricate spirals and rosettes, teardrops bending within circles, and dizzying mazes of lines—embroidering them in vibrant reds, blues, pinks, yellows, and greens on fabric of delicate silk or cotton. Pang Xiong Sirirathasuk Sikoun is a master of paj ntaub, or “flower cloth” embroidery, the most difficult of the century’soldest Hmong needlework arts. Paj ntaub is increasingly made in lighter, softer shades today. She’s been creating stitched textiles since she was a young woman living in northern Laos. For the past several decades, she’s been designing paj ntaub in Philadelphia, Pennsylvania, where she also teaches her craft. Flower cloth (commonly as a shirt, dress, coat, or collar) is made to be worn as clothing…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-44",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 44,
+      "question": "The best placement for the underlined portion would be:",
+      "options": [
+        "where it is now.",
+        "after the word made.",
+        "after the word clothing.",
+        "after the word needlework."
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "The Artful Stitch of Paj Ntaub She depicts flowers with layers of petals, intricate spirals and rosettes, teardrops bending within circles, and dizzying mazes of lines—embroidering them in vibrant reds, blues, pinks, yellows, and greens on fabric of delicate silk or cotton. Pang Xiong Sirirathasuk Sikoun is a master of paj ntaub, or “flower cloth” embroidery, the most difficult of the century’soldest Hmong needlework arts. Paj ntaub is increasingly made in lighter, softer shades today. She’s been creating stitched textiles since she was a young woman living in northern Laos. For the past several decades, she’s been designing paj ntaub in Philadelphia, Pennsylvania, where she also teaches her craft. Flower cloth (commonly as a shirt, dress, coat, or collar) is made to be worn as clothing…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-45",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 45,
+      "question": "Which choice most clearly builds on the information provided earlier in the sentence about a common theme in paj ntaub patterns and images?",
+      "options": [
+        "NO CHANGE",
+        "only a master artist is able to create paj ntaub clothing for special occasions.",
+        "paj ntaub patterns are extraordinarily colorful.",
+        "paj ntaub celebrates the natural world."
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "The Artful Stitch of Paj Ntaub She depicts flowers with layers of petals, intricate spirals and rosettes, teardrops bending within circles, and dizzying mazes of lines—embroidering them in vibrant reds, blues, pinks, yellows, and greens on fabric of delicate silk or cotton. Pang Xiong Sirirathasuk Sikoun is a master of paj ntaub, or “flower cloth” embroidery, the most difficult of the century’soldest Hmong needlework arts. Paj ntaub is increasingly made in lighter, softer shades today. She’s been creating stitched textiles since she was a young woman living in northern Laos. For the past several decades, she’s been designing paj ntaub in Philadelphia, Pennsylvania, where she also teaches her craft. Flower cloth (commonly as a shirt, dress, coat, or collar) is made to be worn as clothing…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-48",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 48,
+      "question": "The writer is considering revising the underlined portion to the following: massproduced Should the writer make this revision?",
+      "options": [
+        "Yes, because the revision creates a clearer contrast between the homogeneous styles of clothing that are popular today and the handcrafted paj ntaub.",
+        "Yes, because the revision emphasizes Pang Xiong’sdesire for her handcrafted paj ntaub to be sold on a large scale in stores.",
+        "No, because the original word reinforces the idea that although paj ntaub clothing can be used for everyday wear, it should be saved for special occasions.",
+        "No, because the original word more specifically"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "The Artful Stitch of Paj Ntaub She depicts flowers with layers of petals, intricate spirals and rosettes, teardrops bending within circles, and dizzying mazes of lines—embroidering them in vibrant reds, blues, pinks, yellows, and greens on fabric of delicate silk or cotton. Pang Xiong Sirirathasuk Sikoun is a master of paj ntaub, or “flower cloth” embroidery, the most difficult of the century’soldest Hmong needlework arts. Paj ntaub is increasingly made in lighter, softer shades today. She’s been creating stitched textiles since she was a young woman living in northern Laos. For the past several decades, she’s been designing paj ntaub in Philadelphia, Pennsylvania, where she also teaches her craft. Flower cloth (commonly as a shirt, dress, coat, or collar) is made to be worn as clothing…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-49",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 49,
+      "question": "Which transition word or phrase, if any, is most logical in context?",
+      "options": [
+        "NO CHANGE",
+        "For example, she",
+        "Besides, she",
+        "She"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "The Artful Stitch of Paj Ntaub She depicts flowers with layers of petals, intricate spirals and rosettes, teardrops bending within circles, and dizzying mazes of lines—embroidering them in vibrant reds, blues, pinks, yellows, and greens on fabric of delicate silk or cotton. Pang Xiong Sirirathasuk Sikoun is a master of paj ntaub, or “flower cloth” embroidery, the most difficult of the century’soldest Hmong needlework arts. Paj ntaub is increasingly made in lighter, softer shades today. She’s been creating stitched textiles since she was a young woman living in northern Laos. For the past several decades, she’s been designing paj ntaub in Philadelphia, Pennsylvania, where she also teaches her craft. Flower cloth (commonly as a shirt, dress, coat, or collar) is made to be worn as clothing…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "Preparing-for-the-ACT-eng-50",
+      "track": "act",
+      "section": "english",
+      "chapter": "act-eng-organization",
+      "subject_slug": "act-english",
+      "question_number": 50,
+      "question": "Which of the following true statements, if added here, would best build on the ideas presented in this paragraph and connect to the final sentence of the essay?",
+      "options": [
+        "She loves when people, no matter what their ethnicity, wear traditional clothing every day.",
+        "She often teaches paj ntaub to Hmong adults her age who want to learn new techniques.",
+        "Recently, she worked with nine young Hmong women in a formal apprenticeship.",
+        "One of her own favorite pieces tells the story of"
+      ],
+      "option_labels": [
+        "F",
+        "G",
+        "H",
+        "J"
+      ],
+      "answer_verified": true,
+      "source": "https://www.act.org/content/dam/act/unsecured/documents/Preparing-for-the-ACT-e.pdf",
+      "paper_pair_id": "Preparing-for-the-ACT",
+      "passage_context": "The Artful Stitch of Paj Ntaub She depicts flowers with layers of petals, intricate spirals and rosettes, teardrops bending within circles, and dizzying mazes of lines—embroidering them in vibrant reds, blues, pinks, yellows, and greens on fabric of delicate silk or cotton. Pang Xiong Sirirathasuk Sikoun is a master of paj ntaub, or “flower cloth” embroidery, the most difficult of the century’soldest Hmong needlework arts. Paj ntaub is increasingly made in lighter, softer shades today. She’s been creating stitched textiles since she was a young woman living in northern Laos. For the past several decades, she’s been designing paj ntaub in Philadelphia, Pennsylvania, where she also teaches her craft. Flower cloth (commonly as a shirt, dress, coat, or collar) is made to be worn as clothing…",
+      "doc_role": "question",
+      "tags": [
+        "act",
+        "english",
+        "Preparing-for-the-ACT"
+      ],
+      "question_provenance": "board_official",
+      "previously_asked": true
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "education_provenance_v2",
+  "sku": "english-tests",
+  "built_at": "2026-06-26T16:11:27.429152+00:00",
+  "count": 7,
+  "answers": [
+    {
+      "question_id": "toefl-q-16",
+      "answer_for": "board_official",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Research on animal cognition"
+    },
+    {
+      "question_id": "toefl-q-17",
+      "answer_for": "board_official",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] accomplishment"
+    },
+    {
+      "question_id": "toefl-q-18",
+      "answer_for": "board_official",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] It helped them determine whether the animals recognized themselves."
+    },
+    {
+      "question_id": "toefl-q-19",
+      "answer_for": "board_official",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] They understand certain signs from other animals."
+    },
+    {
+      "question_id": "toefl-q-20",
+      "answer_for": "board_official",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] To suggest that a wide range of animals may possess self-awareness"
+    },
+    {
+      "question_id": "toefl-q-9",
+      "answer_for": "board_official",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Go shopping"
+    },
+    {
+      "question_id": "toefl-q-10",
+      "answer_for": "board_official",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] He forgot about the timing of their plans."
+    }
+  ]
+}

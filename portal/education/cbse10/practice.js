@@ -3,6 +3,7 @@
   let curriculum = null;
   let catalogQuestions = [];
   let boardQuestions = [];
+  let syntheticQuestions = [];
 
   const prSubject = document.getElementById('prSubject');
   const prChapter = document.getElementById('prChapter');
@@ -14,10 +15,12 @@
   Promise.all([
     shared.loadCurriculum(),
     shared.loadMasterCatalog(),
+    shared.loadSyntheticBank(),
     fetch('../../data/cbse10-board-questions.json').then((r) => (r.ok ? r.json() : { questions: [] })),
-  ]).then(([cur, catalog, boardPayload]) => {
+  ]).then(([cur, catalog, synthetic, boardPayload]) => {
     curriculum = cur;
     catalogQuestions = catalog?.questions || [];
+    syntheticQuestions = synthetic || [];
     boardQuestions = boardPayload?.questions || [];
     if (urlParams.get('subject')) prSubject.value = urlParams.get('subject');
     if (urlParams.get('count')) {
@@ -65,8 +68,15 @@
       chapter,
       limit: count * 12,
     });
+    const fromSynthetic = shared.filterMasterQuestions(syntheticQuestions, {
+      subject,
+      chapter,
+      mode: 'ai',
+      limit: count * 12,
+    });
     const chNorm = shared.normalizeChapterId(chapter);
     const fromBoard = boardQuestions.filter((q) => {
+      if (shared.isAdvancedComplexity?.(q)) return false;
       const sub = (q.subject || '').toLowerCase();
       const matchSub =
         sub === subject ||
@@ -79,7 +89,7 @@
     const seenIds = new Set();
     const seenPrompts = new Set();
     const pool = [];
-    for (const q of [...fromCatalog, ...fromBoard]) {
+    for (const q of [...fromCatalog, ...fromSynthetic, ...fromBoard]) {
       if (!isUsableQuestion(q)) continue;
       const d = shared.toDisplayQ(q);
       const idKey = String(q.id || d.id || '').trim();

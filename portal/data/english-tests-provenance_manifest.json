@@ -1,0 +1,27 @@
+{
+  "schema_version": "education_provenance_v2",
+  "sku": "english-tests",
+  "built_at": "2026-06-26T16:11:27.429152+00:00",
+  "stats": {
+    "input_rows": 43,
+    "dropped_no_id": 0,
+    "dropped_duplicate": 0,
+    "board": 7,
+    "synthetic": 36,
+    "answers_board": 7,
+    "answers_synthetic": 36
+  },
+  "counts": {
+    "board_questions": 7,
+    "synthetic_questions": 36,
+    "board_question_answers": 7,
+    "synthetic_question_answers": 36
+  },
+  "files": {
+    "board_questions.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\english_tests\\board_questions.json",
+    "synthetic_questions.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\english_tests\\synthetic_questions.json",
+    "board_question_answers.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\english_tests\\board_question_answers.json",
+    "synthetic_question_answers.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\english_tests\\synthetic_question_answers.json"
+  },
+  "note": "Board bucket = exam-body official items. All answers are synthetic rationales only (answer_origin=synthetic). Questions never embed reference_answer."
+}

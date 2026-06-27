@@ -1,0 +1,3194 @@
+{
+  "schema_version": "kg_v1",
+  "sku": "cbse10-core",
+  "subject": "science",
+  "chapter_id": "carbon",
+  "title": "Carbon and its Compounds",
+  "built_at": "2026-06-27T00:42:52.324677+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "type": "chapter",
+      "label": "Carbon and its Compounds",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "## Syllabus outline\n- Covalent bonding in Carbon\n- Catenation and tetravalency\n- Homologous series and Functional groups\n- Saponification & Soap cleaning action\n\nPedagogical concepts and learning benchmarks for Class 10 active curriculum.",
+      "metadata": {
+        "discipline": "chemistry",
+        "ncert_code": "jesc104",
+        "keywords": [
+          "carbon compound",
+          "covalent",
+          "hydrocarbon",
+          "ethanol"
+        ]
+      },
+      "sources": [
+        "curriculum",
+        "study-material"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:topic:covalent-bonding-in-carbon",
+      "type": "topic",
+      "label": "Covalent bonding in Carbon",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Covalent bonding in Carbon",
+      "metadata": {},
+      "sources": [
+        "study-material:syllabusOutline"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "type": "concept",
+      "label": "Covalent bonding in carbon",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain why carbon forms covalent bonds by sharing valence electrons.",
+      "metadata": {
+        "concept_id": "covalent-bonding",
+        "keywords": [
+          "covalent",
+          "share electrons",
+          "electron dot",
+          "valence"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:covalent-bonding-objective",
+      "type": "learning_objective",
+      "label": "Explain why carbon forms covalent bonds by sharing valence electrons.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain why carbon forms covalent bonds by sharing valence electrons.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:topic:catenation-and-tetravalency",
+      "type": "topic",
+      "label": "Catenation and tetravalency",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Catenation and tetravalency",
+      "metadata": {},
+      "sources": [
+        "study-material:syllabusOutline"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:catenation-tetravalency",
+      "type": "concept",
+      "label": "Catenation and tetravalency",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Describe catenation and tetravalency as reasons for carbon's versatility.",
+      "metadata": {
+        "concept_id": "catenation-tetravalency",
+        "keywords": [
+          "catenation",
+          "tetravalency",
+          "tetravalent",
+          "long chains",
+          "atomic number 6"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:catenation-tetravalency-objective",
+      "type": "learning_objective",
+      "label": "Describe catenation and tetravalency as reasons for carbon's versatility.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Describe catenation and tetravalency as reasons for carbon's versatility.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:topic:homologous-series-and-functional-groups",
+      "type": "topic",
+      "label": "Homologous series and Functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Homologous series and Functional groups",
+      "metadata": {},
+      "sources": [
+        "study-material:syllabusOutline"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "type": "concept",
+      "label": "Homologous series",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Define homologous series and state characteristics of successive members.",
+      "metadata": {
+        "concept_id": "homologous-series",
+        "keywords": [
+          "homologous",
+          "homologue",
+          "ch2",
+          "successive members",
+          "14 u"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:homologous-series-objective",
+      "type": "learning_objective",
+      "label": "Define homologous series and state characteristics of successive members.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Define homologous series and state characteristics of successive members.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "type": "concept",
+      "label": "Functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Identify common functional groups in carbon compounds.",
+      "metadata": {
+        "concept_id": "functional-groups",
+        "keywords": [
+          "functional group",
+          "ethanoic",
+          "ethanol",
+          "-oh",
+          "-cooh",
+          "iupac"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:functional-groups-objective",
+      "type": "learning_objective",
+      "label": "Identify common functional groups in carbon compounds.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Identify common functional groups in carbon compounds.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "type": "concept",
+      "label": "Hydrocarbons",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Distinguish hydrocarbons from other carbon compounds.",
+      "metadata": {
+        "concept_id": "hydrocarbon-definition",
+        "keywords": [
+          "hydrocarbon",
+          "c2h6",
+          "methane",
+          "butane",
+          "pentane"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:hydrocarbon-definition-objective",
+      "type": "learning_objective",
+      "label": "Distinguish hydrocarbons from other carbon compounds.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Distinguish hydrocarbons from other carbon compounds.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:topic:saponification-soap-cleaning-action",
+      "type": "topic",
+      "label": "Saponification & Soap cleaning action",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Saponification & Soap cleaning action",
+      "metadata": {},
+      "sources": [
+        "study-material:syllabusOutline"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:saponification",
+      "type": "concept",
+      "label": "Saponification",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain saponification and products formed.",
+      "metadata": {
+        "concept_id": "saponification",
+        "keywords": [
+          "saponification",
+          "soap",
+          "sodium hydroxide",
+          "glycerol"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:saponification-objective",
+      "type": "learning_objective",
+      "label": "Explain saponification and products formed.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain saponification and products formed.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:soap-micelle",
+      "type": "concept",
+      "label": "Soap micelle and cleaning action",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain how soap removes grease using micelle formation.",
+      "metadata": {
+        "concept_id": "soap-micelle",
+        "keywords": [
+          "micelle",
+          "cleaning action",
+          "hydrophilic",
+          "hydrophobic",
+          "surfactant"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:soap-micelle-objective",
+      "type": "learning_objective",
+      "label": "Explain how soap removes grease using micelle formation.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain how soap removes grease using micelle formation.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:esterification",
+      "type": "concept",
+      "label": "Esterification",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Describe esterification with a balanced equation.",
+      "metadata": {
+        "concept_id": "esterification",
+        "keywords": [
+          "esterification",
+          "ethyl ethanoate",
+          "sweet-smelling ester"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:esterification-objective",
+      "type": "learning_objective",
+      "label": "Describe esterification with a balanced equation.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Describe esterification with a balanced equation.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:hard-water-scum",
+      "type": "concept",
+      "label": "Soap in hard water",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain why soaps fail in hard water and how detergents differ.",
+      "metadata": {
+        "concept_id": "hard-water-scum",
+        "keywords": [
+          "hard water",
+          "scum",
+          "calcium",
+          "magnesium",
+          "detergent"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:hard-water-scum-objective",
+      "type": "learning_objective",
+      "label": "Explain why soaps fail in hard water and how detergents differ.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain why soaps fail in hard water and how detergents differ.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:isomerism",
+      "type": "concept",
+      "label": "Structural isomerism",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Draw and name structural isomers of simple alkanes.",
+      "metadata": {
+        "concept_id": "isomerism",
+        "keywords": [
+          "isomer",
+          "butane",
+          "pentane",
+          "structural"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:isomerism-objective",
+      "type": "learning_objective",
+      "label": "Draw and name structural isomers of simple alkanes.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Draw and name structural isomers of simple alkanes.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:concept:ionic-vs-covalent-conductivity",
+      "type": "concept",
+      "label": "Conductivity of covalent compounds",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Compare electrical conductivity of ionic and covalent compounds.",
+      "metadata": {
+        "concept_id": "ionic-vs-covalent-conductivity",
+        "keywords": [
+          "poor conductors",
+          "ionic compounds",
+          "conduct electricity",
+          "crystallized"
+        ]
+      },
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:learning_objective:ionic-vs-covalent-conductivity-objective",
+      "type": "learning_objective",
+      "label": "Compare electrical conductivity of ionic and covalent compounds.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Compare electrical conductivity of ionic and covalent compounds.",
+      "metadata": {},
+      "sources": [
+        "concept-registry:carbon"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:glossary_term:carbon-compound",
+      "type": "glossary_term",
+      "label": "carbon compound",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "carbon compound",
+      "metadata": {},
+      "sources": [
+        "curriculum:keywords"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:glossary_term:covalent",
+      "type": "glossary_term",
+      "label": "covalent",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "covalent",
+      "metadata": {},
+      "sources": [
+        "curriculum:keywords"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:glossary_term:hydrocarbon",
+      "type": "glossary_term",
+      "label": "hydrocarbon",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "hydrocarbon",
+      "metadata": {},
+      "sources": [
+        "curriculum:keywords"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:glossary_term:ethanol",
+      "type": "glossary_term",
+      "label": "ethanol",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "ethanol",
+      "metadata": {},
+      "sources": [
+        "curriculum:keywords"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:reaction:reaction-1",
+      "type": "reaction",
+      "label": "Esterification reaction is: Ethanoic acid + Ethanol -> Ethyl Ethanoate (sweet-sm",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Esterification reaction is: Ethanoic acid + Ethanol -> Ethyl Ethanoate (sweet-smelling ester) in presence of acid catalyst.",
+      "metadata": {},
+      "sources": [
+        "study-material:scholarTips"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:example:example-2",
+      "type": "example",
+      "label": "Soaps do not work in hard water because they form scum (insoluble precipitate) w",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Soaps do not work in hard water because they form scum (insoluble precipitate) with Calcium and Magnesium ions. Detergents solve this!",
+      "metadata": {},
+      "sources": [
+        "study-material:scholarTips"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:transcript_beat:beat-1",
+      "type": "transcript_beat",
+      "label": "Carbon can neither lose 4 electrons nor gain 4 electrons due to energy constrain",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Carbon can neither lose 4 electrons nor gain 4 electrons due to energy constraints. It only shares!",
+      "metadata": {
+        "time": "00:20:10",
+        "speaker": null
+      },
+      "sources": [
+        "study-material:video"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:transcript_beat:beat-2",
+      "type": "transcript_beat",
+      "label": "Catenation is carbons superpower. No other element can form such incredibly long",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Catenation is carbons superpower. No other element can form such incredibly long stable chains.",
+      "metadata": {
+        "time": "01:10:45",
+        "speaker": null
+      },
+      "sources": [
+        "study-material:video"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:transcript_beat:beat-3",
+      "type": "transcript_beat",
+      "label": "Successive members of a homologous series differ by a -CH2- group which translat",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Successive members of a homologous series differ by a -CH2- group which translates to 14 unified atomic mass units.",
+      "metadata": {
+        "time": "02:15:30",
+        "speaker": null
+      },
+      "sources": [
+        "study-material:video"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:transcript_beat:beat-4",
+      "type": "transcript_beat",
+      "label": "Soap has a bipolar nature: a hydrophilic head that loves water, and a hydrophobi",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Soap has a bipolar nature: a hydrophilic head that loves water, and a hydrophobic tail that grabs the grease molecule.",
+      "metadata": {
+        "time": "03:00:20",
+        "speaker": null
+      },
+      "sources": [
+        "study-material:video"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:transcript_beat:beat-5",
+      "type": "transcript_beat",
+      "label": "Today we study Carbon and its Compounds. Carbon has atomic number 6, meaning it ",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Today we study Carbon and its Compounds. Carbon has atomic number 6, meaning it has 4 valence electrons. To achieve stability, it shares electrons, forming covalent bonds.",
+      "metadata": {
+        "time": null,
+        "speaker": "Teacher"
+      },
+      "sources": [
+        "official-books:transcript"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:transcript_beat:beat-6",
+      "type": "transcript_beat",
+      "label": "Why are there so many carbon compounds in nature?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Why are there so many carbon compounds in nature?",
+      "metadata": {
+        "time": null,
+        "speaker": "Rahul - Interrupting"
+      },
+      "sources": [
+        "official-books:transcript"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:transcript_beat:beat-7",
+      "type": "transcript_beat",
+      "label": "What is a homologous series?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "What is a homologous series?",
+      "metadata": {
+        "time": null,
+        "speaker": "Priya - Interrupting"
+      },
+      "sources": [
+        "official-books:transcript"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:transcript_beat:beat-8",
+      "type": "transcript_beat",
+      "label": "Ma'am, could you explain CBSE Class 10 Science with a board diagram?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Ma'am, could you explain CBSE Class 10 Science with a board diagram?",
+      "metadata": {
+        "time": null,
+        "speaker": "Priya"
+      },
+      "sources": [
+        "official-books:transcript"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:transcript_beat:beat-9",
+      "type": "transcript_beat",
+      "label": "Certainly, Priya. For CBSE Class 10 Science, write the definition and units firs",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Certainly, Priya. For CBSE Class 10 Science, write the definition and units first, then solve one NCERT example. This is important for Class 12 boards in CBSE Class 10 Science: Carbon and its Compounds.",
+      "metadata": {
+        "time": null,
+        "speaker": "Teacher"
+      },
+      "sources": [
+        "official-books:transcript"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:transcript_beat:beat-10",
+      "type": "transcript_beat",
+      "label": "That completes our coverage of CBSE Class 10 Science: Carbon and its Compounds. ",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "That completes our coverage of CBSE Class 10 Science: Carbon and its Compounds. Revise NCERT examples and try the intext questions before your test. Any final doubts?",
+      "metadata": {
+        "time": null,
+        "speaker": "Teacher"
+      },
+      "sources": [
+        "official-books:transcript"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1094",
+      "type": "exercise",
+      "label": "What are homologous series of carbon compounds? Give any two characteristics of this series.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "What are homologous series of carbon compounds? Give any two characteristics of this series.",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1094",
+        "marks": 2,
+        "question_type": "Short Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1095",
+      "type": "exercise",
+      "label": "Explain the mechanism of the cleaning action of soaps using structured surfactant micelle theory.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain the mechanism of the cleaning action of soaps using structured surfactant micelle theory.",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1095",
+        "marks": 5,
+        "question_type": "Long Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1096",
+      "type": "exercise",
+      "label": "Why are covalent compounds generally poor conductors of electricity compared to ionic compounds?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Why are covalent compounds generally poor conductors of electricity compared to ionic compounds?",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1096",
+        "marks": 2,
+        "question_type": "Short Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1097",
+      "type": "exercise",
+      "label": "Explain esterification and saponification reactions with complete chemical equations.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain esterification and saponification reactions with complete chemical equations.",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1097",
+        "marks": 3,
+        "question_type": "Short Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1098",
+      "type": "exercise",
+      "label": "Write the IUPAC names and draw structural isomers for butane (C4H10).",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Write the IUPAC names and draw structural isomers for butane (C4H10).",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1098",
+        "marks": 3,
+        "question_type": "Short Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1104",
+      "type": "exercise",
+      "label": "What are homologous series of carbon compounds? Give any two characteristics of this series. (Verify",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "What are homologous series of carbon compounds? Give any two characteristics of this series. (Verify with Class 10 Board Test-Set 3)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1104",
+        "marks": 4,
+        "question_type": "Case Study",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1105",
+      "type": "exercise",
+      "label": "Explain the mechanism of the cleaning action of soaps using structured surfactant micelle theory. (V",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain the mechanism of the cleaning action of soaps using structured surfactant micelle theory. (Verify with Class 10 Board Test-Set 3)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1105",
+        "marks": 4,
+        "question_type": "Case Study",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1106",
+      "type": "exercise",
+      "label": "Why are covalent compounds generally poor conductors of electricity compared to ionic compounds? (Ve",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Why are covalent compounds generally poor conductors of electricity compared to ionic compounds? (Verify with Class 10 Board Test-Set 3)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1106",
+        "marks": 4,
+        "question_type": "Case Study",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1107",
+      "type": "exercise",
+      "label": "Explain esterification and saponification reactions with complete chemical equations. (Verify with C",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain esterification and saponification reactions with complete chemical equations. (Verify with Class 10 Board Test-Set 3)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1107",
+        "marks": 4,
+        "question_type": "Case Study",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1108",
+      "type": "exercise",
+      "label": "Write the IUPAC names and draw structural isomers for butane (C4H10). (Verify with Class 10 Board Te",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Write the IUPAC names and draw structural isomers for butane (C4H10). (Verify with Class 10 Board Test-Set 3)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1108",
+        "marks": 4,
+        "question_type": "Case Study",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1114",
+      "type": "exercise",
+      "label": "What are homologous series of carbon compounds? Give any two characteristics of this series. (Verify",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "What are homologous series of carbon compounds? Give any two characteristics of this series. (Verify with Class 10 Board Test-Set 5)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1114",
+        "marks": 5,
+        "question_type": "Long Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1115",
+      "type": "exercise",
+      "label": "Explain the mechanism of the cleaning action of soaps using structured surfactant micelle theory. (V",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain the mechanism of the cleaning action of soaps using structured surfactant micelle theory. (Verify with Class 10 Board Test-Set 5)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1115",
+        "marks": 5,
+        "question_type": "Long Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1116",
+      "type": "exercise",
+      "label": "Why are covalent compounds generally poor conductors of electricity compared to ionic compounds? (Ve",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Why are covalent compounds generally poor conductors of electricity compared to ionic compounds? (Verify with Class 10 Board Test-Set 5)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1116",
+        "marks": 5,
+        "question_type": "Long Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1117",
+      "type": "exercise",
+      "label": "Explain esterification and saponification reactions with complete chemical equations. (Verify with C",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain esterification and saponification reactions with complete chemical equations. (Verify with Class 10 Board Test-Set 5)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1117",
+        "marks": 5,
+        "question_type": "Long Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1118",
+      "type": "exercise",
+      "label": "Write the IUPAC names and draw structural isomers for butane (C4H10). (Verify with Class 10 Board Te",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Write the IUPAC names and draw structural isomers for butane (C4H10). (Verify with Class 10 Board Test-Set 5)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1118",
+        "marks": 5,
+        "question_type": "Long Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1124",
+      "type": "exercise",
+      "label": "What are homologous series of carbon compounds? Give any two characteristics of this series. (Verify",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "What are homologous series of carbon compounds? Give any two characteristics of this series. (Verify with Class 10 Board Test-Set 7)",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-1124",
+        "marks": 2,
+        "question_type": "Short Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25181",
+      "type": "exercise",
+      "label": "What is homologous series? Write the next higher homologue of C2H6O.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "What is homologous series? Write the next higher homologue of C2H6O.",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-25181",
+        "marks": 2,
+        "question_type": "Short Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25201",
+      "type": "exercise",
+      "label": "Explain the term functional groups. Show the electron dot sharing structure of ethanoic acid.",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Explain the term functional groups. Show the electron dot sharing structure of ethanoic acid.",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-25201",
+        "marks": 3,
+        "question_type": "Short Answer",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25221",
+      "type": "exercise",
+      "label": "Define esterification. Draw structural isomers of pentane and show how saponification reaction acts ",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Define esterification. Draw structural isomers of pentane and show how saponification reaction acts as chemical inverse to esterification.",
+      "metadata": {
+        "external_id": "ym-cbsex-science-XS-25221",
+        "marks": 4,
+        "question_type": "Case Study",
+        "source": "voltaic-study-material"
+      },
+      "sources": [
+        "study-material:boardQuestions"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0005",
+      "type": "misconception",
+      "label": "Ethanol vs ethanoic acid functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "How to distinguish -OH and -COOH in one line? Esterification test links both — smell of ester in lab. Ethanol has alcohol group; ethanoic acid has carboxylic — turns blue litmus red.",
+      "metadata": {
+        "thread_id": "thr_sci_carbon_0005",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0031",
+      "type": "misconception",
+      "label": "Ethanol vs ethanoic acid functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Esterification test links both — smell of ester in lab. Ethanol has alcohol group; ethanoic acid has carboxylic — turns blue litmus red. How to distinguish -OH and -COOH in one line?",
+      "metadata": {
+        "thread_id": "thr_sci_carbon_0031",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0057",
+      "type": "misconception",
+      "label": "Ethanol vs ethanoic acid functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Esterification test links both — smell of ester in lab. Ethanol has alcohol group; ethanoic acid has carboxylic — turns blue litmus red. How to distinguish -OH and -COOH in one line?",
+      "metadata": {
+        "thread_id": "thr_sci_carbon_0057",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0083",
+      "type": "misconception",
+      "label": "Ethanol vs ethanoic acid functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "How to distinguish -OH and -COOH in one line? Esterification test links both — smell of ester in lab. Ethanol has alcohol group; ethanoic acid has carboxylic — turns blue litmus red.",
+      "metadata": {
+        "thread_id": "thr_sci_carbon_0083",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0109",
+      "type": "misconception",
+      "label": "Ethanol vs ethanoic acid functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Ethanol has alcohol group; ethanoic acid has carboxylic — turns blue litmus red. How to distinguish -OH and -COOH in one line? Esterification test links both — smell of ester in lab.",
+      "metadata": {
+        "thread_id": "thr_sci_carbon_0109",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0135",
+      "type": "misconception",
+      "label": "Ethanol vs ethanoic acid functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "How to distinguish -OH and -COOH in one line? Ethanol has alcohol group; ethanoic acid has carboxylic — turns blue litmus red. Esterification test links both — smell of ester in lab.",
+      "metadata": {
+        "thread_id": "thr_sci_carbon_0135",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0161",
+      "type": "misconception",
+      "label": "Ethanol vs ethanoic acid functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Esterification test links both — smell of ester in lab. Ethanol has alcohol group; ethanoic acid has carboxylic — turns blue litmus red. How to distinguish -OH and -COOH in one line?",
+      "metadata": {
+        "thread_id": "thr_sci_carbon_0161",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0187",
+      "type": "misconception",
+      "label": "Ethanol vs ethanoic acid functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Ethanol has alcohol group; ethanoic acid has carboxylic — turns blue litmus red. Esterification test links both — smell of ester in lab. How to distinguish -OH and -COOH in one line?",
+      "metadata": {
+        "thread_id": "thr_sci_carbon_0187",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0213",
+      "type": "misconception",
+      "label": "Ethanol vs ethanoic acid functional groups",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Esterification test links both — smell of ester in lab. Ethanol has alcohol group; ethanoic acid has carboxylic — turns blue litmus red. How to distinguish -OH and -COOH in one line?",
+      "metadata": {
+        "thread_id": "thr_sci_carbon_0213",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0001",
+      "type": "misconception",
+      "label": "How to easily memorize complex concepts of The role of temperature in exothermic profiles",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity series. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) t",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0001",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0002",
+      "type": "misconception",
+      "label": "Did anyone solve previous year's 5-mark question from Confused on oxidizing vs reducing agents",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) to score full marks. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. This tota",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0002",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0003",
+      "type": "misconception",
+      "label": "Is this proof still in the active syllabus for Why lead nitrate gives brown fumes specifically?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. This totally simplifies the",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0003",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0004",
+      "type": "misconception",
+      "label": "Tricky numerical calculation in Is dilution of acid an endothermic pathway?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. This totally simplifies the algebraic/chemic",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0004",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0005",
+      "type": "misconception",
+      "label": "An elegant shortcut formula for What is water of crystallization exactly?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. This totally simplifies the algebraic/chemi",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0005",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0006",
+      "type": "misconception",
+      "label": "Understanding the core reaction pathway of Why dry HCl gas fails litmus test?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Myopia requires a diverging concave lens because the focal length shrinks and the eyeball elongates. This totally simplifies the algebraic/ch",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0006",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0007",
+      "type": "misconception",
+      "label": "My teacher marked me wrong for this step in Gypsum vs Plaster of Paris moisture sensitivity",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Myopia requires a diverging concave lens because the focal length shrinks and the eyeball elongates. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Power combinations simply sum up algebraically: P_total = P1 + P2. Ensure signs are positive/negative. This totally simplifies the algebr",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0007",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0008",
+      "type": "misconception",
+      "label": "Struggling with the sign conventions in Thermite reaction joining railway tracks",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Power combinations simply sum up algebraically: P_total = P1 + P2. Ensure signs are positive/negative. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Be careful to balance charge as well as atom count. Law of conservation of mass must be satisfied. This totally simplifies the algebrai",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0008",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0009",
+      "type": "misconception",
+      "label": "How to easily memorize complex concepts of Roasting vs Calcination oxygen thresholds",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Be careful to balance charge as well as atom count. Law of conservation of mass must be satisfied. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity ser",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0009",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0010",
+      "type": "misconception",
+      "label": "Did anyone solve previous year's 5-mark question from Why ionic solids do not conduct when crystalli",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity series. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) t",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0010",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0011",
+      "type": "misconception",
+      "label": "Is this proof still in the active syllabus for Anode Slime/Mud metals settling down",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) to score full marks. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. This tota",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0011",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0012",
+      "type": "misconception",
+      "label": "Tricky numerical calculation in Catenation vs Tetravalency limits in Silicon",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. This totally simplifies the",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0012",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0013",
+      "type": "misconception",
+      "label": "An elegant shortcut formula for Soap micelle orientation on oil dirt",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. This totally simplifies the algebraic/chemic",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0013",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0014",
+      "type": "misconception",
+      "label": "Understanding the core reaction pathway of Isomerism structure differences of pentane",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. This totally simplifies the algebraic/chemi",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0014",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0015",
+      "type": "misconception",
+      "label": "My teacher marked me wrong for this step in Why small intestine length varies in animals?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Myopia requires a diverging concave lens because the focal length shrinks and the eyeball elongates. This totally simplifies the algebraic/ch",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0015",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0016",
+      "type": "misconception",
+      "label": "Struggling with the sign conventions in Cellular breakdown of glucose ATP differences",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Myopia requires a diverging concave lens because the focal length shrinks and the eyeball elongates. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Power combinations simply sum up algebraically: P_total = P1 + P2. Ensure signs are positive/negative. This totally simplifies the algebr",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0016",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0017",
+      "type": "misconception",
+      "label": "How to easily memorize complex concepts of How to trace urine formation pathway?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Power combinations simply sum up algebraically: P_total = P1 + P2. Ensure signs are positive/negative. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Be careful to balance charge as well as atom count. Law of conservation of mass must be satisfied. This totally simplifies the algebrai",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0017",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0018",
+      "type": "misconception",
+      "label": "Did anyone solve previous year's 5-mark question from Reflex Arc shortcut bypass loops",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Be careful to balance charge as well as atom count. Law of conservation of mass must be satisfied. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity ser",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0018",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0019",
+      "type": "misconception",
+      "label": "Is this proof still in the active syllabus for Auxin migration phothotropism shading side",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity series. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) t",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0019",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0020",
+      "type": "misconception",
+      "label": "Tricky numerical calculation in Mendel monohybrid crosses generation counts",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) to score full marks. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. This tota",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0020",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0021",
+      "type": "misconception",
+      "label": "An elegant shortcut formula for How sex is determined chromsomally in babies?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. This totally simplifies the",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0021",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0022",
+      "type": "misconception",
+      "label": "Understanding the core reaction pathway of Concave mirror erect virtual conditions",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. This totally simplifies the algebraic/chemic",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0022",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0023",
+      "type": "misconception",
+      "label": "My teacher marked me wrong for this step in Snell's law index ratios calculation",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. This totally simplifies the algebraic/chemi",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0023",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0024",
+      "type": "misconception",
+      "label": "Struggling with the sign conventions in Why stars twinkle but planets do not?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Myopia requires a diverging concave lens because the focal length shrinks and the eyeball elongates. This totally simplifies the algebraic/ch",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0024",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0025",
+      "type": "misconception",
+      "label": "How to easily memorize complex concepts of Rayleigh scattering and sunset red hues",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Myopia requires a diverging concave lens because the focal length shrinks and the eyeball elongates. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Power combinations simply sum up algebraically: P_total = P1 + P2. Ensure signs are positive/negative. This totally simplifies the algebr",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0025",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0026",
+      "type": "misconception",
+      "label": "Did anyone solve previous year's 5-mark question from Resistors series vs parallel rules",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Power combinations simply sum up algebraically: P_total = P1 + P2. Ensure signs are positive/negative. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Be careful to balance charge as well as atom count. Law of conservation of mass must be satisfied. This totally simplifies the algebrai",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0026",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0027",
+      "type": "misconception",
+      "label": "Is this proof still in the active syllabus for Joule heating H = I^2 Rt current doubling",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Be careful to balance charge as well as atom count. Law of conservation of mass must be satisfied. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity ser",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0027",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0028",
+      "type": "misconception",
+      "label": "Tricky numerical calculation in Solenoid behaving identical to bar magnets",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity series. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) t",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0028",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0029",
+      "type": "misconception",
+      "label": "An elegant shortcut formula for Right-Hand Thumb rule field lines",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) to score full marks. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. This tota",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0029",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0030",
+      "type": "misconception",
+      "label": "Understanding the core reaction pathway of Why fuse wire needs low melting coordinates?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. This totally simplifies the",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0030",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0031",
+      "type": "misconception",
+      "label": "My teacher marked me wrong for this step in Biogas slurry nitrogen enrichment value",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. This totally simplifies the algebraic/chemic",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0031",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0032",
+      "type": "misconception",
+      "label": "Struggling with the sign conventions in Solar cell silicon purity bottlenecks",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. This totally simplifies the algebraic/chemi",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0032",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0033",
+      "type": "misconception",
+      "label": "How to easily memorize complex concepts of Why we must balance balancing chemical equivalents?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Myopia requires a diverging concave lens because the focal length shrinks and the eyeball elongates. This totally simplifies the algebraic/ch",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0033",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0034",
+      "type": "misconception",
+      "label": "Did anyone solve previous year's 5-mark question from The role of temperature in exothermic profiles",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Myopia requires a diverging concave lens because the focal length shrinks and the eyeball elongates. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Power combinations simply sum up algebraically: P_total = P1 + P2. Ensure signs are positive/negative. This totally simplifies the algebr",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0034",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0035",
+      "type": "misconception",
+      "label": "Is this proof still in the active syllabus for Confused on oxidizing vs reducing agents",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Power combinations simply sum up algebraically: P_total = P1 + P2. Ensure signs are positive/negative. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Be careful to balance charge as well as atom count. Law of conservation of mass must be satisfied. This totally simplifies the algebrai",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0035",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0036",
+      "type": "misconception",
+      "label": "Tricky numerical calculation in Why lead nitrate gives brown fumes specifically?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Be careful to balance charge as well as atom count. Law of conservation of mass must be satisfied. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity ser",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0036",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0037",
+      "type": "misconception",
+      "label": "An elegant shortcut formula for Is dilution of acid an endothermic pathway?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity series. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) t",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0037",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0038",
+      "type": "misconception",
+      "label": "Understanding the core reaction pathway of What is water of crystallization exactly?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) to score full marks. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. This tota",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0038",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0039",
+      "type": "misconception",
+      "label": "My teacher marked me wrong for this step in Why dry HCl gas fails litmus test?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. This totally simplifies the",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0039",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0040",
+      "type": "misconception",
+      "label": "Struggling with the sign conventions in Gypsum vs Plaster of Paris moisture sensitivity",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. This totally simplifies the algebraic/chemic",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0040",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0041",
+      "type": "misconception",
+      "label": "How to easily memorize complex concepts of Thermite reaction joining railway tracks",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. This totally simplifies the algebraic/chemi",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0041",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0042",
+      "type": "misconception",
+      "label": "Did anyone solve previous year's 5-mark question from Roasting vs Calcination oxygen thresholds",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Myopia requires a diverging concave lens because the focal length shrinks and the eyeball elongates. This totally simplifies the algebraic/ch",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0042",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0043",
+      "type": "misconception",
+      "label": "Is this proof still in the active syllabus for Why ionic solids do not conduct when crystallized?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Myopia requires a diverging concave lens because the focal length shrinks and the eyeball elongates. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Power combinations simply sum up algebraically: P_total = P1 + P2. Ensure signs are positive/negative. This totally simplifies the algebr",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0043",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0044",
+      "type": "misconception",
+      "label": "Tricky numerical calculation in Anode Slime/Mud metals settling down",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Power combinations simply sum up algebraically: P_total = P1 + P2. Ensure signs are positive/negative. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Be careful to balance charge as well as atom count. Law of conservation of mass must be satisfied. This totally simplifies the algebrai",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0044",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0045",
+      "type": "misconception",
+      "label": "An elegant shortcut formula for Catenation vs Tetravalency limits in Silicon",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Be careful to balance charge as well as atom count. Law of conservation of mass must be satisfied. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity ser",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0045",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0046",
+      "type": "misconception",
+      "label": "Understanding the core reaction pathway of Soap micelle orientation on oil dirt",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. The displacement of copper sulphate solution is a textbook favorite. Iron displaces copper because iron stands higher in the reactivity series. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) t",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0046",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0047",
+      "type": "misconception",
+      "label": "My teacher marked me wrong for this step in Isomerism structure differences of pentane",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. In the exam, write complete states like gaseous (g), liquid (l), solid (s), and aqueous (aq) to score full marks. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. This tota",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0047",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0048",
+      "type": "misconception",
+      "label": "Struggling with the sign conventions in Why small intestine length varies in animals?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Thermite process is highly exothermic, creating molten iron of incredible heat. Fe2O3 + 2Al -> Al2O3 + 2Fe + Heat. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. This totally simplifies the",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0048",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0049",
+      "type": "misconception",
+      "label": "How to easily memorize complex concepts of Cellular breakdown of glucose ATP differences",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. For Saponification, keep the sodium hydroxide concentration exact, otherwise soap fails to set. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. This totally simplifies the algebraic/chemic",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0049",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    },
+    {
+      "id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0050",
+      "type": "misconception",
+      "label": "Did anyone solve previous year's 5-mark question from How to trace urine formation pathway?",
+      "chapter_id": "carbon",
+      "subject": "science",
+      "sku": "cbse10-core",
+      "text": "Hey peer warriors, I was attempting some past 10 years papers from **undefined** and got completely stuck. Amoeba pseudopodia ingestion is holozoic nutrition. The food vacuole moves inside cellular fluid. Can anyone provide a clean explanation or an intuitive shortcut? Don't stress, I had the same doubt. In our school's mock test, the teacher explained that Iodine-contained salt is advised because the thyroid gland needs iodine to synthesize thyroxine. This totally simplifies the algebraic/chemi",
+      "metadata": {
+        "thread_id": "thr_vol_sci_carbon_0050",
+        "reply_count": 3
+      },
+      "sources": [
+        "forum"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:se10-sci-carbon-topic-covalent-bonding-in-carbon",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:topic:covalent-bonding-in-carbon",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-concept-covalent-bonding:on-learning-objective-covalent-bonding-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:covalent-bonding-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:se10-sci-carbon-topic-covalent-bonding-in-carbon:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:topic:covalent-bonding-in-carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:e10-sci-carbon-topic-catenation-and-tetravalency",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:topic:catenation-and-tetravalency",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:bse10-sci-carbon-concept-catenation-tetravalency",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:catenation-tetravalency",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:bse10-sci-carbon-concept-catenation-tetravalency:ning-objective-catenation-tetravalency-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:catenation-tetravalency",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:catenation-tetravalency-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:e10-sci-carbon-topic-catenation-and-tetravalency:bse10-sci-carbon-concept-catenation-tetravalency",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:topic:catenation-and-tetravalency",
+      "to_id": "kg:cbse10:sci:carbon:concept:catenation-tetravalency",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:on-topic-homologous-series-and-functional-groups",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:topic:homologous-series-and-functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-concept-homologous-series",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-concept-homologous-series:n-learning-objective-homologous-series-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:homologous-series-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:on-topic-homologous-series-and-functional-groups:kg-cbse10-sci-carbon-concept-homologous-series",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:topic:homologous-series-and-functional-groups",
+      "to_id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-concept-functional-groups:n-learning-objective-functional-groups-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:functional-groups-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:on-topic-homologous-series-and-functional-groups:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:topic:homologous-series-and-functional-groups",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:cbse10-sci-carbon-concept-hydrocarbon-definition",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:cbse10-sci-carbon-concept-hydrocarbon-definition:rning-objective-hydrocarbon-definition-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:hydrocarbon-definition-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:on-topic-homologous-series-and-functional-groups:cbse10-sci-carbon-concept-hydrocarbon-definition",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:topic:homologous-series-and-functional-groups",
+      "to_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:carbon-topic-saponification-soap-cleaning-action",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:topic:saponification-soap-cleaning-action",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-concept-saponification:rbon-learning-objective-saponification-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:saponification-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:carbon-topic-saponification-soap-cleaning-action:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:topic:saponification-soap-cleaning-action",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-concept-soap-micelle",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:soap-micelle",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-concept-soap-micelle:carbon-learning-objective-soap-micelle-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:soap-micelle",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:soap-micelle-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:carbon-topic-saponification-soap-cleaning-action:kg-cbse10-sci-carbon-concept-soap-micelle",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:topic:saponification-soap-cleaning-action",
+      "to_id": "kg:cbse10:sci:carbon:concept:soap-micelle",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-concept-esterification:rbon-learning-objective-esterification-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:esterification-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-concept-hard-water-scum",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:hard-water-scum",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-concept-hard-water-scum:bon-learning-objective-hard-water-scum-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:hard-water-scum",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:hard-water-scum-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-concept-isomerism",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:isomerism",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-concept-isomerism:ci-carbon-learning-objective-isomerism-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:isomerism",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:isomerism-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:contains:kg-cbse10-sci-carbon-chapter-carbon:ci-carbon-concept-ionic-vs-covalent-conductivity",
+      "type": "contains",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:ionic-vs-covalent-conductivity",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:ci-carbon-concept-ionic-vs-covalent-conductivity:jective-ionic-vs-covalent-conductivity-objective",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:concept:ionic-vs-covalent-conductivity",
+      "to_id": "kg:cbse10:sci:carbon:learning_objective:ionic-vs-covalent-conductivity-objective",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:related:kg-cbse10-sci-carbon-chapter-carbon:-cbse10-sci-carbon-glossary-term-carbon-compound",
+      "type": "related",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:glossary_term:carbon-compound",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:related:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-glossary-term-covalent",
+      "type": "related",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:glossary_term:covalent",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:related:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-glossary-term-hydrocarbon",
+      "type": "related",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:glossary_term:hydrocarbon",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:related:kg-cbse10-sci-carbon-chapter-carbon:kg-cbse10-sci-carbon-glossary-term-ethanol",
+      "type": "related",
+      "from_id": "kg:cbse10:sci:carbon:chapter:carbon",
+      "to_id": "kg:cbse10:sci:carbon:glossary_term:ethanol",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:defines:-cbse10-sci-carbon-glossary-term-carbon-compound:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "defines",
+      "from_id": "kg:cbse10:sci:carbon:glossary_term:carbon-compound",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:defines:kg-cbse10-sci-carbon-glossary-term-covalent:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "defines",
+      "from_id": "kg:cbse10:sci:carbon:glossary_term:covalent",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:defines:kg-cbse10-sci-carbon-glossary-term-hydrocarbon:cbse10-sci-carbon-concept-hydrocarbon-definition",
+      "type": "defines",
+      "from_id": "kg:cbse10:sci:carbon:glossary_term:hydrocarbon",
+      "to_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:defines:kg-cbse10-sci-carbon-glossary-term-ethanol:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "defines",
+      "from_id": "kg:cbse10:sci:carbon:glossary_term:ethanol",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:exemplifies:kg-cbse10-sci-carbon-reaction-reaction-1:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "exemplifies",
+      "from_id": "kg:cbse10:sci:carbon:reaction:reaction-1",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:exemplifies:kg-cbse10-sci-carbon-reaction-reaction-1:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "exemplifies",
+      "from_id": "kg:cbse10:sci:carbon:reaction:reaction-1",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:exemplifies:kg-cbse10-sci-carbon-example-example-2:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "exemplifies",
+      "from_id": "kg:cbse10:sci:carbon:example:example-2",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:exemplifies:kg-cbse10-sci-carbon-example-example-2:kg-cbse10-sci-carbon-concept-hard-water-scum",
+      "type": "exemplifies",
+      "from_id": "kg:cbse10:sci:carbon:example:example-2",
+      "to_id": "kg:cbse10:sci:carbon:concept:hard-water-scum",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-1:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-1",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-2:bse10-sci-carbon-concept-catenation-tetravalency",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-2",
+      "to_id": "kg:cbse10:sci:carbon:concept:catenation-tetravalency",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-3:kg-cbse10-sci-carbon-concept-homologous-series",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-3",
+      "to_id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-4:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-4",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-4:kg-cbse10-sci-carbon-concept-soap-micelle",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-4",
+      "to_id": "kg:cbse10:sci:carbon:concept:soap-micelle",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-5:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-5",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-5:bse10-sci-carbon-concept-catenation-tetravalency",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-5",
+      "to_id": "kg:cbse10:sci:carbon:concept:catenation-tetravalency",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-6:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-6",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-7:kg-cbse10-sci-carbon-concept-homologous-series",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-7",
+      "to_id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-8:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-8",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-9:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-9",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:teaches:kg-cbse10-sci-carbon-transcript-beat-beat-10:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "teaches",
+      "from_id": "kg:cbse10:sci:carbon:transcript_beat:beat-10",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1094:kg-cbse10-sci-carbon-concept-homologous-series",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1094",
+      "to_id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1095:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1095",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1095:kg-cbse10-sci-carbon-concept-soap-micelle",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1095",
+      "to_id": "kg:cbse10:sci:carbon:concept:soap-micelle",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1096:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1096",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1096:ci-carbon-concept-ionic-vs-covalent-conductivity",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1096",
+      "to_id": "kg:cbse10:sci:carbon:concept:ionic-vs-covalent-conductivity",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1097:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1097",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1097:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1097",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1098:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1098",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1098:cbse10-sci-carbon-concept-hydrocarbon-definition",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1098",
+      "to_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1098:kg-cbse10-sci-carbon-concept-isomerism",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1098",
+      "to_id": "kg:cbse10:sci:carbon:concept:isomerism",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1104:kg-cbse10-sci-carbon-concept-homologous-series",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1104",
+      "to_id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1105:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1105",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1105:kg-cbse10-sci-carbon-concept-soap-micelle",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1105",
+      "to_id": "kg:cbse10:sci:carbon:concept:soap-micelle",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1106:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1106",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1106:ci-carbon-concept-ionic-vs-covalent-conductivity",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1106",
+      "to_id": "kg:cbse10:sci:carbon:concept:ionic-vs-covalent-conductivity",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1107:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1107",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1107:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1107",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1108:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1108",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1108:cbse10-sci-carbon-concept-hydrocarbon-definition",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1108",
+      "to_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1108:kg-cbse10-sci-carbon-concept-isomerism",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1108",
+      "to_id": "kg:cbse10:sci:carbon:concept:isomerism",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1114:kg-cbse10-sci-carbon-concept-homologous-series",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1114",
+      "to_id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1115:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1115",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1115:kg-cbse10-sci-carbon-concept-soap-micelle",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1115",
+      "to_id": "kg:cbse10:sci:carbon:concept:soap-micelle",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1116:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1116",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1116:ci-carbon-concept-ionic-vs-covalent-conductivity",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1116",
+      "to_id": "kg:cbse10:sci:carbon:concept:ionic-vs-covalent-conductivity",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1117:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1117",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1117:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1117",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1118:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1118",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1118:cbse10-sci-carbon-concept-hydrocarbon-definition",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1118",
+      "to_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1118:kg-cbse10-sci-carbon-concept-isomerism",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1118",
+      "to_id": "kg:cbse10:sci:carbon:concept:isomerism",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:e10-sci-carbon-exercise-ym-cbsex-science-xs-1124:kg-cbse10-sci-carbon-concept-homologous-series",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-1124",
+      "to_id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:10-sci-carbon-exercise-ym-cbsex-science-xs-25181:kg-cbse10-sci-carbon-concept-homologous-series",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25181",
+      "to_id": "kg:cbse10:sci:carbon:concept:homologous-series",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:10-sci-carbon-exercise-ym-cbsex-science-xs-25181:cbse10-sci-carbon-concept-hydrocarbon-definition",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25181",
+      "to_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:10-sci-carbon-exercise-ym-cbsex-science-xs-25201:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25201",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:10-sci-carbon-exercise-ym-cbsex-science-xs-25201:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25201",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:10-sci-carbon-exercise-ym-cbsex-science-xs-25221:cbse10-sci-carbon-concept-hydrocarbon-definition",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25221",
+      "to_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:10-sci-carbon-exercise-ym-cbsex-science-xs-25221:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25221",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:10-sci-carbon-exercise-ym-cbsex-science-xs-25221:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25221",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:tests:10-sci-carbon-exercise-ym-cbsex-science-xs-25221:kg-cbse10-sci-carbon-concept-isomerism",
+      "type": "tests",
+      "from_id": "kg:cbse10:sci:carbon:exercise:ym-cbsex-science-xs-25221",
+      "to_id": "kg:cbse10:sci:carbon:concept:isomerism",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0005:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0005",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0005:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0005",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0031:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0031",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0031:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0031",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0057:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0057",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0057:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0057",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0083:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0083",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0083:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0083",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0109:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0109",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0109:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0109",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0135:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0135",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0135:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0135",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0161:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0161",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0161:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0161",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0187:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0187",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0187:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0187",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0213:kg-cbse10-sci-carbon-concept-functional-groups",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0213",
+      "to_id": "kg:cbse10:sci:carbon:concept:functional-groups",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:e10-sci-carbon-misconception-thr-sci-carbon-0213:kg-cbse10-sci-carbon-concept-esterification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-sci-carbon-0213",
+      "to_id": "kg:cbse10:sci:carbon:concept:esterification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0001:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0001",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0002:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0002",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0003:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0003",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0004:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0004",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0005:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0005",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0006:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0006",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0007:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0007",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0008:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0008",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0009:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0009",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0010:ci-carbon-concept-ionic-vs-covalent-conductivity",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0010",
+      "to_id": "kg:cbse10:sci:carbon:concept:ionic-vs-covalent-conductivity",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0011:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0011",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0012:bse10-sci-carbon-concept-catenation-tetravalency",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0012",
+      "to_id": "kg:cbse10:sci:carbon:concept:catenation-tetravalency",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0012:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0012",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0013:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0013",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0013:kg-cbse10-sci-carbon-concept-soap-micelle",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0013",
+      "to_id": "kg:cbse10:sci:carbon:concept:soap-micelle",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0014:cbse10-sci-carbon-concept-hydrocarbon-definition",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0014",
+      "to_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0014:kg-cbse10-sci-carbon-concept-isomerism",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0014",
+      "to_id": "kg:cbse10:sci:carbon:concept:isomerism",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0015:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0015",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0016:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0016",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0017:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0017",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0018:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0018",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0019:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0019",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0020:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0020",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0021:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0021",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0022:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0022",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0023:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0023",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0024:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0024",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0025:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0025",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0026:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0026",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0027:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0027",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0028:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0028",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0029:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0029",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0030:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0030",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0031:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0031",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0032:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0032",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0033:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0033",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0034:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0034",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0035:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0035",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0036:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0036",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0037:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0037",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0038:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0038",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0039:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0039",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0040:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0040",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0041:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0041",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0042:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0042",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0043:ci-carbon-concept-ionic-vs-covalent-conductivity",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0043",
+      "to_id": "kg:cbse10:sci:carbon:concept:ionic-vs-covalent-conductivity",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0044:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0044",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0045:bse10-sci-carbon-concept-catenation-tetravalency",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0045",
+      "to_id": "kg:cbse10:sci:carbon:concept:catenation-tetravalency",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0046:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0046",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0046:kg-cbse10-sci-carbon-concept-soap-micelle",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0046",
+      "to_id": "kg:cbse10:sci:carbon:concept:soap-micelle",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0047:cbse10-sci-carbon-concept-hydrocarbon-definition",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0047",
+      "to_id": "kg:cbse10:sci:carbon:concept:hydrocarbon-definition",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0047:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0047",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0047:kg-cbse10-sci-carbon-concept-isomerism",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0047",
+      "to_id": "kg:cbse10:sci:carbon:concept:isomerism",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0048:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0048",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0049:kg-cbse10-sci-carbon-concept-saponification",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0049",
+      "to_id": "kg:cbse10:sci:carbon:concept:saponification",
+      "metadata": {}
+    },
+    {
+      "id": "kg-edge:misconception_of:sci-carbon-misconception-thr-vol-sci-carbon-0050:kg-cbse10-sci-carbon-concept-covalent-bonding",
+      "type": "misconception_of",
+      "from_id": "kg:cbse10:sci:carbon:misconception:thr-vol-sci-carbon-0050",
+      "to_id": "kg:cbse10:sci:carbon:concept:covalent-bonding",
+      "metadata": {}
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "topic": 4,
+    "concept": 11,
+    "learning_objective": 11,
+    "glossary_term": 4,
+    "reaction": 1,
+    "example": 1,
+    "transcript_beat": 10,
+    "exercise": 19,
+    "misconception": 59,
+    "edges": 170
+  }
+}

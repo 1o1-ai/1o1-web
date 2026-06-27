@@ -1,0 +1,20 @@
+{
+  "schema_version": "education_provenance_v2",
+  "sku": "rhytoma-wbbse",
+  "built_at": "2026-06-26T16:11:28.062651+00:00",
+  "count": 2,
+  "answers": [
+    {
+      "question_id": "rw_q1",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] Ohm's law"
+    },
+    {
+      "question_id": "rw_q2",
+      "answer_for": "synthetic",
+      "answer_origin": "synthetic",
+      "text": "[AI Generated] 2 and 3"
+    }
+  ]
+}

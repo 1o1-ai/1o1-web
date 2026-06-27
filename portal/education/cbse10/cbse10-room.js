@@ -13,6 +13,8 @@
   let curriculum = null;
 
   let masterQuestions = [];
+  let syntheticQuestions = [];
+  let advancedQuestions = [];
 
   let subject = '';
 
@@ -84,17 +86,25 @@
 
     window.CBSE10Shared.loadMasterCatalog(),
 
+    window.CBSE10Shared.loadSyntheticBank(),
+
+    window.CBSE10Shared.loadAdvancedComplexityBank(),
+
     window.CBSE10StudyMaterial.load().catch(() => null),
 
     window.AnyoBots.loadRoster(),
 
     window.AnyoReferenceAnswer?.loadOverrides?.() || Promise.resolve(),
 
-  ]).then(([cur, master, _study, roster]) => {
+  ]).then(([cur, master, synthetic, advanced, _study, roster]) => {
 
     curriculum = cur;
 
     masterQuestions = master?.questions || [];
+
+    syntheticQuestions = synthetic || [];
+
+    advancedQuestions = advanced || [];
 
     renderStudents(roster?.students || [], 'studentsRoster');
 
@@ -354,7 +364,8 @@
 
       btn.className = 'sr-chapter-pick';
 
-      btn.innerHTML = `<span class="sr-ch-num">${ch.syllabus_order || ''}</span><span class="sr-ch-title">${ch.title}</span><span class="sr-ch-count">${official} board · ${explore} explore</span>`;
+      const total = official + explore;
+      btn.innerHTML = `<span class="sr-ch-num">${ch.syllabus_order || ''}</span><span class="sr-ch-title">${ch.title}</span><span class="sr-ch-count">${total} questions</span>`;
 
       btn.addEventListener('click', () => {
 
@@ -426,19 +437,18 @@
 
     const difficulty = document.getElementById('difficultySelect')?.value || 'all';
 
-    return window.CBSE10Shared.filterMasterQuestions(masterQuestions, {
-
+    const base = {
       subject,
-
       chapter: chapterId,
-
       mode,
-
       difficulty: difficulty === 'all' ? undefined : difficulty,
-
       limit: 50,
-
-    }).map(window.CBSE10Shared.toDisplayQ);
+    };
+    let pool = window.CBSE10Shared.filterMasterQuestions(masterQuestions, base);
+    if (!pool.length && base.difficulty) {
+      pool = window.CBSE10Shared.filterMasterQuestions(masterQuestions, { ...base, difficulty: undefined });
+    }
+    return pool.map(window.CBSE10Shared.toDisplayQ);
 
   }
 
@@ -505,7 +515,7 @@
 
       chapterTitle,
 
-      initialTab: initialTab === 'random' ? 'quiz' : initialTab || 'regular',
+      initialTab: initialTab || 'regular',
 
       showPhase,
 
@@ -515,18 +525,40 @@
       filterQuestions: ({ difficulty, limit, chapterIds }) => {
         const ids = chapterIds?.length ? chapterIds : [chapterId];
         const out = [];
+        const isComplex = difficulty === 'difficult' || difficulty === 'hard' || difficulty === 'advanced';
+        const banks = isComplex
+          ? [
+              { rows: advancedQuestions, mode: 'advanced' },
+              { rows: syntheticQuestions, mode: 'ai' },
+              { rows: masterQuestions, mode: 'ai' },
+            ]
+          : [
+              { rows: syntheticQuestions, mode: 'ai' },
+              { rows: masterQuestions, mode: 'cbse' },
+              { rows: masterQuestions, mode: 'ai' },
+            ];
         ids.forEach((ch) => {
-          window.CBSE10Shared.filterMasterQuestions(masterQuestions, {
-            subject,
-            chapter: ch,
-            mode: 'cbse',
-            difficulty,
-            limit: limit || 6,
-          })
-            .map(window.CBSE10Shared.toDisplayQ)
-            .forEach((q) => out.push(q));
+          banks.forEach(({ rows, mode }) => {
+            window.CBSE10Shared.filterMasterQuestions(rows, {
+              subject,
+              chapter: ch,
+              mode,
+              difficulty,
+              limit: limit || 6,
+            })
+              .map(window.CBSE10Shared.toDisplayQ)
+              .forEach((q) => out.push(q));
+          });
         });
-        return out.slice(0, (limit || 6) * ids.length);
+        const seen = new Set();
+        const deduped = [];
+        out.forEach((q) => {
+          const key = String(q.id || q.prompt || '');
+          if (seen.has(key)) return;
+          seen.add(key);
+          deduped.push(q);
+        });
+        return window.CBSE10Shared.shuffleArray(deduped).slice(0, (limit || 6) * ids.length);
       },
 
       onBeforePractice: () => {
@@ -617,7 +649,7 @@
 
     if (!questionQueue.length) {
 
-      appendChatLine('system', 'No valid questions for this chapter and source. Try AI-generated or another difficulty.');
+      appendChatLine('system', 'No valid questions for this chapter. Try another difficulty or refresh the queue.');
 
     } else {
 
@@ -786,8 +818,7 @@
 
 
   const AI_ANSWER_DISCLAIMER =
-
-    'Computer-generated reference answer — not official CBSE marking. Verify with your NCERT textbook and teacher before relying on this.';
+    'Reference answer — cross-check with your textbook and teacher before relying on this.';
 
 
 
@@ -1022,7 +1053,7 @@
 
     card.dataset.qIndex = String(queueIndex);
 
-    card.innerHTML = `<p class="sr-q-meta">Question ${queueIndex + 1} of ${questionQueue.length} · ${q.type || 'Question'} · ${q.marks || '?'} mark(s)${q.exam_year ? ' · ' + q.exam_year : ''}${q.source_kind === 'pdf_catalog' ? ' · board' : ''}</p>
+    card.innerHTML = `<p class="sr-q-meta">Question ${queueIndex + 1} of ${questionQueue.length} · ${q.type || 'Question'} · ${q.marks || '?'} mark(s)${q.exam_year ? ' · ' + q.exam_year : ''}</p>
 
       <div class="sr-q-diagram"></div>
 

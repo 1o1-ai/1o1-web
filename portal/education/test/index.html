@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education API Test Hub · Brahmando</title>
+  <link rel="stylesheet" href="../../assets/portal.css" />
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 920px; margin: 0 auto; padding: 24px 16px 64px; }
+    .gate, .card { background: #1e293b; border: 1px solid rgba(148,163,184,.2); border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+    .hidden { display: none !important; }
+    input, select { width: 100%; padding: 10px; margin: 6px 0 12px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: #f1f5f9; }
+    button { background: #0d9488; color: #fff; border: none; border-radius: 8px; padding: 10px 16px; cursor: pointer; font-weight: 600; }
+    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+    a.tile { display: block; padding: 14px; border-radius: 10px; background: #0f172a; border: 1px solid #334155; color: #e2e8f0; text-decoration: none; }
+    a.tile:hover { border-color: #2dd4bf; }
+    .muted { color: #94a3b8; font-size: 0.88rem; }
+    .err { color: #f87171; }
+  </style>
+</head>
+<body>
+  <div id="loginGate" class="gate">
+    <h1>Education API Test Hub</h1>
+    <p class="muted">Sign in to open per-SKU mock API test pages (yoga / yoga).</p>
+    <label>Username</label>
+    <input id="loginUser" type="text" autocomplete="username" />
+    <label>Password</label>
+    <input id="loginPass" type="password" autocomplete="current-password" />
+    <button type="button" id="btnLogin">Sign in</button>
+    <p id="loginErr" class="err"></p>
+  </div>
+
+  <div id="app" class="hidden">
+    <h1>Education API Test Hub</h1>
+    <p class="muted">Signed in as <strong id="signedInAs">Yoga</strong> · <a href="../index.html">← Education home</a></p>
+
+    <div class="card">
+      <h2 style="font-size:1rem;margin-bottom:10px">Production-ready</h2>
+      <div class="grid">
+        <a class="tile" href="https://api.brahmando.com/education/abhyas/client/guideline-mock-live.html">
+          <strong>CBSE 10 · Guideline mock (live)</strong>
+          <span class="muted">Full 80-mark · Mix / Official / AI</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size:1rem;margin-bottom:10px">All microservices · gap + bank-sample mock</h2>
+      <div class="grid" id="skuGrid"></div>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size:1rem;margin-bottom:10px">Gap analysis document</h2>
+      <p class="muted"><a href="https://github.com/Brahmando-ai/Brahmando/blob/main/docs/phase2/EDUCATION_DATA_GAP_ANALYSIS.md">EDUCATION_DATA_GAP_ANALYSIS.md</a> (GitHub)</p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var AUTH = 'edu_test_hub_v1';
+      var USER = { yoga: { pass: 'yoga', label: 'Yoga', token: 'abhyas-test-token-sangati-2026' } };
+      var SKUS = [
+        { id: 'cbse10-core', name: 'CBSE 10 Core', note: 'Use guideline-mock-live for full paper' },
+        { id: 'cbse12-science', name: 'CBSE XII Science', note: 'Bank sample · 8668 legacy rows' },
+        { id: 'sat-act', name: 'SAT / ACT', note: 'ACT English heavy · SAT gaps' },
+        { id: 'gre-gmat', name: 'GRE / GMAT', note: 'Synthetic placeholders' },
+        { id: 'english-tests', name: 'TOEFL · IELTS · DET', note: 'DET official sparse' },
+        { id: 'rhytoma-wbbse', name: 'Rhytoma WBBSE', note: 'Demo only' },
+      ];
+
+      function show(on) {
+        document.getElementById('loginGate').classList.toggle('hidden', !on);
+        document.getElementById('app').classList.toggle('hidden', on);
+      }
+
+      document.getElementById('btnLogin').onclick = function () {
+        var u = (document.getElementById('loginUser').value || '').trim().toLowerCase();
+        var acc = USER[u];
+        if (acc && document.getElementById('loginPass').value === acc.pass) {
+          sessionStorage.setItem(AUTH, u);
+          document.getElementById('signedInAs').textContent = acc.label;
+          document.getElementById('loginErr').textContent = '';
+          show(false);
+        } else {
+          document.getElementById('loginErr').textContent = 'Invalid username or password.';
+        }
+      };
+
+      if (sessionStorage.getItem(AUTH) === 'yoga') {
+        document.getElementById('signedInAs').textContent = 'Yoga';
+        show(false);
+      }
+
+      var grid = document.getElementById('skuGrid');
+      SKUS.forEach(function (s) {
+        var a = document.createElement('a');
+        a.className = 'tile';
+        a.href = 'mock-api.html?sku=' + encodeURIComponent(s.id);
+        a.innerHTML = '<strong>' + s.name + '</strong><br><span class="muted">' + s.note + '</span>';
+        grid.appendChild(a);
+      });
+    })();
+  </script>
+</body>
+</html>

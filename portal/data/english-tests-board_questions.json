@@ -1,0 +1,127 @@
+{
+  "schema_version": "education_provenance_v2",
+  "sku": "english-tests",
+  "built_at": "2026-06-26T16:11:27.429152+00:00",
+  "count": 7,
+  "questions": [
+    {
+      "id": "toefl-q-16",
+      "track": "toefl",
+      "section": "reading",
+      "chapter": "toefl-rdg",
+      "question": "What is the passage mainly about?",
+      "options": [
+        "Stages of early childhood development",
+        "Research on animal cognition",
+        "Differences between apes, elephants, and dolphins",
+        "Recent experiments on fish"
+      ],
+      "answer_verified": true,
+      "source": "ETS Practice Test 1 PDF",
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "toefl-q-17",
+      "track": "toefl",
+      "section": "reading",
+      "chapter": "toefl-rdg",
+      "question": "The word “milestone” in the first sentence is closest in meaning to?",
+      "options": [
+        "accomplishment",
+        "distance",
+        "weight",
+        "discovery"
+      ],
+      "answer_verified": true,
+      "source": "ETS Practice Test 1 PDF",
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "toefl-q-18",
+      "track": "toefl",
+      "section": "reading",
+      "chapter": "toefl-rdg",
+      "question": "Why did scientists put colored marks on animals’ bodies?",
+      "options": [
+        "It made it possible to track the animals’ movements.",
+        "It helped them determine whether the animals recognized themselves.",
+        "It made it easier to tell the animals apart.",
+        "It showed whether some animals can detect color differences."
+      ],
+      "answer_verified": true,
+      "source": "ETS Practice Test 1 PDF",
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "toefl-q-19",
+      "track": "toefl",
+      "section": "reading",
+      "chapter": "toefl-rdg",
+      "question": "According to the passage, all of the following are true about elephants EXCEPT:?",
+      "options": [
+        "They can recognize themselves in mirrors.",
+        "They are highly intelligent animals.",
+        "They possess qualities in common with apes.",
+        "They understand certain signs from other animals."
+      ],
+      "answer_verified": true,
+      "source": "ETS Practice Test 1 PDF",
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "toefl-q-20",
+      "track": "toefl",
+      "section": "reading",
+      "chapter": "toefl-rdg",
+      "question": "Why does the author mention cleaner fish?",
+      "options": [
+        "To suggest that a wide range of animals may possess self-awareness",
+        "To imply that ocean animals are highly intelligent",
+        "To demonstrate a flaw in a recent experiment",
+        "To provide an example of an animal that does not recognize itself"
+      ],
+      "answer_verified": true,
+      "source": "ETS Practice Test 1 PDF",
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "toefl-q-9",
+      "track": "toefl",
+      "section": "listening",
+      "chapter": "toefl-lis",
+      "question": "What does the woman imply that she was about to do?",
+      "options": [
+        "See a play",
+        "Change her clothes",
+        "Go shopping",
+        "Eat dinner"
+      ],
+      "answer_verified": true,
+      "source": "ETS Practice Test 1 PDF",
+      "question_provenance": "board_official",
+      "previously_asked": true
+    },
+    {
+      "id": "toefl-q-10",
+      "track": "toefl",
+      "section": "listening",
+      "chapter": "toefl-lis",
+      "question": "Why does the man say “I’d forget my head if it wasn’t screwed on”?",
+      "options": [
+        "He forgot what the woman wanted him to buy.",
+        "He forgot about the timing of their plans.",
+        "He forgot what they were going to eat for dinner.",
+        "He forgot to buy salmon and salad at the supermarket."
+      ],
+      "answer_verified": true,
+      "source": "ETS Practice Test 1 PDF",
+      "question_provenance": "board_official",
+      "previously_asked": true
+    }
+  ]
+}

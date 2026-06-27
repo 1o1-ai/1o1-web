@@ -1,0 +1,944 @@
+{
+  "schema_version": "education_provenance_v2",
+  "sku": "english-tests",
+  "built_at": "2026-06-26T16:11:27.429152+00:00",
+  "count": 36,
+  "questions": [
+    {
+      "id": "c95595e6a1d08654",
+      "track": "toefl",
+      "section": "listening",
+      "chapter": "toefl-lis",
+      "question": "Which learning objective best matches TOEFL Listening Section?",
+      "options": [
+        "Learn concept details of TOEFL Listening Section Focus Topic 13",
+        "Learn concept details of TOEFL Listening Section Focus Topic 01",
+        "Learn concept details of TOEFL Reading Section Focus Topic 16",
+        "Learn concept details of IELTS Writing Tasks Focus Topic 34"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.LIS.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "4643a8fc7a1cddbf",
+      "track": "toefl",
+      "section": "listening",
+      "chapter": "toefl-lis",
+      "question": "Which is a common mistake students make on TOEFL Listening Section?",
+      "options": [
+        "Common error in IELTS Speaking Interview Focus Topic 36",
+        "Common error in Duolingo Comprehension Skills Focus Topic 31",
+        "Common error in TOEFL Listening Section Focus Topic 01",
+        "Common error in TOEFL Speaking Section Focus Topic 18"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.LIS.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "843e1c3efc298129",
+      "track": "toefl",
+      "section": "listening",
+      "chapter": "toefl-lis",
+      "question": "What is the recommended first difficulty level when practicing TOEFL Listening Section?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.LIS.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "a16ec6ffd05c388c",
+      "track": "toefl",
+      "section": "reading",
+      "chapter": "toefl-rdg",
+      "question": "Which learning objective best matches TOEFL Reading Section?",
+      "options": [
+        "Learn concept details of Duolingo Conversation Skills Focus Topic 13",
+        "Learn concept details of Duolingo Production Skills Focus Topic 29",
+        "Learn concept details of TOEFL Reading Section Focus Topic 01",
+        "Learn concept details of IELTS Academic Listening Focus Topic 05"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.RDG.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "87e38d07adadd007",
+      "track": "toefl",
+      "section": "reading",
+      "chapter": "toefl-rdg",
+      "question": "Which is a common mistake students make on TOEFL Reading Section?",
+      "options": [
+        "Common error in TOEFL Reading Section Focus Topic 01",
+        "Common error in IELTS Writing Tasks Focus Topic 28",
+        "Common error in Duolingo Literacy Skills Focus Topic 05",
+        "Common error in IELTS Writing Tasks Focus Topic 23"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.RDG.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "e29f757056cc3582",
+      "track": "toefl",
+      "section": "reading",
+      "chapter": "toefl-rdg",
+      "question": "What is the recommended first difficulty level when practicing TOEFL Reading Section?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.RDG.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "d380e461148645c1",
+      "track": "toefl",
+      "section": "speaking",
+      "chapter": "toefl-spk",
+      "question": "Which learning objective best matches TOEFL Speaking Section?",
+      "options": [
+        "Learn concept details of Duolingo Literacy Skills Focus Topic 08",
+        "Learn concept details of TOEFL Speaking Section Focus Topic 01",
+        "Learn concept details of IELTS Writing Tasks Focus Topic 32",
+        "Learn concept details of IELTS Academic Listening Focus Topic 19"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.SPK.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "26896f2191ce77c7",
+      "track": "toefl",
+      "section": "speaking",
+      "chapter": "toefl-spk",
+      "question": "Which is a common mistake students make on TOEFL Speaking Section?",
+      "options": [
+        "Common error in Duolingo Literacy Skills Focus Topic 12",
+        "Common error in Duolingo Comprehension Skills Focus Topic 15",
+        "Common error in TOEFL Speaking Section Focus Topic 01",
+        "Common error in TOEFL Writing Section Focus Topic 41"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.SPK.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "027c7e2158bb407e",
+      "track": "toefl",
+      "section": "speaking",
+      "chapter": "toefl-spk",
+      "question": "What is the recommended first difficulty level when practicing TOEFL Speaking Section?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.SPK.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "27927e5b08ff8c1a",
+      "track": "toefl",
+      "section": "writing",
+      "chapter": "toefl-wrt",
+      "question": "Which learning objective best matches TOEFL Writing Section?",
+      "options": [
+        "Learn concept details of Duolingo Literacy Skills Focus Topic 33",
+        "Learn concept details of Duolingo Production Skills Focus Topic 07",
+        "Learn concept details of TOEFL Writing Section Focus Topic 01",
+        "Learn concept details of IELTS Academic Listening Focus Topic 35"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.WRT.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "f19197783246714b",
+      "track": "toefl",
+      "section": "writing",
+      "chapter": "toefl-wrt",
+      "question": "Which is a common mistake students make on TOEFL Writing Section?",
+      "options": [
+        "Common error in TOEFL Reading Section Focus Topic 05",
+        "Common error in TOEFL Listening Section Focus Topic 25",
+        "Common error in Duolingo Conversation Skills Focus Topic 09",
+        "Common error in TOEFL Writing Section Focus Topic 01"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.WRT.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "17c2c0a1bae2bed3",
+      "track": "toefl",
+      "section": "writing",
+      "chapter": "toefl-wrt",
+      "question": "What is the recommended first difficulty level when practicing TOEFL Writing Section?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:TOEFL.WRT.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "eb00cdcf357a1cec",
+      "track": "ielts",
+      "section": "listening",
+      "chapter": "ielts-lis",
+      "question": "Which learning objective best matches IELTS Academic Listening?",
+      "options": [
+        "Learn concept details of IELTS Speaking Interview Focus Topic 23",
+        "Learn concept details of IELTS Academic Listening Focus Topic 01",
+        "Learn concept details of Duolingo Literacy Skills Focus Topic 34",
+        "Learn concept details of Duolingo Comprehension Skills Focus Topic 14"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.LIS.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "25edde7ae4e22836",
+      "track": "ielts",
+      "section": "listening",
+      "chapter": "ielts-lis",
+      "question": "Which is a common mistake students make on IELTS Academic Listening?",
+      "options": [
+        "Common error in TOEFL Writing Section Focus Topic 27",
+        "Common error in IELTS Academic Listening Focus Topic 01",
+        "Common error in Duolingo Literacy Skills Focus Topic 26",
+        "Common error in IELTS Writing Tasks Focus Topic 27"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.LIS.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "c19a61a059c553af",
+      "track": "ielts",
+      "section": "listening",
+      "chapter": "ielts-lis",
+      "question": "What is the recommended first difficulty level when practicing IELTS Academic Listening?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.LIS.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "809d0b8aa6b8bb9d",
+      "track": "ielts",
+      "section": "reading",
+      "chapter": "ielts-rdg",
+      "question": "Which learning objective best matches IELTS Academic Reading?",
+      "options": [
+        "Learn concept details of Duolingo Production Skills Focus Topic 14",
+        "Learn concept details of IELTS Academic Listening Focus Topic 18",
+        "Learn concept details of IELTS Academic Reading Focus Topic 01",
+        "Learn concept details of TOEFL Reading Section Focus Topic 16"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.RDG.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "0c6cd3873f318ea5",
+      "track": "ielts",
+      "section": "reading",
+      "chapter": "ielts-rdg",
+      "question": "Which is a common mistake students make on IELTS Academic Reading?",
+      "options": [
+        "Common error in IELTS Academic Reading Focus Topic 01",
+        "Common error in TOEFL Speaking Section Focus Topic 01",
+        "Common error in Duolingo Production Skills Focus Topic 23",
+        "Common error in IELTS Speaking Interview Focus Topic 30"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.RDG.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "89f49fa261fc480e",
+      "track": "ielts",
+      "section": "reading",
+      "chapter": "ielts-rdg",
+      "question": "What is the recommended first difficulty level when practicing IELTS Academic Reading?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.RDG.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "4aaac72ebe6c21e9",
+      "track": "ielts",
+      "section": "speaking",
+      "chapter": "ielts-spk",
+      "question": "Which learning objective best matches IELTS Speaking Interview?",
+      "options": [
+        "Learn concept details of TOEFL Reading Section Focus Topic 20",
+        "Learn concept details of TOEFL Speaking Section Focus Topic 32",
+        "Learn concept details of TOEFL Writing Section Focus Topic 01",
+        "Learn concept details of IELTS Speaking Interview Focus Topic 01"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.SPK.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "4cb0fe87b78feaca",
+      "track": "ielts",
+      "section": "speaking",
+      "chapter": "ielts-spk",
+      "question": "Which is a common mistake students make on IELTS Speaking Interview?",
+      "options": [
+        "Common error in IELTS Speaking Interview Focus Topic 01",
+        "Common error in Duolingo Comprehension Skills Focus Topic 07",
+        "Common error in TOEFL Writing Section Focus Topic 17",
+        "Common error in IELTS Academic Reading Focus Topic 39"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.SPK.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "3ac76372592e3d42",
+      "track": "ielts",
+      "section": "speaking",
+      "chapter": "ielts-spk",
+      "question": "What is the recommended first difficulty level when practicing IELTS Speaking Interview?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.SPK.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "c8af1e57a7692d2c",
+      "track": "ielts",
+      "section": "writing",
+      "chapter": "ielts-wrt",
+      "question": "Which learning objective best matches IELTS Writing Tasks?",
+      "options": [
+        "Learn concept details of IELTS Academic Reading Focus Topic 30",
+        "Learn concept details of IELTS Academic Reading Focus Topic 01",
+        "Learn concept details of IELTS Writing Tasks Focus Topic 01",
+        "Learn concept details of Duolingo Literacy Skills Focus Topic 23"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.WRT.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "b7d4f807e0694389",
+      "track": "ielts",
+      "section": "writing",
+      "chapter": "ielts-wrt",
+      "question": "Which is a common mistake students make on IELTS Writing Tasks?",
+      "options": [
+        "Common error in TOEFL Writing Section Focus Topic 17",
+        "Common error in IELTS Academic Reading Focus Topic 27",
+        "Common error in IELTS Writing Tasks Focus Topic 01",
+        "Common error in TOEFL Speaking Section Focus Topic 10"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.WRT.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "319cf652d8cdf3be",
+      "track": "ielts",
+      "section": "writing",
+      "chapter": "ielts-wrt",
+      "question": "What is the recommended first difficulty level when practicing IELTS Writing Tasks?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:IELTS.WRT.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "f3e3fd8c5ed26f0d",
+      "track": "det",
+      "section": "comprehension",
+      "chapter": "det-cmp",
+      "question": "Which learning objective best matches Duolingo Comprehension Skills?",
+      "options": [
+        "Learn concept details of IELTS Academic Reading Focus Topic 39",
+        "Learn concept details of IELTS Academic Reading Focus Topic 37",
+        "Learn concept details of Duolingo Comprehension Skills Focus Topic 01",
+        "Learn concept details of TOEFL Speaking Section Focus Topic 26"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.CMP.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "0a5672e1586a0f44",
+      "track": "det",
+      "section": "comprehension",
+      "chapter": "det-cmp",
+      "question": "Which is a common mistake students make on Duolingo Comprehension Skills?",
+      "options": [
+        "Common error in TOEFL Writing Section Focus Topic 26",
+        "Common error in TOEFL Speaking Section Focus Topic 28",
+        "Common error in Duolingo Production Skills Focus Topic 34",
+        "Common error in Duolingo Comprehension Skills Focus Topic 01"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.CMP.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "140a4d0656fc39ca",
+      "track": "det",
+      "section": "comprehension",
+      "chapter": "det-cmp",
+      "question": "What is the recommended first difficulty level when practicing Duolingo Comprehension Skills?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.CMP.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "365566c296d29852",
+      "track": "det",
+      "section": "conversation",
+      "chapter": "det-con",
+      "question": "Which learning objective best matches Duolingo Conversation Skills?",
+      "options": [
+        "Learn concept details of Duolingo Comprehension Skills Focus Topic 10",
+        "Learn concept details of Duolingo Conversation Skills Focus Topic 01",
+        "Learn concept details of IELTS Writing Tasks Focus Topic 11",
+        "Learn concept details of TOEFL Listening Section Focus Topic 35"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.CON.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "1fb89af190ae4a2c",
+      "track": "det",
+      "section": "conversation",
+      "chapter": "det-con",
+      "question": "Which is a common mistake students make on Duolingo Conversation Skills?",
+      "options": [
+        "Common error in Duolingo Comprehension Skills Focus Topic 07",
+        "Common error in TOEFL Writing Section Focus Topic 35",
+        "Common error in Duolingo Comprehension Skills Focus Topic 31",
+        "Common error in Duolingo Conversation Skills Focus Topic 01"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.CON.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "adeac642de45afd3",
+      "track": "det",
+      "section": "conversation",
+      "chapter": "det-con",
+      "question": "What is the recommended first difficulty level when practicing Duolingo Conversation Skills?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.CON.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "b40d35c9175146a0",
+      "track": "det",
+      "section": "literacy",
+      "chapter": "det-lit",
+      "question": "Which learning objective best matches Duolingo Literacy Skills?",
+      "options": [
+        "Learn concept details of TOEFL Reading Section Focus Topic 26",
+        "Learn concept details of IELTS Speaking Interview Focus Topic 08",
+        "Learn concept details of TOEFL Writing Section Focus Topic 10",
+        "Learn concept details of Duolingo Literacy Skills Focus Topic 01"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.LIT.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "648e3ab08baa0f4d",
+      "track": "det",
+      "section": "literacy",
+      "chapter": "det-lit",
+      "question": "Which is a common mistake students make on Duolingo Literacy Skills?",
+      "options": [
+        "Common error in Duolingo Literacy Skills Focus Topic 01",
+        "Common error in Duolingo Production Skills Focus Topic 16",
+        "Common error in TOEFL Reading Section Focus Topic 12",
+        "Common error in Duolingo Comprehension Skills Focus Topic 04"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.LIT.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "dab2eefcc5327a66",
+      "track": "det",
+      "section": "literacy",
+      "chapter": "det-lit",
+      "question": "What is the recommended first difficulty level when practicing Duolingo Literacy Skills?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.LIT.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "7b9584dbedb28d91",
+      "track": "det",
+      "section": "production",
+      "chapter": "det-prd",
+      "question": "Which learning objective best matches Duolingo Production Skills?",
+      "options": [
+        "Learn concept details of Duolingo Production Skills Focus Topic 01",
+        "Learn concept details of TOEFL Writing Section Focus Topic 03",
+        "Learn concept details of Duolingo Production Skills Focus Topic 02",
+        "Learn concept details of Duolingo Production Skills Focus Topic 03"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.PRD.T01",
+      "tags": [
+        "learning-objective"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "045a493771f78361",
+      "track": "det",
+      "section": "production",
+      "chapter": "det-prd",
+      "question": "Which is a common mistake students make on Duolingo Production Skills?",
+      "options": [
+        "Common error in TOEFL Reading Section Focus Topic 16",
+        "Common error in IELTS Speaking Interview Focus Topic 36",
+        "Common error in Duolingo Production Skills Focus Topic 01",
+        "Common error in TOEFL Listening Section Focus Topic 05"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.PRD.T01",
+      "tags": [
+        "common-error"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    },
+    {
+      "id": "c4624cf78c704bf4",
+      "track": "det",
+      "section": "production",
+      "chapter": "det-prd",
+      "question": "What is the recommended first difficulty level when practicing Duolingo Production Skills?",
+      "options": [
+        "Easy",
+        "Medium",
+        "Hard",
+        "Expert"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_verified": true,
+      "source": "topic:DET.PRD.T01",
+      "tags": [
+        "difficulty"
+      ],
+      "question_provenance": "synthetic",
+      "ai_generated": true
+    }
+  ]
+}

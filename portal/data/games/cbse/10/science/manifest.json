@@ -1,0 +1,24 @@
+{
+  "version": "2026.06.27",
+  "built_at": "2026-06-27T03:32:49.721810+00:00",
+  "total_items": 400,
+  "deduplicated": 34,
+  "by_generator": {
+    "assertion_reason": 17,
+    "case_study": 15,
+    "classification": 11,
+    "compare_concepts": 8,
+    "competency": 11,
+    "concept_recall": 188,
+    "definition_match": 22,
+    "diagram_label": 1,
+    "exercise_objective": 16,
+    "formula_recognition": 3,
+    "glossary_mcq": 44,
+    "odd_one_out": 8,
+    "pyq_variation": 45,
+    "topic_concept": 11
+  },
+  "avg_quality_score": 0.9536,
+  "items_file": "carbon.jsonl"
+}

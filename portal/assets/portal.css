@@ -925,6 +925,21 @@ button.portal:disabled:hover {
   margin: 0 auto;
 }
 
+.cbse10-hub-game-row {
+  display: flex;
+  justify-content: center;
+  margin: 8px auto 0;
+  max-width: 920px;
+}
+
+.portal--game-room .portal-ring {
+  border-color: rgba(168, 85, 247, 0.45);
+}
+
+.portal--game-room .portal-core {
+  background: radial-gradient(circle at 30% 30%, rgba(168, 85, 247, 0.35), rgba(15, 23, 42, 0.9));
+}
+
 /* Practice */
 .practice-card {
   background: rgba(15, 23, 42, 0.65);

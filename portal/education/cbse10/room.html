@@ -9,10 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../../assets/theme.css" />
   <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="../../assets/education-layout.css" />
   <link rel="stylesheet" href="cbse10-study-room.css" />
-  <link rel="stylesheet" href="../../assets/cbse-official-books.css?v=2" />
+  <link rel="stylesheet" href="../../assets/cbse-official-books.css?v=3" />
 </head>
-<body class="portal-page study-room-page student-ambience" data-sr-baseline="2026-06-22">
+<body class="portal-page study-room-page student-ambience education-compact education-ambient" data-sr-baseline="2026-06-22">
   <canvas id="cosmos" aria-hidden="true"></canvas>
   <div class="mesh" aria-hidden="true"></div>
   <div class="lamp-glow" aria-hidden="true"></div>
@@ -91,7 +92,7 @@
         <div class="sr-learn-main">
           <div class="sr-eval-header">
             <h2 id="learnTitle">Chapter</h2>
-            <p id="learnSubtitle" class="sr-chapter-meta">AI study guide · not official CBSE</p>
+            <p id="learnSubtitle" class="sr-chapter-meta">Chapter study guide</p>
           </div>
           <div id="learnContent" class="sr-learn-content">
             <p class="sr-eval-hint">Loading study material…</p>
@@ -116,8 +117,8 @@
           </div>
 
           <div class="sr-question-source">
-            <label class="sr-radio"><input type="radio" name="qSource" value="official" checked /> Official CBSE / board questions</label>
-            <label class="sr-radio"><input type="radio" name="qSource" value="ai" /> AI-generated (wider practice)</label>
+            <label class="sr-radio"><input type="radio" name="qSource" value="official" checked /> Board-style questions</label>
+            <label class="sr-radio"><input type="radio" name="qSource" value="ai" /> Extended practice</label>
             <label class="sr-diff-label">Difficulty
               <select id="difficultySelect">
                 <option value="all">All levels</option>
@@ -170,23 +171,23 @@
   </dialog>
 
   <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/education-ambient.js"></script>
   <script src="../../assets/bots.js"></script>
   <script src="../../assets/question-format.js?v=5"></script>
   <script src="../../assets/reference-answer.js?v=2"></script>
   <script src="../../assets/education-perf.js?v=1"></script>
   <script src="../../assets/education-content-cache.js?v=1"></script>
   <script src="../../assets/education-deterministic-grade.js?v=1"></script>
-  <script src="../../assets/cbse10-shared.js"></script>
+  <script src="../../assets/cbse10-shared.js?v=8"></script>
   <script src="../../assets/diagram-vector.js"></script>
   <script src="../../assets/cbse10-eval-store.js"></script>
   <script src="../../assets/cbse10-tutor-api.js?v=7"></script>
-  <script src="../../assets/cbse10-study-material.js?v=5"></script>
-  <script src="../../assets/cbse-hangman-quiz.js"></script>
+  <script src="../../assets/cbse10-study-material.js?v=7"></script>
   <script src="../../assets/cbse-voice-engine.js?v=4"></script>
   <script src="../../assets/cbse-lecture-flow.js?v=2"></script>
-  <script src="../../assets/cbse-official-books.js?v=6"></script>
-  <script src="../../assets/cbse-study-hub.js?v=3"></script>
+  <script src="../../assets/cbse-official-books.js?v=7"></script>
+  <script src="../../assets/cbse-study-hub.js?v=5"></script>
   <script src="../../assets/answer-composer.js"></script>
-  <script src="cbse10-room.js?v=10"></script>
+  <script src="cbse10-room.js?v=11"></script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+{
+  "schema_version": "education_provenance_v2",
+  "sku": "gre-gmat",
+  "built_at": "2026-06-26T16:11:27.412150+00:00",
+  "stats": {
+    "input_rows": 55,
+    "dropped_no_id": 0,
+    "dropped_duplicate": 0,
+    "board": 0,
+    "synthetic": 55,
+    "answers_board": 0,
+    "answers_synthetic": 55
+  },
+  "counts": {
+    "board_questions": 0,
+    "synthetic_questions": 55,
+    "board_question_answers": 0,
+    "synthetic_question_answers": 55
+  },
+  "files": {
+    "board_questions.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\gre_gmat\\board_questions.json",
+    "synthetic_questions.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\gre_gmat\\synthetic_questions.json",
+    "board_question_answers.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\gre_gmat\\board_question_answers.json",
+    "synthetic_question_answers.json": "C:\\Users\\whizy\\source\\repos\\brahmando\\services\\education-portal\\data\\gre_gmat\\synthetic_question_answers.json"
+  },
+  "note": "Board bucket = exam-body official items. All answers are synthetic rationales only (answer_origin=synthetic). Questions never embed reference_answer."
+}
