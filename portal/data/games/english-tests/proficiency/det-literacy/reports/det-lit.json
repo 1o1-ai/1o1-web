@@ -1,0 +1,13 @@
+{
+  "schema_version": "chapter_build_report_v1",
+  "repository_version": "2026.06.27",
+  "sku": "english-tests",
+  "chapter_id": "det-lit",
+  "subject": "det-literacy",
+  "total_items": 3,
+  "mcq_items": 3,
+  "verified_items": 3,
+  "built_at": "2026-06-27T13:19:41.675080+00:00",
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\TOEFL-IELTS-DET",
+  "source_questions_file": "english-tests-questions.json"
+}

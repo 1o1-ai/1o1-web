@@ -664,6 +664,31 @@ button.portal:disabled:hover {
   transform: none;
 }
 
+.portal.is-dormant {
+  cursor: not-allowed;
+  opacity: 0.88;
+}
+.portal.is-dormant:hover {
+  transform: scale(1.02);
+}
+.portal.is-dormant .portal-ring {
+  opacity: 0.72;
+  filter: saturate(0.65);
+}
+.portal-wip-badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fde68a;
+  background: rgba(251, 191, 36, 0.18);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+}
+
 /* Rhytoma stream circles */
 .stream-circle-grid {
   display: flex;

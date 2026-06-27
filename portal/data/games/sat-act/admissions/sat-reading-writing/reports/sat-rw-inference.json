@@ -1,0 +1,13 @@
+{
+  "schema_version": "chapter_build_report_v1",
+  "repository_version": "2026.06.27",
+  "sku": "sat-act",
+  "chapter_id": "sat-rw-inference",
+  "subject": "sat-reading-writing",
+  "total_items": 6,
+  "mcq_items": 6,
+  "verified_items": 6,
+  "built_at": "2026-06-27T13:19:41.535247+00:00",
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\SAT_ACT",
+  "source_questions_file": "sat-act-questions.json"
+}

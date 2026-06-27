@@ -1,0 +1,13 @@
+{
+  "schema_version": "chapter_build_report_v1",
+  "repository_version": "2026.06.27",
+  "sku": "sat-act",
+  "chapter_id": "act-eng-punctuation",
+  "subject": "act-english",
+  "total_items": 4,
+  "mcq_items": 4,
+  "verified_items": 4,
+  "built_at": "2026-06-27T13:19:41.453158+00:00",
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\SAT_ACT",
+  "source_questions_file": "sat-act-questions.json"
+}

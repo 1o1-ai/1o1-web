@@ -1,0 +1,13 @@
+{
+  "schema_version": "chapter_build_report_v1",
+  "repository_version": "2026.06.27",
+  "sku": "gre-gmat",
+  "chapter_id": "gre-vbl-rc",
+  "subject": "gre-verbal",
+  "total_items": 3,
+  "mcq_items": 3,
+  "verified_items": 3,
+  "built_at": "2026-06-27T13:19:41.629597+00:00",
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\GRE_GMAT",
+  "source_questions_file": "gre-gmat-questions.json"
+}

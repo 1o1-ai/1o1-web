@@ -50,15 +50,16 @@
         </div>
       </a>
 
-      <a class="portal portal--rhytoma" href="/portal/education/rhytoma/index.html">
+      <button type="button" class="portal portal--rhytoma is-dormant" data-dormant="true" title="WIP — coming soon" aria-label="Rhytoma Academy — work in progress">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
           <span class="portal-icon" aria-hidden="true">🧪</span>
           <span class="portal-title">Rhytoma Academy</span>
-          <span class="portal-sub">WBBSE/WBCHSE · IX–XII · mock demo</span>
+          <span class="portal-sub">WBBSE/WBCHSE · IX–XII</span>
+          <span class="portal-wip-badge" aria-hidden="true">WIP</span>
         </div>
-      </a>
+      </button>
 
       <a class="portal portal--rhytoma" href="/portal/education/sat-act/index.html">
         <div class="portal-ring"></div>
@@ -104,6 +105,9 @@
   <script src="../assets/portal.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('[data-dormant="true"]').forEach((el) => {
+        el.addEventListener('click', (e) => e.preventDefault());
+      });
       if (window.AnyoPresence) {
         window.AnyoPresence.mountOnlineBadges();
         setInterval(() => window.AnyoPresence.mountOnlineBadges(), 60000);

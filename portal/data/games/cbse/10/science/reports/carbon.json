@@ -1,0 +1,23 @@
+{
+  "sku": "cbse10-core",
+  "subject": "science",
+  "chapter_id": "carbon",
+  "generated": 437,
+  "accepted": 434,
+  "rejected": 3,
+  "rejection_reasons": {
+    "chemistry_invalid": 3
+  },
+  "rejection_labels": {
+    "Chemistry invalid": 3
+  },
+  "coverage": {
+    "application": 14.7,
+    "case_study": 3.5,
+    "competency": 5.1,
+    "conceptual": 34.6,
+    "hots": 15.4,
+    "recall": 26.7
+  },
+  "validator_version": "1.0.0"
+}

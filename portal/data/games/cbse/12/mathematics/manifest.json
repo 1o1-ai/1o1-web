@@ -1,14 +1,26 @@
 {
+  "schema_version": "repository_manifest_v2",
+  "repository_version": "2026.06.27",
   "version": "2026.06.27",
-  "built_at": "2026-06-27T08:46:17.034691+00:00",
+  "built_at": "2026-06-27T13:22:59.176834+00:00",
   "sku": "cbse12-science",
   "curriculum": "cbse",
   "grade": "12",
   "subject": "mathematics",
-  "total_items": 2025,
+  "total_items": 329,
   "verified_items": 0,
-  "mcq_items": 48,
+  "mcq_items": 29,
   "chapters": 13,
+  "chapter_count": 13,
   "source_questions_file": "cbse12-science-questions.json",
-  "knowledge_root": "C:\\Knowledge\\EDUCATION\\CBSE-11-12-SCIENCE\\Question Bank"
+  "legacy_portal_export": "cbse12-science-questions.json",
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\CBSE-11-12-SCIENCE\\Question Bank",
+  "item_format": "jsonl",
+  "layout": {
+    "items": "items/{chapter_id}.jsonl",
+    "kg": "kg/{chapter_id}.json",
+    "reports": "reports/{chapter_id}.json",
+    "analytics": "analytics/",
+    "exports": "exports/"
+  }
 }

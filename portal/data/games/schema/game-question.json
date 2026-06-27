@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://brahmando.local/schemas/game-question/v2",
+  "title": "GameQuestion",
+  "type": "object",
+  "required": [
+    "id",
+    "curriculum",
+    "grade",
+    "subject",
+    "chapter_id",
+    "topic",
+    "concept",
+    "graph_refs",
+    "question_type",
+    "question",
+    "options",
+    "answer",
+    "answer_index",
+    "explanation",
+    "bloom",
+    "learning_objective",
+    "generator",
+    "generator_version",
+    "confidence_score",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+-\\d+-(sci|math)-[a-z0-9-]+-[a-z0-9-]+-(mcq|mcq-multi|tf|match|odd-one-out|classification|sequence|assertion-reason|case-stem|diagram)-\\d{5}$"
+    },
+    "curriculum": {
+      "type": "string",
+      "minLength": 2
+    },
+    "grade": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sku": {
+      "type": "string"
+    },
+    "subject": {
+      "enum": [
+        "science",
+        "mathematics"
+      ]
+    },
+    "chapter_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "topic": {
+      "type": "string"
+    },
+    "concept": {
+      "type": "string"
+    },
+    "graph_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^kg:"
+      }
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "question_type": {
+      "enum": [
+        "mcq_single",
+        "mcq_multi",
+        "true_false",
+        "match",
+        "odd_one_out",
+        "classification",
+        "sequence",
+        "assertion_reason",
+        "case_stem",
+        "diagram_id"
+      ]
+    },
+    "question": {
+      "type": "string",
+      "minLength": 10
+    },
+    "options": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "answer": {
+      "type": "string"
+    },
+    "answer_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 20
+    },
+    "interesting_fact": {
+      "type": "string"
+    },
+    "difficulty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "bloom": {
+      "enum": [
+        "remember",
+        "understand",
+        "apply",
+        "analyze",
+        "evaluate",
+        "create"
+      ]
+    },
+    "competency_band": {
+      "enum": [
+        "recall",
+        "conceptual",
+        "application",
+        "competency",
+        "case_study",
+        "hots"
+      ]
+    },
+    "marks": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "misconception_tested": {
+      "type": "string"
+    },
+    "learning_objective": {
+      "type": "string",
+      "minLength": 5
+    },
+    "learning_outcome": {
+      "type": "string"
+    },
+    "game_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "game_compat": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_modes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source": {
+      "type": "string"
+    },
+    "generator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generator_version": {
+      "type": "string"
+    },
+    "validator_version": {
+      "type": "string"
+    },
+    "confidence_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "status": {
+      "enum": [
+        "generated",
+        "validated",
+        "verified",
+        "rejected"
+      ]
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    }
+  },
+  "additionalProperties": false
+}

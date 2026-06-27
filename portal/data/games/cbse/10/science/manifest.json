@@ -1,6 +1,12 @@
 {
+  "schema_version": "repository_manifest_v2",
+  "repository_version": "2026.06.27",
   "version": "2026.06.27",
-  "built_at": "2026-06-27T08:53:53.970376+00:00",
+  "built_at": "2026-06-27T13:22:59.095033+00:00",
+  "sku": "cbse10-core",
+  "curriculum": "cbse",
+  "grade": "10",
+  "subject": "science",
   "total_items": 400,
   "deduplicated": 34,
   "by_generator": {
@@ -19,6 +25,18 @@
     "pyq_variation": 45,
     "topic_concept": 11
   },
-  "avg_quality_score": 0.9536,
-  "items_file": "carbon.jsonl"
+  "avg_quality_score": 0.9534,
+  "items_file": "carbon.jsonl",
+  "item_format": "jsonl",
+  "layout": {
+    "items": "items/{chapter_id}.jsonl",
+    "kg": "kg/{chapter_id}.json",
+    "reports": "reports/{chapter_id}.json",
+    "analytics": "analytics/",
+    "exports": "exports/"
+  },
+  "verified_items": 0,
+  "mcq_items": 400,
+  "chapters": 1,
+  "chapter_count": 1
 }

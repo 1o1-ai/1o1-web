@@ -1,0 +1,13 @@
+{
+  "schema_version": "chapter_build_report_v1",
+  "repository_version": "2026.06.27",
+  "sku": "rhytoma-wbbse",
+  "chapter_id": "physics",
+  "subject": "science",
+  "total_items": 1,
+  "mcq_items": 1,
+  "verified_items": 1,
+  "built_at": "2026-06-27T13:19:41.808529+00:00",
+  "knowledge_root": "C:\\Knowledge\\Education\\WBEducation",
+  "source_questions_file": "rhytoma-questions.json"
+}

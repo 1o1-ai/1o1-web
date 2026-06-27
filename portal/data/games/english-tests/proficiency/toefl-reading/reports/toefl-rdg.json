@@ -1,0 +1,13 @@
+{
+  "schema_version": "chapter_build_report_v1",
+  "repository_version": "2026.06.27",
+  "sku": "english-tests",
+  "chapter_id": "toefl-rdg",
+  "subject": "toefl-reading",
+  "total_items": 8,
+  "mcq_items": 8,
+  "verified_items": 8,
+  "built_at": "2026-06-27T13:19:41.706932+00:00",
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\TOEFL-IELTS-DET",
+  "source_questions_file": "english-tests-questions.json"
+}

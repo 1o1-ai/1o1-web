@@ -1,0 +1,14 @@
+{
+  "schema_version": "education_repository_v2",
+  "repository_version": "2026.06.27",
+  "sku": "english-tests",
+  "curriculum": "english-tests",
+  "grade": "proficiency",
+  "subject": "ielts-listening",
+  "item_format": "jsonl",
+  "item_schema_id": "game-question-v1",
+  "item_schema_path": "schema/game-question.json",
+  "manifest_schema_version": "repository_manifest_v2",
+  "chapters": 1,
+  "total_items": 3
+}

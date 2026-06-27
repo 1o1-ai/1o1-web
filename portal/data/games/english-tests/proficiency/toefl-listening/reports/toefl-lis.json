@@ -1,0 +1,13 @@
+{
+  "schema_version": "chapter_build_report_v1",
+  "repository_version": "2026.06.27",
+  "sku": "english-tests",
+  "chapter_id": "toefl-lis",
+  "subject": "toefl-listening",
+  "total_items": 5,
+  "mcq_items": 5,
+  "verified_items": 5,
+  "built_at": "2026-06-27T13:19:41.702654+00:00",
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\TOEFL-IELTS-DET",
+  "source_questions_file": "english-tests-questions.json"
+}

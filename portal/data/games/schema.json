@@ -1,0 +1,20 @@
+{
+  "schema_version": "education_repository_v2",
+  "repository_version": "2026.06.27",
+  "item_format": "jsonl",
+  "item_schema_id": "game-question-v1",
+  "item_schema_path": "schema/game-question.json",
+  "layout": {
+    "index": "index.json",
+    "subject_root": "{curriculum}/{grade}/{subject}/",
+    "manifest": "manifest.json",
+    "items": "items/{chapter_id}.jsonl",
+    "knowledge_graph": "kg/{chapter_id}.json",
+    "staging": "staging/{chapter_id}/",
+    "reports": "reports/{chapter_id}.json",
+    "analytics": "analytics/",
+    "exports": "exports/"
+  },
+  "legacy_portal_exports": "portal/data/{sku}-questions.json",
+  "skus_indexed": 6
+}

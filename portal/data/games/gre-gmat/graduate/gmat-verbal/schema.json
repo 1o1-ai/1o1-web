@@ -1,0 +1,14 @@
+{
+  "schema_version": "education_repository_v2",
+  "repository_version": "2026.06.27",
+  "sku": "gre-gmat",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "subject": "gmat-verbal",
+  "item_format": "jsonl",
+  "item_schema_id": "game-question-v1",
+  "item_schema_path": "schema/game-question.json",
+  "manifest_schema_version": "repository_manifest_v2",
+  "chapters": 3,
+  "total_items": 9
+}
