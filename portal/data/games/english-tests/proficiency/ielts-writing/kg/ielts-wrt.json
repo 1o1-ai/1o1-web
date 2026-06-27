@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "english-tests",
+  "grade": "proficiency",
+  "sku": "english-tests",
+  "subject": "ielts-writing",
+  "chapter_id": "ielts-wrt",
+  "title": "IELTS Writing Tasks",
+  "built_at": "2026-06-27T08:46:17.292601+00:00",
+  "nodes": [
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "type": "chapter",
+      "label": "IELTS Writing Tasks",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t01",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 01",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 01",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t01",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 01",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 01.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t02",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 02",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 02",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t02",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 02",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 02.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t03",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 03",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 03",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t03",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 03",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 03.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t04",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 04",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 04",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t04",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 04",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 04.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t05",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 05",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 05",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t05",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 05",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 05.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t06",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 06",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 06",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t06",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 06",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 06.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t07",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 07",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 07",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t07",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 07",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 07.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t08",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 08",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 08",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t08",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 08",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 08.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t09",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 09",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 09",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t09",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 09",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 09.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t10",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 10",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 10",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t10",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 10",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 10.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t11",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 11",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 11",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t11",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 11",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 11.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t12",
+      "type": "concept",
+      "label": "IELTS Writing Tasks Focus Topic 12",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks Focus Topic 12",
+      "metadata": {
+        "skill_id": "IELTS.WRT.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t12",
+      "type": "learning_objective",
+      "label": "IELTS Writing Tasks Focus Topic 12",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of IELTS Writing Tasks Focus Topic 12.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts-wrt-more",
+      "type": "concept",
+      "label": "+ 30 more topics",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "+ 30 more topics",
+      "metadata": {
+        "skill_id": "ielts-wrt-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts-wrt-more",
+      "type": "learning_objective",
+      "label": "+ 30 more topics",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of + 30 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:core-concepts",
+      "type": "concept",
+      "label": "IELTS Writing Tasks",
+      "chapter_id": "ielts-wrt",
+      "subject": "ielts-writing",
+      "sku": "english-tests",
+      "text": "IELTS Writing Tasks",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t01",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t01"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t01",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t01",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t01"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t02",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t02"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t02",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t02",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t02"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t03",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t03"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t03",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t03",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t03"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t04",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t04"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t04",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t04",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t04"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t05",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t05"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t05",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t05",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t05"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t06",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t06"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t06",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t06",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t06"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t07",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t07"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t07",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t07",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t07"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t08",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t08"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t08",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t08",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t08"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t09",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t09"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t09",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t09",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t09"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t10",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t10"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t10",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t10",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t10"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t11",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t11"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t11",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t11",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t11"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts.wrt.t12",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t12"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts.wrt.t12",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts.wrt.t12",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts.wrt.t12"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-ielts-wrt-more",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts-wrt-more"
+    },
+    {
+      "id": "edge-ielts-wrt-teaches-ielts-wrt-more",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:ielts-wrt-more",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:learning_objective:ielts-wrt-more"
+    },
+    {
+      "id": "edge-ielts-wrt-contains-core",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:chapter:ielts-wrt",
+      "to_id": "kg:english-tests:proficiency:ielts-writing:ielts-wrt:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "act-english",
+  "chapter_id": "act-eng-organization",
+  "title": "Organization",
+  "built_at": "2026-06-27T08:46:17.077941+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:act-english:act-eng-organization:chapter:act-eng-organization",
+      "type": "chapter",
+      "label": "Organization",
+      "chapter_id": "act-eng-organization",
+      "subject": "act-english",
+      "sku": "sat-act",
+      "text": "Organization",
+      "metadata": {
+        "unit": "Production of Writing",
+        "unit_id": "act-eng-production",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:act-english:act-eng-organization:concept:act-eng-organization-1",
+      "type": "concept",
+      "label": "Topic development",
+      "chapter_id": "act-eng-organization",
+      "subject": "act-english",
+      "sku": "sat-act",
+      "text": "Topic development",
+      "metadata": {
+        "skill_id": "act-eng-organization-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:act-english:act-eng-organization:learning_objective:act-eng-organization-1",
+      "type": "learning_objective",
+      "label": "Topic development",
+      "chapter_id": "act-eng-organization",
+      "subject": "act-english",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Topic development.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:act-english:act-eng-organization:concept:act-eng-organization-2",
+      "type": "concept",
+      "label": "Paragraph unity",
+      "chapter_id": "act-eng-organization",
+      "subject": "act-english",
+      "sku": "sat-act",
+      "text": "Paragraph unity",
+      "metadata": {
+        "skill_id": "act-eng-organization-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:act-english:act-eng-organization:learning_objective:act-eng-organization-2",
+      "type": "learning_objective",
+      "label": "Paragraph unity",
+      "chapter_id": "act-eng-organization",
+      "subject": "act-english",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Paragraph unity.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:act-english:act-eng-organization:concept:core-concepts",
+      "type": "concept",
+      "label": "Organization",
+      "chapter_id": "act-eng-organization",
+      "subject": "act-english",
+      "sku": "sat-act",
+      "text": "Organization",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-act-eng-organization-contains-act-eng-organization-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:act-english:act-eng-organization:chapter:act-eng-organization",
+      "to_id": "kg:sat-act:admissions:act-english:act-eng-organization:concept:act-eng-organization-1"
+    },
+    {
+      "id": "edge-act-eng-organization-teaches-act-eng-organization-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:act-english:act-eng-organization:concept:act-eng-organization-1",
+      "to_id": "kg:sat-act:admissions:act-english:act-eng-organization:learning_objective:act-eng-organization-1"
+    },
+    {
+      "id": "edge-act-eng-organization-contains-act-eng-organization-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:act-english:act-eng-organization:chapter:act-eng-organization",
+      "to_id": "kg:sat-act:admissions:act-english:act-eng-organization:concept:act-eng-organization-2"
+    },
+    {
+      "id": "edge-act-eng-organization-teaches-act-eng-organization-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:act-english:act-eng-organization:concept:act-eng-organization-2",
+      "to_id": "kg:sat-act:admissions:act-english:act-eng-organization:learning_objective:act-eng-organization-2"
+    },
+    {
+      "id": "edge-act-eng-organization-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:act-english:act-eng-organization:chapter:act-eng-organization",
+      "to_id": "kg:sat-act:admissions:act-english:act-eng-organization:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "mathematics",
+  "chapter_id": "matrices",
+  "title": "Matrices",
+  "built_at": "2026-06-27T08:46:16.816232+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:mathematics:matrices:chapter:matrices",
+      "type": "chapter",
+      "label": "Matrices",
+      "chapter_id": "matrices",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Matrices",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 146
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:mathematics:matrices:concept:core-concepts",
+      "type": "concept",
+      "label": "Matrices",
+      "chapter_id": "matrices",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Matrices",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-matrices-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:mathematics:matrices:chapter:matrices",
+      "to_id": "kg:cbse:12:mathematics:matrices:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

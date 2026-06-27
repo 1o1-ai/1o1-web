@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gre-quantitative",
+  "chapter_id": "gre-qnt-alg",
+  "title": "GRE.QNT.ALG Topic: Simplifying Algebraic Expressions",
+  "built_at": "2026-06-27T08:46:17.232287+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "type": "chapter",
+      "label": "GRE.QNT.ALG Topic: Simplifying Algebraic Expressions",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Simplifying Algebraic Expressions",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t01",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Simplifying Algebraic Expressions",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Simplifying Algebraic Expressions",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t01",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Simplifying Algebraic Expressions",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Simplifying Algebraic Expressions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t02",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Linear Equations in One Variable",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Linear Equations in One Variable",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t02",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Linear Equations in One Variable",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Linear Equations in One Variable.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t03",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Linear Equations in Two Variables",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Linear Equations in Two Variables",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t03",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Linear Equations in Two Variables",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Linear Equations in Two Variables.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t04",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Quadratic Equations: Factoring",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Quadratic Equations: Factoring",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t04",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Quadratic Equations: Factoring",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Quadratic Equations: Factoring.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t05",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Quadratic Equations: Quadratic Formula",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Quadratic Equations: Quadratic Formula",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t05",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Quadratic Equations: Quadratic Formula",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Quadratic Equations: Quadratic Formula.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t06",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Algebraic Inequalities",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Algebraic Inequalities",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t06",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Algebraic Inequalities",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Algebraic Inequalities.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t07",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Absolute Value Inequalities",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Absolute Value Inequalities",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t07",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Absolute Value Inequalities",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Absolute Value Inequalities.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t08",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Systems of Inequalities",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Systems of Inequalities",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t08",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Systems of Inequalities",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Systems of Inequalities.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t09",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Exponent Rules in Algebra",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Exponent Rules in Algebra",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t09",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Exponent Rules in Algebra",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Exponent Rules in Algebra.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t10",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Factoring Algebraic Identities",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Factoring Algebraic Identities",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t10",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Factoring Algebraic Identities",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Factoring Algebraic Identities.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t11",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Functions: Domain and Range",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Functions: Domain and Range",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t11",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Functions: Domain and Range",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Functions: Domain and Range.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t12",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Composite Functions",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Composite Functions",
+      "metadata": {
+        "skill_id": "GRE.QNT.ALG.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t12",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ALG Topic: Composite Functions",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ALG Topic: Composite Functions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre-qnt-alg-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gre-qnt-alg-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre-qnt-alg-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:core-concepts",
+      "type": "concept",
+      "label": "GRE.QNT.ALG Topic: Simplifying Algebraic Expressions",
+      "chapter_id": "gre-qnt-alg",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ALG Topic: Simplifying Algebraic Expressions",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t01"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t01",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t01"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t02"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t02",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t02"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t03"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t03",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t03"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t04"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t04",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t04"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t05"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t05",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t05"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t06"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t06",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t06"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t07"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t07",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t07"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t08"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t08",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t08"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t09"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t09",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t09"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t10"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t10",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t10"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t11"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t11",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t11"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre.qnt.alg.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t12"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre.qnt.alg.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre.qnt.alg.t12",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre.qnt.alg.t12"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-gre-qnt-alg-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre-qnt-alg-more"
+    },
+    {
+      "id": "edge-gre-qnt-alg-teaches-gre-qnt-alg-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:gre-qnt-alg-more",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:learning_objective:gre-qnt-alg-more"
+    },
+    {
+      "id": "edge-gre-qnt-alg-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:chapter:gre-qnt-alg",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-alg:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

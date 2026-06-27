@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gmat-data-insights",
+  "chapter_id": "gmat-di-ds",
+  "title": "GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions",
+  "built_at": "2026-06-27T08:46:17.192340+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "type": "chapter",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t01",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t01",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t02",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Value Questions",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Value Questions",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t02",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Value Questions",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Data Sufficiency: Value Questions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t03",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Evaluating Statement 1 independently",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Evaluating Statement 1 independently",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t03",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Evaluating Statement 1 independently",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Evaluating Statement 1 independently.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t04",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Evaluating Statement 2 independently",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Evaluating Statement 2 independently",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t04",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Evaluating Statement 2 independently",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Evaluating Statement 2 independently.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t05",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Combining Statement 1 and 2",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Combining Statement 1 and 2",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t05",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Combining Statement 1 and 2",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Combining Statement 1 and 2.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t06",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Number Properties",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Number Properties",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t06",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Number Properties",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Data Sufficiency: Number Properties.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t07",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Algebra",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Algebra",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t07",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Algebra",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Data Sufficiency: Algebra.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t08",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Word Problems",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Word Problems",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t08",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Word Problems",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Data Sufficiency: Word Problems.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t09",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Inequalities",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Inequalities",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t09",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Inequalities",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Data Sufficiency: Inequalities.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t10",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Ratios and Proportions",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Ratios and Proportions",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t10",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Ratios and Proportions",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Data Sufficiency: Ratios and Proportions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t11",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Percentages",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Percentages",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t11",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Percentages",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Data Sufficiency: Percentages.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t12",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Statistics",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Statistics",
+      "metadata": {
+        "skill_id": "GMAT.DI.DS.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t12",
+      "type": "learning_objective",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Statistics",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.DS Topic: Data Sufficiency: Statistics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat-di-ds-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gmat-di-ds-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat-di-ds-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:core-concepts",
+      "type": "concept",
+      "label": "GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions",
+      "chapter_id": "gmat-di-ds",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.DS Topic: Data Sufficiency: Yes/No Questions",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t01"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t01",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t01"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t02"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t02",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t02"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t03"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t03",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t03"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t04"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t04",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t04"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t05"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t05",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t05"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t06"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t06",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t06"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t07"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t07",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t07"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t08"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t08",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t08"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t09"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t09",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t09"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t10"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t10",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t10"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t11"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t11",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t11"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat.di.ds.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t12"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat.di.ds.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat.di.ds.t12",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat.di.ds.t12"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-gmat-di-ds-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat-di-ds-more"
+    },
+    {
+      "id": "edge-gmat-di-ds-teaches-gmat-di-ds-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:gmat-di-ds-more",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:learning_objective:gmat-di-ds-more"
+    },
+    {
+      "id": "edge-gmat-di-ds-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:chapter:gmat-di-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-ds:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

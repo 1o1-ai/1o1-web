@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-reading-writing",
+  "chapter_id": "sat-rw-rhetorical",
+  "title": "Rhetorical Synthesis",
+  "built_at": "2026-06-27T08:46:17.174147+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:chapter:sat-rw-rhetorical",
+      "type": "chapter",
+      "label": "Rhetorical Synthesis",
+      "chapter_id": "sat-rw-rhetorical",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Rhetorical Synthesis",
+      "metadata": {
+        "unit": "Expression of Ideas",
+        "unit_id": "sat-rw-expression",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:concept:sat-rw-rhetorical-1",
+      "type": "concept",
+      "label": "Clarity and concision",
+      "chapter_id": "sat-rw-rhetorical",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Clarity and concision",
+      "metadata": {
+        "skill_id": "sat-rw-rhetorical-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:learning_objective:sat-rw-rhetorical-1",
+      "type": "learning_objective",
+      "label": "Clarity and concision",
+      "chapter_id": "sat-rw-rhetorical",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Clarity and concision.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:concept:sat-rw-rhetorical-2",
+      "type": "concept",
+      "label": "Rhetorical effectiveness",
+      "chapter_id": "sat-rw-rhetorical",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Rhetorical effectiveness",
+      "metadata": {
+        "skill_id": "sat-rw-rhetorical-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:learning_objective:sat-rw-rhetorical-2",
+      "type": "learning_objective",
+      "label": "Rhetorical effectiveness",
+      "chapter_id": "sat-rw-rhetorical",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Rhetorical effectiveness.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:concept:core-concepts",
+      "type": "concept",
+      "label": "Rhetorical Synthesis",
+      "chapter_id": "sat-rw-rhetorical",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Rhetorical Synthesis",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-rw-rhetorical-contains-sat-rw-rhetorical-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:chapter:sat-rw-rhetorical",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:concept:sat-rw-rhetorical-1"
+    },
+    {
+      "id": "edge-sat-rw-rhetorical-teaches-sat-rw-rhetorical-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:concept:sat-rw-rhetorical-1",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:learning_objective:sat-rw-rhetorical-1"
+    },
+    {
+      "id": "edge-sat-rw-rhetorical-contains-sat-rw-rhetorical-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:chapter:sat-rw-rhetorical",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:concept:sat-rw-rhetorical-2"
+    },
+    {
+      "id": "edge-sat-rw-rhetorical-teaches-sat-rw-rhetorical-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:concept:sat-rw-rhetorical-2",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:learning_objective:sat-rw-rhetorical-2"
+    },
+    {
+      "id": "edge-sat-rw-rhetorical-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:chapter:sat-rw-rhetorical",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-rhetorical:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

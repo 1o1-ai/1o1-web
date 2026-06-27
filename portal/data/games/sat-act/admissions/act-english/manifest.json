@@ -1,0 +1,14 @@
+{
+  "version": "2026.06.27",
+  "built_at": "2026-06-27T08:46:17.183811+00:00",
+  "sku": "sat-act",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "subject": "act-english",
+  "total_items": 175,
+  "verified_items": 175,
+  "mcq_items": 175,
+  "chapters": 2,
+  "source_questions_file": "sat-act-questions.json",
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\SAT_ACT"
+}

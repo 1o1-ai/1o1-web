@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gre-quantitative",
+  "chapter_id": "gre-qnt-geo",
+  "title": "GRE.QNT.GEO Topic: Lines and Angles",
+  "built_at": "2026-06-27T08:46:17.243499+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "type": "chapter",
+      "label": "GRE.QNT.GEO Topic: Lines and Angles",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Lines and Angles",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t01",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Lines and Angles",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Lines and Angles",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t01",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Lines and Angles",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Lines and Angles.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t02",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Triangles: Angles and Perimeter",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Triangles: Angles and Perimeter",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t02",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Triangles: Angles and Perimeter",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Triangles: Angles and Perimeter.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t03",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Right-angled Triangles & Pythagoras",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Right-angled Triangles & Pythagoras",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t03",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Right-angled Triangles & Pythagoras",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Right-angled Triangles & Pythagoras.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t04",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Special Right Triangles (30-60-90)",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Special Right Triangles (30-60-90)",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t04",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Special Right Triangles (30-60-90)",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Special Right Triangles (30-60-90).",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t05",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Similar Triangles properties",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Similar Triangles properties",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t05",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Similar Triangles properties",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Similar Triangles properties.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t06",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Congruent Triangles criteria",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Congruent Triangles criteria",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t06",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Congruent Triangles criteria",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Congruent Triangles criteria.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t07",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Quadrilaterals: Properties",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Quadrilaterals: Properties",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t07",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Quadrilaterals: Properties",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Quadrilaterals: Properties.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t08",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Parallelograms and Rectangles",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Parallelograms and Rectangles",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t08",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Parallelograms and Rectangles",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Parallelograms and Rectangles.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t09",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Squares and Rhombuses",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Squares and Rhombuses",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t09",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Squares and Rhombuses",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Squares and Rhombuses.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t10",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Polygons: Interior & Exterior Angles",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Polygons: Interior & Exterior Angles",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t10",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Polygons: Interior & Exterior Angles",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Polygons: Interior & Exterior Angles.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t11",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Regular Polygons",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Regular Polygons",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t11",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Regular Polygons",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Regular Polygons.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t12",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Circles: Circumference and Area",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Circles: Circumference and Area",
+      "metadata": {
+        "skill_id": "GRE.QNT.GEO.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t12",
+      "type": "learning_objective",
+      "label": "GRE.QNT.GEO Topic: Circles: Circumference and Area",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.GEO Topic: Circles: Circumference and Area.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre-qnt-geo-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gre-qnt-geo-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre-qnt-geo-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:core-concepts",
+      "type": "concept",
+      "label": "GRE.QNT.GEO Topic: Lines and Angles",
+      "chapter_id": "gre-qnt-geo",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.GEO Topic: Lines and Angles",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t01"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t01",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t01"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t02"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t02",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t02"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t03"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t03",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t03"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t04"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t04",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t04"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t05"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t05",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t05"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t06"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t06",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t06"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t07"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t07",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t07"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t08"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t08",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t08"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t09"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t09",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t09"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t10"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t10",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t10"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t11"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t11",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t11"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre.qnt.geo.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t12"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre.qnt.geo.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre.qnt.geo.t12",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre.qnt.geo.t12"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-gre-qnt-geo-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre-qnt-geo-more"
+    },
+    {
+      "id": "edge-gre-qnt-geo-teaches-gre-qnt-geo-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:gre-qnt-geo-more",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:learning_objective:gre-qnt-geo-more"
+    },
+    {
+      "id": "edge-gre-qnt-geo-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:chapter:gre-qnt-geo",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-geo:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

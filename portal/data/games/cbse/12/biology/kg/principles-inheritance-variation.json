@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "biology",
+  "chapter_id": "principles-inheritance-variation",
+  "title": "Principles of Inheritance and Variation",
+  "built_at": "2026-06-27T08:46:16.597298+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:biology:principles-inheritance-variation:chapter:principles-inheritance-variation",
+      "type": "chapter",
+      "label": "Principles of Inheritance and Variation",
+      "chapter_id": "principles-inheritance-variation",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Principles of Inheritance and Variation",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 164
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:biology:principles-inheritance-variation:concept:core-concepts",
+      "type": "concept",
+      "label": "Principles of Inheritance and Variation",
+      "chapter_id": "principles-inheritance-variation",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Principles of Inheritance and Variation",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-principles-inheritance-variation-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:biology:principles-inheritance-variation:chapter:principles-inheritance-variation",
+      "to_id": "kg:cbse:12:biology:principles-inheritance-variation:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

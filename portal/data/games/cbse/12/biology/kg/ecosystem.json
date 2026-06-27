@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "biology",
+  "chapter_id": "ecosystem",
+  "title": "Ecosystem",
+  "built_at": "2026-06-27T08:46:16.540791+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:biology:ecosystem:chapter:ecosystem",
+      "type": "chapter",
+      "label": "Ecosystem",
+      "chapter_id": "ecosystem",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Ecosystem",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 74
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:biology:ecosystem:concept:core-concepts",
+      "type": "concept",
+      "label": "Ecosystem",
+      "chapter_id": "ecosystem",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Ecosystem",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-ecosystem-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:biology:ecosystem:chapter:ecosystem",
+      "to_id": "kg:cbse:12:biology:ecosystem:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

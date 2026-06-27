@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gre-verbal",
+  "chapter_id": "gre-vbl-se",
+  "title": "GRE.VBL.SE Topic: Synonym Pair Selection",
+  "built_at": "2026-06-27T08:46:17.250757+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "type": "chapter",
+      "label": "GRE.VBL.SE Topic: Synonym Pair Selection",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Synonym Pair Selection",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t01",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Synonym Pair Selection",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Synonym Pair Selection",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t01",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Synonym Pair Selection",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Synonym Pair Selection.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t02",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Identifying Context Clues",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Identifying Context Clues",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t02",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Identifying Context Clues",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Identifying Context Clues.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t03",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Contrasting Transition Words",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Contrasting Transition Words",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t03",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Contrasting Transition Words",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Contrasting Transition Words.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t04",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Supporting Transition Words",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Supporting Transition Words",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t04",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Supporting Transition Words",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Supporting Transition Words.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t05",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Tone and Charge Analysis",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Tone and Charge Analysis",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t05",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Tone and Charge Analysis",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Tone and Charge Analysis.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t06",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Eliminating Outliers",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Eliminating Outliers",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t06",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Eliminating Outliers",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Eliminating Outliers.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t07",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Sentence Equivalence Traps",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Sentence Equivalence Traps",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t07",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Sentence Equivalence Traps",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Sentence Equivalence Traps.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t08",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Context-Based Meaning check",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Context-Based Meaning check",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t08",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Context-Based Meaning check",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Context-Based Meaning check.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t09",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Vocab Definition matching",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Vocab Definition matching",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t09",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Vocab Definition matching",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Vocab Definition matching.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t10",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Grammatical Agreement check",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Grammatical Agreement check",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t10",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Grammatical Agreement check",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Grammatical Agreement check.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t11",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Secondary Definitions of words",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Secondary Definitions of words",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t11",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Secondary Definitions of words",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Secondary Definitions of words.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t12",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Positive/Negative charge testing",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Positive/Negative charge testing",
+      "metadata": {
+        "skill_id": "GRE.VBL.SE.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t12",
+      "type": "learning_objective",
+      "label": "GRE.VBL.SE Topic: Positive/Negative charge testing",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.SE Topic: Positive/Negative charge testing.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre-vbl-se-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gre-vbl-se-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre-vbl-se-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:core-concepts",
+      "type": "concept",
+      "label": "GRE.VBL.SE Topic: Synonym Pair Selection",
+      "chapter_id": "gre-vbl-se",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.SE Topic: Synonym Pair Selection",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t01"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t01",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t01"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t02"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t02",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t02"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t03"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t03",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t03"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t04"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t04",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t04"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t05"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t05",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t05"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t06"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t06",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t06"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t07"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t07",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t07"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t08"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t08",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t08"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t09"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t09",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t09"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t10"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t10",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t10"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t11"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t11",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t11"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre.vbl.se.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t12"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre.vbl.se.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre.vbl.se.t12",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre.vbl.se.t12"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-gre-vbl-se-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre-vbl-se-more"
+    },
+    {
+      "id": "edge-gre-vbl-se-teaches-gre-vbl-se-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:gre-vbl-se-more",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:learning_objective:gre-vbl-se-more"
+    },
+    {
+      "id": "edge-gre-vbl-se-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:chapter:gre-vbl-se",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-se:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

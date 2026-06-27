@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-math",
+  "chapter_id": "sat-math-systems",
+  "title": "Systems of Equations",
+  "built_at": "2026-06-27T08:46:17.136843+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-systems:chapter:sat-math-systems",
+      "type": "chapter",
+      "label": "Systems of Equations",
+      "chapter_id": "sat-math-systems",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Systems of Equations",
+      "metadata": {
+        "unit": "Algebra",
+        "unit_id": "sat-math-algebra",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-systems:concept:sat-math-systems-1",
+      "type": "concept",
+      "label": "Substitution",
+      "chapter_id": "sat-math-systems",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Substitution",
+      "metadata": {
+        "skill_id": "sat-math-systems-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-systems:learning_objective:sat-math-systems-1",
+      "type": "learning_objective",
+      "label": "Substitution",
+      "chapter_id": "sat-math-systems",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Substitution.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-systems:concept:sat-math-systems-2",
+      "type": "concept",
+      "label": "Elimination",
+      "chapter_id": "sat-math-systems",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Elimination",
+      "metadata": {
+        "skill_id": "sat-math-systems-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-systems:learning_objective:sat-math-systems-2",
+      "type": "learning_objective",
+      "label": "Elimination",
+      "chapter_id": "sat-math-systems",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Elimination.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-systems:concept:core-concepts",
+      "type": "concept",
+      "label": "Systems of Equations",
+      "chapter_id": "sat-math-systems",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Systems of Equations",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-math-systems-contains-sat-math-systems-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-systems:chapter:sat-math-systems",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-systems:concept:sat-math-systems-1"
+    },
+    {
+      "id": "edge-sat-math-systems-teaches-sat-math-systems-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-systems:concept:sat-math-systems-1",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-systems:learning_objective:sat-math-systems-1"
+    },
+    {
+      "id": "edge-sat-math-systems-contains-sat-math-systems-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-systems:chapter:sat-math-systems",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-systems:concept:sat-math-systems-2"
+    },
+    {
+      "id": "edge-sat-math-systems-teaches-sat-math-systems-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-systems:concept:sat-math-systems-2",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-systems:learning_objective:sat-math-systems-2"
+    },
+    {
+      "id": "edge-sat-math-systems-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-systems:chapter:sat-math-systems",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-systems:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

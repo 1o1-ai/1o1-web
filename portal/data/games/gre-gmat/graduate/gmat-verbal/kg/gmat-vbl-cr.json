@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gmat-verbal",
+  "chapter_id": "gmat-vbl-cr",
+  "title": "GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure",
+  "built_at": "2026-06-27T08:46:17.215213+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "type": "chapter",
+      "label": "GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t01",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t01",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t02",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Analyzing Premises and Conclusions",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Analyzing Premises and Conclusions",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t02",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Analyzing Premises and Conclusions",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Analyzing Premises and Conclusions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t03",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Weakening the Argument: Strategies",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Weakening the Argument: Strategies",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t03",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Weakening the Argument: Strategies",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Weakening the Argument: Strategies.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t04",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Weakening the Argument: Common Traps",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Weakening the Argument: Common Traps",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t04",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Weakening the Argument: Common Traps",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Weakening the Argument: Common Traps.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t05",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Strengthening the Argument: Strategies",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Strengthening the Argument: Strategies",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t05",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Strengthening the Argument: Strategies",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Strengthening the Argument: Strategies.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t06",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Strengthening the Argument: Common Traps",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Strengthening the Argument: Common Traps",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t06",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Strengthening the Argument: Common Traps",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Strengthening the Argument: Common Traps.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t07",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Finding the Assumption: Defender Assumption",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Finding the Assumption: Defender Assumption",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t07",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Finding the Assumption: Defender Assumption",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Finding the Assumption: Defender Assumption.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t08",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Finding the Assumption: Supporter Assumption",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Finding the Assumption: Supporter Assumption",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t08",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Finding the Assumption: Supporter Assumption",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Finding the Assumption: Supporter Assumption.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t09",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Boldface Questions: Role of Sentences",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Boldface Questions: Role of Sentences",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t09",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Boldface Questions: Role of Sentences",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Boldface Questions: Role of Sentences.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t10",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Boldface Questions: Strategies",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Boldface Questions: Strategies",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t10",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Boldface Questions: Strategies",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Boldface Questions: Strategies.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t11",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Resolving the Paradox / Discrepancy",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Resolving the Paradox / Discrepancy",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t11",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Resolving the Paradox / Discrepancy",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Resolving the Paradox / Discrepancy.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t12",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Evaluating the Plan / Argument",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Evaluating the Plan / Argument",
+      "metadata": {
+        "skill_id": "GMAT.VBL.CR.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t12",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.CR Topic: Evaluating the Plan / Argument",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.CR Topic: Evaluating the Plan / Argument.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat-vbl-cr-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gmat-vbl-cr-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat-vbl-cr-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:core-concepts",
+      "type": "concept",
+      "label": "GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure",
+      "chapter_id": "gmat-vbl-cr",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.CR Topic: Critical Reasoning: Argument Structure",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t01"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t01",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t01"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t02"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t02",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t02"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t03"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t03",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t03"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t04"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t04",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t04"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t05"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t05",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t05"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t06"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t06",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t06"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t07"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t07",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t07"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t08"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t08",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t08"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t09"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t09",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t09"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t10"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t10",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t10"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t11"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t11",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t11"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat.vbl.cr.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t12"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat.vbl.cr.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat.vbl.cr.t12",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat.vbl.cr.t12"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-gmat-vbl-cr-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat-vbl-cr-more"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-teaches-gmat-vbl-cr-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:gmat-vbl-cr-more",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:learning_objective:gmat-vbl-cr-more"
+    },
+    {
+      "id": "edge-gmat-vbl-cr-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:chapter:gmat-vbl-cr",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-cr:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

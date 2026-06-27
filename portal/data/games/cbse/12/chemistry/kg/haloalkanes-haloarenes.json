@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "chemistry",
+  "chapter_id": "haloalkanes-haloarenes",
+  "title": "Haloalkanes and Haloarenes",
+  "built_at": "2026-06-27T08:46:16.728528+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:chemistry:haloalkanes-haloarenes:chapter:haloalkanes-haloarenes",
+      "type": "chapter",
+      "label": "Haloalkanes and Haloarenes",
+      "chapter_id": "haloalkanes-haloarenes",
+      "subject": "chemistry",
+      "sku": "cbse12-science",
+      "text": "Haloalkanes and Haloarenes",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 121
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:chemistry:haloalkanes-haloarenes:concept:core-concepts",
+      "type": "concept",
+      "label": "Haloalkanes and Haloarenes",
+      "chapter_id": "haloalkanes-haloarenes",
+      "subject": "chemistry",
+      "sku": "cbse12-science",
+      "text": "Haloalkanes and Haloarenes",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-haloalkanes-haloarenes-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:chemistry:haloalkanes-haloarenes:chapter:haloalkanes-haloarenes",
+      "to_id": "kg:cbse:12:chemistry:haloalkanes-haloarenes:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "mathematics",
+  "chapter_id": "linear-programming",
+  "title": "Linear Programming",
+  "built_at": "2026-06-27T08:46:16.810861+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:mathematics:linear-programming:chapter:linear-programming",
+      "type": "chapter",
+      "label": "Linear Programming",
+      "chapter_id": "linear-programming",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Linear Programming",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 67
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:mathematics:linear-programming:concept:core-concepts",
+      "type": "concept",
+      "label": "Linear Programming",
+      "chapter_id": "linear-programming",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Linear Programming",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-linear-programming-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:mathematics:linear-programming:chapter:linear-programming",
+      "to_id": "kg:cbse:12:mathematics:linear-programming:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

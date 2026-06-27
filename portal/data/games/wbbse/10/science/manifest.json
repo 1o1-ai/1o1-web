@@ -1,0 +1,14 @@
+{
+  "version": "2026.06.27",
+  "built_at": "2026-06-27T08:46:17.364953+00:00",
+  "sku": "rhytoma-wbbse",
+  "curriculum": "wbbse",
+  "grade": "10",
+  "subject": "science",
+  "total_items": 11,
+  "verified_items": 11,
+  "mcq_items": 11,
+  "chapters": 10,
+  "source_questions_file": "rhytoma-questions.json",
+  "knowledge_root": "C:\\Knowledge\\Education\\WBEducation"
+}

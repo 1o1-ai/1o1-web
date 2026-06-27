@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gmat-data-insights",
+  "chapter_id": "gmat-di-msr",
+  "title": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure",
+  "built_at": "2026-06-27T08:46:17.199995+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "type": "chapter",
+      "label": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t01",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t01",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t02",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Synthesizing info from multiple tabs",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Synthesizing info from multiple tabs",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t02",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Synthesizing info from multiple tabs",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Synthesizing info from multiple tabs.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t03",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Identifying details in text tabs",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Identifying details in text tabs",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t03",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Identifying details in text tabs",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Identifying details in text tabs.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t04",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Extracting data from table tabs",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Extracting data from table tabs",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t04",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Extracting data from table tabs",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Extracting data from table tabs.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t05",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Graphic-Text consistency checks",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Graphic-Text consistency checks",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t05",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Graphic-Text consistency checks",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Graphic-Text consistency checks.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t06",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Analyzing contradictory data",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Analyzing contradictory data",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t06",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Analyzing contradictory data",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Analyzing contradictory data.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t07",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Answering multi-part questions",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Answering multi-part questions",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t07",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Answering multi-part questions",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Answering multi-part questions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t08",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Drawing inferences across sources",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Drawing inferences across sources",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t08",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Drawing inferences across sources",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Drawing inferences across sources.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t09",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Pacing",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Pacing",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t09",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Pacing",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Multi-Source Reasoning: Pacing.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t10",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Time Management",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Time Management",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t10",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Time Management",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Multi-Source Reasoning: Time Management.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t11",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Locating relevant details in text",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Locating relevant details in text",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t11",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Locating relevant details in text",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Locating relevant details in text.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t12",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Distinguishing fact from opinion",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Distinguishing fact from opinion",
+      "metadata": {
+        "skill_id": "GMAT.DI.MSR.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t12",
+      "type": "learning_objective",
+      "label": "GMAT.DI.MSR Topic: Distinguishing fact from opinion",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.MSR Topic: Distinguishing fact from opinion.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat-di-msr-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gmat-di-msr-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat-di-msr-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:core-concepts",
+      "type": "concept",
+      "label": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure",
+      "chapter_id": "gmat-di-msr",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.MSR Topic: Multi-Source Reasoning: Tab Structure",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t01"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t01",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t01"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t02"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t02",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t02"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t03"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t03",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t03"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t04"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t04",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t04"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t05"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t05",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t05"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t06"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t06",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t06"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t07"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t07",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t07"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t08"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t08",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t08"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t09"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t09",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t09"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t10"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t10",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t10"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t11"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t11",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t11"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat.di.msr.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t12"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat.di.msr.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat.di.msr.t12",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat.di.msr.t12"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-gmat-di-msr-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat-di-msr-more"
+    },
+    {
+      "id": "edge-gmat-di-msr-teaches-gmat-di-msr-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:gmat-di-msr-more",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:learning_objective:gmat-di-msr-more"
+    },
+    {
+      "id": "edge-gmat-di-msr-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:chapter:gmat-di-msr",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-msr:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

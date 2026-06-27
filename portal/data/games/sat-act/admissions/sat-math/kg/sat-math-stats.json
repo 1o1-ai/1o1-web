@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-math",
+  "chapter_id": "sat-math-stats",
+  "title": "Statistics",
+  "built_at": "2026-06-27T08:46:17.133050+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-stats:chapter:sat-math-stats",
+      "type": "chapter",
+      "label": "Statistics",
+      "chapter_id": "sat-math-stats",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Statistics",
+      "metadata": {
+        "unit": "Problem Solving and Data Analysis",
+        "unit_id": "sat-math-psda",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-stats:concept:sat-math-stats-1",
+      "type": "concept",
+      "label": "Mean median mode",
+      "chapter_id": "sat-math-stats",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Mean median mode",
+      "metadata": {
+        "skill_id": "sat-math-stats-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-stats:learning_objective:sat-math-stats-1",
+      "type": "learning_objective",
+      "label": "Mean median mode",
+      "chapter_id": "sat-math-stats",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Mean median mode.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-stats:concept:sat-math-stats-2",
+      "type": "concept",
+      "label": "Scatterplots and trend lines",
+      "chapter_id": "sat-math-stats",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Scatterplots and trend lines",
+      "metadata": {
+        "skill_id": "sat-math-stats-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-stats:learning_objective:sat-math-stats-2",
+      "type": "learning_objective",
+      "label": "Scatterplots and trend lines",
+      "chapter_id": "sat-math-stats",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Scatterplots and trend lines.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-stats:concept:core-concepts",
+      "type": "concept",
+      "label": "Statistics",
+      "chapter_id": "sat-math-stats",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Statistics",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-math-stats-contains-sat-math-stats-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-stats:chapter:sat-math-stats",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-stats:concept:sat-math-stats-1"
+    },
+    {
+      "id": "edge-sat-math-stats-teaches-sat-math-stats-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-stats:concept:sat-math-stats-1",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-stats:learning_objective:sat-math-stats-1"
+    },
+    {
+      "id": "edge-sat-math-stats-contains-sat-math-stats-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-stats:chapter:sat-math-stats",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-stats:concept:sat-math-stats-2"
+    },
+    {
+      "id": "edge-sat-math-stats-teaches-sat-math-stats-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-stats:concept:sat-math-stats-2",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-stats:learning_objective:sat-math-stats-2"
+    },
+    {
+      "id": "edge-sat-math-stats-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-stats:chapter:sat-math-stats",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-stats:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

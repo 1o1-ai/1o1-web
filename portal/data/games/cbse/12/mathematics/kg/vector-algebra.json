@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "mathematics",
+  "chapter_id": "vector-algebra",
+  "title": "Vector Algebra",
+  "built_at": "2026-06-27T08:46:16.885540+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:mathematics:vector-algebra:chapter:vector-algebra",
+      "type": "chapter",
+      "label": "Vector Algebra",
+      "chapter_id": "vector-algebra",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Vector Algebra",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 202
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:mathematics:vector-algebra:concept:core-concepts",
+      "type": "concept",
+      "label": "Vector Algebra",
+      "chapter_id": "vector-algebra",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Vector Algebra",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-vector-algebra-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:mathematics:vector-algebra:chapter:vector-algebra",
+      "to_id": "kg:cbse:12:mathematics:vector-algebra:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

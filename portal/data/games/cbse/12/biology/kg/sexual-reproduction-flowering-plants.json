@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "biology",
+  "chapter_id": "sexual-reproduction-flowering-plants",
+  "title": "Sexual Reproduction in Flowering Plants",
+  "built_at": "2026-06-27T08:46:16.615069+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:biology:sexual-reproduction-flowering-plants:chapter:sexual-reproduction-flowering-plants",
+      "type": "chapter",
+      "label": "Sexual Reproduction in Flowering Plants",
+      "chapter_id": "sexual-reproduction-flowering-plants",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Sexual Reproduction in Flowering Plants",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 960
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:biology:sexual-reproduction-flowering-plants:concept:core-concepts",
+      "type": "concept",
+      "label": "Sexual Reproduction in Flowering Plants",
+      "chapter_id": "sexual-reproduction-flowering-plants",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Sexual Reproduction in Flowering Plants",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sexual-reproduction-flowering-plants-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:biology:sexual-reproduction-flowering-plants:chapter:sexual-reproduction-flowering-plants",
+      "to_id": "kg:cbse:12:biology:sexual-reproduction-flowering-plants:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

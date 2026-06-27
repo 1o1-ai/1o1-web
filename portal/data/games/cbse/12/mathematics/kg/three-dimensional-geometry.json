@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "mathematics",
+  "chapter_id": "three-dimensional-geometry",
+  "title": "Three Dimensional Geometry",
+  "built_at": "2026-06-27T08:46:16.880251+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:mathematics:three-dimensional-geometry:chapter:three-dimensional-geometry",
+      "type": "chapter",
+      "label": "Three Dimensional Geometry",
+      "chapter_id": "three-dimensional-geometry",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Three Dimensional Geometry",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 69
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:mathematics:three-dimensional-geometry:concept:core-concepts",
+      "type": "concept",
+      "label": "Three Dimensional Geometry",
+      "chapter_id": "three-dimensional-geometry",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Three Dimensional Geometry",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-three-dimensional-geometry-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:mathematics:three-dimensional-geometry:chapter:three-dimensional-geometry",
+      "to_id": "kg:cbse:12:mathematics:three-dimensional-geometry:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

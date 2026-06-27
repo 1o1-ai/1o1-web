@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-math",
+  "chapter_id": "sat-math-percent",
+  "title": "Percentages",
+  "built_at": "2026-06-27T08:46:17.117378+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-percent:chapter:sat-math-percent",
+      "type": "chapter",
+      "label": "Percentages",
+      "chapter_id": "sat-math-percent",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Percentages",
+      "metadata": {
+        "unit": "Problem Solving and Data Analysis",
+        "unit_id": "sat-math-psda",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-percent:concept:sat-math-percent-1",
+      "type": "concept",
+      "label": "Percent change",
+      "chapter_id": "sat-math-percent",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Percent change",
+      "metadata": {
+        "skill_id": "sat-math-percent-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-percent:learning_objective:sat-math-percent-1",
+      "type": "learning_objective",
+      "label": "Percent change",
+      "chapter_id": "sat-math-percent",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Percent change.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-percent:concept:sat-math-percent-2",
+      "type": "concept",
+      "label": "Applications",
+      "chapter_id": "sat-math-percent",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Applications",
+      "metadata": {
+        "skill_id": "sat-math-percent-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-percent:learning_objective:sat-math-percent-2",
+      "type": "learning_objective",
+      "label": "Applications",
+      "chapter_id": "sat-math-percent",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Applications.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-percent:concept:core-concepts",
+      "type": "concept",
+      "label": "Percentages",
+      "chapter_id": "sat-math-percent",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Percentages",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-math-percent-contains-sat-math-percent-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-percent:chapter:sat-math-percent",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-percent:concept:sat-math-percent-1"
+    },
+    {
+      "id": "edge-sat-math-percent-teaches-sat-math-percent-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-percent:concept:sat-math-percent-1",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-percent:learning_objective:sat-math-percent-1"
+    },
+    {
+      "id": "edge-sat-math-percent-contains-sat-math-percent-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-percent:chapter:sat-math-percent",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-percent:concept:sat-math-percent-2"
+    },
+    {
+      "id": "edge-sat-math-percent-teaches-sat-math-percent-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-percent:concept:sat-math-percent-2",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-percent:learning_objective:sat-math-percent-2"
+    },
+    {
+      "id": "edge-sat-math-percent-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-percent:chapter:sat-math-percent",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-percent:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

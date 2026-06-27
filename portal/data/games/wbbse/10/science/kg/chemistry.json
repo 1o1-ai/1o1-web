@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "wbbse",
+  "grade": "10",
+  "sku": "rhytoma-wbbse",
+  "subject": "science",
+  "chapter_id": "chemistry",
+  "title": "Chemistry",
+  "built_at": "2026-06-27T08:46:17.340128+00:00",
+  "nodes": [
+    {
+      "id": "kg:wbbse:10:science:chemistry:chapter:chemistry",
+      "type": "chapter",
+      "label": "Chemistry",
+      "chapter_id": "chemistry",
+      "subject": "science",
+      "sku": "rhytoma-wbbse",
+      "text": "Chemistry",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:wbbse:10:science:chemistry:concept:core-concepts",
+      "type": "concept",
+      "label": "Chemistry",
+      "chapter_id": "chemistry",
+      "subject": "science",
+      "sku": "rhytoma-wbbse",
+      "text": "Chemistry",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-chemistry-contains-core",
+      "type": "contains",
+      "from_id": "kg:wbbse:10:science:chemistry:chapter:chemistry",
+      "to_id": "kg:wbbse:10:science:chemistry:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

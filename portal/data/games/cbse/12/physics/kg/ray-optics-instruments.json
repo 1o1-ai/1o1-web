@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "physics",
+  "chapter_id": "ray-optics-instruments",
+  "title": "Ray Optics and Optical Instruments",
+  "built_at": "2026-06-27T08:46:17.003454+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:physics:ray-optics-instruments:chapter:ray-optics-instruments",
+      "type": "chapter",
+      "label": "Ray Optics and Optical Instruments",
+      "chapter_id": "ray-optics-instruments",
+      "subject": "physics",
+      "sku": "cbse12-science",
+      "text": "Ray Optics and Optical Instruments",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 220
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:physics:ray-optics-instruments:concept:core-concepts",
+      "type": "concept",
+      "label": "Ray Optics and Optical Instruments",
+      "chapter_id": "ray-optics-instruments",
+      "subject": "physics",
+      "sku": "cbse12-science",
+      "text": "Ray Optics and Optical Instruments",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-ray-optics-instruments-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:physics:ray-optics-instruments:chapter:ray-optics-instruments",
+      "to_id": "kg:cbse:12:physics:ray-optics-instruments:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

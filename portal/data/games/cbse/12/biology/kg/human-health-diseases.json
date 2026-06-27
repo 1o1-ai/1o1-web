@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "biology",
+  "chapter_id": "human-health-diseases",
+  "title": "Human Health and Diseases",
+  "built_at": "2026-06-27T08:46:16.554794+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:biology:human-health-diseases:chapter:human-health-diseases",
+      "type": "chapter",
+      "label": "Human Health and Diseases",
+      "chapter_id": "human-health-diseases",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Human Health and Diseases",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 159
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:biology:human-health-diseases:concept:core-concepts",
+      "type": "concept",
+      "label": "Human Health and Diseases",
+      "chapter_id": "human-health-diseases",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Human Health and Diseases",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-human-health-diseases-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:biology:human-health-diseases:chapter:human-health-diseases",
+      "to_id": "kg:cbse:12:biology:human-health-diseases:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

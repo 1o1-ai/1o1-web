@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "wbbse",
+  "grade": "10",
+  "sku": "rhytoma-wbbse",
+  "subject": "science",
+  "chapter_id": "physics",
+  "title": "Physics",
+  "built_at": "2026-06-27T08:46:17.353574+00:00",
+  "nodes": [
+    {
+      "id": "kg:wbbse:10:science:physics:chapter:physics",
+      "type": "chapter",
+      "label": "Physics",
+      "chapter_id": "physics",
+      "subject": "science",
+      "sku": "rhytoma-wbbse",
+      "text": "Physics",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:wbbse:10:science:physics:concept:core-concepts",
+      "type": "concept",
+      "label": "Physics",
+      "chapter_id": "physics",
+      "subject": "science",
+      "sku": "rhytoma-wbbse",
+      "text": "Physics",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-physics-contains-core",
+      "type": "contains",
+      "from_id": "kg:wbbse:10:science:physics:chapter:physics",
+      "to_id": "kg:wbbse:10:science:physics:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

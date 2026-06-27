@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "english-tests",
+  "grade": "proficiency",
+  "sku": "english-tests",
+  "subject": "det-conversation",
+  "chapter_id": "det-con",
+  "title": "Duolingo Conversation Skills",
+  "built_at": "2026-06-27T08:46:17.271633+00:00",
+  "nodes": [
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "type": "chapter",
+      "label": "Duolingo Conversation Skills",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t01",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 01",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 01",
+      "metadata": {
+        "skill_id": "DET.CON.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t01",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 01",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 01.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t02",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 02",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 02",
+      "metadata": {
+        "skill_id": "DET.CON.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t02",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 02",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 02.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t03",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 03",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 03",
+      "metadata": {
+        "skill_id": "DET.CON.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t03",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 03",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 03.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t04",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 04",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 04",
+      "metadata": {
+        "skill_id": "DET.CON.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t04",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 04",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 04.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t05",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 05",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 05",
+      "metadata": {
+        "skill_id": "DET.CON.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t05",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 05",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 05.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t06",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 06",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 06",
+      "metadata": {
+        "skill_id": "DET.CON.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t06",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 06",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 06.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t07",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 07",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 07",
+      "metadata": {
+        "skill_id": "DET.CON.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t07",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 07",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 07.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t08",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 08",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 08",
+      "metadata": {
+        "skill_id": "DET.CON.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t08",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 08",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 08.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t09",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 09",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 09",
+      "metadata": {
+        "skill_id": "DET.CON.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t09",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 09",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 09.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t10",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 10",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 10",
+      "metadata": {
+        "skill_id": "DET.CON.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t10",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 10",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 10.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t11",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 11",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 11",
+      "metadata": {
+        "skill_id": "DET.CON.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t11",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 11",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 11.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t12",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills Focus Topic 12",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills Focus Topic 12",
+      "metadata": {
+        "skill_id": "DET.CON.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t12",
+      "type": "learning_objective",
+      "label": "Duolingo Conversation Skills Focus Topic 12",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of Duolingo Conversation Skills Focus Topic 12.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det-con-more",
+      "type": "concept",
+      "label": "+ 30 more topics",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "+ 30 more topics",
+      "metadata": {
+        "skill_id": "det-con-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det-con-more",
+      "type": "learning_objective",
+      "label": "+ 30 more topics",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Demonstrate understanding of + 30 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:english-tests:proficiency:det-conversation:det-con:concept:core-concepts",
+      "type": "concept",
+      "label": "Duolingo Conversation Skills",
+      "chapter_id": "det-con",
+      "subject": "det-conversation",
+      "sku": "english-tests",
+      "text": "Duolingo Conversation Skills",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-det-con-contains-det.con.t01",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t01"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t01",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t01",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t01"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t02",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t02"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t02",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t02",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t02"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t03",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t03"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t03",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t03",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t03"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t04",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t04"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t04",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t04",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t04"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t05",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t05"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t05",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t05",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t05"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t06",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t06"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t06",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t06",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t06"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t07",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t07"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t07",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t07",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t07"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t08",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t08"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t08",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t08",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t08"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t09",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t09"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t09",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t09",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t09"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t10",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t10"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t10",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t10",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t10"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t11",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t11"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t11",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t11",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t11"
+    },
+    {
+      "id": "edge-det-con-contains-det.con.t12",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t12"
+    },
+    {
+      "id": "edge-det-con-teaches-det.con.t12",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det.con.t12",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det.con.t12"
+    },
+    {
+      "id": "edge-det-con-contains-det-con-more",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det-con-more"
+    },
+    {
+      "id": "edge-det-con-teaches-det-con-more",
+      "type": "teaches",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:det-con-more",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:learning_objective:det-con-more"
+    },
+    {
+      "id": "edge-det-con-contains-core",
+      "type": "contains",
+      "from_id": "kg:english-tests:proficiency:det-conversation:det-con:chapter:det-con",
+      "to_id": "kg:english-tests:proficiency:det-conversation:det-con:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

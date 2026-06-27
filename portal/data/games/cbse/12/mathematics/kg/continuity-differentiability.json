@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "mathematics",
+  "chapter_id": "continuity-differentiability",
+  "title": "Continuity and Differentiability",
+  "built_at": "2026-06-27T08:46:16.784449+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:mathematics:continuity-differentiability:chapter:continuity-differentiability",
+      "type": "chapter",
+      "label": "Continuity and Differentiability",
+      "chapter_id": "continuity-differentiability",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Continuity and Differentiability",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 29
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:mathematics:continuity-differentiability:concept:core-concepts",
+      "type": "concept",
+      "label": "Continuity and Differentiability",
+      "chapter_id": "continuity-differentiability",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Continuity and Differentiability",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-continuity-differentiability-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:mathematics:continuity-differentiability:chapter:continuity-differentiability",
+      "to_id": "kg:cbse:12:mathematics:continuity-differentiability:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

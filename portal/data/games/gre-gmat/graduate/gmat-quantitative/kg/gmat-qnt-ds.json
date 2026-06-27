@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gmat-quantitative",
+  "chapter_id": "gmat-qnt-ds",
+  "title": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions",
+  "built_at": "2026-06-27T08:46:17.207347+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "type": "chapter",
+      "label": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t01",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t01",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t02",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Value Questions",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Value Questions",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t02",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Value Questions",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Data Sufficiency (Quant): Value Questions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t03",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Statement 1 Independence",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Statement 1 Independence",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t03",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Statement 1 Independence",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Statement 1 Independence.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t04",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Statement 2 Independence",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Statement 2 Independence",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t04",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Statement 2 Independence",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Statement 2 Independence.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t05",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Statements Combined",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Statements Combined",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t05",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Statements Combined",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Statements Combined.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t06",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Integers & Primes",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Quant DS: Integers & Primes",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t06",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Integers & Primes",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Quant DS: Integers & Primes.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t07",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Decimals & Fractions",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Quant DS: Decimals & Fractions",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t07",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Decimals & Fractions",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Quant DS: Decimals & Fractions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t08",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Ratios & Rates",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Quant DS: Ratios & Rates",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t08",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Ratios & Rates",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Quant DS: Ratios & Rates.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t09",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Percentages",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Quant DS: Percentages",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t09",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Percentages",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Quant DS: Percentages.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t10",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Exponents & Roots",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Quant DS: Exponents & Roots",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t10",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Exponents & Roots",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Quant DS: Exponents & Roots.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t11",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Algebra & Equations",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Quant DS: Algebra & Equations",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t11",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Algebra & Equations",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Quant DS: Algebra & Equations.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t12",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Inequalities",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Quant DS: Inequalities",
+      "metadata": {
+        "skill_id": "GMAT.QNT.DS.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t12",
+      "type": "learning_objective",
+      "label": "GMAT.QNT.DS Topic: Quant DS: Inequalities",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.QNT.DS Topic: Quant DS: Inequalities.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat-qnt-ds-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gmat-qnt-ds-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat-qnt-ds-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:core-concepts",
+      "type": "concept",
+      "label": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions",
+      "chapter_id": "gmat-qnt-ds",
+      "subject": "gmat-quantitative",
+      "sku": "gre-gmat",
+      "text": "GMAT.QNT.DS Topic: Data Sufficiency (Quant): Yes/No Questions",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t01"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t01",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t01"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t02"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t02",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t02"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t03"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t03",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t03"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t04"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t04",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t04"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t05"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t05",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t05"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t06"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t06",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t06"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t07"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t07",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t07"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t08"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t08",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t08"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t09"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t09",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t09"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t10"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t10",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t10"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t11"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t11",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t11"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat.qnt.ds.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t12"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat.qnt.ds.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat.qnt.ds.t12",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat.qnt.ds.t12"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-gmat-qnt-ds-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat-qnt-ds-more"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-teaches-gmat-qnt-ds-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:gmat-qnt-ds-more",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:learning_objective:gmat-qnt-ds-more"
+    },
+    {
+      "id": "edge-gmat-qnt-ds-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:chapter:gmat-qnt-ds",
+      "to_id": "kg:gre-gmat:graduate:gmat-quantitative:gmat-qnt-ds:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

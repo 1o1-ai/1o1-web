@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gmat-data-insights",
+  "chapter_id": "gmat-di-tpa",
+  "title": "GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure",
+  "built_at": "2026-06-27T08:46:17.203338+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "type": "chapter",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t01",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t01",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t02",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Quantitative relationships in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Quantitative relationships in TPA",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t02",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Quantitative relationships in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Quantitative relationships in TPA.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t03",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Verbal logical relations in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Verbal logical relations in TPA",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t03",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Verbal logical relations in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Verbal logical relations in TPA.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t04",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Systems of equations in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Systems of equations in TPA",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t04",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Systems of equations in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Systems of equations in TPA.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t05",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Probability calculations in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Probability calculations in TPA",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t05",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Probability calculations in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Probability calculations in TPA.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t06",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Combinations and Permutations in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Combinations and Permutations in TPA",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t06",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Combinations and Permutations in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Combinations and Permutations in TPA.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t07",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Sorting data tables in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Sorting data tables in TPA",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t07",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Sorting data tables in TPA",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Sorting data tables in TPA.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t08",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Selecting dependent values",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Selecting dependent values",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t08",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Selecting dependent values",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Selecting dependent values.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t09",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Two-column consistency checks",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Two-column consistency checks",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t09",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Two-column consistency checks",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Two-column consistency checks.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t10",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Pacing",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Two-Part Analysis: Pacing",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t10",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Pacing",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Two-Part Analysis: Pacing.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t11",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Logic Puzzles",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Two-Part Analysis: Logic Puzzles",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t11",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Logic Puzzles",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Two-Part Analysis: Logic Puzzles.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t12",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Arithmetic",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Two-Part Analysis: Arithmetic",
+      "metadata": {
+        "skill_id": "GMAT.DI.TPA.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t12",
+      "type": "learning_objective",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Arithmetic",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.TPA Topic: Two-Part Analysis: Arithmetic.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat-di-tpa-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gmat-di-tpa-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat-di-tpa-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:core-concepts",
+      "type": "concept",
+      "label": "GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure",
+      "chapter_id": "gmat-di-tpa",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.TPA Topic: Two-Part Analysis: Columns Structure",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t01"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t01",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t01"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t02"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t02",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t02"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t03"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t03",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t03"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t04"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t04",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t04"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t05"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t05",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t05"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t06"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t06",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t06"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t07"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t07",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t07"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t08"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t08",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t08"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t09"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t09",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t09"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t10"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t10",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t10"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t11"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t11",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t11"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat.di.tpa.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t12"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat.di.tpa.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat.di.tpa.t12",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat.di.tpa.t12"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-gmat-di-tpa-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat-di-tpa-more"
+    },
+    {
+      "id": "edge-gmat-di-tpa-teaches-gmat-di-tpa-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:gmat-di-tpa-more",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:learning_objective:gmat-di-tpa-more"
+    },
+    {
+      "id": "edge-gmat-di-tpa-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:chapter:gmat-di-tpa",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-tpa:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

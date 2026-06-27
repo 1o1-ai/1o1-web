@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "physics",
+  "chapter_id": "wave-optics",
+  "title": "Wave Optics",
+  "built_at": "2026-06-27T08:46:17.025281+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:physics:wave-optics:chapter:wave-optics",
+      "type": "chapter",
+      "label": "Wave Optics",
+      "chapter_id": "wave-optics",
+      "subject": "physics",
+      "sku": "cbse12-science",
+      "text": "Wave Optics",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 91
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:physics:wave-optics:concept:core-concepts",
+      "type": "concept",
+      "label": "Wave Optics",
+      "chapter_id": "wave-optics",
+      "subject": "physics",
+      "sku": "cbse12-science",
+      "text": "Wave Optics",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-wave-optics-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:physics:wave-optics:chapter:wave-optics",
+      "to_id": "kg:cbse:12:physics:wave-optics:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

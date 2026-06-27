@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "chemistry",
+  "chapter_id": "alcohols-phenols-ethers",
+  "title": "Alcohols, Phenols and Ethers",
+  "built_at": "2026-06-27T08:46:16.658891+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:chemistry:alcohols-phenols-ethers:chapter:alcohols-phenols-ethers",
+      "type": "chapter",
+      "label": "Alcohols, Phenols and Ethers",
+      "chapter_id": "alcohols-phenols-ethers",
+      "subject": "chemistry",
+      "sku": "cbse12-science",
+      "text": "Alcohols, Phenols and Ethers",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 176
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:chemistry:alcohols-phenols-ethers:concept:core-concepts",
+      "type": "concept",
+      "label": "Alcohols, Phenols and Ethers",
+      "chapter_id": "alcohols-phenols-ethers",
+      "subject": "chemistry",
+      "sku": "cbse12-science",
+      "text": "Alcohols, Phenols and Ethers",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-alcohols-phenols-ethers-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:chemistry:alcohols-phenols-ethers:chapter:alcohols-phenols-ethers",
+      "to_id": "kg:cbse:12:chemistry:alcohols-phenols-ethers:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

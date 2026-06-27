@@ -1,0 +1,220 @@
+{
+  "schema_version": "games_index_v1",
+  "built_at": "2026-06-27T08:46:17.366084+00:00",
+  "skus": [
+    {
+      "sku": "cbse12-science",
+      "raw_questions": 9335,
+      "skipped": 0,
+      "canonical_items": 9310,
+      "verified_mcq": 0,
+      "mcq_items": 628,
+      "subjects": {
+        "biology": {
+          "chapters": 13,
+          "items": 2363,
+          "verified": 0,
+          "mcq": 253
+        },
+        "chemistry": {
+          "chapters": 10,
+          "items": 2697,
+          "verified": 0,
+          "mcq": 227
+        },
+        "mathematics": {
+          "chapters": 13,
+          "items": 2025,
+          "verified": 0,
+          "mcq": 48
+        },
+        "physics": {
+          "chapters": 14,
+          "items": 2225,
+          "verified": 0,
+          "mcq": 100
+        }
+      }
+    },
+    {
+      "sku": "sat-act",
+      "raw_questions": 319,
+      "skipped": 0,
+      "canonical_items": 319,
+      "verified_mcq": 319,
+      "mcq_items": 319,
+      "subjects": {
+        "act-english": {
+          "chapters": 2,
+          "items": 175,
+          "verified": 175,
+          "mcq": 175
+        },
+        "sat-math": {
+          "chapters": 14,
+          "items": 84,
+          "verified": 84,
+          "mcq": 84
+        },
+        "sat-reading-writing": {
+          "chapters": 10,
+          "items": 60,
+          "verified": 60,
+          "mcq": 60
+        }
+      }
+    },
+    {
+      "sku": "gre-gmat",
+      "raw_questions": 55,
+      "skipped": 0,
+      "canonical_items": 55,
+      "verified_mcq": 55,
+      "mcq_items": 55,
+      "subjects": {
+        "gmat-data-insights": {
+          "chapters": 4,
+          "items": 12,
+          "verified": 12,
+          "mcq": 12
+        },
+        "gmat-quantitative": {
+          "chapters": 2,
+          "items": 6,
+          "verified": 6,
+          "mcq": 6
+        },
+        "gmat-verbal": {
+          "chapters": 3,
+          "items": 9,
+          "verified": 9,
+          "mcq": 9
+        },
+        "gre-awa": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        },
+        "gre-quantitative": {
+          "chapters": 4,
+          "items": 16,
+          "verified": 16,
+          "mcq": 16
+        },
+        "gre-verbal": {
+          "chapters": 3,
+          "items": 9,
+          "verified": 9,
+          "mcq": 9
+        }
+      }
+    },
+    {
+      "sku": "english-tests",
+      "raw_questions": 43,
+      "skipped": 0,
+      "canonical_items": 43,
+      "verified_mcq": 43,
+      "mcq_items": 43,
+      "subjects": {
+        "det-comprehension": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        },
+        "det-conversation": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        },
+        "det-literacy": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        },
+        "det-production": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        },
+        "ielts-listening": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        },
+        "ielts-reading": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        },
+        "ielts-speaking": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        },
+        "ielts-writing": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        },
+        "toefl-listening": {
+          "chapters": 1,
+          "items": 5,
+          "verified": 5,
+          "mcq": 5
+        },
+        "toefl-reading": {
+          "chapters": 1,
+          "items": 8,
+          "verified": 8,
+          "mcq": 8
+        },
+        "toefl-speaking": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        },
+        "toefl-writing": {
+          "chapters": 1,
+          "items": 3,
+          "verified": 3,
+          "mcq": 3
+        }
+      }
+    },
+    {
+      "sku": "rhytoma-wbbse",
+      "raw_questions": 12,
+      "skipped": 0,
+      "canonical_items": 12,
+      "verified_mcq": 12,
+      "mcq_items": 12,
+      "subjects": {
+        "mathematics": {
+          "chapters": 1,
+          "items": 1,
+          "verified": 1,
+          "mcq": 1
+        },
+        "science": {
+          "chapters": 10,
+          "items": 11,
+          "verified": 11,
+          "mcq": 11
+        }
+      }
+    }
+  ],
+  "layout": "portal/data/games/{curriculum}/{grade}/{subject}/items/{chapter_id}.jsonl",
+  "kg_layout": "portal/data/games/{curriculum}/{grade}/{subject}/kg/{chapter_id}.json"
+}

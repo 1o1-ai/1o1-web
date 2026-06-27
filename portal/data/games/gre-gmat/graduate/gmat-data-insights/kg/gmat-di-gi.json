@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gmat-data-insights",
+  "chapter_id": "gmat-di-gi",
+  "title": "GMAT.DI.GI Topic: Bar Charts Interpretation",
+  "built_at": "2026-06-27T08:46:17.196134+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "type": "chapter",
+      "label": "GMAT.DI.GI Topic: Bar Charts Interpretation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Bar Charts Interpretation",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t01",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Bar Charts Interpretation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Bar Charts Interpretation",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t01",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Bar Charts Interpretation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Bar Charts Interpretation.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t02",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Line Graphs Interpretation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Line Graphs Interpretation",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t02",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Line Graphs Interpretation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Line Graphs Interpretation.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t03",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Scatter Plots Interpretation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Scatter Plots Interpretation",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t03",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Scatter Plots Interpretation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Scatter Plots Interpretation.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t04",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Bubble Charts Interpretation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Bubble Charts Interpretation",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t04",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Bubble Charts Interpretation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Bubble Charts Interpretation.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t05",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Multi-axis Graphs",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Multi-axis Graphs",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t05",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Multi-axis Graphs",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Multi-axis Graphs.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t06",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Interpreting Tables",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Interpreting Tables",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t06",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Interpreting Tables",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Interpreting Tables.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t07",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Calculating Percentage Changes",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Calculating Percentage Changes",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t07",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Calculating Percentage Changes",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Calculating Percentage Changes.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t08",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Finding Correlations",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Finding Correlations",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t08",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Finding Correlations",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Finding Correlations.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t09",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Sorting Data in Tables",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Sorting Data in Tables",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t09",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Sorting Data in Tables",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Sorting Data in Tables.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t10",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Data Synthesis from Multiple Visuals",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Data Synthesis from Multiple Visuals",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t10",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Data Synthesis from Multiple Visuals",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Data Synthesis from Multiple Visuals.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t11",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Graphical Interpretation: Estimation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Graphical Interpretation: Estimation",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t11",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Graphical Interpretation: Estimation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Graphical Interpretation: Estimation.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t12",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Graphical Interpretation: Pacing",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Graphical Interpretation: Pacing",
+      "metadata": {
+        "skill_id": "GMAT.DI.GI.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t12",
+      "type": "learning_objective",
+      "label": "GMAT.DI.GI Topic: Graphical Interpretation: Pacing",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.DI.GI Topic: Graphical Interpretation: Pacing.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat-di-gi-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gmat-di-gi-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat-di-gi-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:core-concepts",
+      "type": "concept",
+      "label": "GMAT.DI.GI Topic: Bar Charts Interpretation",
+      "chapter_id": "gmat-di-gi",
+      "subject": "gmat-data-insights",
+      "sku": "gre-gmat",
+      "text": "GMAT.DI.GI Topic: Bar Charts Interpretation",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t01"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t01",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t01"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t02"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t02",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t02"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t03"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t03",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t03"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t04"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t04",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t04"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t05"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t05",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t05"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t06"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t06",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t06"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t07"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t07",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t07"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t08"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t08",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t08"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t09"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t09",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t09"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t10"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t10",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t10"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t11"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t11",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t11"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat.di.gi.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t12"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat.di.gi.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat.di.gi.t12",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat.di.gi.t12"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-gmat-di-gi-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat-di-gi-more"
+    },
+    {
+      "id": "edge-gmat-di-gi-teaches-gmat-di-gi-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:gmat-di-gi-more",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:learning_objective:gmat-di-gi-more"
+    },
+    {
+      "id": "edge-gmat-di-gi-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:chapter:gmat-di-gi",
+      "to_id": "kg:gre-gmat:graduate:gmat-data-insights:gmat-di-gi:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

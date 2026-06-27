@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gre-awa",
+  "chapter_id": "gre-awa-iss",
+  "title": "GRE.AWA.ISS Topic: Thesis Formulation",
+  "built_at": "2026-06-27T08:46:17.228230+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "type": "chapter",
+      "label": "GRE.AWA.ISS Topic: Thesis Formulation",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Thesis Formulation",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t01",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Thesis Formulation",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Thesis Formulation",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t01",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Thesis Formulation",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Thesis Formulation.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t02",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Essay Structuring",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Essay Structuring",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t02",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Essay Structuring",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Essay Structuring.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t03",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Introductory Paragraphs",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Introductory Paragraphs",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t03",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Introductory Paragraphs",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Introductory Paragraphs.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t04",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Evidence Selection",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Evidence Selection",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t04",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Evidence Selection",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Evidence Selection.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t05",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Body Paragraph Development",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Body Paragraph Development",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t05",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Body Paragraph Development",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Body Paragraph Development.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t06",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Addressing Counterarguments",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Addressing Counterarguments",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t06",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Addressing Counterarguments",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Addressing Counterarguments.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t07",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Cohesive Transitions",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Cohesive Transitions",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t07",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Cohesive Transitions",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Cohesive Transitions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t08",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Concluding Paragraphs",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Concluding Paragraphs",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t08",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Concluding Paragraphs",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Concluding Paragraphs.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t09",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Sentence Variety",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Sentence Variety",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t09",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Sentence Variety",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Sentence Variety.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t10",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Vocabulary Precision",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Vocabulary Precision",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t10",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Vocabulary Precision",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Vocabulary Precision.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t11",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Grammar and Mechanics",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Grammar and Mechanics",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t11",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Grammar and Mechanics",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Grammar and Mechanics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t12",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Time Management under Pressure",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Time Management under Pressure",
+      "metadata": {
+        "skill_id": "GRE.AWA.ISS.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t12",
+      "type": "learning_objective",
+      "label": "GRE.AWA.ISS Topic: Time Management under Pressure",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.AWA.ISS Topic: Time Management under Pressure.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre-awa-iss-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gre-awa-iss-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre-awa-iss-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:core-concepts",
+      "type": "concept",
+      "label": "GRE.AWA.ISS Topic: Thesis Formulation",
+      "chapter_id": "gre-awa-iss",
+      "subject": "gre-awa",
+      "sku": "gre-gmat",
+      "text": "GRE.AWA.ISS Topic: Thesis Formulation",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t01"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t01",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t01"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t02"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t02",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t02"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t03"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t03",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t03"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t04"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t04",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t04"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t05"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t05",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t05"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t06"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t06",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t06"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t07"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t07",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t07"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t08"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t08",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t08"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t09"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t09",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t09"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t10"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t10",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t10"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t11"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t11",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t11"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre.awa.iss.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t12"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre.awa.iss.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre.awa.iss.t12",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre.awa.iss.t12"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-gre-awa-iss-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre-awa-iss-more"
+    },
+    {
+      "id": "edge-gre-awa-iss-teaches-gre-awa-iss-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:gre-awa-iss-more",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:learning_objective:gre-awa-iss-more"
+    },
+    {
+      "id": "edge-gre-awa-iss-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:chapter:gre-awa-iss",
+      "to_id": "kg:gre-gmat:graduate:gre-awa:gre-awa-iss:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

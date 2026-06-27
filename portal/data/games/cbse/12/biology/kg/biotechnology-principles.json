@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "biology",
+  "chapter_id": "biotechnology-principles",
+  "title": "Biotechnology - Principles and Processes",
+  "built_at": "2026-06-27T08:46:16.527136+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:biology:biotechnology-principles:chapter:biotechnology-principles",
+      "type": "chapter",
+      "label": "Biotechnology - Principles and Processes",
+      "chapter_id": "biotechnology-principles",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Biotechnology - Principles and Processes",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 160
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:biology:biotechnology-principles:concept:core-concepts",
+      "type": "concept",
+      "label": "Biotechnology - Principles and Processes",
+      "chapter_id": "biotechnology-principles",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Biotechnology - Principles and Processes",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-biotechnology-principles-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:biology:biotechnology-principles:chapter:biotechnology-principles",
+      "to_id": "kg:cbse:12:biology:biotechnology-principles:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

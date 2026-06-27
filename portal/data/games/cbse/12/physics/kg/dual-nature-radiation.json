@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "physics",
+  "chapter_id": "dual-nature-radiation",
+  "title": "Dual Nature of Radiation and Matter",
+  "built_at": "2026-06-27T08:46:16.922015+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:physics:dual-nature-radiation:chapter:dual-nature-radiation",
+      "type": "chapter",
+      "label": "Dual Nature of Radiation and Matter",
+      "chapter_id": "dual-nature-radiation",
+      "subject": "physics",
+      "sku": "cbse12-science",
+      "text": "Dual Nature of Radiation and Matter",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 116
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:physics:dual-nature-radiation:concept:core-concepts",
+      "type": "concept",
+      "label": "Dual Nature of Radiation and Matter",
+      "chapter_id": "dual-nature-radiation",
+      "subject": "physics",
+      "sku": "cbse12-science",
+      "text": "Dual Nature of Radiation and Matter",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-dual-nature-radiation-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:physics:dual-nature-radiation:chapter:dual-nature-radiation",
+      "to_id": "kg:cbse:12:physics:dual-nature-radiation:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

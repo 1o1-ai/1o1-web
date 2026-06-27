@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-reading-writing",
+  "chapter_id": "sat-rw-words-context",
+  "title": "Words in Context",
+  "built_at": "2026-06-27T08:46:17.180593+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:chapter:sat-rw-words-context",
+      "type": "chapter",
+      "label": "Words in Context",
+      "chapter_id": "sat-rw-words-context",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Words in Context",
+      "metadata": {
+        "unit": "Craft and Structure",
+        "unit_id": "sat-rw-craft",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:concept:sat-rw-words-context-1",
+      "type": "concept",
+      "label": "Vocabulary in context",
+      "chapter_id": "sat-rw-words-context",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Vocabulary in context",
+      "metadata": {
+        "skill_id": "sat-rw-words-context-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:learning_objective:sat-rw-words-context-1",
+      "type": "learning_objective",
+      "label": "Vocabulary in context",
+      "chapter_id": "sat-rw-words-context",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Vocabulary in context.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:concept:sat-rw-words-context-2",
+      "type": "concept",
+      "label": "Precision and tone",
+      "chapter_id": "sat-rw-words-context",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Precision and tone",
+      "metadata": {
+        "skill_id": "sat-rw-words-context-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:learning_objective:sat-rw-words-context-2",
+      "type": "learning_objective",
+      "label": "Precision and tone",
+      "chapter_id": "sat-rw-words-context",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Precision and tone.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:concept:core-concepts",
+      "type": "concept",
+      "label": "Words in Context",
+      "chapter_id": "sat-rw-words-context",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Words in Context",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-rw-words-context-contains-sat-rw-words-context-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:chapter:sat-rw-words-context",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:concept:sat-rw-words-context-1"
+    },
+    {
+      "id": "edge-sat-rw-words-context-teaches-sat-rw-words-context-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:concept:sat-rw-words-context-1",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:learning_objective:sat-rw-words-context-1"
+    },
+    {
+      "id": "edge-sat-rw-words-context-contains-sat-rw-words-context-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:chapter:sat-rw-words-context",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:concept:sat-rw-words-context-2"
+    },
+    {
+      "id": "edge-sat-rw-words-context-teaches-sat-rw-words-context-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:concept:sat-rw-words-context-2",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:learning_objective:sat-rw-words-context-2"
+    },
+    {
+      "id": "edge-sat-rw-words-context-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:chapter:sat-rw-words-context",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-words-context:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

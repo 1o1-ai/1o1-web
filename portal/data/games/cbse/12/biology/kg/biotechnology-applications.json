@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "biology",
+  "chapter_id": "biotechnology-applications",
+  "title": "Biotechnology and its Application",
+  "built_at": "2026-06-27T08:46:16.518483+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:biology:biotechnology-applications:chapter:biotechnology-applications",
+      "type": "chapter",
+      "label": "Biotechnology and its Application",
+      "chapter_id": "biotechnology-applications",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Biotechnology and its Application",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 53
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:biology:biotechnology-applications:concept:core-concepts",
+      "type": "concept",
+      "label": "Biotechnology and its Application",
+      "chapter_id": "biotechnology-applications",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Biotechnology and its Application",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-biotechnology-applications-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:biology:biotechnology-applications:chapter:biotechnology-applications",
+      "to_id": "kg:cbse:12:biology:biotechnology-applications:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

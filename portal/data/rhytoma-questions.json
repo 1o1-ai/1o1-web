@@ -1,5 +1,6 @@
 {
   "sku": "rhytoma-wbbse",
+  "updated_at": "2026-06-27T08:37:19.301596+00:00",
   "questions": [
     {
       "id": "rw_q1",
@@ -7,7 +8,12 @@
       "grade": "10",
       "chapter": "physical-science",
       "text": "Which law explains the relation between current, voltage and resistance in a metallic conductor at constant temperature?",
-      "options": ["Ohm's law", "Faraday's law", "Snell's law", "Boyle's law"],
+      "options": [
+        "Ohm's law",
+        "Faraday's law",
+        "Snell's law",
+        "Boyle's law"
+      ],
       "correctIndex": 0,
       "answer_verified": true
     },
@@ -17,9 +23,294 @@
       "grade": "10",
       "chapter": "algebra",
       "text": "The roots of x² - 5x + 6 = 0 are:",
-      "options": ["2 and 3", "-2 and -3", "1 and 6", "-1 and -6"],
+      "options": [
+        "2 and 3",
+        "-2 and -3",
+        "1 and 6",
+        "-1 and -6"
+      ],
       "correctIndex": 0,
       "answer_verified": true
+    },
+    {
+      "id": "8ddaf76b3f80d06f",
+      "subject_slug": "science",
+      "subject": "science",
+      "chapter": "physical-science",
+      "chapter_id": "physical-science",
+      "question": "Which study focus best supports Physical Science & Environment?",
+      "options": [
+        "Master Physical Science & Environment fundamentals",
+        "Apply Physical Science & Environment to board-style problems",
+        "Ignore Physical Science & Environment until mock week",
+        "Memorize formulas unrelated to Physical Science & Environment"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:physical-science:0",
+      "tags": [
+        "learning-objective",
+        "wbbse-enriched"
+      ]
+    },
+    {
+      "id": "12ffd90e5c404ba6",
+      "subject_slug": "science",
+      "subject": "science",
+      "chapter": "life-science",
+      "chapter_id": "life-science",
+      "question": "Which study focus best supports Life Science & Environment?",
+      "options": [
+        "Master Life Science & Environment fundamentals",
+        "Apply Life Science & Environment to board-style problems",
+        "Ignore Life Science & Environment until mock week",
+        "Memorize formulas unrelated to Life Science & Environment"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:life-science:0",
+      "tags": [
+        "learning-objective",
+        "wbbse-enriched"
+      ]
+    },
+    {
+      "id": "9f4020f83e5de6ec",
+      "subject_slug": "science",
+      "subject": "science",
+      "chapter": "physics",
+      "chapter_id": "physics",
+      "question": "Which study focus best supports Physics?",
+      "options": [
+        "Master Physics fundamentals",
+        "Apply Physics to board-style problems",
+        "Ignore Physics until mock week",
+        "Memorize formulas unrelated to Physics"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:physics:0",
+      "tags": [
+        "learning-objective",
+        "wbbse-enriched"
+      ]
+    },
+    {
+      "id": "8d729db5369799f8",
+      "subject_slug": "science",
+      "subject": "science",
+      "chapter": "chemistry",
+      "chapter_id": "chemistry",
+      "question": "Which study focus best supports Chemistry?",
+      "options": [
+        "Master Chemistry fundamentals",
+        "Apply Chemistry to board-style problems",
+        "Ignore Chemistry until mock week",
+        "Memorize formulas unrelated to Chemistry"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:chemistry:0",
+      "tags": [
+        "learning-objective",
+        "wbbse-enriched"
+      ]
+    },
+    {
+      "id": "e909a8874486bd42",
+      "subject_slug": "science",
+      "subject": "science",
+      "chapter": "biology",
+      "chapter_id": "biology",
+      "question": "Which study focus best supports Biological Sciences?",
+      "options": [
+        "Master Biological Sciences fundamentals",
+        "Apply Biological Sciences to board-style problems",
+        "Ignore Biological Sciences until mock week",
+        "Memorize formulas unrelated to Biological Sciences"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:biology:0",
+      "tags": [
+        "learning-objective",
+        "wbbse-enriched"
+      ]
+    },
+    {
+      "id": "6dfad1232637617b",
+      "subject_slug": "science",
+      "subject": "science",
+      "chapter": "algebra",
+      "chapter_id": "algebra",
+      "question": "Which study focus best supports Algebra & Number Systems?",
+      "options": [
+        "Master Algebra & Number Systems fundamentals",
+        "Apply Algebra & Number Systems to board-style problems",
+        "Ignore Algebra & Number Systems until mock week",
+        "Memorize formulas unrelated to Algebra & Number Systems"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:algebra:0",
+      "tags": [
+        "learning-objective",
+        "wbbse-enriched"
+      ]
+    },
+    {
+      "id": "0122ab97f82a7a91",
+      "subject_slug": "science",
+      "subject": "science",
+      "chapter": "geometry",
+      "chapter_id": "geometry",
+      "question": "Which study focus best supports Geometry & Mensuration?",
+      "options": [
+        "Master Geometry & Mensuration fundamentals",
+        "Apply Geometry & Mensuration to board-style problems",
+        "Ignore Geometry & Mensuration until mock week",
+        "Memorize formulas unrelated to Geometry & Mensuration"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:geometry:0",
+      "tags": [
+        "learning-objective",
+        "wbbse-enriched"
+      ]
+    },
+    {
+      "id": "cba2809d8ff31590",
+      "subject_slug": "science",
+      "subject": "science",
+      "chapter": "trigonometry",
+      "chapter_id": "trigonometry",
+      "question": "Which study focus best supports Trigonometry?",
+      "options": [
+        "Master Trigonometry fundamentals",
+        "Apply Trigonometry to board-style problems",
+        "Ignore Trigonometry until mock week",
+        "Memorize formulas unrelated to Trigonometry"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:trigonometry:0",
+      "tags": [
+        "learning-objective",
+        "wbbse-enriched"
+      ]
+    },
+    {
+      "id": "ef403988407e74e8",
+      "subject_slug": "science",
+      "subject": "science",
+      "chapter": "calculus",
+      "chapter_id": "calculus",
+      "question": "Which study focus best supports Calculus?",
+      "options": [
+        "Master Calculus fundamentals",
+        "Apply Calculus to board-style problems",
+        "Ignore Calculus until mock week",
+        "Memorize formulas unrelated to Calculus"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:calculus:0",
+      "tags": [
+        "learning-objective",
+        "wbbse-enriched"
+      ]
+    },
+    {
+      "id": "0da99bfd95778258",
+      "subject_slug": "science",
+      "subject": "science",
+      "chapter": "probability",
+      "chapter_id": "probability",
+      "question": "Which study focus best supports Probability & Statistics?",
+      "options": [
+        "Master Probability & Statistics fundamentals",
+        "Apply Probability & Statistics to board-style problems",
+        "Ignore Probability & Statistics until mock week",
+        "Memorize formulas unrelated to Probability & Statistics"
+      ],
+      "option_labels": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "correct_index": 0,
+      "answer_key": "A",
+      "answer_verified": true,
+      "source": "topic:probability:0",
+      "tags": [
+        "learning-objective",
+        "wbbse-enriched"
+      ]
     }
   ]
 }

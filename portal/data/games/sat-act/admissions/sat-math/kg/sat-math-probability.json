@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-math",
+  "chapter_id": "sat-math-probability",
+  "title": "Probability",
+  "built_at": "2026-06-27T08:46:17.124175+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-probability:chapter:sat-math-probability",
+      "type": "chapter",
+      "label": "Probability",
+      "chapter_id": "sat-math-probability",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Probability",
+      "metadata": {
+        "unit": "Problem Solving and Data Analysis",
+        "unit_id": "sat-math-psda",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-probability:concept:sat-math-probability-1",
+      "type": "concept",
+      "label": "Basic probability",
+      "chapter_id": "sat-math-probability",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Basic probability",
+      "metadata": {
+        "skill_id": "sat-math-probability-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-probability:learning_objective:sat-math-probability-1",
+      "type": "learning_objective",
+      "label": "Basic probability",
+      "chapter_id": "sat-math-probability",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Basic probability.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-probability:concept:sat-math-probability-2",
+      "type": "concept",
+      "label": "Conditional probability",
+      "chapter_id": "sat-math-probability",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Conditional probability",
+      "metadata": {
+        "skill_id": "sat-math-probability-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-probability:learning_objective:sat-math-probability-2",
+      "type": "learning_objective",
+      "label": "Conditional probability",
+      "chapter_id": "sat-math-probability",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Conditional probability.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-probability:concept:core-concepts",
+      "type": "concept",
+      "label": "Probability",
+      "chapter_id": "sat-math-probability",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Probability",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-math-probability-contains-sat-math-probability-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-probability:chapter:sat-math-probability",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-probability:concept:sat-math-probability-1"
+    },
+    {
+      "id": "edge-sat-math-probability-teaches-sat-math-probability-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-probability:concept:sat-math-probability-1",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-probability:learning_objective:sat-math-probability-1"
+    },
+    {
+      "id": "edge-sat-math-probability-contains-sat-math-probability-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-probability:chapter:sat-math-probability",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-probability:concept:sat-math-probability-2"
+    },
+    {
+      "id": "edge-sat-math-probability-teaches-sat-math-probability-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-probability:concept:sat-math-probability-2",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-probability:learning_objective:sat-math-probability-2"
+    },
+    {
+      "id": "edge-sat-math-probability-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-probability:chapter:sat-math-probability",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-probability:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

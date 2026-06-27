@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gmat-verbal",
+  "chapter_id": "gmat-vbl-sc",
+  "title": "GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement",
+  "built_at": "2026-06-27T08:46:17.224169+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "type": "chapter",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t01",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t01",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t02",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Pronoun Reference",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Pronoun Reference",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t02",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Pronoun Reference",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Pronoun Reference.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t03",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Modifier Placement",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Modifier Placement",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t03",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Modifier Placement",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Modifier Placement.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t04",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Parallelism",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Parallelism",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t04",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Parallelism",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Parallelism.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t05",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Comparisons",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Comparisons",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t05",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Comparisons",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Comparisons.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t06",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Verb Tense & Aspect",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Verb Tense & Aspect",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t06",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Verb Tense & Aspect",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Verb Tense & Aspect.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t07",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Idioms and Usage",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Idioms and Usage",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t07",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Idioms and Usage",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Idioms and Usage.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t08",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Conciseness & Redundancy",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Conciseness & Redundancy",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t08",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Conciseness & Redundancy",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Conciseness & Redundancy.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t09",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Logical Meaning & Clarity",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Logical Meaning & Clarity",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t09",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Logical Meaning & Clarity",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Logical Meaning & Clarity.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t10",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Active vs Passive Voice",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Active vs Passive Voice",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t10",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Active vs Passive Voice",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Active vs Passive Voice.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t11",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Punctuation (Semicolons/Commas)",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Punctuation (Semicolons/Commas)",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t11",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Punctuation (Semicolons/Commas)",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Punctuation (Semicolons/Commas).",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t12",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Pronoun Case (I vs Me)",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Pronoun Case (I vs Me)",
+      "metadata": {
+        "skill_id": "GMAT.VBL.SC.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t12",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Pronoun Case (I vs Me)",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.SC Topic: Sentence Correction: Pronoun Case (I vs Me).",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat-vbl-sc-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gmat-vbl-sc-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat-vbl-sc-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:core-concepts",
+      "type": "concept",
+      "label": "GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement",
+      "chapter_id": "gmat-vbl-sc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.SC Topic: Sentence Correction: Subject-Verb Agreement",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t01"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t01",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t01"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t02"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t02",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t02"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t03"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t03",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t03"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t04"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t04",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t04"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t05"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t05",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t05"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t06"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t06",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t06"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t07"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t07",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t07"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t08"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t08",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t08"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t09"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t09",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t09"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t10"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t10",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t10"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t11"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t11",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t11"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat.vbl.sc.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t12"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat.vbl.sc.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat.vbl.sc.t12",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat.vbl.sc.t12"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-gmat-vbl-sc-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat-vbl-sc-more"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-teaches-gmat-vbl-sc-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:gmat-vbl-sc-more",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:learning_objective:gmat-vbl-sc-more"
+    },
+    {
+      "id": "edge-gmat-vbl-sc-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:chapter:gmat-vbl-sc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-sc:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

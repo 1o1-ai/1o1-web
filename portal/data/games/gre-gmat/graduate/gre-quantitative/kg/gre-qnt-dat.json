@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gre-quantitative",
+  "chapter_id": "gre-qnt-dat",
+  "title": "GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median",
+  "built_at": "2026-06-27T08:46:17.239776+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "type": "chapter",
+      "label": "GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t01",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t01",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t02",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Descriptive Statistics: Mode & Range",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Descriptive Statistics: Mode & Range",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t02",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Descriptive Statistics: Mode & Range",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Descriptive Statistics: Mode & Range.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t03",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Standard Deviation and Variance",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Standard Deviation and Variance",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t03",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Standard Deviation and Variance",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Standard Deviation and Variance.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t04",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Percentiles and Quartiles",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Percentiles and Quartiles",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t04",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Percentiles and Quartiles",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Percentiles and Quartiles.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t05",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Box Plots and Data Ranges",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Box Plots and Data Ranges",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t05",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Box Plots and Data Ranges",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Box Plots and Data Ranges.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t06",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Normal Distribution properties",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Normal Distribution properties",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t06",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Normal Distribution properties",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Normal Distribution properties.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t07",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Permutations: Formula and usage",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Permutations: Formula and usage",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t07",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Permutations: Formula and usage",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Permutations: Formula and usage.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t08",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Combinations: Formula and usage",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Combinations: Formula and usage",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t08",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Combinations: Formula and usage",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Combinations: Formula and usage.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t09",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Probability: Classical Definition",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Probability: Classical Definition",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t09",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Probability: Classical Definition",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Probability: Classical Definition.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t10",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Probability: Independent Events",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Probability: Independent Events",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t10",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Probability: Independent Events",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Probability: Independent Events.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t11",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Probability: Dependent Events",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Probability: Dependent Events",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t11",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Probability: Dependent Events",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Probability: Dependent Events.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t12",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Overlapping Sets and Venn Diagrams",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Overlapping Sets and Venn Diagrams",
+      "metadata": {
+        "skill_id": "GRE.QNT.DAT.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t12",
+      "type": "learning_objective",
+      "label": "GRE.QNT.DAT Topic: Overlapping Sets and Venn Diagrams",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.DAT Topic: Overlapping Sets and Venn Diagrams.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre-qnt-dat-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gre-qnt-dat-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre-qnt-dat-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:core-concepts",
+      "type": "concept",
+      "label": "GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median",
+      "chapter_id": "gre-qnt-dat",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.DAT Topic: Descriptive Statistics: Mean & Median",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t01"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t01",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t01"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t02"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t02",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t02"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t03"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t03",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t03"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t04"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t04",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t04"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t05"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t05",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t05"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t06"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t06",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t06"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t07"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t07",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t07"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t08"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t08",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t08"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t09"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t09",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t09"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t10"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t10",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t10"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t11"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t11",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t11"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre.qnt.dat.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t12"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre.qnt.dat.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre.qnt.dat.t12",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre.qnt.dat.t12"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-gre-qnt-dat-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre-qnt-dat-more"
+    },
+    {
+      "id": "edge-gre-qnt-dat-teaches-gre-qnt-dat-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:gre-qnt-dat-more",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:learning_objective:gre-qnt-dat-more"
+    },
+    {
+      "id": "edge-gre-qnt-dat-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:chapter:gre-qnt-dat",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-dat:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

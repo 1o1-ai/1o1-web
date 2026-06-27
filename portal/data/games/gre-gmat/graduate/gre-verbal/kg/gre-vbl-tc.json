@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gre-verbal",
+  "chapter_id": "gre-vbl-tc",
+  "title": "GRE.VBL.TC Topic: Single Blank: Sentence Analysis",
+  "built_at": "2026-06-27T08:46:17.254447+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "type": "chapter",
+      "label": "GRE.VBL.TC Topic: Single Blank: Sentence Analysis",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Single Blank: Sentence Analysis",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t01",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Single Blank: Sentence Analysis",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Single Blank: Sentence Analysis",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t01",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Single Blank: Sentence Analysis",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Single Blank: Sentence Analysis.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t02",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Single Blank: Clue Words",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Single Blank: Clue Words",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t02",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Single Blank: Clue Words",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Single Blank: Clue Words.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t03",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Single Blank: Word Choice",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Single Blank: Word Choice",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t03",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Single Blank: Word Choice",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Single Blank: Word Choice.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t04",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Double Blank: Relationship between Blanks",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Double Blank: Relationship between Blanks",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t04",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Double Blank: Relationship between Blanks",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Double Blank: Relationship between Blanks.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t05",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Double Blank: Clue Words",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Double Blank: Clue Words",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t05",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Double Blank: Clue Words",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Double Blank: Clue Words.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t06",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Double Blank: Options Matching",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Double Blank: Options Matching",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t06",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Double Blank: Options Matching",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Double Blank: Options Matching.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t07",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Triple Blank: Logic Flow",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Triple Blank: Logic Flow",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t07",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Triple Blank: Logic Flow",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Triple Blank: Logic Flow.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t08",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Triple Blank: Clue Words",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Triple Blank: Clue Words",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t08",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Triple Blank: Clue Words",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Triple Blank: Clue Words.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t09",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Triple Blank: Options Matching",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Triple Blank: Options Matching",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t09",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Triple Blank: Options Matching",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Triple Blank: Options Matching.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t10",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Identifying Transition Words",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Identifying Transition Words",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t10",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Identifying Transition Words",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Identifying Transition Words.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t11",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Punctuation Clues",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Punctuation Clues",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t11",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Punctuation Clues",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Punctuation Clues.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t12",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Defining Blank in Own Words first",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Defining Blank in Own Words first",
+      "metadata": {
+        "skill_id": "GRE.VBL.TC.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t12",
+      "type": "learning_objective",
+      "label": "GRE.VBL.TC Topic: Defining Blank in Own Words first",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.VBL.TC Topic: Defining Blank in Own Words first.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre-vbl-tc-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gre-vbl-tc-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre-vbl-tc-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:core-concepts",
+      "type": "concept",
+      "label": "GRE.VBL.TC Topic: Single Blank: Sentence Analysis",
+      "chapter_id": "gre-vbl-tc",
+      "subject": "gre-verbal",
+      "sku": "gre-gmat",
+      "text": "GRE.VBL.TC Topic: Single Blank: Sentence Analysis",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t01"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t01",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t01"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t02"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t02",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t02"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t03"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t03",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t03"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t04"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t04",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t04"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t05"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t05",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t05"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t06"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t06",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t06"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t07"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t07",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t07"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t08"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t08",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t08"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t09"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t09",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t09"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t10"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t10",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t10"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t11"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t11",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t11"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre.vbl.tc.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t12"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre.vbl.tc.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre.vbl.tc.t12",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre.vbl.tc.t12"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-gre-vbl-tc-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre-vbl-tc-more"
+    },
+    {
+      "id": "edge-gre-vbl-tc-teaches-gre-vbl-tc-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:gre-vbl-tc-more",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:learning_objective:gre-vbl-tc-more"
+    },
+    {
+      "id": "edge-gre-vbl-tc-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:chapter:gre-vbl-tc",
+      "to_id": "kg:gre-gmat:graduate:gre-verbal:gre-vbl-tc:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gre-quantitative",
+  "chapter_id": "gre-qnt-ari",
+  "title": "GRE.QNT.ARI Topic: Integers and Factors",
+  "built_at": "2026-06-27T08:46:17.235854+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "type": "chapter",
+      "label": "GRE.QNT.ARI Topic: Integers and Factors",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Integers and Factors",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t01",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Integers and Factors",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Integers and Factors",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t01",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Integers and Factors",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Integers and Factors.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t02",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Greatest Common Divisor (GCD) and Least Common Multiple (LCM)",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Greatest Common Divisor (GCD) and Least Common Multiple (LCM)",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t02",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Greatest Common Divisor (GCD) and Least Common Multiple (LCM)",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Greatest Common Divisor (GCD) and Least Common Multiple (LCM).",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t03",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Even and Odd Integers properties",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Even and Odd Integers properties",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t03",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Even and Odd Integers properties",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Even and Odd Integers properties.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t04",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Prime Numbers and Factorization",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Prime Numbers and Factorization",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t04",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Prime Numbers and Factorization",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Prime Numbers and Factorization.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t05",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Fractions Operations and Comparisons",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Fractions Operations and Comparisons",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t05",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Fractions Operations and Comparisons",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Fractions Operations and Comparisons.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t06",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Decimals and Place Value",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Decimals and Place Value",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t06",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Decimals and Place Value",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Decimals and Place Value.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t07",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Real Numbers and Number Line",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Real Numbers and Number Line",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t07",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Real Numbers and Number Line",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Real Numbers and Number Line.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t08",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Absolute Value concepts",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Absolute Value concepts",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t08",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Absolute Value concepts",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Absolute Value concepts.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t09",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Ratios, Proportions, and Scales",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Ratios, Proportions, and Scales",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t09",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Ratios, Proportions, and Scales",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Ratios, Proportions, and Scales.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t10",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Percentages: Increase and Decrease",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Percentages: Increase and Decrease",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t10",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Percentages: Increase and Decrease",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Percentages: Increase and Decrease.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t11",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Exponents and Rules of Exponents",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Exponents and Rules of Exponents",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t11",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Exponents and Rules of Exponents",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Exponents and Rules of Exponents.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t12",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Square Roots and Radicals",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Square Roots and Radicals",
+      "metadata": {
+        "skill_id": "GRE.QNT.ARI.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t12",
+      "type": "learning_objective",
+      "label": "GRE.QNT.ARI Topic: Square Roots and Radicals",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GRE.QNT.ARI Topic: Square Roots and Radicals.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre-qnt-ari-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gre-qnt-ari-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre-qnt-ari-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:core-concepts",
+      "type": "concept",
+      "label": "GRE.QNT.ARI Topic: Integers and Factors",
+      "chapter_id": "gre-qnt-ari",
+      "subject": "gre-quantitative",
+      "sku": "gre-gmat",
+      "text": "GRE.QNT.ARI Topic: Integers and Factors",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t01"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t01",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t01"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t02"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t02",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t02"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t03"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t03",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t03"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t04"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t04",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t04"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t05"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t05",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t05"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t06"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t06",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t06"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t07"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t07",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t07"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t08"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t08",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t08"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t09"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t09",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t09"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t10"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t10",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t10"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t11"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t11",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t11"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre.qnt.ari.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t12"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre.qnt.ari.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre.qnt.ari.t12",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre.qnt.ari.t12"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-gre-qnt-ari-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre-qnt-ari-more"
+    },
+    {
+      "id": "edge-gre-qnt-ari-teaches-gre-qnt-ari-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:gre-qnt-ari-more",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:learning_objective:gre-qnt-ari-more"
+    },
+    {
+      "id": "edge-gre-qnt-ari-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:chapter:gre-qnt-ari",
+      "to_id": "kg:gre-gmat:graduate:gre-quantitative:gre-qnt-ari:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "wbbse",
+  "grade": "10",
+  "sku": "rhytoma-wbbse",
+  "subject": "science",
+  "chapter_id": "physical-science",
+  "title": "Physical Science & Environment",
+  "built_at": "2026-06-27T08:46:17.350191+00:00",
+  "nodes": [
+    {
+      "id": "kg:wbbse:10:science:physical-science:chapter:physical-science",
+      "type": "chapter",
+      "label": "Physical Science & Environment",
+      "chapter_id": "physical-science",
+      "subject": "science",
+      "sku": "rhytoma-wbbse",
+      "text": "Physical Science & Environment",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:wbbse:10:science:physical-science:concept:core-concepts",
+      "type": "concept",
+      "label": "Physical Science & Environment",
+      "chapter_id": "physical-science",
+      "subject": "science",
+      "sku": "rhytoma-wbbse",
+      "text": "Physical Science & Environment",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-physical-science-contains-core",
+      "type": "contains",
+      "from_id": "kg:wbbse:10:science:physical-science:chapter:physical-science",
+      "to_id": "kg:wbbse:10:science:physical-science:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

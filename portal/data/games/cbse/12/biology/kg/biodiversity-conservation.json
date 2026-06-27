@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "biology",
+  "chapter_id": "biodiversity-conservation",
+  "title": "Biodiversity and Conservation",
+  "built_at": "2026-06-27T08:46:16.501375+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:biology:biodiversity-conservation:chapter:biodiversity-conservation",
+      "type": "chapter",
+      "label": "Biodiversity and Conservation",
+      "chapter_id": "biodiversity-conservation",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Biodiversity and Conservation",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 46
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:biology:biodiversity-conservation:concept:core-concepts",
+      "type": "concept",
+      "label": "Biodiversity and Conservation",
+      "chapter_id": "biodiversity-conservation",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Biodiversity and Conservation",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-biodiversity-conservation-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:biology:biodiversity-conservation:chapter:biodiversity-conservation",
+      "to_id": "kg:cbse:12:biology:biodiversity-conservation:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

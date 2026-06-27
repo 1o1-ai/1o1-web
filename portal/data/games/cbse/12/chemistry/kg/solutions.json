@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "chemistry",
+  "chapter_id": "solutions",
+  "title": "Solutions",
+  "built_at": "2026-06-27T08:46:16.736108+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:chemistry:solutions:chapter:solutions",
+      "type": "chapter",
+      "label": "Solutions",
+      "chapter_id": "solutions",
+      "subject": "chemistry",
+      "sku": "cbse12-science",
+      "text": "Solutions",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 1146
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:chemistry:solutions:concept:core-concepts",
+      "type": "concept",
+      "label": "Solutions",
+      "chapter_id": "solutions",
+      "subject": "chemistry",
+      "sku": "cbse12-science",
+      "text": "Solutions",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-solutions-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:chemistry:solutions:chapter:solutions",
+      "to_id": "kg:cbse:12:chemistry:solutions:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

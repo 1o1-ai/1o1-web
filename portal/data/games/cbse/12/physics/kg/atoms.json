@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "physics",
+  "chapter_id": "atoms",
+  "title": "Atoms",
+  "built_at": "2026-06-27T08:46:16.899152+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:physics:atoms:chapter:atoms",
+      "type": "chapter",
+      "label": "Atoms",
+      "chapter_id": "atoms",
+      "subject": "physics",
+      "sku": "cbse12-science",
+      "text": "Atoms",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 60
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:physics:atoms:concept:core-concepts",
+      "type": "concept",
+      "label": "Atoms",
+      "chapter_id": "atoms",
+      "subject": "physics",
+      "sku": "cbse12-science",
+      "text": "Atoms",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-atoms-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:physics:atoms:chapter:atoms",
+      "to_id": "kg:cbse:12:physics:atoms:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

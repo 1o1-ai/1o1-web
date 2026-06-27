@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-reading-writing",
+  "chapter_id": "sat-rw-cross-text",
+  "title": "Cross-Text Connections",
+  "built_at": "2026-06-27T08:46:17.155115+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:chapter:sat-rw-cross-text",
+      "type": "chapter",
+      "label": "Cross-Text Connections",
+      "chapter_id": "sat-rw-cross-text",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Cross-Text Connections",
+      "metadata": {
+        "unit": "Craft and Structure",
+        "unit_id": "sat-rw-craft",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:concept:sat-rw-cross-text-1",
+      "type": "concept",
+      "label": "Compare passages",
+      "chapter_id": "sat-rw-cross-text",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Compare passages",
+      "metadata": {
+        "skill_id": "sat-rw-cross-text-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:learning_objective:sat-rw-cross-text-1",
+      "type": "learning_objective",
+      "label": "Compare passages",
+      "chapter_id": "sat-rw-cross-text",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Compare passages.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:concept:sat-rw-cross-text-2",
+      "type": "concept",
+      "label": "Synthesize viewpoints",
+      "chapter_id": "sat-rw-cross-text",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Synthesize viewpoints",
+      "metadata": {
+        "skill_id": "sat-rw-cross-text-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:learning_objective:sat-rw-cross-text-2",
+      "type": "learning_objective",
+      "label": "Synthesize viewpoints",
+      "chapter_id": "sat-rw-cross-text",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Synthesize viewpoints.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:concept:core-concepts",
+      "type": "concept",
+      "label": "Cross-Text Connections",
+      "chapter_id": "sat-rw-cross-text",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Cross-Text Connections",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-rw-cross-text-contains-sat-rw-cross-text-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:chapter:sat-rw-cross-text",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:concept:sat-rw-cross-text-1"
+    },
+    {
+      "id": "edge-sat-rw-cross-text-teaches-sat-rw-cross-text-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:concept:sat-rw-cross-text-1",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:learning_objective:sat-rw-cross-text-1"
+    },
+    {
+      "id": "edge-sat-rw-cross-text-contains-sat-rw-cross-text-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:chapter:sat-rw-cross-text",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:concept:sat-rw-cross-text-2"
+    },
+    {
+      "id": "edge-sat-rw-cross-text-teaches-sat-rw-cross-text-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:concept:sat-rw-cross-text-2",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:learning_objective:sat-rw-cross-text-2"
+    },
+    {
+      "id": "edge-sat-rw-cross-text-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:chapter:sat-rw-cross-text",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-cross-text:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

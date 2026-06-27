@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "wbbse",
+  "grade": "10",
+  "sku": "rhytoma-wbbse",
+  "subject": "mathematics",
+  "chapter_id": "algebra",
+  "title": "Algebra & Number Systems",
+  "built_at": "2026-06-27T08:46:17.327146+00:00",
+  "nodes": [
+    {
+      "id": "kg:wbbse:10:mathematics:algebra:chapter:algebra",
+      "type": "chapter",
+      "label": "Algebra & Number Systems",
+      "chapter_id": "algebra",
+      "subject": "mathematics",
+      "sku": "rhytoma-wbbse",
+      "text": "Algebra & Number Systems",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:wbbse:10:mathematics:algebra:concept:core-concepts",
+      "type": "concept",
+      "label": "Algebra & Number Systems",
+      "chapter_id": "algebra",
+      "subject": "mathematics",
+      "sku": "rhytoma-wbbse",
+      "text": "Algebra & Number Systems",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-algebra-contains-core",
+      "type": "contains",
+      "from_id": "kg:wbbse:10:mathematics:algebra:chapter:algebra",
+      "to_id": "kg:wbbse:10:mathematics:algebra:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

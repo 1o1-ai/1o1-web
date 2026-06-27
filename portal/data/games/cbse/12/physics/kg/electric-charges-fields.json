@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "physics",
+  "chapter_id": "electric-charges-fields",
+  "title": "Electric Charges and Fields",
+  "built_at": "2026-06-27T08:46:16.930644+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:physics:electric-charges-fields:chapter:electric-charges-fields",
+      "type": "chapter",
+      "label": "Electric Charges and Fields",
+      "chapter_id": "electric-charges-fields",
+      "subject": "physics",
+      "sku": "cbse12-science",
+      "text": "Electric Charges and Fields",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 664
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:physics:electric-charges-fields:concept:core-concepts",
+      "type": "concept",
+      "label": "Electric Charges and Fields",
+      "chapter_id": "electric-charges-fields",
+      "subject": "physics",
+      "sku": "cbse12-science",
+      "text": "Electric Charges and Fields",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-electric-charges-fields-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:physics:electric-charges-fields:chapter:electric-charges-fields",
+      "to_id": "kg:cbse:12:physics:electric-charges-fields:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

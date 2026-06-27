@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "chemistry",
+  "chapter_id": "d-f-block-elements",
+  "title": "d and f Block Elements",
+  "built_at": "2026-06-27T08:46:16.712551+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:chemistry:d-f-block-elements:chapter:d-f-block-elements",
+      "type": "chapter",
+      "label": "d and f Block Elements",
+      "chapter_id": "d-f-block-elements",
+      "subject": "chemistry",
+      "sku": "cbse12-science",
+      "text": "d and f Block Elements",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 123
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:chemistry:d-f-block-elements:concept:core-concepts",
+      "type": "concept",
+      "label": "d and f Block Elements",
+      "chapter_id": "d-f-block-elements",
+      "subject": "chemistry",
+      "sku": "cbse12-science",
+      "text": "d and f Block Elements",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-d-f-block-elements-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:chemistry:d-f-block-elements:chapter:d-f-block-elements",
+      "to_id": "kg:cbse:12:chemistry:d-f-block-elements:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

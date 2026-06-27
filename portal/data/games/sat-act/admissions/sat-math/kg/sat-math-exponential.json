@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-math",
+  "chapter_id": "sat-math-exponential",
+  "title": "Exponential Functions",
+  "built_at": "2026-06-27T08:46:17.106869+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-exponential:chapter:sat-math-exponential",
+      "type": "chapter",
+      "label": "Exponential Functions",
+      "chapter_id": "sat-math-exponential",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Exponential Functions",
+      "metadata": {
+        "unit": "Advanced Math",
+        "unit_id": "sat-math-advanced",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-exponential:concept:sat-math-exponential-1",
+      "type": "concept",
+      "label": "Growth and decay",
+      "chapter_id": "sat-math-exponential",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Growth and decay",
+      "metadata": {
+        "skill_id": "sat-math-exponential-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-exponential:learning_objective:sat-math-exponential-1",
+      "type": "learning_objective",
+      "label": "Growth and decay",
+      "chapter_id": "sat-math-exponential",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Growth and decay.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-exponential:concept:sat-math-exponential-2",
+      "type": "concept",
+      "label": "Function transformations",
+      "chapter_id": "sat-math-exponential",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Function transformations",
+      "metadata": {
+        "skill_id": "sat-math-exponential-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-exponential:learning_objective:sat-math-exponential-2",
+      "type": "learning_objective",
+      "label": "Function transformations",
+      "chapter_id": "sat-math-exponential",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Function transformations.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-exponential:concept:core-concepts",
+      "type": "concept",
+      "label": "Exponential Functions",
+      "chapter_id": "sat-math-exponential",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Exponential Functions",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-math-exponential-contains-sat-math-exponential-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-exponential:chapter:sat-math-exponential",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-exponential:concept:sat-math-exponential-1"
+    },
+    {
+      "id": "edge-sat-math-exponential-teaches-sat-math-exponential-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-exponential:concept:sat-math-exponential-1",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-exponential:learning_objective:sat-math-exponential-1"
+    },
+    {
+      "id": "edge-sat-math-exponential-contains-sat-math-exponential-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-exponential:chapter:sat-math-exponential",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-exponential:concept:sat-math-exponential-2"
+    },
+    {
+      "id": "edge-sat-math-exponential-teaches-sat-math-exponential-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-exponential:concept:sat-math-exponential-2",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-exponential:learning_objective:sat-math-exponential-2"
+    },
+    {
+      "id": "edge-sat-math-exponential-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-exponential:chapter:sat-math-exponential",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-exponential:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

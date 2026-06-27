@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "mathematics",
+  "chapter_id": "relations-functions",
+  "title": "Relations and Functions",
+  "built_at": "2026-06-27T08:46:16.834711+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:mathematics:relations-functions:chapter:relations-functions",
+      "type": "chapter",
+      "label": "Relations and Functions",
+      "chapter_id": "relations-functions",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Relations and Functions",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 1065
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:mathematics:relations-functions:concept:core-concepts",
+      "type": "concept",
+      "label": "Relations and Functions",
+      "chapter_id": "relations-functions",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Relations and Functions",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-relations-functions-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:mathematics:relations-functions:chapter:relations-functions",
+      "to_id": "kg:cbse:12:mathematics:relations-functions:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

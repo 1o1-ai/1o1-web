@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "mathematics",
+  "chapter_id": "determinants",
+  "title": "Determinants",
+  "built_at": "2026-06-27T08:46:16.789044+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:mathematics:determinants:chapter:determinants",
+      "type": "chapter",
+      "label": "Determinants",
+      "chapter_id": "determinants",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Determinants",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 33
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:mathematics:determinants:concept:core-concepts",
+      "type": "concept",
+      "label": "Determinants",
+      "chapter_id": "determinants",
+      "subject": "mathematics",
+      "sku": "cbse12-science",
+      "text": "Determinants",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-determinants-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:mathematics:determinants:chapter:determinants",
+      "to_id": "kg:cbse:12:mathematics:determinants:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

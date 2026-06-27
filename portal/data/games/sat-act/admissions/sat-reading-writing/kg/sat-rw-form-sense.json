@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-reading-writing",
+  "chapter_id": "sat-rw-form-sense",
+  "title": "Form Structure and Sense",
+  "built_at": "2026-06-27T08:46:17.163181+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:chapter:sat-rw-form-sense",
+      "type": "chapter",
+      "label": "Form Structure and Sense",
+      "chapter_id": "sat-rw-form-sense",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Form Structure and Sense",
+      "metadata": {
+        "unit": "Standard English Conventions",
+        "unit_id": "sat-rw-conventions",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:concept:sat-rw-form-sense-1",
+      "type": "concept",
+      "label": "Subject-verb agreement",
+      "chapter_id": "sat-rw-form-sense",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Subject-verb agreement",
+      "metadata": {
+        "skill_id": "sat-rw-form-sense-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:learning_objective:sat-rw-form-sense-1",
+      "type": "learning_objective",
+      "label": "Subject-verb agreement",
+      "chapter_id": "sat-rw-form-sense",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Subject-verb agreement.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:concept:sat-rw-form-sense-2",
+      "type": "concept",
+      "label": "Pronouns and modifiers",
+      "chapter_id": "sat-rw-form-sense",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Pronouns and modifiers",
+      "metadata": {
+        "skill_id": "sat-rw-form-sense-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:learning_objective:sat-rw-form-sense-2",
+      "type": "learning_objective",
+      "label": "Pronouns and modifiers",
+      "chapter_id": "sat-rw-form-sense",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Pronouns and modifiers.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:concept:core-concepts",
+      "type": "concept",
+      "label": "Form Structure and Sense",
+      "chapter_id": "sat-rw-form-sense",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Form Structure and Sense",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-rw-form-sense-contains-sat-rw-form-sense-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:chapter:sat-rw-form-sense",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:concept:sat-rw-form-sense-1"
+    },
+    {
+      "id": "edge-sat-rw-form-sense-teaches-sat-rw-form-sense-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:concept:sat-rw-form-sense-1",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:learning_objective:sat-rw-form-sense-1"
+    },
+    {
+      "id": "edge-sat-rw-form-sense-contains-sat-rw-form-sense-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:chapter:sat-rw-form-sense",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:concept:sat-rw-form-sense-2"
+    },
+    {
+      "id": "edge-sat-rw-form-sense-teaches-sat-rw-form-sense-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:concept:sat-rw-form-sense-2",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:learning_objective:sat-rw-form-sense-2"
+    },
+    {
+      "id": "edge-sat-rw-form-sense-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:chapter:sat-rw-form-sense",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-form-sense:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "biology",
+  "chapter_id": "microbes-human-welfare",
+  "title": "Microbes in Human Welfare",
+  "built_at": "2026-06-27T08:46:16.573172+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:biology:microbes-human-welfare:chapter:microbes-human-welfare",
+      "type": "chapter",
+      "label": "Microbes in Human Welfare",
+      "chapter_id": "microbes-human-welfare",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Microbes in Human Welfare",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 71
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:biology:microbes-human-welfare:concept:core-concepts",
+      "type": "concept",
+      "label": "Microbes in Human Welfare",
+      "chapter_id": "microbes-human-welfare",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Microbes in Human Welfare",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-microbes-human-welfare-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:biology:microbes-human-welfare:chapter:microbes-human-welfare",
+      "to_id": "kg:cbse:12:biology:microbes-human-welfare:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

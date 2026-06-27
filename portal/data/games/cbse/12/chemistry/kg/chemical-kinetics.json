@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "chemistry",
+  "chapter_id": "chemical-kinetics",
+  "title": "Chemical Kinetics",
+  "built_at": "2026-06-27T08:46:16.689591+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:chemistry:chemical-kinetics:chapter:chemical-kinetics",
+      "type": "chapter",
+      "label": "Chemical Kinetics",
+      "chapter_id": "chemical-kinetics",
+      "subject": "chemistry",
+      "sku": "cbse12-science",
+      "text": "Chemical Kinetics",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 218
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:chemistry:chemical-kinetics:concept:core-concepts",
+      "type": "concept",
+      "label": "Chemical Kinetics",
+      "chapter_id": "chemical-kinetics",
+      "subject": "chemistry",
+      "sku": "cbse12-science",
+      "text": "Chemical Kinetics",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-chemical-kinetics-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:chemistry:chemical-kinetics:chapter:chemical-kinetics",
+      "to_id": "kg:cbse:12:chemistry:chemical-kinetics:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}

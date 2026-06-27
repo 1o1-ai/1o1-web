@@ -1,0 +1,578 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "gre-gmat",
+  "grade": "graduate",
+  "sku": "gre-gmat",
+  "subject": "gmat-verbal",
+  "chapter_id": "gmat-vbl-rc",
+  "title": "GMAT.VBL.RC Topic: Reading Comprehension: Active Reading",
+  "built_at": "2026-06-27T08:46:17.219515+00:00",
+  "nodes": [
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "type": "chapter",
+      "label": "GMAT.VBL.RC Topic: Reading Comprehension: Active Reading",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Reading Comprehension: Active Reading",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t01",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Reading Comprehension: Active Reading",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Reading Comprehension: Active Reading",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T01"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t01",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: Reading Comprehension: Active Reading",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: Reading Comprehension: Active Reading.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t02",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Identifying Main Idea / Primary Purpose",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Identifying Main Idea / Primary Purpose",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T02"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t02",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: Identifying Main Idea / Primary Purpose",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: Identifying Main Idea / Primary Purpose.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t03",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Answering Detail/Retrieval Questions",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Answering Detail/Retrieval Questions",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T03"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t03",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: Answering Detail/Retrieval Questions",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: Answering Detail/Retrieval Questions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t04",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Drawing Inferences in GMAT RC",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Drawing Inferences in GMAT RC",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T04"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t04",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: Drawing Inferences in GMAT RC",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: Drawing Inferences in GMAT RC.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t05",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Answering Application/Extrapolation Questions",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Answering Application/Extrapolation Questions",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T05"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t05",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: Answering Application/Extrapolation Questions",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: Answering Application/Extrapolation Questions.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t06",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Determining Function of a Paragraph",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Determining Function of a Paragraph",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T06"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t06",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: Determining Function of a Paragraph",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: Determining Function of a Paragraph.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t07",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Analyzing Author's Tone and Attitude",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Analyzing Author's Tone and Attitude",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T07"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t07",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: Analyzing Author's Tone and Attitude",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: Analyzing Author's Tone and Attitude.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t08",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Understanding Logical Relationships in Text",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Understanding Logical Relationships in Text",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T08"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t08",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: Understanding Logical Relationships in Text",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: Understanding Logical Relationships in Text.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t09",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: RC Strategies: Short Passages",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: RC Strategies: Short Passages",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T09"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t09",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: RC Strategies: Short Passages",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: RC Strategies: Short Passages.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t10",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: RC Strategies: Long Passages",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: RC Strategies: Long Passages",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T10"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t10",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: RC Strategies: Long Passages",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: RC Strategies: Long Passages.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t11",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Handling Science Passages",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Handling Science Passages",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T11"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t11",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: Handling Science Passages",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: Handling Science Passages.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t12",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Handling Business & Economics Passages",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Handling Business & Economics Passages",
+      "metadata": {
+        "skill_id": "GMAT.VBL.RC.T12"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t12",
+      "type": "learning_objective",
+      "label": "GMAT.VBL.RC Topic: Handling Business & Economics Passages",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of GMAT.VBL.RC Topic: Handling Business & Economics Passages.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat-vbl-rc-more",
+      "type": "concept",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "+ 18 more topics",
+      "metadata": {
+        "skill_id": "gmat-vbl-rc-more"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat-vbl-rc-more",
+      "type": "learning_objective",
+      "label": "+ 18 more topics",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "Demonstrate understanding of + 18 more topics.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:core-concepts",
+      "type": "concept",
+      "label": "GMAT.VBL.RC Topic: Reading Comprehension: Active Reading",
+      "chapter_id": "gmat-vbl-rc",
+      "subject": "gmat-verbal",
+      "sku": "gre-gmat",
+      "text": "GMAT.VBL.RC Topic: Reading Comprehension: Active Reading",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t01",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t01"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t01",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t01",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t01"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t02",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t02"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t02",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t02",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t02"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t03",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t03"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t03",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t03",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t03"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t04",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t04"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t04",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t04",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t04"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t05",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t05"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t05",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t05",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t05"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t06",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t06"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t06",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t06",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t06"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t07",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t07"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t07",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t07",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t07"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t08",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t08"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t08",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t08",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t08"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t09",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t09"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t09",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t09",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t09"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t10",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t10"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t10",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t10",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t10"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t11",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t11"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t11",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t11",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t11"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat.vbl.rc.t12",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t12"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat.vbl.rc.t12",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat.vbl.rc.t12",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat.vbl.rc.t12"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-gmat-vbl-rc-more",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat-vbl-rc-more"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-teaches-gmat-vbl-rc-more",
+      "type": "teaches",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:gmat-vbl-rc-more",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:learning_objective:gmat-vbl-rc-more"
+    },
+    {
+      "id": "edge-gmat-vbl-rc-contains-core",
+      "type": "contains",
+      "from_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:chapter:gmat-vbl-rc",
+      "to_id": "kg:gre-gmat:graduate:gmat-verbal:gmat-vbl-rc:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 14,
+    "learning_objective": 13,
+    "edges": 27
+  }
+}

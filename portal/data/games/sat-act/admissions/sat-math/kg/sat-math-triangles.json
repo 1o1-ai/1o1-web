@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-math",
+  "chapter_id": "sat-math-triangles",
+  "title": "Triangles",
+  "built_at": "2026-06-27T08:46:17.140722+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-triangles:chapter:sat-math-triangles",
+      "type": "chapter",
+      "label": "Triangles",
+      "chapter_id": "sat-math-triangles",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Triangles",
+      "metadata": {
+        "unit": "Geometry and Trigonometry",
+        "unit_id": "sat-math-geometry",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-triangles:concept:sat-math-triangles-1",
+      "type": "concept",
+      "label": "Angles",
+      "chapter_id": "sat-math-triangles",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Angles",
+      "metadata": {
+        "skill_id": "sat-math-triangles-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-triangles:learning_objective:sat-math-triangles-1",
+      "type": "learning_objective",
+      "label": "Angles",
+      "chapter_id": "sat-math-triangles",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Angles.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-triangles:concept:sat-math-triangles-2",
+      "type": "concept",
+      "label": "Similarity and congruence",
+      "chapter_id": "sat-math-triangles",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Similarity and congruence",
+      "metadata": {
+        "skill_id": "sat-math-triangles-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-triangles:learning_objective:sat-math-triangles-2",
+      "type": "learning_objective",
+      "label": "Similarity and congruence",
+      "chapter_id": "sat-math-triangles",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Similarity and congruence.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-math:sat-math-triangles:concept:core-concepts",
+      "type": "concept",
+      "label": "Triangles",
+      "chapter_id": "sat-math-triangles",
+      "subject": "sat-math",
+      "sku": "sat-act",
+      "text": "Triangles",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-math-triangles-contains-sat-math-triangles-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-triangles:chapter:sat-math-triangles",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-triangles:concept:sat-math-triangles-1"
+    },
+    {
+      "id": "edge-sat-math-triangles-teaches-sat-math-triangles-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-triangles:concept:sat-math-triangles-1",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-triangles:learning_objective:sat-math-triangles-1"
+    },
+    {
+      "id": "edge-sat-math-triangles-contains-sat-math-triangles-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-triangles:chapter:sat-math-triangles",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-triangles:concept:sat-math-triangles-2"
+    },
+    {
+      "id": "edge-sat-math-triangles-teaches-sat-math-triangles-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-triangles:concept:sat-math-triangles-2",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-triangles:learning_objective:sat-math-triangles-2"
+    },
+    {
+      "id": "edge-sat-math-triangles-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-math:sat-math-triangles:chapter:sat-math-triangles",
+      "to_id": "kg:sat-act:admissions:sat-math:sat-math-triangles:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

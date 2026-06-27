@@ -1,0 +1,138 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "sat-act",
+  "grade": "admissions",
+  "sku": "sat-act",
+  "subject": "sat-reading-writing",
+  "chapter_id": "sat-rw-boundaries",
+  "title": "Boundaries",
+  "built_at": "2026-06-27T08:46:17.146957+00:00",
+  "nodes": [
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:chapter:sat-rw-boundaries",
+      "type": "chapter",
+      "label": "Boundaries",
+      "chapter_id": "sat-rw-boundaries",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Boundaries",
+      "metadata": {
+        "unit": "Standard English Conventions",
+        "unit_id": "sat-rw-conventions",
+        "question_count": null
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:concept:sat-rw-boundaries-1",
+      "type": "concept",
+      "label": "Comma usage",
+      "chapter_id": "sat-rw-boundaries",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Comma usage",
+      "metadata": {
+        "skill_id": "sat-rw-boundaries-1"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:learning_objective:sat-rw-boundaries-1",
+      "type": "learning_objective",
+      "label": "Comma usage",
+      "chapter_id": "sat-rw-boundaries",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Comma usage.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:concept:sat-rw-boundaries-2",
+      "type": "concept",
+      "label": "Colon and semicolon",
+      "chapter_id": "sat-rw-boundaries",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Colon and semicolon",
+      "metadata": {
+        "skill_id": "sat-rw-boundaries-2"
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:learning_objective:sat-rw-boundaries-2",
+      "type": "learning_objective",
+      "label": "Colon and semicolon",
+      "chapter_id": "sat-rw-boundaries",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Demonstrate understanding of Colon and semicolon.",
+      "metadata": {},
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:concept:core-concepts",
+      "type": "concept",
+      "label": "Boundaries",
+      "chapter_id": "sat-rw-boundaries",
+      "subject": "sat-reading-writing",
+      "sku": "sat-act",
+      "text": "Boundaries",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-sat-rw-boundaries-contains-sat-rw-boundaries-1",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:chapter:sat-rw-boundaries",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:concept:sat-rw-boundaries-1"
+    },
+    {
+      "id": "edge-sat-rw-boundaries-teaches-sat-rw-boundaries-1",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:concept:sat-rw-boundaries-1",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:learning_objective:sat-rw-boundaries-1"
+    },
+    {
+      "id": "edge-sat-rw-boundaries-contains-sat-rw-boundaries-2",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:chapter:sat-rw-boundaries",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:concept:sat-rw-boundaries-2"
+    },
+    {
+      "id": "edge-sat-rw-boundaries-teaches-sat-rw-boundaries-2",
+      "type": "teaches",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:concept:sat-rw-boundaries-2",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:learning_objective:sat-rw-boundaries-2"
+    },
+    {
+      "id": "edge-sat-rw-boundaries-contains-core",
+      "type": "contains",
+      "from_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:chapter:sat-rw-boundaries",
+      "to_id": "kg:sat-act:admissions:sat-reading-writing:sat-rw-boundaries:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 3,
+    "learning_objective": 2,
+    "edges": 5
+  }
+}

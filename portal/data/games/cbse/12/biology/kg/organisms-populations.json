@@ -1,0 +1,57 @@
+{
+  "schema_version": "kg_v1",
+  "curriculum": "cbse",
+  "grade": "12",
+  "sku": "cbse12-science",
+  "subject": "biology",
+  "chapter_id": "organisms-populations",
+  "title": "Organisms and Populations",
+  "built_at": "2026-06-27T08:46:16.588987+00:00",
+  "nodes": [
+    {
+      "id": "kg:cbse:12:biology:organisms-populations:chapter:organisms-populations",
+      "type": "chapter",
+      "label": "Organisms and Populations",
+      "chapter_id": "organisms-populations",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Organisms and Populations",
+      "metadata": {
+        "unit": null,
+        "unit_id": null,
+        "question_count": 102
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    },
+    {
+      "id": "kg:cbse:12:biology:organisms-populations:concept:core-concepts",
+      "type": "concept",
+      "label": "Organisms and Populations",
+      "chapter_id": "organisms-populations",
+      "subject": "biology",
+      "sku": "cbse12-science",
+      "text": "Organisms and Populations",
+      "metadata": {
+        "fallback": true
+      },
+      "sources": [
+        "curriculum-json"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-organisms-populations-contains-core",
+      "type": "contains",
+      "from_id": "kg:cbse:12:biology:organisms-populations:chapter:organisms-populations",
+      "to_id": "kg:cbse:12:biology:organisms-populations:concept:core-concepts"
+    }
+  ],
+  "stats": {
+    "chapter": 1,
+    "concept": 1,
+    "edges": 1
+  }
+}
