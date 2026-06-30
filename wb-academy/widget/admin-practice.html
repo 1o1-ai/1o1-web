@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Practice Studio Admin · Brahmando Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --surface2: #334155;
+      --accent: #14b8a6;
+      --accent2: #0d9488;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --border: rgba(148, 163, 184, 0.15);
+      --success: #22c55e;
+      --warn: #f59e0b;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(20, 184, 166, 0.15), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(99, 102, 241, 0.08), transparent);
+    }
+    .shell { max-width: 1100px; margin: 0 auto; padding: 32px 24px 64px; }
+    header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin-bottom: 32px; flex-wrap: wrap; gap: 16px;
+    }
+    header h1 { font-size: 1.75rem; font-weight: 700; letter-spacing: -0.02em; }
+    header p { color: var(--muted); font-size: 0.9rem; margin-top: 6px; max-width: 520px; line-height: 1.5; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(20, 184, 166, 0.12); color: var(--accent);
+      padding: 6px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600;
+    }
+    .badge::before { content: ''; width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+    .auth-bar {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 16px 20px; margin-bottom: 24px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+    }
+    .auth-bar label { font-size: 0.75rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .auth-bar input {
+      flex: 1; min-width: 200px; background: var(--bg); border: 1px solid var(--border);
+      color: var(--text); padding: 10px 14px; border-radius: 10px; font-size: 0.9rem;
+    }
+    .tabs {
+      display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap;
+    }
+    .tab {
+      padding: 10px 18px; border-radius: 12px; border: 1px solid var(--border);
+      background: transparent; color: var(--muted); cursor: pointer; font-weight: 600; font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .tab:hover { color: var(--text); border-color: var(--accent); }
+    .tab.active { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .card {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px; margin-bottom: 20px;
+    }
+    .card h2 { font-size: 1.1rem; margin-bottom: 8px; }
+    .card > p { color: var(--muted); font-size: 0.85rem; margin-bottom: 16px; line-height: 1.5; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 16px; }
+    .field label { display: block; font-size: 0.7rem; color: var(--muted); margin-bottom: 4px; font-weight: 600; text-transform: uppercase; }
+    .field input, .field select, .field textarea {
+      width: 100%; background: var(--bg); border: 1px solid var(--border);
+      color: var(--text); padding: 10px 12px; border-radius: 10px; font-size: 0.9rem;
+    }
+    .field textarea { min-height: 220px; font-family: 'Consolas', monospace; font-size: 0.8rem; resize: vertical; }
+    .btn {
+      background: var(--accent); color: var(--bg); border: none; padding: 12px 20px;
+      border-radius: 12px; font-weight: 700; cursor: pointer; font-size: 0.9rem;
+    }
+    .btn:hover { filter: brightness(1.08); }
+    .btn.secondary { background: var(--surface2); color: var(--text); }
+    .dropzone {
+      border: 2px dashed var(--border); border-radius: var(--radius); padding: 48px 24px;
+      text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s;
+    }
+    .dropzone:hover, .dropzone.dragover { border-color: var(--accent); background: rgba(20, 184, 166, 0.05); }
+    .dropzone strong { display: block; margin-bottom: 8px; }
+    .dropzone span { color: var(--muted); font-size: 0.85rem; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; }
+    .stat {
+      background: var(--bg); border-radius: 14px; padding: 20px; text-align: center;
+      border: 1px solid var(--border);
+    }
+    .stat strong { display: block; font-size: 2rem; color: var(--accent); font-weight: 700; }
+    .stat span { font-size: 0.8rem; color: var(--muted); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; font-size: 0.72rem; text-transform: uppercase; }
+    .pill { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 600; }
+    .pill.pending { background: rgba(245, 158, 11, 0.15); color: var(--warn); }
+    .toast {
+      position: fixed; bottom: 24px; right: 24px; background: var(--surface2);
+      border: 1px solid var(--border); padding: 14px 20px; border-radius: 12px;
+      font-size: 0.9rem; opacity: 0; transform: translateY(12px); transition: all 0.3s; z-index: 100;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .toast.error { border-color: #ef4444; }
+    .toast.ok { border-color: var(--success); }
+    code { background: var(--bg); padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div>
+        <span class="badge">Admin Studio</span>
+        <h1>Practice Test Studio</h1>
+        <p>Upload question banks, ingest student answer sheets, and monitor the manual review queue for answers our RAG corpus cannot auto-evaluate.</p>
+      </div>
+    </header>
+
+    <div class="auth-bar">
+      <label for="apiUrl">API URL</label>
+      <input id="apiUrl" type="url" placeholder="https://api.brahmando.com/education" />
+      <label for="adminKey">Admin Key</label>
+      <input id="adminKey" type="password" placeholder="EDUCATION_ADMIN_KEY" />
+      <button type="button" class="btn secondary" id="saveConfig">Save</button>
+    </div>
+
+    <div class="tabs">
+      <button type="button" class="tab active" data-tab="questions">Question Bank</button>
+      <button type="button" class="tab" data-tab="sheets">Answer Sheets</button>
+      <button type="button" class="tab" data-tab="review">Review Queue</button>
+      <button type="button" class="tab" data-tab="stats">Overview</button>
+    </div>
+
+    <section class="panel active" id="panel-questions">
+      <div class="card">
+        <h2>Upload questions (JSON)</h2>
+        <p>Add MCQ, short, or long questions with reference answers. Students receive these first when filters match.</p>
+        <textarea id="questionsJson" spellcheck="false">{
+  "questions": [
+    {
+      "type": "mcq",
+      "subject": "Science",
+      "board": "CBSE",
+      "grade": "10",
+      "topic": "Photosynthesis",
+      "question": "Which gas is released during photosynthesis?",
+      "options": ["A) CO₂", "B) O₂", "C) N₂", "D) H₂"],
+      "reference_answer": "B) O₂",
+      "marks": 1
+    }
+  ]
+}</textarea>
+        <button type="button" class="btn" id="uploadQuestions">Upload to question bank</button>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-sheets">
+      <div class="card">
+        <h2>Student answer sheets</h2>
+        <p>Upload PDF, image, or text files. They are queued for Brahmando manual review alongside non-evaluated practice test answers.</p>
+        <div class="grid">
+          <div class="field"><label>Student name</label><input id="studentName" placeholder="Optional" /></div>
+          <div class="field"><label>Subject</label><input id="sheetSubject" placeholder="Science" /></div>
+          <div class="field"><label>Grade</label><input id="sheetGrade" placeholder="10" /></div>
+        </div>
+        <div class="dropzone" id="dropzone">
+          <strong>Drop answer sheet here</strong>
+          <span>PDF, PNG, JPG, or TXT · max 10 MB</span>
+          <input type="file" id="fileInput" hidden accept=".pdf,.png,.jpg,.jpeg,.txt,.doc,.docx" />
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-review">
+      <div class="card">
+        <h2>Pending manual reviews</h2>
+        <p>Answers flagged as non-evaluated (insufficient KB, diagrams, subjective rubrics) and uploaded answer sheets.</p>
+        <button type="button" class="btn secondary" id="refreshQueue" style="margin-bottom:16px">Refresh queue</button>
+        <div id="queueTable"><p style="color:var(--muted)">Load queue to see items…</p></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-stats">
+      <div class="card">
+        <h2>Studio overview</h2>
+        <div class="stats" id="statsGrid">
+          <div class="stat"><strong>—</strong><span>Question bank</span></div>
+          <div class="stat"><strong>—</strong><span>Pending reviews</span></div>
+        </div>
+        <button type="button" class="btn secondary" id="refreshStats" style="margin-top:20px">Refresh stats</button>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script>
+    (function () {
+      var apiInput = document.getElementById('apiUrl');
+      var keyInput = document.getElementById('adminKey');
+      var toast = document.getElementById('toast');
+
+      function resolveApiBase() {
+        var path = location.pathname || '';
+        var eduIdx = path.indexOf('/education');
+        if (eduIdx !== -1) {
+          return location.origin + path.substring(0, eduIdx + '/education'.length);
+        }
+        var host = (location.hostname || '').toLowerCase();
+        if (host === 'localhost' || host === '127.0.0.1') return 'http://127.0.0.1:8120';
+        if (host.indexOf('csr.education') !== -1 || host.endsWith('.manjulab.com')) {
+          return location.origin.replace(/\/$/, '');
+        }
+        if (host.endsWith('yogabrata.com')) {
+          return 'https://api.brahmando.com/wb-academy';
+        }
+        if (host.endsWith('brahmando.com')) {
+          return location.origin.replace(/\/$/, '') + '/education';
+        }
+        return location.origin.replace(/\/$/, '') + '/education';
+      }
+
+      function loadConfig() {
+        apiInput.value = localStorage.getItem('eps_api') || resolveApiBase();
+        keyInput.value = localStorage.getItem('eps_admin_key') || '';
+      }
+
+      document.getElementById('saveConfig').onclick = function () {
+        localStorage.setItem('eps_api', apiInput.value.replace(/\/$/, ''));
+        localStorage.setItem('eps_admin_key', keyInput.value);
+        notify('Configuration saved', 'ok');
+      };
+
+      function notify(msg, type) {
+        toast.textContent = msg;
+        toast.className = 'toast show ' + (type || '');
+        setTimeout(function () { toast.classList.remove('show'); }, 3500);
+      }
+
+      function headers() {
+        return { 'Content-Type': 'application/json', 'X-Admin-Key': keyInput.value };
+      }
+
+      function apiBase() {
+        return apiInput.value.replace(/\/$/, '');
+      }
+
+      document.querySelectorAll('.tab').forEach(function (tab) {
+        tab.onclick = function () {
+          document.querySelectorAll('.tab').forEach(function (t) { t.classList.remove('active'); });
+          document.querySelectorAll('.panel').forEach(function (p) { p.classList.remove('active'); });
+          tab.classList.add('active');
+          document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+          if (tab.dataset.tab === 'review') loadQueue();
+          if (tab.dataset.tab === 'stats') loadStats();
+        };
+      });
+
+      document.getElementById('uploadQuestions').onclick = async function () {
+        try {
+          var body = JSON.parse(document.getElementById('questionsJson').value);
+          var res = await fetch(apiBase() + '/admin/practice/questions', {
+            method: 'POST', headers: headers(), body: JSON.stringify(body)
+          });
+          var data = await res.json();
+          if (!res.ok) throw new Error(data.detail || 'Upload failed');
+          notify('Added ' + data.added + ' questions (total: ' + data.total + ')', 'ok');
+        } catch (e) {
+          notify(e.message || 'Invalid JSON', 'error');
+        }
+      };
+
+      var dropzone = document.getElementById('dropzone');
+      var fileInput = document.getElementById('fileInput');
+      dropzone.onclick = function () { fileInput.click(); };
+      dropzone.ondragover = function (e) { e.preventDefault(); dropzone.classList.add('dragover'); };
+      dropzone.ondragleave = function () { dropzone.classList.remove('dragover'); };
+      dropzone.ondrop = function (e) {
+        e.preventDefault(); dropzone.classList.remove('dragover');
+        if (e.dataTransfer.files.length) uploadSheet(e.dataTransfer.files[0]);
+      };
+      fileInput.onchange = function () { if (fileInput.files[0]) uploadSheet(fileInput.files[0]); };
+
+      async function uploadSheet(file) {
+        var fd = new FormData();
+        fd.append('file', file);
+        fd.append('student_name', document.getElementById('studentName').value);
+        fd.append('subject', document.getElementById('sheetSubject').value);
+        fd.append('grade', document.getElementById('sheetGrade').value);
+        try {
+          var res = await fetch(apiBase() + '/admin/practice/answer-sheets', {
+            method: 'POST',
+            headers: { 'X-Admin-Key': keyInput.value },
+            body: fd
+          });
+          var data = await res.json();
+          if (!res.ok) throw new Error(data.detail || 'Upload failed');
+          notify('Answer sheet uploaded: ' + (data.filename || file.name), 'ok');
+        } catch (e) {
+          notify(e.message, 'error');
+        }
+      }
+
+      async function loadQueue() {
+        try {
+          var res = await fetch(apiBase() + '/admin/practice/review-queue?status=pending', { headers: headers() });
+          var data = await res.json();
+          if (!res.ok) throw new Error(data.detail || 'Failed');
+          var items = data.items || [];
+          if (!items.length) {
+            document.getElementById('queueTable').innerHTML = '<p style="color:var(--muted)">No pending reviews 🎉</p>';
+            return;
+          }
+          var html = '<table><thead><tr><th>When</th><th>Type</th><th>Detail</th><th>Status</th></tr></thead><tbody>';
+          items.forEach(function (item) {
+            var kind = item.kind || (item.question_id ? 'practice_answer' : 'unknown');
+            var detail = item.question || item.filename || item.student_answer || '—';
+            if (detail.length > 80) detail = detail.slice(0, 77) + '…';
+            html += '<tr><td>' + (item.created_at || '').slice(0, 19) + '</td><td>' + kind + '</td><td>' + esc(detail) + '</td><td><span class="pill pending">pending</span></td></tr>';
+          });
+          html += '</tbody></table>';
+          document.getElementById('queueTable').innerHTML = html;
+        } catch (e) {
+          document.getElementById('queueTable').innerHTML = '<p style="color:#ef4444">' + esc(e.message) + '</p>';
+        }
+      }
+
+      async function loadStats() {
+        try {
+          var res = await fetch(apiBase() + '/admin/practice/stats', { headers: headers() });
+          var data = await res.json();
+          if (!res.ok) throw new Error(data.detail || 'Failed');
+          document.getElementById('statsGrid').innerHTML =
+            '<div class="stat"><strong>' + data.question_bank_size + '</strong><span>Question bank</span></div>' +
+            '<div class="stat"><strong>' + data.pending_reviews + '</strong><span>Pending reviews</span></div>';
+        } catch (e) {
+          notify(e.message, 'error');
+        }
+      }
+
+      document.getElementById('refreshQueue').onclick = loadQueue;
+      document.getElementById('refreshStats').onclick = loadStats;
+
+      function esc(s) {
+        return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      }
+
+      loadConfig();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rhytoma Academy — TruthGuard Eval Lab</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --line: #334155;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --accent: #14b8a6;
+      --warn: #f59e0b;
+      --bad: #ef4444;
+      --good: #22c55e;
+      --radius: 14px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+      background: radial-gradient(circle at top, #134e4a 0%, var(--bg) 45%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
+    header { margin-bottom: 24px; }
+    header h1 { margin: 0 0 8px; font-size: 1.6rem; }
+    header p { margin: 0; color: var(--muted); line-height: 1.55; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    label { display: block; font-size: 0.85rem; color: var(--muted); margin-bottom: 6px; }
+    input, select, textarea {
+      width: 100%;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      color: var(--text);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+    }
+    textarea { min-height: 90px; resize: vertical; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+    .btn {
+      background: linear-gradient(135deg, var(--accent), #0d9488);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn.secondary { background: transparent; border: 1px solid var(--line); color: var(--text); }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: rgba(20, 184, 166, 0.15);
+      color: var(--accent);
+      margin-right: 6px;
+    }
+    .qbox { border-left: 4px solid var(--accent); padding-left: 14px; }
+    .opt { padding: 8px 0; color: var(--muted); }
+    .evidence {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+    .rating-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .rating-btn {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+    .rating-btn.selected { border-color: var(--accent); background: rgba(20,184,166,0.15); }
+    .result {
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 12px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .result.ok { background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.35); }
+    .result.warn { background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.35); }
+    .hidden { display: none; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+    .q-card {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 14px;
+    }
+    .q-card h3 { margin: 0 0 10px; font-size: 1rem; }
+    .type-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+    .opt-btn {
+      display: block;
+      width: 100%;
+      text-align: left;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 10px 12px;
+      margin-bottom: 6px;
+    }
+    .opt-btn.ai-pick { border-color: var(--accent); background: rgba(20,184,166,0.12); }
+    .ai-answer {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin-top: 8px;
+      white-space: pre-wrap;
+    }
+    .progress { color: var(--muted); font-size: 0.85rem; margin-bottom: 12px; }
+    footer { margin-top: 24px; font-size: 0.8rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">TruthGuard Phase 1</span>
+      <span class="badge">Human + Corpus Triangulation</span>
+      <h1>Eval Lab — Review AI Outputs</h1>
+      <p>
+        Help improve Rhytoma Academy (West Bengal Board) by reviewing AI-generated questions and answers.
+        Rate each model answer and add optional comments — this feeds our training data pipeline.
+        Your feedback is <strong>never applied blindly</strong>.
+      </p>
+    </header>
+
+    <section id="loginCard" class="card">
+      <h2 style="margin-top:0">Sign in</h2>
+      <p style="color:var(--muted);font-size:0.9rem;line-height:1.5;margin-top:0">
+        <strong>Username:</strong> <code>yoga</code> &nbsp;·&nbsp; <strong>Password:</strong> <code>yoga</code><br>
+        Do <em>not</em> use your email in the username field. If a browser popup appeared earlier, click Cancel and use this form.
+      </p>
+      <div class="grid">
+        <div>
+          <label for="evalName">Your name</label>
+          <input id="evalName" placeholder="Reviewer name" />
+        </div>
+        <div>
+          <label for="gateUser">Lab username</label>
+          <input id="gateUser" value="yoga" autocomplete="username" />
+        </div>
+        <div>
+          <label for="gatePass">Lab password</label>
+          <input id="gatePass" type="password" value="yoga" autocomplete="current-password" />
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="btnLogin">Enter lab</button>
+      </div>
+      <p id="loginMsg" class="hidden result warn"></p>
+    </section>
+
+    <section id="labCard" class="card hidden">
+      <h2 style="margin-top:0">Generate review case</h2>
+      <div class="grid">
+        <div>
+          <label>Board</label>
+          <select id="board"><option>WBBSE</option><option>WBCHSE</option></select>
+        </div>
+        <div>
+          <label>Grade</label>
+          <select id="grade">
+            <option>8</option><option>9</option><option selected>10</option>
+            <option>11</option><option>12</option>
+          </select>
+        </div>
+        <div>
+          <label>Subject</label>
+          <select id="subject">
+            <option>Science</option><option>Mathematics</option><option>English</option>
+            <option>Physics</option><option>Chemistry</option><option>Biology</option>
+            <option>Computer Science</option><option>History</option>
+          </select>
+        </div>
+        <div>
+          <label>Topic</label>
+          <input id="topic" value="General" />
+        </div>
+        <div>
+          <label>Number of questions</label>
+          <select id="qcount">
+            <option value="3">3</option>
+            <option value="5" selected>5</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="btnNext">Start review session (live RAG)</button>
+        <button class="btn secondary" id="btnSeed">Start with seed questions</button>
+      </div>
+      <p id="loadMsg" class="hidden result warn"></p>
+    </section>
+
+    <section id="caseCard" class="card hidden">
+      <h2 style="margin-top:0">Review AI outputs</h2>
+      <div id="caseMeta" class="progress"></div>
+      <p id="caseInstructions" style="color:var(--muted);font-size:0.9rem;margin-top:0"></p>
+      <div id="questionsContainer"></div>
+      <div class="actions">
+        <button class="btn" id="btnSubmit">Submit all ratings</button>
+        <button class="btn secondary" id="btnNewSession">New session</button>
+      </div>
+      <div id="submitResult" class="hidden result"></div>
+    </section>
+
+    <section id="resultsCard" class="card hidden">
+      <h2 style="margin-top:0">Review summary</h2>
+      <div id="gradingSummary"></div>
+      <div id="gradingDetails"></div>
+    </section>
+
+    <footer>
+      API: <code>/eval-lab/*</code> · Cron: <code>ym-truthguard-nightly</code> ·
+      Feedback stored in <code>data/eval_lab/feedback.jsonl</code> (admin review only).
+    </footer>
+  </div>
+
+  <script>
+    function resolveApiBase() {
+      var params = new URLSearchParams(window.location.search);
+      var explicit = params.get('api');
+      if (explicit) return explicit.replace(/\/$/, '');
+
+      var path = location.pathname || '';
+      var wbIdx = path.indexOf('/wb-academy');
+      if (wbIdx !== -1) {
+        return 'https://api.brahmando.com/wb-academy';
+      }
+      var eduIdx = path.indexOf('/education');
+      if (eduIdx !== -1) {
+        return location.origin + path.substring(0, eduIdx + '/education'.length);
+      }
+
+      var host = (location.hostname || '').toLowerCase();
+      if (host === 'localhost' || host === '127.0.0.1') return 'http://127.0.0.1:8120';
+      if (host.indexOf('csr.education') !== -1 || host.endsWith('.manjulab.com')) {
+        return location.origin.replace(/\/$/, '');
+      }
+      if (host.endsWith('yogabrata.com')) {
+        return 'https://api.brahmando.com/wb-academy';
+      }
+      if (host.endsWith('brahmando.com')) {
+        return location.origin.replace(/\/$/, '') + '/education';
+      }
+      return location.origin.replace(/\/$/, '') + '/education';
+    }
+
+    var API = resolveApiBase();
+    var token = '';
+    var session = localStorage.getItem('eval_lab_session') || '';
+    var currentCase = null;
+    var ratings = {};
+    var qNotes = {};
+
+    function apiFetch(url, options) {
+      options = options || {};
+      options.headers = options.headers || {};
+      if (session) options.headers['X-Eval-Lab-Session'] = session;
+      options.credentials = 'same-origin';
+      return fetch(url, options);
+    }
+
+    var RATINGS = [
+      { id: 'correct', label: 'Correct' },
+      { id: 'mostly_correct', label: 'Mostly correct' },
+      { id: 'partial', label: 'Partial' },
+      { id: 'incorrect', label: 'Incorrect' },
+      { id: 'hallucinated', label: 'Hallucinated' }
+    ];
+
+    function el(id) { return document.getElementById(id); }
+
+    function show(id, visible) {
+      el(id).classList.toggle('hidden', !visible);
+    }
+
+    function typeLabel(t) {
+      t = (t || 'short').toLowerCase();
+      if (t === 'mcq') return 'Multiple choice';
+      if (t === 'long') return 'Long answer';
+      return 'Short answer';
+    }
+
+    function isAiMcqPick(opt, q) {
+      var ai = (q.ai_answer || '').trim();
+      if (!ai) return false;
+      return opt === ai || opt.toLowerCase() === ai.toLowerCase();
+    }
+
+    function renderQuestionCard(q, index) {
+      var card = document.createElement('div');
+      card.className = 'q-card';
+      card.dataset.qid = q.id;
+
+      var tag = document.createElement('div');
+      tag.className = 'type-tag';
+      tag.textContent = typeLabel(q.type);
+      card.appendChild(tag);
+
+      var h = document.createElement('h3');
+      h.textContent = (index + 1) + '. ' + (q.question || '');
+      card.appendChild(h);
+
+      if ((q.type || '').toLowerCase() === 'mcq' && (q.options || []).length) {
+        var ol = document.createElement('label');
+        ol.textContent = 'Options (AI-selected answer highlighted)';
+        card.appendChild(ol);
+        (q.options || []).forEach(function (opt) {
+          var row = document.createElement('div');
+          row.className = 'opt-btn' + (isAiMcqPick(opt, q) ? ' ai-pick' : '');
+          row.textContent = opt;
+          card.appendChild(row);
+        });
+      }
+
+      var al = document.createElement('label');
+      al.style.marginTop = '12px';
+      al.textContent = 'AI model answer';
+      card.appendChild(al);
+
+      var ansBox = document.createElement('div');
+      ansBox.className = 'ai-answer';
+      ansBox.textContent = q.ai_answer || '(no model answer generated)';
+      card.appendChild(ansBox);
+
+      var rl = document.createElement('label');
+      rl.style.marginTop = '12px';
+      rl.textContent = 'Rate this AI answer';
+      card.appendChild(rl);
+
+      var row = document.createElement('div');
+      row.className = 'rating-row';
+      RATINGS.forEach(function (r) {
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'rating-btn' + (ratings[q.id] === r.id ? ' selected' : '');
+        b.textContent = r.label;
+        b.onclick = function () {
+          ratings[q.id] = r.id;
+          renderQuestions(currentCase.questions);
+        };
+        row.appendChild(b);
+      });
+      card.appendChild(row);
+
+      var nl = document.createElement('label');
+      nl.style.marginTop = '8px';
+      nl.textContent = 'Comments (optional; encouraged for Incorrect/Hallucinated)';
+      card.appendChild(nl);
+
+      var notes = document.createElement('textarea');
+      notes.style.minHeight = '60px';
+      notes.placeholder = 'What is good or bad about this AI answer?';
+      notes.value = qNotes[q.id] || '';
+      notes.oninput = function () { qNotes[q.id] = notes.value.trim(); };
+      card.appendChild(notes);
+
+      return card;
+    }
+
+    function renderQuestions(questions) {
+      var box = el('questionsContainer');
+      box.innerHTML = '';
+      (questions || []).forEach(function (q, i) {
+        box.appendChild(renderQuestionCard(q, i));
+      });
+    }
+
+    function resetSession() {
+      currentCase = null;
+      ratings = {};
+      qNotes = {};
+      show('caseCard', false);
+      show('resultsCard', false);
+      show('submitResult', false);
+      show('labCard', true);
+    }
+
+    el('btnLogin').onclick = async function () {
+      var name = el('evalName').value.trim();
+      var user = el('gateUser').value.trim();
+      var pass = el('gatePass').value;
+      if (!name) {
+        el('loginMsg').textContent = 'Enter your name.';
+        show('loginMsg', true);
+        return;
+      }
+      try {
+        var gateRes = await apiFetch(API + '/eval-lab/gate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username: user, password: pass, evaluator_name: name })
+        });
+        if (!gateRes.ok) {
+          var ge = await gateRes.json().catch(function () { return {}; });
+          throw new Error(ge.detail || 'Login failed — use username yoga, password yoga');
+        }
+        var gateData = await gateRes.json();
+        session = gateData.session;
+        localStorage.setItem('eval_lab_session', session);
+
+        var res = await apiFetch(API + '/eval-lab/auth', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ token: token, evaluator_name: name })
+        });
+        if (!res.ok) throw new Error((await res.json()).detail || 'Auth failed');
+        show('loginCard', false);
+        show('labCard', true);
+      } catch (e) {
+        el('loginMsg').textContent = e.message || 'Invalid token';
+        show('loginMsg', true);
+      }
+    };
+
+    async function loadCase(live) {
+      el('btnNext').disabled = true;
+      el('btnSeed').disabled = true;
+      show('loadMsg', false);
+      show('resultsCard', false);
+      try {
+        var res = await apiFetch(API + '/eval-lab/next-case', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            token: token,
+            board: el('board').value,
+            grade: el('grade').value,
+            subject: el('subject').value,
+            topic: el('topic').value,
+            difficulty: 'medium',
+            count: parseInt(el('qcount').value, 10) || 5,
+            live: live
+          })
+        });
+        var data = await res.json();
+        if (!res.ok) throw new Error(data.detail || data.message || 'Failed to load session');
+
+        currentCase = data.case;
+        ratings = {};
+        qNotes = {};
+
+        var n = currentCase.question_count || (currentCase.questions || []).length;
+        el('caseMeta').textContent =
+          currentCase.board + ' · Class ' + currentCase.grade + ' · ' +
+          currentCase.subject + ' · ' + currentCase.topic + ' · ' + n + ' question(s)';
+        var hint = data.fallback_reason
+          ? ' (Using subject-matched seed questions — live RAG unavailable for this topic.)'
+          : '';
+        el('caseInstructions').textContent = (currentCase.instructions || '') + hint;
+
+        renderQuestions(currentCase.questions || []);
+        show('labCard', false);
+        show('caseCard', true);
+        show('submitResult', false);
+      } catch (e) {
+        el('loadMsg').textContent = e.message || 'Could not load session';
+        show('loadMsg', true);
+      } finally {
+        el('btnNext').disabled = false;
+        el('btnSeed').disabled = false;
+      }
+    }
+
+    function renderReviewSummary(data) {
+      var checks = data.system_checks || [];
+      var tris = data.triangulations || [];
+      el('gradingSummary').innerHTML =
+        '<p><strong>Recorded:</strong> ' + tris.length + ' rating(s) · ' +
+        (data.message || 'Thank you for your review.') + '</p>';
+
+      var html = '';
+      checks.forEach(function (item, i) {
+        var tri = tris[i] || {};
+        var grounded = item.kb_grounded;
+        var cls = grounded ? 'ok' : 'warn';
+        html += '<div class="q-card result ' + cls + '">' +
+          '<strong>Q' + (i + 1) + ':</strong> ' + (item.question || '') +
+          '<br><strong>AI answer:</strong> ' + (item.ai_answer || '—') +
+          '<br><strong>Your rating:</strong> ' + (tri.rating || '—') +
+          '<br><strong>KB grounded:</strong> ' + (grounded ? 'Yes' : 'No or unverified') +
+          (tri.trust_score != null ? ' · Trust: ' + tri.trust_score : '') +
+          '</div>';
+      });
+      el('gradingDetails').innerHTML = html;
+      show('resultsCard', true);
+    }
+
+    el('btnNext').onclick = function () { loadCase(true); };
+    el('btnSeed').onclick = function () { loadCase(false); };
+    el('btnNewSession').onclick = resetSession;
+
+    el('btnSubmit').onclick = async function () {
+      if (!currentCase) return;
+      var qs = currentCase.questions || [];
+      for (var i = 0; i < qs.length; i++) {
+        var q = qs[i];
+        if (!ratings[q.id]) {
+          return alert('Please rate the AI answer for question ' + (i + 1));
+        }
+        if ((ratings[q.id] === 'incorrect' || ratings[q.id] === 'hallucinated') &&
+            (!qNotes[q.id] || qNotes[q.id].length < 10)) {
+          return alert('Add a comment (min 10 chars) for question ' + (i + 1));
+        }
+      }
+
+      el('btnSubmit').disabled = true;
+      try {
+        var res = await apiFetch(API + '/eval-lab/submit-batch', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            token: token,
+            case_id: currentCase.id,
+            ratings: ratings,
+            notes: qNotes
+          })
+        });
+        var data = await res.json();
+        if (!res.ok) throw new Error(data.detail || 'Submit failed');
+
+        var box = el('submitResult');
+        box.className = 'result ok';
+        box.innerHTML = '<strong>Submitted.</strong> ' + (data.message || '');
+        show('submitResult', true);
+
+        renderReviewSummary(data);
+      } catch (e) {
+        alert(e.message || 'Submit failed');
+      } finally {
+        el('btnSubmit').disabled = false;
+      }
+    };
+
+    fetch(API + '/eval-lab/config').catch(function () {});
+  </script>
+</body>
+</html>
