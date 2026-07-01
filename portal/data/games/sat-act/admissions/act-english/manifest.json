@@ -1,26 +1,14 @@
 {
-  "schema_version": "repository_manifest_v2",
-  "repository_version": "2026.06.27",
   "version": "2026.06.27",
-  "built_at": "2026-06-27T13:22:59.281916+00:00",
+  "built_at": "2026-06-27T08:46:17.183811+00:00",
   "sku": "sat-act",
   "curriculum": "sat-act",
   "grade": "admissions",
   "subject": "act-english",
-  "total_items": 125,
-  "verified_items": 125,
-  "mcq_items": 125,
+  "total_items": 175,
+  "verified_items": 175,
+  "mcq_items": 175,
   "chapters": 2,
-  "chapter_count": 2,
   "source_questions_file": "sat-act-questions.json",
-  "legacy_portal_export": "sat-act-questions.json",
-  "knowledge_root": "C:\\Knowledge\\EDUCATION\\SAT_ACT",
-  "item_format": "jsonl",
-  "layout": {
-    "items": "items/{chapter_id}.jsonl",
-    "kg": "kg/{chapter_id}.json",
-    "reports": "reports/{chapter_id}.json",
-    "analytics": "analytics/",
-    "exports": "exports/"
-  }
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\SAT_ACT"
 }

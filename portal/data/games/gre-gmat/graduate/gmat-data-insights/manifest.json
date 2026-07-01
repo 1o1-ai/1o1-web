@@ -1,8 +1,6 @@
 {
-  "schema_version": "repository_manifest_v2",
-  "repository_version": "2026.06.27",
   "version": "2026.06.27",
-  "built_at": "2026-06-27T13:22:59.249263+00:00",
+  "built_at": "2026-06-27T08:46:17.257959+00:00",
   "sku": "gre-gmat",
   "curriculum": "gre-gmat",
   "grade": "graduate",
@@ -11,16 +9,6 @@
   "verified_items": 12,
   "mcq_items": 12,
   "chapters": 4,
-  "chapter_count": 4,
   "source_questions_file": "gre-gmat-questions.json",
-  "legacy_portal_export": "gre-gmat-questions.json",
-  "knowledge_root": "C:\\Knowledge\\EDUCATION\\GRE_GMAT",
-  "item_format": "jsonl",
-  "layout": {
-    "items": "items/{chapter_id}.jsonl",
-    "kg": "kg/{chapter_id}.json",
-    "reports": "reports/{chapter_id}.json",
-    "analytics": "analytics/",
-    "exports": "exports/"
-  }
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\GRE_GMAT"
 }

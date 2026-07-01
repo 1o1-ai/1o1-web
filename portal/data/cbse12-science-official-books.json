@@ -1,6 +1,6 @@
 {
   "sku": "cbse12-science",
-  "generatedAt": "2026-06-25T20:45:43.837983+00:00",
+  "generatedAt": "2026-07-01T01:04:06.390606+00:00",
   "sourceRoot": "C:\\Knowledge\\EDUCATION\\CBSE-11-12-SCIENCE",
   "subjects": {
     "physics": {
@@ -1002,8 +1002,8 @@
             "fileSize": "190481 bytes"
           }
         },
-        "human-health-disease": {
-          "chapterId": "human-health-disease",
+        "human-health-diseases": {
+          "chapterId": "human-health-diseases",
           "ncertCode": "kebo108",
           "hasTranscript": false,
           "hasPdf": true,
@@ -1026,8 +1026,8 @@
             "fileSize": "319786 bytes"
           }
         },
-        "biotechnology-principles-processes": {
-          "chapterId": "biotechnology-principles-processes",
+        "biotechnology-principles": {
+          "chapterId": "biotechnology-principles",
           "ncertCode": "kebo110",
           "hasTranscript": true,
           "hasPdf": true,
@@ -1285,8 +1285,8 @@
           },
           "title": "CBSE Class 11-12 Mathematics: Relations and Functions"
         },
-        "inverse-trigonometric-functions": {
-          "chapterId": "inverse-trigonometric-functions",
+        "inverse-trig-functions": {
+          "chapterId": "inverse-trig-functions",
           "ncertCode": "kemh102",
           "hasTranscript": false,
           "hasPdf": true,

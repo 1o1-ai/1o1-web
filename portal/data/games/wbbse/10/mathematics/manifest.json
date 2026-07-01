@@ -1,8 +1,6 @@
 {
-  "schema_version": "repository_manifest_v2",
-  "repository_version": "2026.06.27",
   "version": "2026.06.27",
-  "built_at": "2026-06-27T13:22:59.303497+00:00",
+  "built_at": "2026-06-27T08:46:17.363823+00:00",
   "sku": "rhytoma-wbbse",
   "curriculum": "wbbse",
   "grade": "10",
@@ -11,16 +9,6 @@
   "verified_items": 1,
   "mcq_items": 1,
   "chapters": 1,
-  "chapter_count": 1,
   "source_questions_file": "rhytoma-questions.json",
-  "legacy_portal_export": "rhytoma-questions.json",
-  "knowledge_root": "C:\\Knowledge\\Education\\WBEducation",
-  "item_format": "jsonl",
-  "layout": {
-    "items": "items/{chapter_id}.jsonl",
-    "kg": "kg/{chapter_id}.json",
-    "reports": "reports/{chapter_id}.json",
-    "analytics": "analytics/",
-    "exports": "exports/"
-  }
+  "knowledge_root": "C:\\Knowledge\\Education\\WBEducation"
 }

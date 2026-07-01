@@ -151,7 +151,25 @@
         });
       return;
     }
-    mount.innerHTML = '<p class="sr-eval-hint">Advance Material is available for CBSE 10 only.</p>';
+    if (ctx.sku === 'cbse12-science' && global.CBSE12StudyMaterial?.renderAdvanceMaterialView) {
+      global.CBSE12StudyMaterial.load()
+        .then(() => global.CBSE12StudyMaterial.chapter(ctx.chapterId))
+        .then((ch) => {
+          if (!ch) {
+            mount.innerHTML =
+              '<p class="sr-eval-hint">Advance material for this chapter is not available yet.</p>';
+            return;
+          }
+          global.CBSE12StudyMaterial.renderAdvanceMaterialView(ch, mount, ctx);
+        })
+        .catch(() => {
+          mount.innerHTML =
+            '<p class="sr-eval-hint">Could not load advance material. Try again later.</p>';
+        });
+      return;
+    }
+    mount.innerHTML =
+      '<p class="sr-eval-hint">Advance material for CBSE Class 12 is being wired from Additional Materials (NCERT exemplar & master solutions). Use <strong>Official Books</strong> or <strong>Q &amp; A Practice</strong> meanwhile.</p>';
   }
 
   function renderNcertPlusFallback(host, ctx) {

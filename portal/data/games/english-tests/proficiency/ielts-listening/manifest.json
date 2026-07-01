@@ -1,8 +1,6 @@
 {
-  "schema_version": "repository_manifest_v2",
-  "repository_version": "2026.06.27",
   "version": "2026.06.27",
-  "built_at": "2026-06-27T13:22:59.212039+00:00",
+  "built_at": "2026-06-27T08:46:17.315704+00:00",
   "sku": "english-tests",
   "curriculum": "english-tests",
   "grade": "proficiency",
@@ -11,16 +9,6 @@
   "verified_items": 3,
   "mcq_items": 3,
   "chapters": 1,
-  "chapter_count": 1,
   "source_questions_file": "english-tests-questions.json",
-  "legacy_portal_export": "english-tests-questions.json",
-  "knowledge_root": "C:\\Knowledge\\EDUCATION\\TOEFL-IELTS-DET",
-  "item_format": "jsonl",
-  "layout": {
-    "items": "items/{chapter_id}.jsonl",
-    "kg": "kg/{chapter_id}.json",
-    "reports": "reports/{chapter_id}.json",
-    "analytics": "analytics/",
-    "exports": "exports/"
-  }
+  "knowledge_root": "C:\\Knowledge\\EDUCATION\\TOEFL-IELTS-DET"
 }

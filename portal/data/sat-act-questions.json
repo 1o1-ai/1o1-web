@@ -1,6 +1,6 @@
 {
   "sku": "sat-act",
-  "updated_at": "2026-06-27T13:19:38.942471+00:00",
+  "updated_at": "2026-06-27T08:37:18.285078+00:00",
   "questions": [
     {
       "id": "preparing-for-the-act-24-25-eng-1",
@@ -9078,17 +9078,5 @@
       ],
       "explanation": "The best study focus for Right-triangle trig is understanding core principles and exam strategies."
     }
-  ],
-  "stats": {
-    "total": 319,
-    "by_track": {
-      "act": 175,
-      "sat": 144
-    },
-    "by_section": {
-      "act:english": 175,
-      "sat:reading_writing": 60,
-      "sat:math": 84
-    }
-  }
+  ]
 }

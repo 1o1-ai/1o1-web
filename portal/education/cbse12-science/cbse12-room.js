@@ -9,6 +9,7 @@
   if (window.AnyoBots?.configureForSku) window.AnyoBots.configureForSku(SKU);
 
   let curriculum = null;
+  let masterQuestions = [];
   let subjectId = '';
   let chapterId = '';
   let chapterTitle = '';
@@ -23,13 +24,16 @@
   };
 
   const curPath = cfg.curriculumPath || '/portal/data/cbse12-science-curriculum.json';
+  const qPath = cfg.questionsPath || '/portal/data/cbse12-science-questions.json';
 
   Promise.all([
     fetch(curPath).then((r) => r.json()),
+    fetch(qPath).then((r) => (r.ok ? r.json() : { questions: [] })),
     window.AnyoBots?.loadRoster?.() || Promise.resolve({ students: [] }),
   ])
-    .then(([cur, roster]) => {
+    .then(([cur, qbank, roster]) => {
       curriculum = cur;
+      masterQuestions = qbank?.questions || [];
       renderSubjectCircles();
       renderStudents(roster?.students || [], 'studentsRoster');
       renderStudents(roster?.students || [], 'learnStudentsRoster');
@@ -90,7 +94,40 @@
       showPhase,
       listChapters: () =>
         chaptersForSubject().map((c) => ({ id: c.id, title: c.title })),
-      filterQuestions: () => [],
+      filterQuestions: ({ difficulty, limit, chapterIds }) => {
+        const ids = chapterIds?.length ? chapterIds : [chapterId];
+        const out = [];
+        ids.forEach((ch) => {
+          masterQuestions
+            .filter((q) => {
+              const sub = (q.subject_id || q.subject || '').toLowerCase();
+              if (sub !== subjectId) return false;
+              const qch = q.chapterId || q.chapter_id || q.chapter;
+              if (qch !== ch) return false;
+              if (difficulty && difficulty !== 'all') {
+                const d = String(q.difficulty || '').toLowerCase();
+                const want = String(difficulty).toLowerCase();
+                if (want === 'difficult' || want === 'hard') {
+                  if (d !== 'difficult' && d !== 'hard' && d !== 'advanced') return false;
+                } else if (d !== want) return false;
+              }
+              return !!(q.prompt || q.question || q.text);
+            })
+            .slice(0, limit || 6)
+            .forEach((q) => {
+              out.push({
+                id: q.id,
+                prompt: q.prompt || q.question || q.text,
+                options: (q.options || []).filter(Boolean),
+                correctIndex: q.correctIndex ?? q.correct_index ?? null,
+                marks: q.marks,
+                type: q.type || 'Question',
+                source: q.source,
+              });
+            });
+        });
+        return out;
+      },
       onBeforePractice: () => {
         const embed = document.getElementById('studyPracticeEmbed');
         const evalPhase = document.getElementById('phaseEvaluate');
