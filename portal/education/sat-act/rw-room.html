@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reading &amp; Writing Lab · SAT / ACT</title>
+  <link rel="stylesheet" href="../../../assets/theme.css" />
+  <link rel="stylesheet" href="../../assets/portal.css" />
+  <link rel="stylesheet" href="../cbse10/cbse10-study-room.css" />
+  <link rel="stylesheet" href="sat-act-mock.css" />
+  <link rel="stylesheet" href="sat-act-study-room.css" />
+</head>
+<body class="portal-page study-room-page student-ambience">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <header class="portal-header">
+    <a class="back-link" href="room.html" id="rwBackLink">← Study Room</a>
+    <h1>Reading &amp; Writing Lab</h1>
+  </header>
+  <main class="portal-main rw-room-layout">
+    <aside class="rw-sidebar">
+      <h3>Skills</h3>
+      <nav id="rwTopicNav" class="rw-topic-nav"></nav>
+      <p class="rw-sidebar-note">Read background material, then practice passage questions for each skill.</p>
+      <a class="btn-portal btn-portal-ghost" style="width:100%;margin-top:12px;text-align:center" href="practice.html">Section practice →</a>
+    </aside>
+    <div id="rwRoomRoot" class="rw-room-main"></div>
+  </main>
+  <script src="../../../assets/cosmic.js"></script>
+  <script src="../../assets/academy-config.js"></script>
+  <script src="../../assets/sat-act-shared.js"></script>
+  <script src="../../assets/sat-act-rw-room.js"></script>
+  <script>
+    (function () {
+      const p = new URLSearchParams(location.search);
+      const back = document.getElementById('rwBackLink');
+      if (back && p.get('track') && p.get('section')) {
+        back.href = `room.html?track=${p.get('track')}&section=${p.get('section')}${p.get('chapter') ? '&chapter=' + p.get('chapter') : ''}`;
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -211,6 +211,7 @@
         chapterId = ch.id;
         chapterTitle = ch.title;
         document.getElementById('intentChapterLabel').textContent = ch.title;
+        updateIntentForSection();
         showPhase('intent');
       });
       grid.appendChild(btn);
@@ -228,8 +229,43 @@
     document.getElementById('backFromEvaluate')?.addEventListener('click', () => showPhase('intent'));
   }
 
+  function isRwSection() {
+    return (
+      window.SatActRwRoom?.isRwSection?.(subjectId) ||
+      window.SatActShared?.isRwSection?.(subjectId) ||
+      ['sat-reading-writing', 'act-english', 'act-reading'].includes(subjectId)
+    );
+  }
+
+  function updateIntentForSection() {
+    const btnLearn = document.getElementById('btnLearn');
+    const learnTitle = btnLearn?.querySelector('strong');
+    const learnSmall = btnLearn?.querySelector('small');
+    if (!btnLearn) return;
+    if (isRwSection()) {
+      if (learnTitle) learnTitle.textContent = 'Reading & Writing Lab';
+      if (learnSmall) learnSmall.textContent = 'Read summaries, videos, and passage practice';
+    } else {
+      if (learnTitle) learnTitle.textContent = 'Learn';
+      if (learnSmall) learnSmall.textContent = 'Study materials & skill walkthrough';
+    }
+  }
+
   function bindIntent() {
-    document.getElementById('btnLearn')?.addEventListener('click', openLearn);
+    document.getElementById('btnLearn')?.addEventListener('click', () => {
+      if (isRwSection()) {
+        const url =
+          window.SatActRwRoom?.rwRoomUrl?.({
+            track,
+            subjectId,
+            chapterId,
+            tab: 'read',
+          }) || `rw-room.html?track=${track}&section=${subjectId}&chapter=${chapterId}`;
+        location.href = url;
+        return;
+      }
+      openLearn();
+    });
     document.getElementById('btnEvaluate')?.addEventListener('click', openEvaluate);
   }
 
@@ -445,11 +481,22 @@
         const found = chaptersForSubject().find((c) => c.id === ch);
         chapterTitle = found?.title || ch;
         document.getElementById('intentChapterLabel').textContent = chapterTitle;
+        updateIntentForSection();
         if (p.get('intent') === 'evaluate') {
           openEvaluate();
           return true;
         }
         if (p.get('intent') === 'learn') {
+          if (isRwSection()) {
+            location.href =
+              window.SatActRwRoom?.rwRoomUrl?.({
+                track,
+                subjectId,
+                chapterId,
+                tab: 'read',
+              }) || `rw-room.html?track=${track}&section=${subjectId}&chapter=${chapterId}`;
+            return true;
+          }
           openLearn();
           return true;
         }

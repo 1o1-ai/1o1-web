@@ -38,10 +38,16 @@
       hub: 'index.html',
       practice: 'practice.html',
       mock: 'mock-exam.html',
-      mockParams: () => '',
-      subjects: [],
-      practiceNote: '5-question skill drill · section timing from official guides.',
-      mockNote: 'Timed section mock — Digital SAT or ACT section format.',
+      mockParams: (subject) => {
+        if (subject === 'act-math') return '?track=act&section=math';
+        return '?track=sat&section=math';
+      },
+      subjects: [
+        { id: 'sat-math', label: 'SAT Mathematics' },
+        { id: 'act-math', label: 'ACT Mathematics' },
+      ],
+      practiceNote: 'Reading & Writing — untimed passage practice by skill.',
+      mockNote: 'Timed math mock only (SAT or ACT Mathematics section).',
     },
     'english-tests': {
       label: 'TOEFL · IELTS · DET',

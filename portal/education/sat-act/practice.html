@@ -3,109 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Practice Test · SAT / ACT</title>
+  <title>Practice Test · Reading &amp; Writing · SAT / ACT</title>
   <link rel="stylesheet" href="../../../assets/theme.css" />
   <link rel="stylesheet" href="../../assets/portal.css" />
   <link rel="stylesheet" href="sat-act-mock.css" />
+  <link rel="stylesheet" href="sat-act-study-room.css" />
 </head>
 <body class="portal-page study-room-page">
   <canvas id="cosmos" aria-hidden="true"></canvas>
   <header class="portal-header">
     <a class="back-link" href="exam-center.html">← Exam Center</a>
-    <h1>Practice Test</h1>
+    <h1>Reading &amp; Writing Practice</h1>
   </header>
-  <main class="portal-main" style="max-width:820px">
+  <main class="portal-main" style="max-width:920px">
     <p class="portal-note" style="margin-bottom:20px">
-      Section mocks use <strong>official timing</strong> from College Board &amp; ACT.org.
-      ACT English is live with 125 verified items from ingested PDFs.
+      Untimed <strong>passage-based practice</strong> for SAT Reading &amp; Writing and ACT English / Reading.
+      Timed <strong>math mocks</strong> are in Exam Center → Mock Test.
     </p>
 
-    <section class="practice-card">
-      <h2>ACT section mocks</h2>
-      <table class="mock-section-table">
-        <thead><tr><th>Section</th><th>Official time</th><th>Questions</th><th></th></tr></thead>
-        <tbody>
-          <tr><td>English</td><td>45 min</td><td>75</td><td><a class="btn-portal btn-portal-primary" href="mock-exam.html?track=act&section=english">Start</a></td></tr>
-          <tr><td>Mathematics</td><td>60 min</td><td>60</td><td><a class="btn-portal btn-portal-ghost" href="mock-exam.html?track=act&section=math">Start</a></td></tr>
-          <tr><td>Reading</td><td>35 min</td><td>40</td><td><a class="btn-portal btn-portal-ghost" href="mock-exam.html?track=act&section=reading">Start</a></td></tr>
-          <tr><td>Science</td><td>35 min</td><td>40</td><td><a class="btn-portal btn-portal-ghost" href="mock-exam.html?track=act&section=science">Start</a></td></tr>
-        </tbody>
-      </table>
-      <a class="btn-portal btn-portal-primary" style="width:100%;margin-top:16px;text-align:center;display:block" href="mock-exam.html?track=act&mode=full">
-        Full ACT (175 min · 4 sections + break)
-      </a>
+    <section class="practice-card rw-practice-controls">
+      <h2>Choose section</h2>
+      <div class="rw-filter-row">
+        <label>Exam
+          <select id="rwTrack">
+            <option value="sat">SAT (Digital)</option>
+            <option value="act">ACT</option>
+          </select>
+        </label>
+        <label>Section
+          <select id="rwSection"></select>
+        </label>
+        <label>Skill (optional)
+          <select id="rwChapter"></select>
+        </label>
+      </div>
+      <div class="rw-practice-actions">
+        <button type="button" class="btn-portal btn-portal-ghost" id="btnRwLab">Open Reading &amp; Writing Lab</button>
+        <span id="rwStats" class="rw-session-stats"></span>
+      </div>
     </section>
 
-    <section class="practice-card mock-card" style="margin-top:24px">
-      <h2>SAT section mocks (Digital SAT)</h2>
+    <div id="rwPracticeRoot" class="rw-practice-feed"></div>
+
+    <section class="practice-card" style="margin-top:28px">
+      <h2>Math mocks (timed)</h2>
+      <p class="hint">Section and full math mocks use official timing. Reading &amp; Writing timed mocks are not available yet.</p>
       <table class="mock-section-table">
-        <thead><tr><th>Section</th><th>Official time</th><th>Questions</th><th>Modules</th></tr></thead>
+        <thead><tr><th>Exam</th><th>Section</th><th>Time</th><th></th></tr></thead>
         <tbody>
-          <tr>
-            <td>Reading &amp; Writing</td><td>64 min</td><td>54</td><td>2 × 32 min</td>
-            <td><a class="btn-portal btn-portal-ghost" href="mock-exam.html?track=sat&section=reading_writing">Start</a></td>
-          </tr>
-          <tr>
-            <td>Mathematics</td><td>70 min</td><td>44</td><td>2 × 35 min · Desmos</td>
-            <td><a class="btn-portal btn-portal-ghost" href="mock-exam.html?track=sat&section=math">Start</a></td>
-          </tr>
+          <tr><td>SAT</td><td>Mathematics</td><td>70 min · 44 Q</td><td><a class="btn-portal btn-portal-primary" href="mock-exam.html?track=sat&section=math">Start</a></td></tr>
+          <tr><td>ACT</td><td>Mathematics</td><td>60 min · 60 Q</td><td><a class="btn-portal btn-portal-ghost" href="mock-exam.html?track=act&section=math">Start</a></td></tr>
         </tbody>
       </table>
-      <a class="btn-portal btn-portal-primary" style="width:100%;margin-top:16px;text-align:center;display:block" href="mock-exam.html?track=sat&mode=full">
-        Full Digital SAT (134 min · RW + Math)
-      </a>
-      <p class="hint" style="margin-top:12px">SAT question bank pending — College Board robots.txt blocks automated PDF download. Manual PDF drop unlocks RW &amp; Math drills.</p>
-    </section>
-
-    <section class="practice-card" style="margin-top:24px">
-      <h2>5-question skill drill</h2>
-      <p class="hint">Official ingested items — from Study Room Evaluate.</p>
-      <label>Track</label>
-      <select id="prTrack"><option value="act">ACT</option><option value="sat">SAT</option></select>
-      <label>Section</label>
-      <select id="prSection">
-        <option value="english">ACT English</option>
-        <option value="math">ACT Math</option>
-        <option value="reading">ACT Reading</option>
-        <option value="science">ACT Science</option>
-      </select>
-      <button type="button" class="btn-portal btn-portal-primary" id="btnSkillStart" style="width:100%;margin-top:12px">Open in Study Room</button>
     </section>
   </main>
   <script src="../../../assets/cosmic.js"></script>
   <script src="../../assets/academy-config.js"></script>
-  <script>
-    const trackSec = {
-      act: [
-        ['english', 'act-english'],
-        ['math', 'act-math'],
-        ['reading', 'act-reading'],
-        ['science', 'act-science'],
-      ],
-      sat: [
-        ['reading_writing', 'sat-rw-craft'],
-        ['math', 'sat-math-algebra'],
-      ],
-    };
-    const prTrack = document.getElementById('prTrack');
-    const prSection = document.getElementById('prSection');
-    prTrack.addEventListener('change', () => {
-      const t = prTrack.value;
-      prSection.innerHTML = '';
-      (trackSec[t] || []).forEach(([sec, ch]) => {
-        const o = document.createElement('option');
-        o.value = sec + '|' + ch;
-        o.textContent = sec.replace('_', ' & ');
-        prSection.appendChild(o);
-      });
-    });
-    prTrack.dispatchEvent(new Event('change'));
-    document.getElementById('btnSkillStart').addEventListener('click', () => {
-      const t = prTrack.value;
-      const [sec, ch] = prSection.value.split('|');
-      const sectionParam = t === 'sat' ? (sec === 'reading_writing' ? 'sat-reading-writing' : 'sat-math') : 'act-' + sec;
-      location.href = `room.html?track=${t}&section=${sectionParam}&chapter=${ch}&intent=evaluate`;
-    });
-  </script>
+  <script src="../../assets/sat-act-shared.js"></script>
+  <script src="../../assets/sat-act-rw-room.js"></script>
+  <script src="../../assets/sat-act-rw-practice.js"></script>
 </body>
 </html>

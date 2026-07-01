@@ -1457,7 +1457,7 @@
 
     try {
 
-      const feedback = await window.Cbse10TutorApi.gradeAnswer(
+      const grade = await window.Cbse10TutorApi.gradeAnswer(
 
         ans.prompt,
 
@@ -1477,13 +1477,16 @@
 
           chapterTitle: ans.chapterTitle || chapterTitle,
 
+          solutionSteps: ans.solutionSteps || ans.solution_steps || [],
+
         }
 
       );
 
-      const marksAwarded = parseMarksFromFeedback(feedback, maxMarks);
+      const marksAwarded =
+        grade.marksAwarded != null ? grade.marksAwarded : parseMarksFromFeedback(grade.feedback, maxMarks);
 
-      let presentation = cleanPresentationFeedback(feedback);
+      let presentation = cleanPresentationFeedback(grade.feedback);
 
       if (!presentation && marksAwarded != null) {
 
@@ -1494,7 +1497,7 @@
       window.EducationPerf?.record?.('grade_answer', {
         durationMs: (window.performance?.now?.() ?? Date.now()) - t0,
         usedAi: true,
-        gradedBy: referenceAnswer ? 'server_deterministic_or_llm' : 'llm',
+        gradedBy: grade.gradedBy || 'semantic_llm',
         sku: 'cbse10-core',
       });
 
@@ -1506,7 +1509,7 @@
 
         feedback: presentation || 'Graded by computer tutor.',
 
-        gradedBy: marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative',
+        gradedBy: grade.gradedBy || (marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative'),
 
       };
 

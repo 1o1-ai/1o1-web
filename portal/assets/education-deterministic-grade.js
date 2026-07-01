@@ -53,12 +53,16 @@
     const ans = String(studentAnswer || '').trim();
     if (!ref || !ans || ref.length < 8) return null;
 
+    const minFastPath = opts.minFastPathRatio ?? 0.95;
     const minPass = opts.minPassRatio ?? 0.5;
     const minFull = opts.minFullRatio ?? 0.78;
     const refInAns = overlapRatio(ref, ans);
     const ansInRef = overlapRatio(ans, ref);
     const fuzzy = fuzzyRatio(ans, ref);
     const scoreRatio = Math.max(refInAns, ansInRef * 0.92, fuzzy * 0.85);
+
+    // Only short-circuit for near-exact matches; paraphrases go to semantic API.
+    if (scoreRatio < minFastPath) return null;
 
     let marksAwarded;
     let feedback;
@@ -78,7 +82,7 @@
       maxMarks,
       feedback,
       referenceAnswer: ref,
-      gradedBy: 'deterministic_overlap',
+      gradedBy: 'deterministic_fast_path',
       scoreRatio: Math.round(scoreRatio * 100),
     };
   }

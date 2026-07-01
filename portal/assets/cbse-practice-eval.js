@@ -316,22 +316,26 @@
     }
 
     try {
-      const feedback = await global.Cbse10TutorApi.gradeAnswer(ans.prompt, ans.studentAnswer, referenceAnswer, {
+      const grade = await global.Cbse10TutorApi.gradeAnswer(ans.prompt, ans.studentAnswer, referenceAnswer, {
         referenceAnswer,
         maxMarks,
         subject: ctx.subject,
         chapterId: ctx.chapterId,
         chapterTitle: ctx.chapterTitle,
+        solutionSteps: ans.solutionSteps || ans.solution_steps || [],
+        sku: ctx.sku || 'cbse10-core',
+        grade: ctx.grade || '10',
       });
-      const marksAwarded = parseMarksFromFeedback(feedback, maxMarks);
-      let presentation = cleanPresentationFeedback(feedback);
+      const marksAwarded =
+        grade.marksAwarded != null ? grade.marksAwarded : parseMarksFromFeedback(grade.feedback, maxMarks);
+      let presentation = cleanPresentationFeedback(grade.feedback);
       if (!presentation && marksAwarded != null) {
         presentation = `Scored ${marksAwarded}/${maxMarks}.`;
       }
       global.EducationPerf?.record?.('grade_answer', {
         durationMs: (global.performance?.now?.() ?? Date.now()) - t0,
         usedAi: true,
-        gradedBy: referenceAnswer ? 'server_deterministic_or_llm' : 'llm',
+        gradedBy: grade.gradedBy || 'semantic_llm',
         sku: 'cbse10-core',
       });
       return {
@@ -339,7 +343,7 @@
         maxMarks,
         feedback: presentation || 'Graded by ManjuLAB computer agent.',
         referenceAnswer: referenceAnswer || '',
-        gradedBy: marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative',
+        gradedBy: grade.gradedBy || (marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative'),
       };
     } catch {
       global.EducationPerf?.record?.('grade_answer', {
