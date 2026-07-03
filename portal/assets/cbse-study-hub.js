@@ -181,6 +181,7 @@
     const mount = host.querySelector('.cbse-advanced-mount');
     global.CBSEOfficialBooks?.stopLecture?.();
     global.CBSE10StudyMaterial?.stopReadAloud?.();
+    global.CBSE12StudyMaterial?.stopReadAloud?.();
 
     if (ctx.sku === 'cbse10' && global.CBSE10StudyMaterial?.renderAdvanceMaterialView) {
       const loadCh = global.CBSE10StudyMaterial.loadChapter
@@ -204,7 +205,25 @@
         });
       return;
     }
-    mount.innerHTML = '<p class="sr-eval-hint">Advance Material is available for CBSE 10 only.</p>';
+
+    if (ctx.sku === 'cbse12-science' && global.CBSE12StudyMaterial?.renderAdvanceMaterialView) {
+      loadStudyChapter(ctx)
+        .then((ch) => {
+          if (!ch) {
+            mount.innerHTML =
+              '<p class="sr-eval-hint">Advance material for this chapter is not available yet.</p>';
+            return;
+          }
+          global.CBSE12StudyMaterial.renderAdvanceMaterialView(ch, mount, ctx);
+        })
+        .catch(() => {
+          mount.innerHTML =
+            '<p class="sr-eval-hint">Could not load advance material. Try again later.</p>';
+        });
+      return;
+    }
+
+    mount.innerHTML = '<p class="sr-eval-hint">Advance Material is available for CBSE 10 and XII Science.</p>';
   }
 
   function renderNcertPlusFallback(host, ctx) {

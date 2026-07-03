@@ -212,7 +212,90 @@
     return card;
   }
 
-    mount.innerHTML = '<p class="sr-eval-hint">Advance Material is available for CBSE Class 10 only.</p>';
+  function renderAdvanceMaterialView(ch, root, ctx) {
+    if (!root || !ch) return;
+    root.innerHTML = '';
+    const mat = ch.advanceMaterial || {};
+    const plus = ch.advancedStudy || {};
+    const concepts = ch.discoveredConcepts || [];
+
+    const head = document.createElement('div');
+    head.className = 'cbse-advanced-panel';
+    head.innerHTML = `<h3>Advance Material · ${ch.title || ctx?.chapterTitle || ''}</h3>
+      <p class="cbse-advanced-lead">${mat.summary || plus.summary || 'Master solutions, screenplay transcripts, and discovered concepts from the CBSE XI–XII corpus.'}</p>`;
+    root.appendChild(head);
+
+    if (mat.solutionPdfs?.length) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = '<h3>Master solution PDFs</h3><ul class="sr-learn-links"></ul>';
+      const ul = sec.querySelector('ul');
+      mat.solutionPdfs.slice(0, 8).forEach((pdf) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = pdf.url || '#';
+        a.target = '_blank';
+        a.rel = 'noopener';
+        a.textContent = pdf.title || 'Solution PDF';
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      root.appendChild(sec);
+    }
+
+    const solutions = mat.solutions || [];
+    if (solutions.length) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = `<h3>Worked solutions (${mat.solutionCount || solutions.length})</h3><div class="cbse-adv-solutions"></div>`;
+      const wrap = sec.querySelector('.cbse-adv-solutions');
+      solutions.slice(0, 8).forEach((sol) => {
+        const card = document.createElement('article');
+        card.className = 'cbse-adv-solution-card';
+        let stepsHtml = '';
+        (sol.steps || []).forEach((st) => {
+          stepsHtml += `<li><strong>${st.heading || 'Step'}:</strong> ${st.detail || ''}</li>`;
+        });
+        card.innerHTML = `<p class="cbse-adv-sol-prompt"><span class="cbse-adv-q-marks">${sol.marks || '?'} mark(s)</span> ${String(sol.prompt || '').slice(0, 280)}</p>${stepsHtml ? `<ol class="sr-learn-list">${stepsHtml}</ol>` : ''}`;
+        wrap.appendChild(card);
+      });
+      root.appendChild(sec);
+    }
+
+    if (concepts.length) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = '<h3>Discovered concepts</h3><ul class="sr-learn-list"></ul>';
+      const ul = sec.querySelector('ul');
+      concepts.slice(0, 16).forEach((c) => {
+        const li = document.createElement('li');
+        li.textContent = String(c || '').trim();
+        ul.appendChild(li);
+      });
+      root.appendChild(sec);
+    }
+
+    if (plus?.modules?.length) {
+      plus.modules.forEach((mod) => {
+        const sec = document.createElement('section');
+        sec.className = 'sr-learn-section cbse-plus-module';
+        sec.innerHTML = `<div class="cbse-plus-module-head"><h3>${mod.title || 'Module'}</h3></div>`;
+        if (mod.body) {
+          const body = document.createElement('div');
+          body.className = 'sr-learn-body cbse-plus-body';
+          body.innerHTML = mdToHtml(mod.body);
+          sec.appendChild(body);
+        }
+        root.appendChild(sec);
+      });
+    }
+
+    if (!mat.solutionPdfs?.length && !solutions.length && !concepts.length && !plus?.modules?.length) {
+      const empty = document.createElement('p');
+      empty.className = 'sr-eval-hint';
+      empty.textContent = 'Advance material for this chapter is being curated from the OneDrive corpus.';
+      root.appendChild(empty);
+    }
   }
 
   function renderNcertPlusView(ch, root, ctx) {
@@ -339,6 +422,20 @@
       root.appendChild(sec);
     }
 
+    if (ch.lectureTranscript?.beats?.length) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = `<h3>${ch.lectureTranscript.title || 'Screenplay lecture'}</h3><div class="sr-transcript-beats"></div>`;
+      const wrap = sec.querySelector('.sr-transcript-beats');
+      ch.lectureTranscript.beats.slice(0, 12).forEach((b) => {
+        const p = document.createElement('p');
+        p.className = b.role === 'teacher' ? 'sr-beat-teacher' : 'sr-beat-student';
+        p.innerHTML = `<strong>${b.speaker || b.role || 'Speaker'}:</strong> ${String(b.text || '').slice(0, 420)}`;
+        wrap.appendChild(p);
+      });
+      root.appendChild(sec);
+    }
+
     const actions = document.createElement('div');
     actions.className = 'sr-learn-actions';
     actions.innerHTML = `
@@ -365,6 +462,7 @@
     chapter,
     renderLearnView,
     renderNcertPlusView,
+    renderAdvanceMaterialView,
     readAloud,
     stopReadAloud,
     isValidYoutubeId,
