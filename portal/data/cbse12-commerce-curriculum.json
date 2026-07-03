@@ -1,0 +1,356 @@
+{
+  "sku": "cbse12-commerce",
+  "title": "CBSE-XII-Commerce",
+  "displayName": "CBSE-XII-Commerce",
+  "locale": "en-IN",
+  "session": "rolling",
+  "grades": [
+    "11",
+    "12"
+  ],
+  "subjects": {
+    "accountancy": {
+      "label": "Accountancy",
+      "icon": "📒",
+      "code": "055",
+      "grades": [
+        "11",
+        "12"
+      ],
+      "chapters": [
+        {
+          "id": "theoretical-framework",
+          "title": "Theoretical Framework",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "accounting-process",
+          "title": "Accounting Process",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "financial-statements-sole-proprietorship",
+          "title": "Financial Statements of Sole Proprietorship",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "accounting-partnership-firms",
+          "title": "Accounting for Partnership Firms",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "accounting-companies",
+          "title": "Accounting for Companies",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "analysis-financial-statements",
+          "title": "Analysis of Financial Statements",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "cash-flow-statement",
+          "title": "Cash Flow Statement",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        }
+      ]
+    },
+    "business-studies": {
+      "label": "Business Studies",
+      "icon": "💼",
+      "code": "054",
+      "grades": [
+        "11",
+        "12"
+      ],
+      "chapters": [
+        {
+          "id": "evolution-fundamentals-business",
+          "title": "Evolution and Fundamentals of Business",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "forms-business-organizations",
+          "title": "Forms of Business Organizations",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "public-private-global-enterprises",
+          "title": "Public, Private and Global Enterprises",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "business-services",
+          "title": "Business Services",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "emerging-modes-business",
+          "title": "Emerging Modes of Business",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "social-responsibility-business-ethics",
+          "title": "Social Responsibility and Business Ethics",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "sources-business-finance",
+          "title": "Sources of Business Finance",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "small-business-enterprises",
+          "title": "Small Business and Enterprises",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "internal-trade",
+          "title": "Internal Trade",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "international-trade",
+          "title": "International Trade",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "nature-significance-management",
+          "title": "Nature and Significance of Management",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "principles-management",
+          "title": "Principles of Management",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "business-environment",
+          "title": "Business Environment",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "planning",
+          "title": "Planning",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "organising",
+          "title": "Organising",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "staffing",
+          "title": "Staffing",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "directing",
+          "title": "Directing",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "controlling",
+          "title": "Controlling",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "financial-management",
+          "title": "Financial Management",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "financial-markets",
+          "title": "Financial Markets",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "marketing",
+          "title": "Marketing",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "consumer-protection",
+          "title": "Consumer Protection",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": true
+        }
+      ]
+    },
+    "economics": {
+      "label": "Economics",
+      "icon": "📈",
+      "code": "030",
+      "grades": [
+        "11",
+        "12"
+      ],
+      "chapters": [
+        {
+          "id": "statistics-introduction",
+          "title": "Statistics for Economics — Introduction",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "collection-organisation-data",
+          "title": "Collection, Organisation and Presentation of Data",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "statistical-tools-interpretation",
+          "title": "Statistical Tools and Interpretation",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": true
+        },
+        {
+          "id": "microeconomics-introduction",
+          "title": "Introductory Microeconomics — Introduction",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "consumer-equilibrium-demand",
+          "title": "Consumer's Equilibrium and Demand",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "producer-behaviour-supply",
+          "title": "Producer Behaviour and Supply",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "perfect-competition",
+          "title": "Perfect Competition and Price Determination",
+          "grade": "11",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "national-income-aggregates",
+          "title": "National Income and Related Aggregates",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "money-banking",
+          "title": "Money and Banking",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "income-determination-employment",
+          "title": "Determination of Income and Employment",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "government-budget-economy",
+          "title": "Government Budget and the Economy",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "balance-of-payments",
+          "title": "Balance of Payments",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "development-experience-1947-90",
+          "title": "Development Experience (1947–90) and Reforms",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "current-challenges-indian-economy",
+          "title": "Current Challenges facing Indian Economy",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        },
+        {
+          "id": "development-experience-comparison",
+          "title": "Development Experience — India and Neighbours",
+          "grade": "12",
+          "questionCount": 0,
+          "hasNcert": false
+        }
+      ]
+    }
+  },
+  "generated_at": "2026-07-03T21:42:50.395223+00:00",
+  "source_root": "C:\\Users\\whizy\\OneDrive\\Knowledge\\EDUCATION\\CBSE-11-12-Commerce"
+}

@@ -67,6 +67,35 @@
         { id: 'mathematics', label: 'Mathematics', code: '041', icon: '📐' },
       ],
     },
+    'cbse12-commerce': {
+      id: 'cbse12-commerce',
+      label: 'CBSE-XII-Commerce',
+      hubPath: '/portal/education/cbse12-commerce/index.html',
+      rosterPath: '/portal/data/academy-bots.json',
+      locale: 'in',
+      currency: 'INR',
+      moderationReply:
+        "Let's keep this about CBSE Commerce prep — Accountancy, Business Studies, or Economics. No personal contact or off-topic chat.",
+      timepassWarn: 'This room is for board prep. Please stay on syllabus topics.',
+      studyChatter: [
+        'Anyone on partnership accounts tonight?',
+        'Business Studies case studies are heavy this week',
+        'Macroeconomics national income numericals — help?',
+        'GST treatment in Class XI accounts — revising',
+        'Consumer protection act MCQs for pre-board',
+      ],
+      curriculumPath: '/portal/data/cbse12-commerce-curriculum.json',
+      forumPath: '/portal/data/cbse12-commerce-forum.json',
+      bankPath: '/portal/data/cbse12-commerce-questions.json',
+      studyMaterialPath: '/portal/data/cbse12-commerce-study-material.json',
+      educationApiBase: 'https://api.brahmando.com/education',
+      grades: ['11', '12'],
+      subjects: [
+        { id: 'accountancy', label: 'Accountancy', code: '055', icon: '📒' },
+        { id: 'business-studies', label: 'Business Studies', code: '054', icon: '💼' },
+        { id: 'economics', label: 'Economics', code: '030', icon: '📈' },
+      ],
+    },
     'sat-act': {
       id: 'sat-act',
       label: 'SAT / ACT',
@@ -242,6 +271,7 @@
     if (p.includes('/english-tests/')) return 'english-tests';
     if (p.includes('/gre-gmat/')) return 'gre-gmat';
     if (p.includes('/rhytoma/')) return 'rhytoma-wbbse';
+    if (p.includes('/cbse12-commerce/')) return 'cbse12-commerce';
     if (p.includes('/cbse12-science/')) return 'cbse12-science';
     if (p.includes('/cbse10/')) return 'cbse10-core';
     const q = new URLSearchParams(global.location.search || '');

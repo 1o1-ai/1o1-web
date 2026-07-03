@@ -17,12 +17,19 @@
   let booksCatalog = null;
 
   function loadBooks(sku) {
-    const key = sku === 'cbse10' ? 'cbse10' : 'cbse12-science';
+    const key =
+      sku === 'cbse10'
+        ? 'cbse10'
+        : sku === 'cbse12-commerce'
+          ? 'cbse12-commerce'
+          : 'cbse12-science';
     if (booksCatalog?.sku === key) return Promise.resolve(booksCatalog);
     const path =
       sku === 'cbse10'
         ? '/portal/data/cbse10-official-books.json'
-        : '/portal/data/cbse12-science-official-books.json';
+        : sku === 'cbse12-commerce'
+          ? '/portal/data/cbse12-commerce-official-books.json'
+          : '/portal/data/cbse12-science-official-books.json';
     return fetch(path)
       .then((r) => (r.ok ? r.json() : { subjects: {} }))
       .then((data) => {
@@ -128,6 +135,11 @@
     if (ctx.sku === 'cbse12-science' && global.CBSE12StudyMaterial) {
       return global.CBSE12StudyMaterial.load().then(() =>
         global.CBSE12StudyMaterial.chapter(ctx.chapterId)
+      );
+    }
+    if (ctx.sku === 'cbse12-commerce' && global.CBSE12CommerceStudyMaterial) {
+      return global.CBSE12CommerceStudyMaterial.load().then(() =>
+        global.CBSE12CommerceStudyMaterial.chapter(ctx.chapterId)
       );
     }
     return Promise.resolve(null);
@@ -254,6 +266,12 @@
           return;
         }
         global.CBSE12StudyMaterial.renderLearnView(ch, mount);
+      });
+      return;
+    }
+    if (ctx.sku === 'cbse12-commerce' && global.CBSE12CommerceStudyMaterial) {
+      global.CBSE12CommerceStudyMaterial.load().then(() => {
+        global.CBSE12CommerceStudyMaterial.renderLearnPanel(mount, ctx);
       });
       return;
     }

@@ -382,6 +382,42 @@
     return true;
   }
 
+  function questionStemKey(text) {
+    return cleanDisplayText(text)
+      .toLowerCase()
+      .replace(/\d+(?:\.\d+)?/g, '#')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function questionVariantScore(q) {
+    let score = 0;
+    if (isAuthenticCbse(q)) score += 1000;
+    score += Number(q.exam_year) || 0;
+    const raw = String(q.text || q.prompt || q.question || '');
+    if (/\[Set-\d+/i.test(raw)) score -= 50;
+    if (/Ref Key/i.test(raw)) score -= 25;
+    return score;
+  }
+
+  /** Keep one row per numeric template (e.g. same story, different angles). */
+  function dedupeByStem(questions) {
+    const byStem = new Map();
+    questions.forEach((q) => {
+      const text = q.text || q.prompt || q.question || '';
+      const key = questionStemKey(text);
+      if (!key || key.length < 16) {
+        byStem.set('id:' + String(q.id || key), q);
+        return;
+      }
+      const prev = byStem.get(key);
+      if (!prev || questionVariantScore(q) > questionVariantScore(prev)) {
+        byStem.set(key, q);
+      }
+    });
+    return [...byStem.values()];
+  }
+
   function filterMasterQuestions(questions, { subject, chapter, mode, type, difficulty, limit }) {
     const subj = subject === 'mathematics' ? 'mathematics' : 'science';
     let pool = questions.filter((q) => {
@@ -417,6 +453,7 @@
       }
       return isValidCatalogQuestion(q);
     });
+    pool = dedupeByStem(pool);
     return shuffleArray(pool).slice(0, limit || 9999);
   }
 
@@ -507,6 +544,8 @@
     resolveCorrectIndex,
     letterToIndex,
     cleanDisplayText,
+    questionStemKey,
+    dedupeByStem,
     masterChapterId,
     normalizeChapterId,
     effectiveChapter,

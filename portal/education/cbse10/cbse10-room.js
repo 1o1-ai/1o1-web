@@ -553,7 +553,7 @@
         const seen = new Set();
         const deduped = [];
         out.forEach((q) => {
-          const key = String(q.id || q.prompt || '');
+          const key = window.CBSE10Shared.questionStemKey?.(q.prompt || '') || String(q.id || q.prompt || '');
           if (seen.has(key)) return;
           seen.add(key);
           deduped.push(q);

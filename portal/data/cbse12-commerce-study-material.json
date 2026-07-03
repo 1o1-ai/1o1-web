@@ -1,0 +1,824 @@
+{
+  "version": 1,
+  "sku": "cbse12-commerce",
+  "generated_at": "2026-07-03T21:42:50.415421+00:00",
+  "content_pack": "cbse12-commerce-study-material-v1-onedrive",
+  "source_root": "C:\\Users\\whizy\\OneDrive\\Knowledge\\EDUCATION\\CBSE-11-12-Commerce",
+  "chapters": {
+    "theoretical-framework": {
+      "chapterId": "theoretical-framework",
+      "subject": "accountancy",
+      "title": "Theoretical Framework",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "accounting-process": {
+      "chapterId": "accounting-process",
+      "subject": "accountancy",
+      "title": "Accounting Process",
+      "grade": "11",
+      "ncertCode": "keac107",
+      "ncertPdf": "sources/keac107.pdf",
+      "studySummary": "## Overview\n226 Accountancy M atching principle requires that the revenue of a given period is matched against the expenses for the same period. This ensures ascertainment of the correct amount of profit or loss. If some cost is incurred whose benefit extend to more than one accounting period, it is not justified to charge the entire cost as expense in the year in which it is incurred. In fact, such a cost must be spread over the periods in which it provides benefits. Depreciation, on fixed assets, which is the main subject matter of the present chapter, deals with such a situation. Further, it may not always be possible to ascertain with certainty the amount of some particular expense. Recall the principle of conservatism (prudence) which requires that instead of ignoring such items of costs, adequat\n"
+    },
+    "financial-statements-sole-proprietorship": {
+      "chapterId": "financial-statements-sole-proprietorship",
+      "subject": "accountancy",
+      "title": "Financial Statements of Sole Proprietorship",
+      "grade": "11",
+      "ncertCode": "keac202",
+      "ncertPdf": "sources/keac202.pdf",
+      "studySummary": "## Overview\n318 Accountancy Financial Statements - II 9 I n chapter 8, you learnt about the preparation of simple final accounts in the format of trading and profit and loss account and balance sheet. The preparation of simple final accounts pre-supposes the absence of any accounting complexities which are normal to business operations. These complexities arise due to the fact that the process of determining income and financial position is based on the accrual basis of accounting. This emphasises that while ascertaining the profitability, the revenues be considered on earned basis and not on receipt basis, and the expenses be considered on incurred basis and not on paid basis. Hence, many items need some adjustment while preparing the financial statements. In this chapter we shall discuss all items w\n"
+    },
+    "accounting-partnership-firms": {
+      "chapterId": "accounting-partnership-firms",
+      "subject": "accountancy",
+      "title": "Accounting for Partnership Firms",
+      "grade": "12",
+      "ncertCode": "leac104",
+      "ncertPdf": "Additional Materials/Accountancy_Class_12/Reconstitution of a Partnership Firm - RetirementDeath of a Partner/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Accountancy_Class_12 - Chapter 4: Reconstitution of a Partnership Firm - Retirement/Death of a Partner Michael Ray Dibdin Heseltine, Baron Heseltine (; born 21 March 1933) is a British politician. Having begun his career as a property developer, he became one of the founders of the publishing house Haymarket Media Group in 1957. Heseltine served as a Conservative Member of Parliament from 1966 to 2001. He was a prominent figure in the governments of Margaret Thatcher and John Major, and served as Deputy Prime Minister and First Secretary of State under Major from 1995 to 1997. Heseltine entered the Cabinet in 1979 as Secretary of State for the Environment, where he promoted the \"Right to Buy\" campaign that allowed people to purchase their council houses. He w\n",
+      "videos": [
+        {
+          "title": "Class 12th Accountancy Reconstitution Of A Partnership Firm Retirement, Death Of A Partner",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=yOAhdvpJ0tQ",
+          "youtubeId": "yOAhdvpJ0tQ",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/yOAhdvpJ0tQ"
+        },
+        {
+          "title": "Accountancy Class 12, Chapter-3 Reconstitution of a Partnership Firm: Retirement/Death of a Partner",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=_exFDZPS7yY",
+          "youtubeId": "_exFDZPS7yY",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/_exFDZPS7yY"
+        },
+        {
+          "title": "CBSE Class 12 Accountancy Reconstitution of a Partnership Firm–Retirement/Death of a Partner",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=saWedGgFbfk",
+          "youtubeId": "saWedGgFbfk",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/saWedGgFbfk"
+        },
+        {
+          "title": "Retirement/Death of a Partner",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=Cf2jjocFF_Y",
+          "youtubeId": "Cf2jjocFF_Y",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Cf2jjocFF_Y"
+        },
+        {
+          "title": "Class XII Accountancy-Reconstitution of a Partnership Firm Retirement Death of a Partner",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=h3Wg5wyv5_c",
+          "youtubeId": "h3Wg5wyv5_c",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/h3Wg5wyv5_c"
+        }
+      ]
+    },
+    "accounting-companies": {
+      "chapterId": "accounting-companies",
+      "subject": "accountancy",
+      "title": "Accounting for Companies",
+      "grade": "12",
+      "ncertCode": "leac201",
+      "ncertPdf": "Additional Materials/Accountancy_Class_12/Accounting for Share Capital/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Accountancy_Class_12 - Chapter 1: Accounting for Share Capital Certified Public Accountant (CPA) is the title of qualified accountants in many countries in the English-speaking world. It is generally equivalent to the title of chartered accountant in other English-speaking countries. In the United States, the CPA is a license to provide accounting services to the public. It is awarded by each of the 50 states for practice in that state. Additionally, all states except Hawaii have passed mobility laws to allow CPAs from other states to practice in their state. State licensing requirements vary, but the minimum standard requirements include passing the Uniform Certified Public Accountant Examination, 150 semester units of college education, and one year of acco\n",
+      "videos": [
+        {
+          "title": "Accounting for Share Capital - One Shot | Class 12 Accounts | CBSE Board Exam 2026-27",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=-Fs4rpQd64g",
+          "youtubeId": "-Fs4rpQd64g",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/-Fs4rpQd64g"
+        },
+        {
+          "title": "Accounting for share capital Complete chapter in 10 Mins⏰CS Executive Corporate accounting 💡",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=5VoIiM0if64",
+          "youtubeId": "5VoIiM0if64",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/5VoIiM0if64"
+        },
+        {
+          "title": "Class 12 Accounts Chapter 9 | Accounting For Share Capital - Concept (Part 1) (2022-23)",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=bZSdkGuu0vE",
+          "youtubeId": "bZSdkGuu0vE",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/bZSdkGuu0vE"
+        },
+        {
+          "title": "Accounting for Share Capital Class 12 Accounts🎯|Complete Accounting for Share Capital in 20 Minutes",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=0R97r2AumgQ",
+          "youtubeId": "0R97r2AumgQ",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/0R97r2AumgQ"
+        },
+        {
+          "title": "+2 Accountancy | AFS: ACCOUNTING FOR SHARE CAPITAL |",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=vm33nWEJ68I",
+          "youtubeId": "vm33nWEJ68I",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/vm33nWEJ68I"
+        }
+      ]
+    },
+    "analysis-financial-statements": {
+      "chapterId": "analysis-financial-statements",
+      "subject": "accountancy",
+      "title": "Analysis of Financial Statements",
+      "grade": "12",
+      "ncertCode": "leac205",
+      "ncertPdf": "sources/leac205.pdf",
+      "studySummary": "## Overview\nF inancial statements aim at providing financial information about a business enterprise to meet the information needs of the decision-makers. Financial statements prepared by a business enterprise in the corporate sector are published and are available to the decision-makers. These statements provide financial data which require analysis, comparison and interpretation for taking decision by the external as well as internal users of accounting information. This act is termed as financial statement analysis. It is regarded as  an integral and important part of accounting. As indicated in the previous chapter, the most commonly used techniques of financial statements analysis are comparative statements, common size statements, trend analysis, accounting ratios and cash flow analysis. The fir\n"
+    },
+    "cash-flow-statement": {
+      "chapterId": "cash-flow-statement",
+      "subject": "accountancy",
+      "title": "Cash Flow Statement",
+      "grade": "12",
+      "ncertCode": "",
+      "ncertPdf": "Additional Materials/Accountancy_Class_12/Cash Flow Statement/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Accountancy_Class_12 - Chapter 5: Cash Flow Statement Mark-to-market (MTM or M2M) or fair value accounting is accounting for the \"fair value\" of an asset or liability based on the current market price, or the price for similar assets and liabilities, or based on another objectively assessed \"fair\" value.  Fair value accounting has been a part of Generally Accepted Accounting Principles (GAAP) in the United States since the early 1990s. Failure to use it is viewed as the cause of the Orange County Bankruptcy, even though its use is considered to be one of the reasons for the Enron scandal and the eventual bankruptcy of the company, as well as the closure of the accounting firm Arthur Andersen. Mark-to-market accounting can change values on the balance sheet as\n",
+      "videos": [
+        {
+          "title": "El ESTADO DE FLUJO DE EFECTIVO para PRINCIPIANTES",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=DiVPAjgmnj0",
+          "youtubeId": "DiVPAjgmnj0",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/DiVPAjgmnj0"
+        },
+        {
+          "title": "Cash flow statement | Accountancy | Class 12 | Part 1 | All basics",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=WgfaRZUfUkA",
+          "youtubeId": "WgfaRZUfUkA",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/WgfaRZUfUkA"
+        },
+        {
+          "title": "Cash Flow Statement Complete Chapter One Shot | Accounts Class 12 | CBSE Board Exam 2026-27",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=-XZNRXePa5g",
+          "youtubeId": "-XZNRXePa5g",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/-XZNRXePa5g"
+        },
+        {
+          "title": "Cash Flow Statement Super One Shot🔥 | Class 12 Accounts | Boards 2025–26 | Ushank Sir",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=EXSEVplZMWo",
+          "youtubeId": "EXSEVplZMWo",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/EXSEVplZMWo"
+        },
+        {
+          "title": "Cash Flow Statement Class 12 Accountancy | One Shot Full Chapter | CBSE 2025-26 | Vishwaas Batch🎯",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=JhQCHkMPa64",
+          "youtubeId": "JhQCHkMPa64",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/JhQCHkMPa64"
+        }
+      ]
+    },
+    "evolution-fundamentals-business": {
+      "chapterId": "evolution-fundamentals-business",
+      "subject": "business-studies",
+      "title": "Evolution and Fundamentals of Business",
+      "grade": "11",
+      "ncertCode": "kebs101",
+      "ncertPdf": "Additional Materials/Business_Studies_Class_11/Business, Trade and Commerce/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Business_Studies_Class_11 - Chapter 1: Business, Trade and Commerce The University of International Business and Economics (UIBE; 对外经济贸易大学) is a public university located in Chaoyang, Beijing, China. It is affiliated with the Ministry of Education and co-funded by the Ministry of Education and the Ministry of Commerce. The university is part of Project 211 and the Double First-Class Construction. It is the only finance and economics university in China accredited by EQUIS, AACSB, CAMEA, and AMBA, and one of 15 universities in mainland China with AACSB, EQUIS, and AMBA accreditations(the fifth university in China to receive all three accreditations). The university emphasizes on economics, finance, international business, management, business, law, foreign lan\n",
+      "videos": [
+        {
+          "title": "BUSINESS, TRADE AND COMMERCE Class 11th Full Chapter Animation | Bst Chapter 1",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=OnjzjHemKoM",
+          "youtubeId": "OnjzjHemKoM",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/OnjzjHemKoM"
+        },
+        {
+          "title": "Business, Trade and Commerce | Chapter 1 | Business Studies | Class 11",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=LLdcckJQjPo",
+          "youtubeId": "LLdcckJQjPo",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/LLdcckJQjPo"
+        },
+        {
+          "title": "Business, Trade And Commerce Class 11🔥 | Class 11 Business Studies One Shot | Pace Commerce",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=rXP2fgKoZFs",
+          "youtubeId": "rXP2fgKoZFs",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/rXP2fgKoZFs"
+        },
+        {
+          "title": "Business, Trade and Commerce | Chapter 1 | Business Studies | Class 11",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=9Oz8TdKwUG8",
+          "youtubeId": "9Oz8TdKwUG8",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/9Oz8TdKwUG8"
+        },
+        {
+          "title": "Business Trade And Commerce Class 11 | Business Studies Class 11 Chapter 1 One Shot🎯Pace Commerce",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=4JLfHERF8jQ",
+          "youtubeId": "4JLfHERF8jQ",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/4JLfHERF8jQ"
+        }
+      ]
+    },
+    "forms-business-organizations": {
+      "chapterId": "forms-business-organizations",
+      "subject": "business-studies",
+      "title": "Forms of Business Organizations",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "public-private-global-enterprises": {
+      "chapterId": "public-private-global-enterprises",
+      "subject": "business-studies",
+      "title": "Public, Private and Global Enterprises",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "business-services": {
+      "chapterId": "business-services",
+      "subject": "business-studies",
+      "title": "Business Services",
+      "grade": "11",
+      "ncertCode": "kebs104",
+      "ncertPdf": "Additional Materials/Business_Studies_Class_11/Business Services/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Business_Studies_Class_11 - Chapter 4: Business Services Business studies, normally called business, is a field of study that deals with the principles of business, management, and economics. It combines elements of accountancy, finance, marketing, organizational studies, human resource management, and operations. Business studies is a broad subject, where the range of topics is designed to give the student a general overview of the various elements of running a business. The teaching of business studies is known as business education. Countries in which the subject is taught under the name \"business studies\" include Mauritius, Oman, Bahrain, South Korea, Argentina, Australia, Bangladesh, Nepal, Brazil, Canada, Hong Kong, India, Ireland, Mexico, Singapore,  M\n",
+      "videos": [
+        {
+          "title": "Business Services Class 11th | Full chapter in animation | Bst chapter 4",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=ZIObZirKR5I",
+          "youtubeId": "ZIObZirKR5I",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/ZIObZirKR5I"
+        },
+        {
+          "title": "Business Services  - One Shot Revision | Class 11 Business Studies Chapter 4 | CBSE 2026-27",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=RWHYYL-_A3g",
+          "youtubeId": "RWHYYL-_A3g",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/RWHYYL-_A3g"
+        },
+        {
+          "title": "Business Services | CBSE Class 11 Business Studies  | Full Chapter in 15 Mins | Rapid Revision",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=lQKINCqZUag",
+          "youtubeId": "lQKINCqZUag",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/lQKINCqZUag"
+        },
+        {
+          "title": "Business Services Class 11 ONE SHOT | Business Studies | GAURAV JAIN",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=cLjxXRAd1JY",
+          "youtubeId": "cLjxXRAd1JY",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/cLjxXRAd1JY"
+        },
+        {
+          "title": "Business Services | Chapter 4 | Business Studies | Class 11 | Part 1",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=c5ZdfKEPJJ4",
+          "youtubeId": "c5ZdfKEPJJ4",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/c5ZdfKEPJJ4"
+        }
+      ]
+    },
+    "emerging-modes-business": {
+      "chapterId": "emerging-modes-business",
+      "subject": "business-studies",
+      "title": "Emerging Modes of Business",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "social-responsibility-business-ethics": {
+      "chapterId": "social-responsibility-business-ethics",
+      "subject": "business-studies",
+      "title": "Social Responsibility and Business Ethics",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "sources-business-finance": {
+      "chapterId": "sources-business-finance",
+      "subject": "business-studies",
+      "title": "Sources of Business Finance",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "small-business-enterprises": {
+      "chapterId": "small-business-enterprises",
+      "subject": "business-studies",
+      "title": "Small Business and Enterprises",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "internal-trade": {
+      "chapterId": "internal-trade",
+      "subject": "business-studies",
+      "title": "Internal Trade",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "international-trade": {
+      "chapterId": "international-trade",
+      "subject": "business-studies",
+      "title": "International Trade",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "nature-significance-management": {
+      "chapterId": "nature-significance-management",
+      "subject": "business-studies",
+      "title": "Nature and Significance of Management",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "principles-management": {
+      "chapterId": "principles-management",
+      "subject": "business-studies",
+      "title": "Principles of Management",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "business-environment": {
+      "chapterId": "business-environment",
+      "subject": "business-studies",
+      "title": "Business Environment",
+      "grade": "12",
+      "ncertCode": "lebs103",
+      "ncertPdf": "Additional Materials/Business_Studies_Class_12/Business Environment/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Business_Studies_Class_12 - Chapter 3: Business Environment Failed to fetch Wikipedia resources due to network error. Related Articles:\n",
+      "videos": [
+        {
+          "title": "Recharge Chapter 3 | Business Environment | Class 12 | Business Studies | Boards 2025",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=t_GnXhYRHSc",
+          "youtubeId": "t_GnXhYRHSc",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/t_GnXhYRHSc"
+        },
+        {
+          "title": "Business Environment | Class 12 | Business Studies | Chapter 3 | BST Bhaiya",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=I0hHRMRLkMs",
+          "youtubeId": "I0hHRMRLkMs",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/I0hHRMRLkMs"
+        },
+        {
+          "title": "Business Environment - One Shot | Class 12 Business Studies Chapter 3 | CBSE Session  2025-26",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=8QxCKjuHp5I",
+          "youtubeId": "8QxCKjuHp5I",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/8QxCKjuHp5I"
+        },
+        {
+          "title": "Business Environment | Chapter 3 | Business Studies | Class 12 | Part 1",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=j_vZ6vyumss",
+          "youtubeId": "j_vZ6vyumss",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/j_vZ6vyumss"
+        },
+        {
+          "title": "Business environment | ONE SHOT | Class 12 Business Studies | Half yearly exams. Easiest explanation",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=iDOip50wUsE",
+          "youtubeId": "iDOip50wUsE",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/iDOip50wUsE"
+        }
+      ]
+    },
+    "planning": {
+      "chapterId": "planning",
+      "subject": "business-studies",
+      "title": "Planning",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "organising": {
+      "chapterId": "organising",
+      "subject": "business-studies",
+      "title": "Organising",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "staffing": {
+      "chapterId": "staffing",
+      "subject": "business-studies",
+      "title": "Staffing",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "directing": {
+      "chapterId": "directing",
+      "subject": "business-studies",
+      "title": "Directing",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "controlling": {
+      "chapterId": "controlling",
+      "subject": "business-studies",
+      "title": "Controlling",
+      "grade": "12",
+      "ncertCode": "lebs108",
+      "ncertPdf": "Additional Materials/Business_Studies_Class_12/Controlling/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Business_Studies_Class_12 - Chapter 8: Controlling A Master of Business Administration (MBA) is a professional degree focused on business administration. The core courses in an MBA program cover various areas of business administration; elective courses may allow further study in a particular area but an MBA is normally intended to be a general program. It originated in the United States in the early 20th century when the country industrialized and companies sought scientific management. MBA programs in the United States typically require completing about forty to sixty semester credit hours, much higher than the thirty semester credit hours typically required for other US master's degrees that cover some of the same material. The UK-based Association of MBAs\n",
+      "videos": [
+        {
+          "title": "Controlling - Complete Chapter One Shot | Class 12 Business Studies | CBSE Board Exam 2026-27",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=428L0g-XwKE",
+          "youtubeId": "428L0g-XwKE",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/428L0g-XwKE"
+        },
+        {
+          "title": "Controlling | Chapter 8 | Business Studies | Class 12 | One Shot",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=3_H60sMQzSE",
+          "youtubeId": "3_H60sMQzSE",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/3_H60sMQzSE"
+        },
+        {
+          "title": "Recharge Chapter 8 | Controlling | Class 12 | Business Studies | Boards 2025",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=K7iQB6rupm0",
+          "youtubeId": "K7iQB6rupm0",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/K7iQB6rupm0"
+        },
+        {
+          "title": "Controlling - Full Chapter Explanation and MCQs | Class 12 Business Studies Chapter 8 | 2022-23",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=zaHZ4DchmYs",
+          "youtubeId": "zaHZ4DchmYs",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/zaHZ4DchmYs"
+        },
+        {
+          "title": "CONTROLLING | FINAL REVISION 🔴LIVE  WITH ALL NCERT KEY WORDS | CLASS 12 BUSINESS STUDIES BOARDS 2026",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=XKWhip9CwHw",
+          "youtubeId": "XKWhip9CwHw",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/XKWhip9CwHw"
+        }
+      ]
+    },
+    "financial-management": {
+      "chapterId": "financial-management",
+      "subject": "business-studies",
+      "title": "Financial Management",
+      "grade": "12",
+      "ncertCode": "lebs201",
+      "ncertPdf": "sources/lebs201.pdf",
+      "studySummary": "## Overview\nchapter 9 When Tata Steel Acquired Corus Tata Steel, the biggest steel producer in the Indian private sector acquired Corus, a Dutch Steel Company in a deal worth 12 billion USD in 2007. A financial decision of this magnitude has significant implicitness for both Tata Steel and Corus as well as their employees and shareholders. Details of acquisition are as follows: y This acquisition has been a largest private sector transaction by Indian company outside of India and named Tata Steel Europe in 2010. y Tata Steel raised a debt of over $8 billion to finance the transaction. The deal will be paid for by Tata Steel UK, a special purpose vehicle (SPV) set up for the purpose. Another company of the Tata group, Tata Sons Ltd., invested $ 1 billion dollars for preference shares along with Tata St\n"
+    },
+    "financial-markets": {
+      "chapterId": "financial-markets",
+      "subject": "business-studies",
+      "title": "Financial Markets",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "marketing": {
+      "chapterId": "marketing",
+      "subject": "business-studies",
+      "title": "Marketing",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "consumer-protection": {
+      "chapterId": "consumer-protection",
+      "subject": "business-studies",
+      "title": "Consumer Protection",
+      "grade": "12",
+      "ncertCode": "lebs203",
+      "ncertPdf": "Additional Materials/Business_Studies_Class_12/Consumer Protection/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Business_Studies_Class_12 - Chapter 3: Consumer Protection Consumer protection is the practice of safeguarding buyers of goods and services, and the public, against unfair practices in the marketplace. Consumer protection measures are often established by law. Such laws are intended to prevent businesses from engaging in fraud or specified unfair practices to gain an advantage over competitors or to mislead consumers. They may also provide additional protection for the general public which may be impacted by a product (or its production) even when they are not the direct purchaser or consumer of that product. For example, government regulations may require businesses to disclose detailed information about their products—particularly in areas where public heal\n",
+      "videos": [
+        {
+          "title": "Recharge Chapter 12 | Consumer protection | Class 12 | Business Studies | Boards 2025",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=DPHmALm3tfk",
+          "youtubeId": "DPHmALm3tfk",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/DPHmALm3tfk"
+        },
+        {
+          "title": "Consumer Protection | One Shot | Chapter 12 | Business Studies | Class 12",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=RmFTC5zldoI",
+          "youtubeId": "RmFTC5zldoI",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/RmFTC5zldoI"
+        },
+        {
+          "title": "CONSUMER PROTECTION | ONE SHOT REVISION WITH ALL NCERT KEY WORDS CLASS 12 BUSINESS STUDIES BOARDS 26",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=u8Vvc_yujSw",
+          "youtubeId": "u8Vvc_yujSw",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/u8Vvc_yujSw"
+        },
+        {
+          "title": "Chapter 12 | Consumer Protection | Business Studies | Class 12",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=fHdLnSKWmJU",
+          "youtubeId": "fHdLnSKWmJU",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/fHdLnSKWmJU"
+        },
+        {
+          "title": "Consumer Protection | Fast Track Revision with  NCERT Key words | Class 12 Business studies 2026",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=gRqXSeXBU04",
+          "youtubeId": "gRqXSeXBU04",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/gRqXSeXBU04"
+        }
+      ]
+    },
+    "statistics-introduction": {
+      "chapterId": "statistics-introduction",
+      "subject": "economics",
+      "title": "Statistics for Economics — Introduction",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "collection-organisation-data": {
+      "chapterId": "collection-organisation-data",
+      "subject": "economics",
+      "title": "Collection, Organisation and Presentation of Data",
+      "grade": "11",
+      "ncertCode": "kest102",
+      "ncertPdf": "sources/kest102.pdf",
+      "studySummary": "## Overview\nCollection of Data 1. INTRODUCTION In the previous chapter, you have read about what is economics. You also studied about the role and importance of statistics in economics. In this Studying this chapter should enable you to: • understand the meaning and purpose of data collection; • distinguish between primary and secondary sources; • know the mode of collection of data; • distinguish between Census and Sample Surveys; • be familiar with the techniques of sampling; • know about some important sources of secondary data. chapter, you will study the sources of data and the mode of data collection. The purpose of collection of data is to show evidence for reaching a sound and clear solution to a problem. In economics, you often come across a statement like this, “After many fluctuations the o\n"
+    },
+    "statistical-tools-interpretation": {
+      "chapterId": "statistical-tools-interpretation",
+      "subject": "economics",
+      "title": "Statistical Tools and Interpretation",
+      "grade": "11",
+      "ncertCode": "kest106",
+      "ncertPdf": "sources/kest106.pdf",
+      "studySummary": "## Overview\nAs the summer heat rises, hill stations, are crowded with more and more visitors. Ice-cream sales become more brisk. Thus, the temperature is related to number of visitors and sale of ice-creams. Similarly, as the supply of tomatoes increases in your local mandi, its price drops. When the local harvest starts reaching the market, the price of tomatoes drops from Rs 40 per kg to Rs 4 per kg or even less. Thus supply is related to price. Correlation analysis is a means for examining such relationships systematically. It deals with questions such as: • Is there any relationship between two variables? Correlation 1.  INTRODUCTION In previous chapters you have learnt how to construct summary measures out of a mass of data and changes among similar variables. Now you will learn how to examine th\n"
+    },
+    "microeconomics-introduction": {
+      "chapterId": "microeconomics-introduction",
+      "subject": "economics",
+      "title": "Introductory Microeconomics — Introduction",
+      "grade": "11",
+      "ncertCode": "leec201",
+      "ncertPdf": "sources/leec201.pdf",
+      "studySummary": "## Overview\nChapter 1 Introduction Introduction Introduction Introduction Introduction 1.1 A SIMPLE ECONOMY Think of any society. People in the society need many goods and services1 in their everyday life including food, clothing, shelter, transport facilities like roads and railways, postal services and various other services like that of teachers and doctors. In fact, the list of goods and services that any individual2 needs is so large that no individual in society, to begin with, has all the things she needs. Every individual has some amount of only a few of the goods and services that she would like to use. A family farm may own a plot of land, some grains, farming implements, maybe a pair of bullocks and also the labour services of the family members. A weaver may have some yarn, some cotton and\n"
+    },
+    "consumer-equilibrium-demand": {
+      "chapterId": "consumer-equilibrium-demand",
+      "subject": "economics",
+      "title": "Consumer's Equilibrium and Demand",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "producer-behaviour-supply": {
+      "chapterId": "producer-behaviour-supply",
+      "subject": "economics",
+      "title": "Producer Behaviour and Supply",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "perfect-competition": {
+      "chapterId": "perfect-competition",
+      "subject": "economics",
+      "title": "Perfect Competition and Price Determination",
+      "grade": "11",
+      "ncertCode": ""
+    },
+    "national-income-aggregates": {
+      "chapterId": "national-income-aggregates",
+      "subject": "economics",
+      "title": "National Income and Related Aggregates",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "money-banking": {
+      "chapterId": "money-banking",
+      "subject": "economics",
+      "title": "Money and Banking",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "income-determination-employment": {
+      "chapterId": "income-determination-employment",
+      "subject": "economics",
+      "title": "Determination of Income and Employment",
+      "grade": "12",
+      "ncertCode": "",
+      "ncertPdf": "Additional Materials/Economics_Class_12/Income Determination and Multiplier/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Economics_Class_12 - Chapter 4: Income Determination and Multiplier Failed to fetch Wikipedia resources due to network error. Related Articles:\n",
+      "videos": [
+        {
+          "title": "Recharge Chapter 8 | Income determination and Multiplier | Class 12 | Boards 2025",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=Ssl0Sfq0VPk",
+          "youtubeId": "Ssl0Sfq0VPk",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Ssl0Sfq0VPk"
+        },
+        {
+          "title": "Income Determination And Multiplier Complete Chapter One Shot | Economics Class 12 | Cbse 2026",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=2Vnzqcpkt7o",
+          "youtubeId": "2Vnzqcpkt7o",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/2Vnzqcpkt7o"
+        },
+        {
+          "title": "Income Determination and Multiplier | Chapter 8 | Class 12 | One Shot",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=Fvp2QwrtDpQ",
+          "youtubeId": "Fvp2QwrtDpQ",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/Fvp2QwrtDpQ"
+        },
+        {
+          "title": "Income determination and Multiplier | Macroeconomics | Class 12 | chapter 8 | Part 1",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=f6PQZl9z91o",
+          "youtubeId": "f6PQZl9z91o",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/f6PQZl9z91o"
+        },
+        {
+          "title": "GNG Economics | Day 17 | Chapter 8 | Class 12  | Income determination and Multiplier",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=fb1h09YVZcE",
+          "youtubeId": "fb1h09YVZcE",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/fb1h09YVZcE"
+        }
+      ]
+    },
+    "government-budget-economy": {
+      "chapterId": "government-budget-economy",
+      "subject": "economics",
+      "title": "Government Budget and the Economy",
+      "grade": "12",
+      "ncertCode": ""
+    },
+    "balance-of-payments": {
+      "chapterId": "balance-of-payments",
+      "subject": "economics",
+      "title": "Balance of Payments",
+      "grade": "12",
+      "ncertCode": "",
+      "ncertPdf": "Additional Materials/Economics_Class_12/Balance of Payments/Official_NCERT_Chapter.pdf"
+    },
+    "development-experience-1947-90": {
+      "chapterId": "development-experience-1947-90",
+      "subject": "economics",
+      "title": "Development Experience (1947–90) and Reforms",
+      "grade": "12",
+      "ncertCode": "",
+      "ncertPdf": "Additional Materials/Economics_Class_12/Indian Economy on the Eve of Independence/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Economics_Class_12 - Chapter 1: Indian Economy on the Eve of Independence India has a developing mixed economy with a notable public sector in strategic sectors. It is the world's sixth-largest economy by nominal GDP and the third-largest by purchasing power parity (PPP) as of April 2026. On a per capita income basis, the nation is ranked 149th by nominal GDP and 119th by PPP-adjusted GDP as of 2026. From independence in 1947 until 1991, economic development was characterized by protectionist economic policies, with extensive state intervention, demand-side economics, natural resource optimization, and regulation. An acute balance of payments crisis in 1991 led to the adoption of a broad economic liberalisation in India and indicative planning. India has abou\n",
+      "videos": [
+        {
+          "title": "Indian Economy on the eve of Independence | One Shot | Chapter 1 | Best Explanation | Class 12",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=aeeGpPwRG9I",
+          "youtubeId": "aeeGpPwRG9I",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/aeeGpPwRG9I"
+        },
+        {
+          "title": "Indian Economy on the Eve of Independence | Economics Class12 NCERT | Animation",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=IuY4W0qItAY",
+          "youtubeId": "IuY4W0qItAY",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/IuY4W0qItAY"
+        },
+        {
+          "title": "Indian Economy on the Eve of Independence One Shot | Class 12 Economics Complete Chapter-1 Revision",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=9gKaaeOzNxI",
+          "youtubeId": "9gKaaeOzNxI",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/9gKaaeOzNxI"
+        },
+        {
+          "title": "Indian Economy on the Eve of Independence | Class 12 Economics Chapter 1 | CBSE Board Exam 2026-27",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=1Fh-Dp8bG2E",
+          "youtubeId": "1Fh-Dp8bG2E",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/1Fh-Dp8bG2E"
+        },
+        {
+          "title": "Indian Economy on the Eve of Independence | Class 12th Economics One Shot 🎯Vishwaas Batch",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=U2PeeXc_Ado",
+          "youtubeId": "U2PeeXc_Ado",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/U2PeeXc_Ado"
+        }
+      ]
+    },
+    "current-challenges-indian-economy": {
+      "chapterId": "current-challenges-indian-economy",
+      "subject": "economics",
+      "title": "Current Challenges facing Indian Economy",
+      "grade": "12",
+      "ncertCode": "keec106",
+      "ncertPdf": "Additional Materials/Economics_Class_12/Rural Development/Official_NCERT_Chapter.pdf",
+      "studySummary": "## Overview\nWikipedia Academic Summary for Economics_Class_12 - Chapter 6: Rural Development This glossary of economics is a list of definitions containing terms and concepts used in economics, its sub-disciplines, and related fields. Related Articles: - Glossary of economics: https://en.wikipedia.org/wiki/Glossary_of_economics - Rostow's stages of growth: https://en.wikipedia.org/wiki/Rostow%27s_stages_of_growth - Gender and development: https://en.wikipedia.org/wiki/Gender_and_development\n",
+      "videos": [
+        {
+          "title": "Rural Development | One Shot | Chapter 5 | Best Explanation | Class 12",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=e04ph92uXqM",
+          "youtubeId": "e04ph92uXqM",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/e04ph92uXqM"
+        },
+        {
+          "title": "Rural Development | Economics Class12 NCERT | Animation",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=DJynCSiaIAA",
+          "youtubeId": "DJynCSiaIAA",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/DJynCSiaIAA"
+        },
+        {
+          "title": "Meaning Of Rural Development | Chapter 6 Class 12 Economics (2025-26)",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=qQfjl7yL5fo",
+          "youtubeId": "qQfjl7yL5fo",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/qQfjl7yL5fo"
+        },
+        {
+          "title": "Human Capital Formation And Rural Development | Class 12th Economics | Manzil Free Batch",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=eSDIelXnuvo",
+          "youtubeId": "eSDIelXnuvo",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/eSDIelXnuvo"
+        },
+        {
+          "title": "Recharge Chapter 5 | Rural Development | Indian Eco | Class 12 | Boards 2025",
+          "presenter": "",
+          "url": "https://www.youtube.com/watch?v=rldJJgDrXME",
+          "youtubeId": "rldJJgDrXME",
+          "isEmbeddable": true,
+          "embedUrl": "https://www.youtube-nocookie.com/embed/rldJJgDrXME"
+        }
+      ]
+    },
+    "development-experience-comparison": {
+      "chapterId": "development-experience-comparison",
+      "subject": "economics",
+      "title": "Development Experience — India and Neighbours",
+      "grade": "12",
+      "ncertCode": "keec108",
+      "ncertPdf": "sources/keec108.pdf",
+      "studySummary": "## Overview\nDEVELOPMENT EXPERIENCES OF INDIA: A COMPARISON WITH NEIGHBOURS UNIT III UNIT IV Reprint 2025-26 In today’s globalised world, where geographical boundaries are slowly becoming meaningless, it is important for neighbouring countries in the developing world to understand the development strategies being pursued by their neighbours. This is more so because they share the relatively limited economic space in world markets. In this unit, we will compare India’s developmental experiences with two of its important and strategic neighbours — Pakistan and China. Reprint 2025-26 134 INDIAN ECONOMIC DEVELOPMENT After studying this chapter, the learners will • figure out comparative trends in various economic and human development indicators of India and its neighbours, China and Pakistan • assess the \n"
+    }
+  },
+  "stats": {
+    "chapters": 44,
+    "with_videos": 11,
+    "with_ncert": 20,
+    "with_summary": 19
+  }
+}
