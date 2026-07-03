@@ -7,17 +7,6 @@
   let catalog = null;
   let videoOverrides = null;
 
-  /** Legacy study-material keys → curriculum chapter ids */
-  const CHAPTER_ID_ALIASES = {
-    'human-health-disease': 'human-health-diseases',
-    'biotechnology-principles-processes': 'biotechnology-principles',
-    'inverse-trigonometric-functions': 'inverse-trig-functions',
-  };
-
-  function resolveChapterId(chapterId) {
-    return CHAPTER_ID_ALIASES[chapterId] || chapterId;
-  }
-
   const YOUTUBE_ID_RE =
     /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]+)/g;
 
@@ -39,8 +28,7 @@
   }
 
   function chapter(chapterId) {
-    const id = resolveChapterId(chapterId);
-    return catalog?.chapters?.[id] || catalog?.chapters?.[chapterId] || null;
+    return catalog?.chapters?.[chapterId] || null;
   }
 
   function isEmbeddableYoutubeId(id) {
@@ -224,6 +212,58 @@
     return card;
   }
 
+    mount.innerHTML = '<p class="sr-eval-hint">Advance Material is available for CBSE Class 10 only.</p>';
+  }
+
+  function renderNcertPlusView(ch, root, ctx) {
+    if (!root || !ch) return;
+    root.innerHTML = '';
+    const disciplineLabels = {
+      physics: 'Physics',
+      chemistry: 'Chemistry',
+      biology: 'Biology',
+      mathematics: 'Mathematics',
+    };
+    const subjectLabel = disciplineLabels[ch.subject] || ctx?.subjectLabel || 'Science';
+
+    const head = document.createElement('div');
+    head.className = 'cbse-advanced-panel';
+    head.innerHTML = `<h3>NCERT Plus Syllabus Extension · ${ch.title || ctx?.chapterTitle || ''}</h3>
+      <p class="cbse-advanced-lead">Board-level extensions from the NCERT syllabus — Class XI–XII scope for ${subjectLabel}.</p>`;
+    root.appendChild(head);
+
+    if (ch.syllabusOutline?.length) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = '<h3>Key syllabus points</h3><ul class="sr-learn-list"></ul>';
+      ch.syllabusOutline.forEach((item) => {
+        const li = document.createElement('li');
+        li.textContent = String(item || '').trim();
+        sec.querySelector('ul').appendChild(li);
+      });
+      root.appendChild(sec);
+    }
+
+    if (ch.scholarTips?.length) {
+      const sec = document.createElement('section');
+      sec.className = 'sr-learn-section';
+      sec.innerHTML = '<h3>Exam focus tips</h3><ul class="sr-learn-list"></ul>';
+      ch.scholarTips.forEach((tip) => {
+        const li = document.createElement('li');
+        li.textContent = String(tip || '').trim();
+        sec.querySelector('ul').appendChild(li);
+      });
+      root.appendChild(sec);
+    }
+
+    if (!ch.syllabusOutline?.length && !ch.scholarTips?.length) {
+      const note = document.createElement('p');
+      note.className = 'sr-eval-hint';
+      note.textContent = 'Open Regular Study for curated NCERT-aligned video guides for this chapter.';
+      root.appendChild(note);
+    }
+  }
+
   function renderLearnView(ch, root) {
     if (!root || !ch) return;
     root.innerHTML = '';
@@ -320,88 +360,11 @@
     });
   }
 
-  function renderAdvanceMaterialView(ch, root, ctx) {
-    if (!root || !ch) return;
-    root.innerHTML = '';
-    const mat = ch.advanceMaterial || {};
-    const head = document.createElement('div');
-    head.className = 'cbse-advanced-panel';
-    head.innerHTML = `<h3>Advance Material · ${ch.title || ctx.chapterTitle}</h3>
-      <p class="cbse-advanced-lead">${mat.summary || 'NCERT exemplar solutions and enrichment from Additional Materials.'}</p>`;
-    root.appendChild(head);
-
-    const pdfs = mat.pdfResources || [];
-    if (pdfs.length) {
-      const sec = document.createElement('section');
-      sec.className = 'sr-learn-section';
-      sec.innerHTML = '<h3>NCERT solution PDFs</h3><ul class="sr-learn-list cbse-adv-pdf-list"></ul>';
-      const ul = sec.querySelector('.cbse-adv-pdf-list');
-      pdfs.forEach((pdf) => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = pdf.url;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.textContent = pdf.label || pdf.url;
-        li.appendChild(a);
-        ul.appendChild(li);
-      });
-      root.appendChild(sec);
-    }
-
-    const links = mat.supplementalLinks || [];
-    if (links.length) {
-      const sec = document.createElement('section');
-      sec.className = 'sr-learn-section';
-      sec.innerHTML = '<h3>Curated videos &amp; links</h3><ul class="sr-learn-list"></ul>';
-      const ul = sec.querySelector('.sr-learn-list');
-      links.slice(0, 12).forEach((l) => {
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = l.url;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        a.textContent = l.label || l.url;
-        li.appendChild(a);
-        ul.appendChild(li);
-      });
-      root.appendChild(sec);
-    }
-
-    const solutions = mat.solutions || [];
-    if (solutions.length) {
-      const sec = document.createElement('section');
-      sec.className = 'sr-learn-section';
-      sec.innerHTML = `<h3>Master solutions (${mat.solutionCount || solutions.length})</h3><div class="cbse-adv-solutions"></div>`;
-      const wrap = sec.querySelector('.cbse-adv-solutions');
-      solutions.slice(0, 8).forEach((sol) => {
-        const card = document.createElement('article');
-        card.className = 'cbse-adv-solution-card';
-        let stepsHtml = '';
-        (sol.steps || []).forEach((st) => {
-          stepsHtml += `<li><strong>${st.heading || 'Step'}:</strong> ${st.detail || ''}</li>`;
-        });
-        card.innerHTML = `<p class="cbse-adv-sol-prompt"><span class="cbse-adv-q-marks">${sol.marks || '?'} mark(s)</span> ${sol.prompt || sol.title || ''}</p>${stepsHtml ? `<ol class="sr-learn-list">${stepsHtml}</ol>` : ''}`;
-        wrap.appendChild(card);
-      });
-      root.appendChild(sec);
-    }
-
-    if (!pdfs.length && !links.length && !solutions.length) {
-      const empty = document.createElement('p');
-      empty.className = 'sr-eval-hint';
-      empty.textContent =
-        mat.message ||
-        'Advance material for this chapter is being curated from NCERT exemplar PDFs in Additional Materials.';
-      root.appendChild(empty);
-    }
-  }
-
   global.CBSE12StudyMaterial = {
     load,
     chapter,
     renderLearnView,
-    renderAdvanceMaterialView,
+    renderNcertPlusView,
     readAloud,
     stopReadAloud,
     isValidYoutubeId,

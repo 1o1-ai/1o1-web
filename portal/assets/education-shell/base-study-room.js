@@ -133,7 +133,7 @@
       }
 
       if (global.Cbse10TutorApi?.gradeAnswer) {
-        const grade = await global.Cbse10TutorApi.gradeAnswer(
+        const feedback = await global.Cbse10TutorApi.gradeAnswer(
           row.prompt,
           row.studentAnswer,
           ref,
@@ -143,23 +143,14 @@
             subject: this.state.subject,
             chapterId: this.state.chapterId,
             chapterTitle: this.state.chapterTitle,
-            solutionSteps: row.solutionSteps || row.solution_steps || [],
-            sku: this.sku,
-            grade: this.state.grade || '12',
           }
         );
         global.EducationPerf?.record?.('grade_answer', {
           durationMs: (global.performance?.now?.() ?? Date.now()) - t0,
           usedAi: true,
-          gradedBy: grade.gradedBy || 'semantic_llm',
           sku: this.sku,
         });
-        return {
-          marksAwarded: grade.marksAwarded,
-          maxMarks: grade.maxMarks || maxMarks,
-          feedback: grade.feedback,
-          gradedBy: grade.gradedBy || 'computer_ai',
-        };
+        return { feedback, maxMarks, gradedBy: 'computer_ai' };
       }
 
       return { marksAwarded: null, maxMarks, gradedBy: 'pending' };

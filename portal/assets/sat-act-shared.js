@@ -139,62 +139,21 @@
     },
   };
 
-  const RW_SECTIONS = new Set(['sat-reading-writing', 'act-english', 'act-reading']);
-
-  const MATH_MOCK_SECTIONS = {
-    act: 'math',
-    sat: 'math',
-  };
-
   const FULL_MOCK_SPECS = {
     act: {
-      label: 'ACT Mathematics (mock)',
-      totalMinutes: 60,
-      breakMinutes: 0,
-      sections: ['math'],
-      mathOnly: true,
+      label: 'ACT (No Writing)',
+      totalMinutes: 175,
+      breakAfterSection: 2,
+      breakMinutes: 10,
+      sections: ['english', 'math', 'reading', 'science'],
     },
     sat: {
-      label: 'Digital SAT Mathematics (mock)',
-      totalMinutes: 70,
-      breakMinutes: 0,
-      sections: ['math'],
-      mathOnly: true,
+      label: 'Digital SAT',
+      totalMinutes: 134,
+      breakMinutes: 10,
+      sections: ['reading_writing', 'math'],
     },
   };
-
-  function isRwSection(subjectId) {
-    return RW_SECTIONS.has(subjectId);
-  }
-
-  function isMathMockSection(track, sectionKey) {
-    const key = (sectionKey || '').toLowerCase();
-    return key === 'math' || key === MATH_MOCK_SECTIONS[track];
-  }
-
-  function redirectNonMathMock(track, sectionKey, mode) {
-    const mathSection = MATH_MOCK_SECTIONS[track] || 'math';
-    const key = (sectionKey || '').toLowerCase();
-    const u = new URL(typeof location !== 'undefined' ? location.href : 'http://local/mock-exam.html');
-
-    if (mode === 'full' && FULL_MOCK_SPECS[track]?.mathOnly) {
-      if (key && key !== mathSection) {
-        u.searchParams.set('track', track);
-        u.searchParams.set('section', mathSection);
-        u.searchParams.set('mode', 'full');
-        return u.pathname + u.search;
-      }
-      return null;
-    }
-
-    if (!isMathMockSection(track, key)) {
-      u.searchParams.set('track', track);
-      u.searchParams.set('section', mathSection);
-      u.searchParams.delete('mode');
-      return u.pathname + u.search;
-    }
-    return null;
-  }
 
   global.SatActShared = {
     loadVerifiedBank,
@@ -203,10 +162,5 @@
     resolveCorrectIndex,
     SECTION_SPECS,
     FULL_MOCK_SPECS,
-    RW_SECTIONS,
-    MATH_MOCK_SECTIONS,
-    isRwSection,
-    isMathMockSection,
-    redirectNonMathMock,
   };
 })(typeof window !== 'undefined' ? window : globalThis);

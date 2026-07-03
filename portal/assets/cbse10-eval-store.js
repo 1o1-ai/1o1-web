@@ -7,16 +7,56 @@
   const PROFILE_KEY = 'cbse10_study_profile';
   const TEACHER_QUEUE_KEY = 'cbse10_teacher_grading_queue';
   const FORUM_GRADING_KEY = 'cbse10_forum_grading_threads';
-  const DUMMY_USER = { id: 'yoga-demo', name: 'Yoga Demo Student', grade: '10' };
+  const DEFAULT_USER = { id: 'student', name: 'Student', grade: '10' };
+
+  function capitalizeName(value) {
+    const s = String(value || '').trim();
+    if (!s) return DEFAULT_USER.name;
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  function isDemoProfile(user) {
+    if (!user) return true;
+    const id = String(user.id || '').toLowerCase();
+    const name = String(user.name || '').toLowerCase();
+    return id.includes('demo') || name.includes('demo') || id === 'yoga-demo';
+  }
+
+  function resolveStudyUser() {
+    const session = global.getPortalSession?.();
+    if (session) {
+      return { id: session, name: capitalizeName(session), grade: '10' };
+    }
+    try {
+      const raw = global.localStorage?.getItem(PROFILE_KEY);
+      if (raw) {
+        const profile = JSON.parse(raw);
+        if (profile.user && !isDemoProfile(profile.user)) {
+          return {
+            id: profile.user.id || DEFAULT_USER.id,
+            name: profile.user.name || DEFAULT_USER.name,
+            grade: profile.user.grade || '10',
+          };
+        }
+      }
+    } catch {
+      /* */
+    }
+    return { ...DEFAULT_USER };
+  }
 
   function loadProfile() {
     try {
       const raw = localStorage.getItem(PROFILE_KEY);
-      if (raw) return JSON.parse(raw);
+      if (raw) {
+        const profile = JSON.parse(raw);
+        profile.user = resolveStudyUser();
+        return profile;
+      }
     } catch {
       /* */
     }
-    return { user: DUMMY_USER, attempts: [] };
+    return { user: resolveStudyUser(), attempts: [] };
   }
 
   function saveProfile(profile) {
@@ -55,11 +95,13 @@
    * @param {object} attempt
    */
   function recordAttempt(attempt) {
+    const user = resolveStudyUser();
     const profile = loadProfile();
+    profile.user = user;
     profile.attempts.push({
       ...attempt,
-      userId: DUMMY_USER.id,
-      userName: DUMMY_USER.name,
+      userId: user.id,
+      userName: user.name,
       recordedAt: new Date().toISOString(),
     });
     if (profile.attempts.length > 200) profile.attempts = profile.attempts.slice(-200);
@@ -68,6 +110,7 @@
   }
 
   function buildForumThread(submission) {
+    const user = resolveStudyUser();
     const threadId = 'thr_grade_' + Date.now();
     const answerLines = (submission.answers || [])
       .map((a, i) => {
@@ -98,8 +141,8 @@
       submission_id: submission.sessionId,
       posts: [
         {
-          author_id: DUMMY_USER.id,
-          author_name: DUMMY_USER.name,
+          author_id: user.id,
+          author_name: user.name,
           author_role: 'student',
           location: 'CBSE 10 Study Room',
           photo: 'https://randomuser.me/api/portraits/men/32.jpg',
@@ -111,6 +154,7 @@
   }
 
   function submitToTeacherQueue(submission) {
+    const user = resolveStudyUser();
     const queue = loadTeacherQueue();
     const forumData = loadForumGradingThreads();
     const forumThread = buildForumThread(submission);
@@ -119,8 +163,8 @@
       status: 'pending_teacher',
       forumThreadId: forumThread.id,
       ...submission,
-      userId: DUMMY_USER.id,
-      userName: DUMMY_USER.name,
+      userId: user.id,
+      userName: user.name,
       submittedAt: new Date().toISOString(),
     };
     queue.submissions.unshift(entry);
@@ -135,7 +179,7 @@
   }
 
   global.CBSE10EvalStore = {
-    DUMMY_USER,
+    getStudyUser: resolveStudyUser,
     loadProfile,
     recordAttempt,
     submitToTeacherQueue,

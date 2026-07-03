@@ -94,27 +94,68 @@
     if (panel) panel.classList.remove('hidden');
   }
 
+  function ncertPlusScopeLead(ctx) {
+    if (ctx?.sku === 'cbse10') {
+      return 'Board-level extensions from the NCERT syllabus — Class 10 scope only.';
+    }
+    if (ctx?.sku === 'cbse12-science') {
+      return 'Board-level extensions from the NCERT syllabus — Class XI–XII scope.';
+    }
+    return 'Board-level extensions from the NCERT syllabus.';
+  }
+
+  function filterNcertPlusConcepts(rawConcepts, ctx) {
+    return (rawConcepts || [])
+      .map((c) => String(c || '').trim())
+      .filter((s) => {
+        if (!s || s.length < 10) return false;
+        if (/^CBSE Class 10/i.test(s)) return false;
+        if (/^Chapter:/i.test(s)) return false;
+        if (/JEE|NEET|olympiad|IIT|competitive exam/i.test(s)) return false;
+        return true;
+      });
+  }
+
+  function loadStudyChapter(ctx) {
+    if (ctx.sku === 'cbse10' && global.CBSE10StudyMaterial) {
+      if (global.CBSE10StudyMaterial.loadChapter) {
+        return global.CBSE10StudyMaterial.loadChapter(ctx.chapterId);
+      }
+      return global.CBSE10StudyMaterial.load().then(() =>
+        global.CBSE10StudyMaterial.chapter(ctx.chapterId)
+      );
+    }
+    if (ctx.sku === 'cbse12-science' && global.CBSE12StudyMaterial) {
+      return global.CBSE12StudyMaterial.load().then(() =>
+        global.CBSE12StudyMaterial.chapter(ctx.chapterId)
+      );
+    }
+    return Promise.resolve(null);
+  }
+
   function mountNcertPlus(host, ctx) {
     host.innerHTML =
       '<div class="cbse-advanced-mount"><p class="sr-eval-hint">Loading NCERT Plus…</p></div>';
     const mount = host.querySelector('.cbse-advanced-mount');
     global.CBSEOfficialBooks?.stopLecture?.();
     global.CBSE10StudyMaterial?.stopReadAloud?.();
+    global.CBSE12StudyMaterial?.stopReadAloud?.();
 
-    if (ctx.sku === 'cbse10' && global.CBSE10StudyMaterial?.renderNcertPlusView) {
-      const loadCh = global.CBSE10StudyMaterial.loadChapter
-        ? () => global.CBSE10StudyMaterial.loadChapter(ctx.chapterId)
-        : () =>
-            global.CBSE10StudyMaterial.load().then(() =>
-              global.CBSE10StudyMaterial.chapter(ctx.chapterId)
-            );
-      loadCh()
+    const renderView =
+      ctx.sku === 'cbse10'
+        ? global.CBSE10StudyMaterial?.renderNcertPlusView
+        : ctx.sku === 'cbse12-science'
+          ? global.CBSE12StudyMaterial?.renderNcertPlusView
+          : null;
+
+    if (renderView) {
+      loadStudyChapter(ctx)
         .then((ch) => {
           if (!ch) {
             renderNcertPlusFallback(mount, ctx);
             return;
           }
-          global.CBSE10StudyMaterial.renderNcertPlusView(ch, mount, ctx);
+          renderView(ch, mount, ctx);
         })
         .catch(() => renderNcertPlusFallback(mount, ctx));
       return;
@@ -151,45 +192,35 @@
         });
       return;
     }
-    if (ctx.sku === 'cbse12-science' && global.CBSE12StudyMaterial?.renderAdvanceMaterialView) {
-      global.CBSE12StudyMaterial.load()
-        .then(() => global.CBSE12StudyMaterial.chapter(ctx.chapterId))
-        .then((ch) => {
-          if (!ch) {
-            mount.innerHTML =
-              '<p class="sr-eval-hint">Advance material for this chapter is not available yet.</p>';
-            return;
-          }
-          global.CBSE12StudyMaterial.renderAdvanceMaterialView(ch, mount, ctx);
-        })
-        .catch(() => {
-          mount.innerHTML =
-            '<p class="sr-eval-hint">Could not load advance material. Try again later.</p>';
-        });
-      return;
-    }
-    mount.innerHTML =
-      '<p class="sr-eval-hint">Advance material for CBSE Class 12 is being wired from Additional Materials (NCERT exemplar & master solutions). Use <strong>Official Books</strong> or <strong>Q &amp; A Practice</strong> meanwhile.</p>';
+    mount.innerHTML = '<p class="sr-eval-hint">Advance Material is available for CBSE 10 only.</p>';
   }
 
   function renderNcertPlusFallback(host, ctx) {
     const entry = chapterEntry(ctx);
-    const rawConcepts = entry?.transcript?.concepts || [];
-    const concepts = rawConcepts
-      .map((c) => String(c || '').trim())
-      .filter((s) => {
-        if (!s || s.length < 10) return false;
-        if (/^CBSE Class 10/i.test(s)) return false;
-        if (/^Chapter:/i.test(s)) return false;
-        if (/JEE|NEET|olympiad|IIT|competitive exam/i.test(s)) return false;
-        return true;
-      });
-    host.innerHTML = `
+    let concepts = filterNcertPlusConcepts(entry?.transcript?.concepts, ctx);
+
+    const renderPanel = (extraConcepts) => {
+      const merged = concepts.length ? concepts : extraConcepts || [];
+      host.innerHTML = `
       <div class="cbse-advanced-panel">
         <h3>NCERT Plus Syllabus Extension · ${ctx.chapterTitle}</h3>
-        <p class="cbse-advanced-lead">Board-level extensions from the NCERT syllabus — Class 10 scope only.</p>
-        <ul class="cbse-concept-list">${concepts.map((c) => `<li>${c}</li>`).join('') || '<li>Open <strong>Regular Study</strong> for the full chapter guide.</li>'}</ul>
+        <p class="cbse-advanced-lead">${ncertPlusScopeLead(ctx)}</p>
+        <ul class="cbse-concept-list">${merged.map((c) => `<li>${c}</li>`).join('') || '<li>Open <strong>Regular Study</strong> for the full chapter guide.</li>'}</ul>
       </div>`;
+    };
+
+    if (concepts.length || ctx.sku !== 'cbse12-science' || !global.CBSE12StudyMaterial) {
+      renderPanel();
+      return;
+    }
+
+    global.CBSE12StudyMaterial.load()
+      .then(() => {
+        const ch = global.CBSE12StudyMaterial.chapter(ctx.chapterId);
+        const outline = (ch?.syllabusOutline || []).map((item) => String(item || '').trim()).filter(Boolean);
+        renderPanel(outline);
+      })
+      .catch(() => renderPanel());
   }
 
   /** @deprecated use mountNcertPlus */

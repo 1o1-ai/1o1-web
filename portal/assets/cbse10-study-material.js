@@ -238,7 +238,7 @@
     const head = document.createElement('div');
     head.className = 'cbse-advanced-panel';
     head.innerHTML = `<h3>NCERT Plus Syllabus Extension · ${ch.title || ctx.chapterTitle}</h3>
-      <p class="cbse-advanced-lead">${ext.summary || `Board-style depth for ${subjectLabel} — NCERT syllabus extensions and exam shortcuts.`}</p>`;
+      <p class="cbse-advanced-lead">${ext.summary || `Board-level extensions from the NCERT syllabus — Class 10 scope only for ${subjectLabel}.`}</p>`;
     root.appendChild(head);
 
     const outline = ext.syllabusOutline?.length ? ext.syllabusOutline : ch.syllabusOutline;

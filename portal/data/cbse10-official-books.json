@@ -1,7 +1,7 @@
 {
   "sku": "cbse10",
-  "generatedAt": "2026-06-25T20:45:43.110015+00:00",
-  "sourceRoot": "C:\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE",
+  "generatedAt": "2026-07-03T01:20:59.877255+00:00",
+  "sourceRoot": "C:\\Users\\whizy\\OneDrive\\Knowledge\\EDUCATION\\CBSE-10-MATH-SCIENCE",
   "subjects": {
     "science": {
       "label": "Science",
@@ -10,13 +10,7 @@
           "chapterId": "chem-reactions",
           "ncertCode": "jesc101",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc101",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc101.pdf",
-            "sha256": "1678a9a32260743eb669bc5fdeaf9e5055dec91934813f1643a1d78c53327e6b",
-            "fileSize": "2676702 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Chemical Reactions and Equations",
             "concepts": [
@@ -119,13 +113,7 @@
           "chapterId": "acids-bases",
           "ncertCode": "jesc102",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc102",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc102.pdf",
-            "sha256": "82f9b8b174bd6ad91c54eef15185614341b100e5af9fd4c8bda8d1a34288f49e",
-            "fileSize": "1783241 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Acids, Bases and Salts",
             "concepts": [
@@ -223,13 +211,7 @@
           "chapterId": "metals",
           "ncertCode": "jesc103",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc103",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc103.pdf",
-            "sha256": "8ea099cefc6d82053b4e99968f1a97f3718770fd63d0ee86302f933f4a197604",
-            "fileSize": "939036 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Metals and Non-metals",
             "concepts": [
@@ -312,13 +294,7 @@
           "chapterId": "carbon",
           "ncertCode": "jesc104",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc104",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc104.pdf",
-            "sha256": "7d6a8512201aeed47743e9d95f53e4676890dc177e64f469799a6e61c0a92eda",
-            "fileSize": "11034777 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Carbon and its Compounds",
             "concepts": [
@@ -381,13 +357,7 @@
           "chapterId": "life",
           "ncertCode": "jesc105",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc105",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc105.pdf",
-            "sha256": "966ea21e1a39d9d6fff05ee030becf7f92c61050066722578c627cc4e394dca7",
-            "fileSize": "7075106 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Life Processes",
             "concepts": [
@@ -470,13 +440,7 @@
           "chapterId": "control",
           "ncertCode": "jesc106",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc106",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc106.pdf",
-            "sha256": "69364a8a9fbc0e4e8160694aed4267910ce98f44fa67e973e495bd3cae12ed7e",
-            "fileSize": "878963 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Control and Coordination",
             "concepts": [
@@ -539,13 +503,7 @@
           "chapterId": "reproduction",
           "ncertCode": "jesc107",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc107",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc107.pdf",
-            "sha256": "da319258cae1e6eb10312f27538c12d1e4e131b24d9f30d943e140b7331f053d",
-            "fileSize": "2316566 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: How do Organisms Reproduce?",
             "concepts": [
@@ -623,13 +581,7 @@
           "chapterId": "heredity",
           "ncertCode": "jesc108",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc108",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc108.pdf",
-            "sha256": "1f7bd9baeee4c1b31a845ead079696388a0d32b62910e291853b69f9447847a3",
-            "fileSize": "18149754 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Heredity",
             "concepts": [
@@ -710,13 +662,7 @@
           "chapterId": "light",
           "ncertCode": "jesc109",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc109",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc109.pdf",
-            "sha256": "de69967dbbbac2486faf8ad4a198964c76b49e50938c705bff01ef806e1b1814",
-            "fileSize": "375161 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Light - Reflection and Refraction",
             "concepts": [
@@ -792,13 +738,7 @@
           "chapterId": "human-eye",
           "ncertCode": "jesc110",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc110",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc110.pdf",
-            "sha256": "0f5c54b4e72e140f43ebae6d20c2a1e3d0a4c35444c838176305efa9187f29f6",
-            "fileSize": "481868 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: The Human Eye and the Colorful World",
             "concepts": [
@@ -874,13 +814,7 @@
           "chapterId": "electricity",
           "ncertCode": "jesc111",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc111",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc111.pdf",
-            "sha256": "f9fdba8dc39325847d154320e95f6000dfcd122629f7bf2e2f2915f34b67d564",
-            "fileSize": "524411 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Electricity",
             "concepts": [
@@ -986,13 +920,7 @@
           "chapterId": "magnetism",
           "ncertCode": "jesc112",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc112",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc112.pdf",
-            "sha256": "cbfe6874d46bbfdceffc16e721bb8c61617d76eb3627264df4af3decd5d15941",
-            "fileSize": "809711 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Magnetic Effects of Electric Current",
             "concepts": [
@@ -1078,13 +1006,7 @@
           "chapterId": "sources-of-energy",
           "ncertCode": "jesc113",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jesc113",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jesc113.pdf",
-            "sha256": "0fdae2be417cb3f1d765009214d0279db2bc4393778ac0e8847a2041b140473c",
-            "fileSize": "2918677 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Science: Our Environment",
             "concepts": [
@@ -1170,13 +1092,7 @@
           "chapterId": "real-numbers",
           "ncertCode": "jemh101",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh101",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh101.pdf",
-            "sha256": "8b537dc98b439902748a933f0bfd4395dce5cadb7b24cb0f4427133d763c94a0",
-            "fileSize": "239801 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Real Numbers",
             "concepts": [
@@ -1244,13 +1160,7 @@
           "chapterId": "polynomials",
           "ncertCode": "jemh102",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh102",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh102.pdf",
-            "sha256": "064b396bc8aed01e12e90ec80dc9afdcf54514080de75c69d747fe27d5409ef4",
-            "fileSize": "192725 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Polynomials",
             "concepts": [
@@ -1333,13 +1243,7 @@
           "chapterId": "linear-eq",
           "ncertCode": "jemh103",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh103",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh103.pdf",
-            "sha256": "6698f52d93667a916fa7dd8af20c904ce3767919efcb4ea816f17e9837b62f6f",
-            "fileSize": "219247 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Pair of Linear Equations in Two Variables",
             "concepts": [
@@ -1412,13 +1316,7 @@
           "chapterId": "quadratic",
           "ncertCode": "jemh104",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh104",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh104.pdf",
-            "sha256": "dcbda2ad03f0fa09a1c10080b5927eccc3c18850ce83e07337afc5be87379a19",
-            "fileSize": "248139 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Quadratic Equations",
             "concepts": [
@@ -1501,13 +1399,7 @@
           "chapterId": "ap",
           "ncertCode": "jemh105",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh105",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh105.pdf",
-            "sha256": "12a255beb62c904f8e7e18539c31f47db421721e8dcafe5bdbf39efb747687b1",
-            "fileSize": "226905 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Arithmetic Progressions",
             "concepts": [
@@ -1610,13 +1502,7 @@
           "chapterId": "triangles",
           "ncertCode": "jemh106",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh106",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh106.pdf",
-            "sha256": "968bd8dd80f1d561306ffd8e333bde7c2b165c2c15251ba90ec20492832c2247",
-            "fileSize": "408240 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Triangles",
             "concepts": [
@@ -1714,13 +1600,7 @@
           "chapterId": "coordinate",
           "ncertCode": "jemh107",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh107",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh107.pdf",
-            "sha256": "c7a6f87f6637db56400ed26e6d8ee661a7a50fbb0e8153dad9f29e7a406e718b",
-            "fileSize": "652564 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Coordinate Geometry",
             "concepts": [
@@ -1808,13 +1688,7 @@
           "chapterId": "trigonometry",
           "ncertCode": "jemh108",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh108",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh108.pdf",
-            "sha256": "18ad53444b0942bb8811ed2df86767072c3aa17447d40c59f00ce27f2eb6d55f",
-            "fileSize": "356370 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Introduction to Trigonometry",
             "concepts": [
@@ -1892,13 +1766,7 @@
           "chapterId": "trig-apps",
           "ncertCode": "jemh109",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh109",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh109.pdf",
-            "sha256": "771f5ce0eab247acb30e23ae4b7aa0b11d698cab3a406ee6e021299a19f6343f",
-            "fileSize": "535900 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Some Applications of Trigonometry",
             "concepts": [
@@ -1969,13 +1837,7 @@
           "chapterId": "circles",
           "ncertCode": "jemh110",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh110",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh110.pdf",
-            "sha256": "345cecef736efa1ba7f501543f2ebe242ef0e75bf2aec27d591aa106083808fc",
-            "fileSize": "154898 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Circles",
             "concepts": [
@@ -2048,13 +1910,7 @@
           "chapterId": "areas-circles",
           "ncertCode": "jemh111",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh111",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh111.pdf",
-            "sha256": "ee78c9df3b5db25b1bdc20191f0c7befc4035bb6ea7105265a5483808a50da44",
-            "fileSize": "226889 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Areas Related to Circles",
             "concepts": [
@@ -2125,13 +1981,7 @@
           "chapterId": "surface-vol",
           "ncertCode": "jemh112",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh112",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh112.pdf",
-            "sha256": "0e260434b6d160e57769a9d724585e770744802489a65857a2e8a0c333dd4ca2",
-            "fileSize": "417747 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Surface Areas and Volumes",
             "concepts": [
@@ -2190,13 +2040,7 @@
           "chapterId": "statistics",
           "ncertCode": "jemh113",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh113",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh113.pdf",
-            "sha256": "8ee395d19748eed730217c0cbbe9ca08e56cb41bf1e13bcbe09856cd7bab7b00",
-            "fileSize": "270429 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Statistics",
             "concepts": [
@@ -2282,13 +2126,7 @@
           "chapterId": "probability",
           "ncertCode": "jemh114",
           "hasTranscript": true,
-          "hasPdf": true,
-          "pdf": {
-            "ncertCode": "jemh114",
-            "pdfUrl": "https://files.supercop.in/ncert-books/2025/class10/jemh114.pdf",
-            "sha256": "811f7f0657b4ad58dce848fb64bb37adb256e3b5f04548bc565332421b1b40c9",
-            "fileSize": "225551 bytes"
-          },
+          "hasPdf": false,
           "transcript": {
             "title": "CBSE Class 10 Mathematics: Probability",
             "concepts": [
@@ -2370,7 +2208,7 @@
   },
   "stats": {
     "subjects": 2,
-    "chaptersWithPdf": 27,
+    "chaptersWithPdf": 0,
     "chaptersWithTranscript": 27
   }
 }

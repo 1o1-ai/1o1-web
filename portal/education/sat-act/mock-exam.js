@@ -2,32 +2,20 @@
   'use strict';
 
   const params = new URLSearchParams(location.search);
-  const track = (params.get('track') || 'sat').toLowerCase();
-  let section = (params.get('section') || 'math').toLowerCase();
+  const track = (params.get('track') || 'act').toLowerCase();
+  const section = (params.get('section') || 'english').toLowerCase();
   const mode = params.get('mode') || 'section';
-
-  const redirect = window.SatActShared?.redirectNonMathMock?.(track, section, mode);
-  if (redirect && redirect !== location.pathname + location.search) {
-    location.replace(redirect);
-    return;
-  }
-
   document.body.dataset.track = track;
 
   const specs = window.SatActShared?.SECTION_SPECS?.[track] || {};
   const fullSpec = window.SatActShared?.FULL_MOCK_SPECS?.[track];
   let sectionKey = section;
   if (track === 'sat' && (section === 'rw' || section === 'reading_writing' || section === 'sat-rw')) {
-    sectionKey = 'math';
-  } else if (track === 'sat' && section === 'math') {
-    sectionKey = 'math';
-  } else if (track === 'act' && ['english', 'reading', 'science'].includes(section)) {
-    sectionKey = 'math';
-  } else if (track === 'act' && section === 'math') {
-    sectionKey = 'math';
+    sectionKey = 'reading_writing';
   }
+  if (track === 'sat' && section === 'math') sectionKey = 'math';
 
-  const sectionSpec = specs[sectionKey] || specs.math;
+  const sectionSpec = specs[sectionKey] || specs.english || specs.reading_writing;
   let remaining = sectionSpec?.durationSec || 45 * 60;
   let pasteCount = 0;
   let blurCount = 0;
@@ -273,10 +261,10 @@
 
     let compositeNote = '';
     if (track === 'act' && sectionResults.length) {
-      const math = sectionResults.find((r) => r.section === 'math');
-      if (math) {
-        const est = estimateActScaled(math.score, 60);
-        compositeNote = `<p>ACT Math estimated scaled: <strong>${est}</strong>/36 (approximate from raw ${math.score}/60)</p>`;
+      const english = sectionResults.find((r) => r.section === 'english');
+      if (english) {
+        const est = estimateActScaled(english.score, 75);
+        compositeNote = `<p>ACT English estimated scaled: <strong>${est}</strong>/36 (approximate from raw ${english.score}/75)</p>`;
       }
     }
 
@@ -286,7 +274,7 @@
       ${compositeNote}
       <p>Concentration: ${focusScore}% · Paste events: ${pasteCount} · Tab away: ${blurCount}</p>
       <p class="sr-eval-hint">Review missed items in Study Room → Evaluate, then discuss in the Forum.</p>
-      <a href="practice.html" class="btn-portal btn-portal-ghost">Back to R&amp;W practice</a>
+      <a href="practice.html" class="btn-portal btn-portal-ghost">Back to practice hub</a>
       <a href="room.html" class="btn-portal btn-portal-primary" style="margin-left:8px">Study room</a>`;
     document.getElementById('btnSubmitMock').disabled = true;
   }
@@ -313,7 +301,7 @@
     .then(() => {
       if (!questions.length) {
         mockQuestions.innerHTML =
-          '<p class="sr-eval-hint">No verified math items for this section yet. Check back after the next ingest.</p>';
+          '<p class="sr-eval-hint">No verified questions for this section yet. ACT English is live (125 items). SAT sections need College Board PDFs — see hub note.</p>';
       }
       timerId = setInterval(tick, 1000);
       renderClock();

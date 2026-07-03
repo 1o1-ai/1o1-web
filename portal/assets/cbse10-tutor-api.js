@@ -81,29 +81,24 @@
     return run();
   }
 
-  /**
-   * @returns {Promise<{feedback: string, marksAwarded: number|null, maxMarks: number|null, gradedBy: string, score: number|null}>}
-   */
   async function gradeAnswer(question, studentAnswer, rubric, ctx) {
     ctx = ctx || {};
     const referenceAnswer = String(ctx.referenceAnswer || rubric || '').trim();
-    const solutionSteps = Array.isArray(ctx.solutionSteps) ? ctx.solutionSteps : [];
     const body = {
       actor: 'student',
       message: 'Grade my answer',
       context: {
         grade_submission: true,
-        semantic_grade: ctx.semanticGrade !== false,
+        semantic_grade: ctx.forceSemanticGrade !== false,
         question,
         answer: studentAnswer,
         rubric: referenceAnswer,
         reference_answer: referenceAnswer,
-        solution_steps: solutionSteps,
         max_marks: ctx.maxMarks || 5,
         marks: ctx.maxMarks || 5,
-        grade: ctx.grade || '10',
-        board: ctx.board || 'CBSE',
-        sku: ctx.sku || 'cbse10-core',
+        grade: '10',
+        board: 'CBSE',
+        sku: 'cbse10-core',
         study_room: true,
         subject: ctx.subject || '',
         chapter: ctx.chapterId || '',
@@ -120,29 +115,20 @@
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.detail || 'Grading failed');
-      const feedback =
+      return (
         data.evaluation ||
-        data.feedback ||
         data.answer ||
         data.message ||
         data.content ||
         (typeof data.response === 'string' ? data.response : '') ||
-        '';
-      return {
-        feedback,
-        marksAwarded: data.marks_awarded ?? data.marksAwarded ?? null,
-        maxMarks: data.max_marks ?? data.maxMarks ?? ctx.maxMarks ?? null,
-        gradedBy: data.grading_method || 'semantic_llm',
-        score: data.score ?? null,
-        strengths: data.strengths || [],
-        improvements: data.improvements || [],
-      };
+        ''
+      );
     };
 
     const meta = {
-      usedAi: true,
-      sku: ctx.sku || 'cbse10-core',
-      gradedBy: 'semantic_llm',
+      usedAi: ctx.forceSemanticGrade !== false,
+      sku: 'cbse10-core',
+      gradedBy: ctx.forceSemanticGrade === false ? 'server_deterministic' : 'llm',
     };
     if (global.EducationPerf?.timed) {
       return global.EducationPerf.timed('grade_answer_api', run, meta);

@@ -31,6 +31,8 @@
       .replace(/keyword overlap[\s\S]*/gi, '')
       .replace(/offline rubric[\s\S]*/gi, '')
       .replace(/\(API offline[^)]*\)/gi, '')
+      .replace(/_Graded locally from catalog reference \(no LLM\)\._/gi, '')
+      .replace(/Graded locally from catalog reference \(no LLM\)\.?/gi, '')
       .trim();
   }
 
@@ -127,7 +129,7 @@
   }
 
   function renderAnswerSheetHtml(ctx, rows) {
-    const user = global.CBSE10EvalStore?.DUMMY_USER?.name || 'Student';
+    const user = global.CBSE10EvalStore?.getStudyUser?.()?.name || 'Student';
     const subjectLabel = ctx.subject === 'mathematics' ? 'Mathematics' : 'Science';
     let html = `
       <div class="exam-paper-sheet practice-answer-sheet">
@@ -180,7 +182,7 @@
       alert('PDF library not loaded. Refresh the page and try again.');
       return;
     }
-    const user = global.CBSE10EvalStore?.DUMMY_USER?.name || 'Student';
+    const user = global.CBSE10EvalStore?.getStudyUser?.()?.name || 'Student';
     const subjectLabel = ctx.subject === 'mathematics' ? 'Mathematics' : 'Science';
     const doc = new JsPDF({ unit: 'pt', format: 'a4' });
     let y = 48;
@@ -259,30 +261,6 @@
     await (global.AnyoReferenceAnswer?.loadOverrides?.() || Promise.resolve());
     referenceAnswer = extractReferenceAnswer(ans) || referenceAnswer;
 
-    if (referenceAnswer && global.EducationDeterministicGrade?.gradeWritten) {
-      const local = global.EducationDeterministicGrade.gradeWritten(
-        ans.studentAnswer,
-        referenceAnswer,
-        maxMarks
-      );
-      if (local) {
-        global.EducationPerf?.record?.('grade_answer', {
-          durationMs: (global.performance?.now?.() ?? Date.now()) - t0,
-          usedAi: false,
-          gradedBy: local.gradedBy,
-          source: 'catalog_reference',
-          sku: 'cbse10-core',
-        });
-        return {
-          marksAwarded: local.marksAwarded,
-          maxMarks: local.maxMarks,
-          feedback: local.feedback,
-          referenceAnswer,
-          gradedBy: local.gradedBy,
-        };
-      }
-    }
-
     if (!referenceAnswer && global.Cbse10TutorApi?.chat) {
       try {
         const reply = await global.Cbse10TutorApi.chat(
@@ -316,26 +294,22 @@
     }
 
     try {
-      const grade = await global.Cbse10TutorApi.gradeAnswer(ans.prompt, ans.studentAnswer, referenceAnswer, {
+      const feedback = await global.Cbse10TutorApi.gradeAnswer(ans.prompt, ans.studentAnswer, referenceAnswer, {
         referenceAnswer,
         maxMarks,
         subject: ctx.subject,
         chapterId: ctx.chapterId,
         chapterTitle: ctx.chapterTitle,
-        solutionSteps: ans.solutionSteps || ans.solution_steps || [],
-        sku: ctx.sku || 'cbse10-core',
-        grade: ctx.grade || '10',
       });
-      const marksAwarded =
-        grade.marksAwarded != null ? grade.marksAwarded : parseMarksFromFeedback(grade.feedback, maxMarks);
-      let presentation = cleanPresentationFeedback(grade.feedback);
+      const marksAwarded = parseMarksFromFeedback(feedback, maxMarks);
+      let presentation = cleanPresentationFeedback(feedback);
       if (!presentation && marksAwarded != null) {
         presentation = `Scored ${marksAwarded}/${maxMarks}.`;
       }
       global.EducationPerf?.record?.('grade_answer', {
         durationMs: (global.performance?.now?.() ?? Date.now()) - t0,
         usedAi: true,
-        gradedBy: grade.gradedBy || 'semantic_llm',
+        gradedBy: referenceAnswer ? 'server_deterministic_or_llm' : 'llm',
         sku: 'cbse10-core',
       });
       return {
@@ -343,7 +317,7 @@
         maxMarks,
         feedback: presentation || 'Graded by ManjuLAB computer agent.',
         referenceAnswer: referenceAnswer || '',
-        gradedBy: grade.gradedBy || (marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative'),
+        gradedBy: marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative',
       };
     } catch {
       global.EducationPerf?.record?.('grade_answer', {

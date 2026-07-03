@@ -879,7 +879,8 @@
       .replace(/offline rubric[\s\S]*/gi, '')
 
       .replace(/\(API offline[^)]*\)/gi, '')
-
+      .replace(/_Graded locally from catalog reference \(no LLM\)\._/gi, '')
+      .replace(/Graded locally from catalog reference \(no LLM\)\.?/gi, '')
       .trim();
 
   }
@@ -1417,47 +1418,9 @@
 
       '';
 
-    if (referenceAnswer && window.EducationDeterministicGrade?.gradeWritten) {
-
-      const local = window.EducationDeterministicGrade.gradeWritten(
-
-        ans.studentAnswer,
-
-        referenceAnswer,
-
-        maxMarks
-
-      );
-
-      if (local) {
-
-        window.EducationPerf?.record?.('grade_answer', {
-          durationMs: (window.performance?.now?.() ?? Date.now()) - t0,
-          usedAi: false,
-          gradedBy: local.gradedBy,
-          source: 'catalog_reference',
-          sku: 'cbse10-core',
-        });
-
-        return {
-
-          marksAwarded: local.marksAwarded,
-
-          maxMarks: local.maxMarks,
-
-          feedback: local.feedback,
-
-          gradedBy: local.gradedBy,
-
-        };
-
-      }
-
-    }
-
     try {
 
-      const grade = await window.Cbse10TutorApi.gradeAnswer(
+      const feedback = await window.Cbse10TutorApi.gradeAnswer(
 
         ans.prompt,
 
@@ -1477,16 +1440,13 @@
 
           chapterTitle: ans.chapterTitle || chapterTitle,
 
-          solutionSteps: ans.solutionSteps || ans.solution_steps || [],
-
         }
 
       );
 
-      const marksAwarded =
-        grade.marksAwarded != null ? grade.marksAwarded : parseMarksFromFeedback(grade.feedback, maxMarks);
+      const marksAwarded = parseMarksFromFeedback(feedback, maxMarks);
 
-      let presentation = cleanPresentationFeedback(grade.feedback);
+      let presentation = cleanPresentationFeedback(feedback);
 
       if (!presentation && marksAwarded != null) {
 
@@ -1497,7 +1457,7 @@
       window.EducationPerf?.record?.('grade_answer', {
         durationMs: (window.performance?.now?.() ?? Date.now()) - t0,
         usedAi: true,
-        gradedBy: grade.gradedBy || 'semantic_llm',
+        gradedBy: referenceAnswer ? 'server_deterministic_or_llm' : 'llm',
         sku: 'cbse10-core',
       });
 
@@ -1509,7 +1469,7 @@
 
         feedback: presentation || 'Graded by computer tutor.',
 
-        gradedBy: grade.gradedBy || (marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative'),
+        gradedBy: marksAwarded != null ? 'computer_ai' : 'computer_ai_narrative',
 
       };
 
@@ -1643,7 +1603,7 @@
 
 
 
-    let html = `<h3>Evaluation complete</h3><p>${window.CBSE10EvalStore.DUMMY_USER.name} · ${sessionAnswers.length} answer(s) · Score: ${totalAwarded}/${totalMax}</p><ul class="sr-grade-list">`;
+    let html = `<h3>Evaluation complete</h3><p>${window.CBSE10EvalStore.getStudyUser().name} · ${sessionAnswers.length} answer(s) · Score: ${totalAwarded}/${totalMax}</p><ul class="sr-grade-list">`;
 
     grades.forEach((g, i) => {
 
