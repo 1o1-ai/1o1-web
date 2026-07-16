@@ -808,12 +808,300 @@
         display: none; /* simple hidden for mobile mockup */
       }
     }
-    @media (max-width: 480px) {
-      .chatbot-panel {
-        width: calc(100vw - 40px);
-        right: 20px;
-        left: 20px;
-      }
+    
+    /* Circular Portals UI (ManjuLab Style) */
+    .portal-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2.5rem 0;
+    }
+    
+    .portal {
+      position: relative;
+      display: block;
+      width: 210px;
+      height: 210px;
+      text-decoration: none;
+      color: inherit;
+      flex-shrink: 0;
+      border-radius: 50%;
+      transition: transform 0.25s ease;
+      cursor: pointer;
+    }
+    
+    .portal:hover {
+      transform: scale(1.06);
+    }
+    
+    .portal-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, rgba(15, 23, 42, 0.15) 55%, transparent 72%);
+      box-shadow: 0 0 30px rgba(6, 182, 212, 0.1), inset 0 0 20px rgba(6, 182, 212, 0.05);
+      animation: portal-pulse 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+    
+    .portal-orbit {
+      position: absolute;
+      inset: -5px;
+      border-radius: 50%;
+      border: 1px dashed rgba(255, 255, 255, 0.15);
+      animation: portal-spin 22s linear infinite;
+      pointer-events: none;
+    }
+    
+    .portal-orbit::before,
+    .portal-orbit::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 8px var(--primary);
+    }
+    
+    .portal-orbit::before {
+      top: 4%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .portal-orbit::after {
+      bottom: 8%;
+      right: 12%;
+    }
+    
+    .portal-core {
+      position: absolute;
+      inset: 15%;
+      z-index: 2;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 15px;
+      background: linear-gradient(145deg, rgba(6, 182, 212, 0.25), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+    
+    .portal:hover .portal-core {
+      border-color: var(--primary);
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.2), inset 0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    .portal-icon {
+      font-size: 1.85rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+    
+    .portal-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #f8fafc;
+      line-height: 1.25;
+      font-family: 'Outfit', sans-serif;
+    }
+    
+    .portal-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      margin-top: 5px;
+      line-height: 1.3;
+      max-width: 130px;
+    }
+    
+    /* Cardio Theme */
+    .portal--cardio .portal-ring {
+      background: radial-gradient(circle, rgba(239, 68, 68, 0.22) 0%, transparent 72%);
+      box-shadow: 0 0 40px rgba(239, 68, 68, 0.15);
+    }
+    .portal--cardio .portal-orbit::before,
+    .portal--cardio .portal-orbit::after {
+      background: #ef4444;
+      box-shadow: 0 0 8px #ef4444;
+    }
+    .portal--cardio .portal-core {
+      background: linear-gradient(145deg, rgba(239, 68, 68, 0.35), rgba(3, 7, 18, 0.96));
+    }
+    .portal--cardio:hover .portal-core {
+      border-color: #ef4444;
+    }
+    .portal--cardio .portal-icon {
+      color: #ef4444;
+    }
+    
+    /* Neuro Theme */
+    .portal--neuro .portal-ring {
+      background: radial-gradient(circle, rgba(167, 139, 250, 0.22) 0%, transparent 72%);
+      box-shadow: 0 0 40px rgba(167, 139, 250, 0.15);
+    }
+    .portal--neuro .portal-orbit::before,
+    .portal--neuro .portal-orbit::after {
+      background: #a78bfa;
+      box-shadow: 0 0 8px #a78bfa;
+    }
+    .portal--neuro .portal-core {
+      background: linear-gradient(145deg, rgba(167, 139, 250, 0.35), rgba(3, 7, 18, 0.96));
+    }
+    .portal--neuro:hover .portal-core {
+      border-color: #a78bfa;
+    }
+    .portal--neuro .portal-icon {
+      color: #a78bfa;
+    }
+    
+    /* Haem Theme */
+    .portal--haem .portal-ring {
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.22) 0%, transparent 72%);
+      box-shadow: 0 0 40px rgba(236, 72, 153, 0.15);
+    }
+    .portal--haem .portal-orbit::before,
+    .portal--haem .portal-orbit::after {
+      background: #ec4899;
+      box-shadow: 0 0 8px #ec4899;
+    }
+    .portal--haem .portal-core {
+      background: linear-gradient(145deg, rgba(236, 72, 153, 0.35), rgba(3, 7, 18, 0.96));
+    }
+    .portal--haem:hover .portal-core {
+      border-color: #ec4899;
+    }
+    .portal--haem .portal-icon {
+      color: #ec4899;
+    }
+    
+    /* Med Theme */
+    .portal--med .portal-ring {
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.22) 0%, transparent 72%);
+      box-shadow: 0 0 40px rgba(16, 185, 129, 0.15);
+    }
+    .portal--med .portal-orbit::before,
+    .portal--med .portal-orbit::after {
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+    }
+    .portal--med .portal-core {
+      background: linear-gradient(145deg, rgba(16, 185, 129, 0.35), rgba(3, 7, 18, 0.96));
+    }
+    .portal--med:hover .portal-core {
+      border-color: #10b981;
+    }
+    .portal--med .portal-icon {
+      color: #10b981;
+    }
+
+    @keyframes portal-pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.85; transform: scale(1.01); }
+    }
+    @keyframes portal-spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Floating Theme Picker */
+    .theme-picker-container {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000001;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .theme-picker-toggle {
+      background: rgba(15, 23, 42, 0.95);
+      border: 2px solid var(--secondary);
+      color: #fff;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+      font-size: 1.15rem;
+    }
+    
+    .theme-picker-toggle:hover {
+      transform: scale(1.1) rotate(20deg);
+      border-color: var(--primary);
+      box-shadow: 0 6px 24px rgba(124, 58, 237, 0.4);
+    }
+    
+    .theme-options {
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      width: 140px;
+      transition: all 0.3s ease;
+    }
+    
+    .theme-options.open {
+      display: flex;
+      animation: fadeInRight 0.3s ease forwards;
+    }
+    
+    .theme-options h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+      font-family: 'Outfit', sans-serif;
+    }
+    
+    .theme-btn-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    
+    .theme-opt-btn {
+      width: 100%;
+      height: 35px;
+      border-radius: 6px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .theme-opt-btn:hover {
+      transform: scale(1.08);
+    }
+    
+    .theme-opt-btn.active {
+      border-color: #fff;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
     }
   </style>
 </head>
@@ -918,34 +1206,49 @@
   <section class="departments" id="departments">
     <div class="container">
       <h2 class="section-title">Medical Departments</h2>
-      <div class="dept-grid">
-        <!-- Cardiology -->
-        <div class="dept-card">
-          <div class="dept-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-          <h3>Cardiology</h3>
-          <p>Comprehensive coronary diagnostic testing, bypass consults, and advanced heart health monitoring.</p>
-          <a href="#" onclick="openChatWithPrompt('Cardiology Department')" class="dept-link">Consult Cardiology <i class="fa-solid fa-arrow-right"></i></a>
+      <div class="portal-grid">
+        <!-- Cardiology Portal -->
+        <div class="portal portal--cardio" onclick="openChatWithPrompt('Cardiology Department')">
+          <div class="portal-ring"></div>
+          <div class="portal-orbit"></div>
+          <div class="portal-core">
+            <span class="portal-icon" aria-hidden="true"><i class="fa-solid fa-heart-pulse"></i></span>
+            <span class="portal-title">Cardiology</span>
+            <span class="portal-sub">Diagnostics & Coronary Bypass Consults</span>
+          </div>
         </div>
-        <!-- Neuro-Surgery -->
-        <div class="dept-card">
-          <div class="dept-icon"><i class="fa-solid fa-brain"></i></div>
-          <h3>Neuro-Surgery</h3>
-          <p>State-of-the-art neurological intervention, cerebral diagnostics, and spinal care.</p>
-          <a href="#" onclick="openChatWithPrompt('Neuro-Surgery Department')" class="dept-link">Consult Neurology <i class="fa-solid fa-arrow-right"></i></a>
+
+        <!-- Neuro-Surgery Portal -->
+        <div class="portal portal--neuro" onclick="openChatWithPrompt('Neuro-Surgery Department')">
+          <div class="portal-ring"></div>
+          <div class="portal-orbit"></div>
+          <div class="portal-core">
+            <span class="portal-icon" aria-hidden="true"><i class="fa-solid fa-brain"></i></span>
+            <span class="portal-title">Neuro-Surgery</span>
+            <span class="portal-sub">Cerebral Diagnostics & Advanced Spinal Care</span>
+          </div>
         </div>
-        <!-- Haematology -->
-        <div class="dept-card">
-          <div class="dept-icon"><i class="fa-solid fa-droplet"></i></div>
-          <h3>Haematology</h3>
-          <p>Expert oncology-hematology screenings, anemia profiles, and blood disorder treatments.</p>
-          <a href="#" onclick="openChatWithPrompt('Haematology Department')" class="dept-link">Consult Haematology <i class="fa-solid fa-arrow-right"></i></a>
+
+        <!-- Haematology Portal -->
+        <div class="portal portal--haem" onclick="openChatWithPrompt('Haematology Department')">
+          <div class="portal-ring"></div>
+          <div class="portal-orbit"></div>
+          <div class="portal-core">
+            <span class="portal-icon" aria-hidden="true"><i class="fa-solid fa-droplet"></i></span>
+            <span class="portal-title">Haematology</span>
+            <span class="portal-sub">Oncology Blood Profiles & Treatments</span>
+          </div>
         </div>
-        <!-- General Medicine -->
-        <div class="dept-card">
-          <div class="dept-icon"><i class="fa-solid fa-stethoscope"></i></div>
-          <h3>Gen Medicine & Critical Care</h3>
-          <p>Internal medicine general consultations, intensive care monitoring, and diagnostic profiles.</p>
-          <a href="#" onclick="openChatWithPrompt('General Medicine Department')" class="dept-link">Consult Medicine <i class="fa-solid fa-arrow-right"></i></a>
+
+        <!-- General Medicine Portal -->
+        <div class="portal portal--med" onclick="openChatWithPrompt('General Medicine Department')">
+          <div class="portal-ring"></div>
+          <div class="portal-orbit"></div>
+          <div class="portal-core">
+            <span class="portal-icon" aria-hidden="true"><i class="fa-solid fa-stethoscope"></i></span>
+            <span class="portal-title">Medicine</span>
+            <span class="portal-sub">Internal Medicine & Intensive Critical Care</span>
+          </div>
         </div>
       </div>
     </div>
@@ -1064,6 +1367,22 @@
     </div>
   </footer>
 
+  <!-- Floating Theme Picker -->
+  <div class="theme-picker-container" id="themePickerContainer">
+    <button class="theme-picker-toggle" id="themePickerToggle" aria-label="Choose Palette">
+      <i class="fa-solid fa-palette"></i>
+    </button>
+    <div class="theme-options" id="themeOptions">
+      <h4>Choose Palette</h4>
+      <div class="theme-btn-grid">
+        <button class="theme-opt-btn active" data-theme="ocean" style="background: linear-gradient(135deg, #7c3aed, #06b6d4);" title="Ocean Cyan"></button>
+        <button class="theme-opt-btn" data-theme="emerald" style="background: linear-gradient(135deg, #06b6d4, #10b981);" title="Emerald Green"></button>
+        <button class="theme-opt-btn" data-theme="violet" style="background: linear-gradient(135deg, #ec4899, #a78bfa);" title="Royal Violet"></button>
+        <button class="theme-opt-btn" data-theme="ruby" style="background: linear-gradient(135deg, #f97316, #f43f5e);" title="Ruby Crimson"></button>
+      </div>
+    </div>
+  </div>
+
   <!-- AI Chatbot UI components -->
   <div class="chatbot-bubble" id="chatBubble" onclick="toggleChatbot()">
     <div class="chatbot-pulse"></div>
@@ -1102,5 +1421,81 @@
   </div>
 
   <script src="chatbot.js"></script>
+  <script>
+    // Theme Switcher Logic
+    const themePickerToggle = document.getElementById('themePickerToggle');
+    const themeOptions = document.getElementById('themeOptions');
+    const themeBtns = document.querySelectorAll('.theme-opt-btn');
+
+    themePickerToggle.addEventListener('click', () => {
+      themeOptions.classList.toggle('open');
+    });
+
+    // Close options if clicked outside
+    document.addEventListener('click', (e) => {
+      if (!themePickerToggle.contains(e.target) && !themeOptions.contains(e.target)) {
+        themeOptions.classList.remove('open');
+      }
+    });
+
+    const themes = {
+      ocean: {
+        primary: '#06b6d4',
+        primaryDark: '#0891b2',
+        secondary: '#7c3aed',
+        glow: '0 0 20px rgba(6, 182, 212, 0.15)',
+        gradient: 'linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%)'
+      },
+      emerald: {
+        primary: '#10b981',
+        primaryDark: '#059669',
+        secondary: '#06b6d4',
+        glow: '0 0 20px rgba(16, 185, 129, 0.15)',
+        gradient: 'linear-gradient(135deg, #06b6d4 0%, #10b981 100%)'
+      },
+      violet: {
+        primary: '#a78bfa',
+        primaryDark: '#8b5cf6',
+        secondary: '#ec4899',
+        glow: '0 0 20px rgba(167, 139, 250, 0.15)',
+        gradient: 'linear-gradient(135deg, #ec4899 0%, #a78bfa 100%)'
+      },
+      ruby: {
+        primary: '#f43f5e',
+        primaryDark: '#e11d48',
+        secondary: '#f97316',
+        glow: '0 0 20px rgba(244, 63, 94, 0.15)',
+        gradient: 'linear-gradient(135deg, #f97316 0%, #f43f5e 100%)'
+      }
+    };
+
+    themeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const themeName = btn.getAttribute('data-theme');
+        const theme = themes[themeName];
+        
+        // Remove active class from all buttons
+        themeBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Apply theme to CSS Custom Properties
+        document.documentElement.style.setProperty('--primary', theme.primary);
+        document.documentElement.style.setProperty('--primary-dark', theme.primaryDark);
+        document.documentElement.style.setProperty('--secondary', theme.secondary);
+        document.documentElement.style.setProperty('--glow', theme.glow);
+        document.documentElement.style.setProperty('--gradient', theme.gradient);
+
+        // Save selection to localStorage
+        localStorage.setItem('yoga-hospital-theme', themeName);
+      });
+    });
+
+    // Load saved theme if exists
+    const savedTheme = localStorage.getItem('yoga-hospital-theme');
+    if (savedTheme && themes[savedTheme]) {
+      const activeBtn = document.querySelector(`.theme-opt-btn[data-theme="${savedTheme}"]`);
+      if (activeBtn) activeBtn.click();
+    }
+  </script>
 </body>
 </html>
