@@ -1,0 +1,86 @@
+
+/**=========================
+    START RTL
+=========================**/
+[dir="rtl"] #slider-carousel h4 img {
+    margin: 0px 0px 0px 15px;
+}
+[dir="rtl"] #slider-carousel .carousel-caption-left .slider-btn .theme-btn {
+    margin: 0px 0px 0px 10px;
+}
+[dir="rtl"] #slider-carousel .carousel-caption-right .slider-btn .theme-btn {
+    margin: 0px 10px 0px 0px;
+}
+.about-col-left{
+    padding: 0px 20px 0px 0px;
+}
+.about-col-right{
+    padding: 0px 0px 0px 60px;
+}
+.about-2-col-left{
+    padding: 0px 20px 0px 0px;
+}
+.about-2-col-right{
+    padding: 0px 0px 0px 20px;
+}
+.doctor-col-right{
+    padding: 0px 0px 0px 60px;
+}
+[dir="rtl"] .about-col-left{
+    padding: 0px 0px 0px 20px;
+}
+[dir="rtl"] .about-col-right{
+    padding: 0px 60px 0px 0px;
+}
+[dir="rtl"] .about-2-col-left{
+    padding: 0px 0px 0px 20px;
+}
+[dir="rtl"] .about-2-col-right{
+    padding: 0px 20px 0px 0px;
+}
+[dir="rtl"] .doctor-col-right{
+    padding: 0px 60px 0px 0px;
+}
+.shop-col-left,
+[dir="rtl"] .shop-col-right{
+    padding: 0px 7.5px 0px 0px;
+}
+[dir="rtl"] .shop-col-left,
+.shop-col-right{
+    padding: 0px 0px 0px 7.5px;
+}
+[dir="rtl"] .team-style-2 .team-item-img img {
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    right: 0px;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+}
+[dir="rtl"] .team-style-2 .team-item:hover .team-item-img img,
+[dir="rtl"] .team-style-2 .team-item-active .team-item-img img {
+    position: relative;
+    right: 30px;
+}
+[dir="rtl"] .team-style-2 .team-item-social {
+    left: auto;
+    right: 15px;
+}
+[dir="rtl"] .team-style-2 .team-item:hover .team-item-social,
+[dir="rtl"] .team-style-2 .team-item-active .team-item-social {
+    animation-name: fadeInRight;
+}
+[dir="rtl"] .team-style-3-social-icon {
+    left: inherit;
+    right: 20px;
+}
+[dir="rtl"] .team-style-3-card:hover .team-style-3-social-icon,
+[dir="rtl"] .team-style-3-active .team-style-3-social-icon {
+    opacity: 1;
+    animation-name: fadeInRight;
+}
+/**=========================
+    END RTL
+=========================**/

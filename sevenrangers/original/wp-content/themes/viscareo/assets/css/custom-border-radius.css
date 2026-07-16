@@ -1,0 +1,46 @@
+/**=========================
+    START BORDER RADIUS
+=========================**/
+.input-group [type="search"],
+.input-group [type="text"],
+.input-group [type="password"],
+.input-group textarea,
+.input-group select,
+[dir="rtl"] .input-group input[type="submit"],
+[dir="rtl"] .input-group input[type="button"],
+[dir="rtl"] .input-group button,
+[dir="rtl"] .input-group .button,
+[dir="rtl"] .woocommerce table.shop_table .input-group .input-group-append .button {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.input-group input[type="submit"],
+.input-group input[type="button"],
+.input-group button,
+.input-group .button,
+[dir="rtl"] .site .input-group [type="search"],
+[dir="rtl"] .site .input-group [type="text"],
+[dir="rtl"] .site .input-group [type="password"],
+[dir="rtl"] .site .input-group textarea,
+[dir="rtl"] .site .input-group select,
+.woocommerce table.shop_table .input-group .input-group-append .button {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.post-thumbnail .post-img,
+[dir="rtl"] blockquote:before,
+[dir="rtl"] .wp-block-quote.is-large:before,
+[dir="rtl"] .wp-block-quote.is-style-large:before {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+blockquote:before,
+.wp-block-quote.is-large:before,
+.wp-block-quote.is-style-large:before {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+/**=========================
+    END BORDER RADIUS
+=========================**/

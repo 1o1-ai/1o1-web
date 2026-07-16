@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7RANGERS Hospital Pitch Showcase - ManjuLAB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #06b6d4;
+      --secondary: #7c3aed;
+      --bg-dark: #06060f;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-light: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      background-image: radial-gradient(circle at 50% -20%, rgba(124, 58, 237, 0.15) 0%, transparent 60%);
+    }
+
+    /* Back button */
+    .floating-back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      background: rgba(6, 6, 15, 0.9);
+      border: 1px solid var(--secondary);
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+    .floating-back-btn a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .floating-back-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(124, 58, 237, 0.4);
+      border-color: var(--primary);
+    }
+
+    .showcase-container {
+      max-width: 1000px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      background: linear-gradient(135deg, #fff 40%, var(--primary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .sub {
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 3.5rem;
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      text-align: left;
+    }
+
+    .card {
+      background: rgba(13, 13, 31, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15);
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.85rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-o {
+      border: 1px solid var(--border-color);
+      color: #fff;
+      background: transparent;
+    }
+
+    .btn-p {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+      color: #fff;
+      border: none;
+      box-shadow: 0 4px 15px rgba(6, 182, 212, 0.2);
+    }
+
+    .card:hover .btn-o {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .card:hover .btn-p {
+      box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+    }
+
+    .badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--secondary);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: bold;
+      padding: 4px 14px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 10px rgba(124, 58, 237, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 4rem 1rem 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Back Button -->
+  <div class="floating-back-btn">
+    <a href="/">
+      <span>←</span> Back to yogabrata.com
+    </a>
+  </div>
+
+  <div class="showcase-container">
+    <h1>7RANGERS Hospital Pitch Showcase</h1>
+    <p class="sub">We have prepared two versions of the Seven Rangers Hospital integration. Compare the side-by-side transition from the exact original layout to our modernized, AI-enabled redesign.</p>
+    
+    <div class="grid">
+      <!-- Card 1: Original Version -->
+      <div class="card" onclick="window.location.href='original/index.html'">
+        <div>
+          <div class="icon">🏥</div>
+          <h2 class="card-title">1. Original Replica</h2>
+          <p class="card-desc">An exact static clone of the current hospital website. Serves all existing assets, styling, and doctor databases locally.</p>
+        </div>
+        <span class="btn btn-o">Launch Original Site</span>
+      </div>
+      
+      <!-- Card 2: Yoga Version (AI Redesign) -->
+      <div class="card" onclick="window.location.href='yoga/index.html'" style="border: 2px solid var(--secondary); box-shadow: 0 0 20px rgba(124, 58, 237, 0.15);">
+        <div class="badge">AI Redesign</div>
+        <div>
+          <div class="icon">⚡</div>
+          <h2 class="card-title" style="color: var(--primary);">2. Yoga Version</h2>
+          <p class="card-desc">A complete premium redesign. Features modern hospital layouts, advanced typography, custom grids, and an interactive AI Health Assistant Chatbot.</p>
+        </div>
+        <span class="btn btn-p">Explore Yoga Version</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

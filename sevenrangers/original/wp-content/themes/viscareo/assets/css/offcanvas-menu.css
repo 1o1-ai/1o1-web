@@ -1,0 +1,273 @@
+/* header fixed */
+.sticky-header-fixed {
+    position: sticky;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 0.1);
+    animation-duration: 0.4s;
+    animation-name: fadeInDown;
+}
+.logged-in.admin-bar .sticky-header-fixed {
+    top: 31px;
+}
+/* offcanvas */
+.offcanvas {
+    width: 100%;
+}
+.offcanvas .navbar {
+    margin: 0px 0px 0px 0px;
+    padding: 20px 0px 20px 0px;
+}
+.offcanvas .navbar-expand-lg .navbar-collapse {
+    margin: 0px -15px 0px 0px;
+    justify-content: end;
+}
+.offcanvas .navbar-expand-lg .navbar-brand {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-size: 30px;
+    font-weight: 500;
+}
+.offcanvas .navbar-expand-lg .navbar-nav {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+.offcanvas .navbar-expand-lg .nav-item {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+.offcanvas .navbar-expand-lg .nav-link,
+.offcanvas .navbar-expand-lg .dropdown-item {
+    margin: 0px 0px 0px 0px;
+    font-weight: 500;
+    color: #081839;
+}
+.offcanvas .navbar-expand-lg .nav-link {
+    padding: 15px 15px 15px 15px;
+}
+.offcanvas .navbar-expand-lg .dropdown-item {
+    padding: 10px 20px 10px 20px;
+}
+.offcanvas .navbar-expand-lg .nav-link:hover,
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown-item:hover,
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown-item:active,
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown-item:focus,
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown-item.active,
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown-item.active:hover,
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown-item.active:active,
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown-item.active:focus,
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown .nav-link:hover,
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown .nav-link:active,
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown .nav-link:focus,
+.offcanvas .navbar-expand-lg .dropdown-menu .current_page_item.active .dropdown-item,
+.offcanvas .navbar-expand-lg .dropdown-menu .current-menu-item.current_page_item.menu-item-has-children.dropdown.active ul.dropdown-menu li:hover a {
+    background-color: #fff;
+    color: #1bbde4;
+}
+
+/* dropdown */
+.offcanvas .navbar-expand-lg .dropdown-menu .dropdown-menu {
+    top: 0px;
+    right: auto;
+    left: 100%;
+}
+.offcanvas .navbar-expand-lg .theme-dropdown-menu-right .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+.offcanvas .navbar-expand-lg .theme-dropdown-menu-right .dropdown-menu .dropdown-menu {
+    top: 0px;
+    right: 100%;
+    left: auto;
+}
+.offcanvas .navbar-expand-lg .dropdown-menu {
+    min-width: 270px;
+    margin: 0px 0px 0px 0px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid rgb(0 0 0 / 5%);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
+    animation: 0.4s dropdown_menu;
+}
+.offcanvas .navbar-expand-lg .dropdown-toggle:after {
+    content: "\F0140";
+    font-family: "Material Design Icons";
+    border: 0;
+    vertical-align: middle;
+    margin: 0px 0px 0px 5px;
+    float: right;
+    transition: all 0.4s;
+}
+@media (max-width: 1024px){
+}
+@media (min-width: 991px) {
+    .offcanvas .navbar-expand-lg .dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+    .offcanvas .navbar-expand-lg .dropdown-menu .dropdown a::after {
+        transform: rotate(-90deg);
+    }
+    .offcanvas .navbar-expand-lg .theme-dropdown-menu-right .dropdown-menu .dropdown a::after {
+        transform: rotate(90deg);
+    }
+    .offcanvas .offcanvas-brand-responsive {
+        display: none;
+    }
+}
+@media (max-width: 991px) {
+    .offcanvas,
+    .offcanvas-body {
+        position: relative;
+        transition: all 0.4s;
+    }
+    .offcanvas-body::after {
+        content: "";
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 999;
+        background-color: #000;
+        opacity: 0.5;
+    }
+    .offcanvas-sidebar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 350px;
+        height: 100vh;
+        overflow: hidden;
+        transform: translateX(-100%);
+        opacity: 0;
+        visibility: hidden;
+        align-items: normal;
+        z-index: 99999;
+        transition: all ease 0.4s;
+        background-color: #fff;
+    }
+    .logged-in.admin-bar .offcanvas-sidebar {
+        top: 31px;
+    }
+    .offcanvas.active .offcanvas-sidebar {
+        transform: translateX(0%);
+        opacity: 1;
+        visibility: visible;
+    }
+    .offcanvas.active .offcanvas-sidebar::-webkit-scrollbar {
+        width: 4px;
+        background-color: #f1f1f1;
+    }
+    .offcanvas.active .offcanvas-sidebar::-webkit-scrollbar-thumb {
+        background-color: #1bbde4;
+    }
+    .offcanvas.active .offcanvas-brand-responsive {
+        position: fixed;
+        display: flex;
+        width: 100%;
+        padding: 15px 20px 15px 20px;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    }
+    .offcanvas .navbar-toggler {
+        display: inline-block;
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #1bbde4;
+        color: #fff;
+    }
+    .offcanvas .navbar-toggler-open:hover,
+    .offcanvas .navbar-toggler-open:focus,
+    .offcanvas .navbar-toggler-open:active {
+        background-color: #1bbde4;
+        color: #fff;
+    }
+    .offcanvas .navbar-toggler-close {
+        background-color: #dc3545; /* danger color */
+        color: #fff;
+    }
+    .offcanvas .navbar-toggler-close:hover,
+    .offcanvas .navbar-toggler-close:focus,
+    .offcanvas .navbar-toggler-close:active {
+        background-color: #c82333; /* danger color hover */
+        color: #fff;
+    }
+    .offcanvas .navbar-toggler-close span {
+        font-size: 20px;
+    }
+    .offcanvas .navbar-expand-lg .nav-link {
+        padding: 12px 20px 12px 20px;
+    }
+    .offcanvas .navbar-expand-lg .dropdown-menu {
+        padding: 0px 0px 0px 5px;
+        border: 0px;
+        box-shadow: 0px 0px 0px 0px;
+    }
+    .offcanvas.active .navbar-expand-lg .dropdown-toggle:after {
+        position: relative;
+        border: 1px solid;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        display: inline-block;
+        right: 0px;
+        color: #1bbde4;
+        transition: all 0.4s;
+    }
+    .offcanvas.active .navbar-expand-lg .dropdown-toggle.opened:after,
+    .offcanvas.active .navbar-expand-lg .dropdown-toggle[aria-expanded="true"]:after {
+        border-color: #dc3545; /* danger color */
+        color: #dc3545; /* danger color */
+        transform: rotate(90deg);
+        transition: all 0.4s;
+    }
+    .offcanvas.active .navbar-nav {
+        padding: 90px 0px 15px 0px;
+        overflow-y: auto;
+        height: 100vh;
+    }
+    [dir="rtl"] .offcanvas-sidebar {
+        left: inherit;
+        right: 0px;
+        transform: translateX(100%);
+    }
+    [dir="rtl"] .offcanvas.active .offcanvas-sidebar {
+        transform: translateX(0%);
+    }
+    [dir="rtl"] .offcanvas.active .navbar-expand-lg .dropdown-toggle:after {
+        float: left;
+        right: inherit;
+        left: 0px;
+    }
+    [dir="rtl"] .offcanvas .navbar-expand-lg .nav-link,
+    [dir="rtl"] .offcanvas .navbar-expand-lg .dropdown-item {
+        text-align: right;
+    }
+    [dir="rtl"] .offcanvas .navbar-expand-lg .dropdown-menu {
+        padding: 0px 5px 0px 0px;
+    }
+}
+@media (max-width: 782px) {
+    .logged-in.admin-bar .sticky-header-fixed,
+    .logged-in.admin-bar .offcanvas-sidebar {
+        top: 40px;
+    }
+}
+@media (max-width: 600px) {
+    .logged-in.admin-bar .sticky-header-fixed,
+    .logged-in.admin-bar .offcanvas-sidebar {
+        top: -1px;
+    }
+}
