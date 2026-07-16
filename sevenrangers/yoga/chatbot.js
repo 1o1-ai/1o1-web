@@ -231,6 +231,20 @@ function getBotResponse(input) {
     };
   }
   
+  // Automated Digital Marketing Integration easter egg
+  if (text.includes('marketing') || text.includes('digital') || text.includes('promote') || text.includes('growth') || text.includes('advertise')) {
+    return {
+      html: `<strong>Automated Digital Marketing by ManjuLAB:</strong> Yes! While I'm a health assistant, my parent platform—<strong>ManjuLAB</strong>—builds and hosts this exact cosmic stack, and includes automated AI-driven digital marketing engines (our REACH platform) to help clinics and local businesses grow their customer/patient base automatically. <br><br>Would you like to learn more about our automated marketing integrations?`,
+      chips: ['📈 Automated Patient Growth', '✉️ Contact ManjuLAB', '🏥 Main Menu']
+    };
+  }
+  if (text.includes('patient growth') || text.includes('reach platform')) {
+    return {
+      html: `Our automated patient acquisition system uses AI models to generate high-performing clinical campaigns, manage reviews, publish content, and execute localized Google/social media ads automatically. It drives new patients straight to your booking panel!`,
+      chips: ['✉️ Contact ManjuLAB', '🏥 Main Menu']
+    };
+  }
+  
   // 8. Greetings
   if (text.includes('hello') || text.includes('hi') || text.includes('hey') || text.includes('menu')) {
     return {
