@@ -118,7 +118,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(3, 7, 18, 0.8);
+      background: var(--bg-header, rgba(3, 7, 18, 0.8));
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-color);
       padding: 1.25rem 0;
@@ -511,7 +511,7 @@
 
     /* Footer */
     footer {
-      background: #020617;
+      background: var(--bg-footer, #020617);
       border-top: 1px solid var(--border-color);
       padding: 5rem 0 3rem;
       color: var(--text-muted);
@@ -625,9 +625,9 @@
       right: 30px;
       width: 400px;
       height: 550px;
-      background: rgba(3, 7, 18, 0.95);
+      background: var(--bg-chat, rgba(3, 7, 18, 0.95));
       backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--border-color);
       border-radius: 20px;
       box-shadow: 0 20px 50px rgba(0,0,0,0.6);
       display: flex;
@@ -720,10 +720,11 @@
       to { transform: translateY(0); opacity: 1; }
     }
     .msg-bot {
-      background: rgba(255,255,255,0.05);
+      background: var(--bg-bot-msg, rgba(255,255,255,0.05));
       border: 1px solid var(--border-color);
       align-self: flex-start;
       border-bottom-left-radius: 4px;
+      color: var(--text-bot-msg, inherit);
     }
     .msg-user {
       background: var(--primary);
@@ -763,11 +764,11 @@
     }
     .chat-input {
       flex-grow: 1;
-      background: rgba(255,255,255,0.03);
+      background: var(--bg-chat-input, rgba(255,255,255,0.03));
       border: 1px solid var(--border-color);
       padding: 0.75rem 1.25rem;
       border-radius: 12px;
-      color: #fff;
+      color: var(--text-chat-input, #fff);
       font-family: inherit;
       font-size: 0.9rem;
       outline: none;
@@ -1057,7 +1058,7 @@
       display: none;
       flex-direction: column;
       gap: 10px;
-      width: 140px;
+      width: 190px;
       transition: all 0.3s ease;
     }
     
@@ -1077,7 +1078,7 @@
     
     .theme-btn-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
     }
     
@@ -1379,6 +1380,8 @@
         <button class="theme-opt-btn" data-theme="emerald" style="background: linear-gradient(135deg, #06b6d4, #10b981);" title="Emerald Green"></button>
         <button class="theme-opt-btn" data-theme="violet" style="background: linear-gradient(135deg, #ec4899, #a78bfa);" title="Royal Violet"></button>
         <button class="theme-opt-btn" data-theme="ruby" style="background: linear-gradient(135deg, #f97316, #f43f5e);" title="Ruby Crimson"></button>
+        <button class="theme-opt-btn" data-theme="light-clinic" style="background: linear-gradient(135deg, #4f46e5, #0891b2); border: 1px solid rgba(255,255,255,0.4);" title="Light Clinic"></button>
+        <button class="theme-opt-btn" data-theme="light-sakura" style="background: linear-gradient(135deg, #ea580c, #e11d48); border: 1px solid rgba(255,255,255,0.4);" title="Light Sakura"></button>
       </div>
     </div>
   </div>
@@ -1444,28 +1447,114 @@
         primaryDark: '#0891b2',
         secondary: '#7c3aed',
         glow: '0 0 20px rgba(6, 182, 212, 0.15)',
-        gradient: 'linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%)'
+        gradient: 'linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%)',
+        bgDark: '#030712',
+        textLight: '#f3f4f6',
+        textMuted: '#9ca3af',
+        bgCard: 'rgba(17, 24, 39, 0.7)',
+        borderColor: 'rgba(255, 255, 255, 0.08)',
+        bgHeader: 'rgba(3, 7, 18, 0.8)',
+        bgFooter: '#020617',
+        bgChat: 'rgba(3, 7, 18, 0.95)',
+        bgBotMsg: 'rgba(255, 255, 255, 0.05)',
+        textBotMsg: 'inherit',
+        bgChatInput: 'rgba(255, 255, 255, 0.03)',
+        textChatInput: '#fff'
       },
       emerald: {
         primary: '#10b981',
         primaryDark: '#059669',
         secondary: '#06b6d4',
         glow: '0 0 20px rgba(16, 185, 129, 0.15)',
-        gradient: 'linear-gradient(135deg, #06b6d4 0%, #10b981 100%)'
+        gradient: 'linear-gradient(135deg, #06b6d4 0%, #10b981 100%)',
+        bgDark: '#030712',
+        textLight: '#f3f4f6',
+        textMuted: '#9ca3af',
+        bgCard: 'rgba(17, 24, 39, 0.7)',
+        borderColor: 'rgba(255, 255, 255, 0.08)',
+        bgHeader: 'rgba(3, 7, 18, 0.8)',
+        bgFooter: '#020617',
+        bgChat: 'rgba(3, 7, 18, 0.95)',
+        bgBotMsg: 'rgba(255, 255, 255, 0.05)',
+        textBotMsg: 'inherit',
+        bgChatInput: 'rgba(255, 255, 255, 0.03)',
+        textChatInput: '#fff'
       },
       violet: {
         primary: '#a78bfa',
         primaryDark: '#8b5cf6',
         secondary: '#ec4899',
         glow: '0 0 20px rgba(167, 139, 250, 0.15)',
-        gradient: 'linear-gradient(135deg, #ec4899 0%, #a78bfa 100%)'
+        gradient: 'linear-gradient(135deg, #ec4899 0%, #a78bfa 100%)',
+        bgDark: '#030712',
+        textLight: '#f3f4f6',
+        textMuted: '#9ca3af',
+        bgCard: 'rgba(17, 24, 39, 0.7)',
+        borderColor: 'rgba(255, 255, 255, 0.08)',
+        bgHeader: 'rgba(3, 7, 18, 0.8)',
+        bgFooter: '#020617',
+        bgChat: 'rgba(3, 7, 18, 0.95)',
+        bgBotMsg: 'rgba(255, 255, 255, 0.05)',
+        textBotMsg: 'inherit',
+        bgChatInput: 'rgba(255, 255, 255, 0.03)',
+        textChatInput: '#fff'
       },
       ruby: {
         primary: '#f43f5e',
         primaryDark: '#e11d48',
         secondary: '#f97316',
         glow: '0 0 20px rgba(244, 63, 94, 0.15)',
-        gradient: 'linear-gradient(135deg, #f97316 0%, #f43f5e 100%)'
+        gradient: 'linear-gradient(135deg, #f97316 0%, #f43f5e 100%)',
+        bgDark: '#030712',
+        textLight: '#f3f4f6',
+        textMuted: '#9ca3af',
+        bgCard: 'rgba(17, 24, 39, 0.7)',
+        borderColor: 'rgba(255, 255, 255, 0.08)',
+        bgHeader: 'rgba(3, 7, 18, 0.8)',
+        bgFooter: '#020617',
+        bgChat: 'rgba(3, 7, 18, 0.95)',
+        bgBotMsg: 'rgba(255, 255, 255, 0.05)',
+        textBotMsg: 'inherit',
+        bgChatInput: 'rgba(255, 255, 255, 0.03)',
+        textChatInput: '#fff'
+      },
+      'light-clinic': {
+        primary: '#0891b2',
+        primaryDark: '#0369a1',
+        secondary: '#4f46e5',
+        glow: '0 8px 30px rgba(8, 145, 178, 0.08)',
+        gradient: 'linear-gradient(135deg, #4f46e5 0%, #0891b2 100%)',
+        bgDark: '#f0f9ff',
+        textLight: '#0f172a',
+        textMuted: '#475569',
+        bgCard: 'rgba(255, 255, 255, 0.85)',
+        borderColor: 'rgba(15, 23, 42, 0.08)',
+        bgHeader: 'rgba(240, 249, 255, 0.8)',
+        bgFooter: '#e0f2fe',
+        bgChat: 'rgba(255, 255, 255, 0.95)',
+        bgBotMsg: 'rgba(15, 23, 42, 0.05)',
+        textBotMsg: '#0f172a',
+        bgChatInput: 'rgba(0, 0, 0, 0.03)',
+        textChatInput: '#0f172a'
+      },
+      'light-sakura': {
+        primary: '#e11d48',
+        primaryDark: '#be123c',
+        secondary: '#ea580c',
+        glow: '0 8px 30px rgba(225, 29, 72, 0.08)',
+        gradient: 'linear-gradient(135deg, #ea580c 0%, #e11d48 100%)',
+        bgDark: '#fff5f5',
+        textLight: '#1c1917',
+        textMuted: '#57534e',
+        bgCard: 'rgba(255, 255, 255, 0.85)',
+        borderColor: 'rgba(28, 25, 22, 0.08)',
+        bgHeader: 'rgba(255, 245, 245, 0.8)',
+        bgFooter: '#ffe4e6',
+        bgChat: 'rgba(255, 255, 255, 0.95)',
+        bgBotMsg: 'rgba(28, 25, 22, 0.05)',
+        textBotMsg: '#1c1917',
+        bgChatInput: 'rgba(0, 0, 0, 0.03)',
+        textChatInput: '#1c1917'
       }
     };
 
@@ -1484,6 +1573,19 @@
         document.documentElement.style.setProperty('--secondary', theme.secondary);
         document.documentElement.style.setProperty('--glow', theme.glow);
         document.documentElement.style.setProperty('--gradient', theme.gradient);
+        
+        document.documentElement.style.setProperty('--bg-dark', theme.bgDark);
+        document.documentElement.style.setProperty('--text-light', theme.textLight);
+        document.documentElement.style.setProperty('--text-muted', theme.textMuted);
+        document.documentElement.style.setProperty('--bg-card', theme.bgCard);
+        document.documentElement.style.setProperty('--border-color', theme.borderColor);
+        document.documentElement.style.setProperty('--bg-header', theme.bgHeader);
+        document.documentElement.style.setProperty('--bg-footer', theme.bgFooter);
+        document.documentElement.style.setProperty('--bg-chat', theme.bgChat);
+        document.documentElement.style.setProperty('--bg-bot-msg', theme.bgBotMsg);
+        document.documentElement.style.setProperty('--text-bot-msg', theme.textBotMsg);
+        document.documentElement.style.setProperty('--bg-chat-input', theme.bgChatInput);
+        document.documentElement.style.setProperty('--text-chat-input', theme.textChatInput);
 
         // Save selection to localStorage
         localStorage.setItem('yoga-hospital-theme', themeName);
