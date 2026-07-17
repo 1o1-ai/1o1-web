@@ -132,8 +132,10 @@ function getBotResponse(input) {
       docSuggest = "<strong>Dr. Sabyasachi Basu (Neuro-Surgery)</strong> is available on Tue - Thu (12PM - 4PM).";
     } else if (text.includes('shubashis') || text.includes('haemat') || text.includes('blood')) {
       docSuggest = "<strong>Dr. Shubashis Saha (Haematology)</strong> is available on Wed - Fri (11AM - 3PM).";
+    } else if (text.includes('manoj') || text.includes('pal')) {
+      docSuggest = "<strong>Dr. Manoj Kumar Pal (General Medicine)</strong> is available Every Day (9AM - 5PM).";
     } else if (text.includes('dipanjan') || text.includes('medicine') || text.includes('general')) {
-      docSuggest = "<strong>Dr. Dipanjan Chottopadhyay (General Medicine)</strong> is available on Mon - Sat (9AM - 1PM).";
+      docSuggest = "<strong>Dr. Manoj Kumar Pal</strong> (Every Day: 9AM - 5PM) and <strong>Dr. Dipanjan Chottopadhyay</strong> (Mon - Sat: 9AM - 1PM) lead our General Medicine department.";
     }
     
     return {
@@ -146,10 +148,11 @@ function getBotResponse(input) {
   if (text.includes('doctor') || text.includes('schedule') || text.includes('specialist') || text.includes('opd')) {
     return {
       html: `Here are our active clinic specialists:<br><br>
-             1. <strong>Dr. Goutam Das</strong> - Cardiology<br>
-             2. <strong>Dr. Sabyasachi Basu</strong> - Neuro-Surgery<br>
-             3. <strong>Dr. Shubashis Saha</strong> - Haematology<br>
-             4. <strong>Dr. Dipanjan Chottopadhyay</strong> - Gen Medicine & Critical Care<br><br>
+             1. <strong>Dr. Manoj Kumar Pal</strong> - General Medicine (Every Day Lead)<br>
+             2. <strong>Dr. Goutam Das</strong> - Cardiology<br>
+             3. <strong>Dr. Sabyasachi Basu</strong> - Neuro-Surgery<br>
+             4. <strong>Dr. Shubashis Saha</strong> - Haematology<br>
+             5. <strong>Dr. Dipanjan Chottopadhyay</strong> - Gen Medicine & Critical Care<br><br>
              Which specialist department would you like to check or book?`,
       chips: ['❤️ Cardiology', '🧠 Neuro-Surgery', '🩸 Haematology', '🩺 General Medicine']
     };
@@ -176,8 +179,8 @@ function getBotResponse(input) {
   }
   if (text.includes('medicine') || text.includes('general') || text.includes('critical')) {
     return {
-      html: `<strong>General Medicine & Critical Care:</strong> led by Dr. Dipanjan Chottopadhyay. Comprehensive diagnostics, outpatient consults, and intensive care monitoring.`,
-      chips: ['📅 Book Dr. Dipanjan Chottopadhyay', '🏥 Main Menu']
+      html: `<strong>General Medicine & Critical Care:</strong> led by our lead physician, Dr. Manoj Kumar Pal (available Every Day: 9AM - 5PM) and Dr. Dipanjan Chottopadhyay. Comprehensive diagnostics, outpatient consults, and intensive care monitoring.`,
+      chips: ['📅 Book Dr. Manoj Kumar Pal', '📅 Book Dr. Dipanjan Chottopadhyay', '🏥 Main Menu']
     };
   }
   
