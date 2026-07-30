@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yogabrata Tech — Smartboards, IoT & AI Robotics</title>
+<meta name="description" content="Interactive smartboards, Matter/Thread IoT infrastructure, edge AI compute and desktop robotics. Free delivery across the United States.">
+<!--
+  Yogabrata Tech demo storefront — a source catalog, not a real shop.
+
+  This page exists to be READ by tools/shopify/extract_catalog.py and turned into
+  a COMET mission, so its shape matters more than its styling: every product
+  states a name, one unambiguous price, a spec table, and any variants as plain
+  text. The delivery terms are stated once, in prose, in their own section —
+  which is exactly the shape extract_catalog.py's ShippingHint is built to read.
+
+  Every product and the "Yogabrata Tech" brand are invented for this fixture. No
+  real manufacturer, model or trademark appears anywhere on this page, and no
+  claim here describes a product that exists. Prices, SKUs and specifications are
+  plausible fiction so the extraction has realistic material to work on.
+
+  Product visuals are inline SVG rather than photographs: nothing external to
+  fetch, nothing to 404, and Shopify will not try to side-load an image URL that
+  does not resolve. Catalogs with real photography should use absolute HTTPS URLs
+  reachable from Shopify's network.
+-->
+<style>
+  :root{
+    --bg:#0a0b0f; --surface:#12141b; --raised:#171a23; --edge:rgba(255,255,255,.09);
+    --ink:#f4f5f7; --muted:#9aa1b1; --dim:#6b7285;
+    --accent:#5eead4; --accent2:#818cf8; --warm:#fbbf24;
+    --font:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --mono:ui-monospace,"SF Mono",Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent)}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  header.site{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);
+    background:rgba(10,11,15,.82);border-bottom:1px solid var(--edge)}
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:16px 0;flex-wrap:wrap}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:18px}
+  .logo .dot{width:26px;height:26px;border-radius:50%;
+    background:conic-gradient(from 140deg,var(--accent),var(--accent2),var(--warm),var(--accent));
+    box-shadow:0 0 18px rgba(94,234,212,.35)}
+  .nav nav{display:flex;gap:22px;font-size:14.5px;color:var(--muted);flex-wrap:wrap}
+  .nav nav a{color:var(--muted);text-decoration:none}
+  .nav nav a:hover{color:var(--ink)}
+
+  .ship-strip{background:linear-gradient(90deg,rgba(94,234,212,.12),rgba(129,140,248,.12));
+    border-bottom:1px solid var(--edge);text-align:center;padding:10px 16px;font-size:13.5px;color:var(--ink)}
+
+  .hero{padding:64px 0 40px}
+  .kicker{font:600 12px/1 var(--mono);letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0}
+  .hero h1{margin:16px 0 14px;font-size:clamp(34px,5.2vw,56px);line-height:1.05;letter-spacing:-.025em;font-weight:700;max-width:20ch}
+  .hero p{max-width:62ch;color:var(--muted);font-size:17.5px;margin:0}
+
+  .catalog{padding:26px 0 60px}
+  h2.section{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--dim);font-family:var(--mono);margin:44px 0 20px}
+
+  .grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+  .product{border:1px solid var(--edge);background:var(--surface);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+  .shot{aspect-ratio:16/10;background:var(--raised);display:grid;place-items:center;border-bottom:1px solid var(--edge)}
+  .shot svg{width:72%;height:72%}
+  .body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+  .product h3{margin:0 0 6px;font-size:18px;font-weight:650;letter-spacing:-.01em}
+  .tagline{margin:0 0 14px;color:var(--muted);font-size:14px}
+  .price-row{display:flex;align-items:baseline;gap:10px;margin:0 0 14px}
+  .price{font-size:25px;font-weight:700;letter-spacing:-.02em}
+  .was{color:var(--dim);text-decoration:line-through;font-size:15px}
+  .sku{font:500 11.5px/1 var(--mono);color:var(--dim);margin-left:auto}
+
+  table.specs{width:100%;border-collapse:collapse;font-size:13.5px;margin:0 0 14px}
+  table.specs th,table.specs td{text-align:left;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);vertical-align:top}
+  table.specs th{color:var(--dim);font-weight:500;width:44%}
+  table.specs tr:last-child th,table.specs tr:last-child td{border-bottom:0}
+
+  .variants{margin:0 0 16px;font-size:13.5px;color:var(--muted)}
+  .variants b{color:var(--ink);font-weight:600}
+  .buy{margin-top:auto;display:flex;align-items:center;gap:10px}
+  .btn{flex:1;text-align:center;padding:12px 18px;border-radius:999px;border:1px solid var(--accent);
+    background:var(--accent);color:#06231f;font-weight:650;font-size:14px;text-decoration:none}
+  .stock{font-size:12.5px;color:var(--accent);white-space:nowrap}
+
+  section.info{border-top:1px solid var(--edge);padding:52px 0}
+  section.info h2{font-size:22px;margin:0 0 12px;letter-spacing:-.01em}
+  section.info p{color:var(--muted);max-width:70ch;margin:0 0 12px}
+  .info-grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:8px}
+  .info-card{border:1px solid var(--edge);background:var(--surface);border-radius:16px;padding:20px}
+  .info-card h3{margin:0 0 7px;font-size:15.5px}
+  .info-card p{font-size:14px;margin:0}
+
+  footer.site{border-top:1px solid var(--edge);padding:34px 0 64px;color:var(--dim);font-size:13.5px}
+  .demo-note{margin-top:14px;padding:14px 16px;border-radius:14px;border:1px dashed rgba(251,191,36,.4);
+    background:rgba(251,191,36,.06);color:#f1e0b0;font-size:13px;max-width:74ch}
+</style>
+</head>
+<body>
+
+<div class="ship-strip">
+  <strong>Free delivery on every order across the United States.</strong>
+  Dispatched within 2 business days · 30-day returns
+</div>
+
+<header class="site">
+  <div class="wrap nav">
+    <div class="logo"><span class="dot" aria-hidden="true"></span> Yogabrata Tech</div>
+    <nav>
+      <a href="#smartboards">Smartboards</a>
+      <a href="#iot">IoT &amp; Sensing</a>
+      <a href="#robotics">AI &amp; Robotics</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <p class="kicker">Yogabrata Tech · 2026 Catalog</p>
+  <h1>Hardware for rooms that think.</h1>
+  <p>
+    Interactive displays, Matter-native sensing, and edge AI compute — built for
+    classrooms, clinics and small studios that want serious equipment without an
+    enterprise procurement cycle.
+  </p>
+</div>
+
+<div class="wrap catalog">
+
+  <h2 class="section" id="smartboards">Interactive Smartboards</h2>
+  <div class="grid">
+
+    <article class="product">
+      <div class="shot">
+        <svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="14" y="12" width="172" height="98" rx="6" fill="#0e1017" stroke="#5eead4" stroke-width="1.5"/>
+          <rect x="22" y="20" width="156" height="82" rx="3" fill="url(#g1)" opacity=".55"/>
+          <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#818cf8"/></linearGradient></defs>
+          <path d="M40 84 L66 56 L88 74 L118 40 L156 66" fill="none" stroke="#f4f5f7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>
+          <circle cx="118" cy="40" r="4" fill="#fbbf24"/>
+          <rect x="86" y="110" width="28" height="5" rx="2.5" fill="#5eead4" opacity=".6"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h3>Lumen 86″ Interactive Smartboard</h3>
+        <p class="tagline">4K anti-glare panel with 40-point touch and on-device handwriting recognition.</p>
+        <div class="price-row"><span class="price">$4,299.00</span><span class="was">$4,899.00</span><span class="sku">YT-LUM-86</span></div>
+        <table class="specs">
+          <tr><th>Display</th><td>86-inch 4K UHD, 400 nits, anti-glare etched glass</td></tr>
+          <tr><th>Touch</th><td>40-point infrared, 2 ms latency, passive stylus</td></tr>
+          <tr><th>Compute</th><td>Octa-core ARM, 8 GB RAM, 128 GB storage, Android 14</td></tr>
+          <tr><th>Connectivity</th><td>Wi-Fi 6E, Gigabit Ethernet, HDMI 2.1 ×3, USB-C 100 W</td></tr>
+          <tr><th>Mounting</th><td>VESA 800×400, wall bracket included</td></tr>
+        </table>
+        <p class="variants"><b>Sizes:</b> 65″ · 75″ · 86″ &nbsp;|&nbsp; <b>Finish:</b> Graphite · Chalk White</p>
+        <div class="buy"><a class="btn" href="#">Add to cart</a><span class="stock">In stock</span></div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="shot">
+        <svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="30" y="22" width="140" height="70" rx="5" fill="#0e1017" stroke="#818cf8" stroke-width="1.5"/>
+          <rect x="38" y="30" width="124" height="54" rx="3" fill="#818cf8" opacity=".22"/>
+          <circle cx="100" cy="57" r="15" fill="none" stroke="#5eead4" stroke-width="2"/>
+          <circle cx="100" cy="57" r="5" fill="#5eead4"/>
+          <path d="M62 96 h76" stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>
+          <path d="M100 92 v10" stroke="#818cf8" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h3>Lumen Capture Bar</h3>
+        <p class="tagline">Auto-framing 4K camera bar with eight-microphone beamforming array.</p>
+        <div class="price-row"><span class="price">$899.00</span><span class="sku">YT-CAP-01</span></div>
+        <table class="specs">
+          <tr><th>Camera</th><td>4K 30 fps, 120° field of view, AI auto-framing</td></tr>
+          <tr><th>Audio</th><td>8-mic beamforming, 6 m pickup, echo cancellation</td></tr>
+          <tr><th>Processing</th><td>On-device speaker tracking, no cloud dependency</td></tr>
+          <tr><th>Connectivity</th><td>USB-C UVC/UAC, plug-and-play</td></tr>
+        </table>
+        <div class="buy"><a class="btn" href="#">Add to cart</a><span class="stock">In stock</span></div>
+      </div>
+    </article>
+  </div>
+
+  <h2 class="section" id="iot">IoT &amp; Sensing</h2>
+  <div class="grid">
+
+    <article class="product">
+      <div class="shot">
+        <svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="100" cy="62" r="20" fill="#0e1017" stroke="#5eead4" stroke-width="2"/>
+          <circle cx="100" cy="62" r="7" fill="#5eead4"/>
+          <circle cx="100" cy="62" r="34" fill="none" stroke="#5eead4" stroke-width="1" opacity=".45"/>
+          <circle cx="100" cy="62" r="48" fill="none" stroke="#5eead4" stroke-width="1" opacity=".22"/>
+          <circle cx="134" cy="62" r="4" fill="#818cf8"/><circle cx="66" cy="62" r="4" fill="#818cf8"/>
+          <circle cx="100" cy="28" r="4" fill="#fbbf24"/><circle cx="100" cy="96" r="4" fill="#818cf8"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h3>Mesh Hub Pro</h3>
+        <p class="tagline">Matter and Thread border router with local automation that survives an internet outage.</p>
+        <div class="price-row"><span class="price">$249.00</span><span class="sku">YT-HUB-PRO</span></div>
+        <table class="specs">
+          <tr><th>Protocols</th><td>Matter 1.3, Thread 1.3, Zigbee 3.0, BLE 5.3</td></tr>
+          <tr><th>Capacity</th><td>Up to 250 paired devices</td></tr>
+          <tr><th>Automation</th><td>Runs locally; cloud optional, never required</td></tr>
+          <tr><th>Power</th><td>USB-C PD, 4-hour battery backup</td></tr>
+        </table>
+        <div class="buy"><a class="btn" href="#">Add to cart</a><span class="stock">In stock</span></div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="shot">
+        <svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="66" y="24" width="68" height="78" rx="14" fill="#0e1017" stroke="#818cf8" stroke-width="1.6"/>
+          <circle cx="100" cy="48" r="11" fill="none" stroke="#5eead4" stroke-width="2"/>
+          <path d="M78 74 h44 M78 84 h30" stroke="#818cf8" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+          <path d="M100 16 v-6" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h3>Aura Air Quality Monitor</h3>
+        <p class="tagline">Laser particulate sensing with CO₂, VOC and humidity on a colour e-ink face.</p>
+        <div class="price-row"><span class="price">$179.00</span><span class="was">$199.00</span><span class="sku">YT-AURA-2</span></div>
+        <table class="specs">
+          <tr><th>Sensors</th><td>PM1.0 / PM2.5 / PM10, CO₂ NDIR, TVOC, temp, RH</td></tr>
+          <tr><th>Display</th><td>4.2-inch colour e-ink, ambient light adaptive</td></tr>
+          <tr><th>Logging</th><td>2 years on-device history, CSV export</td></tr>
+          <tr><th>Battery</th><td>Rechargeable, 6 weeks per charge</td></tr>
+        </table>
+        <p class="variants"><b>Colours:</b> Slate · Sand</p>
+        <div class="buy"><a class="btn" href="#">Add to cart</a><span class="stock">In stock</span></div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="shot">
+        <svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="52" y="40" width="96" height="46" rx="8" fill="#0e1017" stroke="#5eead4" stroke-width="1.6"/>
+          <circle cx="76" cy="63" r="9" fill="none" stroke="#818cf8" stroke-width="2"/>
+          <circle cx="76" cy="63" r="3.5" fill="#818cf8"/>
+          <path d="M96 55 h40 M96 63 h30 M96 71 h36" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" opacity=".75"/>
+          <path d="M100 40 v-12 M86 28 h28" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h3>Sentry 4K AI Camera</h3>
+        <p class="tagline">On-device person and vehicle detection with no subscription and no cloud upload.</p>
+        <div class="price-row"><span class="price">$329.00</span><span class="sku">YT-SEN-4K</span></div>
+        <table class="specs">
+          <tr><th>Sensor</th><td>4K 8 MP, 1/1.8″, f/1.6, colour night vision</td></tr>
+          <tr><th>Detection</th><td>On-device person, vehicle, package; zero subscription</td></tr>
+          <tr><th>Storage</th><td>256 GB internal, optional NAS via RTSP</td></tr>
+          <tr><th>Rating</th><td>IP66, −30 °C to 55 °C</td></tr>
+        </table>
+        <p class="variants"><b>Mount:</b> Wall · Ceiling · Pole</p>
+        <div class="buy"><a class="btn" href="#">Add to cart</a><span class="stock">In stock</span></div>
+      </div>
+    </article>
+  </div>
+
+  <h2 class="section" id="robotics">AI &amp; Robotics</h2>
+  <div class="grid">
+
+    <article class="product">
+      <div class="shot">
+        <svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="70" y="34" width="60" height="46" rx="16" fill="#0e1017" stroke="#5eead4" stroke-width="1.8"/>
+          <circle cx="87" cy="55" r="6" fill="#5eead4"/><circle cx="113" cy="55" r="6" fill="#5eead4"/>
+          <path d="M88 68 q12 8 24 0" stroke="#818cf8" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <rect x="82" y="84" width="36" height="18" rx="6" fill="#171a23" stroke="#818cf8" stroke-width="1.5"/>
+          <path d="M100 34 v-9" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"/><circle cx="100" cy="22" r="3.5" fill="#fbbf24"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h3>Atlas Mini Desktop Robot</h3>
+        <p class="tagline">A tabletop companion that runs its language model locally — nothing leaves the room.</p>
+        <div class="price-row"><span class="price">$1,149.00</span><span class="sku">YT-ATL-MINI</span></div>
+        <table class="specs">
+          <tr><th>Compute</th><td>12 TOPS NPU, 16 GB LPDDR5, on-device 7B model</td></tr>
+          <tr><th>Motion</th><td>3-axis head, expressive 360° base rotation</td></tr>
+          <tr><th>Sensing</th><td>Depth camera, 4-mic array, capacitive touch</td></tr>
+          <tr><th>Privacy</th><td>Hardware mic/camera cut-off switch</td></tr>
+        </table>
+        <p class="variants"><b>Colours:</b> Arctic · Graphite</p>
+        <div class="buy"><a class="btn" href="#">Add to cart</a><span class="stock">Ships in 5 days</span></div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="shot">
+        <svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="56" y="38" width="88" height="50" rx="7" fill="#0e1017" stroke="#818cf8" stroke-width="1.6"/>
+          <rect x="66" y="48" width="30" height="30" rx="4" fill="#5eead4" opacity=".28"/>
+          <path d="M104 52 h30 M104 63 h30 M104 74 h18" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round" opacity=".8"/>
+          <path d="M70 88 v10 M130 88 v10" stroke="#818cf8" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h3>Forge Edge AI Node</h3>
+        <p class="tagline">Fanless inference server for vision workloads at the edge of the network.</p>
+        <div class="price-row"><span class="price">$1,899.00</span><span class="sku">YT-FRG-100</span></div>
+        <table class="specs">
+          <tr><th>Accelerator</th><td>100 TOPS INT8, 32 GB unified memory</td></tr>
+          <tr><th>Throughput</th><td>16 simultaneous 1080p video streams</td></tr>
+          <tr><th>Cooling</th><td>Fanless, 0–50 °C, silent operation</td></tr>
+          <tr><th>I/O</th><td>2× 10 GbE SFP+, 4× USB-C, PoE++ out</td></tr>
+        </table>
+        <p class="variants"><b>Memory:</b> 32 GB · 64 GB</p>
+        <div class="buy"><a class="btn" href="#">Add to cart</a><span class="stock">Ships in 5 days</span></div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div class="shot">
+        <svg viewBox="0 0 200 125" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="100" cy="62" r="30" fill="#0e1017" stroke="#5eead4" stroke-width="1.8"/>
+          <circle cx="100" cy="62" r="16" fill="none" stroke="#818cf8" stroke-width="2" stroke-dasharray="5 4"/>
+          <circle cx="100" cy="62" r="5" fill="#fbbf24"/>
+          <path d="M100 32 v-8 M100 100 v8 M70 62 h-8 M130 62 h8" stroke="#5eead4" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="body">
+        <h3>Orbit Presence Sensor</h3>
+        <p class="tagline">60 GHz mmWave presence detection that sees stillness, not just motion.</p>
+        <div class="price-row"><span class="price">$89.00</span><span class="sku">YT-ORB-60</span></div>
+        <table class="specs">
+          <tr><th>Technology</th><td>60 GHz mmWave radar, detects a seated, still person</td></tr>
+          <tr><th>Range</th><td>0.3 m to 8 m, adjustable zones</td></tr>
+          <tr><th>Integration</th><td>Matter over Thread, works with Mesh Hub Pro</td></tr>
+          <tr><th>Power</th><td>USB-C, 1.1 W typical</td></tr>
+        </table>
+        <p class="variants"><b>Pack size:</b> Single · 3-pack · 6-pack</p>
+        <div class="buy"><a class="btn" href="#">Add to cart</a><span class="stock">In stock</span></div>
+      </div>
+    </article>
+  </div>
+</div>
+
+<section class="info" id="delivery">
+  <div class="wrap">
+    <h2>Delivery &amp; Returns</h2>
+    <p>
+      <strong>Free standard delivery on every order, anywhere in the United States.</strong>
+      There is no minimum order value and no handling fee. Orders placed before
+      2 pm Eastern are dispatched the same business day; everything else goes out
+      within two business days.
+    </p>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Standard — Free</h3>
+        <p>3–5 business days, tracked, signature not required. Applies to all United States addresses.</p>
+      </div>
+      <div class="info-card">
+        <h3>Express — $24.00</h3>
+        <p>1–2 business days for orders under 20 kg. Not available for the 86-inch smartboard.</p>
+      </div>
+      <div class="info-card">
+        <h3>Returns</h3>
+        <p>30 days, unopened or as-sold condition, return shipping paid by us.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info" id="about">
+  <div class="wrap">
+    <h2>About Yogabrata Tech</h2>
+    <p>
+      We build room-scale hardware for people who do not have an IT department.
+      Every product runs its intelligence on the device: no subscription to keep a
+      camera recording, no cloud round-trip to turn on a light, and no service that
+      can be discontinued out from under equipment you already paid for.
+    </p>
+    <p>
+      All prices are in United States dollars and include a two-year hardware
+      warranty. Volume pricing is available for schools and clinics.
+    </p>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    Yogabrata Tech — smartboards, IoT infrastructure and edge AI. Prices in USD.
+    <div class="demo-note">
+      <strong>Demonstration catalog.</strong> This storefront is a test fixture for
+      the Brahmexa COMET commerce engine. “Yogabrata Tech” and every product,
+      specification, SKU and price on this page are invented for that purpose — no
+      real manufacturer or trademark is represented, nothing here is for sale, and
+      no order can be placed.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
