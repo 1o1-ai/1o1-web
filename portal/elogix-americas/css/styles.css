@@ -1,6 +1,6 @@
 /* ==========================================================================
    Elogix Americas LLC - Modern Clean Light Glassmorphic Design System
-   Featuring Cosmic Universe Orbit Component with Revolving Product Planets
+   Featuring Cosmic Universe Orbit Component & Pure Product Viewports
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
@@ -328,8 +328,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .universe-stage {
   position: relative;
-  width: 360px;
-  height: 360px;
+  width: 380px;
+  height: 380px;
   margin: 0 auto 1.5rem;
   display: flex;
   align-items: center;
@@ -339,8 +339,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Outer Orbit Track 1 (Clockwise) */
 .orbit-track-outer {
   position: absolute;
-  width: 340px;
-  height: 340px;
+  width: 360px;
+  height: 360px;
   border-radius: var(--radius-circle);
   border: 1.5px dashed rgba(79, 70, 229, 0.3);
   animation: rotateUniverse 35s linear infinite;
@@ -349,8 +349,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Inner Orbit Track 2 (Counter-Clockwise) */
 .orbit-track-inner {
   position: absolute;
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
   border-radius: var(--radius-circle);
   border: 1.5px dashed rgba(8, 145, 178, 0.35);
   animation: rotateUniverse 25s linear infinite reverse;
@@ -362,8 +362,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Central Core Sun / Core Orb */
 .universe-core-sun {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   border-radius: var(--radius-circle);
   background: radial-gradient(circle at 35% 35%, #ffffff 0%, #f1f5f9 60%, #e2e8f0 100%);
   border: 2px solid rgba(79, 70, 229, 0.4);
@@ -374,82 +374,89 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   z-index: 10;
   position: relative;
+  padding: 0.5rem;
   transition: var(--transition-normal);
 }
 
 .universe-core-sun::after {
   content: '';
   position: absolute;
-  inset: -8px;
+  inset: -9px;
   border-radius: var(--radius-circle);
   border: 2px dashed rgba(99, 102, 241, 0.4);
   animation: rotateUniverse 20s linear infinite;
 }
 
 .universe-core-icon {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   border-radius: var(--radius-circle);
   border: 2px solid var(--accent-indigo);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 
 .universe-core-icon::before {
   content: '';
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
   border-radius: var(--radius-circle);
   border: 2px solid var(--accent-indigo);
 }
 
 .universe-core-title {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--text-dark);
   line-height: 1.1;
+  text-align: center;
 }
 
 .universe-core-sub {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: var(--accent-indigo);
+  text-align: center;
+  margin-top: 2px;
 }
 
-/* Orbiting Product Planet Nodes */
+/* Orbiting Product Planet Nodes with Product Names */
 .planet-orb {
   position: absolute;
-  width: 48px;
-  height: 48px;
-  border-radius: var(--radius-circle);
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-pill);
   background: #ffffff;
   border: 1px solid var(--border-highlight);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.12);
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-dark);
   cursor: pointer;
   transition: var(--transition-fast);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .planet-orb:hover {
-  transform: scale(1.25);
+  transform: scale(1.15);
   box-shadow: 0 0 20px var(--accent-indigo);
+  border-color: var(--accent-indigo);
   z-index: 20;
 }
 
-/* Outer Track Planet Positions (Outer ring 340px -> radius 170px) */
-.planet-nexus { top: -24px; left: 146px; }
-.planet-reach { bottom: -24px; left: 146px; }
-.planet-smb   { top: 146px; right: -24px; }
+/* Outer Track Planet Positions (Outer ring 360px -> radius 180px) */
+.planet-nexus { top: -22px; left: 130px; }
+.planet-reach { bottom: -22px; left: 130px; }
+.planet-smb   { top: 160px; right: -30px; }
 
-/* Inner Track Planet Positions (Inner ring 250px -> radius 125px) */
-.planet-orbit { top: -24px; left: 101px; }
-.planet-lens  { bottom: -24px; left: 101px; }
+/* Inner Track Planet Positions (Inner ring 260px -> radius 130px) */
+.planet-orbit { top: -20px; left: 95px; }
+.planet-lens  { bottom: -20px; left: 95px; }
 
 .universe-label-title {
   font-size: 1.3rem;
@@ -515,8 +522,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .circular-core-center {
-  width: 220px;
-  height: 220px;
+  width: 230px;
+  height: 230px;
   border-radius: var(--radius-circle);
   background: var(--gradient-brand);
   color: #ffffff;
@@ -645,7 +652,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-/* Embedded Product Showcase with Live iFrame Viewport */
+/* ==========================================================================
+   EMBEDDED PRODUCT SHOWCASE WITH LIVE IFRAME VIEWPORT & NAV CROP
+   ========================================================================== */
 .product-viewport-container {
   background: #ffffff;
   border: 1px solid var(--border-light);
@@ -729,9 +738,19 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
+/* Crop wrapper to hide Brahmexa site top navbar inside embedded frame */
+.iframe-wrapper-crop {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
 .iframe-viewport-frame {
   width: 100%;
-  height: 600px;
+  height: calc(100% + 75px);
+  margin-top: -75px;
   border: none;
   background: #ffffff;
 }
