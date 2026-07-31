@@ -6,6 +6,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initLightParticleCanvas();
   initProductViewportTabs();
+  initPlanetTriggers();
   initModalHandler();
 });
 
@@ -64,7 +65,45 @@ function initLightParticleCanvas() {
 /* --------------------------------------------------------------------------
    2. Embedded Live Product iFrame Viewport Tab Switcher
    -------------------------------------------------------------------------- */
-function initProductViewportTabs() {
+const capSpecs = {
+  nexus: {
+    name: "NEXUS",
+    title: "AI Knowledge Brain & Document Grounding",
+    desc: "NEXUS indexes enterprise documentation and web data to provide zero-hallucination answers with cited evidence. Elogix integrates NEXUS into custom web portals and enterprise backends.",
+    url: "https://www.brahmexa.com/nexus-sample-client.php",
+    extUrl: "https://www.brahmexa.com/nexus.php"
+  },
+  orbit: {
+    name: "ORBIT",
+    title: "Intelligent Web Performance & Digital Audit",
+    desc: "ORBIT continuously monitors web uptime, loading velocity, vulnerability protection, and AI search discoverability. Elogix wraps ORBIT into managed enterprise digital SLAs.",
+    url: "https://www.brahmexa.com/services/orbit",
+    extUrl: "https://www.brahmexa.com/services/orbit"
+  },
+  reach: {
+    name: "REACH",
+    title: "Digital Marketing & Content Studio",
+    desc: "REACH automates multi-channel social media posts and corporate marketing updates with strict human approval gates. Elogix customizes REACH workflows for enterprise brand governance.",
+    url: "https://www.brahmexa.com/services/reach",
+    extUrl: "https://saas.brahmexa.com/reach/studio.html"
+  },
+  lens: {
+    name: "LENS",
+    title: "Visual Intelligence & Document AI",
+    desc: "LENS parses complex forms, invoices, and visual streams with multimodal OCR and defect detection. Elogix connects LENS directly to enterprise ERPs and document storage.",
+    url: "https://saas.brahmexa.com/smb/lens/",
+    extUrl: "https://saas.brahmexa.com/smb/lens/"
+  },
+  smb: {
+    name: "SMB Engine",
+    title: "Autonomous Back-Office Operations",
+    desc: "SMB Engine handles routine customer inquiry triage and operational steps for field services, clinics, and hospitality. Elogix deploys turnkey SMB Engine pipelines for rapid ROI.",
+    url: "https://www.brahmexa.com/services/smb",
+    extUrl: "https://saas.brahmexa.com/smb/"
+  }
+};
+
+function activateProductTab(productKey) {
   const tabBtns = document.querySelectorAll('.product-tab-btn');
   const iframe = document.getElementById('live-product-frame');
   const extLink = document.getElementById('toolbar-navigate-link');
@@ -72,54 +111,44 @@ function initProductViewportTabs() {
   const capTitleEl = document.getElementById('cap-product-title');
   const capDescEl = document.getElementById('cap-product-desc');
 
-  const capSpecs = {
-    nexus: {
-      name: "NEXUS",
-      title: "AI Knowledge Brain & Document Grounding",
-      desc: "NEXUS indexes enterprise documentation and web data to provide zero-hallucination answers with cited evidence. Elogix integrates NEXUS into custom web portals and enterprise backends."
-    },
-    orbit: {
-      name: "ORBIT",
-      title: "Intelligent Web Performance & Digital Audit",
-      desc: "ORBIT continuously monitors web uptime, loading velocity, vulnerability protection, and AI search discoverability. Elogix wraps ORBIT into managed enterprise digital SLAs."
-    },
-    reach: {
-      name: "REACH",
-      title: "Digital Marketing & Content Studio",
-      desc: "REACH automates multi-channel social media posts and corporate marketing updates with strict human approval gates. Elogix customizes REACH workflows for enterprise brand governance."
-    },
-    lens: {
-      name: "LENS",
-      title: "Visual Intelligence & Document AI",
-      desc: "LENS parses complex forms, invoices, and visual streams with multimodal OCR and defect detection. Elogix connects LENS directly to enterprise ERPs and document storage."
-    },
-    smb: {
-      name: "SMB Engine",
-      title: "Autonomous Back-Office Operations",
-      desc: "SMB Engine handles routine customer inquiry triage and operational steps for field services, clinics, and hospitality. Elogix deploys turnkey SMB Engine pipelines for rapid ROI."
+  const spec = capSpecs[productKey] || capSpecs.nexus;
+
+  tabBtns.forEach(b => {
+    if (b.getAttribute('data-product') === productKey) {
+      b.classList.add('active');
+    } else {
+      b.classList.remove('active');
     }
-  };
+  });
 
-  if (!tabBtns.length || !iframe) return;
+  if (iframe) iframe.src = spec.url;
+  if (extLink) {
+    extLink.href = spec.extUrl;
+    extLink.innerHTML = `Navigate to Brahmexa (${spec.name}) &rarr;`;
+  }
+  if (productTitleEl) productTitleEl.textContent = `${spec.name} Live Engine`;
+  if (capTitleEl) capTitleEl.textContent = spec.title;
+  if (capDescEl) capDescEl.textContent = spec.desc;
+}
 
+function initProductViewportTabs() {
+  const tabBtns = document.querySelectorAll('.product-tab-btn');
   tabBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const url = btn.getAttribute('data-url');
       const key = btn.getAttribute('data-product');
-      const spec = capSpecs[key] || capSpecs.nexus;
+      activateProductTab(key);
+    });
+  });
+}
 
-      iframe.src = url;
-
-      if (extLink) {
-        extLink.href = url;
-        extLink.innerHTML = `Navigate to Brahmexa (${spec.name}) &rarr;`;
+function initPlanetTriggers() {
+  const planetTriggers = document.querySelectorAll('.product-tab-trigger');
+  planetTriggers.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      const key = trigger.getAttribute('data-product');
+      if (key) {
+        activateProductTab(key);
       }
-      if (productTitleEl) productTitleEl.textContent = `${spec.name} Live Engine`;
-      if (capTitleEl) capTitleEl.textContent = spec.title;
-      if (capDescEl) capDescEl.textContent = spec.desc;
     });
   });
 }

@@ -1,6 +1,6 @@
 /* ==========================================================================
    Elogix Americas LLC - Modern Clean Light Glassmorphic Design System
-   Featuring Circular Engineering Constellation & 25-Year Legacy Showcase
+   Featuring Cosmic Universe Orbit Component with Revolving Product Planets
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
@@ -28,7 +28,7 @@
 
   --gradient-brand: linear-gradient(135deg, #4f46e5 0%, #0891b2 50%, #7c3aed 100%);
   --gradient-gold: linear-gradient(135deg, #d97706 0%, #f59e0b 50%, #b45309 100%);
-  --gradient-glow: radial-gradient(circle at center, rgba(79, 70, 229, 0.12) 0%, rgba(8, 145, 178, 0.03) 60%, transparent 80%);
+  --gradient-glow: radial-gradient(circle at center, rgba(79, 70, 229, 0.15) 0%, rgba(8, 145, 178, 0.04) 60%, transparent 80%);
 
   --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-heading: 'Outfit', sans-serif;
@@ -42,7 +42,7 @@
   --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.04);
   --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
   --shadow-lg: 0 20px 35px -10px rgba(15, 23, 42, 0.12);
-  --shadow-glow: 0 0 35px rgba(79, 70, 229, 0.18);
+  --shadow-glow: 0 0 35px rgba(79, 70, 229, 0.2);
 
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -105,12 +105,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-gradient {
   background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.text-gold {
-  background: var(--gradient-gold);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -318,63 +312,155 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--accent-indigo);
 }
 
-/* Hero Visual Box */
-.hero-portal-hub {
+/* ==========================================================================
+   STUNNING COSMIC UNIVERSE ORBIT COMPONENT (HERO VISUAL)
+   ========================================================================== */
+.hero-universe-card {
   position: relative;
   background: #ffffff;
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 2.5rem 1.5rem;
   box-shadow: var(--shadow-md);
   text-align: center;
+  overflow: hidden;
 }
 
-/* Brahmexa Signature Circular Portal Element */
-.portal-circle-wrapper {
+.universe-stage {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 360px;
+  height: 360px;
   margin: 0 auto 1.5rem;
-  border-radius: var(--radius-circle);
-  background: radial-gradient(circle, rgba(79, 70, 229, 0.1) 0%, rgba(8, 145, 178, 0.05) 70%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.portal-ring {
+/* Outer Orbit Track 1 (Clockwise) */
+.orbit-track-outer {
   position: absolute;
-  inset: -12px;
+  width: 340px;
+  height: 340px;
   border-radius: var(--radius-circle);
-  border: 2px dashed var(--accent-indigo);
-  animation: spinRing 25s linear infinite;
+  border: 1.5px dashed rgba(79, 70, 229, 0.3);
+  animation: rotateUniverse 35s linear infinite;
 }
 
-.portal-orbit {
+/* Inner Orbit Track 2 (Counter-Clockwise) */
+.orbit-track-inner {
   position: absolute;
-  inset: -28px;
+  width: 250px;
+  height: 250px;
   border-radius: var(--radius-circle);
-  border: 1px dashed var(--accent-cyan);
-  animation: spinRing 40s linear infinite reverse;
+  border: 1.5px dashed rgba(8, 145, 178, 0.35);
+  animation: rotateUniverse 25s linear infinite reverse;
 }
 
-.portal-core-content {
-  text-align: center;
-  z-index: 2;
+@keyframes rotateUniverse {
+  100% { transform: rotate(360deg); }
 }
 
-.portal-icon {
-  font-size: 2.5rem;
-  display: block;
+/* Central Core Sun / Core Orb */
+.universe-core-sun {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--radius-circle);
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #f1f5f9 60%, #e2e8f0 100%);
+  border: 2px solid rgba(79, 70, 229, 0.4);
+  box-shadow: var(--shadow-glow), 0 0 40px rgba(79, 70, 229, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  position: relative;
+  transition: var(--transition-normal);
 }
 
-.portal-core-title {
-  font-size: 1.25rem;
+.universe-core-sun::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: var(--radius-circle);
+  border: 2px dashed rgba(99, 102, 241, 0.4);
+  animation: rotateUniverse 20s linear infinite;
+}
+
+.universe-core-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-circle);
+  border: 2px solid var(--accent-indigo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.35rem;
+}
+
+.universe-core-icon::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-circle);
+  border: 2px solid var(--accent-indigo);
+}
+
+.universe-core-title {
+  font-size: 1.15rem;
   font-weight: 800;
   color: var(--text-dark);
+  line-height: 1.1;
 }
 
-@keyframes spinRing { 100% { transform: rotate(360deg); } }
+.universe-core-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+}
+
+/* Orbiting Product Planet Nodes */
+.planet-orb {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-circle);
+  background: #ffffff;
+  border: 1px solid var(--border-highlight);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.planet-orb:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 20px var(--accent-indigo);
+  z-index: 20;
+}
+
+/* Outer Track Planet Positions (Outer ring 340px -> radius 170px) */
+.planet-nexus { top: -24px; left: 146px; }
+.planet-reach { bottom: -24px; left: 146px; }
+.planet-smb   { top: 146px; right: -24px; }
+
+/* Inner Track Planet Positions (Inner ring 250px -> radius 125px) */
+.planet-orbit { top: -24px; left: 101px; }
+.planet-lens  { bottom: -24px; left: 101px; }
+
+.universe-label-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.35rem;
+}
+
+.universe-label-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
 
 /* Section Header styling */
 .section-header {
@@ -407,9 +493,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 6rem 0;
 }
 
-/* ==========================================================================
-   NEW CIRCULAR CAPABILITIES CONSTELLATION LAYOUT
-   ========================================================================== */
+/* CIRCULAR CAPABILITIES CONSTELLATION LAYOUT */
 .circular-capabilities-wrapper {
   position: relative;
   width: 100%;
@@ -464,12 +548,24 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: var(--shadow-lg);
 }
 
+.cap-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: rgba(79, 70, 229, 0.08);
+  color: var(--accent-indigo);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
 .node-top-left { top: 20px; left: -20px; }
 .node-top-right { top: 20px; right: -20px; }
 .node-bottom-left { bottom: 20px; left: -20px; }
 .node-bottom-right { bottom: 20px; right: -20px; }
 
-/* Responsive fallback for smaller screens */
 @media (max-width: 992px) {
   .circular-orbit-ring {
     width: 100%;
@@ -488,9 +584,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ==========================================================================
-   ELOGIX 25-YEAR LEGACY & TRUST SHOWCASE SECTION
-   ========================================================================== */
+/* ELOGIX 25-YEAR LEGACY & TRUST SHOWCASE SECTION */
 .legacy-card {
   background: #ffffff;
   border: 1px solid var(--border-light);
