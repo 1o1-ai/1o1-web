@@ -12,6 +12,7 @@ Sign-in gate (GitHub Pages cannot enforce HTTP Basic Auth; same session pattern 
 |----------|----------|
 | `yoga` | `yoga` |
 | `deepak` | `Deepak@2026%100#` |
+| `jyoti` | `Light@Lamp#1` |
 
 ## Modes
 

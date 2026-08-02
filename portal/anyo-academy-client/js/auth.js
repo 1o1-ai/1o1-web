@@ -16,11 +16,13 @@
   var USERS = {
     yoga: 'yoga',
     deepak: 'Deepak@2026%100#',
+    jyoti: 'Light@Lamp#1',
   };
 
   var LABELS = {
     yoga: 'Yoga',
     deepak: 'Deepak',
+    jyoti: 'Jyoti',
   };
 
   function normalizeUser(u) {
