@@ -1,0 +1,239 @@
+<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Anyo Academy Client · Yogabrata</title>
+<meta name="description" content="Anyo Academy Client — study, Q&A, quiz, and Education API health on yogabrata.com." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="top" id="appTop" hidden>
+  <a class="back" href="/">← Yogabrata</a>
+  <div class="top-brand">
+    <strong>Anyo Academy Client</strong>
+    <span id="signedAs" class="muted"></span>
+  </div>
+  <div class="top-actions">
+    <span id="apiBaseLabel" class="pill"></span>
+    <button type="button" class="btn btn--ghost btn--tiny" id="btnLogout">Sign out</button>
+  </div>
+</header>
+
+<!-- Landing / class picker -->
+<section id="landing" class="landing" hidden>
+  <div class="landing-bg" aria-hidden="true"></div>
+  <div class="landing-inner">
+    <p class="eyebrow">Brahmexa Education · yogabrata.com</p>
+    <h1 class="hero-brand">Anyo Academy</h1>
+    <p class="hero-lead">Study with live curriculum, tutor Q&A, board questions, quizzes — plus an API pulse that shows what the service can actually serve.</p>
+    <form id="classForm" class="class-form">
+      <label>Board<select id="selBoard" required></select></label>
+      <label>Grade<select id="selGrade" required></select></label>
+      <label>Stream<select id="selStream" required></select></label>
+      <label>Subject<select id="selSubject" required></select></label>
+      <button type="submit" class="btn btn--primary" id="enterBtn" disabled>Enter study room</button>
+    </form>
+    <p id="landingStatus" class="status-line"></p>
+  </div>
+</section>
+
+<!-- Study room -->
+<section id="room" class="room" hidden>
+  <header class="room-bar">
+    <div class="room-brand">
+      <button type="button" id="backHome" class="btn btn--ghost btn--tiny">← Classes</button>
+      <div>
+        <strong id="roomTitle">Study</strong>
+        <span id="roomMeta" class="room-meta"></span>
+      </div>
+    </div>
+    <nav class="modes" role="tablist">
+      <button type="button" class="mode is-active" data-mode="atlas">Atlas</button>
+      <button type="button" class="mode" data-mode="reality">Reality</button>
+      <button type="button" class="mode" data-mode="tutor">Tutor</button>
+      <button type="button" class="mode" data-mode="drill">Questions</button>
+      <button type="button" class="mode" data-mode="quiz">Quiz</button>
+      <button type="button" class="mode" data-mode="practice">Practice</button>
+      <button type="button" class="mode" data-mode="plan">Lesson</button>
+      <button type="button" class="mode" data-mode="pulse">API Pulse</button>
+    </nav>
+  </header>
+
+  <div class="room-body">
+    <aside class="chapters">
+      <div class="chapters-head">
+        <h2>Chapters</h2>
+        <span id="chapterCount" class="muted"></span>
+      </div>
+      <div id="chapterList" class="chapter-list"></div>
+    </aside>
+
+    <main class="workspace">
+      <!-- Atlas constellation -->
+      <div class="pane is-active" id="pane-atlas">
+        <header class="pane-head">
+          <h2>Chapter atlas</h2>
+          <p>Live bank size from <code>/v1/questions</code> — not curriculum hints. Disc area ∝ question total.</p>
+          <button type="button" class="btn" id="btnRefreshAtlas">Refresh live counts</button>
+        </header>
+        <p id="atlasStatus" class="status-line"></p>
+        <div id="atlasSky" class="atlas-sky" aria-live="polite"></div>
+      </div>
+
+      <!-- Reality: hint vs live -->
+      <div class="pane" id="pane-reality" hidden>
+        <header class="pane-head">
+          <h2>Hint vs reality</h2>
+          <p>Curriculum <code>question_count</code> is a hint. This table compares it to cleaned <code>/v1/questions</code> totals.</p>
+          <button type="button" class="btn btn--primary" id="btnRealityScan">Scan chapters</button>
+        </header>
+        <p id="realityStatus" class="status-line"></p>
+        <div class="table-wrap">
+          <table class="data-table" id="realityTable">
+            <thead>
+              <tr>
+                <th>Chapter</th>
+                <th>Hint</th>
+                <th>Live total</th>
+                <th>Excluded</th>
+                <th>Verdict</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tutor -->
+      <div class="pane" id="pane-tutor" hidden>
+        <header class="pane-head">
+          <h2>Ask the tutor</h2>
+          <p><code>POST /actors/chat</code> with class context. Allow ~90s.</p>
+        </header>
+        <div id="chatLog" class="chat-log"></div>
+        <form id="chatForm" class="chat-form">
+          <select id="chatActor">
+            <option value="student">Student</option>
+            <option value="teacher" selected>Teacher</option>
+            <option value="school">School</option>
+            <option value="coaching_center">Coaching</option>
+          </select>
+          <textarea id="chatInput" rows="2" placeholder="Ask about this chapter…" required></textarea>
+          <button type="submit" class="btn btn--primary" id="chatSend">Ask</button>
+        </form>
+      </div>
+
+      <!-- Questions -->
+      <div class="pane" id="pane-drill" hidden>
+        <header class="pane-head">
+          <h2>Board questions</h2>
+          <p>From <code>/v1/questions</code>. No answer keys are served.</p>
+          <div class="pane-actions">
+            <label class="check"><input type="checkbox" id="filterNoFigure" checked /> Hide figures</label>
+            <label class="check"><input type="checkbox" id="filterObjective" /> Objective only</label>
+            <button type="button" class="btn" id="loadMoreQ">Load more</button>
+          </div>
+        </header>
+        <p id="drillStats" class="status-line"></p>
+        <div id="questionList" class="q-list"></div>
+      </div>
+
+      <!-- Quiz -->
+      <div class="pane" id="pane-quiz" hidden>
+        <header class="pane-head">
+          <h2>Quiz</h2>
+          <p id="quizBlurb">Board MCQs when available; otherwise generate a paper.</p>
+        </header>
+        <div id="quizSetup" class="quiz-setup">
+          <label>Count<input type="number" id="quizCount" min="2" max="20" value="5" /></label>
+          <label>Topic<input type="text" id="quizTopic" placeholder="e.g. Photoelectric Effect" /></label>
+          <div class="pane-actions">
+            <button type="button" class="btn btn--primary" id="quizFromBank">From board bank</button>
+            <button type="button" class="btn" id="quizGenerate">Generate paper</button>
+          </div>
+          <p id="quizSetupNote" class="status-line"></p>
+        </div>
+        <div id="quizRun" class="quiz-run" hidden>
+          <div id="quizProgress" class="quiz-progress"></div>
+          <div id="quizCard" class="quiz-card"></div>
+          <div class="pane-actions">
+            <button type="button" class="btn" id="quizPrev" disabled>Previous</button>
+            <button type="button" class="btn btn--primary" id="quizNext">Next</button>
+            <button type="button" class="btn btn--ghost" id="quizExit">Exit</button>
+          </div>
+        </div>
+        <div id="quizGenerated" class="generated" hidden></div>
+      </div>
+
+      <!-- Practice -->
+      <div class="pane" id="pane-practice" hidden>
+        <header class="pane-head">
+          <h2>Practice session</h2>
+          <p><code>POST /practice/start</code> — grade and subject sent explicitly.</p>
+        </header>
+        <form id="practiceForm" class="practice-form">
+          <label>Count<input type="number" id="practiceCount" min="3" max="15" value="5" /></label>
+          <label>Difficulty
+            <select id="practiceDiff">
+              <option>easy</option>
+              <option selected>medium</option>
+              <option>hard</option>
+            </select>
+          </label>
+          <label>Your name<input type="text" id="practiceName" placeholder="optional" /></label>
+          <button type="submit" class="btn btn--primary">Start practice</button>
+        </form>
+        <div id="practicePanel" class="practice-panel" hidden></div>
+      </div>
+
+      <!-- Lesson -->
+      <div class="pane" id="pane-plan" hidden>
+        <header class="pane-head">
+          <h2>Lesson plan</h2>
+          <p><code>POST /teacher/plan</code></p>
+        </header>
+        <form id="planForm" class="practice-form">
+          <label>Duration (min)<input type="number" id="planMins" min="20" max="120" value="45" /></label>
+          <label>Objectives<input type="text" id="planObjectives" placeholder="comma-separated" /></label>
+          <button type="submit" class="btn btn--primary">Generate plan</button>
+        </form>
+        <article id="planOut" class="generated" hidden></article>
+      </div>
+
+      <!-- API Pulse -->
+      <div class="pane" id="pane-pulse" hidden>
+        <header class="pane-head">
+          <h2>API pulse</h2>
+          <p>Live health + sanity assessment folded into this client. Same surface as the earlier Education API review.</p>
+          <div class="pane-actions">
+            <button type="button" class="btn btn--primary" id="btnPulseCore">Core probe</button>
+            <button type="button" class="btn" id="btnPulseSweep">OpenAPI GET sweep</button>
+            <button type="button" class="btn" id="btnPulseVersions">Version drift</button>
+          </div>
+        </header>
+        <div id="pulseSummary" class="pulse-summary"></div>
+        <div id="pulseGaps" class="pulse-gaps"></div>
+        <div id="pulseResults" class="pulse-results"></div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<div id="toast" class="toast" hidden></div>
+
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/health.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
