@@ -19,6 +19,23 @@
     return DEFAULT_BASE;
   }
 
+  /* The Education API requires a credential on every route. This page is
+     served from GitHub Pages, so the token can never be baked into the
+     source — it is pasted by the operator and kept in sessionStorage, which
+     drops it when the tab closes. */
+  var TOKEN_KEY = 'anyo_api_token';
+
+  function token() {
+    try { return sessionStorage.getItem(TOKEN_KEY) || ''; } catch (e) { return ''; }
+  }
+
+  function setToken(value) {
+    try {
+      if (value) sessionStorage.setItem(TOKEN_KEY, value);
+      else sessionStorage.removeItem(TOKEN_KEY);
+    } catch (e) { /* private mode — no persistence, calls still work this tab */ }
+  }
+
   function call(spec) {
     var method = (spec.method || 'GET').toUpperCase();
     var path = spec.path || '/';
@@ -37,7 +54,9 @@
       Accept: 'application/json',
       'Content-Type': 'application/json',
     };
-    if (spec.bearer) headers.Authorization = 'Bearer ' + spec.bearer;
+    /* An explicit spec.bearer still wins, so a caller can override per call. */
+    var auth = spec.bearer || token();
+    if (auth) headers.Authorization = 'Bearer ' + auth;
 
     var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
     var timeoutMs = spec.timeout_ms || 90000;
@@ -89,5 +108,12 @@
       });
   }
 
-  global.AnyoApi = { call: call, base: base, DEFAULT_BASE: DEFAULT_BASE };
+  global.AnyoApi = {
+    call: call,
+    base: base,
+    DEFAULT_BASE: DEFAULT_BASE,
+    token: token,
+    setToken: setToken,
+    TOKEN_KEY: TOKEN_KEY,
+  };
 })(typeof window !== 'undefined' ? window : globalThis);

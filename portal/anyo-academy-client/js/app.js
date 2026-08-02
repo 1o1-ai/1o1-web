@@ -40,7 +40,14 @@
     });
   }
 
-  function call(spec) { return api.call(spec); }
+  /* Every request funnels through here, so a 401 surfaces the credential bar
+     once, from one place, rather than each caller inventing its own copy. */
+  function call(spec) {
+    return api.call(spec).then(function (res) {
+      if (res && res.status === 401) handleUnauthorized(res);
+      return res;
+    });
+  }
 
   function subjectLabel(sub) {
     return sub.label || sub.subject_id || '';
@@ -58,7 +65,58 @@
       auth.logout();
       location.reload();
     };
+    wireApiToken();
     loadBoards();
+  }
+
+  /* ── Education API credential ───────────────────────────────────────
+     Signing into this UI is not the same as holding an API token, and the
+     two being conflated is what makes a 401 here so confusing. The pill
+     states plainly whether a token is present. */
+  function refreshTokenPill() {
+    var has = !!api.token();
+    $('tokenPill').hidden = has;
+    $('btnToken').textContent = has ? 'API token ✓' : 'API token';
+  }
+
+  function showTokenBar(message) {
+    $('tokenBar').hidden = false;
+    $('apiToken').value = api.token();
+    $('tokenNote').textContent = message
+      || 'Ask an operator for a client JWT. It is kept in this tab only, never stored in the site.';
+  }
+
+  function wireApiToken() {
+    refreshTokenPill();
+    $('btnToken').onclick = function () {
+      if ($('tokenBar').hidden) showTokenBar();
+      else $('tokenBar').hidden = true;
+    };
+    $('btnTokenSave').onclick = function () {
+      api.setToken($('apiToken').value.trim());
+      $('tokenBar').hidden = true;
+      refreshTokenPill();
+      location.reload();
+    };
+    $('btnTokenClear').onclick = function () {
+      api.setToken('');
+      $('apiToken').value = '';
+      refreshTokenPill();
+      showTokenBar('Token cleared.');
+    };
+    if (!api.token()) showTokenBar('This API needs a client token. Signing in above does not provide one.');
+  }
+
+  /* Called by any request path that sees a 401. */
+  function handleUnauthorized(res) {
+    var detail = (res && res.body && res.body.detail) || '';
+    showTokenBar(
+      api.token()
+        ? 'The API rejected this token (401). ' + (detail
+            || 'It was probably minted with a different signing secret than the server uses.')
+        : 'This API needs a client token. Signing in above does not provide one.'
+    );
+    refreshTokenPill();
   }
 
   /* ── class picker ───────────────────────────────────────────────── */

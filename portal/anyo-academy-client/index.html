@@ -30,9 +30,22 @@
     </div>
     <div class="top-actions">
       <span id="apiBaseLabel" class="pill"></span>
+      <span id="tokenPill" class="pill pill--warn" hidden>No API token</span>
       <span id="filterStatus" class="muted"></span>
+      <button type="button" class="btn btn--ghost btn--tiny" id="btnToken">API token</button>
       <button type="button" class="btn btn--ghost btn--tiny" id="btnLogout">Sign out</button>
     </div>
+  </div>
+
+  <!-- Signing in here is a UI session, not an API credential: the Education API
+       wants a partner JWT that this page must never ship, since it is served
+       from GitHub Pages. Paste it once per tab. -->
+  <div id="tokenBar" class="token-bar" hidden>
+    <label for="apiToken"><strong>Education API token</strong></label>
+    <input id="apiToken" type="password" placeholder="paste client JWT" spellcheck="false" autocomplete="off" />
+    <button type="button" class="btn btn--tiny" id="btnTokenSave">Use token</button>
+    <button type="button" class="btn btn--ghost btn--tiny" id="btnTokenClear">Clear</button>
+    <p id="tokenNote" class="muted"></p>
   </div>
 
   <form id="classForm" class="filter-bar" autocomplete="off">

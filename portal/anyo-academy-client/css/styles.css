@@ -287,3 +287,25 @@ code { font-family: var(--mono); font-size: 0.86em; background: rgba(15, 107, 92
   .chat-form { grid-template-columns: 1fr; }
   .atlas-sky { min-height: 320px; }
 }
+
+/* Education API credential bar. Signing into this UI is a session, not an API
+   token — the two get confused, so this states which one is missing. */
+.token-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+  padding: .7rem 1rem;
+  background: var(--warn-bg, #fff8e1);
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  font-size: .85rem;
+}
+.token-bar input {
+  flex: 1 1 24rem;
+  min-width: 12rem;
+  padding: .4rem .55rem;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: .35rem;
+  font: inherit;
+}
+.token-bar p { flex: 1 1 100%; margin: 0; }
