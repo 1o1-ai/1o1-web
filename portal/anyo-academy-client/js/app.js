@@ -50,37 +50,29 @@
 
   function boot(user) {
     state.user = user;
-    $('appTop').hidden = false;
-    $('landing').hidden = false;
+    $('appShell').hidden = false;
+    $('room').hidden = false;
     $('signedAs').textContent = 'Signed in as ' + auth.labelFor(user);
     $('apiBaseLabel').textContent = api.base().replace('https://', '');
     $('btnLogout').onclick = function () {
       auth.logout();
       location.reload();
     };
-    renderKnownGaps();
     loadBoards();
-  }
-
-  function renderKnownGaps() {
-    $('pulseGaps').innerHTML = health.KNOWN_GAPS.map(function (g) {
-      return '<div class="gap-card"><h4>' + esc(g.title) + '</h4><p>' + esc(g.body) + '</p></div>';
-    }).join('');
   }
 
   /* ── class picker ───────────────────────────────────────────────── */
 
   function loadBoards() {
-    $('landingStatus').textContent = 'Loading curriculum catalogue…';
+    $('filterStatus').textContent = 'Loading catalogue…';
     return call({ method: 'GET', path: '/v1/boards', timeout_ms: 30000 }).then(function (res) {
       if (!res.ok || !res.json) {
-        $('landingStatus').textContent = 'Could not load /v1/boards (' + res.status + ').';
+        $('filterStatus').textContent = 'Catalogue failed (' + res.status + ')';
         return;
       }
       state.boardsPayload = res.json;
       fillBoards();
-      $('landingStatus').textContent = res.json.note || 'Choose a class with real content.';
-      $('enterBtn').disabled = false;
+      applySelection();
     });
   }
 
@@ -160,13 +152,15 @@
     if ([].some.call(sel.options, function (o) { return o.value === 'physics'; })) sel.value = 'physics';
   }
 
-  function enterRoom(ev) {
-    ev.preventDefault();
+  function applySelection() {
     var stream = currentStream();
     var sub = (stream && stream.subjects || []).find(function (s) {
       return s.subject_id === $('selSubject').value;
     });
-    if (!stream || !sub) { toast('Pick a complete class first.'); return; }
+    if (!stream || !sub) {
+      $('filterStatus').textContent = 'Incomplete selection';
+      return;
+    }
     state.selection = {
       board: $('selBoard').value,
       grade: $('selGrade').value,
@@ -178,18 +172,18 @@
     state.liveCounts = {};
     state.questions = [];
     state.qOffset = 0;
-    $('landing').hidden = true;
-    $('room').hidden = false;
     $('roomTitle').textContent = state.selection.subjectLabel;
     $('roomMeta').textContent =
       state.selection.board + ' · Class ' + state.selection.grade +
       ' · ' + state.selection.stream +
-      (state.selection.sku ? ' · ' + state.selection.sku : '');
+      (state.selection.sku ? ' · ' + state.selection.sku : '') +
+      ' — live bank size from /v1/questions';
+    $('filterStatus').textContent = state.selection.subjectLabel;
     $('chatLog').innerHTML = '';
     pushChatMeta('Tutor ready for ' + state.selection.subjectLabel + '.');
     loadChapters().then(function () {
-      switchMode('atlas');
-      refreshAtlas();
+      if (!$('pane-atlas').hidden) refreshAtlas();
+      if (!$('pane-drill').hidden) resetAndLoadQuestions();
     });
   }
 
@@ -688,64 +682,69 @@
     });
   }
 
-  /* ── API Pulse ──────────────────────────────────────────────────── */
+  /* ── Simple Health (8787-style, lighter) ────────────────────────── */
 
-  function showPulseRows(rows) {
-    var host = $('pulseResults');
-    host.innerHTML = rows.map(function (r) {
-      var cls = r.category === 'OK' ? 'pill' : 'pill';
-      return '<div class="pulse-row"><span class="' + cls + '">' + r.status +
-        '</span><code>' + esc(r.path) + '</code><span class="muted">' +
-        (r.ms != null ? r.ms + 'ms' : '') + '</span></div>';
-    }).join('');
+  function pillClass(category) {
+    if (category === 'OK') return 'pill pill--ok';
+    if (category === 'SERVER_ERROR' || category === 'NETWORK') return 'pill pill--err';
+    return 'pill pill--warn';
   }
 
-  function showCounts(counts) {
-    var order = ['OK', 'AUTH', 'FORBIDDEN', 'NOT_FOUND', 'VALIDATION', 'SERVER_ERROR', 'NETWORK', 'OTHER'];
-    $('pulseSummary').innerHTML = order.filter(function (k) { return counts[k]; }).map(function (k) {
-      var tone = k === 'OK' ? 'ok' : (k === 'SERVER_ERROR' || k === 'NETWORK' ? 'err' : 'warn');
-      return '<div class="stat stat--' + tone + '"><b>' + counts[k] + '</b><span>' + k + '</span></div>';
-    }).join('');
-  }
+  function runHealthCheck() {
+    $('btnHealthCheck').disabled = true;
+    $('healthState').textContent = 'Checking…';
+    $('healthSummary').innerHTML = '';
+    $('healthResults').innerHTML = '';
 
-  function pulseCore() {
-    $('pulseSummary').innerHTML = '<div class="stat"><b>…</b><span>probing</span></div>';
-    health.runCoreProbe(api).then(function (rows) {
+    Promise.all([
+      health.versionDrift(api),
+      health.runCoreProbe(api),
+    ]).then(function (pair) {
+      var versions = pair[0];
+      var rows = pair[1];
       var counts = {};
       rows.forEach(function (r) { counts[r.category] = (counts[r.category] || 0) + 1; });
-      showCounts(counts);
-      showPulseRows(rows);
-      toast('Core probe complete');
-    });
-  }
 
-  function pulseSweep() {
-    $('pulseSummary').innerHTML = '<div class="stat"><b>…</b><span>sweep</span></div>';
-    health.runOpenApiSweep(api).then(function (out) {
-      if (out.error) {
-        $('pulseResults').textContent = out.error;
-        return;
-      }
-      showCounts(out.counts || {});
-      $('pulseSummary').insertAdjacentHTML('beforeend',
-        '<div class="stat"><b>' + out.ops + '</b><span>ops</span></div>' +
-        '<div class="stat"><b>' + (out.skipped || []).length + '</b><span>skipped</span></div>' +
-        '<div class="stat"><b>v' + esc(out.version) + '</b><span>openapi</span></div>');
-      showPulseRows(out.results || []);
-      toast('OpenAPI sweep complete');
-    });
-  }
+      var order = ['OK', 'AUTH', 'FORBIDDEN', 'NOT_FOUND', 'SERVER_ERROR', 'NETWORK', 'OTHER'];
+      $('healthSummary').innerHTML =
+        '<div class="stat"><b>' + esc(versions.health || '?') + '</b><span>/health</span></div>' +
+        '<div class="stat"><b>' + esc(versions.root || '?') + '</b><span>service</span></div>' +
+        '<div class="stat"><b>' + esc(versions.openapi || '?') + '</b><span>openapi</span></div>' +
+        order.filter(function (k) { return counts[k]; }).map(function (k) {
+          var tone = k === 'OK' ? 'ok' : (k === 'SERVER_ERROR' || k === 'NETWORK' ? 'err' : 'warn');
+          return '<div class="stat stat--' + tone + '"><b>' + counts[k] + '</b><span>' + k + '</span></div>';
+        }).join('');
 
-  function pulseVersions() {
-    health.versionDrift(api).then(function (v) {
-      $('pulseSummary').innerHTML =
-        '<div class="stat"><b>' + esc(v.openapi || '?') + '</b><span>openapi</span></div>' +
-        '<div class="stat"><b>' + esc(v.root || '?') + '</b><span>GET /</span></div>' +
-        '<div class="stat"><b>' + esc(v.health || '?') + '</b><span>/health</span></div>';
-      var hs = v.healthStatus || {};
-      $('pulseResults').innerHTML =
-        '<div class="gap-card"><h4>Health payload</h4><pre style="white-space:pre-wrap;margin:0">' +
-        esc(JSON.stringify(hs, null, 2)) + '</pre></div>';
+      var hs = versions.healthStatus || {};
+      var degraded = hs.degraded ? ' · degraded' : '';
+      var groups = {};
+      rows.forEach(function (r) {
+        (groups[r.category] = groups[r.category] || []).push(r);
+      });
+
+      var html = '<div class="health-group"><h4>Service</h4>' +
+        '<div class="pulse-row"><span class="pill pill--ok">' +
+        (hs.status || 'n/a') + '</span><code>education-portal' + degraded +
+        '</code><span class="muted"></span></div></div>';
+
+      order.forEach(function (cat) {
+        if (!groups[cat]) return;
+        html += '<div class="health-group"><h4>' + cat + ' · ' + groups[cat].length + '</h4>';
+        groups[cat].forEach(function (r) {
+          html += '<div class="pulse-row"><span class="' + pillClass(cat) + '">' +
+            (r.status || 'ERR') + '</span><code>' + esc(r.path) +
+            '</code><span class="muted">' + (r.ms != null ? r.ms + 'ms' : '') +
+            '</span></div>';
+        });
+        html += '</div>';
+      });
+
+      $('healthResults').innerHTML = html;
+      $('healthState').textContent = 'Done · ' + rows.length + ' endpoints';
+      $('btnHealthCheck').disabled = false;
+    }).catch(function (err) {
+      $('healthState').textContent = String(err.message || err);
+      $('btnHealthCheck').disabled = false;
     });
   }
 
@@ -763,19 +762,17 @@
     if (name === 'drill' && state.selection && !state.questions.length) resetAndLoadQuestions();
     if (name === 'quiz') updateQuizBlurb();
     if (name === 'atlas') renderAtlas();
+    if (name === 'health' && !$('healthResults').innerHTML) runHealthCheck();
   }
 
   function init() {
     auth.mountGate(boot);
 
-    $('selBoard').addEventListener('change', fillGrades);
-    $('selGrade').addEventListener('change', fillStreams);
-    $('selStream').addEventListener('change', fillSubjects);
-    $('classForm').addEventListener('submit', enterRoom);
-    $('backHome').addEventListener('click', function () {
-      $('room').hidden = true;
-      $('landing').hidden = false;
-    });
+    $('selBoard').addEventListener('change', function () { fillGrades(); applySelection(); });
+    $('selGrade').addEventListener('change', function () { fillStreams(); applySelection(); });
+    $('selStream').addEventListener('change', function () { fillSubjects(); applySelection(); });
+    $('selSubject').addEventListener('change', applySelection);
+    $('classForm').addEventListener('submit', function (e) { e.preventDefault(); applySelection(); });
 
     Array.prototype.forEach.call(document.querySelectorAll('.mode'), function (b) {
       b.addEventListener('click', function () { switchMode(b.dataset.mode); });
@@ -794,9 +791,7 @@
     $('quizExit').addEventListener('click', quizExit);
     $('practiceForm').addEventListener('submit', startPractice);
     $('planForm').addEventListener('submit', makePlan);
-    $('btnPulseCore').addEventListener('click', pulseCore);
-    $('btnPulseSweep').addEventListener('click', pulseSweep);
-    $('btnPulseVersions').addEventListener('click', pulseVersions);
+    $('btnHealthCheck').addEventListener('click', runHealthCheck);
   }
 
   init();

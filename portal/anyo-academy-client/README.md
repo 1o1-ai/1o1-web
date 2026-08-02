@@ -24,7 +24,7 @@ Sign-in gate (GitHub Pages cannot enforce HTTP Basic Auth; same session pattern 
 | **Quiz** | MCQ bank or generated paper |
 | **Practice** | `POST /practice/start` |
 | **Lesson** | `POST /teacher/plan` |
-| **API Pulse** | Core probe, OpenAPI GET sweep, version drift, known gaps |
+| **Health** | One-click public GET probe + version badges (simple status list) |
 
 API base: `https://api.brahmando.com/education` (browser Origin `https://yogabrata.com` is allowlisted).
 
