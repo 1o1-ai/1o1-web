@@ -13,7 +13,7 @@ function ymIsYogabrataPagesClone() {
 
 function ymResolveApiBase() {
   if (ymIsYogabrataPagesClone()) {
-    return "https://brahmexa.com/atlas-api.php";
+    return "https://brahmexa.com/saas/atlas-api.php";
   }
   return "/atlas/api/v1";
 }
