@@ -265,7 +265,7 @@ function ymAskBox() {
       <button type="button" data-q="What should the operator do?">What should I do?</button>
     </div>
     <form id="ask-form"><input name="q" placeholder="Ask in ordinary language…" aria-label="Question" /><button type="submit">Ask</button></form>
-    <div class="ym-chat" id="ask-out"></div>
+    <div class="ym-chat" id="ask-out" role="log" aria-live="polite" aria-label="ATLAS explanation"></div>
   </div>`;
 }
 
@@ -274,14 +274,14 @@ function ymRenderExplain(out) {
   const ai = out.ai || {};
   const txn = engine.transaction_risk || {};
   const reasons = (txn.reasons || (engine.profile_risk || {}).reasons || []).slice(0, 3);
-  return `<article class="ym-bubble engine">
+  return `<article class="ym-bubble engine" aria-label="ATLAS engine answer">
       <span class="pill pill-engine">ATLAS engine</span>
       <p>${ymEsc((txn.plain && txn.plain.headline) || engine.goal || "")}</p>
       <ul>${reasons.map((r) => `<li>${ymEsc(r.plain)} <span class="muted">(${ymEsc(r.effect)})</span></li>`).join("")}</ul>
       <p class="muted">${ymEsc(engine.profile_vs_transaction || "")}</p>
       <p><strong>What a person should do:</strong> ${ymEsc(engine.operator_should || "")}</p>
     </article>
-    <article class="ym-bubble ai">
+    <article class="ym-bubble ai" aria-label="AI explanation">
       <span class="pill pill-ai">AI explanation</span>
       <p class="muted">${ymEsc(ai.notice || "")}</p>
       <p>${ymEsc(ai.text || "")}</p>
@@ -309,6 +309,80 @@ function ymBindAsk() {
   });
 }
 
+const YM_PUBLIC_INTEGRATIONS = Object.freeze([
+  {
+    id: "plaid-sandbox",
+    monogram: "PL",
+    title: "Plaid Sandbox",
+    role: "Customer-permissioned accounts, transactions, identity, and Link through the sandbox adapter.",
+  },
+  {
+    id: "stripe-sandbox",
+    monogram: "ST",
+    title: "Stripe test mode",
+    role: "PaymentIntents, signed webhooks, and idempotent submission. ATLAS refuses live Stripe keys.",
+  },
+  {
+    id: "ofac-sanctions",
+    monogram: "OF",
+    title: "OFAC screening",
+    role: "Sanctions-screening evidence through a provider boundary; the public demo uses a deterministic fixture.",
+  },
+  {
+    id: "openbb-mcp",
+    monogram: "OB",
+    title: "OpenBB MCP",
+    role: "Optional market, company, and economic context—never authoritative customer or payment data.",
+  },
+  {
+    id: "stripe-mcp",
+    monogram: "SM",
+    title: "Stripe official MCP",
+    role: "Optional operator tools with no authority to approve, release, or execute a payment.",
+  },
+  {
+    id: "fednow-network-intelligence-mock",
+    monogram: "FN",
+    title: "FedNow intelligence",
+    role: "Receiver-account signals behind a mock adapter. ATLAS has no live FedNow access.",
+  },
+]);
+
+function ymIntegrationStatus(ym_source) {
+  if (!ym_source) return { label: "STATUS UNAVAILABLE", tone: "" };
+  if (ym_source.mode === "SYNTHETIC") return { label: "DEMO FIXTURE ACTIVE", tone: "pill-engine" };
+  if (ym_source.status === "HEALTHY") return { label: "SANDBOX CONNECTED", tone: "pill-engine" };
+  if (ym_source.status === "DEGRADED") return { label: "CONFIGURED · CHECK HEALTH", tone: "pill-ai" };
+  return { label: "ADAPTER READY · NOT CONNECTED", tone: "pill-syn" };
+}
+
+function ymIntegrationShowcase(ym_sources) {
+  const ym_cards = YM_PUBLIC_INTEGRATIONS.map((ym_definition) => {
+    const ym_source = ym_sources.find((ym_candidate) => ym_candidate.source_id === ym_definition.id);
+    const ym_status = ymIntegrationStatus(ym_source);
+    const ym_capabilities = (ym_source && ym_source.capabilities ? ym_source.capabilities : [])
+      .slice(0, 4)
+      .map((ym_capability) => String(ym_capability).replaceAll("_", " "))
+      .join(" · ");
+    return `
+      <article class="ym-integration-card">
+        <span class="ym-integration-card__orb" aria-hidden="true">${ymEsc(ym_definition.monogram)}</span>
+        <span class="pill ${ym_status.tone}">${ymEsc(ym_status.label)}</span>
+        <h3>${ymEsc(ym_definition.title)}</h3>
+        <p>${ymEsc(ym_definition.role)}</p>
+        ${ym_capabilities ? `<small>${ymEsc(ym_capabilities)}</small>` : ""}
+      </article>`;
+  }).join("");
+  return `
+    <section class="ym-integrations" aria-labelledby="ym-integrations-title">
+      <p class="eyebrow">Implemented integration surfaces</p>
+      <h2 id="ym-integrations-title">Connectors ATLAS already knows how to use</h2>
+      <p>Badges are loaded from ATLAS source health. “Not connected” means the adapter exists but this public demo has no credential. Financial and payment connectors remain sandbox/test-only.</p>
+      <div class="ym-integration-grid">${ym_cards}</div>
+      <div class="ym-actions"><a class="ym-btn ghost" href="#/sources">Inspect live source status and limitations</a></div>
+    </section>`;
+}
+
 function ymViewHome() {
   ymSetView("What is ATLAS?", "Payments controlled before money moves", `
     <section class="ym-overview-hero">
@@ -316,8 +390,7 @@ function ymViewHome() {
       <p class="ym-overview-lead">ATLAS creates and orchestrates payments, analyzes risk before money moves, applies deterministic policy controls, and produces a complete replayable record of every decision.</p>
       <p>Choose a synthetic scenario and watch ATLAS turn fragmented financial signals into a controlled, explainable payment decision.</p>
       <div class="ym-actions">
-        <a class="ym-cta" href="#/profiles">Explore synthetic scenarios</a>
-        <a class="ym-btn ghost" href="#/story/persona-ato">Watch the recommended demonstration</a>
+        <a class="ym-cta" href="#/profiles">Choose a use case</a>
       </div>
     </section>
     <div class="ym-capability-pair">
@@ -335,14 +408,13 @@ function ymViewHome() {
     <div class="ym-system-flow" aria-label="ATLAS end-to-end flow">
       ${["Fragmented sources", "Evidence-backed profile", "Canonical PaymentIntent", "Transaction analysis", "Deterministic policy", "Human control", "Simulated orchestration", "TRACE", "PROOF"].map((ym_label) => `<span>${ymEsc(ym_label)}</span>`).join("<b aria-hidden=\"true\">→</b>")}
     </div>
-    <aside class="ym-recommended">
+    <aside class="ym-choice-prompt">
       <div>
-        <span class="pill">RECOMMENDED · 7 MIN</span>
-        <h2>Possible Account Takeover</h2>
-        <p><strong>Priya Shah · Synthetic customer</strong></p>
-        <p>A trustworthy customer can still initiate a dangerous payment. This scenario makes Customer/Profile Risk, Transaction Risk, and the Final Payment Decision unmistakably separate.</p>
+        <span class="pill pill-engine">YOUR CHOICE</span>
+        <h2>Which business question should ATLAS answer?</h2>
+        <p>Choose routine approval, payment failure, account takeover, identity conflict, ACH returns, or pass-through activity. Every use case runs its own synthetic profile and deterministic policy path.</p>
       </div>
-      <a class="ym-cta" href="#/story/persona-ato">Run Priya's scenario</a>
+      <a class="ym-cta" href="#/profiles">Choose a scenario</a>
     </aside>
     <p class="ym-boundary-note"><strong>Decision boundary:</strong> deterministic rules decide. AI may explain the result in ordinary language; AI cannot authorize or move money.</p>
   `);
@@ -350,13 +422,19 @@ function ymViewHome() {
 
 async function ymViewProfiles() {
   const list = YM_STATE.scenarios.length ? YM_STATE.scenarios : await ymLoadScenarios();
+  let ym_sources = [];
+  try {
+    const ym_source_health = await ymApi("/proof/source-health");
+    ym_sources = ym_source_health.sources || [];
+  } catch (ym_error) {
+    console.warn("ATLAS source health is unavailable", ym_error);
+  }
   const ym_cards = list.map((ym_scenario) => `
-    <article class="ym-scenario-card${ym_scenario.recommended ? " is-recommended" : ""}">
+    <article class="ym-scenario-card">
       <div class="ym-scenario-card__orbit" aria-hidden="true"><span>${ymEsc(ym_scenario.short_name.split(" ").map((ym_part) => ym_part[0]).join(""))}</span></div>
       <div class="ym-scenario-card__body">
         <div class="ym-scenario-card__top">
           <span class="pill pill-syn">SYNTHETIC CUSTOMER</span>
-          ${ym_scenario.recommended ? "<span class=\"pill pill-engine\">RECOMMENDED</span>" : ""}
           <span class="ym-duration">${ymEsc(ym_scenario.estimated_minutes)} min</span>
         </div>
         <h2>${ymEsc(ym_scenario.scenario_name)}</h2>
@@ -372,12 +450,33 @@ async function ymViewProfiles() {
         <button type="button" class="ym-cta ym-run-scenario" data-id="${ymEsc(ym_scenario.profile_id)}" data-key="${ymEsc(ym_scenario.demo_key)}">Run scenario</button>
       </div>
     </article>`).join("");
+  const ym_real_profile = `
+    <article class="ym-scenario-card ym-real-profile-card">
+      <div class="ym-scenario-card__orbit" aria-hidden="true"><span>+</span></div>
+      <div class="ym-scenario-card__body">
+        <div class="ym-scenario-card__top">
+          <span class="pill pill-ai">COMING SOON</span>
+        </div>
+        <h2>Add a real customer profile</h2>
+        <p class="ym-persona-name">Customer-permissioned data</p>
+        <p>Bring a consenting customer's financial profile into the same evidence, risk, policy, TRACE, and PROOF workflow.</p>
+        <dl>
+          <div><dt>Intended profile path</dt><dd>Plaid Link and typed provider APIs for authorized accounts, transactions, and identity.</dd></div>
+          <div><dt>Public-demo boundary</dt><dd>No real credentials, bank data, or money are accepted here today.</dd></div>
+        </dl>
+        <div class="ym-risk-labels" aria-label="Required controls">
+          <span>EXPLICIT CONSENT</span><span>TOKENIZED ACCESS</span><span>PRIVACY CONTROLS</span>
+        </div>
+        <button type="button" class="ym-cta ym-coming-soon" disabled aria-disabled="true">Connect real profile · coming soon</button>
+      </div>
+    </article>`;
   ymSetView("Scenario Demonstration Center", "Choose a business question and watch ATLAS answer it", `
     <section class="ym-catalog-intro">
       <span class="pill pill-syn">SYNTHETIC DEMO — NO REAL DATA OR MONEY</span>
-      <p>Each guided workflow uses the real synthetic fixture and ATLAS policy engine. Scores, factors, state, TRACE, and PROOF are loaded from the API—not invented in this page.</p>
+      <p>Choose any use case below. Each guided workflow uses its real synthetic fixture and the ATLAS policy engine. Scores, factors, state, TRACE, and PROOF are loaded from the API—not invented in this page.</p>
     </section>
-    <div class="ym-scenario-grid">${ym_cards}</div>
+    <div class="ym-scenario-grid">${ym_cards}${ym_real_profile}</div>
+    ${ymIntegrationShowcase(ym_sources)}
   `);
   document.querySelectorAll(".ym-run-scenario").forEach((ym_element) => {
     ym_element.addEventListener("click", () => {
@@ -648,38 +747,178 @@ async function ymViewFraud(id) {
   ymBindAsk();
 }
 
+const YM_ACH_DEMOS = Object.freeze([
+  { id: "valid_one_batch_credit", label: "Valid · one-batch credit", detail: "A standard PPD credit file with one $2,500.00 entry.", expected_valid: true },
+  { id: "valid_one_batch_debit", label: "Valid · one-batch debit", detail: "A structurally valid debit collection file.", expected_valid: true },
+  { id: "valid_with_addenda", label: "Valid · entry with addenda", detail: "A valid payment entry carrying an addenda record.", expected_valid: true },
+  { id: "valid_same_day", label: "Valid · Same Day ACH", detail: "A valid file exercising same-day effective-date handling.", expected_valid: true },
+  { id: "valid_multiple_batches", label: "Valid · multiple batches", detail: "A valid file with more than one balanced batch.", expected_valid: true },
+  { id: "invalid_record_93", label: "Reject · 93-character record", detail: "One record is one character short; rejection is expected.", expected_valid: false },
+  { id: "invalid_routing_check_digit", label: "Reject · routing check digit", detail: "An entry contains an invalid ABA routing check digit.", expected_valid: false },
+  { id: "invalid_entry_hash", label: "Reject · entry hash mismatch", detail: "The control total does not match the computed routing hash.", expected_valid: false },
+  { id: "invalid_batch_count", label: "Reject · batch count mismatch", detail: "The file control declares the wrong number of batches.", expected_valid: false },
+  { id: "invalid_unsupported_sec", label: "Reject · unsupported SEC code", detail: "The batch uses a Standard Entry Class outside this parser's accepted set.", expected_valid: false },
+]);
+
+function ymAchErrorMessage(ym_payload, ym_fallback) {
+  const ym_detail = ym_payload && ym_payload.detail;
+  if (typeof ym_detail === "string") return ym_detail;
+  if (ym_detail && typeof ym_detail.message === "string") return ym_detail.message;
+  if (ym_payload && ym_payload.error && ym_payload.error.message) return ym_payload.error.message;
+  return ym_fallback;
+}
+
 function ymViewAch() {
-  ymSetView("ACH Inspector", "Electronic bank-to-bank files", `
-    <p>${ymTip("ACH")}. ATLAS reads the file with a parser — not an AI. A broken file is rejected with an exact reason.</p>
-    <input type="file" id="achf" accept=".ach,.txt" />
-    <p class="muted">Or load a built-in demonstration file:</p>
-    <div class="ask-list">
-      <button type="button" data-demo="valid_one_batch_credit">Valid credit file</button>
-      <button type="button" data-demo="invalid_record_93">Broken 93-character record</button>
+  const ym_options = YM_ACH_DEMOS.map((ym_demo) => `
+    <option value="${ymEsc(ym_demo.id)}">${ymEsc(ym_demo.label)}</option>`).join("");
+  ymSetView("ACH Inspector", "Upload a file or choose a known parser case", `
+    <section class="ym-ach-intro">
+      <span class="pill pill-syn">DETERMINISTIC PARSER · NO LLM</span>
+      <p>${ymTip("ACH")}. ATLAS validates Nacha structure with exact 94-character records, control totals, routing checks, and record order. No money is moved.</p>
+    </section>
+    <div class="ym-ach-workbench">
+      <section class="ym-ach-input-panel" aria-labelledby="ym-ach-upload-title">
+        <span class="pill pill-engine">YOUR FILE</span>
+        <h2 id="ym-ach-upload-title">Upload from this computer</h2>
+        <label class="ym-ach-file-label" for="achf">
+          <strong>Choose an ACH file</strong>
+          <span>.ach or .txt · parsed securely by ATLAS</span>
+        </label>
+        <input type="file" id="achf" accept=".ach,.txt,text/plain" />
+        <p class="muted" id="ym-ach-file-status">The public demo parses the uploaded bytes for validation; it does not submit them to a payment rail.</p>
+      </section>
+      <section class="ym-ach-input-panel" aria-labelledby="ym-ach-sample-title">
+        <span class="pill pill-ai">INCLUDED TEST FILES</span>
+        <h2 id="ym-ach-sample-title">Choose a parser case</h2>
+        <label for="ym-ach-demo-select">Sample ACH file</label>
+        <select id="ym-ach-demo-select">${ym_options}</select>
+        <p class="muted" id="ym-ach-demo-detail">${ymEsc(YM_ACH_DEMOS[0].detail)}</p>
+        <button type="button" class="ym-cta" id="ym-ach-demo-run">Analyze selected sample</button>
+      </section>
     </div>
-    <div class="pipe" id="achp"></div>
-    <div id="ach-human"></div>
-    <details class="ym-tech"><summary>Technical evidence</summary><pre class="out" id="ach-out"></pre></details>
+    <section id="ym-ach-result" class="ym-ach-result" aria-live="polite">
+      <p class="muted">Choose a built-in case or upload a local file to see the parser path and result.</p>
+    </section>
   `);
-  const show = (data) => {
-    const steps = ["File header", "Batch", "Entries", "Controls", data.valid ? "Accepted" : "Rejected"];
-    document.getElementById("achp").innerHTML = steps.map((s) => `<span class="node">${s}</span>`).join("<span class='arrow'>→</span>");
-    document.querySelectorAll("#achp .node").forEach((el) => el.classList.add("is-on"));
-    const finding = (data.findings || [])[0];
-    document.getElementById("ach-human").innerHTML = data.valid
-      ? `<p class="allow">This file is structurally valid. Batches ${ymEsc(data.batch_count)} · entries ${ymEsc(data.entry_count)}.</p>`
-      : `<p class="block">Rejected. ${ymEsc((finding && finding.code) || "The file did not match the bank-file rules.")}</p>`;
-    document.getElementById("ach-out").textContent = JSON.stringify({ valid: data.valid, findings: data.findings, batch_count: data.batch_count, entry_count: data.entry_count }, null, 2);
+
+  const ym_result = document.getElementById("ym-ach-result");
+  const ym_show_error = (ym_message) => {
+    ym_result.innerHTML = `
+      <div class="ym-ach-result__status is-rejected">
+        <span class="pill">UPLOAD COULD NOT BE PARSED</span>
+        <h2>Check the selected file</h2>
+        <p>${ymEsc(ym_message)}</p>
+      </div>`;
   };
-  document.getElementById("achf").addEventListener("change", async (e) => {
-    const file = e.target.files[0];
-    const fd = new FormData();
-    fd.append("file", file);
-    const resp = await fetch(ymApiUrl("/files/ach/parse"), { method: "POST", headers: ymAuth(), body: fd });
-    show(await resp.json());
+  const ym_show = (ym_data, ym_case) => {
+    if (!ym_data || typeof ym_data.valid !== "boolean") {
+      ym_show_error("ATLAS did not return a parser result.");
+      return;
+    }
+    const ym_findings = ym_data.findings || [];
+    const ym_expected = ym_case && typeof ym_case.expected_valid === "boolean"
+      ? ym_case.expected_valid === ym_data.valid
+      : null;
+    const ym_status = ym_data.valid
+      ? "FILE ACCEPTED"
+      : ym_expected === true
+        ? "EXPECTED REJECTION CONFIRMED"
+        : "FILE REJECTED";
+    const ym_status_class = ym_data.valid ? "is-accepted" : "is-rejected";
+    const ym_steps = ["File header", "Batch records", "Entry records", "Control totals", ym_data.valid ? "Accepted" : "Rejected"];
+    const ym_finding_rows = ym_findings.slice(0, 6).map((ym_finding) => `
+      <li>
+        <span class="ym-ach-finding__marker" aria-hidden="true">!</span>
+        <span>
+          <strong>${ymEsc(ym_finding.message || ym_finding.code)}</strong>
+          <small>${ym_finding.record_number ? `Record ${ymEsc(ym_finding.record_number)} · ` : ""}${ymEsc(ym_finding.code)}</small>
+        </span>
+        <span>${ym_finding.expected != null ? `Expected ${ymEsc(ym_finding.expected)}` : ""}${ym_finding.actual_safe != null ? ` · observed ${ymEsc(ym_finding.actual_safe)}` : ""}</span>
+      </li>`).join("");
+    const ym_safe_result = {
+      valid: ym_data.valid,
+      parser_version: ym_data.parser_version,
+      record_count: ym_data.record_count,
+      batch_count: ym_data.batch_count,
+      entry_count: ym_data.entry_count,
+      addenda_count: ym_data.addenda_count,
+      total_credit_minor: ym_data.total_credit_minor,
+      total_debit_minor: ym_data.total_debit_minor,
+      findings: ym_findings,
+      source_digest: ym_data.source_digest,
+    };
+    ym_result.innerHTML = `
+      <header class="ym-ach-result__status ${ym_status_class}">
+        <span class="pill">${ymEsc(ym_status)}</span>
+        <h2>${ymEsc((ym_case && ym_case.label) || "Uploaded ACH file")}</h2>
+        <p>${ym_data.valid
+          ? "The file passed the structural and control checks represented in this parser."
+          : ym_expected === true
+            ? "This malformed test case was rejected for the expected reason. The parser behaved correctly."
+            : "The file was safely rejected before any payment workflow."}</p>
+      </header>
+      <div class="ym-pipeline ym-ach-pipeline" aria-label="ACH parser stages">
+        ${ym_steps.map((ym_step) => `<span class="step on ${ym_step === "Rejected" ? "stop" : ""}">${ymEsc(ym_step)}</span>`).join("<span class=\"arrow\" aria-hidden=\"true\">→</span>")}
+      </div>
+      <div class="ym-ach-result__visual">
+        <article><span>94</span><small>Characters per record</small><strong>${ymEsc(ym_data.record_count ?? "—")} records</strong></article>
+        <article><span>B</span><small>Batch structure</small><strong>${ymEsc(ym_data.batch_count ?? "—")} batches</strong></article>
+        <article><span>E</span><small>Entry structure</small><strong>${ymEsc(ym_data.entry_count ?? "—")} entries</strong></article>
+        <article><span>$</span><small>Control totals</small><strong>${ymMoney(ym_data.total_credit_minor || 0)} credit</strong></article>
+      </div>
+      ${ym_finding_rows
+        ? `<section class="ym-ach-findings"><h3>Why ATLAS rejected it</h3><ul>${ym_finding_rows}</ul>${ym_findings.length > 6 ? `<p class="muted">${ym_findings.length - 6} more findings are available in raw evidence.</p>` : ""}</section>`
+        : '<p class="ym-ach-valid-message">No parser findings. Account and routing values remain masked/tokenized in parser output.</p>'}
+      <details class="ym-raw-evidence">
+        <summary>View raw parser evidence (JSON)</summary>
+        <pre class="out">${ymEsc(JSON.stringify(ym_safe_result, null, 2))}</pre>
+      </details>`;
+  };
+
+  const ym_demo_select = document.getElementById("ym-ach-demo-select");
+  ym_demo_select.addEventListener("change", () => {
+    const ym_demo = YM_ACH_DEMOS.find((ym_candidate) => ym_candidate.id === ym_demo_select.value);
+    document.getElementById("ym-ach-demo-detail").textContent = ym_demo ? ym_demo.detail : "";
   });
-  document.querySelectorAll("[data-demo]").forEach((btn) => {
-    btn.addEventListener("click", async () => show(await ymApi("/proof/ach-demo/" + btn.dataset.demo)));
+  document.getElementById("ym-ach-demo-run").addEventListener("click", async (ym_event) => {
+    const ym_demo = YM_ACH_DEMOS.find((ym_candidate) => ym_candidate.id === ym_demo_select.value);
+    if (!ym_demo) return;
+    const ym_button = ym_event.currentTarget;
+    ym_button.disabled = true;
+    ym_button.textContent = "Analyzing…";
+    try {
+      ym_show(await ymApi(`/proof/ach-demo/${ym_demo.id}`), ym_demo);
+    } catch (ym_error) {
+      ym_show_error(ym_error.message);
+    } finally {
+      ym_button.disabled = false;
+      ym_button.textContent = "Analyze selected sample";
+    }
+  });
+
+  document.getElementById("achf").addEventListener("change", async (ym_event) => {
+    const ym_file = ym_event.target.files && ym_event.target.files[0];
+    if (!ym_file) return;
+    const ym_file_status = document.getElementById("ym-ach-file-status");
+    ym_file_status.textContent = `Analyzing ${ym_file.name}…`;
+    const ym_form_data = new FormData();
+    ym_form_data.append("file", ym_file);
+    try {
+      const ym_response = await fetch(ymApiUrl("/files/ach/parse"), {
+        method: "POST",
+        headers: ymAuth(),
+        body: ym_form_data,
+      });
+      const ym_payload = await ym_response.json().catch(() => ({}));
+      if (!ym_response.ok) {
+        throw new Error(ymAchErrorMessage(ym_payload, `Upload failed with HTTP ${ym_response.status}.`));
+      }
+      ym_file_status.textContent = `${ym_file.name} was parsed by ATLAS.`;
+      ym_show(ym_payload, { label: ym_file.name });
+    } catch (ym_error) {
+      ym_file_status.textContent = `${ym_file.name} could not be parsed.`;
+      ym_show_error(ym_error.message);
+    }
   });
 }
 
@@ -805,6 +1044,6 @@ async function ymRoute() {
 document.getElementById("login-form").addEventListener("submit", (ev) => {
   ymLogin(ev).catch((e) => { document.getElementById("login-status").textContent = e.message; });
 });
-document.getElementById("btn-guided").addEventListener("click", () => { location.hash = "#/story/persona-ato"; });
+document.getElementById("btn-guided").addEventListener("click", () => { location.hash = "#/profiles"; });
 window.addEventListener("hashchange", ymRoute);
 ymApplyBrandChrome();

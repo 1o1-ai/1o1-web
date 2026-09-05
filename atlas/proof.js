@@ -19,6 +19,13 @@ async function ymLightPipe(selector, delay) {
   if (ymReduced()) nodes.forEach((el) => el.classList.add("is-on"));
 }
 
+function ymProofRaw(ym_value, ym_label) {
+  return `<details class="ym-raw-evidence">
+    <summary>${ymEsc(ym_label || "View raw API evidence (JSON)")}</summary>
+    <pre class="out">${ymEsc(JSON.stringify(ym_value, null, 2))}</pre>
+  </details>`;
+}
+
 async function ymViewProof() {
   const [ym_ov, ym_q] = await Promise.all([
     ymApi("/proof/overview"),
@@ -134,17 +141,17 @@ async function ymSelectPersona(demoKey) {
 }
 
 async function ymProofPreflight(stage) {
-  const priya = await ymSelectPersona("persona-ato");
+  const ym_amanda = await ymSelectPersona("persona-ato");
   const created = await ymApi("/payment-intents", {
     method: "POST",
     json: {
-      payer_profile_id: priya.id,
+      payer_profile_id: ym_amanda.id,
       amount_minor: 2500000,
       currency: "USD",
       purpose: "vendor_payment",
       requested_rail: "RTP",
       speed: "INSTANT",
-      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_priya_new_landlord" },
+      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_amanda_new_landlord" },
     },
   });
   const intent = created.intent.id;
@@ -154,7 +161,7 @@ async function ymProofPreflight(stage) {
   YM_STATE.decisionId = tr.id;
   const factors = tr.factors || [];
   stage.innerHTML = `
-    <h3>Fraud pre-flight · ${ymEsc(priya.display_name)}</h3>
+    <h3>Fraud pre-flight · ${ymEsc(ym_amanda.display_name)}</h3>
     <p class="muted">$25,000 instant · SYNTHETIC</p>
     <div class="pipe" id="sig">
       <span class="node allow">Established identity</span>
@@ -184,7 +191,13 @@ async function ymProofAchValid(stage) {
     </div>
     <p>94-character records · batches ${ymEsc(parsed.batch_count)} · entries ${ymEsc(parsed.entry_count)} · hash ${ymEsc(parsed.entry_hash)}</p>
     <p>debit ${ymEsc(parsed.total_debit_minor)} · credit ${ymEsc(parsed.total_credit_minor)} · blocking ${ymEsc(parsed.block_count)} · parser ${ymEsc(parsed.parser_version)}</p>
-    <pre class="out">${ymEsc(JSON.stringify(parsed.batches, null, 2))}</pre>
+    <div class="ym-ach-result__visual">
+      <article><span>94</span><small>Record width</small><strong>${ymEsc(parsed.record_count)} records</strong></article>
+      <article><span>B</span><small>Batch structure</small><strong>${ymEsc(parsed.batch_count)} batches</strong></article>
+      <article><span>E</span><small>Entry structure</small><strong>${ymEsc(parsed.entry_count)} entries</strong></article>
+      <article><span>$</span><small>Control total</small><strong>${ymMoney(parsed.total_credit_minor)} credit</strong></article>
+    </div>
+    ${ymProofRaw(parsed.batches, "View raw batch records (JSON)")}
   `;
   await ymLightPipe("#achp .node", 140);
 }
@@ -192,23 +205,50 @@ async function ymProofAchValid(stage) {
 async function ymProofParser(stage) {
   const st = await ymApi("/proof/parser-status");
   const bad = await ymApi("/proof/ach-demo/invalid_record_93");
-  const f = (bad.findings || [])[0] || {};
   stage.innerHTML = `
     <h3>Parser conformance</h3>
-    <p>ATLAS ACH Parser ${ymEsc(st.parser_version)} · LLM parsing NO</p>
-    <p>VALID CORPUS ${ymEsc(st.valid_count)} · INVALID CORPUS ${ymEsc(st.invalid_count)}</p>
-    <p>${ymEsc((st.tests || {}).label)}</p>
-    <h4>Malformed example: 93-character record</h4>
-    <p>RECORD ${ymEsc(f.record_number)} · expected ${ymEsc(f.expected)} · actual ${ymEsc(f.actual_safe)}</p>
-    <p class="block">✕ ${ymEsc(f.code)} · FILE REJECTED=${ymEsc(!bad.valid)}</p>
-    <label>Other invalid corpus
+    <p>Every bundled case runs through ${ymEsc(st.parser_version)}. AI/LLM parsing is disabled.</p>
+    <div class="ym-ach-result__visual">
+      <article><span>P</span><small>Parser</small><strong>${ymEsc(st.parser_version)}</strong></article>
+      <article><span>✓</span><small>Valid corpus</small><strong>${ymEsc(st.valid_count)} accepted</strong></article>
+      <article><span>!</span><small>Invalid corpus</small><strong>${ymEsc(st.invalid_count)} rejected</strong></article>
+      <article><span>AI</span><small>LLM parser</small><strong>Not used</strong></article>
+    </div>
+    <p class="muted">${ymEsc((st.tests || {}).label)}</p>
+    <label class="ym-proof-parser-select">Inspect an intentionally invalid test file
       <select id="bad-sel">${(st.invalid_corpus || []).map((n) => `<option>${ymEsc(n)}</option>`).join("")}</select>
     </label>
-    <pre class="out" id="bad-out"></pre>
+    <div id="ym-proof-parser-case"></div>
+    <p><a class="ym-cta" href="#/ach">Open ACH upload and sample workbench</a></p>
   `;
-  document.getElementById("bad-sel").addEventListener("change", async (e) => {
-    const out = await ymApi("/proof/ach-demo/" + e.target.value);
-    document.getElementById("bad-out").textContent = JSON.stringify(out.findings, null, 2);
+  const ym_render_invalid = (ym_output, ym_name) => {
+    const ym_findings = ym_output.findings || [];
+    const ym_first = ym_findings[0] || {};
+    const ym_rows = ym_findings.slice(0, 5).map((ym_finding) => `
+      <li>
+        <span class="ym-ach-finding__marker" aria-hidden="true">!</span>
+        <span><strong>${ymEsc(ym_finding.message || ym_finding.code)}</strong><small>${ymEsc(ym_finding.code)}</small></span>
+        <span>${ym_finding.record_number ? `Record ${ymEsc(ym_finding.record_number)}` : "File control"}</span>
+      </li>`).join("");
+    document.getElementById("ym-proof-parser-case").innerHTML = `
+      <section class="ym-proof-parser-case">
+        <header class="ym-ach-result__status is-rejected">
+          <span class="pill">EXPECTED REJECTION CONFIRMED</span>
+          <h4>${ymEsc(String(ym_name).replaceAll("_", " "))}</h4>
+          <p>${ymEsc(ym_first.message || "The malformed corpus file was rejected by deterministic rules.")}</p>
+        </header>
+        <div class="ym-pipeline ym-ach-pipeline">
+          ${["Read records", "Validate width", "Check controls", "Reject safely"].map((ym_step) => `<span class="step on ${ym_step === "Reject safely" ? "stop" : ""}">${ymEsc(ym_step)}</span>`).join("<span class=\"arrow\" aria-hidden=\"true\">→</span>")}
+        </div>
+        <section class="ym-ach-findings"><h4>Readable parser findings</h4><ul>${ym_rows}</ul></section>
+        ${ymProofRaw(ym_findings, "View raw parser findings (JSON)")}
+      </section>`;
+  };
+  ym_render_invalid(bad, "invalid_record_93");
+  document.getElementById("bad-sel").addEventListener("change", async (ym_event) => {
+    const ym_name = ym_event.target.value;
+    const ym_output = await ymApi("/proof/ach-demo/" + ym_name);
+    ym_render_invalid(ym_output, ym_name);
   });
 }
 
@@ -218,7 +258,14 @@ async function ymProofConflict(stage) {
   stage.innerHTML = `
     <h3>Conflicting sources · ${ymEsc(alex.display_name)}</h3>
     <p class="muted">LOW DATA CONFIDENCE — conflicts are retained, never silently overwritten.</p>
-    <pre class="out">${ymEsc(JSON.stringify({ conflicts: ev.conflicts, observation_count: (ev.observations || []).length }, null, 2))}</pre>
+    <div class="ym-evidence-path">
+      <article class="ym-evidence-node"><span class="ym-evidence-node__icon">SRC</span><small>Observations</small><strong>${ymEsc((ev.observations || []).length)}</strong><em>Source facts retained</em></article>
+      <span class="ym-evidence-arrow" aria-hidden="true">→</span>
+      <article class="ym-evidence-node"><span class="ym-evidence-node__icon">!</span><small>Conflicts</small><strong>${ymEsc((ev.conflicts || []).length)}</strong><em>Not silently overwritten</em></article>
+      <span class="ym-evidence-arrow" aria-hidden="true">→</span>
+      <article class="ym-evidence-node"><span class="ym-evidence-node__icon">MAP</span><small>ATLAS action</small><strong>Preserve</strong><em>Operator can inspect provenance</em></article>
+    </div>
+    ${ymProofRaw({ conflicts: ev.conflicts, observation_count: (ev.observations || []).length }, "View raw conflict evidence (JSON)")}
   `;
 }
 
@@ -239,15 +286,15 @@ async function ymProofSources(stage) {
 }
 
 async function ymProofTamper(stage) {
-  const priya = await ymSelectPersona("persona-ato");
+  const ym_amanda = await ymSelectPersona("persona-ato");
   const created = await ymApi("/payment-intents", {
     method: "POST",
     json: {
-      payer_profile_id: priya.id,
+      payer_profile_id: ym_amanda.id,
       amount_minor: 2500000,
       requested_rail: "RTP",
       speed: "INSTANT",
-      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_priya_new_landlord" },
+      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_amanda_new_landlord" },
     },
   });
   const intent = created.intent.id;
@@ -273,7 +320,7 @@ async function ymProofTamper(stage) {
     <h3>Payment tamper</h3>
     <p>$25,000 → $250,000</p>
     <p>OLD DIGEST ${ymEsc(oldDigest)}</p>
-    <pre class="out">${ymEsc(JSON.stringify(tamper, null, 2))}</pre>
+    ${ymProofRaw(tamper, "View raw tamper evidence (JSON)")}
   `;
 }
 
@@ -312,15 +359,15 @@ async function ymProofIdempotency(stage) {
 }
 
 async function ymProofMaker(stage) {
-  const priya = await ymSelectPersona("persona-ato");
+  const ym_amanda = await ymSelectPersona("persona-ato");
   const created = await ymApi("/payment-intents", {
     method: "POST",
     json: {
-      payer_profile_id: priya.id,
+      payer_profile_id: ym_amanda.id,
       amount_minor: 2500000,
       requested_rail: "RTP",
       speed: "INSTANT",
-      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_priya_new_landlord" },
+      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_amanda_new_landlord" },
     },
   });
   const intent = created.intent.id;
@@ -374,7 +421,7 @@ async function ymProofTimeout(stage) {
     <h3>Provider timeout</h3>
     <p><strong>${ymEsc((sim.payment || {}).state)}</strong></p>
     <p>${ymEsc(sim.note || "DO NOT BLIND RETRY")}</p>
-    <pre class="out">${ymEsc(JSON.stringify({ payment_id: (sim.payment || {}).id, provider_ref: (sim.payment || {}).provider_payment_ref }, null, 2))}</pre>
+    ${ymProofRaw({ payment_id: (sim.payment || {}).id, provider_ref: (sim.payment || {}).provider_payment_ref }, "View raw provider evidence (JSON)")}
   `;
 }
 
@@ -388,7 +435,7 @@ async function ymProofReplay(stage) {
     <p>persisted ${(proof.decision || proof).score} / ${(proof.decision || proof).disposition}</p>
     <p>replayed ${(replay.replayed || replay).score} / ${(replay.replayed || replay).disposition}</p>
     <p>${match ? "MATCH ✓" : "compare fields in JSON"}</p>
-    <pre class="out">${ymEsc(JSON.stringify({ proof, replay }, null, 2))}</pre>
+    ${ymProofRaw({ proof, replay }, "View raw replay evidence (JSON)")}
   `;
 }
 
@@ -403,7 +450,7 @@ async function ymProofWhatIf(stage) {
     <p class="pill">SIMULATION — NOT AUTHORITATIVE PAYMENT DECISION</p>
     <p>CURRENT ${ymEsc(out.current && out.current.score)} ${ymEsc(out.current && out.current.disposition)}</p>
     <p>WHAT-IF ${ymEsc(out.what_if && out.what_if.score)} ${ymEsc(out.what_if && out.what_if.disposition)}</p>
-    <pre class="out">${ymEsc(JSON.stringify(out.changed_inputs, null, 2))}</pre>
+    ${ymProofRaw(out.changed_inputs, "View raw changed inputs (JSON)")}
   `;
 }
 

@@ -72,6 +72,89 @@ function ymRunnerPolicyVisual(ym_context) {
   </div>`;
 }
 
+function ymRunnerEvidenceVisual(ym_stage, ym_evidence) {
+  const ym_digest = (ym_value) => {
+    const ym_text = String(ym_value || "Not recorded");
+    return ym_text.length > 16 ? `${ym_text.slice(0, 12)}…` : ym_text;
+  };
+  const ym_yes_no = (ym_value) => (ym_value ? "Yes" : "No");
+  let ym_nodes = [];
+
+  if (ym_stage.id === "scenario") {
+    ym_nodes = [
+      ["FIXTURE", "Scenario source", ym_evidence.demo_key, "Synthetic persona and payment"],
+      ["QUESTION", "Business frame", ym_evidence.scenario_name, "Decision not revealed yet"],
+      ["BOUNDARY", "Safety", "No live money", "Synthetic data only"],
+    ];
+  } else if (ym_stage.id === "data_signals") {
+    ym_nodes = [
+      ["SOURCE", "Source facts", `${ym_evidence.observation_count || 0} observations`, `${(ym_evidence.source_ids || []).length} synthetic sources`],
+      ["MAP", "Relationship map", `${ym_evidence.graph_node_count || 0} nodes`, `${ym_evidence.graph_edge_count || 0} edges`],
+      ["CHECK", "Evidence conflicts", `${ym_evidence.conflict_count || 0} open`, "Conflicts stay visible"],
+    ];
+  } else if (ym_stage.id === "customer_profile") {
+    ym_nodes = [
+      ["EVIDENCE", "Profile signals", `${ym_evidence.identity_confidence ?? "—"} identity`, `${ym_evidence.financial_stability ?? "—"} stability · ${ym_evidence.payment_reliability ?? "—"} reliability`],
+      ["RISK", "Customer assessment", `${ym_evidence.score ?? "—"} · ${ym_evidence.band || "—"}`, `${(ym_evidence.factors || []).length} scored factors`],
+      ["RESULT", "Profile disposition", ym_evidence.disposition, "Not the payment decision"],
+    ];
+  } else if (ym_stage.id === "payment_instruction") {
+    ym_nodes = [
+      ["INTENT", "Canonical instruction", ymMoney(ym_evidence.amount_minor), `${ym_evidence.requested_rail || "AUTO"} · ${ym_evidence.speed || "STANDARD"}`],
+      ["DIGEST", "Payload integrity", ym_digest(ym_evidence.payload_digest), "Tamper-evident request"],
+      ["STATE", "Initial state", ym_evidence.initial_state || "DRAFT", ym_evidence.intent_id || "PaymentIntent"],
+    ];
+  } else if (ym_stage.id === "transaction_analysis") {
+    ym_nodes = [
+      ["SIGNALS", "Payment signals", `${(ym_evidence.factors || []).length} factors`, `Policy ${ym_evidence.policy_set_id || "—"}`],
+      ["RISK", "Transaction assessment", `${ym_evidence.score ?? "—"} · ${ym_evidence.band || "—"}`, "This payment only"],
+      ["RESULT", "Transaction disposition", ym_evidence.disposition, `Policy v${ym_evidence.policy_version || "—"}`],
+    ];
+  } else if (ym_stage.id === "policy_decision") {
+    const ym_transaction = ym_evidence.transaction_assessment || {};
+    ym_nodes = [
+      ["INPUT", "Governing assessment", `${ym_transaction.score ?? "—"} · ${ym_transaction.band || "—"}`, ym_evidence.governing_assessment || "TRANSACTION"],
+      ["RULES", "Deterministic policy", `${ym_evidence.policy_set_id || "—"} v${ym_evidence.policy_version || "—"}`, `${(ym_evidence.triggered_rules || []).length} triggered rules`],
+      ["DECISION", "Final disposition", ym_evidence.final_disposition, ym_evidence.payment_outcome || "Policy outcome"],
+    ];
+  } else if (ym_stage.id === "human_control") {
+    ym_nodes = [
+      ["ACTOR", "Current role", ym_evidence.current_user_role || "Demo operator", "Authenticated actor"],
+      ["GATE", "Maker / checker", ym_yes_no(ym_evidence.maker_checker_required), ym_evidence.human_review_required ? "Human review required" : "No approval gate required"],
+      ["AI", "AI authority", ym_evidence.ai_authoritative ? "Authoritative" : "Explanation only", "Cannot approve or release"],
+    ];
+  } else if (ym_stage.id === "payment_outcome") {
+    ym_nodes = [
+      ["POLICY", "Policy result", ym_evidence.disposition, ym_evidence.policy_outcome || "Final decision"],
+      ["STATE", "Payment state", ym_evidence.payment_state || "—", `${(ym_evidence.event_types || []).length} lifecycle events`],
+      ["RAIL", "Money movement", ym_evidence.live_money ? "Live" : "Simulation only", ym_evidence.required_next_action || "No live rail"],
+    ];
+  } else if (ym_stage.id === "trace") {
+    ym_nodes = [
+      ["SAVED", "Persisted decision", `${ym_evidence.persisted_score ?? "—"} · ${ym_evidence.persisted_disposition || "—"}`, ym_evidence.decision_id || "Decision record"],
+      ["REPLAY", "Deterministic replay", `${ym_evidence.replayed_score ?? "—"} · ${ym_evidence.replayed_disposition || "—"}`, `${ym_evidence.policy_set_id || "—"} v${ym_evidence.policy_version || "—"}`],
+      ["VERIFY", "Replay check", ym_evidence.match ? "MATCH" : "MISMATCH", ym_evidence.feature_set_version || "Feature version"],
+    ];
+  } else {
+    ym_nodes = [
+      ["SOURCE", "Evidence", `${ym_evidence.observation_count || 0} observations`, ym_digest(ym_evidence.input_digest)],
+      ["DECISION", "Policy record", `${ym_evidence.policy_set_id || "—"} v${ym_evidence.policy_version || "—"}`, `${ym_evidence.audit_record_count || 0} audit records`],
+      ["PROOF", "Assurance", ym_evidence.replay_match ? "REPLAY VERIFIED" : "CHECK REPLAY", ym_evidence.ai_authoritative ? "AI authoritative" : "AI isolated from authority"],
+    ];
+  }
+
+  return `<div class="ym-evidence-path" aria-label="Pictorial technical evidence path">
+    ${ym_nodes.map((ym_node, ym_index) => `
+      ${ym_index ? '<span class="ym-evidence-arrow" aria-hidden="true">→</span>' : ""}
+      <article class="ym-evidence-node">
+        <span class="ym-evidence-node__icon" aria-hidden="true">${ymEsc(ym_node[0])}</span>
+        <small>${ymEsc(ym_node[1])}</small>
+        <strong>${ymEsc(ym_node[2] ?? "—")}</strong>
+        <em>${ymEsc(ym_node[3] || "")}</em>
+      </article>`).join("")}
+  </div>`;
+}
+
 function ymRunnerTechnicalHref(ym_stage, ym_context) {
   const ym_route = ym_stage.technical_route;
   if (ym_route === "workspace" || ym_route === "pay" || ym_route === "fraud") {
@@ -527,8 +610,15 @@ async function ymViewScenarioCenterStory(ym_demo_key, ym_stage_ref) {
           <p class="ym-runner-next" id="ym-runner-next"></p>
           <details class="ym-tech">
             <summary>View technical evidence</summary>
-            <pre class="out" id="ym-runner-evidence"></pre>
-            <a class="ym-btn ghost" id="ym-runner-deep-link" href="#/technical">Open in Technical Explorer</a>
+            <div class="ym-runner-evidence">
+              <h3>Evidence path</h3>
+              <div id="ym-runner-evidence-visual"></div>
+              <details class="ym-raw-evidence">
+                <summary>View raw API evidence (JSON)</summary>
+                <pre class="out" id="ym-runner-evidence"></pre>
+              </details>
+              <a class="ym-btn ghost" id="ym-runner-deep-link" href="#/technical">Open full module in Technical Explorer</a>
+            </div>
           </details>
         </section>
       </div>
@@ -585,6 +675,7 @@ async function ymViewScenarioCenterStory(ym_demo_key, ym_stage_ref) {
     document.getElementById("ym-runner-found").textContent = ym_model.found;
     document.getElementById("ym-runner-matters").textContent = ym_model.matters;
     document.getElementById("ym-runner-next").textContent = ym_model.next;
+    document.getElementById("ym-runner-evidence-visual").innerHTML = ymRunnerEvidenceVisual(ym_stage, ym_model.evidence);
     document.getElementById("ym-runner-evidence").textContent = JSON.stringify(ym_model.evidence, null, 2);
     document.getElementById("ym-runner-deep-link").href = ymRunnerTechnicalHref(ym_stage, ym_context);
     document.querySelectorAll("[data-ym-stage]").forEach((ym_button, ym_index) => {
