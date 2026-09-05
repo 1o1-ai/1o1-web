@@ -768,6 +768,12 @@ function ymAchErrorMessage(ym_payload, ym_fallback) {
   return ym_fallback;
 }
 
+function ymCountLabel(ym_value, ym_singular) {
+  const ym_count = Number(ym_value);
+  const ym_label = ym_count === 1 ? ym_singular : `${ym_singular}s`;
+  return `${ym_value ?? "—"} ${ym_label}`;
+}
+
 function ymViewAch() {
   const ym_options = YM_ACH_DEMOS.map((ym_demo) => `
     <option value="${ymEsc(ym_demo.id)}">${ymEsc(ym_demo.label)}</option>`).join("");
@@ -861,9 +867,9 @@ function ymViewAch() {
         ${ym_steps.map((ym_step) => `<span class="step on ${ym_step === "Rejected" ? "stop" : ""}">${ymEsc(ym_step)}</span>`).join("<span class=\"arrow\" aria-hidden=\"true\">→</span>")}
       </div>
       <div class="ym-ach-result__visual">
-        <article><span>94</span><small>Characters per record</small><strong>${ymEsc(ym_data.record_count ?? "—")} records</strong></article>
-        <article><span>B</span><small>Batch structure</small><strong>${ymEsc(ym_data.batch_count ?? "—")} batches</strong></article>
-        <article><span>E</span><small>Entry structure</small><strong>${ymEsc(ym_data.entry_count ?? "—")} entries</strong></article>
+        <article><span>94</span><small>Characters per record</small><strong>${ymEsc(ymCountLabel(ym_data.record_count, "record"))}</strong></article>
+        <article><span>B</span><small>Batch structure</small><strong>${ymEsc(ymCountLabel(ym_data.batch_count, "batch"))}</strong></article>
+        <article><span>E</span><small>Entry structure</small><strong>${ymEsc(ymCountLabel(ym_data.entry_count, "entry"))}</strong></article>
         <article><span>$</span><small>Control totals</small><strong>${ymMoney(ym_data.total_credit_minor || 0)} credit</strong></article>
       </div>
       ${ym_finding_rows

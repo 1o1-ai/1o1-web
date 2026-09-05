@@ -192,9 +192,9 @@ async function ymProofAchValid(stage) {
     <p>94-character records · batches ${ymEsc(parsed.batch_count)} · entries ${ymEsc(parsed.entry_count)} · hash ${ymEsc(parsed.entry_hash)}</p>
     <p>debit ${ymEsc(parsed.total_debit_minor)} · credit ${ymEsc(parsed.total_credit_minor)} · blocking ${ymEsc(parsed.block_count)} · parser ${ymEsc(parsed.parser_version)}</p>
     <div class="ym-ach-result__visual">
-      <article><span>94</span><small>Record width</small><strong>${ymEsc(parsed.record_count)} records</strong></article>
-      <article><span>B</span><small>Batch structure</small><strong>${ymEsc(parsed.batch_count)} batches</strong></article>
-      <article><span>E</span><small>Entry structure</small><strong>${ymEsc(parsed.entry_count)} entries</strong></article>
+      <article><span>94</span><small>Record width</small><strong>${ymEsc(ymCountLabel(parsed.record_count, "record"))}</strong></article>
+      <article><span>B</span><small>Batch structure</small><strong>${ymEsc(ymCountLabel(parsed.batch_count, "batch"))}</strong></article>
+      <article><span>E</span><small>Entry structure</small><strong>${ymEsc(ymCountLabel(parsed.entry_count, "entry"))}</strong></article>
       <article><span>$</span><small>Control total</small><strong>${ymMoney(parsed.total_credit_minor)} credit</strong></article>
     </div>
     ${ymProofRaw(parsed.batches, "View raw batch records (JSON)")}
