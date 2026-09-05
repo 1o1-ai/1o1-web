@@ -13,7 +13,7 @@ function ymIsYogabrataPagesClone() {
 
 function ymResolveApiBase() {
   if (ymIsYogabrataPagesClone()) {
-    return "https://api.brahmando.com/atlas/api/v1";
+    return "https://atlas.kai247.com/atlas/api/v1";
   }
   return "/atlas/api/v1";
 }

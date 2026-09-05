@@ -11,7 +11,7 @@ Static site for inflight Yogabrata projects on **yogabrata.com** (GitHub Pages).
 | 7RANGERS Hospital | `/sevenrangers/index.html` |
 | **ATLAS** | [`/atlas/`](https://yogabrata.com/atlas/) |
 
-ATLAS is a static clone of the ATOM demo UI on GitHub Pages. The browser stays on `yogabrata.com/atlas/`; API calls go to `https://api.brahmando.com/atlas/api/v1`. Visitors must never be sent to `atlas.kai247.com`.
+ATLAS is a static clone of the ATOM demo UI on GitHub Pages. The browser stays on `yogabrata.com/atlas/`. Visitors must never be redirected to `atlas.kai247.com`.
 
 ## Anyo Brahmando Academy (Education SaaS)
 
