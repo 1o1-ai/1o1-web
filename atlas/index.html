@@ -1,0 +1,100 @@
+<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en" data-cosmic-theme="eden" data-theme="dark" data-ym-surface="yogabrata">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="/atlas/" />
+  <title>ATLAS — Financial Intelligence &amp; Payment Orchestration</title>
+  <script>
+    (function () {
+      var ym_host = location.hostname;
+      var ym_path = location.pathname || "";
+      var ym_q = /(?:^|[?&])surface=yogabrata(?:&|$)/.test(location.search || "");
+      var ym_pages = !/\/atlas\/ui(\/|$)/.test(ym_path) && (/\/atlas\/?$/.test(ym_path.replace(/\/index\.html$/, "/")) || /\/atlas\/index\.html$/.test(ym_path) || /\/atlas\/proof\//.test(ym_path));
+      var ym_yoga = ym_q || /(^|\.)yogabrata\.com$/i.test(ym_host) || ym_pages;
+      document.documentElement.setAttribute("data-ym-surface", ym_yoga ? "yogabrata" : "kai247");
+      var ym_saved = "eden";
+      try {
+        ym_saved = localStorage.getItem("brahmexa_cosmic_theme") || localStorage.getItem("manjulab_cosmic_theme") || "eden";
+      } catch (e) { /* ignore */ }
+      document.documentElement.setAttribute("data-cosmic-theme", ym_saved);
+      var ym_light = ym_saved === "dawn" || ym_saved === "paper" || ym_saved === "ivory";
+      document.documentElement.setAttribute("data-theme", ym_light ? "light" : "dark");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./theme-presets.css" />
+  <link rel="stylesheet" href="./atlas.css" />
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="orb orb-cyan" aria-hidden="true"></div>
+  <div class="orb orb-gold orb-orange" aria-hidden="true"></div>
+  <div class="ym-banner" role="status">SYNTHETIC DEMO — NO REAL DATA OR MONEY</div>
+  <div class="atlas-shell">
+    <header class="atlas-constellation">
+      <div class="atlas-mark">
+        <svg class="atlas-mark__orb" viewBox="0 0 64 64" aria-hidden="true">
+          <circle class="ym-orb-ring" cx="32" cy="32" r="28" />
+          <circle class="ym-orb-core" cx="32" cy="32" r="10" />
+          <circle class="ym-orb-sat" cx="50" cy="18" r="3.5" />
+        </svg>
+        <span class="atlas-mark__name">ATLAS</span>
+        <span class="atlas-mark__title">Financial Intelligence &amp; Payment Orchestration</span>
+        <span class="atlas-mark__sub" data-ym-brand>Yogabrata · Brahmexa</span>
+        <span class="pill pill-syn">SYNTHETIC / SANDBOX</span>
+        <button type="button" class="ym-cta" id="btn-guided">Start Guided Demo</button>
+      </div>
+      <nav class="atlas-nav" id="atlas-nav" aria-label="ATLAS primary">
+        <a href="#/home" data-view="home">Home</a>
+        <a href="#/story" data-view="story">Guided story</a>
+        <a href="#/profiles" data-view="profiles">Scenarios</a>
+        <a href="#/workspace" data-view="workspace">Workspace</a>
+        <a href="#/pay" data-view="pay">Payments</a>
+        <a href="#/fraud" data-view="fraud">Fraud</a>
+        <a href="#/ach" data-view="ach" title="ACH Inspector">ACH</a>
+        <a href="#/trace" data-view="trace">TRACE</a>
+        <a href="#/proof" data-view="proof">PROOF</a>
+        <a href="#/sources" data-view="sources">Sources</a>
+        <a href="#/new" data-view="new">New</a>
+      </nav>
+      <p class="atlas-rail__foot">ATLAS decides with rules. AI only explains. No live money movement.</p>
+    </header>
+    <main class="atlas-main">
+      <header class="atlas-top">
+        <div>
+          <p class="eyebrow" id="view-eyebrow" data-ym-brand>Yogabrata · Brahmexa</p>
+          <h1 id="view-title">Financial Intelligence &amp; Payment Orchestration</h1>
+        </div>
+        <div class="ym-session">
+          <span id="login-status" class="muted" role="status">Connecting…</span>
+          <details class="ym-login-wrap">
+            <summary>Sign in</summary>
+            <form id="login-form" class="login-form">
+              <input name="username" value="yoga" aria-label="Username" autocomplete="username" />
+              <input name="password" type="password" value="yoga" aria-label="Password" autocomplete="current-password" />
+              <button type="submit">Sign in</button>
+            </form>
+          </details>
+        </div>
+      </header>
+      <section id="view" class="atlas-view" tabindex="-1"></section>
+    </main>
+  </div>
+  <script src="./theme-picker.js"></script>
+  <script src="./cosmos.js"></script>
+  <script src="./atlas.js"></script>
+  <script src="./graph.js"></script>
+  <script src="./story.js"></script>
+  <script src="./proof.js"></script>
+  <script>ymRoute();</script>
+</body>
+</html>

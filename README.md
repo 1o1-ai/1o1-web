@@ -9,9 +9,9 @@ Static site for inflight Yogabrata projects on **yogabrata.com** (GitHub Pages).
 | Elogix Americas | `/portal/elogix-americas/` |
 | AI-Caregiver | [1o1.ai](https://1o1.ai) |
 | 7RANGERS Hospital | `/sevenrangers/index.html` |
-| **ATLAS** | [atlas.yogabrata.com](https://atlas.yogabrata.com/) |
+| **ATLAS** | [`/atlas/`](https://yogabrata.com/atlas/) |
 
-ATLAS is a host-aware clone of the ATOM demo. Yogabrata visitors must never be sent to `atlas.kai247.com`.
+ATLAS is a static clone of the ATOM demo UI on GitHub Pages. The browser stays on `yogabrata.com/atlas/`; API calls go to `https://api.brahmando.com/atlas/api/v1`. Visitors must never be sent to `atlas.kai247.com`.
 
 ## Anyo Brahmando Academy (Education SaaS)
 
