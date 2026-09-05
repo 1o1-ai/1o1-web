@@ -1,18 +1,17 @@
 # 1o1-web · yogabrata.com
 
-Static site for ManjuLAB offerings on **yogabrata.com** (GitHub Pages).
+Static site for inflight Yogabrata projects on **yogabrata.com** (GitHub Pages).
 
 ## Home circles
 
 | Circle | Path |
 |--------|------|
-| Rhytoma Academy | `/rhytoma/` (WIP) |
-| AI-Caregiver | [1o1.ai](https://1o1.ai) |
-| **ManjuLAB Online Portal** | `/portal/` |
-| 7RANGERS Hospital | `/sevenrangers/index.html` |
 | Elogix Americas | `/portal/elogix-americas/` |
-| Anyo Academy Client | `/portal/anyo-academy-client/` |
-| **ATLAS** | [atlas.kai247.com](https://atlas.kai247.com/) |
+| AI-Caregiver | [1o1.ai](https://1o1.ai) |
+| 7RANGERS Hospital | `/sevenrangers/index.html` |
+| **ATLAS** | [atlas.yogabrata.com](https://atlas.yogabrata.com/) |
+
+ATLAS is a host-aware clone of the ATOM demo. Yogabrata visitors must never be sent to `atlas.kai247.com`.
 
 ## Anyo Brahmando Academy (Education SaaS)
 

@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-cosmic-theme="eden" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yogabrata · ManjuLAB</title>
-  <meta name="description" content="Yogabrata — Rhytoma Academy, AI-Caregiver, ATLAS, and ManjuLAB SaaS (Anyo Brahmando Academy)." />
+  <title>Yogabrata · Inflight projects</title>
+  <meta name="description" content="Yogabrata inflight projects — Elogix Americas, AI-Caregiver, 7RANGERS Hospital, and ATLAS." />
+  <script>
+    (function () {
+      var ym_saved = "eden";
+      try {
+        ym_saved = localStorage.getItem("brahmexa_cosmic_theme") || localStorage.getItem("manjulab_cosmic_theme") || "eden";
+      } catch (e) { /* ignore */ }
+      document.documentElement.setAttribute("data-cosmic-theme", ym_saved);
+      var ym_light = ym_saved === "dawn" || ym_saved === "paper" || ym_saved === "ivory";
+      document.documentElement.setAttribute("data-theme", ym_light ? "light" : "dark");
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/theme.css" />
+  <link rel="stylesheet" href="assets/theme-presets.css" />
   <link rel="stylesheet" href="assets/landing.css" />
-  <link rel="stylesheet" href="assets/saas-auth.css" />
 </head>
 <body class="landing-page">
   <canvas id="cosmos" aria-hidden="true"></canvas>
@@ -18,52 +29,30 @@
   <div class="orb orb-orange" aria-hidden="true"></div>
 
   <header class="landing-header">
-    <a class="manjulab-mark" href="https://manjulab.com" target="_blank" rel="noopener">
-      <img src="https://brahmando.com/branding/manjulab-logo.png" alt="ManjuLAB" width="44" height="44" />
+    <a class="manjulab-mark" href="/">
       <div class="brand-text">
-        <strong>ManjuLAB</strong>
-        <span>Democratizing Intelligence</span>
+        <strong>Yogabrata</strong>
+        <span>Brahmexa</span>
       </div>
     </a>
-    <nav class="saas-header-nav" id="saasAuthNav" aria-label="Account">
-      <!-- filled by saas-auth.js -->
-    </nav>
   </header>
 
   <main class="landing-main">
     <div class="landing-tagline">
-      <p>Intelligence for every gap</p>
-      <h1>Choose your path</h1>
+      <p>Inflight projects</p>
+      <h1>Work in motion</h1>
     </div>
 
-    <section class="saas-promo" aria-labelledby="saasPromoTitle">
-      <div class="saas-promo-card">
-        <p class="eyebrow">ManjuLab Academy · SaaS</p>
-        <h2 id="saasPromoTitle">Subscribe to a program</h2>
-        <p>CBSE Class 10 is live today — SAT/ACT and English tests coming soon. First month <strong style="color:#6ee7b7">free</strong> on CBSE.</p>
-        <div class="saas-promo-prices">
-          <span>CBSE Class 10 · ₹1,000/mo</span>
-          <span>SAT/ACT · $24/mo (soon)</span>
-          <span>20% off with autopay</span>
-        </div>
-        <div class="saas-promo-actions">
-          <a class="saas-btn saas-btn-primary" href="/subscribe/?program=cbse10">Subscribe now</a>
-          <a class="saas-btn saas-btn-ghost" href="/portal/education/">Open study portal</a>
-        </div>
-      </div>
-    </section>
-
     <div class="portal-grid">
-      <button type="button" class="portal portal--rhytoma is-dormant" data-dormant="true" title="WIP — coming soon" aria-label="Rhytoma Academy — work in progress">
+      <a class="portal portal--saas" href="/portal/elogix-americas/">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
-          <span class="portal-icon" aria-hidden="true">📚</span>
-          <span class="portal-title bn">ঋতমা Academy</span>
-          <span class="portal-sub">West Bengal Board · TruthGuard</span>
-          <span class="portal-wip-badge" aria-hidden="true">WIP</span>
+          <span class="portal-icon" aria-hidden="true">⚡</span>
+          <span class="portal-title">Elogix Americas</span>
+          <span class="portal-sub">AI platforms &amp; software</span>
         </div>
-      </button>
+      </a>
 
       <a class="portal portal--caregiver" href="https://1o1.ai" target="_blank" rel="noopener">
         <div class="portal-ring"></div>
@@ -75,78 +64,33 @@
         </div>
       </a>
 
-      <a class="portal portal--saas" href="/portal/">
-        <div class="portal-ring"></div>
-        <div class="portal-orbit"></div>
-        <div class="portal-core">
-          <span class="portal-icon" aria-hidden="true">☁️</span>
-          <span class="portal-title">ManjuLAB Online Portal</span>
-          <span class="portal-sub">Anyo Brahmando Academy · SaaS</span>
-        </div>
-      </a>
-
-      <!-- 7RANGERS Hospital Replica Circle -->
       <a class="portal portal--caregiver" href="/sevenrangers/index.html">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
           <span class="portal-icon" aria-hidden="true">🏥</span>
           <span class="portal-title">7RANGERS Hospital</span>
-          <span class="portal-sub">AI Healthcare Showcase</span>
+          <span class="portal-sub">AI healthcare showcase</span>
         </div>
       </a>
 
-      <!-- Elogix Americas Enterprise AI Circle -->
-      <a class="portal portal--saas" href="/portal/elogix-americas/" style="border-color: rgba(79, 70, 229, 0.6);">
-        <div class="portal-ring"></div>
-        <div class="portal-orbit"></div>
-        <div class="portal-core">
-          <span class="portal-icon" aria-hidden="true">⚡</span>
-          <span class="portal-title">Elogix Americas</span>
-          <span class="portal-sub">AI Platforms &amp; Software</span>
-        </div>
-      </a>
-
-      <!-- Anyo Academy Client — Education API study console -->
-      <a class="portal portal--saas" href="/portal/anyo-academy-client/" style="border-color: rgba(15, 107, 92, 0.65);">
-        <div class="portal-ring"></div>
-        <div class="portal-orbit"></div>
-        <div class="portal-core">
-          <span class="portal-icon" aria-hidden="true">🧭</span>
-          <span class="portal-title">Anyo Academy Client</span>
-          <span class="portal-sub">Study · Quiz · API Pulse</span>
-        </div>
-      </a>
-
-      <a class="portal portal--atlas" href="https://atlas.kai247.com/" target="_blank" rel="noopener">
+      <a class="portal portal--atlas" href="https://atlas.yogabrata.com/" rel="noopener">
         <div class="portal-ring"></div>
         <div class="portal-orbit"></div>
         <div class="portal-core">
           <span class="portal-icon" aria-hidden="true">🪐</span>
           <span class="portal-title">ATLAS</span>
-          <span class="portal-sub">Financial intelligence · KAI247</span>
+          <span class="portal-sub">Financial intelligence</span>
         </div>
       </a>
     </div>
   </main>
 
   <footer class="landing-footer">
-    <img src="https://brahmando.com/branding/brahmexa-logo.jpeg" alt="" />
-    <img src="https://brahmando.com/branding/brahmando-logo.jpg" alt="" />
-    <p style="margin-top:8px">
-      A <a href="https://brahmando.com">Brahmexa</a> group surface ·
-      <a href="https://brahmando.com">brahmando.com</a>
-    </p>
+    <p>A <a href="https://brahmexa.com">Brahmexa</a> surface</p>
   </footer>
 
   <script src="assets/cosmic.js"></script>
-  <script src="assets/saas-auth.js"></script>
-  <script>
-    document.querySelectorAll('[data-dormant="true"]').forEach(function (el) {
-      el.addEventListener('click', function (e) {
-        e.preventDefault();
-      });
-    });
-  </script>
+  <script src="assets/theme-picker.js"></script>
 </body>
 </html>

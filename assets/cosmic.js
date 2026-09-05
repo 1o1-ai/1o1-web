@@ -24,7 +24,9 @@
       if (st.a < 0.12) st.a = 0.12;
       if (st.a > 0.9) st.a = 0.9;
       ctx.beginPath();
-      ctx.fillStyle = 'rgba(226, 232, 240, ' + st.a + ')';
+      ctx.fillStyle = document.documentElement.getAttribute('data-theme') === 'light'
+        ? 'rgba(15, 23, 42, ' + st.a + ')'
+        : 'rgba(226, 232, 240, ' + st.a + ')';
       ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
       ctx.fill();
     });
