@@ -492,7 +492,9 @@ async function ymViewScenarioCenterStory(ym_demo_key, ym_stage_ref) {
   if (ym_step < 0) ym_step = 0;
   let ym_paused = false;
   let ym_timer = null;
+  let ym_active = true;
   const ym_outcome_index = ym_stages.findIndex((ym_stage) => ym_stage.id === "payment_outcome");
+  const ym_runner_hash_prefix = `#/story/${encodeURIComponent(ym_context.sc.demo_key)}`;
 
   ymSetView(ym_sc.scenario_name, `${ym_sc.short_name} · Guided scenario`, `
     <section class="ym-runner" aria-label="${ymEsc(ym_sc.scenario_name)} guided demonstration">
@@ -544,7 +546,11 @@ async function ymViewScenarioCenterStory(ym_demo_key, ym_stage_ref) {
     if (ym_timer) window.clearInterval(ym_timer);
     ym_timer = null;
   };
-  window.ym_active_runner_stop = ym_stop_timer;
+  const ym_stop_runner = () => {
+    ym_active = false;
+    ym_stop_timer();
+  };
+  window.ym_active_runner_stop = ym_stop_runner;
   const ym_start_timer = () => {
     ym_stop_timer();
     if (ymReduced() || ym_paused) return;
@@ -558,6 +564,11 @@ async function ymViewScenarioCenterStory(ym_demo_key, ym_stage_ref) {
     }, 11000);
   };
   const ym_paint = () => {
+    if (!ym_active) return;
+    if (!location.hash.startsWith(ym_runner_hash_prefix)) {
+      ym_stop_runner();
+      return;
+    }
     const ym_stage = ym_stages[ym_step];
     const ym_model = ymRunnerStageModel(ym_stage, ym_context);
     history.replaceState(
@@ -617,7 +628,7 @@ async function ymViewScenarioCenterStory(ym_demo_key, ym_stage_ref) {
     ym_start_timer();
   });
   document.getElementById("ym-runner-exit").addEventListener("click", () => {
-    ym_stop_timer();
+    ym_stop_runner();
     location.hash = "#/profiles";
   });
   ym_paint();
