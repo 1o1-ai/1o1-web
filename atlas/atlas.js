@@ -273,11 +273,15 @@ function ymRenderExplain(out) {
   const engine = out.engine || {};
   const ai = out.ai || {};
   const txn = engine.transaction_risk || {};
-  const reasons = (txn.reasons || (engine.profile_risk || {}).reasons || []).slice(0, 3);
+  const ym_profile = engine.profile_risk || {};
+  const ym_has_transaction = txn.score != null && Boolean(txn.disposition);
+  const ym_assessment = ym_has_transaction ? txn : ym_profile;
+  const reasons = (ym_assessment.reasons || []).slice(0, 3);
   return `<article class="ym-bubble engine" aria-label="ATLAS engine answer">
-      <span class="pill pill-engine">ATLAS engine</span>
-      <p>${ymEsc((txn.plain && txn.plain.headline) || engine.goal || "")}</p>
+      <span class="pill pill-engine">ATLAS engine · ${ym_has_transaction ? "TRANSACTION ASSESSMENT" : "CUSTOMER ASSESSMENT"}</span>
+      <p>${ymEsc((ym_assessment.plain && ym_assessment.plain.headline) || engine.goal || "")}</p>
       <ul>${reasons.map((r) => `<li>${ymEsc(r.plain)} <span class="muted">(${ymEsc(r.effect)})</span></li>`).join("")}</ul>
+      ${ym_has_transaction ? "" : '<p class="muted">No transaction has been evaluated. This is not a payment decision.</p>'}
       <p class="muted">${ymEsc(engine.profile_vs_transaction || "")}</p>
       <p><strong>What a person should do:</strong> ${ymEsc(engine.operator_should || "")}</p>
     </article>
@@ -314,13 +318,13 @@ const YM_PUBLIC_INTEGRATIONS = Object.freeze([
     id: "plaid-sandbox",
     monogram: "PL",
     title: "Plaid Sandbox",
-    role: "Customer-permissioned accounts, transactions, identity, and Link through the sandbox adapter.",
+    role: "Test-mode Link/API adapter for sandbox accounts, transactions, and identity. Guided scenarios do not use it.",
   },
   {
     id: "stripe-sandbox",
     monogram: "ST",
     title: "Stripe test mode",
-    role: "PaymentIntents, signed webhooks, and idempotent submission. ATLAS refuses live Stripe keys.",
+    role: "Test PaymentIntents, signed webhooks, and idempotent submission. Demo payments use the internal simulator.",
   },
   {
     id: "ofac-sanctions",
@@ -348,10 +352,20 @@ const YM_PUBLIC_INTEGRATIONS = Object.freeze([
   },
 ]);
 
-function ymIntegrationStatus(ym_source) {
+function ymIntegrationStatus(ym_source, ym_definition) {
   if (!ym_source) return { label: "STATUS UNAVAILABLE", tone: "" };
-  if (ym_source.mode === "SYNTHETIC") return { label: "DEMO FIXTURE ACTIVE", tone: "pill-engine" };
-  if (ym_source.status === "HEALTHY") return { label: "SANDBOX CONNECTED", tone: "pill-engine" };
+  if (ym_source.mode === "SYNTHETIC") {
+    return {
+      label: ym_definition.id === "fednow-network-intelligence-mock" ? "SYNTHETIC MOCK ACTIVE" : "DEMO FIXTURE ACTIVE",
+      tone: "pill-engine",
+    };
+  }
+  if (ym_source.status === "HEALTHY") {
+    return {
+      label: ym_definition.id.endsWith("-sandbox") ? "SANDBOX CONNECTED" : "OPTIONAL SOURCE HEALTHY",
+      tone: "pill-engine",
+    };
+  }
   if (ym_source.status === "DEGRADED") return { label: "CONFIGURED · CHECK HEALTH", tone: "pill-ai" };
   return { label: "ADAPTER READY · NOT CONNECTED", tone: "pill-syn" };
 }
@@ -359,7 +373,7 @@ function ymIntegrationStatus(ym_source) {
 function ymIntegrationShowcase(ym_sources) {
   const ym_cards = YM_PUBLIC_INTEGRATIONS.map((ym_definition) => {
     const ym_source = ym_sources.find((ym_candidate) => ym_candidate.source_id === ym_definition.id);
-    const ym_status = ymIntegrationStatus(ym_source);
+    const ym_status = ymIntegrationStatus(ym_source, ym_definition);
     const ym_capabilities = (ym_source && ym_source.capabilities ? ym_source.capabilities : [])
       .slice(0, 4)
       .map((ym_capability) => String(ym_capability).replaceAll("_", " "))
@@ -377,7 +391,7 @@ function ymIntegrationShowcase(ym_sources) {
     <section class="ym-integrations" aria-labelledby="ym-integrations-title">
       <p class="eyebrow">Implemented integration surfaces</p>
       <h2 id="ym-integrations-title">Connectors ATLAS already knows how to use</h2>
-      <p>Badges are loaded from ATLAS source health. “Not connected” means the adapter exists but this public demo has no credential. Financial and payment connectors remain sandbox/test-only.</p>
+      <p>Guided demonstrations always use synthetic fixtures. Plaid and Stripe are optional sandbox connectors for health checks and advanced API paths—not live money movement. Badges are loaded from ATLAS source health.</p>
       <div class="ym-integration-grid">${ym_cards}</div>
       <div class="ym-actions"><a class="ym-btn ghost" href="#/sources">Inspect live source status and limitations</a></div>
     </section>`;
