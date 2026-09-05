@@ -6,9 +6,13 @@ Static site for ManjuLAB offerings on **yogabrata.com** (GitHub Pages).
 
 | Circle | Path |
 |--------|------|
-| Rhytoma Academy | `/rhytoma/` |
-| AI-Caregiver | `/ai-caregiver/` |
+| Rhytoma Academy | `/rhytoma/` (WIP) |
+| AI-Caregiver | [1o1.ai](https://1o1.ai) |
 | **ManjuLAB Online Portal** | `/portal/` |
+| 7RANGERS Hospital | `/sevenrangers/index.html` |
+| Elogix Americas | `/portal/elogix-americas/` |
+| Anyo Academy Client | `/portal/anyo-academy-client/` |
+| **ATLAS** | [atlas.kai247.com](https://atlas.kai247.com/) |
 
 ## Anyo Brahmando Academy (Education SaaS)
 

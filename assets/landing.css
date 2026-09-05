@@ -155,6 +155,24 @@ body.landing-page {
   box-shadow: 0 0 12px #34d399;
 }
 
+.portal--atlas .portal-ring {
+  background: radial-gradient(circle, rgba(126, 224, 255, 0.38) 0%, rgba(212, 180, 106, 0.14) 52%, transparent 72%);
+  box-shadow:
+    0 0 60px rgba(126, 224, 255, 0.32),
+    inset 0 0 40px rgba(212, 180, 106, 0.16);
+  animation-delay: -2.4s;
+}
+.portal--atlas .portal-core {
+  background: linear-gradient(145deg, rgba(16, 48, 72, 0.88), rgba(7, 16, 24, 0.92));
+  border-color: rgba(212, 180, 106, 0.35);
+  animation-delay: -1.4s;
+}
+.portal--atlas .portal-orbit::before,
+.portal--atlas .portal-orbit::after {
+  background: #d4b46a;
+  box-shadow: 0 0 12px #d4b46a;
+}
+
 .portal-core {
   position: absolute;
   inset: 14%;
