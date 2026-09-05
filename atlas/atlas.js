@@ -13,9 +13,19 @@ function ymIsYogabrataPagesClone() {
 
 function ymResolveApiBase() {
   if (ymIsYogabrataPagesClone()) {
-    return "https://atlas.kai247.com/atlas/api/v1";
+    return "https://brahmexa.com/atlas-api.php";
   }
   return "/atlas/api/v1";
+}
+
+function ymApiUrl(path) {
+  if (String(YM_API).indexOf("atlas-api.php") !== -1) {
+    const ym_q = path.indexOf("?");
+    const ym_only = ym_q >= 0 ? path.slice(0, ym_q) : path;
+    const ym_qs = ym_q >= 0 ? path.slice(ym_q + 1) : "";
+    return YM_API + "?path=" + encodeURIComponent(ym_only) + (ym_qs ? "&" + ym_qs : "");
+  }
+  return YM_API + path;
 }
 
 const YM_API = ymResolveApiBase();
@@ -63,7 +73,7 @@ function ymSelectProfile(id, demoKey) {
 async function ymApi(path, opts = {}) {
   const ym_headers = { ...(opts.headers || {}), ...ymAuth() };
   if (opts.json) ym_headers["Content-Type"] = "application/json";
-  const ym_resp = await fetch(YM_API + path, {
+  const ym_resp = await fetch(ymApiUrl(path), {
     method: opts.method || "GET",
     headers: ym_headers,
     body: opts.json ? JSON.stringify(opts.json) : opts.body,
@@ -518,8 +528,8 @@ async function ymViewPay(id) {
     const key = "DEMO-" + pid.slice(0, 8) + "-" + Date.now();
     const body = { payer_profile_id: pid, amount_minor: pay.amount_minor, requested_rail: pay.requested_rail, payee: { name: pay.payee_name, counterparty_id: pay.counterparty_id } };
     const headers = { ...ymAuth(), "Content-Type": "application/json", "Idempotency-Key": key };
-    const first = await fetch(YM_API + "/payment-intents", { method: "POST", headers, body: JSON.stringify(body) }).then((r) => r.json());
-    const second = await fetch(YM_API + "/payment-intents", { method: "POST", headers, body: JSON.stringify(body) }).then((r) => r.json());
+    const first = await fetch(ymApiUrl("/payment-intents"), { method: "POST", headers, body: JSON.stringify(body) }).then((r) => r.json());
+    const second = await fetch(ymApiUrl("/payment-intents"), { method: "POST", headers, body: JSON.stringify(body) }).then((r) => r.json());
     document.getElementById("pay-result").innerHTML = `<p>ATLAS treated the second request as the same payment. First id ${ymEsc((first.intent || {}).id)} · second id ${ymEsc((second.intent || {}).id)} — they match, so a duplicate was not created.</p>${ymTech({ first, second }, "Technical evidence")}`;
   });
   document.getElementById("btn-mutate").addEventListener("click", async () => {
@@ -591,7 +601,7 @@ function ymViewAch() {
     const file = e.target.files[0];
     const fd = new FormData();
     fd.append("file", file);
-    const resp = await fetch(YM_API + "/files/ach/parse", { method: "POST", headers: ymAuth(), body: fd });
+    const resp = await fetch(ymApiUrl("/files/ach/parse"), { method: "POST", headers: ymAuth(), body: fd });
     show(await resp.json());
   });
   document.querySelectorAll("[data-demo]").forEach((btn) => {

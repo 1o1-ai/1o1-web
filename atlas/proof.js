@@ -286,17 +286,17 @@ async function ymProofIdempotency(stage) {
     requested_rail: "ACH",
     payee: { name: "SYNTHETIC VENDOR", counterparty_id: "cp_idemp" },
   };
-  const first = await fetch(YM_API + "/payment-intents", {
+  const first = await fetch(ymApiUrl("/payment-intents"), {
     method: "POST",
     headers: { ...ymAuth(), "Content-Type": "application/json", "Idempotency-Key": key },
     body: JSON.stringify(body),
   }).then((r) => r.json());
-  const second = await fetch(YM_API + "/payment-intents", {
+  const second = await fetch(ymApiUrl("/payment-intents"), {
     method: "POST",
     headers: { ...ymAuth(), "Content-Type": "application/json", "Idempotency-Key": key },
     body: JSON.stringify(body),
   }).then((r) => r.json());
-  const thirdResp = await fetch(YM_API + "/payment-intents", {
+  const thirdResp = await fetch(ymApiUrl("/payment-intents"), {
     method: "POST",
     headers: { ...ymAuth(), "Content-Type": "application/json", "Idempotency-Key": key },
     body: JSON.stringify({ ...body, amount_minor: 99000 }),
@@ -325,16 +325,16 @@ async function ymProofMaker(stage) {
   });
   const intent = created.intent.id;
   await ymApi("/payment-intents/" + intent + "/evaluate", { method: "POST" });
-  const makerTry = await fetch(YM_API + "/payment-intents/" + intent + "/approve", {
+  const makerTry = await fetch(ymApiUrl("/payment-intents/" + intent + "/approve"), {
     method: "POST",
     headers: ymAuth(),
   });
-  const checker = await fetch(YM_API + "/auth/login", {
+  const checker = await fetch(ymApiUrl("/auth/login"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ username: "ap-1", password: "atlas-test-password" }),
   }).then((r) => r.json());
-  const ok = await fetch(YM_API + "/payment-intents/" + intent + "/approve", {
+  const ok = await fetch(ymApiUrl("/payment-intents/" + intent + "/approve"), {
     method: "POST",
     headers: { Authorization: "Bearer " + checker.access_token },
   });
@@ -359,12 +359,12 @@ async function ymProofTimeout(stage) {
   const intent = created.intent.id;
   const ev = await ymApi("/payment-intents/" + intent + "/evaluate", { method: "POST" });
   if (["STEP_UP_REQUIRED", "HELD"].includes((ev.payment || {}).state)) {
-    const tok = await fetch(YM_API + "/auth/login", {
+    const tok = await fetch(ymApiUrl("/auth/login"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username: "ap-1", password: "atlas-test-password" }),
     }).then((r) => r.json());
-    await fetch(YM_API + "/payment-intents/" + intent + "/approve", {
+    await fetch(ymApiUrl("/payment-intents/" + intent + "/approve"), {
       method: "POST",
       headers: { Authorization: "Bearer " + tok.access_token },
     });
