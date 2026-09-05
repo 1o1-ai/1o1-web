@@ -30,7 +30,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./theme-presets.css" />
-  <link rel="stylesheet" href="./atlas.css" />
+  <link rel="stylesheet" href="./atlas.css?v=20260905g" />
 </head>
 <body>
   <a class="skip-link" href="#view">Skip to content</a>
@@ -51,22 +51,15 @@
         <span class="atlas-mark__title">Financial Intelligence &amp; Payment Orchestration</span>
         <span class="atlas-mark__sub" data-ym-brand>Yogabrata · Brahmexa</span>
         <span class="pill pill-syn">SYNTHETIC / SANDBOX</span>
-        <button type="button" class="ym-cta" id="btn-guided">Start Guided Demo</button>
+        <button type="button" class="ym-cta" id="btn-guided">Run recommended scenario</button>
       </div>
       <nav class="atlas-nav" id="atlas-nav" aria-label="ATLAS primary">
-        <a href="#/home" data-view="home">Home</a>
-        <a href="#/story" data-view="story">Guided story</a>
-        <a href="#/profiles" data-view="profiles">Scenarios</a>
-        <a href="#/workspace" data-view="workspace">Workspace</a>
-        <a href="#/pay" data-view="pay">Payments</a>
-        <a href="#/fraud" data-view="fraud">Fraud</a>
-        <a href="#/ach" data-view="ach" title="ACH Inspector">ACH</a>
-        <a href="#/trace" data-view="trace">TRACE</a>
-        <a href="#/proof" data-view="proof">PROOF</a>
-        <a href="#/sources" data-view="sources">Sources</a>
-        <a href="#/new" data-view="new">New</a>
+        <a href="#/home" data-view="home">Overview</a>
+        <a href="#/profiles" data-view="profiles">Scenario demonstrations</a>
+        <a href="#/architecture" data-view="architecture">How ATLAS works</a>
+        <a href="#/technical" data-view="technical">Technical explorer</a>
       </nav>
-      <p class="atlas-rail__foot">ATLAS decides with rules. AI only explains. No live money movement.</p>
+      <p class="atlas-rail__foot">Rules decide before routing. AI only explains. TRACE and PROOF preserve evidence. No live money movement.</p>
     </header>
     <main class="atlas-main">
       <header class="atlas-top">
@@ -89,12 +82,13 @@
       <section id="view" class="atlas-view" tabindex="-1"></section>
     </main>
   </div>
-  <script src="./theme-picker.js?v=20260905c"></script>
-  <script src="./cosmos.js?v=20260905c"></script>
-  <script src="./atlas.js?v=20260905c"></script>
-  <script src="./graph.js?v=20260905c"></script>
-  <script src="./story.js?v=20260905c"></script>
-  <script src="./proof.js?v=20260905c"></script>
+  <script src="./theme-picker.js?v=20260905g"></script>
+  <script src="./cosmos.js?v=20260905g"></script>
+  <script src="./atlas.js?v=20260905g"></script>
+  <script src="./graph.js?v=20260905g"></script>
+  <script src="./story.js?v=20260905g"></script>
+  <script src="./scenario-center.js?v=20260905g"></script>
+  <script src="./proof.js?v=20260905g"></script>
   <script>ymRoute();</script>
 </body>
 </html>

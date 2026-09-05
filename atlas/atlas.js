@@ -112,8 +112,10 @@ function ymScoreClass(n) {
 }
 
 function ymRiskWord(n) {
-  if (n >= 80) return "HIGH";
-  if (n >= 40) return "MODERATE";
+  if (n >= 80) return "CRITICAL";
+  if (n >= 60) return "HIGH";
+  if (n >= 40) return "ELEVATED";
+  if (n >= 25) return "WATCH";
   return "LOW";
 }
 
@@ -137,13 +139,20 @@ function ymHash() {
 }
 
 function ymSetView(title, eyebrow, html) {
+  if (typeof window.ym_active_runner_stop === "function") {
+    window.ym_active_runner_stop();
+    window.ym_active_runner_stop = null;
+  }
   document.getElementById("view-title").textContent = title;
   document.getElementById("view-eyebrow").textContent = eyebrow;
   document.getElementById("view").innerHTML = html;
   const h = location.hash || "#/home";
   document.querySelectorAll(".atlas-nav a").forEach((a) => {
     const href = a.getAttribute("href");
-    a.classList.toggle("is-on", h === href || h.startsWith(href + "/"));
+    const ym_story_active = href === "#/profiles" && h.startsWith("#/story");
+    const ym_technical_active = href === "#/technical"
+      && /^#\/(workspace|pay|fraud|ach|trace|proof|sources|new)(\/|$)/.test(h);
+    a.classList.toggle("is-on", h === href || h.startsWith(href + "/") || ym_story_active || ym_technical_active);
   });
 }
 
@@ -301,56 +310,120 @@ function ymBindAsk() {
 }
 
 function ymViewHome() {
-  ymSetView("Watch ATLAS think out loud", "Synthetic guided demo", `
-    <div class="ym-hero">
-      <div>
-        <p>ATLAS is a demonstration of how a payment can be understood before any money moves.
-        You will meet a made-up customer, watch ATLAS gather signals, and see whether a payment is allowed, reviewed, held, or stopped — and why.</p>
-        <p class="ym-term">${ymTip("TRACE")}. ${ymTip("PROOF")}.</p>
-        <p class="muted">AI can explain the result. AI cannot send money.</p>
-        <div class="ym-actions">
-          <a class="ym-cta" href="#/story" style="display:inline-block;width:auto;text-decoration:none;">Start Guided Demo</a>
-          <a class="ym-btn ghost" href="#/profiles" style="display:inline-block;text-decoration:none;">Browse six scenarios</a>
-        </div>
+  ymSetView("What is ATLAS?", "Payments controlled before money moves", `
+    <section class="ym-overview-hero">
+      <span class="pill pill-syn">SYNTHETIC DEMO — NO REAL DATA OR MONEY</span>
+      <p class="ym-overview-lead">ATLAS creates and orchestrates payments, analyzes risk before money moves, applies deterministic policy controls, and produces a complete replayable record of every decision.</p>
+      <p>Choose a synthetic scenario and watch ATLAS turn fragmented financial signals into a controlled, explainable payment decision.</p>
+      <div class="ym-actions">
+        <a class="ym-cta" href="#/profiles">Explore synthetic scenarios</a>
+        <a class="ym-btn ghost" href="#/story/persona-ato">Watch the recommended demonstration</a>
       </div>
-      <svg viewBox="0 0 420 420" role="img" aria-label="Signals flowing into ATLAS">
-        <circle class="ym-core-glow" cx="210" cy="210" r="64" />
-        <circle cx="210" cy="210" r="24" fill="#7ee0ff" />
-        <text x="210" y="216" text-anchor="middle" fill="#071018" font-size="11">ATLAS</text>
-        <path class="ym-sig" d="M50 80 C130 80, 150 210, 186 210" />
-        <path class="ym-sig gold" d="M50 340 C130 340, 150 210, 186 210" />
-        <path class="ym-sig risk" d="M370 80 C290 80, 270 210, 234 210" />
-        <path class="ym-sig" d="M370 340 C290 340, 270 210, 234 210" />
-        <circle cx="50" cy="80" r="7" fill="#7eb6ff"/>
-        <circle cx="50" cy="340" r="7" fill="#d4b46a"/>
-        <circle cx="370" cy="80" r="7" fill="#e0a45c"/>
-        <circle cx="370" cy="340" r="7" fill="#6fd3b0"/>
-        <text x="50" y="62" text-anchor="middle" fill="#8b9bb0" font-size="11">Identity</text>
-        <text x="50" y="368" text-anchor="middle" fill="#8b9bb0" font-size="11">Income</text>
-        <text x="370" y="62" text-anchor="middle" fill="#8b9bb0" font-size="11">Device</text>
-        <text x="370" y="368" text-anchor="middle" fill="#8b9bb0" font-size="11">History</text>
-      </svg>
+    </section>
+    <div class="ym-capability-pair">
+      <article>
+        <span class="ym-capability-index">01</span>
+        <h2>Create and orchestrate payments</h2>
+        <p>ATLAS converts business instructions and payment files into validated, canonical payment intents with lifecycle controls, duplicate protection, and approval safeguards.</p>
+      </article>
+      <article>
+        <span class="ym-capability-index">02</span>
+        <h2>Analyze before money moves</h2>
+        <p>ATLAS combines customer history, transaction behavior, devices, beneficiaries, relationships, and source evidence to determine whether a payment should proceed, be monitored, require verification, be held, or be reviewed.</p>
+      </article>
     </div>
+    <div class="ym-system-flow" aria-label="ATLAS end-to-end flow">
+      ${["Fragmented sources", "Evidence-backed profile", "Canonical PaymentIntent", "Transaction analysis", "Deterministic policy", "Human control", "Simulated orchestration", "TRACE", "PROOF"].map((ym_label) => `<span>${ymEsc(ym_label)}</span>`).join("<b aria-hidden=\"true\">→</b>")}
+    </div>
+    <aside class="ym-recommended">
+      <div>
+        <span class="pill">RECOMMENDED · 7 MIN</span>
+        <h2>Possible Account Takeover</h2>
+        <p><strong>Priya Shah · Synthetic customer</strong></p>
+        <p>A trustworthy customer can still initiate a dangerous payment. This scenario makes Customer/Profile Risk, Transaction Risk, and the Final Payment Decision unmistakably separate.</p>
+      </div>
+      <a class="ym-cta" href="#/story/persona-ato">Run Priya's scenario</a>
+    </aside>
+    <p class="ym-boundary-note"><strong>Decision boundary:</strong> deterministic rules decide. AI may explain the result in ordinary language; AI cannot authorize or move money.</p>
   `);
 }
 
 async function ymViewProfiles() {
   const list = YM_STATE.scenarios.length ? YM_STATE.scenarios : await ymLoadScenarios();
-  const cards = list.map((s) => ymPortalShell(
-    `<span class="pill pill-syn">SYNTHETIC</span>
-      <span class="portal-title">${ymEsc(s.short_name)}</span>
-      <span class="portal-sub">${ymEsc(s.profile_risk_score ?? "—")} ${ymTip("profile risk")}</span>
-      <span class="portal-sub">${ymEsc(s.headline)}</span>`,
-    "",
-    `data-id="${ymEsc(s.profile_id)}" data-key="${ymEsc(s.demo_key)}"`,
-  )).join("");
-  ymSetView("Six synthetic people", "Each one teaches a different ATLAS idea", `<div class="portal-grid">${cards}</div>`);
-  document.querySelectorAll(".persona").forEach((el) => {
-    el.addEventListener("click", () => {
-      ymSelectProfile(el.dataset.id, el.dataset.key);
-      location.hash = "#/workspace/" + el.dataset.id;
+  const ym_cards = list.map((ym_scenario) => `
+    <article class="ym-scenario-card${ym_scenario.recommended ? " is-recommended" : ""}">
+      <div class="ym-scenario-card__orbit" aria-hidden="true"><span>${ymEsc(ym_scenario.short_name.split(" ").map((ym_part) => ym_part[0]).join(""))}</span></div>
+      <div class="ym-scenario-card__body">
+        <div class="ym-scenario-card__top">
+          <span class="pill pill-syn">SYNTHETIC CUSTOMER</span>
+          ${ym_scenario.recommended ? "<span class=\"pill pill-engine\">RECOMMENDED</span>" : ""}
+          <span class="ym-duration">${ymEsc(ym_scenario.estimated_minutes)} min</span>
+        </div>
+        <h2>${ymEsc(ym_scenario.scenario_name)}</h2>
+        <p class="ym-persona-name">${ymEsc(ym_scenario.short_name)}</p>
+        <p>${ymEsc(ym_scenario.situation)}</p>
+        <dl>
+          <div><dt>ATLAS must decide</dt><dd>${ymEsc(ym_scenario.decision_question)}</dd></div>
+          <div><dt>You will learn</dt><dd>${ymEsc(ym_scenario.learning_outcome)}</dd></div>
+        </dl>
+        <div class="ym-risk-labels" aria-label="Relevant risk concepts">
+          ${(ym_scenario.risk_labels || []).map((ym_label) => `<span>${ymEsc(ym_label)}</span>`).join("")}
+        </div>
+        <button type="button" class="ym-cta ym-run-scenario" data-id="${ymEsc(ym_scenario.profile_id)}" data-key="${ymEsc(ym_scenario.demo_key)}">Run scenario</button>
+      </div>
+    </article>`).join("");
+  ymSetView("Scenario Demonstration Center", "Choose a business question and watch ATLAS answer it", `
+    <section class="ym-catalog-intro">
+      <span class="pill pill-syn">SYNTHETIC DEMO — NO REAL DATA OR MONEY</span>
+      <p>Each guided workflow uses the real synthetic fixture and ATLAS policy engine. Scores, factors, state, TRACE, and PROOF are loaded from the API—not invented in this page.</p>
+    </section>
+    <div class="ym-scenario-grid">${ym_cards}</div>
+  `);
+  document.querySelectorAll(".ym-run-scenario").forEach((ym_element) => {
+    ym_element.addEventListener("click", () => {
+      ymSelectProfile(ym_element.dataset.id, ym_element.dataset.key);
+      location.hash = "#/story/" + ym_element.dataset.key;
     });
   });
+}
+
+function ymViewArchitecture() {
+  ymSetView("How ATLAS works", "One controlled path from fragmented signals to assurance", `
+    <span class="pill pill-syn">SYNTHETIC DEMO — NO REAL DATA OR MONEY</span>
+    <div class="ym-system-flow ym-system-flow--large" aria-label="ATLAS architecture flow">
+      ${["Fragmented sources", "MAP profile", "FLOW PaymentIntent", "GUARD transaction analysis", "Deterministic policy", "Maker / checker", "Sandbox rail", "TRACE replay", "PROOF assurance"].map((ym_label) => `<span>${ymEsc(ym_label)}</span>`).join("<b aria-hidden=\"true\">→</b>")}
+    </div>
+    <div class="ym-architecture-grid">
+      <article><h2>Evidence before inference</h2><p>ATLAS retains source provenance, freshness, confidence, and conflicts. SOURCE_FACT, DERIVED_FACT, and INFERENCE remain distinguishable.</p></article>
+      <article><h2>Two risk questions</h2><p><strong>Customer/Profile Risk</strong> asks whether the customer is generally trustworthy. <strong>Transaction Risk</strong> asks whether this payment is safe.</p></article>
+      <article><h2>Policy before routing</h2><p>The versioned deterministic engine returns ALLOW, ALLOW_MONITOR, STEP_UP, HOLD, or BLOCK_REVIEW before the simulator can route a payment.</p></article>
+      <article><h2>Humans retain authority</h2><p>RBAC and maker/checker controls prevent AI—or one employee—from creating and independently releasing a high-risk payment.</p></article>
+      <article><h2>TRACE reconstructs</h2><p>Persisted inputs, feature versions, policy versions, and outputs can be replayed to reproduce the decision.</p></article>
+      <article><h2>PROOF verifies</h2><p>Evidence, controls, audit records, parser status, and replay results make assurance inspectable.</p></article>
+    </div>
+    <p class="ym-boundary-note"><strong>AI's role:</strong> query, explain, investigate, and recommend. <strong>AI cannot:</strong> score authoritatively, parse ACH authoritatively, approve, release, or move money.</p>
+    <div class="ym-actions"><a class="ym-cta" href="#/profiles">Explore scenario demonstrations</a><a class="ym-btn ghost" href="#/technical">Open Technical Explorer</a></div>
+  `);
+}
+
+function ymViewTechnical() {
+  const ym_modules = [
+    ["Workspace", "Customer profile, evidence, metrics, and relationship map.", "#/workspace"],
+    ["Payments", "Canonical PaymentIntent creation, risk gate, and sandbox lifecycle.", "#/pay"],
+    ["Fraud", "Relationship graph and connected-risk investigation.", "#/fraud"],
+    ["ACH", "Deterministic Nacha parsing and validation.", "#/ach"],
+    ["TRACE", "Replay a persisted decision using the same inputs and rules.", "#/trace"],
+    ["PROOF", "Inspect institutional assurance and control evidence.", "#/proof"],
+    ["Sources", "Review provider modes, authority, health, and limitations.", "#/sources"],
+    ["New profile", "Build another synthetic customer through structured intake.", "#/new"],
+  ];
+  ymSetView("Technical Explorer", "Existing expert modules and bookmarked routes remain available", `
+    <span class="pill pill-syn">SYNTHETIC / SANDBOX</span>
+    <p class="ym-catalog-intro">Use these modules to inspect the implementation behind a scenario. The guided runner deep-links here without breaking the business story.</p>
+    <div class="ym-technical-grid">
+      ${ym_modules.map((ym_module) => `<a href="${ym_module[2]}"><span class="ym-tech-orb" aria-hidden="true"></span><strong>${ym_module[0]}</strong><small>${ym_module[1]}</small></a>`).join("")}
+    </div>
+  `);
 }
 
 function ymMeters(p, risk) {
@@ -406,7 +479,8 @@ async function ymViewWorkspace(id) {
         <p><strong>What this scenario proves:</strong> ${ymEsc(sc.proves || "")}</p>
       </article>
       <article>
-        <h3>ATLAS view of the customer</h3>
+        <h3>Customer/Profile Assessment</h3>
+        <p class="muted">This is the customer's general profile—not the decision on a payment.</p>
         <p class="${ymDispClass(risk.disposition)}"><strong>${ymEsc(disp.label || risk.disposition || "")}</strong></p>
         <p>${ymEsc(disp.detail || "")}</p>
       </article>
@@ -707,9 +781,11 @@ async function ymRoute() {
   const h = ymHash();
   try {
     if (h.view === "story") {
-      if (window.ymViewStory) await window.ymViewStory(h.id);
+      if (window.ymViewStory) await window.ymViewStory(h.id, h.extra);
       else ymViewHome();
-    } else if (h.view === "workspace") await ymViewWorkspace(h.id);
+    } else if (h.view === "architecture") ymViewArchitecture();
+    else if (h.view === "technical") ymViewTechnical();
+    else if (h.view === "workspace") await ymViewWorkspace(h.id);
     else if (h.view === "new") ymViewNew();
     else if (h.view === "pay") await ymViewPay(h.id);
     else if (h.view === "ach") ymViewAch();
@@ -729,6 +805,6 @@ async function ymRoute() {
 document.getElementById("login-form").addEventListener("submit", (ev) => {
   ymLogin(ev).catch((e) => { document.getElementById("login-status").textContent = e.message; });
 });
-document.getElementById("btn-guided").addEventListener("click", () => { location.hash = "#/story"; });
+document.getElementById("btn-guided").addEventListener("click", () => { location.hash = "#/story/persona-ato"; });
 window.addEventListener("hashchange", ymRoute);
 ymApplyBrandChrome();

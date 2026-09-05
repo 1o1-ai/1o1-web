@@ -144,7 +144,7 @@ async function ymProofPreflight(stage) {
       purpose: "vendor_payment",
       requested_rail: "RTP",
       speed: "INSTANT",
-      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_known_rent" },
+      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_priya_new_landlord" },
     },
   });
   const intent = created.intent.id;
@@ -247,7 +247,7 @@ async function ymProofTamper(stage) {
       amount_minor: 2500000,
       requested_rail: "RTP",
       speed: "INSTANT",
-      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_known_rent" },
+      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_priya_new_landlord" },
     },
   });
   const intent = created.intent.id;
@@ -320,7 +320,7 @@ async function ymProofMaker(stage) {
       amount_minor: 2500000,
       requested_rail: "RTP",
       speed: "INSTANT",
-      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_known_rent" },
+      payee: { name: "SYNTHETIC LANDLORD", counterparty_id: "cp_priya_new_landlord" },
     },
   });
   const intent = created.intent.id;
