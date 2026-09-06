@@ -100,6 +100,71 @@ function ymApplyBrandChrome() {
   });
 }
 
+const YM_SCENARIO_LAYOUT_KEY = "atlas_scenario_layout";
+
+function ymScenarioLayout() {
+  return document.documentElement.getAttribute("data-ym-scenario-layout") === "rectangular"
+    ? "rectangular"
+    : "circular";
+}
+
+function ymUpdateScenarioLayoutToggle() {
+  const ym_toggle = document.getElementById("ym-scenario-layout-toggle");
+  if (!ym_toggle) return;
+  const ym_is_circular = ymScenarioLayout() === "circular";
+  const ym_label = ym_toggle.querySelector(".ym-layout-switch__label");
+  ym_toggle.setAttribute("aria-checked", String(ym_is_circular));
+  ym_toggle.setAttribute(
+    "aria-label",
+    ym_is_circular ? "Use rectangular scenario cards" : "Use circular scenario cards",
+  );
+  ym_toggle.title = ym_is_circular
+    ? "Switch to rectangular scenario cards"
+    : "Switch to circular scenario cards";
+  if (ym_label) ym_label.textContent = ym_is_circular ? "Circular" : "Rectangular";
+}
+
+function ymSetScenarioLayout(ym_layout) {
+  const ym_normalized = ym_layout === "rectangular" ? "rectangular" : "circular";
+  document.documentElement.setAttribute("data-ym-scenario-layout", ym_normalized);
+  try {
+    localStorage.setItem(YM_SCENARIO_LAYOUT_KEY, ym_normalized);
+  } catch (ym_error) {
+    console.warn("ATLAS could not save the scenario layout preference", ym_error);
+  }
+  ymUpdateScenarioLayoutToggle();
+}
+
+function ymScenarioLayoutControl() {
+  const ym_is_circular = ymScenarioLayout() === "circular";
+  return `
+    <div class="ym-scenario-layout-bar">
+      <div>
+        <strong>Scenario card view</strong>
+        <small>Circles are the default. Switch to rectangular panels whenever you prefer.</small>
+      </div>
+      <button
+        type="button"
+        class="ym-layout-switch"
+        id="ym-scenario-layout-toggle"
+        role="switch"
+        aria-checked="${ym_is_circular ? "true" : "false"}"
+      >
+        <span class="ym-layout-switch__track" aria-hidden="true"><span></span></span>
+        <span class="ym-layout-switch__label">${ym_is_circular ? "Circular" : "Rectangular"}</span>
+      </button>
+    </div>`;
+}
+
+function ymBindScenarioLayoutToggle() {
+  const ym_toggle = document.getElementById("ym-scenario-layout-toggle");
+  if (!ym_toggle) return;
+  ymUpdateScenarioLayoutToggle();
+  ym_toggle.addEventListener("click", () => {
+    ymSetScenarioLayout(ymScenarioLayout() === "circular" ? "rectangular" : "circular");
+  });
+}
+
 function ymMoney(minor) {
   const n = Number(minor || 0) / 100;
   return n.toLocaleString("en-US", { style: "currency", currency: "USD" });
@@ -489,9 +554,11 @@ async function ymViewProfiles() {
       <span class="pill pill-syn">SYNTHETIC DEMO — NO REAL DATA OR MONEY</span>
       <p>Choose any use case below. Each guided workflow uses its real synthetic fixture and the ATLAS policy engine. Scores, factors, state, TRACE, and PROOF are loaded from the API—not invented in this page.</p>
     </section>
+    ${ymScenarioLayoutControl()}
     <div class="ym-scenario-grid">${ym_cards}${ym_real_profile}</div>
     ${ymIntegrationShowcase(ym_sources)}
   `);
+  ymBindScenarioLayoutToggle();
   document.querySelectorAll(".ym-run-scenario").forEach((ym_element) => {
     ym_element.addEventListener("click", () => {
       ymSelectProfile(ym_element.dataset.id, ym_element.dataset.key);

@@ -874,6 +874,72 @@ details.ym-tech a {
   margin: 0 auto 1.5rem;
   text-align: center;
 }
+.ym-scenario-layout-bar {
+  max-width: 42rem;
+  margin: 0 auto 1.5rem;
+  padding: 0.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow: 0 10px 28px var(--surface-shadow);
+}
+.ym-scenario-layout-bar > div { display: grid; gap: 0.15rem; }
+.ym-scenario-layout-bar strong { color: var(--ink); font-size: 0.82rem; }
+.ym-scenario-layout-bar small { color: var(--muted); font-size: 0.68rem; line-height: 1.35; }
+.ym-layout-switch {
+  flex: 0 0 auto;
+  min-width: 8.7rem;
+  min-height: 2.6rem;
+  padding: 0.35rem 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-raised);
+  cursor: pointer;
+}
+.ym-layout-switch:hover { border-color: var(--gold); }
+.ym-layout-switch__track {
+  position: relative;
+  width: 2.8rem;
+  height: 1.45rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: var(--surface-inset);
+  box-shadow: inset 0 0 0 1px var(--line);
+  transition: background 0.2s ease;
+}
+.ym-layout-switch__track > span {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  width: 1.05rem;
+  height: 1.05rem;
+  border-radius: 50%;
+  background: var(--muted);
+  box-shadow: 0 2px 7px var(--surface-shadow);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.ym-layout-switch[aria-checked="true"] .ym-layout-switch__track {
+  background: color-mix(in srgb, var(--accent) 48%, var(--surface-inset));
+}
+.ym-layout-switch[aria-checked="true"] .ym-layout-switch__track > span {
+  transform: translateX(1.35rem);
+  background: var(--gold-2);
+}
+.ym-layout-switch__label {
+  min-width: 4.8rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-align: left;
+}
 .ym-scenario-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -973,6 +1039,49 @@ details.ym-tech a {
   background:
     radial-gradient(circle at 50% 18%, color-mix(in srgb, var(--gold) 20%, transparent), transparent 36%),
     var(--surface);
+}
+[data-ym-scenario-layout="circular"] .ym-scenario-card {
+  align-content: center;
+  aspect-ratio: 1;
+  min-height: 0;
+  padding: clamp(3.2rem, 5vw, 4.5rem);
+  overflow: hidden;
+  border-radius: 50%;
+  container-type: inline-size;
+}
+[data-ym-scenario-layout="circular"] .ym-scenario-card::after {
+  border-radius: 50%;
+}
+@container (max-width: 30rem) {
+  [data-ym-scenario-layout="circular"] .ym-scenario-card__body {
+    font-size: 0.86rem;
+  }
+  [data-ym-scenario-layout="circular"] .ym-scenario-card h2 {
+    margin-top: 0.55rem;
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+  [data-ym-scenario-layout="circular"] .ym-scenario-card p {
+    margin: 0.18rem 0 0.5rem;
+    line-height: 1.4;
+  }
+  [data-ym-scenario-layout="circular"] .ym-persona-name {
+    margin: 0.12rem 0 0.45rem;
+  }
+  [data-ym-scenario-layout="circular"] .ym-scenario-card dl {
+    gap: 0.32rem;
+  }
+  [data-ym-scenario-layout="circular"] .ym-scenario-card dl div {
+    padding-top: 0.32rem;
+  }
+  [data-ym-scenario-layout="circular"] .ym-scenario-card dd {
+    font-size: 0.76rem;
+    line-height: 1.35;
+  }
+  [data-ym-scenario-layout="circular"] .ym-risk-labels {
+    margin: 0 0 0.55rem;
+    padding-top: 0.5rem;
+  }
 }
 .ym-coming-soon:disabled {
   color: var(--muted);
@@ -1718,7 +1827,7 @@ input[type="file"]::file-selector-button {
   .ym-orb-ring, .ym-orb-core, .ym-orb-sat, .ym-sig, .ym-packet, .ym-core-glow, .ym-link-on, .ym-node-pop, .ym-score-anim b, .ym-score-anim, .flow span.on::after, .portal-ring, .portal-orbit, .portal-core, .orb, .ym-scenario-card__orbit, .ym-scenario-card__orbit span, .ym-runner-loading__core, .ym-runner-orbit::before, .ym-runner-signal, .ym-tech-orb {
     animation: none !important;
   }
-  .persona, .portal, .atlas-nav a, .ym-technical-grid a { transition: none; }
+  .persona, .portal, .atlas-nav a, .ym-technical-grid a, .ym-layout-switch, .ym-layout-switch__track, .ym-layout-switch__track > span { transition: none; }
 }
 
 @media (max-width: 960px) {
@@ -1754,10 +1863,18 @@ input[type="file"]::file-selector-button {
   .ym-capability-pair article { min-height: 0; padding: 1.6rem; }
   .ym-overview-hero { border-radius: 1.5rem; padding: 1.8rem 1.4rem; }
   .ym-choice-prompt { min-height: 0; flex-direction: column; padding: 1.6rem; text-align: center; }
+  .ym-scenario-layout-bar { flex-direction: column; border-radius: 1.25rem; text-align: center; }
   .ym-scenario-card {
     width: min(100%, 27rem);
     min-height: 0;
     padding: 6.8rem 1.4rem 1.8rem;
+  }
+  [data-ym-scenario-layout="circular"] .ym-scenario-card {
+    aspect-ratio: 2 / 3;
+    min-height: 0;
+    padding: 5.5rem 2.5rem 3.8rem;
+    overflow: hidden;
+    border-radius: 50%;
   }
   .ym-scenario-card__orbit {
     top: 1.15rem;

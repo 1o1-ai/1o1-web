@@ -4,7 +4,7 @@
   Copyright (c) 2026 Brahmexa. All rights reserved.
 -->
 <!DOCTYPE html>
-<html lang="en" data-cosmic-theme="eden" data-theme="dark" data-ym-surface="kai247">
+<html lang="en" data-cosmic-theme="eden" data-theme="dark" data-ym-surface="kai247" data-ym-scenario-layout="circular">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,12 +24,19 @@
       document.documentElement.setAttribute("data-cosmic-theme", ym_saved);
       var ym_light = ym_saved === "dawn" || ym_saved === "paper" || ym_saved === "ivory";
       document.documentElement.setAttribute("data-theme", ym_light ? "light" : "dark");
+      var ym_scenario_layout = "circular";
+      try {
+        ym_scenario_layout = localStorage.getItem("atlas_scenario_layout") === "rectangular"
+          ? "rectangular"
+          : "circular";
+      } catch (ym_error) { /* ignore */ }
+      document.documentElement.setAttribute("data-ym-scenario-layout", ym_scenario_layout);
     })();
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./theme-presets.css?v=20260905p" />
-  <link rel="stylesheet" href="./atlas.css?v=20260905p" />
+  <link rel="stylesheet" href="./theme-presets.css?v=20260905q" />
+  <link rel="stylesheet" href="./atlas.css?v=20260905q" />
 </head>
 <body>
   <a class="skip-link" href="#view">Skip to content</a>
@@ -81,13 +88,13 @@
       <section id="view" class="atlas-view" tabindex="-1"></section>
     </main>
   </div>
-  <script src="./theme-picker.js?v=20260905p"></script>
-  <script src="./cosmos.js?v=20260905p"></script>
-  <script src="./atlas.js?v=20260905p"></script>
-  <script src="./graph.js?v=20260905p"></script>
-  <script src="./story.js?v=20260905p"></script>
-  <script src="./scenario-center.js?v=20260905p"></script>
-  <script src="./proof.js?v=20260905p"></script>
+  <script src="./theme-picker.js?v=20260905q"></script>
+  <script src="./cosmos.js?v=20260905q"></script>
+  <script src="./atlas.js?v=20260905q"></script>
+  <script src="./graph.js?v=20260905q"></script>
+  <script src="./story.js?v=20260905q"></script>
+  <script src="./scenario-center.js?v=20260905q"></script>
+  <script src="./proof.js?v=20260905q"></script>
   <script>ymRoute();</script>
 </body>
 </html>
