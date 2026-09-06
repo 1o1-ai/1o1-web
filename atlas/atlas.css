@@ -301,7 +301,29 @@ h1 { font-weight: 600; font-size: clamp(1.35rem, 3vw, 1.75rem); margin: 0.2rem 0
   height: min(168px, 42vw);
 }
 .portal--compact .portal-title { font-size: 0.78rem; font-weight: 600; }
-.portal--source { cursor: default; }
+.portal--source {
+  width: min(22rem, 92vw);
+  height: auto;
+  min-height: 16rem;
+  padding: 1rem;
+  cursor: default;
+  border: 1px solid var(--line);
+  border-radius: 1.5rem;
+  background: var(--surface);
+}
+.portal--source .portal-ring,
+.portal--source .portal-orbit,
+.portal--source .portal-core { border-radius: 1.15rem; }
+.portal--source .portal-orbit { inset: 0.55rem; animation: none; }
+.portal--source .portal-orbit::before,
+.portal--source .portal-orbit::after { display: none; }
+.portal--source .portal-core {
+  position: relative;
+  inset: auto;
+  min-height: 14rem;
+  overflow: visible;
+}
+.portal--source .portal-sub { max-height: none; overflow: visible; }
 .portal--source:hover { transform: scale(1.03); }
 
 .score-row {
@@ -348,7 +370,7 @@ h1 { font-weight: 600; font-size: clamp(1.35rem, 3vw, 1.75rem); margin: 0.2rem 0
   list-style: none;
   width: min(12rem, 80vw);
   min-height: 5.4rem;
-  border-radius: 50%;
+  border-radius: 1.25rem;
   display: grid;
   place-items: center;
   text-align: center;
@@ -460,11 +482,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   font-variant-numeric: tabular-nums;
   max-width: 22rem;
   margin: 1rem auto;
-  min-height: 15rem;
+  min-height: 0;
   display: grid;
   align-content: center;
-  padding: 2rem 2.8rem;
-  border-radius: 50%;
+  padding: 1.4rem 1.6rem;
+  border-radius: 1.35rem;
   border: 1px solid var(--line);
   background: var(--surface);
 }
@@ -513,9 +535,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   justify-content: center;
 }
 .ym-reason {
-  width: 8.6rem;
-  height: 8.6rem;
-  border-radius: 50%;
+  width: min(13rem, 88vw);
+  min-height: 8.6rem;
+  border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -539,17 +561,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   justify-content: center;
 }
 .ym-split article {
-  width: min(260px, 82vw);
-  height: min(260px, 82vw);
-  border-radius: 50%;
+  width: min(30rem, 100%);
+  min-height: 12rem;
+  border-radius: 1.5rem;
   border: 1px solid var(--line);
-  padding: 2.1rem 1.6rem;
+  padding: 1.6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  overflow: hidden;
+  overflow: visible;
   background: radial-gradient(circle at 50% 28%, color-mix(in srgb, var(--accent) 16%, transparent), var(--surface) 62%);
 }
 .ym-split article h3 { margin: 0 0 0.4rem; font-size: 0.95rem; }
@@ -623,8 +645,8 @@ details.ym-tech summary { cursor: pointer; color: var(--syn); }
   margin: 0 auto 1rem;
 }
 .ym-evidence-node {
-  width: 9.4rem;
-  height: 9.4rem;
+  width: 10.5rem;
+  min-height: 9rem;
   display: flex;
   flex: 0 0 auto;
   flex-direction: column;
@@ -635,7 +657,7 @@ details.ym-tech summary { cursor: pointer; color: var(--syn); }
   color: var(--ink);
   text-align: center;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 1.25rem;
   background: var(--surface-raised);
 }
 .ym-evidence-node__icon {
@@ -749,7 +771,7 @@ svg.ym-graph {
   text-align: center;
   padding: clamp(1.4rem, 4vw, 2.8rem);
   border: 1px solid rgba(126, 224, 255, 0.22);
-  border-radius: 50% / 32%;
+  border-radius: 2rem;
   background:
     radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 48%),
     var(--surface);
@@ -780,13 +802,13 @@ details.ym-tech a {
 }
 .ym-capability-pair article {
   position: relative;
-  min-height: 19rem;
+  min-height: 14rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3.2rem;
+  padding: 2rem;
   text-align: center;
-  border-radius: 50%;
+  border-radius: 1.75rem;
   border: 1px solid var(--line);
   background: radial-gradient(circle at 50% 28%, color-mix(in srgb, var(--accent) 18%, transparent), var(--surface) 64%);
   box-shadow: inset 0 0 36px color-mix(in srgb, var(--accent) 10%, transparent);
@@ -829,10 +851,10 @@ details.ym-tech a {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  min-height: 16rem;
-  padding: 3rem 5rem;
+  min-height: 0;
+  padding: 2rem 2.25rem;
   border: 1px solid rgba(212, 180, 106, 0.45);
-  border-radius: 50%;
+  border-radius: 1.75rem;
   background: radial-gradient(circle at 26% 30%, color-mix(in srgb, var(--gold) 18%, transparent), var(--surface) 64%);
 }
 .ym-choice-prompt h2 { margin: 0.5rem 0 0.15rem; }
@@ -843,7 +865,7 @@ details.ym-tech a {
   padding: 0.85rem 1.1rem;
   text-align: center;
   border: 1px solid rgba(126, 182, 255, 0.34);
-  border-radius: 999px;
+  border-radius: 1rem;
   background: var(--surface);
 }
 
@@ -862,14 +884,13 @@ details.ym-tech a {
   position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  align-content: center;
-  aspect-ratio: 1;
-  min-height: 0;
-  padding: clamp(3.2rem, 5vw, 4.5rem);
-  overflow: hidden;
+  align-content: start;
+  min-height: 36rem;
+  padding: 7.8rem clamp(1.5rem, 3vw, 2.5rem) 2.5rem;
+  overflow: visible;
   text-align: center;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 2rem;
   background:
     radial-gradient(circle at 25% 18%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 34%),
     var(--surface);
@@ -881,7 +902,7 @@ details.ym-tech a {
   inset: 0.65rem;
   pointer-events: none;
   border: 1px dashed color-mix(in srgb, var(--gold) 35%, transparent);
-  border-radius: 50%;
+  border-radius: 1.5rem;
 }
 .ym-scenario-card.is-recommended {
   border-color: rgba(212, 180, 106, 0.62);
@@ -978,16 +999,16 @@ details.ym-tech a {
 }
 .ym-integration-card {
   width: min(100%, 20rem);
-  aspect-ratio: 1;
+  min-height: 17rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 2.6rem;
+  padding: 1.8rem;
   text-align: center;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 1.5rem;
   background:
     radial-gradient(circle at 50% 22%, color-mix(in srgb, var(--accent) 18%, transparent), transparent 36%),
     var(--surface);
@@ -1064,7 +1085,7 @@ details.ym-tech a {
   z-index: 12;
   padding: 0.75rem;
   border: 1px solid rgba(126, 224, 255, 0.25);
-  border-radius: 999px;
+  border-radius: 1.25rem;
   background: var(--surface-raised);
   box-shadow: 0 10px 28px var(--surface-shadow);
   backdrop-filter: blur(16px);
@@ -1142,7 +1163,7 @@ details.ym-tech a {
   min-width: 0;
   padding: clamp(1rem, 2.5vw, 1.8rem);
   border: 1px solid var(--line);
-  border-radius: 4.5rem;
+  border-radius: 1.75rem;
   background:
     radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--accent) 13%, transparent), transparent 35%),
     var(--surface);
@@ -1157,7 +1178,7 @@ details.ym-tech a {
   padding: 1rem;
   overflow: hidden;
   border: 1px solid rgba(126, 224, 255, 0.16);
-  border-radius: 50% / 28%;
+  border-radius: 1.5rem;
   background: radial-gradient(circle at 50% 46%, color-mix(in srgb, var(--surface-inset) 74%, var(--accent)), var(--surface-inset) 72%);
 }
 .ym-runner-four {
@@ -1168,14 +1189,13 @@ details.ym-tech a {
 }
 .ym-runner-four article {
   min-height: 10rem;
-  aspect-ratio: 1.65;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 1.35rem 2rem;
   text-align: center;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 1.25rem;
   background: var(--surface-raised);
 }
 .ym-runner-four h3 {
@@ -1293,7 +1313,7 @@ details.ym-tech a {
   align-items: center;
   padding: 0.42rem 0.65rem;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: 0.8rem;
   background: var(--surface-raised);
   font-size: 0.7rem;
 }
@@ -1314,7 +1334,7 @@ details.ym-tech a {
   padding: 2rem;
   text-align: center;
   border: 1px solid var(--gold);
-  border-radius: 50%;
+  border-radius: 1.5rem;
   background: radial-gradient(circle at 50% 20%, color-mix(in srgb, var(--gold) 17%, transparent), var(--surface-raised));
   box-shadow: 0 0 28px rgba(212, 180, 106, 0.12);
 }
@@ -1364,7 +1384,7 @@ details.ym-tech a {
   margin-top: 0.9rem;
   padding: 0.8rem 1rem;
   border: 1px solid var(--line);
-  border-radius: 3rem;
+  border-radius: 1rem;
   background: var(--surface-raised);
   font-size: 0.7rem;
 }
@@ -1426,15 +1446,14 @@ details.ym-tech a {
   gap: 0.85rem;
 }
 .ym-architecture-grid article {
-  aspect-ratio: 1;
-  min-height: 0;
+  min-height: 13rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2.8rem;
+  padding: 1.8rem;
   text-align: center;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 1.5rem;
   background: radial-gradient(circle at 50% 18%, color-mix(in srgb, var(--accent) 14%, transparent), var(--surface) 58%);
 }
 .ym-architecture-grid h2 { margin: 0 0 0.5rem; color: var(--gold-2); font-size: 1rem; }
@@ -1445,8 +1464,7 @@ details.ym-tech a {
   margin-top: 1.2rem;
 }
 .ym-technical-grid a {
-  aspect-ratio: 1;
-  min-height: 0;
+  min-height: 12rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1457,7 +1475,7 @@ details.ym-tech a {
   text-align: center;
   text-decoration: none;
   border: 1px solid var(--line);
-  border-radius: 50%;
+  border-radius: 1.5rem;
   background: var(--surface);
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
@@ -1634,7 +1652,7 @@ input[type="file"]::file-selector-button {
   padding: 0.8rem 1rem;
   color: var(--allow);
   border: 1px solid var(--allow);
-  border-radius: 999px;
+  border-radius: 1rem;
 }
 .ym-proof-parser-select {
   display: grid;
@@ -1728,17 +1746,18 @@ input[type="file"]::file-selector-button {
   .atlas-top > div:first-child { text-align: center; }
   .login-form { justify-content: center; }
   .portal, .persona, .ym-card { width: min(220px, 78vw); height: min(220px, 78vw); }
-  .ym-split article { width: min(220px, 78vw); height: min(220px, 78vw); }
+  .portal--source { width: min(100%, 22rem); height: auto; }
+  .ym-split article { width: 100%; min-height: 0; }
   .atlas-nav { gap: 0.4rem; }
   .atlas-nav a { width: 4.5rem; height: 4.5rem; font-size: 0.56rem; }
   .ym-capability-pair { grid-template-columns: 1fr; }
-  .ym-capability-pair article { min-height: 16rem; padding: 2.7rem; }
-  .ym-overview-hero { border-radius: 50% / 18%; padding: 3rem 2rem; }
-  .ym-choice-prompt { min-height: 19rem; flex-direction: column; padding: 3.2rem 2.5rem; text-align: center; }
+  .ym-capability-pair article { min-height: 0; padding: 1.6rem; }
+  .ym-overview-hero { border-radius: 1.5rem; padding: 1.8rem 1.4rem; }
+  .ym-choice-prompt { min-height: 0; flex-direction: column; padding: 1.6rem; text-align: center; }
   .ym-scenario-card {
     width: min(100%, 27rem);
-    aspect-ratio: 2 / 3;
-    padding: 5.5rem 2.5rem 3.8rem;
+    min-height: 0;
+    padding: 6.8rem 1.4rem 1.8rem;
   }
   .ym-scenario-card__orbit {
     top: 1.15rem;
@@ -1756,8 +1775,8 @@ input[type="file"]::file-selector-button {
   .ym-runner-summary__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ym-runner-summary__grid div,
   .ym-runner-summary__grid div:nth-child(4) { border-right: 0; border-bottom: 1px solid var(--line); padding-bottom: 0.4rem; }
-  .ym-runner-stage { border-radius: 3rem; }
-  .ym-runner-stage__visual { min-height: 18rem; border-radius: 50% / 18%; }
+  .ym-runner-stage { border-radius: 1.5rem; }
+  .ym-runner-stage__visual { min-height: 18rem; border-radius: 1.25rem; }
   .ym-runner-four { grid-template-columns: 1fr; }
   .ym-runner-four article { width: min(100%, 24rem); min-height: 11rem; justify-self: center; }
   .ym-runner-controls { border-radius: 999px; }
