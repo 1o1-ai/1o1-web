@@ -114,10 +114,6 @@ function ymUpdateScenarioLayoutToggle() {
   const ym_is_circular = ymScenarioLayout() === "circular";
   const ym_label = ym_toggle.querySelector(".ym-layout-switch__label");
   ym_toggle.setAttribute("aria-checked", String(ym_is_circular));
-  ym_toggle.setAttribute(
-    "aria-label",
-    ym_is_circular ? "Use rectangular scenario cards" : "Use circular scenario cards",
-  );
   ym_toggle.title = ym_is_circular
     ? "Switch to rectangular scenario cards"
     : "Switch to circular scenario cards";
@@ -149,6 +145,7 @@ function ymScenarioLayoutControl() {
         id="ym-scenario-layout-toggle"
         role="switch"
         aria-checked="${ym_is_circular ? "true" : "false"}"
+        aria-label="Circular scenario card view"
       >
         <span class="ym-layout-switch__track" aria-hidden="true"><span></span></span>
         <span class="ym-layout-switch__label">${ym_is_circular ? "Circular" : "Rectangular"}</span>
