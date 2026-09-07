@@ -1,0 +1,59 @@
+{
+  "id": "jsi-preview",
+  "name": "JSI Software Solutions",
+  "legalName": "JSI Software Solutions Pvt Ltd",
+  "relatedCompany": "Brahmexa LLC",
+  "network": "KAIORB",
+  "platform": "KAI247",
+  "tagline": "The infrastructure behind practical AI.",
+  "heroTitle": "Your infrastructure. Your knowledge. AI that gets work done.",
+  "heroSupport": "Bring together private AI compute, local language models, knowledge retrieval, and agentic workflows—from business operations to intelligent classrooms.",
+  "positioning": "JSI brings together compute, local LLMs, private knowledge retrieval, workflow orchestration, and intelligent devices into usable business solutions.",
+  "previewNote": "Preview on yogabrata.com. This is an in-flight web solution. It is not the live jsisoftwaresolutions.com storefront.",
+  "status": "In Flight",
+  "basePath": "/jsi/",
+  "canonicalOrigin": "https://yogabrata.com",
+  "robots": "noindex, nofollow",
+  "contact": {
+    "inquiryEmail": "hello@jsisoftwaresolutions.com",
+    "supportEmail": "tech-support@jsisoftwaresolutions.com",
+    "phoneDisplay": "+91 79838 75643",
+    "phoneTel": "+917983875643",
+    "whatsapp": "https://wa.me/917983875643",
+    "inquirySubject": "JSI AI infrastructure enquiry",
+    "hardwareSubject": "SWAN board / installation enquiry"
+  },
+  "locations": [
+    {
+      "label": "India — Moradabad",
+      "detail": "2nd Floor, Madhubani Complex, Kanth Road, Moradabad, Uttar Pradesh 244001",
+      "role": "JSI Software Solutions"
+    },
+    {
+      "label": "India — Rampur",
+      "detail": "Plot C-16, Roshan Bagh Industrial Area, Civil Lines, Rampur, Uttar Pradesh 244901",
+      "role": "Infrastructure location. Capacity, uptime, and inventory figures are scoped during discovery—not published as guarantees."
+    },
+    {
+      "label": "United States — Brahmexa LLC",
+      "detail": "659 Ferndale Ct NE, Renton, WA 98056",
+      "role": "Related Brahmexa LLC office"
+    }
+  ],
+  "nav": [
+    { "id": "solutions", "label": "Solutions", "href": "/jsi/#solutions" },
+    { "id": "demo", "label": "See AI at work", "href": "/jsi/see-ai-at-work/" },
+    { "id": "architecture", "label": "Architecture", "href": "/jsi/#architecture" },
+    { "id": "swan", "label": "SWAN", "href": "/jsi/swan/" },
+    { "id": "leadership", "label": "Leadership", "href": "/jsi/#leadership" },
+    { "id": "contact", "label": "Contact", "href": "/jsi/#contact" }
+  ],
+  "primaryCta": { "label": "Explore a solution", "href": "/jsi/#solutions" },
+  "secondaryCta": { "label": "Discuss your deployment", "href": "/jsi/#contact" },
+  "statusLegend": [
+    { "id": "available", "label": "Available", "meaning": "Offered as a current JSI product or service path." },
+    { "id": "pilot", "label": "Pilot", "meaning": "Scoped engagement. Fit, sizing, and operations are designed with the customer." },
+    { "id": "proposed", "label": "Proposed integration", "meaning": "Described capability that is not presented here as a finished customer deployment." },
+    { "id": "demonstration", "label": "Demonstration", "meaning": "Interactive preview with synthetic data. Not a live model, n8n connection, or customer system." }
+  ]
+}

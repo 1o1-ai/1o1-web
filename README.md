@@ -6,10 +6,13 @@ Static site for inflight Yogabrata projects on **yogabrata.com** (GitHub Pages).
 
 | Circle | Path |
 |--------|------|
+| **JSI — AI Infrastructure** | [`/jsi/`](https://yogabrata.com/jsi/) (In Flight) |
 | Elogix Americas | `/portal/elogix-americas/` |
 | AI-Caregiver | [1o1.ai](https://1o1.ai) |
 | 7RANGERS Hospital | `/sevenrangers/index.html` |
 | **ATLAS** | [`/atlas/`](https://yogabrata.com/atlas/) |
+
+JSI at `/jsi/` is a static AI-infrastructure preview (private LLMs, RAG, local n8n workflows, SWAN boards). Nested routes are directories with `index.html` so GitHub Pages refresh works. In-browser demonstrations use synthetic data only and do not call live models or n8n.
 
 ATLAS is a static clone of the ATOM demo UI on GitHub Pages. The browser stays on `yogabrata.com/atlas/`. Visitors must never be redirected to `atlas.kai247.com`.
 
@@ -35,6 +38,7 @@ Curriculum data: `portal/data/cbse10-curriculum.json` (from CBSE Class X 2026-27
 cd 1o1-web
 python -m http.server 8080
 # http://localhost:8080/portal/
+# http://localhost:8080/jsi/
 ```
 
 ## Deploy

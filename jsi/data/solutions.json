@@ -1,0 +1,222 @@
+{
+  "items": [
+    {
+      "id": "infrastructure",
+      "path": "/jsi/infrastructure/",
+      "navLabel": "Infrastructure",
+      "title": "Private AI Infrastructure",
+      "orbitLabel": "Compute",
+      "status": "pilot",
+      "summary": "Choose where inference and data live: on-premises, managed private infrastructure, or hybrid. Deployment choice sets data location, connectivity, control, and who operates the stack.",
+      "lede": "AI services need somewhere to run. JSI designs that foundation so models, retrieval, and workflows have a known home—rather than a shared public chatbot with no account of where text goes.",
+      "sections": [
+        {
+          "heading": "What you are choosing",
+          "paragraphs": [
+            "A language model is only as private as the machine and network that host it. The same assistant can keep documents on a school campus, in a dedicated private environment, or split work between the two.",
+            "We treat location, identity, backups, and operational duty as design inputs—not as slogans. Published kilowatt figures, GPU counts, and uptime percentages are not used as marketing claims on this preview."
+          ]
+        },
+        {
+          "heading": "Three patterns",
+          "bullets": [
+            "On-premises: equipment in your room or campus. You control physical access and typically own power, cooling, and change windows.",
+            "Managed private: dedicated capacity operated with JSI under an agreed site and access list. “Private” still names who can log in.",
+            "Hybrid: retrieval and the system of record stay local; a named external service may be used for burst inference or model updates."
+          ]
+        }
+      ],
+      "technical": {
+        "summary": "For architects and IT",
+        "paragraphs": [
+          "Sizing starts from concurrent sessions, context length, embedding dimension, and whether GPUs are required for the chosen models. A campus board that asks short questions is a different envelope from overnight document ingestion.",
+          "Connectivity matters: air-gapped, allow-listed egress, or general internet. External connectors (email, SaaS APIs, model marketplaces) can move prompts and files off the local network. Those paths are listed in the design or they are not enabled.",
+          "Operational responsibility is split in writing: who patches the OS, who rotates keys, who watches disk for the retrieval index, who is on call when n8n retries are exhausted."
+        ]
+      }
+    },
+    {
+      "id": "local-llm",
+      "path": "/jsi/local-llm/",
+      "navLabel": "Local LLMs",
+      "title": "Local LLM Solutions",
+      "orbitLabel": "Models",
+      "status": "pilot",
+      "summary": "Hosted language models for assistants, inference APIs, and business applications—selected, deployed, and operated to match hardware and workload, not a promise that every model runs everywhere.",
+      "lede": "A local model is a program you run on compute you can name. It can draft, classify, and extract. It does not automatically know your files, and it does not become private merely because the box is in the building.",
+      "sections": [
+        {
+          "heading": "Where a local model helps",
+          "paragraphs": [
+            "Assistants that must not send classroom or HR text to a public consumer chatbot. Inference APIs for an internal app. Classification and extraction in front of a workflow.",
+            "Quality still depends on the model, the prompt, and the evidence you retrieve. Local hosting reduces one class of exposure; it does not create unlimited inference, zero cost, or perfect answers."
+          ]
+        },
+        {
+          "heading": "Selection and operation",
+          "bullets": [
+            "Model selection: parameter size, context window, languages, and licence terms versus available memory and GPUs.",
+            "Deployment: serving stack, version pinning, and a rollback path when a new weight file misbehaves.",
+            "Integration: a documented API for your apps and for n8n—not an unbounded chat box on the public internet unless that is the design.",
+            "Ongoing operation: temperature and safety settings, evaluation sets, and a process for replacing weights."
+          ]
+        }
+      ],
+      "technical": {
+        "summary": "For architects and IT",
+        "paragraphs": [
+          "Not every open-weight model fits every machine. If VRAM or RAM is short, you choose a smaller model, quantisation, or a different placement—not a silent quality collapse.",
+          "Optional cloud fallback must be explicit: which traffic, which vendor, which retention. If fallback is off, failed local inference is a failed request, not a hidden export.",
+          "JSI engagements size the serving layer with you. This preview does not publish a catalogue of models as if all were certified on all hardware."
+        ]
+      }
+    },
+    {
+      "id": "knowledge",
+      "path": "/jsi/knowledge/",
+      "navLabel": "Knowledge",
+      "title": "RAG and Enterprise Knowledge",
+      "orbitLabel": "Knowledge",
+      "status": "pilot",
+      "summary": "Answers grounded in approved organisational information: documents are ingested, retrieved, and cited—or the system says evidence is insufficient.",
+      "lede": "Retrieval-augmented generation (RAG) means the assistant looks up passages from your approved files before it writes. The model is a speaker; the files are the brief.",
+      "sections": [
+        {
+          "heading": "The journey",
+          "bullets": [
+            "Documents: policies, lesson packs, SOPs—only what an owner marks as approved.",
+            "Ingestion: split into passages, tagged with source, date, and who may see them.",
+            "Retrieval: a question pulls the most relevant permitted passages, not the entire drive.",
+            "Answer: a draft that points at those passages. If nothing relevant is permitted, the honest result is “insufficient evidence.”"
+          ]
+        },
+        {
+          "heading": "Requirements, not extras",
+          "paragraphs": [
+            "Access-aware retrieval: a teacher and a contractor should not see the same index by default.",
+            "Freshness: superseded policies must age out or be re-ingested. An index can be wrong while a file on a share is already updated.",
+            "Insufficient evidence: guessing from general training data is not an acceptable substitute for a missing procedure."
+          ]
+        }
+      ],
+      "technical": {
+        "summary": "For architects and IT",
+        "paragraphs": [
+          "Chunking, embedding, and metadata filters are part of the design. Evaluation should include “must cite” and “must refuse” cases, not only fluent paragraphs.",
+          "Connectors to cloud drives or email can copy content into the index and, if mis-scoped, copy it onward. Scope is an access-control problem.",
+          "The interactive demo on this site uses a tiny synthetic corpus. It is not your tenant and not a production index."
+        ]
+      }
+    },
+    {
+      "id": "workflows",
+      "path": "/jsi/workflows/",
+      "navLabel": "Workflows",
+      "title": "Local Agentic Workflows",
+      "orbitLabel": "Orchestration",
+      "status": "proposed",
+      "summary": "Self-hosted n8n connected to local models, RAG, and approved business systems—with rules and people in control of actions.",
+      "lede": "An agentic workflow is a visible sequence: interpret, look up, check, wait, then act. JSI’s proposed packaging uses self-hosted n8n so that sequence runs next to your models rather than in an anonymous cloud account.",
+      "sections": [
+        {
+          "heading": "Where AI speaks, where rules decide",
+          "paragraphs": [
+            "The model may extract fields from a request or summarise a procedure. Deterministic rules then validate amounts, required fields, and roles. A person approves before a task is created or a message is prepared.",
+            "That split is the product. A fluent draft is not permission to purchase equipment or change a grade."
+          ]
+        },
+        {
+          "heading": "Operable automation",
+          "bullets": [
+            "Run history: each run has a start, inputs, and a result you can open later.",
+            "Retries: transient failures are retried with a limit; exhausted retries surface as failures, not silent drops.",
+            "Failure handling: invalid payloads stop before side effects.",
+            "Approval checkpoints: the workflow waits. It does not impersonate the approver."
+          ]
+        }
+      ],
+      "technical": {
+        "summary": "For architects and IT",
+        "paragraphs": [
+          "n8n nodes that call Slack, email, or SaaS APIs leave the local boundary. Those nodes are optional and must be listed.",
+          "Credentials for business systems stay in the customer’s secret store or an agreed vault—not in a browser demo.",
+          "The document-to-action demonstration on this site simulates stages only. It does not create tickets in a live n8n."
+        ]
+      }
+    },
+    {
+      "id": "swan",
+      "path": "/jsi/swan/",
+      "navLabel": "SWAN",
+      "title": "SWAN Intelligent Smart Boards",
+      "orbitLabel": "SWAN",
+      "status": "available",
+      "summary": "SWAN is JSI’s interactive board brand: a classroom and collaboration interface that can sit in front of the AI platform. Hardware is available today; AI lesson and meeting features are proposed integrations.",
+      "lede": "A board is how a room sees the system. SWAN panels are the existing JSI interface for teaching, presenting, and writing together. Intelligence is useful when it is grounded in approved materials—not when it improvises a curriculum.",
+      "sections": [
+        {
+          "heading": "Existing board capabilities",
+          "paragraphs": [
+            "SWAN interactive flat panels are JSI’s registered board line for classrooms and meeting rooms. Public product pages describe 4K UHD displays, Android with a Windows OPS option, and multi-touch writing. Exact size, touch, and module specifications are confirmed at quote time because published pages do not always agree on every figure."
+          ],
+          "bullets": [
+            "Sizes commonly offered include 65\", 75\", and 86\" class panels, with larger sizes on request.",
+            "Installation, rental or purchase, and support remain a normal JSI hardware path—kept secondary on this AI infrastructure site so pricing promotions do not lead the story."
+          ]
+        },
+        {
+          "heading": "Proposed AI on the board",
+          "paragraphs": [
+            "Ask a question about an approved lesson pack and receive an explanation with source references.",
+            "Draft a short activity or quiz from those materials for the teacher to review before sharing.",
+            "Assist with a meeting summary from notes the room agrees to capture—not from a hidden always-on microphone story we do not claim."
+          ]
+        }
+      ],
+      "technical": {
+        "summary": "For architects and IT",
+        "paragraphs": [
+          "The board is an endpoint. It should talk to the local assistant and retrieval API on the campus or private network. It should not be assumed to bundle a datacentre.",
+          "OPS Windows modules, Android versions, and EDLA or Play eligibility are hardware SKU details. Confirm them on the quotation, not from this preview.",
+          "Computer-lab rental remains available as a related facilities conversation; it is not the homepage narrative of this site."
+        ]
+      }
+    },
+    {
+      "id": "operations",
+      "path": "/jsi/operations/",
+      "navLabel": "Deploy",
+      "title": "Deployment and Operations",
+      "orbitLabel": "Operate",
+      "status": "pilot",
+      "summary": "A practical path: Discover → Design → Pilot → Deploy → Operate. Sizing, integration, evaluation, security, monitoring, maintenance, and support are scoped services—not an unlimited warranty.",
+      "lede": "Infrastructure that no one can operate is a project, not a solution. JSI’s engagement model is a sequence of decisions you can see, with a pilot before a wider rollout.",
+      "sections": [
+        {
+          "heading": "The journey",
+          "bullets": [
+            "Discover: rooms, documents, identities, and what must never leave the building.",
+            "Design: placement (on-prem, managed private, hybrid), models, retrieval scope, and which n8n connectors exist.",
+            "Pilot: one workflow or one classroom, with evaluation cases including insufficient evidence and a failed validation.",
+            "Deploy: production identities, backups, and runbooks.",
+            "Operate: monitoring, maintenance windows, model and index updates, and a named support path."
+          ]
+        },
+        {
+          "heading": "What is scoped",
+          "paragraphs": [
+            "Security configuration, monitoring, maintenance, and support are part of the engagement document. They are not implied by a local model. This preview does not publish SLA percentages or “fully operational” claims for unnamed customer sites."
+          ]
+        }
+      ],
+      "technical": {
+        "summary": "For architects and IT",
+        "paragraphs": [
+          "Evaluation should include grounded answers, citation correctness, refusal behaviour, and workflow side-effect safety.",
+          "Change control for weights and for the retrieval index is as important as OS patching.",
+          "Support hours, on-site hardware response, and software escalation are quoted separately. Hardware rental and purchase enquiries use the same contact path with a clear subject line."
+        ]
+      }
+    }
+  ]
+}

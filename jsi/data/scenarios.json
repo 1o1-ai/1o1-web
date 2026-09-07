@@ -1,0 +1,410 @@
+{
+  "disclaimer": "Interactive demo • Synthetic data",
+  "notice": "These demonstrations run entirely in your browser. They do not call a live language model, a live n8n instance, or any customer system. Nothing you type is sent to a server except the static files already on this site.",
+  "items": [
+    {
+      "id": "classroom",
+      "title": "Intelligent classroom",
+      "status": "demonstration",
+      "problem": "A teacher needs a source-grounded explanation from approved lesson material, then a quiz draft to review before anything is shared with the class.",
+      "interface": "SWAN-style board (simulated)",
+      "materials": [
+        {
+          "id": "photo",
+          "label": "Class 8 Science — Photosynthesis (sample pack)",
+          "questions": [
+            {
+              "id": "photo-q1",
+              "label": "Why do leaves look green, according to this pack?",
+              "stages": [
+                {
+                  "id": "ask",
+                  "label": "Teacher asks from the board",
+                  "actor": "SWAN interface",
+                  "runs": "local",
+                  "detail": "The question is typed on a simulated SWAN panel. Only the selected sample pack is in scope."
+                },
+                {
+                  "id": "retrieve",
+                  "label": "Retrieve approved passages",
+                  "actor": "RAG",
+                  "runs": "local",
+                  "detail": "The index returns two passages from the sample photosynthesis pack. No other files are searched."
+                },
+                {
+                  "id": "draft",
+                  "label": "Draft a grounded explanation",
+                  "actor": "Local LLM",
+                  "runs": "local",
+                  "detail": "A local model would write from the retrieved passages. Here the explanation is a prepared synthetic draft."
+                },
+                {
+                  "id": "quiz",
+                  "label": "Propose a quiz",
+                  "actor": "Local LLM + teacher",
+                  "runs": "local",
+                  "detail": "A three-item quiz is generated from the same passages. Sharing stays blocked until the teacher reviews it."
+                }
+              ],
+              "answer": {
+                "text": "This sample pack says leaves often look green because chlorophyll reflects green wavelengths more than red or blue. The same pages note that photosynthesis uses light to build sugars from carbon dioxide and water, with oxygen released as a by-product.",
+                "citations": ["photo-a", "photo-b"]
+              },
+              "quiz": [
+                {
+                  "prompt": "According to the pack, why do many leaves appear green?",
+                  "choices": [
+                    "Chlorophyll reflects green wavelengths more than red or blue",
+                    "Leaves contain no pigment",
+                    "Soil dye rises into the blade"
+                  ],
+                  "correctIndex": 0
+                },
+                {
+                  "prompt": "What inputs does the pack list for photosynthesis?",
+                  "choices": [
+                    "Only oxygen and sugar",
+                    "Carbon dioxide, water, and light",
+                    "Nitrogen gas and salt"
+                  ],
+                  "correctIndex": 1
+                },
+                {
+                  "prompt": "What by-product does the pack name?",
+                  "choices": ["Helium", "Oxygen", "Iron"],
+                  "correctIndex": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fractions",
+          "label": "Class 6 Maths — Fractions (sample pack)",
+          "questions": [
+            {
+              "id": "frac-q1",
+              "label": "How does this pack tell students to add fractions with the same denominator?",
+              "stages": [
+                {
+                  "id": "ask",
+                  "label": "Teacher asks from the board",
+                  "actor": "SWAN interface",
+                  "runs": "local",
+                  "detail": "Scope is the fractions sample pack only."
+                },
+                {
+                  "id": "retrieve",
+                  "label": "Retrieve approved passages",
+                  "actor": "RAG",
+                  "runs": "local",
+                  "detail": "Two passages from the fractions pack are returned."
+                },
+                {
+                  "id": "draft",
+                  "label": "Draft a grounded explanation",
+                  "actor": "Local LLM",
+                  "runs": "local",
+                  "detail": "Synthetic draft bound to those passages."
+                },
+                {
+                  "id": "quiz",
+                  "label": "Propose a quiz",
+                  "actor": "Local LLM + teacher",
+                  "runs": "local",
+                  "detail": "Teacher review is required before a share action. Share is simulated and sends nothing."
+                }
+              ],
+              "answer": {
+                "text": "The sample pack says that when denominators already match, students add the numerators and keep the same denominator, then simplify if the pack’s examples allow it. It warns not to add denominators to each other.",
+                "citations": ["frac-a", "frac-b"]
+              },
+              "quiz": [
+                {
+                  "prompt": "Same denominator: what does the pack say to add?",
+                  "choices": ["The denominators only", "The numerators, keeping the denominator", "Cross-multiply first"],
+                  "correctIndex": 1
+                },
+                {
+                  "prompt": "What mistake does the pack warn against?",
+                  "choices": ["Adding the two denominators together", "Writing a fraction bar", "Using a number line"],
+                  "correctIndex": 0
+                },
+                {
+                  "prompt": "After adding, what may students do if the example allows it?",
+                  "choices": ["Change the topic to decimals immediately", "Simplify the result", "Erase the denominator"],
+                  "correctIndex": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sources": {
+        "photo-a": {
+          "title": "Sample pack · Photosynthesis overview",
+          "locator": "p. 2",
+          "excerpt": "Chlorophyll in chloroplasts reflects green light more strongly than red or blue, which is why many leaves look green to us."
+        },
+        "photo-b": {
+          "title": "Sample pack · The photosynthesis word equation",
+          "locator": "p. 4",
+          "excerpt": "Plants use carbon dioxide and water, with light, to make sugars. Oxygen is released as a by-product."
+        },
+        "frac-a": {
+          "title": "Sample pack · Like denominators",
+          "locator": "p. 1",
+          "excerpt": "To add fractions with the same denominator, add the numerators and keep the denominator the same."
+        },
+        "frac-b": {
+          "title": "Sample pack · Common errors",
+          "locator": "p. 3",
+          "excerpt": "Do not add the denominators. Simplify the result when the example shows an equivalent fraction."
+        }
+      },
+      "shareNote": "Prepared for classroom display — not sent. No students, no LMS, and no board were contacted."
+    },
+    {
+      "id": "knowledge",
+      "title": "Private company knowledge assistant",
+      "status": "demonstration",
+      "problem": "An employee asks about a company policy. The assistant should retrieve only permitted sample documents, cite them, and refuse when the corpus has no evidence.",
+      "interface": "Internal assistant (simulated)",
+      "prompts": [
+        {
+          "id": "leave",
+          "label": "How many annual leave days can I carry into next year?",
+          "kind": "grounded",
+          "stages": [
+            {
+              "id": "ask",
+              "label": "Employee asks",
+              "actor": "Assistant UI",
+              "runs": "local",
+              "detail": "The question is answered only from the synthetic policy set. Role in this demo is “employee” — contractor files are excluded."
+            },
+            {
+              "id": "authz",
+              "label": "Apply access rules",
+              "actor": "Rules",
+              "runs": "local",
+              "detail": "Leave Policy and Travel Policy are tagged employee-readable. A file tagged finance-only is not retrieved."
+            },
+            {
+              "id": "retrieve",
+              "label": "Retrieve passages",
+              "actor": "RAG",
+              "runs": "local",
+              "detail": "Two passages from Leave Policy match carry-forward rules."
+            },
+            {
+              "id": "answer",
+              "label": "Answer with citations",
+              "actor": "Local LLM",
+              "runs": "local",
+              "detail": "The draft must point at retrieved passages. Click a citation to read the excerpt."
+            }
+          ],
+          "answer": {
+            "text": "According to the sample Leave Policy, employees may carry forward up to five unused annual leave days into the next calendar year, and unused days above that cap lapse unless a manager exception is recorded. This demo has no record of your personal balance.",
+            "citations": ["leave-a", "leave-b"]
+          }
+        },
+        {
+          "id": "bonus",
+          "label": "What is the 2026 executive bonus formula?",
+          "kind": "insufficient",
+          "stages": [
+            {
+              "id": "ask",
+              "label": "Employee asks",
+              "actor": "Assistant UI",
+              "runs": "local",
+              "detail": "The question is in scope for a person, but not for this corpus."
+            },
+            {
+              "id": "authz",
+              "label": "Apply access rules",
+              "actor": "Rules",
+              "runs": "local",
+              "detail": "Even a finance-only sample file in this demo does not contain a 2026 bonus formula."
+            },
+            {
+              "id": "retrieve",
+              "label": "Retrieve passages",
+              "actor": "RAG",
+              "runs": "local",
+              "detail": "No passage meets similarity and permission checks for a bonus formula."
+            },
+            {
+              "id": "refuse",
+              "label": "Insufficient evidence",
+              "actor": "Local LLM + rules",
+              "runs": "local",
+              "detail": "The assistant must not invent a formula from general knowledge. It reports a gap."
+            }
+          ],
+          "answer": {
+            "text": "Insufficient evidence. The sample policies available to this employee role do not include a 2026 executive bonus formula. A real deployment should stop here rather than guessing.",
+            "citations": []
+          }
+        }
+      ],
+      "sources": {
+        "leave-a": {
+          "title": "Leave Policy (sample) · Carry-forward",
+          "locator": "§4.2",
+          "excerpt": "Employees may carry forward a maximum of five (5) unused annual leave days into the following calendar year."
+        },
+        "leave-b": {
+          "title": "Leave Policy (sample) · Lapse",
+          "locator": "§4.3",
+          "excerpt": "Days above the cap lapse on 31 December unless a written manager exception is stored in HR records."
+        }
+      },
+      "excludedNote": "A sample file tagged finance-only is present in the demo index and is never returned for the employee role."
+    },
+    {
+      "id": "workflow",
+      "title": "Document-to-action workflow",
+      "status": "demonstration",
+      "problem": "A service request arrives as text. The system should extract and classify it, retrieve the procedure, validate with rules, wait for a person, then simulate n8n creating a task and preparing a notification.",
+      "interface": "Facilities intake (simulated)",
+      "runs": [
+        {
+          "id": "fail",
+          "label": "Path A — validation failure",
+          "request": "Please replace the projector, budget under 50000, needed by Friday.",
+          "extracted": {
+            "type": "equipment-replacement",
+            "asset": "projector",
+            "location": null,
+            "deadline": "Friday",
+            "budget": 50000
+          },
+          "stages": [
+            {
+              "id": "arrive",
+              "label": "Request arrives",
+              "actor": "Intake",
+              "runs": "local",
+              "detail": "Synthetic mailbox. No real email is read."
+            },
+            {
+              "id": "extract",
+              "label": "Extract and classify",
+              "actor": "Local LLM",
+              "runs": "local",
+              "detail": "Fields: asset = projector; deadline = Friday; budget = 50000; location missing."
+            },
+            {
+              "id": "retrieve",
+              "label": "Retrieve procedure",
+              "actor": "RAG",
+              "runs": "local",
+              "detail": "Procurement SOP requires a room or hall identifier before a replacement task can open."
+            },
+            {
+              "id": "validate",
+              "label": "Deterministic validation",
+              "actor": "Rules",
+              "runs": "local",
+              "detail": "Check fails: location is required. n8n does not create a task."
+            }
+          ],
+          "outcome": {
+            "kind": "validation-failure",
+            "title": "Stopped for missing location",
+            "text": "Retry with a room or hall name. The workflow records a failed validation rather than guessing “somewhere on campus.”"
+          }
+        },
+        {
+          "id": "ok",
+          "label": "Path B — retry, approve, simulate n8n",
+          "request": "Please replace the projector in the Main Hall, budget under 50000, needed by Friday.",
+          "extracted": {
+            "type": "equipment-replacement",
+            "asset": "projector",
+            "location": "Main Hall",
+            "deadline": "Friday",
+            "budget": 50000
+          },
+          "stages": [
+            {
+              "id": "arrive",
+              "label": "Retry arrives",
+              "actor": "Intake",
+              "runs": "local",
+              "detail": "Same requester, location now present. This is a new run in history, not an edit of the failed one."
+            },
+            {
+              "id": "extract",
+              "label": "Extract and classify",
+              "actor": "Local LLM",
+              "runs": "local",
+              "detail": "Classification: equipment-replacement. Location = Main Hall."
+            },
+            {
+              "id": "retrieve",
+              "label": "Retrieve procedure",
+              "actor": "RAG",
+              "runs": "local",
+              "detail": "SOP: replacements under the sample threshold need facilities lead approval, then a task and a notification draft."
+            },
+            {
+              "id": "validate",
+              "label": "Deterministic validation",
+              "actor": "Rules",
+              "runs": "local",
+              "detail": "Required fields present. Sample threshold 100000; 50000 is under the cap so this is not an auto-reject."
+            },
+            {
+              "id": "approve",
+              "label": "Human approval",
+              "actor": "Person",
+              "runs": "local",
+              "detail": "A facilities lead must approve. The demo waits on an Approve control. Nothing is purchased."
+            },
+            {
+              "id": "n8n-task",
+              "label": "n8n: create task (simulated)",
+              "actor": "n8n",
+              "runs": "local",
+              "detail": "Would open a facilities task with the extracted fields. In this browser, a task card is drawn only."
+            },
+            {
+              "id": "n8n-notify",
+              "label": "n8n: prepare notification (simulated)",
+              "actor": "n8n",
+              "runs": "local",
+              "detail": "A notification body is prepared. If an email node were enabled in a real deployment, that would be an external send. Here it stays on screen."
+            }
+          ],
+          "procedureCitation": "sop-a",
+          "task": {
+            "id": "FAC-1042",
+            "title": "Replace projector — Main Hall",
+            "owner": "Facilities (sample)",
+            "due": "Friday (sample, no calendar write)"
+          },
+          "notification": {
+            "channel": "Not sent",
+            "body": "Task FAC-1042 drafted: replace projector in Main Hall, budget 50000, due Friday. Approver: you (demo)."
+          },
+          "outcome": {
+            "kind": "simulated-complete",
+            "title": "Run complete (simulated)",
+            "text": "Task card and notification draft exist only in this page. No n8n webhook was called."
+          }
+        }
+      ],
+      "sources": {
+        "sop-a": {
+          "title": "Facilities procurement SOP (sample)",
+          "locator": "§2.1",
+          "excerpt": "Equipment replacement requests must name the room or hall. Amounts at or above 100000 require finance approval; amounts below still require the facilities lead to accept the task."
+        }
+      }
+    }
+  ]
+}

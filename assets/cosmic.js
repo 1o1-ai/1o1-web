@@ -1,9 +1,13 @@
+/* Author: Yogabrata Mukhopadhyay
+   Organization: Brahmexa
+   Copyright (c) 2026 Brahmexa. All rights reserved. */
 (function () {
   'use strict';
   var canvas = document.getElementById('cosmos');
   if (!canvas) return;
   var ctx = canvas.getContext('2d');
   var stars = [];
+  var ym_reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   function resize() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -17,12 +21,14 @@
       };
     });
   }
-  function draw() {
+  function paint() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     stars.forEach(function (st) {
-      st.a += st.s * (Math.random() > 0.5 ? 1 : -1);
-      if (st.a < 0.12) st.a = 0.12;
-      if (st.a > 0.9) st.a = 0.9;
+      if (!ym_reduce) {
+        st.a += st.s * (Math.random() > 0.5 ? 1 : -1);
+        if (st.a < 0.12) st.a = 0.12;
+        if (st.a > 0.9) st.a = 0.9;
+      }
       ctx.beginPath();
       ctx.fillStyle = document.documentElement.getAttribute('data-theme') === 'light'
         ? 'rgba(15, 23, 42, ' + st.a + ')'
@@ -30,9 +36,15 @@
       ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
       ctx.fill();
     });
-    requestAnimationFrame(draw);
   }
-  window.addEventListener('resize', resize);
+  function draw() {
+    paint();
+    if (!ym_reduce) requestAnimationFrame(draw);
+  }
+  window.addEventListener('resize', function () {
+    resize();
+    if (ym_reduce) paint();
+  });
   resize();
   draw();
 })();

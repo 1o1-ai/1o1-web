@@ -1,0 +1,106 @@
+{
+  "title": "How the stack fits together",
+  "lede": "Inspect each layer. The story is the data path: a person asks or a record arrives; orchestration decides the next step; models and knowledge interpret; compute is where those pieces run.",
+  "layers": [
+    {
+      "id": "interfaces",
+      "label": "Interfaces",
+      "summary": "Where people meet the system: boards, browsers, and approved business apps.",
+      "nodes": [
+        {
+          "id": "swan",
+          "label": "SWAN boards",
+          "role": "Classroom and meeting display. Today: interactive panel, dual OS, presentation and teaching software. Proposed: questions against approved lesson materials, activity drafts, meeting-note assistance.",
+          "boundary": "The board is on the local network. It only sends a prompt or document reference if a connector is enabled.",
+          "runs": "local",
+          "status": "available"
+        },
+        {
+          "id": "assistant-ui",
+          "label": "Knowledge assistant",
+          "role": "A browser or in-app assistant for policy, procedures, and lesson materials. Answers should cite retrieved sources or say evidence is insufficient.",
+          "boundary": "Queries stay inside the customer deployment unless an external search or ticket tool is explicitly connected.",
+          "runs": "local",
+          "status": "proposed"
+        }
+      ]
+    },
+    {
+      "id": "orchestration",
+      "label": "Orchestration",
+      "summary": "Self-hosted n8n sequences steps, retries, and human checkpoints.",
+      "nodes": [
+        {
+          "id": "n8n",
+          "label": "Local n8n",
+          "role": "Runs workflows: retrieve, validate, wait for approval, create a task, prepare a notification. AI may draft; n8n does not grant extra authority.",
+          "boundary": "n8n can call local services only, or also external APIs if those nodes are enabled. External nodes can send data off-site.",
+          "runs": "local",
+          "status": "proposed"
+        },
+        {
+          "id": "rules",
+          "label": "Rules and approvals",
+          "role": "Deterministic checks (required fields, amounts, roles) and a person who must approve before an action is taken.",
+          "boundary": "Rule outcomes are recorded in run history. They do not require a language model.",
+          "runs": "local",
+          "status": "proposed"
+        }
+      ]
+    },
+    {
+      "id": "models-knowledge",
+      "label": "Models and Knowledge",
+      "summary": "Local language models plus a private retrieval index over approved documents.",
+      "nodes": [
+        {
+          "id": "llm",
+          "label": "Local LLM",
+          "role": "Drafts explanations, extracts fields, classifies a request. Model choice depends on hardware, latency, and language needs. Not every model fits every machine.",
+          "boundary": "Weights and prompts can stay on customer or JSI-managed private compute. Cloud fallback is optional and must be named in the design.",
+          "runs": "local-or-private",
+          "status": "pilot"
+        },
+        {
+          "id": "rag",
+          "label": "RAG index",
+          "role": "Stores chunked, access-tagged documents. Retrieval returns passages with source references. Freshness and permissions are solution requirements, not extras.",
+          "boundary": "The index contains copies of approved files. Deleting a source file does not remove it from the index until re-ingestion or a retention job runs.",
+          "runs": "local",
+          "status": "pilot"
+        }
+      ]
+    },
+    {
+      "id": "compute",
+      "label": "Compute",
+      "summary": "Where models, indexes, and orchestration actually run.",
+      "nodes": [
+        {
+          "id": "on-prem",
+          "label": "On-premises",
+          "role": "Customer-owned room or campus. Highest control of data location; customer owns power, cooling, and access.",
+          "boundary": "Data stays on site unless a connector is opened.",
+          "runs": "local",
+          "status": "pilot"
+        },
+        {
+          "id": "private-managed",
+          "label": "Managed private",
+          "role": "Dedicated infrastructure operated with JSI under an agreed location and access model.",
+          "boundary": "Location and operator access are design choices. They are written into the engagement, not implied by the word private.",
+          "runs": "private",
+          "status": "pilot"
+        },
+        {
+          "id": "hybrid",
+          "label": "Hybrid",
+          "role": "Sensitive retrieval stays local; selected burst or update tasks may use an external service.",
+          "boundary": "Anything that leaves the local network must be listed. Hybrid is not automatic privacy.",
+          "runs": "hybrid",
+          "status": "pilot"
+        }
+      ]
+    }
+  ]
+}

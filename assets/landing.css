@@ -1,3 +1,7 @@
+/* Author: Yogabrata Mukhopadhyay
+   Organization: Brahmexa
+   Copyright (c) 2026 Brahmexa. All rights reserved. */
+
 /* Yogabrata landing — live portal circles */
 body.landing-page {
   min-height: 100vh;
@@ -173,6 +177,23 @@ body.landing-page {
   box-shadow: 0 0 12px #d4b46a;
 }
 
+.portal--jsi .portal-ring {
+  background: radial-gradient(circle, rgba(87, 216, 207, 0.38) 0%, rgba(244, 200, 106, 0.12) 52%, transparent 72%);
+  box-shadow:
+    0 0 60px rgba(87, 216, 207, 0.3),
+    inset 0 0 40px rgba(244, 200, 106, 0.14);
+  animation-delay: -0.4s;
+}
+.portal--jsi .portal-core {
+  background: linear-gradient(145deg, rgba(7, 16, 24, 0.9), rgba(12, 23, 36, 0.92));
+  border-color: rgba(244, 200, 106, 0.35);
+}
+.portal--jsi .portal-orbit::before,
+.portal--jsi .portal-orbit::after {
+  background: #57d8cf;
+  box-shadow: 0 0 12px #57d8cf;
+}
+
 .portal-core {
   position: absolute;
   inset: 14%;
@@ -283,12 +304,29 @@ body.landing-page {
 
 @media (min-width: 900px) {
   .portal-grid {
-    display: grid;
-    grid-template-columns: repeat(3, min(260px, 28vw));
+    display: flex;
+    flex-wrap: wrap;
     gap: clamp(24px, 4vw, 48px);
     justify-content: center;
     align-items: center;
+    max-width: 980px;
   }
+  .portal {
+    width: min(230px, 26vw);
+    height: min(230px, 26vw);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .portal-ring,
+  .portal-orbit,
+  .portal-core,
+  .orb,
+  .planet-gap {
+    animation: none !important;
+  }
+  .portal:hover { transform: none; }
 }
 
 @media (max-width: 899px) {
