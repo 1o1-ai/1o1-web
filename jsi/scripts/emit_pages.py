@@ -3,160 +3,104 @@
 # Copyright (c) 2026 Brahmexa. All rights reserved.
 """Emit JSI HTML shells. Run from 1o1-web: python jsi/scripts/emit_pages.py"""
 
+from __future__ import annotations
+
+import html
+import json
 from pathlib import Path
 
 YM_ROOT = Path(__file__).resolve().parents[1]
 YM_ORIGIN = "https://yogabrata.com"
 
-YM_NAV = """        <a href="/jsi/see-ai-at-work/">Work</a>
+YM_NAV = """        <a href="/jsi/#offerings">Solutions</a>
         <a href="/jsi/swan/">SWAN</a>
-        <a href="/jsi/#solutions">Solutions</a>
-        <a href="/jsi/offerings/">Offerings</a>
         <a href="/jsi/contact/">Contact</a>"""
 
-YM_HOME_BODY = r"""
-    <!-- Hero Section -->
-    <section class="jsi-hero-arch">
-      <div class="jsi-hero-head">
-        <p class="eyebrow">The infrastructure behind practical AI</p>
-        <h1>Intelligence for every Infra gap.</h1>
-        <p class="lede">Private compute, local language models, enterprise RAG, and agentic workflows—from school operations to the board display.</p>
-        <div class="jsi-status-row">
-          <span class="jsi-badge" data-status="in-flight">In Flight</span>
-          <span class="jsi-badge" data-status="available">SWAN hardware available</span>
-          <span class="jsi-badge" data-status="proposed">AI platform packaging in preview</span>
-        </div>
-        <div class="jsi-hero-actions">
-          <a class="btn-primary" href="/jsi/see-ai-at-work/">See the work</a>
-          <a class="btn-secondary" href="/jsi/contact/">Talk to JSI</a>
-        </div>
-      </div>
+YM_ICON_SERVER = (
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
+    '<rect x="3.5" y="4" width="17" height="6" rx="1.2"/>'
+    '<rect x="3.5" y="14" width="17" height="6" rx="1.2"/>'
+    '<circle cx="7.5" cy="7" r="0.9" fill="currentColor" stroke="none"/>'
+    '<circle cx="7.5" cy="17" r="0.9" fill="currentColor" stroke="none"/>'
+    "</svg>"
+)
+YM_ICON_CHIP = (
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
+    '<rect x="7" y="7" width="10" height="10" rx="1.4"/>'
+    '<path d="M9 4v3M12 4v3M15 4v3M9 17v3M12 17v3M15 17v3M4 9h3M4 12h3M4 15h3M17 9h3M17 12h3M17 15h3"/>'
+    "</svg>"
+)
+YM_ICON_SEARCH = (
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
+    '<circle cx="11" cy="11" r="6"/>'
+    '<path d="M20 20l-3.5-3.5"/>'
+    "</svg>"
+)
+YM_ICON_FLOW = (
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
+    '<circle cx="6" cy="7" r="2.2"/>'
+    '<circle cx="18" cy="7" r="2.2"/>'
+    '<circle cx="12" cy="17" r="2.2"/>'
+    '<path d="M8 8.2l3.2 6.2M16 8.2l-3.2 6.2"/>'
+    "</svg>"
+)
+YM_ICON_BOARD = (
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
+    '<rect x="3" y="4" width="18" height="13" rx="1.4"/>'
+    '<path d="M8 21h8M12 17v4"/>'
+    "</svg>"
+)
 
-      <!-- Infrastructure Building Blocks / 5 Platform Pillars Grid -->
-      <div class="jsi-pillars-header">
-        <p class="eyebrow" style="margin-bottom:0">Platform Architecture</p>
-        <h2>5 Building Blocks of Private AI</h2>
-      </div>
 
-      <div class="jsi-pillars-grid">
-        <a class="jsi-pillar-block" href="/jsi/infrastructure/">
-          <span class="jsi-pillar-num">PILLAR 01</span>
-          <h3>Private AI Compute</h3>
-          <p>On-premises, managed private, or hybrid compute placement for your models & data.</p>
-          <span class="jsi-pillar-link">Open Pillar →</span>
-        </a>
+def ym_metrics_html() -> str:
+    ym_path = YM_ROOT / "data" / "metrics.json"
+    ym_data = json.loads(ym_path.read_text(encoding="utf-8"))
+    ym_cells: list[str] = []
+    for ym_item in ym_data["items"]:
+        ym_value = html.escape(str(ym_item["value"]))
+        ym_label = html.escape(str(ym_item["label"]))
+        ym_cells.append(
+            "        <div class=\"ym-metric\">\n"
+            f"          <p class=\"ym-metric-value\">{ym_value}</p>\n"
+            f"          <p class=\"ym-metric-label\">{ym_label}</p>\n"
+            "        </div>"
+        )
+    return "\n".join(ym_cells)
 
-        <a class="jsi-pillar-block" href="/jsi/local-llm/">
-          <span class="jsi-pillar-num">PILLAR 02</span>
-          <h3>Local LLM Serving</h3>
-          <p>Hosted language models for assistants and internal APIs without public data exposure.</p>
-          <span class="jsi-pillar-link">Open Pillar →</span>
-        </a>
 
-        <a class="jsi-pillar-block" href="/jsi/knowledge/">
-          <span class="jsi-pillar-num">PILLAR 03</span>
-          <h3>Enterprise RAG</h3>
-          <p>Answers grounded in approved files with explicit citations and refusal rules.</p>
-          <span class="jsi-pillar-link">Open Pillar →</span>
-        </a>
+def ym_offer(ym_href: str, ym_icon: str, ym_title: str, ym_line: str) -> str:
+    return (
+        f'        <a href="{html.escape(ym_href)}">'
+        f'<span class="ym-offer-icon">{ym_icon}</span>'
+        f"<h3>{html.escape(ym_title)}</h3>"
+        f"<p>{html.escape(ym_line)}</p></a>"
+    )
 
-        <a class="jsi-pillar-block" href="/jsi/workflows/">
-          <span class="jsi-pillar-num">PILLAR 04</span>
-          <h3>Agentic n8n</h3>
-          <p>Self-hosted n8n automation with local models, rules, and human approval checkpoints.</p>
-          <span class="jsi-pillar-link">Open Pillar →</span>
-        </a>
 
-        <a class="jsi-pillar-block" href="/jsi/swan/">
-          <span class="jsi-pillar-num">PILLAR 05</span>
-          <h3>SWAN Smart Boards</h3>
-          <p>Classroom & meeting display interface with grounded AI lesson support.</p>
-          <span class="jsi-pillar-link">Open Pillar →</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Navigation Doors Index Strip -->
-    <section class="jsi-section">
-      <p class="eyebrow">Quick Navigation</p>
-      <h2>Explore JSI by topic</h2>
-      <div class="jsi-nav-doors-strip">
-        <a class="jsi-nav-door-item" href="/jsi/see-ai-at-work/">
-          <h4>Work Demos</h4>
-          <p>3 interactive flows →</p>
-        </a>
-        <a class="jsi-nav-door-item" href="/jsi/swan/">
-          <h4>SWAN Boards</h4>
-          <p>Classroom & displays →</p>
-        </a>
-        <a class="jsi-nav-door-item" href="/jsi/offerings/">
-          <h4>Offerings</h4>
-          <p>Products & ERP →</p>
-        </a>
-        <a class="jsi-nav-door-item" href="/jsi/architecture/">
-          <h4>Architecture</h4>
-          <p>Stack & boundaries →</p>
-        </a>
-        <a class="jsi-nav-door-item" href="/jsi/nexus/">
-          <h4>Ask Nexus</h4>
-          <p>AI assistant →</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- Solution Doors Grid -->
-    <section class="jsi-section" id="solutions" aria-labelledby="ym-sol-heading">
-      <p class="eyebrow">Solutions</p>
-      <h2 id="ym-sol-heading">Explore a solution</h2>
-      <div class="jsi-sol-grid">
-        <a class="jsi-door-card" href="/jsi/infrastructure/">
-          <span class="jsi-badge" data-status="pilot">Pilot</span>
-          <h3>Private AI Infrastructure</h3>
-          <p>On-premises, managed private, or hybrid compute for your models and data.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-        <a class="jsi-door-card" href="/jsi/local-llm/">
-          <span class="jsi-badge" data-status="pilot">Pilot</span>
-          <h3>Local LLM Solutions</h3>
-          <p>Hosted language models for assistants and APIs, matched to your hardware.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-        <a class="jsi-door-card" href="/jsi/knowledge/">
-          <span class="jsi-badge" data-status="pilot">Pilot</span>
-          <h3>RAG & Enterprise Knowledge</h3>
-          <p>Answers grounded in approved files with source citations and refusal rules.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-        <a class="jsi-door-card" href="/jsi/workflows/">
-          <span class="jsi-badge" data-status="proposed">Proposed</span>
-          <h3>Local Agentic Workflows</h3>
-          <p>Self-hosted n8n automation with local LLMs, deterministic rules, and human approval.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-        <a class="jsi-door-card" href="/jsi/swan/">
-          <span class="jsi-badge" data-status="available">Available</span>
-          <h3>SWAN Smart Boards</h3>
-          <p>Interactive smart boards for classrooms and meetings, with proposed AI features.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-        <a class="jsi-door-card" href="/jsi/operations/">
-          <span class="jsi-badge" data-status="pilot">Pilot</span>
-          <h3>Deployment & Operations</h3>
-          <p>Scoped path: Discover, Design, Pilot, Deploy, and Operate your private AI.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Clean Close -->
-    <section class="jsi-close-clean">
-      <div>
-        <h2>Ready to discuss your deployment?</h2>
-        <p>Connect compute, knowledge retrieval, and intelligent displays on your terms.</p>
-      </div>
+def ym_home_body() -> str:
+    return f"""
+    <section class="jsi-home-hero" aria-labelledby="home-title">
+      <h1 id="home-title">AI. <span class="ym-accent">At your doorstep.</span></h1>
+      <p class="home-intro">Affordable AI infrastructure for your business, school, and beyond.</p>
       <div class="jsi-hero-actions">
-        <a class="btn-primary" href="/jsi/contact/">Talk to JSI</a>
-        <a class="btn-secondary" href="mailto:hello@jsisoftwaresolutions.com?subject=JSI%20AI%20infrastructure%20enquiry">hello@jsisoftwaresolutions.com</a>
+        <a class="btn-primary" href="/jsi/#offerings">Explore Solutions</a>
+        <a class="btn-secondary" href="/jsi/contact/">Talk to JSI</a>
+      </div>
+    </section>
+    <section class="ym-metrics" aria-label="JSI in figures">
+{ym_metrics_html()}
+    </section>
+    <section class="home-offerings" id="offerings" aria-labelledby="offerings-title">
+      <div class="home-section-head">
+        <h2 id="offerings-title">Solutions</h2>
+        <a class="ym-all-offerings" href="/jsi/offerings/">All offerings</a>
+      </div>
+      <div class="home-offering-grid">
+{ym_offer("/jsi/infrastructure/", YM_ICON_SERVER, "Private AI", "Your infrastructure. Your control.")}
+{ym_offer("/jsi/local-llm/", YM_ICON_CHIP, "Local LLMs", "AI models running close to your data.")}
+{ym_offer("/jsi/knowledge/", YM_ICON_SEARCH, "Knowledge & Search", "Answers from your documents.")}
+{ym_offer("/jsi/workflows/", YM_ICON_FLOW, "Smart Automation", "AI agents that help get work done.")}
+{ym_offer("/jsi/swan/", YM_ICON_BOARD, "SWAN Smart Boards", "Interactive teaching with AI learning modules.")}
       </div>
     </section>
 """
@@ -166,9 +110,9 @@ YM_PAGES = [
         "file": "index.html",
         "page": "home",
         "title": "JSI — AI Infrastructure & Intelligent Systems",
-        "desc": "Private LLMs, enterprise RAG, local agentic workflows, and SWAN intelligent smart boards. The infrastructure behind practical AI.",
+        "desc": "Affordable AI infrastructure for your business, school, and beyond.",
         "path": "/jsi/",
-        "extra": YM_HOME_BODY,
+        "extra": "",
         "scripts": "",
     },
     {
@@ -284,7 +228,7 @@ YM_PAGES = [
     </header>
     <div id="ym-scenarios"></div>
 """,
-        "scripts": '  <script src="/jsi/js/ym_scenarios.js?v=2"></script>\n',
+        "scripts": '  <script src="/jsi/js/ym_scenarios.js?v=2" defer></script>\n',
     },
     {
         "file": "offerings/index.html",
@@ -370,7 +314,7 @@ YM_PAGES = [
       </p>
     </section>
 """,
-        "scripts": '  <script src="/jsi/js/ym_architecture.js?v=2"></script>\n',
+        "scripts": '  <script src="/jsi/js/ym_architecture.js?v=2" defer></script>\n',
     },
     {
         "file": "nexus/index.html",
@@ -398,8 +342,8 @@ YM_PAGES = [
     {
         "file": "contact/index.html",
         "page": "contact",
-        "title": "Contact & Leadership | JSI Software Solutions",
-        "desc": "Direct channels for email enquiries, technical support, phone/WhatsApp, office locations, and executive leadership.",
+        "title": "Contact | JSI Software Solutions",
+        "desc": "Direct channels for email enquiries, technical support, phone, and WhatsApp.",
         "path": "/jsi/contact/",
         "extra": """
     <section class="jsi-section">
@@ -447,16 +391,6 @@ YM_PAGES = [
           <p>Renton, WA 98056, United States (Related organisation)</p>
         </div>
       </div>
-
-      <div class="jsi-leader">
-        <img src="/jsi/assets/yoga-mukhopadhyay.jpg" width="220" height="264" alt="Portrait of Yogabrata Mukhopadhyay, CEO of JSI Software Solutions" />
-        <div>
-          <p class="eyebrow">Leadership</p>
-          <h2 style="margin-top:4px">Yogabrata “Yoga” Mukhopadhyay</h2>
-          <p class="jsi-loc" style="margin-bottom:12px">CEO, JSI Software Solutions</p>
-          <p>Yogabrata ‘Yoga’ Mukhopadhyay combines 25+ years of business leadership with hands-on architecture expertise across Ericsson, Comverse, and Brahmexa. At JSI, he leads private AI infrastructure, local LLMs, and intelligent SWAN smart board deployments.</p>
-        </div>
-      </div>
     </section>
 """,
         "scripts": "",
@@ -464,7 +398,73 @@ YM_PAGES = [
 ]
 
 
+def ym_home_chrome(ym_page: dict) -> str:
+    ym_canonical = YM_ORIGIN + ym_page["path"]
+    ym_og = YM_ORIGIN + "/jsi/assets/swan-boards.webp"
+    ym_font = "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap"
+    return f"""<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{ym_page["title"]}</title>
+  <meta name="description" content="{ym_page["desc"]}" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="{ym_canonical}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{ym_canonical}" />
+  <meta property="og:title" content="{ym_page["title"]}" />
+  <meta property="og:description" content="{ym_page["desc"]}" />
+  <meta property="og:image" content="{ym_og}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{ym_page["title"]}" />
+  <meta name="twitter:description" content="{ym_page["desc"]}" />
+  <meta name="twitter:image" content="{ym_og}" />
+  <link rel="icon" href="/jsi/assets/jsi-favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="{ym_font}" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="{ym_font}" /></noscript>
+  <link rel="stylesheet" href="/jsi/css/home.css?v=2" />
+</head>
+<body class="jsi-page" data-ym-page="home">
+  <a class="skip-link" href="#ym-main">Skip to content</a>
+  <div class="jsi-watermark" aria-hidden="true">
+    <img src="/jsi/assets/jsi-favicon.png" alt="" width="220" height="220" />
+  </div>
+  <div class="jsi-banner">In-flight preview</div>
+  <header class="site-header jsi-header">
+    <div class="header-inner">
+      <a class="jsi-brand" href="/jsi/">
+        <img class="jsi-brand-mark" src="/jsi/assets/jsi-favicon.png" width="36" height="36" alt="JSI Software Solutions" />
+        <span class="site-name">JSI Software Solutions</span>
+      </a>
+      <nav class="jsi-nav" id="jsi-nav" aria-label="JSI">
+{YM_NAV}
+      </nav>
+    </div>
+  </header>
+  <main class="main-wrap jsi-main" id="ym-main">
+{ym_home_body()}
+  </main>
+  <footer class="site-footer jsi-footer">
+    <p>JSI Software Solutions Pvt Ltd · <a href="https://brahmexa.com">Brahmexa LLC</a> · KAIORB · KAI247</p>
+    <p class="footer-tag"><a href="/jsi/contact/">Contact</a> · <a href="/jsi/offerings/">All offerings</a> · <a href="/jsi/see-ai-at-work/">See AI at work</a> · <a href="/jsi/architecture/">Architecture</a> · <a href="/jsi/nexus/">Nexus</a> · <a href="mailto:hello@jsisoftwaresolutions.com">Email JSI</a></p>
+  </footer>
+</body>
+</html>
+"""
+
+
 def ym_chrome(ym_page: dict) -> str:
+    if ym_page["page"] == "home":
+        return "\n".join(line.rstrip() for line in ym_home_chrome(ym_page).splitlines()) + "\n"
+
     ym_canonical = YM_ORIGIN + ym_page["path"]
     ym_og = YM_ORIGIN + "/jsi/assets/swan-boards.webp"
     ym_main_extra = ym_page.get("extra", "")
@@ -476,7 +476,7 @@ def ym_chrome(ym_page: dict) -> str:
       <p class="lede" style="margin-left:0">{ym_page["desc"]}</p>
     </article>
 """
-    return f"""<!--
+    ym_html = f"""<!--
   Author: Yogabrata Mukhopadhyay
   Organization: Brahmexa
   Copyright (c) 2026 Brahmexa. All rights reserved.
@@ -499,39 +499,29 @@ def ym_chrome(ym_page: dict) -> str:
   <meta name="twitter:title" content="{ym_page["title"]}" />
   <meta name="twitter:description" content="{ym_page["desc"]}" />
   <meta name="twitter:image" content="{ym_og}" />
-  <script>
-    (function () {{
-      var ym_saved = "paper";
-      try {{
-        ym_saved = localStorage.getItem("jsi_cosmic_theme") || "paper";
-      }} catch (e) {{ /* ignore */ }}
-      document.documentElement.setAttribute("data-cosmic-theme", ym_saved);
-      var ym_light = ym_saved !== "forge" && ym_saved !== "abyss" && ym_saved !== "void" && ym_saved !== "noir";
-      document.documentElement.setAttribute("data-theme", ym_light ? "light" : "dark");
-    }})();
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="/jsi/assets/jsi-favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" /></noscript>
   <link rel="stylesheet" href="/assets/theme.css" />
   <link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-paper" />
-  <link rel="stylesheet" href="/jsi/css/jsi.css?v=5" />
+  <link rel="stylesheet" href="/jsi/css/jsi.css?v=6" />
+  <noscript><style>.jsi-page .jsi-nav{{display:flex !important}}</style></noscript>
 </head>
 <body class="jsi-page" data-ym-page="{ym_page["page"]}">
   <a class="skip-link" href="#ym-main">Skip to content</a>
-  <canvas id="cosmos" aria-hidden="true"></canvas>
-  <div class="mesh" aria-hidden="true"></div>
   <div class="jsi-watermark" aria-hidden="true">
-    <img src="/jsi/assets/jsi-favicon.png" alt="" width="620" height="620" />
+    <img src="/jsi/assets/jsi-favicon.png" alt="" width="220" height="220" />
   </div>
-  <div class="jsi-banner">In-flight preview · yogabrata.com/jsi/ · not the live jsisoftwaresolutions.com storefront</div>
+  <div class="jsi-banner">In-flight preview</div>
   <header class="site-header jsi-header">
     <div class="header-inner">
       <a class="jsi-brand" href="/jsi/">
-        <img class="jsi-brand-mark" src="/jsi/assets/jsi-favicon.png" width="80" height="80" alt="JSI Software Solutions" />
+        <img class="jsi-brand-mark" src="/jsi/assets/jsi-favicon.png" width="48" height="48" alt="JSI Software Solutions" />
         <span>
           <span class="site-name">JSI Software Solutions</span>
-          <span class="site-tag">The infrastructure behind practical AI</span>
+          <span class="site-tag">AI. At your doorstep.</span>
         </span>
       </a>
       <button type="button" class="jsi-menu-toggle" id="jsi-menu-toggle" aria-expanded="false" aria-controls="jsi-nav">Menu</button>
@@ -544,16 +534,15 @@ def ym_chrome(ym_page: dict) -> str:
 {ym_article}{ym_main_extra}
   </main>
   <footer class="site-footer jsi-footer">
-    <p>JSI Software Solutions Pvt Ltd · a <a href="https://brahmexa.com">Brahmexa LLC</a> related delivery organisation in the KAIORB network. KAI247 is the SaaS platform.</p>
-    <p class="footer-tag"><a href="/jsi/architecture/">Architecture</a> · <a href="/jsi/nexus/">Ask Nexus</a> · <a href="/">Yogabrata inflight projects</a> · Preview indexing: noindex · jsisoftwaresolutions.com is unchanged</p>
+    <p>JSI Software Solutions Pvt Ltd · <a href="https://brahmexa.com">Brahmexa LLC</a> · KAIORB · KAI247</p>
+    <p class="footer-tag"><a href="/jsi/contact/">Contact</a> · <a href="/jsi/offerings/">All offerings</a> · <a href="/jsi/see-ai-at-work/">See AI at work</a> · <a href="/jsi/architecture/">Architecture</a> · <a href="/jsi/nexus/">Nexus</a> · <a href="mailto:hello@jsisoftwaresolutions.com">Email JSI</a></p>
   </footer>
-  <script src="/assets/cosmic.js"></script>
-  <script src="/assets/theme-picker.js?v=jsi-paper"></script>
-  <script src="/jsi/js/ym_app.js?v=2"></script>
-{ym_page["scripts"]}  <script src="https://brahmexa.com/nexus/widget.js" data-nexus-key="pk_jsi_site" data-nexus-accent="#c44536" defer></script>
+  <script src="/jsi/js/ym_app.js?v=2" defer></script>
+{ym_page["scripts"]}  <script src="https://brahmexa.com/nexus/widget.js" data-nexus-key="pk_jsi_site" data-nexus-accent="#ae3024" async></script>
 </body>
 </html>
 """
+    return ym_html
 
 
 def main() -> None:

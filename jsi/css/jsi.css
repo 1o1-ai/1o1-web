@@ -31,19 +31,17 @@
 /* Watermark */
 .jsi-watermark {
   position: fixed;
-  inset: 0;
+  right: 4%;
+  top: 28%;
   z-index: 0;
   pointer-events: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  opacity: 0.04;
 }
 .jsi-watermark img {
-  width: min(50vw, 540px);
+  width: min(28vw, 220px);
   height: auto;
-  transform: translateY(-5%);
-  opacity: var(--logo-opacity, 0.05);
-  filter: grayscale(0.2) opacity(0.5);
+  transform: none;
+  filter: none;
 }
 
 .skip-link {
@@ -666,28 +664,27 @@
 }
 
 @media (max-width: 900px) {
-  .jsi-menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .jsi-menu-toggle { display: none; }
   .jsi-nav {
-    display: none;
-    position: absolute;
-    right: 16px;
-    top: 88px;
-    flex-direction: column;
-    align-items: stretch;
-    min-width: 220px;
-    padding: 10px;
-    border-radius: var(--jsi-radius);
-    border: 1px solid var(--border);
-    background: var(--panel);
-    z-index: 60;
+    display: flex;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    gap: 4px 8px;
   }
-  .jsi-nav.is-open { display: flex; }
+  .jsi-nav a { padding: 8px 10px; }
   .jsi-arch,
   .jsi-leader,
   .jsi-close-clean { grid-template-columns: 1fr; }
   .jsi-leader img { width: 160px; height: 192px; }
   .jsi-arch-detail { position: static; }
-  .jsi-brand-mark { width: 56px; height: 56px; }
+  .jsi-brand-mark { width: 48px; height: 48px; }
   .jsi-address-list { grid-template-columns: 1fr; }
 }
 
