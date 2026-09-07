@@ -48,6 +48,10 @@ def main() -> int:
         "assets/rampur-cutaway-mobile.webp",
         "assets/rampur-cutaway-mobile-720.webp",
         "assets/rampur-cutaway-og.jpg",
+        "assets/swan-reel-cbse.webp",
+        "assets/swan-reel-abhyas.webp",
+        "assets/swan-reel-quadratic.webp",
+        "assets/swan-reel-quiz.webp",
         "infrastructure/index.html",
         "local-llm/index.html",
         "knowledge/index.html",
@@ -81,6 +85,8 @@ def main() -> int:
         "css/home.css",
         "Five connected systems",
         "Conceptual infrastructure illustration",
+        "Mentha cooling",
+        "Vector databases as software",
         "AI Compute",
         "Connected &amp; Secure",
         "Data &amp; Recovery",
@@ -137,6 +143,19 @@ def main() -> int:
         ym_ok("architecture contains ym-arch-stack")
     else:
         ym_bad("architecture missing ym-arch-stack")
+
+    ym_swan = (YM_ROOT / "swan/index.html").read_text(encoding="utf-8")
+    for ym_token in (
+        "ym-swan-reel",
+        "CBSE mock test",
+        "Abhyas Learning module",
+        "Quadratic equations",
+        "pk_jsi_site",
+    ):
+        if ym_token in ym_swan:
+            ym_ok("swan contains " + ym_token)
+        else:
+            ym_bad("swan missing " + ym_token)
 
     for ym_forbidden in ("jsi-constellation", "orb orb-cyan", "jsi-arch-orbit"):
         if ym_forbidden in ym_home:
