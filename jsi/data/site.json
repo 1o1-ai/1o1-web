@@ -7,8 +7,8 @@
   "platform": "KAI247",
   "tagline": "The infrastructure behind practical AI.",
   "heroTitle": "Your infrastructure. Your knowledge. AI that gets work done.",
-  "heroSupport": "Bring together private AI compute, local language models, knowledge retrieval, and agentic workflows—from business operations to intelligent classrooms.",
-  "positioning": "JSI brings together compute, local LLMs, private knowledge retrieval, workflow orchestration, and intelligent devices into usable business solutions.",
+  "heroSupport": "Private compute, local language models, RAG, and agentic workflows—from school operations to the board.",
+  "positioning": "JSI connects private compute, local LLMs, enterprise knowledge, and intelligent devices into dependable operational solutions.",
   "previewNote": "Preview on yogabrata.com. This is an in-flight web solution. It is not the live jsisoftwaresolutions.com storefront.",
   "status": "In Flight",
   "basePath": "/jsi/",
@@ -32,7 +32,7 @@
     {
       "label": "India — Rampur",
       "detail": "Plot C-16, Roshan Bagh Industrial Area, Civil Lines, Rampur, Uttar Pradesh 244901",
-      "role": "Infrastructure location. Capacity, uptime, and inventory figures are scoped during discovery—not published as guarantees."
+      "role": "Infrastructure location"
     },
     {
       "label": "India — Manesar (Gurugram)",
@@ -46,20 +46,12 @@
     }
   ],
   "nav": [
-    { "id": "solutions", "label": "Solutions", "href": "/jsi/#solutions" },
-    { "id": "offerings", "label": "Offerings", "href": "/jsi/#offerings" },
-    { "id": "demo", "label": "See AI at work", "href": "/jsi/see-ai-at-work/" },
-    { "id": "architecture", "label": "Architecture", "href": "/jsi/#architecture" },
+    { "id": "demo", "label": "Work", "href": "/jsi/see-ai-at-work/" },
     { "id": "swan", "label": "SWAN", "href": "/jsi/swan/" },
-    { "id": "nexus", "label": "Nexus", "href": "/jsi/#nexus" },
-    { "id": "contact", "label": "Contact", "href": "/jsi/#contact" }
+    { "id": "solutions", "label": "Solutions", "href": "/jsi/#solutions" },
+    { "id": "offerings", "label": "Offerings", "href": "/jsi/offerings/" },
+    { "id": "contact", "label": "Contact", "href": "/jsi/contact/" }
   ],
-  "primaryCta": { "label": "Explore a solution", "href": "/jsi/#solutions" },
-  "secondaryCta": { "label": "Discuss your deployment", "href": "/jsi/#contact" },
-  "statusLegend": [
-    { "id": "available", "label": "Available", "meaning": "Offered as a current JSI product or service path." },
-    { "id": "pilot", "label": "Pilot", "meaning": "Scoped engagement. Fit, sizing, and operations are designed with the customer." },
-    { "id": "proposed", "label": "Proposed integration", "meaning": "Described capability that is not presented here as a finished customer deployment." },
-    { "id": "demonstration", "label": "Demonstration", "meaning": "Interactive preview with synthetic data. Not a live model, n8n connection, or customer system." }
-  ]
+  "primaryCta": { "label": "See the work", "href": "/jsi/see-ai-at-work/" },
+  "secondaryCta": { "label": "Talk to JSI", "href": "/jsi/contact/" }
 }

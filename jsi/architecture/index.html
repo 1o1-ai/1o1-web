@@ -8,18 +8,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Local LLM Solutions | JSI Software Solutions</title>
-  <meta name="description" content="Locally hosted language models for assistants, inference APIs, and business applications." />
+  <title>System Architecture | JSI Software Solutions</title>
+  <meta name="description" content="Interfaces → Orchestration → Models and Knowledge → Compute. Inspect the data boundary for each layer." />
   <meta name="robots" content="noindex, nofollow" />
-  <link rel="canonical" href="https://yogabrata.com/jsi/local-llm/" />
+  <link rel="canonical" href="https://yogabrata.com/jsi/architecture/" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://yogabrata.com/jsi/local-llm/" />
-  <meta property="og:title" content="Local LLM Solutions | JSI Software Solutions" />
-  <meta property="og:description" content="Locally hosted language models for assistants, inference APIs, and business applications." />
+  <meta property="og:url" content="https://yogabrata.com/jsi/architecture/" />
+  <meta property="og:title" content="System Architecture | JSI Software Solutions" />
+  <meta property="og:description" content="Interfaces → Orchestration → Models and Knowledge → Compute. Inspect the data boundary for each layer." />
   <meta property="og:image" content="https://yogabrata.com/jsi/assets/swan-boards.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Local LLM Solutions | JSI Software Solutions" />
-  <meta name="twitter:description" content="Locally hosted language models for assistants, inference APIs, and business applications." />
+  <meta name="twitter:title" content="System Architecture | JSI Software Solutions" />
+  <meta name="twitter:description" content="Interfaces → Orchestration → Models and Knowledge → Compute. Inspect the data boundary for each layer." />
   <meta name="twitter:image" content="https://yogabrata.com/jsi/assets/swan-boards.webp" />
   <script>
     (function () {
@@ -39,7 +39,7 @@
   <link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-forge" />
   <link rel="stylesheet" href="/jsi/css/jsi.css?v=2" />
 </head>
-<body class="jsi-page" data-ym-page="local-llm">
+<body class="jsi-page" data-ym-page="architecture">
   <a class="skip-link" href="#ym-main">Skip to content</a>
   <canvas id="cosmos" aria-hidden="true"></canvas>
   <div class="mesh" aria-hidden="true"></div>
@@ -67,11 +67,24 @@
     </div>
   </header>
   <main class="main-wrap jsi-main" id="ym-main">
-    <article id="ym-solution" class="jsi-prose">
-      <p class="eyebrow">JSI Software Solutions</p>
-      <h1>Local LLM Solutions</h1>
-      <p class="lede" style="margin-left:0">Locally hosted language models for assistants, inference APIs, and business applications.</p>
-    </article>
+
+    <section class="jsi-section">
+      <p class="eyebrow">Architecture Stack</p>
+      <h1>System Architecture</h1>
+      <p class="lede">Interfaces → Orchestration → Models and Knowledge → Compute. Select a component to inspect data boundaries.</p>
+      
+      <div class="jsi-arch">
+        <div class="jsi-arch-stack" id="ym-arch-stack" role="group" aria-label="Architecture layers"></div>
+        <div class="jsi-arch-detail" id="ym-arch-detail" aria-live="polite">
+          <p>Loading architecture…</p>
+        </div>
+      </div>
+      
+      <p class="jsi-legend" style="margin-top:20px">
+        <span><i class="jsi-dot"></i>Local or private by default</span>
+        <span><i class="jsi-dot ext"></i>May leave the building if a connector is enabled</span>
+      </p>
+    </section>
 
   </main>
   <footer class="site-footer jsi-footer">
@@ -81,6 +94,7 @@
   <script src="/assets/cosmic.js"></script>
   <script src="/assets/theme-picker.js?v=jsi-forge"></script>
   <script src="/jsi/js/ym_app.js?v=2"></script>
+  <script src="/jsi/js/ym_architecture.js?v=2"></script>
   <script src="https://brahmexa.com/nexus/widget.js" data-nexus-key="pk_jsi_site" data-nexus-accent="#c44536" defer></script>
 </body>
 </html>

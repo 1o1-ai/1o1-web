@@ -48,28 +48,52 @@ def main() -> int:
         "swan/index.html",
         "operations/index.html",
         "see-ai-at-work/index.html",
+        "offerings/index.html",
+        "architecture/index.html",
+        "nexus/index.html",
+        "contact/index.html",
     ):
         ym_need(ym_rel)
 
     ym_home = (YM_ROOT / "index.html").read_text(encoding="utf-8")
     for ym_token in (
         "noindex",
-        "yoga-mukhopadhyay.jpg",
         "mailto:hello@jsisoftwaresolutions.com",
-        "Interactive demo",
-        "ym-scenarios",
         "Brahmexa LLC",
         "KAIORB",
         "KAI247",
         "jsi-watermark",
         "jsi-brand-mark",
-        "pk_jsi_site",
-        "ym-arch-stack",
     ):
         if ym_token in ym_home:
             ym_ok("home contains " + ym_token)
         else:
             ym_bad("home missing " + ym_token)
+
+    # Check dedicated inner pages contain required components
+    ym_contact = (YM_ROOT / "contact/index.html").read_text(encoding="utf-8")
+    if "yoga-mukhopadhyay.jpg" in ym_contact:
+        ym_ok("contact contains leadership portrait")
+    else:
+        ym_bad("contact missing leadership portrait")
+
+    ym_demo = (YM_ROOT / "see-ai-at-work/index.html").read_text(encoding="utf-8")
+    if "Interactive demo" in ym_demo and "ym-scenarios" in ym_demo:
+        ym_ok("demo contains Interactive demo and ym-scenarios")
+    else:
+        ym_bad("demo missing interactive demo elements")
+
+    ym_nexus = (YM_ROOT / "nexus/index.html").read_text(encoding="utf-8")
+    if "pk_jsi_site" in ym_nexus:
+        ym_ok("nexus contains pk_jsi_site")
+    else:
+        ym_bad("nexus missing pk_jsi_site")
+
+    ym_arch = (YM_ROOT / "architecture/index.html").read_text(encoding="utf-8")
+    if "ym-arch-stack" in ym_arch:
+        ym_ok("architecture contains ym-arch-stack")
+    else:
+        ym_bad("architecture missing ym-arch-stack")
 
     for ym_forbidden in ("jsi-constellation", "orb orb-cyan", "jsi-arch-orbit"):
         if ym_forbidden in ym_home:
