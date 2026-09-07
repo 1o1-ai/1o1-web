@@ -86,6 +86,7 @@ def main() -> int:
         "Five connected systems",
         "Conceptual infrastructure illustration",
         "Mentha cooling",
+        "Software Solutions entrance board",
         "Vector databases as software",
         "AI Compute",
         "Connected &amp; Secure",
