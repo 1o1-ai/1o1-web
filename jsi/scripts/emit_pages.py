@@ -34,7 +34,7 @@ YM_INFRA_LAYERS = (
         "data",
         "Data & Recovery",
         "NVMe storage, vector databases, backups, replication, and disaster recovery.",
-        "Vector DB: software layer. Recovery is a designed capability, not proven for every workload.",
+        "Vector databases as software, with backup and recovery in the design.",
     ),
     (
         "power",
@@ -207,6 +207,7 @@ def ym_home_body() -> str:
       </div>
       <div class="ym-infra-stage">
         <figure class="ym-infra-figure">
+          <div class="ym-infra-plate">
           <picture>
             <source media="(max-width: 720px)" type="image/webp" srcset="/jsi/assets/rampur-cutaway-mobile-720.webp 720w, /jsi/assets/rampur-cutaway-mobile.webp 1200w" sizes="100vw" />
             <img src="/jsi/assets/rampur-cutaway.webp" srcset="/jsi/assets/rampur-cutaway-800.webp 800w, /jsi/assets/rampur-cutaway-1280.webp 1280w, /jsi/assets/rampur-cutaway.webp 1536w" sizes="(max-width: 720px) 100vw, min(1200px, 92vw)" width="1536" height="864" alt="Conceptual cutaway of a modest, expandable data-centre hall in Rampur, with compute racks, networking, storage, power cabinets, and engineered cooling. Not a verified drawing of the actual facility." decoding="async" fetchpriority="high" />
@@ -218,8 +219,10 @@ def ym_home_body() -> str:
             <path class="ym-lead ym-lead-data" d="M620 310 L620 260" />
             <path class="ym-lead ym-lead-cool" d="M805 365 L805 315" />
           </svg>
+          <p class="ym-mentha-note">Mentha cooling · Rampur</p>
           <div class="ym-layers">
 {chr(10).join(ym_layer(*ym_row) for ym_row in YM_INFRA_LAYERS)}
+          </div>
           </div>
           <figcaption>Conceptual infrastructure illustration</figcaption>
         </figure>
@@ -279,6 +282,23 @@ YM_PAGES = [
         <span class="jsi-badge" data-status="available">Available</span>
         <span class="jsi-badge" data-status="proposed">AI features: proposed</span>
       </div>
+      <figure class="ym-swan-reel">
+        <div class="ym-swan-reel-stage">
+          <img src="/jsi/assets/swan-reel-cbse.webp" srcset="/jsi/assets/swan-reel-cbse-960.webp 960w, /jsi/assets/swan-reel-cbse.webp 1536w" sizes="(max-width: 720px) 100vw, 720px" width="1536" height="1024" alt="SWAN board showing a CBSE mock test with timed multiple-choice questions." decoding="async" fetchpriority="high" />
+          <img src="/jsi/assets/swan-reel-abhyas.webp" srcset="/jsi/assets/swan-reel-abhyas-960.webp 960w, /jsi/assets/swan-reel-abhyas.webp 1536w" sizes="(max-width: 720px) 100vw, 720px" width="1536" height="1024" alt="SWAN board showing the Abhyas Learning module for Class 10 practice." decoding="async" />
+          <img src="/jsi/assets/swan-reel-quadratic.webp" srcset="/jsi/assets/swan-reel-quadratic-960.webp 960w, /jsi/assets/swan-reel-quadratic.webp 1536w" sizes="(max-width: 720px) 100vw, 720px" width="1536" height="1024" alt="A teacher using a SWAN board to teach quadratic equations, with a parabola and worked roots on screen." decoding="async" />
+          <img src="/jsi/assets/swan-reel-quiz.webp" srcset="/jsi/assets/swan-reel-quiz-960.webp 960w, /jsi/assets/swan-reel-quiz.webp 1536w" sizes="(max-width: 720px) 100vw, 720px" width="1536" height="1024" alt="Students answering a live class quiz on a SWAN board." decoding="async" />
+        </div>
+        <figcaption>
+          <p class="ym-swan-reel-kicker">On the board</p>
+          <ol>
+            <li>CBSE mock test</li>
+            <li>Abhyas Learning module</li>
+            <li>Quadratic equations</li>
+            <li>Live class quiz</li>
+          </ol>
+        </figcaption>
+      </figure>
       <div class="jsi-prose">
         <h3>In the room</h3>
         <p>SWAN boards are how teachers and teams present, write, and share a lesson or meeting. Hardware is a current JSI product: rent or purchase, with installation by enquiry.</p>
@@ -859,7 +879,7 @@ def ym_home_chrome(ym_page: dict) -> str:
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="{ym_font}" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="{ym_font}" /></noscript>
-  <link rel="stylesheet" href="/jsi/css/home.css?v=4" />
+  <link rel="stylesheet" href="/jsi/css/home.css?v=6" />
 </head>
 <body class="jsi-page" data-ym-page="home">
   <a class="skip-link" href="#ym-main">Skip to content</a>
@@ -949,7 +969,7 @@ def ym_chrome(ym_page: dict) -> str:
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" /></noscript>
   <link rel="stylesheet" href="/assets/theme.css" />
   <link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-paper" />
-  <link rel="stylesheet" href="/jsi/css/jsi.css?v=7" />
+  <link rel="stylesheet" href="/jsi/css/jsi.css?v=8" />
   <noscript><style>.jsi-page .jsi-nav{{display:flex !important}}</style></noscript>
 </head>
 <body class="jsi-page" data-ym-page="{ym_page["page"]}">

@@ -526,6 +526,78 @@
 }
 .jsi-spec-table tr:last-child td { border-bottom: 0; }
 
+.ym-swan-reel {
+  margin: 8px 0 28px;
+  max-width: 42rem;
+}
+.ym-swan-reel-stage {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: var(--jsi-radius);
+  background: #1a1d22;
+}
+.ym-swan-reel-stage img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: ym-swan-reel 20s infinite;
+}
+.ym-swan-reel-stage img:nth-child(1) { animation-delay: 0s; opacity: 1; }
+.ym-swan-reel-stage img:nth-child(2) { animation-delay: 5s; }
+.ym-swan-reel-stage img:nth-child(3) { animation-delay: 10s; }
+.ym-swan-reel-stage img:nth-child(4) { animation-delay: 15s; }
+.ym-swan-reel:hover .ym-swan-reel-stage img,
+.ym-swan-reel:focus-within .ym-swan-reel-stage img {
+  animation-play-state: paused;
+}
+@keyframes ym-swan-reel {
+  0%, 22% { opacity: 1; }
+  27%, 100% { opacity: 0; }
+}
+.ym-swan-reel figcaption { margin: 10px 0 0; }
+.ym-swan-reel-kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ae3024;
+}
+.ym-swan-reel ol {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 8px 0 0;
+  padding: 0;
+}
+.ym-swan-reel li {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ym-swan-reel-stage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    aspect-ratio: auto;
+    gap: 6px;
+    background: transparent;
+  }
+  .ym-swan-reel-stage img {
+    position: static;
+    opacity: 1 !important;
+    animation: none;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
+}
+
 /* Architecture Page Stack */
 .jsi-arch {
   display: grid;

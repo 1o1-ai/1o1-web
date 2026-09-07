@@ -209,7 +209,9 @@ summary:focus-visible {
   margin-bottom: 4px;
 }
 
-.ym-infra-stage { position: relative; }
+.ym-infra-plate {
+  position: relative;
+}
 .ym-infra-figure {
   margin: 0;
   position: relative;
@@ -245,6 +247,24 @@ summary:focus-visible {
   stroke: var(--ym-cool);
   stroke-width: 1.8;
   opacity: 0.55;
+}
+
+.ym-mentha-note {
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  bottom: auto;
+  z-index: 3;
+  margin: 0;
+  padding: 5px 9px;
+  max-width: 14rem;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--ym-line);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ym-ink);
 }
 
 .ym-layer-stack { display: none; }
@@ -495,6 +515,11 @@ summary:focus-visible {
   .ym-infra-figure img { aspect-ratio: 4 / 3; }
   .ym-infra-svg,
   .ym-layers { display: none; }
+  .ym-mentha-note {
+    left: 3%;
+    top: 8%;
+    font-size: 0.68rem;
+  }
   .ym-layer-stack {
     display: grid;
     gap: 0;
