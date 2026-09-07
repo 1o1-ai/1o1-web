@@ -7,7 +7,9 @@
 
   var STORAGE_KEY = "brahmexa_cosmic_theme";
   var LEGACY_KEY = "manjulab_cosmic_theme";
+  var YM_JSI_KEY = "jsi_cosmic_theme";
   var YM_THEMES = [
+    { id: "forge", label: "Forge" },
     { id: "eden", label: "Eden" },
     { id: "cosmic", label: "Cosmic" },
     { id: "ember", label: "Ember" },
@@ -33,11 +35,22 @@
     try { localStorage.setItem("brahmexa-theme", ym_mode); } catch (e) { /* ignore */ }
   }
 
+  function ymIsJsiPage() {
+    return /\/jsi(\/|$)/.test(location.pathname || "") ||
+      !!(document.body && document.body.classList.contains("jsi-page"));
+  }
+
   function ymApplyTheme(id) {
     if (!id) return;
     document.documentElement.setAttribute("data-cosmic-theme", id);
     ymSyncLegacyTheme(id);
-    try { localStorage.setItem(STORAGE_KEY, id); } catch (e) { /* ignore */ }
+    try {
+      if (ymIsJsiPage()) {
+        localStorage.setItem(YM_JSI_KEY, id);
+      } else {
+        localStorage.setItem(STORAGE_KEY, id);
+      }
+    } catch (e) { /* ignore */ }
     document.querySelectorAll(".cosmic-theme-swatch").forEach(function (el) {
       el.classList.toggle("is-active", el.getAttribute("data-theme") === id);
     });
@@ -62,7 +75,7 @@
     ym_wrap.innerHTML =
       '<button type="button" class="cosmic-theme-picker-toggle" aria-expanded="false" aria-controls="cosmicThemePanel" title="Color palette">🎨</button>' +
       '<div id="cosmicThemePanel" class="cosmic-theme-picker-panel" hidden>' +
-      "<h4>Brahmexa palette</h4>" +
+      "<h4>" + (ymIsJsiPage() ? "JSI palette" : "Brahmexa palette") + "</h4>" +
       '<div class="cosmic-theme-picker-grid">' +
       YM_THEMES.map(function (t) {
         return '<button type="button" class="cosmic-theme-swatch" data-theme="' + t.id + '">' + t.label + "</button>";
@@ -93,9 +106,13 @@
   window.BrahmexaTheme = { applyTheme: ymApplyTheme, themes: YM_THEMES };
 
   document.addEventListener("DOMContentLoaded", function () {
-    var ym_saved = "eden";
+    var ym_saved = ymIsJsiPage() ? "forge" : "eden";
     try {
-      ym_saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY) || "eden";
+      if (ymIsJsiPage()) {
+        ym_saved = localStorage.getItem(YM_JSI_KEY) || "forge";
+      } else {
+        ym_saved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem(LEGACY_KEY) || "eden";
+      }
     } catch (e) { /* ignore */ }
     ymApplyTheme(ym_saved);
     ymMount();

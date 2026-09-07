@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "swan",
+      "title": "SWAN interactive boards",
+      "status": "available",
+      "summary": "Registered JSI brand. Rent or purchase. AI features on the board are proposed integrations."
+    },
+    {
+      "id": "labs",
+      "title": "Computer labs",
+      "status": "available",
+      "summary": "Lab setup for schools and institutes as a rental or purchase engagement."
+    },
+    {
+      "id": "abhyas",
+      "title": "Abhyas exam portal",
+      "status": "available",
+      "summary": "Online examinations, question banks, and analytics. Enquiry: abhyas@jsisoftwaresolutions.com"
+    },
+    {
+      "id": "chitrgupt",
+      "title": "ChitrGupt school ERP",
+      "status": "available",
+      "summary": "School management: students, fees, attendance, exams, parent communication. Trial terms confirmed with sales."
+    },
+    {
+      "id": "chatx",
+      "title": "Chat X",
+      "status": "proposed",
+      "summary": "JSI LLM chatbot offering for websites and support. Distinct from Nexus on this preview."
+    },
+    {
+      "id": "delivery",
+      "title": "Hosting, software, apps, web",
+      "status": "available",
+      "summary": "Managed hosting, custom software, mobile apps, websites, and digital marketing by discussion."
+    }
+  ]
+}

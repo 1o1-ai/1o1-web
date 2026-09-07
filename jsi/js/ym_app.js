@@ -129,9 +129,28 @@
     statusLabel: ymStatusLabel
   };
 
+  function ymBindNexus() {
+    document.addEventListener("click", function (ym_ev) {
+      var ym_trigger = ym_ev.target.closest && ym_ev.target.closest("[data-nexus-open]");
+      if (!ym_trigger) return;
+      ym_ev.preventDefault();
+      var ym_api = window.BrahmexaNexus;
+      var ym_ask = ym_trigger.getAttribute("data-nexus-ask");
+      if (ym_api && typeof ym_api.ask === "function" && ym_ask) {
+        ym_api.ask(ym_ask);
+        return;
+      }
+      if (ym_api && typeof ym_api.open === "function") {
+        ym_api.open();
+        return;
+      }
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     ymBindMenu();
     ymMarkCurrentNav();
     ymInitSolutionPage();
+    ymBindNexus();
   });
 })(window);

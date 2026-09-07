@@ -35,6 +35,11 @@
       "role": "Infrastructure location. Capacity, uptime, and inventory figures are scoped during discovery—not published as guarantees."
     },
     {
+      "label": "India — Manesar (Gurugram)",
+      "detail": "Manesar, New City Gurugram, Haryana 122051",
+      "role": "Listed JSI presence"
+    },
+    {
       "label": "United States — Brahmexa LLC",
       "detail": "659 Ferndale Ct NE, Renton, WA 98056",
       "role": "Related Brahmexa LLC office"
@@ -42,10 +47,11 @@
   ],
   "nav": [
     { "id": "solutions", "label": "Solutions", "href": "/jsi/#solutions" },
+    { "id": "offerings", "label": "Offerings", "href": "/jsi/#offerings" },
     { "id": "demo", "label": "See AI at work", "href": "/jsi/see-ai-at-work/" },
     { "id": "architecture", "label": "Architecture", "href": "/jsi/#architecture" },
     { "id": "swan", "label": "SWAN", "href": "/jsi/swan/" },
-    { "id": "leadership", "label": "Leadership", "href": "/jsi/#leadership" },
+    { "id": "nexus", "label": "Nexus", "href": "/jsi/#nexus" },
     { "id": "contact", "label": "Contact", "href": "/jsi/#contact" }
   ],
   "primaryCta": { "label": "Explore a solution", "href": "/jsi/#solutions" },

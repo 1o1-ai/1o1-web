@@ -61,13 +61,23 @@ def main() -> int:
         "Brahmexa LLC",
         "KAIORB",
         "KAI247",
+        "jsi-watermark",
+        "jsi-brand-mark",
+        "pk_jsi_site",
+        "ym-arch-stack",
     ):
         if ym_token in ym_home:
             ym_ok("home contains " + ym_token)
         else:
             ym_bad("home missing " + ym_token)
 
-    for ym_name in ("site.json", "solutions.json", "scenarios.json", "architecture.json", "leadership.json"):
+    for ym_forbidden in ("jsi-constellation", "orb orb-cyan", "jsi-arch-orbit"):
+        if ym_forbidden in ym_home:
+            ym_bad("home still has circular markup: " + ym_forbidden)
+        else:
+            ym_ok("home dropped " + ym_forbidden)
+
+    for ym_name in ("site.json", "solutions.json", "scenarios.json", "architecture.json", "leadership.json", "offerings.json"):
         ym_path = YM_ROOT / "data" / ym_name
         try:
             ym_obj = json.loads(ym_path.read_text(encoding="utf-8"))

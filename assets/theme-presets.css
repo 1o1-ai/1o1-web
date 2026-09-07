@@ -69,6 +69,29 @@
   --manju-gold: #a7f3d0;
 }
 
+[data-cosmic-theme="forge"] {
+  --bg: #0b0707;
+  --bg-soft: #160c0c;
+  --text: #f6efe6;
+  --muted: #c4a090;
+  --cyan: #c44536;
+  --cyan-light: #e07064;
+  --orange: #d4a017;
+  --accent: #c44536;
+  --accent-2: #d4a017;
+  --panel: rgba(22, 12, 12, 0.9);
+  --border: rgba(196, 69, 54, 0.34);
+  --orb-a: rgba(196, 69, 54, 0.16);
+  --orb-b: rgba(212, 160, 23, 0.12);
+  --mesh-alpha: 0.07;
+  --cosmos-opacity: 0.28;
+  --orbit-gold: rgba(212, 160, 23, 0.5);
+  --orbit-teal: rgba(196, 69, 54, 0.45);
+  --orbit-violet: rgba(224, 112, 100, 0.3);
+  --manju-gold: #d4a017;
+  --logo-opacity: 0.09;
+}
+
 [data-cosmic-theme="ember"] {
   --bg: #120806;
   --bg-soft: #1c100c;
@@ -313,6 +336,7 @@ body {
   border-color: var(--cyan-light);
   box-shadow: 0 0 12px color-mix(in srgb, var(--cyan) 40%, transparent);
 }
+.cosmic-theme-swatch[data-theme="forge"] { background: linear-gradient(135deg, #0b0707, #c44536 55%, #d4a017); }
 .cosmic-theme-swatch[data-theme="eden"] { background: linear-gradient(135deg, #071018, #f4c86a 55%, #57d8cf); }
 .cosmic-theme-swatch[data-theme="cosmic"] { background: linear-gradient(135deg, #020617, #06b6d4); }
 .cosmic-theme-swatch[data-theme="aurora"] { background: linear-gradient(135deg, #04101a, #22d3ee); }
