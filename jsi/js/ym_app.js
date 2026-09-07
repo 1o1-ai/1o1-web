@@ -107,8 +107,9 @@
   }
 
   function ymInitSolutionPage() {
+    var ym_host = document.getElementById("ym-solution");
     var ym_page = document.body.getAttribute("data-ym-page");
-    if (!ym_page || ym_page === "home" || ym_page === "demo") return;
+    if (!ym_host || !ym_page || ym_page === "home" || ym_page === "demo") return;
     ymFetchJson("solutions.json").then(function (ym_data) {
       var ym_item = (ym_data.items || []).filter(function (ym_s) {
         return ym_s.id === ym_page;

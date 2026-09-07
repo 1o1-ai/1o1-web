@@ -368,7 +368,24 @@
 }
 
 /* Doors Section & Grid */
-.jsi-section { margin: 56px 0; }
+.jsi-section { margin: 32px 0 56px; }
+.jsi-detail { margin-top: 8px; }
+.jsi-sol-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin: 16px 0 28px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.jsi-sol-index a {
+  color: var(--muted);
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.jsi-sol-index a:hover { color: var(--text); }
 .jsi-section h2 {
   font-size: clamp(1.4rem, 2.8vw, 1.9rem);
   font-weight: 800;
