@@ -15,149 +15,25 @@ YM_NAV = """        <a href="/jsi/see-ai-at-work/">Work</a>
         <a href="/jsi/contact/">Contact</a>"""
 
 YM_HOME_BODY = r"""
-    <!-- Hero Section -->
-    <section class="jsi-hero-arch">
-      <div class="jsi-hero-head">
-        <p class="eyebrow">The infrastructure behind practical AI</p>
-        <h1>Intelligence for every Infra gap.</h1>
-        <p class="lede">Private compute, local language models, enterprise RAG, and agentic workflows—from school operations to the board display.</p>
-        <div class="jsi-status-row">
-          <span class="jsi-badge" data-status="in-flight">In Flight</span>
-          <span class="jsi-badge" data-status="available">SWAN hardware available</span>
-          <span class="jsi-badge" data-status="proposed">AI platform packaging in preview</span>
-        </div>
-        <div class="jsi-hero-actions">
-          <a class="btn-primary" href="/jsi/see-ai-at-work/">See the work</a>
-          <a class="btn-secondary" href="/jsi/contact/">Talk to JSI</a>
-        </div>
-      </div>
-
-      <!-- Infrastructure Building Blocks / 5 Platform Pillars Grid -->
-      <div class="jsi-pillars-header">
-        <p class="eyebrow" style="margin-bottom:0">Platform Architecture</p>
-        <h2>5 Building Blocks of Private AI</h2>
-      </div>
-
-      <div class="jsi-pillars-grid">
-        <a class="jsi-pillar-block" href="/jsi/infrastructure/">
-          <span class="jsi-pillar-num">PILLAR 01</span>
-          <h3>Private AI Compute</h3>
-          <p>On-premises, managed private, or hybrid compute placement for your models & data.</p>
-          <span class="jsi-pillar-link">Open Pillar →</span>
-        </a>
-
-        <a class="jsi-pillar-block" href="/jsi/local-llm/">
-          <span class="jsi-pillar-num">PILLAR 02</span>
-          <h3>Local LLM Serving</h3>
-          <p>Hosted language models for assistants and internal APIs without public data exposure.</p>
-          <span class="jsi-pillar-link">Open Pillar →</span>
-        </a>
-
-        <a class="jsi-pillar-block" href="/jsi/knowledge/">
-          <span class="jsi-pillar-num">PILLAR 03</span>
-          <h3>Enterprise RAG</h3>
-          <p>Answers grounded in approved files with explicit citations and refusal rules.</p>
-          <span class="jsi-pillar-link">Open Pillar →</span>
-        </a>
-
-        <a class="jsi-pillar-block" href="/jsi/workflows/">
-          <span class="jsi-pillar-num">PILLAR 04</span>
-          <h3>Agentic n8n</h3>
-          <p>Self-hosted n8n automation with local models, rules, and human approval checkpoints.</p>
-          <span class="jsi-pillar-link">Open Pillar →</span>
-        </a>
-
-        <a class="jsi-pillar-block" href="/jsi/swan/">
-          <span class="jsi-pillar-num">PILLAR 05</span>
-          <h3>SWAN Smart Boards</h3>
-          <p>Classroom & meeting display interface with grounded AI lesson support.</p>
-          <span class="jsi-pillar-link">Open Pillar →</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Navigation Doors Index Strip -->
-    <section class="jsi-section">
-      <p class="eyebrow">Quick Navigation</p>
-      <h2>Explore JSI by topic</h2>
-      <div class="jsi-nav-doors-strip">
-        <a class="jsi-nav-door-item" href="/jsi/see-ai-at-work/">
-          <h4>Work Demos</h4>
-          <p>3 interactive flows →</p>
-        </a>
-        <a class="jsi-nav-door-item" href="/jsi/swan/">
-          <h4>SWAN Boards</h4>
-          <p>Classroom & displays →</p>
-        </a>
-        <a class="jsi-nav-door-item" href="/jsi/offerings/">
-          <h4>Offerings</h4>
-          <p>Products & ERP →</p>
-        </a>
-        <a class="jsi-nav-door-item" href="/jsi/architecture/">
-          <h4>Architecture</h4>
-          <p>Stack & boundaries →</p>
-        </a>
-        <a class="jsi-nav-door-item" href="/jsi/nexus/">
-          <h4>Ask Nexus</h4>
-          <p>AI assistant →</p>
-        </a>
-      </div>
-    </section>
-
-    <!-- Solution Doors Grid -->
-    <section class="jsi-section" id="solutions" aria-labelledby="ym-sol-heading">
-      <p class="eyebrow">Solutions</p>
-      <h2 id="ym-sol-heading">Explore a solution</h2>
-      <div class="jsi-sol-grid">
-        <a class="jsi-door-card" href="/jsi/infrastructure/">
-          <span class="jsi-badge" data-status="pilot">Pilot</span>
-          <h3>Private AI Infrastructure</h3>
-          <p>On-premises, managed private, or hybrid compute for your models and data.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-        <a class="jsi-door-card" href="/jsi/local-llm/">
-          <span class="jsi-badge" data-status="pilot">Pilot</span>
-          <h3>Local LLM Solutions</h3>
-          <p>Hosted language models for assistants and APIs, matched to your hardware.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-        <a class="jsi-door-card" href="/jsi/knowledge/">
-          <span class="jsi-badge" data-status="pilot">Pilot</span>
-          <h3>RAG & Enterprise Knowledge</h3>
-          <p>Answers grounded in approved files with source citations and refusal rules.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-        <a class="jsi-door-card" href="/jsi/workflows/">
-          <span class="jsi-badge" data-status="proposed">Proposed</span>
-          <h3>Local Agentic Workflows</h3>
-          <p>Self-hosted n8n automation with local LLMs, deterministic rules, and human approval.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-        <a class="jsi-door-card" href="/jsi/swan/">
-          <span class="jsi-badge" data-status="available">Available</span>
-          <h3>SWAN Smart Boards</h3>
-          <p>Interactive smart boards for classrooms and meetings, with proposed AI features.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-        <a class="jsi-door-card" href="/jsi/operations/">
-          <span class="jsi-badge" data-status="pilot">Pilot</span>
-          <h3>Deployment & Operations</h3>
-          <p>Scoped path: Discover, Design, Pilot, Deploy, and Operate your private AI.</p>
-          <span class="jsi-door-link">Open solution →</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Clean Close -->
-    <section class="jsi-close-clean">
-      <div>
-        <h2>Ready to discuss your deployment?</h2>
-        <p>Connect compute, knowledge retrieval, and intelligent displays on your terms.</p>
-      </div>
+    <section class="jsi-home-hero" aria-labelledby="home-title">
+      <p class="home-kicker">AI infrastructure &amp; intelligent systems</p>
+      <h1 id="home-title">Your AI.<br><span>On your terms.</span></h1>
+      <p class="home-intro">Private intelligence. Connected knowledge. Smarter spaces.</p>
       <div class="jsi-hero-actions">
         <a class="btn-primary" href="/jsi/contact/">Talk to JSI</a>
-        <a class="btn-secondary" href="mailto:hello@jsisoftwaresolutions.com?subject=JSI%20AI%20infrastructure%20enquiry">hello@jsisoftwaresolutions.com</a>
+        <a class="home-demo" href="/jsi/see-ai-at-work/">See AI at work <span aria-hidden="true">↗</span></a>
       </div>
+    </section>
+    <section class="home-offerings" id="solutions" aria-labelledby="offerings-title">
+      <div class="home-section-head"><h2 id="offerings-title">Built around your business.</h2><a href="/jsi/offerings/">All offerings ↗</a></div>
+      <div class="home-offering-grid">
+        <a href="/jsi/infrastructure/"><span class="home-number" aria-hidden="true">01 / COMPUTE</span><h3>Private AI</h3><p>Your infrastructure. Your control.</p></a>
+        <a href="/jsi/local-llm/"><span class="home-number" aria-hidden="true">02 / MODELS</span><h3>Local LLMs</h3><p>Intelligence close to your data.</p></a>
+        <a href="/jsi/knowledge/"><span class="home-number" aria-hidden="true">03 / KNOWLEDGE</span><h3>Enterprise RAG</h3><p>Your knowledge. Grounded answers.</p></a>
+        <a href="/jsi/workflows/"><span class="home-number" aria-hidden="true">04 / AUTOMATION</span><h3>Agentic Workflows</h3><p>Local agents. Connected work.</p></a>
+        <a href="/jsi/swan/"><span class="home-number" aria-hidden="true">05 / SPACES</span><h3>SWAN Smart Boards</h3><p>Meet. Teach. Collaborate.</p></a>
+      </div>
+      <p class="home-availability">SWAN hardware available · AI solutions in pilot &amp; preview</p>
     </section>
 """
 
@@ -476,7 +352,7 @@ def ym_chrome(ym_page: dict) -> str:
       <p class="lede" style="margin-left:0">{ym_page["desc"]}</p>
     </article>
 """
-    return f"""<!--
+    ym_html = f"""<!--
   Author: Yogabrata Mukhopadhyay
   Organization: Brahmexa
   Copyright (c) 2026 Brahmexa. All rights reserved.
@@ -554,6 +430,27 @@ def ym_chrome(ym_page: dict) -> str:
 </body>
 </html>
 """
+
+    if ym_page["page"] == "home":
+        # Keep the landing page static and readable without theme/animation JS.
+        start = ym_html.index("  <script>")
+        end = ym_html.index("  <link rel=\"preconnect\"", start)
+        ym_html = ym_html[:start] + ym_html[end:]
+        ym_html = ym_html.replace('<link rel="stylesheet" href="/assets/theme.css" />', '')
+        ym_html = ym_html.replace('<link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-paper" />', '')
+        ym_html = ym_html.replace('<link rel="stylesheet" href="/jsi/css/jsi.css?v=5" />', '<link rel="stylesheet" href="/jsi/css/home.css?v=1" />')
+        ym_html = ym_html.replace('<canvas id="cosmos" aria-hidden="true"></canvas>', '')
+        ym_html = ym_html.replace('<div class="mesh" aria-hidden="true"></div>', '')
+        ym_html = ym_html.replace('<script src="/assets/cosmic.js"></script>', '')
+        ym_html = ym_html.replace('<script src="/assets/theme-picker.js?v=jsi-paper"></script>', '')
+        ym_html = ym_html.replace('<script src="/jsi/js/ym_app.js?v=2"></script>', '<script src="/jsi/js/ym_app.js?v=2" defer></script>')
+        ym_html = ym_html.replace('In-flight preview · yogabrata.com/jsi/ · not the live jsisoftwaresolutions.com storefront', 'JSI · In-flight preview')
+        ym_html = ym_html.replace('The infrastructure behind practical AI</span>', 'AI Infrastructure &amp; Intelligent Systems</span>')
+        ym_html = ym_html.replace(' · Preview indexing: noindex · jsisoftwaresolutions.com is unchanged', '')
+        ym_html = ym_html.replace('Yogabrata inflight projects</a>', 'In-flight projects</a> · <a href="/jsi/operations/">Deployment &amp; Operations</a> · <a href="mailto:hello@jsisoftwaresolutions.com">Email JSI</a>')
+        ym_html = "\n".join(line.rstrip() for line in ym_html.splitlines()) + "\n"
+    return ym_html
+
 
 
 def main() -> None:
