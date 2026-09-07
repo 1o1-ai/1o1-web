@@ -4,7 +4,7 @@
   Copyright (c) 2026 Brahmexa. All rights reserved.
 -->
 <!DOCTYPE html>
-<html lang="en" data-cosmic-theme="forge" data-theme="dark">
+<html lang="en" data-cosmic-theme="paper" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,12 +23,12 @@
   <meta name="twitter:image" content="https://yogabrata.com/jsi/assets/swan-boards.webp" />
   <script>
     (function () {
-      var ym_saved = "forge";
+      var ym_saved = "paper";
       try {
-        ym_saved = localStorage.getItem("jsi_cosmic_theme") || "forge";
+        ym_saved = localStorage.getItem("jsi_cosmic_theme") || "paper";
       } catch (e) { /* ignore */ }
       document.documentElement.setAttribute("data-cosmic-theme", ym_saved);
-      var ym_light = ym_saved === "dawn" || ym_saved === "paper" || ym_saved === "ivory";
+      var ym_light = ym_saved !== "forge" && ym_saved !== "abyss" && ym_saved !== "void" && ym_saved !== "noir";
       document.documentElement.setAttribute("data-theme", ym_light ? "light" : "dark");
     })();
   </script>
@@ -36,8 +36,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="/jsi/assets/jsi-favicon.png" type="image/png" />
   <link rel="stylesheet" href="/assets/theme.css" />
-  <link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-forge" />
-  <link rel="stylesheet" href="/jsi/css/jsi.css?v=2" />
+  <link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-paper" />
+  <link rel="stylesheet" href="/jsi/css/jsi.css?v=3" />
 </head>
 <body class="jsi-page" data-ym-page="operations">
   <a class="skip-link" href="#ym-main">Skip to content</a>
@@ -79,7 +79,7 @@
     <p class="footer-tag"><a href="/jsi/architecture/">Architecture</a> · <a href="/jsi/nexus/">Ask Nexus</a> · <a href="/">Yogabrata inflight projects</a> · Preview indexing: noindex · jsisoftwaresolutions.com is unchanged</p>
   </footer>
   <script src="/assets/cosmic.js"></script>
-  <script src="/assets/theme-picker.js?v=jsi-forge"></script>
+  <script src="/assets/theme-picker.js?v=jsi-paper"></script>
   <script src="/jsi/js/ym_app.js?v=2"></script>
   <script src="https://brahmexa.com/nexus/widget.js" data-nexus-key="pk_jsi_site" data-nexus-accent="#c44536" defer></script>
 </body>

@@ -15,8 +15,8 @@ YM_NAV = """        <a href="/jsi/see-ai-at-work/">Work</a>
         <a href="/jsi/contact/">Contact</a>"""
 
 YM_HOME_BODY = r"""
-    <!-- Beat 1: Hero -->
-    <header class="jsi-hero">
+    <!-- Clean Hero -->
+    <header class="jsi-hero-clean">
       <div>
         <p class="eyebrow">The infrastructure behind practical AI</p>
         <h1>Your infrastructure. Your knowledge. AI that gets work done.</h1>
@@ -26,121 +26,104 @@ YM_HOME_BODY = r"""
           <span class="jsi-badge" data-status="available">SWAN hardware available</span>
           <span class="jsi-badge" data-status="proposed">AI platform packaging in preview</span>
         </div>
-        <div class="jsi-hero-actions">
+        <div class="jsi-hero-actions" style="margin-top:24px">
           <a class="btn-primary" href="/jsi/see-ai-at-work/">See the work</a>
           <a class="btn-secondary" href="/jsi/contact/">Talk to JSI</a>
         </div>
       </div>
-      <img class="jsi-hero-photo" src="/jsi/assets/swan-hero.webp" width="720" height="450" alt="SWAN interactive board in classroom" />
+      <div class="jsi-hero-summary-card">
+        <h3>Platform Pillars</h3>
+        <ul class="jsi-summary-list">
+          <li><strong>Private AI Compute</strong> — On-prem, private & hybrid</li>
+          <li><strong>Local LLM Serving</strong> — Zero public data exposure</li>
+          <li><strong>Enterprise RAG</strong> — Grounded file retrieval & citations</li>
+          <li><strong>Agentic n8n</strong> — Rules & human checkpoints</li>
+          <li><strong>SWAN Smart Boards</strong> — Classroom & meeting interface</li>
+        </ul>
+      </div>
     </header>
 
-    <!-- Beat 2: Proof Strip -->
+    <!-- Navigation Doors Index Strip -->
     <section class="jsi-section">
-      <p class="eyebrow">Proven in practice</p>
-      <h2>From board display to dedicated compute</h2>
-      <div class="jsi-proof-strip">
-        <a class="jsi-proof-tile" href="/jsi/swan/">
-          <img src="/jsi/assets/swan-boards.webp" alt="SWAN Smart Boards" width="400" height="250" />
-          <div class="jsi-proof-overlay">
-            <span class="jsi-badge" data-status="available">Available</span>
-            <h3>SWAN Smart Boards</h3>
-            <p>Classroom & meeting display →</p>
-          </div>
+      <p class="eyebrow">Quick Navigation</p>
+      <h2>Explore JSI by topic</h2>
+      <div class="jsi-nav-doors-strip">
+        <a class="jsi-nav-door-item" href="/jsi/see-ai-at-work/">
+          <h4>Work Demos</h4>
+          <p>3 interactive flows →</p>
         </a>
-        <a class="jsi-proof-tile" href="/jsi/infrastructure/">
-          <img src="/jsi/assets/swan-ops.webp" alt="Private compute stack" width="400" height="250" />
-          <div class="jsi-proof-overlay">
-            <span class="jsi-badge" data-status="pilot">Pilot</span>
-            <h3>Private AI Compute</h3>
-            <p>Dedicated local & hybrid stacks →</p>
-          </div>
+        <a class="jsi-nav-door-item" href="/jsi/swan/">
+          <h4>SWAN Boards</h4>
+          <p>Classroom & displays →</p>
         </a>
-        <a class="jsi-proof-tile" href="/jsi/see-ai-at-work/">
-          <img src="/jsi/assets/swan-hero.webp" alt="Interactive workflows" width="400" height="250" />
-          <div class="jsi-proof-overlay">
-            <span class="jsi-badge" data-status="demonstration">Demonstration</span>
-            <h3>Interactive Workflows</h3>
-            <p>Synthetic data scenarios →</p>
-          </div>
+        <a class="jsi-nav-door-item" href="/jsi/offerings/">
+          <h4>Offerings</h4>
+          <p>Products & ERP →</p>
+        </a>
+        <a class="jsi-nav-door-item" href="/jsi/architecture/">
+          <h4>Architecture</h4>
+          <p>Stack & boundaries →</p>
+        </a>
+        <a class="jsi-nav-door-item" href="/jsi/nexus/">
+          <h4>Ask Nexus</h4>
+          <p>AI assistant →</p>
         </a>
       </div>
     </section>
 
-    <!-- Beat 3: Doors -->
+    <!-- Solution Doors Grid -->
     <section class="jsi-section" id="solutions" aria-labelledby="ym-sol-heading">
       <p class="eyebrow">Solutions</p>
       <h2 id="ym-sol-heading">Explore a solution</h2>
       <div class="jsi-sol-grid">
         <a class="jsi-door-card" href="/jsi/infrastructure/">
-          <img class="jsi-door-photo" src="/jsi/assets/swan-ops.webp" alt="Private AI Infrastructure" width="400" height="225" />
-          <div class="jsi-door-body">
-            <span class="jsi-badge" data-status="pilot">Pilot</span>
-            <h3>Private AI Infrastructure</h3>
-            <p>On-premises, managed private, or hybrid compute for your models and data.</p>
-            <span class="jsi-door-link">Open solution →</span>
-          </div>
+          <span class="jsi-badge" data-status="pilot">Pilot</span>
+          <h3>Private AI Infrastructure</h3>
+          <p>On-premises, managed private, or hybrid compute for your models and data.</p>
+          <span class="jsi-door-link">Open solution →</span>
         </a>
         <a class="jsi-door-card" href="/jsi/local-llm/">
-          <img class="jsi-door-photo" src="/jsi/assets/swan-boards.webp" alt="Local LLM Solutions" width="400" height="225" />
-          <div class="jsi-door-body">
-            <span class="jsi-badge" data-status="pilot">Pilot</span>
-            <h3>Local LLM Solutions</h3>
-            <p>Hosted language models for assistants and APIs, matched to your hardware.</p>
-            <span class="jsi-door-link">Open solution →</span>
-          </div>
+          <span class="jsi-badge" data-status="pilot">Pilot</span>
+          <h3>Local LLM Solutions</h3>
+          <p>Hosted language models for assistants and APIs, matched to your hardware.</p>
+          <span class="jsi-door-link">Open solution →</span>
         </a>
         <a class="jsi-door-card" href="/jsi/knowledge/">
-          <img class="jsi-door-photo" src="/jsi/assets/swan-hero.webp" alt="RAG and Enterprise Knowledge" width="400" height="225" />
-          <div class="jsi-door-body">
-            <span class="jsi-badge" data-status="pilot">Pilot</span>
-            <h3>RAG & Enterprise Knowledge</h3>
-            <p>Answers grounded in approved files with source citations and refusal rules.</p>
-            <span class="jsi-door-link">Open solution →</span>
-          </div>
+          <span class="jsi-badge" data-status="pilot">Pilot</span>
+          <h3>RAG & Enterprise Knowledge</h3>
+          <p>Answers grounded in approved files with source citations and refusal rules.</p>
+          <span class="jsi-door-link">Open solution →</span>
         </a>
         <a class="jsi-door-card" href="/jsi/workflows/">
-          <img class="jsi-door-photo" src="/jsi/assets/swan-ops.webp" alt="Local Agentic Workflows" width="400" height="225" />
-          <div class="jsi-door-body">
-            <span class="jsi-badge" data-status="proposed">Proposed</span>
-            <h3>Local Agentic Workflows</h3>
-            <p>Self-hosted n8n automation with local LLMs, deterministic rules, and human approval.</p>
-            <span class="jsi-door-link">Open solution →</span>
-          </div>
+          <span class="jsi-badge" data-status="proposed">Proposed</span>
+          <h3>Local Agentic Workflows</h3>
+          <p>Self-hosted n8n automation with local LLMs, deterministic rules, and human approval.</p>
+          <span class="jsi-door-link">Open solution →</span>
         </a>
         <a class="jsi-door-card" href="/jsi/swan/">
-          <img class="jsi-door-photo" src="/jsi/assets/swan-boards.webp" alt="SWAN Intelligent Smart Boards" width="400" height="225" />
-          <div class="jsi-door-body">
-            <span class="jsi-badge" data-status="available">Available</span>
-            <h3>SWAN Smart Boards</h3>
-            <p>Interactive smart boards for classrooms and meetings, with proposed AI features.</p>
-            <span class="jsi-door-link">Open solution →</span>
-          </div>
+          <span class="jsi-badge" data-status="available">Available</span>
+          <h3>SWAN Smart Boards</h3>
+          <p>Interactive smart boards for classrooms and meetings, with proposed AI features.</p>
+          <span class="jsi-door-link">Open solution →</span>
         </a>
         <a class="jsi-door-card" href="/jsi/operations/">
-          <img class="jsi-door-photo" src="/jsi/assets/swan-hero.webp" alt="Deployment and Operations" width="400" height="225" />
-          <div class="jsi-door-body">
-            <span class="jsi-badge" data-status="pilot">Pilot</span>
-            <h3>Deployment & Operations</h3>
-            <p>Scoped path: Discover, Design, Pilot, Deploy, and Operate your private AI.</p>
-            <span class="jsi-door-link">Open solution →</span>
-          </div>
+          <span class="jsi-badge" data-status="pilot">Pilot</span>
+          <h3>Deployment & Operations</h3>
+          <p>Scoped path: Discover, Design, Pilot, Deploy, and Operate your private AI.</p>
+          <span class="jsi-door-link">Open solution →</span>
         </a>
       </div>
     </section>
 
-    <!-- Beat 4: Close -->
-    <section class="jsi-close-band">
-      <div class="jsi-close-inner">
-        <div>
-          <p class="eyebrow">Get Started</p>
-          <h2>Ready to discuss your deployment?</h2>
-          <p class="lede">Connect compute, knowledge retrieval, and intelligent displays on your terms.</p>
-          <div class="jsi-hero-actions">
-            <a class="btn-primary" href="/jsi/contact/">Talk to JSI</a>
-            <a class="btn-secondary" href="mailto:hello@jsisoftwaresolutions.com?subject=JSI%20AI%20infrastructure%20enquiry">Email hello@jsisoftwaresolutions.com</a>
-          </div>
-        </div>
-        <img class="jsi-close-photo" src="/jsi/assets/swan-boards.webp" alt="SWAN interactive display" width="480" height="300" />
+    <!-- Clean Close -->
+    <section class="jsi-close-clean">
+      <div>
+        <h2>Ready to discuss your deployment?</h2>
+        <p>Connect compute, knowledge retrieval, and intelligent displays on your terms.</p>
+      </div>
+      <div class="jsi-hero-actions">
+        <a class="btn-primary" href="/jsi/contact/">Talk to JSI</a>
+        <a class="btn-secondary" href="mailto:hello@jsisoftwaresolutions.com?subject=JSI%20AI%20infrastructure%20enquiry">hello@jsisoftwaresolutions.com</a>
       </div>
     </section>
 """
@@ -166,23 +149,8 @@ YM_PAGES = [
       <p class="eyebrow">Hardware Product</p>
       <h1>SWAN Intelligent Smart Boards</h1>
       <p class="lede">Classroom and meeting displays built for interactive presentation and grounded AI support.</p>
-      
-      <div class="jsi-swan-gallery">
-        <figure class="jsi-swan-card">
-          <img src="/jsi/assets/swan-65.webp" alt="SWAN 65-inch interactive board" width="400" height="250" />
-          <figcaption>65" Class Panel</figcaption>
-        </figure>
-        <figure class="jsi-swan-card">
-          <img src="/jsi/assets/swan-75.webp" alt="SWAN 75-inch interactive board" width="400" height="250" />
-          <figcaption>75" Class Panel</figcaption>
-        </figure>
-        <figure class="jsi-swan-card">
-          <img src="/jsi/assets/swan-86.webp" alt="SWAN 86-inch interactive board" width="400" height="250" />
-          <figcaption>86" Class Panel</figcaption>
-        </figure>
-      </div>
 
-      <h2 style="margin-top:36px">Hardware Specifications</h2>
+      <h2 style="margin-top:32px">Hardware Specifications</h2>
       <table class="jsi-spec-table">
         <thead>
           <tr>
@@ -274,7 +242,7 @@ YM_PAGES = [
         "desc": "Interactive demonstrations with synthetic data: intelligent classroom, private knowledge assistant, and document-to-action workflow.",
         "path": "/jsi/see-ai-at-work/",
         "extra": """
-    <header class="jsi-hero" style="grid-template-columns:1fr; margin-bottom:24px">
+    <header class="jsi-hero-clean" style="grid-template-columns:1fr; margin-bottom:24px">
       <div>
         <p class="eyebrow">Interactive Demo · Synthetic Data</p>
         <h1>See AI at work</h1>
@@ -481,7 +449,7 @@ def ym_chrome(ym_page: dict) -> str:
   Copyright (c) 2026 Brahmexa. All rights reserved.
 -->
 <!DOCTYPE html>
-<html lang="en" data-cosmic-theme="forge" data-theme="dark">
+<html lang="en" data-cosmic-theme="paper" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -500,12 +468,12 @@ def ym_chrome(ym_page: dict) -> str:
   <meta name="twitter:image" content="{ym_og}" />
   <script>
     (function () {{
-      var ym_saved = "forge";
+      var ym_saved = "paper";
       try {{
-        ym_saved = localStorage.getItem("jsi_cosmic_theme") || "forge";
+        ym_saved = localStorage.getItem("jsi_cosmic_theme") || "paper";
       }} catch (e) {{ /* ignore */ }}
       document.documentElement.setAttribute("data-cosmic-theme", ym_saved);
-      var ym_light = ym_saved === "dawn" || ym_saved === "paper" || ym_saved === "ivory";
+      var ym_light = ym_saved !== "forge" && ym_saved !== "abyss" && ym_saved !== "void" && ym_saved !== "noir";
       document.documentElement.setAttribute("data-theme", ym_light ? "light" : "dark");
     }})();
   </script>
@@ -513,8 +481,8 @@ def ym_chrome(ym_page: dict) -> str:
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="icon" href="/jsi/assets/jsi-favicon.png" type="image/png" />
   <link rel="stylesheet" href="/assets/theme.css" />
-  <link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-forge" />
-  <link rel="stylesheet" href="/jsi/css/jsi.css?v=2" />
+  <link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-paper" />
+  <link rel="stylesheet" href="/jsi/css/jsi.css?v=3" />
 </head>
 <body class="jsi-page" data-ym-page="{ym_page["page"]}">
   <a class="skip-link" href="#ym-main">Skip to content</a>
@@ -547,7 +515,7 @@ def ym_chrome(ym_page: dict) -> str:
     <p class="footer-tag"><a href="/jsi/architecture/">Architecture</a> · <a href="/jsi/nexus/">Ask Nexus</a> · <a href="/">Yogabrata inflight projects</a> · Preview indexing: noindex · jsisoftwaresolutions.com is unchanged</p>
   </footer>
   <script src="/assets/cosmic.js"></script>
-  <script src="/assets/theme-picker.js?v=jsi-forge"></script>
+  <script src="/assets/theme-picker.js?v=jsi-paper"></script>
   <script src="/jsi/js/ym_app.js?v=2"></script>
 {ym_page["scripts"]}  <script src="https://brahmexa.com/nexus/widget.js" data-nexus-key="pk_jsi_site" data-nexus-accent="#c44536" defer></script>
 </body>
