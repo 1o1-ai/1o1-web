@@ -101,7 +101,7 @@
     }
     ym_html += '<p class="launch-row" style="margin-top:28px">';
     ym_html += '<a class="btn-primary" href="/jsi/see-ai-at-work/">See AI at work</a>';
-    ym_html += '<a class="btn-secondary" href="/jsi/#contact">Discuss your deployment</a>';
+    ym_html += '<a class="btn-secondary" href="/jsi/contact/">Discuss your deployment</a>';
     ym_html += "</p>";
     ym_host.innerHTML = ym_html;
   }

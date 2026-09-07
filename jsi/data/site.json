@@ -5,10 +5,10 @@
   "relatedCompany": "Brahmexa LLC",
   "network": "KAIORB",
   "platform": "KAI247",
-  "tagline": "The infrastructure behind practical AI.",
-  "heroTitle": "Your infrastructure. Your knowledge. AI that gets work done.",
-  "heroSupport": "Private compute, local language models, RAG, and agentic workflows—from school operations to the board.",
-  "positioning": "JSI connects private compute, local LLMs, enterprise knowledge, and intelligent devices into dependable operational solutions.",
+  "tagline": "AI. At your doorstep.",
+  "heroTitle": "AI. At your doorstep.",
+  "heroSupport": "Affordable AI infrastructure for your business, school, and beyond.",
+  "positioning": "Affordable AI infrastructure for business, school, and beyond.",
   "previewNote": "Preview on yogabrata.com. This is an in-flight web solution. It is not the live jsisoftwaresolutions.com storefront.",
   "status": "In Flight",
   "basePath": "/jsi/",
@@ -46,12 +46,10 @@
     }
   ],
   "nav": [
-    { "id": "demo", "label": "Work", "href": "/jsi/see-ai-at-work/" },
+    { "id": "solutions", "label": "Solutions", "href": "/jsi/#offerings" },
     { "id": "swan", "label": "SWAN", "href": "/jsi/swan/" },
-    { "id": "solutions", "label": "Solutions", "href": "/jsi/#solutions" },
-    { "id": "offerings", "label": "Offerings", "href": "/jsi/offerings/" },
     { "id": "contact", "label": "Contact", "href": "/jsi/contact/" }
   ],
-  "primaryCta": { "label": "See the work", "href": "/jsi/see-ai-at-work/" },
+  "primaryCta": { "label": "Explore Solutions", "href": "/jsi/#offerings" },
   "secondaryCta": { "label": "Talk to JSI", "href": "/jsi/contact/" }
 }

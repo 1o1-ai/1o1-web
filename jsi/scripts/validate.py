@@ -35,6 +35,7 @@ def main() -> int:
     for ym_rel in (
         "index.html",
         "css/jsi.css",
+        "css/home.css",
         "js/ym_app.js",
         "js/ym_architecture.js",
         "js/ym_scenarios.js",
@@ -64,18 +65,29 @@ def main() -> int:
         "KAI247",
         "jsi-watermark",
         "jsi-brand-mark",
+        "At your doorstep",
+        "Explore Solutions",
+        "75 kW",
+        "id=\"offerings\"",
+        "css/home.css",
     ):
         if ym_token in ym_home:
             ym_ok("home contains " + ym_token)
         else:
             ym_bad("home missing " + ym_token)
 
+    for ym_blocked in ("id=\"cosmos\"", "cosmic.js", "theme-picker.js", "nexus/widget.js"):
+        if ym_blocked in ym_home:
+            ym_bad("home still loads blocking extra: " + ym_blocked)
+        else:
+            ym_ok("home omitted " + ym_blocked)
+
     # Check dedicated inner pages contain required components
     ym_contact = (YM_ROOT / "contact/index.html").read_text(encoding="utf-8")
-    if "yoga-mukhopadhyay.jpg" in ym_contact:
-        ym_ok("contact contains leadership portrait")
+    if "yoga-mukhopadhyay.jpg" in ym_contact or "jsi-leader" in ym_contact:
+        ym_bad("contact still has CEO introduction")
     else:
-        ym_bad("contact missing leadership portrait")
+        ym_ok("contact has no CEO introduction")
 
     ym_demo = (YM_ROOT / "see-ai-at-work/index.html").read_text(encoding="utf-8")
     if "Interactive demo" in ym_demo and "ym-scenarios" in ym_demo:
@@ -101,7 +113,7 @@ def main() -> int:
         else:
             ym_ok("home dropped " + ym_forbidden)
 
-    for ym_name in ("site.json", "solutions.json", "scenarios.json", "architecture.json", "leadership.json", "offerings.json"):
+    for ym_name in ("site.json", "solutions.json", "scenarios.json", "architecture.json", "leadership.json", "offerings.json", "metrics.json"):
         ym_path = YM_ROOT / "data" / ym_name
         try:
             ym_obj = json.loads(ym_path.read_text(encoding="utf-8"))
@@ -113,6 +125,14 @@ def main() -> int:
             ym_bad("expected 6 solutions")
         if ym_name == "scenarios.json" and len(ym_obj.get("items") or []) != 3:
             ym_bad("expected 3 scenarios")
+        if ym_name == "metrics.json":
+            ym_items = ym_obj.get("items") or []
+            if len(ym_items) != 4:
+                ym_bad("expected 4 metrics")
+            ym_values = {str(ym_row.get("value")) for ym_row in ym_items}
+            for ym_need_val in ("100+", "75 kW", "500+", "Thousands"):
+                if ym_need_val not in ym_values:
+                    ym_bad("metrics missing " + ym_need_val)
         if ym_name == "leadership.json":
             if "Yoga" not in (ym_obj.get("biography") or "") and "Yoga" not in (ym_obj.get("shortName") or ""):
                 ym_bad("leadership missing Yoga")
