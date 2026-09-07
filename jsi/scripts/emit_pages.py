@@ -43,6 +43,21 @@ YM_HOME_BODY = r"""
       </div>
     </header>
 
+    <!-- Offerings Video Reel -->
+    <section class="jsi-section">
+      <p class="eyebrow">Capabilities Reel</p>
+      <h2>Offerings & Field Deployments</h2>
+      <div class="jsi-reel-wrapper">
+        <video class="jsi-reel-video" autoplay loop muted playsinline poster="/jsi/assets/swan-boards.webp">
+          <source src="/jsi/assets/offerings-reel.mp4" type="video/mp4" />
+        </video>
+        <div class="jsi-reel-caption">
+          <span>JSI Offerings Reel · 01 SWAN Boards · 02 Computer Labs · 03 Abhyas Exam · 04 ChitrGupt ERP · 05 Chat X · 06 Hosting</span>
+          <a class="jsi-reel-link" href="/jsi/offerings/">Explore Offerings Catalog →</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Navigation Doors Index Strip -->
     <section class="jsi-section">
       <p class="eyebrow">Quick Navigation</p>
@@ -411,7 +426,7 @@ YM_PAGES = [
         </div>
         <div class="jsi-address-item">
           <h4>United States — Renton (Brahmexa LLC)</h4>
-          <p>659 Ferndale Ct NE, Renton, WA 98056 (Related organisation)</p>
+          <p>Renton, WA 98056, United States (Related organisation)</p>
         </div>
       </div>
 
@@ -482,7 +497,7 @@ def ym_chrome(ym_page: dict) -> str:
   <link rel="icon" href="/jsi/assets/jsi-favicon.png" type="image/png" />
   <link rel="stylesheet" href="/assets/theme.css" />
   <link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-paper" />
-  <link rel="stylesheet" href="/jsi/css/jsi.css?v=3" />
+  <link rel="stylesheet" href="/jsi/css/jsi.css?v=4" />
 </head>
 <body class="jsi-page" data-ym-page="{ym_page["page"]}">
   <a class="skip-link" href="#ym-main">Skip to content</a>

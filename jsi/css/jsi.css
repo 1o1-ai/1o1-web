@@ -223,13 +223,13 @@
   background: color-mix(in srgb, var(--border) 30%, transparent);
 }
 
-/* Clean Home Hero (No Loud Images) */
+/* Clean Home Hero */
 .jsi-hero-clean {
   display: grid;
   grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
   gap: 48px;
   align-items: center;
-  margin-bottom: 64px;
+  margin-bottom: 56px;
   padding: 40px;
   border-radius: var(--jsi-radius-lg);
   border: 1px solid var(--border);
@@ -333,6 +333,40 @@
   margin: 8px 0 16px;
 }
 
+/* Offerings Tiny Video Reel Container */
+.jsi-reel-wrapper {
+  border: 1px solid var(--border);
+  border-radius: var(--jsi-radius-lg);
+  background: var(--panel);
+  overflow: hidden;
+  margin: 20px 0 48px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+}
+.jsi-reel-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  background: #ffffff;
+  object-fit: contain;
+}
+.jsi-reel-caption {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-soft) 50%, transparent);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+.jsi-reel-link {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
 /* Door Cards (Clean Text-Forward & Minimal UI) */
 .jsi-sol-grid {
   display: grid;
@@ -385,7 +419,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
-  margin: 32px 0 56px;
+  margin: 24px 0 48px;
 }
 .jsi-nav-door-item {
   border: 1px solid var(--border);
