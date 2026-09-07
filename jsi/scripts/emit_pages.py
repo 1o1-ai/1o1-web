@@ -17,28 +17,124 @@ YM_NAV = """        <a href="/jsi/#offerings">Solutions</a>
         <a href="/jsi/contact/">Contact</a>"""
 
 
-def ym_metrics_html() -> str:
+YM_INFRA_LAYERS = (
+    (
+        "compute",
+        "AI Compute",
+        "GPUs and accelerators sized for private AI, local inference, RAG, and computer vision.",
+        "",
+    ),
+    (
+        "connect",
+        "Connected & Secure",
+        "Fast internal networking with secure customer and edge access.",
+        "",
+    ),
+    (
+        "data",
+        "Data & Recovery",
+        "NVMe storage, vector databases, backups, replication, and disaster recovery.",
+        "Vector DB: software layer. Recovery is a designed capability, not proven for every workload.",
+    ),
+    (
+        "power",
+        "Protected Power",
+        "Utility supply, UPS protection, distribution, and monitoring.",
+        "Generator: Planned / subject to design",
+    ),
+    (
+        "cool",
+        "Engineered Cooling",
+        "Cooling matched to rack density, with a path to hybrid or liquid cooling.",
+        "Future option: hybrid or liquid cooling",
+    ),
+)
+
+
+def ym_metric_value(ym_value: str) -> str:
     ym_path = YM_ROOT / "data" / "metrics.json"
     ym_data = json.loads(ym_path.read_text(encoding="utf-8"))
-    ym_cells: list[str] = []
     for ym_item in ym_data["items"]:
-        ym_value = html.escape(str(ym_item["value"]))
-        ym_label = html.escape(str(ym_item["label"]))
-        ym_cells.append(
-            "        <div class=\"ym-metric\">\n"
-            f"          <p class=\"ym-metric-value\">{ym_value}</p>\n"
-            f"          <p class=\"ym-metric-label\">{ym_label}</p>\n"
-            "        </div>"
+        if str(ym_item["value"]) == ym_value:
+            return str(ym_item["value"])
+    raise KeyError(ym_value)
+
+
+def ym_layer(
+    ym_key: str,
+    ym_label: str,
+    ym_detail: str,
+    ym_flag: str = "",
+) -> str:
+    ym_flag_html = ""
+    if ym_flag:
+        ym_flag_html = (
+            f'        <p class="ym-layer-flag">{html.escape(ym_flag)}</p>\n'
         )
-    return "\n".join(ym_cells)
-
-
-def ym_outcome(ym_n: str, ym_href: str, ym_title: str, ym_line: str) -> str:
     return (
-        f'        <a href="{html.escape(ym_href)}">'
-        f'<span class="ym-offer-num">{html.escape(ym_n)}</span>'
-        f"<h3>{html.escape(ym_title)}</h3>"
-        f"<p>{html.escape(ym_line)}</p></a>"
+        f'      <div class="ym-layer ym-layer--{html.escape(ym_key)}">\n'
+        f"        <details>\n"
+        f"          <summary>{html.escape(ym_label)}</summary>\n"
+        f"          <p>{html.escape(ym_detail)}</p>\n"
+        "        </details>\n"
+        f"{ym_flag_html}"
+        "      </div>"
+    )
+
+
+def ym_layer_stack_item(
+    ym_key: str,
+    ym_label: str,
+    ym_detail: str,
+    ym_flag: str = "",
+) -> str:
+    ym_flag_html = ""
+    if ym_flag:
+        ym_flag_html = (
+            f'        <p class="ym-layer-flag">{html.escape(ym_flag)}</p>\n'
+        )
+    return (
+        f'      <div class="ym-stack-item ym-layer--{html.escape(ym_key)}">\n'
+        f"        <h3>{html.escape(ym_label)}</h3>\n"
+        f"        <p>{html.escape(ym_detail)}</p>\n"
+        f"{ym_flag_html}"
+        "      </div>"
+    )
+
+
+def ym_destination(
+    ym_title: str,
+    ym_href: str,
+    ym_line: str,
+    ym_links: list[tuple[str, str]],
+    ym_stats: list[tuple[str, str]] | None = None,
+) -> str:
+    ym_stat_html = ""
+    if ym_stats:
+        ym_stat_bits = []
+        for ym_value, ym_label in ym_stats:
+            ym_stat_bits.append(
+                "<span><strong>"
+                f"{html.escape(ym_value)}</strong> {html.escape(ym_label)}</span>"
+            )
+        ym_stat_html = (
+            '        <p class="ym-dest-stat">'
+            + " ".join(ym_stat_bits)
+            + "</p>\n"
+        )
+    ym_link_html = "\n".join(
+        f'        <a href="{html.escape(ym_href_item)}">{html.escape(ym_label)}</a>'
+        for ym_href_item, ym_label in ym_links
+    )
+    return (
+        '      <article class="ym-dest">\n'
+        f"        <h3><a href=\"{html.escape(ym_href)}\">{html.escape(ym_title)}</a></h3>\n"
+        f"        <p class=\"ym-dest-line\">{html.escape(ym_line)}</p>\n"
+        f"{ym_stat_html}"
+        '        <p class="ym-dest-links">\n'
+        f"{ym_link_html}\n"
+        "        </p>\n"
+        "      </article>"
     )
 
 
@@ -88,37 +184,68 @@ def ym_detail(
 
 
 def ym_home_body() -> str:
+    ym_kw = html.escape(ym_metric_value("75 kW"))
+    ym_hosted = html.escape(ym_metric_value("100+"))
+    ym_swan = html.escape(ym_metric_value("500+"))
+    ym_learn = html.escape(ym_metric_value("Thousands"))
     return f"""
     <section class="jsi-home-hero" aria-labelledby="home-title">
-      <div class="ym-hero-copy">
-        <h1 id="home-title">AI. <span class="ym-accent">At your doorstep.</span></h1>
-        <p class="home-intro">AI that understands your business. Websites that work around the clock. Marketing that helps you grow.</p>
-        <div class="jsi-hero-actions">
-          <a class="btn-primary" href="/jsi/#offerings">Explore Solutions</a>
-          <a class="btn-secondary" href="/jsi/contact/">Talk to JSI</a>
-        </div>
+      <h1 id="home-title">AI. <span class="ym-accent">At your doorstep.</span></h1>
+      <p class="home-intro">AI that understands your business. Websites that work around the clock. Marketing that helps you grow.</p>
+      <div class="jsi-hero-actions">
+        <a class="btn-primary" href="/jsi/#offerings">Explore Solutions</a>
+        <a class="btn-secondary" href="/jsi/contact/">Talk to JSI</a>
       </div>
-      <aside class="ym-hero-panel" aria-label="What JSI helps you do">
-        <p>Understand your business.</p>
-        <p>Connect your knowledge.</p>
-        <p>Grow your reach.</p>
-      </aside>
     </section>
-    <section class="ym-metrics" aria-label="JSI in figures">
-{ym_metrics_html()}
+    <section class="ym-infra" aria-labelledby="ym-infra-title">
+      <div class="ym-infra-head">
+        <div>
+          <p class="ym-infra-kicker">Rampur, Uttar Pradesh</p>
+          <h2 id="ym-infra-title">Five connected systems. One foundation for your business.</h2>
+        </div>
+        <p class="ym-capacity"><span>{ym_kw}</span> Data centre capacity &amp; growing</p>
+      </div>
+      <div class="ym-infra-stage">
+        <figure class="ym-infra-figure">
+          <picture>
+            <source media="(max-width: 720px)" type="image/webp" srcset="/jsi/assets/rampur-cutaway-mobile-720.webp 720w, /jsi/assets/rampur-cutaway-mobile.webp 1200w" sizes="100vw" />
+            <img src="/jsi/assets/rampur-cutaway.webp" srcset="/jsi/assets/rampur-cutaway-800.webp 800w, /jsi/assets/rampur-cutaway-1280.webp 1280w, /jsi/assets/rampur-cutaway.webp 1536w" sizes="(max-width: 720px) 100vw, min(1200px, 92vw)" width="1536" height="864" alt="Conceptual cutaway of a modest, expandable data-centre hall in Rampur, with compute racks, networking, storage, power cabinets, and engineered cooling. Not a verified drawing of the actual facility." decoding="async" fetchpriority="high" />
+          </picture>
+          <svg class="ym-infra-svg" viewBox="0 0 1000 563" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path class="ym-lead ym-lead-power" d="M175 300 L175 255" />
+            <path class="ym-lead ym-lead-compute" d="M430 255 L430 205" />
+            <path class="ym-lead ym-lead-connect" d="M535 175 L535 125" />
+            <path class="ym-lead ym-lead-data" d="M620 310 L620 260" />
+            <path class="ym-lead ym-lead-cool" d="M805 365 L805 315" />
+          </svg>
+          <div class="ym-layers">
+{chr(10).join(ym_layer(*ym_row) for ym_row in YM_INFRA_LAYERS)}
+          </div>
+          <figcaption>Conceptual infrastructure illustration</figcaption>
+        </figure>
+      </div>
+      <div class="ym-layer-stack">
+{chr(10).join(ym_layer_stack_item(*ym_row) for ym_row in YM_INFRA_LAYERS)}
+      </div>
+      <ul class="ym-infra-legend">
+        <li><span class="ym-swatch ym-swatch-now" aria-hidden="true"></span> Charcoal equipment in the drawing represents the five systems, not a verified inventory of what is installed in Rampur.</li>
+        <li><span class="ym-swatch ym-swatch-future" aria-hidden="true"></span> Dashed outlines are planned or future options. Generator provision is planned / subject to design. Liquid cooling is a future option, not shown as installed.</li>
+      </ul>
     </section>
-    <section class="home-offerings" id="offerings" aria-labelledby="offerings-title">
+    <svg class="ym-story-link" viewBox="0 0 100 28" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <path d="M50 0 V12" />
+      <path d="M17 28 L50 12 L83 28" />
+    </svg>
+    <section class="ym-outcomes" id="offerings" aria-labelledby="offerings-title">
+      <div class="ym-outcome-connect" aria-hidden="true"></div>
       <div class="home-section-head">
-        <h2 id="offerings-title">Built for your business. Working for your growth.</h2>
+        <h2 id="offerings-title">From this foundation</h2>
         <a class="ym-all-offerings" href="/jsi/offerings/">All solutions</a>
       </div>
-      <div class="home-offering-grid">
-{ym_outcome("01", "/jsi/business/", "AI for Your Business", "We start with your goals, processes, and everyday challenges.")}
-{ym_outcome("02", "/jsi/knowledge/", "Your Knowledge, Put to Work", "Turn documents and business data into useful answers and insights.")}
-{ym_outcome("03", "/jsi/websites/", "Websites That Work 24×7", "We build, host, and maintain your business online.")}
-{ym_outcome("04", "/jsi/seo/", "Get Found. Stay Visible.", "Ongoing SEO helps customers discover your website.")}
-{ym_outcome("05", "/jsi/marketing/", "Turn Attention into Enquiries", "Digital marketing connects your website, content, and campaigns.")}
-{ym_outcome("06", "/jsi/swan/", "Smarter Learning Spaces", "SWAN smart boards bring interactive lessons and AI learning tools into the classroom.")}
+      <div class="ym-dest-row">
+{ym_destination("Business AI", "/jsi/business/", "Private models · Business knowledge · Automation", [("/jsi/business/", "Private models"), ("/jsi/knowledge/", "Business knowledge"), ("/jsi/workflows/", "Automation")])}
+{ym_destination("Digital Growth", "/jsi/websites/", "Websites & hosting · SEO · Digital marketing", [("/jsi/websites/", "Websites & hosting"), ("/jsi/seo/", "SEO"), ("/jsi/marketing/", "Digital marketing")], [(ym_hosted, "hosted services")])}
+{ym_destination("Smart Classrooms", "/jsi/swan/", "SWAN boards · AI learning modules", [("/jsi/swan/", "SWAN boards")], [(ym_swan, "SWAN boards"), (ym_learn, "of learners")])}
       </div>
     </section>
     <section class="ym-close" aria-labelledby="ym-close-title">
@@ -702,7 +829,7 @@ YM_PAGES = [
 
 def ym_home_chrome(ym_page: dict) -> str:
     ym_canonical = YM_ORIGIN + ym_page["path"]
-    ym_og = YM_ORIGIN + "/jsi/assets/swan-boards.webp"
+    ym_og = YM_ORIGIN + "/jsi/assets/rampur-cutaway-og.jpg"
     ym_font = "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap"
     return f"""<!--
   Author: Yogabrata Mukhopadhyay
@@ -732,7 +859,7 @@ def ym_home_chrome(ym_page: dict) -> str:
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="{ym_font}" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="{ym_font}" /></noscript>
-  <link rel="stylesheet" href="/jsi/css/home.css?v=3" />
+  <link rel="stylesheet" href="/jsi/css/home.css?v=4" />
 </head>
 <body class="jsi-page" data-ym-page="home">
   <a class="skip-link" href="#ym-main">Skip to content</a>
