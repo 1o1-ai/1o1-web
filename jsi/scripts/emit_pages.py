@@ -15,46 +15,64 @@ YM_NAV = """        <a href="/jsi/see-ai-at-work/">Work</a>
         <a href="/jsi/contact/">Contact</a>"""
 
 YM_HOME_BODY = r"""
-    <!-- Clean Hero -->
-    <header class="jsi-hero-clean">
-      <div>
+    <!-- Hero Section -->
+    <section class="jsi-hero-arch">
+      <div class="jsi-hero-head">
         <p class="eyebrow">The infrastructure behind practical AI</p>
-        <h1>Your infrastructure. Your knowledge. AI that gets work done.</h1>
-        <p class="lede">Private compute, local language models, RAG, and agentic workflows—from school operations to the board.</p>
+        <h1>Intelligence for every Infra gap.</h1>
+        <p class="lede">Private compute, local language models, enterprise RAG, and agentic workflows—from school operations to the board display.</p>
         <div class="jsi-status-row">
           <span class="jsi-badge" data-status="in-flight">In Flight</span>
           <span class="jsi-badge" data-status="available">SWAN hardware available</span>
           <span class="jsi-badge" data-status="proposed">AI platform packaging in preview</span>
         </div>
-        <div class="jsi-hero-actions" style="margin-top:24px">
+        <div class="jsi-hero-actions">
           <a class="btn-primary" href="/jsi/see-ai-at-work/">See the work</a>
           <a class="btn-secondary" href="/jsi/contact/">Talk to JSI</a>
         </div>
       </div>
-      <div class="jsi-hero-summary-card">
-        <h3>Platform Pillars</h3>
-        <ul class="jsi-summary-list">
-          <li><strong>Private AI Compute</strong> — On-prem, private & hybrid</li>
-          <li><strong>Local LLM Serving</strong> — Zero public data exposure</li>
-          <li><strong>Enterprise RAG</strong> — Grounded file retrieval & citations</li>
-          <li><strong>Agentic n8n</strong> — Rules & human checkpoints</li>
-          <li><strong>SWAN Smart Boards</strong> — Classroom & meeting interface</li>
-        </ul>
-      </div>
-    </header>
 
-    <!-- Offerings Video Reel -->
-    <section class="jsi-section">
-      <p class="eyebrow">Capabilities Reel</p>
-      <h2>Offerings & Field Deployments</h2>
-      <div class="jsi-reel-wrapper">
-        <video class="jsi-reel-video" autoplay loop muted playsinline poster="/jsi/assets/swan-boards.webp">
-          <source src="/jsi/assets/offerings-reel.mp4" type="video/mp4" />
-        </video>
-        <div class="jsi-reel-caption">
-          <span>JSI Offerings Reel · 01 SWAN Boards · 02 Computer Labs · 03 Abhyas Exam · 04 ChitrGupt ERP · 05 Chat X · 06 Hosting</span>
-          <a class="jsi-reel-link" href="/jsi/offerings/">Explore Offerings Catalog →</a>
-        </div>
+      <!-- Infrastructure Building Blocks / 5 Platform Pillars Grid -->
+      <div class="jsi-pillars-header">
+        <p class="eyebrow" style="margin-bottom:0">Platform Architecture</p>
+        <h2>5 Building Blocks of Private AI</h2>
+      </div>
+
+      <div class="jsi-pillars-grid">
+        <a class="jsi-pillar-block" href="/jsi/infrastructure/">
+          <span class="jsi-pillar-num">PILLAR 01</span>
+          <h3>Private AI Compute</h3>
+          <p>On-premises, managed private, or hybrid compute placement for your models & data.</p>
+          <span class="jsi-pillar-link">Open Pillar →</span>
+        </a>
+
+        <a class="jsi-pillar-block" href="/jsi/local-llm/">
+          <span class="jsi-pillar-num">PILLAR 02</span>
+          <h3>Local LLM Serving</h3>
+          <p>Hosted language models for assistants and internal APIs without public data exposure.</p>
+          <span class="jsi-pillar-link">Open Pillar →</span>
+        </a>
+
+        <a class="jsi-pillar-block" href="/jsi/knowledge/">
+          <span class="jsi-pillar-num">PILLAR 03</span>
+          <h3>Enterprise RAG</h3>
+          <p>Answers grounded in approved files with explicit citations and refusal rules.</p>
+          <span class="jsi-pillar-link">Open Pillar →</span>
+        </a>
+
+        <a class="jsi-pillar-block" href="/jsi/workflows/">
+          <span class="jsi-pillar-num">PILLAR 04</span>
+          <h3>Agentic n8n</h3>
+          <p>Self-hosted n8n automation with local models, rules, and human approval checkpoints.</p>
+          <span class="jsi-pillar-link">Open Pillar →</span>
+        </a>
+
+        <a class="jsi-pillar-block" href="/jsi/swan/">
+          <span class="jsi-pillar-num">PILLAR 05</span>
+          <h3>SWAN Smart Boards</h3>
+          <p>Classroom & meeting display interface with grounded AI lesson support.</p>
+          <span class="jsi-pillar-link">Open Pillar →</span>
+        </a>
       </div>
     </section>
 
@@ -257,8 +275,8 @@ YM_PAGES = [
         "desc": "Interactive demonstrations with synthetic data: intelligent classroom, private knowledge assistant, and document-to-action workflow.",
         "path": "/jsi/see-ai-at-work/",
         "extra": """
-    <header class="jsi-hero-clean" style="grid-template-columns:1fr; margin-bottom:24px">
-      <div>
+    <header class="hero-intro jsi-hero-arch" style="margin-bottom:24px">
+      <div class="jsi-hero-head" style="margin-bottom:0">
         <p class="eyebrow">Interactive Demo · Synthetic Data</p>
         <h1>See AI at work</h1>
         <p class="lede">Three browser-only demonstrations. Interactive demo • Synthetic data. Runs in the browser only.</p>
@@ -497,7 +515,7 @@ def ym_chrome(ym_page: dict) -> str:
   <link rel="icon" href="/jsi/assets/jsi-favicon.png" type="image/png" />
   <link rel="stylesheet" href="/assets/theme.css" />
   <link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-paper" />
-  <link rel="stylesheet" href="/jsi/css/jsi.css?v=4" />
+  <link rel="stylesheet" href="/jsi/css/jsi.css?v=5" />
 </head>
 <body class="jsi-page" data-ym-page="{ym_page["page"]}">
   <a class="skip-link" href="#ym-main">Skip to content</a>
