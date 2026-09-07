@@ -53,6 +53,10 @@ def main() -> int:
         "architecture/index.html",
         "nexus/index.html",
         "contact/index.html",
+        "business/index.html",
+        "websites/index.html",
+        "seo/index.html",
+        "marketing/index.html",
     ):
         ym_need(ym_rel)
 
@@ -63,20 +67,25 @@ def main() -> int:
         "Brahmexa LLC",
         "KAIORB",
         "KAI247",
-        "jsi-watermark",
         "jsi-brand-mark",
         "At your doorstep",
         "Explore Solutions",
         "75 kW",
         "id=\"offerings\"",
         "css/home.css",
+        "Built for your business",
+        "Let’s talk",
+        "/jsi/business/",
+        "/jsi/websites/",
+        "/jsi/seo/",
+        "/jsi/marketing/",
     ):
         if ym_token in ym_home:
             ym_ok("home contains " + ym_token)
         else:
             ym_bad("home missing " + ym_token)
 
-    for ym_blocked in ("id=\"cosmos\"", "cosmic.js", "theme-picker.js", "nexus/widget.js"):
+    for ym_blocked in ("id=\"cosmos\"", "cosmic.js", "theme-picker.js", "nexus/widget.js", "jsi-watermark"):
         if ym_blocked in ym_home:
             ym_bad("home still loads blocking extra: " + ym_blocked)
         else:

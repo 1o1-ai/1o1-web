@@ -16,41 +16,6 @@ YM_NAV = """        <a href="/jsi/#offerings">Solutions</a>
         <a href="/jsi/swan/">SWAN</a>
         <a href="/jsi/contact/">Contact</a>"""
 
-YM_ICON_SERVER = (
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
-    '<rect x="3.5" y="4" width="17" height="6" rx="1.2"/>'
-    '<rect x="3.5" y="14" width="17" height="6" rx="1.2"/>'
-    '<circle cx="7.5" cy="7" r="0.9" fill="currentColor" stroke="none"/>'
-    '<circle cx="7.5" cy="17" r="0.9" fill="currentColor" stroke="none"/>'
-    "</svg>"
-)
-YM_ICON_CHIP = (
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
-    '<rect x="7" y="7" width="10" height="10" rx="1.4"/>'
-    '<path d="M9 4v3M12 4v3M15 4v3M9 17v3M12 17v3M15 17v3M4 9h3M4 12h3M4 15h3M17 9h3M17 12h3M17 15h3"/>'
-    "</svg>"
-)
-YM_ICON_SEARCH = (
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
-    '<circle cx="11" cy="11" r="6"/>'
-    '<path d="M20 20l-3.5-3.5"/>'
-    "</svg>"
-)
-YM_ICON_FLOW = (
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
-    '<circle cx="6" cy="7" r="2.2"/>'
-    '<circle cx="18" cy="7" r="2.2"/>'
-    '<circle cx="12" cy="17" r="2.2"/>'
-    '<path d="M8 8.2l3.2 6.2M16 8.2l-3.2 6.2"/>'
-    "</svg>"
-)
-YM_ICON_BOARD = (
-    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">'
-    '<rect x="3" y="4" width="18" height="13" rx="1.4"/>'
-    '<path d="M8 21h8M12 17v4"/>'
-    "</svg>"
-)
-
 
 def ym_metrics_html() -> str:
     ym_path = YM_ROOT / "data" / "metrics.json"
@@ -68,40 +33,97 @@ def ym_metrics_html() -> str:
     return "\n".join(ym_cells)
 
 
-def ym_offer(ym_href: str, ym_icon: str, ym_title: str, ym_line: str) -> str:
+def ym_outcome(ym_n: str, ym_href: str, ym_title: str, ym_line: str) -> str:
     return (
         f'        <a href="{html.escape(ym_href)}">'
-        f'<span class="ym-offer-icon">{ym_icon}</span>'
+        f'<span class="ym-offer-num">{html.escape(ym_n)}</span>'
         f"<h3>{html.escape(ym_title)}</h3>"
         f"<p>{html.escape(ym_line)}</p></a>"
     )
 
 
+def ym_detail(
+    *,
+    ym_eyebrow: str,
+    ym_title: str,
+    ym_lede: str,
+    ym_status: str,
+    ym_status_label: str,
+    ym_blocks: list[tuple[str, str | list[str]]],
+    ym_related: list[tuple[str, str]] | None = None,
+) -> str:
+    ym_parts = [
+        '    <section class="jsi-section jsi-detail">\n',
+        f'      <p class="eyebrow">{ym_eyebrow}</p>\n',
+        f"      <h1>{ym_title}</h1>\n",
+        f'      <p class="lede">{ym_lede}</p>\n',
+        '      <div class="jsi-status-row" style="justify-content:flex-start;margin:12px 0 20px">\n',
+        f'        <span class="jsi-badge" data-status="{html.escape(ym_status)}">{html.escape(ym_status_label)}</span>\n',
+        "      </div>\n",
+        '      <div class="jsi-prose">\n',
+    ]
+    for ym_heading, ym_body in ym_blocks:
+        ym_parts.append(f"        <h3>{ym_heading}</h3>\n")
+        if isinstance(ym_body, list):
+            ym_parts.append("        <ul>\n")
+            for ym_item in ym_body:
+                ym_parts.append(f"          <li>{ym_item}</li>\n")
+            ym_parts.append("        </ul>\n")
+        else:
+            ym_parts.append(f"        <p>{ym_body}</p>\n")
+    ym_parts.append("      </div>\n")
+    if ym_related:
+        ym_parts.append('      <p class="launch-row" style="margin-top:28px">\n')
+        for ym_href, ym_label in ym_related:
+            ym_parts.append(
+                f'        <a class="btn-secondary" href="{html.escape(ym_href)}">{ym_label}</a>\n'
+            )
+        ym_parts.append("      </p>\n")
+    ym_parts.append(
+        '      <p class="launch-row" style="margin-top:20px">'
+        '<a class="btn-primary" href="/jsi/contact/">Let’s talk</a></p>\n'
+        "    </section>\n"
+    )
+    return "".join(ym_parts)
+
+
 def ym_home_body() -> str:
     return f"""
     <section class="jsi-home-hero" aria-labelledby="home-title">
-      <h1 id="home-title">AI. <span class="ym-accent">At your doorstep.</span></h1>
-      <p class="home-intro">Affordable AI infrastructure for your business, school, and beyond.</p>
-      <div class="jsi-hero-actions">
-        <a class="btn-primary" href="/jsi/#offerings">Explore Solutions</a>
-        <a class="btn-secondary" href="/jsi/contact/">Talk to JSI</a>
+      <div class="ym-hero-copy">
+        <h1 id="home-title">AI. <span class="ym-accent">At your doorstep.</span></h1>
+        <p class="home-intro">AI that understands your business. Websites that work around the clock. Marketing that helps you grow.</p>
+        <div class="jsi-hero-actions">
+          <a class="btn-primary" href="/jsi/#offerings">Explore Solutions</a>
+          <a class="btn-secondary" href="/jsi/contact/">Talk to JSI</a>
+        </div>
       </div>
+      <aside class="ym-hero-panel" aria-label="What JSI helps you do">
+        <p>Understand your business.</p>
+        <p>Connect your knowledge.</p>
+        <p>Grow your reach.</p>
+      </aside>
     </section>
     <section class="ym-metrics" aria-label="JSI in figures">
 {ym_metrics_html()}
     </section>
     <section class="home-offerings" id="offerings" aria-labelledby="offerings-title">
       <div class="home-section-head">
-        <h2 id="offerings-title">Solutions</h2>
-        <a class="ym-all-offerings" href="/jsi/offerings/">All offerings</a>
+        <h2 id="offerings-title">Built for your business. Working for your growth.</h2>
+        <a class="ym-all-offerings" href="/jsi/offerings/">All solutions</a>
       </div>
       <div class="home-offering-grid">
-{ym_offer("/jsi/infrastructure/", YM_ICON_SERVER, "Private AI", "Your infrastructure. Your control.")}
-{ym_offer("/jsi/local-llm/", YM_ICON_CHIP, "Local LLMs", "AI models running close to your data.")}
-{ym_offer("/jsi/knowledge/", YM_ICON_SEARCH, "Knowledge & Search", "Answers from your documents.")}
-{ym_offer("/jsi/workflows/", YM_ICON_FLOW, "Smart Automation", "AI agents that help get work done.")}
-{ym_offer("/jsi/swan/", YM_ICON_BOARD, "SWAN Smart Boards", "Interactive teaching with AI learning modules.")}
+{ym_outcome("01", "/jsi/business/", "AI for Your Business", "We start with your goals, processes, and everyday challenges.")}
+{ym_outcome("02", "/jsi/knowledge/", "Your Knowledge, Put to Work", "Turn documents and business data into useful answers and insights.")}
+{ym_outcome("03", "/jsi/websites/", "Websites That Work 24×7", "We build, host, and maintain your business online.")}
+{ym_outcome("04", "/jsi/seo/", "Get Found. Stay Visible.", "Ongoing SEO helps customers discover your website.")}
+{ym_outcome("05", "/jsi/marketing/", "Turn Attention into Enquiries", "Digital marketing connects your website, content, and campaigns.")}
+{ym_outcome("06", "/jsi/swan/", "Smarter Learning Spaces", "SWAN smart boards bring interactive lessons and AI learning tools into the classroom.")}
       </div>
+    </section>
+    <section class="ym-close" aria-labelledby="ym-close-title">
+      <p id="ym-close-title">Tell us about your business.</p>
+      <a class="btn-primary" href="/jsi/contact/">Let’s talk</a>
     </section>
 """
 
@@ -109,8 +131,8 @@ YM_PAGES = [
     {
         "file": "index.html",
         "page": "home",
-        "title": "JSI — AI Infrastructure & Intelligent Systems",
-        "desc": "Affordable AI infrastructure for your business, school, and beyond.",
+        "title": "JSI — AI, websites, and digital growth",
+        "desc": "JSI brings together infrastructure, business intelligence, websites, and digital growth.",
         "path": "/jsi/",
         "extra": "",
         "scripts": "",
@@ -122,12 +144,21 @@ YM_PAGES = [
         "desc": "SWAN interactive boards as an interface for AI-enabled learning and collaboration. Available hardware and proposed AI capabilities.",
         "path": "/jsi/swan/",
         "extra": """
-    <section class="jsi-section">
+    <section class="jsi-section jsi-detail">
       <p class="eyebrow">Hardware Product</p>
       <h1>SWAN Intelligent Smart Boards</h1>
-      <p class="lede">Classroom and meeting displays built for interactive presentation and grounded AI support.</p>
-
-      <h2 style="margin-top:32px">Hardware Specifications</h2>
+      <p class="lede">Interactive classroom and meeting displays, with proposed AI learning tools on the board.</p>
+      <div class="jsi-status-row" style="justify-content:flex-start;margin:12px 0 20px">
+        <span class="jsi-badge" data-status="available">Available</span>
+        <span class="jsi-badge" data-status="proposed">AI features: proposed</span>
+      </div>
+      <div class="jsi-prose">
+        <h3>In the room</h3>
+        <p>SWAN boards are how teachers and teams present, write, and share a lesson or meeting. Hardware is a current JSI product: rent or purchase, with installation by enquiry.</p>
+        <h3>Proposed AI on the board</h3>
+        <p>Lesson-pack questions, quiz drafts, and meeting-note assistance are proposed integrations. They are not presented here as a finished classroom deployment on every board.</p>
+      </div>
+      <h2 style="margin-top:32px">Hardware specifications</h2>
       <table class="jsi-spec-table">
         <thead>
           <tr>
@@ -137,32 +168,27 @@ YM_PAGES = [
         </thead>
         <tbody>
           <tr>
-            <td>Display Sizes</td>
-            <td>65", 75", and 86" Class 4K UHD Displays</td>
+            <td>Display sizes</td>
+            <td>65", 75", and 86" Class 4K UHD displays</td>
           </tr>
           <tr>
-            <td>Operating Systems</td>
-            <td>Android onboard with optional Windows OPS PC Module</td>
+            <td>Operating systems</td>
+            <td>Android onboard with optional Windows OPS PC module</td>
           </tr>
           <tr>
-            <td>Touch & Interface</td>
-            <td>Multi-touch precision writing, anti-glare tempered glass</td>
+            <td>Touch &amp; interface</td>
+            <td>Multi-touch writing, anti-glare tempered glass</td>
           </tr>
           <tr>
-            <td>Proposed AI Features</td>
-            <td>Lesson pack Q&A, automated quiz drafting, meeting note assistance</td>
-          </tr>
-          <tr>
-            <td>Procurement Terms</td>
+            <td>Procurement</td>
             <td>Rental, purchase, installation, and support by direct enquiry</td>
           </tr>
         </tbody>
       </table>
-
-      <div style="margin-top:32px; display:flex; gap:14px; flex-wrap:wrap">
+      <p class="launch-row" style="margin-top:28px">
         <a class="btn-primary" href="mailto:hello@jsisoftwaresolutions.com?subject=SWAN%20board%20%2F%20installation%20enquiry">Email hardware enquiry</a>
         <a class="btn-secondary" href="tel:+917983875643">Call +91 79838 75643</a>
-      </div>
+      </p>
     </section>
 """,
         "scripts": "",
@@ -173,7 +199,32 @@ YM_PAGES = [
         "title": "Private AI Infrastructure | JSI Software Solutions",
         "desc": "On-premises, managed private, and hybrid compute foundations for AI services.",
         "path": "/jsi/infrastructure/",
-        "extra": "",
+        "extra": ym_detail(
+            ym_eyebrow="Pilot",
+            ym_title="Private AI Infrastructure",
+            ym_lede="Choose where models and data live: on-premises, managed private, or hybrid. Placement decides location, access, and who operates the stack.",
+            ym_status="pilot",
+            ym_status_label="Pilot",
+            ym_blocks=[
+                (
+                    "Three patterns",
+                    [
+                        "On-premises: equipment in your room or campus. You control physical access.",
+                        "Managed private: dedicated capacity operated with JSI under an agreed site and access list.",
+                        "Hybrid: approved information stays local; a named external service may be used for burst work.",
+                    ],
+                ),
+                (
+                    "What this is not",
+                    "Published kilowatt figures, GPU counts, and uptime percentages are not used as guarantees on this preview. Sizing is agreed during discovery.",
+                ),
+            ],
+            ym_related=[
+                ("/jsi/local-llm/", "Local LLMs"),
+                ("/jsi/knowledge/", "Knowledge"),
+                ("/jsi/operations/", "Deployment"),
+            ],
+        ),
         "scripts": "",
     },
     {
@@ -182,25 +233,113 @@ YM_PAGES = [
         "title": "Local LLM Solutions | JSI Software Solutions",
         "desc": "Locally hosted language models for assistants, inference APIs, and business applications.",
         "path": "/jsi/local-llm/",
-        "extra": "",
+        "extra": ym_detail(
+            ym_eyebrow="Pilot",
+            ym_title="Local LLM Solutions",
+            ym_lede="Language models running on compute you can name. They draft, classify, and extract. They do not automatically know your files.",
+            ym_status="pilot",
+            ym_status_label="Pilot",
+            ym_blocks=[
+                (
+                    "In plain language",
+                    "AI models running on private infrastructure, connected to your approved business information when retrieval is configured.",
+                ),
+                (
+                    "Where a local model helps",
+                    [
+                        "Assistants and internal APIs that should not send every prompt to a public chatbot.",
+                        "Drafting and extraction beside a knowledge index, not instead of it.",
+                        "Workload matched to hardware — not a claim that every model runs everywhere.",
+                    ],
+                ),
+            ],
+            ym_related=[
+                ("/jsi/infrastructure/", "Infrastructure"),
+                ("/jsi/knowledge/", "Knowledge"),
+                ("/jsi/workflows/", "Automation"),
+            ],
+        ),
         "scripts": "",
     },
     {
         "file": "knowledge/index.html",
         "page": "knowledge",
-        "title": "RAG and Enterprise Knowledge | JSI Software Solutions",
-        "desc": "AI answers grounded in approved organisational information with citations.",
+        "title": "Your Knowledge, Put to Work | JSI Software Solutions",
+        "desc": "Answers from approved documents, with a clear line between retrieval and calculated reporting.",
         "path": "/jsi/knowledge/",
-        "extra": "",
+        "extra": ym_detail(
+            ym_eyebrow="Pilot",
+            ym_title="Your knowledge, put to work",
+            ym_lede="AI models running on private infrastructure, connected to your approved business information.",
+            ym_status="pilot",
+            ym_status_label="Pilot",
+            ym_blocks=[
+                (
+                    "Document-based answers",
+                    "Retrieval uses approved files first: manuals, policies, product notes, and reports you designate. Answers should cite sources or say when evidence is missing.",
+                ),
+                (
+                    "Useful examples",
+                    [
+                        "Finding a procedure in an operations manual.",
+                        "Summarising a report you already hold.",
+                        "Retrieving product information from approved catalogues.",
+                        "Helping staff read what those documents say about performance — not inventing the numbers.",
+                    ],
+                ),
+                (
+                    "Calculated analytics are different",
+                    "Numerical reporting must use connected, structured data and reliable calculations. A language model alone is not a source of accurate financial or operational metrics.",
+                ),
+                (
+                    "Controls",
+                    "Access follows the permissions of the source files. Indexes are refreshed on a schedule agreed in the engagement — not continuously unless that is specified.",
+                ),
+            ],
+            ym_related=[
+                ("/jsi/business/", "How we start"),
+                ("/jsi/local-llm/", "Local LLMs"),
+                ("/jsi/infrastructure/", "Infrastructure"),
+            ],
+        ),
         "scripts": "",
     },
     {
         "file": "workflows/index.html",
         "page": "workflows",
-        "title": "Local Agentic Workflows | JSI Software Solutions",
-        "desc": "Self-hosted n8n connected to local models and RAG with human approval checkpoints.",
+        "title": "Smart Automation | JSI Software Solutions",
+        "desc": "Local agentic workflows for enquiry routing, document retrieval, and routine tasks — with human checkpoints.",
         "path": "/jsi/workflows/",
-        "extra": "",
+        "extra": ym_detail(
+            ym_eyebrow="Proposed integration",
+            ym_title="Smart automation",
+            ym_lede="Agents that help move work along. Rules and people still control what actually happens.",
+            ym_status="proposed",
+            ym_status_label="Proposed integration",
+            ym_blocks=[
+                (
+                    "Supported examples (illustrative)",
+                    [
+                        "Routing a website enquiry to the right mailbox.",
+                        "Retrieving an approved document for a staff question.",
+                        "Drafting a routine follow-up for someone to review.",
+                    ],
+                ),
+                (
+                    "How it is built",
+                    "Technical deployments use local language models and self-hosted n8n. Connectors that leave the building are named, or they are not enabled.",
+                ),
+                (
+                    "Approvals",
+                    "These flows are proposed integrations until scoped. Illustrative examples on this preview use synthetic data and are not a live customer system.",
+                ),
+            ],
+            ym_related=[
+                ("/jsi/see-ai-at-work/", "See a demonstration"),
+                ("/jsi/knowledge/", "Knowledge"),
+                ("/jsi/local-llm/", "Local LLMs"),
+            ],
+        ),
         "scripts": "",
     },
     {
@@ -209,7 +348,158 @@ YM_PAGES = [
         "title": "Deployment and Operations | JSI Software Solutions",
         "desc": "Discover, design, pilot, deploy, and operate private AI infrastructure.",
         "path": "/jsi/operations/",
-        "extra": "",
+        "extra": ym_detail(
+            ym_eyebrow="Pilot",
+            ym_title="Deployment and operations",
+            ym_lede="Discover, design, pilot, deploy, and operate. Monitoring and support are scoped with you — not unlimited.",
+            ym_status="pilot",
+            ym_status_label="Pilot",
+            ym_blocks=[
+                (
+                    "The path",
+                    [
+                        "Discover: objectives, information sources, and constraints.",
+                        "Design: placement, models, retrieval, and workflow boundaries.",
+                        "Pilot: a limited slice with success criteria.",
+                        "Deploy and operate: patching, backups, and on-call as written in the engagement.",
+                    ],
+                ),
+            ],
+            ym_related=[
+                ("/jsi/infrastructure/", "Infrastructure"),
+                ("/jsi/business/", "How we start"),
+            ],
+        ),
+        "scripts": "",
+    },
+    {
+        "file": "business/index.html",
+        "page": "business",
+        "title": "AI for Your Business | JSI Software Solutions",
+        "desc": "We start with your goals, processes, and everyday challenges — then configure AI around approved knowledge.",
+        "path": "/jsi/business/",
+        "extra": ym_detail(
+            ym_eyebrow="Pilot",
+            ym_title="AI for your business",
+            ym_lede="We start with your goals, processes, and everyday challenges. Models are configured around approved knowledge. They are not trained automatically on your data.",
+            ym_status="pilot",
+            ym_status_label="Pilot",
+            ym_blocks=[
+                (
+                    "How a conversation starts",
+                    [
+                        "Your objectives, workflows, terminology, and information sources.",
+                        "Useful applications identified together — not a generic chatbot dropped on the company.",
+                        "Access permissions for what the system may read.",
+                    ],
+                ),
+                (
+                    "What we configure",
+                    "AI is set up against approved business knowledge. A local model does not become private merely because a machine is on site, and it does not train itself on customer files.",
+                ),
+            ],
+            ym_related=[
+                ("/jsi/knowledge/", "Knowledge"),
+                ("/jsi/infrastructure/", "Private AI"),
+                ("/jsi/local-llm/", "Local LLMs"),
+            ],
+        ),
+        "scripts": "",
+    },
+    {
+        "file": "websites/index.html",
+        "page": "websites",
+        "title": "Managed Websites | JSI Software Solutions",
+        "desc": "Website development, hosting, maintenance, and operational support for your business online.",
+        "path": "/jsi/websites/",
+        "extra": ym_detail(
+            ym_eyebrow="Available",
+            ym_title="Websites that work around the clock",
+            ym_lede="We build, host, and maintain your business online. “Working around the clock” describes the website’s role for customers — not an uptime SLA or a promise of staffed support at every hour.",
+            ym_status="available",
+            ym_status_label="Available",
+            ym_blocks=[
+                (
+                    "What the engagement covers",
+                    [
+                        "Website development and updates scoped with you.",
+                        "Hosting on JSI-operated infrastructure.",
+                        "Maintenance and operational support as written in the agreement.",
+                    ],
+                ),
+                (
+                    "Monitoring, backups, and recovery",
+                    "These are included where the engagement says so. They are not implied by hosting alone.",
+                ),
+            ],
+            ym_related=[
+                ("/jsi/seo/", "SEO"),
+                ("/jsi/marketing/", "Digital marketing"),
+                ("/jsi/offerings/", "All solutions"),
+            ],
+        ),
+        "scripts": "",
+    },
+    {
+        "file": "seo/index.html",
+        "page": "seo",
+        "title": "SEO | JSI Software Solutions",
+        "desc": "Technical SEO, content structure, performance, and ongoing improvement so customers can find your website.",
+        "path": "/jsi/seo/",
+        "extra": ym_detail(
+            ym_eyebrow="Available",
+            ym_title="Get found. Stay visible.",
+            ym_lede="Discoverability through technical SEO, content structure, performance, and ongoing improvement. We do not promise first-page rankings or guaranteed traffic.",
+            ym_status="available",
+            ym_status_label="Available",
+            ym_blocks=[
+                (
+                    "The work",
+                    [
+                        "Technical foundations: crawlability, structure, and page performance.",
+                        "Content structure that matches how people search for your services.",
+                        "Ongoing improvement rather than a one-off report.",
+                    ],
+                ),
+                (
+                    "Measurement",
+                    "Progress is reviewed with the analytics already available on the site. Rankings move; they are not sold as a guarantee.",
+                ),
+            ],
+            ym_related=[
+                ("/jsi/websites/", "Websites"),
+                ("/jsi/marketing/", "Digital marketing"),
+            ],
+        ),
+        "scripts": "",
+    },
+    {
+        "file": "marketing/index.html",
+        "page": "marketing",
+        "title": "Digital Marketing | JSI Software Solutions",
+        "desc": "Website content, social publishing, and campaigns that support discovery and enquiries — scoped separately from hosting.",
+        "path": "/jsi/marketing/",
+        "extra": ym_detail(
+            ym_eyebrow="Available",
+            ym_title="Turn attention into enquiries",
+            ym_lede="Digital marketing connects your website, content, and campaigns. Advertising spend and extra marketing services are not included in hosting unless agreed.",
+            ym_status="available",
+            ym_status_label="Available",
+            ym_blocks=[
+                (
+                    "Organic and paid are different",
+                    "Organic publishing is content you own on the website and social channels. Paid advertising is a separate budget and campaign. Neither is bundled into hosting by default.",
+                ),
+                (
+                    "How we work",
+                    "Approvals and reporting are described in the engagement where they are supported. This preview does not list packages or prices.",
+                ),
+            ],
+            ym_related=[
+                ("/jsi/websites/", "Websites"),
+                ("/jsi/seo/", "SEO"),
+            ],
+        ),
         "scripts": "",
     },
     {
@@ -241,6 +531,18 @@ YM_PAGES = [
       <p class="eyebrow">Field Deployments</p>
       <h1>Products & Services</h1>
       <p class="lede">Products and capabilities operating in schools, institutes, and enterprises.</p>
+      <p class="jsi-sol-index">
+        <a href="/jsi/business/">AI for your business</a>
+        <a href="/jsi/infrastructure/">Private AI</a>
+        <a href="/jsi/local-llm/">Local LLMs</a>
+        <a href="/jsi/knowledge/">Knowledge</a>
+        <a href="/jsi/workflows/">Automation</a>
+        <a href="/jsi/websites/">Websites</a>
+        <a href="/jsi/seo/">SEO</a>
+        <a href="/jsi/marketing/">Marketing</a>
+        <a href="/jsi/swan/">SWAN</a>
+        <a href="/jsi/operations/">Deployment</a>
+      </p>
       
       <div class="jsi-offer-grid">
         <article class="jsi-offer-card">
@@ -430,13 +732,10 @@ def ym_home_chrome(ym_page: dict) -> str:
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="{ym_font}" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="{ym_font}" /></noscript>
-  <link rel="stylesheet" href="/jsi/css/home.css?v=2" />
+  <link rel="stylesheet" href="/jsi/css/home.css?v=3" />
 </head>
 <body class="jsi-page" data-ym-page="home">
   <a class="skip-link" href="#ym-main">Skip to content</a>
-  <div class="jsi-watermark" aria-hidden="true">
-    <img src="/jsi/assets/jsi-favicon.png" alt="" width="220" height="220" />
-  </div>
   <div class="jsi-banner">In-flight preview</div>
   <header class="site-header jsi-header">
     <div class="header-inner">
@@ -454,7 +753,7 @@ def ym_home_chrome(ym_page: dict) -> str:
   </main>
   <footer class="site-footer jsi-footer">
     <p>JSI Software Solutions Pvt Ltd · <a href="https://brahmexa.com">Brahmexa LLC</a> · KAIORB · KAI247</p>
-    <p class="footer-tag"><a href="/jsi/contact/">Contact</a> · <a href="/jsi/offerings/">All offerings</a> · <a href="/jsi/see-ai-at-work/">See AI at work</a> · <a href="/jsi/architecture/">Architecture</a> · <a href="/jsi/nexus/">Nexus</a> · <a href="mailto:hello@jsisoftwaresolutions.com">Email JSI</a></p>
+    <p class="footer-tag"><a href="/jsi/contact/">Contact</a> · <a href="/jsi/offerings/">All solutions</a> · <a href="/jsi/see-ai-at-work/">See AI at work</a> · <a href="/jsi/architecture/">Architecture</a> · <a href="/jsi/nexus/">Nexus</a> · <a href="mailto:hello@jsisoftwaresolutions.com">Email JSI</a></p>
   </footer>
 </body>
 </html>
@@ -469,7 +768,24 @@ def ym_chrome(ym_page: dict) -> str:
     ym_og = YM_ORIGIN + "/jsi/assets/swan-boards.webp"
     ym_main_extra = ym_page.get("extra", "")
     ym_article = ""
-    if ym_page["page"] not in ("demo", "home", "swan", "offerings", "architecture", "nexus", "contact"):
+    if ym_page["page"] not in (
+        "demo",
+        "home",
+        "swan",
+        "offerings",
+        "architecture",
+        "nexus",
+        "contact",
+        "business",
+        "websites",
+        "seo",
+        "marketing",
+        "knowledge",
+        "workflows",
+        "infrastructure",
+        "local-llm",
+        "operations",
+    ):
         ym_article = f"""    <article id="ym-solution" class="jsi-prose">
       <p class="eyebrow">JSI Software Solutions</p>
       <h1>{ym_page["title"].split("|")[0].strip()}</h1>
@@ -506,7 +822,7 @@ def ym_chrome(ym_page: dict) -> str:
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" /></noscript>
   <link rel="stylesheet" href="/assets/theme.css" />
   <link rel="stylesheet" href="/assets/theme-presets.css?v=jsi-paper" />
-  <link rel="stylesheet" href="/jsi/css/jsi.css?v=6" />
+  <link rel="stylesheet" href="/jsi/css/jsi.css?v=7" />
   <noscript><style>.jsi-page .jsi-nav{{display:flex !important}}</style></noscript>
 </head>
 <body class="jsi-page" data-ym-page="{ym_page["page"]}">
@@ -535,7 +851,7 @@ def ym_chrome(ym_page: dict) -> str:
   </main>
   <footer class="site-footer jsi-footer">
     <p>JSI Software Solutions Pvt Ltd · <a href="https://brahmexa.com">Brahmexa LLC</a> · KAIORB · KAI247</p>
-    <p class="footer-tag"><a href="/jsi/contact/">Contact</a> · <a href="/jsi/offerings/">All offerings</a> · <a href="/jsi/see-ai-at-work/">See AI at work</a> · <a href="/jsi/architecture/">Architecture</a> · <a href="/jsi/nexus/">Nexus</a> · <a href="mailto:hello@jsisoftwaresolutions.com">Email JSI</a></p>
+    <p class="footer-tag"><a href="/jsi/contact/">Contact</a> · <a href="/jsi/offerings/">All solutions</a> · <a href="/jsi/see-ai-at-work/">See AI at work</a> · <a href="/jsi/architecture/">Architecture</a> · <a href="/jsi/nexus/">Nexus</a> · <a href="mailto:hello@jsisoftwaresolutions.com">Email JSI</a></p>
   </footer>
   <script src="/jsi/js/ym_app.js?v=2" defer></script>
 {ym_page["scripts"]}  <script src="https://brahmexa.com/nexus/widget.js" data-nexus-key="pk_jsi_site" data-nexus-accent="#ae3024" async></script>
