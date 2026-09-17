@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact Us | Nilanjan Guest House (Yogabrata.com)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="clix-header">
+    <div class="Topbar">
+      <div class="container header-flex">
+        <div class="logo-area">
+          <a href="index.html">
+            <div style="font-size: 32px; font-weight: 800; color: #2b91af; font-family: serif; display: flex; align-items: center; gap: 8px;">
+              <span style="background: #2b91af; color: #fff; padding: 4px 12px; border-radius: 4px;">N</span>
+              <span>NILANJAN</span>
+            </div>
+          </a>
+          <div class="clix-logo-text">
+            <h1>Nilanjan’ Estates</h1>
+            <h2>Guest House · Yogabrata.com</h2>
+          </div>
+        </div>
+
+        <div class="header-contact-nav">
+          <div class="clix-top-phone">
+            <i class="fa fa-phone"></i> +91 9231580965<br>
+            <i class="fa fa-phone"></i> +91 8017069777
+          </div>
+
+          <nav class="clix_main_menu">
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="rooms.html">Rooms & Suites</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about_us.html">About Us</a></li>
+              <li class="current-menu-item"><a href="contact.html">Contact Us</a></li>
+              <li class="book-now-btn"><a href="booking.html">Book Now</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="clix-middle">
+    <div class="container clix-bg-white">
+      <h2 class="section-title">Contact Nilanjan Guest House</h2>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px;">
+        <div>
+          <h3 style="font-size: 20px; color: #2b91af; margin-bottom: 20px;">Get In Touch</h3>
+          <p style="margin-bottom: 15px;"><i class="fa fa-map-marker" style="color: #F78020;"></i> <strong>Address:</strong> 55 Chowringhee Road, Kolkata - 700 071, West Bengal (Near Exide Crossing/Rabindra Sadan Metro Station)</p>
+          <p style="margin-bottom: 15px;"><i class="fa fa-phone" style="color: #F78020;"></i> <strong>Phone:</strong> +91 33 22821817 / +91 33 22828554 / +91 9231580965 / +91 8017069777</p>
+          <p style="margin-bottom: 15px;"><i class="fa fa-envelope" style="color: #F78020;"></i> <strong>Email:</strong> nilanjan@yogabrata.com / chowdhuryguesthouse@gmail.com</p>
+          <p style="margin-bottom: 15px;"><i class="fa fa-globe" style="color: #F78020;"></i> <strong>Domain:</strong> Hosted under Yogabrata.com</p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 20px; color: #2b91af; margin-bottom: 20px;">Send Us a Message</h3>
+          <form id="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="text" id="contact_name" placeholder="Your Full Name" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="email" id="contact_email" placeholder="Your Email Address" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;">
+            <input type="tel" id="contact_phone" placeholder="Phone Number" required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;">
+            <textarea id="contact_msg" rows="4" placeholder="Your Message or Inquiry..." required style="padding: 12px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+            <button type="submit" class="awe-btn" style="align-self: flex-start;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <div class="clix-footer-text-left">
+        <div style="font-size: 24px; font-weight: 800; color: #fff; font-family: serif;">NILANJAN ESTATES</div>
+        <h2>Guest House · Yogabrata.com</h2>
+        <p>(C) 2026 Nilanjan Estates Guest House. Hosted under Yogabrata.com.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact_name').value;
+      const message = document.getElementById('contact_msg').value;
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, message })
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert(data.message);
+        document.getElementById('contact-form').reset();
+      });
+    });
+  </script>
+  <script src="nexus-widget.js"></script>
+</body>
+</html>

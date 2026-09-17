@@ -1,0 +1,719 @@
+/* Nilanjan Guest House — Replica of cguesthouse.com hosted under Yogabrata.com */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary-color: #2b91af;
+  --primary-hover: #1e6d85;
+  --accent-orange: #F78020;
+  --accent-orange-hover: #FA5A12;
+  --dark-bg: #1e1e1e;
+  --light-bg: #f9f9f9;
+  --text-color: #333333;
+  --text-muted: #666666;
+  --border-color: #e5e5e5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #f4f4f4;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-orange);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.cleared {
+  clear: both;
+}
+
+/* TOPBAR & HEADER */
+.clix-header {
+  background: #ffffff;
+  border-bottom: 2px solid #eaeaea;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.Topbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-area img {
+  height: 65px;
+  width: auto;
+}
+
+.clix-logo-text h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.clix-logo-text h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-orange);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.header-contact-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.clix-top-phone {
+  font-size: 13px;
+  font-weight: 600;
+  color: #444;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.clix-top-phone i {
+  color: var(--accent-orange);
+  margin-right: 5px;
+}
+
+/* MAIN NAVIGATION */
+.clix_main_menu {
+  background: #2b91af;
+  border-radius: 4px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 12px 20px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.menu > li > a:hover,
+.menu > li.current-menu-item > a {
+  background: #1e6d85;
+  color: #ffffff !important;
+}
+
+.menu li.book-now-btn a {
+  background: var(--accent-orange);
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.menu li.book-now-btn a:hover {
+  background: var(--accent-orange-hover);
+}
+
+/* Submenu */
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 220px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  list-style: none;
+  z-index: 1000;
+  border-top: 3px solid var(--accent-orange);
+}
+
+.menu > li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu li a {
+  display: block;
+  padding: 10px 18px;
+  color: #333;
+  font-weight: 500;
+  border-bottom: 1px solid #eee;
+}
+
+.sub-menu li a:hover {
+  background: #f5f5f5;
+  color: var(--accent-orange);
+  padding-left: 22px;
+}
+
+/* HERO BANNER CAROUSEL */
+.clix-banner-section {
+  position: relative;
+  background: #222;
+  overflow: hidden;
+  height: 480px;
+}
+
+.banner-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-slide.active {
+  opacity: 1;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.clix-rev-cap {
+  color: #ffffff;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.clix-rev-cap h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.clix-rev-cap p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  font-weight: 300;
+}
+
+/* CHECK AVAILABILITY BAR */
+.clix-middle {
+  padding: 30px 0;
+}
+
+.clix-bg-white {
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  padding: 25px;
+}
+
+.check-availability {
+  background: #2b91af;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+
+.availability-form {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.availability-form input,
+.availability-form select {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.awe-btn {
+  background: var(--accent-orange);
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.3s ease;
+}
+
+.awe-btn:hover {
+  background: var(--accent-orange-hover);
+}
+
+/* ROOMS GRID */
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-orange);
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.clix-rm {
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clix-rm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.clix-rm-img {
+  height: 190px;
+  overflow: hidden;
+}
+
+.clix-rm-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.clix-rm:hover .clix-rm-img img {
+  transform: scale(1.08);
+}
+
+.clix-rm-txt {
+  padding: 20px;
+}
+
+.clix-rm-txt h2 {
+  font-size: 18px;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.clix-rm-txt h3 {
+  font-size: 15px;
+  color: var(--accent-orange);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.clix-rm-txt p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  min-height: 55px;
+}
+
+.clix-rm-txt span a {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.clix-rm-txt span a:hover {
+  background: var(--primary-hover);
+}
+
+/* ABOUT US SECTION */
+.clix-about-us {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 40px;
+  background: #fdfdfd;
+  padding: 30px;
+  border-radius: 6px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.clix-about-us img {
+  width: 250px;
+  height: auto;
+  border-radius: 6px;
+}
+
+.clix-abt-text h1 {
+  font-size: 26px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.clix-abt-text p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* WHY US / AMENITIES GRID */
+.clix-why-us-bg {
+  background: #f7f9fa;
+  border: 1px solid #e1e8ed;
+  border-radius: 6px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.clix-why-us-bg h1 {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.clix-why-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.clix-why-card {
+  background: #ffffff;
+  padding: 15px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+  font-weight: 600;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.clix-why-card i {
+  color: var(--accent-orange);
+  font-size: 16px;
+}
+
+/* GUESTBOOK & TESTIMONIALS PARALLAX */
+.section-home-guestbook {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/bg-guestbook.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.clix-testi-head {
+  font-size: 20px;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+.guestbook-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.guestbook-item span.author {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--accent-orange);
+}
+
+.guestbook-item span.location {
+  font-size: 12px;
+  color: #ddd;
+}
+
+/* FOOTER */
+.footer {
+  background: #1c1c1c;
+  color: #aaaaaa;
+  padding: 40px 0 20px 0;
+  font-size: 13px;
+}
+
+.footer-flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.clix-footer-text-left h1 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 10px 0 2px 0;
+}
+
+.clix-footer-text-left h2 {
+  font-size: 13px;
+  color: var(--accent-orange);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.clix-footer-text-left p a {
+  color: #cccccc;
+  margin: 0 5px;
+}
+
+.clix-footer-form h1,
+.clix-footer-right h6 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #333;
+  padding-bottom: 8px;
+}
+
+.footer-comment-form input,
+.footer-comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #2b2b2b;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.footer-comment-form button {
+  background: var(--accent-orange);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.clix-footer-right span {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.clix-footer-right i {
+  color: var(--accent-orange);
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+/* NEXUS AI FLOATING WIDGET */
+#nexus-chat-widget {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 9999;
+}
+
+.nexus-trigger-btn {
+  background: linear-gradient(135deg, #2b91af, #1e6d85);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  padding: 12px 22px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.nexus-trigger-btn:hover {
+  transform: scale(1.05);
+}
+
+.nexus-chat-window {
+  display: none;
+  position: absolute;
+  bottom: 65px;
+  right: 0;
+  width: 360px;
+  height: 480px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.nexus-chat-header {
+  background: #2b91af;
+  color: #ffffff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nexus-chat-header h4 {
+  font-size: 15px;
+  margin: 0;
+}
+
+.nexus-chat-header span.close-btn {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nexus-chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f9f9f9;
+}
+
+.nexus-msg {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  white-space: pre-line;
+}
+
+.nexus-msg.bot {
+  background: #e8f4f8;
+  color: #1e6d85;
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+.nexus-msg.user {
+  background: var(--accent-orange);
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+.nexus-chat-input-area {
+  display: flex;
+  padding: 10px;
+  background: #ffffff;
+  border-top: 1px solid #eeeeee;
+}
+
+.nexus-chat-input-area input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+  outline: none;
+  font-size: 13px;
+}
+
+.nexus-chat-input-area button {
+  background: #2b91af;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin-left: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-flex,
+  .header-contact-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  .clix-why-col,
+  .footer-flex {
+    grid-template-columns: 1fr;
+  }
+  .clix-about-us {
+    flex-direction: column;
+  }
+  .nexus-chat-window {
+    width: 300px;
+    right: -10px;
+  }
+}
