@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="precision">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLW Engine Valves Pvt. Ltd. | Precision Engineering & Nexus AI</title>
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <title>BLW Engine Valves Pvt. Ltd. | Precision Engineering & Valvetrain Components</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
   <!-- CONCEPT PREVIEW DISCLAIMER BANNER -->
   <div class="concept-preview-bar">
-    <i class="fa-solid fa-flask"></i> <strong>Concept Preview</strong> — Prepared for BLW Engine Valves; not BLW's live site. 
+    <span><i class="fa-solid fa-flask"></i> <strong>Concept Preview</strong> — Prepared for BLW Engine Valves; not BLW's live site.</span>
     <span class="banner-links">
       <a href="proposal.html"><i class="fa-solid fa-file-contract"></i> Partnership Deck (/proposal)</a> | 
-      <a href="admin.html"><i class="fa-solid fa-user-gear"></i> Sales Triage Dashboard (/demo-admin)</a>
+      <a href="admin.html"><i class="fa-solid fa-user-gear"></i> Sales Triage (/demo-admin)</a>
     </span>
   </div>
 
@@ -27,16 +26,16 @@
     <div class="container top-bar-content">
       <div class="top-bar-left">
         <span class="badge-tag"><i class="fa-solid fa-award"></i> IATF 16949:2016 Certified</span>
-        <span class="top-text"><i class="fa-solid fa-globe"></i> Exporting Precision Components to 25+ Nations</span>
+        <span class="top-text"><i class="fa-solid fa-globe"></i> Exporting Precision Automotive Components to 25+ Countries</span>
       </div>
       <div class="top-bar-right">
-        <!-- MULTILINGUAL SELECTOR PROOF -->
+        <!-- MULTILINGUAL SELECTOR -->
         <div class="lang-selector">
           <i class="fa-solid fa-language"></i>
           <select id="langSelect" onchange="switchLanguage(this.value)" class="lang-select">
-            <option value="en">English (UK/US)</option>
-            <option value="es">Español (Latin Am)</option>
-            <option value="ar">العربية (Middle East)</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="ar">العربية</option>
           </select>
         </div>
         <span class="divider">|</span>
@@ -52,7 +51,7 @@
     <div class="container nav-wrapper">
       <a href="#hero" class="brand-logo">
         <div class="logo-icon">
-          <i class="fa-solid fa-gear fa-spin-hover"></i>
+          <i class="fa-solid fa-gear"></i>
         </div>
         <div class="logo-text">
           <span class="brand-name">BLW <span class="highlight">ENGINE VALVES</span></span>
@@ -62,42 +61,39 @@
 
       <nav class="nav-menu" id="navMenu">
         <a href="#overview" class="nav-link active" data-i18n="nav_overview">Overview</a>
-        <a href="#products" class="nav-link" data-i18n="nav_products">Product Catalog</a>
+        <a href="#products" class="nav-link" data-i18n="nav_products">Products</a>
         <a href="#services" class="nav-link" data-i18n="nav_services">Surface Tech</a>
         <a href="#quality" class="nav-link" data-i18n="nav_quality">Quality & Testing</a>
         <a href="#export" class="nav-link" data-i18n="nav_export">Global Reach</a>
-        <a href="#calculator" class="nav-link" data-i18n="nav_calculator">Quote Estimator</a>
+        <a href="#calculator" class="nav-link" data-i18n="nav_calculator">RFQ Estimator</a>
         <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <!-- THEME SWITCHER -->
+        <!-- SELECTABLE THEME SWITCHER -->
         <div class="theme-switcher-wrapper">
-          <button class="btn btn-outline" id="themeToggleBtn" onclick="toggleThemeDropdown()" title="Switch Theme Palette">
-            <i class="fa-solid fa-palette"></i> <span class="theme-label" id="currentThemeLabel">Dark</span> <i class="fa-solid fa-chevron-down" style="font-size:0.7rem;"></i>
+          <button class="btn btn-outline btn-sm" id="themeToggleBtn" onclick="toggleThemeDropdown()" title="Select Visual Theme">
+            <i class="fa-solid fa-palette"></i> <span class="theme-label" id="currentThemeLabel">Precision Light</span> <i class="fa-solid fa-chevron-down" style="font-size:0.65rem;"></i>
           </button>
-          <div class="theme-dropdown glass-panel" id="themeDropdown">
-            <div class="theme-option active" onclick="setTheme('dark')">
-              <span class="theme-dot dot-dark"></span> Dark Titanium
+          <div class="theme-dropdown" id="themeDropdown">
+            <div class="theme-option active" onclick="setTheme('precision')">
+              <span class="theme-dot dot-precision"></span> Precision Light
             </div>
-            <div class="theme-option" onclick="setTheme('light-steel')">
-              <span class="theme-dot dot-steel"></span> OEM Light Steel
+            <div class="theme-option" onclick="setTheme('warm')">
+              <span class="theme-dot dot-warm"></span> Warm Industrial
             </div>
-            <div class="theme-option" onclick="setTheme('light-platinum')">
-              <span class="theme-dot dot-platinum"></span> Platinum Silver Light
-            </div>
-            <div class="theme-option" onclick="setTheme('light-warm')">
-              <span class="theme-dot dot-warm"></span> Precision Warm Light
+            <div class="theme-option" onclick="setTheme('dark')">
+              <span class="theme-dot dot-dark"></span> Graphite Showcase
             </div>
           </div>
         </div>
 
         <!-- PERSISTENT RFQ BASKET BUTTON -->
-        <button class="btn btn-hero-primary" onclick="toggleRfqBasket()" title="View RFQ Basket">
+        <button class="btn btn-primary btn-sm" onclick="toggleRfqBasket()" title="View Consolidated RFQ Basket">
           <i class="fa-solid fa-basket-shopping"></i> RFQ Basket (<span id="rfqCount">0</span>)
         </button>
 
-        <button class="btn btn-outline-nexus" onclick="toggleNexusChat()">
+        <button class="btn btn-secondary btn-sm" onclick="toggleNexusChat()">
           <span class="pulse-dot"></span>
           <i class="fa-solid fa-robot"></i> Aditya AI
         </button>
@@ -110,108 +106,69 @@
 
   <!-- HERO SECTION -->
   <section class="hero-section" id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-glow-1"></div>
-    <div class="hero-glow-2"></div>
-
     <div class="container hero-grid">
       <div class="hero-content">
         <div class="pill-badge">
-          <i class="fa-solid fa-microchip"></i> Powered by Nexus AI &bull; Aditya Specialist Active
+          <i class="fa-solid fa-shield-check"></i> IATF 16949:2016 Certified Manufacturer
         </div>
         <h1 class="hero-title">
-          Precision Engineered <span class="gradient-text">Engine Valves</span> & Automotive Components
+          Precision Engine Valves & Automotive Components
         </h1>
         <p class="hero-description">
-          Combining advanced manufacturing technology with five decades of engineering expertise. Certified IATF 16949 manufacturer delivering high-performance intake & exhaust valves, valve guides, camshafts, and Liquid Nitriding surface treatments for OEMs and global aftermarket distributors.
+          Combining advanced forging technology with 50 years of engineering expertise. Supplying high-performance intake & exhaust valves, guides, and surface treatments to leading OEMs and global distributors.
         </p>
 
         <div class="hero-cta-group">
-          <a href="#products" class="btn btn-hero-primary">
-            <i class="fa-solid fa-boxes-stacked"></i> Explore 1,100+ Parts Catalog
+          <a href="#products" class="btn btn-primary">
+            <i class="fa-solid fa-boxes-stacked"></i> Explore products
           </a>
-          <button class="btn btn-hero-secondary" onclick="toggleNexusChat()">
-            <i class="fa-solid fa-comments"></i> Ask Aditya AI Engineer
-          </button>
+          <a href="#calculator" class="btn btn-secondary">
+            <i class="fa-solid fa-calculator"></i> Request a quote
+          </a>
         </div>
 
         <div class="hero-stats-row">
           <div class="stat-card">
-            <span class="stat-number" data-target="50">50+</span>
-            <span class="stat-label">Years Legacy (Since 1974)</span>
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Years Legacy (Est. 1974)</span>
           </div>
           <div class="stat-card">
-            <span class="stat-number" data-target="110000">1,10,000</span>
-            <span class="stat-label">Sq. Ft. Advanced Plant</span>
+            <span class="stat-number">1,10,000</span>
+            <span class="stat-label">Sq. Ft. Certified Plant</span>
           </div>
           <div class="stat-card">
-            <span class="stat-number" data-target="25">25+</span>
-            <span class="stat-label">Countries Export Footprint</span>
+            <span class="stat-number">25+</span>
+            <span class="stat-label">Export Destinations</span>
           </div>
           <div class="stat-card">
-            <span class="stat-number" data-target="1100">1,100+</span>
-            <span class="stat-label">OEM Compatible Components</span>
+            <span class="stat-number">1,100+</span>
+            <span class="stat-label">OEM Part Specifications</span>
           </div>
         </div>
       </div>
 
-      <!-- 3D Precision Component Simulator Widget -->
-      <div class="hero-visualizer">
-        <div class="visualizer-card glass-panel">
-          <div class="visualizer-header">
-            <span class="visualizer-title"><i class="fa-solid fa-cube"></i> Interactive 3D Component Viewer</span>
-            <div class="visualizer-controls">
-              <button class="viz-btn active" onclick="setVizMode('nitride')">Liquid Nitriding (LCN)</button>
-              <button class="viz-btn" onclick="setVizMode('specs')">Tolerance Specs</button>
-              <button class="viz-btn" onclick="setVizMode('motion')">Valvetrain Motion</button>
-            </div>
+      <!-- SIMPLIFIED 3D ENGINE VALVE PREVIEW -->
+      <div class="visualizer-card card-panel">
+        <div class="visualizer-header">
+          <span class="visualizer-title"><i class="fa-solid fa-cube"></i> Valvetrain Geometry Viewer</span>
+          <div class="visualizer-controls">
+            <button class="viz-btn active" onclick="setVizMode('nitride')">Liquid Nitriding (LCN)</button>
+            <button class="viz-btn" onclick="setVizMode('specs')">Stem Specs</button>
+            <button class="viz-btn" onclick="setVizMode('motion')">Valvetrain Motion</button>
+          </div>
+        </div>
+
+        <div class="interactive-stage" id="interactiveStage">
+          <div class="engine-valve-model" id="valveModel">
+            <div class="valve-head"></div>
+            <div class="valve-stem" id="valveStem"></div>
           </div>
 
-          <div class="interactive-stage" id="interactiveStage">
-            <div class="engine-valve-model" id="valveModel">
-              <div class="valve-head">
-                <span class="surface-tag">SUH3 / 21-4N Alloy</span>
-              </div>
-              <div class="valve-stem" id="valveStem">
-                <div class="nitride-layer-overlay" id="nitrideOverlay"></div>
-                <div class="stem-specs-tooltip">
-                  <span>Stem &Oslash;: 4.98 mm &plusmn; 0.005</span>
-                  <span>Hardness: HV 850+</span>
-                </div>
-              </div>
-              <div class="valve-tip">
-                <span class="hardened-tip-tag">Induction Hardened Tip (55-60 HRC)</span>
-              </div>
-            </div>
-
-            <!-- Dynamic Specs Overlay -->
-            <div class="stage-info-box" id="stageInfoBox">
-              <div class="info-item">
-                <span class="info-key">Process:</span>
-                <span class="info-val highlight-blue">Liquid Carbo-Nitriding (LCN)</span>
-              </div>
-              <div class="info-item">
-                <span class="info-key">Depth:</span>
-                <span class="info-val">15 - 25 Microns Diffusion Layer</span>
-              </div>
-              <div class="info-item">
-                <span class="info-key">Corrosion Resistance:</span>
-                <span class="info-val green-text">96+ Hours Salt Spray Compliant</span>
-              </div>
-              <div class="info-item">
-                <span class="info-key">OEM Compatibility:</span>
-                <span class="info-val">Bajaj, TVS, Honda, Hero, Piaggio</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="visualizer-footer">
-            <div class="viz-status">
-              <span class="status-indicator live"></span> Real-time Geometry Rendering Mode
-            </div>
-            <button class="btn btn-sm btn-outline" onclick="openSpecModal('Engine Valve Kit BM-150')">
-              <i class="fa-solid fa-file-pdf"></i> Download CAD & Datasheet
-            </button>
+          <div class="stage-info-box" id="stageInfoBox">
+            <div class="info-item"><span class="info-key">Process:</span> <span class="info-val">Liquid Carbo-Nitriding (LCN)</span></div>
+            <div class="info-item"><span class="info-key">Depth:</span> <span class="info-val">15 - 25 Microns</span></div>
+            <div class="info-item"><span class="info-key">Hardness:</span> <span class="info-val">HV 850 - 1000</span></div>
+            <div class="info-item"><span class="info-key">Salt Spray:</span> <span class="info-val">96+ Hours Compliant</span></div>
           </div>
         </div>
       </div>
@@ -219,51 +176,51 @@
   </section>
 
   <!-- OVERVIEW & CAPABILITIES -->
-  <section class="section-padding bg-darker" id="overview">
+  <section class="section-padding bg-subtle" id="overview">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-subtitle">ENGINEERING EXCELLENCE SINCE 1974</span>
-        <h2 class="section-title">Trusted Partner for Leading Automotive OEMs & Global Aftermarkets</h2>
+        <span class="section-subtitle">MANUFACTURING & EXPORT DIVISION</span>
+        <h2 class="section-title">Built for Performance & Reliability</h2>
         <div class="section-line"></div>
       </div>
 
       <div class="grid grid-cols-3 gap-lg">
-        <div class="feature-card glass-panel">
+        <div class="feature-card card-panel">
           <div class="feature-icon-wrapper">
             <i class="fa-solid fa-industry"></i>
           </div>
-          <h3>Advanced Manufacturing Plant</h3>
-          <p>State-of-the-art 1,10,000 sq. ft. IATF 16949 certified facility in Bahadurgarh, Haryana featuring German forging presses, friction welding, CNC grinding, and automated surface treatment lines.</p>
+          <h3>Advanced Forging & Machining</h3>
+          <p>Spanning 1,10,000 sq. ft. in Bahadurgarh, Haryana featuring German forging presses, friction welding, CNC grinding, and induction tip hardening lines.</p>
           <ul class="feature-list">
             <li><i class="fa-solid fa-check text-success"></i> Bi-Metallic Friction Welding</li>
             <li><i class="fa-solid fa-check text-success"></i> CNC Precision Stem Grinding</li>
-            <li><i class="fa-solid fa-check text-success"></i> Induction Tip Hardening</li>
+            <li><i class="fa-solid fa-check text-success"></i> Induction Hardened Valve Tips</li>
           </ul>
         </div>
 
-        <div class="feature-card glass-panel">
-          <div class="feature-icon-wrapper accent-orange">
+        <div class="feature-card card-panel">
+          <div class="feature-icon-wrapper">
             <i class="fa-solid fa-flask-vial"></i>
           </div>
           <h3>Proprietary Surface Treatment</h3>
-          <p>In-house Liquid Carbo Nitriding (LCN / NOPQ / QPQ) and 9-Tank Automatic Manganese Phosphating. Significantly reduces friction, improves fatigue life, and resists high thermal stress.</p>
+          <p>In-house Liquid Carbo Nitriding (LCN / NOPQ / QPQ) and 9-tank automatic manganese phosphating for ultra-low friction and anti-galling performance.</p>
           <ul class="feature-list">
             <li><i class="fa-solid fa-check text-success"></i> Micro Vickers Hardness > 850 HV</li>
-            <li><i class="fa-solid fa-check text-success"></i> Zero Distortion Thermal Cycling</li>
-            <li><i class="fa-solid fa-check text-success"></i> Anti-Scuffing & Lubricant Retention</li>
+            <li><i class="fa-solid fa-check text-success"></i> 96+ Hours Salt Spray Defense</li>
+            <li><i class="fa-solid fa-check text-success"></i> Anti-Scuffing Oil Retention</li>
           </ul>
         </div>
 
-        <div class="feature-card glass-panel">
-          <div class="feature-icon-wrapper accent-purple">
+        <div class="feature-card card-panel">
+          <div class="feature-icon-wrapper">
             <i class="fa-solid fa-earth-americas"></i>
           </div>
-          <h3>Global Export Footprint</h3>
-          <p>Trusted brand across 25+ countries in South Asia, Middle East, Africa, and Latin America. Offering OEM equivalent spare parts for motorcycle, 3-wheeler, car, and heavy commercial engines.</p>
+          <h3>Global Export Supply</h3>
+          <p>Exporting to 25+ nations across South Asia, Middle East, Africa, and Latin America. Offering OEM equivalent spare parts for motorcycle and commercial engines.</p>
           <ul class="feature-list">
             <li><i class="fa-solid fa-check text-success"></i> Alternative to OEM Spare Parts</li>
-            <li><i class="fa-solid fa-check text-success"></i> Custom Private Label Packaging</li>
-            <li><i class="fa-solid fa-check text-success"></i> Timely Global Dispatch & Logistics</li>
+            <li><i class="fa-solid fa-check text-success"></i> Private Label Packaging Support</li>
+            <li><i class="fa-solid fa-check text-success"></i> Timely International Freight Dispatch</li>
           </ul>
         </div>
       </div>
@@ -273,229 +230,149 @@
   <!-- PRODUCT CATALOG SECTION -->
   <section class="section-padding" id="products">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end;">
         <div>
-          <span class="section-subtitle">COMPREHENSIVE CATALOGUE</span>
-          <h2 class="section-title">High Performance Engine Components</h2>
+          <span class="section-subtitle">PRODUCT FINDER</span>
+          <h2 class="section-title">Automotive & Engine Components</h2>
         </div>
         <div class="catalog-search-bar">
           <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="catalogSearchInput" placeholder="Search product name, vehicle model (e.g. Pulsar 220, Apache, Nitrided Valve)..." onkeyup="filterCatalog()">
+          <input type="text" id="catalogSearchInput" placeholder="Search by part name, make, model (e.g. Pulsar 220, Apache)..." onkeyup="filterCatalog()">
         </div>
       </div>
 
       <!-- Category Filter Tabs -->
       <div class="tab-buttons-row">
-        <button class="tab-btn active" onclick="switchCatalogCategory('all')">All Products</button>
-        <button class="tab-btn" onclick="switchCatalogCategory('2w')"><i class="fa-solid fa-motorcycle"></i> 2-Wheeler Segment</button>
-        <button class="tab-btn" onclick="switchCatalogCategory('3w')"><i class="fa-solid fa-truck-pickup"></i> 3-Wheeler Segment</button>
-        <button class="tab-btn" onclick="switchCatalogCategory('valves')"><i class="fa-solid fa-gears"></i> Engine Valves & Kits</button>
-        <button class="tab-btn" onclick="switchCatalogCategory('components')"><i class="fa-solid fa-wrench"></i> Guides, Camshafts & Rockers</button>
-        <button class="tab-btn" onclick="switchCatalogCategory('sheetmetal')"><i class="fa-solid fa-layer-group"></i> Washers & Sheet Metal</button>
+        <button class="tab-btn active" onclick="switchCatalogCategory('all')">All Components</button>
+        <button class="tab-btn" onclick="switchCatalogCategory('2w')"><i class="fa-solid fa-motorcycle"></i> 2-Wheeler Parts</button>
+        <button class="tab-btn" onclick="switchCatalogCategory('3w')"><i class="fa-solid fa-truck-pickup"></i> 3-Wheeler Parts</button>
+        <button class="tab-btn" onclick="switchCatalogCategory('valves')"><i class="fa-solid fa-gears"></i> Engine Valves</button>
+        <button class="tab-btn" onclick="switchCatalogCategory('components')"><i class="fa-solid fa-wrench"></i> Guides & Camshafts</button>
+        <button class="tab-btn" onclick="switchCatalogCategory('sheetmetal')"><i class="fa-solid fa-layer-group"></i> Washers & Spools</button>
       </div>
 
       <!-- Catalog Grid -->
       <div class="catalog-grid" id="catalogGrid">
-        <!-- Products will be injected dynamically via JavaScript -->
+        <!-- Products injected via JavaScript -->
       </div>
     </div>
   </section>
 
-  <!-- ADVANCED MANUFACTURING & SURFACE TECH -->
-  <section class="section-padding bg-darker" id="services">
+  <!-- SURFACE TECH & METALLURGY -->
+  <section class="section-padding bg-subtle" id="services">
     <div class="container">
       <div class="grid grid-cols-2 gap-xl align-center">
-        <div class="tech-content">
+        <div>
           <span class="section-subtitle">SURFACE ENGINEERING DIVISION</span>
-          <h2 class="section-title">Liquid Carbo Nitriding (LCN) & Manganese Phosphating</h2>
+          <h2 class="section-title">Liquid Carbo Nitriding (LCN) & Phosphating</h2>
           <p class="section-desc">
-            BLW Engine Valves operates state-of-the-art salt bath nitriding lines and automatic phosphating tanks designed to dramatically enhance component durability, wear resistance, and thermal fatigue resistance under high operating RPMs.
+            BLW operates automated salt bath nitriding lines and 9-tank manganese phosphating systems engineered to extend valvetrain operating life under heavy thermal loads.
           </p>
 
-          <div class="tech-specs-grid">
-            <div class="tech-spec-item">
-              <div class="tech-spec-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:1rem;">
+            <div style="display:flex; gap:1rem; align-items:flex-start;">
+              <div class="feature-icon-wrapper" style="width:40px; height:40px; font-size:1rem; flex-shrink:0;"><i class="fa-solid fa-shield-halved"></i></div>
               <div>
-                <h4>Liquid Carbo Nitriding (LCN / NOPQ / QPQ)</h4>
-                <p>Creates a non-brittle compound layer with exceptional wear resistance, low friction coefficient, and 96+ hour salt spray corrosion defense.</p>
+                <h4 style="font-size:1rem; font-weight:700; color:var(--text-main);">Liquid Carbo Nitriding (LCN / NOPQ)</h4>
+                <p style="font-size:0.875rem; color:var(--text-muted);">Creates a non-brittle diffusion layer with low friction coefficient and 96+ hour salt spray corrosion defense.</p>
               </div>
             </div>
 
-            <div class="tech-spec-item">
-              <div class="tech-spec-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+            <div style="display:flex; gap:1rem; align-items:flex-start;">
+              <div class="feature-icon-wrapper" style="width:40px; height:40px; font-size:1rem; flex-shrink:0;"><i class="fa-solid fa-vial"></i></div>
               <div>
-                <h4>9-Tank Automatic Manganese Phosphating</h4>
-                <p>Produces a crystalline manganese iron phosphate coating that absorbs engine oil, prevents metal-to-metal galling during initial engine break-in, and ensures anti-fretting.</p>
+                <h4 style="font-size:1rem; font-weight:700; color:var(--text-main);">9-Tank Automatic Manganese Phosphating</h4>
+                <p style="font-size:0.875rem; color:var(--text-muted);">Absorbs engine oil and eliminates metal-to-metal scuffing during initial engine break-in cycles.</p>
               </div>
             </div>
-
-            <div class="tech-spec-item">
-              <div class="tech-spec-icon"><i class="fa-solid fa-temperature-arrow-up"></i></div>
-              <div>
-                <h4>High Temperature Metallurgy</h4>
-                <p>Engineered for temperatures up to 800&deg;C using premium materials such as SUH3 (Austenitic Stainless Steel), 21-4N (EV8), and martensitic steel with hard-faced Stellite alloys.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="tech-cta-row">
-            <button class="btn btn-primary" onclick="openServiceModal('Liquid Nitriding')">
-              <i class="fa-solid fa-list-check"></i> View Treatment Specs & Process
-            </button>
-            <button class="btn btn-outline" onclick="askAdityaAbout('surface treatment')">
-              <i class="fa-solid fa-robot"></i> Ask Aditya AI About Treatment Options
-            </button>
           </div>
         </div>
 
-        <div class="tech-visual-card glass-panel">
-          <div class="tech-header">
-            <h3><i class="fa-solid fa-microscope"></i> Microstructure Comparison & Performance</h3>
-          </div>
-          <div class="micro-compare-box">
-            <div class="compare-column">
-              <div class="compare-badge badge-warning">Standard Treated Valve</div>
-              <ul class="compare-list">
-                <li><i class="fa-solid fa-xmark text-danger"></i> High surface friction coefficient</li>
-                <li><i class="fa-solid fa-xmark text-danger"></i> Susceptible to stem galling at high RPM</li>
-                <li><i class="fa-solid fa-xmark text-danger"></i> Lower fatigue limit (~350 MPa)</li>
-              </ul>
-            </div>
-            <div class="compare-column highlighted">
-              <div class="compare-badge badge-success">BLW Liquid Nitrided (LCN) Valve</div>
-              <ul class="compare-list">
-                <li><i class="fa-solid fa-check text-success"></i> Ultra-low friction (0.08 &mu;)</li>
-                <li><i class="fa-solid fa-check text-success"></i> Zero scuffing & stem seizure defense</li>
-                <li><i class="fa-solid fa-check text-success"></i> High fatigue limit (> 650 MPa)</li>
-                <li><i class="fa-solid fa-check text-success"></i> 850-1000 HV surface hardness</li>
-              </ul>
-            </div>
-          </div>
-          <div class="process-flow">
-            <h4>Salt Bath Nitriding Workflow</h4>
-            <div class="flow-steps">
-              <div class="flow-step"><span>1</span> Degrease & Wash</div>
-              <div class="flow-step"><span>2</span> Pre-heat (350&deg;C)</div>
-              <div class="flow-step"><span>3</span> LCN Bath (570&deg;C)</div>
-              <div class="flow-step"><span>4</span> Quench & Polish</div>
-            </div>
-          </div>
+        <div class="card-panel" style="padding:1.75rem;">
+          <h3 style="font-size:1.1rem; font-weight:800; color:var(--text-main); margin-bottom:1rem;"><i class="fa-solid fa-microscope"></i> Surface Performance Comparison</h3>
+          <table style="width:100%; font-size:0.85rem; border-collapse:collapse;">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border-color); text-align:left;">
+                <th style="padding:8px 0; color:var(--text-muted);">Parameter</th>
+                <th style="padding:8px 0; color:var(--text-muted);">Standard Polish</th>
+                <th style="padding:8px 0; color:var(--accent-primary);">BLW Nitrided (LCN)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--border-color);">
+                <td style="padding:8px 0; font-weight:600;">Surface Hardness</td>
+                <td style="padding:8px 0; color:var(--text-muted);">250 - 350 HV</td>
+                <td style="padding:8px 0; font-weight:700; color:var(--accent-primary);">850 - 1000 HV</td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--border-color);">
+                <td style="padding:8px 0; font-weight:600;">Friction Coeff.</td>
+                <td style="padding:8px 0; color:var(--text-muted);">0.25 μ</td>
+                <td style="padding:8px 0; font-weight:700; color:var(--accent-primary);">0.08 μ (Ultra Low)</td>
+              </tr>
+              <tr>
+                <td style="padding:8px 0; font-weight:600;">Corrosion Life</td>
+                <td style="padding:8px 0; color:var(--text-muted);">Standard</td>
+                <td style="padding:8px 0; font-weight:700; color:var(--accent-primary);">96+ Hr Salt Spray</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- QUALITY ASSURANCE & TESTING LAB -->
+  <!-- QUALITY ASSURANCE -->
   <section class="section-padding" id="quality">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-subtitle">UNCOMPROMISING STANDARDS</span>
-        <h2 class="section-title">In-House Metallurgical & Dimensional Quality Assurance Lab</h2>
-        <p class="section-desc max-w-2xl">Every component built at BLW undergoes 100% rigorous dimensional inspection, non-destructive testing (NDT), and chemical analysis to ensure zero defects for OEM and export clients.</p>
+        <span class="section-subtitle">QUALITY CONTROL LAB</span>
+        <h2 class="section-title">In-House Quality Inspection</h2>
+        <p class="section-desc mx-auto">100% dimensional inspection, non-destructive testing (NDT), and chemical bath monitoring.</p>
         <div class="section-line"></div>
       </div>
 
       <div class="grid grid-cols-4 gap-md">
-        <div class="qa-card glass-panel">
-          <div class="qa-icon"><i class="fa-solid fa-crosshairs"></i></div>
-          <h4>Dimensional Inspection</h4>
-          <p>Profile Projector, Vision Measuring Machine (VMM), Digital Micrometers, and Height Gauges calibrated to &plusmn; 0.001mm accuracy.</p>
+        <div class="card-panel" style="padding:1.5rem; text-align:center;">
+          <div class="feature-icon-wrapper" style="margin:0 auto 1rem;"><i class="fa-solid fa-crosshairs"></i></div>
+          <h4 style="font-size:1rem; font-weight:700; color:var(--text-main); margin-bottom:0.4rem;">Dimensional Inspection</h4>
+          <p style="font-size:0.825rem; color:var(--text-muted);">Profile Projectors, Vision Measuring Machines (VMM), and height gauges calibrated to &plusmn; 0.001mm.</p>
         </div>
 
-        <div class="qa-card glass-panel">
-          <div class="qa-icon"><i class="fa-solid fa-wave-square"></i></div>
-          <h4>NDT & Surface Testing</h4>
-          <p>Surface Roughness Testers, Eddy Current Crack Detectors, Coating Thickness Verification Gauges, and Tensile Testing Machines.</p>
+        <div class="card-panel" style="padding:1.5rem; text-align:center;">
+          <div class="feature-icon-wrapper" style="margin:0 auto 1rem;"><i class="fa-solid fa-wave-square"></i></div>
+          <h4 style="font-size:1rem; font-weight:700; color:var(--text-main); margin-bottom:0.4rem;">NDT & Surface Testing</h4>
+          <p style="font-size:0.825rem; color:var(--text-muted);">Surface Roughness Testers, Eddy Current crack detectors, coating thickness gauges, and tensile testing.</p>
         </div>
 
-        <div class="qa-card glass-panel">
-          <div class="qa-icon"><i class="fa-solid fa-atom"></i></div>
-          <h4>Metallurgical Lab</h4>
-          <p>Micro Vickers Hardness Tester, Rockwell Hardness Testers, Portable Hardness Meters, and Metallurgical Microscope (up to 1000x).</p>
+        <div class="card-panel" style="padding:1.5rem; text-align:center;">
+          <div class="feature-icon-wrapper" style="margin:0 auto 1rem;"><i class="fa-solid fa-atom"></i></div>
+          <h4 style="font-size:1rem; font-weight:700; color:var(--text-main); margin-bottom:0.4rem;">Metallurgical Lab</h4>
+          <p style="font-size:0.825rem; color:var(--text-muted);">Micro Vickers Hardness Tester, Rockwell meters, and Metallurgical Microscope up to 1000x magnification.</p>
         </div>
 
-        <div class="qa-card glass-panel">
-          <div class="qa-icon"><i class="fa-solid fa-vial"></i></div>
-          <h4>Chemical & Pressure Lab</h4>
-          <p>In-house spectro chemical analysis lab, bath chemical monitoring, process parameter validation, and hydraulic pressure testing.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GLOBAL EXPORT FOOTPRINT -->
-  <section class="section-padding bg-darker" id="export">
-    <div class="container">
-      <div class="grid grid-cols-2 gap-xl align-center">
-        <div>
-          <span class="section-subtitle">GLOBAL REACH & LOGISTICS</span>
-          <h2 class="section-title">Exporting High Quality Automotive Spare Parts to 25+ Countries</h2>
-          <p class="section-desc">
-            With over 50 years of manufacturing excellence, BLW Engine Valves has established a strong presence in key international automotive markets across South Asia, Africa, the Middle East, and Latin America.
-          </p>
-
-          <div class="country-tags">
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Bangladesh</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Nepal</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Myanmar</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Sri Lanka</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Egypt</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Tanzania</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Nigeria</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Afghanistan</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Iraq</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Colombia</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Peru</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Ecuador</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Mexico</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> UAE (Dubai)</span>
-            <span class="c-tag"><i class="fa-solid fa-location-dot"></i> Bolivia</span>
-          </div>
-
-          <div class="expo-highlight-box glass-panel">
-            <div class="expo-icon"><i class="fa-solid fa-star"></i></div>
-            <div>
-              <h4>Exhibiter at Bharat Mobility Expo 2025</h4>
-              <p>Showcased our latest bi-metallic engine valves, high-wear liquid nitrided components, and valve guides to international delegates and OEM buyers.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="map-visual-card glass-panel">
-          <div class="map-graphic">
-            <div class="map-ping ping-1" title="India HQ - Bahadurgarh"><span>HQ</span></div>
-            <div class="map-ping ping-2" title="Middle East - UAE & Iraq"></div>
-            <div class="map-ping ping-3" title="Africa - Egypt, Nigeria, Tanzania"></div>
-            <div class="map-ping ping-4" title="South America - Colombia, Peru, Ecuador"></div>
-            <div class="map-ping ping-5" title="Asia - Bangladesh, Nepal, Myanmar"></div>
-            <div class="map-overlay-title">
-              <i class="fa-solid fa-plane-departure"></i> International Distribution Network
-            </div>
-          </div>
-          <div class="map-card-footer">
-            <div class="stat-pill"><span class="number">1,100+</span> SKUs Export Ready</div>
-            <div class="stat-pill"><span class="number">99.4%</span> On-Time Delivery Rate</div>
-          </div>
+        <div class="card-panel" style="padding:1.5rem; text-align:center;">
+          <div class="feature-icon-wrapper" style="margin:0 auto 1rem;"><i class="fa-solid fa-vial"></i></div>
+          <h4 style="font-size:1rem; font-weight:700; color:var(--text-main); margin-bottom:0.4rem;">Chemical Analysis</h4>
+          <p style="font-size:0.825rem; color:var(--text-muted);">In-house chemical analysis lab, bath chemical monitoring, and hydraulic pressure testing units.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- INTERACTIVE B2B QUOTE & SPEC ESTIMATOR -->
-  <section class="section-padding" id="calculator">
+  <!-- B2B QUOTE ESTIMATOR -->
+  <section class="section-padding bg-subtle" id="calculator">
     <div class="container">
       <div class="section-header text-center">
-        <span class="section-subtitle">INSTANT SPECIFICATION & PRICING ESTIMATOR</span>
-        <h2 class="section-title">Interactive B2B Quotation & Engineering Calculator</h2>
-        <p class="section-desc max-w-2xl">Configure component requirements, specify vehicle compatibility, select surface treatment options, and get an immediate estimate for sample MOQs or mass production runs.</p>
-        <div class="section-line"></div>
+        <span class="section-subtitle">QUOTATION CALCULATOR</span>
+        <h2 class="section-title">Request a Component Quotation</h2>
+        <p class="section-desc mx-auto">Configure your component requirements and receive an immediate sample MOQ and production estimate.</p>
       </div>
 
-      <div class="calculator-card glass-panel">
+      <div class="calculator-card card-panel">
         <div class="calc-grid">
           <div class="calc-form-side">
             <div class="form-group">
-              <label><i class="fa-solid fa-gears"></i> Select Component Category:</label>
+              <label>Select Component Category:</label>
               <select id="calcCategory" class="calc-input" onchange="updateCalcEstimate()">
                 <option value="valves">Engine Valves (Intake / Exhaust / Bi-metal)</option>
                 <option value="guides">Valve Guides & Valve Seats</option>
@@ -506,7 +383,7 @@
             </div>
 
             <div class="form-group">
-              <label><i class="fa-solid fa-motorcycle"></i> Vehicle Segment / OEM Target:</label>
+              <label>Target OEM / Vehicle Make:</label>
               <select id="calcSegment" class="calc-input" onchange="updateCalcEstimate()">
                 <option value="2w_bajaj">2-Wheeler - Bajaj (Pulsar 220, NS200, Discover)</option>
                 <option value="2w_tvs">2-Wheeler - TVS (Apache 160/180, Jupiter)</option>
@@ -514,51 +391,49 @@
                 <option value="2w_hero">2-Wheeler - Hero (Splendor, Eco Deluxe)</option>
                 <option value="3w_all">3-Wheeler - Bajaj Compact, Piaggio Ape, TVS King</option>
                 <option value="passenger_car">Passenger Cars / Light Commercial Vehicles</option>
-                <option value="heavy_duty">Tractors & Heavy Commercial Vehicles (HCV)</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label><i class="fa-solid fa-vial"></i> Surface Treatment & Metallurgy:</label>
+              <label>Surface Treatment & Metallurgy:</label>
               <select id="calcTreatment" class="calc-input" onchange="updateCalcEstimate()">
                 <option value="lcn">Liquid Carbo-Nitriding (LCN / NOPQ / QPQ)</option>
                 <option value="phosphating">9-Tank Automatic Manganese Phosphating</option>
-                <option value="stellite">Stellite Hard-Faced Valve Seat / Tip</option>
+                <option value="stellite">Stellite Hard-Faced Seat / Tip</option>
                 <option value="standard">Standard Chrome Plated / Polish</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label><i class="fa-solid fa-boxes-stacked"></i> Estimated Order Volume (Units):</label>
+              <label>Estimated Quantity (Units):</label>
               <input type="number" id="calcQuantity" class="calc-input" value="1000" min="100" step="100" oninput="updateCalcEstimate()">
             </div>
           </div>
 
           <div class="calc-summary-side">
             <div class="summary-box">
-              <h3><i class="fa-solid fa-receipt"></i> Quotation Summary</h3>
+              <h3>Quotation Summary</h3>
               <div class="summary-line">
-                <span>Unit Price Range (Est.):</span>
+                <span>Unit Price Est.:</span>
                 <span id="summaryUnitPrice" class="summary-val">$1.20 - $1.85 / unit</span>
               </div>
               <div class="summary-line">
-                <span>Total Estimated Value:</span>
-                <span id="summaryTotalVal" class="summary-val highlight-green">$1,200 - $1,850</span>
+                <span>Total Value:</span>
+                <span id="summaryTotalVal" class="summary-val" style="color:var(--accent-primary);">$1,200 - $1,850</span>
               </div>
               <div class="summary-line">
-                <span>Production Lead Time:</span>
+                <span>Lead Time:</span>
                 <span id="summaryLeadTime" class="summary-val">12 - 15 Business Days</span>
               </div>
               <div class="summary-line">
-                <span>Quality Certification:</span>
-                <span class="summary-val"><i class="fa-solid fa-shield-check text-success"></i> IATF 16949 Included</span>
+                <span>Quality Standard:</span>
+                <span class="summary-val"><i class="fa-solid fa-check text-success"></i> IATF 16949 Included</span>
               </div>
 
-              <div class="summary-cta">
-                <button class="btn btn-primary-glow btn-full" onclick="submitQuoteToAditya()">
-                  <i class="fa-solid fa-paper-plane"></i> Submit Inquiry to Aditya AI
+              <div style="margin-top:auto; padding-top:1rem;">
+                <button class="btn btn-primary btn-full" onclick="submitQuoteToAditya()">
+                  <i class="fa-solid fa-paper-plane"></i> Submit Quote to Aditya AI
                 </button>
-                <p class="tiny-text"><i class="fa-solid fa-lock"></i> Direct connection to BLW Engineering Team</p>
               </div>
             </div>
           </div>
@@ -568,68 +443,58 @@
   </section>
 
   <!-- CONTACT & CORPORATE INFO -->
-  <section class="section-padding bg-darker" id="contact">
+  <section class="section-padding" id="contact">
     <div class="container">
       <div class="grid grid-cols-2 gap-xl">
         <div>
-          <span class="section-subtitle">GET IN TOUCH WITH US</span>
-          <h2 class="section-title">Direct Corporate & OEM Contacts</h2>
+          <span class="section-subtitle">CORPORATE CONTACTS</span>
+          <h2 class="section-title">Direct Sales & Engineering Support</h2>
           <p class="section-desc">
-            Whether you are looking for alternative OEM spare parts, custom valve engineering, or liquid nitriding services, our sales and technical team is ready to assist you.
+            Contact our engineering team for OEM component supply, custom drawing quotes, or surface treatment services.
           </p>
 
-          <div class="contact-info-list">
-            <div class="info-item-row">
-              <div class="info-icon"><i class="fa-solid fa-building-user"></i></div>
-              <div>
-                <h4>Factory & Registered Head Office</h4>
-                <p>BLW Engine Valves Pvt. Ltd.<br>Khasra No. 14/18, 23/1, Badli Road, Village Zardakpur,<br>Bahadurgarh, Haryana, India &ndash; 124507</p>
-              </div>
+          <div style="margin-top:1.5rem; display:flex; flex-direction:column; gap:1.25rem;">
+            <div>
+              <h4 style="font-size:1rem; font-weight:700; color:var(--text-main);"><i class="fa-solid fa-building text-primary"></i> Factory & Office Address</h4>
+              <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.2rem;">BLW Engine Valves Pvt. Ltd.<br>Khasra No. 14/18, 23/1, Badli Road, Village Zardakpur,<br>Bahadurgarh, Haryana, India &ndash; 124507</p>
             </div>
 
-            <div class="info-item-row">
-              <div class="info-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
-              <div>
-                <h4>Email Contacts</h4>
-                <p><a href="mailto:info@blwenginevalves.com">info@blwenginevalves.com</a><br><a href="mailto:sales@blwenginevalves.com">sales@blwenginevalves.com</a></p>
-              </div>
+            <div>
+              <h4 style="font-size:1rem; font-weight:700; color:var(--text-main);"><i class="fa-solid fa-envelope text-primary"></i> Email Support</h4>
+              <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.2rem;"><a href="mailto:info@blwenginevalves.com" style="color:var(--accent-primary);">info@blwenginevalves.com</a></p>
             </div>
 
-            <div class="info-item-row">
-              <div class="info-icon"><i class="fa-solid fa-id-card"></i></div>
-              <div>
-                <h4>GSTIN & Registration</h4>
-                <p>GSTIN: 06AAGCB9011K2ZO &bull; IATF 16949:2016 Certified</p>
-              </div>
+            <div>
+              <h4 style="font-size:1rem; font-weight:700; color:var(--text-main);"><i class="fa-solid fa-id-card text-primary"></i> GSTIN & Certification</h4>
+              <p style="font-size:0.9rem; color:var(--text-muted); margin-top:0.2rem;">GSTIN: 06AAGCB9011K2ZO &bull; Certified IATF 16949:2016</p>
             </div>
           </div>
         </div>
 
-        <div class="contact-form-card glass-panel">
-          <h3><i class="fa-solid fa-paper-plane"></i> Send Direct Inquiry</h3>
+        <div class="card-panel" style="padding:2rem;">
+          <h3 style="font-size:1.2rem; font-weight:800; color:var(--text-main); margin-bottom:1.25rem;">Direct Inquiry Form</h3>
           <form id="contactForm" onsubmit="handleFormSubmit(event)">
-            <div class="form-row">
-              <input type="text" placeholder="Your Full Name *" required class="form-input">
-              <input type="email" placeholder="Company Email *" required class="form-input">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+              <input type="text" placeholder="Full Name *" required class="form-input">
+              <input type="email" placeholder="Business Email *" required class="form-input">
             </div>
-            <div class="form-row">
-              <input type="text" placeholder="Company / Organization" class="form-input">
-              <input type="tel" placeholder="Phone / WhatsApp Number *" required class="form-input">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+              <input type="text" placeholder="Company Name" class="form-input">
+              <input type="tel" placeholder="Phone / WhatsApp *" required class="form-input">
             </div>
-            <div class="form-row">
+            <div style="margin-bottom:1rem;">
               <select class="form-input">
                 <option value="">Inquiry Type...</option>
                 <option value="oem_valves">OEM Engine Valve Supply</option>
                 <option value="spare_parts">2W/3W Spare Parts Import</option>
                 <option value="surface_treatment">Liquid Nitriding Service</option>
-                <option value="custom_design">Custom Engineering Drawing</option>
               </select>
             </div>
-            <div class="form-row">
-              <textarea placeholder="Specify requirements, part numbers, vehicle compatibility, or estimated quantities..." rows="4" class="form-input"></textarea>
+            <div style="margin-bottom:1rem;">
+              <textarea placeholder="Describe part requirements or target vehicle models..." rows="3" class="form-input"></textarea>
             </div>
-            <button type="submit" class="btn btn-hero-primary btn-full">
-              <i class="fa-solid fa-paper-plane"></i> Submit Request
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fa-solid fa-paper-plane"></i> Send Inquiry
             </button>
           </form>
         </div>
@@ -639,184 +504,122 @@
 
   <!-- FOOTER -->
   <footer class="main-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand-col">
-        <div class="brand-logo footer-logo">
-          <div class="logo-icon"><i class="fa-solid fa-gear"></i></div>
-          <span class="brand-name">BLW <span class="highlight">ENGINE VALVES</span></span>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom:1rem;">
+            <div class="logo-icon"><i class="fa-solid fa-gear"></i></div>
+            <span class="brand-name">BLW <span class="highlight">ENGINE VALVES</span></span>
+          </div>
+          <p style="color:var(--text-muted); font-size:0.85rem; line-height:1.6;">
+            Precision Engineered Automotive Components | ISO 9001:2015 & IATF 16949:2016 Certified | Built in India &bull; Deployed on Yogabrata Infrastructure.
+          </p>
         </div>
-        <p class="footer-tagline">
-          Precision Engineered Automotive Components | ISO 9001:2015 & IATF 16949:2016 Certified | Built in India &bull; Deployed on Yogabrata Infrastructure.
-        </p>
-        <div class="social-links">
-          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="#" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="#products">Engine Valves</a></li>
+            <li><a href="#products">Valve Guides</a></li>
+            <li><a href="#products">Camshaft Assemblies</a></li>
+            <li><a href="#products">Rocker Arms</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Liquid Carbo-Nitriding</a></li>
+            <li><a href="#services">Manganese Phosphating</a></li>
+            <li><a href="#quality">Micro Vickers Testing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="proposal.html"><i class="fa-solid fa-file-contract"></i> Partnership Deck</a></li>
+            <li><a href="admin.html"><i class="fa-solid fa-user-gear"></i> Sales Triage Dashboard</a></li>
+            <li><a href="javascript:void(0)" onclick="toggleNexusChat()"><i class="fa-solid fa-robot"></i> Aditya AI</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="footer-col">
-        <h4>Product Range</h4>
-        <ul>
-          <li><a href="#products">Engine Valves</a></li>
-          <li><a href="#products">Valve Guides & Seats</a></li>
-          <li><a href="#products">Camshaft Assemblies</a></li>
-          <li><a href="#products">Rocker Arms & Tappets</a></li>
-          <li><a href="#products">2-Wheeler Spare Parts</a></li>
-          <li><a href="#products">3-Wheeler Spare Parts</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Services & Tech</h4>
-        <ul>
-          <li><a href="#services">Liquid Carbo-Nitriding (LCN)</a></li>
-          <li><a href="#services">Manganese Phosphating</a></li>
-          <li><a href="#quality">Micro Vickers Testing</a></li>
-          <li><a href="#quality">Vision Measuring (VMM)</a></li>
-          <li><a href="#export">Global Export Support</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Nexus AI & Host</h4>
-        <ul>
-          <li><a href="javascript:void(0)" onclick="toggleNexusChat()"><i class="fa-solid fa-robot"></i> Aditya AI Consultant</a></li>
-          <li><a href="https://yogabrata.com" target="_blank"><i class="fa-solid fa-globe"></i> Yogabrata Platform</a></li>
-          <li><a href="#calculator"><i class="fa-solid fa-calculator"></i> B2B Price Estimator</a></li>
-          <li><a href="#contact"><i class="fa-solid fa-headset"></i> 24/7 Technical Support</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="container footer-bottom-flex">
-        <p>&copy; 2026 BLW ENGINE VALVES PVT. LTD. All Rights Reserved. Developed & Hosted by Aditya Yogabrata.</p>
-        <div class="footer-policy-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">IATF 16949 Verification</a>
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 BLW ENGINE VALVES PVT. LTD. All Rights Reserved. Prepared for BLW Concept Review.</p>
+        <p>Concept Demo Deployed on <strong>yogabrata.com</strong></p>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING NEXUS AI CHATBOT WIDGET (ADITYA) -->
+  <!-- FLOATING ADITYA AI CHATBOT -->
   <div class="nexus-chatbot-container" id="nexusChatbotContainer">
-    <!-- Chat Button Bubble -->
     <button class="nexus-trigger-btn" id="nexusTriggerBtn" onclick="toggleNexusChat()">
-      <div class="nexus-avatar">
-        <i class="fa-solid fa-robot"></i>
-      </div>
-      <span class="nexus-btn-label">Aditya AI</span>
-      <span class="nexus-unread-badge">1</span>
+      <div class="nexus-avatar"><i class="fa-solid fa-robot"></i></div>
+      <span>Aditya AI</span>
     </button>
 
-    <!-- Chat Modal Window -->
-    <div class="nexus-chat-window glass-panel" id="nexusChatWindow">
-      <!-- Chat Window Header -->
+    <div class="nexus-chat-window card-panel" id="nexusChatWindow">
       <div class="nexus-chat-header">
-        <div class="header-bot-info">
-          <div class="bot-avatar-large">
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <div style="width:32px; height:32px; background:var(--accent-primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center;">
             <i class="fa-solid fa-robot"></i>
-            <span class="online-dot"></span>
           </div>
           <div>
-            <h4>Aditya <span class="badge-role">BLW Nexus AI Specialist</span></h4>
-            <span class="header-sub">Online &bull; Real-Time Valvetrain & Export Support</span>
+            <h4 style="font-size:0.9rem; font-weight:800; color:var(--text-main); margin:0;">Aditya <span style="font-size:0.65rem; background:var(--bg-subtle); padding:1px 4px; border-radius:3px; color:var(--accent-primary);">AI Specialist</span></h4>
+            <span style="font-size:0.7rem; color:var(--text-muted);">Online &bull; Valvetrain Engineering Support</span>
           </div>
         </div>
-        <div class="header-actions">
-          <button class="chat-hdr-btn" onclick="clearNexusChat()" title="Clear Chat"><i class="fa-solid fa-rotate-right"></i></button>
-          <button class="chat-hdr-btn" onclick="toggleNexusChat()" title="Close"><i class="fa-solid fa-xmark"></i></button>
-        </div>
+        <button class="modal-close-btn" onclick="toggleNexusChat()"><i class="fa-solid fa-xmark"></i></button>
       </div>
 
-      <!-- Quick Prompt Chips -->
-      <div class="quick-chips-bar" id="quickChipsBar">
-        <button class="chip-btn" onclick="sendQuickPrompt('What valves fit Bajaj Pulsar 220 and NS200?')">⚡ Pulsar 220 Valves</button>
-        <button class="chip-btn" onclick="sendQuickPrompt('Explain Liquid Nitriding vs Manganese Phosphating')">🧪 Nitriding vs Phosphating</button>
-        <button class="chip-btn" onclick="sendQuickPrompt('How can I get an export sample quote for 5,000 units?')">📦 Export Quote (5,000 pcs)</button>
-        <button class="chip-btn" onclick="sendQuickPrompt('What are BLW IATF 16949 quality certifications?')">📜 IATF 16949 Specs</button>
-      </div>
-
-      <!-- Chat Messages Body -->
       <div class="nexus-chat-body" id="nexusChatBody">
-        <!-- Initial Welcome Message -->
         <div class="chat-msg bot-msg">
-          <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
           <div class="msg-content">
-            <p><strong>Hello! I am Aditya, Senior Valvetrain & Product Specialist at BLW Engine Valves.</strong> 👋</p>
-            <p>I can help you look up OEM valve specifications, surface treatment benefits (Liquid Nitriding & Phosphating), compatibility for Bajaj, TVS, Honda, Hero, Yamaha, or calculate custom export quotes for your business!</p>
-            <p class="msg-timestamp">Just now</p>
+            <p><strong>Hello! I am Aditya, Valvetrain & Product Specialist at BLW Engine Valves.</strong> 👋</p>
+            <p>How can I assist you with engine valve specifications, nitriding surface treatments, or sample export quotes today?</p>
           </div>
         </div>
       </div>
 
-      <!-- Typing Indicator -->
-      <div class="typing-indicator" id="typingIndicator">
-        <div class="dots-wrapper">
-          <span></span><span></span><span></span>
-        </div>
-        <span class="typing-text">Aditya is generating answer...</span>
-      </div>
-
-      <!-- Chat Input Bar -->
       <div class="nexus-chat-input-bar">
-        <input type="text" id="nexusUserInput" placeholder="Ask Aditya anything about BLW valves, specs, or quotes..." onkeypress="handleNexusKeyPress(event)">
-        <button class="send-btn" onclick="sendNexusMessage()">
-          <i class="fa-solid fa-paper-plane"></i>
-        </button>
+        <input type="text" id="nexusUserInput" placeholder="Ask Aditya a question..." onkeypress="handleNexusKeyPress(event)">
+        <button class="btn btn-primary btn-sm" onclick="sendNexusMessage()"><i class="fa-solid fa-paper-plane"></i></button>
       </div>
     </div>
   </div>
 
   <!-- RFQ BASKET DRAWER OVERLAY -->
   <div class="modal-overlay" id="rfqBasketOverlay">
-    <div class="modal-card glass-panel" style="max-width: 680px;">
+    <div class="modal-card">
       <button class="modal-close-btn" onclick="toggleRfqBasket()"><i class="fa-solid fa-xmark"></i></button>
-      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
-        <div style="width:42px; height:42px; background:var(--gradient-primary); color:#000; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; font-weight:800;">
-          <i class="fa-solid fa-basket-shopping"></i>
-        </div>
-        <div>
-          <h3 style="font-size:1.3rem; font-weight:800; color:#fff; margin:0;">International RFQ Basket</h3>
-          <span style="font-size:0.775rem; color:var(--text-muted);">Consolidate multiple component SKUs into a single inquiry</span>
-        </div>
-      </div>
+      <h3 style="font-size:1.2rem; font-weight:800; color:var(--text-main); margin-bottom:1rem;"><i class="fa-solid fa-basket-shopping text-primary"></i> International RFQ Basket</h3>
+      
+      <div id="rfqBasketItemsList" style="max-height: 240px; overflow-y: auto; margin-bottom:1.25rem;"></div>
 
-      <div id="rfqBasketItemsList" style="max-height: 280px; overflow-y: auto; margin-bottom:1.5rem;">
-        <!-- Injected dynamically via JS -->
-      </div>
-
-      <!-- Guided Inquiry Form inside Basket -->
       <form id="rfqBasketForm" onsubmit="submitRfqBasket(event)">
-        <h4 style="font-size:0.9rem; font-weight:700; color:var(--accent-cyan); margin-bottom:0.75rem;"><i class="fa-solid fa-id-card"></i> Buyer & Destination Details:</h4>
-        <div class="form-row">
+        <h4 style="font-size:0.85rem; font-weight:700; color:var(--text-main); margin-bottom:0.6rem;">Buyer Details:</h4>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
           <input type="text" id="rfqName" placeholder="Full Name *" required class="form-input">
           <input type="email" id="rfqEmail" placeholder="Business Email *" required class="form-input">
         </div>
-        <div class="form-row">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
           <input type="text" id="rfqCompany" placeholder="Company Name *" required class="form-input">
-          <input type="text" id="rfqCountry" placeholder="Target Destination Country *" required class="form-input">
+          <input type="text" id="rfqCountry" placeholder="Destination Country *" required class="form-input">
         </div>
-        <div class="form-row">
-          <select id="rfqBuyerType" class="form-input">
-            <option value="importer">Distributor / International Importer</option>
-            <option value="oem">Automotive Engine OEM</option>
-            <option value="tier1">Tier-1 / Tier-2 Supplier</option>
-            <option value="aftermarket">Aftermarket Spare Parts Retailer</option>
-          </select>
-        </div>
-        <div style="margin-top:1rem; display:flex; gap:1rem;">
-          <button type="submit" class="btn btn-hero-primary btn-full">
-            <i class="fa-solid fa-paper-plane"></i> Submit RFQ to BLW Sales & Aditya AI
-          </button>
-          <button type="button" class="btn btn-outline" onclick="toggleRfqBasket()">
-            Continue Browsing
-          </button>
+        <div style="display:flex; gap:0.75rem; margin-top:1rem;">
+          <button type="submit" class="btn btn-primary btn-full"><i class="fa-solid fa-paper-plane"></i> Submit RFQ</button>
+          <button type="button" class="btn btn-secondary" onclick="toggleRfqBasket()">Close</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- SPEC MODAL OVERLAY -->
+  <div class="modal-overlay" id="specModalOverlay">
+    <div class="modal-card" id="specModalCard">
+      <button class="modal-close-btn" onclick="closeSpecModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div id="specModalBody"></div>
     </div>
   </div>
 

@@ -306,8 +306,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setupScrollAnimations();
   updateRfqBasketUI();
 
-  // Restore Theme Preference
-  const savedTheme = localStorage.getItem("blw_theme_preference") || "dark";
+  // Restore Theme Preference (Default: precision light)
+  const savedTheme = localStorage.getItem("blw_theme_preference") || "precision";
   setTheme(savedTheme);
 });
 
@@ -322,13 +322,12 @@ function setTheme(themeName) {
   localStorage.setItem("blw_theme_preference", themeName);
 
   const labelMap = {
-    "dark": "Dark",
-    "light-steel": "Light Steel",
-    "light-platinum": "Platinum",
-    "light-warm": "Warm Light"
+    "precision": "Precision Light",
+    "warm": "Warm Industrial",
+    "dark": "Graphite Showcase"
   };
   const labelEl = document.getElementById("currentThemeLabel");
-  if (labelEl) labelEl.innerText = labelMap[themeName] || "Theme";
+  if (labelEl) labelEl.innerText = labelMap[themeName] || "Precision Light";
 
   document.querySelectorAll(".theme-option").forEach(opt => opt.classList.remove("active"));
   const activeOpt = Array.from(document.querySelectorAll(".theme-option")).find(opt => opt.getAttribute("onclick")?.includes(`'${themeName}'`));
