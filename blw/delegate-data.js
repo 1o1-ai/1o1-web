@@ -210,34 +210,35 @@ const DELEGATE_GROUPS = [
   },
   {
     id: "g5",
-    name: "Dispatch & Logistics",
-    type: "Internal Operations",
+    name: "Dispatch & Logistics Stream",
+    type: "Internal Logistics",
     state: "Auto-approved",
     stateClass: "st-auto",
-    topic: "Consignment departure and tracking",
+    topic: "Export shipment tracking and container dispatch",
     avatarIcon: "fa-truck-fast",
     unread: 0,
     priority: "low",
-    lastMsg: "Consignment DR-DEMO-551 departed for Port of Nhava Sheva.",
+    lastMsg: "Tracking link generated and sent to customer automatically.",
     time: "07:50 AM",
     participants: 7,
-    signalCount: 2,
+    signalCount: 3,
     fullCount: 6,
     intel: {
       brief: "Export shipment DR-DEMO-551 (3,000 sets Boxer BM150 valves) departed plant on container truck MH-04-CG-9041.",
       risk: "Low Risk — Routine Dispatch",
       confidence: "High",
-      decisionNeeded: "No action needed. Auto-tracking active.",
+      decisionNeeded: "Auto-tracking active. No manual action required.",
       suggestedReply: "",
       sources: ["Dispatch Record DR-DEMO-551", "Container GPS Telemetry"],
       audit: [
         "07:50 AM • Truck departure confirmed",
-        "07:50 AM • Tracking link automatically generated & shared under Auto-approve policy"
+        "07:50 AM • Tracking link automatically generated & shared by Adityam under Auto-approve policy"
       ]
     },
     messages: [
       { id: "m501", sender: "Logistics Lead", text: "Container MH-04-CG-9041 loaded with 30 cases (DR-DEMO-551). Seal #BLW-9901.", time: "07:45 AM", isHuman: true, isSignal: true },
-      { id: "m502", sender: "Adityam AI", text: "Sent automatically under 'Tracking Updates' policy: Tracking link generated for Consignment DR-DEMO-551.", time: "07:50 AM", isBot: true, isSignal: true }
+      { id: "m502", sender: "Adityam", text: "Sent automatically under 'Tracking Updates' policy: Generated GPS live tracking link for Consignment DR-DEMO-551 and notified customer.", time: "07:50 AM", isBot: true, isSignal: true },
+      { id: "m503", sender: "Logistics Lead", text: "Thanks Adityam. Driver departed plant at 07:50 AM.", time: "07:52 AM", isHuman: true, isSignal: true }
     ]
   },
   {
@@ -262,7 +263,7 @@ const DELEGATE_GROUPS = [
       decisionNeeded: "Request correct Rev D CAD drawing from buyer before quoting.",
       suggestedReply: "Please request customer engineering to send drawing Rev D. We cannot issue technical pricing on mismatched drawing revisions.",
       sources: ["Customer RFQ Attachment #RFQ-9042", "BLW Revision Index"],
-      audit: ["08:50 AM • Drawing revision discrepancy flagged by assistant"]
+      audit: ["08:50 AM • Drawing revision discrepancy flagged by Adityam"]
     },
     messages: [
       { id: "m601", sender: "Sales Executive", text: "Received RFQ-9042 from EuroMotives for 2,000 sets intake valves.", time: "08:40 AM", isHuman: true, isSignal: true },
@@ -332,7 +333,7 @@ const DELEGATE_GROUPS = [
     messages: [
       { id: "m801", sender: "Customer Purchase Mgr (Apex)", text: "Hi Aditya & team, can you confirm all 600 pieces of exhaust valves (EV-P220) will dispatch this Friday? Our line plan depends on it.", time: "10:35 AM", isHuman: true, isSignal: true },
       { id: "m802", sender: "BLW Sales Executive", text: "Checking with production team right now.", time: "10:38 AM", isHuman: true, isRoutine: true },
-      { id: "m803", sender: "Adityam AI (Draft)", text: "[Draft Held for Approval] We have completed 420 pieces and can dispatch those on Friday. The remaining 180 finish inspection Saturday morning...", time: "10:40 AM", isBot: true, isDraft: true, isSignal: true }
+      { id: "m803", sender: "Adityam (Draft)", text: "[Draft Held for Approval] We have completed 420 pieces and can dispatch those on Friday. The remaining 180 finish inspection Saturday morning...", time: "10:40 AM", isBot: true, isDraft: true, isSignal: true }
     ]
   },
   {
@@ -368,7 +369,7 @@ const DELEGATE_GROUPS = [
     },
     messages: [
       { id: "m901", sender: "Customer Quality Lead (NorthStar)", text: "Attached photo of stem diameter check. 5 pieces from Lot EV-881 measured 6.984mm vs 6.980mm max.", time: "09:40 AM", isHuman: true, isSignal: true, attachment: "IMG_881_stem.jpg" },
-      { id: "m902", sender: "Adityam AI (Draft)", text: "[Draft Held for Approval] Thank you for alerting us and sharing the inspection image. Our Quality team has opened an urgent review...", time: "09:42 AM", isBot: true, isDraft: true, isSignal: true }
+      { id: "m902", sender: "Adityam (Draft)", text: "[Draft Held for Approval] Thank you for alerting us and sharing the inspection image. Our Quality team has opened an urgent review...", time: "09:42 AM", isBot: true, isDraft: true, isSignal: true }
     ]
   },
   {
@@ -384,8 +385,8 @@ const DELEGATE_GROUPS = [
     lastMsg: "Material Certificate MC-DEMO-77 sent automatically.",
     time: "08:42 AM",
     participants: 3,
-    signalCount: 2,
-    fullCount: 4,
+    signalCount: 3,
+    fullCount: 5,
     intel: {
       brief: "Customer requested approved Material Test Certificate for Bajaj Pulsar 220 valves. Adityam matched mock certificate MC-DEMO-77 and sent it automatically.",
       risk: "Low Risk — Approved Document Request",
@@ -396,12 +397,13 @@ const DELEGATE_GROUPS = [
       audit: [
         "08:40 AM • Customer requested material certificate",
         "08:42 AM • Matched approved certificate MC-DEMO-77",
-        "08:42 AM • Sent automatically under 'Approved Documents' policy"
+        "08:42 AM • Sent automatically under 'Approved Documents' policy by Adityam"
       ]
     },
     messages: [
-      { id: "m1001", sender: "Meridian Procurement", text: "Please share the material certificate for Pulsar 220 valve batch shipped last week.", time: "08:40 AM", isHuman: true, isSignal: true },
-      { id: "m1002", sender: "Adityam AI", text: "Sent automatically by Adityam under 'Approved Documents' policy: Attached Material Certificate MC-DEMO-77 (SUH3/21-4N LCN Nitrided).", time: "08:42 AM", isBot: true, isSignal: true, attachment: "MC-DEMO-77.pdf" }
+      { id: "m1001", sender: "Meridian Procurement (Hans Weber)", text: "Please share the material certificate for Pulsar 220 valve batch shipped last week.", time: "08:40 AM", isHuman: true, isSignal: true },
+      { id: "m1002", sender: "Adityam", text: "Sent automatically by Adityam under 'Approved Documents' policy: Attached Material Certificate MC-DEMO-77 (SUH3/21-4N LCN Nitrided depth 0.020mm).", time: "08:42 AM", isBot: true, isSignal: true, attachment: "MC-DEMO-77.pdf" },
+      { id: "m1003", sender: "Meridian Procurement (Hans Weber)", text: "Received, thank you Adityam! Metallurgy specs match our QA requirements.", time: "08:45 AM", isHuman: true, isSignal: true }
     ]
   },
   {
@@ -426,7 +428,7 @@ const DELEGATE_GROUPS = [
       decisionNeeded: "Procurement to confirm buffer stock availability.",
       suggestedReply: "Please confirm dispatched truck LR number as soon as loaded on Sept 28.",
       sources: ["Supplier Dispatch Notice #SUP-881", "Buffer Inventory Report"],
-      audit: ["08:20 AM • Supplier delay notice logged & linked to production planning"]
+      audit: ["08:20 AM • Supplier delay notice logged & linked to production planning by Adityam"]
     },
     messages: [
       { id: "m1101", sender: "Alloy Steel Logistics", text: "Dispatch of 5 Tons SUH3 12mm bar stock rescheduled from Sept 26 to Sept 28 due to mill annealing slot.", time: "08:20 AM", isHuman: true, isSignal: true }
@@ -436,28 +438,30 @@ const DELEGATE_GROUPS = [
     id: "g12",
     name: "Export — Europe Program",
     type: "Customer-facing Export",
-    state: "Drafting",
-    stateClass: "st-drafting",
-    topic: "Packing declaration and shipment documentation",
+    state: "Auto-approved",
+    stateClass: "st-auto",
+    topic: "Packing declaration and phytosanitary certificate request",
     avatarIcon: "fa-earth-europe",
-    unread: 1,
+    unread: 0,
     priority: "low",
-    lastMsg: "Please send ISPM-15 wooden pallet certificate for Hamburg shipment.",
+    lastMsg: "ISPM-15 wooden pallet heat-treatment certificate dispatched automatically.",
     time: "07:15 AM",
     participants: 4,
-    signalCount: 2,
+    signalCount: 3,
     fullCount: 5,
     intel: {
-      brief: "European distributor requests ISPM-15 heat-treatment phytosanitary packing certificate for Hamburg container.",
-      risk: "Low Risk — Document Request",
+      brief: "European distributor requested ISPM-15 heat-treatment phytosanitary packing certificate for Hamburg container. Adityam matched certified PDF and sent automatically.",
+      risk: "Low Risk — Routine Export Document",
       confidence: "High",
-      decisionNeeded: "Approve sending phytosanitary certificate ISPM15-BLW-2026.pdf.",
-      suggestedReply: "Attached is the ISPM-15 heat-treatment certificate for the wooden crates used in shipment DR-DEMO-551.",
+      decisionNeeded: "Automated under 'Approved Phytosanitary Documents' policy.",
+      suggestedReply: "",
       sources: ["ISPM-15 Certificate #ISPM15-BLW-2026.pdf", "Hamburg Packing List"],
-      audit: ["07:15 AM • Document request received & draft prepared"]
+      audit: ["07:15 AM • Document request received & dispatched automatically by Adityam"]
     },
     messages: [
-      { id: "m1201", sender: "Hamburg Logistics Coordinator", text: "Please send the ISPM-15 wooden pallet heat-treatment certificate for container BLW-EU-9041.", time: "07:15 AM", isHuman: true, isSignal: true }
+      { id: "m1201", sender: "Hamburg Logistics Coordinator", text: "Please send the ISPM-15 wooden pallet heat-treatment certificate for container BLW-EU-9041.", time: "07:15 AM", isHuman: true, isSignal: true },
+      { id: "m1202", sender: "Adityam", text: "Sent automatically by Adityam under 'Phytosanitary Certificates' policy: Attached Heat-Treatment Certificate ISPM15-BLW-2026.pdf.", time: "07:17 AM", isBot: true, isSignal: true, attachment: "ISPM15-BLW-2026.pdf" },
+      { id: "m1203", sender: "Hamburg Logistics Coordinator", text: "Verified and received. Thanks Adityam!", time: "07:20 AM", isHuman: true, isSignal: true }
     ]
   }
 ];

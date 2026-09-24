@@ -234,7 +234,7 @@ function renderDelegateChat() {
 
     thread.className = "wa-chat-bg";
     thread.innerHTML = `
-      <div class="wa-date-divider"><i class="fa-solid fa-lock" style="font-size:0.65rem;"></i> End-to-end encrypted &bull; Adityam AI Copilot Active</div>
+      <div class="wa-date-divider"><i class="fa-solid fa-lock" style="font-size:0.65rem;"></i> End-to-end encrypted &bull; Adityam Copilot Active</div>
 
       ${delegateState.signalOnly && compressedCount > 0 ? `
         <div class="noise-compressed-bar" onclick="toggleSignalOnly(false)" style="margin:4px auto; max-width:92%; cursor:pointer; font-size:0.775rem;">
@@ -258,7 +258,7 @@ function renderDelegateChat() {
             ${!isUser ? `
               <div class="wa-sender-name" style="color:${senderColor};">
                 ${m.sender}
-                ${isBot ? '<span style="font-size:0.65rem; background:#dcfce7; color:#166534; padding:1px 5px; border-radius:3px; margin-left:6px;"><i class="fa-solid fa-robot"></i> Adityam AI</span>' : ''}
+                ${isBot ? '<span style="font-size:0.65rem; background:#dcfce7; color:#166534; padding:1px 5px; border-radius:3px; margin-left:6px;"><i class="fa-solid fa-robot"></i> Adityam</span>' : ''}
               </div>
             ` : ''}
 
@@ -532,7 +532,7 @@ function confirmSimulatedSend(groupId) {
   // Append message to thread
   g.messages.push({
     id: "m_sent_" + Date.now(),
-    sender: "Adityam AI (for Aditya)",
+    sender: "Adityam (for Aditya)",
     text: g.intel.suggestedReply || "Confirmed.",
     time: "Just now",
     isBot: true,
