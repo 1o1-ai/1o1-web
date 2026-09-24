@@ -148,11 +148,128 @@
     .st-needs-data { background: rgba(181, 120, 66, 0.12); color: var(--accent-secondary); border: 1px solid rgba(181, 120, 66, 0.3); }
     .st-requires-prod { background: rgba(71, 85, 105, 0.12); color: var(--text-muted); border: 1px solid rgba(71, 85, 105, 0.3); }
 
+    .journey-player-bar {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .auto-play-progress-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 4px;
+      background: var(--accent-primary);
+      width: 0%;
+      transition: width 0.1s linear;
+      z-index: 10;
+    }
+
+    .workflow-anim-canvas {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .anim-nodes-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      padding: 1rem 0.5rem;
+    }
+
+    .anim-svg-line-bg {
+      position: absolute;
+      top: 50%;
+      left: 4%;
+      width: 92%;
+      height: 3px;
+      background: var(--border-color);
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .anim-svg-line-active {
+      position: absolute;
+      top: 50%;
+      left: 4%;
+      height: 3px;
+      background: var(--accent-primary);
+      transform: translateY(-50%);
+      z-index: 2;
+      transition: width 0.4s ease;
+    }
+
+    .anim-node {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .anim-node-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .anim-node:hover .anim-node-circle {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+      transform: scale(1.08);
+    }
+
+    .anim-node.active .anim-node-circle {
+      background: var(--accent-primary);
+      color: #ffffff;
+      border-color: var(--accent-primary);
+      animation: nodePulse 1.8s infinite;
+    }
+
+    .anim-node-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      transition: color 0.3s ease;
+    }
+
+    .anim-node.active .anim-node-label {
+      color: var(--accent-primary);
+      font-weight: 800;
+    }
+
+    @keyframes nodePulse {
+      0% { box-shadow: 0 0 0 0px rgba(37, 99, 235, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(37, 99, 235, 0); }
+      100% { box-shadow: 0 0 0 0px rgba(37, 99, 235, 0); }
+    }
+
     @media (max-width: 1024px) {
       .workflow-steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .anim-node-label { font-size: 0.65rem; }
     }
     @media (max-width: 640px) {
       .workflow-steps-grid { grid-template-columns: 1fr; }
+      .anim-nodes-wrapper { display: none; }
     }
   </style>
 </head>
@@ -213,16 +330,55 @@
     <!-- PROMINENT VISUAL WORKFLOW COMPONENT -->
     <section class="workflow-section">
       <!-- PLAY JOURNEY CONTROLLER -->
-      <div class="journey-player-bar">
+      <div class="journey-player-bar" id="journeyPlayerBar">
+        <div class="auto-play-progress-line" id="autoPlayProgressLine"></div>
         <div>
-          <h3 style="font-size:1.1rem; font-weight:800; color:var(--text-main); margin:0;"><i class="fa-solid fa-play-circle text-primary"></i> Interactive Buyer Journey Walkthrough</h3>
+          <h3 style="font-size:1.1rem; font-weight:800; color:var(--text-main); margin:0;"><i class="fa-solid fa-film text-primary"></i> Animated Buyer Journey Walkthrough</h3>
           <span style="font-size:0.8rem; color:var(--text-muted);">Fictional Importer Example: <strong>Cairo Moto Parts Ltd (Ahmed Hassan, Egypt)</strong> &bull; Ref: <code>BLW-RFQ-2026-9041</code></span>
         </div>
-        <div style="display:flex; gap:0.5rem; align-items:center;">
+        <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
+          <button class="btn btn-primary btn-sm" id="autoPlayBtn" onclick="toggleAutoPlay()"><i class="fa-solid fa-play" id="autoPlayIcon"></i> <span id="autoPlayText">Auto-Play Animation</span></button>
           <button class="btn btn-secondary btn-sm" id="prevJourneyBtn" onclick="stepJourney(-1)" disabled><i class="fa-solid fa-chevron-left"></i> Back</button>
           <span style="font-size:0.85rem; font-weight:700; color:var(--accent-primary); font-family:var(--font-mono);" id="journeyStepIndicator">Step 1 of 6</span>
-          <button class="btn btn-primary btn-sm" id="nextJourneyBtn" onclick="stepJourney(1)">Next Step <i class="fa-solid fa-chevron-right"></i></button>
+          <button class="btn btn-secondary btn-sm" id="nextJourneyBtn" onclick="stepJourney(1)">Next <i class="fa-solid fa-chevron-right"></i></button>
           <button class="btn btn-outline btn-sm" onclick="resetJourney()"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+        </div>
+      </div>
+
+      <!-- ANIMATED VISUAL DIAGRAM CANVAS -->
+      <div class="workflow-anim-canvas">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.8rem; color:var(--text-muted); font-weight:600;">
+          <span><i class="fa-solid fa-diagram-project text-primary"></i> Interactive Flow Nodes (Click any node to jump)</span>
+          <span id="animStateBadge" class="status-badge st-demonstrated">Step 1 Active</span>
+        </div>
+        <div class="anim-nodes-wrapper">
+          <div class="anim-svg-line-bg"></div>
+          <div class="anim-svg-line-active" id="animLineActive" style="width: 0%;"></div>
+
+          <button class="anim-node active" id="animNode1" onclick="jumpToJourneyStep(1)">
+            <div class="anim-node-circle"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <span class="anim-node-label">1. Find SKU</span>
+          </button>
+          <button class="anim-node" id="animNode2" onclick="jumpToJourneyStep(2)">
+            <div class="anim-node-circle"><i class="fa-solid fa-microscope"></i></div>
+            <span class="anim-node-label">2. Check Specs</span>
+          </button>
+          <button class="anim-node" id="animNode3" onclick="jumpToJourneyStep(3)">
+            <div class="anim-node-circle"><i class="fa-solid fa-basket-shopping"></i></div>
+            <span class="anim-node-label">3. RFQ Basket</span>
+          </button>
+          <button class="anim-node" id="animNode4" onclick="jumpToJourneyStep(4)">
+            <div class="anim-node-circle"><i class="fa-solid fa-user-check"></i></div>
+            <span class="anim-node-label">4. Sales Triage</span>
+          </button>
+          <button class="anim-node" id="animNode5" onclick="jumpToJourneyStep(5)">
+            <div class="anim-node-circle"><i class="fa-solid fa-file-invoice"></i></div>
+            <span class="anim-node-label">5. Quotation</span>
+          </button>
+          <button class="anim-node" id="animNode6" onclick="jumpToJourneyStep(6)">
+            <div class="anim-node-circle"><i class="fa-solid fa-chart-line"></i></div>
+            <span class="anim-node-label">6. Export Order</span>
+          </button>
         </div>
       </div>
 
@@ -502,8 +658,13 @@
 
   <script src="script.js"></script>
   <script>
-    // JOURNEY PLAYER LOGIC
+    // JOURNEY PLAYER & AUTO-PLAY ANIMATION LOGIC
     let currentJourneyStep = 1;
+    let isAutoPlaying = false;
+    let autoPlayTimer = null;
+    let autoPlayProgressTimer = null;
+    let progressPercent = 0;
+    const STEP_DURATION = 3500; // 3.5 seconds per step
 
     const STEP_DETAILS = [
       {
@@ -533,8 +694,11 @@
     ];
 
     function updateJourneyUI() {
+      // 1. Update step cards
       for (let i = 1; i <= 6; i++) {
         const card = document.getElementById(`wfStep${i}`);
+        const node = document.getElementById(`animNode${i}`);
+
         if (card) {
           if (i === currentJourneyStep) {
             card.classList.add("active-step");
@@ -542,11 +706,32 @@
             card.classList.remove("active-step");
           }
         }
+
+        if (node) {
+          if (i === currentJourneyStep) {
+            node.classList.add("active");
+          } else {
+            node.classList.remove("active");
+          }
+        }
       }
 
+      // 2. Update connecting active line
+      const lineActive = document.getElementById("animLineActive");
+      if (lineActive) {
+        const pct = ((currentJourneyStep - 1) / 5) * 92;
+        lineActive.style.width = `${pct}%`;
+      }
+
+      // 3. Update badges & controls
       document.getElementById("journeyStepIndicator").innerText = `Step ${currentJourneyStep} of 6`;
       document.getElementById("prevJourneyBtn").disabled = (currentJourneyStep === 1);
       document.getElementById("nextJourneyBtn").disabled = (currentJourneyStep === 6);
+
+      const animBadge = document.getElementById("animStateBadge");
+      if (animBadge) {
+        animBadge.innerText = `Step ${currentJourneyStep} Active (${STEP_DETAILS[currentJourneyStep - 1].title.split(':')[1].trim()})`;
+      }
 
       const detail = STEP_DETAILS[currentJourneyStep - 1];
       document.getElementById("detailStepTitle").innerText = detail.title;
@@ -554,13 +739,85 @@
     }
 
     function stepJourney(delta) {
+      if (isAutoPlaying) stopAutoPlay();
       currentJourneyStep = Math.max(1, Math.min(6, currentJourneyStep + delta));
       updateJourneyUI();
     }
 
+    function jumpToJourneyStep(stepNum) {
+      if (isAutoPlaying) stopAutoPlay();
+      currentJourneyStep = Math.max(1, Math.min(6, stepNum));
+      updateJourneyUI();
+    }
+
     function resetJourney() {
+      if (isAutoPlaying) stopAutoPlay();
       currentJourneyStep = 1;
       updateJourneyUI();
+    }
+
+    // AUTO-PLAY ANIMATION PLAYBACK
+    function toggleAutoPlay() {
+      if (isAutoPlaying) {
+        stopAutoPlay();
+      } else {
+        startAutoPlay();
+      }
+    }
+
+    function startAutoPlay() {
+      isAutoPlaying = true;
+      document.getElementById("autoPlayIcon").className = "fa-solid fa-pause";
+      document.getElementById("autoPlayText").innerText = "Pause Animation";
+      document.getElementById("autoPlayBtn").classList.replace("btn-primary", "btn-secondary");
+
+      // Reset to 1 if at end
+      if (currentJourneyStep >= 6) {
+        currentJourneyStep = 1;
+        updateJourneyUI();
+      }
+
+      progressPercent = 0;
+      runAutoPlayStepTimer();
+    }
+
+    function stopAutoPlay() {
+      isAutoPlaying = false;
+      clearTimeout(autoPlayTimer);
+      clearInterval(autoPlayProgressTimer);
+      document.getElementById("autoPlayIcon").className = "fa-solid fa-play";
+      document.getElementById("autoPlayText").innerText = "Auto-Play Animation";
+      document.getElementById("autoPlayBtn").classList.replace("btn-secondary", "btn-primary");
+      document.getElementById("autoPlayProgressLine").style.width = "0%";
+    }
+
+    function runAutoPlayStepTimer() {
+      clearTimeout(autoPlayTimer);
+      clearInterval(autoPlayProgressTimer);
+
+      progressPercent = 0;
+      const progressLine = document.getElementById("autoPlayProgressLine");
+      const intervalMs = 50;
+      const increment = (intervalMs / STEP_DURATION) * 100;
+
+      autoPlayProgressTimer = setInterval(() => {
+        progressPercent += increment;
+        if (progressLine) progressLine.style.width = `${Math.min(100, progressPercent)}%`;
+      }, intervalMs);
+
+      autoPlayTimer = setTimeout(() => {
+        if (!isAutoPlaying) return;
+        if (currentJourneyStep < 6) {
+          currentJourneyStep++;
+          updateJourneyUI();
+          runAutoPlayStepTimer();
+        } else {
+          // Loop back to start smoothly
+          currentJourneyStep = 1;
+          updateJourneyUI();
+          runAutoPlayStepTimer();
+        }
+      }, STEP_DURATION);
     }
 
     function openDemoSpecPreview() {
@@ -568,7 +825,6 @@
     }
 
     function openDemoRfqDrawer() {
-      // Seed sample item if empty
       if (rfqBasket.length === 0) {
         rfqBasket = [
           { name: "Bajaj Pulsar 220F Valve Set", oemCode: "BLW-EV-P220", qty: 5000 },
@@ -599,7 +855,14 @@
     document.addEventListener("keydown", (e) => {
       if (e.key === "ArrowRight") stepJourney(1);
       if (e.key === "ArrowLeft") stepJourney(-1);
+      if (e.key === " ") {
+        e.preventDefault();
+        toggleAutoPlay();
+      }
     });
+
+    // Initialize UI on load
+    updateJourneyUI();
   </script>
 </body>
 </html>
