@@ -69,8 +69,8 @@
 
     <!-- MAIN VIEW MODE TOGGLE BAR -->
     <div style="display:flex; gap:0.5rem; margin-bottom:1.5rem; border-bottom:1px solid var(--border-color); padding-bottom:0.75rem;">
-      <button class="admin-tab-btn active" id="btnViewWorkspace" onclick="setDelegateViewMode('workspace')"><i class="fa-solid fa-comments"></i> WhatsApp Business Workspace (12 Groups)</button>
-      <button class="admin-tab-btn" id="btnViewBriefing" onclick="setDelegateViewMode('briefing')"><i class="fa-solid fa-sun"></i> Executive Morning Briefing</button>
+      <button class="admin-tab-btn active" id="btnViewWorkspace" onclick="document.getElementById('delegateBriefingView').style.display='none'; document.getElementById('delegateWorkspaceView').style.display='flex'; setDelegateViewMode('workspace');"><i class="fa-solid fa-comments"></i> WhatsApp Business Workspace (12 Groups)</button>
+      <button class="admin-tab-btn" id="btnViewBriefing" onclick="document.getElementById('delegateBriefingView').style.display='block'; document.getElementById('delegateWorkspaceView').style.display='none'; setDelegateViewMode('briefing');"><i class="fa-solid fa-sun"></i> Executive Morning Briefing</button>
     </div>
 
     <!-- 1. LANDING VIEW: EXECUTIVE MORNING BRIEFING (HIDDEN BY DEFAULT) -->
@@ -295,8 +295,8 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
-  <script src="delegate-data.js"></script>
-  <script src="delegate-ui.js"></script>
+  <script src="script.js?v=20260924_wa2"></script>
+  <script src="delegate-data.js?v=20260924_wa2"></script>
+  <script src="delegate-ui.js?v=20260924_wa2"></script>
 </body>
 </html>
