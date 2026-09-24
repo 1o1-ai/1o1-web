@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="precision">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLW Business Workflows & Sales Triage Admin | Private Internal Portal</title>
+  <title>BLW Sales Triage & Process Simulator | Fictional Demo Admin</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -11,23 +11,23 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     .admin-banner {
-      background: #7c3aed;
+      background: #475569;
       color: #fff;
-      font-size: 0.825rem;
-      font-weight: 800;
+      font-size: 0.8rem;
+      font-weight: 700;
       padding: 0.45rem;
       text-align: center;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.3px;
     }
     .admin-nav {
-      background: #060c18;
+      background: #ffffff;
       border-bottom: 1px solid var(--border-color);
       padding: 0.85rem 0;
     }
     .admin-tab-btn {
-      padding: 0.6rem 1.2rem;
+      padding: 0.55rem 1.1rem;
       font-weight: 700;
-      font-size: 0.875rem;
+      font-size: 0.85rem;
       border-radius: var(--radius-sm);
       border: 1px solid var(--border-color);
       background: var(--bg-surface);
@@ -60,12 +60,12 @@
     }
     .lead-table th, .lead-table td {
       padding: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid var(--border-color);
       text-align: left;
     }
     .lead-table th {
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--text-muted);
+      background: var(--bg-subtle);
+      color: var(--text-main);
       font-weight: 700;
     }
     .status-pill {
@@ -74,13 +74,26 @@
       padding: 3px 8px;
       border-radius: 4px;
     }
-    .st-new { background: rgba(0, 242, 254, 0.15); color: var(--accent-cyan); border: 1px solid rgba(0, 242, 254, 0.3); }
-    .st-review { background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); }
-    .st-quoted { background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .st-new { background: rgba(37, 99, 235, 0.1); color: var(--accent-primary); border: 1px solid rgba(37, 99, 235, 0.3); }
+    .st-review { background: rgba(217, 119, 6, 0.1); color: #d97706; border: 1px solid rgba(217, 119, 6, 0.3); }
+    .st-quoted { background: rgba(5, 150, 105, 0.1); color: #059669; border: 1px solid rgba(5, 150, 105, 0.3); }
+
+    .privacy-notice-box {
+      background: #fffbe6;
+      border: 1px solid #ffe58f;
+      border-radius: var(--radius-sm);
+      padding: 0.85rem 1.25rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.825rem;
+      color: #722ed1;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
 
     .honest-path-banner {
       background: var(--bg-subtle);
-      border: 1px solid var(--accent-secondary);
+      border: 1px solid var(--border-color);
       border-radius: var(--radius-sm);
       padding: 1rem 1.25rem;
       margin-bottom: 1.5rem;
@@ -96,36 +109,50 @@
 
   <!-- DEMO ADMIN DISCLAIMER BANNER -->
   <div class="admin-banner">
-    <i class="fa-solid fa-diagram-project"></i> PRIVATE BUSINESS WORKFLOWS & EXPORT SALES GOVERNANCE PORTAL
+    <i class="fa-solid fa-flask"></i> FICTIONAL DEMONSTRATION DATA — PROCESS & WORKFLOW SIMULATOR (UNAUTHENTICATED DEMO ROUTE)
   </div>
 
   <header class="admin-nav">
     <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
       <div style="display:flex; align-items:center; gap:0.75rem;">
-        <div style="width:36px; height:36px; background:var(--accent-purple); border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.2rem;">
-          <i class="fa-solid fa-network-wired"></i>
+        <div style="width:36px; height:36px; background:var(--accent-primary); border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.1rem;">
+          <i class="fa-solid fa-diagram-project"></i>
         </div>
-        <span style="font-weight:800; color:#fff; font-size:1.1rem;">BLW Business Operations Admin <span style="font-size:0.75rem; color:var(--text-muted); font-weight:400;">v2.0 Canvas</span></span>
+        <div>
+          <span style="font-weight:800; color:var(--text-main); font-size:1.1rem;">BLW Process & Workflow Simulator</span>
+          <span style="display:block; font-size:0.725rem; color:var(--text-muted);">Interactive Front-End Browser Demo &bull; Precision Light Theme</span>
+        </div>
       </div>
 
       <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
         <button class="admin-tab-btn active" id="tabWorkflowsBtn" onclick="switchAdminTab('workflows')"><i class="fa-solid fa-diagram-project"></i> Business Workflows Canvas</button>
-        <button class="admin-tab-btn" id="tabTriageBtn" onclick="switchAdminTab('triage')"><i class="fa-solid fa-inbox"></i> Sales Inquiry Triage Stream</button>
-        <a href="proposal.html" class="btn btn-sm btn-outline-nexus"><i class="fa-solid fa-file-contract"></i> Proposal Deck</a>
-        <a href="index.html" class="btn btn-sm btn-primary-glow"><i class="fa-solid fa-desktop"></i> Public Site</a>
+        <button class="admin-tab-btn" id="tabTriageBtn" onclick="switchAdminTab('triage')"><i class="fa-solid fa-inbox"></i> Sales Inquiry Triage Log</button>
+        <a href="proposal.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-file-contract"></i> Proposal Deck</a>
+        <a href="index.html" class="btn btn-sm btn-primary"><i class="fa-solid fa-desktop"></i> Public Site</a>
       </div>
     </div>
   </header>
 
   <main class="container section-padding">
 
-    <!-- HONEST PATH TO AUTOMATION DISCLAIMER BANNER -->
-    <div class="honest-path-banner">
-      <div style="font-size:1.4rem; color:var(--accent-secondary); margin-top:2px;"><i class="fa-solid fa-triangle-exclamation"></i></div>
+    <!-- DATA PRIVACY & ACCESS NOTICE -->
+    <div class="privacy-notice-box">
+      <div style="font-size:1.2rem; color:#d48806;"><i class="fa-solid fa-shield-halved"></i></div>
       <div>
-        <strong style="color:var(--text-main); font-size:0.9rem;">Operational Governance & Automation Language Note for BLW Leadership:</strong>
+        <strong>Demonstration Data & Access Protection Notice:</strong>
+        <span style="color:#595959;">
+          This route (<code>/blw/admin.html</code>) is an unauthenticated demonstration page for BLW leadership evaluation. <strong>All data shown is fictional sample data for illustration.</strong> Please do not enter real buyer or confidential operational information into demo forms.
+        </span>
+      </div>
+    </div>
+
+    <!-- HONEST SIMULATION vs AUTOMATION DISCLAIMER -->
+    <div class="honest-path-banner">
+      <div style="font-size:1.3rem; color:var(--accent-primary); margin-top:2px;"><i class="fa-solid fa-circle-info"></i></div>
+      <div>
+        <strong style="color:var(--text-main); font-size:0.875rem;">Front-End Visual Canvas Execution Model:</strong>
         <p style="margin:0.25rem 0 0; color:var(--text-muted); line-height:1.5;">
-          This interactive canvas visually demonstrates how export inquiries, technical reviews, and production handoffs move through business operations. Executed actions simulate event triggers in local state; <strong>no actual emails, invoices, purchase orders, or ERP system changes are dispatched to BLW's live systems</strong>. Integration points (SAP/ERP, CRM, Document Vault) are explicitly documented as Phase 2 implementation requirements.
+          This canvas is a <strong>front-end browser visualization & interactive process simulator</strong>. It visualizes workflow stages, decision branches, and state transitions in local browser memory (<code>localStorage</code>). <strong>It does not execute backend server rules, send actual emails, issue legal invoices, or modify BLW production databases.</strong> Software system targets (ERP, CRM, Accounting, Document Vaults) and technical parameters shown are <em>fictional examples for illustration</em> and represent future Phase 2 integration scope.
         </p>
       </div>
     </div>
@@ -172,7 +199,7 @@
         <div class="n8n-detail-panel" id="n8nDetailPanel">
           <div class="n8n-detail-header">
             <div>
-              <h4 style="font-size:1rem; font-weight:800; color:var(--text-main); margin:0;" id="detailNodeTitle">Node Details</h4>
+              <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-main); margin:0;" id="detailNodeTitle">Node Details</h4>
               <span style="font-size:0.725rem; color:var(--text-muted);" id="detailNodeSubtitle">Click a node to view operational details</span>
             </div>
             <button class="modal-close-btn" onclick="closeNodeDetailPanel()"><i class="fa-solid fa-xmark"></i></button>
@@ -188,7 +215,7 @@
 
         <!-- MINIMAP PREVIEW -->
         <div class="n8n-minimap" id="n8nMinimap">
-          <div style="font-size:0.65rem; color:var(--text-muted); padding:4px; font-weight:700; background:rgba(0,0,0,0.4); text-align:center;">CANVAS MINIMAP</div>
+          <div style="font-size:0.65rem; color:var(--text-muted); padding:4px; font-weight:700; background:rgba(0,0,0,0.05); text-align:center;">CANVAS MINIMAP</div>
           <div id="minimapNodes" style="position:relative; width:100%; height:100%;"></div>
         </div>
       </div>
@@ -196,7 +223,7 @@
       <!-- LIST VIEW TABLE (TOGGLEABLE) -->
       <div class="glass-panel" id="n8nListView" style="display:none; padding:1.5rem; margin-top:1.5rem;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.75rem;">
-          <h3 style="font-size:1.1rem; font-weight:800; color:#fff;"><i class="fa-solid fa-list-check"></i> Operational Workflow Task List</h3>
+          <h3 style="font-size:1.1rem; font-weight:800; color:var(--text-main);"><i class="fa-solid fa-list-check"></i> Operational Workflow Task List</h3>
           
           <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
             <select id="listRoleFilter" class="calc-input" style="padding:0.35rem 0.7rem; font-size:0.8rem;" onchange="filterListView()">
@@ -242,34 +269,34 @@
       <!-- METRICS CARDS -->
       <div class="admin-grid">
         <div class="admin-stat-card">
-          <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-inbox text-primary"></i> Total Inquiries (Demo)</span>
-          <h2 style="font-size:1.8rem; font-weight:900; color:#fff; margin-top:0.3rem;" id="statTotalCount">8 Inquiries</h2>
-          <span style="font-size:0.75rem; color:var(--accent-green);"><i class="fa-solid fa-arrow-trend-up"></i> +3 New Today</span>
+          <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-inbox text-primary"></i> Total Inquiries (Sample)</span>
+          <h2 style="font-size:1.8rem; font-weight:900; color:var(--text-main); margin-top:0.3rem;" id="statTotalCount">8 Inquiries</h2>
+          <span style="font-size:0.75rem; color:var(--accent-success);"><i class="fa-solid fa-arrow-trend-up"></i> +3 New Today</span>
         </div>
 
         <div class="admin-stat-card">
           <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-clock text-warning"></i> Avg Response SLA</span>
-          <h2 style="font-size:1.8rem; font-weight:900; color:#fff; margin-top:0.3rem;">1.4 Hours</h2>
-          <span style="font-size:0.75rem; color:var(--accent-cyan);"><i class="fa-solid fa-bolt"></i> Fast Lead Routing</span>
+          <h2 style="font-size:1.8rem; font-weight:900; color:var(--text-main); margin-top:0.3rem;">1.4 Hours</h2>
+          <span style="font-size:0.75rem; color:var(--accent-primary);"><i class="fa-solid fa-bolt"></i> Lead Routing SLA</span>
         </div>
 
         <div class="admin-stat-card">
           <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-earth-americas text-purple"></i> Top Destination</span>
-          <h2 style="font-size:1.8rem; font-weight:900; color:#fff; margin-top:0.3rem;">Egypt & Colombia</h2>
+          <h2 style="font-size:1.8rem; font-weight:900; color:var(--text-main); margin-top:0.3rem;">Egypt & Colombia</h2>
           <span style="font-size:0.75rem; color:var(--text-muted);">25+ Export Nations</span>
         </div>
 
         <div class="admin-stat-card">
           <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-shield-check text-success"></i> Pending Verifications</span>
-          <h2 style="font-size:1.8rem; font-weight:900; color:#fff; margin-top:0.3rem;">3 Items</h2>
-          <span style="font-size:0.75rem; color:var(--accent-orange);"><i class="fa-solid fa-flag"></i> Flagged for BLW Review</span>
+          <h2 style="font-size:1.8rem; font-weight:900; color:var(--text-main); margin-top:0.3rem;">3 Items</h2>
+          <span style="font-size:0.75rem; color:var(--accent-secondary);"><i class="fa-solid fa-flag"></i> Flagged for BLW Review</span>
         </div>
       </div>
 
       <!-- FILTER & LEADS TABLE -->
       <div class="glass-panel" style="padding:1.5rem;">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
-          <h3 style="font-size:1.15rem; font-weight:800; color:#fff;"><i class="fa-solid fa-list-check"></i> Live RFQ & Inquiry Triage Log</h3>
+          <h3 style="font-size:1.15rem; font-weight:800; color:var(--text-main);"><i class="fa-solid fa-list-check"></i> Live RFQ & Inquiry Triage Log</h3>
           <div style="display:flex; gap:0.5rem;">
             <select id="adminChannelFilter" class="calc-input" style="padding:0.4rem 0.8rem; font-size:0.8rem;" onchange="filterAdminLeads()">
               <option value="all">All Channels</option>
@@ -344,7 +371,7 @@
 
   <script src="script.js"></script>
   <script>
-    // DATA STRUCTURES FOR WORKFLOW TEMPLATES
+    // DATA STRUCTURES FOR WORKFLOW TEMPLATES (FICTIONAL ILLUSTRATION SAMPLES)
     const WORKFLOW_TEMPLATES = {
       export_o2c: {
         id: "export_o2c",
@@ -354,35 +381,35 @@
             id: "e_o2c_1",
             stepNum: 1,
             title: "1. RFQ Received",
-            role: "Website Portal / Ingest",
+            role: "Website Portal Ingest",
             execMode: "Rule-Based",
             execClass: "exec-rule",
             status: "completed",
             statusLabel: "Completed",
             waitTime: "< 1 min",
             x: 50, y: 160,
-            inputs: ["Website RFQ Basket", "Inquiry Ref: BLW-RFQ-2026-9041", "Cairo Moto Parts Ltd (Egypt)"],
-            outputs: ["Ingested RFQ record", "5,000 sets Pulsar 220 + 2,500 sets Apache 180"],
-            checklist: ["Check company profile completeness", "Verify destination country (Egypt)", "Generate Ref ID BLW-RFQ-2026-9041"],
-            doc: "BLW-RFQ-2026-9041-INQUIRY.pdf",
+            inputs: ["Website RFQ Basket", "Inquiry Ref: BLW-RFQ-2026-9041", "Cairo Moto Parts Ltd (Egypt Sample)"],
+            outputs: ["Ingested RFQ record", "5,000 sets Pulsar 220 + 2,500 sets Apache 180 (Illustration)"],
+            checklist: ["Check company profile completeness", "Verify destination country", "Generate Ref ID BLW-RFQ-2026-9041"],
+            doc: "Sample-RFQ-Summary-Illustration.pdf",
             history: ["09:00 AM - Ingested from public RFQ Basket", "09:00 AM - Automated Ref ID assigned"]
           },
           {
             id: "e_o2c_2",
             stepNum: 2,
             title: "2. Lead Qualification",
-            role: "Export Sales Owner (Rajesh V.)",
+            role: "Export Sales Manager (Sample Role)",
             execMode: "Manual Task",
             execClass: "exec-manual",
             status: "completed",
             statusLabel: "Completed",
             waitTime: "12 min",
             x: 330, y: 160,
-            inputs: ["Buyer Identity", "Target Quantities (7,500 sets total)"],
-            outputs: ["Qualified Lead Score (92/100)", "Owner Assignment: Rajesh V."],
-            checklist: ["Check buyer import license history", "Confirm minimum order threshold (MOQ 1,000+)", "Assign export territory manager"],
-            doc: "BLW-LEAD-QUAL-LOG.pdf",
-            history: ["09:12 AM - Lead qualified by Rajesh V.", "09:12 AM - Priority tagged: High Export Opportunity"]
+            inputs: ["Buyer Identity Check", "Target Quantities (7,500 sets total sample)"],
+            outputs: ["Qualified Lead Score", "Export Territory Manager Assignment"],
+            checklist: ["Check buyer import history", "Confirm minimum order threshold (MOQ 1,000+ sample)", "Assign export territory manager"],
+            doc: "Sample-Lead-Qualification-Log.pdf",
+            history: ["09:12 AM - Lead qualified by Export Sales Manager", "09:12 AM - Tagged as High Export Opportunity"]
           },
           {
             id: "e_o2c_2a",
@@ -395,61 +422,61 @@
             statusLabel: "Idle / Optional",
             waitTime: "N/A",
             x: 330, y: 410,
-            inputs: ["Incomplete Company Tax / VAT ID"],
-            outputs: ["Clarification email sent to buyer"],
+            inputs: ["Incomplete Tax / VAT ID"],
+            outputs: ["Clarification request dispatched"],
             checklist: ["Request valid VAT/EORI number", "Pause workflow until buyer response"],
-            doc: "CLARIFICATION-REQ-TEMPLATE.pdf",
+            doc: "Sample-Clarification-Request.pdf",
             history: ["Not triggered for Ref BLW-RFQ-2026-9041"]
           },
           {
             id: "e_o2c_3",
             stepNum: 3,
             title: "3. Technical Review",
-            role: "Valvetrain Lead (Vikram M.)",
+            role: "Valvetrain Lead Engineer (Sample Role)",
             execMode: "Approval Required",
             execClass: "exec-approval",
             status: "waiting",
-            statusLabel: "Waiting / Clarification",
+            statusLabel: "Waiting Technical Sign-off",
             waitTime: "45 min",
             x: 610, y: 160,
-            inputs: ["Stem Specs: SUH3 / 21-4N Bi-Metal", "LCN Salt Spray Nitriding Rating"],
+            inputs: ["Stem Specs: Standard Bi-Metallic (Sample)", "Nitriding & Finish Requirement"],
             outputs: ["Engineering Feasibility Sign-off", "Tolerance Verification Pass"],
-            checklist: ["Verify drawing dimensions against OEM specs", "Check Liquid Nitriding (LCN) salt spray 96h feasibility", "Confirm stem chrome plating thickness"],
-            doc: "BLW-TECH-SPEC-P220-REV2.pdf",
-            history: ["09:20 AM - Routed to Chief Engineer Vikram M.", "09:45 AM - Paused: Pending LCN nitriding tank capacity verification"]
+            checklist: ["Verify drawing dimensions against OEM specs (Sample)", "Check Nitriding & Surface Finish Feasibility (Sample)", "Confirm stem chrome plating thickness"],
+            doc: "Sample-Engineering-Spec-Sheet.pdf",
+            history: ["09:20 AM - Routed to Chief Engineer", "09:45 AM - Paused: Pending Technical Sign-off (Sample Gate)"]
           },
           {
             id: "e_o2c_3a",
             stepNum: "3-EX",
             title: "Branch 3A: Metallurgy Review",
-            role: "Lead Metallurgist",
+            role: "Metallurgy Specialist (Sample Role)",
             execMode: "Manual Task",
             execClass: "exec-manual",
             status: "active",
-            statusLabel: "Active Resolution",
+            statusLabel: "Active Review (Sample)",
             waitTime: "30 min",
             x: 610, y: 410,
-            inputs: ["Liquid Nitriding LCN 96h requirement"],
-            outputs: ["LCN Tank Batch Slot Approved for Sept 26"],
-            checklist: ["Verify bath chemical monitoring lab report", "Confirm Micro Vickers 850-1000 HV hardness target"],
-            doc: "LCN-METALLURGY-REPORT.pdf",
-            history: ["09:50 AM - Metallurgist Vikram M. reviewing bath chemical log"]
+            inputs: ["Nitriding rating & alloy specification"],
+            outputs: ["Metallurgy Batch Slot Sign-off"],
+            checklist: ["Verify bath chemical monitoring report", "Confirm Micro Vickers hardness target (Sample)"],
+            doc: "Sample-Metallurgy-Report.pdf",
+            history: ["09:50 AM - Metallurgy review active in simulation"]
           },
           {
             id: "e_o2c_4",
             stepNum: 4,
             title: "4. Pricing & Quotation",
-            role: "Export Sales Mgr (Rajesh V.)",
+            role: "Export Sales Manager (Sample Role)",
             execMode: "Approval Required",
             execClass: "exec-approval",
             status: "idle",
             statusLabel: "Pending Tech Sign-off",
             waitTime: "1.2 hrs avg",
             x: 890, y: 160,
-            inputs: ["Approved Unit Cost", "FOB Alexandria Port Freight Matrix"],
-            outputs: ["Formal PDF Quotation: BLW-QUOTE-2026-9041"],
-            checklist: ["Apply Tier-1 Export Volume Discount (5%)", "Verify 30-day price validity terms", "Generate formal PDF quotation preview"],
-            doc: "BLW-QUOTE-2026-9041.pdf",
+            inputs: ["Approved Unit Cost", "Shipping & Freight Matrix (Sample)"],
+            outputs: ["Formal Quotation Preview: BLW-QUOTE-2026-9041"],
+            checklist: ["Apply Volume Discount (Sample 5%)", "Verify 30-day price validity terms", "Generate quotation preview"],
+            doc: "Sample-Quotation-Preview.pdf",
             history: ["Awaiting completion of Technical Review"]
           },
           {
@@ -466,42 +493,42 @@
             inputs: ["Requested Discount > 8%"],
             outputs: ["Director Special Pricing Approval"],
             checklist: ["Review margin impact statement", "Sign off on special commercial terms"],
-            doc: "DISCOUNT-APPROVAL-GATE.pdf",
+            doc: "Sample-Discount-Approval.pdf",
             history: ["Standard 5% discount within rep authority"]
           },
           {
             id: "e_o2c_5",
             stepNum: 5,
             title: "5. Customer PO Check",
-            role: "Sales Operations",
+            role: "Commercial Operations (Sample Role)",
             execMode: "Rule-Based",
             execClass: "exec-rule",
             status: "idle",
             statusLabel: "Idle",
             waitTime: "2 hrs avg",
             x: 1170, y: 160,
-            inputs: ["Buyer PO Copy", "Approved Quotation BLW-QUOTE-2026-9041"],
+            inputs: ["Buyer Purchase Order Copy", "Approved Quotation BLW-QUOTE-2026-9041"],
             outputs: ["PO Match Verification Pass"],
-            checklist: ["Compare PO prices against approved quote", "Check payment terms (30% LC / 70% BL)", "Flag any discrepancy > 0%"],
-            doc: "CUSTOMER-PO-CHECKLIST.pdf",
+            checklist: ["Compare PO prices against approved quote", "Check payment terms agreement", "Flag any price or quantity discrepancy"],
+            doc: "Sample-PO-Verification.pdf",
             history: ["Pending customer quote acceptance"]
           },
           {
             id: "e_o2c_6",
             stepNum: 6,
             title: "6. Stock & Production",
-            role: "PPC / ERP Integration",
+            role: "Production & PPC (Target Integration)",
             execMode: "Future Integration",
             execClass: "exec-integration",
             status: "idle",
-            statusLabel: "Future ERP Integration",
+            statusLabel: "Target ERP Integration",
             waitTime: "4 hrs avg",
             x: 1450, y: 160,
             inputs: ["Sales Order Confirmation", "Stock Reserve Trigger"],
-            outputs: ["SAP Production Work Order WO-9904"],
-            checklist: ["Query warehouse stock API", "Create production batch work order", "Schedule CNC valve grinding machines"],
-            doc: "PRODUCTION-WORK-ORDER.pdf",
-            history: ["Phase 2: Will connect directly to BLW SAP ERP"]
+            outputs: ["Production Batch Work Order (Sample)"],
+            checklist: ["Query warehouse inventory API (Future Phase)", "Create production batch work order", "Schedule CNC valve grinding machines"],
+            doc: "Sample-Work-Order.pdf",
+            history: ["Phase 2: Target ERP software integration"]
           },
           {
             id: "e_o2c_6a",
@@ -514,68 +541,68 @@
             statusLabel: "Idle",
             waitTime: "N/A",
             x: 1450, y: 410,
-            inputs: ["SUH3 Bar Stock Shortage"],
-            outputs: ["Steel Mill Requisition Order"],
-            checklist: ["Check raw steel bar inventory", "Issue emergency procurement order"],
-            doc: "MATERIAL-REQUISITION-PO.pdf",
-            history: ["Raw bar stock currently available in inventory"]
+            inputs: ["Bar Stock Shortage Trigger"],
+            outputs: ["Steel Requisition Order"],
+            checklist: ["Check raw steel inventory", "Issue emergency procurement order"],
+            doc: "Sample-Material-Requisition.pdf",
+            history: ["Raw bar stock available in sample inventory"]
           },
           {
             id: "e_o2c_7",
             stepNum: 7,
             title: "7. Quality & Packing",
-            role: "QC Lab & Packing",
+            role: "QC Lab & Packing (Sample Role)",
             execMode: "Manual Task",
             execClass: "exec-manual",
             status: "idle",
             statusLabel: "Idle",
             waitTime: "1 Business Day",
             x: 1730, y: 160,
-            inputs: ["Finished Grinded Valves", "Micro Vickers Hardness Certificate"],
-            outputs: ["QC Inspection Certificate & Sea Packing"],
-            checklist: ["100% VMM & Profile Projector dimensional check", "Apply anti-rust VCI oil coating", "Pack into export wooden cases"],
-            doc: "QC-INSPECTION-REPORT.pdf",
+            inputs: ["Finished Grinded Valves", "QC Inspection Certificate"],
+            outputs: ["QC Inspection Sign-off & Sea Packing"],
+            checklist: ["Dimensional inspection (Sample)", "Apply anti-rust VCI oil coating", "Pack into export wooden cases"],
+            doc: "Sample-QC-Inspection-Report.pdf",
             history: ["Awaiting production batch completion"]
           },
           {
             id: "e_o2c_8",
             stepNum: 8,
             title: "8. Export Dispatch",
-            role: "Export Logistics Mgr",
+            role: "Export Logistics Manager (Sample Role)",
             execMode: "Manual Task",
             execClass: "exec-manual",
             status: "idle",
             statusLabel: "Idle",
             waitTime: "2 Days",
             x: 2010, y: 160,
-            inputs: ["Packed Cases", "Destination: Alexandria Port, Egypt"],
-            outputs: ["Bill of Lading & Customs Release"],
-            checklist: ["Generate Commercial Invoice & Packing List", "Handover to Freight Forwarder", "Upload Shipping Reference & BL"],
-            doc: "EXPORT-SHIPPING-DOCS.pdf",
+            inputs: ["Packed Cases", "Destination: Destination Port (Sample)"],
+            outputs: ["Shipping Documents & Handoff"],
+            checklist: ["Generate Commercial Invoice & Packing List (Sample)", "Handover to Freight Forwarder", "Upload Shipping Reference"],
+            doc: "Sample-Shipping-Docs.pdf",
             history: ["Awaiting QC inspection sign-off"]
           },
           {
             id: "e_o2c_9",
             stepNum: 9,
             title: "9. Invoice & Payment",
-            role: "Finance Account",
+            role: "Finance & Accounting (Target Integration)",
             execMode: "Future Integration",
             execClass: "exec-integration",
             status: "idle",
-            statusLabel: "Future Accounting Integration",
-            waitTime: "As per LC terms",
+            statusLabel: "Target Finance Integration",
+            waitTime: "As per agreed terms",
             x: 2290, y: 160,
-            inputs: ["Dispatched Shipment", "Payment Terms (LC)"],
+            inputs: ["Dispatched Shipment Record", "Agreed Payment Terms"],
             outputs: ["Payment Credit Confirmation"],
-            checklist: ["Issue formal export tax invoice", "Submit LC documents to bank", "Record payment receipt in ledger"],
-            doc: "TAX-INVOICE-SAMPLE.pdf",
-            history: ["Phase 2: Accounting software integration"]
+            checklist: ["Issue export tax invoice (Future Phase)", "Submit payment documents to bank", "Record payment receipt in ledger"],
+            doc: "Sample-Tax-Invoice.pdf",
+            history: ["Phase 2: Target accounting software integration"]
           },
           {
             id: "e_o2c_10",
             stepNum: 10,
             title: "10. Close & Learn",
-            role: "CRM & Sales Analytics",
+            role: "CRM & Analytics (Sample Role)",
             execMode: "Rule-Based",
             execClass: "exec-rule",
             status: "idle",
@@ -583,9 +610,9 @@
             waitTime: "Instant",
             x: 2570, y: 160,
             inputs: ["Completed Order Record"],
-            outputs: ["Account History Update & SLA Report"],
+            outputs: ["Account History Update & SLA Metrics"],
             checklist: ["Mark deal stage as Won/Completed", "Log cycle time metric (Website to Order)", "Schedule 30-day post-delivery check"],
-            doc: "DEAL-CLOSE-SUMMARY.pdf",
+            doc: "Sample-Close-Summary.pdf",
             history: ["Workflow cycle closure node"]
           }
         ],
@@ -614,7 +641,7 @@
           { id: "d2", stepNum: 2, title: "2. Technical Review", role: "Engineer", execMode: "Approval Required", execClass: "exec-approval", status: "completed", waitTime: "30 min", x: 340, y: 180 },
           { id: "d3", stepNum: 3, title: "3. Domestic Quote", role: "Sales Mgr", execMode: "Manual Task", execClass: "exec-manual", status: "completed", waitTime: "1 hr", x: 630, y: 180 },
           { id: "d4", stepNum: 4, title: "4. Customer PO", role: "Sales Ops", execMode: "Rule-Based", execClass: "exec-rule", status: "completed", waitTime: "2 hrs", x: 920, y: 180 },
-          { id: "d5", stepNum: 5, title: "5. Stock & Production", role: "PPC / ERP", execMode: "Future Integration", execClass: "exec-integration", status: "active", waitTime: "1 Day", x: 1210, y: 180 },
+          { id: "d5", stepNum: 5, title: "5. Stock & Production", role: "PPC / Target ERP", execMode: "Future Integration", execClass: "exec-integration", status: "active", waitTime: "1 Day", x: 1210, y: 180 },
           { id: "d6", stepNum: 6, title: "6. Quality Inspection", role: "QC Supervisor", execMode: "Manual Task", execClass: "exec-manual", status: "idle", waitTime: "4 hrs", x: 1500, y: 180 },
           { id: "d7", stepNum: 7, title: "7. Local Dispatch", role: "Logistics", execMode: "Manual Task", execClass: "exec-manual", status: "idle", waitTime: "1 Day", x: 1790, y: 180 },
           { id: "d8", stepNum: 8, title: "8. Invoice & Collection", role: "Accounts", execMode: "Future Integration", execClass: "exec-integration", status: "idle", waitTime: "30 Days", x: 2080, y: 180 }
@@ -648,9 +675,9 @@
         id: "capa",
         title: "Quality Issue / CAPA Workflow",
         nodes: [
-          { id: "c1", stepNum: 1, title: "1. Complaint / Defect", role: "QC Inspector", execMode: "Manual Task", execClass: "exec-manual", status: "completed", waitTime: "Instant", x: 50, y: 180 },
+          { id: "c1", stepNum: 1, title: "1. Defect Report", role: "QC Inspector", execMode: "Manual Task", execClass: "exec-manual", status: "completed", waitTime: "Instant", x: 50, y: 180 },
           { id: "c2", stepNum: 2, title: "2. Immediate Containment", role: "Plant QC Lead", execMode: "Approval Required", execClass: "exec-approval", status: "completed", waitTime: "1 hr", x: 340, y: 180 },
-          { id: "c3", stepNum: 3, title: "3. Root Cause 5-Why", role: "Quality Engineer", execMode: "Manual Task", execClass: "exec-manual", status: "active", waitTime: "1 Day", x: 630, y: 180 },
+          { id: "c3", stepNum: 3, title: "3. Root Cause Investigation", role: "Quality Engineer", execMode: "Manual Task", execClass: "exec-manual", status: "active", waitTime: "1 Day", x: 630, y: 180 },
           { id: "c4", stepNum: 4, title: "4. Corrective Action Plan", role: "Engineering Lead", execMode: "Approval Required", execClass: "exec-approval", status: "idle", waitTime: "2 Days", x: 920, y: 180 },
           { id: "c5", stepNum: 5, title: "5. Action Verification", role: "Auditor", execMode: "Manual Task", execClass: "exec-manual", status: "idle", waitTime: "5 Days", x: 1210, y: 180 },
           { id: "c6", stepNum: 6, title: "6. CAPA Closure", role: "VP Quality", execMode: "Rule-Based", execClass: "exec-rule", status: "idle", waitTime: "1 hr", x: 1500, y: 180 }
@@ -733,12 +760,10 @@
       const svg = document.getElementById("n8nSvgLayer");
       const minimap = document.getElementById("minimapNodes");
 
-      // Clear existing nodes (except SVG)
       area.querySelectorAll(".n8n-node").forEach(el => el.remove());
       svg.innerHTML = "";
       minimap.innerHTML = "";
 
-      // Render Nodes
       template.nodes.forEach(node => {
         const div = document.createElement("div");
         div.className = `n8n-node ${node.status} ${selectedNodeId === node.id ? 'selected' : ''}`;
@@ -766,13 +791,11 @@
         `;
         area.appendChild(div);
 
-        // Minimap preview dot
         const dot = document.createElement("div");
-        dot.style.cssText = `position:absolute; left:${node.x / 18}px; top:${node.y / 12}px; width:6px; height:6px; border-radius:50%; background:${node.status === 'completed' ? '#10B981' : (node.status === 'active' || node.status === 'waiting' ? '#F59E0B' : '#475569')};`;
+        dot.style.cssText = `position:absolute; left:${node.x / 18}px; top:${node.y / 12}px; width:6px; height:6px; border-radius:50%; background:${node.status === 'completed' ? '#059669' : (node.status === 'active' || node.status === 'waiting' ? '#D97706' : '#94A3B8')};`;
         minimap.appendChild(dot);
       });
 
-      // Render SVG Bezier Connections
       template.connections.forEach(conn => {
         const fromNode = template.nodes.find(n => n.id === conn.from);
         const toNode = template.nodes.find(n => n.id === conn.to);
@@ -800,12 +823,10 @@
       const node = template.nodes.find(n => n.id === nodeId);
       if (!node) return;
 
-      // Update node border visual
       document.querySelectorAll(".n8n-node").forEach(el => el.classList.remove("selected"));
       const nodeEl = document.getElementById(`node_${nodeId}`);
       if (nodeEl) nodeEl.classList.add("selected");
 
-      // Render side detail panel content
       const panel = document.getElementById("n8nDetailPanel");
       const title = document.getElementById("detailNodeTitle");
       const sub = document.getElementById("detailNodeSubtitle");
@@ -816,8 +837,8 @@
 
       body.innerHTML = `
         <div>
-          <div class="n8n-detail-section-title"><i class="fa-solid fa-gear"></i> Execution Profile</div>
-          <div style="background:var(--bg-subtle); padding:0.85rem; border-radius:6px; font-size:0.825rem;">
+          <div class="n8n-detail-section-title"><i class="fa-solid fa-gear"></i> Execution Profile (Sample)</div>
+          <div style="background:var(--bg-subtle); padding:0.85rem; border-radius:6px; font-size:0.825rem; border:1px solid var(--border-color);">
             <div style="margin-bottom:0.4rem;"><strong>Execution Mode:</strong> <span class="exec-badge ${node.execClass}">${node.execMode}</span></div>
             <div style="margin-bottom:0.4rem;"><strong>Assigned Role:</strong> ${node.role}</div>
             <div style="margin-bottom:0.4rem;"><strong>Current Status:</strong> <span class="status-badge st-${node.status === 'completed' ? 'demonstrated' : 'needs-data'}">${node.statusLabel || node.status}</span></div>
@@ -826,21 +847,21 @@
         </div>
 
         <div>
-          <div class="n8n-detail-section-title"><i class="fa-solid fa-arrow-down-right-across-line"></i> Inputs & Data Captured</div>
+          <div class="n8n-detail-section-title"><i class="fa-solid fa-arrow-down-right-across-line"></i> Inputs & Data Captured (Fictional Example)</div>
           <ul style="padding-left:1.25rem; font-size:0.825rem; color:var(--text-main); margin:0;">
             ${(node.inputs || ['Sample RFQ Ingestion Data']).map(i => `<li style="margin-bottom:0.25rem;">${i}</li>`).join('')}
           </ul>
         </div>
 
         <div>
-          <div class="n8n-detail-section-title"><i class="fa-solid fa-arrow-up-right-from-square"></i> Outputs Produced</div>
+          <div class="n8n-detail-section-title"><i class="fa-solid fa-arrow-up-right-from-square"></i> Outputs Produced (Sample)</div>
           <ul style="padding-left:1.25rem; font-size:0.825rem; color:var(--accent-success); margin:0;">
             ${(node.outputs || ['Verified Record Output']).map(o => `<li style="margin-bottom:0.25rem;">${o}</li>`).join('')}
           </ul>
         </div>
 
         <div>
-          <div class="n8n-detail-section-title"><i class="fa-solid fa-list-check"></i> Operational Verification Checklist</div>
+          <div class="n8n-detail-section-title"><i class="fa-solid fa-list-check"></i> Verification Checklist (Sample)</div>
           <div>
             ${(node.checklist || ['Review items', 'Sign off task']).map(c => `
               <div class="n8n-checklist-item">
@@ -851,24 +872,24 @@
         </div>
 
         <div>
-          <div class="n8n-detail-section-title"><i class="fa-solid fa-paperclip"></i> Associated Document / Spec</div>
-          <div style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-subtle); padding:0.6rem 0.85rem; border-radius:4px; font-size:0.8rem;">
-            <span><i class="fa-solid fa-file-pdf text-danger"></i> <code>${node.doc || 'SAMPLE-ATTACHMENT.pdf'}</code></span>
-            <button class="btn btn-xs btn-outline" onclick="alert('Viewing sample demo document: ${node.doc || 'ATTACHMENT.pdf'}')">Preview</button>
+          <div class="n8n-detail-section-title"><i class="fa-solid fa-paperclip"></i> Associated Document (Illustration)</div>
+          <div style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-subtle); padding:0.6rem 0.85rem; border-radius:4px; font-size:0.8rem; border:1px solid var(--border-color);">
+            <span><i class="fa-solid fa-file-pdf text-danger"></i> <code>${node.doc || 'Sample-Illustration.pdf'}</code></span>
+            <button class="btn btn-xs btn-outline" onclick="alert('Viewing fictional sample document preview: ${node.doc || 'Illustration.pdf'}\nNote: File is a demonstration placeholder.')">Preview</button>
           </div>
         </div>
 
         ${node.id === 'e_o2c_3' || node.id === 'e_o2c_3a' ? `
-          <div style="background:rgba(245, 158, 11, 0.1); border:1px solid rgba(245, 158, 11, 0.3); padding:0.85rem; border-radius:6px;">
-            <strong style="color:#F59E0B; font-size:0.825rem;"><i class="fa-solid fa-triangle-exclamation"></i> Action Required: Technical Clarification</strong>
-            <p style="font-size:0.775rem; color:var(--text-muted); margin:0.3rem 0 0.75rem;">Confirm Liquid Nitriding (LCN 96h salt spray) tank batch schedule for 5,000 sets Bajaj Pulsar 220 valves.</p>
-            <button class="btn btn-primary btn-sm btn-full" onclick="resolveClarificationTask()"><i class="fa-solid fa-check-double"></i> Resolve Clarification & Advance Workflow</button>
+          <div style="background:#fffbe6; border:1px solid #ffe58f; padding:0.85rem; border-radius:6px;">
+            <strong style="color:#d48806; font-size:0.825rem;"><i class="fa-solid fa-triangle-exclamation"></i> Action Required: Technical Verification (Sample Gate)</strong>
+            <p style="font-size:0.775rem; color:#595959; margin:0.3rem 0 0.75rem;">Simulated technical verification gate for valve stem tolerances and nitriding finish.</p>
+            <button class="btn btn-primary btn-sm btn-full" onclick="resolveClarificationTask()"><i class="fa-solid fa-check-double"></i> Resolve Technical Gate & Advance Workflow</button>
           </div>
         ` : ''}
 
         <div>
-          <div class="n8n-detail-section-title"><i class="fa-solid fa-history"></i> Audit Trail History</div>
-          <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono); background:var(--bg-main); padding:0.75rem; border-radius:4px; max-height:120px; overflow-y:auto;">
+          <div class="n8n-detail-section-title"><i class="fa-solid fa-history"></i> Audit Trail History (Local Simulation)</div>
+          <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono); background:var(--bg-subtle); padding:0.75rem; border-radius:4px; max-height:120px; overflow-y:auto; border:1px solid var(--border-color);">
             ${(node.history || ['09:00 AM - System initiated step']).map(h => `<div style="margin-bottom:0.3rem;">&bull; ${h}</div>`).join('')}
           </div>
         </div>
@@ -883,7 +904,7 @@
       document.querySelectorAll(".n8n-node").forEach(el => el.classList.remove("selected"));
     }
 
-    // "FOLLOW SAMPLE ORDER" INTERACTIVE GUIDED MODE (BLW-RFQ-2026-9041)
+    // "FOLLOW SAMPLE ORDER" SIMULATION MODE
     function runSampleOrderSimulation() {
       if (currentTemplateId !== "export_o2c") {
         document.getElementById("workflowTemplateSelect").value = "export_o2c";
@@ -891,28 +912,25 @@
       }
 
       isSimulating = true;
-      alert("Launching 'Follow Sample Order' Simulation for Inquiry BLW-RFQ-2026-9041 (Cairo Moto Parts Ltd, Egypt)...\n\nThe order will advance step-by-step and pause at Step 3 (Technical Review) for engineer clarification!");
+      alert("Launching 'Follow Sample Order' Front-End Simulation for Inquiry BLW-RFQ-2026-9041 (Cairo Moto Parts Ltd, Egypt Sample)...\n\nThe browser simulation will advance step-by-step and pause at Step 3 (Technical Review) for sample engineering sign-off.");
 
-      // 1. Highlight Node 1
       selectCanvasNode("e_o2c_1");
       
       setTimeout(() => {
-        // 2. Advance to Node 2
         selectCanvasNode("e_o2c_2");
         
         setTimeout(() => {
-          // 3. Pause at Node 3 & Branch 3A (Technical Review Clarification)
           const template = WORKFLOW_TEMPLATES["export_o2c"];
           const node3 = template.nodes.find(n => n.id === "e_o2c_3");
           const node3a = template.nodes.find(n => n.id === "e_o2c_3a");
           
-          if (node3) { node3.status = "waiting"; node3.statusLabel = "Waiting Clarification"; }
+          if (node3) { node3.status = "waiting"; node3.statusLabel = "Waiting Sign-off"; }
           if (node3a) { node3a.status = "active"; node3a.statusLabel = "Active Review"; }
           
           renderCanvasNodes();
           selectCanvasNode("e_o2c_3");
-        }, 1500);
-      }, 1500);
+        }, 1200);
+      }, 1200);
     }
 
     function resolveClarificationTask() {
@@ -921,23 +939,31 @@
       const node3a = template.nodes.find(n => n.id === "e_o2c_3a");
       const node4 = template.nodes.find(n => n.id === "e_o2c_4");
 
-      if (node3) { node3.status = "completed"; node3.statusLabel = "Approved"; }
-      if (node3a) { node3a.status = "completed"; node3a.statusLabel = "LCN Approved"; }
-      if (node4) { node4.status = "active"; node4.statusLabel = "In Pricing Review"; }
+      if (node3) { 
+        node3.status = "completed"; 
+        node3.statusLabel = "Approved"; 
+        node3.history.push("09:55 AM - Technical verification sign-off completed (Sample Simulation)");
+      }
+      if (node3a) { 
+        node3a.status = "completed"; 
+        node3a.statusLabel = "Approved"; 
+      }
+      if (node4) { 
+        node4.status = "active"; 
+        node4.statusLabel = "In Pricing Review"; 
+      }
 
-      // Activate connecting path
       const conn = template.connections.find(c => c.from === "e_o2c_3" && c.to === "e_o2c_4");
       if (conn) conn.active = true;
 
       renderCanvasNodes();
       selectCanvasNode("e_o2c_4");
 
-      alert("✅ Technical Clarification Resolved!\nValvetrain Lead Engineer Vikram M. confirmed nitriding batch slot for Sept 26.\n\nWorkflow advanced to Step 4: Pricing & Quotation!");
+      alert("✅ Technical Sign-off Resolved in Front-End Simulation!\nValvetrain Engineering sign-off completed.\n\nWorkflow advanced to Step 4: Pricing & Quotation!");
     }
 
     function resetWorkflowCanvas() {
       isSimulating = false;
-      // Reset statuses for Export O2C
       const template = WORKFLOW_TEMPLATES["export_o2c"];
       template.nodes.forEach(n => {
         if (n.id === "e_o2c_1" || n.id === "e_o2c_2") {
@@ -953,14 +979,12 @@
       loadSelectedWorkflowTemplate();
     }
 
-    // CANVAS ZOOM CONTROLS
     function zoomCanvas(delta) {
       canvasZoom = Math.max(0.6, Math.min(1.5, canvasZoom + delta));
       document.getElementById("n8nCanvasArea").style.transform = `scale(${canvasZoom})`;
       document.getElementById("zoomLabel").innerText = `${Math.round(canvasZoom * 100)}%`;
     }
 
-    // LIST VIEW TABLE RENDER & FILTER
     function toggleGraphListView() {
       isGraphView = !isGraphView;
       const graph = document.getElementById("n8nGraphView");
@@ -1003,11 +1027,9 @@
     }
 
     function filterListView() {
-      // Basic filtering for list view UI
       renderListViewTable();
     }
 
-    // TRIAGE STREAM LOGIC
     const DEMO_LEADS = [
       { refId: "BLW-RFQ-2026-9041", buyer: "Cairo Moto Parts Ltd (Ahmed Hassan)", country: "Egypt", channel: "RFQ Basket", skus: "Bajaj Pulsar 220 Valves + TVS Apache Guides", qty: "5,000 sets", status: "New", statusClass: "st-new" },
       { refId: "BLW-AI-2026-8812", buyer: "Autopartes del Sol (Carlos Ruiz)", country: "Colombia", channel: "Aditya AI Chatbot", skus: "Liquid Nitrided Valve Set (Pulsar NS200)", qty: "2,500 sets", status: "Technical Review", statusClass: "st-review" },
@@ -1021,7 +1043,7 @@
       userRFQs.forEach(rfq => {
         DEMO_LEADS.unshift({
           refId: rfq.refId || "BLW-RFQ-LIVE",
-          buyer: rfq.name || "Live Web Inquiry",
+          buyer: rfq.name || "Live Web Inquiry Sample",
           country: rfq.country || "International",
           channel: rfq.channel || "RFQ Basket",
           skus: rfq.skus || "Custom Component Request",
@@ -1043,7 +1065,7 @@
       filtered.forEach(lead => {
         const row = document.createElement("tr");
         row.innerHTML = `
-          <td><code style="color:var(--accent-cyan); font-weight:700;">${lead.refId}</code></td>
+          <td><code style="color:var(--accent-primary); font-weight:700;">${lead.refId}</code></td>
           <td><strong>${lead.buyer}</strong></td>
           <td><i class="fa-solid fa-location-dot text-orange"></i> ${lead.country}</td>
           <td><span class="p-tag p-tag-blue">${lead.channel}</span></td>
@@ -1069,8 +1091,12 @@
     function viewLeadDetail(refId) {
       const lead = DEMO_LEADS.find(l => l.refId === refId);
       if (!lead) return;
-      alert(`DEMO LEAD DETAIL [${lead.refId}]\nBuyer: ${lead.buyer}\nCountry: ${lead.country}\nSKUs: ${lead.skus}\nQuantity: ${lead.qty}\nStatus: ${lead.status}\n\nNote: All demo leads are safely persisted in local demo state and NOT sent to live third-party inboxes.`);
+      alert(`DEMO LEAD DETAIL [${lead.refId}]\nBuyer: ${lead.buyer}\nCountry: ${lead.country}\nSKUs: ${lead.skus}\nQuantity: ${lead.qty}\nStatus: ${lead.status}\n\nNote: All demo leads are fictional demonstration samples persisted in local browser memory and NOT sent to live third-party inboxes.`);
     }
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeNodeDetailPanel();
+    });
   </script>
 </body>
 </html>
