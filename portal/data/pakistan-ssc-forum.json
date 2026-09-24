@@ -1,0 +1,1746 @@
+{
+  "version": 1,
+  "sku": "pakistan-ssc",
+  "title": "Grade 10",
+  "displayName": "Pakistan · Grade 10",
+  "generated_at": "2026-07-13T12:21:29.734212+00:00",
+  "locale": "pk",
+  "threads": [
+    {
+      "id": "thr_pakistan-ssc_sound_000",
+      "title": "Past paper question on Sound — which formula do you use first?",
+      "subject": "physics",
+      "chapter": "sound",
+      "chapter_title": "Sound",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Scored poorly on the last Sound quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-11T08:44:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Official syllabus lists Sound as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-12T00:02:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I keep a 'mistake log' only for Sound. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-12T04:50:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_electrostatics_001",
+      "title": "Is Electrostatics more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "electrostatics",
+      "chapter_title": "Electrostatics",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Starting from zero on Electrostatics after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-25T13:04:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Don't ignore the worked examples. For Electrostatics they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-25T14:06:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_hydrocarbons_002",
+      "title": "Is Hydrocarbons more theory-heavy or numerical for our board?",
+      "subject": "chemistry",
+      "chapter": "hydrocarbons",
+      "chapter_title": "Hydrocarbons",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Scored poorly on the last Hydrocarbons quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-22T17:47:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-22T23:08:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Someone in my class made a mind map for Hydrocarbons — copying that format helped a lot.",
+          "created_at": "2026-06-23T16:39:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Hydrocarbons set.",
+          "created_at": "2026-06-24T09:53:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I record myself explaining Hydrocarbons out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-24T17:23:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I keep a 'mistake log' only for Hydrocarbons. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-25T09:27:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Thanks — trying that tonight for Hydrocarbons.",
+          "created_at": "2026-06-25T19:08:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Hydrocarbons.",
+          "created_at": "2026-06-26T08:39:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Hydrocarbons marks.",
+          "created_at": "2026-06-26T20:34:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Hydrocarbons.",
+          "created_at": "2026-06-26T22:41:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_probability_003",
+      "title": "Past paper question on Probability — which formula do you use first?",
+      "subject": "mathematics",
+      "chapter": "probability",
+      "chapter_title": "Probability",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Group chat from school is quiet on Probability. Hoping this forum has clearer answers.",
+          "created_at": "2026-07-09T23:24:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Not proud of it, but I left Probability late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-10T02:16:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Official syllabus lists Probability as core — revise worked examples from your textbook.",
+          "created_at": "2026-07-10T16:24:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Honestly I skipped ahead then came back — Probability clicked after seeing later examples.",
+          "created_at": "2026-07-11T00:34:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-11T04:22:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Our senior shared last year's notes on Probability; still accurate for the current syllabus.",
+          "created_at": "2026-07-11T22:29:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_geometrical-optics_004",
+      "title": "Sharing my Geometrical Optics mistake from yesterday's quiz — what did I miss?",
+      "subject": "physics",
+      "chapter": "geometrical-optics",
+      "chapter_title": "Geometrical Optics",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Our teacher hinted Geometrical Optics is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-28T15:04:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Not proud of it, but I left Geometrical Optics late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-29T05:17:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-29T20:41:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Geometrical Optics.",
+          "created_at": "2026-06-30T06:47:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Do the odd-numbered textbook exercises for Geometrical Optics; answers are usually in the back.",
+          "created_at": "2026-06-30T14:36:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I write every Geometrical Optics formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-30T20:03:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_functions_005",
+      "title": "Is Functions more theory-heavy or numerical for our board?",
+      "subject": "mathematics",
+      "chapter": "functions",
+      "chapter_title": "Functions",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Revision week — Functions is the weak spot on my checklist for Mathematics. How are you tackling it?",
+          "created_at": "2026-07-01T19:09:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Not proud of it, but I left Functions late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-01T20:17:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Functions.",
+          "created_at": "2026-07-01T22:39:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Functions.",
+          "created_at": "2026-07-02T07:14:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Don't ignore the worked examples. For Functions they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-03T01:36:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Functions question though.",
+          "created_at": "2026-07-03T14:14:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Functions idea.",
+          "created_at": "2026-07-03T23:24:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I keep a 'mistake log' only for Functions. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-04T09:31:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_current-electricity_006",
+      "title": "How are you preparing Current Electricity for the final exam?",
+      "subject": "physics",
+      "chapter": "current-electricity",
+      "chapter_title": "Current Electricity",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Got stuck on a homework problem from Current Electricity. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-16T05:30:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I keep a 'mistake log' only for Current Electricity. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-16T17:47:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Current Electricity unit.",
+          "created_at": "2026-06-16T19:55:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Current Electricity marks.",
+          "created_at": "2026-06-17T14:39:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-18T02:59:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I write every Current Electricity formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-18T10:04:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_biotechnology_007",
+      "title": "Stuck on Biotechnology — anyone have a clear way to revise this?",
+      "subject": "biology",
+      "chapter": "biotechnology",
+      "chapter_title": "Biotechnology",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Making flashcards for Biotechnology tonight — what should absolutely be on them?",
+          "created_at": "2026-06-17T20:05:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Biotechnology already.",
+          "created_at": "2026-06-18T02:58:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I keep a 'mistake log' only for Biotechnology. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-18T13:49:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Biotechnology.",
+          "created_at": "2026-06-19T07:18:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-06-19T21:48:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Whiteboard + friend teaching me Biotechnology beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-20T14:28:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Biotechnology fixed most of it.",
+          "created_at": "2026-06-21T05:15:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Biotechnology set.",
+          "created_at": "2026-06-21T18:24:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_reproduction_008",
+      "title": "Anyone else find Reproduction denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "reproduction",
+      "chapter_title": "Reproduction",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Tried three YouTube explainers for Reproduction and still confused. Prefer textbook-first approaches? (Grade 10)",
+          "created_at": "2026-06-19T00:53:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I keep a 'mistake log' only for Reproduction. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-19T07:58:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Reproduction fixed most of it.",
+          "created_at": "2026-06-20T02:34:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Reproduction.",
+          "created_at": "2026-06-20T06:54:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Reproduction — the diagrams helped.",
+          "created_at": "2026-06-20T21:17:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_electromagnetism_009",
+      "title": "Is Electromagnetism more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "electromagnetism",
+      "chapter_title": "Electromagnetism",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Our teacher hinted Electromagnetism is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-25T18:50:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Electromagnetism already.",
+          "created_at": "2026-06-26T08:54:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Check units and significant figures on every Electromagnetism numerical before you move on.",
+          "created_at": "2026-06-26T11:25:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Not proud of it, but I left Electromagnetism late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-27T00:54:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_atomic-physics_010",
+      "title": "Teacher said Atomic Physics will definitely show up — panic mode?",
+      "subject": "physics",
+      "chapter": "atomic-physics",
+      "chapter_title": "Atomic Physics",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Is it normal that Atomic Physics takes longer than neighboring chapters in Physics?",
+          "created_at": "2026-06-27T10:26:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Atomic Physics.",
+          "created_at": "2026-06-27T21:55:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-28T13:57:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_genetics_011",
+      "title": "Who already finished Genetics? Worth starting early?",
+      "subject": "biology",
+      "chapter": "genetics",
+      "chapter_title": "Genetics",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Our teacher hinted Genetics is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-07-04T03:47:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Not proud of it, but I left Genetics late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-04T10:10:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Genetics unit.",
+          "created_at": "2026-07-04T16:53:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Genetics fixed most of it.",
+          "created_at": "2026-07-05T02:02:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Genetics.",
+          "created_at": "2026-07-05T03:20:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I write every Genetics formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-05T19:55:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_biochemistry_012",
+      "title": "Is Biochemistry more theory-heavy or numerical for our board?",
+      "subject": "chemistry",
+      "chapter": "biochemistry",
+      "chapter_title": "Biochemistry",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Is it normal that Biochemistry takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-07-04T00:21:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Not proud of it, but I left Biochemistry late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-04T17:25:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I record myself explaining Biochemistry out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-05T09:41:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Our senior shared last year's notes on Biochemistry; still accurate for the current syllabus.",
+          "created_at": "2026-07-06T01:03:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Someone in my class made a mind map for Biochemistry — copying that format helped a lot.",
+          "created_at": "2026-07-06T08:25:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_homeostasis_013",
+      "title": "Concept check: Homeostasis before the mock test",
+      "subject": "biology",
+      "chapter": "homeostasis",
+      "chapter_title": "Homeostasis",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I can recite definitions for Homeostasis but freeze on application questions. Same for anyone? (Grade 10)",
+          "created_at": "2026-06-11T01:55:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Homeostasis unit.",
+          "created_at": "2026-06-11T20:00:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Honestly I skipped ahead then came back — Homeostasis clicked after seeing later examples.",
+          "created_at": "2026-06-12T06:50:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "I keep a 'mistake log' only for Homeostasis. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-12T20:21:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Short sessions beat marathon cramming for Homeostasis. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-13T07:48:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_sets_014",
+      "title": "Sharing my Sets mistake from yesterday's quiz — what did I miss?",
+      "subject": "mathematics",
+      "chapter": "sets",
+      "chapter_title": "Sets",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Tried three YouTube explainers for Sets and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-10T21:36:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Someone in my class made a mind map for Sets — copying that format helped a lot.",
+          "created_at": "2026-06-11T01:45:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Sets unit.",
+          "created_at": "2026-06-11T09:55:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "I record myself explaining Sets out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-11T22:12:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Sets.",
+          "created_at": "2026-06-12T15:05:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_periodic-table_015",
+      "title": "Quick poll: how many hours are you giving Periodic Table this week?",
+      "subject": "chemistry",
+      "chapter": "periodic-table",
+      "chapter_title": "Periodic Table",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Revision week — Periodic Table is the weak spot on my checklist for Chemistry. How are you tackling it? (Grade 10)",
+          "created_at": "2026-06-15T00:42:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Check units and significant figures on every Periodic Table numerical before you move on.",
+          "created_at": "2026-06-15T16:14:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Periodic Table.",
+          "created_at": "2026-06-16T03:03:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_ecology_016",
+      "title": "Is Ecology more theory-heavy or numerical for our board?",
+      "subject": "biology",
+      "chapter": "ecology",
+      "chapter_title": "Ecology",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Starting from zero on Ecology after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-16T07:38:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Ecology fixed most of it.",
+          "created_at": "2026-06-16T17:28:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Our senior shared last year's notes on Ecology; still accurate for the current syllabus.",
+          "created_at": "2026-06-17T01:59:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_evolution_017",
+      "title": "Concept check: Evolution before the mock test",
+      "subject": "biology",
+      "chapter": "evolution",
+      "chapter_title": "Evolution",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "We just started Evolution in class and I'm lost on the basics. Any tips before I dig into numericals? (Grade 10)",
+          "created_at": "2026-06-18T13:31:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Evolution marks.",
+          "created_at": "2026-06-18T19:08:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Evolution.",
+          "created_at": "2026-06-19T09:50:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_algebra_018",
+      "title": "Our class test had a tricky Mathematics question from Algebra",
+      "subject": "mathematics",
+      "chapter": "algebra",
+      "chapter_title": "Algebra",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Group chat from school is quiet on Algebra. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-23T07:43:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Algebra.",
+          "created_at": "2026-06-23T10:01:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Algebra — the diagrams helped.",
+          "created_at": "2026-06-23T11:33:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Past papers > notes for me on Algebra. Pattern recognition beats rereading.",
+          "created_at": "2026-06-23T23:39:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Do the odd-numbered textbook exercises for Algebra; answers are usually in the back.",
+          "created_at": "2026-06-24T00:47:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Algebra.",
+          "created_at": "2026-06-24T09:20:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "I keep a 'mistake log' only for Algebra. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-24T16:52:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Mark scheme language for Algebra is specific — practice writing to that style.",
+          "created_at": "2026-06-24T21:36:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Anyone else want to sync study times for Algebra this week?",
+          "created_at": "2026-06-24T23:09:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Algebra question though.",
+          "created_at": "2026-06-25T16:39:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_environmental-chemistry_019",
+      "title": "Anyone else find Environmental Chemistry denser than the rest of Chemistry?",
+      "subject": "chemistry",
+      "chapter": "environmental-chemistry",
+      "chapter_title": "Environmental Chemistry",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "We just started Environmental Chemistry in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-19T17:01:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Not proud of it, but I left Environmental Chemistry late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-20T08:31:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Whiteboard + friend teaching me Environmental Chemistry beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-20T09:49:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Environmental Chemistry.",
+          "created_at": "2026-06-20T21:41:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Exam boards repeat similar Chemistry patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-06-21T02:21:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Environmental Chemistry question though.",
+          "created_at": "2026-06-21T21:14:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Environmental Chemistry marks.",
+          "created_at": "2026-06-22T05:54:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_coordination_020",
+      "title": "How are you preparing Coordination for the final exam?",
+      "subject": "biology",
+      "chapter": "coordination",
+      "chapter_title": "Coordination",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Our teacher hinted Coordination is high-weight this year. Looking for a realistic study plan. (Grade 10)",
+          "created_at": "2026-06-16T02:55:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Not proud of it, but I left Coordination late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-16T06:39:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Coordination idea.",
+          "created_at": "2026-06-17T01:31:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Coordination.",
+          "created_at": "2026-06-17T20:19:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-18T02:49:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "I record myself explaining Coordination out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-18T20:51:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_chemical-bonding_021",
+      "title": "Past paper question on Chemical Bonding — which formula do you use first?",
+      "subject": "chemistry",
+      "chapter": "chemical-bonding",
+      "chapter_title": "Chemical Bonding",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Scored poorly on the last Chemical Bonding quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-13T20:21:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Honestly I skipped ahead then came back — Chemical Bonding clicked after seeing later examples.",
+          "created_at": "2026-06-14T11:25:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-14T20:42:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Chemical Bonding marks.",
+          "created_at": "2026-06-15T11:18:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I record myself explaining Chemical Bonding out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-16T04:02:29.734212+00:00"
+        },
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Short sessions beat marathon cramming for Chemical Bonding. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-16T18:07:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_coordinate-geometry_022",
+      "title": "I keep mixing up steps in Coordinate Geometry. What helped you?",
+      "subject": "mathematics",
+      "chapter": "coordinate-geometry",
+      "chapter_title": "Coordinate Geometry",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Making flashcards for Coordinate Geometry tonight — what should absolutely be on them?",
+          "created_at": "2026-06-17T12:34:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Coordinate Geometry — the diagrams helped.",
+          "created_at": "2026-06-17T22:57:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Don't ignore the worked examples. For Coordinate Geometry they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-18T09:42:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "That sequencing (theory then numericals) matches what our teacher said too.",
+          "created_at": "2026-06-18T23:33:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Coordinate Geometry.",
+          "created_at": "2026-06-19T06:33:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Coordinate Geometry.",
+          "created_at": "2026-06-19T20:08:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Whiteboard + friend teaching me Coordinate Geometry beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-20T10:27:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Coordinate Geometry problem cold.",
+          "created_at": "2026-06-21T03:06:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_organic-chemistry_023",
+      "title": "Past paper question on Organic Chemistry — which formula do you use first?",
+      "subject": "chemistry",
+      "chapter": "organic-chemistry",
+      "chapter_title": "Organic Chemistry",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Past paper had two weird Organic Chemistry items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-04T22:51:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Organic Chemistry idea.",
+          "created_at": "2026-07-05T16:43:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Organic Chemistry problem cold.",
+          "created_at": "2026-07-06T01:17:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Honestly I skipped ahead then came back — Organic Chemistry clicked after seeing later examples.",
+          "created_at": "2026-07-06T17:11:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Do the odd-numbered textbook exercises for Organic Chemistry; answers are usually in the back.",
+          "created_at": "2026-07-07T08:00:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_quadratic-equations_024",
+      "title": "Best resources for Quadratic Equations? Textbook vs online notes",
+      "subject": "mathematics",
+      "chapter": "quadratic-equations",
+      "chapter_title": "Quadratic Equations",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Group chat from school is quiet on Quadratic Equations. Hoping this forum has clearer answers.",
+          "created_at": "2026-07-07T09:01:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Don't ignore the worked examples. For Quadratic Equations they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-07T21:36:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Quadratic Equations.",
+          "created_at": "2026-07-08T04:07:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Quadratic Equations idea.",
+          "created_at": "2026-07-08T05:14:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Appreciate the tip. Going to redo my notes for Quadratic Equations from scratch.",
+          "created_at": "2026-07-08T20:43:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "If you cannot explain Quadratic Equations to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-07-09T06:23:29.734212+00:00"
+        },
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Quadratic Equations already.",
+          "created_at": "2026-07-10T00:45:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_simple-harmonic-motion_025",
+      "title": "Sharing my Simple Harmonic Motion mistake from yesterday's quiz — what did I miss?",
+      "subject": "physics",
+      "chapter": "simple-harmonic-motion",
+      "chapter_title": "Simple Harmonic Motion",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_aisha_khan",
+          "author_name": "Aisha Khan",
+          "author_role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg",
+          "body": "Our teacher hinted Simple Harmonic Motion is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-22T17:08:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Break Simple Harmonic Motion into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-22T22:33:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Simple Harmonic Motion already.",
+          "created_at": "2026-06-23T08:40:29.734212+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_pakistan-ssc_trigonometry_026",
+      "title": "Sharing my Trigonometry mistake from yesterday's quiz — what did I miss?",
+      "subject": "mathematics",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "track": "pakistan-ssc",
+      "grade": "Grade 10",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_bilal_ahmed",
+          "author_name": "Bilal Ahmed",
+          "author_role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg",
+          "body": "Tried three YouTube explainers for Trigonometry and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-07-07T07:12:29.734212+00:00"
+        },
+        {
+          "author_id": "s_hassan_ali",
+          "author_name": "Hassan Ali",
+          "author_role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg",
+          "body": "Not proud of it, but I left Trigonometry late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-07T11:17:29.734212+00:00"
+        },
+        {
+          "author_id": "t_sana_malik",
+          "author_name": "Sana Malik",
+          "author_role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg",
+          "body": "Check units and significant figures on every Trigonometry numerical before you move on.",
+          "created_at": "2026-07-07T18:08:29.734212+00:00"
+        }
+      ]
+    }
+  ]
+}

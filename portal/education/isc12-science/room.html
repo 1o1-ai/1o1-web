@@ -1,0 +1,88 @@
+<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>ISC-Class-XII-Science · Study Room</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/theme.css?v=saas-layout-19" />
+  <link rel="stylesheet" href="../../assets/portal.css?v=11" />
+  <link rel="stylesheet" href="../../assets/education-layout.css" />
+  <link rel="stylesheet" href="../cbse10/cbse10-study-room.css" />
+  <link rel="stylesheet" href="isc12-science-study-room.css" />
+  <link rel="stylesheet" href="../../assets/cbse-official-books.css" />
+</head>
+<body class="portal-page study-room-page student-ambience">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="lamp-glow" aria-hidden="true"></div>
+
+  <header class="portal-header" id="mainHeader">
+    <a class="back-link" href="index.html">← Hub</a>
+    <a href="/portal/education/index.html" class="universe-top-brand" style="text-decoration: none; text-align: center; flex: 1;">
+      <strong>Brahmexa</strong>
+      <span style="display: block; font-size: 0.7rem; color: var(--cyan-light);">Anyo Academy</span>
+    </a>
+    <span class="sr-open-badge">Open</span>
+  </header>
+
+  <main class="portal-main sr-main">
+    <section id="phaseSubject" class="sr-phase sr-phase-subject">
+      <div id="srLoadError" class="sr-load-error hidden" role="alert"></div>
+      <p class="sr-phase-lead">Choose your subject</p>
+      <div class="sr-subject-circles" id="subjectCircles"></div>
+    </section>
+
+    <section id="phaseChapter" class="sr-phase hidden">
+      <p class="sr-phase-lead" id="chapterLead">Select one chapter</p>
+      <div class="sr-chapter-grid" id="chapterGrid"></div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backToSubject">← Change subject</button>
+    </section>
+
+    <section id="phaseStudy" class="sr-phase hidden">
+      <div class="cbse-study-header">
+        <h2 id="studyHubTitle">Chapter</h2>
+        <p id="studyHubSubtitle" class="sr-chapter-meta"></p>
+      </div>
+      <div id="studyTabBar"></div>
+      <div id="studyTabPanel"></div>
+      <div id="studyPracticeEmbed" class="cbse-practice-embed hidden"></div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backFromStudy">← Change chapter</button>
+    </section>
+
+    <section id="phaseIntent" class="sr-phase hidden" hidden aria-hidden="true"></section>
+    <section id="phaseLearn" class="sr-phase hidden" hidden aria-hidden="true"></section>
+    <section id="phaseEvaluate" class="sr-phase hidden" hidden aria-hidden="true">
+      <div class="sr-eval-layout">
+        <div class="sr-eval-main">
+          <div class="sr-eval-header">
+            <h2 id="evalTitle">Chapter</h2>
+            <p id="evalSubtitle" class="sr-chapter-meta"></p>
+          </div>
+          <div id="evalChat" class="sr-eval-chat"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../../assets/cosmic.js?v=brand-phase4-1"></script>
+  <script src="/portal/education/assets/anyo-education-bootstrap.js?v=4"></script>
+  <script src="../../assets/academy-config.js"></script>
+  <script src="../../assets/bots.js"></script>
+  <script src="../../assets/cbse-voice-engine.js?v=3"></script>
+  <script src="../../assets/cbse-lecture-flow.js?v=1"></script>
+  <script src="../../assets/cbse-official-books.js?v=6"></script>
+  <script src="../../assets/chapter-concepts.js?v=12"></script>
+  <script src="../../assets/isc12-science-study-material.js?v=4"></script>
+  <script src="../../assets/cbse-study-hub.js?v=22"></script>
+  <script src="/portal/education/assets/education-hub-common.js"></script>
+  <script src="isc12-science-room.js"></script>
+</body>
+</html>

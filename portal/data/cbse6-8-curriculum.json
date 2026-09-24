@@ -1,0 +1,2039 @@
+{
+  "sku": "cbse6-8",
+  "title": "CBSE Classes VI–VIII",
+  "displayName": "CBSE Classes 6-8 (Middle Stage)",
+  "locale": "en-IN",
+  "session": "2025-26",
+  "grades": [
+    "6",
+    "7",
+    "8"
+  ],
+  "stats": {
+    "total_questions": 0,
+    "total_chapters": 153
+  },
+  "subjects": {
+    "mathematics": {
+      "label": "Mathematics",
+      "icon": "📐",
+      "code": "MATH",
+      "grade": "6-8",
+      "chapters": [
+        {
+          "id": "class6-mathematics-fegp1",
+          "title": "Patterns in Mathematics",
+          "grade": "6",
+          "ncertCode": "fegp101",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "patterns-in-mathematics"
+          ]
+        },
+        {
+          "id": "class6-mathematics-fegp2",
+          "title": "Lines and Angles",
+          "grade": "6",
+          "ncertCode": "fegp102",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "lines-and-angles"
+          ]
+        },
+        {
+          "id": "class6-mathematics-fegp3",
+          "title": "Number Play",
+          "grade": "6",
+          "ncertCode": "fegp103",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "number-play"
+          ]
+        },
+        {
+          "id": "class6-mathematics-fegp4",
+          "title": "Data Handling and Presentation",
+          "grade": "6",
+          "ncertCode": "fegp104",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "data-handling-and-presentation"
+          ]
+        },
+        {
+          "id": "class6-mathematics-fegp5",
+          "title": "Prime Time",
+          "grade": "6",
+          "ncertCode": "fegp105",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "prime-time"
+          ]
+        },
+        {
+          "id": "class6-mathematics-fegp6",
+          "title": "Perimeter and Area",
+          "grade": "6",
+          "ncertCode": "fegp106",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "perimeter-and-area"
+          ]
+        },
+        {
+          "id": "class6-mathematics-fegp7",
+          "title": "Fractions",
+          "grade": "6",
+          "ncertCode": "fegp107",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "fractions"
+          ]
+        },
+        {
+          "id": "class6-mathematics-fegp8",
+          "title": "Playing with Constructions",
+          "grade": "6",
+          "ncertCode": "fegp108",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "playing-with-constructions"
+          ]
+        },
+        {
+          "id": "class6-mathematics-fegp9",
+          "title": "Symmetry",
+          "grade": "6",
+          "ncertCode": "fegp109",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "symmetry"
+          ]
+        },
+        {
+          "id": "class6-mathematics-fegp10",
+          "title": "The Other Side of Zero",
+          "grade": "6",
+          "ncertCode": "fegp110",
+          "book": "Ganita Prakash",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "the-other-side-of-zero"
+          ]
+        },
+        {
+          "id": "class7-mathematics-gegp1",
+          "title": "A Lakh Varieties!",
+          "grade": "7",
+          "ncertCode": "gegp101",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "a-lakh-varieties"
+          ]
+        },
+        {
+          "id": "class7-mathematics-gegp2",
+          "title": "Simple Expressions",
+          "grade": "7",
+          "ncertCode": "gegp102",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "simple-expressions"
+          ]
+        },
+        {
+          "id": "class7-mathematics-gegp3",
+          "title": "The Need for Smaller Units",
+          "grade": "7",
+          "ncertCode": "gegp103",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "the-need-for-smaller-units"
+          ]
+        },
+        {
+          "id": "class7-mathematics-gegp4",
+          "title": "The Notion of Letter-numbers",
+          "grade": "7",
+          "ncertCode": "gegp104",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "the-notion-of-letter-numbers"
+          ]
+        },
+        {
+          "id": "class7-mathematics-gegp5",
+          "title": "Parallel and Intersecting",
+          "grade": "7",
+          "ncertCode": "gegp105",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "parallel-and-intersecting"
+          ]
+        },
+        {
+          "id": "class7-mathematics-gegp6",
+          "title": "Numbers Tell Us Things",
+          "grade": "7",
+          "ncertCode": "gegp106",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "numbers-tell-us-things"
+          ]
+        },
+        {
+          "id": "class7-mathematics-gegp7",
+          "title": "A Tale of Three",
+          "grade": "7",
+          "ncertCode": "gegp107",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "a-tale-of-three"
+          ]
+        },
+        {
+          "id": "class7-mathematics-gegp8",
+          "title": "Working with Fractions",
+          "grade": "7",
+          "ncertCode": "gegp108",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "working-with-fractions"
+          ]
+        },
+        {
+          "id": "class8-mathematics-hegp1",
+          "title": "Mathematics · Class 8 · Chapter 1",
+          "grade": "8",
+          "ncertCode": "hegp101",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": true,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "mathematics-class8-ch1"
+          ]
+        },
+        {
+          "id": "class8-mathematics-hegp2",
+          "title": "Power Play",
+          "grade": "8",
+          "ncertCode": "hegp102",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "power-play"
+          ]
+        },
+        {
+          "id": "class8-mathematics-hegp3",
+          "title": "A Story of Numbers",
+          "grade": "8",
+          "ncertCode": "hegp103",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "a-story-of-numbers"
+          ]
+        },
+        {
+          "id": "class8-mathematics-hegp4",
+          "title": "Observe the Following Figures.",
+          "grade": "8",
+          "ncertCode": "hegp104",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "observe-the-following-figures"
+          ]
+        },
+        {
+          "id": "class8-mathematics-hegp5",
+          "title": "Sum of Consecutive Numbers",
+          "grade": "8",
+          "ncertCode": "hegp105",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "sum-of-consecutive-numbers"
+          ]
+        },
+        {
+          "id": "class8-mathematics-hegp6",
+          "title": "We Distribute,",
+          "grade": "8",
+          "ncertCode": "hegp106",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "we-distribute"
+          ]
+        },
+        {
+          "id": "class8-mathematics-hegp7",
+          "title": "Observing Similarity in Change",
+          "grade": "8",
+          "ncertCode": "hegp107",
+          "book": "Ganita Prakash",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "observing-similarity-in-change"
+          ]
+        }
+      ]
+    },
+    "science": {
+      "label": "Science",
+      "icon": "🔬",
+      "code": "SCI",
+      "grade": "6-8",
+      "chapters": [
+        {
+          "id": "class6-science-fecu1",
+          "title": "The Wonderful World of Science",
+          "grade": "6",
+          "ncertCode": "fecu101",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "the-wonderful-world-of-science"
+          ]
+        },
+        {
+          "id": "class6-science-fecu2",
+          "title": "Diversity in the Living World",
+          "grade": "6",
+          "ncertCode": "fecu102",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "diversity-in-the-living-world"
+          ]
+        },
+        {
+          "id": "class6-science-fecu3",
+          "title": "Mindful Eating: A Path to a Healthy Body",
+          "grade": "6",
+          "ncertCode": "fecu103",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "mindful-eating-a-path-to-a-healthy-body"
+          ]
+        },
+        {
+          "id": "class6-science-fecu4",
+          "title": "Exploring Magnets",
+          "grade": "6",
+          "ncertCode": "fecu104",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "exploring-magnets"
+          ]
+        },
+        {
+          "id": "class6-science-fecu5",
+          "title": "Measurement of Length and Motion",
+          "grade": "6",
+          "ncertCode": "fecu105",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "measurement-of-length-and-motion"
+          ]
+        },
+        {
+          "id": "class6-science-fecu6",
+          "title": "Materials Around Us",
+          "grade": "6",
+          "ncertCode": "fecu106",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "materials-around-us"
+          ]
+        },
+        {
+          "id": "class6-science-fecu7",
+          "title": "Temperature and its Measurement",
+          "grade": "6",
+          "ncertCode": "fecu107",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "temperature-and-its-measurement"
+          ]
+        },
+        {
+          "id": "class6-science-fecu8",
+          "title": "A Journey through States of Water",
+          "grade": "6",
+          "ncertCode": "fecu108",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "a-journey-through-states-of-water"
+          ]
+        },
+        {
+          "id": "class6-science-fecu9",
+          "title": "Methods of Separation in Everyday Life",
+          "grade": "6",
+          "ncertCode": "fecu109",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "methods-of-separation-in-everyday-life"
+          ]
+        },
+        {
+          "id": "class6-science-fecu10",
+          "title": "Living Creatures: Exploring their Characteristics",
+          "grade": "6",
+          "ncertCode": "fecu110",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "living-creatures-exploring-their-characteristics"
+          ]
+        },
+        {
+          "id": "class6-science-fecu11",
+          "title": "Nature's Treasures",
+          "grade": "6",
+          "ncertCode": "fecu111",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "nature-s-treasures"
+          ]
+        },
+        {
+          "id": "class6-science-fecu12",
+          "title": "Beyond Earth",
+          "grade": "6",
+          "ncertCode": "fecu112",
+          "book": "Curiosity (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "beyond-earth"
+          ]
+        },
+        {
+          "id": "class7-science-geep1",
+          "title": "Nutrition in Plants",
+          "grade": "7",
+          "ncertCode": "geep101",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "nutrition-in-plants"
+          ]
+        },
+        {
+          "id": "class7-science-geep2",
+          "title": "Nutrition in Animals",
+          "grade": "7",
+          "ncertCode": "geep102",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "nutrition-in-animals"
+          ]
+        },
+        {
+          "id": "class7-science-geep3",
+          "title": "Fibre to Fabric",
+          "grade": "7",
+          "ncertCode": "geep103",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "fibre-to-fabric"
+          ]
+        },
+        {
+          "id": "class7-science-geep4",
+          "title": "Heat",
+          "grade": "7",
+          "ncertCode": "geep104",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "heat"
+          ]
+        },
+        {
+          "id": "class7-science-geep5",
+          "title": "Acids, Bases and Salts",
+          "grade": "7",
+          "ncertCode": "geep105",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "acids-bases-and-salts"
+          ]
+        },
+        {
+          "id": "class7-science-geep6",
+          "title": "Physical and Chemical Changes",
+          "grade": "7",
+          "ncertCode": "geep106",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "physical-and-chemical-changes"
+          ]
+        },
+        {
+          "id": "class7-science-geep7",
+          "title": "Weather, Climate and Adaptations of Animals to Climate",
+          "grade": "7",
+          "ncertCode": "geep107",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "weather-climate-and-adaptations-of-animals-to-climate"
+          ]
+        },
+        {
+          "id": "class7-science-geep8",
+          "title": "Winds, Storms and Cyclones",
+          "grade": "7",
+          "ncertCode": "geep108",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "winds-storms-and-cyclones"
+          ]
+        },
+        {
+          "id": "class7-science-geep9",
+          "title": "Soil",
+          "grade": "7",
+          "ncertCode": "geep109",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "soil"
+          ]
+        },
+        {
+          "id": "class7-science-geep10",
+          "title": "Respiration in Organisms",
+          "grade": "7",
+          "ncertCode": "geep110",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "respiration-in-organisms"
+          ]
+        },
+        {
+          "id": "class7-science-geep11",
+          "title": "Transportation in Animals and Plants",
+          "grade": "7",
+          "ncertCode": "geep111",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "transportation-in-animals-and-plants"
+          ]
+        },
+        {
+          "id": "class7-science-geep12",
+          "title": "Reproduction in Plants",
+          "grade": "7",
+          "ncertCode": "geep112",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "reproduction-in-plants"
+          ]
+        },
+        {
+          "id": "class7-science-geep13",
+          "title": "Motion and Time",
+          "grade": "7",
+          "ncertCode": "geep113",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "motion-and-time"
+          ]
+        },
+        {
+          "id": "class7-science-geep14",
+          "title": "Electric Current and its Effects",
+          "grade": "7",
+          "ncertCode": "geep114",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "electric-current-and-its-effects"
+          ]
+        },
+        {
+          "id": "class7-science-geep15",
+          "title": "Light",
+          "grade": "7",
+          "ncertCode": "geep115",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "light"
+          ]
+        },
+        {
+          "id": "class7-science-geep16",
+          "title": "Water: A Precious Resource",
+          "grade": "7",
+          "ncertCode": "geep116",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "water-a-precious-resource"
+          ]
+        },
+        {
+          "id": "class7-science-geep17",
+          "title": "Forests: Our Lifeline",
+          "grade": "7",
+          "ncertCode": "geep117",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "forests-our-lifeline"
+          ]
+        },
+        {
+          "id": "class7-science-geep18",
+          "title": "Wastewater Story",
+          "grade": "7",
+          "ncertCode": "geep118",
+          "book": "Exemplar (Science)",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "wastewater-story"
+          ]
+        },
+        {
+          "id": "class8-science-heep1",
+          "title": "Crop Production and Management",
+          "grade": "8",
+          "ncertCode": "heep101",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "crop-production-and-management"
+          ]
+        },
+        {
+          "id": "class8-science-heep2",
+          "title": "Microorganisms: Friend and Foe",
+          "grade": "8",
+          "ncertCode": "heep102",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "microorganisms-friend-and-foe"
+          ]
+        },
+        {
+          "id": "class8-science-heep3",
+          "title": "Synthetic Fibres and Plastics",
+          "grade": "8",
+          "ncertCode": "heep103",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "synthetic-fibres-and-plastics"
+          ]
+        },
+        {
+          "id": "class8-science-heep4",
+          "title": "Materials: Metals and Non-Metals",
+          "grade": "8",
+          "ncertCode": "heep104",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "materials-metals-and-non-metals"
+          ]
+        },
+        {
+          "id": "class8-science-heep5",
+          "title": "Coal and Petroleum",
+          "grade": "8",
+          "ncertCode": "heep105",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "coal-and-petroleum"
+          ]
+        },
+        {
+          "id": "class8-science-heep6",
+          "title": "Combustion and Flame",
+          "grade": "8",
+          "ncertCode": "heep106",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "combustion-and-flame"
+          ]
+        },
+        {
+          "id": "class8-science-heep7",
+          "title": "Conservation of Plants and Animals",
+          "grade": "8",
+          "ncertCode": "heep107",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "conservation-of-plants-and-animals"
+          ]
+        },
+        {
+          "id": "class8-science-heep8",
+          "title": "Cell — Structure and Functions",
+          "grade": "8",
+          "ncertCode": "heep108",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "cell-structure-and-functions"
+          ]
+        },
+        {
+          "id": "class8-science-heep9",
+          "title": "Reproduction in Animals",
+          "grade": "8",
+          "ncertCode": "heep109",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "reproduction-in-animals"
+          ]
+        },
+        {
+          "id": "class8-science-heep10",
+          "title": "Reaching the Age of Adolescence",
+          "grade": "8",
+          "ncertCode": "heep110",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "reaching-the-age-of-adolescence"
+          ]
+        },
+        {
+          "id": "class8-science-heep11",
+          "title": "Force and Pressure",
+          "grade": "8",
+          "ncertCode": "heep111",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "force-and-pressure"
+          ]
+        },
+        {
+          "id": "class8-science-heep12",
+          "title": "Friction",
+          "grade": "8",
+          "ncertCode": "heep112",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "friction"
+          ]
+        },
+        {
+          "id": "class8-science-heep13",
+          "title": "Sound",
+          "grade": "8",
+          "ncertCode": "heep113",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "sound"
+          ]
+        },
+        {
+          "id": "class8-science-heep14",
+          "title": "Chemical Effects of Electric Current",
+          "grade": "8",
+          "ncertCode": "heep114",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "chemical-effects-of-electric-current"
+          ]
+        },
+        {
+          "id": "class8-science-heep15",
+          "title": "Some Natural Phenomena",
+          "grade": "8",
+          "ncertCode": "heep115",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "some-natural-phenomena"
+          ]
+        },
+        {
+          "id": "class8-science-heep16",
+          "title": "Light",
+          "grade": "8",
+          "ncertCode": "heep116",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "light"
+          ]
+        },
+        {
+          "id": "class8-science-heep17",
+          "title": "Stars and the Solar System",
+          "grade": "8",
+          "ncertCode": "heep117",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "stars-and-the-solar-system"
+          ]
+        },
+        {
+          "id": "class8-science-heep18",
+          "title": "Pollution of Air and Water",
+          "grade": "8",
+          "ncertCode": "heep118",
+          "book": "Exemplar",
+          "hasExemplar": true,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "pollution-of-air-and-water"
+          ]
+        }
+      ]
+    },
+    "social-science": {
+      "label": "Social Science",
+      "icon": "🌏",
+      "code": "SST",
+      "grade": "6-8",
+      "chapters": [
+        {
+          "id": "class6-social-science-fees1",
+          "title": "Introduction",
+          "grade": "6",
+          "ncertCode": "fees101",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "introduction"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees2",
+          "title": "Oceans and Continents",
+          "grade": "6",
+          "ncertCode": "fees102",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "oceans-and-continents"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees3",
+          "title": "Landforms and Life",
+          "grade": "6",
+          "ncertCode": "fees103",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "landforms-and-life"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees4",
+          "title": "Timeline and Sources of History",
+          "grade": "6",
+          "ncertCode": "fees104",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "timeline-and-sources-of-history"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees5",
+          "title": "Sri Aurobindo",
+          "grade": "6",
+          "ncertCode": "fees105",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "sri-aurobindo"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees6",
+          "title": "The Beginnings of Indian Civilisation",
+          "grade": "6",
+          "ncertCode": "fees106",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "the-beginnings-of-indian-civilisation"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees7",
+          "title": "India’s Cultural Roots",
+          "grade": "6",
+          "ncertCode": "fees107",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "indias-cultural-roots"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees8",
+          "title": "‘many in the One’",
+          "grade": "6",
+          "ncertCode": "fees108",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "many-in-the-one"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees9",
+          "title": "Family and Community",
+          "grade": "6",
+          "ncertCode": "fees109",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "family-and-community"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees10",
+          "title": "Grassroots Democracy – Part",
+          "grade": "6",
+          "ncertCode": "fees110",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "grassroots-democracy-part"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees11",
+          "title": "Grassroots Democracy – Part",
+          "grade": "6",
+          "ncertCode": "fees111",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "grassroots-democracy-part"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees12",
+          "title": "Grassroots Democracy – Part",
+          "grade": "6",
+          "ncertCode": "fees112",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "grassroots-democracy-part"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees13",
+          "title": "The Value of Work",
+          "grade": "6",
+          "ncertCode": "fees113",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "the-value-of-work"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees14",
+          "title": "Economic Activities Around Us",
+          "grade": "6",
+          "ncertCode": "fees114",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "economic-activities-around-us"
+          ]
+        },
+        {
+          "id": "class6-social-science-fees999",
+          "title": "Glossary Glossary",
+          "grade": "6",
+          "ncertCode": "fees1gl",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "glossary-glossary"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees1",
+          "title": "Geographical Diversity of India",
+          "grade": "7",
+          "ncertCode": "gees101",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "geographical-diversity-of-india"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees2",
+          "title": "Understanding the Weather",
+          "grade": "7",
+          "ncertCode": "gees102",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "understanding-the-weather"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees3",
+          "title": "Climates of India",
+          "grade": "7",
+          "ncertCode": "gees103",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "climates-of-india"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees4",
+          "title": "New Beginnings:",
+          "grade": "7",
+          "ncertCode": "gees104",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "new-beginnings"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees5",
+          "title": "Tapestry of the Past",
+          "grade": "7",
+          "ncertCode": "gees105",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "tapestry-of-the-past"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees6",
+          "title": "Tapestry of the Past",
+          "grade": "7",
+          "ncertCode": "gees106",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "tapestry-of-the-past"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees7",
+          "title": "Tapestry of the Past",
+          "grade": "7",
+          "ncertCode": "gees107",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "tapestry-of-the-past"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees8",
+          "title": "Our Cultural Heritage and Knowledge Traditions",
+          "grade": "7",
+          "ncertCode": "gees108",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "our-cultural-heritage-and-knowledge-traditions"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees9",
+          "title": "Governance and Democracy",
+          "grade": "7",
+          "ncertCode": "gees109",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "governance-and-democracy"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees10",
+          "title": "Governance and Democracy",
+          "grade": "7",
+          "ncertCode": "gees110",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "governance-and-democracy"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees11",
+          "title": "Economic Life Around Us",
+          "grade": "7",
+          "ncertCode": "gees111",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "economic-life-around-us"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees12",
+          "title": "Economic Life Around Us",
+          "grade": "7",
+          "ncertCode": "gees112",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "economic-life-around-us"
+          ]
+        },
+        {
+          "id": "class7-social-science-gees999",
+          "title": "Https://pminewyork.gov.in/pdf/menu/political_map_of_india.pdf",
+          "grade": "7",
+          "ncertCode": "gees1gl",
+          "book": "Our Environment",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "https-pminewyork-gov-in-pdf-menu-political-map-of-india-pdf"
+          ]
+        },
+        {
+          "id": "class7-social-science-gess1",
+          "title": "Equality in Indian Democracy",
+          "grade": "7",
+          "ncertCode": "gess301",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "equality-in-indian-democracy"
+          ]
+        },
+        {
+          "id": "class7-social-science-gess2",
+          "title": "Teachers Note",
+          "grade": "7",
+          "ncertCode": "gess302",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "teachers-note"
+          ]
+        },
+        {
+          "id": "class7-social-science-gess3",
+          "title": "Social and Political Life",
+          "grade": "7",
+          "ncertCode": "gess303",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class7-social-science-gess4",
+          "title": "Growing Up as",
+          "grade": "7",
+          "ncertCode": "gess304",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "growing-up-as"
+          ]
+        },
+        {
+          "id": "class7-social-science-gess5",
+          "title": "Social and Political Life",
+          "grade": "7",
+          "ncertCode": "gess305",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class7-social-science-gess6",
+          "title": "Social and Political Life",
+          "grade": "7",
+          "ncertCode": "gess306",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class7-social-science-gess7",
+          "title": "Social and Political Life",
+          "grade": "7",
+          "ncertCode": "gess307",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class7-social-science-gess8",
+          "title": "Social and Political Life",
+          "grade": "7",
+          "ncertCode": "gess308",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class8-social-science-hess1",
+          "title": "Social and Political Life",
+          "grade": "8",
+          "ncertCode": "hess301",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class8-social-science-hess2",
+          "title": "Social and Political Life",
+          "grade": "8",
+          "ncertCode": "hess302",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class8-social-science-hess3",
+          "title": "Social and Political Life",
+          "grade": "8",
+          "ncertCode": "hess303",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class8-social-science-hess4",
+          "title": "Social and Political Life",
+          "grade": "8",
+          "ncertCode": "hess304",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class8-social-science-hess5",
+          "title": "Social and Political Life",
+          "grade": "8",
+          "ncertCode": "hess305",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class8-social-science-hess6",
+          "title": "Social and Political Life",
+          "grade": "8",
+          "ncertCode": "hess306",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class8-social-science-hess7",
+          "title": "Social and Political Life",
+          "grade": "8",
+          "ncertCode": "hess307",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        },
+        {
+          "id": "class8-social-science-hess8",
+          "title": "Social and Political Life",
+          "grade": "8",
+          "ncertCode": "hess308",
+          "book": "Social Science",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "social-and-political-life"
+          ]
+        }
+      ]
+    },
+    "english": {
+      "label": "English",
+      "icon": "📖",
+      "code": "ENG",
+      "grade": "6-8",
+      "chapters": [
+        {
+          "id": "class6-english-fepr1",
+          "title": "A Bottle of Dew",
+          "grade": "6",
+          "ncertCode": "fepr101",
+          "book": "Poorvi (English)",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "a-bottle-of-dew"
+          ]
+        },
+        {
+          "id": "class6-english-fepr2",
+          "title": "The Unlikely",
+          "grade": "6",
+          "ncertCode": "fepr102",
+          "book": "Poorvi (English)",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "the-unlikely"
+          ]
+        },
+        {
+          "id": "class6-english-fepr3",
+          "title": "Neem Baba",
+          "grade": "6",
+          "ncertCode": "fepr103",
+          "book": "Poorvi (English)",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "neem-baba"
+          ]
+        },
+        {
+          "id": "class6-english-fepr4",
+          "title": "Change of Heart",
+          "grade": "6",
+          "ncertCode": "fepr104",
+          "book": "Poorvi (English)",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "change-of-heart"
+          ]
+        },
+        {
+          "id": "class6-english-fepr5",
+          "title": "Culture and Tradition",
+          "grade": "6",
+          "ncertCode": "fepr105",
+          "book": "Poorvi (English)",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "culture-and-tradition"
+          ]
+        },
+        {
+          "id": "class7-english-geah1",
+          "title": "And Hard-working.",
+          "grade": "7",
+          "ncertCode": "geah101",
+          "book": "An Alien Hand",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "and-hard-working"
+          ]
+        },
+        {
+          "id": "class7-english-geah2",
+          "title": "Delicious Twigs a Day.",
+          "grade": "7",
+          "ncertCode": "geah102",
+          "book": "An Alien Hand",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "delicious-twigs-a-day"
+          ]
+        },
+        {
+          "id": "class7-english-geah3",
+          "title": "Crocodile’s Eating Habits.",
+          "grade": "7",
+          "ncertCode": "geah103",
+          "book": "An Alien Hand",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "crocodiles-eating-habits"
+          ]
+        },
+        {
+          "id": "class7-english-geah4",
+          "title": "English · Class 7 · Chapter 4",
+          "grade": "7",
+          "ncertCode": "geah104",
+          "book": "An Alien Hand",
+          "hasExemplar": false,
+          "title_provisional": true,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "english-class7-ch4"
+          ]
+        },
+        {
+          "id": "class7-english-geah5",
+          "title": "And Honey.",
+          "grade": "7",
+          "ncertCode": "geah105",
+          "book": "An Alien Hand",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "and-honey"
+          ]
+        },
+        {
+          "id": "class7-english-geah6",
+          "title": "Him Home.",
+          "grade": "7",
+          "ncertCode": "geah106",
+          "book": "An Alien Hand",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "him-home"
+          ]
+        },
+        {
+          "id": "class7-english-geah7",
+          "title": "Before You Read",
+          "grade": "7",
+          "ncertCode": "geah107",
+          "book": "An Alien Hand",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "before-you-read"
+          ]
+        },
+        {
+          "id": "class7-english-gehc1",
+          "title": "Notes for the Teacher",
+          "grade": "7",
+          "ncertCode": "gehc101",
+          "book": "Honeycomb",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "notes-for-the-teacher"
+          ]
+        },
+        {
+          "id": "class7-english-gehc2",
+          "title": "Before You Read",
+          "grade": "7",
+          "ncertCode": "gehc102",
+          "book": "Honeycomb",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "before-you-read"
+          ]
+        },
+        {
+          "id": "class7-english-gehc3",
+          "title": "Before You Read",
+          "grade": "7",
+          "ncertCode": "gehc103",
+          "book": "Honeycomb",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "before-you-read"
+          ]
+        },
+        {
+          "id": "class7-english-gehc4",
+          "title": "The Ashes That Made Trees Bloom",
+          "grade": "7",
+          "ncertCode": "gehc104",
+          "book": "Honeycomb",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "the-ashes-that-made-trees-bloom"
+          ]
+        },
+        {
+          "id": "class7-english-gehc5",
+          "title": "72/honeycomb",
+          "grade": "7",
+          "ncertCode": "gehc105",
+          "book": "Honeycomb",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "72-honeycomb"
+          ]
+        },
+        {
+          "id": "class7-english-gehc6",
+          "title": "86/honeycomb",
+          "grade": "7",
+          "ncertCode": "gehc106",
+          "book": "Honeycomb",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "86-honeycomb"
+          ]
+        },
+        {
+          "id": "class7-english-gehc7",
+          "title": "100/honeycomb",
+          "grade": "7",
+          "ncertCode": "gehc107",
+          "book": "Honeycomb",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "100-honeycomb"
+          ]
+        },
+        {
+          "id": "class7-english-gehc8",
+          "title": "114/honeycomb",
+          "grade": "7",
+          "ncertCode": "gehc108",
+          "book": "Honeycomb",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "114-honeycomb"
+          ]
+        },
+        {
+          "id": "class8-english-hehd1",
+          "title": "English · Class 8 · Chapter 1",
+          "grade": "8",
+          "ncertCode": "hehd101",
+          "book": "Honeydew",
+          "hasExemplar": false,
+          "title_provisional": true,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "english-class8-ch1"
+          ]
+        },
+        {
+          "id": "class8-english-hehd2",
+          "title": "Honeydew",
+          "grade": "8",
+          "ncertCode": "hehd102",
+          "book": "Honeydew",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "honeydew"
+          ]
+        },
+        {
+          "id": "class8-english-hehd3",
+          "title": "Before You Read",
+          "grade": "8",
+          "ncertCode": "hehd103",
+          "book": "Honeydew",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "before-you-read"
+          ]
+        },
+        {
+          "id": "class8-english-hehd4",
+          "title": "Honeydew",
+          "grade": "8",
+          "ncertCode": "hehd104",
+          "book": "Honeydew",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "honeydew"
+          ]
+        },
+        {
+          "id": "class8-english-hehd5",
+          "title": "Honeydew72",
+          "grade": "8",
+          "ncertCode": "hehd105",
+          "book": "Honeydew",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "honeydew72"
+          ]
+        },
+        {
+          "id": "class8-english-hehd6",
+          "title": "Before You Read",
+          "grade": "8",
+          "ncertCode": "hehd106",
+          "book": "Honeydew",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "before-you-read"
+          ]
+        },
+        {
+          "id": "class8-english-hehd7",
+          "title": "A Visit to Cambridge 93",
+          "grade": "8",
+          "ncertCode": "hehd107",
+          "book": "Honeydew",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "a-visit-to-cambridge-93"
+          ]
+        },
+        {
+          "id": "class8-english-hehd8",
+          "title": "Honeydew",
+          "grade": "8",
+          "ncertCode": "hehd108",
+          "book": "Honeydew",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "honeydew"
+          ]
+        },
+        {
+          "id": "class8-english-heih1",
+          "title": "Humans.",
+          "grade": "8",
+          "ncertCode": "heih101",
+          "book": "It So Happened",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "humans"
+          ]
+        },
+        {
+          "id": "class8-english-heih2",
+          "title": "Before You Read",
+          "grade": "8",
+          "ncertCode": "heih102",
+          "book": "It So Happened",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "before-you-read"
+          ]
+        },
+        {
+          "id": "class8-english-heih3",
+          "title": "English · Class 8 · Chapter 3",
+          "grade": "8",
+          "ncertCode": "heih103",
+          "book": "It So Happened",
+          "hasExemplar": false,
+          "title_provisional": true,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "english-class8-ch3"
+          ]
+        },
+        {
+          "id": "class8-english-heih4",
+          "title": "Before You Read",
+          "grade": "8",
+          "ncertCode": "heih104",
+          "book": "It So Happened",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "before-you-read"
+          ]
+        },
+        {
+          "id": "class8-english-heih5",
+          "title": "Birthday.",
+          "grade": "8",
+          "ncertCode": "heih105",
+          "book": "It So Happened",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "birthday"
+          ]
+        },
+        {
+          "id": "class8-english-heih6",
+          "title": "English · Class 8 · Chapter 6",
+          "grade": "8",
+          "ncertCode": "heih106",
+          "book": "It So Happened",
+          "hasExemplar": false,
+          "title_provisional": true,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "english-class8-ch6"
+          ]
+        },
+        {
+          "id": "class8-english-heih7",
+          "title": "Temptation.",
+          "grade": "8",
+          "ncertCode": "heih107",
+          "book": "It So Happened",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "temptation"
+          ]
+        },
+        {
+          "id": "class8-english-heih8",
+          "title": "It So Happened...66 6666",
+          "grade": "8",
+          "ncertCode": "heih108",
+          "book": "It So Happened",
+          "hasExemplar": false,
+          "title_provisional": false,
+          "questionCount": 0,
+          "eden_concept_slugs": [
+            "it-so-happened-66-6666"
+          ]
+        }
+      ]
+    }
+  }
+}

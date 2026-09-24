@@ -1,0 +1,62 @@
+{
+  "slug": "probability-definition",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Probability definition",
+  "theme": "stats",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Probability definition",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Probability definition.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "The probability of an event is like the number of winning lottery tickets divided by the total number of tickets sold. Just as a lottery tic…",
+    "Pause and restate what Probability definition means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Probability definition: chance as a distribution",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Probability definition</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">stats</text><rect x=\"100\" y=\"107\" width=\"55\" height=\"193\" fill=\"#67e8f9\" opacity=\"0.5\"/><rect x=\"175\" y=\"196\" width=\"55\" height=\"104\" fill=\"#67e8f9\" opacity=\"0.6\"/><rect x=\"250\" y=\"155\" width=\"55\" height=\"145\" fill=\"#67e8f9\" opacity=\"0.7\"/><rect x=\"325\" y=\"114\" width=\"55\" height=\"186\" fill=\"#67e8f9\" opacity=\"0.8\"/><rect x=\"400\" y=\"203\" width=\"55\" height=\"97\" fill=\"#67e8f9\" opacity=\"0.5\"/><rect x=\"475\" y=\"162\" width=\"55\" height=\"138\" fill=\"#67e8f9\" opacity=\"0.6\"/><line x1=\"80\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#a5f3fc\" stroke-width=\"2\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Favorable outcomes over possible outcomes",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Probability definition</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">ratio</text><circle cx=\"220\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#67e8f9\" stroke-width=\"4\"/><path d=\"M220 190 L220 110 A80 80 0 0 1 290 160 Z\" fill=\"#fcd34d\"/><text x=\"420\" y=\"180\" text-anchor=\"start\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">P = favorable / possible</text>"
+    },
+    {
+      "id": "core",
+      "caption": "0 ≤ P ≤ 1",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Probability definition</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><line x1=\"100\" y1=\"200\" x2=\"540\" y2=\"200\" stroke=\"#a5f3fc\" stroke-width=\"6\"/><circle cx=\"390\" cy=\"200\" r=\"16\" fill=\"#fcd34d\"/><text x=\"100\" y=\"240\" text-anchor=\"start\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">0</text><text x=\"540\" y=\"240\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">1</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "The probability of an event is like the number of winning lottery tickets divided by the t",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Probability definition</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">The probability of an event is like the number of winnin</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember probability bounds",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Probability definition</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#67e8f9\" font-size=\"24\" font-family=\"Segoe UI,Arial\">0 → certainty ← 1</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ProbabilitydefinitionScene",
+    "notes": "Domain=stats motif=probability. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/probability_definition.py ConceptScene"
+  },
+  "motif": "probability",
+  "generated_by": "template-stem-v5-stats-probability",
+  "generated_at": "2026-07-12T22:35:08Z"
+}

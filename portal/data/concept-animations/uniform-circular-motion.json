@@ -1,0 +1,62 @@
+{
+  "slug": "uniform-circular-motion",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Uniform Circular Motion",
+  "theme": "mechanics",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Uniform Circular Motion",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Uniform Circular Motion.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Imagine a roller coaster car moving through a vertical loop. Just like the car is constantly pulled toward the center of the loop by the tra…",
+    "Pause and restate what Uniform Circular Motion means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Uniform Circular Motion: interlocking parts",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Uniform Circular Motion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mechanism</text><circle cx=\"220\" cy=\"190\" r=\"70\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"14\"/><circle cx=\"380\" cy=\"190\" r=\"50\" fill=\"none\" stroke=\"#fde68a\" stroke-width=\"12\"/><circle cx=\"220\" cy=\"190\" r=\"12\" fill=\"#f97316\"/><circle cx=\"380\" cy=\"190\" r=\"10\" fill=\"#f97316\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Input motion becomes output effect",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Uniform Circular Motion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">io</text><rect x=\"60\" y=\"150\" width=\"120\" height=\"70\" rx=\"8\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"2\"/><text x=\"120\" y=\"190\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"14\" font-family=\"Segoe UI,Arial\">input</text><text x=\"230\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><circle cx=\"320\" cy=\"185\" r=\"40\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"8\"/><text x=\"410\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"450\" y=\"150\" width=\"130\" height=\"70\" rx=\"8\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"2\"/><text x=\"515\" y=\"190\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"14\" font-family=\"Segoe UI,Arial\">output</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Mechanism of the idea",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Uniform Circular Motion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Uniform Circular Motion</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Imagine a roller coaster car moving through a vertical loop. Just like the car is constant",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Uniform Circular Motion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Imagine a roller coaster car moving through a vertical l</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Uniform Circular Motion",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Uniform Circular Motion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"24\" font-family=\"Segoe UI,Arial\">parts → whole</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "UniformCircularMotionScene",
+    "notes": "Domain=mechanics motif=family-11. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/uniform_circular_motion.py ConceptScene"
+  },
+  "motif": "family-11",
+  "generated_by": "template-stem-v5-mechanics-family-11",
+  "generated_at": "2026-07-12T22:35:09Z"
+}

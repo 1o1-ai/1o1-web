@@ -1,0 +1,62 @@
+{
+  "slug": "work-by-variable-force",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Work by Variable Force",
+  "theme": "mechanics",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Work by Variable Force",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Work by Variable Force.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a car’s suspension compresses and extends differently depending on the road’s roughness, a variable force does work that changes wit…",
+    "Pause and restate what Work by Variable Force means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Work by Variable Force: forces as arrows on a body",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Work by Variable Force</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mechanics</text><rect x=\"280\" y=\"160\" width=\"80\" height=\"70\" fill=\"#fb7185\"/><line x1=\"320\" y1=\"160\" x2=\"320\" y2=\"70\" stroke=\"#fdba74\" stroke-width=\"5\"/><polygon points=\"320,70 308,95 332,95\" fill=\"#fdba74\"/><text x=\"350\" y=\"90\" text-anchor=\"start\" fill=\"#fdba74\" font-size=\"16\" font-family=\"Segoe UI,Arial\">F</text><line x1=\"320\" y1=\"230\" x2=\"320\" y2=\"310\" stroke=\"#f9a8d4\" stroke-width=\"5\"/><polygon points=\"320,310 308,285 332,285\" fill=\"#f9a8d4\"/><text x=\"350\" y=\"300\" text-anchor=\"start\" fill=\"#f9a8d4\" font-size=\"16\" font-family=\"Segoe UI,Arial\">mg</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Free-body diagram — name every force",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Work by Variable Force</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">FBD</text><circle cx=\"320\" cy=\"180\" r=\"40\" fill=\"#2a1219\" stroke=\"#fb7185\" stroke-width=\"3\"/><line x1=\"320\" y1=\"140\" x2=\"320\" y2=\"70\" stroke=\"#fdba74\" stroke-width=\"4\"/><line x1=\"360\" y1=\"180\" x2=\"480\" y2=\"180\" stroke=\"#f9a8d4\" stroke-width=\"4\"/><line x1=\"320\" y1=\"220\" x2=\"320\" y2=\"300\" stroke=\"#fda4af\" stroke-width=\"4\"/><text x=\"320\" y=\"55\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">N</text><text x=\"500\" y=\"185\" text-anchor=\"start\" fill=\"#f9a8d4\" font-size=\"14\" font-family=\"Segoe UI,Arial\">F</text><text x=\"340\" y=\"310\" text-anchor=\"middle\" fill=\"#fda4af\" font-size=\"14\" font-family=\"Segoe UI,Arial\">W</text>"
+    },
+    {
+      "id": "core",
+      "caption": "ΣF = ma — unbalanced force changes motion",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Work by Variable Force</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">law</text><line x1=\"60\" y1=\"280\" x2=\"580\" y2=\"180\" stroke=\"#fda4af\" stroke-width=\"6\"/><circle cx=\"340\" cy=\"208\" r=\"30\" fill=\"#fb7185\"/><line x1=\"340\" y1=\"208\" x2=\"440\" y2=\"148\" stroke=\"#fdba74\" stroke-width=\"4\"/><text x=\"320\" y=\"80\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"26\" font-family=\"Segoe UI,Arial\">ΣF = m a</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a car’s suspension compresses and extends differently depending on the road’s roug",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Work by Variable Force</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><rect x=\"100\" y=\"160\" width=\"120\" height=\"70\" fill=\"#fb7185\"/><circle cx=\"130\" cy=\"250\" r=\"18\" fill=\"#fda4af\"/><circle cx=\"190\" cy=\"250\" r=\"18\" fill=\"#fda4af\"/><line x1=\"220\" y1=\"190\" x2=\"360\" y2=\"190\" stroke=\"#fdba74\" stroke-width=\"5\"/><circle cx=\"400\" cy=\"170\" r=\"28\" fill=\"#f9a8d4\"/><text x=\"320\" y=\"310\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Just as a car’s suspension compresses and extends differ</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: net force decides acceleration",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Work by Variable Force</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><rect x=\"100\" y=\"120\" width=\"440\" height=\"140\" rx=\"14\" fill=\"#2a1219\" stroke=\"#fdba74\" stroke-width=\"2\"/><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"32\" font-family=\"Segoe UI,Arial\">ΣF = m a</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "WorkbyVariableForceScene",
+    "notes": "Domain=mechanics motif=newton. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/work_by_variable_force.py ConceptScene"
+  },
+  "motif": "newton",
+  "generated_by": "template-stem-v5-mechanics-newton",
+  "generated_at": "2026-07-12T22:35:10Z"
+}

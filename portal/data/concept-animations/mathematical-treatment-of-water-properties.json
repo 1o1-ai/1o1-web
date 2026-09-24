@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-water-properties",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Water Properties",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Water Properties",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Water Properties.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Mathematical treatment of water properties is like fine-tuning the settings on a desalination plant's control panel. Just as the plant's eng…",
+    "Pause and restate what Mathematical Treatment of Water Properties means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Water Properties: interlocking parts",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Water Properties</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mechanism</text><circle cx=\"220\" cy=\"190\" r=\"70\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"14\"/><circle cx=\"380\" cy=\"190\" r=\"50\" fill=\"none\" stroke=\"#fbbf24\" stroke-width=\"12\"/><circle cx=\"220\" cy=\"190\" r=\"12\" fill=\"#34d399\"/><circle cx=\"380\" cy=\"190\" r=\"10\" fill=\"#34d399\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Input motion becomes output effect",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Water Properties</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">io</text><rect x=\"60\" y=\"150\" width=\"120\" height=\"70\" rx=\"8\" fill=\"#111827\" stroke=\"#38bdf8\" stroke-width=\"2\"/><text x=\"120\" y=\"190\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">input</text><text x=\"230\" y=\"190\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><circle cx=\"320\" cy=\"185\" r=\"40\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"8\"/><text x=\"410\" y=\"190\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"450\" y=\"150\" width=\"130\" height=\"70\" rx=\"8\" fill=\"#111827\" stroke=\"#fbbf24\" stroke-width=\"2\"/><text x=\"515\" y=\"190\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">output</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Mechanism of the idea",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Water Properties</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Water Properties</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Mathematical treatment of water properties is like fine-tuning the settings on a desalinat",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Water Properties</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical treatment of water properties is like fine-</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Mathematical Treatment of Water Properti",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Water Properties</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#38bdf8\" font-size=\"24\" font-family=\"Segoe UI,Arial\">parts → whole</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofWaterPropertiesScene",
+    "notes": "Domain=general motif=family-11. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_water_properties.py ConceptScene"
+  },
+  "motif": "family-11",
+  "generated_by": "template-stem-v5-general-family-11",
+  "generated_at": "2026-07-12T22:35:05Z"
+}

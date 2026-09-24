@@ -1,0 +1,37 @@
+/* Study Room subject pickers — classic portal double-ring circles (all tracks) */
+
+.sr-subject-circles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(24px, 5vw, 48px);
+  padding: 6px 0 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+button.portal.sr-subject-circle {
+  width: min(200px, 40vw);
+  height: min(200px, 40vw);
+  flex-shrink: 0;
+}
+
+button.portal.sr-subject-circle:not(:hover) {
+  transform: none;
+}
+
+button.portal.sr-subject-circle .portal-title {
+  font-size: clamp(0.82rem, 2vw, 0.95rem);
+}
+
+button.portal.sr-subject-circle .portal-sub {
+  font-size: 0.62rem;
+  line-height: 1.35;
+}
+
+button.portal.sr-subject-circle .portal-icon {
+  font-size: 1.6rem;
+}
+
+/* Theme accents come from portal-loop.css (.portal--saas, etc.) */

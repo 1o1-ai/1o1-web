@@ -1,0 +1,2348 @@
+{
+  "version": 1,
+  "sku": "australia-grade-10",
+  "title": "Grade 10",
+  "displayName": "Australia · Grade 10",
+  "generated_at": "2026-07-13T12:21:29.431740+00:00",
+  "locale": "au",
+  "threads": [
+    {
+      "id": "thr_australia-grade-10_probability_000",
+      "title": "I keep mixing up steps in Probability. What helped you?",
+      "subject": "mathematics",
+      "chapter": "probability",
+      "chapter_title": "Probability",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Group chat from school is quiet on Probability. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-19T14:25:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Probability.",
+          "created_at": "2026-06-20T00:27:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Probability.",
+          "created_at": "2026-06-20T11:57:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_heat-and-temperature_001",
+      "title": "Who already finished Heat and Temperature? Worth starting early?",
+      "subject": "physics",
+      "chapter": "heat-and-temperature",
+      "chapter_title": "Heat and Temperature",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Got stuck on a homework problem from Heat and Temperature. Happy to post the exact question if that helps.",
+          "created_at": "2026-07-06T06:22:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Heat and Temperature idea.",
+          "created_at": "2026-07-06T21:17:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Exam boards repeat similar Physics patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-07-07T06:56:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_pressure-and-fluids_002",
+      "title": "I keep mixing up steps in Pressure and Fluids. What helped you?",
+      "subject": "physics",
+      "chapter": "pressure-and-fluids",
+      "chapter_title": "Pressure and Fluids",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Revision week — Pressure and Fluids is the weak spot on my checklist for Physics. How are you tackling it?",
+          "created_at": "2026-06-25T21:44:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Do the odd-numbered textbook exercises for Pressure and Fluids; answers are usually in the back.",
+          "created_at": "2026-06-26T08:52:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Not proud of it, but I left Pressure and Fluids late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-26T21:09:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Pressure and Fluids.",
+          "created_at": "2026-06-27T09:18:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Pressure and Fluids problem cold.",
+          "created_at": "2026-06-27T22:49:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-28T10:43:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_financial-mathematics_003",
+      "title": "Sharing my Financial Mathematics mistake from yesterday's quiz — what did I miss?",
+      "subject": "mathematics",
+      "chapter": "financial-mathematics",
+      "chapter_title": "Financial Mathematics",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Starting from zero on Financial Mathematics after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-13T19:25:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Financial Mathematics already.",
+          "created_at": "2026-06-14T14:08:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_work-energy-and-power_004",
+      "title": "Quick poll: how many hours are you giving Work Energy and Power this week?",
+      "subject": "physics",
+      "chapter": "work-energy-and-power",
+      "chapter_title": "Work Energy and Power",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "We just started Work Energy and Power in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-15T10:30:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-15T21:14:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Work Energy and Power marks.",
+          "created_at": "2026-06-15T23:26:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Work Energy and Power.",
+          "created_at": "2026-06-16T14:39:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Work Energy and Power idea.",
+          "created_at": "2026-06-17T07:40:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Past papers > notes for me on Work Energy and Power. Pattern recognition beats rereading.",
+          "created_at": "2026-06-17T11:04:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Work Energy and Power.",
+          "created_at": "2026-06-17T20:14:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_chemical-reactions-and-equations_005",
+      "title": "Need a simple analogy for Chemical Reactions and Equations that actually sticks",
+      "subject": "chemistry",
+      "chapter": "chemical-reactions-and-equations",
+      "chapter_title": "Chemical Reactions and Equations",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Starting from zero on Chemical Reactions and Equations after a gap. Best first 30 minutes? (Grade 10)",
+          "created_at": "2026-06-10T10:11:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Chemical Reactions and Equations set.",
+          "created_at": "2026-06-10T22:04:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Mark scheme language for Chemical Reactions and Equations is specific — practice writing to that style.",
+          "created_at": "2026-06-10T23:24:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Chemical Reactions and Equations — the diagrams helped.",
+          "created_at": "2026-06-11T01:46:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Chemical Reactions and Equations marks.",
+          "created_at": "2026-06-11T14:12:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I keep a 'mistake log' only for Chemical Reactions and Equations. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-12T01:24:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Someone in my class made a mind map for Chemical Reactions and Equations — copying that format helped a lot.",
+          "created_at": "2026-06-12T17:02:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_metals-and-non-metals_006",
+      "title": "Is Metals and Non-metals more theory-heavy or numerical for our board?",
+      "subject": "chemistry",
+      "chapter": "metals-and-non-metals",
+      "chapter_title": "Metals and Non-metals",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Got stuck on a homework problem from Metals and Non-metals. Happy to post the exact question if that helps.",
+          "created_at": "2026-07-09T02:25:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I keep a 'mistake log' only for Metals and Non-metals. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-09T03:28:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_chemical-bonding_007",
+      "title": "Best resources for Chemical Bonding? Textbook vs online notes",
+      "subject": "chemistry",
+      "chapter": "chemical-bonding",
+      "chapter_title": "Chemical Bonding",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Past paper had two weird Chemical Bonding items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-09T19:17:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I keep a 'mistake log' only for Chemical Bonding. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-10T08:52:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Mark scheme language for Chemical Bonding is specific — practice writing to that style.",
+          "created_at": "2026-06-11T00:44:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Chemical Bonding question though.",
+          "created_at": "2026-06-11T12:34:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Chemical Bonding.",
+          "created_at": "2026-06-11T16:37:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I'll try Evaluate mode after dinner and report back.",
+          "created_at": "2026-06-11T22:39:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_health-and-disease_008",
+      "title": "Need a simple analogy for Health and Disease that actually sticks",
+      "subject": "biology",
+      "chapter": "health-and-disease",
+      "chapter_title": "Health and Disease",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Tried three YouTube explainers for Health and Disease and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-07-03T04:05:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Check units and significant figures on every Health and Disease numerical before you move on.",
+          "created_at": "2026-07-03T20:07:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Health and Disease — the diagrams helped.",
+          "created_at": "2026-07-03T22:46:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Health and Disease.",
+          "created_at": "2026-07-04T08:22:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-07-04T14:05:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_geometry_009",
+      "title": "How are you preparing Geometry for the final exam?",
+      "subject": "mathematics",
+      "chapter": "geometry",
+      "chapter_title": "Geometry",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Tried three YouTube explainers for Geometry and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-07-05T09:35:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-05T18:48:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Geometry marks.",
+          "created_at": "2026-07-06T08:07:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Geometry.",
+          "created_at": "2026-07-06T21:41:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Anyone else want to sync study times for Geometry this week?",
+          "created_at": "2026-07-07T07:33:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-07-07T15:48:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_measurement_010",
+      "title": "Best resources for Measurement? Textbook vs online notes",
+      "subject": "mathematics",
+      "chapter": "measurement",
+      "chapter_title": "Measurement",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Scored poorly on the last Measurement quiz. Resetting my notes — open to structure advice. (Grade 10)",
+          "created_at": "2026-06-13T14:27:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Our senior shared last year's notes on Measurement; still accurate for the current syllabus.",
+          "created_at": "2026-06-13T21:15:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Past papers > notes for me on Measurement. Pattern recognition beats rereading.",
+          "created_at": "2026-06-14T03:20:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_reproduction_011",
+      "title": "How are you preparing Reproduction for the final exam?",
+      "subject": "biology",
+      "chapter": "reproduction",
+      "chapter_title": "Reproduction",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Scored poorly on the last Reproduction quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-12T15:41:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Reproduction.",
+          "created_at": "2026-06-12T18:11:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Reproduction fixed most of it.",
+          "created_at": "2026-06-13T02:46:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "If you cannot explain Reproduction to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-13T15:41:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Reproduction already.",
+          "created_at": "2026-06-13T21:41:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Reproduction.",
+          "created_at": "2026-06-14T05:03:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_acids-bases-and-salts_012",
+      "title": "Our class test had a tricky Chemistry question from Acids Bases and Salts",
+      "subject": "chemistry",
+      "chapter": "acids-bases-and-salts",
+      "chapter_title": "Acids Bases and Salts",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Group chat from school is quiet on Acids Bases and Salts. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-21T13:20:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I record myself explaining Acids Bases and Salts out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-21T23:07:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Acids Bases and Salts.",
+          "created_at": "2026-06-22T13:57:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Acids Bases and Salts.",
+          "created_at": "2026-06-23T07:58:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Acids Bases and Salts.",
+          "created_at": "2026-06-23T11:29:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_number-and-algebra_013",
+      "title": "Quick poll: how many hours are you giving Number and Algebra this week?",
+      "subject": "mathematics",
+      "chapter": "number-and-algebra",
+      "chapter_title": "Number and Algebra",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I can recite definitions for Number and Algebra but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-22T00:01:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I keep a 'mistake log' only for Number and Algebra. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-22T01:19:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Number and Algebra already.",
+          "created_at": "2026-06-22T09:50:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-22T14:50:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Number and Algebra marks.",
+          "created_at": "2026-06-22T21:20:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I write every Number and Algebra formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-23T03:52:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-23T06:40:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_nutrition_014",
+      "title": "Is Nutrition more theory-heavy or numerical for our board?",
+      "subject": "biology",
+      "chapter": "nutrition",
+      "chapter_title": "Nutrition",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Our teacher hinted Nutrition is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-25T19:25:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Nutrition marks.",
+          "created_at": "2026-06-26T02:08:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Nutrition live.",
+          "created_at": "2026-06-26T11:44:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Nutrition.",
+          "created_at": "2026-06-26T22:12:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_heredity-and-evolution_015",
+      "title": "Is Heredity and Evolution more theory-heavy or numerical for our board?",
+      "subject": "biology",
+      "chapter": "heredity-and-evolution",
+      "chapter_title": "Heredity and Evolution",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Group chat from school is quiet on Heredity and Evolution. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-13T16:15:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Heredity and Evolution.",
+          "created_at": "2026-06-13T21:55:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Honestly I skipped ahead then came back — Heredity and Evolution clicked after seeing later examples.",
+          "created_at": "2026-06-14T05:30:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-14T23:39:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Heredity and Evolution set.",
+          "created_at": "2026-06-15T01:59:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Heredity and Evolution.",
+          "created_at": "2026-06-15T02:59:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Heredity and Evolution idea.",
+          "created_at": "2026-06-15T15:32:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_carbon-compounds_016",
+      "title": "Best resources for Carbon Compounds? Textbook vs online notes",
+      "subject": "chemistry",
+      "chapter": "carbon-compounds",
+      "chapter_title": "Carbon Compounds",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Group chat from school is quiet on Carbon Compounds. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-25T14:49:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Carbon Compounds already.",
+          "created_at": "2026-06-26T01:00:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Check units and significant figures on every Carbon Compounds numerical before you move on.",
+          "created_at": "2026-06-26T10:41:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Carbon Compounds.",
+          "created_at": "2026-06-26T16:46:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_gravitation_017",
+      "title": "Sharing my Gravitation mistake from yesterday's quiz — what did I miss?",
+      "subject": "physics",
+      "chapter": "gravitation",
+      "chapter_title": "Gravitation",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Scored poorly on the last Gravitation quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-20T05:15:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Short sessions beat marathon cramming for Gravitation. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-20T20:40:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Gravitation already.",
+          "created_at": "2026-06-21T05:43:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Check units and significant figures on every Gravitation numerical before you move on.",
+          "created_at": "2026-06-21T08:31:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Gravitation — the diagrams helped.",
+          "created_at": "2026-06-21T20:26:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-06-22T13:43:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Honestly I skipped ahead then came back — Gravitation clicked after seeing later examples.",
+          "created_at": "2026-06-23T02:04:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I keep a 'mistake log' only for Gravitation. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-23T15:39:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-23T22:54:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_force-and-newton-s-laws_018",
+      "title": "I keep mixing up steps in Force and Newton's Laws. What helped you?",
+      "subject": "physics",
+      "chapter": "force-and-newton-s-laws",
+      "chapter_title": "Force and Newton's Laws",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Is it normal that Force and Newton's Laws takes longer than neighboring chapters in Physics?",
+          "created_at": "2026-06-22T23:05:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Force and Newton's Laws set.",
+          "created_at": "2026-06-23T11:16:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Force and Newton's Laws.",
+          "created_at": "2026-06-24T01:05:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Honestly I skipped ahead then came back — Force and Newton's Laws clicked after seeing later examples.",
+          "created_at": "2026-06-24T07:33:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_ecology-and-environment_019",
+      "title": "Who already finished Ecology and Environment? Worth starting early?",
+      "subject": "biology",
+      "chapter": "ecology-and-environment",
+      "chapter_title": "Ecology and Environment",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Is it normal that Ecology and Environment takes longer than neighboring chapters in Biology? (Grade 10)",
+          "created_at": "2026-06-26T15:17:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Not proud of it, but I left Ecology and Environment late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-27T04:51:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_motion_020",
+      "title": "Stuck on Motion — anyone have a clear way to revise this?",
+      "subject": "physics",
+      "chapter": "motion",
+      "chapter_title": "Motion",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Got stuck on a homework problem from Motion. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-16T17:55:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I write every Motion formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-17T00:08:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Exam boards repeat similar Physics patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-06-17T15:58:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Motion.",
+          "created_at": "2026-06-17T23:26:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_coordination-and-control_021",
+      "title": "Need a simple analogy for Coordination and Control that actually sticks",
+      "subject": "biology",
+      "chapter": "coordination-and-control",
+      "chapter_title": "Coordination and Control",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Group chat from school is quiet on Coordination and Control. Hoping this forum has clearer answers.",
+          "created_at": "2026-07-08T11:30:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Past papers > notes for me on Coordination and Control. Pattern recognition beats rereading.",
+          "created_at": "2026-07-09T01:50:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Coordination and Control — the diagrams helped.",
+          "created_at": "2026-07-09T10:34:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Our senior shared last year's notes on Coordination and Control; still accurate for the current syllabus.",
+          "created_at": "2026-07-09T23:49:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_units-and-measurement_022",
+      "title": "I keep mixing up steps in Units and Measurement. What helped you?",
+      "subject": "physics",
+      "chapter": "units-and-measurement",
+      "chapter_title": "Units and Measurement",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Our teacher hinted Units and Measurement is high-weight this year. Looking for a realistic study plan. (Grade 10)",
+          "created_at": "2026-06-25T22:17:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Units and Measurement set.",
+          "created_at": "2026-06-26T04:29:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "If you cannot explain Units and Measurement to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-26T13:22:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Units and Measurement idea.",
+          "created_at": "2026-06-26T22:48:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_periodic-table_023",
+      "title": "Stuck on Periodic Table — anyone have a clear way to revise this?",
+      "subject": "chemistry",
+      "chapter": "periodic-table",
+      "chapter_title": "Periodic Table",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Our teacher hinted Periodic Table is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-07-11T04:10:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Don't ignore the worked examples. For Periodic Table they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-11T06:23:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I record myself explaining Periodic Table out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-11T20:15:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I keep a 'mistake log' only for Periodic Table. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-12T09:58:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_energy-resources_024",
+      "title": "Quick poll: how many hours are you giving Energy Resources this week?",
+      "subject": "physics",
+      "chapter": "energy-resources",
+      "chapter_title": "Energy Resources",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Our teacher hinted Energy Resources is high-weight this year. Looking for a realistic study plan. (Grade 10)",
+          "created_at": "2026-07-10T15:48:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I write every Energy Resources formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-10T17:09:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Mark scheme language for Energy Resources is specific — practice writing to that style.",
+          "created_at": "2026-07-11T03:22:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-07-11T07:54:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_transport-in-organisms_025",
+      "title": "Our class test had a tricky Biology question from Transport in Organisms",
+      "subject": "biology",
+      "chapter": "transport-in-organisms",
+      "chapter_title": "Transport in Organisms",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Starting from zero on Transport in Organisms after a gap. Best first 30 minutes? (Grade 10)",
+          "created_at": "2026-06-12T17:49:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Not proud of it, but I left Transport in Organisms late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-13T09:17:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Past papers > notes for me on Transport in Organisms. Pattern recognition beats rereading.",
+          "created_at": "2026-06-13T17:02:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Mark scheme language for Transport in Organisms is specific — practice writing to that style.",
+          "created_at": "2026-06-14T01:57:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Transport in Organisms.",
+          "created_at": "2026-06-14T15:36:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Our senior shared last year's notes on Transport in Organisms; still accurate for the current syllabus.",
+          "created_at": "2026-06-15T04:59:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Transport in Organisms already.",
+          "created_at": "2026-06-15T18:50:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_environmental-chemistry_026",
+      "title": "How are you preparing Environmental Chemistry for the final exam?",
+      "subject": "chemistry",
+      "chapter": "environmental-chemistry",
+      "chapter_title": "Environmental Chemistry",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Is it normal that Environmental Chemistry takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-06-17T01:14:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Environmental Chemistry marks.",
+          "created_at": "2026-06-17T17:27:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Environmental Chemistry problem cold.",
+          "created_at": "2026-06-17T22:55:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_respiration_027",
+      "title": "Our class test had a tricky Biology question from Respiration",
+      "subject": "biology",
+      "chapter": "respiration",
+      "chapter_title": "Respiration",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Revision week — Respiration is the weak spot on my checklist for Biology. How are you tackling it?",
+          "created_at": "2026-06-09T16:29:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I write every Respiration formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-09T22:58:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Check units and significant figures on every Respiration numerical before you move on.",
+          "created_at": "2026-06-10T13:08:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_atomic-structure_028",
+      "title": "How are you preparing Atomic Structure for the final exam?",
+      "subject": "chemistry",
+      "chapter": "atomic-structure",
+      "chapter_title": "Atomic Structure",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "We just started Atomic Structure in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-15T12:52:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Atomic Structure.",
+          "created_at": "2026-06-16T02:08:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Atomic Structure.",
+          "created_at": "2026-06-16T15:29:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Break Atomic Structure into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-16T17:59:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_linear-and-nonlinear-relationships_029",
+      "title": "Quick poll: how many hours are you giving Linear and Nonlinear Relationships this week?",
+      "subject": "mathematics",
+      "chapter": "linear-and-nonlinear-relationships",
+      "chapter_title": "Linear and Nonlinear Relationships",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Is it normal that Linear and Nonlinear Relationships takes longer than neighboring chapters in Mathematics?",
+          "created_at": "2026-07-08T16:02:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Our senior shared last year's notes on Linear and Nonlinear Relationships; still accurate for the current syllabus.",
+          "created_at": "2026-07-08T17:15:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Short sessions beat marathon cramming for Linear and Nonlinear Relationships. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-08T23:06:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-09T13:39:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I'll try Evaluate mode after dinner and report back.",
+          "created_at": "2026-07-09T16:55:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I write every Linear and Nonlinear Relationships formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-10T11:47:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Whiteboard + friend teaching me Linear and Nonlinear Relationships beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-11T00:23:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Linear and Nonlinear Relationships question though.",
+          "created_at": "2026-07-11T03:31:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Linear and Nonlinear Relationships.",
+          "created_at": "2026-07-11T13:46:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_light-and-optics_030",
+      "title": "Is Light and Optics more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "light-and-optics",
+      "chapter_title": "Light and Optics",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I can recite definitions for Light and Optics but freeze on application questions. Same for anyone? (Grade 10)",
+          "created_at": "2026-06-09T10:16:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Do the odd-numbered textbook exercises for Light and Optics; answers are usually in the back.",
+          "created_at": "2026-06-09T20:30:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Light and Optics fixed most of it.",
+          "created_at": "2026-06-10T09:34:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Light and Optics.",
+          "created_at": "2026-06-11T00:20:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I record myself explaining Light and Optics out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-11T10:56:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Light and Optics — the diagrams helped.",
+          "created_at": "2026-06-11T17:44:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_statistics_031",
+      "title": "Teacher said Statistics will definitely show up — panic mode?",
+      "subject": "mathematics",
+      "chapter": "statistics",
+      "chapter_title": "Statistics",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Scored poorly on the last Statistics quiz. Resetting my notes — open to structure advice. (Grade 10)",
+          "created_at": "2026-06-13T22:25:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Do the odd-numbered textbook exercises for Statistics; answers are usually in the back.",
+          "created_at": "2026-06-14T04:18:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Honestly I skipped ahead then came back — Statistics clicked after seeing later examples.",
+          "created_at": "2026-06-14T09:28:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_quantitative-chemistry-mole-concept_032",
+      "title": "Anyone else find Quantitative Chemistry / Mole Concept denser than the rest of Chemistry?",
+      "subject": "chemistry",
+      "chapter": "quantitative-chemistry-mole-concept",
+      "chapter_title": "Quantitative Chemistry / Mole Concept",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I can recite definitions for Quantitative Chemistry / Mole Concept but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-26T16:33:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Quantitative Chemistry / Mole Concept.",
+          "created_at": "2026-06-26T19:16:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Quantitative Chemistry / Mole Concept.",
+          "created_at": "2026-06-27T14:10:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Thanks — trying that tonight for Quantitative Chemistry / Mole Concept.",
+          "created_at": "2026-06-27T22:02:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Quantitative Chemistry / Mole Concept set.",
+          "created_at": "2026-06-28T10:49:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Our senior shared last year's notes on Quantitative Chemistry / Mole Concept; still accurate for the current syllabus.",
+          "created_at": "2026-06-29T02:20:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I keep a 'mistake log' only for Quantitative Chemistry / Mole Concept. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-29T15:03:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_matter-and-its-properties_033",
+      "title": "Anyone else find Matter and Its Properties denser than the rest of Chemistry?",
+      "subject": "chemistry",
+      "chapter": "matter-and-its-properties",
+      "chapter_title": "Matter and Its Properties",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Group chat from school is quiet on Matter and Its Properties. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-18T22:24:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Whiteboard + friend teaching me Matter and Its Properties beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-19T14:06:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Break Matter and Its Properties into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-20T07:53:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Someone in my class made a mind map for Matter and Its Properties — copying that format helped a lot.",
+          "created_at": "2026-06-20T08:55:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Matter and Its Properties.",
+          "created_at": "2026-06-21T01:34:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_waves-and-sound_034",
+      "title": "Our class test had a tricky Physics question from Waves and Sound",
+      "subject": "physics",
+      "chapter": "waves-and-sound",
+      "chapter_title": "Waves and Sound",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "We just started Waves and Sound in class and I'm lost on the basics. Any tips before I dig into numericals? (Grade 10)",
+          "created_at": "2026-07-01T16:43:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Waves and Sound live.",
+          "created_at": "2026-07-01T21:49:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Someone in my class made a mind map for Waves and Sound — copying that format helped a lot.",
+          "created_at": "2026-07-02T08:51:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Waves and Sound.",
+          "created_at": "2026-07-02T15:15:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_cell-biology_035",
+      "title": "Teacher said Cell Biology will definitely show up — panic mode?",
+      "subject": "biology",
+      "chapter": "cell-biology",
+      "chapter_title": "Cell Biology",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Group chat from school is quiet on Cell Biology. Hoping this forum has clearer answers. (Grade 10)",
+          "created_at": "2026-06-25T15:25:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-26T09:41:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Past papers > notes for me on Cell Biology. Pattern recognition beats rereading.",
+          "created_at": "2026-06-26T17:46:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Cell Biology.",
+          "created_at": "2026-06-26T19:47:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Cell Biology — the diagrams helped.",
+          "created_at": "2026-06-27T04:57:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Cell Biology set.",
+          "created_at": "2026-06-27T17:16:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Check units and significant figures on every Cell Biology numerical before you move on.",
+          "created_at": "2026-06-27T18:55:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_trigonometry_036",
+      "title": "Best resources for Trigonometry? Textbook vs online notes",
+      "subject": "mathematics",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "Is it normal that Trigonometry takes longer than neighboring chapters in Mathematics?",
+          "created_at": "2026-07-05T21:30:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "For Trigonometry, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-07-06T04:39:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Trigonometry fixed most of it.",
+          "created_at": "2026-07-06T08:58:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Don't ignore the worked examples. For Trigonometry they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-06T21:39:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Trigonometry.",
+          "created_at": "2026-07-07T15:55:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_excretion_037",
+      "title": "Sharing my Excretion mistake from yesterday's quiz — what did I miss?",
+      "subject": "biology",
+      "chapter": "excretion",
+      "chapter_title": "Excretion",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Revision week — Excretion is the weak spot on my checklist for Biology. How are you tackling it?",
+          "created_at": "2026-06-23T03:37:29.431740+00:00"
+        },
+        {
+          "author_id": "s_liam_walker",
+          "author_name": "Liam Walker",
+          "author_role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg",
+          "body": "I record myself explaining Excretion out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-23T20:26:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_electricity_038",
+      "title": "Best resources for Electricity? Textbook vs online notes",
+      "subject": "physics",
+      "chapter": "electricity",
+      "chapter_title": "Electricity",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Group chat from school is quiet on Electricity. Hoping this forum has clearer answers.",
+          "created_at": "2026-07-12T10:57:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Electricity.",
+          "created_at": "2026-07-12T13:05:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Electricity.",
+          "created_at": "2026-07-12T19:24:29.431740+00:00"
+        },
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Electricity.",
+          "created_at": "2026-07-13T10:45:29.431740+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_australia-grade-10_magnetism_039",
+      "title": "Who already finished Magnetism? Worth starting early?",
+      "subject": "physics",
+      "chapter": "magnetism",
+      "chapter_title": "Magnetism",
+      "track": "australia-grade-10",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_jack_morrison",
+          "author_name": "Jack Morrison",
+          "author_role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg",
+          "body": "Our teacher hinted Magnetism is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-30T18:08:29.431740+00:00"
+        },
+        {
+          "author_id": "s_chloe_nguyen",
+          "author_name": "Chloe Nguyen",
+          "author_role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg",
+          "body": "Whiteboard + friend teaching me Magnetism beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-30T22:29:29.431740+00:00"
+        },
+        {
+          "author_id": "t_sarah_bennett",
+          "author_name": "Sarah Bennett",
+          "author_role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg",
+          "body": "For Magnetism, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-07-01T08:55:29.431740+00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "alternative-derivation-of-linear-inequalities",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Alternative Derivation of Linear Inequalities",
+  "theme": "algebra",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Alternative Derivation of Linear Inequalities",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Alternative Derivation of Linear Inequalities.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Alternative derivation of linear inequalities is like air traffic control systems, where planes have specific altitude and distance constrai…",
+    "Pause and restate what Alternative Derivation of Linear Inequalities means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Alternative Derivation of Linear Inequalities: levels of organization",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Linear Inequalities</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><rect x=\"220\" y=\"70\" width=\"200\" height=\"50\" rx=\"8\" fill=\"#fdba74\"/><rect x=\"140\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb7185\"/><rect x=\"340\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb7185\"/><rect x=\"80\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f9a8d4\"/><rect x=\"250\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f9a8d4\"/><rect x=\"420\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f9a8d4\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Zoom out / zoom in",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Linear Inequalities</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><circle cx=\"200\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#fb7185\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"190\" r=\"40\" fill=\"#881337\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#2a1219\" stroke=\"#fdba74\" stroke-width=\"2\"/><text x=\"460\" y=\"190\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">detail</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Which level explains the effect?",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Linear Inequalities</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Linear Inequalit</text><text x=\"320\" y=\"230\" text-anchor=\"middle\" fill=\"#fda4af\" font-size=\"14\" font-family=\"Segoe UI,Arial\">pick the right scale</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Alternative derivation of linear inequalities is like air traffic control systems, where p",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Linear Inequalities</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative derivation of linear inequalities is like ai</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Alternative Derivation of Linear Inequal",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Linear Inequalities</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f9a8d4\" font-size=\"24\" font-family=\"Segoe UI,Arial\">levels stack</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AlternativeDerivationofLinearInequalitieScene",
+    "notes": "Domain=algebra motif=family-6. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/alternative_derivation_of_linear_inequalities.py ConceptScene"
+  },
+  "motif": "family-6",
+  "generated_by": "template-stem-v5-algebra-family-6",
+  "generated_at": "2026-07-12T22:34:32Z"
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "applications-of-temperature-scales",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Applications of Temperature Scales",
+  "theme": "thermo",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Applications of Temperature Scales",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Applications of Temperature Scales.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as an oven’s temperature scale ensures your cake bakes evenly and your pizza crust crisps perfectly, standardized temperature scales (l…",
+    "Pause and restate what Applications of Temperature Scales means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Applications of Temperature Scales: particles jiggle with temperature",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Temperature Scales</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">thermo</text><circle cx=\"178\" cy=\"90\" r=\"6\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"251\" cy=\"143\" r=\"7\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"324\" cy=\"196\" r=\"8\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"397\" cy=\"249\" r=\"9\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"470\" cy=\"122\" r=\"10\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"123\" cy=\"175\" r=\"11\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"196\" cy=\"228\" r=\"6\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"269\" cy=\"101\" r=\"7\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"342\" cy=\"154\" r=\"8\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"415\" cy=\"207\" r=\"9\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"488\" cy=\"260\" r=\"10\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"141\" cy=\"133\" r=\"11\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"214\" cy=\"186\" r=\"6\" fill=\"#fde68a\" opacity=\"0.85\"/><circle cx=\"287\" cy=\"239\" r=\"7\" fill=\"#fde68a\" opacity=\"0.85\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Heat flows hot → cold",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Temperature Scales</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">flow</text><rect x=\"70\" y=\"100\" width=\"200\" height=\"160\" fill=\"#ef4444\" opacity=\"0.9\"/><text x=\"170\" y=\"185\" text-anchor=\"middle\" fill=\"white\" font-size=\"20\" font-family=\"Segoe UI,Arial\">HOT</text><rect x=\"370\" y=\"100\" width=\"200\" height=\"160\" fill=\"#3b82f6\" opacity=\"0.9\"/><text x=\"470\" y=\"185\" text-anchor=\"middle\" fill=\"white\" font-size=\"20\" font-family=\"Segoe UI,Arial\">COLD</text><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"32\" font-family=\"Segoe UI,Arial\">→</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Energy conservation still rules",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Temperature Scales</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">energy</text><rect x=\"90\" y=\"110\" width=\"460\" height=\"150\" rx=\"14\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"20\" font-family=\"Segoe UI,Arial\">Q = m c ΔT  (when useful)</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as an oven’s temperature scale ensures your cake bakes evenly and your pizza crust cr",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Temperature Scales</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as an oven’s temperature scale ensures your cake ba</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Applications of Temperature Scales",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Temperature Scales</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"22\" font-family=\"Segoe UI,Arial\">hot → cold until equal</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ApplicationsofTemperatureScalesScene",
+    "notes": "Domain=thermo motif=heat. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/applications_of_temperature_scales.py ConceptScene"
+  },
+  "motif": "heat",
+  "generated_by": "template-stem-v5-thermo-heat",
+  "generated_at": "2026-07-12T22:34:50Z"
+}

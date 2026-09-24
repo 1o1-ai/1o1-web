@@ -1,0 +1,3239 @@
+{
+  "version": 1,
+  "sku": "japan-grade-12",
+  "title": "Grade 12",
+  "displayName": "Japan · Grade 12",
+  "generated_at": "2026-07-13T12:21:29.653719+00:00",
+  "locale": "jp",
+  "threads": [
+    {
+      "id": "thr_japan-grade-12_electromagnetic-waves_000",
+      "title": "Teacher said Electromagnetic Waves will definitely show up — panic mode?",
+      "subject": "physics",
+      "chapter": "electromagnetic-waves",
+      "chapter_title": "Electromagnetic Waves",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Revision week — Electromagnetic Waves is the weak spot on my checklist for Physics. How are you tackling it?",
+          "created_at": "2026-07-11T18:56:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Whiteboard + friend teaching me Electromagnetic Waves beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-11T21:18:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Short sessions beat marathon cramming for Electromagnetic Waves. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-12T14:47:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Honestly I skipped ahead then came back — Electromagnetic Waves clicked after seeing later examples.",
+          "created_at": "2026-07-13T09:40:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_principles-of-inheritance-and-variation_001",
+      "title": "Best resources for Principles of Inheritance and Variation? Textbook vs online notes",
+      "subject": "biology",
+      "chapter": "principles-of-inheritance-and-variation",
+      "chapter_title": "Principles of Inheritance and Variation",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Revision week — Principles of Inheritance and Variation is the weak spot on my checklist for Biology. How are you tackling it?",
+          "created_at": "2026-07-11T02:35:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Principles of Inheritance and Variation marks.",
+          "created_at": "2026-07-11T13:03:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Past papers > notes for me on Principles of Inheritance and Variation. Pattern recognition beats rereading.",
+          "created_at": "2026-07-11T14:07:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-11T17:00:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Someone in my class made a mind map for Principles of Inheritance and Variation — copying that format helped a lot.",
+          "created_at": "2026-07-11T18:41:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "If you cannot explain Principles of Inheritance and Variation to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-07-12T03:12:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Principles of Inheritance and Variation idea.",
+          "created_at": "2026-07-12T14:03:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I record myself explaining Principles of Inheritance and Variation out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-12T17:16:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Principles of Inheritance and Variation question though.",
+          "created_at": "2026-07-12T22:33:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_current-electricity_002",
+      "title": "Teacher said Current Electricity will definitely show up — panic mode?",
+      "subject": "physics",
+      "chapter": "current-electricity",
+      "chapter_title": "Current Electricity",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Got stuck on a homework problem from Current Electricity. Happy to post the exact question if that helps.",
+          "created_at": "2026-07-02T10:35:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Current Electricity — the diagrams helped.",
+          "created_at": "2026-07-03T04:57:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Current Electricity fixed most of it.",
+          "created_at": "2026-07-03T10:46:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Honestly I skipped ahead then came back — Current Electricity clicked after seeing later examples.",
+          "created_at": "2026-07-04T04:55:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Whiteboard + friend teaching me Current Electricity beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-04T19:55:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Current Electricity live.",
+          "created_at": "2026-07-05T06:31:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_electric-charges-and-fields_003",
+      "title": "Stuck on Electric Charges and Fields — anyone have a clear way to revise this?",
+      "subject": "physics",
+      "chapter": "electric-charges-and-fields",
+      "chapter_title": "Electric Charges and Fields",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "We just started Electric Charges and Fields in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-23T09:04:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Someone in my class made a mind map for Electric Charges and Fields — copying that format helped a lot.",
+          "created_at": "2026-06-23T22:09:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "For Electric Charges and Fields, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-24T06:28:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Electric Charges and Fields already.",
+          "created_at": "2026-06-25T01:12:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_coordination-compounds_004",
+      "title": "Sharing my Coordination Compounds mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "coordination-compounds",
+      "chapter_title": "Coordination Compounds",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Is it normal that Coordination Compounds takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-06-30T07:49:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Past papers > notes for me on Coordination Compounds. Pattern recognition beats rereading.",
+          "created_at": "2026-06-30T17:52:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Do the odd-numbered textbook exercises for Coordination Compounds; answers are usually in the back.",
+          "created_at": "2026-07-01T07:03:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_mathematics-ii-expressions-and-proof_005",
+      "title": "Who already finished Mathematics II: Expressions and Proof? Worth starting early?",
+      "subject": "mathematics",
+      "chapter": "mathematics-ii-expressions-and-proof",
+      "chapter_title": "Mathematics II: Expressions and Proof",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Scored poorly on the last Mathematics II: Expressions and Proof quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-07-05T21:29:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Mathematics II: Expressions and Proof — the diagrams helped.",
+          "created_at": "2026-07-06T06:18:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Exam boards repeat similar Mathematics patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-07-06T07:59:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-07T02:18:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Mathematics II: Expressions and Proof already.",
+          "created_at": "2026-07-07T03:48:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_microbes-in-human-welfare_006",
+      "title": "Past paper question on Microbes in Human Welfare — which formula do you use first?",
+      "subject": "biology",
+      "chapter": "microbes-in-human-welfare",
+      "chapter_title": "Microbes in Human Welfare",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Scored poorly on the last Microbes in Human Welfare quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-07-03T17:57:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "If you cannot explain Microbes in Human Welfare to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-07-03T20:31:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Our senior shared last year's notes on Microbes in Human Welfare; still accurate for the current syllabus.",
+          "created_at": "2026-07-04T10:51:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Microbes in Human Welfare.",
+          "created_at": "2026-07-04T13:33:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Anyone else want to sync study times for Microbes in Human Welfare this week?",
+          "created_at": "2026-07-04T22:40:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Microbes in Human Welfare idea.",
+          "created_at": "2026-07-05T14:57:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-07-05T19:26:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_biodiversity-and-conservation_007",
+      "title": "Stuck on Biodiversity and Conservation — anyone have a clear way to revise this?",
+      "subject": "biology",
+      "chapter": "biodiversity-and-conservation",
+      "chapter_title": "Biodiversity and Conservation",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Making flashcards for Biodiversity and Conservation tonight — what should absolutely be on them?",
+          "created_at": "2026-06-11T07:04:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Someone in my class made a mind map for Biodiversity and Conservation — copying that format helped a lot.",
+          "created_at": "2026-06-11T14:45:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Biodiversity and Conservation set.",
+          "created_at": "2026-06-11T19:32:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Whiteboard + friend teaching me Biodiversity and Conservation beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-12T14:10:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Biodiversity and Conservation.",
+          "created_at": "2026-06-12T19:42:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Biodiversity and Conservation.",
+          "created_at": "2026-06-12T23:06:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Official syllabus lists Biodiversity and Conservation as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-13T13:32:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_mathematics-iii-integral-calculus_008",
+      "title": "Stuck on Mathematics III: Integral Calculus — anyone have a clear way to revise this?",
+      "subject": "mathematics",
+      "chapter": "mathematics-iii-integral-calculus",
+      "chapter_title": "Mathematics III: Integral Calculus",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "We just started Mathematics III: Integral Calculus in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-20T23:56:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Mathematics III: Integral Calculus.",
+          "created_at": "2026-06-21T05:58:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I write every Mathematics III: Integral Calculus formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-21T15:43:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Mathematics III: Integral Calculus live.",
+          "created_at": "2026-06-21T20:46:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_electrochemistry_009",
+      "title": "I keep mixing up steps in Electrochemistry. What helped you?",
+      "subject": "chemistry",
+      "chapter": "electrochemistry",
+      "chapter_title": "Electrochemistry",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Tried three YouTube explainers for Electrochemistry and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-07-10T23:41:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Whiteboard + friend teaching me Electrochemistry beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-11T06:06:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I record myself explaining Electrochemistry out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-11T14:08:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Electrochemistry — the diagrams helped.",
+          "created_at": "2026-07-12T08:52:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Honestly I skipped ahead then came back — Electrochemistry clicked after seeing later examples.",
+          "created_at": "2026-07-12T23:40:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Check units and significant figures on every Electrochemistry numerical before you move on.",
+          "created_at": "2026-07-13T06:42:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Electrochemistry set.",
+          "created_at": "2026-07-13T21:03:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-14T00:54:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_electromagnetic-induction_010",
+      "title": "I keep mixing up steps in Electromagnetic Induction. What helped you?",
+      "subject": "physics",
+      "chapter": "electromagnetic-induction",
+      "chapter_title": "Electromagnetic Induction",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Scored poorly on the last Electromagnetic Induction quiz. Resetting my notes — open to structure advice. (Grade 12)",
+          "created_at": "2026-07-08T19:48:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-09T02:06:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-09T11:27:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Electromagnetic Induction — the diagrams helped.",
+          "created_at": "2026-07-09T21:36:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-07-10T00:02:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Electromagnetic Induction problem cold.",
+          "created_at": "2026-07-10T03:27:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Electromagnetic Induction already.",
+          "created_at": "2026-07-10T15:20:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Don't ignore the worked examples. For Electromagnetic Induction they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-11T06:04:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_mathematics-ii-complex-numbers-and-equat_011",
+      "title": "Best resources for Mathematics II: Complex Numbers and Equations? Textbook vs online notes",
+      "subject": "mathematics",
+      "chapter": "mathematics-ii-complex-numbers-and-equations",
+      "chapter_title": "Mathematics II: Complex Numbers and Equations",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Revision week — Mathematics II: Complex Numbers and Equations is the weak spot on my checklist for Mathematics. How are you tackling it?",
+          "created_at": "2026-07-11T16:03:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "If you cannot explain Mathematics II: Complex Numbers and Equations to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-07-12T10:58:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Someone in my class made a mind map for Mathematics II: Complex Numbers and Equations — copying that format helped a lot.",
+          "created_at": "2026-07-12T19:48:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_semiconductor-electronics_012",
+      "title": "Is Semiconductor Electronics more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "semiconductor-electronics",
+      "chapter_title": "Semiconductor Electronics",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Tried three YouTube explainers for Semiconductor Electronics and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-19T01:37:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-19T05:32:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Semiconductor Electronics live.",
+          "created_at": "2026-06-19T12:40:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Semiconductor Electronics set.",
+          "created_at": "2026-06-20T00:22:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_dual-nature-of-radiation-and-matter_013",
+      "title": "Need a simple analogy for Dual Nature of Radiation and Matter that actually sticks",
+      "subject": "physics",
+      "chapter": "dual-nature-of-radiation-and-matter",
+      "chapter_title": "Dual Nature of Radiation and Matter",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "We just started Dual Nature of Radiation and Matter in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-11T12:02:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Dual Nature of Radiation and Matter.",
+          "created_at": "2026-06-12T06:08:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Dual Nature of Radiation and Matter marks.",
+          "created_at": "2026-06-12T15:49:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I record myself explaining Dual Nature of Radiation and Matter out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-13T07:13:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Dual Nature of Radiation and Matter set.",
+          "created_at": "2026-06-13T17:07:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-14T06:33:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I keep a 'mistake log' only for Dual Nature of Radiation and Matter. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-14T20:48:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Dual Nature of Radiation and Matter already.",
+          "created_at": "2026-06-15T05:06:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_mathematics-ii-trigonometric-functions_014",
+      "title": "Is Mathematics II: Trigonometric Functions more theory-heavy or numerical for our board?",
+      "subject": "mathematics",
+      "chapter": "mathematics-ii-trigonometric-functions",
+      "chapter_title": "Mathematics II: Trigonometric Functions",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Making flashcards for Mathematics II: Trigonometric Functions tonight — what should absolutely be on them?",
+          "created_at": "2026-06-24T01:17:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Mathematics II: Trigonometric Functions fixed most of it.",
+          "created_at": "2026-06-24T03:58:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_electrostatic-potential-and-capacitance_015",
+      "title": "Anyone else find Electrostatic Potential and Capacitance denser than the rest of Physics?",
+      "subject": "physics",
+      "chapter": "electrostatic-potential-and-capacitance",
+      "chapter_title": "Electrostatic Potential and Capacitance",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Group chat from school is quiet on Electrostatic Potential and Capacitance. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-15T09:49:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Mark scheme language for Electrostatic Potential and Capacitance is specific — practice writing to that style.",
+          "created_at": "2026-06-15T22:24:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Electrostatic Potential and Capacitance.",
+          "created_at": "2026-06-16T07:05:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_surface-chemistry_016",
+      "title": "Our class test had a tricky Chemistry question from Surface Chemistry",
+      "subject": "chemistry",
+      "chapter": "surface-chemistry",
+      "chapter_title": "Surface Chemistry",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Got stuck on a homework problem from Surface Chemistry. Happy to post the exact question if that helps. (Grade 12)",
+          "created_at": "2026-06-28T05:05:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Surface Chemistry problem cold.",
+          "created_at": "2026-06-28T22:18:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Whiteboard + friend teaching me Surface Chemistry beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-29T00:33:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Surface Chemistry — the diagrams helped.",
+          "created_at": "2026-06-29T06:51:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_magnetism-and-matter_017",
+      "title": "Anyone else find Magnetism and Matter denser than the rest of Physics?",
+      "subject": "physics",
+      "chapter": "magnetism-and-matter",
+      "chapter_title": "Magnetism and Matter",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Got stuck on a homework problem from Magnetism and Matter. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-16T00:02:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Magnetism and Matter fixed most of it.",
+          "created_at": "2026-06-16T17:15:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Magnetism and Matter.",
+          "created_at": "2026-06-16T21:43:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Magnetism and Matter.",
+          "created_at": "2026-06-17T00:54:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Magnetism and Matter.",
+          "created_at": "2026-06-17T10:17:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Not proud of it, but I left Magnetism and Matter late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-18T04:24:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_alternating-current_018",
+      "title": "Need a simple analogy for Alternating Current that actually sticks",
+      "subject": "physics",
+      "chapter": "alternating-current",
+      "chapter_title": "Alternating Current",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Is it normal that Alternating Current takes longer than neighboring chapters in Physics?",
+          "created_at": "2026-06-19T09:54:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I write every Alternating Current formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-20T00:33:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Alternating Current unit.",
+          "created_at": "2026-06-20T01:45:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Do the odd-numbered textbook exercises for Alternating Current; answers are usually in the back.",
+          "created_at": "2026-06-20T12:12:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_reproductive-health_019",
+      "title": "Stuck on Reproductive Health — anyone have a clear way to revise this?",
+      "subject": "biology",
+      "chapter": "reproductive-health",
+      "chapter_title": "Reproductive Health",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Got stuck on a homework problem from Reproductive Health. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-18T20:07:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I write every Reproductive Health formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-19T05:34:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Reproductive Health.",
+          "created_at": "2026-06-19T18:25:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Reproductive Health.",
+          "created_at": "2026-06-19T20:53:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Reproductive Health.",
+          "created_at": "2026-06-20T01:47:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Reproductive Health — the diagrams helped.",
+          "created_at": "2026-06-20T20:13:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Reproductive Health fixed most of it.",
+          "created_at": "2026-06-21T04:01:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Reproductive Health marks.",
+          "created_at": "2026-06-21T11:02:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_alcohols-phenols-and-ethers_020",
+      "title": "Past paper question on Alcohols Phenols and Ethers — which formula do you use first?",
+      "subject": "chemistry",
+      "chapter": "alcohols-phenols-and-ethers",
+      "chapter_title": "Alcohols Phenols and Ethers",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 11,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Revision week — Alcohols Phenols and Ethers is the weak spot on my checklist for Chemistry. How are you tackling it?",
+          "created_at": "2026-06-26T16:40:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Alcohols Phenols and Ethers.",
+          "created_at": "2026-06-26T19:51:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Alcohols Phenols and Ethers unit.",
+          "created_at": "2026-06-27T02:38:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Don't ignore the worked examples. For Alcohols Phenols and Ethers they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-27T17:55:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Past papers > notes for me on Alcohols Phenols and Ethers. Pattern recognition beats rereading.",
+          "created_at": "2026-06-28T07:50:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Alcohols Phenols and Ethers already.",
+          "created_at": "2026-06-28T22:56:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Our senior shared last year's notes on Alcohols Phenols and Ethers; still accurate for the current syllabus.",
+          "created_at": "2026-06-29T09:07:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Short sessions beat marathon cramming for Alcohols Phenols and Ethers. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-29T16:07:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Alcohols Phenols and Ethers.",
+          "created_at": "2026-06-29T20:34:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Anyone else want to sync study times for Alcohols Phenols and Ethers this week?",
+          "created_at": "2026-06-29T21:43:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Honestly I skipped ahead then came back — Alcohols Phenols and Ethers clicked after seeing later examples.",
+          "created_at": "2026-06-30T13:52:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_solutions_021",
+      "title": "Anyone else find Solutions denser than the rest of Chemistry?",
+      "subject": "chemistry",
+      "chapter": "solutions",
+      "chapter_title": "Solutions",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Making flashcards for Solutions tonight — what should absolutely be on them?",
+          "created_at": "2026-06-21T11:37:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Solutions.",
+          "created_at": "2026-06-21T13:47:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Solutions marks.",
+          "created_at": "2026-06-22T04:55:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Short sessions beat marathon cramming for Solutions. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-22T15:31:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_human-reproduction_022",
+      "title": "Need a simple analogy for Human Reproduction that actually sticks",
+      "subject": "biology",
+      "chapter": "human-reproduction",
+      "chapter_title": "Human Reproduction",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Past paper had two weird Human Reproduction items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-30T03:13:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Our senior shared last year's notes on Human Reproduction; still accurate for the current syllabus.",
+          "created_at": "2026-06-30T08:43:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Someone in my class made a mind map for Human Reproduction — copying that format helped a lot.",
+          "created_at": "2026-06-30T11:57:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_biotechnology-principles-and-processes_023",
+      "title": "Best resources for Biotechnology Principles and Processes? Textbook vs online notes",
+      "subject": "biology",
+      "chapter": "biotechnology-principles-and-processes",
+      "chapter_title": "Biotechnology Principles and Processes",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Making flashcards for Biotechnology Principles and Processes tonight — what should absolutely be on them?",
+          "created_at": "2026-06-19T21:48:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Biotechnology Principles and Processes.",
+          "created_at": "2026-06-20T05:49:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Biotechnology Principles and Processes unit.",
+          "created_at": "2026-06-21T00:09:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-21T07:23:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Biotechnology Principles and Processes idea.",
+          "created_at": "2026-06-21T11:37:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I keep a 'mistake log' only for Biotechnology Principles and Processes. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-22T01:51:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Honestly I skipped ahead then came back — Biotechnology Principles and Processes clicked after seeing later examples.",
+          "created_at": "2026-06-22T05:23:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-06-22T16:56:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Biotechnology Principles and Processes marks.",
+          "created_at": "2026-06-23T06:21:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Short sessions beat marathon cramming for Biotechnology Principles and Processes. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-24T00:35:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_biotechnology-and-applications_024",
+      "title": "Anyone else find Biotechnology and Applications denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "biotechnology-and-applications",
+      "chapter_title": "Biotechnology and Applications",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Making flashcards for Biotechnology and Applications tonight — what should absolutely be on them?",
+          "created_at": "2026-06-09T11:10:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I keep a 'mistake log' only for Biotechnology and Applications. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-09T18:21:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I write every Biotechnology and Applications formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-10T08:43:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Biotechnology and Applications set.",
+          "created_at": "2026-06-11T02:13:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Biotechnology and Applications.",
+          "created_at": "2026-06-11T18:50:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_organisms-and-populations_025",
+      "title": "Past paper question on Organisms and Populations — which formula do you use first?",
+      "subject": "biology",
+      "chapter": "organisms-and-populations",
+      "chapter_title": "Organisms and Populations",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Starting from zero on Organisms and Populations after a gap. Best first 30 minutes?",
+          "created_at": "2026-07-09T08:43:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Organisms and Populations — the diagrams helped.",
+          "created_at": "2026-07-09T18:15:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Break Organisms and Populations into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-10T03:54:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_aldehydes-ketones-and-carboxylic-acids_026",
+      "title": "Anyone else find Aldehydes Ketones and Carboxylic Acids denser than the rest of Chemistry?",
+      "subject": "chemistry",
+      "chapter": "aldehydes-ketones-and-carboxylic-acids",
+      "chapter_title": "Aldehydes Ketones and Carboxylic Acids",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Past paper had two weird Aldehydes Ketones and Carboxylic Acids items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-24T02:51:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Honestly I skipped ahead then came back — Aldehydes Ketones and Carboxylic Acids clicked after seeing later examples.",
+          "created_at": "2026-06-24T07:53:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Someone in my class made a mind map for Aldehydes Ketones and Carboxylic Acids — copying that format helped a lot.",
+          "created_at": "2026-06-24T09:26:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Official syllabus lists Aldehydes Ketones and Carboxylic Acids as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-24T20:13:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Aldehydes Ketones and Carboxylic Acids.",
+          "created_at": "2026-06-25T07:48:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_haloalkanes-and-haloarenes_027",
+      "title": "Sharing my Haloalkanes and Haloarenes mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "haloalkanes-and-haloarenes",
+      "chapter_title": "Haloalkanes and Haloarenes",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Scored poorly on the last Haloalkanes and Haloarenes quiz. Resetting my notes — open to structure advice. (Grade 12)",
+          "created_at": "2026-06-12T19:06:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Whiteboard + friend teaching me Haloalkanes and Haloarenes beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-13T06:36:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Haloalkanes and Haloarenes marks.",
+          "created_at": "2026-06-13T10:15:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I record myself explaining Haloalkanes and Haloarenes out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-13T14:47:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_solid-state_028",
+      "title": "Anyone else find Solid State denser than the rest of Chemistry?",
+      "subject": "chemistry",
+      "chapter": "solid-state",
+      "chapter_title": "Solid State",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I can recite definitions for Solid State but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-24T01:40:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Someone in my class made a mind map for Solid State — copying that format helped a lot.",
+          "created_at": "2026-06-24T16:49:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Solid State.",
+          "created_at": "2026-06-25T08:25:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Solid State — the diagrams helped.",
+          "created_at": "2026-06-26T01:06:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Solid State fixed most of it.",
+          "created_at": "2026-06-26T04:39:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Our senior shared last year's notes on Solid State; still accurate for the current syllabus.",
+          "created_at": "2026-06-26T05:58:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Official syllabus lists Solid State as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-26T16:29:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_mathematics-iii-limits_029",
+      "title": "Concept check: Mathematics III: Limits before the mock test",
+      "subject": "mathematics",
+      "chapter": "mathematics-iii-limits",
+      "chapter_title": "Mathematics III: Limits",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I can recite definitions for Mathematics III: Limits but freeze on application questions. Same for anyone? (Grade 12)",
+          "created_at": "2026-06-23T22:20:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Break Mathematics III: Limits into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-24T16:20:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Honestly I skipped ahead then came back — Mathematics III: Limits clicked after seeing later examples.",
+          "created_at": "2026-06-24T22:57:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Mathematics III: Limits.",
+          "created_at": "2026-06-25T10:33:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Mathematics III: Limits question though.",
+          "created_at": "2026-06-25T23:43:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Not proud of it, but I left Mathematics III: Limits late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-26T07:24:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Anyone else want to sync study times for Mathematics III: Limits this week?",
+          "created_at": "2026-06-26T13:10:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_evolution_030",
+      "title": "Quick poll: how many hours are you giving Evolution this week?",
+      "subject": "biology",
+      "chapter": "evolution",
+      "chapter_title": "Evolution",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Tried three YouTube explainers for Evolution and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-22T06:05:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-22T12:15:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Break Evolution into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-22T16:20:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Someone in my class made a mind map for Evolution — copying that format helped a lot.",
+          "created_at": "2026-06-22T18:34:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Whiteboard + friend teaching me Evolution beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-23T06:46:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Do the odd-numbered textbook exercises for Evolution; answers are usually in the back.",
+          "created_at": "2026-06-23T14:50:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Anyone else want to sync study times for Evolution this week?",
+          "created_at": "2026-06-23T17:53:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-06-23T18:55:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Our senior shared last year's notes on Evolution; still accurate for the current syllabus.",
+          "created_at": "2026-06-24T09:08:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Appreciate the tip. Going to redo my notes for Evolution from scratch.",
+          "created_at": "2026-06-24T14:58:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_human-health-and-disease_031",
+      "title": "How are you preparing Human Health and Disease for the final exam?",
+      "subject": "biology",
+      "chapter": "human-health-and-disease",
+      "chapter_title": "Human Health and Disease",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Past paper had two weird Human Health and Disease items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-07T12:10:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Human Health and Disease.",
+          "created_at": "2026-07-07T21:45:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Don't ignore the worked examples. For Human Health and Disease they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-08T06:01:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_atoms-and-nuclei_032",
+      "title": "Is Atoms and Nuclei more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "atoms-and-nuclei",
+      "chapter_title": "Atoms and Nuclei",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "We just started Atoms and Nuclei in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-07-05T21:43:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Not proud of it, but I left Atoms and Nuclei late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-06T01:33:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-06T13:56:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Short sessions beat marathon cramming for Atoms and Nuclei. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-07T04:36:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Atoms and Nuclei.",
+          "created_at": "2026-07-07T14:29:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Anyone else want to sync study times for Atoms and Nuclei this week?",
+          "created_at": "2026-07-07T20:49:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Atoms and Nuclei.",
+          "created_at": "2026-07-08T00:21:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-08T16:02:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Atoms and Nuclei fixed most of it.",
+          "created_at": "2026-07-08T21:56:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_ray-optics_033",
+      "title": "Who already finished Ray Optics? Worth starting early?",
+      "subject": "physics",
+      "chapter": "ray-optics",
+      "chapter_title": "Ray Optics",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I can recite definitions for Ray Optics but freeze on application questions. Same for anyone?",
+          "created_at": "2026-07-03T13:09:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I keep a 'mistake log' only for Ray Optics. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-03T16:31:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Exam boards repeat similar Physics patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-07-03T17:43:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Ray Optics fixed most of it.",
+          "created_at": "2026-07-03T20:16:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_amines_034",
+      "title": "Who already finished Amines? Worth starting early?",
+      "subject": "chemistry",
+      "chapter": "amines",
+      "chapter_title": "Amines",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Scored poorly on the last Amines quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-07-07T13:53:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I record myself explaining Amines out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-07T21:53:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Amines set.",
+          "created_at": "2026-07-08T13:35:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Honestly I skipped ahead then came back — Amines clicked after seeing later examples.",
+          "created_at": "2026-07-08T23:14:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Amines already.",
+          "created_at": "2026-07-09T04:29:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_sexual-reproduction-in-flowering-plants_035",
+      "title": "Sharing my Sexual Reproduction in Flowering Plants mistake from yesterday's quiz — what did I miss?",
+      "subject": "biology",
+      "chapter": "sexual-reproduction-in-flowering-plants",
+      "chapter_title": "Sexual Reproduction in Flowering Plants",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Is it normal that Sexual Reproduction in Flowering Plants takes longer than neighboring chapters in Biology? (Grade 12)",
+          "created_at": "2026-07-06T11:30:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Sexual Reproduction in Flowering Plants live.",
+          "created_at": "2026-07-06T18:33:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Whiteboard + friend teaching me Sexual Reproduction in Flowering Plants beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-06T19:46:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_biomolecules_036",
+      "title": "Anyone else find Biomolecules denser than the rest of Chemistry?",
+      "subject": "chemistry",
+      "chapter": "biomolecules",
+      "chapter_title": "Biomolecules",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I can recite definitions for Biomolecules but freeze on application questions. Same for anyone? (Grade 12)",
+          "created_at": "2026-06-23T19:43:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "If you cannot explain Biomolecules to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-23T21:45:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Someone in my class made a mind map for Biomolecules — copying that format helped a lot.",
+          "created_at": "2026-06-24T01:18:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_mathematics-ii-exponential-and-logarithm_037",
+      "title": "Quick poll: how many hours are you giving Mathematics II: Exponential and Logarithmic Functions this week?",
+      "subject": "mathematics",
+      "chapter": "mathematics-ii-exponential-and-logarithmic-funct",
+      "chapter_title": "Mathematics II: Exponential and Logarithmic Functions",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Making flashcards for Mathematics II: Exponential and Logarithmic Functions tonight — what should absolutely be on them? (Grade 12)",
+          "created_at": "2026-06-13T04:03:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-13T21:39:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I record myself explaining Mathematics II: Exponential and Logarithmic Functions out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-14T11:05:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Mathematics II: Exponential and Logarithmic Functions fixed most of it.",
+          "created_at": "2026-06-15T00:53:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I keep a 'mistake log' only for Mathematics II: Exponential and Logarithmic Functions. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-15T05:08:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Mathematics II: Exponential and Logarithmic Functions — the diagrams helped.",
+          "created_at": "2026-06-15T08:16:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_magnetic-effects-of-current_038",
+      "title": "Best resources for Magnetic Effects of Current? Textbook vs online notes",
+      "subject": "physics",
+      "chapter": "magnetic-effects-of-current",
+      "chapter_title": "Magnetic Effects of Current",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Scored poorly on the last Magnetic Effects of Current quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-07-06T13:45:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Short sessions beat marathon cramming for Magnetic Effects of Current. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-06T17:15:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_chemical-kinetics_039",
+      "title": "Need a simple analogy for Chemical Kinetics that actually sticks",
+      "subject": "chemistry",
+      "chapter": "chemical-kinetics",
+      "chapter_title": "Chemical Kinetics",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Is it normal that Chemical Kinetics takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-06-11T11:35:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Break Chemical Kinetics into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-12T02:17:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Chemical Kinetics fixed most of it.",
+          "created_at": "2026-06-12T03:51:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-12T09:51:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I keep a 'mistake log' only for Chemical Kinetics. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-12T18:59:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Anyone else want to sync study times for Chemical Kinetics this week?",
+          "created_at": "2026-06-12T23:00:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_molecular-basis-of-inheritance_040",
+      "title": "Teacher said Molecular Basis of Inheritance will definitely show up — panic mode?",
+      "subject": "biology",
+      "chapter": "molecular-basis-of-inheritance",
+      "chapter_title": "Molecular Basis of Inheritance",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Past paper had two weird Molecular Basis of Inheritance items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-23T20:09:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I keep a 'mistake log' only for Molecular Basis of Inheritance. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-24T13:55:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "For Molecular Basis of Inheritance, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-25T05:38:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_ecosystem_041",
+      "title": "Anyone else find Ecosystem denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "ecosystem",
+      "chapter_title": "Ecosystem",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Past paper had two weird Ecosystem items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-30T19:25:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Short sessions beat marathon cramming for Ecosystem. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-01T12:52:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Ecosystem.",
+          "created_at": "2026-07-02T02:46:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Our senior shared last year's notes on Ecosystem; still accurate for the current syllabus.",
+          "created_at": "2026-07-02T09:16:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Past papers > notes for me on Ecosystem. Pattern recognition beats rereading.",
+          "created_at": "2026-07-02T19:37:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "That sequencing (theory then numericals) matches what our teacher said too.",
+          "created_at": "2026-07-03T09:28:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_reproduction-in-organisms_042",
+      "title": "Best resources for Reproduction in Organisms? Textbook vs online notes",
+      "subject": "biology",
+      "chapter": "reproduction-in-organisms",
+      "chapter_title": "Reproduction in Organisms",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Revision week — Reproduction in Organisms is the weak spot on my checklist for Biology. How are you tackling it? (Grade 12)",
+          "created_at": "2026-06-26T20:22:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-27T08:01:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Short sessions beat marathon cramming for Reproduction in Organisms. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-27T21:36:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Reproduction in Organisms.",
+          "created_at": "2026-06-28T03:08:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Reproduction in Organisms idea.",
+          "created_at": "2026-06-28T21:46:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Mark scheme language for Reproduction in Organisms is specific — practice writing to that style.",
+          "created_at": "2026-06-29T09:22:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Anyone else want to sync study times for Reproduction in Organisms this week?",
+          "created_at": "2026-06-29T10:52:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-06-29T14:43:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_mathematics-ii-figures-and-equations_043",
+      "title": "Teacher said Mathematics II: Figures and Equations will definitely show up — panic mode?",
+      "subject": "mathematics",
+      "chapter": "mathematics-ii-figures-and-equations",
+      "chapter_title": "Mathematics II: Figures and Equations",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Got stuck on a homework problem from Mathematics II: Figures and Equations. Happy to post the exact question if that helps.",
+          "created_at": "2026-07-10T12:09:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I write every Mathematics II: Figures and Equations formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-10T17:45:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Not proud of it, but I left Mathematics II: Figures and Equations late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-11T10:10:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Mathematics II: Figures and Equations.",
+          "created_at": "2026-07-12T00:46:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_chemistry-in-everyday-life_044",
+      "title": "Sharing my Chemistry in Everyday Life mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "chemistry-in-everyday-life",
+      "chapter_title": "Chemistry in Everyday Life",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Making flashcards for Chemistry in Everyday Life tonight — what should absolutely be on them?",
+          "created_at": "2026-07-11T03:08:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "For Chemistry in Everyday Life, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-07-11T07:26:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Don't ignore the worked examples. For Chemistry in Everyday Life they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-11T12:51:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "I write every Chemistry in Everyday Life formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-11T15:36:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Past papers > notes for me on Chemistry in Everyday Life. Pattern recognition beats rereading.",
+          "created_at": "2026-07-12T01:06:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Chemistry in Everyday Life marks.",
+          "created_at": "2026-07-12T11:39:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Someone in my class made a mind map for Chemistry in Everyday Life — copying that format helped a lot.",
+          "created_at": "2026-07-13T00:50:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_polymers_045",
+      "title": "Stuck on Polymers — anyone have a clear way to revise this?",
+      "subject": "chemistry",
+      "chapter": "polymers",
+      "chapter_title": "Polymers",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Revision week — Polymers is the weak spot on my checklist for Chemistry. How are you tackling it? (Grade 12)",
+          "created_at": "2026-07-04T00:25:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Short sessions beat marathon cramming for Polymers. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-04T05:53:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Polymers.",
+          "created_at": "2026-07-04T12:08:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Past papers > notes for me on Polymers. Pattern recognition beats rereading.",
+          "created_at": "2026-07-04T21:14:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Polymers marks.",
+          "created_at": "2026-07-05T08:45:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Our senior shared last year's notes on Polymers; still accurate for the current syllabus.",
+          "created_at": "2026-07-05T14:02:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Do the odd-numbered textbook exercises for Polymers; answers are usually in the back.",
+          "created_at": "2026-07-05T15:38:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-07-05T20:15:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_d-and-f-block-elements_046",
+      "title": "Past paper question on d- and f-Block Elements — which formula do you use first?",
+      "subject": "chemistry",
+      "chapter": "d-and-f-block-elements",
+      "chapter_title": "d- and f-Block Elements",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Our teacher hinted d- and f-Block Elements is high-weight this year. Looking for a realistic study plan. (Grade 12)",
+          "created_at": "2026-07-08T16:21:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to d- and f-Block Elements.",
+          "created_at": "2026-07-08T23:06:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I write every d- and f-Block Elements formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-09T02:40:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_wave-optics_047",
+      "title": "Who already finished Wave Optics? Worth starting early?",
+      "subject": "physics",
+      "chapter": "wave-optics",
+      "chapter_title": "Wave Optics",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Past paper had two weird Wave Optics items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-17T05:29:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Do the odd-numbered textbook exercises for Wave Optics; answers are usually in the back.",
+          "created_at": "2026-06-17T06:52:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Wave Optics — the diagrams helped.",
+          "created_at": "2026-06-17T23:44:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Honestly I skipped ahead then came back — Wave Optics clicked after seeing later examples.",
+          "created_at": "2026-06-18T04:31:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "I record myself explaining Wave Optics out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-18T16:42:29.653719+00:00"
+        },
+        {
+          "author_id": "t_kenji_watanabe",
+          "author_name": "Kenji Watanabe",
+          "author_role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg",
+          "body": "Official syllabus lists Wave Optics as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-18T21:17:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Wave Optics.",
+          "created_at": "2026-06-19T00:29:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_mathematics-ii-differentiation-and-integ_048",
+      "title": "Best resources for Mathematics II: Differentiation and Integration? Textbook vs online notes",
+      "subject": "mathematics",
+      "chapter": "mathematics-ii-differentiation-and-integration",
+      "chapter_title": "Mathematics II: Differentiation and Integration",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Tried three YouTube explainers for Mathematics II: Differentiation and Integration and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-21T04:56:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Whiteboard + friend teaching me Mathematics II: Differentiation and Integration beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-21T22:34:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-22T13:37:29.653719+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_japan-grade-12_mathematics-iii-differential-calculus_049",
+      "title": "Stuck on Mathematics III: Differential Calculus — anyone have a clear way to revise this?",
+      "subject": "mathematics",
+      "chapter": "mathematics-iii-differential-calculus",
+      "chapter_title": "Mathematics III: Differential Calculus",
+      "track": "japan-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Is it normal that Mathematics III: Differential Calculus takes longer than neighboring chapters in Mathematics?",
+          "created_at": "2026-06-21T13:12:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Mathematics III: Differential Calculus marks.",
+          "created_at": "2026-06-21T22:34:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Mathematics III: Differential Calculus idea.",
+          "created_at": "2026-06-22T03:25:29.653719+00:00"
+        },
+        {
+          "author_id": "s_haruto_sato",
+          "author_name": "Haruto Sato",
+          "author_role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg",
+          "body": "Our senior shared last year's notes on Mathematics III: Differential Calculus; still accurate for the current syllabus.",
+          "created_at": "2026-06-22T12:25:29.653719+00:00"
+        },
+        {
+          "author_id": "s_yuki_tanaka",
+          "author_name": "Yuki Tanaka",
+          "author_role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg",
+          "body": "I'll try Evaluate mode after dinner and report back.",
+          "created_at": "2026-06-22T13:28:29.653719+00:00"
+        },
+        {
+          "author_id": "s_sakura_nakamura",
+          "author_name": "Sakura Nakamura",
+          "author_role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Mathematics III: Differential Calculus already.",
+          "created_at": "2026-06-23T03:37:29.653719+00:00"
+        }
+      ]
+    }
+  ]
+}

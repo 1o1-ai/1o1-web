@@ -1,0 +1,399 @@
+{
+  "sku": "philippines-grade-12",
+  "title": "Grade 12",
+  "displayName": "Philippines · Grade 12",
+  "locale": "en",
+  "syllabus_source": "eden_sutra_country_chapter_scope",
+  "subjects": {
+    "mathematics": {
+      "id": "mathematics",
+      "label": "Mathematics",
+      "icon": "📐",
+      "chapters": [
+        {
+          "id": "precalculus",
+          "title": "Precalculus",
+          "topic_id": "philippines-grade-12.mathematics.precalculus",
+          "syllabus_order": 1
+        },
+        {
+          "id": "basic-calculus",
+          "title": "Basic Calculus",
+          "topic_id": "philippines-grade-12.mathematics.basic-calculus",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "fundamental-theorem-of-calculus",
+            "advanced-fundamental-theorem-of-calculus",
+            "visualizing-fundamental-theorem-of-calculus",
+            "applications-of-fundamental-theorem-of-calculus",
+            "mathematical-treatment-of-fundamental-theorem-of-calculus",
+            "experimental-verification-of-fundamental-theorem-of-calculus",
+            "applications-of-fundamental-theorem-of-algebra",
+            "visualizing-fundamental-theorem-of-algebra",
+            "advanced-fundamental-theorem-of-algebra",
+            "fundamental-theorem-of-algebra",
+            "experimental-verification-of-fundamental-theorem-of-algebra",
+            "mathematical-treatment-of-fundamental-theorem-of-algebra",
+            "alternative-derivation-of-fundamental-theorem-of-algebra"
+          ]
+        },
+        {
+          "id": "statistics",
+          "title": "Statistics",
+          "topic_id": "philippines-grade-12.mathematics.statistics",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "measures-of-center-mean-median-mode",
+            "advanced-measures-of-center-mean-median-mode",
+            "applications-of-measures-of-center-mean-median-mode",
+            "experimental-verification-of-measures-of-center-mean-median-mode",
+            "mathematical-treatment-of-measures-of-center-mean-median-mode",
+            "visualizing-measures-of-center-mean-median-mode"
+          ]
+        },
+        {
+          "id": "probability",
+          "title": "Probability",
+          "topic_id": "philippines-grade-12.mathematics.probability",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "probability-definition",
+            "advanced-conditional-probability-bayes",
+            "advanced-probability-definition",
+            "applications-of-conditional-probability-bayes",
+            "applications-of-probability-definition",
+            "concept-of-probability",
+            "conditional-probability-bayes",
+            "experimental-verification-of-conditional-probability-bayes",
+            "experimental-verification-of-probability-definition",
+            "mathematical-treatment-of-conditional-probability-bayes",
+            "mathematical-treatment-of-probability-definition",
+            "visualizing-conditional-probability-bayes",
+            "visualizing-probability-definition",
+            "advanced-limit-definition",
+            "applications-of-limit-definition",
+            "concept-of-the-derivative",
+            "concept-of-the-integral",
+            "experimental-verification-of-limit-definition",
+            "mathematical-treatment-of-limit-definition",
+            "visualizing-limit-definition"
+          ]
+        },
+        {
+          "id": "mathematics-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "philippines-grade-12.mathematics.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "physics": {
+      "id": "physics",
+      "label": "Physics",
+      "icon": "⚛️",
+      "chapters": [
+        {
+          "id": "mechanics",
+          "title": "Mechanics",
+          "topic_id": "philippines-grade-12.physics.mechanics",
+          "syllabus_order": 1
+        },
+        {
+          "id": "electricity",
+          "title": "Electricity",
+          "topic_id": "philippines-grade-12.physics.electricity",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "electric-current",
+            "electric-circuits",
+            "advanced-electric-current",
+            "advanced-electric-power",
+            "advanced-electric-potential",
+            "advanced-electric-dipole",
+            "advanced-torque-on-current-loop",
+            "advanced-kirchhoff-current-law",
+            "advanced-electric-potential-energy",
+            "advanced-electric-flux",
+            "advanced-electric-field-lines",
+            "advanced-electric-field",
+            "advanced-parallel-current-force",
+            "advanced-electric-charge"
+          ]
+        },
+        {
+          "id": "magnetism",
+          "title": "Magnetism",
+          "topic_id": "philippines-grade-12.physics.magnetism",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "magnetic-field-b",
+            "electromagnetic-induction",
+            "advanced-magnetic-field-b",
+            "advanced-solenoid-magnetic-field",
+            "solenoid-magnetic-field"
+          ]
+        },
+        {
+          "id": "waves",
+          "title": "Waves",
+          "topic_id": "philippines-grade-12.physics.waves",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "longitudinal-waves",
+            "standing-waves",
+            "waves-and-superposition",
+            "advanced-de-broglie-waves",
+            "advanced-longitudinal-waves",
+            "advanced-sound-beats",
+            "advanced-standing-waves",
+            "advanced-transverse-waves",
+            "advanced-wave-equation",
+            "de-broglie-waves",
+            "sound-beats",
+            "transverse-waves",
+            "wave-equation",
+            "advanced-bernoulli-equation",
+            "advanced-thin-lens-equation",
+            "advanced-equation-of-continuity",
+            "advanced-ideal-gas-equation"
+          ]
+        },
+        {
+          "id": "modern-physics",
+          "title": "Modern Physics",
+          "topic_id": "philippines-grade-12.physics.modern-physics",
+          "syllabus_order": 5
+        },
+        {
+          "id": "physics-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "philippines-grade-12.physics.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "chemistry": {
+      "id": "chemistry",
+      "label": "Chemistry",
+      "icon": "🧪",
+      "chapters": [
+        {
+          "id": "atomic-structure",
+          "title": "Atomic Structure",
+          "topic_id": "philippines-grade-12.chemistry.atomic-structure",
+          "syllabus_order": 1,
+          "eden_concept_slugs": [
+            "atomic-structure",
+            "periodic-trends",
+            "atomic-mass-unit",
+            "dna-rna-structure",
+            "atomic-radius-trend",
+            "protein-structure-levels",
+            "advanced-atomic-mass-unit",
+            "advanced-dna-rna-structure",
+            "advanced-atomic-radius-trend",
+            "chemical-bonding-and-structure",
+            "applications-of-atomic-mass-unit",
+            "advanced-protein-structure-levels",
+            "applications-of-dna-rna-structure",
+            "applications-of-atomic-radius-trend",
+            "applications-of-protein-structure-levels",
+            "mathematical-treatment-of-atomic-mass-unit",
+            "mathematical-treatment-of-atomic-radius-trend",
+            "ionic-radius-trend",
+            "advanced-ionic-radius-trend",
+            "mathematical-treatment-of-ionic-radius-trend",
+            "applications-of-ionic-radius-trend"
+          ]
+        },
+        {
+          "id": "chemical-bonding",
+          "title": "Chemical Bonding",
+          "topic_id": "philippines-grade-12.chemistry.chemical-bonding",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "chemical-bonding-and-structure",
+            "covalent-bond",
+            "advanced-covalent-bond",
+            "applications-of-covalent-bond",
+            "mathematical-treatment-of-covalent-bond",
+            "chemical-equilibrium",
+            "chemical-kinetics-and-rates",
+            "advanced-coordinate-bond",
+            "advanced-ionic-bond",
+            "advanced-peptide-bond",
+            "applications-of-ionic-bond",
+            "applications-of-peptide-bond",
+            "applications-of-coordinate-bond",
+            "mathematical-treatment-of-ionic-bond",
+            "mathematical-treatment-of-coordinate-bond"
+          ]
+        },
+        {
+          "id": "organic-chemistry",
+          "title": "Organic Chemistry",
+          "topic_id": "philippines-grade-12.chemistry.organic-chemistry",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "covalent-bond",
+            "alkanes-substitution",
+            "advanced-alkanes-substitution",
+            "advanced-covalent-bond",
+            "applications-of-alkanes-substitution",
+            "applications-of-covalent-bond",
+            "mathematical-treatment-of-covalent-bond",
+            "organic-functional-groups",
+            "advanced-benzene-electrophilic-substitution",
+            "advanced-iupac-nomenclature-alkanes",
+            "advanced-coordinate-bond",
+            "advanced-ionic-bond",
+            "advanced-peptide-bond",
+            "applications-of-benzene-electrophilic-substitution",
+            "applications-of-iupac-nomenclature-alkanes",
+            "applications-of-ionic-bond",
+            "applications-of-peptide-bond",
+            "applications-of-coordinate-bond",
+            "mathematical-treatment-of-ionic-bond",
+            "mathematical-treatment-of-coordinate-bond"
+          ]
+        },
+        {
+          "id": "equilibrium",
+          "title": "Equilibrium",
+          "topic_id": "philippines-grade-12.chemistry.equilibrium",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "le-chatelier-principle",
+            "advanced-dynamic-equilibrium",
+            "advanced-equilibrium-constant",
+            "advanced-le-chatelier-principle",
+            "advanced-torque-and-rotational-equilibrium",
+            "applications-of-dynamic-equilibrium",
+            "applications-of-equilibrium-constant",
+            "applications-of-le-chatelier-principle",
+            "applications-of-torque-and-rotational-equilibrium",
+            "chemical-equilibrium",
+            "dynamic-equilibrium",
+            "equilibrium-constant",
+            "mathematical-treatment-of-dynamic-equilibrium",
+            "mathematical-treatment-of-equilibrium-constant",
+            "mathematical-treatment-of-le-chatelier-principle",
+            "torque-and-rotational-equilibrium"
+          ]
+        },
+        {
+          "id": "electrochemistry",
+          "title": "Electrochemistry",
+          "topic_id": "philippines-grade-12.chemistry.electrochemistry",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "redox-definitions",
+            "advanced-redox-definitions",
+            "applications-of-redox-definitions",
+            "advanced-balancing-redox",
+            "applications-of-balancing-redox"
+          ]
+        },
+        {
+          "id": "chemistry-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "philippines-grade-12.chemistry.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "biology": {
+      "id": "biology",
+      "label": "Biology",
+      "icon": "🧬",
+      "chapters": [
+        {
+          "id": "cell-biology",
+          "title": "Cell Biology",
+          "topic_id": "philippines-grade-12.biology.cell-biology",
+          "syllabus_order": 1,
+          "eden_concept_slugs": [
+            "cell-structure-and-function",
+            "cell-theory",
+            "advanced-cell-theory",
+            "advanced-galvanic-cells",
+            "applications-of-cell-theory",
+            "applications-of-galvanic-cells",
+            "experimental-verification-of-cell-theory",
+            "galvanic-cells",
+            "mathematical-treatment-of-cell-theory",
+            "visualizing-cell-theory",
+            "cell-wall",
+            "advanced-cell-wall",
+            "mitosis-and-meiosis",
+            "applications-of-cell-wall",
+            "mathematical-treatment-of-cell-wall",
+            "experimental-verification-of-cell-wall",
+            "structure-and-function-of-enzymes"
+          ]
+        },
+        {
+          "id": "genetics",
+          "title": "Genetics",
+          "topic_id": "philippines-grade-12.biology.genetics",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "mendelian-genetics",
+            "evolution-by-natural-selection",
+            "advanced-sex-linked-inheritance",
+            "applications-of-sex-linked-inheritance",
+            "experimental-verification-of-sex-linked-inheritance",
+            "mathematical-treatment-of-sex-linked-inheritance",
+            "sex-linked-inheritance"
+          ]
+        },
+        {
+          "id": "evolution",
+          "title": "Evolution",
+          "topic_id": "philippines-grade-12.biology.evolution",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "evolution-by-natural-selection"
+          ]
+        },
+        {
+          "id": "ecology",
+          "title": "Ecology",
+          "topic_id": "philippines-grade-12.biology.ecology",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "ecological-succession",
+            "evolution-by-natural-selection",
+            "advanced-ecological-succession",
+            "applications-of-ecological-succession",
+            "experimental-verification-of-ecological-succession",
+            "mathematical-treatment-of-ecological-succession"
+          ]
+        },
+        {
+          "id": "biotechnology",
+          "title": "Biotechnology",
+          "topic_id": "philippines-grade-12.biology.biotechnology",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "transcription-mrna",
+            "advanced-transcription-mrna",
+            "applications-of-transcription-mrna",
+            "experimental-verification-of-transcription-mrna",
+            "mathematical-treatment-of-transcription-mrna"
+          ]
+        },
+        {
+          "id": "biology-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "philippines-grade-12.biology.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    }
+  }
+}

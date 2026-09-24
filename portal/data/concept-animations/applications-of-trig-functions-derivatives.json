@@ -1,0 +1,62 @@
+{
+  "slug": "applications-of-trig-functions-derivatives",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Applications of Trig Functions Derivatives",
+  "theme": "calculus",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Applications of Trig Functions Derivatives",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Applications of Trig Functions Derivatives.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "The derivative of trigonometric functions helps engineers model the motion of a Ferris wheel, taking into account the changing speed and dir…",
+    "Pause and restate what Applications of Trig Functions Derivatives means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Applications of Trig Functions Derivatives: slope of a curve",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Trig Functions Derivatives</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">calculus</text><line x1=\"70\" y1=\"300\" x2=\"570\" y2=\"300\" stroke=\"#fda4af\" stroke-width=\"2\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"50\" stroke=\"#fda4af\" stroke-width=\"2\"/><path d=\"M90 260 C180 260, 220 80, 320 140 S480 280, 550 90\" fill=\"none\" stroke=\"#fb7185\" stroke-width=\"4\"/><line x1=\"280\" y1=\"200\" x2=\"400\" y2=\"110\" stroke=\"#fdba74\" stroke-width=\"4\"/><text x=\"400\" y=\"100\" text-anchor=\"start\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">slope</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Zoom in — curve looks like a line",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Trig Functions Derivatives</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">limit</text><path d=\"M80 250 C200 240, 280 100, 400 160 S540 250, 580 120\" fill=\"none\" stroke=\"#fb7185\" stroke-width=\"3\"/><rect x=\"240\" y=\"100\" width=\"160\" height=\"120\" fill=\"none\" stroke=\"#fdba74\" stroke-width=\"2\" stroke-dasharray=\"6 4\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#fda4af\" font-size=\"14\" font-family=\"Segoe UI,Arial\">local linear approximation</text>"
+    },
+    {
+      "id": "core",
+      "caption": "dy/dx = instantaneous rate of change",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Trig Functions Derivatives</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">definition</text><rect x=\"80\" y=\"100\" width=\"480\" height=\"160\" rx=\"14\" fill=\"#2a1219\" stroke=\"#fb7185\" stroke-width=\"2\"/><text x=\"320\" y=\"170\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"24\" font-family=\"Segoe UI,Arial\">f(x) = lim Δy/Δx</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#fda4af\" font-size=\"16\" font-family=\"Segoe UI,Arial\">as Δx → 0</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "The derivative of trigonometric functions helps engineers model the motion of a Ferris whe",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Trig Functions Derivatives</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><circle cx=\"200\" cy=\"200\" r=\"70\" fill=\"none\" stroke=\"#fb7185\" stroke-width=\"6\"/><line x1=\"200\" y1=\"200\" x2=\"240\" y2=\"150\" stroke=\"#fdba74\" stroke-width=\"4\"/><text x=\"400\" y=\"200\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"14\" font-family=\"Segoe UI,Arial\">The derivative of trigonometric functions helps en</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: derivative = local slope",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Trig Functions Derivatives</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f9a8d4\" font-size=\"28\" font-family=\"Segoe UI,Arial\">slope ↔ rate</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ApplicationsofTrigFunctionsDerivativesScene",
+    "notes": "Domain=calculus motif=derivative. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/applications_of_trig_functions_derivatives.py ConceptScene"
+  },
+  "motif": "derivative",
+  "generated_by": "template-stem-v5-calculus-derivative",
+  "generated_at": "2026-07-12T22:34:51Z"
+}

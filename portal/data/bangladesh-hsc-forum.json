@@ -1,0 +1,3420 @@
+{
+  "version": 1,
+  "sku": "bangladesh-hsc",
+  "title": "Grade 12",
+  "displayName": "Bangladesh · Grade 12",
+  "generated_at": "2026-07-13T12:21:29.530955+00:00",
+  "locale": "bd",
+  "threads": [
+    {
+      "id": "thr_bangladesh-hsc_differentiation_000",
+      "title": "Who already finished Differentiation? Worth starting early?",
+      "subject": "mathematics",
+      "chapter": "differentiation",
+      "chapter_title": "Differentiation",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Is it normal that Differentiation takes longer than neighboring chapters in Mathematics?",
+          "created_at": "2026-06-12T22:19:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Differentiation fixed most of it.",
+          "created_at": "2026-06-13T03:11:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Honestly I skipped ahead then came back — Differentiation clicked after seeing later examples.",
+          "created_at": "2026-06-13T19:31:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-14T02:40:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Differentiation marks.",
+          "created_at": "2026-06-14T03:42:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "If you cannot explain Differentiation to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-14T20:51:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Whiteboard + friend teaching me Differentiation beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-15T13:09:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_integration_001",
+      "title": "Teacher said Integration will definitely show up — panic mode?",
+      "subject": "mathematics",
+      "chapter": "integration",
+      "chapter_title": "Integration",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Group chat from school is quiet on Integration. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-26T01:36:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Integration — the diagrams helped.",
+          "created_at": "2026-06-26T12:26:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Integration.",
+          "created_at": "2026-06-26T22:43:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Break Integration into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-27T13:50:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_coordinate-geometry_002",
+      "title": "I keep mixing up steps in Coordinate Geometry. What helped you?",
+      "subject": "mathematics",
+      "chapter": "coordinate-geometry",
+      "chapter_title": "Coordinate Geometry",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "We just started Coordinate Geometry in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-07-06T21:45:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I record myself explaining Coordinate Geometry out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-07T11:00:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Check units and significant figures on every Coordinate Geometry numerical before you move on.",
+          "created_at": "2026-07-07T17:23:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I'll try Evaluate mode after dinner and report back.",
+          "created_at": "2026-07-08T07:53:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Coordinate Geometry already.",
+          "created_at": "2026-07-08T15:31:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Whiteboard + friend teaching me Coordinate Geometry beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-08T22:23:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Don't ignore the worked examples. For Coordinate Geometry they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-09T05:56:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Coordinate Geometry.",
+          "created_at": "2026-07-09T23:45:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_ecosystem_003",
+      "title": "Is Ecosystem more theory-heavy or numerical for our board?",
+      "subject": "biology",
+      "chapter": "ecosystem",
+      "chapter_title": "Ecosystem",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Starting from zero on Ecosystem after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-14T12:02:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Ecosystem.",
+          "created_at": "2026-06-15T02:31:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Whiteboard + friend teaching me Ecosystem beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-15T15:34:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Ecosystem.",
+          "created_at": "2026-06-15T20:05:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I record myself explaining Ecosystem out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-16T09:37:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_wave-optics_004",
+      "title": "Best resources for Wave Optics? Textbook vs online notes",
+      "subject": "physics",
+      "chapter": "wave-optics",
+      "chapter_title": "Wave Optics",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I can recite definitions for Wave Optics but freeze on application questions. Same for anyone? (Grade 12)",
+          "created_at": "2026-06-17T15:02:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Exam boards repeat similar Physics patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-06-17T23:56:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-18T07:32:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_magnetic-effects-of-current_005",
+      "title": "Our class test had a tricky Physics question from Magnetic Effects of Current",
+      "subject": "physics",
+      "chapter": "magnetic-effects-of-current",
+      "chapter_title": "Magnetic Effects of Current",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I can recite definitions for Magnetic Effects of Current but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-21T02:21:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Honestly I skipped ahead then came back — Magnetic Effects of Current clicked after seeing later examples.",
+          "created_at": "2026-06-21T08:43:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Magnetic Effects of Current.",
+          "created_at": "2026-06-22T01:28:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "If you cannot explain Magnetic Effects of Current to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-22T12:39:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_evolution_006",
+      "title": "Anyone else find Evolution denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "evolution",
+      "chapter_title": "Evolution",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Revision week — Evolution is the weak spot on my checklist for Biology. How are you tackling it?",
+          "created_at": "2026-06-08T21:14:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Official syllabus lists Evolution as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-09T03:55:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Evolution.",
+          "created_at": "2026-06-09T16:32:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Evolution question though.",
+          "created_at": "2026-06-10T04:02:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Evolution.",
+          "created_at": "2026-06-10T19:25:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I write every Evolution formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-10T21:39:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I keep a 'mistake log' only for Evolution. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-11T05:39:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_ray-optics_007",
+      "title": "How are you preparing Ray Optics for the final exam?",
+      "subject": "physics",
+      "chapter": "ray-optics",
+      "chapter_title": "Ray Optics",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "We just started Ray Optics in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-14T05:23:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Someone in my class made a mind map for Ray Optics — copying that format helped a lot.",
+          "created_at": "2026-06-14T14:13:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Ray Optics.",
+          "created_at": "2026-06-14T17:42:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Past papers > notes for me on Ray Optics. Pattern recognition beats rereading.",
+          "created_at": "2026-06-15T06:46:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Ray Optics — the diagrams helped.",
+          "created_at": "2026-06-16T01:41:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Break Ray Optics into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-16T13:02:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_coordination-compounds_008",
+      "title": "Best resources for Coordination Compounds? Textbook vs online notes",
+      "subject": "chemistry",
+      "chapter": "coordination-compounds",
+      "chapter_title": "Coordination Compounds",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "We just started Coordination Compounds in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-29T03:53:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Coordination Compounds set.",
+          "created_at": "2026-06-29T05:39:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Coordination Compounds already.",
+          "created_at": "2026-06-29T15:29:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Coordination Compounds.",
+          "created_at": "2026-06-29T16:48:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I record myself explaining Coordination Compounds out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-30T00:43:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_trigonometry_009",
+      "title": "Quick poll: how many hours are you giving Trigonometry this week?",
+      "subject": "mathematics",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Tried three YouTube explainers for Trigonometry and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-07-09T22:43:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Trigonometry marks.",
+          "created_at": "2026-07-10T12:24:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Trigonometry.",
+          "created_at": "2026-07-10T21:02:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Trigonometry question though.",
+          "created_at": "2026-07-11T12:11:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Mark scheme language for Trigonometry is specific — practice writing to that style.",
+          "created_at": "2026-07-11T14:13:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_molecular-basis-of-inheritance_010",
+      "title": "Anyone else find Molecular Basis of Inheritance denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "molecular-basis-of-inheritance",
+      "chapter_title": "Molecular Basis of Inheritance",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Making flashcards for Molecular Basis of Inheritance tonight — what should absolutely be on them?",
+          "created_at": "2026-06-20T02:47:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Honestly I skipped ahead then came back — Molecular Basis of Inheritance clicked after seeing later examples.",
+          "created_at": "2026-06-20T07:35:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Molecular Basis of Inheritance — the diagrams helped.",
+          "created_at": "2026-06-20T20:13:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Exam boards repeat similar Biology patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-06-21T10:15:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Molecular Basis of Inheritance.",
+          "created_at": "2026-06-21T19:56:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_electromagnetic-induction_011",
+      "title": "Past paper question on Electromagnetic Induction — which formula do you use first?",
+      "subject": "physics",
+      "chapter": "electromagnetic-induction",
+      "chapter_title": "Electromagnetic Induction",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Got stuck on a homework problem from Electromagnetic Induction. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-30T00:48:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Do the odd-numbered textbook exercises for Electromagnetic Induction; answers are usually in the back.",
+          "created_at": "2026-06-30T08:58:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our senior shared last year's notes on Electromagnetic Induction; still accurate for the current syllabus.",
+          "created_at": "2026-06-30T15:15:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-01T07:31:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Don't ignore the worked examples. For Electromagnetic Induction they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-01T17:56:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Whiteboard + friend teaching me Electromagnetic Induction beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-02T09:08:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Electromagnetic Induction.",
+          "created_at": "2026-07-02T18:18:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Electromagnetic Induction already.",
+          "created_at": "2026-07-03T04:39:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I record myself explaining Electromagnetic Induction out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-03T18:39:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_biotechnology-principles-and-processes_012",
+      "title": "I keep mixing up steps in Biotechnology Principles and Processes. What helped you?",
+      "subject": "biology",
+      "chapter": "biotechnology-principles-and-processes",
+      "chapter_title": "Biotechnology Principles and Processes",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our teacher hinted Biotechnology Principles and Processes is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-10T03:55:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Not proud of it, but I left Biotechnology Principles and Processes late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-10T13:48:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Biotechnology Principles and Processes problem cold.",
+          "created_at": "2026-06-10T20:38:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-06-11T15:12:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Honestly I skipped ahead then came back — Biotechnology Principles and Processes clicked after seeing later examples.",
+          "created_at": "2026-06-12T02:40:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_complex-numbers_013",
+      "title": "Anyone else find Complex Numbers denser than the rest of Mathematics?",
+      "subject": "mathematics",
+      "chapter": "complex-numbers",
+      "chapter_title": "Complex Numbers",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Tried three YouTube explainers for Complex Numbers and still confused. Prefer textbook-first approaches? (Grade 12)",
+          "created_at": "2026-06-19T13:45:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Past papers > notes for me on Complex Numbers. Pattern recognition beats rereading.",
+          "created_at": "2026-06-19T19:00:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Do the odd-numbered textbook exercises for Complex Numbers; answers are usually in the back.",
+          "created_at": "2026-06-20T08:35:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Complex Numbers — the diagrams helped.",
+          "created_at": "2026-06-20T10:37:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I record myself explaining Complex Numbers out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-20T21:08:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Complex Numbers fixed most of it.",
+          "created_at": "2026-06-21T12:18:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "For Complex Numbers, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-22T06:13:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_polynomials_014",
+      "title": "Is Polynomials more theory-heavy or numerical for our board?",
+      "subject": "mathematics",
+      "chapter": "polynomials",
+      "chapter_title": "Polynomials",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Is it normal that Polynomials takes longer than neighboring chapters in Mathematics?",
+          "created_at": "2026-06-29T15:51:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-30T07:45:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_magnetism-and-matter_015",
+      "title": "Who already finished Magnetism and Matter? Worth starting early?",
+      "subject": "physics",
+      "chapter": "magnetism-and-matter",
+      "chapter_title": "Magnetism and Matter",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Making flashcards for Magnetism and Matter tonight — what should absolutely be on them? (Grade 12)",
+          "created_at": "2026-06-22T08:26:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Magnetism and Matter.",
+          "created_at": "2026-06-22T14:11:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Whiteboard + friend teaching me Magnetism and Matter beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-23T00:44:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_alternating-current_016",
+      "title": "Teacher said Alternating Current will definitely show up — panic mode?",
+      "subject": "physics",
+      "chapter": "alternating-current",
+      "chapter_title": "Alternating Current",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Got stuck on a homework problem from Alternating Current. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-12T00:08:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I keep a 'mistake log' only for Alternating Current. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-12T03:19:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Alternating Current.",
+          "created_at": "2026-06-12T15:08:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I write every Alternating Current formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-13T05:21:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Alternating Current.",
+          "created_at": "2026-06-13T21:12:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Anyone else want to sync study times for Alternating Current this week?",
+          "created_at": "2026-06-14T05:54:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Don't ignore the worked examples. For Alternating Current they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-14T20:31:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-06-15T04:14:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Alternating Current fixed most of it.",
+          "created_at": "2026-06-15T05:30:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Alternating Current question though.",
+          "created_at": "2026-06-15T07:22:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_conic-sections_017",
+      "title": "How are you preparing Conic Sections for the final exam?",
+      "subject": "mathematics",
+      "chapter": "conic-sections",
+      "chapter_title": "Conic Sections",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Is it normal that Conic Sections takes longer than neighboring chapters in Mathematics?",
+          "created_at": "2026-06-26T03:59:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Conic Sections already.",
+          "created_at": "2026-06-26T14:39:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Conic Sections.",
+          "created_at": "2026-06-27T05:22:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_amines_018",
+      "title": "I keep mixing up steps in Amines. What helped you?",
+      "subject": "chemistry",
+      "chapter": "amines",
+      "chapter_title": "Amines",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Scored poorly on the last Amines quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-19T06:51:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Short sessions beat marathon cramming for Amines. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-19T23:39:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Amines already.",
+          "created_at": "2026-06-20T11:57:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Our senior shared last year's notes on Amines; still accurate for the current syllabus.",
+          "created_at": "2026-06-21T03:52:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Amines.",
+          "created_at": "2026-06-21T12:33:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_aldehydes-ketones-and-carboxylic-acids_019",
+      "title": "Teacher said Aldehydes Ketones and Carboxylic Acids will definitely show up — panic mode?",
+      "subject": "chemistry",
+      "chapter": "aldehydes-ketones-and-carboxylic-acids",
+      "chapter_title": "Aldehydes Ketones and Carboxylic Acids",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Revision week — Aldehydes Ketones and Carboxylic Acids is the weak spot on my checklist for Chemistry. How are you tackling it?",
+          "created_at": "2026-06-20T16:42:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Our senior shared last year's notes on Aldehydes Ketones and Carboxylic Acids; still accurate for the current syllabus.",
+          "created_at": "2026-06-21T05:11:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_electrostatic-potential-and-capacitance_020",
+      "title": "Best resources for Electrostatic Potential and Capacitance? Textbook vs online notes",
+      "subject": "physics",
+      "chapter": "electrostatic-potential-and-capacitance",
+      "chapter_title": "Electrostatic Potential and Capacitance",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Group chat from school is quiet on Electrostatic Potential and Capacitance. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-18T06:11:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Do the odd-numbered textbook exercises for Electrostatic Potential and Capacitance; answers are usually in the back.",
+          "created_at": "2026-06-18T07:44:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Not proud of it, but I left Electrostatic Potential and Capacitance late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-18T16:49:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Electrostatic Potential and Capacitance set.",
+          "created_at": "2026-06-19T02:44:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Don't ignore the worked examples. For Electrostatic Potential and Capacitance they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-19T04:57:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-19T07:17:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Electrostatic Potential and Capacitance.",
+          "created_at": "2026-06-19T13:23:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I record myself explaining Electrostatic Potential and Capacitance out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-19T22:39:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Our senior shared last year's notes on Electrostatic Potential and Capacitance; still accurate for the current syllabus.",
+          "created_at": "2026-06-20T16:48:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Electrostatic Potential and Capacitance live.",
+          "created_at": "2026-06-21T06:50:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_human-reproduction_021",
+      "title": "Past paper question on Human Reproduction — which formula do you use first?",
+      "subject": "biology",
+      "chapter": "human-reproduction",
+      "chapter_title": "Human Reproduction",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Starting from zero on Human Reproduction after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-30T19:07:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-01T10:12:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Don't ignore the worked examples. For Human Reproduction they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-02T02:37:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Not proud of it, but I left Human Reproduction late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-02T19:18:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Appreciate the tip. Going to redo my notes for Human Reproduction from scratch.",
+          "created_at": "2026-07-03T12:40:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Someone in my class made a mind map for Human Reproduction — copying that format helped a lot.",
+          "created_at": "2026-07-04T06:44:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Break Human Reproduction into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-04T16:52:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Human Reproduction — the diagrams helped.",
+          "created_at": "2026-07-04T21:10:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Human Reproduction set.",
+          "created_at": "2026-07-05T05:41:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Human Reproduction marks.",
+          "created_at": "2026-07-05T14:55:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_organisms-and-populations_022",
+      "title": "Teacher said Organisms and Populations will definitely show up — panic mode?",
+      "subject": "biology",
+      "chapter": "organisms-and-populations",
+      "chapter_title": "Organisms and Populations",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our teacher hinted Organisms and Populations is high-weight this year. Looking for a realistic study plan. (Grade 12)",
+          "created_at": "2026-06-13T00:51:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Our senior shared last year's notes on Organisms and Populations; still accurate for the current syllabus.",
+          "created_at": "2026-06-13T05:28:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Organisms and Populations.",
+          "created_at": "2026-06-14T00:13:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Organisms and Populations.",
+          "created_at": "2026-06-14T04:38:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Organisms and Populations problem cold.",
+          "created_at": "2026-06-14T07:51:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Organisms and Populations set.",
+          "created_at": "2026-06-14T22:25:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Past papers > notes for me on Organisms and Populations. Pattern recognition beats rereading.",
+          "created_at": "2026-06-15T03:15:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_chemical-kinetics_023",
+      "title": "Sharing my Chemical Kinetics mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "chemical-kinetics",
+      "chapter_title": "Chemical Kinetics",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Past paper had two weird Chemical Kinetics items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-01T19:18:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-02T13:26:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Exam boards repeat similar Chemistry patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-07-02T20:48:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_microbes-in-human-welfare_024",
+      "title": "Best resources for Microbes in Human Welfare? Textbook vs online notes",
+      "subject": "biology",
+      "chapter": "microbes-in-human-welfare",
+      "chapter_title": "Microbes in Human Welfare",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Scored poorly on the last Microbes in Human Welfare quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-07-11T15:35:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Microbes in Human Welfare.",
+          "created_at": "2026-07-12T05:02:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Exam boards repeat similar Biology patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-07-12T14:46:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Someone in my class made a mind map for Microbes in Human Welfare — copying that format helped a lot.",
+          "created_at": "2026-07-12T18:13:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Microbes in Human Welfare — the diagrams helped.",
+          "created_at": "2026-07-12T23:27:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_electric-charges-and-fields_025",
+      "title": "How are you preparing Electric Charges and Fields for the final exam?",
+      "subject": "physics",
+      "chapter": "electric-charges-and-fields",
+      "chapter_title": "Electric Charges and Fields",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Is it normal that Electric Charges and Fields takes longer than neighboring chapters in Physics? (Grade 12)",
+          "created_at": "2026-06-09T11:48:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Electric Charges and Fields set.",
+          "created_at": "2026-06-10T06:18:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Electric Charges and Fields.",
+          "created_at": "2026-06-10T20:04:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Electric Charges and Fields fixed most of it.",
+          "created_at": "2026-06-11T06:30:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_biodiversity-and-conservation_026",
+      "title": "I keep mixing up steps in Biodiversity and Conservation. What helped you?",
+      "subject": "biology",
+      "chapter": "biodiversity-and-conservation",
+      "chapter_title": "Biodiversity and Conservation",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our teacher hinted Biodiversity and Conservation is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-28T22:25:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Biodiversity and Conservation live.",
+          "created_at": "2026-06-29T16:30:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Someone in my class made a mind map for Biodiversity and Conservation — copying that format helped a lot.",
+          "created_at": "2026-06-30T05:49:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Biodiversity and Conservation idea.",
+          "created_at": "2026-06-30T14:24:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Biodiversity and Conservation.",
+          "created_at": "2026-07-01T08:31:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_dual-nature-of-radiation-and-matter_027",
+      "title": "Sharing my Dual Nature of Radiation and Matter mistake from yesterday's quiz — what did I miss?",
+      "subject": "physics",
+      "chapter": "dual-nature-of-radiation-and-matter",
+      "chapter_title": "Dual Nature of Radiation and Matter",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Past paper had two weird Dual Nature of Radiation and Matter items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-05T02:37:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Don't ignore the worked examples. For Dual Nature of Radiation and Matter they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-05T07:20:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Break Dual Nature of Radiation and Matter into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-05T10:34:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I write every Dual Nature of Radiation and Matter formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-06T03:58:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Dual Nature of Radiation and Matter fixed most of it.",
+          "created_at": "2026-07-06T16:43:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Dual Nature of Radiation and Matter marks.",
+          "created_at": "2026-07-06T18:15:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_principles-of-inheritance-and-variation_028",
+      "title": "Anyone else find Principles of Inheritance and Variation denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "principles-of-inheritance-and-variation",
+      "chapter_title": "Principles of Inheritance and Variation",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "We just started Principles of Inheritance and Variation in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-07-09T11:00:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Principles of Inheritance and Variation — the diagrams helped.",
+          "created_at": "2026-07-10T05:35:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "For Principles of Inheritance and Variation, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-07-10T14:50:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_chemistry-in-everyday-life_029",
+      "title": "Concept check: Chemistry in Everyday Life before the mock test",
+      "subject": "chemistry",
+      "chapter": "chemistry-in-everyday-life",
+      "chapter_title": "Chemistry in Everyday Life",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Revision week — Chemistry in Everyday Life is the weak spot on my checklist for Chemistry. How are you tackling it?",
+          "created_at": "2026-06-24T13:43:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Whiteboard + friend teaching me Chemistry in Everyday Life beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-24T17:48:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Past papers > notes for me on Chemistry in Everyday Life. Pattern recognition beats rereading.",
+          "created_at": "2026-06-25T07:31:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Chemistry in Everyday Life.",
+          "created_at": "2026-06-25T18:56:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I record myself explaining Chemistry in Everyday Life out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-25T23:17:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I write every Chemistry in Everyday Life formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-26T01:23:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Don't ignore the worked examples. For Chemistry in Everyday Life they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-26T06:45:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Chemistry in Everyday Life.",
+          "created_at": "2026-06-26T13:28:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_electromagnetic-waves_030",
+      "title": "Who already finished Electromagnetic Waves? Worth starting early?",
+      "subject": "physics",
+      "chapter": "electromagnetic-waves",
+      "chapter_title": "Electromagnetic Waves",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Scored poorly on the last Electromagnetic Waves quiz. Resetting my notes — open to structure advice. (Grade 12)",
+          "created_at": "2026-07-01T16:57:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "For Electromagnetic Waves, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-07-02T02:14:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I write every Electromagnetic Waves formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-02T18:52:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_d-and-f-block-elements_031",
+      "title": "Who already finished d- and f-Block Elements? Worth starting early?",
+      "subject": "chemistry",
+      "chapter": "d-and-f-block-elements",
+      "chapter_title": "d- and f-Block Elements",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our teacher hinted d- and f-Block Elements is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-07-06T05:21:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for d- and f-Block Elements already.",
+          "created_at": "2026-07-06T22:15:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Past papers > notes for me on d- and f-Block Elements. Pattern recognition beats rereading.",
+          "created_at": "2026-07-07T13:02:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for d- and f-Block Elements.",
+          "created_at": "2026-07-08T01:46:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "If you cannot explain d- and f-Block Elements to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-07-08T05:19:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Someone in my class made a mind map for d- and f-Block Elements — copying that format helped a lot.",
+          "created_at": "2026-07-08T21:58:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_biomolecules_032",
+      "title": "How are you preparing Biomolecules for the final exam?",
+      "subject": "chemistry",
+      "chapter": "biomolecules",
+      "chapter_title": "Biomolecules",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Our teacher hinted Biomolecules is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-16T05:52:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Biomolecules.",
+          "created_at": "2026-06-16T16:44:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I write every Biomolecules formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-17T02:52:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_differential-equations_033",
+      "title": "I keep mixing up steps in Differential Equations. What helped you?",
+      "subject": "mathematics",
+      "chapter": "differential-equations",
+      "chapter_title": "Differential Equations",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Past paper had two weird Differential Equations items back-to-back. Want to compare approaches. (Grade 12)",
+          "created_at": "2026-07-08T17:29:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Differential Equations.",
+          "created_at": "2026-07-08T20:58:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Our senior shared last year's notes on Differential Equations; still accurate for the current syllabus.",
+          "created_at": "2026-07-09T00:35:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Differential Equations.",
+          "created_at": "2026-07-09T11:46:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Differential Equations problem cold.",
+          "created_at": "2026-07-09T19:53:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Don't ignore the worked examples. For Differential Equations they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-10T03:33:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_polymers_034",
+      "title": "Anyone else find Polymers denser than the rest of Chemistry?",
+      "subject": "chemistry",
+      "chapter": "polymers",
+      "chapter_title": "Polymers",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Past paper had two weird Polymers items back-to-back. Want to compare approaches. (Grade 12)",
+          "created_at": "2026-07-07T21:37:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Polymers marks.",
+          "created_at": "2026-07-08T06:43:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Don't ignore the worked examples. For Polymers they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-08T11:48:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Check units and significant figures on every Polymers numerical before you move on.",
+          "created_at": "2026-07-08T15:22:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Polymers set.",
+          "created_at": "2026-07-08T22:40:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Short sessions beat marathon cramming for Polymers. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-09T06:47:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Not proud of it, but I left Polymers late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-09T08:50:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_reproduction-in-organisms_035",
+      "title": "Concept check: Reproduction in Organisms before the mock test",
+      "subject": "biology",
+      "chapter": "reproduction-in-organisms",
+      "chapter_title": "Reproduction in Organisms",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Starting from zero on Reproduction in Organisms after a gap. Best first 30 minutes?",
+          "created_at": "2026-07-09T09:11:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I keep a 'mistake log' only for Reproduction in Organisms. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-09T18:38:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_current-electricity_036",
+      "title": "Past paper question on Current Electricity — which formula do you use first?",
+      "subject": "physics",
+      "chapter": "current-electricity",
+      "chapter_title": "Current Electricity",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Got stuck on a homework problem from Current Electricity. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-30T13:49:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Current Electricity live.",
+          "created_at": "2026-06-30T15:27:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-30T18:37:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Current Electricity.",
+          "created_at": "2026-07-01T05:19:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Current Electricity.",
+          "created_at": "2026-07-01T14:09:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_biotechnology-and-applications_037",
+      "title": "Who already finished Biotechnology and Applications? Worth starting early?",
+      "subject": "biology",
+      "chapter": "biotechnology-and-applications",
+      "chapter_title": "Biotechnology and Applications",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Revision week — Biotechnology and Applications is the weak spot on my checklist for Biology. How are you tackling it?",
+          "created_at": "2026-07-09T22:32:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Biotechnology and Applications set.",
+          "created_at": "2026-07-10T01:36:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our senior shared last year's notes on Biotechnology and Applications; still accurate for the current syllabus.",
+          "created_at": "2026-07-10T19:55:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Not proud of it, but I left Biotechnology and Applications late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-11T13:44:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "For Biotechnology and Applications, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-07-11T17:49:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Past papers > notes for me on Biotechnology and Applications. Pattern recognition beats rereading.",
+          "created_at": "2026-07-11T20:31:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I write every Biotechnology and Applications formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-12T11:37:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Biotechnology and Applications.",
+          "created_at": "2026-07-13T01:07:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Short sessions beat marathon cramming for Biotechnology and Applications. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-13T17:24:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Biotechnology and Applications marks.",
+          "created_at": "2026-07-14T06:42:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_probability-and-statistics_038",
+      "title": "Is Probability and Statistics more theory-heavy or numerical for our board?",
+      "subject": "mathematics",
+      "chapter": "probability-and-statistics",
+      "chapter_title": "Probability and Statistics",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "We just started Probability and Statistics in class and I'm lost on the basics. Any tips before I dig into numericals? (Grade 12)",
+          "created_at": "2026-07-11T09:56:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Probability and Statistics.",
+          "created_at": "2026-07-11T13:32:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Break Probability and Statistics into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-11T18:36:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_surface-chemistry_039",
+      "title": "Best resources for Surface Chemistry? Textbook vs online notes",
+      "subject": "chemistry",
+      "chapter": "surface-chemistry",
+      "chapter_title": "Surface Chemistry",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Got stuck on a homework problem from Surface Chemistry. Happy to post the exact question if that helps. (Grade 12)",
+          "created_at": "2026-06-28T00:50:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Surface Chemistry.",
+          "created_at": "2026-06-28T10:26:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I write every Surface Chemistry formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-29T03:48:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_alcohols-phenols-and-ethers_040",
+      "title": "How are you preparing Alcohols Phenols and Ethers for the final exam?",
+      "subject": "chemistry",
+      "chapter": "alcohols-phenols-and-ethers",
+      "chapter_title": "Alcohols Phenols and Ethers",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "We just started Alcohols Phenols and Ethers in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-08T20:59:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Alcohols Phenols and Ethers.",
+          "created_at": "2026-06-08T22:07:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-09T00:22:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Not proud of it, but I left Alcohols Phenols and Ethers late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-09T13:55:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Alcohols Phenols and Ethers idea.",
+          "created_at": "2026-06-10T02:12:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Do the odd-numbered textbook exercises for Alcohols Phenols and Ethers; answers are usually in the back.",
+          "created_at": "2026-06-10T21:04:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_solid-state_041",
+      "title": "Sharing my Solid State mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "solid-state",
+      "chapter_title": "Solid State",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 11,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Making flashcards for Solid State tonight — what should absolutely be on them? (Grade 12)",
+          "created_at": "2026-07-10T08:51:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Don't ignore the worked examples. For Solid State they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-10T13:28:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Solid State.",
+          "created_at": "2026-07-11T03:19:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Solid State fixed most of it.",
+          "created_at": "2026-07-11T13:34:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Our senior shared last year's notes on Solid State; still accurate for the current syllabus.",
+          "created_at": "2026-07-11T17:54:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-07-12T07:04:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Short sessions beat marathon cramming for Solid State. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-12T20:19:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Solid State.",
+          "created_at": "2026-07-13T02:24:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Solid State.",
+          "created_at": "2026-07-13T15:07:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Whiteboard + friend teaching me Solid State beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-13T20:13:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Solid State idea.",
+          "created_at": "2026-07-14T08:02:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_haloalkanes-and-haloarenes_042",
+      "title": "Stuck on Haloalkanes and Haloarenes — anyone have a clear way to revise this?",
+      "subject": "chemistry",
+      "chapter": "haloalkanes-and-haloarenes",
+      "chapter_title": "Haloalkanes and Haloarenes",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Our teacher hinted Haloalkanes and Haloarenes is high-weight this year. Looking for a realistic study plan. (Grade 12)",
+          "created_at": "2026-06-14T04:22:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Haloalkanes and Haloarenes marks.",
+          "created_at": "2026-06-14T07:29:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Someone in my class made a mind map for Haloalkanes and Haloarenes — copying that format helped a lot.",
+          "created_at": "2026-06-14T19:37:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Whiteboard + friend teaching me Haloalkanes and Haloarenes beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-15T03:27:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-15T15:52:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Haloalkanes and Haloarenes set.",
+          "created_at": "2026-06-16T09:26:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Our senior shared last year's notes on Haloalkanes and Haloarenes; still accurate for the current syllabus.",
+          "created_at": "2026-06-16T15:53:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I record myself explaining Haloalkanes and Haloarenes out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-17T09:58:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Haloalkanes and Haloarenes live.",
+          "created_at": "2026-06-17T22:24:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Haloalkanes and Haloarenes question though.",
+          "created_at": "2026-06-18T01:18:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_reproductive-health_043",
+      "title": "Anyone else find Reproductive Health denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "reproductive-health",
+      "chapter_title": "Reproductive Health",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Tried three YouTube explainers for Reproductive Health and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-21T02:46:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Do the odd-numbered textbook exercises for Reproductive Health; answers are usually in the back.",
+          "created_at": "2026-06-21T19:20:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our senior shared last year's notes on Reproductive Health; still accurate for the current syllabus.",
+          "created_at": "2026-06-22T09:14:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I write every Reproductive Health formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-23T00:33:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_sexual-reproduction-in-flowering-plants_044",
+      "title": "Teacher said Sexual Reproduction in Flowering Plants will definitely show up — panic mode?",
+      "subject": "biology",
+      "chapter": "sexual-reproduction-in-flowering-plants",
+      "chapter_title": "Sexual Reproduction in Flowering Plants",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Group chat from school is quiet on Sexual Reproduction in Flowering Plants. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-29T10:54:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-29T16:21:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Sexual Reproduction in Flowering Plants.",
+          "created_at": "2026-06-30T01:05:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Sexual Reproduction in Flowering Plants already.",
+          "created_at": "2026-06-30T09:22:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_electrochemistry_045",
+      "title": "How are you preparing Electrochemistry for the final exam?",
+      "subject": "chemistry",
+      "chapter": "electrochemistry",
+      "chapter_title": "Electrochemistry",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Group chat from school is quiet on Electrochemistry. Hoping this forum has clearer answers.",
+          "created_at": "2026-07-02T04:18:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Electrochemistry idea.",
+          "created_at": "2026-07-02T08:58:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Electrochemistry.",
+          "created_at": "2026-07-03T01:40:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-07-03T09:00:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Electrochemistry problem cold.",
+          "created_at": "2026-07-03T13:16:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_solutions_046",
+      "title": "Sharing my Solutions mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "solutions",
+      "chapter_title": "Solutions",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "We just started Solutions in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-29T14:57:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-30T06:25:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Solutions problem cold.",
+          "created_at": "2026-06-30T18:26:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Solutions already.",
+          "created_at": "2026-07-01T02:53:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_semiconductor-electronics_047",
+      "title": "Concept check: Semiconductor Electronics before the mock test",
+      "subject": "physics",
+      "chapter": "semiconductor-electronics",
+      "chapter_title": "Semiconductor Electronics",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Tried three YouTube explainers for Semiconductor Electronics and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-12T03:19:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Semiconductor Electronics unit.",
+          "created_at": "2026-06-12T12:12:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Someone in my class made a mind map for Semiconductor Electronics — copying that format helped a lot.",
+          "created_at": "2026-06-13T01:34:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "I record myself explaining Semiconductor Electronics out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-13T10:23:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Not proud of it, but I left Semiconductor Electronics late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-13T12:47:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Semiconductor Electronics marks.",
+          "created_at": "2026-06-14T00:04:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Semiconductor Electronics.",
+          "created_at": "2026-06-14T05:30:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Semiconductor Electronics set.",
+          "created_at": "2026-06-14T13:18:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_matrices-and-determinants_048",
+      "title": "Who already finished Matrices and Determinants? Worth starting early?",
+      "subject": "mathematics",
+      "chapter": "matrices-and-determinants",
+      "chapter_title": "Matrices and Determinants",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Past paper had two weird Matrices and Determinants items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-19T22:52:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Matrices and Determinants.",
+          "created_at": "2026-06-20T17:40:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Honestly I skipped ahead then came back — Matrices and Determinants clicked after seeing later examples.",
+          "created_at": "2026-06-21T11:02:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Matrices and Determinants already.",
+          "created_at": "2026-06-21T15:30:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Matrices and Determinants.",
+          "created_at": "2026-06-22T02:17:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_human-health-and-disease_049",
+      "title": "Who already finished Human Health and Disease? Worth starting early?",
+      "subject": "biology",
+      "chapter": "human-health-and-disease",
+      "chapter_title": "Human Health and Disease",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Is it normal that Human Health and Disease takes longer than neighboring chapters in Biology?",
+          "created_at": "2026-06-28T16:41:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I write every Human Health and Disease formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-29T03:46:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Our senior shared last year's notes on Human Health and Disease; still accurate for the current syllabus.",
+          "created_at": "2026-06-29T13:19:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_atoms-and-nuclei_050",
+      "title": "Anyone else find Atoms and Nuclei denser than the rest of Physics?",
+      "subject": "physics",
+      "chapter": "atoms-and-nuclei",
+      "chapter_title": "Atoms and Nuclei",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "I can recite definitions for Atoms and Nuclei but freeze on application questions. Same for anyone? (Grade 12)",
+          "created_at": "2026-07-07T12:57:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I keep a 'mistake log' only for Atoms and Nuclei. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-07T19:35:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Break Atoms and Nuclei into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-08T07:09:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Someone in my class made a mind map for Atoms and Nuclei — copying that format helped a lot.",
+          "created_at": "2026-07-08T21:51:29.530955+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_bangladesh-hsc_vectors_051",
+      "title": "Best resources for Vectors? Textbook vs online notes",
+      "subject": "mathematics",
+      "chapter": "vectors",
+      "chapter_title": "Vectors",
+      "track": "bangladesh-hsc",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 11,
+      "posts": [
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "We just started Vectors in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-07-12T07:22:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Whiteboard + friend teaching me Vectors beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-12T14:10:29.530955+00:00"
+        },
+        {
+          "author_id": "t_nasreen_akter",
+          "author_name": "Nasreen Akter",
+          "author_role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg",
+          "body": "Check units and significant figures on every Vectors numerical before you move on.",
+          "created_at": "2026-07-12T18:27:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Anyone else want to sync study times for Vectors this week?",
+          "created_at": "2026-07-12T23:45:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "That sequencing (theory then numericals) matches what our teacher said too.",
+          "created_at": "2026-07-13T17:08:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Vectors.",
+          "created_at": "2026-07-14T09:43:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Vectors already.",
+          "created_at": "2026-07-14T14:29:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Past papers > notes for me on Vectors. Pattern recognition beats rereading.",
+          "created_at": "2026-07-14T23:11:29.530955+00:00"
+        },
+        {
+          "author_id": "s_arif_hassan",
+          "author_name": "Arif Hassan",
+          "author_role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg",
+          "body": "Our senior shared last year's notes on Vectors; still accurate for the current syllabus.",
+          "created_at": "2026-07-15T11:06:29.530955+00:00"
+        },
+        {
+          "author_id": "s_rahim_ahmed",
+          "author_name": "Rahim Ahmed",
+          "author_role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+          "body": "Someone in my class made a mind map for Vectors — copying that format helped a lot.",
+          "created_at": "2026-07-16T00:06:29.530955+00:00"
+        },
+        {
+          "author_id": "s_fatima_begum",
+          "author_name": "Fatima Begum",
+          "author_role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Vectors fixed most of it.",
+          "created_at": "2026-07-16T18:49:29.530955+00:00"
+        }
+      ]
+    }
+  ]
+}

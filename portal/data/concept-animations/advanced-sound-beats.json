@@ -1,0 +1,62 @@
+{
+  "slug": "advanced-sound-beats",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Advanced Sound Beats",
+  "theme": "waves",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Advanced Sound Beats",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Advanced Sound Beats.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Imagine two runners on a track with nearly the same speed—one laps the other just slightly faster. As they overlap, their footsteps momentar…",
+    "Pause and restate what Advanced Sound Beats means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Advanced Sound Beats: energy travels as a wave",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Sound Beats</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">waves</text><path d=\"M40 190 Q120 130, 200 190 T360 190 T520 190 T600 190\" fill=\"none\" stroke=\"#4ade80\" stroke-width=\"4\"/><line x1=\"40\" y1=\"190\" x2=\"600\" y2=\"190\" stroke=\"#86efac\" stroke-dasharray=\"4 4\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Label amplitude and wavelength",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Sound Beats</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">parts</text><path d=\"M60 200 Q140 140, 220 200 T380 200 T540 200\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"4\"/><line x1=\"140\" y1=\"140\" x2=\"140\" y2=\"200\" stroke=\"#facc15\" stroke-width=\"2\"/><text x=\"155\" y=\"130\" text-anchor=\"start\" fill=\"#facc15\" font-size=\"14\" font-family=\"Segoe UI,Arial\">A</text><line x1=\"140\" y1=\"250\" x2=\"300\" y2=\"250\" stroke=\"#4ade80\" stroke-width=\"2\"/><text x=\"220\" y=\"275\" text-anchor=\"middle\" fill=\"#4ade80\" font-size=\"16\" font-family=\"Segoe UI,Arial\">λ</text>"
+    },
+    {
+      "id": "core",
+      "caption": "v = f λ links speed, frequency, wavelength",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Sound Beats</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">equation</text><rect x=\"100\" y=\"120\" width=\"440\" height=\"140\" rx=\"14\" fill=\"#10251c\" stroke=\"#facc15\" stroke-width=\"2\"/><text x=\"320\" y=\"195\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"32\" font-family=\"Segoe UI,Arial\">v = f × λ</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Imagine two runners on a track with nearly the same speed—one laps the other just slightly",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Sound Beats</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><circle cx=\"100\" cy=\"150\" r=\"18\" fill=\"#4ade80\"/><circle cx=\"170\" cy=\"240\" r=\"18\" fill=\"#4ade80\"/><circle cx=\"240\" cy=\"150\" r=\"18\" fill=\"#4ade80\"/><circle cx=\"310\" cy=\"240\" r=\"18\" fill=\"#4ade80\"/><circle cx=\"380\" cy=\"150\" r=\"18\" fill=\"#4ade80\"/><circle cx=\"450\" cy=\"240\" r=\"18\" fill=\"#4ade80\"/><circle cx=\"520\" cy=\"150\" r=\"18\" fill=\"#4ade80\"/><text x=\"320\" y=\"320\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"13\" font-family=\"Segoe UI,Arial\">Imagine two runners on a track with nearly the same spee</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember wave measures",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Sound Beats</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#2dd4bf\" font-size=\"26\" font-family=\"Segoe UI,Arial\">A · f · λ · v</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AdvancedSoundBeatsScene",
+    "notes": "Domain=waves motif=wave. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/advanced_sound_beats.py ConceptScene"
+  },
+  "motif": "wave",
+  "generated_by": "template-stem-v5-waves-wave",
+  "generated_at": "2026-07-12T22:34:27Z"
+}

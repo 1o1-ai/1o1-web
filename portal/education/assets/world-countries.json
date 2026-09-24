@@ -1,0 +1,903 @@
+{
+  "version": 2,
+  "updatedAt": "2026-07-06T06:08:03.977815+00:00",
+  "dataRoot": "/portal/data",
+  "educationApi": "https://api.brahmando.com/education",
+  "deploySource": "github.com/Brahmando-ai/Brahmando",
+  "questionBaselinePerSubject": 5,
+  "subjects": [
+    "physics",
+    "chemistry",
+    "mathematics",
+    "biology"
+  ],
+  "center": {
+    "id": "international",
+    "title": "International",
+    "href": "/portal/education/international/",
+    "subtitle": "SAT · ACT · TOEFL · GRE · GMAT · international competitive exams"
+  },
+  "countries": [
+    {
+      "id": "india",
+      "title": "India",
+      "slug": "india",
+      "href": "/portal/education/india/",
+      "subtitle": "CBSE · state boards · Class X & XII",
+      "flag": "🇮🇳",
+      "isIndia": true,
+      "microservices": []
+    },
+    {
+      "id": "australia",
+      "title": "Australia",
+      "slug": "australia",
+      "href": "/portal/education/australia/",
+      "subtitle": "Grade 10 · Grade 12",
+      "flag": "🇦🇺",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "grade-10",
+          "title": "Grade 10",
+          "slug": "grade-10",
+          "equivalent": "10th",
+          "href": "/portal/education/australia/grade-10/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "australia-grade-10",
+          "dataPrefix": "/portal/data/australia-grade-10",
+          "curriculumPath": "/portal/data/australia-grade-10-curriculum.json",
+          "bankPath": "/portal/data/australia-grade-10-questions.json",
+          "forumPath": "/portal/data/australia-grade-10-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "grade-12",
+          "title": "Grade 12",
+          "slug": "grade-12",
+          "equivalent": "12th",
+          "href": "/portal/education/australia/grade-12/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "australia-grade-12",
+          "dataPrefix": "/portal/data/australia-grade-12",
+          "curriculumPath": "/portal/data/australia-grade-12-curriculum.json",
+          "bankPath": "/portal/data/australia-grade-12-questions.json",
+          "forumPath": "/portal/data/australia-grade-12-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "bangladesh",
+      "title": "Bangladesh",
+      "slug": "bangladesh",
+      "href": "/portal/education/bangladesh/",
+      "subtitle": "SSC · HSC",
+      "flag": "🇧🇩",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "ssc",
+          "title": "SSC (10th)",
+          "slug": "ssc",
+          "equivalent": "10th",
+          "href": "/portal/education/bangladesh/ssc/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "bangladesh-ssc",
+          "dataPrefix": "/portal/data/bangladesh-ssc",
+          "curriculumPath": "/portal/data/bangladesh-ssc-curriculum.json",
+          "bankPath": "/portal/data/bangladesh-ssc-questions.json",
+          "forumPath": "/portal/data/bangladesh-ssc-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "hsc",
+          "title": "HSC (12th)",
+          "slug": "hsc",
+          "equivalent": "12th",
+          "href": "/portal/education/bangladesh/hsc/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "bangladesh-hsc",
+          "dataPrefix": "/portal/data/bangladesh-hsc",
+          "curriculumPath": "/portal/data/bangladesh-hsc-curriculum.json",
+          "bankPath": "/portal/data/bangladesh-hsc-questions.json",
+          "forumPath": "/portal/data/bangladesh-hsc-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "canada",
+      "title": "Canada",
+      "slug": "canada",
+      "href": "/portal/education/canada/",
+      "subtitle": "Grade 10 · Grade 12",
+      "flag": "🇨🇦",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "grade-10",
+          "title": "Grade 10",
+          "slug": "grade-10",
+          "equivalent": "10th",
+          "href": "/portal/education/canada/grade-10/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "canada-grade-10",
+          "dataPrefix": "/portal/data/canada-grade-10",
+          "curriculumPath": "/portal/data/canada-grade-10-curriculum.json",
+          "bankPath": "/portal/data/canada-grade-10-questions.json",
+          "forumPath": "/portal/data/canada-grade-10-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "grade-12",
+          "title": "Grade 12",
+          "slug": "grade-12",
+          "equivalent": "12th",
+          "href": "/portal/education/canada/grade-12/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "canada-grade-12",
+          "dataPrefix": "/portal/data/canada-grade-12",
+          "curriculumPath": "/portal/data/canada-grade-12-curriculum.json",
+          "bankPath": "/portal/data/canada-grade-12-questions.json",
+          "forumPath": "/portal/data/canada-grade-12-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "finland",
+      "title": "Finland",
+      "slug": "finland",
+      "href": "/portal/education/finland/",
+      "subtitle": "Grade 10 · Grade 12 · FI-OPH",
+      "flag": "🇫🇮",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "grade-10",
+          "title": "Grade 10",
+          "slug": "grade-10",
+          "equivalent": "10th",
+          "href": "/portal/education/finland/grade-10/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "finland-grade-10",
+          "dataPrefix": "/portal/data/finland-grade-10",
+          "curriculumPath": "/portal/data/finland-grade-10-curriculum.json",
+          "bankPath": "/portal/data/finland-grade-10-questions.json",
+          "forumPath": "/portal/data/finland-grade-10-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "grade-12",
+          "title": "Grade 12",
+          "slug": "grade-12",
+          "equivalent": "12th",
+          "href": "/portal/education/finland/grade-12/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "finland-grade-12",
+          "dataPrefix": "/portal/data/finland-grade-12",
+          "curriculumPath": "/portal/data/finland-grade-12-curriculum.json",
+          "bankPath": "/portal/data/finland-grade-12-questions.json",
+          "forumPath": "/portal/data/finland-grade-12-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "japan",
+      "title": "Japan",
+      "slug": "japan",
+      "href": "/portal/education/japan/",
+      "subtitle": "Grade 10 · Grade 12 · MEXT",
+      "flag": "🇯🇵",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "grade-10",
+          "title": "Grade 10",
+          "slug": "grade-10",
+          "equivalent": "10th",
+          "href": "/portal/education/japan/grade-10/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "japan-grade-10",
+          "dataPrefix": "/portal/data/japan-grade-10",
+          "curriculumPath": "/portal/data/japan-grade-10-curriculum.json",
+          "bankPath": "/portal/data/japan-grade-10-questions.json",
+          "forumPath": "/portal/data/japan-grade-10-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "grade-12",
+          "title": "Grade 12",
+          "slug": "grade-12",
+          "equivalent": "12th",
+          "href": "/portal/education/japan/grade-12/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "japan-grade-12",
+          "dataPrefix": "/portal/data/japan-grade-12",
+          "curriculumPath": "/portal/data/japan-grade-12-curriculum.json",
+          "bankPath": "/portal/data/japan-grade-12-questions.json",
+          "forumPath": "/portal/data/japan-grade-12-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "malaysia",
+      "title": "Malaysia",
+      "slug": "malaysia",
+      "href": "/portal/education/malaysia/",
+      "subtitle": "SPM · STPM · science & math",
+      "flag": "🇲🇾",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "grade-10",
+          "title": "Grade 10 (SPM)",
+          "slug": "grade-10",
+          "equivalent": "10th",
+          "href": "/portal/education/malaysia/grade-10/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "malaysia-grade-10",
+          "dataPrefix": "/portal/data/malaysia-grade-10",
+          "curriculumPath": "/portal/data/malaysia-grade-10-curriculum.json",
+          "bankPath": "/portal/data/malaysia-grade-10-questions.json",
+          "forumPath": "/portal/data/malaysia-grade-10-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "grade-12",
+          "title": "Grade 12 (STPM)",
+          "slug": "grade-12",
+          "equivalent": "12th",
+          "href": "/portal/education/malaysia/grade-12/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "malaysia-grade-12",
+          "dataPrefix": "/portal/data/malaysia-grade-12",
+          "curriculumPath": "/portal/data/malaysia-grade-12-curriculum.json",
+          "bankPath": "/portal/data/malaysia-grade-12-questions.json",
+          "forumPath": "/portal/data/malaysia-grade-12-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "nigeria",
+      "title": "Nigeria",
+      "slug": "nigeria",
+      "href": "/portal/education/nigeria/",
+      "subtitle": "WAEC/NECO · Grade 10 & 12",
+      "flag": "🇳🇬",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "grade-10",
+          "title": "Grade 10 (WAEC/NECO)",
+          "slug": "grade-10",
+          "equivalent": "10th",
+          "href": "/portal/education/nigeria/grade-10/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "nigeria-grade-10",
+          "dataPrefix": "/portal/data/nigeria-grade-10",
+          "curriculumPath": "/portal/data/nigeria-grade-10-curriculum.json",
+          "bankPath": "/portal/data/nigeria-grade-10-questions.json",
+          "forumPath": "/portal/data/nigeria-grade-10-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "grade-12",
+          "title": "Grade 12 (WAEC/NECO)",
+          "slug": "grade-12",
+          "equivalent": "12th",
+          "href": "/portal/education/nigeria/grade-12/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "nigeria-grade-12",
+          "dataPrefix": "/portal/data/nigeria-grade-12",
+          "curriculumPath": "/portal/data/nigeria-grade-12-curriculum.json",
+          "bankPath": "/portal/data/nigeria-grade-12-questions.json",
+          "forumPath": "/portal/data/nigeria-grade-12-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "pakistan",
+      "title": "Pakistan",
+      "slug": "pakistan",
+      "href": "/portal/education/pakistan/",
+      "subtitle": "SSC · HSSC",
+      "flag": "🇵🇰",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "ssc",
+          "title": "SSC (10th)",
+          "slug": "ssc",
+          "equivalent": "10th",
+          "href": "/portal/education/pakistan/ssc/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "pakistan-ssc",
+          "dataPrefix": "/portal/data/pakistan-ssc",
+          "curriculumPath": "/portal/data/pakistan-ssc-curriculum.json",
+          "bankPath": "/portal/data/pakistan-ssc-questions.json",
+          "forumPath": "/portal/data/pakistan-ssc-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "hssc",
+          "title": "HSSC (12th)",
+          "slug": "hssc",
+          "equivalent": "12th",
+          "href": "/portal/education/pakistan/hssc/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "pakistan-hssc",
+          "dataPrefix": "/portal/data/pakistan-hssc",
+          "curriculumPath": "/portal/data/pakistan-hssc-curriculum.json",
+          "bankPath": "/portal/data/pakistan-hssc-questions.json",
+          "forumPath": "/portal/data/pakistan-hssc-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "philippines",
+      "title": "Philippines",
+      "slug": "philippines",
+      "href": "/portal/education/philippines/",
+      "subtitle": "Grade 10 · Grade 12",
+      "flag": "🇵🇭",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "grade-10",
+          "title": "Grade 10",
+          "slug": "grade-10",
+          "equivalent": "10th",
+          "href": "/portal/education/philippines/grade-10/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "philippines-grade-10",
+          "dataPrefix": "/portal/data/philippines-grade-10",
+          "curriculumPath": "/portal/data/philippines-grade-10-curriculum.json",
+          "bankPath": "/portal/data/philippines-grade-10-questions.json",
+          "forumPath": "/portal/data/philippines-grade-10-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "grade-12",
+          "title": "Grade 12",
+          "slug": "grade-12",
+          "equivalent": "12th",
+          "href": "/portal/education/philippines/grade-12/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "philippines-grade-12",
+          "dataPrefix": "/portal/data/philippines-grade-12",
+          "curriculumPath": "/portal/data/philippines-grade-12-curriculum.json",
+          "bankPath": "/portal/data/philippines-grade-12-questions.json",
+          "forumPath": "/portal/data/philippines-grade-12-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "singapore",
+      "title": "Singapore",
+      "slug": "singapore",
+      "href": "/portal/education/singapore/",
+      "subtitle": "GCE O · GCE A",
+      "flag": "🇸🇬",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "gce-o-level",
+          "title": "GCE O Level (10th)",
+          "slug": "gce-o-level",
+          "equivalent": "10th",
+          "href": "/portal/education/singapore/gce-o-level/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "singapore-gce-o-level",
+          "dataPrefix": "/portal/data/singapore-gce-o-level",
+          "curriculumPath": "/portal/data/singapore-gce-o-level-curriculum.json",
+          "bankPath": "/portal/data/singapore-gce-o-level-questions.json",
+          "forumPath": "/portal/data/singapore-gce-o-level-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "gce-a-level",
+          "title": "GCE A Level (12th)",
+          "slug": "gce-a-level",
+          "equivalent": "12th",
+          "href": "/portal/education/singapore/gce-a-level/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "singapore-gce-a-level",
+          "dataPrefix": "/portal/data/singapore-gce-a-level",
+          "curriculumPath": "/portal/data/singapore-gce-a-level-curriculum.json",
+          "bankPath": "/portal/data/singapore-gce-a-level-questions.json",
+          "forumPath": "/portal/data/singapore-gce-a-level-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "south-korea",
+      "title": "South Korea",
+      "slug": "south-korea",
+      "href": "/portal/education/south-korea/",
+      "subtitle": "Grade 10 · Grade 12 · CSAT prep",
+      "flag": "🇰🇷",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "grade-10",
+          "title": "Grade 10",
+          "slug": "grade-10",
+          "equivalent": "10th",
+          "href": "/portal/education/south-korea/grade-10/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "south-korea-grade-10",
+          "dataPrefix": "/portal/data/south-korea-grade-10",
+          "curriculumPath": "/portal/data/south-korea-grade-10-curriculum.json",
+          "bankPath": "/portal/data/south-korea-grade-10-questions.json",
+          "forumPath": "/portal/data/south-korea-grade-10-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "grade-12",
+          "title": "Grade 12",
+          "slug": "grade-12",
+          "equivalent": "12th",
+          "href": "/portal/education/south-korea/grade-12/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "south-korea-grade-12",
+          "dataPrefix": "/portal/data/south-korea-grade-12",
+          "curriculumPath": "/portal/data/south-korea-grade-12-curriculum.json",
+          "bankPath": "/portal/data/south-korea-grade-12-questions.json",
+          "forumPath": "/portal/data/south-korea-grade-12-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "uk",
+      "title": "United Kingdom",
+      "slug": "uk",
+      "href": "/portal/education/uk/",
+      "subtitle": "GCSE · GCE A-Level",
+      "flag": "🇬🇧",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "gcse",
+          "title": "GCSE (10th)",
+          "slug": "gcse",
+          "equivalent": "10th",
+          "href": "/portal/education/uk/gcse/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "uk-gcse",
+          "dataPrefix": "/portal/data/uk-gcse",
+          "curriculumPath": "/portal/data/uk-gcse-curriculum.json",
+          "bankPath": "/portal/data/uk-gcse-questions.json",
+          "forumPath": "/portal/data/uk-gcse-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "gce-a-level",
+          "title": "GCE A Level (12th)",
+          "slug": "gce-a-level",
+          "equivalent": "12th",
+          "href": "/portal/education/uk/gce-a-level/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "uk-gce-a-level",
+          "dataPrefix": "/portal/data/uk-gce-a-level",
+          "curriculumPath": "/portal/data/uk-gce-a-level-curriculum.json",
+          "bankPath": "/portal/data/uk-gce-a-level-questions.json",
+          "forumPath": "/portal/data/uk-gce-a-level-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    },
+    {
+      "id": "usa",
+      "title": "United States",
+      "slug": "usa",
+      "href": "/portal/education/usa/",
+      "subtitle": "Grade 10 · Grade 12 AP",
+      "flag": "🇺🇸",
+      "isIndia": false,
+      "microservices": [
+        {
+          "id": "grade-10",
+          "title": "Grade 10",
+          "slug": "grade-10",
+          "equivalent": "10th",
+          "href": "/portal/education/usa/grade-10/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "usa-grade-10",
+          "dataPrefix": "/portal/data/usa-grade-10",
+          "curriculumPath": "/portal/data/usa-grade-10-curriculum.json",
+          "bankPath": "/portal/data/usa-grade-10-questions.json",
+          "forumPath": "/portal/data/usa-grade-10-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        },
+        {
+          "id": "grade-12",
+          "title": "Grade 12 (AP)",
+          "slug": "grade-12",
+          "equivalent": "12th",
+          "href": "/portal/education/usa/grade-12/index.html",
+          "subjects": [
+            "physics",
+            "chemistry",
+            "mathematics",
+            "biology"
+          ],
+          "questionsPerSubject": 5,
+          "questionCounts": {
+            "physics": 5,
+            "chemistry": 5,
+            "mathematics": 5,
+            "biology": 5
+          },
+          "totalQuestions": 20,
+          "subtitle": "Phy · Chem · Math · Bio",
+          "sku": "usa-grade-12",
+          "dataPrefix": "/portal/data/usa-grade-12",
+          "curriculumPath": "/portal/data/usa-grade-12-curriculum.json",
+          "bankPath": "/portal/data/usa-grade-12-questions.json",
+          "forumPath": "/portal/data/usa-grade-12-forum.json",
+          "educationApi": "https://api.brahmando.com/education"
+        }
+      ]
+    }
+  ]
+}

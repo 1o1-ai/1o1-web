@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-measures-of-center-mean-median-mode",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Measures of Center Mean Median Mode",
+  "theme": "stats",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Measures of Center Mean Median Mode",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Measures of Center Mean Median Mode.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Measures of center, such as mean, median, and mode, are like different methods to calculate the average return on investment (ROI) of a stoc…",
+    "Pause and restate what Mathematical Treatment of Measures of Center Mean Median Mode means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Measures of Center Mean Median Mode: interlocking parts",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Measures of Center Mea</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mechanism</text><circle cx=\"220\" cy=\"190\" r=\"70\" fill=\"none\" stroke=\"#4ade80\" stroke-width=\"14\"/><circle cx=\"380\" cy=\"190\" r=\"50\" fill=\"none\" stroke=\"#facc15\" stroke-width=\"12\"/><circle cx=\"220\" cy=\"190\" r=\"12\" fill=\"#2dd4bf\"/><circle cx=\"380\" cy=\"190\" r=\"10\" fill=\"#2dd4bf\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Input motion becomes output effect",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Measures of Center Mea</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">io</text><rect x=\"60\" y=\"150\" width=\"120\" height=\"70\" rx=\"8\" fill=\"#10251c\" stroke=\"#4ade80\" stroke-width=\"2\"/><text x=\"120\" y=\"190\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"14\" font-family=\"Segoe UI,Arial\">input</text><text x=\"230\" y=\"190\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><circle cx=\"320\" cy=\"185\" r=\"40\" fill=\"none\" stroke=\"#2dd4bf\" stroke-width=\"8\"/><text x=\"410\" y=\"190\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"450\" y=\"150\" width=\"130\" height=\"70\" rx=\"8\" fill=\"#10251c\" stroke=\"#facc15\" stroke-width=\"2\"/><text x=\"515\" y=\"190\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"14\" font-family=\"Segoe UI,Arial\">output</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Mechanism of the idea",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Measures of Center Mea</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Measures of Cent</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Measures of center, such as mean, median, and mode, are like different methods to calculat",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Measures of Center Mea</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Measures of center, such as mean, median, and mode, are </text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Mathematical Treatment of Measures of Ce",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Measures of Center Mea</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#4ade80\" font-size=\"24\" font-family=\"Segoe UI,Arial\">parts → whole</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofMeasuresofCenterMScene",
+    "notes": "Domain=stats motif=family-11. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_measures_of_center_mean_median_mode.py ConceptScene"
+  },
+  "motif": "family-11",
+  "generated_by": "template-stem-v5-stats-family-11",
+  "generated_at": "2026-07-12T22:35:03Z"
+}

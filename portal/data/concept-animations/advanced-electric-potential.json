@@ -1,0 +1,62 @@
+{
+  "slug": "advanced-electric-potential",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Advanced Electric Potential",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Advanced Electric Potential",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Advanced Electric Potential.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a weather balloon measures air pressure differences to predict storms, electric potential maps the 'pressure' of electric fields in …",
+    "Pause and restate what Advanced Electric Potential means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Advanced Electric Potential: levels of organization",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Electric Potential</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><rect x=\"220\" y=\"70\" width=\"200\" height=\"50\" rx=\"8\" fill=\"#fcd34d\"/><rect x=\"140\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#67e8f9\"/><rect x=\"340\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#67e8f9\"/><rect x=\"80\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#5eead4\"/><rect x=\"250\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#5eead4\"/><rect x=\"420\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#5eead4\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Zoom out / zoom in",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Electric Potential</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><circle cx=\"200\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#67e8f9\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"190\" r=\"40\" fill=\"#164e63\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><text x=\"460\" y=\"190\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"14\" font-family=\"Segoe UI,Arial\">detail</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Which level explains the effect?",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Electric Potential</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Advanced Electric Potential</text><text x=\"320\" y=\"230\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">pick the right scale</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a weather balloon measures air pressure differences to predict storms, electric po",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Electric Potential</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a weather balloon measures air pressure differen</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Advanced Electric Potential",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Electric Potential</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"24\" font-family=\"Segoe UI,Arial\">levels stack</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AdvancedElectricPotentialScene",
+    "notes": "Domain=general motif=family-6. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/advanced_electric_potential.py ConceptScene"
+  },
+  "motif": "family-6",
+  "generated_by": "template-stem-v5-general-family-6",
+  "generated_at": "2026-07-12T22:34:09Z"
+}

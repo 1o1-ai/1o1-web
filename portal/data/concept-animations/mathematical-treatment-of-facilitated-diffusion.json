@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-facilitated-diffusion",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Facilitated Diffusion",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Facilitated Diffusion",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Facilitated Diffusion.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Facilitated diffusion works like a subway turnstile that only allows passengers with valid tickets (specific molecules) to pass through, but…",
+    "Pause and restate what Mathematical Treatment of Facilitated Diffusion means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Facilitated Diffusion: sequence of steps",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Facilitated Diffusion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">timeline</text><line x1=\"80\" y1=\"200\" x2=\"560\" y2=\"200\" stroke=\"#38bdf8\" stroke-width=\"6\"/><circle cx=\"120\" cy=\"200\" r=\"16\" fill=\"#fbbf24\"/><text x=\"120\" y=\"240\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"14\" font-family=\"Segoe UI,Arial\">1</text><circle cx=\"220\" cy=\"200\" r=\"16\" fill=\"#fbbf24\"/><text x=\"220\" y=\"240\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"14\" font-family=\"Segoe UI,Arial\">2</text><circle cx=\"320\" cy=\"200\" r=\"16\" fill=\"#fbbf24\"/><text x=\"320\" y=\"240\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"14\" font-family=\"Segoe UI,Arial\">3</text><circle cx=\"420\" cy=\"200\" r=\"16\" fill=\"#fbbf24\"/><text x=\"420\" y=\"240\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"14\" font-family=\"Segoe UI,Arial\">4</text><circle cx=\"520\" cy=\"200\" r=\"16\" fill=\"#fbbf24\"/><text x=\"520\" y=\"240\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"14\" font-family=\"Segoe UI,Arial\">5</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Order matters",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Facilitated Diffusion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">order</text><rect x=\"70\" y=\"130\" width=\"95\" height=\"120\" rx=\"10\" fill=\"#111827\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"117\" y=\"195\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">step 1</text><rect x=\"180\" y=\"130\" width=\"95\" height=\"120\" rx=\"10\" fill=\"#111827\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"227\" y=\"195\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">step 2</text><rect x=\"290\" y=\"130\" width=\"95\" height=\"120\" rx=\"10\" fill=\"#111827\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"337\" y=\"195\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">step 3</text><rect x=\"400\" y=\"130\" width=\"95\" height=\"120\" rx=\"10\" fill=\"#111827\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"447\" y=\"195\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">step 4</text><rect x=\"510\" y=\"130\" width=\"95\" height=\"120\" rx=\"10\" fill=\"#111827\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"557\" y=\"195\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">step 5</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Watch the transformation across time",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Facilitated Diffusion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><path d=\"M80 260 L200 120 L320 220 L440 90 L560 180\" fill=\"none\" stroke=\"#fbbf24\" stroke-width=\"4\"/><text x=\"320\" y=\"310\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"13\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Facilitated Diffusion</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Facilitated diffusion works like a subway turnstile that only allows passengers with valid",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Facilitated Diffusion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Facilitated diffusion works like a subway turnstile that</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Mathematical Treatment of Facilitated Di",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Facilitated Diffusion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#38bdf8\" font-size=\"24\" font-family=\"Segoe UI,Arial\">step-by-step</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofFacilitatedDiffusScene",
+    "notes": "Domain=general motif=family-1. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_facilitated_diffusion.py ConceptScene"
+  },
+  "motif": "family-1",
+  "generated_by": "template-stem-v5-general-family-1",
+  "generated_at": "2026-07-12T22:35:01Z"
+}

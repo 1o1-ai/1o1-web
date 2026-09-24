@@ -1,0 +1,62 @@
+{
+  "slug": "alternative-derivation-of-infinite-geometric-series",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Alternative Derivation of Infinite Geometric Series",
+  "theme": "algebra",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Alternative Derivation of Infinite Geometric Series",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Alternative Derivation of Infinite Geometric Series.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Imagine dropping a ball that bounces back to half its previous height each time. The total distance it travels is the sum of its initial dro…",
+    "Pause and restate what Alternative Derivation of Infinite Geometric Series means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Alternative Derivation of Infinite Geometric Series: pattern in points",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Infinite Geometric Ser</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">data</text><line x1=\"80\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#fdba74\" stroke-width=\"2\"/><line x1=\"80\" y1=\"300\" x2=\"80\" y2=\"60\" stroke=\"#fdba74\" stroke-width=\"2\"/><circle cx=\"146\" cy=\"242\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"213\" cy=\"199\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"280\" cy=\"156\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"347\" cy=\"113\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"414\" cy=\"270\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"481\" cy=\"227\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"128\" cy=\"184\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"195\" cy=\"141\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"262\" cy=\"98\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"329\" cy=\"255\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"396\" cy=\"212\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"463\" cy=\"169\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"530\" cy=\"126\" r=\"7\" fill=\"#fb923c\"/><circle cx=\"177\" cy=\"83\" r=\"7\" fill=\"#fb923c\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Trend line vs noise",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Infinite Geometric Ser</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">trend</text><line x1=\"100\" y1=\"260\" x2=\"520\" y2=\"100\" stroke=\"#fde68a\" stroke-width=\"3\"/><circle cx=\"140\" cy=\"240\" r=\"6\" fill=\"#f97316\"/><circle cx=\"190\" cy=\"237\" r=\"6\" fill=\"#f97316\"/><circle cx=\"240\" cy=\"234\" r=\"6\" fill=\"#f97316\"/><circle cx=\"290\" cy=\"186\" r=\"6\" fill=\"#f97316\"/><circle cx=\"340\" cy=\"183\" r=\"6\" fill=\"#f97316\"/><circle cx=\"390\" cy=\"180\" r=\"6\" fill=\"#f97316\"/><circle cx=\"440\" cy=\"132\" r=\"6\" fill=\"#f97316\"/><circle cx=\"490\" cy=\"129\" r=\"6\" fill=\"#f97316\"/>"
+    },
+    {
+      "id": "core",
+      "caption": "Read the signal",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Infinite Geometric Ser</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"90\" y=\"110\" width=\"460\" height=\"150\" rx=\"12\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"16\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Infinite Geometr</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Imagine dropping a ball that bounces back to half its previous height each time. The total",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Infinite Geometric Ser</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Imagine dropping a ball that bounces back to half its pr</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Alternative Derivation of Infinite Geome",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Alternative Derivation of Infinite Geometric Ser</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"24\" font-family=\"Segoe UI,Arial\">see the pattern</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AlternativeDerivationofInfiniteGeometricScene",
+    "notes": "Domain=algebra motif=family-10. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/alternative_derivation_of_infinite_geometric_series.py ConceptScene"
+  },
+  "motif": "family-10",
+  "generated_by": "template-stem-v5-algebra-family-10",
+  "generated_at": "2026-07-12T22:34:31Z"
+}

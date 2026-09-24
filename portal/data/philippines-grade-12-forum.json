@@ -1,0 +1,1077 @@
+{
+  "version": 1,
+  "sku": "philippines-grade-12",
+  "title": "Grade 12",
+  "displayName": "Philippines · Grade 12",
+  "generated_at": "2026-07-13T12:21:29.752600+00:00",
+  "locale": "ph",
+  "threads": [
+    {
+      "id": "thr_philippines-grade-12_electricity_000",
+      "title": "Quick poll: how many hours are you giving Electricity this week?",
+      "subject": "physics",
+      "chapter": "electricity",
+      "chapter_title": "Electricity",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Tried three YouTube explainers for Electricity and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-27T21:43:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Not proud of it, but I left Electricity late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-28T05:55:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "If you cannot explain Electricity to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-29T00:18:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "I record myself explaining Electricity out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-29T11:23:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Electricity.",
+          "created_at": "2026-06-30T03:54:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_equilibrium_001",
+      "title": "Teacher said Equilibrium will definitely show up — panic mode?",
+      "subject": "chemistry",
+      "chapter": "equilibrium",
+      "chapter_title": "Equilibrium",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Group chat from school is quiet on Equilibrium. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-09T19:54:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Honestly I skipped ahead then came back — Equilibrium clicked after seeing later examples.",
+          "created_at": "2026-06-10T08:01:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Equilibrium live.",
+          "created_at": "2026-06-11T00:34:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Equilibrium.",
+          "created_at": "2026-06-11T09:43:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_waves_002",
+      "title": "Sharing my Waves mistake from yesterday's quiz — what did I miss?",
+      "subject": "physics",
+      "chapter": "waves",
+      "chapter_title": "Waves",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "I can recite definitions for Waves but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-09T22:54:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Waves unit.",
+          "created_at": "2026-06-10T02:12:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Waves set.",
+          "created_at": "2026-06-10T03:40:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Not proud of it, but I left Waves late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-10T14:35:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Short sessions beat marathon cramming for Waves. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-10T20:13:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Waves marks.",
+          "created_at": "2026-06-11T03:32:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_atomic-structure_003",
+      "title": "Our class test had a tricky Chemistry question from Atomic Structure",
+      "subject": "chemistry",
+      "chapter": "atomic-structure",
+      "chapter_title": "Atomic Structure",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Past paper had two weird Atomic Structure items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-11T12:51:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Do the odd-numbered textbook exercises for Atomic Structure; answers are usually in the back.",
+          "created_at": "2026-07-11T23:56:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_cell-biology_004",
+      "title": "Sharing my Cell Biology mistake from yesterday's quiz — what did I miss?",
+      "subject": "biology",
+      "chapter": "cell-biology",
+      "chapter_title": "Cell Biology",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "I can recite definitions for Cell Biology but freeze on application questions. Same for anyone?",
+          "created_at": "2026-07-01T07:25:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Past papers > notes for me on Cell Biology. Pattern recognition beats rereading.",
+          "created_at": "2026-07-01T19:51:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "Break Cell Biology into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-02T07:23:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Cell Biology.",
+          "created_at": "2026-07-03T00:23:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Honestly I skipped ahead then came back — Cell Biology clicked after seeing later examples.",
+          "created_at": "2026-07-03T04:53:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Someone in my class made a mind map for Cell Biology — copying that format helped a lot.",
+          "created_at": "2026-07-03T22:03:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Not proud of it, but I left Cell Biology late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-04T12:38:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_ecology_005",
+      "title": "Our class test had a tricky Biology question from Ecology",
+      "subject": "biology",
+      "chapter": "ecology",
+      "chapter_title": "Ecology",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Group chat from school is quiet on Ecology. Hoping this forum has clearer answers.",
+          "created_at": "2026-07-05T22:21:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Ecology fixed most of it.",
+          "created_at": "2026-07-06T00:32:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-06T08:59:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Someone in my class made a mind map for Ecology — copying that format helped a lot.",
+          "created_at": "2026-07-06T13:51:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Ecology already.",
+          "created_at": "2026-07-06T23:32:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "That sequencing (theory then numericals) matches what our teacher said too.",
+          "created_at": "2026-07-07T06:07:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "If you cannot explain Ecology to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-07-07T12:29:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_electrochemistry_006",
+      "title": "Past paper question on Electrochemistry — which formula do you use first?",
+      "subject": "chemistry",
+      "chapter": "electrochemistry",
+      "chapter_title": "Electrochemistry",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "I can recite definitions for Electrochemistry but freeze on application questions. Same for anyone?",
+          "created_at": "2026-07-12T12:05:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Short sessions beat marathon cramming for Electrochemistry. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-12T19:24:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-13T02:06:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_probability_007",
+      "title": "Who already finished Probability? Worth starting early?",
+      "subject": "mathematics",
+      "chapter": "probability",
+      "chapter_title": "Probability",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Starting from zero on Probability after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-17T03:09:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Probability set.",
+          "created_at": "2026-06-17T04:35:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-17T16:53:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Appreciate the tip. Going to redo my notes for Probability from scratch.",
+          "created_at": "2026-06-18T02:23:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_mechanics_008",
+      "title": "Is Mechanics more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "mechanics",
+      "chapter_title": "Mechanics",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Scored poorly on the last Mechanics quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-20T09:40:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Whiteboard + friend teaching me Mechanics beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-20T20:13:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "For Mechanics, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-21T14:16:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Past papers > notes for me on Mechanics. Pattern recognition beats rereading.",
+          "created_at": "2026-06-22T07:25:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-06-22T23:57:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_magnetism_009",
+      "title": "Sharing my Magnetism mistake from yesterday's quiz — what did I miss?",
+      "subject": "physics",
+      "chapter": "magnetism",
+      "chapter_title": "Magnetism",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Past paper had two weird Magnetism items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-08T03:02:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Magnetism already.",
+          "created_at": "2026-07-08T18:26:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Magnetism live.",
+          "created_at": "2026-07-09T02:06:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Past papers > notes for me on Magnetism. Pattern recognition beats rereading.",
+          "created_at": "2026-07-09T15:51:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Someone in my class made a mind map for Magnetism — copying that format helped a lot.",
+          "created_at": "2026-07-09T22:33:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_basic-calculus_010",
+      "title": "Need a simple analogy for Basic Calculus that actually sticks",
+      "subject": "mathematics",
+      "chapter": "basic-calculus",
+      "chapter_title": "Basic Calculus",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Is it normal that Basic Calculus takes longer than neighboring chapters in Mathematics? (Grade 12)",
+          "created_at": "2026-06-30T20:34:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "Break Basic Calculus into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-01T08:58:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Whiteboard + friend teaching me Basic Calculus beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-01T23:42:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Basic Calculus question though.",
+          "created_at": "2026-07-02T18:12:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_statistics_011",
+      "title": "Teacher said Statistics will definitely show up — panic mode?",
+      "subject": "mathematics",
+      "chapter": "statistics",
+      "chapter_title": "Statistics",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Scored poorly on the last Statistics quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-17T03:22:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Statistics.",
+          "created_at": "2026-06-17T20:35:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Honestly I skipped ahead then came back — Statistics clicked after seeing later examples.",
+          "created_at": "2026-06-18T11:54:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Statistics.",
+          "created_at": "2026-06-19T02:38:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Statistics set.",
+          "created_at": "2026-06-19T13:14:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Thanks — trying that tonight for Statistics.",
+          "created_at": "2026-06-19T22:32:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Short sessions beat marathon cramming for Statistics. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-20T01:07:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_precalculus_012",
+      "title": "Who already finished Precalculus? Worth starting early?",
+      "subject": "mathematics",
+      "chapter": "precalculus",
+      "chapter_title": "Precalculus",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Starting from zero on Precalculus after a gap. Best first 30 minutes?",
+          "created_at": "2026-07-03T06:25:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Not proud of it, but I left Precalculus late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-04T00:57:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Precalculus.",
+          "created_at": "2026-07-04T13:28:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Precalculus already.",
+          "created_at": "2026-07-04T21:40:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_organic-chemistry_013",
+      "title": "Past paper question on Organic Chemistry — which formula do you use first?",
+      "subject": "chemistry",
+      "chapter": "organic-chemistry",
+      "chapter_title": "Organic Chemistry",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Tried three YouTube explainers for Organic Chemistry and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-07-07T18:04:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Organic Chemistry marks.",
+          "created_at": "2026-07-08T08:46:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "Exam boards repeat similar Chemistry patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-07-08T20:02:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_evolution_014",
+      "title": "Sharing my Evolution mistake from yesterday's quiz — what did I miss?",
+      "subject": "biology",
+      "chapter": "evolution",
+      "chapter_title": "Evolution",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Making flashcards for Evolution tonight — what should absolutely be on them?",
+          "created_at": "2026-07-09T23:04:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "Official syllabus lists Evolution as core — revise worked examples from your textbook.",
+          "created_at": "2026-07-10T10:42:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "I keep a 'mistake log' only for Evolution. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-10T16:04:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_genetics_015",
+      "title": "Anyone else find Genetics denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "genetics",
+      "chapter_title": "Genetics",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Got stuck on a homework problem from Genetics. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-20T19:44:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Genetics fixed most of it.",
+          "created_at": "2026-06-21T09:36:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "For Genetics, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-21T17:58:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_biotechnology_016",
+      "title": "Is Biotechnology more theory-heavy or numerical for our board?",
+      "subject": "biology",
+      "chapter": "biotechnology",
+      "chapter_title": "Biotechnology",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Got stuck on a homework problem from Biotechnology. Happy to post the exact question if that helps.",
+          "created_at": "2026-07-12T08:10:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Biotechnology problem cold.",
+          "created_at": "2026-07-12T11:23:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Our senior shared last year's notes on Biotechnology; still accurate for the current syllabus.",
+          "created_at": "2026-07-13T00:32:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "I'll try Evaluate mode after dinner and report back.",
+          "created_at": "2026-07-13T08:07:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_chemical-bonding_017",
+      "title": "Stuck on Chemical Bonding — anyone have a clear way to revise this?",
+      "subject": "chemistry",
+      "chapter": "chemical-bonding",
+      "chapter_title": "Chemical Bonding",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "Starting from zero on Chemical Bonding after a gap. Best first 30 minutes?",
+          "created_at": "2026-07-06T01:17:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Not proud of it, but I left Chemical Bonding late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-06T04:25:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Chemical Bonding.",
+          "created_at": "2026-07-06T17:07:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-06T22:26:29.752600+00:00"
+        },
+        {
+          "author_id": "t_roberto_garcia",
+          "author_name": "Roberto Garcia",
+          "author_role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg",
+          "body": "Mark scheme language for Chemical Bonding is specific — practice writing to that style.",
+          "created_at": "2026-07-07T07:58:29.752600+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_philippines-grade-12_modern-physics_018",
+      "title": "Past paper question on Modern Physics — which formula do you use first?",
+      "subject": "physics",
+      "chapter": "modern-physics",
+      "chapter_title": "Modern Physics",
+      "track": "philippines-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Our teacher hinted Modern Physics is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-07-07T07:41:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Honestly I skipped ahead then came back — Modern Physics clicked after seeing later examples.",
+          "created_at": "2026-07-07T10:06:29.752600+00:00"
+        },
+        {
+          "author_id": "s_jose_reyes",
+          "author_name": "Jose Reyes",
+          "author_role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Modern Physics.",
+          "created_at": "2026-07-08T00:27:29.752600+00:00"
+        },
+        {
+          "author_id": "s_angelica_cruz",
+          "author_name": "Angelica Cruz",
+          "author_role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg",
+          "body": "Past papers > notes for me on Modern Physics. Pattern recognition beats rereading.",
+          "created_at": "2026-07-08T12:14:29.752600+00:00"
+        },
+        {
+          "author_id": "s_maria_santos",
+          "author_name": "Maria Santos",
+          "author_role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg",
+          "body": "Do the odd-numbered textbook exercises for Modern Physics; answers are usually in the back.",
+          "created_at": "2026-07-08T20:34:29.752600+00:00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1850 @@
+{
+  "bank": {
+    "bank_total": 1160,
+    "mcq_count": 145,
+    "duplicate_stems_in_bank": 80,
+    "mcq_option_dupes": 0,
+    "sample_bad_opts": [],
+    "sample_dup_stems": [
+      [
+        "find the prime factors of 5005 express the number as product of prime factorization exponent values",
+        6
+      ],
+      [
+        "explain why 7 11 13 13 is a composite number",
+        6
+      ],
+      [
+        "find a quadratic polynomial the sum and product of whose zeroes are 1 4 and 1 4 respectively",
+        10
+      ],
+      [
+        "if and are the zeroes of the quadratic polynomial ax bx c then express in terms of its coefficients",
+        10
+      ],
+      [
+        "the sum of a two digit number and the number obtained by reversing digits is 66 digits differ by 2 find the numbers",
+        8
+      ]
+    ]
+  },
+  "generate": {
+    "calls": [
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Science",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 5,
+        "returned": 5,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 10,
+        "returned": 10,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 20,
+        "returned": 20,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      },
+      {
+        "subject": "Mathematics",
+        "count": 40,
+        "returned": 40,
+        "dup_id_positions": [],
+        "dup_stem_positions": [],
+        "option_dupes": [],
+        "non_official": []
+      }
+    ],
+    "issues": []
+  },
+  "mock_official": {
+    "Science": {
+      "count": 38,
+      "duplicate_pairs": [],
+      "option_dupes": [],
+      "error": null
+    },
+    "Mathematics": {
+      "count": 38,
+      "duplicate_pairs": [],
+      "option_dupes": [],
+      "error": null
+    }
+  }
+}

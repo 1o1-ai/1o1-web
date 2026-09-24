@@ -1,0 +1,2497 @@
+{
+  "recommendations": {
+    "815da0841d14": {
+      "id": "815da0841d14",
+      "url": "https://brahmexa.com",
+      "finding": "Title tag is too long (73 chars) and may truncate in search results: 'BRAHMEXA – A.I | Agentic | Data Center | Affordable AI for Small Business'",
+      "recommendation": "Shorten the title to under 60 characters while keeping important keywords first.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "427912208bdc": {
+      "id": "427912208bdc",
+      "url": "https://brahmexa.com",
+      "finding": "Page has multiple H1 headings (3 found).",
+      "recommendation": "Ensure there is only one primary H1 heading; demote other H1s to H2 or H3 structures.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "ddd26eccb590": {
+      "id": "ddd26eccb590",
+      "url": "https://brahmexa.com",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://brahmexa.com",
+          "name": "Brahmexa",
+          "description": "Making modern AI accessible, affordable, and practical for small businesses and underprivileged communities through Agentic Automation.",
+          "alternateName": "BRAHMEXA AI & Innovation Labs",
+          "logo": "https://brahmexa.com/branding/logo.png",
+          "sameAs": [
+            "https://github.com/brahmando-ai",
+            "https://saas.brahmexa.com"
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "642f66d9e990": {
+      "id": "642f66d9e990",
+      "url": "https://brahmexa.com",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "27d8ca25a16b": {
+      "id": "27d8ca25a16b",
+      "url": "https://brahmexa.com",
+      "finding": "Duplicate content match (100% similarity) detected with: https://brahmexa.com/index.php",
+      "recommendation": "Differentiate content. Add page-unique data, custom case studies, or rewrite duplicate blocks to prevent index filtering.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "360057989597": {
+      "id": "360057989597",
+      "url": "https://saas.brahmexa.com",
+      "finding": "Meta description is too short (95 chars): 'Register free for Brahmexa SaaS — ANYO Academy, study rooms, AI tutor. No credit card required.'",
+      "recommendation": "Expand description to between 120 and 160 characters to improve click-through rates.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "7aa033578abd": {
+      "id": "7aa033578abd",
+      "url": "https://saas.brahmexa.com",
+      "finding": "Page is missing a canonical link tag.",
+      "recommendation": "Add a self-referencing canonical tag pointing to: https://saas.brahmexa.com",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "canonical",
+        "action": "add",
+        "value": "https://saas.brahmexa.com"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "d7178046ac14": {
+      "id": "d7178046ac14",
+      "url": "https://saas.brahmexa.com",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": "https://saas.brahmexa.com",
+          "name": "Brahmexa",
+          "description": "Register free for Brahmexa SaaS — ANYO Academy, study rooms, AI tutor. No credit card required.",
+          "alternateName": "BRAHMEXA AI & Innovation Labs",
+          "logo": "https://brahmexa.com/branding/logo.png",
+          "sameAs": [
+            "https://github.com/brahmando-ai",
+            "https://saas.brahmexa.com"
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "17f4cadd0023": {
+      "id": "17f4cadd0023",
+      "url": "https://saas.brahmexa.com",
+      "finding": "Page has thin content (113 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "83895520ce99": {
+      "id": "83895520ce99",
+      "url": "https://saas.brahmexa.com",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa provides private, sovereign LLM hosting solutions and GPU-ready infrastructure custom-tailored for small businesses. By deploying local models like Mistral and Qwen, we eliminate high API token taxes, enabling startups to operate state-of-the-art agentic automation secure from public cloud leaks.",
+          "faqs": [
+            {
+              "question": "What infrastructure options does Brahmexa offer?",
+              "answer": "We offer sovereign GPU hosting in US and India locations running open-weight LLMs, coupled with local RAG adapters to modernise franchise business databases."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "65d4e39bb89e": {
+      "id": "65d4e39bb89e",
+      "url": "https://brahmexa.com/index.php",
+      "finding": "Title tag is too long (73 chars) and may truncate in search results: 'BRAHMEXA – A.I | Agentic | Data Center | Affordable AI for Small Business'",
+      "recommendation": "Shorten the title to under 60 characters while keeping important keywords first.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "698439332305": {
+      "id": "698439332305",
+      "url": "https://brahmexa.com/index.php",
+      "finding": "Page has multiple H1 headings (3 found).",
+      "recommendation": "Ensure there is only one primary H1 heading; demote other H1s to H2 or H3 structures.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "2bc7bcd48a55": {
+      "id": "2bc7bcd48a55",
+      "url": "https://brahmexa.com/index.php",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://brahmexa.com/index.php",
+          "name": "BRAHMEXA – A.I | Agentic | Data Center | Affordable AI for Small Business",
+          "description": "Making modern AI accessible, affordable, and practical for small businesses and underprivileged communities through Agentic Automation."
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "4773542149d5": {
+      "id": "4773542149d5",
+      "url": "https://brahmexa.com/index.php",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "0278a8c58f33": {
+      "id": "0278a8c58f33",
+      "url": "https://brahmexa.com/index.php",
+      "finding": "Duplicate content match (100% similarity) detected with: https://brahmexa.com",
+      "recommendation": "Differentiate content. Add page-unique data, custom case studies, or rewrite duplicate blocks to prevent index filtering.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "3ff5ad091819": {
+      "id": "3ff5ad091819",
+      "url": "https://brahmexa.com/services.php",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://brahmexa.com/services.php",
+          "name": "Services | BRAHMEXA – SaaS Portal, Consulting & Development",
+          "description": "Brahmexa Services — access the SaaS Portal for all products and agents, consulting (coming soon), and on-demand development teams.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "793c80f0cfa3": {
+      "id": "793c80f0cfa3",
+      "url": "https://brahmexa.com/services/orbit",
+      "finding": "Meta description is too long (173 chars) and will truncate in search snippets.",
+      "recommendation": "Trim description to fit within the standard 160-character budget.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "6851493e2863": {
+      "id": "6851493e2863",
+      "url": "https://brahmexa.com/services/orbit",
+      "finding": "Canonical URL mismatch. Tag points to 'https://www.brahmexa.com/services/orbit', but current page is 'https://brahmexa.com/services/orbit'",
+      "recommendation": "Verify if the canonical target is correct. If this is a separate URL, ensure it is not a duplicate.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "c54fb26beb7e": {
+      "id": "c54fb26beb7e",
+      "url": "https://brahmexa.com/services/orbit",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://brahmexa.com/services/orbit",
+          "name": "Brahmexa ORBIT | Intelligent Web Hosting That Works 24×7",
+          "description": "Meet Brahmexa ORBIT—intelligent web hosting that continuously monitors, protects and improves the digital face of your business while connecting with specialist AI services.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "bb16afb4447d": {
+      "id": "bb16afb4447d",
+      "url": "https://brahmexa.com/services/orbit",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "7adf647d744f": {
+      "id": "7adf647d744f",
+      "url": "https://brahmexa.com/infra_offering.php",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://brahmexa.com/infra_offering.php",
+          "name": "Infra-Offering | BRAHMEXA – Smart Board & AI Datacenter",
+          "description": "Brahmexa infrastructure offerings — SWAN Smart Board interactive panels and Rampur AI Data Center as a Service."
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "2f09cab4e313": {
+      "id": "2f09cab4e313",
+      "url": "https://brahmexa.com/customer.php",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://brahmexa.com/customer.php",
+          "name": "Our Customers | BRAHMEXA – A.I | Agentic | Data Center",
+          "description": "See how diverse businesses across industries are leveraging BRAHMEXA's AI and data center solutions for growth and automation."
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "de822f0b09c2": {
+      "id": "de822f0b09c2",
+      "url": "https://brahmexa.com/customer.php",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "b08d194fa54d": {
+      "id": "b08d194fa54d",
+      "url": "https://brahmexa.com/csr.php",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://brahmexa.com/csr.php",
+          "name": "Social Impact (CSR) | BRAHMEXA – A.I | Agentic | Data Center",
+          "description": "BRAHMEXA's CSR approach emphasizes practical AI guidance and learning support for students and citizens at zero cost."
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "88bf18d56e82": {
+      "id": "88bf18d56e82",
+      "url": "https://brahmexa.com/whitepapers",
+      "finding": "Title tag is too short (22 chars): 'Whitepapers · BRAHMEXA'",
+      "recommendation": "Expand the title tag to include target primary keyword and brand name (ideal: 50-60 chars).",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "update_title",
+        "value": "Whitepapers · BRAHMEXA | Brahmexa AI Labs"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "1c486cabfe6d": {
+      "id": "1c486cabfe6d",
+      "url": "https://brahmexa.com/whitepapers",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "url": "https://brahmexa.com/whitepapers",
+          "name": "Whitepapers · BRAHMEXA",
+          "description": "Browse the Brahmexa Research and Impact Library containing technical whitepapers, including Eden Sutra and LLM Ecosystem studies.",
+          "headline": "Whitepapers · BRAHMEXA",
+          "inLanguage": "en",
+          "author": {
+            "@type": "Organization",
+            "name": "Brahmexa Research Team"
+          }
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "3d34dc187e11": {
+      "id": "3d34dc187e11",
+      "url": "https://brahmexa.com/whitepapers",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "ec6256729be5": {
+      "id": "ec6256729be5",
+      "url": "https://brahmexa.com/about_us.php",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://brahmexa.com/about_us.php",
+          "name": "About Us | BRAHMEXA – A.I | Agentic | Data Center",
+          "description": "Learn about BRAHMEXA, our mission to make modern AI accessible, and our commitment to responsible AI and agentic automation."
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "a75f955d110c": {
+      "id": "a75f955d110c",
+      "url": "https://brahmexa.com/contact.php",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://brahmexa.com/contact.php",
+          "name": "Contact Us | BRAHMEXA – A.I | Agentic | Data Center",
+          "description": "Get in touch with BRAHMEXA. Contact our USA and India delivery centers for AI solutions, hosting, and agentic automation inquiries."
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "4b005f74bc98": {
+      "id": "4b005f74bc98",
+      "url": "https://saas.brahmexa.com/portal/education/",
+      "finding": "Meta description is too short (84 chars): 'Brahmexa Anyo Academy — every nation's curriculum orbits one international universe.'",
+      "recommendation": "Expand description to between 120 and 160 characters to improve click-through rates.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "47f9a5e21493": {
+      "id": "47f9a5e21493",
+      "url": "https://saas.brahmexa.com/portal/education/",
+      "finding": "Page is missing an H1 heading.",
+      "recommendation": "Create exactly one unique H1 element at the top of the main content.",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "8324fa5ebc28": {
+      "id": "8324fa5ebc28",
+      "url": "https://saas.brahmexa.com/portal/education/",
+      "finding": "Page is missing a canonical link tag.",
+      "recommendation": "Add a self-referencing canonical tag pointing to: https://saas.brahmexa.com/portal/education/",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "canonical",
+        "action": "add",
+        "value": "https://saas.brahmexa.com/portal/education/"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "b55146200f32": {
+      "id": "b55146200f32",
+      "url": "https://saas.brahmexa.com/portal/education/",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "LearningResource",
+          "url": "https://saas.brahmexa.com/portal/education/",
+          "name": "Brahmexa Anyo Academy · Brahmexa Online Portal",
+          "description": "Brahmexa Anyo Academy — every nation's curriculum orbits one international universe."
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "1285629d0daf": {
+      "id": "1285629d0daf",
+      "url": "https://saas.brahmexa.com/portal/education/",
+      "finding": "Page has thin content (22 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "02c0d8628c43": {
+      "id": "02c0d8628c43",
+      "url": "https://saas.brahmexa.com/portal/education/",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "44fdb0c16e5b": {
+      "id": "44fdb0c16e5b",
+      "url": "https://saas.brahmexa.com/portal/education/",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Eden Sutra is Brahmexa's sovereign AI educational framework. Designed for ICSE and ISC students, it offers secure, local-first RAG (Retrieval-Augmented Generation) infrastructure, ensuring schools can deploy AI learning environments that protect student data while eliminating external token dependency.",
+          "faqs": [
+            {
+              "question": "How does Eden Sutra secure student data?",
+              "answer": "Eden Sutra runs locally inside school environments on dedicated GPU stacks using Ollama, keeping all prompt history and learning metrics strictly isolated."
+            },
+            {
+              "question": "Can it integrate with national curriculum standards?",
+              "answer": "Yes, it contains specialized modules pre-aligned with CBSE Class 10 and ICSE structures to guide coursework dynamically."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "690535762d2f": {
+      "id": "690535762d2f",
+      "url": "https://brahmexa.com/whitepapers/llm",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "url": "https://brahmexa.com/whitepapers/llm",
+          "name": "AI Is Not for the Giants · BRAHMEXA",
+          "description": "Learn how Brahmexa makes artificial intelligence accessible and affordable for local small businesses, bypassing giant enterprise per-seat licensing models.",
+          "headline": "AI Is Not for the Giants · BRAHMEXA",
+          "inLanguage": "en",
+          "author": {
+            "@type": "Organization",
+            "name": "Brahmexa Research Team"
+          }
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "eb242e676e85": {
+      "id": "eb242e676e85",
+      "url": "https://brahmexa.com/whitepapers/llm",
+      "finding": "Page has thin content (241 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "9575b1af1711": {
+      "id": "9575b1af1711",
+      "url": "https://brahmexa.com/whitepapers/llm",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa AI Labs provides enterprise-grade agentic workflow automation and deterministic knowledge graph structures. Our products help businesses and academic platforms index, structure, and understand their conceptual data silos securely, optimizing them for modern search engines.",
+          "faqs": [
+            {
+              "question": "What is the Brahmando repository?",
+              "answer": "Brahmando is the peer-level hosting repository for Brahmexa R&D. It manages platform deployment configurations, custom Model Context Protocol (MCP) servers, and agent networks."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "83f88975732f": {
+      "id": "83f88975732f",
+      "url": "https://brahmexa.com/datacenter.php",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://brahmexa.com/datacenter.php",
+          "name": "AI Data Center as a Service | BRAHMEXA – Rampur",
+          "description": "40 kW operational AI datacenter in Rampur, UP — inference, hosting, and regional compute with expansion to 1 MW."
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "0d2aaa91ba5c": {
+      "id": "0d2aaa91ba5c",
+      "url": "https://saas.brahmexa.com/smb/",
+      "finding": "Title tag is too short (26 chars): 'Brahmexa SMB Engine · SaaS'",
+      "recommendation": "Expand the title tag to include target primary keyword and brand name (ideal: 50-60 chars).",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "update_title",
+        "value": "Brahmexa SMB Engine · SaaS | Brahmexa AI Labs"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "e4a2812c42cf": {
+      "id": "e4a2812c42cf",
+      "url": "https://saas.brahmexa.com/smb/",
+      "finding": "Meta description is too short (96 chars): 'Brahmexa SMB Engine — digital marketing (REACH), platform verticals, agents, MCP, and workflows.'",
+      "recommendation": "Expand description to between 120 and 160 characters to improve click-through rates.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "bb75d79e4ed4": {
+      "id": "bb75d79e4ed4",
+      "url": "https://saas.brahmexa.com/smb/",
+      "finding": "Canonical URL mismatch. Tag points to 'https://saas.brahmexa.com/smb/index.html', but current page is 'https://saas.brahmexa.com/smb/'",
+      "recommendation": "Verify if the canonical target is correct. If this is a separate URL, ensure it is not a duplicate.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "0320626ce420": {
+      "id": "0320626ce420",
+      "url": "https://saas.brahmexa.com/smb/",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/smb/",
+          "name": "Brahmexa SMB Engine · SaaS",
+          "description": "Brahmexa SMB Engine — digital marketing (REACH), platform verticals, agents, MCP, and workflows.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "c1bc528100db": {
+      "id": "c1bc528100db",
+      "url": "https://saas.brahmexa.com/smb/",
+      "finding": "Page has thin content (118 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "5b36dc22d9b3": {
+      "id": "5b36dc22d9b3",
+      "url": "https://saas.brahmexa.com/smb/",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "a1e2180c00e6": {
+      "id": "a1e2180c00e6",
+      "url": "https://saas.brahmexa.com/smb/",
+      "finding": "Duplicate content match (100% similarity) detected with: https://saas.brahmexa.com/smb/index.html",
+      "recommendation": "Differentiate content. Add page-unique data, custom case studies, or rewrite duplicate blocks to prevent index filtering.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "8aa0e816cb4a": {
+      "id": "8aa0e816cb4a",
+      "url": "https://saas.brahmexa.com/smb/",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa provides private, sovereign LLM hosting solutions and GPU-ready infrastructure custom-tailored for small businesses. By deploying local models like Mistral and Qwen, we eliminate high API token taxes, enabling startups to operate state-of-the-art agentic automation secure from public cloud leaks.",
+          "faqs": [
+            {
+              "question": "What infrastructure options does Brahmexa offer?",
+              "answer": "We offer sovereign GPU hosting in US and India locations running open-weight LLMs, coupled with local RAG adapters to modernise franchise business databases."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "ec9ea59fab74": {
+      "id": "ec9ea59fab74",
+      "url": "https://brahmexa.com/smart_board.php",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://brahmexa.com/smart_board.php",
+          "name": "SWAN Smart Interactive Board | BRAHMEXA – 4K UHD & AI Powered",
+          "description": "Experience the SWAN Smart Interactive Board by BRAHMEXA. 4K UHD resolution, 20-point multi-touch, and integrated AI learning modules for schools and offices."
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "0d542e628315": {
+      "id": "0d542e628315",
+      "url": "https://brahmexa.com/csr-agent.php?slug=fafsa",
+      "finding": "Page is missing an H1 heading.",
+      "recommendation": "Create exactly one unique H1 element at the top of the main content.",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "7996c7937431": {
+      "id": "7996c7937431",
+      "url": "https://brahmexa.com/csr-agent.php?slug=fafsa",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "url": "https://brahmexa.com/csr-agent.php?slug=fafsa",
+          "name": "Social Impact (CSR) | BRAHMEXA – A.I | Agentic | Data Center",
+          "description": "BRAHMEXA's CSR approach emphasizes practical AI guidance and learning support for students and citizens at zero cost."
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "b75f36a0a826": {
+      "id": "b75f36a0a826",
+      "url": "https://brahmexa.com/csr-agent.php?slug=fafsa",
+      "finding": "Page has thin content (117 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "8541bdfd4f4f": {
+      "id": "8541bdfd4f4f",
+      "url": "https://brahmexa.com/csr-agent.php?slug=fafsa",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa AI Labs provides enterprise-grade agentic workflow automation and deterministic knowledge graph structures. Our products help businesses and academic platforms index, structure, and understand their conceptual data silos securely, optimizing them for modern search engines.",
+          "faqs": [
+            {
+              "question": "What is the Brahmando repository?",
+              "answer": "Brahmando is the peer-level hosting repository for Brahmexa R&D. It manages platform deployment configurations, custom Model Context Protocol (MCP) servers, and agent networks."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "68d92d2b3c15": {
+      "id": "68d92d2b3c15",
+      "url": "https://brahmexa.com/whitepapers/eden-sutra",
+      "finding": "Page has multiple H1 headings (12 found).",
+      "recommendation": "Ensure there is only one primary H1 heading; demote other H1s to H2 or H3 structures.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "b9a40429239e": {
+      "id": "b9a40429239e",
+      "url": "https://brahmexa.com/whitepapers/eden-sutra",
+      "finding": "Page is missing a canonical link tag.",
+      "recommendation": "Add a self-referencing canonical tag pointing to: https://brahmexa.com/whitepapers/eden-sutra",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "canonical",
+        "action": "add",
+        "value": "https://brahmexa.com/whitepapers/eden-sutra"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "2603cfe4740b": {
+      "id": "2603cfe4740b",
+      "url": "https://brahmexa.com/whitepapers/eden-sutra",
+      "finding": "Page content is extremely large (10325 words).",
+      "recommendation": "Consider splitting heavy content into paginated clusters or lazily loaded sub-modules.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Performance Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "cadbc0ff3693": {
+      "id": "cadbc0ff3693",
+      "url": "https://brahmexa.com/whitepapers/eden-sutra",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "url": "https://brahmexa.com/whitepapers/eden-sutra",
+          "name": "EDEN SUTRA | The Garden of Knowledge",
+          "description": "The Garden of Knowledge — walk the path from a single seed to an endless forest. Every glowing orb is a chapter; tap one to open it.",
+          "headline": "EDEN SUTRA | The Garden of Knowledge",
+          "inLanguage": "en",
+          "author": {
+            "@type": "Organization",
+            "name": "Brahmexa Research Team"
+          }
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "a7d35384922f": {
+      "id": "a7d35384922f",
+      "url": "https://brahmexa.com/whitepapers/eden-sutra",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "bac339ccbba6": {
+      "id": "bac339ccbba6",
+      "url": "https://saas.brahmexa.com/portal/admin/",
+      "finding": "Page is missing a meta description tag.",
+      "recommendation": "Add a unique meta description of 120-160 characters describing the page contents.",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "add_description",
+        "value": "Discover Brahmexa's sovereign AI infrastructure, private LLM hosting capabilities, and innovative educational AI framework Eden Sutra."
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "21aa38caddc1": {
+      "id": "21aa38caddc1",
+      "url": "https://saas.brahmexa.com/portal/admin/",
+      "finding": "Page has multiple H1 headings (9 found).",
+      "recommendation": "Ensure there is only one primary H1 heading; demote other H1s to H2 or H3 structures.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "43e5a1695c8f": {
+      "id": "43e5a1695c8f",
+      "url": "https://saas.brahmexa.com/portal/admin/",
+      "finding": "Page is missing a canonical link tag.",
+      "recommendation": "Add a self-referencing canonical tag pointing to: https://saas.brahmexa.com/portal/admin/",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "canonical",
+        "action": "add",
+        "value": "https://saas.brahmexa.com/portal/admin/"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "87cff49e45ae": {
+      "id": "87cff49e45ae",
+      "url": "https://saas.brahmexa.com/portal/admin/",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/portal/admin/",
+          "name": "Brahmando GPU Admin · Eden Sutra",
+          "description": "",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "7b8b9f979c22": {
+      "id": "7b8b9f979c22",
+      "url": "https://saas.brahmexa.com/portal/admin/",
+      "finding": "Page has thin content (239 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "7a22328d8ab6": {
+      "id": "7a22328d8ab6",
+      "url": "https://saas.brahmexa.com/portal/admin/",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "d363dbbe428d": {
+      "id": "d363dbbe428d",
+      "url": "https://brahmexa.com/whitepapers/llm/smb",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          "url": "https://brahmexa.com/whitepapers/llm/smb",
+          "name": "LLM Universe · Brahmexa SMB Solution",
+          "description": "Access the Brahmexa LLM Universe explore tool built to compare open and private model hosting architectures tailored for SMB businesses.",
+          "headline": "LLM Universe · Brahmexa SMB Solution",
+          "inLanguage": "en",
+          "author": {
+            "@type": "Organization",
+            "name": "Brahmexa Research Team"
+          }
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "9c5c406380bc": {
+      "id": "9c5c406380bc",
+      "url": "https://saas.brahmexa.com/smb/hvac/",
+      "finding": "Title tag is too short (27 chars): 'HVAC Support · Brahmexa SMB'",
+      "recommendation": "Expand the title tag to include target primary keyword and brand name (ideal: 50-60 chars).",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "update_title",
+        "value": "HVAC Support · Brahmexa SMB | Brahmexa AI Labs"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "1a4f71c32c1c": {
+      "id": "1a4f71c32c1c",
+      "url": "https://saas.brahmexa.com/smb/hvac/",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/smb/hvac/",
+          "name": "HVAC Support · Brahmexa SMB",
+          "description": "Find local HVAC repair pros, message them on WhatsApp or open a ticket, and get AI troubleshooting help.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "debb822767a1": {
+      "id": "debb822767a1",
+      "url": "https://saas.brahmexa.com/smb/hvac/",
+      "finding": "Page has thin content (232 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "ed71636ce93b": {
+      "id": "ed71636ce93b",
+      "url": "https://saas.brahmexa.com/reach/workbook.html",
+      "finding": "Title tag is too short (25 chars): 'REACH · Creative workbook'",
+      "recommendation": "Expand the title tag to include target primary keyword and brand name (ideal: 50-60 chars).",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "update_title",
+        "value": "REACH · Creative workbook | Brahmexa AI Labs"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "9f5ab96954fd": {
+      "id": "9f5ab96954fd",
+      "url": "https://saas.brahmexa.com/reach/workbook.html",
+      "finding": "Page is missing a meta description tag.",
+      "recommendation": "Add a unique meta description of 120-160 characters describing the page contents.",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "add_description",
+        "value": "Discover Brahmexa's sovereign AI infrastructure, private LLM hosting capabilities, and innovative educational AI framework Eden Sutra."
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "b9dc7e400df7": {
+      "id": "b9dc7e400df7",
+      "url": "https://saas.brahmexa.com/reach/workbook.html",
+      "finding": "Page is missing a canonical link tag.",
+      "recommendation": "Add a self-referencing canonical tag pointing to: https://saas.brahmexa.com/reach/workbook.html",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "canonical",
+        "action": "add",
+        "value": "https://saas.brahmexa.com/reach/workbook.html"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "4ae2e842a323": {
+      "id": "4ae2e842a323",
+      "url": "https://saas.brahmexa.com/reach/workbook.html",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/reach/workbook.html",
+          "name": "REACH · Creative workbook",
+          "description": "",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "a9c26f84e78a": {
+      "id": "a9c26f84e78a",
+      "url": "https://saas.brahmexa.com/smb/restaurant/",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/smb/restaurant/",
+          "name": "Restaurant Services · Brahmexa SMB Engine",
+          "description": "Brahmexa Restaurant Services — live and demonstration restaurants with an interactive Order-to-Cash workspace.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "c655957e45e9": {
+      "id": "c655957e45e9",
+      "url": "https://saas.brahmexa.com/smb/restaurant/",
+      "finding": "Page has thin content (142 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "4d2efd7a5d4a": {
+      "id": "4d2efd7a5d4a",
+      "url": "https://saas.brahmexa.com/smb/restaurant/",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa provides private, sovereign LLM hosting solutions and GPU-ready infrastructure custom-tailored for small businesses. By deploying local models like Mistral and Qwen, we eliminate high API token taxes, enabling startups to operate state-of-the-art agentic automation secure from public cloud leaks.",
+          "faqs": [
+            {
+              "question": "What infrastructure options does Brahmexa offer?",
+              "answer": "We offer sovereign GPU hosting in US and India locations running open-weight LLMs, coupled with local RAG adapters to modernise franchise business databases."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "4f5581061cb4": {
+      "id": "4f5581061cb4",
+      "url": "https://saas.brahmexa.com/smb/space/",
+      "finding": "Title tag is too long (85 chars) and may truncate in search results: 'SPACE · Smart Planning, Architecture, Communication & Execution · Brahmexa SMB Engine'",
+      "recommendation": "Shorten the title to under 60 characters while keeping important keywords first.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "0647eaed4892": {
+      "id": "0647eaed4892",
+      "url": "https://saas.brahmexa.com/smb/space/",
+      "finding": "Meta description is too long (194 chars) and will truncate in search snippets.",
+      "recommendation": "Trim description to fit within the standard 160-character budget.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "551c0301adf4": {
+      "id": "551c0301adf4",
+      "url": "https://saas.brahmexa.com/smb/space/",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/smb/space/",
+          "name": "SPACE · Smart Planning, Architecture, Communication & Execution · Brahmexa SMB Engine",
+          "description": "SPACE — AI Copilot for Office Interior Design. An AI-native project workspace for office-interior-design firms: inbox triage, requirement extraction, project memory, and human-approved drafting.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "3e36dd3316b2": {
+      "id": "3e36dd3316b2",
+      "url": "https://saas.brahmexa.com/smb/space/",
+      "finding": "Page has thin content (109 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "68d6a3236f54": {
+      "id": "68d6a3236f54",
+      "url": "https://saas.brahmexa.com/smb/hospital/",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/smb/hospital/",
+          "name": "Brahmexa SMB AI Hospital · Command Center",
+          "description": "Brahmexa SMB AI Hospital — AI-powered operations for hospitals and nursing homes. Hospital Operating Map, domains, processes and workflows.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "47f020633fe9": {
+      "id": "47f020633fe9",
+      "url": "https://saas.brahmexa.com/smb/hospital/",
+      "finding": "Page has thin content (63 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "2162f9b53913": {
+      "id": "2162f9b53913",
+      "url": "https://saas.brahmexa.com/smb/index.html",
+      "finding": "Title tag is too short (26 chars): 'Brahmexa SMB Engine · SaaS'",
+      "recommendation": "Expand the title tag to include target primary keyword and brand name (ideal: 50-60 chars).",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "update_title",
+        "value": "Brahmexa SMB Engine · SaaS | Brahmexa AI Labs"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "e44891e550bb": {
+      "id": "e44891e550bb",
+      "url": "https://saas.brahmexa.com/smb/index.html",
+      "finding": "Meta description is too short (96 chars): 'Brahmexa SMB Engine — digital marketing (REACH), platform verticals, agents, MCP, and workflows.'",
+      "recommendation": "Expand description to between 120 and 160 characters to improve click-through rates.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "ca3fe40873f7": {
+      "id": "ca3fe40873f7",
+      "url": "https://saas.brahmexa.com/smb/index.html",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/smb/index.html",
+          "name": "Brahmexa SMB Engine · SaaS",
+          "description": "Brahmexa SMB Engine — digital marketing (REACH), platform verticals, agents, MCP, and workflows.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "2ee23c0c6d90": {
+      "id": "2ee23c0c6d90",
+      "url": "https://saas.brahmexa.com/smb/index.html",
+      "finding": "Page has thin content (118 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "985977bf2fd5": {
+      "id": "985977bf2fd5",
+      "url": "https://saas.brahmexa.com/smb/index.html",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "3a8550718344": {
+      "id": "3a8550718344",
+      "url": "https://saas.brahmexa.com/smb/index.html",
+      "finding": "Duplicate content match (100% similarity) detected with: https://saas.brahmexa.com/smb/",
+      "recommendation": "Differentiate content. Add page-unique data, custom case studies, or rewrite duplicate blocks to prevent index filtering.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "8c28d10070b7": {
+      "id": "8c28d10070b7",
+      "url": "https://saas.brahmexa.com/smb/index.html",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa provides private, sovereign LLM hosting solutions and GPU-ready infrastructure custom-tailored for small businesses. By deploying local models like Mistral and Qwen, we eliminate high API token taxes, enabling startups to operate state-of-the-art agentic automation secure from public cloud leaks.",
+          "faqs": [
+            {
+              "question": "What infrastructure options does Brahmexa offer?",
+              "answer": "We offer sovereign GPU hosting in US and India locations running open-weight LLMs, coupled with local RAG adapters to modernise franchise business databases."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "01fca25f92b3": {
+      "id": "01fca25f92b3",
+      "url": "https://saas.brahmexa.com/smb/agents.html",
+      "finding": "Title tag is too short (21 chars): 'Agents · Brahmexa SMB'",
+      "recommendation": "Expand the title tag to include target primary keyword and brand name (ideal: 50-60 chars).",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "update_title",
+        "value": "Agents · Brahmexa SMB | Brahmexa AI Labs"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "52f60c33fa81": {
+      "id": "52f60c33fa81",
+      "url": "https://saas.brahmexa.com/smb/agents.html",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/smb/agents.html",
+          "name": "Agents · Brahmexa SMB",
+          "description": "Explore Brahmexa's autonomous agent framework configured with memory, guardrails, and role definitions for small businesses.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "d5c2bb3fddd7": {
+      "id": "d5c2bb3fddd7",
+      "url": "https://saas.brahmexa.com/smb/agents.html",
+      "finding": "Page has thin content (48 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "fe0f3a970a3e": {
+      "id": "fe0f3a970a3e",
+      "url": "https://saas.brahmexa.com/smb/agents.html",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "06428c2d6b77": {
+      "id": "06428c2d6b77",
+      "url": "https://saas.brahmexa.com/smb/agents.html",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa provides private, sovereign LLM hosting solutions and GPU-ready infrastructure custom-tailored for small businesses. By deploying local models like Mistral and Qwen, we eliminate high API token taxes, enabling startups to operate state-of-the-art agentic automation secure from public cloud leaks.",
+          "faqs": [
+            {
+              "question": "What infrastructure options does Brahmexa offer?",
+              "answer": "We offer sovereign GPU hosting in US and India locations running open-weight LLMs, coupled with local RAG adapters to modernise franchise business databases."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "5297fd8774fc": {
+      "id": "5297fd8774fc",
+      "url": "https://saas.brahmexa.com/smb/mcp.html",
+      "finding": "Title tag is too short (26 chars): 'MCP Servers · Brahmexa SMB'",
+      "recommendation": "Expand the title tag to include target primary keyword and brand name (ideal: 50-60 chars).",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "update_title",
+        "value": "MCP Servers · Brahmexa SMB | Brahmexa AI Labs"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "bc41410e8965": {
+      "id": "bc41410e8965",
+      "url": "https://saas.brahmexa.com/smb/mcp.html",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/smb/mcp.html",
+          "name": "MCP Servers · Brahmexa SMB",
+          "description": "Discover Model Context Protocol (MCP) servers integrated with Brahmando to connect models to external data and custom tools.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "721c82872689": {
+      "id": "721c82872689",
+      "url": "https://saas.brahmexa.com/smb/mcp.html",
+      "finding": "Page has thin content (40 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "8b26852897d7": {
+      "id": "8b26852897d7",
+      "url": "https://saas.brahmexa.com/smb/mcp.html",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa provides private, sovereign LLM hosting solutions and GPU-ready infrastructure custom-tailored for small businesses. By deploying local models like Mistral and Qwen, we eliminate high API token taxes, enabling startups to operate state-of-the-art agentic automation secure from public cloud leaks.",
+          "faqs": [
+            {
+              "question": "What infrastructure options does Brahmexa offer?",
+              "answer": "We offer sovereign GPU hosting in US and India locations running open-weight LLMs, coupled with local RAG adapters to modernise franchise business databases."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "2baab7ddd980": {
+      "id": "2baab7ddd980",
+      "url": "https://saas.brahmexa.com/smb/workflows.html",
+      "finding": "Title tag is too short (24 chars): 'Workflows · Brahmexa SMB'",
+      "recommendation": "Expand the title tag to include target primary keyword and brand name (ideal: 50-60 chars).",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "update_title",
+        "value": "Workflows · Brahmexa SMB | Brahmexa AI Labs"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "5fad176590f9": {
+      "id": "5fad176590f9",
+      "url": "https://saas.brahmexa.com/smb/workflows.html",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/smb/workflows.html",
+          "name": "Workflows · Brahmexa SMB",
+          "description": "Explore multi-step agentic workflows that coordinate actions, review stages, and notifications for enterprise systems.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "a47001ddc95d": {
+      "id": "a47001ddc95d",
+      "url": "https://saas.brahmexa.com/smb/workflows.html",
+      "finding": "Page has thin content (38 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "f675577b417d": {
+      "id": "f675577b417d",
+      "url": "https://saas.brahmexa.com/smb/workflows.html",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa provides private, sovereign LLM hosting solutions and GPU-ready infrastructure custom-tailored for small businesses. By deploying local models like Mistral and Qwen, we eliminate high API token taxes, enabling startups to operate state-of-the-art agentic automation secure from public cloud leaks.",
+          "faqs": [
+            {
+              "question": "What infrastructure options does Brahmexa offer?",
+              "answer": "We offer sovereign GPU hosting in US and India locations running open-weight LLMs, coupled with local RAG adapters to modernise franchise business databases."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "f79e7a77e567": {
+      "id": "f79e7a77e567",
+      "url": "https://saas.brahmexa.com/portal/",
+      "finding": "Page is missing a meta description tag.",
+      "recommendation": "Add a unique meta description of 120-160 characters describing the page contents.",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "add_description",
+        "value": "Discover Brahmexa's sovereign AI infrastructure, private LLM hosting capabilities, and innovative educational AI framework Eden Sutra."
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "31243785be9f": {
+      "id": "31243785be9f",
+      "url": "https://saas.brahmexa.com/portal/",
+      "finding": "Page is missing an H1 heading.",
+      "recommendation": "Create exactly one unique H1 element at the top of the main content.",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "2318544a0352": {
+      "id": "2318544a0352",
+      "url": "https://saas.brahmexa.com/portal/",
+      "finding": "Canonical URL mismatch. Tag points to '/portal/education/', but current page is 'https://saas.brahmexa.com/portal/'",
+      "recommendation": "Verify if the canonical target is correct. If this is a separate URL, ensure it is not a duplicate.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "31ab7a9e93aa": {
+      "id": "31ab7a9e93aa",
+      "url": "https://saas.brahmexa.com/portal/",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/portal/",
+          "name": "Redirecting to Brahmexa ANYO Academy…",
+          "description": "",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "1fab9566dc05": {
+      "id": "1fab9566dc05",
+      "url": "https://saas.brahmexa.com/portal/",
+      "finding": "Page has thin content (5 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "59cfb21dee1f": {
+      "id": "59cfb21dee1f",
+      "url": "https://saas.brahmexa.com/portal/",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "7c502e5e5eda": {
+      "id": "7c502e5e5eda",
+      "url": "https://saas.brahmexa.com/portal/",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa provides private, sovereign LLM hosting solutions and GPU-ready infrastructure custom-tailored for small businesses. By deploying local models like Mistral and Qwen, we eliminate high API token taxes, enabling startups to operate state-of-the-art agentic automation secure from public cloud leaks.",
+          "faqs": [
+            {
+              "question": "What infrastructure options does Brahmexa offer?",
+              "answer": "We offer sovereign GPU hosting in US and India locations running open-weight LLMs, coupled with local RAG adapters to modernise franchise business databases."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "6ba81075ad38": {
+      "id": "6ba81075ad38",
+      "url": "https://saas.brahmexa.com/portal/data/reports/eden-education-data-report.html",
+      "finding": "Page is missing a meta description tag.",
+      "recommendation": "Add a unique meta description of 120-160 characters describing the page contents.",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "add_description",
+        "value": "Discover Brahmexa's sovereign AI infrastructure, private LLM hosting capabilities, and innovative educational AI framework Eden Sutra."
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "5e1401a384a2": {
+      "id": "5e1401a384a2",
+      "url": "https://saas.brahmexa.com/portal/data/reports/eden-education-data-report.html",
+      "finding": "Page is missing a canonical link tag.",
+      "recommendation": "Add a self-referencing canonical tag pointing to: https://saas.brahmexa.com/portal/data/reports/eden-education-data-report.html",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "canonical",
+        "action": "add",
+        "value": "https://saas.brahmexa.com/portal/data/reports/eden-education-data-report.html"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "7b12459f2bdd": {
+      "id": "7b12459f2bdd",
+      "url": "https://saas.brahmexa.com/portal/data/reports/eden-education-data-report.html",
+      "finding": "Page content is extremely large (28491 words).",
+      "recommendation": "Consider splitting heavy content into paginated clusters or lazily loaded sub-modules.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Performance Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "dfc2b3ee19e0": {
+      "id": "dfc2b3ee19e0",
+      "url": "https://saas.brahmexa.com/portal/data/reports/eden-education-data-report.html",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "LearningResource",
+          "url": "https://saas.brahmexa.com/portal/data/reports/eden-education-data-report.html",
+          "name": "Eden Sutra — Education Data Report",
+          "description": ""
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "0c0c1fb3fe70": {
+      "id": "0c0c1fb3fe70",
+      "url": "https://saas.brahmexa.com/smb/hvac/providers.html",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/smb/hvac/providers.html",
+          "name": "List your HVAC business · Brahmexa SMB",
+          "description": "Register your HVAC repair business on Brahmexa. Pay $5 per customer request received through our channel.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "e95cdcbdd2e9": {
+      "id": "e95cdcbdd2e9",
+      "url": "https://saas.brahmexa.com/smb/hvac/providers.html",
+      "finding": "Page has thin content (117 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "ea3f14e09eb2": {
+      "id": "ea3f14e09eb2",
+      "url": "https://saas.brahmexa.com/reach/index.html",
+      "finding": "Title tag is too short (5 chars): 'REACH'",
+      "recommendation": "Expand the title tag to include target primary keyword and brand name (ideal: 50-60 chars).",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "update_title",
+        "value": "REACH | Brahmexa AI Labs"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "90b8cf83a67d": {
+      "id": "90b8cf83a67d",
+      "url": "https://saas.brahmexa.com/reach/index.html",
+      "finding": "Page is missing a meta description tag.",
+      "recommendation": "Add a unique meta description of 120-160 characters describing the page contents.",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "add_description",
+        "value": "Discover Brahmexa's sovereign AI infrastructure, private LLM hosting capabilities, and innovative educational AI framework Eden Sutra."
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "a19804bc9104": {
+      "id": "a19804bc9104",
+      "url": "https://saas.brahmexa.com/reach/index.html",
+      "finding": "Page is missing an H1 heading.",
+      "recommendation": "Create exactly one unique H1 element at the top of the main content.",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "931e56ae77a0": {
+      "id": "931e56ae77a0",
+      "url": "https://saas.brahmexa.com/reach/index.html",
+      "finding": "Page is missing a canonical link tag.",
+      "recommendation": "Add a self-referencing canonical tag pointing to: https://saas.brahmexa.com/reach/index.html",
+      "severity": "critical",
+      "confidence": 1.0,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "canonical",
+        "action": "add",
+        "value": "https://saas.brahmexa.com/reach/index.html"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "3c352a2e0e34": {
+      "id": "3c352a2e0e34",
+      "url": "https://saas.brahmexa.com/reach/index.html",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/reach/index.html",
+          "name": "REACH",
+          "description": "",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "9c674a5805ad": {
+      "id": "9c674a5805ad",
+      "url": "https://saas.brahmexa.com/reach/index.html",
+      "finding": "Page has thin content (5 words).",
+      "recommendation": "Expand the page content to at least 350-500 words to provide standalone value.",
+      "severity": "warning",
+      "confidence": 0.95,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "e409e0415751": {
+      "id": "e409e0415751",
+      "url": "https://saas.brahmexa.com/reach/index.html",
+      "finding": "Page is missing a direct, citation-friendly answer-first introduction in the opening paragraph.",
+      "recommendation": "Craft a self-contained, 40-70 word paragraph right at the start answering the core question of the page.",
+      "severity": "warning",
+      "confidence": 0.85,
+      "agent_owner": "Content Intelligence Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "9dc384f8ea2c": {
+      "id": "9dc384f8ea2c",
+      "url": "https://saas.brahmexa.com/reach/index.html",
+      "finding": "Page is missing direct question headings and citation answers.",
+      "recommendation": "Add a citation-friendly direct summary and an FAQ section using natural language question headings.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "AEO Agent",
+      "proposed_fix": {
+        "type": "aeo",
+        "action": "add_aeo_blocks",
+        "value": {
+          "direct_answer": "Brahmexa provides private, sovereign LLM hosting solutions and GPU-ready infrastructure custom-tailored for small businesses. By deploying local models like Mistral and Qwen, we eliminate high API token taxes, enabling startups to operate state-of-the-art agentic automation secure from public cloud leaks.",
+          "faqs": [
+            {
+              "question": "What infrastructure options does Brahmexa offer?",
+              "answer": "We offer sovereign GPU hosting in US and India locations running open-weight LLMs, coupled with local RAG adapters to modernise franchise business databases."
+            }
+          ]
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "62dd5e99425c": {
+      "id": "62dd5e99425c",
+      "url": "https://saas.brahmexa.com/reach/help.html",
+      "finding": "Title tag is too short (25 chars): 'REACH Help · How it works'",
+      "recommendation": "Expand the title tag to include target primary keyword and brand name (ideal: 50-60 chars).",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Technical SEO Agent",
+      "proposed_fix": {
+        "type": "metadata",
+        "action": "update_title",
+        "value": "REACH Help · How it works | Brahmexa AI Labs"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "dabeebcf73c3": {
+      "id": "dabeebcf73c3",
+      "url": "https://saas.brahmexa.com/reach/help.html",
+      "finding": "Page is missing structured data (JSON-LD).",
+      "recommendation": "Add structured data to help search engines understand page type, entities, and services.",
+      "severity": "warning",
+      "confidence": 0.9,
+      "agent_owner": "Schema Agent",
+      "proposed_fix": {
+        "type": "schema",
+        "action": "add_jsonld",
+        "value": {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "url": "https://saas.brahmexa.com/reach/help.html",
+          "name": "REACH Help · How it works",
+          "description": "Learn how REACH works: Brahmexa's guided digital marketing assistant for campaign planning, content generation, and social sharing.",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All"
+        }
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "c6e1669b0ce7": {
+      "id": "c6e1669b0ce7",
+      "url": "https://brahmexa.com/datacenter.php",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "9d90e094ea67": {
+      "id": "9d90e094ea67",
+      "url": "https://brahmexa.com/smart_board.php",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "cdf5d6fd075f": {
+      "id": "cdf5d6fd075f",
+      "url": "https://brahmexa.com/csr-agent.php?slug=fafsa",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "126a50bca626": {
+      "id": "126a50bca626",
+      "url": "https://brahmexa.com/whitepapers/eden-sutra",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "06b373186478": {
+      "id": "06b373186478",
+      "url": "https://saas.brahmexa.com/portal/admin/",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "284e65c6c2e7": {
+      "id": "284e65c6c2e7",
+      "url": "https://brahmexa.com/whitepapers/llm/smb",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "70383128ab20": {
+      "id": "70383128ab20",
+      "url": "https://saas.brahmexa.com/smb/hvac/",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "b57ccf168a38": {
+      "id": "b57ccf168a38",
+      "url": "https://saas.brahmexa.com/reach/workbook.html",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "ee559b55e839": {
+      "id": "ee559b55e839",
+      "url": "https://saas.brahmexa.com/smb/restaurant/",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "973f07d5cf36": {
+      "id": "973f07d5cf36",
+      "url": "https://saas.brahmexa.com/smb/space/",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "6d3e9e88f13d": {
+      "id": "6d3e9e88f13d",
+      "url": "https://saas.brahmexa.com/smb/hospital/",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "cc92fdb687fd": {
+      "id": "cc92fdb687fd",
+      "url": "https://saas.brahmexa.com/smb/index.html",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "2c1f7c93a8cc": {
+      "id": "2c1f7c93a8cc",
+      "url": "https://saas.brahmexa.com/smb/agents.html",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "a31c8fab1949": {
+      "id": "a31c8fab1949",
+      "url": "https://saas.brahmexa.com/smb/mcp.html",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "53aa1ec69ab4": {
+      "id": "53aa1ec69ab4",
+      "url": "https://saas.brahmexa.com/smb/workflows.html",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "8333f153c720": {
+      "id": "8333f153c720",
+      "url": "https://saas.brahmexa.com/portal/",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "a02e5e371e9d": {
+      "id": "a02e5e371e9d",
+      "url": "https://saas.brahmexa.com/portal/data/reports/eden-education-data-report.html",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "60694a0afade": {
+      "id": "60694a0afade",
+      "url": "https://saas.brahmexa.com/smb/hvac/providers.html",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "4ee50071d0fd": {
+      "id": "4ee50071d0fd",
+      "url": "https://saas.brahmexa.com/reach/index.html",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "f030804296a3": {
+      "id": "f030804296a3",
+      "url": "https://saas.brahmexa.com/reach/help.html",
+      "finding": "Page is weakly linked. Only 1 internal crawled page points to it.",
+      "recommendation": "Integrate context links from high-authority content clusters or whitepaper indexes.",
+      "severity": "warning",
+      "confidence": 0.8,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": null,
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "d29b7aaf72cb": {
+      "id": "d29b7aaf72cb",
+      "url": "https://brahmexa.com/infra_offering.php",
+      "finding": "Concept match: Found unlinked mention of 'eden sutra' on this page.",
+      "recommendation": "Add an internal contextual anchor link for 'eden sutra' pointing to https://brahmexa.com/whitepapers/eden-sutra.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": {
+        "type": "internal_link",
+        "action": "add_link",
+        "keyword": "eden sutra",
+        "target_url": "https://brahmexa.com/whitepapers/eden-sutra"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "437898a7804d": {
+      "id": "437898a7804d",
+      "url": "https://brahmexa.com/whitepapers",
+      "finding": "Concept match: Found unlinked mention of 'eden sutra' on this page.",
+      "recommendation": "Add an internal contextual anchor link for 'eden sutra' pointing to https://brahmexa.com/whitepapers/eden-sutra.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": {
+        "type": "internal_link",
+        "action": "add_link",
+        "keyword": "eden sutra",
+        "target_url": "https://brahmexa.com/whitepapers/eden-sutra"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "13763b8cbda3": {
+      "id": "13763b8cbda3",
+      "url": "https://brahmexa.com/about_us.php",
+      "finding": "Concept match: Found unlinked mention of 'eden sutra' on this page.",
+      "recommendation": "Add an internal contextual anchor link for 'eden sutra' pointing to https://brahmexa.com/whitepapers/eden-sutra.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": {
+        "type": "internal_link",
+        "action": "add_link",
+        "keyword": "eden sutra",
+        "target_url": "https://brahmexa.com/whitepapers/eden-sutra"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "70208d76c844": {
+      "id": "70208d76c844",
+      "url": "https://brahmexa.com/smart_board.php",
+      "finding": "Concept match: Found unlinked mention of 'eden sutra' on this page.",
+      "recommendation": "Add an internal contextual anchor link for 'eden sutra' pointing to https://brahmexa.com/whitepapers/eden-sutra.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": {
+        "type": "internal_link",
+        "action": "add_link",
+        "keyword": "eden sutra",
+        "target_url": "https://brahmexa.com/whitepapers/eden-sutra"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "9f4556809689": {
+      "id": "9f4556809689",
+      "url": "https://saas.brahmexa.com/portal/admin/",
+      "finding": "Concept match: Found unlinked mention of 'eden sutra' on this page.",
+      "recommendation": "Add an internal contextual anchor link for 'eden sutra' pointing to https://brahmexa.com/whitepapers/eden-sutra.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": {
+        "type": "internal_link",
+        "action": "add_link",
+        "keyword": "eden sutra",
+        "target_url": "https://brahmexa.com/whitepapers/eden-sutra"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "a01186d8a42c": {
+      "id": "a01186d8a42c",
+      "url": "https://saas.brahmexa.com/reach/workbook.html",
+      "finding": "Concept match: Found unlinked mention of 'eden sutra' on this page.",
+      "recommendation": "Add an internal contextual anchor link for 'eden sutra' pointing to https://brahmexa.com/whitepapers/eden-sutra.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": {
+        "type": "internal_link",
+        "action": "add_link",
+        "keyword": "eden sutra",
+        "target_url": "https://brahmexa.com/whitepapers/eden-sutra"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    },
+    "be6beaaaba00": {
+      "id": "be6beaaaba00",
+      "url": "https://saas.brahmexa.com/portal/data/reports/eden-education-data-report.html",
+      "finding": "Concept match: Found unlinked mention of 'eden sutra' on this page.",
+      "recommendation": "Add an internal contextual anchor link for 'eden sutra' pointing to https://brahmexa.com/whitepapers/eden-sutra.",
+      "severity": "info",
+      "confidence": 0.85,
+      "agent_owner": "Internal Linking Agent",
+      "proposed_fix": {
+        "type": "internal_link",
+        "action": "add_link",
+        "keyword": "eden sutra",
+        "target_url": "https://brahmexa.com/whitepapers/eden-sutra"
+      },
+      "validation_status": "pending",
+      "approval_status": "pending"
+    }
+  }
+}

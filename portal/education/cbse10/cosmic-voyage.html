@@ -1,0 +1,134 @@
+<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+
+  Cosmic Voyage — an interplanetary CBSE Class 10 quiz journey. The student
+  pilots a ship from Earth outward across 8 legs (Moon, Mars, Asteroid Belt,
+  Jupiter, Saturn, Uranus, Neptune, Deep Space). Correct answers generate
+  thrust toward the next waypoint; wrong answers or timeouts damage the hull.
+  Difficulty ramps through mechanics — shrinking timers, meteor-shower rapid
+  questions from leg 3, and a weighted d1/d2/d3 question mix that shifts from
+  80/20/0 on the Moon leg to 15/45/40 in Deep Space.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cosmic Voyage · CBSE Class 10 Science &amp; Maths</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/theme.css?v=saas-layout-19" />
+  <link rel="stylesheet" href="../../../assets/landing.css?v=saas-layout-12" />
+  <link rel="stylesheet" href="../../assets/portal.css?v=11" />
+  <link rel="stylesheet" href="../../assets/education-layout.css" />
+  <link rel="stylesheet" href="game-room.css" />
+  <link rel="stylesheet" href="cosmic-voyage.css?v=1" />
+</head>
+<body class="portal-page education-compact">
+
+  <canvas class="cv-stars" id="cv-stars" aria-hidden="true"></canvas>
+
+  <header class="portal-header">
+    <a class="back-link" href="game-room.html">← Game Room</a>
+    <h1>Cosmic Voyage 🚀 <span class="sr-open-badge">Play</span></h1>
+  </header>
+
+  <main class="portal-main">
+    <div class="cv">
+      <!-- Route map: 8 waypoints from Moon to Deep Space -->
+      <div class="cv-route" id="cv-route" aria-label="Voyage route"></div>
+
+      <!-- HUD -->
+      <div class="cv-hud">
+        <div class="cv-stat" style="--cv-accent:#fbbf24">
+          <span class="cv-stat-label">Score</span>
+          <span class="cv-stat-value" id="cv-score">0</span>
+        </div>
+        <div class="cv-stat" style="--cv-accent:#22d3ee">
+          <span class="cv-stat-label">Leg</span>
+          <span class="cv-stat-value cv-stat-value--sm" id="cv-leg">—</span>
+        </div>
+        <div class="cv-stat" style="--cv-accent:#f97316">
+          <span class="cv-stat-label">Streak</span>
+          <span class="cv-stat-value" id="cv-streak">—</span>
+        </div>
+        <div class="cv-stat" style="--cv-accent:#34d399">
+          <span class="cv-stat-label">Hull</span>
+          <div class="cv-hull" id="cv-hull"></div>
+        </div>
+      </div>
+
+      <!-- Thrust progress toward the waypoint -->
+      <div class="cv-thrust">
+        <span class="cv-thrust-label">Thrust</span>
+        <div class="cv-thrust-track" id="cv-thrustTrack">
+          <div class="cv-thrust-fill" id="cv-thrustFill"></div>
+        </div>
+        <span class="cv-thrust-text" id="cv-thrustText">0 / 5</span>
+      </div>
+
+      <!-- Question card -->
+      <section class="cv-panel cv-qpanel" id="cv-qpanel">
+        <div class="cv-timer">
+          <div class="cv-timer-track"><div class="cv-timer-fill" id="cv-timerFill"></div></div>
+          <span class="cv-timer-text" id="cv-timerText">—</span>
+        </div>
+        <div class="cv-tags" id="cv-tags"></div>
+        <p class="cv-question" id="cv-question">Preparing launch…</p>
+        <div class="cv-options" id="cv-options"></div>
+        <div class="cv-ticker" id="cv-ticker" aria-live="polite"></div>
+        <div class="cv-actions">
+          <button type="button" class="cv-btn cv-btn--ghost" id="cv-abortBtn">🗺 Star map</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- The vessel (cosmetic stages 1–3, upgraded along the voyage) -->
+  <div class="cv-ship" id="cv-ship" data-stage="1" aria-hidden="true">
+    <svg viewBox="0 0 120 150" fill="none">
+      <defs>
+        <!-- userSpaceOnUse: several strokes here are axis-aligned; an
+             objectBoundingBox gradient would degenerate and paint nothing. -->
+        <linearGradient id="cvHullG" gradientUnits="userSpaceOnUse" x1="60" y1="10" x2="60" y2="112">
+          <stop offset="0%" stop-color="#eef3fc" />
+          <stop offset="100%" stop-color="#8fa3c8" />
+        </linearGradient>
+        <linearGradient id="cvFlameG" gradientUnits="userSpaceOnUse" x1="60" y1="112" x2="60" y2="148">
+          <stop offset="0%" stop-color="#fbbf24" />
+          <stop offset="60%" stop-color="#f97316" />
+          <stop offset="100%" stop-color="rgba(239,68,68,0)" />
+        </linearGradient>
+      </defs>
+      <path class="cv-flame" d="M50 110 C54 130 56 138 60 148 C64 138 66 130 70 110 Z" fill="url(#cvFlameG)" />
+      <g class="cv-s3">
+        <path d="M46 92 L24 132 L48 112 Z" fill="#f472b6" />
+        <path d="M74 92 L96 132 L72 112 Z" fill="#f472b6" />
+      </g>
+      <g class="cv-s2">
+        <path d="M48 72 L16 110 L48 104 Z" fill="#38bdf8" />
+        <path d="M72 72 L104 110 L72 104 Z" fill="#38bdf8" />
+      </g>
+      <path d="M48 86 L34 112 L48 108 Z" fill="#22d3ee" />
+      <path d="M72 86 L86 112 L72 108 Z" fill="#22d3ee" />
+      <path d="M60 10 C78 36 79 78 71 112 L49 112 C41 78 42 36 60 10 Z"
+            fill="url(#cvHullG)" stroke="#22d3ee" stroke-width="2" />
+      <circle cx="60" cy="46" r="9" fill="#0b1226" stroke="#22d3ee" stroke-width="3" />
+      <line x1="52" y1="90" x2="68" y2="90" stroke="#8b5cf6" stroke-width="3" />
+    </svg>
+  </div>
+
+  <!-- Viewport layers (pinned with !important against theme.css body>* rule) -->
+  <div class="cv-flash" id="cv-flash" aria-hidden="true"></div>
+  <div class="cv-warp-badge" id="cv-warpBadge" aria-hidden="true"></div>
+
+  <div class="cv-overlay" id="cv-overlay" hidden>
+    <div class="cv-card" id="cv-overlayBody"></div>
+  </div>
+
+  <script src="cbse10-quiz-bank.js?v=3"></script>
+  <script src="cosmic-voyage.js?v=1"></script>
+</body>
+</html>

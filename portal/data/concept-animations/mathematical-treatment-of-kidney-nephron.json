@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-kidney-nephron",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Kidney Nephron",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Kidney Nephron",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Kidney Nephron.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "The kidney nephron can be thought of as a microscopic water filtration plant, where water and solutes are filtered and regulated to maintain…",
+    "Pause and restate what Mathematical Treatment of Kidney Nephron means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Kidney Nephron: pattern in points",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Kidney Nephron</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">data</text><line x1=\"80\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#94a3b8\" stroke-width=\"2\"/><line x1=\"80\" y1=\"300\" x2=\"80\" y2=\"60\" stroke=\"#94a3b8\" stroke-width=\"2\"/><circle cx=\"159\" cy=\"223\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"226\" cy=\"180\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"293\" cy=\"137\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"360\" cy=\"94\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"427\" cy=\"251\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"494\" cy=\"208\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"141\" cy=\"165\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"208\" cy=\"122\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"275\" cy=\"279\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"342\" cy=\"236\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"409\" cy=\"193\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"476\" cy=\"150\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"123\" cy=\"107\" r=\"7\" fill=\"#38bdf8\"/><circle cx=\"190\" cy=\"264\" r=\"7\" fill=\"#38bdf8\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Trend line vs noise",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Kidney Nephron</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">trend</text><line x1=\"100\" y1=\"260\" x2=\"520\" y2=\"100\" stroke=\"#fbbf24\" stroke-width=\"3\"/><circle cx=\"140\" cy=\"240\" r=\"6\" fill=\"#34d399\"/><circle cx=\"190\" cy=\"237\" r=\"6\" fill=\"#34d399\"/><circle cx=\"240\" cy=\"234\" r=\"6\" fill=\"#34d399\"/><circle cx=\"290\" cy=\"186\" r=\"6\" fill=\"#34d399\"/><circle cx=\"340\" cy=\"183\" r=\"6\" fill=\"#34d399\"/><circle cx=\"390\" cy=\"180\" r=\"6\" fill=\"#34d399\"/><circle cx=\"440\" cy=\"132\" r=\"6\" fill=\"#34d399\"/><circle cx=\"490\" cy=\"129\" r=\"6\" fill=\"#34d399\"/>"
+    },
+    {
+      "id": "core",
+      "caption": "Read the signal",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Kidney Nephron</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"90\" y=\"110\" width=\"460\" height=\"150\" rx=\"12\" fill=\"#111827\" stroke=\"#38bdf8\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"16\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Kidney Nephron</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "The kidney nephron can be thought of as a microscopic water filtration plant, where water ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Kidney Nephron</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">The kidney nephron can be thought of as a microscopic wa</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Mathematical Treatment of Kidney Nephron",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Kidney Nephron</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"24\" font-family=\"Segoe UI,Arial\">see the pattern</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofKidneyNephronScene",
+    "notes": "Domain=general motif=family-10. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_kidney_nephron.py ConceptScene"
+  },
+  "motif": "family-10",
+  "generated_by": "template-stem-v5-general-family-10",
+  "generated_at": "2026-07-12T22:35:03Z"
+}

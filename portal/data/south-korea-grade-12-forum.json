@@ -1,0 +1,1066 @@
+{
+  "version": 1,
+  "sku": "south-korea-grade-12",
+  "title": "Grade 12",
+  "displayName": "South Korea · Grade 12",
+  "generated_at": "2026-07-13T12:21:29.847729+00:00",
+  "locale": "kr",
+  "threads": [
+    {
+      "id": "thr_south-korea-grade-12_evolution_000",
+      "title": "Quick poll: how many hours are you giving Evolution this week?",
+      "subject": "biology",
+      "chapter": "evolution",
+      "chapter_title": "Evolution",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Tried three YouTube explainers for Evolution and still confused. Prefer textbook-first approaches? (Grade 12)",
+          "created_at": "2026-07-08T15:03:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Not proud of it, but I left Evolution late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-09T08:05:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "I keep a 'mistake log' only for Evolution. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-09T23:46:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "That sequencing (theory then numericals) matches what our teacher said too.",
+          "created_at": "2026-07-10T02:13:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Evolution idea.",
+          "created_at": "2026-07-10T16:24:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "Break Evolution into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-11T03:04:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_molecular-biology_001",
+      "title": "Anyone else find Molecular Biology denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "molecular-biology",
+      "chapter_title": "Molecular Biology",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Our teacher hinted Molecular Biology is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-12T20:32:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Not proud of it, but I left Molecular Biology late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-13T07:59:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Molecular Biology fixed most of it.",
+          "created_at": "2026-06-13T12:08:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Molecular Biology.",
+          "created_at": "2026-06-13T20:48:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "Break Molecular Biology into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-14T06:43:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Molecular Biology.",
+          "created_at": "2026-06-14T13:36:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_electromagnetism_002",
+      "title": "Is Electromagnetism more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "electromagnetism",
+      "chapter_title": "Electromagnetism",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Got stuck on a homework problem from Electromagnetism. Happy to post the exact question if that helps.",
+          "created_at": "2026-07-06T21:24:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "If you cannot explain Electromagnetism to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-07-07T06:45:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Do the odd-numbered textbook exercises for Electromagnetism; answers are usually in the back.",
+          "created_at": "2026-07-07T09:50:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_electrochemistry_003",
+      "title": "Quick poll: how many hours are you giving Electrochemistry this week?",
+      "subject": "chemistry",
+      "chapter": "electrochemistry",
+      "chapter_title": "Electrochemistry",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Tried three YouTube explainers for Electrochemistry and still confused. Prefer textbook-first approaches? (Grade 12)",
+          "created_at": "2026-06-22T19:02:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Electrochemistry problem cold.",
+          "created_at": "2026-06-23T09:06:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Do the odd-numbered textbook exercises for Electrochemistry; answers are usually in the back.",
+          "created_at": "2026-06-23T10:58:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Electrochemistry idea.",
+          "created_at": "2026-06-23T13:28:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Our senior shared last year's notes on Electrochemistry; still accurate for the current syllabus.",
+          "created_at": "2026-06-23T19:29:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Electrochemistry.",
+          "created_at": "2026-06-24T05:43:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_organic-chemistry_004",
+      "title": "Concept check: Organic Chemistry before the mock test",
+      "subject": "chemistry",
+      "chapter": "organic-chemistry",
+      "chapter_title": "Organic Chemistry",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Scored poorly on the last Organic Chemistry quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-07-03T10:12:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Organic Chemistry marks.",
+          "created_at": "2026-07-04T00:29:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Organic Chemistry — the diagrams helped.",
+          "created_at": "2026-07-04T12:52:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Thanks — trying that tonight for Organic Chemistry.",
+          "created_at": "2026-07-05T06:35:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-07-05T09:56:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "I record myself explaining Organic Chemistry out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-05T18:22:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_vectors_005",
+      "title": "Best resources for Vectors? Textbook vs online notes",
+      "subject": "mathematics",
+      "chapter": "vectors",
+      "chapter_title": "Vectors",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Got stuck on a homework problem from Vectors. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-29T04:44:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Not proud of it, but I left Vectors late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-29T12:54:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Vectors live.",
+          "created_at": "2026-06-29T14:31:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "I keep a 'mistake log' only for Vectors. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-30T03:15:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_mechanics_006",
+      "title": "Is Mechanics more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "mechanics",
+      "chapter_title": "Mechanics",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Got stuck on a homework problem from Mechanics. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-13T04:58:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "I write every Mechanics formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-13T13:36:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "Break Mechanics into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-14T00:21:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Not proud of it, but I left Mechanics late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-14T06:52:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_ecology_007",
+      "title": "Teacher said Ecology will definitely show up — panic mode?",
+      "subject": "biology",
+      "chapter": "ecology",
+      "chapter_title": "Ecology",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Past paper had two weird Ecology items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-04T14:17:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Honestly I skipped ahead then came back — Ecology clicked after seeing later examples.",
+          "created_at": "2026-07-04T19:45:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_electricity_008",
+      "title": "How are you preparing Electricity for the final exam?",
+      "subject": "physics",
+      "chapter": "electricity",
+      "chapter_title": "Electricity",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Is it normal that Electricity takes longer than neighboring chapters in Physics?",
+          "created_at": "2026-07-11T16:58:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Electricity idea.",
+          "created_at": "2026-07-12T06:26:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Electricity set.",
+          "created_at": "2026-07-12T15:01:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Our senior shared last year's notes on Electricity; still accurate for the current syllabus.",
+          "created_at": "2026-07-12T18:01:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Electricity.",
+          "created_at": "2026-07-13T08:48:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Past papers > notes for me on Electricity. Pattern recognition beats rereading.",
+          "created_at": "2026-07-13T20:22:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Electricity fixed most of it.",
+          "created_at": "2026-07-14T01:03:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_waves_009",
+      "title": "Our class test had a tricky Physics question from Waves",
+      "subject": "physics",
+      "chapter": "waves",
+      "chapter_title": "Waves",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Past paper had two weird Waves items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-08T15:59:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Short sessions beat marathon cramming for Waves. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-09T10:19:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_geometry_010",
+      "title": "Anyone else find Geometry denser than the rest of Mathematics?",
+      "subject": "mathematics",
+      "chapter": "geometry",
+      "chapter_title": "Geometry",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Got stuck on a homework problem from Geometry. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-20T02:54:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "I keep a 'mistake log' only for Geometry. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-20T03:58:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Geometry.",
+          "created_at": "2026-06-20T14:01:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Geometry marks.",
+          "created_at": "2026-06-21T05:23:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-21T09:46:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Not proud of it, but I left Geometry late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-21T12:33:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Geometry unit.",
+          "created_at": "2026-06-21T15:56:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "I write every Geometry formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-21T19:24:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Geometry.",
+          "created_at": "2026-06-22T06:37:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_modern-physics_011",
+      "title": "Quick poll: how many hours are you giving Modern Physics this week?",
+      "subject": "physics",
+      "chapter": "modern-physics",
+      "chapter_title": "Modern Physics",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "We just started Modern Physics in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-07-09T09:33:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-10T00:57:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Modern Physics.",
+          "created_at": "2026-07-10T08:21:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Modern Physics idea.",
+          "created_at": "2026-07-10T21:50:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Modern Physics marks.",
+          "created_at": "2026-07-11T07:25:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Whiteboard + friend teaching me Modern Physics beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-12T02:09:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_physical-chemistry_012",
+      "title": "Past paper question on Physical Chemistry — which formula do you use first?",
+      "subject": "chemistry",
+      "chapter": "physical-chemistry",
+      "chapter_title": "Physical Chemistry",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Scored poorly on the last Physical Chemistry quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-25T07:15:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Physical Chemistry.",
+          "created_at": "2026-06-25T15:43:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Physical Chemistry.",
+          "created_at": "2026-06-25T23:33:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_calculus_013",
+      "title": "How are you preparing Calculus for the final exam?",
+      "subject": "mathematics",
+      "chapter": "calculus",
+      "chapter_title": "Calculus",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "We just started Calculus in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-07-04T14:01:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "Exam boards repeat similar Mathematics patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-07-05T00:56:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Calculus.",
+          "created_at": "2026-07-05T15:32:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_probability_014",
+      "title": "Need a simple analogy for Probability that actually sticks",
+      "subject": "mathematics",
+      "chapter": "probability",
+      "chapter_title": "Probability",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "We just started Probability in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-11T11:50:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Probability marks.",
+          "created_at": "2026-06-11T17:55:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "For Probability, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-11T19:35:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-11T22:05:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_chemical-equilibrium_015",
+      "title": "Is Chemical Equilibrium more theory-heavy or numerical for our board?",
+      "subject": "chemistry",
+      "chapter": "chemical-equilibrium",
+      "chapter_title": "Chemical Equilibrium",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Group chat from school is quiet on Chemical Equilibrium. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-22T06:58:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Do the odd-numbered textbook exercises for Chemical Equilibrium; answers are usually in the back.",
+          "created_at": "2026-06-22T12:17:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Whiteboard + friend teaching me Chemical Equilibrium beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-23T02:26:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Our senior shared last year's notes on Chemical Equilibrium; still accurate for the current syllabus.",
+          "created_at": "2026-06-23T08:58:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Don't ignore the worked examples. For Chemical Equilibrium they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-23T19:00:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_genetics_016",
+      "title": "Need a simple analogy for Genetics that actually sticks",
+      "subject": "biology",
+      "chapter": "genetics",
+      "chapter_title": "Genetics",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Past paper had two weird Genetics items back-to-back. Want to compare approaches. (Grade 12)",
+          "created_at": "2026-07-01T05:31:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Past papers > notes for me on Genetics. Pattern recognition beats rereading.",
+          "created_at": "2026-07-01T08:50:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Do the odd-numbered textbook exercises for Genetics; answers are usually in the back.",
+          "created_at": "2026-07-02T03:05:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-02T08:16:29.847729+00:00"
+        },
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Genetics set.",
+          "created_at": "2026-07-02T16:08:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Genetics — the diagrams helped.",
+          "created_at": "2026-07-02T17:53:29.847729+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_south-korea-grade-12_statistics_017",
+      "title": "Sharing my Statistics mistake from yesterday's quiz — what did I miss?",
+      "subject": "mathematics",
+      "chapter": "statistics",
+      "chapter_title": "Statistics",
+      "track": "south-korea-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_min_ji_park",
+          "author_name": "Min-ji Park",
+          "author_role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg",
+          "body": "Revision week — Statistics is the weak spot on my checklist for Mathematics. How are you tackling it?",
+          "created_at": "2026-06-27T23:38:29.847729+00:00"
+        },
+        {
+          "author_id": "s_soo_yeon_lee",
+          "author_name": "Soo-yeon Lee",
+          "author_role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg",
+          "body": "Do the odd-numbered textbook exercises for Statistics; answers are usually in the back.",
+          "created_at": "2026-06-28T16:54:29.847729+00:00"
+        },
+        {
+          "author_id": "s_jun_ho_kim",
+          "author_name": "Jun-ho Kim",
+          "author_role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+          "body": "I write every Statistics formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-29T10:15:29.847729+00:00"
+        },
+        {
+          "author_id": "t_hyun_soo_choi",
+          "author_name": "Hyun-soo Choi",
+          "author_role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Statistics.",
+          "created_at": "2026-06-30T04:35:29.847729+00:00"
+        }
+      ]
+    }
+  ]
+}

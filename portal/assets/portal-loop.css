@@ -1,0 +1,208 @@
+/* Canonical portal double-ring loop — default for all circles (hub, study rooms, signature countries) */
+
+.portal,
+a.portal,
+button.portal {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+  text-decoration: none;
+  color: inherit;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+}
+
+.portal:hover:not(:disabled),
+a.portal:hover {
+  transform: scale(1.05);
+}
+
+.portal-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, rgba(15, 23, 42, 0.15) 55%, transparent 72%);
+  box-shadow: 0 0 48px rgba(6, 182, 212, 0.18), inset 0 0 32px rgba(6, 182, 212, 0.08);
+  animation: portal-pulse 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.portal-orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px dashed rgba(148, 163, 184, 0.25);
+  animation: portal-spin 18s linear infinite;
+  pointer-events: none;
+}
+
+.portal-orbit::before,
+.portal-orbit::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan-light, #67e8f9);
+  box-shadow: 0 0 10px rgba(103, 232, 249, 0.8);
+}
+
+.portal-orbit::before {
+  top: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.portal-orbit::after {
+  bottom: 8%;
+  right: 12%;
+}
+
+.portal-core {
+  position: absolute;
+  inset: 14%;
+  z-index: 2;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  /* Higher-contrast, less-transparent core so title/subtitle stay readable
+     over any theme background (was rgba(...,.35)/(.92) — too transparent on
+     dark themes, too dim on light themes). */
+  background: linear-gradient(145deg, rgba(6, 182, 212, 0.65), rgba(2, 8, 24, 0.94));
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.22),
+    inset 0 -6px 18px rgba(0, 0, 0, 0.55),
+    0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+.portal-icon {
+  font-size: 1.85rem;
+  line-height: 1;
+  margin-bottom: 6px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+.portal-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
+}
+
+.portal-sub {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin-top: 4px;
+  line-height: 1.4;
+  max-width: 130px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.65);
+}
+
+/* Theme accents */
+.portal--saas .portal-ring {
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.38) 0%, rgba(6, 182, 212, 0.1) 55%, transparent 70%);
+  box-shadow: 0 0 60px rgba(16, 185, 129, 0.32), inset 0 0 40px rgba(16, 185, 129, 0.12);
+}
+
+.portal--saas .portal-core {
+  background: linear-gradient(145deg, rgba(16, 185, 129, 0.5), rgba(15, 23, 42, 0.88));
+  animation-delay: -1s;
+}
+
+.portal--saas .portal-orbit::before,
+.portal--saas .portal-orbit::after {
+  background: #34d399;
+  box-shadow: 0 0 12px #34d399;
+}
+
+.portal--caregiver .portal-ring {
+  background: radial-gradient(circle, rgba(249, 115, 22, 0.28) 0%, rgba(15, 23, 42, 0.1) 55%, transparent 70%);
+  box-shadow: 0 0 52px rgba(249, 115, 22, 0.22);
+}
+
+.portal--caregiver .portal-core {
+  background: linear-gradient(145deg, rgba(249, 115, 22, 0.4), rgba(15, 23, 42, 0.88));
+}
+
+.portal--rhytoma .portal-ring {
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.3) 0%, transparent 70%);
+  box-shadow: 0 0 52px rgba(167, 139, 250, 0.22);
+}
+
+.portal--rhytoma .portal-core {
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.4), rgba(15, 23, 42, 0.88));
+}
+
+.portal--international .portal-ring {
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.42) 0%, rgba(6, 182, 212, 0.12) 55%, transparent 70%);
+  box-shadow: 0 0 72px rgba(168, 85, 247, 0.35), inset 0 0 48px rgba(139, 92, 246, 0.15);
+}
+
+.portal--international .portal-core {
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.55), rgba(30, 58, 95, 0.92));
+}
+
+.portal--international .portal-orbit::before,
+.portal--international .portal-orbit::after {
+  background: #c4b5fd;
+  box-shadow: 0 0 14px #a78bfa;
+}
+
+@keyframes portal-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.88; transform: scale(1.02); }
+}
+
+@keyframes portal-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes portal-core-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+/* Light-theme readability: swap the dark-glow text-shadow for a subtle
+   white lift, and swap the near-black core gradient for a lighter one
+   so titles/subtitles stay legible on parchment/sky/meadow/dawn. */
+[data-cosmic-theme="parchment"] .portal-core,
+[data-cosmic-theme="sky"]       .portal-core,
+[data-cosmic-theme="meadow"]    .portal-core,
+[data-cosmic-theme="dawn"]      .portal-core {
+  background: linear-gradient(145deg,
+    color-mix(in srgb, var(--accent) 55%, rgba(255, 255, 255, 0.85)),
+    color-mix(in srgb, var(--accent-2) 45%, rgba(255, 255, 255, 0.75)));
+  border-color: color-mix(in srgb, var(--text) 45%, transparent);
+  box-shadow:
+    inset 0 2px 6px rgba(255, 255, 255, 0.55),
+    inset 0 -4px 12px rgba(0, 0, 0, 0.18),
+    0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+[data-cosmic-theme="parchment"] .portal-title,
+[data-cosmic-theme="sky"]       .portal-title,
+[data-cosmic-theme="meadow"]    .portal-title,
+[data-cosmic-theme="dawn"]      .portal-title {
+  color: var(--text-1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 0 4px rgba(0, 0, 0, 0.15);
+  font-weight: 800;
+}
+
+[data-cosmic-theme="parchment"] .portal-sub,
+[data-cosmic-theme="sky"]       .portal-sub,
+[data-cosmic-theme="meadow"]    .portal-sub,
+[data-cosmic-theme="dawn"]      .portal-sub {
+  color: var(--text-2);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}

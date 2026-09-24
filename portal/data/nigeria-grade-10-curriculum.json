@@ -1,0 +1,724 @@
+{
+  "sku": "nigeria-grade-10",
+  "title": "Grade 10",
+  "displayName": "Nigeria · Grade 10",
+  "locale": "en",
+  "syllabus_source": "eden_sutra_country_chapter_scope",
+  "subjects": {
+    "mathematics": {
+      "id": "mathematics",
+      "label": "Mathematics",
+      "icon": "📐",
+      "chapters": [
+        {
+          "id": "number-system",
+          "title": "Number System",
+          "topic_id": "nigeria-grade-10.mathematics.number-system",
+          "syllabus_order": 1,
+          "eden_concept_slugs": [
+            "real-number-system"
+          ]
+        },
+        {
+          "id": "algebra",
+          "title": "Algebra",
+          "topic_id": "nigeria-grade-10.mathematics.algebra",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "fundamental-theorem-of-algebra",
+            "advanced-fundamental-theorem-of-algebra",
+            "visualizing-fundamental-theorem-of-algebra",
+            "applications-of-fundamental-theorem-of-algebra",
+            "alternative-derivation-of-fundamental-theorem-of-algebra",
+            "mathematical-treatment-of-fundamental-theorem-of-algebra",
+            "experimental-verification-of-fundamental-theorem-of-algebra",
+            "applications-of-fundamental-theorem-of-calculus",
+            "visualizing-fundamental-theorem-of-calculus",
+            "advanced-fundamental-theorem-of-calculus",
+            "mathematical-treatment-of-fundamental-theorem-of-calculus",
+            "experimental-verification-of-fundamental-theorem-of-calculus",
+            "fundamental-theorem-of-calculus"
+          ]
+        },
+        {
+          "id": "linear-equations",
+          "title": "Linear Equations",
+          "topic_id": "nigeria-grade-10.mathematics.linear-equations",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "linear-equations",
+            "advanced-linear-equations",
+            "alternative-derivation-of-linear-equations",
+            "applications-of-linear-equations",
+            "experimental-verification-of-linear-equations",
+            "linear-equations-and-inequalities",
+            "mathematical-treatment-of-linear-equations",
+            "visualizing-linear-equations",
+            "linear-inequalities",
+            "quadratic-equations",
+            "simultaneous-equations",
+            "trigonometric-equations",
+            "absolute-value-equations",
+            "advanced-linear-inequalities",
+            "quadratic-equations-factoring",
+            "advanced-simultaneous-equations",
+            "visualizing-linear-inequalities",
+            "vector-geometry-lines-and-planes",
+            "advanced-absolute-value-equations",
+            "visualizing-simultaneous-equations",
+            "applications-of-linear-inequalities",
+            "visualizing-absolute-value-equations",
+            "exponential-and-logarithmic-functions",
+            "advanced-quadratic-equations-factoring",
+            "applications-of-simultaneous-equations",
+            "applications-of-absolute-value-equations",
+            "visualizing-quadratic-equations-factoring",
+            "alternative-derivation-of-linear-inequalities",
+            "applications-of-quadratic-equations-factoring",
+            "mathematical-treatment-of-linear-inequalities",
+            "alternative-derivation-of-simultaneous-equations",
+            "experimental-verification-of-linear-inequalities",
+            "mathematical-treatment-of-simultaneous-equations",
+            "alternative-derivation-of-absolute-value-equations",
+            "mathematical-treatment-of-absolute-value-equations",
+            "experimental-verification-of-simultaneous-equations",
+            "experimental-verification-of-absolute-value-equations",
+            "alternative-derivation-of-quadratic-equations-factoring",
+            "mathematical-treatment-of-quadratic-equations-factoring",
+            "experimental-verification-of-quadratic-equations-factoring"
+          ]
+        },
+        {
+          "id": "quadratic-equations",
+          "title": "Quadratic Equations",
+          "topic_id": "nigeria-grade-10.mathematics.quadratic-equations",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "quadratic-equations",
+            "quadratic-formula",
+            "advanced-quadratic-equations-factoring",
+            "advanced-quadratic-formula",
+            "alternative-derivation-of-quadratic-equations-factoring",
+            "alternative-derivation-of-quadratic-formula",
+            "applications-of-quadratic-equations-factoring",
+            "applications-of-quadratic-formula",
+            "experimental-verification-of-quadratic-equations-factoring",
+            "experimental-verification-of-quadratic-formula",
+            "mathematical-treatment-of-quadratic-equations-factoring",
+            "mathematical-treatment-of-quadratic-formula",
+            "quadratic-equations-factoring",
+            "visualizing-quadratic-equations-factoring",
+            "visualizing-quadratic-formula",
+            "linear-equations",
+            "simultaneous-equations",
+            "trigonometric-equations",
+            "absolute-value-equations",
+            "advanced-linear-equations",
+            "visualizing-linear-equations",
+            "advanced-simultaneous-equations",
+            "applications-of-linear-equations",
+            "vector-geometry-lines-and-planes",
+            "advanced-absolute-value-equations",
+            "linear-equations-and-inequalities",
+            "visualizing-simultaneous-equations",
+            "visualizing-absolute-value-equations",
+            "exponential-and-logarithmic-functions",
+            "applications-of-simultaneous-equations",
+            "applications-of-absolute-value-equations",
+            "alternative-derivation-of-linear-equations",
+            "mathematical-treatment-of-linear-equations",
+            "experimental-verification-of-linear-equations",
+            "alternative-derivation-of-simultaneous-equations",
+            "mathematical-treatment-of-simultaneous-equations",
+            "alternative-derivation-of-absolute-value-equations",
+            "mathematical-treatment-of-absolute-value-equations",
+            "experimental-verification-of-simultaneous-equations",
+            "experimental-verification-of-absolute-value-equations",
+            "advanced-linear-inequalities",
+            "visualizing-linear-inequalities",
+            "applications-of-linear-inequalities",
+            "alternative-derivation-of-linear-inequalities",
+            "mathematical-treatment-of-linear-inequalities",
+            "experimental-verification-of-linear-inequalities"
+          ]
+        },
+        {
+          "id": "geometry",
+          "title": "Geometry",
+          "topic_id": "nigeria-grade-10.mathematics.geometry",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "vector-geometry-lines-and-planes"
+          ]
+        },
+        {
+          "id": "mensuration",
+          "title": "Mensuration",
+          "topic_id": "nigeria-grade-10.mathematics.mensuration",
+          "syllabus_order": 6
+        },
+        {
+          "id": "trigonometry",
+          "title": "Trigonometry",
+          "topic_id": "nigeria-grade-10.mathematics.trigonometry",
+          "syllabus_order": 7,
+          "eden_concept_slugs": [
+            "radian-measure-and-trigonometric-ratios",
+            "trigonometric-identities",
+            "trigonometric-equations"
+          ]
+        },
+        {
+          "id": "statistics",
+          "title": "Statistics",
+          "topic_id": "nigeria-grade-10.mathematics.statistics",
+          "syllabus_order": 8,
+          "eden_concept_slugs": [
+            "measures-of-center-mean-median-mode",
+            "advanced-measures-of-center-mean-median-mode",
+            "applications-of-measures-of-center-mean-median-mode",
+            "experimental-verification-of-measures-of-center-mean-median-mode",
+            "mathematical-treatment-of-measures-of-center-mean-median-mode",
+            "visualizing-measures-of-center-mean-median-mode"
+          ]
+        },
+        {
+          "id": "probability",
+          "title": "Probability",
+          "topic_id": "nigeria-grade-10.mathematics.probability",
+          "syllabus_order": 9,
+          "eden_concept_slugs": [
+            "probability-definition",
+            "advanced-conditional-probability-bayes",
+            "advanced-probability-definition",
+            "applications-of-conditional-probability-bayes",
+            "applications-of-probability-definition",
+            "concept-of-probability",
+            "conditional-probability-bayes",
+            "experimental-verification-of-conditional-probability-bayes",
+            "experimental-verification-of-probability-definition",
+            "mathematical-treatment-of-conditional-probability-bayes",
+            "mathematical-treatment-of-probability-definition",
+            "visualizing-conditional-probability-bayes",
+            "visualizing-probability-definition",
+            "advanced-limit-definition",
+            "applications-of-limit-definition",
+            "concept-of-the-derivative",
+            "concept-of-the-integral",
+            "experimental-verification-of-limit-definition",
+            "mathematical-treatment-of-limit-definition",
+            "visualizing-limit-definition"
+          ]
+        },
+        {
+          "id": "mathematics-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "nigeria-grade-10.mathematics.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "physics": {
+      "id": "physics",
+      "label": "Physics",
+      "icon": "⚛️",
+      "chapters": [
+        {
+          "id": "measurement",
+          "title": "Measurement",
+          "topic_id": "nigeria-grade-10.physics.measurement",
+          "syllabus_order": 1,
+          "eden_concept_slugs": []
+        },
+        {
+          "id": "motion",
+          "title": "Motion",
+          "topic_id": "nigeria-grade-10.physics.motion",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "projectile-motion",
+            "constant-velocity-motion",
+            "advanced-constant-velocity-motion",
+            "advanced-cyclotron-motion",
+            "advanced-motional-emf",
+            "advanced-projectile-motion",
+            "advanced-uniform-circular-motion",
+            "applications-of-constant-velocity-motion",
+            "applications-of-projectile-motion",
+            "applications-of-uniform-circular-motion",
+            "cyclotron-motion",
+            "kinematics-in-one-dimension",
+            "motional-emf",
+            "newtons-laws-of-motion",
+            "uniform-circular-motion",
+            "advanced-emf-and-internal-resistance"
+          ]
+        },
+        {
+          "id": "force",
+          "title": "Force",
+          "topic_id": "nigeria-grade-10.physics.force",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "buoyant-force",
+            "force-vectors",
+            "normal-contact-force",
+            "advanced-buoyant-force",
+            "advanced-force-vectors",
+            "magnetic-lorentz-force",
+            "newtons-laws-of-motion",
+            "parallel-current-force",
+            "work-by-constant-force",
+            "work-by-variable-force",
+            "advanced-normal-contact-force",
+            "applications-of-buoyant-force",
+            "applications-of-force-vectors",
+            "advanced-magnetic-lorentz-force",
+            "advanced-parallel-current-force",
+            "advanced-work-by-constant-force",
+            "advanced-work-by-variable-force",
+            "applications-of-normal-contact-force",
+            "applications-of-work-by-constant-force",
+            "applications-of-work-by-variable-force",
+            "advanced-position-vectors",
+            "applications-of-position-vectors"
+          ]
+        },
+        {
+          "id": "work-and-energy",
+          "title": "Work and Energy",
+          "topic_id": "nigeria-grade-10.physics.work-and-energy",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "work-energy-and-power",
+            "internal-energy",
+            "potential-energy",
+            "energy-in-capacitor",
+            "kinetic-energy-theorem",
+            "nuclear-binding-energy",
+            "work-by-constant-force",
+            "work-by-variable-force",
+            "advanced-internal-energy",
+            "advanced-potential-energy",
+            "electric-potential-energy",
+            "advanced-energy-in-capacitor",
+            "gravitational-potential-energy",
+            "mechanical-energy-conservation",
+            "advanced-kinetic-energy-theorem",
+            "advanced-nuclear-binding-energy",
+            "advanced-work-by-constant-force",
+            "advanced-work-by-variable-force",
+            "applications-of-potential-energy",
+            "advanced-electric-potential-energy",
+            "applications-of-kinetic-energy-theorem",
+            "applications-of-work-by-constant-force",
+            "applications-of-work-by-variable-force",
+            "advanced-gravitational-potential-energy",
+            "advanced-mechanical-energy-conservation",
+            "applications-of-gravitational-potential-energy",
+            "applications-of-mechanical-energy-conservation",
+            "advanced-emf-and-internal-resistance",
+            "advanced-total-internal-reflection",
+            "advanced-electric-potential",
+            "electric-potential"
+          ]
+        },
+        {
+          "id": "heat",
+          "title": "Heat",
+          "topic_id": "nigeria-grade-10.physics.heat",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "specific-heat-capacity",
+            "advanced-isothermal-process",
+            "advanced-latent-heat",
+            "advanced-molar-heat-capacity",
+            "advanced-specific-heat-capacity",
+            "advanced-temperature-enzyme-effect",
+            "advanced-temperature-scales",
+            "advanced-thermal-conductivity",
+            "advanced-thermal-expansion",
+            "advanced-wheatstone-bridge",
+            "applications-of-specific-heat-capacity",
+            "applications-of-temperature-enzyme-effect",
+            "applications-of-temperature-scales",
+            "applications-of-thermal-expansion",
+            "experimental-verification-of-temperature-enzyme-effect",
+            "isothermal-process",
+            "latent-heat",
+            "mathematical-treatment-of-temperature-enzyme-effect",
+            "molar-heat-capacity",
+            "temperature-enzyme-effect",
+            "temperature-scales",
+            "thermal-conductivity",
+            "thermal-expansion",
+            "wheatstone-bridge",
+            "advanced-isochoric-process",
+            "advanced-adiabatic-process",
+            "advanced-isobaric-process",
+            "advanced-resistivity-and-conductivity"
+          ]
+        },
+        {
+          "id": "light",
+          "title": "Light",
+          "topic_id": "nigeria-grade-10.physics.light",
+          "syllabus_order": 6,
+          "eden_concept_slugs": [
+            "snell-law",
+            "refractive-index",
+            "total-internal-reflection",
+            "prism-refraction",
+            "laws-of-reflection",
+            "advanced-laws-of-reflection",
+            "advanced-light-reactions",
+            "advanced-polarization-of-light",
+            "advanced-total-internal-reflection",
+            "applications-of-light-reactions",
+            "experimental-verification-of-light-reactions",
+            "light-reactions",
+            "mathematical-treatment-of-light-reactions",
+            "polarization-of-light"
+          ]
+        },
+        {
+          "id": "sound",
+          "title": "Sound",
+          "topic_id": "nigeria-grade-10.physics.sound",
+          "syllabus_order": 7,
+          "eden_concept_slugs": [
+            "longitudinal-waves",
+            "standing-waves",
+            "waves-and-superposition",
+            "advanced-de-broglie-waves",
+            "advanced-longitudinal-waves",
+            "advanced-sound-beats",
+            "advanced-standing-waves",
+            "advanced-transverse-waves",
+            "advanced-wave-equation",
+            "de-broglie-waves",
+            "sound-beats",
+            "transverse-waves",
+            "wave-equation",
+            "advanced-bernoulli-equation",
+            "advanced-thin-lens-equation",
+            "advanced-equation-of-continuity",
+            "advanced-ideal-gas-equation"
+          ]
+        },
+        {
+          "id": "electricity",
+          "title": "Electricity",
+          "topic_id": "nigeria-grade-10.physics.electricity",
+          "syllabus_order": 8,
+          "eden_concept_slugs": [
+            "electric-current",
+            "electric-circuits",
+            "advanced-electric-current",
+            "advanced-electric-power",
+            "advanced-electric-potential",
+            "advanced-electric-dipole",
+            "advanced-torque-on-current-loop",
+            "advanced-kirchhoff-current-law",
+            "advanced-electric-potential-energy",
+            "advanced-electric-flux",
+            "advanced-electric-field-lines",
+            "advanced-electric-field",
+            "advanced-parallel-current-force",
+            "advanced-electric-charge"
+          ]
+        },
+        {
+          "id": "magnetism",
+          "title": "Magnetism",
+          "topic_id": "nigeria-grade-10.physics.magnetism",
+          "syllabus_order": 9,
+          "eden_concept_slugs": [
+            "magnetic-field-b",
+            "electromagnetic-induction",
+            "advanced-magnetic-field-b",
+            "advanced-solenoid-magnetic-field",
+            "solenoid-magnetic-field"
+          ]
+        },
+        {
+          "id": "physics-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "nigeria-grade-10.physics.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "chemistry": {
+      "id": "chemistry",
+      "label": "Chemistry",
+      "icon": "🧪",
+      "chapters": [
+        {
+          "id": "matter",
+          "title": "Matter",
+          "topic_id": "nigeria-grade-10.chemistry.matter",
+          "syllabus_order": 1
+        },
+        {
+          "id": "atomic-structure",
+          "title": "Atomic Structure",
+          "topic_id": "nigeria-grade-10.chemistry.atomic-structure",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "atomic-structure",
+            "periodic-trends",
+            "atomic-mass-unit",
+            "dna-rna-structure",
+            "atomic-radius-trend",
+            "protein-structure-levels",
+            "advanced-atomic-mass-unit",
+            "advanced-dna-rna-structure",
+            "advanced-atomic-radius-trend",
+            "chemical-bonding-and-structure",
+            "applications-of-atomic-mass-unit",
+            "advanced-protein-structure-levels",
+            "applications-of-dna-rna-structure",
+            "applications-of-atomic-radius-trend",
+            "applications-of-protein-structure-levels",
+            "mathematical-treatment-of-atomic-mass-unit",
+            "mathematical-treatment-of-atomic-radius-trend",
+            "ionic-radius-trend",
+            "advanced-ionic-radius-trend",
+            "mathematical-treatment-of-ionic-radius-trend",
+            "applications-of-ionic-radius-trend"
+          ]
+        },
+        {
+          "id": "elements-and-compounds",
+          "title": "Elements and Compounds",
+          "topic_id": "nigeria-grade-10.chemistry.elements-and-compounds",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "coordination-compounds",
+            "advanced-coordination-compounds",
+            "applications-of-coordination-compounds"
+          ]
+        },
+        {
+          "id": "periodic-table",
+          "title": "Periodic Table",
+          "topic_id": "nigeria-grade-10.chemistry.periodic-table",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "periodic-trends",
+            "modern-periodic-law",
+            "advanced-modern-periodic-law",
+            "applications-of-modern-periodic-law",
+            "mathematical-treatment-of-modern-periodic-law"
+          ]
+        },
+        {
+          "id": "chemical-bonding",
+          "title": "Chemical Bonding",
+          "topic_id": "nigeria-grade-10.chemistry.chemical-bonding",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "chemical-bonding-and-structure",
+            "covalent-bond",
+            "advanced-covalent-bond",
+            "applications-of-covalent-bond",
+            "mathematical-treatment-of-covalent-bond",
+            "chemical-equilibrium",
+            "chemical-kinetics-and-rates",
+            "advanced-coordinate-bond",
+            "advanced-ionic-bond",
+            "advanced-peptide-bond",
+            "applications-of-ionic-bond",
+            "applications-of-peptide-bond",
+            "applications-of-coordinate-bond",
+            "mathematical-treatment-of-ionic-bond",
+            "mathematical-treatment-of-coordinate-bond"
+          ]
+        },
+        {
+          "id": "acids-and-bases",
+          "title": "Acids and Bases",
+          "topic_id": "nigeria-grade-10.chemistry.acids-and-bases",
+          "syllabus_order": 6,
+          "eden_concept_slugs": [
+            "acids-bases-and-salts",
+            "advanced-carboxylic-acids-acidity",
+            "advanced-nucleic-acids",
+            "advanced-weak-acid-dissociation",
+            "applications-of-carboxylic-acids-acidity",
+            "applications-of-nucleic-acids",
+            "applications-of-weak-acid-dissociation",
+            "carboxylic-acids-acidity",
+            "experimental-verification-of-nucleic-acids",
+            "mathematical-treatment-of-nucleic-acids",
+            "mathematical-treatment-of-weak-acid-dissociation",
+            "nucleic-acids",
+            "weak-acid-dissociation",
+            "organic-functional-groups"
+          ]
+        },
+        {
+          "id": "salts",
+          "title": "Salts",
+          "topic_id": "nigeria-grade-10.chemistry.salts",
+          "syllabus_order": 7,
+          "eden_concept_slugs": [
+            "acids-bases-and-salts"
+          ]
+        },
+        {
+          "id": "air-and-water",
+          "title": "Air and Water",
+          "topic_id": "nigeria-grade-10.chemistry.air-and-water",
+          "syllabus_order": 8,
+          "eden_concept_slugs": []
+        },
+        {
+          "id": "chemistry-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "nigeria-grade-10.chemistry.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "biology": {
+      "id": "biology",
+      "label": "Biology",
+      "icon": "🧬",
+      "chapters": [
+        {
+          "id": "cell",
+          "title": "Cell",
+          "topic_id": "nigeria-grade-10.biology.cell",
+          "syllabus_order": 1,
+          "eden_concept_slugs": [
+            "cell-wall",
+            "cell-theory",
+            "advanced-cell-wall",
+            "mitosis-and-meiosis",
+            "advanced-cell-theory",
+            "visualizing-cell-theory",
+            "applications-of-cell-wall",
+            "applications-of-cell-theory",
+            "cell-structure-and-function",
+            "mathematical-treatment-of-cell-wall",
+            "mathematical-treatment-of-cell-theory",
+            "experimental-verification-of-cell-wall",
+            "experimental-verification-of-cell-theory",
+            "structure-and-function-of-enzymes"
+          ]
+        },
+        {
+          "id": "tissues",
+          "title": "Tissues",
+          "topic_id": "nigeria-grade-10.biology.tissues",
+          "syllabus_order": 2
+        },
+        {
+          "id": "nutrition",
+          "title": "Nutrition",
+          "topic_id": "nigeria-grade-10.biology.nutrition",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "photosynthesis"
+          ]
+        },
+        {
+          "id": "respiration",
+          "title": "Respiration",
+          "topic_id": "nigeria-grade-10.biology.respiration",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "cellular-respiration"
+          ]
+        },
+        {
+          "id": "transport",
+          "title": "Transport",
+          "topic_id": "nigeria-grade-10.biology.transport",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "xylem-transport",
+            "active-transport",
+            "oxygen-transport",
+            "phloem-transport",
+            "advanced-xylem-transport",
+            "electron-transport-chain",
+            "advanced-active-transport",
+            "advanced-oxygen-transport",
+            "advanced-phloem-transport",
+            "applications-of-xylem-transport",
+            "applications-of-active-transport",
+            "applications-of-oxygen-transport",
+            "applications-of-phloem-transport",
+            "advanced-electron-transport-chain",
+            "applications-of-electron-transport-chain",
+            "mathematical-treatment-of-xylem-transport",
+            "mathematical-treatment-of-active-transport",
+            "mathematical-treatment-of-oxygen-transport",
+            "mathematical-treatment-of-phloem-transport",
+            "experimental-verification-of-xylem-transport",
+            "experimental-verification-of-active-transport",
+            "experimental-verification-of-oxygen-transport",
+            "experimental-verification-of-phloem-transport",
+            "mathematical-treatment-of-electron-transport-chain",
+            "experimental-verification-of-electron-transport-chain",
+            "advanced-active-site",
+            "applications-of-active-site",
+            "mathematical-treatment-of-active-site",
+            "experimental-verification-of-active-site"
+          ]
+        },
+        {
+          "id": "reproduction",
+          "title": "Reproduction",
+          "topic_id": "nigeria-grade-10.biology.reproduction",
+          "syllabus_order": 6,
+          "eden_concept_slugs": [
+            "mendelian-genetics"
+          ]
+        },
+        {
+          "id": "ecology",
+          "title": "Ecology",
+          "topic_id": "nigeria-grade-10.biology.ecology",
+          "syllabus_order": 7,
+          "eden_concept_slugs": [
+            "ecological-succession",
+            "evolution-by-natural-selection",
+            "advanced-ecological-succession",
+            "applications-of-ecological-succession",
+            "experimental-verification-of-ecological-succession",
+            "mathematical-treatment-of-ecological-succession"
+          ]
+        },
+        {
+          "id": "heredity",
+          "title": "Heredity",
+          "topic_id": "nigeria-grade-10.biology.heredity",
+          "syllabus_order": 8,
+          "eden_concept_slugs": [
+            "mendelian-genetics",
+            "evolution-by-natural-selection",
+            "advanced-sex-linked-inheritance",
+            "applications-of-sex-linked-inheritance",
+            "experimental-verification-of-sex-linked-inheritance",
+            "mathematical-treatment-of-sex-linked-inheritance",
+            "sex-linked-inheritance"
+          ]
+        },
+        {
+          "id": "biology-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "nigeria-grade-10.biology.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    }
+  }
+}

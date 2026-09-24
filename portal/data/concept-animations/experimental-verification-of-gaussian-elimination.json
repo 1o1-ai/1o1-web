@@ -1,0 +1,62 @@
+{
+  "slug": "experimental-verification-of-gaussian-elimination",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Experimental Verification of Gaussian Elimination",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Experimental Verification of Gaussian Elimination",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Experimental Verification of Gaussian Elimination.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Gaussian elimination is like systematically organizing a jigsaw puzzle by first separating overlapping pieces (row operations), then arrangi…",
+    "Pause and restate what Experimental Verification of Gaussian Elimination means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Experimental Verification of Gaussian Elimination: measure and test",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Gaussian Eliminatio</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">lab</text><rect x=\"60\" y=\"240\" width=\"520\" height=\"40\" fill=\"#132033\"/><rect x=\"140\" y=\"120\" width=\"70\" height=\"120\" fill=\"#67e8f9\" opacity=\"0.7\"/><rect x=\"280\" y=\"150\" width=\"70\" height=\"90\" fill=\"#fcd34d\" opacity=\"0.8\"/><rect x=\"420\" y=\"100\" width=\"70\" height=\"140\" fill=\"#5eead4\" opacity=\"0.7\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">observe · measure · conclude</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Hypothesis then evidence",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Gaussian Eliminatio</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">method</text><rect x=\"80\" y=\"100\" width=\"220\" height=\"160\" rx=\"12\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><text x=\"190\" y=\"170\" text-anchor=\"middle\" fill=\"#67e8f9\" font-size=\"16\" font-family=\"Segoe UI,Arial\">hypothesis</text><rect x=\"340\" y=\"100\" width=\"220\" height=\"160\" rx=\"12\" fill=\"#164e63\" stroke=\"#5eead4\" stroke-width=\"2\"/><text x=\"450\" y=\"170\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"16\" font-family=\"Segoe UI,Arial\">evidence</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Result board",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Gaussian Eliminatio</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"100\" y=\"110\" width=\"440\" height=\"150\" rx=\"12\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><text x=\"320\" y=\"175\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"16\" font-family=\"Segoe UI,Arial\">Experimental Verification of Gaussian Elim</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">data supports / rejects claim</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Gaussian elimination is like systematically organizing a jigsaw puzzle by first separating",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Gaussian Eliminatio</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Gaussian elimination is like systematically organizing a</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Experimental Verification of Gaussian El",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Gaussian Eliminatio</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"24\" font-family=\"Segoe UI,Arial\">evidence wins</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ExperimentalVerificationofGaussianEliminScene",
+    "notes": "Domain=general motif=family-4. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/experimental_verification_of_gaussian_elimination.py ConceptScene"
+  },
+  "motif": "family-4",
+  "generated_by": "template-stem-v5-general-family-4",
+  "generated_at": "2026-07-12T22:34:56Z"
+}

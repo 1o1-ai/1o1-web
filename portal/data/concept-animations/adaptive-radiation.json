@@ -1,0 +1,62 @@
+{
+  "slug": "adaptive-radiation",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Adaptive Radiation",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Adaptive Radiation",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Adaptive Radiation.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Adaptive radiation is like a restaurant franchise expanding into new markets. Just as the franchise adapts its menu and services to suit loc…",
+    "Pause and restate what Adaptive Radiation means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Adaptive Radiation: levels of organization",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Adaptive Radiation</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><rect x=\"220\" y=\"70\" width=\"200\" height=\"50\" rx=\"8\" fill=\"#fde68a\"/><rect x=\"140\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb923c\"/><rect x=\"340\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb923c\"/><rect x=\"80\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/><rect x=\"250\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/><rect x=\"420\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Zoom out / zoom in",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Adaptive Radiation</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><circle cx=\"200\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"190\" r=\"40\" fill=\"#7c2d12\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"2\"/><text x=\"460\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">detail</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Which level explains the effect?",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Adaptive Radiation</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Adaptive Radiation</text><text x=\"320\" y=\"230\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">pick the right scale</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Adaptive radiation is like a restaurant franchise expanding into new markets. Just as the ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Adaptive Radiation</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Adaptive radiation is like a restaurant franchise expand</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Adaptive Radiation",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Adaptive Radiation</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"24\" font-family=\"Segoe UI,Arial\">levels stack</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AdaptiveRadiationScene",
+    "notes": "Domain=general motif=family-6. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/adaptive_radiation.py ConceptScene"
+  },
+  "motif": "family-6",
+  "generated_by": "template-stem-v5-general-family-6",
+  "generated_at": "2026-07-12T22:34:02Z"
+}

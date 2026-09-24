@@ -1,0 +1,457 @@
+{
+  "sku": "pakistan-hssc",
+  "title": "Grade 12",
+  "displayName": "Pakistan · Grade 12",
+  "locale": "en",
+  "syllabus_source": "eden_sutra_country_chapter_scope",
+  "subjects": {
+    "mathematics": {
+      "id": "mathematics",
+      "label": "Mathematics",
+      "icon": "📐",
+      "chapters": [
+        {
+          "id": "calculus",
+          "title": "Calculus",
+          "topic_id": "pakistan-hssc.mathematics.calculus",
+          "syllabus_order": 1,
+          "eden_concept_slugs": [
+            "fundamental-theorem-of-calculus",
+            "advanced-fundamental-theorem-of-calculus",
+            "visualizing-fundamental-theorem-of-calculus",
+            "applications-of-fundamental-theorem-of-calculus",
+            "mathematical-treatment-of-fundamental-theorem-of-calculus",
+            "experimental-verification-of-fundamental-theorem-of-calculus",
+            "applications-of-fundamental-theorem-of-algebra",
+            "visualizing-fundamental-theorem-of-algebra",
+            "advanced-fundamental-theorem-of-algebra",
+            "fundamental-theorem-of-algebra",
+            "experimental-verification-of-fundamental-theorem-of-algebra",
+            "mathematical-treatment-of-fundamental-theorem-of-algebra",
+            "alternative-derivation-of-fundamental-theorem-of-algebra"
+          ]
+        },
+        {
+          "id": "analytical-geometry",
+          "title": "Analytical Geometry",
+          "topic_id": "pakistan-hssc.mathematics.analytical-geometry",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "vector-geometry-lines-and-planes"
+          ]
+        },
+        {
+          "id": "vectors",
+          "title": "Vectors",
+          "topic_id": "pakistan-hssc.mathematics.vectors",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "position-vectors",
+            "force-vectors",
+            "advanced-displacement-vector",
+            "advanced-force-vectors",
+            "advanced-position-vectors",
+            "applications-of-displacement-vector",
+            "applications-of-force-vectors",
+            "applications-of-position-vectors",
+            "displacement-vector",
+            "vector-geometry-lines-and-planes",
+            "vectors-and-scalars"
+          ]
+        },
+        {
+          "id": "probability",
+          "title": "Probability",
+          "topic_id": "pakistan-hssc.mathematics.probability",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "probability-definition",
+            "advanced-conditional-probability-bayes",
+            "advanced-probability-definition",
+            "applications-of-conditional-probability-bayes",
+            "applications-of-probability-definition",
+            "concept-of-probability",
+            "conditional-probability-bayes",
+            "experimental-verification-of-conditional-probability-bayes",
+            "experimental-verification-of-probability-definition",
+            "mathematical-treatment-of-conditional-probability-bayes",
+            "mathematical-treatment-of-probability-definition",
+            "visualizing-conditional-probability-bayes",
+            "visualizing-probability-definition",
+            "advanced-limit-definition",
+            "applications-of-limit-definition",
+            "concept-of-the-derivative",
+            "concept-of-the-integral",
+            "experimental-verification-of-limit-definition",
+            "mathematical-treatment-of-limit-definition",
+            "visualizing-limit-definition"
+          ]
+        },
+        {
+          "id": "statistics",
+          "title": "Statistics",
+          "topic_id": "pakistan-hssc.mathematics.statistics",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "measures-of-center-mean-median-mode",
+            "advanced-measures-of-center-mean-median-mode",
+            "applications-of-measures-of-center-mean-median-mode",
+            "experimental-verification-of-measures-of-center-mean-median-mode",
+            "mathematical-treatment-of-measures-of-center-mean-median-mode",
+            "visualizing-measures-of-center-mean-median-mode"
+          ]
+        },
+        {
+          "id": "trigonometry",
+          "title": "Trigonometry",
+          "topic_id": "pakistan-hssc.mathematics.trigonometry",
+          "syllabus_order": 6,
+          "eden_concept_slugs": [
+            "radian-measure-and-trigonometric-ratios",
+            "trigonometric-identities",
+            "trigonometric-equations"
+          ]
+        },
+        {
+          "id": "mathematics-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "pakistan-hssc.mathematics.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "physics": {
+      "id": "physics",
+      "label": "Physics",
+      "icon": "⚛️",
+      "chapters": [
+        {
+          "id": "mechanics",
+          "title": "Mechanics",
+          "topic_id": "pakistan-hssc.physics.mechanics",
+          "syllabus_order": 1
+        },
+        {
+          "id": "dynamics",
+          "title": "Dynamics",
+          "topic_id": "pakistan-hssc.physics.dynamics",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "inclined-plane-dynamics",
+            "advanced-inclined-plane-dynamics",
+            "applications-of-inclined-plane-dynamics"
+          ]
+        },
+        {
+          "id": "thermodynamics",
+          "title": "Thermodynamics",
+          "topic_id": "pakistan-hssc.physics.thermodynamics",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "enthalpy-definition",
+            "first-law-of-thermodynamics",
+            "advanced-enthalpy-definition",
+            "advanced-first-law-of-thermodynamics",
+            "advanced-second-law-of-thermodynamics",
+            "advanced-standard-formation-enthalpy",
+            "applications-of-enthalpy-definition",
+            "applications-of-standard-formation-enthalpy",
+            "laws-of-thermodynamics",
+            "mathematical-treatment-of-enthalpy-definition",
+            "mathematical-treatment-of-standard-formation-enthalpy",
+            "second-law-of-thermodynamics",
+            "standard-formation-enthalpy",
+            "applications-of-newton-first-law",
+            "applications-of-newton-second-law"
+          ]
+        },
+        {
+          "id": "electromagnetic-induction",
+          "title": "Electromagnetic Induction",
+          "topic_id": "pakistan-hssc.physics.electromagnetic-induction",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "magnetic-field-b",
+            "electromagnetic-induction",
+            "advanced-magnetic-field-b",
+            "advanced-solenoid-magnetic-field",
+            "solenoid-magnetic-field"
+          ]
+        },
+        {
+          "id": "waves",
+          "title": "Waves",
+          "topic_id": "pakistan-hssc.physics.waves",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "longitudinal-waves",
+            "standing-waves",
+            "waves-and-superposition",
+            "advanced-de-broglie-waves",
+            "advanced-longitudinal-waves",
+            "advanced-sound-beats",
+            "advanced-standing-waves",
+            "advanced-transverse-waves",
+            "advanced-wave-equation",
+            "de-broglie-waves",
+            "sound-beats",
+            "transverse-waves",
+            "wave-equation",
+            "advanced-bernoulli-equation",
+            "advanced-thin-lens-equation",
+            "advanced-equation-of-continuity",
+            "advanced-ideal-gas-equation"
+          ]
+        },
+        {
+          "id": "modern-physics",
+          "title": "Modern Physics",
+          "topic_id": "pakistan-hssc.physics.modern-physics",
+          "syllabus_order": 6
+        },
+        {
+          "id": "physics-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "pakistan-hssc.physics.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "chemistry": {
+      "id": "chemistry",
+      "label": "Chemistry",
+      "icon": "🧪",
+      "chapters": [
+        {
+          "id": "organic-chemistry",
+          "title": "Organic Chemistry",
+          "topic_id": "pakistan-hssc.chemistry.organic-chemistry",
+          "syllabus_order": 1,
+          "eden_concept_slugs": [
+            "covalent-bond",
+            "alkanes-substitution",
+            "advanced-alkanes-substitution",
+            "advanced-covalent-bond",
+            "applications-of-alkanes-substitution",
+            "applications-of-covalent-bond",
+            "mathematical-treatment-of-covalent-bond",
+            "organic-functional-groups",
+            "advanced-benzene-electrophilic-substitution",
+            "advanced-iupac-nomenclature-alkanes",
+            "advanced-coordinate-bond",
+            "advanced-ionic-bond",
+            "advanced-peptide-bond",
+            "applications-of-benzene-electrophilic-substitution",
+            "applications-of-iupac-nomenclature-alkanes",
+            "applications-of-ionic-bond",
+            "applications-of-peptide-bond",
+            "applications-of-coordinate-bond",
+            "mathematical-treatment-of-ionic-bond",
+            "mathematical-treatment-of-coordinate-bond"
+          ]
+        },
+        {
+          "id": "coordination-compounds",
+          "title": "Coordination Compounds",
+          "topic_id": "pakistan-hssc.chemistry.coordination-compounds",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "coordination-compounds",
+            "advanced-coordination-compounds",
+            "applications-of-coordination-compounds"
+          ]
+        },
+        {
+          "id": "thermodynamics",
+          "title": "Thermodynamics",
+          "topic_id": "pakistan-hssc.chemistry.thermodynamics",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "enthalpy-definition",
+            "first-law-of-thermodynamics",
+            "advanced-enthalpy-definition",
+            "advanced-first-law-of-thermodynamics",
+            "advanced-second-law-of-thermodynamics",
+            "advanced-standard-formation-enthalpy",
+            "applications-of-enthalpy-definition",
+            "applications-of-standard-formation-enthalpy",
+            "laws-of-thermodynamics",
+            "mathematical-treatment-of-enthalpy-definition",
+            "mathematical-treatment-of-standard-formation-enthalpy",
+            "second-law-of-thermodynamics",
+            "standard-formation-enthalpy",
+            "advanced-ph-definition",
+            "applications-of-ph-definition",
+            "mathematical-treatment-of-ph-definition"
+          ]
+        },
+        {
+          "id": "chemical-equilibrium",
+          "title": "Chemical Equilibrium",
+          "topic_id": "pakistan-hssc.chemistry.chemical-equilibrium",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "le-chatelier-principle",
+            "advanced-dynamic-equilibrium",
+            "advanced-equilibrium-constant",
+            "advanced-le-chatelier-principle",
+            "advanced-torque-and-rotational-equilibrium",
+            "applications-of-dynamic-equilibrium",
+            "applications-of-equilibrium-constant",
+            "applications-of-le-chatelier-principle",
+            "applications-of-torque-and-rotational-equilibrium",
+            "chemical-equilibrium",
+            "dynamic-equilibrium",
+            "equilibrium-constant",
+            "mathematical-treatment-of-dynamic-equilibrium",
+            "mathematical-treatment-of-equilibrium-constant",
+            "mathematical-treatment-of-le-chatelier-principle",
+            "torque-and-rotational-equilibrium",
+            "chemical-kinetics-and-rates",
+            "chemical-bonding-and-structure"
+          ]
+        },
+        {
+          "id": "electrochemistry",
+          "title": "Electrochemistry",
+          "topic_id": "pakistan-hssc.chemistry.electrochemistry",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "redox-definitions",
+            "advanced-redox-definitions",
+            "applications-of-redox-definitions",
+            "advanced-balancing-redox",
+            "applications-of-balancing-redox"
+          ]
+        },
+        {
+          "id": "reaction-kinetics",
+          "title": "Reaction Kinetics",
+          "topic_id": "pakistan-hssc.chemistry.reaction-kinetics",
+          "syllabus_order": 6,
+          "eden_concept_slugs": [
+            "chemical-kinetics-and-rates",
+            "advanced-first-order-kinetics",
+            "applications-of-first-order-kinetics",
+            "first-order-kinetics",
+            "mathematical-treatment-of-first-order-kinetics",
+            "reaction-rate",
+            "order-of-reaction",
+            "advanced-reaction-rate",
+            "advanced-order-of-reaction",
+            "applications-of-reaction-rate",
+            "applications-of-order-of-reaction",
+            "mathematical-treatment-of-reaction-rate",
+            "mathematical-treatment-of-order-of-reaction",
+            "advanced-rate-law-equation",
+            "applications-of-rate-law-equation",
+            "mathematical-treatment-of-rate-law-equation"
+          ]
+        },
+        {
+          "id": "chemistry-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "pakistan-hssc.chemistry.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "biology": {
+      "id": "biology",
+      "label": "Biology",
+      "icon": "🧬",
+      "chapters": [
+        {
+          "id": "genetics",
+          "title": "Genetics",
+          "topic_id": "pakistan-hssc.biology.genetics",
+          "syllabus_order": 1,
+          "eden_concept_slugs": [
+            "mendelian-genetics",
+            "evolution-by-natural-selection",
+            "advanced-sex-linked-inheritance",
+            "applications-of-sex-linked-inheritance",
+            "experimental-verification-of-sex-linked-inheritance",
+            "mathematical-treatment-of-sex-linked-inheritance",
+            "sex-linked-inheritance"
+          ]
+        },
+        {
+          "id": "biotechnology",
+          "title": "Biotechnology",
+          "topic_id": "pakistan-hssc.biology.biotechnology",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "transcription-mrna",
+            "advanced-transcription-mrna",
+            "applications-of-transcription-mrna",
+            "experimental-verification-of-transcription-mrna",
+            "mathematical-treatment-of-transcription-mrna"
+          ]
+        },
+        {
+          "id": "evolution",
+          "title": "Evolution",
+          "topic_id": "pakistan-hssc.biology.evolution",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "evolution-by-natural-selection"
+          ]
+        },
+        {
+          "id": "ecology",
+          "title": "Ecology",
+          "topic_id": "pakistan-hssc.biology.ecology",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "ecological-succession",
+            "evolution-by-natural-selection",
+            "advanced-ecological-succession",
+            "applications-of-ecological-succession",
+            "experimental-verification-of-ecological-succession",
+            "mathematical-treatment-of-ecological-succession"
+          ]
+        },
+        {
+          "id": "human-physiology",
+          "title": "Human Physiology",
+          "topic_id": "pakistan-hssc.biology.human-physiology",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "human-lungs",
+            "human-carbon-impact",
+            "advanced-human-lungs",
+            "human-digestion-anatomy",
+            "applications-of-human-lungs",
+            "advanced-human-carbon-impact",
+            "advanced-human-digestion-anatomy",
+            "applications-of-human-carbon-impact",
+            "mathematical-treatment-of-human-lungs",
+            "applications-of-human-digestion-anatomy",
+            "experimental-verification-of-human-lungs",
+            "mathematical-treatment-of-human-carbon-impact",
+            "experimental-verification-of-human-carbon-impact",
+            "mathematical-treatment-of-human-digestion-anatomy",
+            "experimental-verification-of-human-digestion-anatomy"
+          ]
+        },
+        {
+          "id": "molecular-biology",
+          "title": "Molecular Biology",
+          "topic_id": "pakistan-hssc.biology.molecular-biology",
+          "syllabus_order": 6
+        },
+        {
+          "id": "biology-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "pakistan-hssc.biology.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    }
+  }
+}

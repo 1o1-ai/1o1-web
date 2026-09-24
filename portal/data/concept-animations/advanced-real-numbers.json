@@ -1,0 +1,62 @@
+{
+  "slug": "advanced-real-numbers",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Advanced Real Numbers",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Advanced Real Numbers",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Advanced Real Numbers.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Advanced real numbers are like the infinitely fine scale on a digital thermometer—just as the device can represent temperatures like 36.666.…",
+    "Pause and restate what Advanced Real Numbers means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Advanced Real Numbers: flow through a system",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Real Numbers</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">flow</text><path d=\"M60 180 C160 80, 260 280, 360 160 S520 80, 600 200\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"10\"/><polygon points=\"560,180 530,160 530,200\" fill=\"#fbbf24\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Constraints change the rate",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Real Numbers</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">constraint</text><rect x=\"80\" y=\"140\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#111827\" stroke=\"#34d399\" stroke-width=\"2\"/><rect x=\"280\" y=\"160\" width=\"80\" height=\"40\" fill=\"#fbbf24\"/><rect x=\"400\" y=\"140\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#111827\" stroke=\"#38bdf8\" stroke-width=\"2\"/><text x=\"320\" y=\"280\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"13\" font-family=\"Segoe UI,Arial\">narrow section slows flow</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Conservation along the path",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Real Numbers</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"170\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Advanced Real Numbers</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"14\" font-family=\"Segoe UI,Arial\">what enters must be accounted</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Advanced real numbers are like the infinitely fine scale on a digital thermometer—just as ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Real Numbers</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced real numbers are like the infinitely fine scale</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Advanced Real Numbers",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Real Numbers</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#38bdf8\" font-size=\"24\" font-family=\"Segoe UI,Arial\">flow + limits</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AdvancedRealNumbersScene",
+    "notes": "Domain=general motif=family-8. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/advanced_real_numbers.py ConceptScene"
+  },
+  "motif": "family-8",
+  "generated_by": "template-stem-v5-general-family-8",
+  "generated_at": "2026-07-12T22:34:25Z"
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "applications-of-pauli-exclusion-principle",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Applications of Pauli Exclusion Principle",
+  "theme": "atomic",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Applications of Pauli Exclusion Principle",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Applications of Pauli Exclusion Principle.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a concert venue has a limited number of seats, and each seat can only be occupied by one person, the Pauli Exclusion Principle state…",
+    "Pause and restate what Applications of Pauli Exclusion Principle means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Applications of Pauli Exclusion Principle: interlocking parts",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Pauli Exclusion Principle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mechanism</text><circle cx=\"220\" cy=\"190\" r=\"70\" fill=\"none\" stroke=\"#fb7185\" stroke-width=\"14\"/><circle cx=\"380\" cy=\"190\" r=\"50\" fill=\"none\" stroke=\"#fdba74\" stroke-width=\"12\"/><circle cx=\"220\" cy=\"190\" r=\"12\" fill=\"#f9a8d4\"/><circle cx=\"380\" cy=\"190\" r=\"10\" fill=\"#f9a8d4\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Input motion becomes output effect",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Pauli Exclusion Principle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">io</text><rect x=\"60\" y=\"150\" width=\"120\" height=\"70\" rx=\"8\" fill=\"#2a1219\" stroke=\"#fb7185\" stroke-width=\"2\"/><text x=\"120\" y=\"190\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"14\" font-family=\"Segoe UI,Arial\">input</text><text x=\"230\" y=\"190\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><circle cx=\"320\" cy=\"185\" r=\"40\" fill=\"none\" stroke=\"#f9a8d4\" stroke-width=\"8\"/><text x=\"410\" y=\"190\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"450\" y=\"150\" width=\"130\" height=\"70\" rx=\"8\" fill=\"#2a1219\" stroke=\"#fdba74\" stroke-width=\"2\"/><text x=\"515\" y=\"190\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"14\" font-family=\"Segoe UI,Arial\">output</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Mechanism of the idea",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Pauli Exclusion Principle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Applications of Pauli Exclusion Principle</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a concert venue has a limited number of seats, and each seat can only be occupied ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Pauli Exclusion Principle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a concert venue has a limited number of seats, a</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Applications of Pauli Exclusion Principl",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Pauli Exclusion Principle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fb7185\" font-size=\"24\" font-family=\"Segoe UI,Arial\">parts → whole</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ApplicationsofPauliExclusionPrincipleScene",
+    "notes": "Domain=atomic motif=family-11. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/applications_of_pauli_exclusion_principle.py ConceptScene"
+  },
+  "motif": "family-11",
+  "generated_by": "template-stem-v5-atomic-family-11",
+  "generated_at": "2026-07-12T22:34:47Z"
+}

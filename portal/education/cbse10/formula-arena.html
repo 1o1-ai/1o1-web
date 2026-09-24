@@ -1,0 +1,87 @@
+﻿<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formula Battle Arena · CBSE Class 10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/theme.css?v=saas-layout-19" />
+  <link rel="stylesheet" href="../../../assets/landing.css?v=saas-layout-12" />
+  <link rel="stylesheet" href="../../assets/portal.css?v=11" />
+  <link rel="stylesheet" href="../../assets/education-layout.css" />
+  <link rel="stylesheet" href="game-room.css" />
+  <link rel="stylesheet" href="formula-arena.css?v=2" />
+</head>
+<body class="portal-page education-compact">
+  <canvas id="fa-fx" aria-hidden="true"></canvas>
+
+  <header class="portal-header">
+    <a class="back-link" href="game-room.html">← Game Room</a>
+    <h1>Formula Battle Arena <span class="sr-open-badge">Play</span></h1>
+  </header>
+
+  <main class="portal-main">
+    <div class="fa">
+      <!-- Run stats -->
+      <div class="fa-top">
+        <div class="fa-chip" style="--fa-accent:#fbbf24"><span>Score</span><b id="fa-score">0</b></div>
+        <div class="fa-chip" style="--fa-accent:#38bdf8"><span>Boss</span><b id="fa-bossNo">1 / 5</b></div>
+        <div class="fa-chip" style="--fa-accent:#a78bfa"><span>Round</span><b id="fa-roundNo">1</b></div>
+      </div>
+
+      <!-- Battle stage -->
+      <section class="fa-stage" id="fa-stage">
+        <div class="fa-fighter">
+          <div class="fa-avatar" id="fa-heroAvatar" style="--fa-tint:#38bdf8;--fa-glow:rgba(56,189,248,0.45)">🧑‍🎓</div>
+          <span class="fa-name">You</span>
+          <span class="fa-title">Class 10 Scholar</span>
+          <div class="fa-hpbar"><div class="fa-hpfill" id="fa-heroFill"></div></div>
+          <span class="fa-hptext" id="fa-heroText">100 / 100 HP</span>
+        </div>
+
+        <div class="fa-centre">
+          <span class="fa-combo" id="fa-combo"></span>
+          <span class="fa-vs">VS</span>
+        </div>
+
+        <div class="fa-fighter">
+          <div class="fa-avatar" id="fa-foeAvatar">⚡</div>
+          <span class="fa-name" id="fa-foeName">Voltaron</span>
+          <span class="fa-title" id="fa-foeTitle">Circuit Warden</span>
+          <div class="fa-hpbar"><div class="fa-hpfill" id="fa-foeFill"></div></div>
+          <span class="fa-hptext" id="fa-foeText">100 / 100 HP</span>
+        </div>
+      </section>
+
+      <!-- Question console -->
+      <section class="fa-console">
+        <div class="fa-timer"><div class="fa-timer-fill" id="fa-timerFill"></div></div>
+        <div class="fa-tags" id="fa-tags"></div>
+        <p class="fa-question" id="fa-question">Loading…</p>
+        <div class="fa-options" id="fa-options"></div>
+        <div class="fa-feedback" id="fa-feedback"></div>
+        <div class="fa-powers" id="fa-powers"></div>
+        <div class="fa-actions">
+          <button type="button" class="fa-btn" id="fa-nextBtn" hidden>Next round →</button>
+          <button type="button" class="fa-btn fa-btn--ghost" id="fa-fleeBtn">Forfeit</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="fa-flash" id="fa-flash" aria-hidden="true"></div>
+
+  <div class="fa-overlay" id="fa-overlay" hidden>
+    <div class="fa-card" id="fa-overlayBody"></div>
+  </div>
+
+  <script src="cbse10-quiz-bank.js?v=2"></script>
+  <script src="formula-arena.js?v=3"></script>
+</body>
+</html>

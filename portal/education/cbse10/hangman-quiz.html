@@ -1,0 +1,119 @@
+﻿<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CBSE Hangman Quiz · Class 10 Science &amp; Maths</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/theme.css?v=saas-layout-19" />
+  <link rel="stylesheet" href="../../../assets/landing.css?v=saas-layout-12" />
+  <link rel="stylesheet" href="../../assets/portal.css?v=11" />
+  <link rel="stylesheet" href="../../assets/education-layout.css" />
+  <link rel="stylesheet" href="game-room.css" />
+  <link rel="stylesheet" href="hangman-quiz.css?v=4" />
+</head>
+<body class="portal-page education-compact">
+
+  <header class="portal-header">
+    <a class="back-link" href="game-room.html">← Game Room</a>
+    <h1>CBSE Hangman Quiz <span class="sr-open-badge">Play</span></h1>
+  </header>
+
+  <main class="portal-main">
+    <div class="hq">
+      <!-- HUD -->
+      <div class="hq-hud">
+        <div class="hq-stat" style="--hq-accent:#fbbf24">
+          <span class="hq-stat-label">Score</span>
+          <span class="hq-stat-value" id="hq-score">0</span>
+        </div>
+        <div class="hq-stat" style="--hq-accent:#22d3ee">
+          <span class="hq-stat-label">Level</span>
+          <span class="hq-stat-value" id="hq-level">1</span>
+        </div>
+        <div class="hq-stat" style="--hq-accent:#f97316">
+          <span class="hq-stat-label">Streak</span>
+          <span class="hq-stat-value" id="hq-streak">—</span>
+        </div>
+        <div class="hq-stat" style="--hq-accent:#34d399">
+          <span class="hq-stat-label">Accuracy</span>
+          <span class="hq-stat-value" id="hq-accuracy">100%</span>
+        </div>
+        <div class="hq-stat" style="--hq-accent:#fb7185">
+          <span class="hq-stat-label">Lives</span>
+          <div class="hq-lives" id="hq-lives"></div>
+        </div>
+      </div>
+
+      <div class="hq-board">
+        <!-- Gallows + secret word -->
+        <section class="hq-panel hq-stage">
+          <svg class="hq-gallows" id="hq-gallows" viewBox="0 0 200 220" fill="none"
+               stroke-linecap="round" aria-label="Hangman progress">
+            <defs>
+              <!-- userSpaceOnUse is required: the frame lines are axis-aligned, so their
+                   object bounding boxes have zero area and an objectBoundingBox gradient
+                   would degenerate and paint nothing. -->
+              <linearGradient id="hqWood" gradientUnits="userSpaceOnUse"
+                              x1="20" y1="20" x2="160" y2="205">
+                <stop offset="0%" stop-color="#8b5cf6" />
+                <stop offset="100%" stop-color="#22d3ee" />
+              </linearGradient>
+            </defs>
+            <!-- Frame is always visible -->
+            <g stroke="url(#hqWood)" stroke-width="6">
+              <line x1="20" y1="205" x2="110" y2="205" />
+              <line x1="55" y1="205" x2="55" y2="20" />
+              <line x1="55" y1="20" x2="140" y2="20" />
+              <line x1="140" y1="20" x2="140" y2="45" />
+            </g>
+            <!-- Body parts appear one per wrong answer -->
+            <g stroke="#fb7185" stroke-width="5" fill="none">
+              <circle id="hq-part-head" class="hq-part hq-stroke" cx="140" cy="63" r="18" />
+              <line id="hq-part-body" class="hq-part hq-stroke" x1="140" y1="81" x2="140" y2="140" />
+              <line id="hq-part-armL" class="hq-part hq-stroke" x1="140" y1="98" x2="115" y2="122" />
+              <line id="hq-part-armR" class="hq-part hq-stroke" x1="140" y1="98" x2="165" y2="122" />
+              <line id="hq-part-legL" class="hq-part hq-stroke" x1="140" y1="140" x2="118" y2="176" />
+              <line id="hq-part-legR" class="hq-part hq-stroke" x1="140" y1="140" x2="162" y2="176" />
+            </g>
+          </svg>
+          <p class="hq-danger" id="hq-danger">6 mistakes left</p>
+
+          <div class="hq-word-wrap">
+            <p class="hq-word-hint" id="hq-wordHint"></p>
+            <div class="hq-word" id="hq-word"></div>
+          </div>
+        </section>
+
+        <!-- Question -->
+        <section class="hq-panel">
+          <div class="hq-timer"><div class="hq-timer-fill" id="hq-timerFill"></div></div>
+          <div class="hq-tags" id="hq-tags"></div>
+          <p class="hq-question" id="hq-question">Loading…</p>
+          <div class="hq-options" id="hq-options"></div>
+          <div class="hq-feedback" id="hq-feedback"></div>
+          <div class="hq-actions">
+            <button type="button" class="hq-btn" id="hq-nextBtn" hidden>Next question →</button>
+            <button type="button" class="hq-btn hq-btn--ghost" id="hq-quitBtn">End game</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div class="hq-streak-badge" id="hq-streakBadge" aria-hidden="true"></div>
+
+  <div class="hq-overlay" id="hq-overlay" hidden>
+    <div class="hq-card" id="hq-overlayBody"></div>
+  </div>
+
+  <script src="cbse10-quiz-bank.js?v=3"></script>
+  <script src="hangman-quiz.js?v=3"></script>
+</body>
+</html>

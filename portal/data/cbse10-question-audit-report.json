@@ -1,0 +1,593 @@
+{
+  "issues": {
+    "too_few": 177
+  },
+  "sources": {
+    "board_questions": {
+      "mcq": 193
+    },
+    "master_catalog": {
+      "mcq": 285,
+      "too_few": 177
+    },
+    "synthetic": {
+      "mcq": 169
+    },
+    "verified": {
+      "mcq": 193
+    }
+  },
+  "samples": {
+    "garbled": [],
+    "dup_options": []
+  },
+  "fixed_files": {
+    "board_questions.json": 0,
+    "cbse10-verified-questions.json": 0,
+    "synthetic_questions.json": 0
+  },
+  "duplicate_stem_count": 200,
+  "duplicate_stem_samples": [
+    {
+      "stem": "the graph of a polynomial is shown in fig. 1, then the number of its zeroes is xc x yc y o",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-2-q01"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-2-q01"
+        ]
+      ]
+    },
+    {
+      "stem": "probability that a number selected at random from the numbers 1, 2, 3, ..., 15 is a multip",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-2-q03"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-2-q03"
+        ]
+      ]
+    },
+    {
+      "stem": "the median and mode respectively of a frequency distribution are 26 and 29. then its mean ",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-2-q05"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-2-q05"
+        ]
+      ]
+    },
+    {
+      "stem": "hcf of 144 and 198 is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-2-q06"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-2-q06"
+        ]
+      ]
+    },
+    {
+      "stem": "if the distance between the points a(4, p) and b(1, 0) is 5 units, then the value (s) of p",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-2-q07"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-2-q07"
+        ]
+      ]
+    },
+    {
+      "stem": "the area of a triangle with vertices a(5, 0), b(8, 0) and c(8, 4) in square units is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-2-q08"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-2-q08"
+        ]
+      ]
+    },
+    {
+      "stem": "from an external point q, the length of tangent to a circle is 12 cm and the distance of q",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-2-q10"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-2-q10"
+        ]
+      ]
+    },
+    {
+      "stem": "in fig. 1, on a circle of radius 7 cm, tangent pt is drawn from a point p such that pt = 2",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-1-q03"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-1-q03"
+        ]
+      ]
+    },
+    {
+      "stem": "the probability that a number selected at random from the numbers 1, 2, 3, ..., 15 is a mu",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-1-q05"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-1-q05"
+        ]
+      ]
+    },
+    {
+      "stem": "if one zero of a quadratic polynomial (kx 2 + 3x + k) is 2, then the value of k is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-1-q06"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-1-q06"
+        ]
+      ]
+    },
+    {
+      "stem": "the graph of a polynomial is shown in fig. 2, then the number of its zeroes is xc x yc y o",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-1-q08"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-1-q08"
+        ]
+      ]
+    },
+    {
+      "stem": "distance of point p(3, 4) from x-axis is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-1-q09"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-1-q09"
+        ]
+      ]
+    },
+    {
+      "stem": "if the distance between the points a(4, p) and b(1, 0) is 5 units, then the value(s) of p ",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-1-q10"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-1-q10"
+        ]
+      ]
+    },
+    {
+      "stem": "if the centre of a circle is (3, 5) and end points of a diameter are (4, 7) and (2, y), th",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-2-q01"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-2-q01"
+        ]
+      ]
+    },
+    {
+      "stem": "the decimal expansion of 52 23 25u will terminate after how many places of decimal?",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-2-q02"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-2-q02"
+        ]
+      ]
+    },
+    {
+      "stem": "two coins are tossed simultaneously. the probability of getting at most one head is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-2-q03"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-2-q03"
+        ]
+      ]
+    },
+    {
+      "stem": "the cumulative frequency table is useful in determining",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-2-q04"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-2-q04"
+        ]
+      ]
+    },
+    {
+      "stem": "hcf of two numbers is 27 and their lcm is 162. if one of the number is 54, then the other ",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-2-q05"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-2-q05"
+        ]
+      ]
+    },
+    {
+      "stem": "the maximum number of zeroes a cubic polynomial can have, is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-2-q07"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-2-q07"
+        ]
+      ]
+    },
+    {
+      "stem": "if d a n d e a r e t h e z e r o e s o f t h e p o l y n o m i a l 2 x2 – 1 3 x + 6 , t h ",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-2-q08"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-2-q08"
+        ]
+      ]
+    },
+    {
+      "stem": "in fig.-1 ap, aq and bc are tangents to the circle with centre o. if ab = 5 cm, ac = 6 cm ",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-2-q10"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-2-q10"
+        ]
+      ]
+    },
+    {
+      "stem": "in fig. 1, o is the centre of circle. pq is a chord and pt is tangent at p which makes an ",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-1-q03"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-1-q03"
+        ]
+      ]
+    },
+    {
+      "stem": "two coins are tossed simultaneously. the pr obability of getting at most one head is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-1-q05"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-1-q05"
+        ]
+      ]
+    },
+    {
+      "stem": "if one zero of the polynomial (3x 2 + 8x + k) is the r ecipr ocal of the other , then valu",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-1-q06"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-1-q06"
+        ]
+      ]
+    },
+    {
+      "stem": "the distance of the point (–12, 5) from the origin is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-1-q09"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-1-q09"
+        ]
+      ]
+    },
+    {
+      "stem": "the graph of a polynomial is shown in fig. 1, then the number of its zeroes is xc x yc y o",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-3-q03"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-3-q03"
+        ]
+      ]
+    },
+    {
+      "stem": "qp is a tangent to a circle with centre o at a point p on the circle. if 'opq is isosceles",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-3-q08"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-3-q08"
+        ]
+      ]
+    },
+    {
+      "stem": "if d and e ar e the z er oes of the pol ynomial x2 + 2x + 1, then 11de is equal to",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-1-3-q09"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-1-3-q09"
+        ]
+      ]
+    },
+    {
+      "stem": "x-axis divides the line segment joining a(2, –3) and b(5, 6) in the ratio:",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-3-q08"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-3-q08"
+        ]
+      ]
+    },
+    {
+      "stem": "if th e s u m of th e zeroes of th e q u ad rati c p ol y n om i al k x 2 + 2x + 3k is equ",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-3-q09"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-3-q09"
+        ]
+      ]
+    },
+    {
+      "stem": "a chord of a circle of radius 10 cm, subtends a right angle at its centre. the length of t",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-2-3-q10"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-2-3-q10"
+        ]
+      ]
+    },
+    {
+      "stem": "the simplest form of 1095 1168 is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-3-2-q01"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-3-2-q01"
+        ]
+      ]
+    },
+    {
+      "stem": "one card is drawn at random from a well – shuffled deck of 52 cards. what is the probabili",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-3-2-q02"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-3-2-q02"
+        ]
+      ]
+    },
+    {
+      "stem": "which of the following rational numbers is expressible as a terminating decimal?",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-3-2-q03"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-3-2-q03"
+        ]
+      ]
+    },
+    {
+      "stem": "if one zero of the quadratic polynomial, (k – 1) x 2 + kx + 1 is –4 then the value of k is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-3-2-q04"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-3-2-q04"
+        ]
+      ]
+    },
+    {
+      "stem": "if p(–1, 1) is the midpoint of the line segment joining a(–3, b) and b(1, b + 4), then b i",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-3-2-q05"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-3-2-q05"
+        ]
+      ]
+    },
+    {
+      "stem": "consider the following distribution: classes: 0 – 5 5 – 10 10 – 15 15 – 20 20 – 25 frequen",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-3-2-q06"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-3-2-q06"
+        ]
+      ]
+    },
+    {
+      "stem": "what is the largest number that divides 245 and 1029, leaving remainder 5 in each?",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-3-2-q07"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-3-2-q07"
+        ]
+      ]
+    },
+    {
+      "stem": "the distance between the points a(2, –3) and b(2, 2) is",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-3-2-q08"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-3-2-q08"
+        ]
+      ]
+    },
+    {
+      "stem": "the product of the two zeroes of the polynomial 3x 2 – 7x – 27 is:",
+      "count": 2,
+      "refs": [
+        [
+          "board_questions",
+          "cbse10-m_2020_430-3-2-q09"
+        ],
+        [
+          "verified",
+          "cbse10-m_2020_430-3-2-q09"
+        ]
+      ]
+    }
+  ],
+  "fix_total": 0
+}

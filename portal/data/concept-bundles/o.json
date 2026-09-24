@@ -1,0 +1,1631 @@
+{
+  "octet-rule": {
+    "slug": "octet-rule",
+    "display_name": "Octet Rule",
+    "description": "Standard concept of Octet Rule.",
+    "analogy": "Think of atoms as party hosts trying to fill an 8-seat VIP table to achieve perfect social harmony. Atoms with mostly empty seats will aggressively recruit guests (electrons) from others, while those with only one or two guests will happily send them to other tables. This cooperative sharing and swapping continues until every participating atom has access to a perfectly filled table of eight, representing a stable, non-reactive state.",
+    "student_guidance": "Standard concept of Octet Rule. Chemistry: core concept in General Chemistry",
+    "historical_context": "",
+    "everyday_applications": "",
+    "cross_disciplinary_connections": "Chemistry: core concept in General Chemistry",
+    "future_relevance": "",
+    "guidance": {
+      "What is this concept?": "Standard concept of Octet Rule.",
+      "How is it connected to other subjects?": "Chemistry: core concept in General Chemistry"
+    },
+    "stem_animation": {
+      "slug": "octet-rule",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Octet Rule",
+      "theme": "general",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Octet Rule",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Octet Rule.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Think of atoms as party hosts trying to fill an 8-seat VIP table to achieve perfect social harmony. Atoms with mostly empty seats will aggre…",
+        "Pause and restate what Octet Rule means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Octet Rule: keep both sides equal",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Octet Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">balance</text><line x1=\"120\" y1=\"200\" x2=\"520\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"8\"/><line x1=\"320\" y1=\"200\" x2=\"320\" y2=\"280\" stroke=\"#38bdf8\" stroke-width=\"8\"/><rect x=\"140\" y=\"140\" width=\"100\" height=\"55\" fill=\"#fbbf24\"/><rect x=\"400\" y=\"140\" width=\"100\" height=\"55\" fill=\"#34d399\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Same operation on both sides",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Octet Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">ops</text><text x=\"320\" y=\"140\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"28\" font-family=\"Segoe UI,Arial\">L = R</text><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"22\" font-family=\"Segoe UI,Arial\">L − a = R − a</text><text x=\"320\" y=\"260\" text-anchor=\"middle\" fill=\"#34d399\" font-size=\"16\" font-family=\"Segoe UI,Arial\">still equal</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Arrive at the unknown",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Octet Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"120\" y=\"120\" width=\"400\" height=\"140\" rx=\"12\" fill=\"#111827\" stroke=\"#38bdf8\" stroke-width=\"2\"/><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Octet Rule</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Think of atoms as party hosts trying to fill an 8-seat VIP table to achieve perfect social",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Octet Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Think of atoms as party hosts trying to fill an 8-seat V</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Octet Rule",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Octet Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"24\" font-family=\"Segoe UI,Arial\">balance always</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OctetRuleScene",
+        "notes": "Domain=general motif=family-7. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/octet_rule.py ConceptScene"
+      },
+      "motif": "family-7",
+      "generated_by": "template-stem-v5-general-family-7",
+      "generated_at": "2026-07-12T22:35:06Z"
+    },
+    "ascii_animation": {
+      "slug": "octet-rule",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Octet Rule",
+      "theme": "general",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Octet Rule",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Octet Rule.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Think of atoms as party hosts trying to fill an 8-seat VIP table to achieve perfect social harmony. Atoms with mostly empty seats will aggre…",
+        "Pause and restate what Octet Rule means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Octet Rule: keep both sides equal",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Octet Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">balance</text><line x1=\"120\" y1=\"200\" x2=\"520\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"8\"/><line x1=\"320\" y1=\"200\" x2=\"320\" y2=\"280\" stroke=\"#38bdf8\" stroke-width=\"8\"/><rect x=\"140\" y=\"140\" width=\"100\" height=\"55\" fill=\"#fbbf24\"/><rect x=\"400\" y=\"140\" width=\"100\" height=\"55\" fill=\"#34d399\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Same operation on both sides",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Octet Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">ops</text><text x=\"320\" y=\"140\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"28\" font-family=\"Segoe UI,Arial\">L = R</text><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"22\" font-family=\"Segoe UI,Arial\">L − a = R − a</text><text x=\"320\" y=\"260\" text-anchor=\"middle\" fill=\"#34d399\" font-size=\"16\" font-family=\"Segoe UI,Arial\">still equal</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Arrive at the unknown",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Octet Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"120\" y=\"120\" width=\"400\" height=\"140\" rx=\"12\" fill=\"#111827\" stroke=\"#38bdf8\" stroke-width=\"2\"/><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Octet Rule</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Think of atoms as party hosts trying to fill an 8-seat VIP table to achieve perfect social",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Octet Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Think of atoms as party hosts trying to fill an 8-seat V</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Octet Rule",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Octet Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"24\" font-family=\"Segoe UI,Arial\">balance always</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OctetRuleScene",
+        "notes": "Domain=general motif=family-7. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/octet_rule.py ConceptScene"
+      },
+      "motif": "family-7",
+      "generated_by": "template-stem-v5-general-family-7",
+      "generated_at": "2026-07-12T22:35:06Z"
+    }
+  },
+  "ohm-law": {
+    "slug": "ohm-law",
+    "display_name": "Ohm Law",
+    "description": "Standard concept of Ohm Law.",
+    "analogy": "Just like how the water pressure and flow rate from a hose are affected by the nozzle's resistance, Ohm's Law states that the current flowing through a conductor is directly proportional to the voltage applied and inversely proportional to the resistance of the conductor. In the hose analogy, the water pressure is like voltage, the flow rate is like current, and the nozzle's resistance is like the conductor's resistance. By adjusting the nozzle, you're changing the resistance, which in turn affects the flow rate.",
+    "student_guidance": "Standard concept of Ohm Law. In the 19th century, Georg Ohm discovered the fundamental relationship between voltage, current, and resistance while studying the telegraph system. His findings revolutionized the field of electrical engineering, enabling the efficient design of electrical circuits and systems. Today, Ohm's Law is crucial in designing and optimizing electrical systems, from household appliances to complex industrial machinery. The concept is also essential in understanding and managing electrical safety in various industries. Encounter via A household water hose with a spray nozzle; Used in Electrical Engineering; Used in Telecommunications; Used in Automotive Manufacturing; Used in Aerospace Engineering Physics: core concept in Electromagnetism; Engineering: applied in Electrical Engineering, Telecommunications, Automotive Manufacturing The first transatlantic telegraph cable, laid in 1858, relied heavily on Ohm's Law to ensure efficient signal transmission over long distances. Careers in Electrical Engineering rely on this concept; Careers in Telecommunications rely on this concept; Careers in Automotive Manufacturing rely on this concept; Careers in Aerospace Engineering rely on this concept; Careers in Renewable Energy rely on this concept Visualize A household water hose with a spray nozzle — Just like how the water pressure and flow rate from a hose are affected by the nozzle's resistance, Ohm's Law states that the current flowing through a conductor is directly proportional to the voltag Just like how the water pressure and flow rate from a hose are affected by the nozzle's resistance, Ohm's Law states that the current flowing through a conductor is directly proportional to the voltage applied and inversely proportional to the resistance of the conductor. In the hose analogy, the water pressure is like voltage, the flow rate is like current, and the nozzle's resistance is like the conductor's resistance. By adjusting the nozzle, you're changing the resistance, which in turn affects the flow rate.",
+    "historical_context": "In the 19th century, Georg Ohm discovered the fundamental relationship between voltage, current, and resistance while studying the telegraph system. His findings revolutionized the field of electrical engineering, enabling the efficient design of electrical circuits and systems. Today, Ohm's Law is crucial in designing and optimizing electrical systems, from household appliances to complex industr [\"The first transatlantic telegraph cable, laid in 1858, relied heavily on Ohm's Law to ensure efficient signal transmission over long distances.\"]",
+    "everyday_applications": "Encounter via A household water hose with a spray nozzle; Used in Electrical Engineering; Used in Telecommunications; Used in Automotive Manufacturing; Used in Aerospace Engineering",
+    "cross_disciplinary_connections": "Physics: core concept in Electromagnetism; Engineering: applied in Electrical Engineering, Telecommunications, Automotive Manufacturing",
+    "future_relevance": "Careers in Electrical Engineering rely on this concept; Careers in Telecommunications rely on this concept; Careers in Automotive Manufacturing rely on this concept; Careers in Aerospace Engineering rely on this concept; Careers in Renewable Energy rely on this concept",
+    "guidance": {
+      "What is this concept?": "Standard concept of Ohm Law.",
+      "Why was it discovered?": "In the 19th century, Georg Ohm discovered the fundamental relationship between voltage, current, and resistance while studying the telegraph system. His findings revolutionized the field of electrical engineering, enabling the efficient design of electrical circuits and systems. Today, Ohm's Law is crucial in designing and optimizing electrical systems, from household appliances to complex industrial machinery. The concept is also essential in understanding and managing electrical safety in various industries.",
+      "Where do I see it in everyday life?": "Encounter via A household water hose with a spray nozzle; Used in Electrical Engineering; Used in Telecommunications; Used in Automotive Manufacturing; Used in Aerospace Engineering",
+      "How is it connected to other subjects?": "Physics: core concept in Electromagnetism; Engineering: applied in Electrical Engineering, Telecommunications, Automotive Manufacturing",
+      "How has it changed history?": "The first transatlantic telegraph cable, laid in 1858, relied heavily on Ohm's Law to ensure efficient signal transmission over long distances.",
+      "Why is it important for the future?": "Careers in Electrical Engineering rely on this concept; Careers in Telecommunications rely on this concept; Careers in Automotive Manufacturing rely on this concept; Careers in Aerospace Engineering rely on this concept; Careers in Renewable Energy rely on this concept",
+      "How can I visualize it?": "Visualize A household water hose with a spray nozzle — Just like how the water pressure and flow rate from a hose are affected by the nozzle's resistance, Ohm's Law states that the current flowing through a conductor is directly proportional to the voltag",
+      "How can I remember it intuitively?": "Just like how the water pressure and flow rate from a hose are affected by the nozzle's resistance, Ohm's Law states that the current flowing through a conductor is directly proportional to the voltage applied and inversely proportional to the resistance of the conductor. In the hose analogy, the water pressure is like voltage, the flow rate is like current, and the nozzle's resistance is like the conductor's resistance. By adjusting the nozzle, you're changing the resistance, which in turn affects the flow rate."
+    },
+    "stem_animation": {
+      "slug": "ohm-law",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Ohm Law",
+      "theme": "circuit",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Ohm Law",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Ohm Law.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Just like how the water pressure and flow rate from a hose are affected by the nozzle's resistance, Ohm's Law states that the current flowin…",
+        "Pause and restate what Ohm Law means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Ohm Law: current, voltage, resistance",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Ohm Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">circuit</text><rect x=\"80\" y=\"120\" width=\"40\" height=\"100\" fill=\"#fde68a\"/><text x=\"100\" y=\"110\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">V</text><rect x=\"420\" y=\"145\" width=\"100\" height=\"50\" fill=\"#fb923c\"/><text x=\"470\" y=\"175\" text-anchor=\"middle\" fill=\"#1a1008\" font-size=\"16\" font-family=\"Segoe UI,Arial\">R</text><line x1=\"120\" y1=\"140\" x2=\"420\" y2=\"140\" stroke=\"#f97316\" stroke-width=\"5\"/><line x1=\"120\" y1=\"200\" x2=\"420\" y2=\"200\" stroke=\"#f97316\" stroke-width=\"5\"/><polygon points=\"250,140 235,128 235,152\" fill=\"#fde68a\"/><text x=\"260\" y=\"120\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">I</text>"
+        },
+        {
+          "id": "setup",
+          "caption": "Build the loop — source, wires, load",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Ohm Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">loop</text><rect x=\"100\" y=\"100\" width=\"50\" height=\"120\" fill=\"#fde68a\"/><rect x=\"450\" y=\"130\" width=\"90\" height=\"55\" rx=\"6\" fill=\"#fb923c\"/><polyline points=\"150,120 500,120 500,185 150,185 150,120\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"4\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">closed path required</text>"
+        },
+        {
+          "id": "core",
+          "caption": "V = I R — bigger R, smaller I for same V",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Ohm Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">law</text><circle cx=\"160\" cy=\"190\" r=\"55\" fill=\"none\" stroke=\"#fde68a\" stroke-width=\"4\"/><text x=\"160\" y=\"196\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"24\" font-family=\"Segoe UI,Arial\">V</text><text x=\"260\" y=\"196\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"28\" font-family=\"Segoe UI,Arial\">=</text><circle cx=\"340\" cy=\"190\" r=\"55\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"4\"/><text x=\"340\" y=\"196\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"24\" font-family=\"Segoe UI,Arial\">I</text><text x=\"430\" y=\"196\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"28\" font-family=\"Segoe UI,Arial\">×</text><circle cx=\"520\" cy=\"190\" r=\"55\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"4\"/><text x=\"520\" y=\"196\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"24\" font-family=\"Segoe UI,Arial\">R</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Just like how the water pressure and flow rate from a hose are affected by the nozzles res",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Ohm Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><path d=\"M70 200 C150 80, 250 320, 340 180 S500 80, 580 200\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"6\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Just like how the water pressure and flow rate from a ho</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember Ohm: V = I R",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Ohm Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><rect x=\"120\" y=\"120\" width=\"400\" height=\"140\" rx=\"16\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"3\"/><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"32\" font-family=\"Segoe UI,Arial\">V = I × R</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OhmLawScene",
+        "notes": "Domain=circuit motif=ohm. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/ohm_law.py ConceptScene"
+      },
+      "motif": "ohm",
+      "generated_by": "template-stem-v5-circuit-ohm",
+      "generated_at": "2026-07-12T22:35:06Z"
+    },
+    "ascii_animation": {
+      "slug": "ohm-law",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Ohm Law",
+      "theme": "circuit",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Ohm Law",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Ohm Law.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Just like how the water pressure and flow rate from a hose are affected by the nozzle's resistance, Ohm's Law states that the current flowin…",
+        "Pause and restate what Ohm Law means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Ohm Law: current, voltage, resistance",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Ohm Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">circuit</text><rect x=\"80\" y=\"120\" width=\"40\" height=\"100\" fill=\"#fde68a\"/><text x=\"100\" y=\"110\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">V</text><rect x=\"420\" y=\"145\" width=\"100\" height=\"50\" fill=\"#fb923c\"/><text x=\"470\" y=\"175\" text-anchor=\"middle\" fill=\"#1a1008\" font-size=\"16\" font-family=\"Segoe UI,Arial\">R</text><line x1=\"120\" y1=\"140\" x2=\"420\" y2=\"140\" stroke=\"#f97316\" stroke-width=\"5\"/><line x1=\"120\" y1=\"200\" x2=\"420\" y2=\"200\" stroke=\"#f97316\" stroke-width=\"5\"/><polygon points=\"250,140 235,128 235,152\" fill=\"#fde68a\"/><text x=\"260\" y=\"120\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">I</text>"
+        },
+        {
+          "id": "setup",
+          "caption": "Build the loop — source, wires, load",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Ohm Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">loop</text><rect x=\"100\" y=\"100\" width=\"50\" height=\"120\" fill=\"#fde68a\"/><rect x=\"450\" y=\"130\" width=\"90\" height=\"55\" rx=\"6\" fill=\"#fb923c\"/><polyline points=\"150,120 500,120 500,185 150,185 150,120\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"4\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">closed path required</text>"
+        },
+        {
+          "id": "core",
+          "caption": "V = I R — bigger R, smaller I for same V",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Ohm Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">law</text><circle cx=\"160\" cy=\"190\" r=\"55\" fill=\"none\" stroke=\"#fde68a\" stroke-width=\"4\"/><text x=\"160\" y=\"196\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"24\" font-family=\"Segoe UI,Arial\">V</text><text x=\"260\" y=\"196\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"28\" font-family=\"Segoe UI,Arial\">=</text><circle cx=\"340\" cy=\"190\" r=\"55\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"4\"/><text x=\"340\" y=\"196\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"24\" font-family=\"Segoe UI,Arial\">I</text><text x=\"430\" y=\"196\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"28\" font-family=\"Segoe UI,Arial\">×</text><circle cx=\"520\" cy=\"190\" r=\"55\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"4\"/><text x=\"520\" y=\"196\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"24\" font-family=\"Segoe UI,Arial\">R</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Just like how the water pressure and flow rate from a hose are affected by the nozzles res",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Ohm Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><path d=\"M70 200 C150 80, 250 320, 340 180 S500 80, 580 200\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"6\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Just like how the water pressure and flow rate from a ho</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember Ohm: V = I R",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Ohm Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><rect x=\"120\" y=\"120\" width=\"400\" height=\"140\" rx=\"16\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"3\"/><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"32\" font-family=\"Segoe UI,Arial\">V = I × R</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OhmLawScene",
+        "notes": "Domain=circuit motif=ohm. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/ohm_law.py ConceptScene"
+      },
+      "motif": "ohm",
+      "generated_by": "template-stem-v5-circuit-ohm",
+      "generated_at": "2026-07-12T22:35:06Z"
+    }
+  },
+  "okazaki-fragments": {
+    "slug": "okazaki-fragments",
+    "display_name": "Okazaki Fragments",
+    "description": "Standard concept of Okazaki Fragments.",
+    "analogy": "Imagine a construction crew building a brick wall on both sides of a river. The ferry can only carry bricks to one side at a time, so the workers on the far side must build their section in small, disconnected segments while waiting for the ferry to return. Similarly, Okazaki fragments are short, discontinuous segments of DNA synthesized on the lagging strand during replication, as the enzyme can only work in one direction while the DNA unwinds in the opposite direction.",
+    "student_guidance": "Standard concept of Okazaki Fragments. In the 1960s, scientists Reiji and Tsuneko Okazaki discovered these short DNA fragments while studying how bacteria replicate their genetic material. Their work revealed that DNA replication isn’t as straightforward as once thought—one strand is built continuously, while the other is pieced together like a patchwork. This discovery was crucial for understanding genetic diseases, cancer mutations, and even the development of PCR, a technique now used in everything from crime scene investigations to COVID-19 testing. Encounter via A team of construction workers building a brick wall on both sides of a river using a single ferry to transport bricks; Used in Biotechnology; Used in Pharmaceuticals; Used in Forensic Science; Used in Genetic Engineering Biology: core concept in Genetics & Molecular Biology; Engineering: applied in Biotechnology, Pharmaceuticals, Forensic Science The Human Genome Project, which mapped all the genes in human DNA, relied heavily on understanding Okazaki fragments to accurately sequence and assemble the genome. Errors in fragment assembly could have led to gaps or misinterpretations in the genetic code. Careers in Biotechnology rely on this concept; Careers in Pharmaceuticals rely on this concept; Careers in Forensic Science rely on this concept; Careers in Genetic Engineering rely on this concept; Careers in Medical Diagnostics rely on this concept Visualize A team of construction workers building a brick wall on both sides of a river using a single ferry to transport bricks — Imagine a construction crew building a brick wall on both sides of a river. The ferry can only carry bricks to one side at a time, so the workers on the far side must build their section in small, dis Imagine a construction crew building a brick wall on both sides of a river. The ferry can only carry bricks to one side at a time, so the workers on the far side must build their section in small, disconnected segments while waiting for the ferry to return. Similarly, Okazaki fragments are short, discontinuous segments of DNA synthesized on the lagging strand during replication, as the enzyme can only work in one direction while the DNA unwinds in the opposite direction.",
+    "historical_context": "In the 1960s, scientists Reiji and Tsuneko Okazaki discovered these short DNA fragments while studying how bacteria replicate their genetic material. Their work revealed that DNA replication isn’t as straightforward as once thought—one strand is built continuously, while the other is pieced together like a patchwork. This discovery was crucial for understanding genetic diseases, cancer mutations,  ['The Human Genome Project, which mapped all the genes in human DNA, relied heavily on understanding Okazaki fragments to accurately sequence and assemble the genome. Errors in fragment assembly could have led to gaps or misinterpretations in the genetic code.']",
+    "everyday_applications": "Encounter via A team of construction workers building a brick wall on both sides of a river using a single ferry to transport bricks; Used in Biotechnology; Used in Pharmaceuticals; Used in Forensic Science; Used in Genetic Engineering",
+    "cross_disciplinary_connections": "Biology: core concept in Genetics & Molecular Biology; Engineering: applied in Biotechnology, Pharmaceuticals, Forensic Science",
+    "future_relevance": "Careers in Biotechnology rely on this concept; Careers in Pharmaceuticals rely on this concept; Careers in Forensic Science rely on this concept; Careers in Genetic Engineering rely on this concept; Careers in Medical Diagnostics rely on this concept",
+    "guidance": {
+      "What is this concept?": "Standard concept of Okazaki Fragments.",
+      "Why was it discovered?": "In the 1960s, scientists Reiji and Tsuneko Okazaki discovered these short DNA fragments while studying how bacteria replicate their genetic material. Their work revealed that DNA replication isn’t as straightforward as once thought—one strand is built continuously, while the other is pieced together like a patchwork. This discovery was crucial for understanding genetic diseases, cancer mutations, and even the development of PCR, a technique now used in everything from crime scene investigations to COVID-19 testing.",
+      "Where do I see it in everyday life?": "Encounter via A team of construction workers building a brick wall on both sides of a river using a single ferry to transport bricks; Used in Biotechnology; Used in Pharmaceuticals; Used in Forensic Science; Used in Genetic Engineering",
+      "How is it connected to other subjects?": "Biology: core concept in Genetics & Molecular Biology; Engineering: applied in Biotechnology, Pharmaceuticals, Forensic Science",
+      "How has it changed history?": "The Human Genome Project, which mapped all the genes in human DNA, relied heavily on understanding Okazaki fragments to accurately sequence and assemble the genome. Errors in fragment assembly could have led to gaps or misinterpretations in the genetic code.",
+      "Why is it important for the future?": "Careers in Biotechnology rely on this concept; Careers in Pharmaceuticals rely on this concept; Careers in Forensic Science rely on this concept; Careers in Genetic Engineering rely on this concept; Careers in Medical Diagnostics rely on this concept",
+      "How can I visualize it?": "Visualize A team of construction workers building a brick wall on both sides of a river using a single ferry to transport bricks — Imagine a construction crew building a brick wall on both sides of a river. The ferry can only carry bricks to one side at a time, so the workers on the far side must build their section in small, dis",
+      "How can I remember it intuitively?": "Imagine a construction crew building a brick wall on both sides of a river. The ferry can only carry bricks to one side at a time, so the workers on the far side must build their section in small, disconnected segments while waiting for the ferry to return. Similarly, Okazaki fragments are short, discontinuous segments of DNA synthesized on the lagging strand during replication, as the enzyme can only work in one direction while the DNA unwinds in the opposite direction."
+    },
+    "stem_animation": {
+      "slug": "okazaki-fragments",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Okazaki Fragments",
+      "theme": "general",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Okazaki Fragments",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Okazaki Fragments.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Imagine a construction crew building a brick wall on both sides of a river. The ferry can only carry bricks to one side at a time, so the wo…",
+        "Pause and restate what Okazaki Fragments means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Okazaki Fragments: levels of organization",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><rect x=\"220\" y=\"70\" width=\"200\" height=\"50\" rx=\"8\" fill=\"#fde68a\"/><rect x=\"140\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb923c\"/><rect x=\"340\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb923c\"/><rect x=\"80\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/><rect x=\"250\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/><rect x=\"420\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Zoom out / zoom in",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><circle cx=\"200\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"190\" r=\"40\" fill=\"#7c2d12\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"2\"/><text x=\"460\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">detail</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Which level explains the effect?",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"320\" y=\"230\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">pick the right scale</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Imagine a construction crew building a brick wall on both sides of a river. The ferry can ",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Imagine a construction crew building a brick wall on bot</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Okazaki Fragments",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"24\" font-family=\"Segoe UI,Arial\">levels stack</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OkazakiFragmentsScene",
+        "notes": "Domain=general motif=family-6. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/okazaki_fragments.py ConceptScene"
+      },
+      "motif": "family-6",
+      "generated_by": "template-stem-v5-general-family-6",
+      "generated_at": "2026-07-12T22:35:06Z"
+    },
+    "ascii_animation": {
+      "slug": "okazaki-fragments",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Okazaki Fragments",
+      "theme": "general",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Okazaki Fragments",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Okazaki Fragments.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Imagine a construction crew building a brick wall on both sides of a river. The ferry can only carry bricks to one side at a time, so the wo…",
+        "Pause and restate what Okazaki Fragments means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Okazaki Fragments: levels of organization",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><rect x=\"220\" y=\"70\" width=\"200\" height=\"50\" rx=\"8\" fill=\"#fde68a\"/><rect x=\"140\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb923c\"/><rect x=\"340\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb923c\"/><rect x=\"80\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/><rect x=\"250\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/><rect x=\"420\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Zoom out / zoom in",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><circle cx=\"200\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"190\" r=\"40\" fill=\"#7c2d12\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"2\"/><text x=\"460\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">detail</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Which level explains the effect?",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"320\" y=\"230\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">pick the right scale</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Imagine a construction crew building a brick wall on both sides of a river. The ferry can ",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Imagine a construction crew building a brick wall on bot</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Okazaki Fragments",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Okazaki Fragments</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"24\" font-family=\"Segoe UI,Arial\">levels stack</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OkazakiFragmentsScene",
+        "notes": "Domain=general motif=family-6. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/okazaki_fragments.py ConceptScene"
+      },
+      "motif": "family-6",
+      "generated_by": "template-stem-v5-general-family-6",
+      "generated_at": "2026-07-12T22:35:06Z"
+    }
+  },
+  "one-sided-limits": {
+    "slug": "one-sided-limits",
+    "display_name": "One-Sided Limits",
+    "description": "Standard concept of One-Sided Limits.",
+    "analogy": "A one-sided limit is like trying to determine the value of a house number by walking down a one-way street. You can only approach the address from the legal direction of traffic (the right-hand limit), and the value you find from that side might be completely different from what you'd see if you could illegally approach from the wrong direction (the left-hand limit). The function's overall limit at that point only exists if both one-sided approaches agree.",
+    "student_guidance": "Standard concept of One-Sided Limits. Mathematics: core concept in Calculus",
+    "historical_context": "",
+    "everyday_applications": "",
+    "cross_disciplinary_connections": "Mathematics: core concept in Calculus",
+    "future_relevance": "",
+    "guidance": {
+      "What is this concept?": "Standard concept of One-Sided Limits.",
+      "How is it connected to other subjects?": "Mathematics: core concept in Calculus"
+    },
+    "stem_animation": {
+      "slug": "one-sided-limits",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "One-Sided Limits",
+      "theme": "calculus",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain One-Sided Limits",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore One-Sided Limits.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "A one-sided limit is like trying to determine the value of a house number by walking down a one-way street. You can only approach the addres…",
+        "Pause and restate what One-Sided Limits means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "One-Sided Limits: connected ideas",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">map</text><circle cx=\"320\" cy=\"180\" r=\"36\" fill=\"#67e8f9\"/><circle cx=\"453\" cy=\"206\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"453\" y2=\"206\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"329\" cy=\"269\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"329\" y2=\"269\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"194\" cy=\"218\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"194\" y2=\"218\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"229\" cy=\"112\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"229\" y2=\"112\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"385\" cy=\"101\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"385\" y2=\"101\" stroke=\"#a5f3fc\" stroke-width=\"2\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Trace links between parts",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">links</text><rect x=\"80\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><rect x=\"250\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><rect x=\"420\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#5eead4\" stroke-width=\"2\"/><rect x=\"160\" y=\"220\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#164e63\" stroke=\"#67e8f9\" stroke-width=\"2\"/><rect x=\"340\" y=\"220\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#164e63\" stroke=\"#5eead4\" stroke-width=\"2\"/><text x=\"150\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">A</text><text x=\"320\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">B</text><text x=\"490\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">C</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Core relationship",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"70\" y=\"110\" width=\"500\" height=\"150\" rx=\"14\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><text x=\"320\" y=\"175\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"18\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">cause → effect → check</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "A one-sided limit is like trying to determine the value of a house number by walking down ",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">A one-sided limit is like trying to determine the value </text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: One-Sided Limits",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"24\" font-family=\"Segoe UI,Arial\">linked parts</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OneSidedLimitsScene",
+        "notes": "Domain=calculus motif=family-0. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/one_sided_limits.py ConceptScene"
+      },
+      "motif": "family-0",
+      "generated_by": "template-stem-v5-calculus-family-0",
+      "generated_at": "2026-07-12T22:35:07Z"
+    },
+    "ascii_animation": {
+      "slug": "one-sided-limits",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "One-Sided Limits",
+      "theme": "calculus",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain One-Sided Limits",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore One-Sided Limits.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "A one-sided limit is like trying to determine the value of a house number by walking down a one-way street. You can only approach the addres…",
+        "Pause and restate what One-Sided Limits means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "One-Sided Limits: connected ideas",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">map</text><circle cx=\"320\" cy=\"180\" r=\"36\" fill=\"#67e8f9\"/><circle cx=\"453\" cy=\"206\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"453\" y2=\"206\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"329\" cy=\"269\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"329\" y2=\"269\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"194\" cy=\"218\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"194\" y2=\"218\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"229\" cy=\"112\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"229\" y2=\"112\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"385\" cy=\"101\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"385\" y2=\"101\" stroke=\"#a5f3fc\" stroke-width=\"2\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Trace links between parts",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">links</text><rect x=\"80\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><rect x=\"250\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><rect x=\"420\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#5eead4\" stroke-width=\"2\"/><rect x=\"160\" y=\"220\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#164e63\" stroke=\"#67e8f9\" stroke-width=\"2\"/><rect x=\"340\" y=\"220\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#164e63\" stroke=\"#5eead4\" stroke-width=\"2\"/><text x=\"150\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">A</text><text x=\"320\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">B</text><text x=\"490\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">C</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Core relationship",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"70\" y=\"110\" width=\"500\" height=\"150\" rx=\"14\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><text x=\"320\" y=\"175\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"18\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">cause → effect → check</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "A one-sided limit is like trying to determine the value of a house number by walking down ",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">A one-sided limit is like trying to determine the value </text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: One-Sided Limits",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">One-Sided Limits</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"24\" font-family=\"Segoe UI,Arial\">linked parts</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OneSidedLimitsScene",
+        "notes": "Domain=calculus motif=family-0. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/one_sided_limits.py ConceptScene"
+      },
+      "motif": "family-0",
+      "generated_by": "template-stem-v5-calculus-family-0",
+      "generated_at": "2026-07-12T22:35:07Z"
+    }
+  },
+  "optimization-max-min": {
+    "slug": "optimization-max-min",
+    "display_name": "Optimization Max Min",
+    "description": "Standard concept of Optimization Max Min.",
+    "analogy": "Finding the maximum volume of cargo you can fit into a container is like finding the maximum of a function. But you can't just fill it to the brim; you must also meet the minimum requirement for the ship's stability, which is like finding a minimum constraint. Optimization is the process of balancing these competing 'max' and 'min' conditions to find the single best, or optimal, solution.",
+    "student_guidance": "Standard concept of Optimization Max Min. Mathematics: core concept in Calculus",
+    "historical_context": "",
+    "everyday_applications": "",
+    "cross_disciplinary_connections": "Mathematics: core concept in Calculus",
+    "future_relevance": "",
+    "guidance": {
+      "What is this concept?": "Standard concept of Optimization Max Min.",
+      "How is it connected to other subjects?": "Mathematics: core concept in Calculus"
+    },
+    "stem_animation": {
+      "slug": "optimization-max-min",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Optimization Max Min",
+      "theme": "general",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Optimization Max Min",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Optimization Max Min.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Finding the maximum volume of cargo you can fit into a container is like finding the maximum of a function. But you can't just fill it to th…",
+        "Pause and restate what Optimization Max Min means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Optimization Max Min: compare two cases",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">compare</text><rect x=\"60\" y=\"90\" width=\"240\" height=\"200\" rx=\"14\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"3\"/><rect x=\"340\" y=\"90\" width=\"240\" height=\"200\" rx=\"14\" fill=\"#7c2d12\" stroke=\"#fde68a\" stroke-width=\"3\"/><text x=\"180\" y=\"180\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Case A</text><text x=\"460\" y=\"180\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Case B</text>"
+        },
+        {
+          "id": "setup",
+          "caption": "Spot what changes vs what stays",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">diff</text><rect x=\"80\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#f97316\" opacity=\"0.35\"/><rect x=\"240\" y=\"120\" width=\"160\" height=\"140\" rx=\"10\" fill=\"#fde68a\" opacity=\"0.45\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#fb923c\" opacity=\"0.35\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">overlap = shared rule</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Decision rule",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><polygon points=\"320,90 500,280 140,280\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"3\"/><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Finding the maximum volume of cargo you can fit into a container is like finding the maxim",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Finding the maximum volume of cargo you can fit into a c</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Optimization Max Min",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"24\" font-family=\"Segoe UI,Arial\">A vs B → rule</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OptimizationMaxMinScene",
+        "notes": "Domain=general motif=family-2. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/optimization_max_min.py ConceptScene"
+      },
+      "motif": "family-2",
+      "generated_by": "template-stem-v5-general-family-2",
+      "generated_at": "2026-07-12T22:35:07Z"
+    },
+    "ascii_animation": {
+      "slug": "optimization-max-min",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Optimization Max Min",
+      "theme": "general",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Optimization Max Min",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Optimization Max Min.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Finding the maximum volume of cargo you can fit into a container is like finding the maximum of a function. But you can't just fill it to th…",
+        "Pause and restate what Optimization Max Min means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Optimization Max Min: compare two cases",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">compare</text><rect x=\"60\" y=\"90\" width=\"240\" height=\"200\" rx=\"14\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"3\"/><rect x=\"340\" y=\"90\" width=\"240\" height=\"200\" rx=\"14\" fill=\"#7c2d12\" stroke=\"#fde68a\" stroke-width=\"3\"/><text x=\"180\" y=\"180\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Case A</text><text x=\"460\" y=\"180\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Case B</text>"
+        },
+        {
+          "id": "setup",
+          "caption": "Spot what changes vs what stays",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">diff</text><rect x=\"80\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#f97316\" opacity=\"0.35\"/><rect x=\"240\" y=\"120\" width=\"160\" height=\"140\" rx=\"10\" fill=\"#fde68a\" opacity=\"0.45\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#fb923c\" opacity=\"0.35\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">overlap = shared rule</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Decision rule",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><polygon points=\"320,90 500,280 140,280\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"3\"/><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Finding the maximum volume of cargo you can fit into a container is like finding the maxim",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Finding the maximum volume of cargo you can fit into a c</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Optimization Max Min",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Optimization Max Min</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"24\" font-family=\"Segoe UI,Arial\">A vs B → rule</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OptimizationMaxMinScene",
+        "notes": "Domain=general motif=family-2. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/optimization_max_min.py ConceptScene"
+      },
+      "motif": "family-2",
+      "generated_by": "template-stem-v5-general-family-2",
+      "generated_at": "2026-07-12T22:35:07Z"
+    }
+  },
+  "orbital-velocity": {
+    "slug": "orbital-velocity",
+    "display_name": "Orbital Velocity",
+    "description": "Standard concept of Orbital Velocity.",
+    "analogy": "The ISS's orbital velocity is like a car driving on a circular track at a precise speed, where the force of gravity pulling it towards the center is balanced by the centrifugal force pushing it away. If the car goes too slow, it will fall towards the center, but if it goes too fast, it will fly off the track. Similarly, the ISS must maintain a precise orbital velocity to balance the gravitational force and stay in orbit.",
+    "student_guidance": "Standard concept of Orbital Velocity. The concept of orbital velocity was crucial in the design and launch of the ISS, which orbits the Earth at an altitude of around 250 miles. The ISS's orbital velocity of approximately 17,500 mph allows it to complete one orbit every 90 minutes. This precise balance between gravity and velocity enables the ISS to maintain a stable orbit, supporting a wide range of scientific experiments and research. The ISS's orbit has also been adjusted over time to ensure optimal performance and longevity. Encounter via The International Space Station (ISS); Used in Space Exploration; Used in Satellite Communications; Used in GPS Technology; Used in Aerospace Engineering Physics: core concept in Mechanics; Engineering: applied in Space Exploration, Satellite Communications, GPS Technology The Apollo 11 Mission, where astronauts Neil Armstrong and Edwin 'Buzz' Aldrin became the first humans to walk on the Moon, relied heavily on the concept of orbital velocity to successfully enter lunar orbit and return to Earth. Careers in Space Exploration rely on this concept; Careers in Satellite Communications rely on this concept; Careers in GPS Technology rely on this concept; Careers in Aerospace Engineering rely on this concept; Careers in Astrophysics Research rely on this concept Visualize The International Space Station (ISS) — The ISS's orbital velocity is like a car driving on a circular track at a precise speed, where the force of gravity pulling it towards the center is balanced by the centrifugal force pushing it away.  The ISS's orbital velocity is like a car driving on a circular track at a precise speed, where the force of gravity pulling it towards the center is balanced by the centrifugal force pushing it away. If the car goes too slow, it will fall towards the center, but if it goes too fast, it will fly off the track. Similarly, the ISS must maintain a precise orbital velocity to balance the gravitational force and stay in orbit.",
+    "historical_context": "The concept of orbital velocity was crucial in the design and launch of the ISS, which orbits the Earth at an altitude of around 250 miles. The ISS's orbital velocity of approximately 17,500 mph allows it to complete one orbit every 90 minutes. This precise balance between gravity and velocity enables the ISS to maintain a stable orbit, supporting a wide range of scientific experiments and researc [\"The Apollo 11 Mission, where astronauts Neil Armstrong and Edwin 'Buzz' Aldrin became the first humans to walk on the Moon, relied heavily on the concept of orbital velocity to successfully enter lunar orbit and return to Earth.\"]",
+    "everyday_applications": "Encounter via The International Space Station (ISS); Used in Space Exploration; Used in Satellite Communications; Used in GPS Technology; Used in Aerospace Engineering",
+    "cross_disciplinary_connections": "Physics: core concept in Mechanics; Engineering: applied in Space Exploration, Satellite Communications, GPS Technology",
+    "future_relevance": "Careers in Space Exploration rely on this concept; Careers in Satellite Communications rely on this concept; Careers in GPS Technology rely on this concept; Careers in Aerospace Engineering rely on this concept; Careers in Astrophysics Research rely on this concept",
+    "guidance": {
+      "What is this concept?": "Standard concept of Orbital Velocity.",
+      "Why was it discovered?": "The concept of orbital velocity was crucial in the design and launch of the ISS, which orbits the Earth at an altitude of around 250 miles. The ISS's orbital velocity of approximately 17,500 mph allows it to complete one orbit every 90 minutes. This precise balance between gravity and velocity enables the ISS to maintain a stable orbit, supporting a wide range of scientific experiments and research. The ISS's orbit has also been adjusted over time to ensure optimal performance and longevity.",
+      "Where do I see it in everyday life?": "Encounter via The International Space Station (ISS); Used in Space Exploration; Used in Satellite Communications; Used in GPS Technology; Used in Aerospace Engineering",
+      "How is it connected to other subjects?": "Physics: core concept in Mechanics; Engineering: applied in Space Exploration, Satellite Communications, GPS Technology",
+      "How has it changed history?": "The Apollo 11 Mission, where astronauts Neil Armstrong and Edwin 'Buzz' Aldrin became the first humans to walk on the Moon, relied heavily on the concept of orbital velocity to successfully enter lunar orbit and return to Earth.",
+      "Why is it important for the future?": "Careers in Space Exploration rely on this concept; Careers in Satellite Communications rely on this concept; Careers in GPS Technology rely on this concept; Careers in Aerospace Engineering rely on this concept; Careers in Astrophysics Research rely on this concept",
+      "How can I visualize it?": "Visualize The International Space Station (ISS) — The ISS's orbital velocity is like a car driving on a circular track at a precise speed, where the force of gravity pulling it towards the center is balanced by the centrifugal force pushing it away.",
+      "How can I remember it intuitively?": "The ISS's orbital velocity is like a car driving on a circular track at a precise speed, where the force of gravity pulling it towards the center is balanced by the centrifugal force pushing it away. If the car goes too slow, it will fall towards the center, but if it goes too fast, it will fly off the track. Similarly, the ISS must maintain a precise orbital velocity to balance the gravitational force and stay in orbit."
+    },
+    "stem_animation": {
+      "slug": "orbital-velocity",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Orbital Velocity",
+      "theme": "mechanics",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Orbital Velocity",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Orbital Velocity.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "The ISS's orbital velocity is like a car driving on a circular track at a precise speed, where the force of gravity pulling it towards the c…",
+        "Pause and restate what Orbital Velocity means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Orbital Velocity: nucleus + electron shells",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Orbital Velocity</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">atomic</text><circle cx=\"320\" cy=\"190\" r=\"28\" fill=\"#fde68a\"/><ellipse cx=\"320\" cy=\"190\" rx=\"90\" ry=\"45\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"2\"/><ellipse cx=\"320\" cy=\"190\" rx=\"150\" ry=\"75\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"2\"/><circle cx=\"410\" cy=\"190\" r=\"9\" fill=\"#fb923c\"/><circle cx=\"180\" cy=\"210\" r=\"9\" fill=\"#f97316\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Energy levels — electrons jump floors",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Orbital Velocity</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><line x1=\"140\" y1=\"280\" x2=\"500\" y2=\"280\" stroke=\"#fdba74\" stroke-width=\"3\"/><line x1=\"140\" y1=\"200\" x2=\"500\" y2=\"200\" stroke=\"#fb923c\" stroke-width=\"3\"/><line x1=\"140\" y1=\"120\" x2=\"500\" y2=\"120\" stroke=\"#f97316\" stroke-width=\"3\"/><line x1=\"300\" y1=\"280\" x2=\"300\" y2=\"120\" stroke=\"#fde68a\" stroke-width=\"3\"/><text x=\"320\" y=\"100\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"16\" font-family=\"Segoe UI,Arial\">ΔE = h f</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Absorb photon → jump up; emit → fall down",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Orbital Velocity</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">photon</text><circle cx=\"200\" cy=\"200\" r=\"40\" fill=\"#fde68a\"/><path d=\"M260 200 Q340 100, 420 200\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"3\"/><circle cx=\"460\" cy=\"120\" r=\"16\" fill=\"#f97316\"/><text x=\"460\" y=\"90\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"12\" font-family=\"Segoe UI,Arial\">photon</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "The ISSs orbital velocity is like a car driving on a circular track at a precise speed, wh",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Orbital Velocity</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">The ISSs orbital velocity is like a car driving on a cir</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Orbital Velocity",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Orbital Velocity</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"22\" font-family=\"Segoe UI,Arial\">shells · jumps · photons</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OrbitalVelocityScene",
+        "notes": "Domain=mechanics motif=atom. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/orbital_velocity.py ConceptScene"
+      },
+      "motif": "atom",
+      "generated_by": "template-stem-v5-mechanics-atom",
+      "generated_at": "2026-07-12T22:35:07Z"
+    },
+    "ascii_animation": {
+      "slug": "orbital-velocity",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Orbital Velocity",
+      "theme": "mechanics",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Orbital Velocity",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Orbital Velocity.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "The ISS's orbital velocity is like a car driving on a circular track at a precise speed, where the force of gravity pulling it towards the c…",
+        "Pause and restate what Orbital Velocity means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Orbital Velocity: nucleus + electron shells",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Orbital Velocity</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">atomic</text><circle cx=\"320\" cy=\"190\" r=\"28\" fill=\"#fde68a\"/><ellipse cx=\"320\" cy=\"190\" rx=\"90\" ry=\"45\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"2\"/><ellipse cx=\"320\" cy=\"190\" rx=\"150\" ry=\"75\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"2\"/><circle cx=\"410\" cy=\"190\" r=\"9\" fill=\"#fb923c\"/><circle cx=\"180\" cy=\"210\" r=\"9\" fill=\"#f97316\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Energy levels — electrons jump floors",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Orbital Velocity</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><line x1=\"140\" y1=\"280\" x2=\"500\" y2=\"280\" stroke=\"#fdba74\" stroke-width=\"3\"/><line x1=\"140\" y1=\"200\" x2=\"500\" y2=\"200\" stroke=\"#fb923c\" stroke-width=\"3\"/><line x1=\"140\" y1=\"120\" x2=\"500\" y2=\"120\" stroke=\"#f97316\" stroke-width=\"3\"/><line x1=\"300\" y1=\"280\" x2=\"300\" y2=\"120\" stroke=\"#fde68a\" stroke-width=\"3\"/><text x=\"320\" y=\"100\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"16\" font-family=\"Segoe UI,Arial\">ΔE = h f</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Absorb photon → jump up; emit → fall down",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Orbital Velocity</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">photon</text><circle cx=\"200\" cy=\"200\" r=\"40\" fill=\"#fde68a\"/><path d=\"M260 200 Q340 100, 420 200\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"3\"/><circle cx=\"460\" cy=\"120\" r=\"16\" fill=\"#f97316\"/><text x=\"460\" y=\"90\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"12\" font-family=\"Segoe UI,Arial\">photon</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "The ISSs orbital velocity is like a car driving on a circular track at a precise speed, wh",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Orbital Velocity</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">The ISSs orbital velocity is like a car driving on a cir</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Orbital Velocity",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Orbital Velocity</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"22\" font-family=\"Segoe UI,Arial\">shells · jumps · photons</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OrbitalVelocityScene",
+        "notes": "Domain=mechanics motif=atom. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/orbital_velocity.py ConceptScene"
+      },
+      "motif": "atom",
+      "generated_by": "template-stem-v5-mechanics-atom",
+      "generated_at": "2026-07-12T22:35:07Z"
+    }
+  },
+  "order-of-reaction": {
+    "slug": "order-of-reaction",
+    "display_name": "Order of Reaction",
+    "description": "Standard concept of Order of Reaction.",
+    "analogy": "The order of a reaction is like the number of chefs working on a dish in the kitchen. A first-order reaction is like having one chef working on a dish, where the rate of completion depends on the number of dishes the chef has to work on. A second-order reaction is like having two chefs working together on a dish, where the rate of completion depends on the number of dishes each chef has to work on and how often they interact with each other.",
+    "student_guidance": "Standard concept of Order of Reaction. Chemistry: core concept in Physical Chemistry",
+    "historical_context": "",
+    "everyday_applications": "",
+    "cross_disciplinary_connections": "Chemistry: core concept in Physical Chemistry",
+    "future_relevance": "",
+    "guidance": {
+      "What is this concept?": "Standard concept of Order of Reaction.",
+      "How is it connected to other subjects?": "Chemistry: core concept in Physical Chemistry"
+    },
+    "stem_animation": {
+      "slug": "order-of-reaction",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Order of Reaction",
+      "theme": "chemistry",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Order of Reaction",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Order of Reaction.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "The order of a reaction is like the number of chefs working on a dish in the kitchen. A first-order reaction is like having one chef working…",
+        "Pause and restate what Order of Reaction means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Order of Reaction: levels of organization",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><rect x=\"220\" y=\"70\" width=\"200\" height=\"50\" rx=\"8\" fill=\"#fde68a\"/><rect x=\"140\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb923c\"/><rect x=\"340\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb923c\"/><rect x=\"80\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/><rect x=\"250\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/><rect x=\"420\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Zoom out / zoom in",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><circle cx=\"200\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"190\" r=\"40\" fill=\"#7c2d12\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"2\"/><text x=\"460\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">detail</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Which level explains the effect?",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"320\" y=\"230\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">pick the right scale</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "The order of a reaction is like the number of chefs working on a dish in the kitchen. A fi",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">The order of a reaction is like the number of chefs work</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Order of Reaction",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"24\" font-family=\"Segoe UI,Arial\">levels stack</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OrderofReactionScene",
+        "notes": "Domain=chemistry motif=family-6. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/order_of_reaction.py ConceptScene"
+      },
+      "motif": "family-6",
+      "generated_by": "template-stem-v5-chemistry-family-6",
+      "generated_at": "2026-07-12T22:35:07Z"
+    },
+    "ascii_animation": {
+      "slug": "order-of-reaction",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Order of Reaction",
+      "theme": "chemistry",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Order of Reaction",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Order of Reaction.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "The order of a reaction is like the number of chefs working on a dish in the kitchen. A first-order reaction is like having one chef working…",
+        "Pause and restate what Order of Reaction means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Order of Reaction: levels of organization",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><rect x=\"220\" y=\"70\" width=\"200\" height=\"50\" rx=\"8\" fill=\"#fde68a\"/><rect x=\"140\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb923c\"/><rect x=\"340\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#fb923c\"/><rect x=\"80\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/><rect x=\"250\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/><rect x=\"420\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#f97316\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Zoom out / zoom in",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><circle cx=\"200\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"190\" r=\"40\" fill=\"#7c2d12\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"2\"/><text x=\"460\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">detail</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Which level explains the effect?",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"320\" y=\"230\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">pick the right scale</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "The order of a reaction is like the number of chefs working on a dish in the kitchen. A fi",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">The order of a reaction is like the number of chefs work</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Order of Reaction",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Order of Reaction</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"24\" font-family=\"Segoe UI,Arial\">levels stack</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OrderofReactionScene",
+        "notes": "Domain=chemistry motif=family-6. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/order_of_reaction.py ConceptScene"
+      },
+      "motif": "family-6",
+      "generated_by": "template-stem-v5-chemistry-family-6",
+      "generated_at": "2026-07-12T22:35:07Z"
+    }
+  },
+  "organic-functional-groups": {
+    "slug": "organic-functional-groups",
+    "display_name": "Organic Functional Groups and Nomenclature",
+    "description": "Organic Functional Groups and Nomenclature Identification, IUPAC naming conventions, structure, and basic reactivity of primary organic functional groups including hydrocarbons, alcohols, aldehydes, ketones, and carboxylic acids.",
+    "analogy": "Every functional group has a characteristic smell and reactivity pattern. Esters produce fruit smells (banana = isoamyl acetate, pineapple = ethyl butyrate). Aldehydes give vanilla its characteristic smell. Ketones account for nail polish remover. Amines smell of fish. Pharmaceutical chemists design drugs by attaching specific functional groups to carbon skeletons — the functional group determines exactly how the drug molecule interacts with receptor proteins in your body.",
+    "student_guidance": "Organic functional groups are specific groups of atoms within a molecule that determine its chemical properties and reactivity. They are the building blocks of organic molecules and play a crucial role in understanding the behavior of complex molecules. The discovery of organic functional groups was a major breakthrough in chemistry, as it allowed scientists to predict and explain the behavior of complex molecules, leading to numerous applications in fields like medicine, materials science, and energy. Organic functional groups are present in many everyday products, such as medicines, food additives, cosmetics, and fuels. Understanding their properties and reactivity is essential for developing new products and technologies. Organic functional groups are connected to other subjects like biology, materials science, and environmental science, as they are used to understand and analyze complex systems and phenomena. The discovery of organic functional groups had a significant impact on the development of modern chemistry, leading to numerous breakthroughs and applications in various fields. Understanding organic functional groups will continue to play a crucial role in the development of new technologies and products, particularly in fields like pharmaceutical research and development, biotechnology, and sustainable energy. Imagine a LEGO structure, where each brick represents a functional group. Just as LEGO bricks can be combined in different ways to create different structures, functional groups can be combined to form different molecules with unique properties. Think of a functional group as a 'chemical fingerprint' that determines the properties and reactivity of a molecule. Just as a fingerprint is unique to an individual, a functional group is unique to a molecule.",
+    "historical_context": "['Friedrich Wöhler', 'Auguste Laurent', 'Charles Adolphe Wurtz'] Understanding organic functional groups was crucial for the development of modern chemistry, as it allowed scientists to predict and explain the behavior of complex molecules, leading to breakthroughs in fields like medicine, materials science, and energy. ['1828: Friedrich Wöhler discovers urea synthesis', '1830s: Auguste Laurent develops the theory of radicals', '1850s: Charles Adolphe Wurtz establishes the concept of functional groups']",
+    "everyday_applications": "medicines; food additives; cosmetics; fuels; biodegradable plastics",
+    "cross_disciplinary_connections": "Biology: understanding biomolecules and their functions; Materials Science: designing new materials with specific properties; Environmental Science: analyzing and mitigating the impact of pollutants; Pharmacology: developing new medicines and understanding their mechanisms",
+    "future_relevance": "pharmaceutical research and development; biotechnology and genetic engineering; sustainable energy and materials; environmental remediation and conservation",
+    "guidance": {
+      "What is this concept?": "Organic functional groups are specific groups of atoms within a molecule that determine its chemical properties and reactivity. They are the building blocks of organic molecules and play a crucial role in understanding the behavior of complex molecules.",
+      "Why was it discovered?": "The discovery of organic functional groups was a major breakthrough in chemistry, as it allowed scientists to predict and explain the behavior of complex molecules, leading to numerous applications in fields like medicine, materials science, and energy.",
+      "Where do I see it in everyday life?": "Organic functional groups are present in many everyday products, such as medicines, food additives, cosmetics, and fuels. Understanding their properties and reactivity is essential for developing new products and technologies.",
+      "How is it connected to other subjects?": "Organic functional groups are connected to other subjects like biology, materials science, and environmental science, as they are used to understand and analyze complex systems and phenomena.",
+      "How has it changed history?": "The discovery of organic functional groups had a significant impact on the development of modern chemistry, leading to numerous breakthroughs and applications in various fields.",
+      "Why is it important for the future?": "Understanding organic functional groups will continue to play a crucial role in the development of new technologies and products, particularly in fields like pharmaceutical research and development, biotechnology, and sustainable energy.",
+      "How can I visualize it?": "Imagine a LEGO structure, where each brick represents a functional group. Just as LEGO bricks can be combined in different ways to create different structures, functional groups can be combined to form different molecules with unique properties.",
+      "How can I remember it intuitively?": "Think of a functional group as a 'chemical fingerprint' that determines the properties and reactivity of a molecule. Just as a fingerprint is unique to an individual, a functional group is unique to a molecule."
+    },
+    "stem_animation": {
+      "slug": "organic-functional-groups",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Organic Functional Groups and Nomenclature",
+      "theme": "biology",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Organic Functional Groups and Nomenclature",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Organic Functional Groups and Nomenclature.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Every functional group has a characteristic smell and reactivity pattern. Esters produce fruit smells (banana = isoamyl acetate, pineapple =…",
+        "Pause and restate what Organic Functional Groups and Nomenclature means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Organic Functional Groups and Nomenclature: acids, bases, and pH scale",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">chemistry</text><rect x=\"80\" y=\"120\" width=\"200\" height=\"160\" rx=\"12\" fill=\"#ef4444\" opacity=\"0.85\"/><text x=\"180\" y=\"200\" text-anchor=\"middle\" fill=\"white\" font-size=\"22\" font-family=\"Segoe UI,Arial\">ACID</text><rect x=\"360\" y=\"120\" width=\"200\" height=\"160\" rx=\"12\" fill=\"#3b82f6\" opacity=\"0.85\"/><text x=\"460\" y=\"200\" text-anchor=\"middle\" fill=\"white\" font-size=\"22\" font-family=\"Segoe UI,Arial\">BASE</text>"
+        },
+        {
+          "id": "setup",
+          "caption": "pH scale from 0 (acidic) to 14 (basic)",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">pH</text><rect x=\"80\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(255,80,0)\"/><rect x=\"115\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(240,90,18)\"/><rect x=\"150\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(225,100,36)\"/><rect x=\"185\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(210,110,54)\"/><rect x=\"220\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(195,120,72)\"/><rect x=\"255\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(180,130,90)\"/><rect x=\"290\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(165,140,108)\"/><rect x=\"325\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(150,150,126)\"/><rect x=\"360\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(135,160,144)\"/><rect x=\"395\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(120,170,162)\"/><rect x=\"430\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(105,180,180)\"/><rect x=\"465\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(90,190,198)\"/><rect x=\"500\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(75,200,216)\"/><rect x=\"535\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(60,210,234)\"/><rect x=\"570\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(45,220,252)\"/><text x=\"100\" y=\"280\" text-anchor=\"start\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">0</text><text x=\"320\" y=\"280\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">7</text><text x=\"540\" y=\"280\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">14</text>"
+        },
+        {
+          "id": "core",
+          "caption": "H+ / OH− decide the character",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">ions</text><circle cx=\"200\" cy=\"190\" r=\"50\" fill=\"#fde68a\"/><text x=\"200\" y=\"196\" text-anchor=\"middle\" fill=\"#1a1008\" font-size=\"20\" font-family=\"Segoe UI,Arial\">H+</text><circle cx=\"440\" cy=\"190\" r=\"50\" fill=\"#fb923c\"/><text x=\"440\" y=\"196\" text-anchor=\"middle\" fill=\"#1a1008\" font-size=\"18\" font-family=\"Segoe UI,Arial\">OH−</text><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"13\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Every functional group has a characteristic smell and reactivity pattern. Esters produce f",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Every functional group has a characteristic smell and re</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember the pH story",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"24\" font-family=\"Segoe UI,Arial\">acid · neutral · base</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OrganicFunctionalGroupsandNomenclatureScene",
+        "notes": "Domain=biology motif=acidbase. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/organic_functional_groups.py ConceptScene"
+      },
+      "motif": "acidbase",
+      "generated_by": "template-stem-v5-biology-acidbase",
+      "generated_at": "2026-07-12T22:35:07Z"
+    },
+    "ascii_animation": {
+      "slug": "organic-functional-groups",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Organic Functional Groups and Nomenclature",
+      "theme": "biology",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Organic Functional Groups and Nomenclature",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Organic Functional Groups and Nomenclature.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Every functional group has a characteristic smell and reactivity pattern. Esters produce fruit smells (banana = isoamyl acetate, pineapple =…",
+        "Pause and restate what Organic Functional Groups and Nomenclature means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Organic Functional Groups and Nomenclature: acids, bases, and pH scale",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">chemistry</text><rect x=\"80\" y=\"120\" width=\"200\" height=\"160\" rx=\"12\" fill=\"#ef4444\" opacity=\"0.85\"/><text x=\"180\" y=\"200\" text-anchor=\"middle\" fill=\"white\" font-size=\"22\" font-family=\"Segoe UI,Arial\">ACID</text><rect x=\"360\" y=\"120\" width=\"200\" height=\"160\" rx=\"12\" fill=\"#3b82f6\" opacity=\"0.85\"/><text x=\"460\" y=\"200\" text-anchor=\"middle\" fill=\"white\" font-size=\"22\" font-family=\"Segoe UI,Arial\">BASE</text>"
+        },
+        {
+          "id": "setup",
+          "caption": "pH scale from 0 (acidic) to 14 (basic)",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">pH</text><rect x=\"80\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(255,80,0)\"/><rect x=\"115\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(240,90,18)\"/><rect x=\"150\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(225,100,36)\"/><rect x=\"185\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(210,110,54)\"/><rect x=\"220\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(195,120,72)\"/><rect x=\"255\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(180,130,90)\"/><rect x=\"290\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(165,140,108)\"/><rect x=\"325\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(150,150,126)\"/><rect x=\"360\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(135,160,144)\"/><rect x=\"395\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(120,170,162)\"/><rect x=\"430\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(105,180,180)\"/><rect x=\"465\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(90,190,198)\"/><rect x=\"500\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(75,200,216)\"/><rect x=\"535\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(60,210,234)\"/><rect x=\"570\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(45,220,252)\"/><text x=\"100\" y=\"280\" text-anchor=\"start\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">0</text><text x=\"320\" y=\"280\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">7</text><text x=\"540\" y=\"280\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">14</text>"
+        },
+        {
+          "id": "core",
+          "caption": "H+ / OH− decide the character",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">ions</text><circle cx=\"200\" cy=\"190\" r=\"50\" fill=\"#fde68a\"/><text x=\"200\" y=\"196\" text-anchor=\"middle\" fill=\"#1a1008\" font-size=\"20\" font-family=\"Segoe UI,Arial\">H+</text><circle cx=\"440\" cy=\"190\" r=\"50\" fill=\"#fb923c\"/><text x=\"440\" y=\"196\" text-anchor=\"middle\" fill=\"#1a1008\" font-size=\"18\" font-family=\"Segoe UI,Arial\">OH−</text><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"13\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Every functional group has a characteristic smell and reactivity pattern. Esters produce f",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Every functional group has a characteristic smell and re</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember the pH story",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Organic Functional Groups and Nomenclature</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"24\" font-family=\"Segoe UI,Arial\">acid · neutral · base</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OrganicFunctionalGroupsandNomenclatureScene",
+        "notes": "Domain=biology motif=acidbase. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/organic_functional_groups.py ConceptScene"
+      },
+      "motif": "acidbase",
+      "generated_by": "template-stem-v5-biology-acidbase",
+      "generated_at": "2026-07-12T22:35:07Z"
+    }
+  },
+  "osmosis": {
+    "slug": "osmosis",
+    "display_name": "Osmosis",
+    "description": "Standard concept of Osmosis.",
+    "analogy": "Osmosis is like a water balloon trying to equalize the concentration of water inside and outside its rubber membrane. When the sun heats the balloon, the water molecules inside the balloon gain energy and move faster, causing some to escape through the membrane. As a result, water molecules from the surrounding air move into the balloon to equalize the concentration, causing the balloon to shrink.",
+    "student_guidance": "Standard concept of Osmosis. In the 1950s, scientists used osmosis to develop dialysis machines that could filter waste products from the blood of patients with kidney failure. This innovation relied on the principle of osmosis to remove excess water and waste from the blood, saving countless lives. Today, osmosis is used in various medical applications, including wound healing and drug delivery. Understanding osmosis is essential for developing new medical treatments and technologies. Encounter via A water balloon; Used in Biotechnology; Used in Pharmaceuticals; Used in Medical Devices; Used in Water Treatment Biology: core concept in Cell Biology & Biochemistry; Engineering: applied in Biotechnology, Pharmaceuticals, Medical Devices The development of reverse osmosis desalination plants, which provide clean drinking water for millions of people around the world, particularly in coastal regions where access to fresh water is limited. Careers in Biotechnology rely on this concept; Careers in Pharmaceuticals rely on this concept; Careers in Medical Devices rely on this concept; Careers in Water Treatment rely on this concept; Careers in Food Processing rely on this concept Visualize A water balloon — Osmosis is like a water balloon trying to equalize the concentration of water inside and outside its rubber membrane. When the sun heats the balloon, the water molecules inside the balloon gain energy Osmosis is like a water balloon trying to equalize the concentration of water inside and outside its rubber membrane. When the sun heats the balloon, the water molecules inside the balloon gain energy and move faster, causing some to escape through the membrane. As a result, water molecules from the surrounding air move into the balloon to equalize the concentration, causing the balloon to shrink.",
+    "historical_context": "In the 1950s, scientists used osmosis to develop dialysis machines that could filter waste products from the blood of patients with kidney failure. This innovation relied on the principle of osmosis to remove excess water and waste from the blood, saving countless lives. Today, osmosis is used in various medical applications, including wound healing and drug delivery. Understanding osmosis is esse ['The development of reverse osmosis desalination plants, which provide clean drinking water for millions of people around the world, particularly in coastal regions where access to fresh water is limited.']",
+    "everyday_applications": "Encounter via A water balloon; Used in Biotechnology; Used in Pharmaceuticals; Used in Medical Devices; Used in Water Treatment",
+    "cross_disciplinary_connections": "Biology: core concept in Cell Biology & Biochemistry; Engineering: applied in Biotechnology, Pharmaceuticals, Medical Devices",
+    "future_relevance": "Careers in Biotechnology rely on this concept; Careers in Pharmaceuticals rely on this concept; Careers in Medical Devices rely on this concept; Careers in Water Treatment rely on this concept; Careers in Food Processing rely on this concept",
+    "guidance": {
+      "What is this concept?": "Standard concept of Osmosis.",
+      "Why was it discovered?": "In the 1950s, scientists used osmosis to develop dialysis machines that could filter waste products from the blood of patients with kidney failure. This innovation relied on the principle of osmosis to remove excess water and waste from the blood, saving countless lives. Today, osmosis is used in various medical applications, including wound healing and drug delivery. Understanding osmosis is essential for developing new medical treatments and technologies.",
+      "Where do I see it in everyday life?": "Encounter via A water balloon; Used in Biotechnology; Used in Pharmaceuticals; Used in Medical Devices; Used in Water Treatment",
+      "How is it connected to other subjects?": "Biology: core concept in Cell Biology & Biochemistry; Engineering: applied in Biotechnology, Pharmaceuticals, Medical Devices",
+      "How has it changed history?": "The development of reverse osmosis desalination plants, which provide clean drinking water for millions of people around the world, particularly in coastal regions where access to fresh water is limited.",
+      "Why is it important for the future?": "Careers in Biotechnology rely on this concept; Careers in Pharmaceuticals rely on this concept; Careers in Medical Devices rely on this concept; Careers in Water Treatment rely on this concept; Careers in Food Processing rely on this concept",
+      "How can I visualize it?": "Visualize A water balloon — Osmosis is like a water balloon trying to equalize the concentration of water inside and outside its rubber membrane. When the sun heats the balloon, the water molecules inside the balloon gain energy",
+      "How can I remember it intuitively?": "Osmosis is like a water balloon trying to equalize the concentration of water inside and outside its rubber membrane. When the sun heats the balloon, the water molecules inside the balloon gain energy and move faster, causing some to escape through the membrane. As a result, water molecules from the surrounding air move into the balloon to equalize the concentration, causing the balloon to shrink."
+    },
+    "stem_animation": {
+      "slug": "osmosis",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Osmosis",
+      "theme": "general",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Osmosis",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Osmosis.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Osmosis is like a water balloon trying to equalize the concentration of water inside and outside its rubber membrane. When the sun heats the…",
+        "Pause and restate what Osmosis means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Osmosis: layered model",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">layers</text><rect x=\"120\" y=\"80\" width=\"400\" height=\"40\" rx=\"6\" fill=\"#1e1230\" stroke=\"#c084fc\" stroke-width=\"2\"/><text x=\"320\" y=\"105\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">layer 1</text><rect x=\"120\" y=\"125\" width=\"400\" height=\"40\" rx=\"6\" fill=\"#1e1230\" stroke=\"#f472b6\" stroke-width=\"2\"/><text x=\"320\" y=\"150\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">layer 2</text><rect x=\"120\" y=\"170\" width=\"400\" height=\"40\" rx=\"6\" fill=\"#1e1230\" stroke=\"#a3e635\" stroke-width=\"2\"/><text x=\"320\" y=\"195\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">layer 3</text><rect x=\"120\" y=\"215\" width=\"400\" height=\"40\" rx=\"6\" fill=\"#1e1230\" stroke=\"#c4b5fd\" stroke-width=\"2\"/><text x=\"320\" y=\"240\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">layer 4</text><rect x=\"120\" y=\"260\" width=\"400\" height=\"40\" rx=\"6\" fill=\"#1e1230\" stroke=\"#3b0764\" stroke-width=\"2\"/><text x=\"320\" y=\"285\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">layer 5</text>"
+        },
+        {
+          "id": "setup",
+          "caption": "Each layer depends on the one below",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">deps</text><rect x=\"180\" y=\"80\" width=\"280\" height=\"60\" fill=\"#f472b6\"/><rect x=\"150\" y=\"150\" width=\"340\" height=\"60\" fill=\"#c084fc\"/><rect x=\"120\" y=\"220\" width=\"400\" height=\"60\" fill=\"#a3e635\"/>"
+        },
+        {
+          "id": "core",
+          "caption": "Explain from the right layer",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Osmosis</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Osmosis is like a water balloon trying to equalize the concentration of water inside and o",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis is like a water balloon trying to equalize the c</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Osmosis",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#a3e635\" font-size=\"22\" font-family=\"Segoe UI,Arial\">stack of meaning</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OsmosisScene",
+        "notes": "Domain=general motif=family-9. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/osmosis.py ConceptScene"
+      },
+      "motif": "family-9",
+      "generated_by": "template-stem-v5-general-family-9",
+      "generated_at": "2026-07-12T22:35:07Z"
+    },
+    "ascii_animation": {
+      "slug": "osmosis",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Osmosis",
+      "theme": "general",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Osmosis",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Osmosis.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Osmosis is like a water balloon trying to equalize the concentration of water inside and outside its rubber membrane. When the sun heats the…",
+        "Pause and restate what Osmosis means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Osmosis: layered model",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">layers</text><rect x=\"120\" y=\"80\" width=\"400\" height=\"40\" rx=\"6\" fill=\"#1e1230\" stroke=\"#c084fc\" stroke-width=\"2\"/><text x=\"320\" y=\"105\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">layer 1</text><rect x=\"120\" y=\"125\" width=\"400\" height=\"40\" rx=\"6\" fill=\"#1e1230\" stroke=\"#f472b6\" stroke-width=\"2\"/><text x=\"320\" y=\"150\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">layer 2</text><rect x=\"120\" y=\"170\" width=\"400\" height=\"40\" rx=\"6\" fill=\"#1e1230\" stroke=\"#a3e635\" stroke-width=\"2\"/><text x=\"320\" y=\"195\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">layer 3</text><rect x=\"120\" y=\"215\" width=\"400\" height=\"40\" rx=\"6\" fill=\"#1e1230\" stroke=\"#c4b5fd\" stroke-width=\"2\"/><text x=\"320\" y=\"240\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">layer 4</text><rect x=\"120\" y=\"260\" width=\"400\" height=\"40\" rx=\"6\" fill=\"#1e1230\" stroke=\"#3b0764\" stroke-width=\"2\"/><text x=\"320\" y=\"285\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">layer 5</text>"
+        },
+        {
+          "id": "setup",
+          "caption": "Each layer depends on the one below",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">deps</text><rect x=\"180\" y=\"80\" width=\"280\" height=\"60\" fill=\"#f472b6\"/><rect x=\"150\" y=\"150\" width=\"340\" height=\"60\" fill=\"#c084fc\"/><rect x=\"120\" y=\"220\" width=\"400\" height=\"60\" fill=\"#a3e635\"/>"
+        },
+        {
+          "id": "core",
+          "caption": "Explain from the right layer",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Osmosis</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Osmosis is like a water balloon trying to equalize the concentration of water inside and o",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis is like a water balloon trying to equalize the c</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Osmosis",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Osmosis</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#a3e635\" font-size=\"22\" font-family=\"Segoe UI,Arial\">stack of meaning</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OsmosisScene",
+        "notes": "Domain=general motif=family-9. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/osmosis.py ConceptScene"
+      },
+      "motif": "family-9",
+      "generated_by": "template-stem-v5-general-family-9",
+      "generated_at": "2026-07-12T22:35:07Z"
+    }
+  },
+  "oxidation-states": {
+    "slug": "oxidation-states",
+    "display_name": "Oxidation States",
+    "description": "Standard concept of Oxidation States.",
+    "analogy": "Oxidation states are like the battery's 'charge level', where the flow of electrons (or 'charge') between the positive and negative terminals determines its overall state. Just as a battery's charge level changes as it's used or recharged, an atom's oxidation state changes as it gains or loses electrons. By tracking these changes, we can understand the battery's performance and predict its lifespan.",
+    "student_guidance": "Standard concept of Oxidation States. Chemistry: core concept in Inorganic & Analytical",
+    "historical_context": "",
+    "everyday_applications": "",
+    "cross_disciplinary_connections": "Chemistry: core concept in Inorganic & Analytical",
+    "future_relevance": "",
+    "guidance": {
+      "What is this concept?": "Standard concept of Oxidation States.",
+      "How is it connected to other subjects?": "Chemistry: core concept in Inorganic & Analytical"
+    },
+    "stem_animation": {
+      "slug": "oxidation-states",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Oxidation States",
+      "theme": "chemistry",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Oxidation States",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Oxidation States.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Oxidation states are like the battery's 'charge level', where the flow of electrons (or 'charge') between the positive and negative terminal…",
+        "Pause and restate what Oxidation States means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Oxidation States: flow through a system",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">flow</text><path d=\"M60 180 C160 80, 260 280, 360 160 S520 80, 600 200\" fill=\"none\" stroke=\"#4ade80\" stroke-width=\"10\"/><polygon points=\"560,180 530,160 530,200\" fill=\"#facc15\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Constraints change the rate",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">constraint</text><rect x=\"80\" y=\"140\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#10251c\" stroke=\"#2dd4bf\" stroke-width=\"2\"/><rect x=\"280\" y=\"160\" width=\"80\" height=\"40\" fill=\"#facc15\"/><rect x=\"400\" y=\"140\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#10251c\" stroke=\"#4ade80\" stroke-width=\"2\"/><text x=\"320\" y=\"280\" text-anchor=\"middle\" fill=\"#86efac\" font-size=\"13\" font-family=\"Segoe UI,Arial\">narrow section slows flow</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Conservation along the path",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"170\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#86efac\" font-size=\"14\" font-family=\"Segoe UI,Arial\">what enters must be accounted</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Oxidation states are like the batterys charge level, where the flow of electrons (or charg",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation states are like the batterys charge level, whe</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Oxidation States",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#4ade80\" font-size=\"24\" font-family=\"Segoe UI,Arial\">flow + limits</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OxidationStatesScene",
+        "notes": "Domain=chemistry motif=family-8. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/oxidation_states.py ConceptScene"
+      },
+      "motif": "family-8",
+      "generated_by": "template-stem-v5-chemistry-family-8",
+      "generated_at": "2026-07-12T22:35:07Z"
+    },
+    "ascii_animation": {
+      "slug": "oxidation-states",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Oxidation States",
+      "theme": "chemistry",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Oxidation States",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Oxidation States.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Oxidation states are like the battery's 'charge level', where the flow of electrons (or 'charge') between the positive and negative terminal…",
+        "Pause and restate what Oxidation States means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Oxidation States: flow through a system",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">flow</text><path d=\"M60 180 C160 80, 260 280, 360 160 S520 80, 600 200\" fill=\"none\" stroke=\"#4ade80\" stroke-width=\"10\"/><polygon points=\"560,180 530,160 530,200\" fill=\"#facc15\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Constraints change the rate",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">constraint</text><rect x=\"80\" y=\"140\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#10251c\" stroke=\"#2dd4bf\" stroke-width=\"2\"/><rect x=\"280\" y=\"160\" width=\"80\" height=\"40\" fill=\"#facc15\"/><rect x=\"400\" y=\"140\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#10251c\" stroke=\"#4ade80\" stroke-width=\"2\"/><text x=\"320\" y=\"280\" text-anchor=\"middle\" fill=\"#86efac\" font-size=\"13\" font-family=\"Segoe UI,Arial\">narrow section slows flow</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Conservation along the path",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"170\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#86efac\" font-size=\"14\" font-family=\"Segoe UI,Arial\">what enters must be accounted</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Oxidation states are like the batterys charge level, where the flow of electrons (or charg",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation states are like the batterys charge level, whe</text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Oxidation States",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxidation States</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#4ade80\" font-size=\"24\" font-family=\"Segoe UI,Arial\">flow + limits</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OxidationStatesScene",
+        "notes": "Domain=chemistry motif=family-8. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/oxidation_states.py ConceptScene"
+      },
+      "motif": "family-8",
+      "generated_by": "template-stem-v5-chemistry-family-8",
+      "generated_at": "2026-07-12T22:35:07Z"
+    }
+  },
+  "oxygen-transport": {
+    "slug": "oxygen-transport",
+    "display_name": "Oxygen Transport",
+    "description": "Standard concept of Oxygen Transport.",
+    "analogy": "Just as a city's water supply system relies on a network of pipes to distribute water throughout the city, our bodies use a network of blood vessels to transport oxygen from the lungs to the rest of the body. Hemoglobin in red blood cells acts like water treatment plants, picking up oxygen from the lungs and releasing it to the body's tissues. The heart pumps blood through the vessels, much like the water pumps in a city's water supply system.",
+    "student_guidance": "Standard concept of Oxygen Transport. In the early 20th century, cities like New York and London faced significant challenges in delivering clean water to their growing populations. Similarly, our bodies face the challenge of delivering oxygen to our cells, which is essential for energy production and survival. The discovery of the oxygen transport mechanism in the body has been crucial in understanding various diseases, such as anemia and cardiovascular disease. Today, researchers continue to study oxygen transport to develop new treatments for these conditions. Encounter via A city's water supply system; Used in Medical Research; Used in Pharmaceuticals; Used in Biotechnology; Used in Environmental Monitoring Biology: core concept in Physiology; Engineering: applied in Medical Research, Pharmaceuticals, Biotechnology The development of the first successful oxygen therapy systems for patients with respiratory failure, pioneered by Dr. Bjørn Ibsen in the 1950s Careers in Medical Research rely on this concept; Careers in Pharmaceuticals rely on this concept; Careers in Biotechnology rely on this concept; Careers in Environmental Monitoring rely on this concept; Careers in Aerospace Engineering rely on this concept Visualize A city's water supply system — Just as a city's water supply system relies on a network of pipes to distribute water throughout the city, our bodies use a network of blood vessels to transport oxygen from the lungs to the rest of t Just as a city's water supply system relies on a network of pipes to distribute water throughout the city, our bodies use a network of blood vessels to transport oxygen from the lungs to the rest of the body. Hemoglobin in red blood cells acts like water treatment plants, picking up oxygen from the lungs and releasing it to the body's tissues. The heart pumps blood through the vessels, much like the water pumps in a city's water supply system.",
+    "historical_context": "In the early 20th century, cities like New York and London faced significant challenges in delivering clean water to their growing populations. Similarly, our bodies face the challenge of delivering oxygen to our cells, which is essential for energy production and survival. The discovery of the oxygen transport mechanism in the body has been crucial in understanding various diseases, such as anemi ['The development of the first successful oxygen therapy systems for patients with respiratory failure, pioneered by Dr. Bjørn Ibsen in the 1950s']",
+    "everyday_applications": "Encounter via A city's water supply system; Used in Medical Research; Used in Pharmaceuticals; Used in Biotechnology; Used in Environmental Monitoring",
+    "cross_disciplinary_connections": "Biology: core concept in Physiology; Engineering: applied in Medical Research, Pharmaceuticals, Biotechnology",
+    "future_relevance": "Careers in Medical Research rely on this concept; Careers in Pharmaceuticals rely on this concept; Careers in Biotechnology rely on this concept; Careers in Environmental Monitoring rely on this concept; Careers in Aerospace Engineering rely on this concept",
+    "guidance": {
+      "What is this concept?": "Standard concept of Oxygen Transport.",
+      "Why was it discovered?": "In the early 20th century, cities like New York and London faced significant challenges in delivering clean water to their growing populations. Similarly, our bodies face the challenge of delivering oxygen to our cells, which is essential for energy production and survival. The discovery of the oxygen transport mechanism in the body has been crucial in understanding various diseases, such as anemia and cardiovascular disease. Today, researchers continue to study oxygen transport to develop new treatments for these conditions.",
+      "Where do I see it in everyday life?": "Encounter via A city's water supply system; Used in Medical Research; Used in Pharmaceuticals; Used in Biotechnology; Used in Environmental Monitoring",
+      "How is it connected to other subjects?": "Biology: core concept in Physiology; Engineering: applied in Medical Research, Pharmaceuticals, Biotechnology",
+      "How has it changed history?": "The development of the first successful oxygen therapy systems for patients with respiratory failure, pioneered by Dr. Bjørn Ibsen in the 1950s",
+      "Why is it important for the future?": "Careers in Medical Research rely on this concept; Careers in Pharmaceuticals rely on this concept; Careers in Biotechnology rely on this concept; Careers in Environmental Monitoring rely on this concept; Careers in Aerospace Engineering rely on this concept",
+      "How can I visualize it?": "Visualize A city's water supply system — Just as a city's water supply system relies on a network of pipes to distribute water throughout the city, our bodies use a network of blood vessels to transport oxygen from the lungs to the rest of t",
+      "How can I remember it intuitively?": "Just as a city's water supply system relies on a network of pipes to distribute water throughout the city, our bodies use a network of blood vessels to transport oxygen from the lungs to the rest of the body. Hemoglobin in red blood cells acts like water treatment plants, picking up oxygen from the lungs and releasing it to the body's tissues. The heart pumps blood through the vessels, much like the water pumps in a city's water supply system."
+    },
+    "stem_animation": {
+      "slug": "oxygen-transport",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Oxygen Transport",
+      "theme": "general",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Oxygen Transport",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Oxygen Transport.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Just as a city's water supply system relies on a network of pipes to distribute water throughout the city, our bodies use a network of blood…",
+        "Pause and restate what Oxygen Transport means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Oxygen Transport: connected ideas",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">map</text><circle cx=\"320\" cy=\"180\" r=\"36\" fill=\"#67e8f9\"/><circle cx=\"453\" cy=\"206\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"453\" y2=\"206\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"329\" cy=\"269\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"329\" y2=\"269\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"194\" cy=\"218\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"194\" y2=\"218\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"229\" cy=\"112\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"229\" y2=\"112\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"385\" cy=\"101\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"385\" y2=\"101\" stroke=\"#a5f3fc\" stroke-width=\"2\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Trace links between parts",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">links</text><rect x=\"80\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><rect x=\"250\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><rect x=\"420\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#5eead4\" stroke-width=\"2\"/><rect x=\"160\" y=\"220\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#164e63\" stroke=\"#67e8f9\" stroke-width=\"2\"/><rect x=\"340\" y=\"220\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#164e63\" stroke=\"#5eead4\" stroke-width=\"2\"/><text x=\"150\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">A</text><text x=\"320\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">B</text><text x=\"490\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">C</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Core relationship",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"70\" y=\"110\" width=\"500\" height=\"150\" rx=\"14\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><text x=\"320\" y=\"175\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">cause → effect → check</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Just as a citys water supply system relies on a network of pipes to distribute water throu",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a citys water supply system relies on a network </text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Oxygen Transport",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"24\" font-family=\"Segoe UI,Arial\">linked parts</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OxygenTransportScene",
+        "notes": "Domain=general motif=family-0. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/oxygen_transport.py ConceptScene"
+      },
+      "motif": "family-0",
+      "generated_by": "template-stem-v5-general-family-0",
+      "generated_at": "2026-07-12T22:35:07Z"
+    },
+    "ascii_animation": {
+      "slug": "oxygen-transport",
+      "version": 3,
+      "format": "stem-svg",
+      "title": "Oxygen Transport",
+      "theme": "general",
+      "fps": 0.55,
+      "duration_sec": 22,
+      "learning_objectives": [
+        "Explain Oxygen Transport",
+        "Connect the idea to a real-world example",
+        "Recall the key diagram"
+      ],
+      "voiceover": [
+        "Let's explore Oxygen Transport.",
+        "Watch how the diagram builds step by step.",
+        "Connect each label to the core idea.",
+        "Just as a city's water supply system relies on a network of pipes to distribute water throughout the city, our bodies use a network of blood…",
+        "Pause and restate what Oxygen Transport means."
+      ],
+      "viewBox": "0 0 640 360",
+      "scenes": [
+        {
+          "id": "hook",
+          "caption": "Oxygen Transport: connected ideas",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">map</text><circle cx=\"320\" cy=\"180\" r=\"36\" fill=\"#67e8f9\"/><circle cx=\"453\" cy=\"206\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"453\" y2=\"206\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"329\" cy=\"269\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"329\" y2=\"269\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"194\" cy=\"218\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"194\" y2=\"218\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"229\" cy=\"112\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"229\" y2=\"112\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"385\" cy=\"101\" r=\"24\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><line x1=\"320\" y1=\"180\" x2=\"385\" y2=\"101\" stroke=\"#a5f3fc\" stroke-width=\"2\"/>"
+        },
+        {
+          "id": "setup",
+          "caption": "Trace links between parts",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">links</text><rect x=\"80\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><rect x=\"250\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><rect x=\"420\" y=\"100\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#132033\" stroke=\"#5eead4\" stroke-width=\"2\"/><rect x=\"160\" y=\"220\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#164e63\" stroke=\"#67e8f9\" stroke-width=\"2\"/><rect x=\"340\" y=\"220\" width=\"140\" height=\"70\" rx=\"8\" fill=\"#164e63\" stroke=\"#5eead4\" stroke-width=\"2\"/><text x=\"150\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">A</text><text x=\"320\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">B</text><text x=\"490\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">C</text>"
+        },
+        {
+          "id": "core",
+          "caption": "Core relationship",
+          "duration_frames": 4,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"70\" y=\"110\" width=\"500\" height=\"150\" rx=\"14\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><text x=\"320\" y=\"175\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">cause → effect → check</text>"
+        },
+        {
+          "id": "analogy",
+          "caption": "Just as a citys water supply system relies on a network of pipes to distribute water throu",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a citys water supply system relies on a network </text>"
+        },
+        {
+          "id": "takeaway",
+          "caption": "Remember: Oxygen Transport",
+          "duration_frames": 3,
+          "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Oxygen Transport</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"24\" font-family=\"Segoe UI,Arial\">linked parts</text>"
+        }
+      ],
+      "manim_plan": {
+        "class_name": "OxygenTransportScene",
+        "notes": "Domain=general motif=family-0. Recreate with Manim CE matching the SVG storyboard.",
+        "cli": "manim -pqh scripts/manim_scenes/oxygen_transport.py ConceptScene"
+      },
+      "motif": "family-0",
+      "generated_by": "template-stem-v5-general-family-0",
+      "generated_at": "2026-07-12T22:35:07Z"
+    }
+  },
+  "observe-the-following-figures": {
+    "slug": "observe-the-following-figures",
+    "display_name": "Observe the Following Figures.",
+    "description": "Observe the Following Figures. is a Class 8 mathematics topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "analogy": "Observe the Following Figures. is a Class 8 mathematics topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "student_guidance": "Observe the Following Figures. is a Class 8 mathematics topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "real_world_applications": [],
+    "examples": [],
+    "related_concepts": [],
+    "explainer_script": "",
+    "sku": "cbse6-8",
+    "grade": "8",
+    "subject": "mathematics",
+    "source": "eden_stub",
+    "updated_at": "2026-07-14T23:31:12.542891+00:00"
+  },
+  "oceans-and-continents": {
+    "slug": "oceans-and-continents",
+    "display_name": "Oceans and Continents",
+    "description": "Oceans and Continents is a Class 6 social-science topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "analogy": "Oceans and Continents is a Class 6 social-science topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "student_guidance": "Oceans and Continents is a Class 6 social-science topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "real_world_applications": [],
+    "examples": [],
+    "related_concepts": [],
+    "explainer_script": "",
+    "sku": "cbse6-8",
+    "grade": "6",
+    "subject": "social-science",
+    "source": "eden_stub",
+    "updated_at": "2026-07-14T23:31:12.542891+00:00"
+  },
+  "our-cultural-heritage-and-knowledge-traditions": {
+    "slug": "our-cultural-heritage-and-knowledge-traditions",
+    "display_name": "Our Cultural Heritage and Knowledge Traditions",
+    "description": "Our Cultural Heritage and Knowledge Traditions is a Class 7 social-science topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "analogy": "Our Cultural Heritage and Knowledge Traditions is a Class 7 social-science topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "student_guidance": "Our Cultural Heritage and Knowledge Traditions is a Class 7 social-science topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "real_world_applications": [],
+    "examples": [],
+    "related_concepts": [],
+    "explainer_script": "",
+    "sku": "cbse6-8",
+    "grade": "7",
+    "subject": "social-science",
+    "source": "eden_stub",
+    "updated_at": "2026-07-14T23:31:12.542891+00:00"
+  },
+  "observing-similarity-in-change": {
+    "slug": "observing-similarity-in-change",
+    "display_name": "Observing Similarity in Change",
+    "description": "Observing Similarity in Change is a Class 8 mathematics topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "analogy": "Observing Similarity in Change is a Class 8 mathematics topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "student_guidance": "Observing Similarity in Change is a Class 8 mathematics topic from the NCERT syllabus. A full Eden explanation is being prepared.",
+    "real_world_applications": [],
+    "examples": [],
+    "related_concepts": [],
+    "explainer_script": "",
+    "sku": "cbse6-8",
+    "grade": "8",
+    "subject": "mathematics",
+    "source": "eden_stub",
+    "updated_at": "2026-07-14T23:31:12.542891+00:00"
+  }
+}

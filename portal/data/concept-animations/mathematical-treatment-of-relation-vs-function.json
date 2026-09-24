@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-relation-vs-function",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Relation vs Function",
+  "theme": "algebra",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Relation vs Function",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Relation vs Function.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "A vending machine is like a function—each button (input) corresponds to exactly one snack (output), ensuring predictability. A restaurant me…",
+    "Pause and restate what Mathematical Treatment of Relation vs Function means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Relation vs Function: levels of organization",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Relation vs Function</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><rect x=\"220\" y=\"70\" width=\"200\" height=\"50\" rx=\"8\" fill=\"#fcd34d\"/><rect x=\"140\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#67e8f9\"/><rect x=\"340\" y=\"150\" width=\"160\" height=\"50\" rx=\"8\" fill=\"#67e8f9\"/><rect x=\"80\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#5eead4\"/><rect x=\"250\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#5eead4\"/><rect x=\"420\" y=\"230\" width=\"140\" height=\"50\" rx=\"8\" fill=\"#5eead4\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Zoom out / zoom in",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Relation vs Function</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><circle cx=\"200\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#67e8f9\" stroke-width=\"3\"/><circle cx=\"200\" cy=\"190\" r=\"40\" fill=\"#164e63\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><text x=\"460\" y=\"190\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"14\" font-family=\"Segoe UI,Arial\">detail</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Which level explains the effect?",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Relation vs Function</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Relation vs Func</text><text x=\"320\" y=\"230\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">pick the right scale</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "A vending machine is like a function—each button (input) corresponds to exactly one snack ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Relation vs Function</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">A vending machine is like a function—each button (input)</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Mathematical Treatment of Relation vs Fu",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Relation vs Function</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"24\" font-family=\"Segoe UI,Arial\">levels stack</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofRelationvsFunctioScene",
+    "notes": "Domain=algebra motif=family-6. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_relation_vs_function.py ConceptScene"
+  },
+  "motif": "family-6",
+  "generated_by": "template-stem-v5-algebra-family-6",
+  "generated_at": "2026-07-12T22:35:05Z"
+}

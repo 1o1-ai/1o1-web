@@ -1,0 +1,35 @@
+{
+  "base": "https://api.brahmando.com/education/abhyas",
+  "rounds": 15,
+  "endpoints": {
+    "/v1/mcq/generate:Science": {
+      "ok_http": 15,
+      "total": 15,
+      "dup_stem_runs": 0,
+      "dup_option_runs": 0,
+      "non_official_runs": 0
+    },
+    "/v1/mcq/generate:Mathematics": {
+      "ok_http": 15,
+      "total": 15,
+      "dup_stem_runs": 0,
+      "dup_option_runs": 0,
+      "non_official_runs": 0
+    },
+    "/v1/session/start:Science": {
+      "ok_http": 15,
+      "total": 15,
+      "dup_stem_runs": 0,
+      "dup_option_runs": 0,
+      "non_official_runs": 0
+    },
+    "/v1/session/start:Mathematics": {
+      "ok_http": 15,
+      "total": 15,
+      "dup_stem_runs": 0,
+      "dup_option_runs": 0,
+      "non_official_runs": 0
+    }
+  },
+  "issues": []
+}

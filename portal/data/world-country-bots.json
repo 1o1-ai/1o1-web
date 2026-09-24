@@ -1,0 +1,843 @@
+{
+  "version": 1,
+  "demographicNote": "Simulated study-room peers localized per country track — names, schools, and cities match each region.",
+  "countries": {
+    "bangladesh": {
+      "locale": "bd",
+      "students": [
+        {
+          "id": "s_rahim_ahmed",
+          "name": "Rahim Ahmed",
+          "gender": "male",
+          "subject": "mathematics",
+          "school": "Motijheel Ideal School",
+          "city": "Dhaka",
+          "country": "BD",
+          "avatar": 40,
+          "isBot": true,
+          "role": "student",
+          "location": "Motijheel Ideal School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/men/40.jpg"
+        },
+        {
+          "id": "s_fatima_begum",
+          "name": "Fatima Begum",
+          "gender": "female",
+          "subject": "chemistry",
+          "school": "Viqarunnisa Noon School",
+          "city": "Dhaka",
+          "country": "BD",
+          "avatar": 41,
+          "isBot": true,
+          "role": "student",
+          "location": "Viqarunnisa Noon School, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/41.jpg"
+        },
+        {
+          "id": "s_arif_hassan",
+          "name": "Arif Hassan",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Chittagong Collegiate School",
+          "city": "Chittagong",
+          "country": "BD",
+          "avatar": 42,
+          "isBot": true,
+          "role": "student",
+          "location": "Chittagong Collegiate School, Chittagong",
+          "photo": "https://randomuser.me/api/portraits/men/42.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_nasreen_akter",
+          "name": "Nasreen Akter",
+          "gender": "female",
+          "subject": "biology",
+          "school": "Dhaka Residential Model College",
+          "city": "Dhaka",
+          "country": "BD",
+          "avatar": 43,
+          "isBot": true,
+          "role": "teacher",
+          "location": "Dhaka Residential Model College, Dhaka",
+          "photo": "https://randomuser.me/api/portraits/women/43.jpg"
+        }
+      ]
+    },
+    "canada": {
+      "locale": "ca",
+      "students": [
+        {
+          "id": "s_emma_thompson",
+          "name": "Emma Thompson",
+          "gender": "female",
+          "subject": "mathematics",
+          "school": "Earl Haig Secondary School",
+          "city": "Toronto",
+          "state": "Ontario",
+          "country": "CA",
+          "avatar": 44,
+          "isBot": true,
+          "role": "student",
+          "location": "Earl Haig Secondary, Toronto, ON",
+          "photo": "https://randomuser.me/api/portraits/women/44.jpg"
+        },
+        {
+          "id": "s_liam_chen",
+          "name": "Liam Chen",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Burnaby North Secondary",
+          "city": "Burnaby",
+          "state": "British Columbia",
+          "country": "CA",
+          "avatar": 45,
+          "isBot": true,
+          "role": "student",
+          "location": "Burnaby North Secondary, BC",
+          "photo": "https://randomuser.me/api/portraits/men/45.jpg"
+        },
+        {
+          "id": "s_sophie_martin",
+          "name": "Sophie Martin",
+          "gender": "female",
+          "subject": "chemistry",
+          "school": "Collège Jean-de-Brébeuf",
+          "city": "Montreal",
+          "state": "Quebec",
+          "country": "CA",
+          "avatar": 46,
+          "isBot": true,
+          "role": "student",
+          "location": "Collège Jean-de-Brébeuf, Montreal, QC",
+          "photo": "https://randomuser.me/api/portraits/women/46.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_david_okonkwo",
+          "name": "David Okonkwo",
+          "gender": "male",
+          "subject": "science",
+          "school": "West Vancouver Secondary",
+          "city": "West Vancouver",
+          "state": "British Columbia",
+          "country": "CA",
+          "avatar": 47,
+          "isBot": true,
+          "role": "teacher",
+          "location": "West Vancouver Secondary, BC",
+          "photo": "https://randomuser.me/api/portraits/men/47.jpg"
+        }
+      ]
+    },
+    "finland": {
+      "locale": "fi",
+      "students": [
+        {
+          "id": "s_aino_virtanen",
+          "name": "Aino Virtanen",
+          "gender": "female",
+          "subject": "mathematics",
+          "school": "Helsingin normaalikoulu",
+          "city": "Helsinki",
+          "country": "FI",
+          "avatar": 48,
+          "isBot": true,
+          "role": "student",
+          "location": "Helsingin normaalikoulu, Helsinki",
+          "photo": "https://randomuser.me/api/portraits/women/48.jpg"
+        },
+        {
+          "id": "s_mikko_korhonen",
+          "name": "Mikko Korhonen",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Tampereen klassillinen lukio",
+          "city": "Tampere",
+          "country": "FI",
+          "avatar": 49,
+          "isBot": true,
+          "role": "student",
+          "location": "Tampereen klassillinen lukio, Tampere",
+          "photo": "https://randomuser.me/api/portraits/men/49.jpg"
+        },
+        {
+          "id": "s_elina_laine",
+          "name": "Elina Laine",
+          "gender": "female",
+          "subject": "biology",
+          "school": "Oulun lyseon lukio",
+          "city": "Oulu",
+          "country": "FI",
+          "avatar": 50,
+          "isBot": true,
+          "role": "student",
+          "location": "Oulun lyseon lukio, Oulu",
+          "photo": "https://randomuser.me/api/portraits/women/50.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_juha_nieminen",
+          "name": "Juha Nieminen",
+          "gender": "male",
+          "subject": "chemistry",
+          "school": "Espoonlahden lukio",
+          "city": "Espoo",
+          "country": "FI",
+          "avatar": 51,
+          "isBot": true,
+          "role": "teacher",
+          "location": "Espoonlahden lukio, Espoo",
+          "photo": "https://randomuser.me/api/portraits/men/51.jpg"
+        }
+      ]
+    },
+    "japan": {
+      "locale": "jp",
+      "students": [
+        {
+          "id": "s_yuki_tanaka",
+          "name": "Yuki Tanaka",
+          "gender": "female",
+          "subject": "mathematics",
+          "school": "Shibuya Kōtō Gakkō",
+          "city": "Tokyo",
+          "country": "JP",
+          "avatar": 52,
+          "isBot": true,
+          "role": "student",
+          "location": "Shibuya Kōtō Gakkō, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/women/52.jpg"
+        },
+        {
+          "id": "s_haruto_sato",
+          "name": "Haruto Sato",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Osaka Prefectural Kitano High School",
+          "city": "Osaka",
+          "country": "JP",
+          "avatar": 53,
+          "isBot": true,
+          "role": "student",
+          "location": "Kitano High School, Osaka",
+          "photo": "https://randomuser.me/api/portraits/men/53.jpg"
+        },
+        {
+          "id": "s_sakura_nakamura",
+          "name": "Sakura Nakamura",
+          "gender": "female",
+          "subject": "chemistry",
+          "school": "Kyoto Prefectural Rakuhoku High School",
+          "city": "Kyoto",
+          "country": "JP",
+          "avatar": 54,
+          "isBot": true,
+          "role": "student",
+          "location": "Rakuhoku High School, Kyoto",
+          "photo": "https://randomuser.me/api/portraits/women/54.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_kenji_watanabe",
+          "name": "Kenji Watanabe",
+          "gender": "male",
+          "subject": "science",
+          "school": "Tokyo Metropolitan Hibiya High School",
+          "city": "Tokyo",
+          "country": "JP",
+          "avatar": 55,
+          "isBot": true,
+          "role": "teacher",
+          "location": "Hibiya High School, Tokyo",
+          "photo": "https://randomuser.me/api/portraits/men/55.jpg"
+        }
+      ]
+    },
+    "malaysia": {
+      "locale": "my",
+      "students": [
+        {
+          "id": "s_aisyah_ibrahim",
+          "name": "Aisyah Ibrahim",
+          "gender": "female",
+          "subject": "mathematics",
+          "school": "SMK Bandar Utama",
+          "city": "Petaling Jaya",
+          "state": "Selangor",
+          "country": "MY",
+          "avatar": 56,
+          "isBot": true,
+          "role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg"
+        },
+        {
+          "id": "s_wei_ming_tan",
+          "name": "Wei Ming Tan",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Penang Free School",
+          "city": "George Town",
+          "state": "Penang",
+          "country": "MY",
+          "avatar": 57,
+          "isBot": true,
+          "role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg"
+        },
+        {
+          "id": "s_priya_devi",
+          "name": "Priya Devi",
+          "gender": "female",
+          "subject": "biology",
+          "school": "SMK Convent Bukit Nanas",
+          "city": "Kuala Lumpur",
+          "country": "MY",
+          "avatar": 58,
+          "isBot": true,
+          "role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_hafiz_rahman",
+          "name": "Hafiz Rahman",
+          "gender": "male",
+          "subject": "chemistry",
+          "school": "SMK Sultan Abdul Samad",
+          "city": "Petaling Jaya",
+          "country": "MY",
+          "avatar": 59,
+          "isBot": true,
+          "role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg"
+        }
+      ]
+    },
+    "nigeria": {
+      "locale": "ng",
+      "students": [
+        {
+          "id": "s_chiamaka_okafor",
+          "name": "Chiamaka Okafor",
+          "gender": "female",
+          "subject": "mathematics",
+          "school": "Queens College Lagos",
+          "city": "Lagos",
+          "state": "Lagos",
+          "country": "NG",
+          "avatar": 60,
+          "isBot": true,
+          "role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg"
+        },
+        {
+          "id": "s_emeka_nwosu",
+          "name": "Emeka Nwosu",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Federal Government College Enugu",
+          "city": "Enugu",
+          "country": "NG",
+          "avatar": 61,
+          "isBot": true,
+          "role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg"
+        },
+        {
+          "id": "s_fatima_bello",
+          "name": "Fatima Bello",
+          "gender": "female",
+          "subject": "chemistry",
+          "school": "Government Secondary School Keffi",
+          "city": "Keffi",
+          "state": "Nasarawa",
+          "country": "NG",
+          "avatar": 62,
+          "isBot": true,
+          "role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_adebayo_adeyemi",
+          "name": "Adebayo Adeyemi",
+          "gender": "male",
+          "subject": "biology",
+          "school": "King's College Lagos",
+          "city": "Lagos",
+          "country": "NG",
+          "avatar": 63,
+          "isBot": true,
+          "role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg"
+        }
+      ]
+    },
+    "pakistan": {
+      "locale": "pk",
+      "students": [
+        {
+          "id": "s_hassan_ali",
+          "name": "Hassan Ali",
+          "gender": "male",
+          "subject": "mathematics",
+          "school": "Aitchison College",
+          "city": "Lahore",
+          "state": "Punjab",
+          "country": "PK",
+          "avatar": 64,
+          "isBot": true,
+          "role": "student",
+          "location": "Aitchison College, Lahore",
+          "photo": "https://randomuser.me/api/portraits/men/64.jpg"
+        },
+        {
+          "id": "s_aisha_khan",
+          "name": "Aisha Khan",
+          "gender": "female",
+          "subject": "chemistry",
+          "school": "Karachi Grammar School",
+          "city": "Karachi",
+          "state": "Sindh",
+          "country": "PK",
+          "avatar": 65,
+          "isBot": true,
+          "role": "student",
+          "location": "Karachi Grammar School, Karachi",
+          "photo": "https://randomuser.me/api/portraits/women/65.jpg"
+        },
+        {
+          "id": "s_bilal_ahmed",
+          "name": "Bilal Ahmed",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Islamabad Model College",
+          "city": "Islamabad",
+          "country": "PK",
+          "avatar": 66,
+          "isBot": true,
+          "role": "student",
+          "location": "Islamabad Model College, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/men/66.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_sana_malik",
+          "name": "Sana Malik",
+          "gender": "female",
+          "subject": "biology",
+          "school": "Beaconhouse School System",
+          "city": "Islamabad",
+          "country": "PK",
+          "avatar": 67,
+          "isBot": true,
+          "role": "teacher",
+          "location": "Beaconhouse School, Islamabad",
+          "photo": "https://randomuser.me/api/portraits/women/67.jpg"
+        }
+      ]
+    },
+    "philippines": {
+      "locale": "ph",
+      "students": [
+        {
+          "id": "s_maria_santos",
+          "name": "Maria Santos",
+          "gender": "female",
+          "subject": "mathematics",
+          "school": "Philippine Science High School",
+          "city": "Quezon City",
+          "country": "PH",
+          "avatar": 68,
+          "isBot": true,
+          "role": "student",
+          "location": "Philippine Science High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/women/68.jpg"
+        },
+        {
+          "id": "s_jose_reyes",
+          "name": "Jose Reyes",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Ateneo de Manila High School",
+          "city": "Quezon City",
+          "country": "PH",
+          "avatar": 69,
+          "isBot": true,
+          "role": "student",
+          "location": "Ateneo de Manila High School, Quezon City",
+          "photo": "https://randomuser.me/api/portraits/men/69.jpg"
+        },
+        {
+          "id": "s_angelica_cruz",
+          "name": "Angelica Cruz",
+          "gender": "female",
+          "subject": "biology",
+          "school": "Makati Science High School",
+          "city": "Makati",
+          "country": "PH",
+          "avatar": 70,
+          "isBot": true,
+          "role": "student",
+          "location": "Makati Science High School, Makati",
+          "photo": "https://randomuser.me/api/portraits/women/70.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_roberto_garcia",
+          "name": "Roberto Garcia",
+          "gender": "male",
+          "subject": "chemistry",
+          "school": "De La Salle Santiago Zobel",
+          "city": "Muntinlupa",
+          "country": "PH",
+          "avatar": 71,
+          "isBot": true,
+          "role": "teacher",
+          "location": "DLSZ, Muntinlupa",
+          "photo": "https://randomuser.me/api/portraits/men/71.jpg"
+        }
+      ]
+    },
+    "singapore": {
+      "locale": "sg",
+      "students": [
+        {
+          "id": "s_jia_wei_lim",
+          "name": "Jia Wei Lim",
+          "gender": "male",
+          "subject": "mathematics",
+          "school": "Raffles Institution",
+          "city": "Singapore",
+          "country": "SG",
+          "avatar": 72,
+          "isBot": true,
+          "role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg"
+        },
+        {
+          "id": "s_nurul_hassan",
+          "name": "Nurul Hassan",
+          "gender": "female",
+          "subject": "chemistry",
+          "school": "Nanyang Girls' High School",
+          "city": "Singapore",
+          "country": "SG",
+          "avatar": 73,
+          "isBot": true,
+          "role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg"
+        },
+        {
+          "id": "s_arjun_pillai",
+          "name": "Arjun Pillai",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Hwa Chong Institution",
+          "city": "Singapore",
+          "country": "SG",
+          "avatar": 74,
+          "isBot": true,
+          "role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_sarah_tan",
+          "name": "Sarah Tan",
+          "gender": "female",
+          "subject": "biology",
+          "school": "National Junior College",
+          "city": "Singapore",
+          "country": "SG",
+          "avatar": 75,
+          "isBot": true,
+          "role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg"
+        }
+      ]
+    },
+    "south-korea": {
+      "locale": "kr",
+      "students": [
+        {
+          "id": "s_min_ji_park",
+          "name": "Min-ji Park",
+          "gender": "female",
+          "subject": "mathematics",
+          "school": "Ewha Girls' High School",
+          "city": "Seoul",
+          "country": "KR",
+          "avatar": 76,
+          "isBot": true,
+          "role": "student",
+          "location": "Ewha Girls' High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/women/76.jpg"
+        },
+        {
+          "id": "s_jun_ho_kim",
+          "name": "Jun-ho Kim",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Seoul Science High School",
+          "city": "Seoul",
+          "country": "KR",
+          "avatar": 77,
+          "isBot": true,
+          "role": "student",
+          "location": "Seoul Science High School, Seoul",
+          "photo": "https://randomuser.me/api/portraits/men/77.jpg"
+        },
+        {
+          "id": "s_soo_yeon_lee",
+          "name": "Soo-yeon Lee",
+          "gender": "female",
+          "subject": "chemistry",
+          "school": "Busan International High School",
+          "city": "Busan",
+          "country": "KR",
+          "avatar": 78,
+          "isBot": true,
+          "role": "student",
+          "location": "Busan International High School, Busan",
+          "photo": "https://randomuser.me/api/portraits/women/78.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_hyun_soo_choi",
+          "name": "Hyun-soo Choi",
+          "gender": "male",
+          "subject": "science",
+          "school": "Korea Minjok Leadership Academy",
+          "city": "Gangwon",
+          "country": "KR",
+          "avatar": 79,
+          "isBot": true,
+          "role": "teacher",
+          "location": "KMLA, Gangwon",
+          "photo": "https://randomuser.me/api/portraits/men/79.jpg"
+        }
+      ]
+    },
+    "uk": {
+      "locale": "uk",
+      "students": [
+        {
+          "id": "s_olivia_hughes",
+          "name": "Olivia Hughes",
+          "gender": "female",
+          "subject": "mathematics",
+          "school": "King Edward VI Camp Hill School",
+          "city": "Birmingham",
+          "country": "UK",
+          "avatar": 80,
+          "isBot": true,
+          "role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg"
+        },
+        {
+          "id": "s_james_wright",
+          "name": "James Wright",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Manchester Grammar School",
+          "city": "Manchester",
+          "country": "UK",
+          "avatar": 81,
+          "isBot": true,
+          "role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg"
+        },
+        {
+          "id": "s_amara_patel",
+          "name": "Amara Patel",
+          "gender": "female",
+          "subject": "chemistry",
+          "school": "Harrow School",
+          "city": "London",
+          "country": "UK",
+          "avatar": 82,
+          "isBot": true,
+          "role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_charlotte_evans",
+          "name": "Charlotte Evans",
+          "gender": "female",
+          "subject": "biology",
+          "school": "Westminster School",
+          "city": "London",
+          "country": "UK",
+          "avatar": 83,
+          "isBot": true,
+          "role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg"
+        }
+      ]
+    },
+    "usa": {
+      "locale": "us",
+      "students": [
+        {
+          "id": "s_noah_taylor",
+          "name": "Noah Taylor",
+          "gender": "male",
+          "subject": "mathematics",
+          "school": "Thomas Jefferson High School",
+          "city": "Alexandria",
+          "state": "Virginia",
+          "country": "US",
+          "avatar": 84,
+          "isBot": true,
+          "role": "student",
+          "location": "TJHSST, Alexandria, VA",
+          "photo": "https://randomuser.me/api/portraits/men/84.jpg"
+        },
+        {
+          "id": "s_olivia_clark",
+          "name": "Olivia Clark",
+          "gender": "female",
+          "subject": "chemistry",
+          "school": "Stuyvesant High School",
+          "city": "New York",
+          "state": "New York",
+          "country": "US",
+          "avatar": 85,
+          "isBot": true,
+          "role": "student",
+          "location": "Stuyvesant High School, NYC",
+          "photo": "https://randomuser.me/api/portraits/women/85.jpg"
+        },
+        {
+          "id": "s_ethan_martinez",
+          "name": "Ethan Martinez",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Phillips Exeter Academy",
+          "city": "Exeter",
+          "state": "New Hampshire",
+          "country": "US",
+          "avatar": 86,
+          "isBot": true,
+          "role": "student",
+          "location": "Phillips Exeter Academy, NH",
+          "photo": "https://randomuser.me/api/portraits/men/86.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_emily_hart",
+          "name": "Emily Hart",
+          "gender": "female",
+          "subject": "biology",
+          "school": "Lincoln High School",
+          "city": "Portland",
+          "state": "Oregon",
+          "country": "US",
+          "avatar": 87,
+          "isBot": true,
+          "role": "teacher",
+          "location": "Lincoln High School, Portland, OR",
+          "photo": "https://randomuser.me/api/portraits/women/87.jpg"
+        }
+      ]
+    },
+    "australia": {
+      "locale": "au",
+      "students": [
+        {
+          "id": "s_liam_walker",
+          "name": "Liam Walker",
+          "gender": "male",
+          "subject": "mathematics",
+          "school": "Sydney Boys High School",
+          "city": "Sydney",
+          "state": "NSW",
+          "country": "AU",
+          "avatar": 88,
+          "isBot": true,
+          "role": "student",
+          "location": "Sydney Boys High School, NSW",
+          "photo": "https://randomuser.me/api/portraits/men/88.jpg"
+        },
+        {
+          "id": "s_chloe_nguyen",
+          "name": "Chloe Nguyen",
+          "gender": "female",
+          "subject": "chemistry",
+          "school": "Melbourne High School",
+          "city": "Melbourne",
+          "state": "VIC",
+          "country": "AU",
+          "avatar": 89,
+          "isBot": true,
+          "role": "student",
+          "location": "Melbourne High School, VIC",
+          "photo": "https://randomuser.me/api/portraits/women/89.jpg"
+        },
+        {
+          "id": "s_jack_morrison",
+          "name": "Jack Morrison",
+          "gender": "male",
+          "subject": "physics",
+          "school": "Brisbane State High School",
+          "city": "Brisbane",
+          "state": "QLD",
+          "country": "AU",
+          "avatar": 90,
+          "isBot": true,
+          "role": "student",
+          "location": "Brisbane State High School, QLD",
+          "photo": "https://randomuser.me/api/portraits/men/90.jpg"
+        }
+      ],
+      "teachers": [
+        {
+          "id": "t_sarah_bennett",
+          "name": "Sarah Bennett",
+          "gender": "female",
+          "subject": "biology",
+          "school": "Perth Modern School",
+          "city": "Perth",
+          "state": "WA",
+          "country": "AU",
+          "avatar": 91,
+          "isBot": true,
+          "role": "teacher",
+          "location": "Perth Modern School, WA",
+          "photo": "https://randomuser.me/api/portraits/women/91.jpg"
+        }
+      ]
+    }
+  }
+}

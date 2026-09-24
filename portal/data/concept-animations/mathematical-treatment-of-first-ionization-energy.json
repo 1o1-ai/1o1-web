@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-first-ionization-energy",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of First Ionization Energy",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of First Ionization Energy",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of First Ionization Energy.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a combination lock requires a precise sequence of numbers to open, atoms require a specific amount of energy to remove their first e…",
+    "Pause and restate what Mathematical Treatment of First Ionization Energy means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of First Ionization Energy: interlocking parts",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of First Ionization Energ</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mechanism</text><circle cx=\"220\" cy=\"190\" r=\"70\" fill=\"none\" stroke=\"#c084fc\" stroke-width=\"14\"/><circle cx=\"380\" cy=\"190\" r=\"50\" fill=\"none\" stroke=\"#f472b6\" stroke-width=\"12\"/><circle cx=\"220\" cy=\"190\" r=\"12\" fill=\"#a3e635\"/><circle cx=\"380\" cy=\"190\" r=\"10\" fill=\"#a3e635\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Input motion becomes output effect",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of First Ionization Energ</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">io</text><rect x=\"60\" y=\"150\" width=\"120\" height=\"70\" rx=\"8\" fill=\"#1e1230\" stroke=\"#c084fc\" stroke-width=\"2\"/><text x=\"120\" y=\"190\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">input</text><text x=\"230\" y=\"190\" text-anchor=\"middle\" fill=\"#f472b6\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><circle cx=\"320\" cy=\"185\" r=\"40\" fill=\"none\" stroke=\"#a3e635\" stroke-width=\"8\"/><text x=\"410\" y=\"190\" text-anchor=\"middle\" fill=\"#f472b6\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"450\" y=\"150\" width=\"130\" height=\"70\" rx=\"8\" fill=\"#1e1230\" stroke=\"#f472b6\" stroke-width=\"2\"/><text x=\"515\" y=\"190\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">output</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Mechanism of the idea",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of First Ionization Energ</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of First Ionization</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a combination lock requires a precise sequence of numbers to open, atoms require a",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of First Ionization Energ</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a combination lock requires a precise sequence o</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Mathematical Treatment of First Ionizati",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of First Ionization Energ</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#c084fc\" font-size=\"24\" font-family=\"Segoe UI,Arial\">parts → whole</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofFirstIonizationEnScene",
+    "notes": "Domain=general motif=family-11. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_first_ionization_energy.py ConceptScene"
+  },
+  "motif": "family-11",
+  "generated_by": "template-stem-v5-general-family-11",
+  "generated_at": "2026-07-12T22:35:01Z"
+}

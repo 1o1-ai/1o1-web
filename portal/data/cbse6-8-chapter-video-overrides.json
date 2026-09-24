@@ -1,0 +1,619 @@
+{
+  "version": 1,
+  "sku": "cbse6-8",
+  "note": "Per-chapter elevated YouTube video. Populate youtubeId per chapterId; the study-material renderer swaps wrongIds for the curated id.",
+  "overrides": {
+    "class6-english-fepr1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20english%20A%20Bottle%20of%20Dew%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-english-fepr2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20english%20The%20Unlikely%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-english-fepr3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20english%20Neem%20Baba%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-english-fepr4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20english%20Change%20of%20Heart%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-english-fepr5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20english%20Culture%20and%20Tradition%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-geah1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20And%20Hard-working.%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-geah2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20Delicious%20Twigs%20a%20Day.%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-geah3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20Crocodile%E2%80%99s%20Eating%20Habits.%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-geah4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20English%20%C2%B7%20Class%207%20%C2%B7%20Chapter%204%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-geah5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20And%20Honey.%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-geah6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20Him%20Home.%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-geah7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20Before%20You%20Read%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-gehc1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20Notes%20for%20the%20Teacher%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-gehc2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20Before%20You%20Read%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-gehc3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20Before%20You%20Read%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-gehc4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20The%20Ashes%20That%20Made%20Trees%20Bloom%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-gehc5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%2072/honeycomb%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-gehc6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%2086/honeycomb%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-gehc7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20100/honeycomb%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-english-gehc8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20english%20114/honeycomb%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-hehd1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20English%20%C2%B7%20Class%208%20%C2%B7%20Chapter%201%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-hehd2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Honeydew%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-hehd3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Before%20You%20Read%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-hehd4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Honeydew%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-hehd5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Honeydew72%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-hehd6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Before%20You%20Read%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-hehd7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20A%20Visit%20to%20Cambridge%2093%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-hehd8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Honeydew%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-heih1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Humans.%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-heih2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Before%20You%20Read%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-heih3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20English%20%C2%B7%20Class%208%20%C2%B7%20Chapter%203%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-heih4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Before%20You%20Read%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-heih5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Birthday.%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-heih6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20English%20%C2%B7%20Class%208%20%C2%B7%20Chapter%206%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-heih7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20Temptation.%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-english-heih8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20english%20It%20So%20Happened...66%206666%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-mathematics-fegp1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20mathematics%20Patterns%20in%20Mathematics%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-mathematics-fegp2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20mathematics%20Lines%20and%20Angles%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-mathematics-fegp3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20mathematics%20Number%20Play%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-mathematics-fegp4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20mathematics%20Data%20Handling%20and%20Presentation%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-mathematics-fegp5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20mathematics%20Prime%20Time%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-mathematics-fegp6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20mathematics%20Perimeter%20and%20Area%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-mathematics-fegp7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20mathematics%20Fractions%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-mathematics-fegp8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20mathematics%20Playing%20with%20Constructions%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-mathematics-fegp9": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20mathematics%20Symmetry%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-mathematics-fegp10": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20mathematics%20The%20Other%20Side%20of%20Zero%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-mathematics-gegp1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20mathematics%20A%20Lakh%20Varieties%21%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-mathematics-gegp2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20mathematics%20Simple%20Expressions%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-mathematics-gegp3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20mathematics%20The%20Need%20for%20Smaller%20Units%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-mathematics-gegp4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20mathematics%20The%20Notion%20of%20Letter-numbers%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-mathematics-gegp5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20mathematics%20Parallel%20and%20Intersecting%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-mathematics-gegp6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20mathematics%20Numbers%20Tell%20Us%20Things%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-mathematics-gegp7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20mathematics%20A%20Tale%20of%20Three%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-mathematics-gegp8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20mathematics%20Working%20with%20Fractions%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-mathematics-hegp1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20mathematics%20Mathematics%20%C2%B7%20Class%208%20%C2%B7%20Chapter%201%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-mathematics-hegp2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20mathematics%20Power%20Play%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-mathematics-hegp3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20mathematics%20A%20Story%20of%20Numbers%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-mathematics-hegp4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20mathematics%20Observe%20the%20Following%20Figures.%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-mathematics-hegp5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20mathematics%20Sum%20of%20Consecutive%20Numbers%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-mathematics-hegp6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20mathematics%20We%20Distribute%2C%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-mathematics-hegp7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20mathematics%20Observing%20Similarity%20in%20Change%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20The%20Wonderful%20World%20of%20Science%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20Diversity%20in%20the%20Living%20World%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20Mindful%20Eating%3A%20A%20Path%20to%20a%20Healthy%20Body%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20Exploring%20Magnets%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20Measurement%20of%20Length%20and%20Motion%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20Materials%20Around%20Us%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20Temperature%20and%20its%20Measurement%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20A%20Journey%20through%20States%20of%20Water%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu9": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20Methods%20of%20Separation%20in%20Everyday%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu10": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20Living%20Creatures%3A%20Exploring%20their%20Characteristics%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu11": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20Nature%27s%20Treasures%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-science-fecu12": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20science%20Beyond%20Earth%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Introduction%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Oceans%20and%20Continents%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Landforms%20and%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Timeline%20and%20Sources%20of%20History%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Sri%20Aurobindo%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20The%20Beginnings%20of%20Indian%20Civilisation%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20India%E2%80%99s%20Cultural%20Roots%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20%E2%80%98many%20in%20the%20One%E2%80%99%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees9": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Family%20and%20Community%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees10": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Grassroots%20Democracy%20%E2%80%93%20Part%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees11": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Grassroots%20Democracy%20%E2%80%93%20Part%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees12": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Grassroots%20Democracy%20%E2%80%93%20Part%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees13": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20The%20Value%20of%20Work%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees14": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Economic%20Activities%20Around%20Us%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class6-social-science-fees999": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%206%20social-science%20Glossary%20Glossary%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Geographical%20Diversity%20of%20India%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Understanding%20the%20Weather%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Climates%20of%20India%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20New%20Beginnings%3A%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Tapestry%20of%20the%20Past%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Tapestry%20of%20the%20Past%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Tapestry%20of%20the%20Past%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Our%20Cultural%20Heritage%20and%20Knowledge%20Traditions%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees9": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Governance%20and%20Democracy%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees10": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Governance%20and%20Democracy%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees11": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Economic%20Life%20Around%20Us%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees12": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Economic%20Life%20Around%20Us%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gees999": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Https%3A//pminewyork.gov.in/pdf/menu/political_map_of_india.pdf%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gess1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Equality%20in%20Indian%20Democracy%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gess2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Teacher%C2%92s%20Note%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gess3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gess4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Growing%20Up%20as%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gess5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gess6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gess7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-social-science-gess8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-social-science-hess1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-social-science-hess2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-social-science-hess3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-social-science-hess4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-social-science-hess5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-social-science-hess6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-social-science-hess7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-social-science-hess8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20social-science%20Social%20and%20Political%20Life%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Nutrition%20in%20Plants%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Nutrition%20in%20Animals%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Fibre%20to%20Fabric%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Heat%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Acids%2C%20Bases%20and%20Salts%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Physical%20and%20Chemical%20Changes%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Weather%2C%20Climate%20and%20Adaptations%20of%20Animals%20to%20Climate%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Winds%2C%20Storms%20and%20Cyclones%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep9": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Soil%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep10": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Respiration%20in%20Organisms%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep11": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Transportation%20in%20Animals%20and%20Plants%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep12": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Reproduction%20in%20Plants%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep13": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Motion%20and%20Time%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep14": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Electric%20Current%20and%20its%20Effects%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep15": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Light%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep16": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Water%3A%20A%20Precious%20Resource%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep17": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Forests%3A%20Our%20Lifeline%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class7-science-geep18": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%207%20science%20Wastewater%20Story%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep1": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Crop%20Production%20and%20Management%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep2": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Microorganisms%3A%20Friend%20and%20Foe%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep3": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Synthetic%20Fibres%20and%20Plastics%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep4": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Materials%3A%20Metals%20and%20Non-Metals%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep5": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Coal%20and%20Petroleum%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep6": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Combustion%20and%20Flame%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep7": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Conservation%20of%20Plants%20and%20Animals%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep8": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Cell%20%E2%80%94%20Structure%20and%20Functions%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep9": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Reproduction%20in%20Animals%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep10": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Reaching%20the%20Age%20of%20Adolescence%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep11": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Force%20and%20Pressure%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep12": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Friction%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep13": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Sound%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep14": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Chemical%20Effects%20of%20Electric%20Current%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep15": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Some%20Natural%20Phenomena%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep16": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Light%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep17": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Stars%20and%20the%20Solar%20System%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    },
+    "class8-science-heep18": {
+      "searchUrl": "https://www.youtube.com/results?search_query=CBSE%20Class%208%20science%20Pollution%20of%20Air%20and%20Water%20explained",
+      "reason": "pending — set YT_API_KEY to auto-embed the top video"
+    }
+  }
+}

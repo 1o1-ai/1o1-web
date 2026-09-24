@@ -1,0 +1,62 @@
+{
+  "slug": "inertia-and-mass",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Inertia and Mass",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Inertia and Mass",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Inertia and Mass.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just like how a car's airbag system relies on the concept of inertia and mass to deploy at the right moment, objects in motion tend to maint…",
+    "Pause and restate what Inertia and Mass means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Inertia and Mass: forces as arrows on a body",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Inertia and Mass</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mechanics</text><rect x=\"280\" y=\"160\" width=\"80\" height=\"70\" fill=\"#4ade80\"/><line x1=\"320\" y1=\"160\" x2=\"320\" y2=\"70\" stroke=\"#facc15\" stroke-width=\"5\"/><polygon points=\"320,70 308,95 332,95\" fill=\"#facc15\"/><text x=\"350\" y=\"90\" text-anchor=\"start\" fill=\"#facc15\" font-size=\"16\" font-family=\"Segoe UI,Arial\">F</text><line x1=\"320\" y1=\"230\" x2=\"320\" y2=\"310\" stroke=\"#2dd4bf\" stroke-width=\"5\"/><polygon points=\"320,310 308,285 332,285\" fill=\"#2dd4bf\"/><text x=\"350\" y=\"300\" text-anchor=\"start\" fill=\"#2dd4bf\" font-size=\"16\" font-family=\"Segoe UI,Arial\">mg</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Free-body diagram — name every force",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Inertia and Mass</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">FBD</text><circle cx=\"320\" cy=\"180\" r=\"40\" fill=\"#10251c\" stroke=\"#4ade80\" stroke-width=\"3\"/><line x1=\"320\" y1=\"140\" x2=\"320\" y2=\"70\" stroke=\"#facc15\" stroke-width=\"4\"/><line x1=\"360\" y1=\"180\" x2=\"480\" y2=\"180\" stroke=\"#2dd4bf\" stroke-width=\"4\"/><line x1=\"320\" y1=\"220\" x2=\"320\" y2=\"300\" stroke=\"#86efac\" stroke-width=\"4\"/><text x=\"320\" y=\"55\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"14\" font-family=\"Segoe UI,Arial\">N</text><text x=\"500\" y=\"185\" text-anchor=\"start\" fill=\"#2dd4bf\" font-size=\"14\" font-family=\"Segoe UI,Arial\">F</text><text x=\"340\" y=\"310\" text-anchor=\"middle\" fill=\"#86efac\" font-size=\"14\" font-family=\"Segoe UI,Arial\">W</text>"
+    },
+    {
+      "id": "core",
+      "caption": "ΣF = ma — unbalanced force changes motion",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Inertia and Mass</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">law</text><line x1=\"60\" y1=\"280\" x2=\"580\" y2=\"220\" stroke=\"#86efac\" stroke-width=\"6\"/><circle cx=\"180\" cy=\"240\" r=\"30\" fill=\"#4ade80\"/><line x1=\"180\" y1=\"240\" x2=\"280\" y2=\"180\" stroke=\"#facc15\" stroke-width=\"4\"/><text x=\"320\" y=\"80\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"26\" font-family=\"Segoe UI,Arial\">ΣF = m a</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just like how a cars airbag system relies on the concept of inertia and mass to deploy at ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Inertia and Mass</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><rect x=\"100\" y=\"160\" width=\"120\" height=\"70\" fill=\"#4ade80\"/><circle cx=\"130\" cy=\"250\" r=\"18\" fill=\"#86efac\"/><circle cx=\"190\" cy=\"250\" r=\"18\" fill=\"#86efac\"/><line x1=\"220\" y1=\"190\" x2=\"360\" y2=\"190\" stroke=\"#facc15\" stroke-width=\"5\"/><circle cx=\"400\" cy=\"170\" r=\"28\" fill=\"#2dd4bf\"/><text x=\"320\" y=\"310\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Just like how a cars airbag system relies on the concept</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: net force decides acceleration",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Inertia and Mass</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><rect x=\"100\" y=\"120\" width=\"440\" height=\"140\" rx=\"14\" fill=\"#10251c\" stroke=\"#facc15\" stroke-width=\"2\"/><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"32\" font-family=\"Segoe UI,Arial\">ΣF = m a</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "InertiaandMassScene",
+    "notes": "Domain=general motif=newton. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/inertia_and_mass.py ConceptScene"
+  },
+  "motif": "newton",
+  "generated_by": "template-stem-v5-general-newton",
+  "generated_at": "2026-07-12T22:34:59Z"
+}

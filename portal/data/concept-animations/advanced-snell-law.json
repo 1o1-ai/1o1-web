@@ -1,0 +1,62 @@
+{
+  "slug": "advanced-snell-law",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Advanced Snell Law",
+  "theme": "optics",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Advanced Snell Law",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Advanced Snell Law.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "The Advanced Snell Law is like the rulebook for fiber optic cables, dictating how light bends and changes direction as it passes from one me…",
+    "Pause and restate what Advanced Snell Law means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Advanced Snell Law: light bends at a boundary",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Snell Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">optics</text><rect x=\"0\" y=\"42\" width=\"640\" height=\"150\" fill=\"#2a1a0c\"/><rect x=\"0\" y=\"192\" width=\"640\" height=\"168\" fill=\"#7c2d12\"/><line x1=\"320\" y1=\"50\" x2=\"320\" y2=\"340\" stroke=\"#fdba74\" stroke-dasharray=\"6 6\" stroke-width=\"2\"/><line x1=\"120\" y1=\"70\" x2=\"320\" y2=\"192\" stroke=\"#fde68a\" stroke-width=\"4\"/><line x1=\"320\" y1=\"192\" x2=\"370\" y2=\"330\" stroke=\"#f97316\" stroke-width=\"4\"/><text x=\"40\" y=\"80\" text-anchor=\"start\" fill=\"#fdba74\" font-size=\"13\" font-family=\"Segoe UI,Arial\">air</text><text x=\"40\" y=\"320\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"13\" font-family=\"Segoe UI,Arial\">water</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Measure angles from the normal",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Snell Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">angles</text><rect x=\"0\" y=\"42\" width=\"640\" height=\"150\" fill=\"#2a1a0c\"/><rect x=\"0\" y=\"192\" width=\"640\" height=\"168\" fill=\"#7c2d12\"/><line x1=\"320\" y1=\"50\" x2=\"320\" y2=\"340\" stroke=\"#fdba74\" stroke-dasharray=\"6 6\" stroke-width=\"2\"/><line x1=\"100\" y1=\"80\" x2=\"320\" y2=\"192\" stroke=\"#fde68a\" stroke-width=\"4\"/><line x1=\"320\" y1=\"192\" x2=\"350\" y2=\"320\" stroke=\"#f97316\" stroke-width=\"4\"/><text x=\"180\" y=\"120\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"16\" font-family=\"Segoe UI,Arial\">θ1</text><text x=\"360\" y=\"280\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"16\" font-family=\"Segoe UI,Arial\">θ2</text>"
+    },
+    {
+      "id": "core",
+      "caption": "n1 sinθ1 = n2 sinθ2",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Snell Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">law</text><rect x=\"70\" y=\"100\" width=\"500\" height=\"160\" rx=\"14\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"2\"/><text x=\"320\" y=\"175\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"26\" font-family=\"Segoe UI,Arial\">n1 sin θ1 = n2 sin θ2</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">speed changes ⇒ direction pivots</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "The Advanced Snell Law is like the rulebook for fiber optic cables, dictating how light be",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Snell Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><rect x=\"60\" y=\"80\" width=\"520\" height=\"100\" fill=\"#2a1a0c\"/><rect x=\"60\" y=\"180\" width=\"520\" height=\"120\" fill=\"#7c2d12\"/><circle cx=\"140\" cy=\"130\" r=\"12\" fill=\"#fde68a\"/><circle cx=\"190\" cy=\"130\" r=\"12\" fill=\"#fde68a\"/><circle cx=\"240\" cy=\"130\" r=\"12\" fill=\"#fde68a\"/><circle cx=\"290\" cy=\"230\" r=\"12\" fill=\"#fde68a\"/><circle cx=\"340\" cy=\"230\" r=\"12\" fill=\"#fde68a\"/><circle cx=\"390\" cy=\"230\" r=\"12\" fill=\"#fde68a\"/><circle cx=\"440\" cy=\"230\" r=\"12\" fill=\"#fde68a\"/><text x=\"320\" y=\"330\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"13\" font-family=\"Segoe UI,Arial\">The Advanced Snell Law is like the rulebook for fiber op</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember Snell's law at every boundary",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Snell Law</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"28\" font-family=\"Segoe UI,Arial\">n1 sinθ1 = n2 sinθ2</text><text x=\"320\" y=\"240\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Advanced Snell Law</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AdvancedSnellLawScene",
+    "notes": "Domain=optics motif=snell. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/advanced_snell_law.py ConceptScene"
+  },
+  "motif": "snell",
+  "generated_by": "template-stem-v5-optics-snell",
+  "generated_at": "2026-07-12T22:34:27Z"
+}

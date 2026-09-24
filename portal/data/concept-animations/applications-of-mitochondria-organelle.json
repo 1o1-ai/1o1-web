@@ -1,0 +1,62 @@
+{
+  "slug": "applications-of-mitochondria-organelle",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Applications of Mitochondria Organelle",
+  "theme": "biology",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Applications of Mitochondria Organelle",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Applications of Mitochondria Organelle.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Mitochondria function like power plants in a city, converting fuel (food) into usable energy (ATP) that powers every cellular process, just …",
+    "Pause and restate what Applications of Mitochondria Organelle means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Applications of Mitochondria Organelle: food → usable energy",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Mitochondria Organelle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">biology</text><rect x=\"70\" y=\"120\" width=\"140\" height=\"90\" rx=\"10\" fill=\"#fde68a\"/><text x=\"140\" y=\"170\" text-anchor=\"middle\" fill=\"#1a1008\" font-size=\"14\" font-family=\"Segoe UI,Arial\">glucose</text><text x=\"240\" y=\"170\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"22\" font-family=\"Segoe UI,Arial\">+</text><circle cx=\"300\" cy=\"165\" r=\"28\" fill=\"#fb923c\"/><text x=\"300\" y=\"170\" text-anchor=\"middle\" fill=\"#1a1008\" font-size=\"14\" font-family=\"Segoe UI,Arial\">O2</text><text x=\"360\" y=\"170\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"22\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"400\" y=\"120\" width=\"170\" height=\"90\" rx=\"10\" fill=\"#f97316\"/><text x=\"485\" y=\"170\" text-anchor=\"middle\" fill=\"#052e16\" font-size=\"13\" font-family=\"Segoe UI,Arial\">ATP + CO2</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Mitochondrion: power station of the cell",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Mitochondria Organelle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">organelle</text><ellipse cx=\"320\" cy=\"190\" rx=\"180\" ry=\"90\" fill=\"#7c2d12\" stroke=\"#f97316\" stroke-width=\"4\"/><path d=\"M180 190 Q240 140, 300 190 T420 190 T480 190\" fill=\"none\" stroke=\"#fde68a\" stroke-width=\"4\"/><text x=\"320\" y=\"310\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"13\" font-family=\"Segoe UI,Arial\">inner membrane folds</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Glycolysis → Krebs → ETC",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Mitochondria Organelle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">stages</text><rect x=\"50\" y=\"140\" width=\"150\" height=\"80\" rx=\"8\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"2\"/><text x=\"125\" y=\"185\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"13\" font-family=\"Segoe UI,Arial\">glycolysis</text><text x=\"220\" y=\"185\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"20\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"250\" y=\"140\" width=\"140\" height=\"80\" rx=\"8\" fill=\"#2a1a0c\" stroke=\"#f97316\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Krebs</text><text x=\"410\" y=\"185\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"20\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"440\" y=\"140\" width=\"150\" height=\"80\" rx=\"8\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"2\"/><text x=\"515\" y=\"185\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"13\" font-family=\"Segoe UI,Arial\">ETC / ATP</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Mitochondria function like power plants in a city, converting fuel (food) into usable ener",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Mitochondria Organelle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mitochondria function like power plants in a city, conve</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Applications of Mitochondria Organelle",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Mitochondria Organelle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"22\" font-family=\"Segoe UI,Arial\">glucose + O2 → ATP</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ApplicationsofMitochondriaOrganelleScene",
+    "notes": "Domain=biology motif=respiration. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/applications_of_mitochondria_organelle.py ConceptScene"
+  },
+  "motif": "respiration",
+  "generated_by": "template-stem-v5-biology-respiration",
+  "generated_at": "2026-07-12T22:34:45Z"
+}

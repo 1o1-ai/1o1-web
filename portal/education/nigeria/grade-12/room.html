@@ -1,0 +1,166 @@
+<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Study Room · Brahmexa Anyo Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/theme.css?v=saas-layout-19" />
+  <link rel="stylesheet" href="/assets/landing.css?v=saas-layout-12" />
+  <link rel="stylesheet" href="/portal/assets/portal.css?v=11" />
+  <link rel="stylesheet" href="/portal/assets/education-layout.css" />
+  <link rel="stylesheet" href="/portal/education/cbse10/cbse10-study-room.css?v=anim4" />
+  <link rel="stylesheet" href="/portal/assets/cbse-official-books.css?v=3" />
+</head>
+<body class="portal-page study-room-page student-ambience education-compact education-ambient" data-world-track="1">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="lamp-glow" aria-hidden="true"></div>
+
+  <header class="portal-header" id="mainHeader">
+    <a class="back-link" href="index.html">← Hub</a>
+    <a href="/portal/education/index.html" class="universe-top-brand" style="text-decoration: none; text-align: center; flex: 1;">
+      <strong>Brahmexa</strong>
+      <span style="display: block; font-size: 0.7rem; color: var(--cyan-light);">Anyo Academy</span>
+    </a>
+    <span class="sr-open-badge">Open</span>
+  </header>
+
+  <div id="cornerOrbs" class="sr-corner-orbs hidden" aria-hidden="true"></div>
+
+  <main class="portal-main sr-main">
+    <section id="phaseSubject" class="sr-phase sr-phase-subject">
+      <div id="srLoadError" class="sr-load-error hidden" role="alert"></div>
+      <p class="sr-phase-lead">Choose your subject</p>
+      <div class="sr-subject-circles" id="subjectCircles"></div>
+    </section>
+
+    <section id="phaseChapter" class="sr-phase hidden">
+      <p class="sr-phase-lead" id="chapterPhaseLead">Select <strong>one</strong> chapter</p>
+      <div class="sr-chapter-grid" id="chapterGrid"></div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backToSubject">← Change subject</button>
+    </section>
+
+    <section id="phaseStudy" class="sr-phase hidden">
+      <div class="cbse-study-header">
+        <h2 id="studyHubTitle">Chapter</h2>
+        <p id="studyHubSubtitle" class="sr-chapter-meta"></p>
+      </div>
+      <div id="studyTabBar"></div>
+      <div id="studyTabPanel"></div>
+      <div id="studyPracticeEmbed" class="cbse-practice-embed hidden"></div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backFromStudy">← Change chapter</button>
+    </section>
+
+    <section id="phaseIntent" class="sr-phase hidden" hidden aria-hidden="true">
+      <p class="sr-phase-lead" id="intentChapterLabel">Chapter</p>
+      <div class="sr-intent-circles">
+        <button type="button" class="sr-intent-card" id="btnLearn">
+          <span class="sr-intent-icon">📚</span>
+          <strong>Learn</strong>
+          <small>Study material &amp; explanations</small>
+        </button>
+        <button type="button" class="sr-intent-card primary" id="btnEvaluate">
+          <span class="sr-intent-icon">✅</span>
+          <strong>Evaluate</strong>
+          <small>Test your prep — one question at a time</small>
+        </button>
+      </div>
+      <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backToChapter">← Change chapter</button>
+    </section>
+
+    <section id="phaseLearn" class="sr-phase hidden">
+      <div class="sr-learn-layout">
+        <div class="sr-learn-main">
+          <div class="sr-eval-header">
+            <h2 id="learnTitle">Chapter</h2>
+            <p id="learnSubtitle" class="sr-chapter-meta">Chapter study guide</p>
+          </div>
+          <div id="learnContent" class="sr-learn-content">
+            <p class="sr-eval-hint">Loading study material…</p>
+          </div>
+          <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backFromLearn">← Back</button>
+        </div>
+        <aside class="sr-students-panel">
+          <h3>Students online</h3>
+          <p class="sr-students-hint">Classmates in study rooms now</p>
+          <ul id="learnStudentsRoster" class="sr-students-list"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="phaseEvaluate" class="sr-phase hidden">
+      <div class="sr-eval-layout">
+        <div class="sr-eval-main">
+          <div class="sr-eval-header">
+            <h2 id="evalTitle">Chapter</h2>
+            <p id="evalSubtitle" class="sr-chapter-meta"></p>
+          </div>
+
+          <div class="sr-question-source">
+            <label class="sr-radio"><input type="radio" name="qSource" value="official" checked /> Board-style questions</label>
+            <label class="sr-radio"><input type="radio" name="qSource" value="ai" /> Extended practice</label>
+            <label class="sr-diff-label">Difficulty
+              <select id="difficultySelect">
+                <option value="all">All levels</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="difficult">Difficult</option>
+              </select>
+            </label>
+            <button type="button" class="btn-portal btn-portal-ghost" id="btnReloadQueue" style="margin-left:auto">Refresh questions</button>
+          </div>
+
+          <div class="sr-eval-chat" id="evalChat">
+            <p class="sr-eval-hint">Questions appear here one at a time. Answer each, then use <strong>Next question</strong>. Scoring only when you press <strong>Evaluate</strong>.</p>
+          </div>
+
+          <div class="sr-eval-actions">
+            <button type="button" class="btn-portal btn-portal-ghost" id="btnNextQuestion">Next question</button>
+            <button type="button" class="btn-portal btn-portal-primary" id="btnEvaluateSubmit">Evaluate my answers</button>
+          </div>
+          <div id="evalResults" class="sr-results hidden" aria-live="polite"></div>
+          <p class="sr-distraction" id="distractionStats">Focus: 100% · Session: 0:00 · Tab away: 0 · Answered: 0</p>
+          <button type="button" class="btn-portal btn-portal-ghost sr-back-btn" id="backFromEvaluate">← Back</button>
+        </div>
+
+        <aside class="sr-students-panel">
+          <h3>Students online</h3>
+          <p class="sr-students-hint">Classmates in study rooms now</p>
+          <ul id="studentsRoster" class="sr-students-list"></ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="evalModal" class="sr-modal">
+    <form method="dialog">
+      <h3>Submit for evaluation</h3>
+      <p>Choose how to grade your answer sheet (<span id="evalAnswerCount">0</span> responses).</p>
+      <div class="sr-eval-choices">
+        <label><input type="radio" name="evalMode" value="computer" checked /> Computer (catalog + AI scoring)</label>
+        <label><input type="radio" name="evalMode" value="teacher" /> Real teacher (forum queue)</label>
+        <label><input type="radio" name="evalMode" value="both" /> Both</label>
+      </div>
+      <div class="sr-modal-actions">
+        <button type="button" class="btn-portal btn-portal-ghost" id="evalCancel">Cancel</button>
+        <button type="submit" class="btn-portal btn-portal-primary" id="evalConfirm">Submit</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/assets/cosmic.js?v=brand-phase4-1"></script>
+  <script src="/portal/assets/education-ambient.js"></script>
+  <script
+    src="/portal/education/assets/anyo-education-bootstrap.js?v=4"
+    data-page-scripts="/portal/education/assets/education-hub-common.js?v=13,/portal/assets/bots.js,/portal/assets/question-format.js?v=6,/portal/assets/reference-answer.js?v=3,/portal/assets/education-perf.js?v=1,/portal/assets/education-content-cache.js?v=1,/portal/assets/education-deterministic-grade.js?v=1,/portal/assets/cbse10-shared.js?v=16,/portal/assets/diagram-vector.js,/portal/assets/cbse10-eval-store.js?v=2,/portal/assets/cbse10-tutor-api.js?v=8,/portal/assets/world-study-material.js?v=9,/portal/assets/cbse-voice-engine.js?v=4,/portal/assets/cbse-lecture-flow.js?v=2,/portal/assets/cbse-official-books.js?v=7,/portal/assets/chapter-concepts.js?v=12,/portal/assets/cbse-study-hub.js?v=22,/portal/assets/answer-composer.js,/portal/education/cbse10/cbse10-room.js?v=19"
+  ></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{
+  "slug": "applications-of-gas-laws",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Applications of Gas Laws",
+  "theme": "thermo",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Applications of Gas Laws",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Applications of Gas Laws.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just like a bicycle pump compresses air into a smaller space when you push the handle, gas laws explain how gases behave under pressure, vol…",
+    "Pause and restate what Applications of Gas Laws means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Applications of Gas Laws: particles jiggle with temperature",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Gas Laws</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">thermo</text><circle cx=\"127\" cy=\"90\" r=\"6\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"200\" cy=\"143\" r=\"7\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"273\" cy=\"196\" r=\"8\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"346\" cy=\"249\" r=\"9\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"419\" cy=\"122\" r=\"10\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"492\" cy=\"175\" r=\"11\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"145\" cy=\"228\" r=\"6\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"218\" cy=\"101\" r=\"7\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"291\" cy=\"154\" r=\"8\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"364\" cy=\"207\" r=\"9\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"437\" cy=\"260\" r=\"10\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"510\" cy=\"133\" r=\"11\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"163\" cy=\"186\" r=\"6\" fill=\"#fbbf24\" opacity=\"0.85\"/><circle cx=\"236\" cy=\"239\" r=\"7\" fill=\"#fbbf24\" opacity=\"0.85\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Heat flows hot → cold",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Gas Laws</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">flow</text><rect x=\"70\" y=\"100\" width=\"200\" height=\"160\" fill=\"#ef4444\" opacity=\"0.9\"/><text x=\"170\" y=\"185\" text-anchor=\"middle\" fill=\"white\" font-size=\"20\" font-family=\"Segoe UI,Arial\">HOT</text><rect x=\"370\" y=\"100\" width=\"200\" height=\"160\" fill=\"#3b82f6\" opacity=\"0.9\"/><text x=\"470\" y=\"185\" text-anchor=\"middle\" fill=\"white\" font-size=\"20\" font-family=\"Segoe UI,Arial\">COLD</text><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"32\" font-family=\"Segoe UI,Arial\">→</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Energy conservation still rules",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Gas Laws</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">energy</text><rect x=\"90\" y=\"110\" width=\"460\" height=\"150\" rx=\"14\" fill=\"#111827\" stroke=\"#38bdf8\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"20\" font-family=\"Segoe UI,Arial\">Q = m c ΔT  (when useful)</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just like a bicycle pump compresses air into a smaller space when you push the handle, gas",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Gas Laws</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just like a bicycle pump compresses air into a smaller s</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Applications of Gas Laws",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Gas Laws</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#34d399\" font-size=\"22\" font-family=\"Segoe UI,Arial\">hot → cold until equal</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ApplicationsofGasLawsScene",
+    "notes": "Domain=thermo motif=heat. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/applications_of_gas_laws.py ConceptScene"
+  },
+  "motif": "heat",
+  "generated_by": "template-stem-v5-thermo-heat",
+  "generated_at": "2026-07-12T22:34:40Z"
+}

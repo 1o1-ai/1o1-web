@@ -1,0 +1,125 @@
+{
+  "sku": "cbse6-8",
+  "generated_at": "2026-07-14T23:29:43.814105+00:00",
+  "books": [
+    {
+      "code": "fepr",
+      "subject": "english",
+      "grade": "6",
+      "title": "Poorvi (English)",
+      "category": "textbook"
+    },
+    {
+      "code": "feep",
+      "subject": "mathematics",
+      "grade": "6",
+      "title": "Exemplar",
+      "category": "exemplar"
+    },
+    {
+      "code": "fegp",
+      "subject": "mathematics",
+      "grade": "6",
+      "title": "Ganita Prakash",
+      "category": "textbook"
+    },
+    {
+      "code": "fecu",
+      "subject": "science",
+      "grade": "6",
+      "title": "Curiosity (Science)",
+      "category": "textbook"
+    },
+    {
+      "code": "fees",
+      "subject": "social-science",
+      "grade": "6",
+      "title": "Social Science",
+      "category": "textbook"
+    },
+    {
+      "code": "geah",
+      "subject": "english",
+      "grade": "7",
+      "title": "An Alien Hand",
+      "category": "textbook"
+    },
+    {
+      "code": "gehc",
+      "subject": "english",
+      "grade": "7",
+      "title": "Honeycomb",
+      "category": "textbook"
+    },
+    {
+      "code": "gegp",
+      "subject": "mathematics",
+      "grade": "7",
+      "title": "Ganita Prakash",
+      "category": "textbook"
+    },
+    {
+      "code": "gemp",
+      "subject": "mathematics",
+      "grade": "7",
+      "title": "Mathematics",
+      "category": "exemplar"
+    },
+    {
+      "code": "geep",
+      "subject": "science",
+      "grade": "7",
+      "title": "Exemplar (Science)",
+      "category": "exemplar"
+    },
+    {
+      "code": "gees",
+      "subject": "social-science",
+      "grade": "7",
+      "title": "Our Environment",
+      "category": "textbook"
+    },
+    {
+      "code": "gess",
+      "subject": "social-science",
+      "grade": "7",
+      "title": "Social Science",
+      "category": "textbook"
+    },
+    {
+      "code": "hehd",
+      "subject": "english",
+      "grade": "8",
+      "title": "Honeydew",
+      "category": "textbook"
+    },
+    {
+      "code": "heih",
+      "subject": "english",
+      "grade": "8",
+      "title": "It So Happened",
+      "category": "textbook"
+    },
+    {
+      "code": "heep",
+      "subject": "mathematics",
+      "grade": "8",
+      "title": "Exemplar",
+      "category": "exemplar"
+    },
+    {
+      "code": "hegp",
+      "subject": "mathematics",
+      "grade": "8",
+      "title": "Ganita Prakash",
+      "category": "textbook"
+    },
+    {
+      "code": "hess",
+      "subject": "social-science",
+      "grade": "8",
+      "title": "Social Science",
+      "category": "textbook"
+    }
+  ]
+}

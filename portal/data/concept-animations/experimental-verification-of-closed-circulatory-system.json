@@ -1,0 +1,62 @@
+{
+  "slug": "experimental-verification-of-closed-circulatory-system",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Experimental Verification of Closed Circulatory System",
+  "theme": "biology",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Experimental Verification of Closed Circulatory System",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Experimental Verification of Closed Circulatory System.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a city's water supply system uses a network of pipes to distribute water throughout the city, an animal's closed circulatory system …",
+    "Pause and restate what Experimental Verification of Closed Circulatory System means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Experimental Verification of Closed Circulatory System: compare two cases",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Closed Circulatory </text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">compare</text><rect x=\"60\" y=\"90\" width=\"240\" height=\"200\" rx=\"14\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"3\"/><rect x=\"340\" y=\"90\" width=\"240\" height=\"200\" rx=\"14\" fill=\"#7c2d12\" stroke=\"#fde68a\" stroke-width=\"3\"/><text x=\"180\" y=\"180\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Case A</text><text x=\"460\" y=\"180\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Case B</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Spot what changes vs what stays",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Closed Circulatory </text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">diff</text><rect x=\"80\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#f97316\" opacity=\"0.35\"/><rect x=\"240\" y=\"120\" width=\"160\" height=\"140\" rx=\"10\" fill=\"#fde68a\" opacity=\"0.45\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#fb923c\" opacity=\"0.35\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">overlap = shared rule</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Decision rule",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Closed Circulatory </text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><polygon points=\"320,90 500,280 140,280\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"3\"/><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Experimental Verification of Closed </text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a citys water supply system uses a network of pipes to distribute water throughout",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Closed Circulatory </text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a citys water supply system uses a network of pi</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Experimental Verification of Closed Circ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Closed Circulatory </text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"24\" font-family=\"Segoe UI,Arial\">A vs B → rule</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ExperimentalVerificationofClosedCirculatScene",
+    "notes": "Domain=biology motif=family-2. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/experimental_verification_of_closed_circulatory_system.py ConceptScene"
+  },
+  "motif": "family-2",
+  "generated_by": "template-stem-v5-biology-family-2",
+  "generated_at": "2026-07-12T22:34:55Z"
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "applications-of-center-of-mass",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Applications of Center of Mass",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Applications of Center of Mass",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Applications of Center of Mass.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "The concept of center of mass is crucial in designing playground equipment like seesaws. By positioning the fulcrum at the center of mass of…",
+    "Pause and restate what Applications of Center of Mass means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Applications of Center of Mass: keep both sides equal",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Center of Mass</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">balance</text><line x1=\"120\" y1=\"200\" x2=\"520\" y2=\"200\" stroke=\"#86efac\" stroke-width=\"8\"/><line x1=\"320\" y1=\"200\" x2=\"320\" y2=\"280\" stroke=\"#4ade80\" stroke-width=\"8\"/><rect x=\"140\" y=\"140\" width=\"100\" height=\"55\" fill=\"#facc15\"/><rect x=\"400\" y=\"140\" width=\"100\" height=\"55\" fill=\"#2dd4bf\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Same operation on both sides",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Center of Mass</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">ops</text><text x=\"320\" y=\"140\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"28\" font-family=\"Segoe UI,Arial\">L = R</text><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"22\" font-family=\"Segoe UI,Arial\">L − a = R − a</text><text x=\"320\" y=\"260\" text-anchor=\"middle\" fill=\"#2dd4bf\" font-size=\"16\" font-family=\"Segoe UI,Arial\">still equal</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Arrive at the unknown",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Center of Mass</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"120\" y=\"120\" width=\"400\" height=\"140\" rx=\"12\" fill=\"#10251c\" stroke=\"#4ade80\" stroke-width=\"2\"/><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Applications of Center of Mass</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "The concept of center of mass is crucial in designing playground equipment like seesaws. B",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Center of Mass</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"15\" font-family=\"Segoe UI,Arial\">The concept of center of mass is crucial in designing pl</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Applications of Center of Mass",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Center of Mass</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"24\" font-family=\"Segoe UI,Arial\">balance always</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ApplicationsofCenterofMassScene",
+    "notes": "Domain=general motif=family-7. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/applications_of_center_of_mass.py ConceptScene"
+  },
+  "motif": "family-7",
+  "generated_by": "template-stem-v5-general-family-7",
+  "generated_at": "2026-07-12T22:34:36Z"
+}

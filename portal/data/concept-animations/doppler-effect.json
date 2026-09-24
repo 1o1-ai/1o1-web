@@ -1,0 +1,62 @@
+{
+  "slug": "doppler-effect",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Doppler Effect",
+  "theme": "waves",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Doppler Effect",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Doppler Effect.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Imagine the ambulance siren as a wave-making machine: when it moves toward you, the sound waves get squished together like a compressed spri…",
+    "Pause and restate what Doppler Effect means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Doppler Effect: energy travels as a wave",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Doppler Effect</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">waves</text><path d=\"M40 190 Q120 115, 200 190 T360 190 T520 190 T600 190\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"4\"/><line x1=\"40\" y1=\"190\" x2=\"600\" y2=\"190\" stroke=\"#94a3b8\" stroke-dasharray=\"4 4\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Label amplitude and wavelength",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Doppler Effect</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">parts</text><path d=\"M60 200 Q140 125, 220 200 T380 200 T540 200\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"4\"/><line x1=\"140\" y1=\"125\" x2=\"140\" y2=\"200\" stroke=\"#fbbf24\" stroke-width=\"2\"/><text x=\"155\" y=\"115\" text-anchor=\"start\" fill=\"#fbbf24\" font-size=\"14\" font-family=\"Segoe UI,Arial\">A</text><line x1=\"140\" y1=\"250\" x2=\"300\" y2=\"250\" stroke=\"#38bdf8\" stroke-width=\"2\"/><text x=\"220\" y=\"275\" text-anchor=\"middle\" fill=\"#38bdf8\" font-size=\"16\" font-family=\"Segoe UI,Arial\">λ</text>"
+    },
+    {
+      "id": "core",
+      "caption": "v = f λ links speed, frequency, wavelength",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Doppler Effect</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">equation</text><rect x=\"100\" y=\"120\" width=\"440\" height=\"140\" rx=\"14\" fill=\"#111827\" stroke=\"#fbbf24\" stroke-width=\"2\"/><text x=\"320\" y=\"195\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"32\" font-family=\"Segoe UI,Arial\">v = f × λ</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Imagine the ambulance siren as a wave-making machine: when it moves toward you, the sound ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Doppler Effect</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><circle cx=\"100\" cy=\"255\" r=\"18\" fill=\"#38bdf8\"/><circle cx=\"170\" cy=\"142\" r=\"18\" fill=\"#38bdf8\"/><circle cx=\"240\" cy=\"255\" r=\"18\" fill=\"#38bdf8\"/><circle cx=\"310\" cy=\"142\" r=\"18\" fill=\"#38bdf8\"/><circle cx=\"380\" cy=\"255\" r=\"18\" fill=\"#38bdf8\"/><circle cx=\"450\" cy=\"142\" r=\"18\" fill=\"#38bdf8\"/><circle cx=\"520\" cy=\"255\" r=\"18\" fill=\"#38bdf8\"/><text x=\"320\" y=\"320\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">Imagine the ambulance siren as a wave-making machine: wh</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember wave measures",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Doppler Effect</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#34d399\" font-size=\"26\" font-family=\"Segoe UI,Arial\">A · f · λ · v</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "DopplerEffectScene",
+    "notes": "Domain=waves motif=wave. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/doppler_effect.py ConceptScene"
+  },
+  "motif": "wave",
+  "generated_by": "template-stem-v5-waves-wave",
+  "generated_at": "2026-07-12T22:34:53Z"
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "advanced-structural-isomerism",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Advanced Structural Isomerism",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Advanced Structural Isomerism",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Advanced Structural Isomerism.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as the same LEGO pieces can form entirely different structures depending on how they’re connected, advanced structural isomers are mole…",
+    "Pause and restate what Advanced Structural Isomerism means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Advanced Structural Isomerism: flow through a system",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Structural Isomerism</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">flow</text><path d=\"M60 180 C160 80, 260 280, 360 160 S520 80, 600 200\" fill=\"none\" stroke=\"#67e8f9\" stroke-width=\"10\"/><polygon points=\"560,180 530,160 530,200\" fill=\"#fcd34d\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Constraints change the rate",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Structural Isomerism</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">constraint</text><rect x=\"80\" y=\"140\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#132033\" stroke=\"#5eead4\" stroke-width=\"2\"/><rect x=\"280\" y=\"160\" width=\"80\" height=\"40\" fill=\"#fcd34d\"/><rect x=\"400\" y=\"140\" width=\"160\" height=\"80\" rx=\"8\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><text x=\"320\" y=\"280\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">narrow section slows flow</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Conservation along the path",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Structural Isomerism</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><text x=\"320\" y=\"170\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Advanced Structural Isomerism</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">what enters must be accounted</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as the same LEGO pieces can form entirely different structures depending on how they’",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Structural Isomerism</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as the same LEGO pieces can form entirely different</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Advanced Structural Isomerism",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Structural Isomerism</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#67e8f9\" font-size=\"24\" font-family=\"Segoe UI,Arial\">flow + limits</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AdvancedStructuralIsomerismScene",
+    "notes": "Domain=general motif=family-8. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/advanced_structural_isomerism.py ConceptScene"
+  },
+  "motif": "family-8",
+  "generated_by": "template-stem-v5-general-family-8",
+  "generated_at": "2026-07-12T22:34:28Z"
+}

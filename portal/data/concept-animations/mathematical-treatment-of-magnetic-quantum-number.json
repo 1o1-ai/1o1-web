@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-magnetic-quantum-number",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Magnetic Quantum Number",
+  "theme": "magnetism",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Magnetic Quantum Number",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Magnetic Quantum Number.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Imagine an atom’s electron orbitals as floors in a parking garage, where each floor (principal quantum number) has sections (angular momentu…",
+    "Pause and restate what Mathematical Treatment of Magnetic Quantum Number means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Magnetic Quantum Number: nucleus + electron shells",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Magnetic Quantum Numbe</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">atomic</text><circle cx=\"320\" cy=\"190\" r=\"28\" fill=\"#fbbf24\"/><ellipse cx=\"320\" cy=\"190\" rx=\"90\" ry=\"45\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"2\"/><ellipse cx=\"320\" cy=\"190\" rx=\"150\" ry=\"75\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"2\"/><circle cx=\"410\" cy=\"190\" r=\"9\" fill=\"#38bdf8\"/><circle cx=\"180\" cy=\"210\" r=\"9\" fill=\"#34d399\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Energy levels — electrons jump floors",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Magnetic Quantum Numbe</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><line x1=\"140\" y1=\"280\" x2=\"500\" y2=\"280\" stroke=\"#94a3b8\" stroke-width=\"3\"/><line x1=\"140\" y1=\"200\" x2=\"500\" y2=\"200\" stroke=\"#38bdf8\" stroke-width=\"3\"/><line x1=\"140\" y1=\"120\" x2=\"500\" y2=\"120\" stroke=\"#34d399\" stroke-width=\"3\"/><line x1=\"300\" y1=\"280\" x2=\"300\" y2=\"120\" stroke=\"#fbbf24\" stroke-width=\"3\"/><text x=\"320\" y=\"100\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"16\" font-family=\"Segoe UI,Arial\">ΔE = h f</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Absorb photon → jump up; emit → fall down",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Magnetic Quantum Numbe</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">photon</text><circle cx=\"200\" cy=\"200\" r=\"40\" fill=\"#fbbf24\"/><path d=\"M260 200 Q340 100, 420 200\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"3\"/><circle cx=\"460\" cy=\"120\" r=\"16\" fill=\"#34d399\"/><text x=\"460\" y=\"90\" text-anchor=\"middle\" fill=\"#34d399\" font-size=\"12\" font-family=\"Segoe UI,Arial\">photon</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Imagine an atom’s electron orbitals as floors in a parking garage, where each floor (princ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Magnetic Quantum Numbe</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Imagine an atom’s electron orbitals as floors in a parki</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Mathematical Treatment of Magnetic Quant",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Magnetic Quantum Numbe</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#38bdf8\" font-size=\"22\" font-family=\"Segoe UI,Arial\">shells · jumps · photons</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofMagneticQuantumNuScene",
+    "notes": "Domain=magnetism motif=atom. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_magnetic_quantum_number.py ConceptScene"
+  },
+  "motif": "atom",
+  "generated_by": "template-stem-v5-magnetism-atom",
+  "generated_at": "2026-07-12T22:35:03Z"
+}

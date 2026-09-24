@@ -1,0 +1,17 @@
+/* CBSE Classes 6-8 — subject portal accents (shared study-room-portals.css) */
+@import url('/portal/assets/study-room-portals.css?v=10');
+
+.sr-chapter-pick small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.sr-grade-heading {
+  margin: 18px 0 6px;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}

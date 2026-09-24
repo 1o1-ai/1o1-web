@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-lewis-theory",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Lewis Theory",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Lewis Theory",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Lewis Theory.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as trade negotiators use mathematical models to quantify invisible factors like political leverage, market demand, or hidden risks to p…",
+    "Pause and restate what Mathematical Treatment of Lewis Theory means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Lewis Theory: atoms stick by sharing/transfer",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Lewis Theory</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">chemistry</text><circle cx=\"200\" cy=\"190\" r=\"45\" fill=\"#67e8f9\"/><text x=\"200\" y=\"196\" text-anchor=\"middle\" fill=\"#0b1520\" font-size=\"20\" font-family=\"Segoe UI,Arial\">A</text><circle cx=\"440\" cy=\"190\" r=\"45\" fill=\"#fcd34d\"/><text x=\"440\" y=\"196\" text-anchor=\"middle\" fill=\"#0b1520\" font-size=\"20\" font-family=\"Segoe UI,Arial\">B</text><line x1=\"245\" y1=\"190\" x2=\"395\" y2=\"190\" stroke=\"#5eead4\" stroke-width=\"6\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Ionic transfer vs covalent share",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Lewis Theory</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">types</text><rect x=\"60\" y=\"100\" width=\"240\" height=\"160\" rx=\"12\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><text x=\"180\" y=\"160\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"18\" font-family=\"Segoe UI,Arial\">ionic</text><text x=\"180\" y=\"200\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">electron transfer</text><rect x=\"340\" y=\"100\" width=\"240\" height=\"160\" rx=\"12\" fill=\"#132033\" stroke=\"#5eead4\" stroke-width=\"2\"/><text x=\"460\" y=\"160\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"18\" font-family=\"Segoe UI,Arial\">covalent</text><text x=\"460\" y=\"200\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">electron share</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Lewis / VSEPR shapes follow electron pairs",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Lewis Theory</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">shape</text><circle cx=\"320\" cy=\"190\" r=\"30\" fill=\"#67e8f9\"/><circle cx=\"427\" cy=\"203\" r=\"18\" fill=\"#fcd34d\"/><circle cx=\"247\" cy=\"242\" r=\"18\" fill=\"#fcd34d\"/><circle cx=\"233\" cy=\"148\" r=\"18\" fill=\"#fcd34d\"/><circle cx=\"371\" cy=\"129\" r=\"18\" fill=\"#fcd34d\"/><text x=\"320\" y=\"320\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">pairs repel → geometry</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as trade negotiators use mathematical models to quantify invisible factors like polit",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Lewis Theory</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as trade negotiators use mathematical models to qua</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Mathematical Treatment of Lewis Theory",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Lewis Theory</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#67e8f9\" font-size=\"24\" font-family=\"Segoe UI,Arial\">share or transfer</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofLewisTheoryScene",
+    "notes": "Domain=general motif=bond. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_lewis_theory.py ConceptScene"
+  },
+  "motif": "bond",
+  "generated_by": "template-stem-v5-general-bond",
+  "generated_at": "2026-07-12T22:35:03Z"
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "experimental-verification-of-cell-wall",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Experimental Verification of Cell Wall",
+  "theme": "biology",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Experimental Verification of Cell Wall",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Experimental Verification of Cell Wall.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as architects use various techniques to verify the strength and composition of load-bearing walls in a building, scientists use experim…",
+    "Pause and restate what Experimental Verification of Cell Wall means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Experimental Verification of Cell Wall: structure inside a living cell",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Cell Wall</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">biology</text><ellipse cx=\"320\" cy=\"200\" rx=\"200\" ry=\"120\" fill=\"#164e63\" stroke=\"#5eead4\" stroke-width=\"4\"/><circle cx=\"320\" cy=\"200\" r=\"50\" fill=\"#67e8f9\"/><text x=\"320\" y=\"205\" text-anchor=\"middle\" fill=\"#0b1520\" font-size=\"12\" font-family=\"Segoe UI,Arial\">nucleus</text><circle cx=\"235\" cy=\"140\" r=\"16\" fill=\"#fcd34d\"/><ellipse cx=\"420\" cy=\"240\" rx=\"30\" ry=\"16\" fill=\"#5eead4\"/><text x=\"235\" y=\"120\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"11\" font-family=\"Segoe UI,Arial\">mito</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Parts have jobs — membrane, nucleus, organelles",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Cell Wall</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">parts</text><ellipse cx=\"280\" cy=\"200\" rx=\"160\" ry=\"100\" fill=\"none\" stroke=\"#5eead4\" stroke-width=\"4\"/><circle cx=\"280\" cy=\"200\" r=\"40\" fill=\"#67e8f9\"/><rect x=\"460\" y=\"100\" width=\"140\" height=\"200\" rx=\"10\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><text x=\"530\" y=\"140\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">membrane</text><text x=\"530\" y=\"180\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">nucleus</text><text x=\"530\" y=\"220\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">organelles</text><text x=\"530\" y=\"260\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">cytoplasm</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Process: input → transformation → output",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Cell Wall</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">flow</text><rect x=\"50\" y=\"140\" width=\"130\" height=\"80\" rx=\"10\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><text x=\"115\" y=\"185\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">input</text><text x=\"210\" y=\"185\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"250\" y=\"140\" width=\"140\" height=\"80\" rx=\"10\" fill=\"#164e63\" stroke=\"#5eead4\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">cell work</text><text x=\"420\" y=\"185\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"460\" y=\"140\" width=\"130\" height=\"80\" rx=\"10\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><text x=\"525\" y=\"185\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">output</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as architects use various techniques to verify the strength and composition of load-b",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Cell Wall</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><rect x=\"70\" y=\"100\" width=\"500\" height=\"180\" rx=\"14\" fill=\"#132033\" stroke=\"#5eead4\" stroke-width=\"2\"/><text x=\"320\" y=\"170\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Living factory</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Just as architects use various techniques to verify the </text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Experimental Verification of Cell Wall",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Cell Wall</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><ellipse cx=\"320\" cy=\"200\" rx=\"120\" ry=\"70\" fill=\"#164e63\" stroke=\"#5eead4\" stroke-width=\"3\"/><circle cx=\"320\" cy=\"200\" r=\"35\" fill=\"#67e8f9\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">structure supports function</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ExperimentalVerificationofCellWallScene",
+    "notes": "Domain=biology motif=cell. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/experimental_verification_of_cell_wall.py ConceptScene"
+  },
+  "motif": "cell",
+  "generated_by": "template-stem-v5-biology-cell",
+  "generated_at": "2026-07-12T22:34:55Z"
+}

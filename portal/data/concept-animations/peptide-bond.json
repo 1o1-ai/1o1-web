@@ -1,0 +1,62 @@
+{
+  "slug": "peptide-bond",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Peptide Bond",
+  "theme": "chemistry",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Peptide Bond",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Peptide Bond.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a zipper’s teeth interlock to form a strong, flexible connection between two fabric strips, a peptide bond links amino acids togethe…",
+    "Pause and restate what Peptide Bond means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Peptide Bond: atoms stick by sharing/transfer",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Peptide Bond</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">chemistry</text><circle cx=\"200\" cy=\"190\" r=\"45\" fill=\"#4ade80\"/><text x=\"200\" y=\"196\" text-anchor=\"middle\" fill=\"#0a1a14\" font-size=\"20\" font-family=\"Segoe UI,Arial\">A</text><circle cx=\"440\" cy=\"190\" r=\"45\" fill=\"#facc15\"/><text x=\"440\" y=\"196\" text-anchor=\"middle\" fill=\"#0a1a14\" font-size=\"20\" font-family=\"Segoe UI,Arial\">B</text><line x1=\"245\" y1=\"190\" x2=\"395\" y2=\"190\" stroke=\"#2dd4bf\" stroke-width=\"6\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Ionic transfer vs covalent share",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Peptide Bond</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">types</text><rect x=\"60\" y=\"100\" width=\"240\" height=\"160\" rx=\"12\" fill=\"#10251c\" stroke=\"#facc15\" stroke-width=\"2\"/><text x=\"180\" y=\"160\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"18\" font-family=\"Segoe UI,Arial\">ionic</text><text x=\"180\" y=\"200\" text-anchor=\"middle\" fill=\"#86efac\" font-size=\"13\" font-family=\"Segoe UI,Arial\">electron transfer</text><rect x=\"340\" y=\"100\" width=\"240\" height=\"160\" rx=\"12\" fill=\"#10251c\" stroke=\"#2dd4bf\" stroke-width=\"2\"/><text x=\"460\" y=\"160\" text-anchor=\"middle\" fill=\"#2dd4bf\" font-size=\"18\" font-family=\"Segoe UI,Arial\">covalent</text><text x=\"460\" y=\"200\" text-anchor=\"middle\" fill=\"#86efac\" font-size=\"13\" font-family=\"Segoe UI,Arial\">electron share</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Lewis / VSEPR shapes follow electron pairs",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Peptide Bond</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">shape</text><circle cx=\"320\" cy=\"190\" r=\"30\" fill=\"#4ade80\"/><circle cx=\"427\" cy=\"203\" r=\"18\" fill=\"#facc15\"/><circle cx=\"247\" cy=\"242\" r=\"18\" fill=\"#facc15\"/><circle cx=\"233\" cy=\"148\" r=\"18\" fill=\"#facc15\"/><circle cx=\"371\" cy=\"129\" r=\"18\" fill=\"#facc15\"/><text x=\"320\" y=\"320\" text-anchor=\"middle\" fill=\"#86efac\" font-size=\"13\" font-family=\"Segoe UI,Arial\">pairs repel → geometry</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a zipper’s teeth interlock to form a strong, flexible connection between two fabri",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Peptide Bond</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a zipper’s teeth interlock to form a strong, fle</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Peptide Bond",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Peptide Bond</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#4ade80\" font-size=\"24\" font-family=\"Segoe UI,Arial\">share or transfer</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "PeptideBondScene",
+    "notes": "Domain=chemistry motif=bond. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/peptide_bond.py ConceptScene"
+  },
+  "motif": "bond",
+  "generated_by": "template-stem-v5-chemistry-bond",
+  "generated_at": "2026-07-12T22:35:07Z"
+}

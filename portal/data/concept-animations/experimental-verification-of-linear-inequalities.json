@@ -1,0 +1,62 @@
+{
+  "slug": "experimental-verification-of-linear-inequalities",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Experimental Verification of Linear Inequalities",
+  "theme": "algebra",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Experimental Verification of Linear Inequalities",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Experimental Verification of Linear Inequalities.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "A linear inequality acts like a straight fence dividing a flat yard into 'allowed' and 'forbidden' zones. To experimentally verify this boun…",
+    "Pause and restate what Experimental Verification of Linear Inequalities means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Experimental Verification of Linear Inequalities: symbol language",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Linear Inequalities</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">symbols</text><rect x=\"80\" y=\"100\" width=\"480\" height=\"180\" rx=\"14\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"2\"/><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"20\" font-family=\"Segoe UI,Arial\">Experimental Verification of Linear </text><text x=\"320\" y=\"230\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">write · rearrange · interpret</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Isolate the unknown",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Linear Inequalities</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">solve</text><text x=\"320\" y=\"140\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"28\" font-family=\"Segoe UI,Arial\">□ + 5 = 12</text><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"28\" font-family=\"Segoe UI,Arial\">□ = 7</text><text x=\"320\" y=\"260\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"14\" font-family=\"Segoe UI,Arial\">inverse operations</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Structure of the relation",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Linear Inequalities</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><circle cx=\"180\" cy=\"190\" r=\"50\" fill=\"none\" stroke=\"#fde68a\" stroke-width=\"3\"/><circle cx=\"320\" cy=\"190\" r=\"50\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"3\"/><circle cx=\"460\" cy=\"190\" r=\"50\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"3\"/><text x=\"180\" y=\"196\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">in</text><text x=\"320\" y=\"196\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"14\" font-family=\"Segoe UI,Arial\">rule</text><text x=\"460\" y=\"196\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"14\" font-family=\"Segoe UI,Arial\">out</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "A linear inequality acts like a straight fence dividing a flat yard into allowed and forbi",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Linear Inequalities</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">A linear inequality acts like a straight fence dividing </text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Experimental Verification of Linear Ineq",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Linear Inequalities</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"22\" font-family=\"Segoe UI,Arial\">symbol → meaning</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ExperimentalVerificationofLinearInequaliScene",
+    "notes": "Domain=algebra motif=family-5. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/experimental_verification_of_linear_inequalities.py ConceptScene"
+  },
+  "motif": "family-5",
+  "generated_by": "template-stem-v5-algebra-family-5",
+  "generated_at": "2026-07-12T22:34:57Z"
+}

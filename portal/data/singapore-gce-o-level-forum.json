@@ -1,0 +1,2889 @@
+{
+  "version": 1,
+  "sku": "singapore-gce-o-level",
+  "title": "Grade 10",
+  "displayName": "Singapore · Grade 10",
+  "generated_at": "2026-07-13T12:21:29.791525+00:00",
+  "locale": "sg",
+  "threads": [
+    {
+      "id": "thr_singapore-gce-o-level_equations-and-inequalities_000",
+      "title": "I keep mixing up steps in Equations and Inequalities. What helped you?",
+      "subject": "mathematics",
+      "chapter": "equations-and-inequalities",
+      "chapter_title": "Equations and Inequalities",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "We just started Equations and Inequalities in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-29T08:56:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Equations and Inequalities fixed most of it.",
+          "created_at": "2026-06-30T00:18:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Don't ignore the worked examples. For Equations and Inequalities they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-30T07:41:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Equations and Inequalities set.",
+          "created_at": "2026-06-30T14:02:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "If you cannot explain Equations and Inequalities to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-07-01T04:49:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Equations and Inequalities idea.",
+          "created_at": "2026-07-01T23:01:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Equations and Inequalities marks.",
+          "created_at": "2026-07-02T03:51:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Whiteboard + friend teaching me Equations and Inequalities beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-02T08:10:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_pressure-and-fluids_001",
+      "title": "How are you preparing Pressure and Fluids for the final exam?",
+      "subject": "physics",
+      "chapter": "pressure-and-fluids",
+      "chapter_title": "Pressure and Fluids",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Starting from zero on Pressure and Fluids after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-15T01:20:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Pressure and Fluids.",
+          "created_at": "2026-06-15T09:54:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Official syllabus lists Pressure and Fluids as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-15T15:06:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Someone in my class made a mind map for Pressure and Fluids — copying that format helped a lot.",
+          "created_at": "2026-06-16T06:57:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Don't ignore the worked examples. For Pressure and Fluids they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-16T23:28:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_motion_002",
+      "title": "Need a simple analogy for Motion that actually sticks",
+      "subject": "physics",
+      "chapter": "motion",
+      "chapter_title": "Motion",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Making flashcards for Motion tonight — what should absolutely be on them?",
+          "created_at": "2026-07-10T00:49:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I keep a 'mistake log' only for Motion. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-10T08:32:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I record myself explaining Motion out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-11T01:57:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Motion.",
+          "created_at": "2026-07-11T20:47:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Short sessions beat marathon cramming for Motion. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-12T05:37:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Mark scheme language for Motion is specific — practice writing to that style.",
+          "created_at": "2026-07-12T16:38:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Not proud of it, but I left Motion late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-12T18:39:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Motion set.",
+          "created_at": "2026-07-13T07:44:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Someone in my class made a mind map for Motion — copying that format helped a lot.",
+          "created_at": "2026-07-13T22:09:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Our senior shared last year's notes on Motion; still accurate for the current syllabus.",
+          "created_at": "2026-07-14T02:01:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_heat-and-temperature_003",
+      "title": "Is Heat and Temperature more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "heat-and-temperature",
+      "chapter_title": "Heat and Temperature",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Past paper had two weird Heat and Temperature items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-10T16:35:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Our senior shared last year's notes on Heat and Temperature; still accurate for the current syllabus.",
+          "created_at": "2026-06-10T22:36:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Heat and Temperature idea.",
+          "created_at": "2026-06-11T03:40:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Whiteboard + friend teaching me Heat and Temperature beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-11T08:27:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Heat and Temperature unit.",
+          "created_at": "2026-06-11T20:53:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_reproduction_004",
+      "title": "Our class test had a tricky Biology question from Reproduction",
+      "subject": "biology",
+      "chapter": "reproduction",
+      "chapter_title": "Reproduction",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Is it normal that Reproduction takes longer than neighboring chapters in Biology?",
+          "created_at": "2026-06-12T14:07:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Not proud of it, but I left Reproduction late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-13T00:00:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Don't ignore the worked examples. For Reproduction they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-13T18:43:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Reproduction marks.",
+          "created_at": "2026-06-14T07:17:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Reproduction.",
+          "created_at": "2026-06-14T18:37:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_gravitation_005",
+      "title": "How are you preparing Gravitation for the final exam?",
+      "subject": "physics",
+      "chapter": "gravitation",
+      "chapter_title": "Gravitation",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Got stuck on a homework problem from Gravitation. Happy to post the exact question if that helps.",
+          "created_at": "2026-07-01T00:43:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Gravitation fixed most of it.",
+          "created_at": "2026-07-01T16:09:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Gravitation.",
+          "created_at": "2026-07-01T21:18:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-02T04:12:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_units-and-measurement_006",
+      "title": "Quick poll: how many hours are you giving Units and Measurement this week?",
+      "subject": "physics",
+      "chapter": "units-and-measurement",
+      "chapter_title": "Units and Measurement",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Our teacher hinted Units and Measurement is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-29T07:52:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Past papers > notes for me on Units and Measurement. Pattern recognition beats rereading.",
+          "created_at": "2026-06-29T18:45:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Someone in my class made a mind map for Units and Measurement — copying that format helped a lot.",
+          "created_at": "2026-06-30T06:31:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Whiteboard + friend teaching me Units and Measurement beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-30T22:36:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I write every Units and Measurement formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-01T04:48:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Units and Measurement.",
+          "created_at": "2026-07-01T06:42:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Units and Measurement.",
+          "created_at": "2026-07-01T07:43:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Official syllabus lists Units and Measurement as core — revise worked examples from your textbook.",
+          "created_at": "2026-07-01T23:01:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Our senior shared last year's notes on Units and Measurement; still accurate for the current syllabus.",
+          "created_at": "2026-07-02T06:20:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_coordination-and-control_007",
+      "title": "Anyone else find Coordination and Control denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "coordination-and-control",
+      "chapter_title": "Coordination and Control",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I can recite definitions for Coordination and Control but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-24T07:59:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Short sessions beat marathon cramming for Coordination and Control. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-24T13:47:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Exam boards repeat similar Biology patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-06-25T01:03:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Coordination and Control set.",
+          "created_at": "2026-06-25T10:27:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Coordination and Control already.",
+          "created_at": "2026-06-26T04:52:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_magnetism_008",
+      "title": "Our class test had a tricky Physics question from Magnetism",
+      "subject": "physics",
+      "chapter": "magnetism",
+      "chapter_title": "Magnetism",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Group chat from school is quiet on Magnetism. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-18T04:33:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Someone in my class made a mind map for Magnetism — copying that format helped a lot.",
+          "created_at": "2026-06-18T19:15:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Not proud of it, but I left Magnetism late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-19T09:00:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "If you cannot explain Magnetism to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-19T10:23:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Magnetism.",
+          "created_at": "2026-06-19T15:17:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Magnetism already.",
+          "created_at": "2026-06-19T19:07:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_environmental-chemistry_009",
+      "title": "Past paper question on Environmental Chemistry — which formula do you use first?",
+      "subject": "chemistry",
+      "chapter": "environmental-chemistry",
+      "chapter_title": "Environmental Chemistry",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Making flashcards for Environmental Chemistry tonight — what should absolutely be on them?",
+          "created_at": "2026-06-29T12:55:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I record myself explaining Environmental Chemistry out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-29T16:19:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Past papers > notes for me on Environmental Chemistry. Pattern recognition beats rereading.",
+          "created_at": "2026-06-29T22:47:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-06-30T03:40:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Environmental Chemistry.",
+          "created_at": "2026-06-30T12:59:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I keep a 'mistake log' only for Environmental Chemistry. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-30T22:34:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Don't ignore the worked examples. For Environmental Chemistry they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-01T12:13:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Environmental Chemistry idea.",
+          "created_at": "2026-07-02T01:06:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_excretion_010",
+      "title": "Best resources for Excretion? Textbook vs online notes",
+      "subject": "biology",
+      "chapter": "excretion",
+      "chapter_title": "Excretion",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Group chat from school is quiet on Excretion. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-10T20:33:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Not proud of it, but I left Excretion late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-11T03:00:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Do the odd-numbered textbook exercises for Excretion; answers are usually in the back.",
+          "created_at": "2026-06-11T05:12:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "For Excretion, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-11T08:38:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_mensuration_011",
+      "title": "I keep mixing up steps in Mensuration. What helped you?",
+      "subject": "mathematics",
+      "chapter": "mensuration",
+      "chapter_title": "Mensuration",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Past paper had two weird Mensuration items back-to-back. Want to compare approaches. (Grade 10)",
+          "created_at": "2026-06-21T17:35:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Do the odd-numbered textbook exercises for Mensuration; answers are usually in the back.",
+          "created_at": "2026-06-21T23:10:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Not proud of it, but I left Mensuration late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-22T09:37:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Mensuration idea.",
+          "created_at": "2026-06-23T01:58:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_health-and-disease_012",
+      "title": "Our class test had a tricky Biology question from Health and Disease",
+      "subject": "biology",
+      "chapter": "health-and-disease",
+      "chapter_title": "Health and Disease",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Scored poorly on the last Health and Disease quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-10T19:33:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I keep a 'mistake log' only for Health and Disease. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-11T04:17:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I write every Health and Disease formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-11T12:29:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Not proud of it, but I left Health and Disease late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-11T21:41:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Health and Disease already.",
+          "created_at": "2026-06-12T11:07:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Health and Disease problem cold.",
+          "created_at": "2026-06-12T23:47:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Health and Disease.",
+          "created_at": "2026-06-13T12:10:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Health and Disease idea.",
+          "created_at": "2026-06-13T23:01:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Health and Disease marks.",
+          "created_at": "2026-06-14T02:01:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_functions-and-graphs_013",
+      "title": "Need a simple analogy for Functions and Graphs that actually sticks",
+      "subject": "mathematics",
+      "chapter": "functions-and-graphs",
+      "chapter_title": "Functions and Graphs",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Starting from zero on Functions and Graphs after a gap. Best first 30 minutes? (Grade 10)",
+          "created_at": "2026-06-14T04:55:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-14T12:03:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Honestly I skipped ahead then came back — Functions and Graphs clicked after seeing later examples.",
+          "created_at": "2026-06-14T21:44:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Anyone else want to sync study times for Functions and Graphs this week?",
+          "created_at": "2026-06-15T07:07:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Appreciate the tip. Going to redo my notes for Functions and Graphs from scratch.",
+          "created_at": "2026-06-15T11:12:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Not proud of it, but I left Functions and Graphs late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-16T01:56:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Break Functions and Graphs into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-16T15:40:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_energy-resources_014",
+      "title": "Stuck on Energy Resources — anyone have a clear way to revise this?",
+      "subject": "physics",
+      "chapter": "energy-resources",
+      "chapter_title": "Energy Resources",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Starting from zero on Energy Resources after a gap. Best first 30 minutes? (Grade 10)",
+          "created_at": "2026-06-23T01:53:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Energy Resources.",
+          "created_at": "2026-06-23T16:00:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Check units and significant figures on every Energy Resources numerical before you move on.",
+          "created_at": "2026-06-23T20:46:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Energy Resources marks.",
+          "created_at": "2026-06-24T13:32:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_quantitative-chemistry-mole-concept_015",
+      "title": "Our class test had a tricky Chemistry question from Quantitative Chemistry / Mole Concept",
+      "subject": "chemistry",
+      "chapter": "quantitative-chemistry-mole-concept",
+      "chapter_title": "Quantitative Chemistry / Mole Concept",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Past paper had two weird Quantitative Chemistry / Mole Concept items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-09T17:29:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I record myself explaining Quantitative Chemistry / Mole Concept out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-10T04:38:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_nutrition_016",
+      "title": "I keep mixing up steps in Nutrition. What helped you?",
+      "subject": "biology",
+      "chapter": "nutrition",
+      "chapter_title": "Nutrition",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Starting from zero on Nutrition after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-23T01:56:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I keep a 'mistake log' only for Nutrition. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-23T06:02:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Nutrition.",
+          "created_at": "2026-06-23T07:44:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_ecology-and-environment_017",
+      "title": "How are you preparing Ecology and Environment for the final exam?",
+      "subject": "biology",
+      "chapter": "ecology-and-environment",
+      "chapter_title": "Ecology and Environment",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Making flashcards for Ecology and Environment tonight — what should absolutely be on them?",
+          "created_at": "2026-06-30T01:09:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I record myself explaining Ecology and Environment out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-30T17:10:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I keep a 'mistake log' only for Ecology and Environment. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-01T07:20:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Do the odd-numbered textbook exercises for Ecology and Environment; answers are usually in the back.",
+          "created_at": "2026-07-01T14:39:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Ecology and Environment fixed most of it.",
+          "created_at": "2026-07-01T17:29:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Ecology and Environment.",
+          "created_at": "2026-07-02T12:09:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Ecology and Environment unit.",
+          "created_at": "2026-07-02T14:51:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-07-03T09:35:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-03T18:53:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_transport-in-organisms_018",
+      "title": "Need a simple analogy for Transport in Organisms that actually sticks",
+      "subject": "biology",
+      "chapter": "transport-in-organisms",
+      "chapter_title": "Transport in Organisms",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Got stuck on a homework problem from Transport in Organisms. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-14T08:14:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Someone in my class made a mind map for Transport in Organisms — copying that format helped a lot.",
+          "created_at": "2026-06-14T16:14:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Past papers > notes for me on Transport in Organisms. Pattern recognition beats rereading.",
+          "created_at": "2026-06-15T09:24:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "If you cannot explain Transport in Organisms to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-15T15:26:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_metals-and-non-metals_019",
+      "title": "How are you preparing Metals and Non-metals for the final exam?",
+      "subject": "chemistry",
+      "chapter": "metals-and-non-metals",
+      "chapter_title": "Metals and Non-metals",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Tried three YouTube explainers for Metals and Non-metals and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-18T09:51:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Metals and Non-metals.",
+          "created_at": "2026-06-19T00:19:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-19T09:31:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I write every Metals and Non-metals formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-19T12:19:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Someone in my class made a mind map for Metals and Non-metals — copying that format helped a lot.",
+          "created_at": "2026-06-19T15:12:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_statistics_020",
+      "title": "Our class test had a tricky Mathematics question from Statistics",
+      "subject": "mathematics",
+      "chapter": "statistics",
+      "chapter_title": "Statistics",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Past paper had two weird Statistics items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-10T21:40:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Whiteboard + friend teaching me Statistics beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-11T14:24:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Statistics already.",
+          "created_at": "2026-06-11T19:56:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Don't ignore the worked examples. For Statistics they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-12T08:21:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Our senior shared last year's notes on Statistics; still accurate for the current syllabus.",
+          "created_at": "2026-06-12T14:45:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Statistics.",
+          "created_at": "2026-06-13T09:17:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_cell-biology_021",
+      "title": "I keep mixing up steps in Cell Biology. What helped you?",
+      "subject": "biology",
+      "chapter": "cell-biology",
+      "chapter_title": "Cell Biology",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 11,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Making flashcards for Cell Biology tonight — what should absolutely be on them? (Grade 10)",
+          "created_at": "2026-06-22T05:11:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-22T09:48:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Cell Biology fixed most of it.",
+          "created_at": "2026-06-23T01:40:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Cell Biology problem cold.",
+          "created_at": "2026-06-23T03:13:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-23T18:32:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Appreciate the tip. Going to redo my notes for Cell Biology from scratch.",
+          "created_at": "2026-06-24T06:39:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Cell Biology.",
+          "created_at": "2026-06-24T10:28:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "That sequencing (theory then numericals) matches what our teacher said too.",
+          "created_at": "2026-06-24T19:46:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Cell Biology idea.",
+          "created_at": "2026-06-25T02:56:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Cell Biology marks.",
+          "created_at": "2026-06-25T12:06:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Cell Biology.",
+          "created_at": "2026-06-25T20:49:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_force-and-newton-s-laws_022",
+      "title": "Teacher said Force and Newton's Laws will definitely show up — panic mode?",
+      "subject": "physics",
+      "chapter": "force-and-newton-s-laws",
+      "chapter_title": "Force and Newton's Laws",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "We just started Force and Newton's Laws in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-07-02T10:35:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Force and Newton's Laws.",
+          "created_at": "2026-07-02T22:59:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Force and Newton's Laws fixed most of it.",
+          "created_at": "2026-07-03T10:30:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Break Force and Newton's Laws into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-04T04:08:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_electricity_023",
+      "title": "Best resources for Electricity? Textbook vs online notes",
+      "subject": "physics",
+      "chapter": "electricity",
+      "chapter_title": "Electricity",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I can recite definitions for Electricity but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-27T19:14:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "For Electricity, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-27T22:20:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Not proud of it, but I left Electricity late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-28T14:54:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Electricity set.",
+          "created_at": "2026-06-29T00:07:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_carbon-compounds_024",
+      "title": "Concept check: Carbon Compounds before the mock test",
+      "subject": "chemistry",
+      "chapter": "carbon-compounds",
+      "chapter_title": "Carbon Compounds",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Got stuck on a homework problem from Carbon Compounds. Happy to post the exact question if that helps.",
+          "created_at": "2026-07-02T00:14:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "If you cannot explain Carbon Compounds to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-07-02T07:36:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Carbon Compounds marks.",
+          "created_at": "2026-07-02T10:53:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_similarity_025",
+      "title": "Sharing my Similarity mistake from yesterday's quiz — what did I miss?",
+      "subject": "mathematics",
+      "chapter": "similarity",
+      "chapter_title": "Similarity",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Past paper had two weird Similarity items back-to-back. Want to compare approaches. (Grade 10)",
+          "created_at": "2026-06-22T20:49:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Don't ignore the worked examples. For Similarity they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-22T22:16:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I record myself explaining Similarity out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-23T11:36:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_work-energy-and-power_026",
+      "title": "Anyone else find Work Energy and Power denser than the rest of Physics?",
+      "subject": "physics",
+      "chapter": "work-energy-and-power",
+      "chapter_title": "Work Energy and Power",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Got stuck on a homework problem from Work Energy and Power. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-30T16:30:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Work Energy and Power.",
+          "created_at": "2026-06-30T23:05:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Mark scheme language for Work Energy and Power is specific — practice writing to that style.",
+          "created_at": "2026-07-01T02:32:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_respiration_027",
+      "title": "Who already finished Respiration? Worth starting early?",
+      "subject": "biology",
+      "chapter": "respiration",
+      "chapter_title": "Respiration",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Revision week — Respiration is the weak spot on my checklist for Biology. How are you tackling it?",
+          "created_at": "2026-06-12T02:04:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Do the odd-numbered textbook exercises for Respiration; answers are usually in the back.",
+          "created_at": "2026-06-12T15:35:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Exam boards repeat similar Biology patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-06-13T02:22:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Respiration fixed most of it.",
+          "created_at": "2026-06-13T10:12:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I keep a 'mistake log' only for Respiration. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-13T15:53:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Respiration already.",
+          "created_at": "2026-06-13T20:02:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I'll try Evaluate mode after dinner and report back.",
+          "created_at": "2026-06-14T05:16:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Respiration.",
+          "created_at": "2026-06-14T12:06:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_geometry-and-congruence_028",
+      "title": "How are you preparing Geometry and Congruence for the final exam?",
+      "subject": "mathematics",
+      "chapter": "geometry-and-congruence",
+      "chapter_title": "Geometry and Congruence",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Revision week — Geometry and Congruence is the weak spot on my checklist for Mathematics. How are you tackling it?",
+          "created_at": "2026-06-25T23:38:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I record myself explaining Geometry and Congruence out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-26T16:03:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Geometry and Congruence idea.",
+          "created_at": "2026-06-27T03:36:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Our senior shared last year's notes on Geometry and Congruence; still accurate for the current syllabus.",
+          "created_at": "2026-06-27T15:39:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Whiteboard + friend teaching me Geometry and Congruence beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-28T01:08:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Past papers > notes for me on Geometry and Congruence. Pattern recognition beats rereading.",
+          "created_at": "2026-06-28T07:37:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Don't ignore the worked examples. For Geometry and Congruence they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-29T01:44:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "For Geometry and Congruence, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-29T13:05:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_acids-bases-and-salts_029",
+      "title": "Best resources for Acids Bases and Salts? Textbook vs online notes",
+      "subject": "chemistry",
+      "chapter": "acids-bases-and-salts",
+      "chapter_title": "Acids Bases and Salts",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Our teacher hinted Acids Bases and Salts is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-07-02T11:39:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Acids Bases and Salts.",
+          "created_at": "2026-07-03T01:44:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Acids Bases and Salts.",
+          "created_at": "2026-07-03T08:50:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Whiteboard + friend teaching me Acids Bases and Salts beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-04T03:27:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_chemical-bonding_030",
+      "title": "Sharing my Chemical Bonding mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "chemical-bonding",
+      "chapter_title": "Chemical Bonding",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Got stuck on a homework problem from Chemical Bonding. Happy to post the exact question if that helps. (Grade 10)",
+          "created_at": "2026-07-10T05:41:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Do the odd-numbered textbook exercises for Chemical Bonding; answers are usually in the back.",
+          "created_at": "2026-07-10T07:53:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Don't ignore the worked examples. For Chemical Bonding they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-11T01:17:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Chemical Bonding — the diagrams helped.",
+          "created_at": "2026-07-11T05:26:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Chemical Bonding fixed most of it.",
+          "created_at": "2026-07-11T16:40:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-11T18:59:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Mark scheme language for Chemical Bonding is specific — practice writing to that style.",
+          "created_at": "2026-07-12T01:40:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Our senior shared last year's notes on Chemical Bonding; still accurate for the current syllabus.",
+          "created_at": "2026-07-12T09:59:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Chemical Bonding idea.",
+          "created_at": "2026-07-12T16:23:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_matter-and-its-properties_031",
+      "title": "How are you preparing Matter and Its Properties for the final exam?",
+      "subject": "chemistry",
+      "chapter": "matter-and-its-properties",
+      "chapter_title": "Matter and Its Properties",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Starting from zero on Matter and Its Properties after a gap. Best first 30 minutes?",
+          "created_at": "2026-07-06T23:52:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Past papers > notes for me on Matter and Its Properties. Pattern recognition beats rereading.",
+          "created_at": "2026-07-07T16:33:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Matter and Its Properties marks.",
+          "created_at": "2026-07-07T23:49:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Matter and Its Properties problem cold.",
+          "created_at": "2026-07-08T02:36:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Short sessions beat marathon cramming for Matter and Its Properties. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-08T18:25:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Honestly I skipped ahead then came back — Matter and Its Properties clicked after seeing later examples.",
+          "created_at": "2026-07-09T05:07:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_chemical-reactions-and-equations_032",
+      "title": "Need a simple analogy for Chemical Reactions and Equations that actually sticks",
+      "subject": "chemistry",
+      "chapter": "chemical-reactions-and-equations",
+      "chapter_title": "Chemical Reactions and Equations",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 11,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Starting from zero on Chemical Reactions and Equations after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-24T11:16:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Chemical Reactions and Equations.",
+          "created_at": "2026-06-25T04:41:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Don't ignore the worked examples. For Chemical Reactions and Equations they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-25T11:06:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Chemical Reactions and Equations.",
+          "created_at": "2026-06-26T01:28:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I write every Chemical Reactions and Equations formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-26T10:04:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I record myself explaining Chemical Reactions and Equations out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-27T01:06:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Our senior shared last year's notes on Chemical Reactions and Equations; still accurate for the current syllabus.",
+          "created_at": "2026-06-27T04:46:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I keep a 'mistake log' only for Chemical Reactions and Equations. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-27T14:19:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Chemical Reactions and Equations.",
+          "created_at": "2026-06-28T01:40:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-28T07:06:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Past papers > notes for me on Chemical Reactions and Equations. Pattern recognition beats rereading.",
+          "created_at": "2026-06-28T21:25:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_trigonometry_033",
+      "title": "Is Trigonometry more theory-heavy or numerical for our board?",
+      "subject": "mathematics",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Our teacher hinted Trigonometry is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-10T12:08:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Trigonometry idea.",
+          "created_at": "2026-06-10T18:59:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Trigonometry.",
+          "created_at": "2026-06-11T11:04:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_coordinate-geometry_034",
+      "title": "Stuck on Coordinate Geometry — anyone have a clear way to revise this?",
+      "subject": "mathematics",
+      "chapter": "coordinate-geometry",
+      "chapter_title": "Coordinate Geometry",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Tried three YouTube explainers for Coordinate Geometry and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-24T13:58:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Whiteboard + friend teaching me Coordinate Geometry beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-24T17:09:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Coordinate Geometry — the diagrams helped.",
+          "created_at": "2026-06-25T11:32:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Not proud of it, but I left Coordinate Geometry late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-26T04:27:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Coordinate Geometry.",
+          "created_at": "2026-06-26T08:22:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Thanks — trying that tonight for Coordinate Geometry.",
+          "created_at": "2026-06-26T17:41:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Coordinate Geometry.",
+          "created_at": "2026-06-27T02:22:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-27T13:09:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Our senior shared last year's notes on Coordinate Geometry; still accurate for the current syllabus.",
+          "created_at": "2026-06-27T18:10:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_waves-and-sound_035",
+      "title": "Who already finished Waves and Sound? Worth starting early?",
+      "subject": "physics",
+      "chapter": "waves-and-sound",
+      "chapter_title": "Waves and Sound",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Is it normal that Waves and Sound takes longer than neighboring chapters in Physics?",
+          "created_at": "2026-06-14T16:06:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Not proud of it, but I left Waves and Sound late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-15T10:23:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Waves and Sound already.",
+          "created_at": "2026-06-16T00:28:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Waves and Sound.",
+          "created_at": "2026-06-16T07:23:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Whiteboard + friend teaching me Waves and Sound beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-16T09:43:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Do the odd-numbered textbook exercises for Waves and Sound; answers are usually in the back.",
+          "created_at": "2026-06-16T10:43:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Waves and Sound idea.",
+          "created_at": "2026-06-16T23:59:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_periodic-table_036",
+      "title": "Is Periodic Table more theory-heavy or numerical for our board?",
+      "subject": "chemistry",
+      "chapter": "periodic-table",
+      "chapter_title": "Periodic Table",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Our teacher hinted Periodic Table is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-15T01:02:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Official syllabus lists Periodic Table as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-15T02:20:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Periodic Table.",
+          "created_at": "2026-06-15T13:31:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_numbers-and-algebra_037",
+      "title": "Teacher said Numbers and Algebra will definitely show up — panic mode?",
+      "subject": "mathematics",
+      "chapter": "numbers-and-algebra",
+      "chapter_title": "Numbers and Algebra",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Got stuck on a homework problem from Numbers and Algebra. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-17T15:00:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Whiteboard + friend teaching me Numbers and Algebra beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-18T01:09:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Check units and significant figures on every Numbers and Algebra numerical before you move on.",
+          "created_at": "2026-06-18T02:12:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Someone in my class made a mind map for Numbers and Algebra — copying that format helped a lot.",
+          "created_at": "2026-06-18T04:01:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_heredity-and-evolution_038",
+      "title": "Anyone else find Heredity and Evolution denser than the rest of Biology?",
+      "subject": "biology",
+      "chapter": "heredity-and-evolution",
+      "chapter_title": "Heredity and Evolution",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Scored poorly on the last Heredity and Evolution quiz. Resetting my notes — open to structure advice. (Grade 10)",
+          "created_at": "2026-06-24T02:43:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Mark scheme language for Heredity and Evolution is specific — practice writing to that style.",
+          "created_at": "2026-06-24T04:02:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Don't ignore the worked examples. For Heredity and Evolution they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-24T22:05:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-06-25T16:16:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Our senior shared last year's notes on Heredity and Evolution; still accurate for the current syllabus.",
+          "created_at": "2026-06-25T23:41:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_light-and-optics_039",
+      "title": "Sharing my Light and Optics mistake from yesterday's quiz — what did I miss?",
+      "subject": "physics",
+      "chapter": "light-and-optics",
+      "chapter_title": "Light and Optics",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Is it normal that Light and Optics takes longer than neighboring chapters in Physics? (Grade 10)",
+          "created_at": "2026-07-04T15:50:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-05T04:04:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Past papers > notes for me on Light and Optics. Pattern recognition beats rereading.",
+          "created_at": "2026-07-05T07:57:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Light and Optics.",
+          "created_at": "2026-07-05T12:18:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Do the odd-numbered textbook exercises for Light and Optics; answers are usually in the back.",
+          "created_at": "2026-07-05T21:08:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Light and Optics question though.",
+          "created_at": "2026-07-06T07:20:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_vectors-in-two-dimensions_040",
+      "title": "Need a simple analogy for Vectors in Two Dimensions that actually sticks",
+      "subject": "mathematics",
+      "chapter": "vectors-in-two-dimensions",
+      "chapter_title": "Vectors in Two Dimensions",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "Making flashcards for Vectors in Two Dimensions tonight — what should absolutely be on them?",
+          "created_at": "2026-06-10T23:39:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Vectors in Two Dimensions marks.",
+          "created_at": "2026-06-11T03:19:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "I keep a 'mistake log' only for Vectors in Two Dimensions. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-11T22:12:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Don't ignore the worked examples. For Vectors in Two Dimensions they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-12T06:57:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Vectors in Two Dimensions unit.",
+          "created_at": "2026-06-13T01:48:29.791525+00:00"
+        },
+        {
+          "author_id": "s_jia_wei_lim",
+          "author_name": "Jia Wei Lim",
+          "author_role": "student",
+          "location": "Raffles Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/72.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Vectors in Two Dimensions.",
+          "created_at": "2026-06-13T13:48:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-06-13T16:20:29.791525+00:00"
+        },
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Past papers > notes for me on Vectors in Two Dimensions. Pattern recognition beats rereading.",
+          "created_at": "2026-06-14T00:51:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_probability_041",
+      "title": "I keep mixing up steps in Probability. What helped you?",
+      "subject": "mathematics",
+      "chapter": "probability",
+      "chapter_title": "Probability",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "Tried three YouTube explainers for Probability and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-07-09T21:49:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Probability.",
+          "created_at": "2026-07-10T04:54:29.791525+00:00"
+        },
+        {
+          "author_id": "t_sarah_tan",
+          "author_name": "Sarah Tan",
+          "author_role": "teacher",
+          "location": "National Junior College, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/75.jpg",
+          "body": "Check units and significant figures on every Probability numerical before you move on.",
+          "created_at": "2026-07-10T15:57:29.791525+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_singapore-gce-o-level_atomic-structure_042",
+      "title": "Concept check: Atomic Structure before the mock test",
+      "subject": "chemistry",
+      "chapter": "atomic-structure",
+      "chapter_title": "Atomic Structure",
+      "track": "singapore-gce-o-level",
+      "grade": "Grade 10",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_arjun_pillai",
+          "author_name": "Arjun Pillai",
+          "author_role": "student",
+          "location": "Hwa Chong Institution, Singapore",
+          "photo": "https://randomuser.me/api/portraits/men/74.jpg",
+          "body": "We just started Atomic Structure in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-17T23:30:29.791525+00:00"
+        },
+        {
+          "author_id": "s_nurul_hassan",
+          "author_name": "Nurul Hassan",
+          "author_role": "student",
+          "location": "Nanyang Girls' High School, Singapore",
+          "photo": "https://randomuser.me/api/portraits/women/73.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Atomic Structure — the diagrams helped.",
+          "created_at": "2026-06-18T06:21:29.791525+00:00"
+        }
+      ]
+    }
+  ]
+}

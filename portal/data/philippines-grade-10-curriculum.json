@@ -1,0 +1,446 @@
+{
+  "sku": "philippines-grade-10",
+  "title": "Grade 10",
+  "displayName": "Philippines · Grade 10",
+  "locale": "en",
+  "syllabus_source": "eden_sutra_country_chapter_scope",
+  "subjects": {
+    "mathematics": {
+      "id": "mathematics",
+      "label": "Mathematics",
+      "icon": "📐",
+      "chapters": [
+        {
+          "id": "algebra",
+          "title": "Algebra",
+          "topic_id": "philippines-grade-10.mathematics.algebra",
+          "syllabus_order": 1,
+          "eden_concept_slugs": [
+            "fundamental-theorem-of-algebra",
+            "advanced-fundamental-theorem-of-algebra",
+            "visualizing-fundamental-theorem-of-algebra",
+            "applications-of-fundamental-theorem-of-algebra",
+            "alternative-derivation-of-fundamental-theorem-of-algebra",
+            "mathematical-treatment-of-fundamental-theorem-of-algebra",
+            "experimental-verification-of-fundamental-theorem-of-algebra",
+            "applications-of-fundamental-theorem-of-calculus",
+            "visualizing-fundamental-theorem-of-calculus",
+            "advanced-fundamental-theorem-of-calculus",
+            "mathematical-treatment-of-fundamental-theorem-of-calculus",
+            "experimental-verification-of-fundamental-theorem-of-calculus",
+            "fundamental-theorem-of-calculus"
+          ]
+        },
+        {
+          "id": "geometry",
+          "title": "Geometry",
+          "topic_id": "philippines-grade-10.mathematics.geometry",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "vector-geometry-lines-and-planes"
+          ]
+        },
+        {
+          "id": "statistics",
+          "title": "Statistics",
+          "topic_id": "philippines-grade-10.mathematics.statistics",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "measures-of-center-mean-median-mode",
+            "advanced-measures-of-center-mean-median-mode",
+            "applications-of-measures-of-center-mean-median-mode",
+            "experimental-verification-of-measures-of-center-mean-median-mode",
+            "mathematical-treatment-of-measures-of-center-mean-median-mode",
+            "visualizing-measures-of-center-mean-median-mode"
+          ]
+        },
+        {
+          "id": "probability",
+          "title": "Probability",
+          "topic_id": "philippines-grade-10.mathematics.probability",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "probability-definition",
+            "advanced-conditional-probability-bayes",
+            "advanced-probability-definition",
+            "applications-of-conditional-probability-bayes",
+            "applications-of-probability-definition",
+            "concept-of-probability",
+            "conditional-probability-bayes",
+            "experimental-verification-of-conditional-probability-bayes",
+            "experimental-verification-of-probability-definition",
+            "mathematical-treatment-of-conditional-probability-bayes",
+            "mathematical-treatment-of-probability-definition",
+            "visualizing-conditional-probability-bayes",
+            "visualizing-probability-definition",
+            "advanced-limit-definition",
+            "applications-of-limit-definition",
+            "concept-of-the-derivative",
+            "concept-of-the-integral",
+            "experimental-verification-of-limit-definition",
+            "mathematical-treatment-of-limit-definition",
+            "visualizing-limit-definition"
+          ]
+        },
+        {
+          "id": "mathematics-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "philippines-grade-10.mathematics.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "physics": {
+      "id": "physics",
+      "label": "Physics",
+      "icon": "⚛️",
+      "chapters": [
+        {
+          "id": "motion",
+          "title": "Motion",
+          "topic_id": "philippines-grade-10.physics.motion",
+          "syllabus_order": 1,
+          "eden_concept_slugs": [
+            "projectile-motion",
+            "constant-velocity-motion",
+            "advanced-constant-velocity-motion",
+            "advanced-cyclotron-motion",
+            "advanced-motional-emf",
+            "advanced-projectile-motion",
+            "advanced-uniform-circular-motion",
+            "applications-of-constant-velocity-motion",
+            "applications-of-projectile-motion",
+            "applications-of-uniform-circular-motion",
+            "cyclotron-motion",
+            "kinematics-in-one-dimension",
+            "motional-emf",
+            "newtons-laws-of-motion",
+            "uniform-circular-motion",
+            "advanced-emf-and-internal-resistance"
+          ]
+        },
+        {
+          "id": "forces",
+          "title": "Forces",
+          "topic_id": "philippines-grade-10.physics.forces",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "tension-forces",
+            "conservative-forces",
+            "advanced-tension-forces",
+            "advanced-conservative-forces",
+            "applications-of-tension-forces",
+            "applications-of-conservative-forces"
+          ]
+        },
+        {
+          "id": "energy",
+          "title": "Energy",
+          "topic_id": "philippines-grade-10.physics.energy",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "internal-energy",
+            "potential-energy",
+            "energy-in-capacitor",
+            "work-energy-and-power",
+            "kinetic-energy-theorem",
+            "nuclear-binding-energy",
+            "advanced-internal-energy",
+            "advanced-potential-energy",
+            "electric-potential-energy",
+            "advanced-energy-in-capacitor",
+            "gravitational-potential-energy",
+            "mechanical-energy-conservation",
+            "advanced-kinetic-energy-theorem",
+            "advanced-nuclear-binding-energy",
+            "applications-of-potential-energy",
+            "advanced-electric-potential-energy",
+            "applications-of-kinetic-energy-theorem",
+            "advanced-gravitational-potential-energy",
+            "advanced-mechanical-energy-conservation",
+            "applications-of-gravitational-potential-energy",
+            "applications-of-mechanical-energy-conservation",
+            "advanced-emf-and-internal-resistance",
+            "advanced-total-internal-reflection",
+            "advanced-electric-potential",
+            "electric-potential"
+          ]
+        },
+        {
+          "id": "electricity",
+          "title": "Electricity",
+          "topic_id": "philippines-grade-10.physics.electricity",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "electric-current",
+            "electric-circuits",
+            "advanced-electric-current",
+            "advanced-electric-power",
+            "advanced-electric-potential",
+            "advanced-electric-dipole",
+            "advanced-torque-on-current-loop",
+            "advanced-kirchhoff-current-law",
+            "advanced-electric-potential-energy",
+            "advanced-electric-flux",
+            "advanced-electric-field-lines",
+            "advanced-electric-field",
+            "advanced-parallel-current-force",
+            "advanced-electric-charge"
+          ]
+        },
+        {
+          "id": "magnetism",
+          "title": "Magnetism",
+          "topic_id": "philippines-grade-10.physics.magnetism",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "magnetic-field-b",
+            "electromagnetic-induction",
+            "advanced-magnetic-field-b",
+            "advanced-solenoid-magnetic-field",
+            "solenoid-magnetic-field"
+          ]
+        },
+        {
+          "id": "waves",
+          "title": "Waves",
+          "topic_id": "philippines-grade-10.physics.waves",
+          "syllabus_order": 6,
+          "eden_concept_slugs": [
+            "longitudinal-waves",
+            "standing-waves",
+            "waves-and-superposition",
+            "advanced-de-broglie-waves",
+            "advanced-longitudinal-waves",
+            "advanced-sound-beats",
+            "advanced-standing-waves",
+            "advanced-transverse-waves",
+            "advanced-wave-equation",
+            "de-broglie-waves",
+            "sound-beats",
+            "transverse-waves",
+            "wave-equation",
+            "advanced-bernoulli-equation",
+            "advanced-thin-lens-equation",
+            "advanced-equation-of-continuity",
+            "advanced-ideal-gas-equation"
+          ]
+        },
+        {
+          "id": "physics-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "philippines-grade-10.physics.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "chemistry": {
+      "id": "chemistry",
+      "label": "Chemistry",
+      "icon": "🧪",
+      "chapters": [
+        {
+          "id": "matter",
+          "title": "Matter",
+          "topic_id": "philippines-grade-10.chemistry.matter",
+          "syllabus_order": 1
+        },
+        {
+          "id": "atomic-structure",
+          "title": "Atomic Structure",
+          "topic_id": "philippines-grade-10.chemistry.atomic-structure",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "atomic-structure",
+            "periodic-trends",
+            "atomic-mass-unit",
+            "dna-rna-structure",
+            "atomic-radius-trend",
+            "protein-structure-levels",
+            "advanced-atomic-mass-unit",
+            "advanced-dna-rna-structure",
+            "advanced-atomic-radius-trend",
+            "chemical-bonding-and-structure",
+            "applications-of-atomic-mass-unit",
+            "advanced-protein-structure-levels",
+            "applications-of-dna-rna-structure",
+            "applications-of-atomic-radius-trend",
+            "applications-of-protein-structure-levels",
+            "mathematical-treatment-of-atomic-mass-unit",
+            "mathematical-treatment-of-atomic-radius-trend",
+            "ionic-radius-trend",
+            "advanced-ionic-radius-trend",
+            "mathematical-treatment-of-ionic-radius-trend",
+            "applications-of-ionic-radius-trend"
+          ]
+        },
+        {
+          "id": "chemical-reactions",
+          "title": "Chemical Reactions",
+          "topic_id": "philippines-grade-10.chemistry.chemical-reactions",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "balancing-equations",
+            "stoichiometry",
+            "advanced-balancing-equations",
+            "applications-of-balancing-equations",
+            "mathematical-treatment-of-balancing-equations",
+            "chemical-equilibrium",
+            "alcohols-reactions",
+            "reversible-reactions",
+            "advanced-alcohols-reactions",
+            "chemical-kinetics-and-rates",
+            "advanced-reversible-reactions",
+            "chemical-bonding-and-structure",
+            "applications-of-alcohols-reactions",
+            "applications-of-reversible-reactions",
+            "mathematical-treatment-of-reversible-reactions",
+            "advanced-balancing-redox",
+            "applications-of-balancing-redox"
+          ]
+        },
+        {
+          "id": "solutions",
+          "title": "Solutions",
+          "topic_id": "philippines-grade-10.chemistry.solutions",
+          "syllabus_order": 4,
+          "eden_concept_slugs": []
+        },
+        {
+          "id": "acids-and-bases",
+          "title": "Acids and Bases",
+          "topic_id": "philippines-grade-10.chemistry.acids-and-bases",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "acids-bases-and-salts",
+            "advanced-carboxylic-acids-acidity",
+            "advanced-nucleic-acids",
+            "advanced-weak-acid-dissociation",
+            "applications-of-carboxylic-acids-acidity",
+            "applications-of-nucleic-acids",
+            "applications-of-weak-acid-dissociation",
+            "carboxylic-acids-acidity",
+            "experimental-verification-of-nucleic-acids",
+            "mathematical-treatment-of-nucleic-acids",
+            "mathematical-treatment-of-weak-acid-dissociation",
+            "nucleic-acids",
+            "weak-acid-dissociation",
+            "organic-functional-groups"
+          ]
+        },
+        {
+          "id": "chemistry-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "philippines-grade-10.chemistry.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    },
+    "biology": {
+      "id": "biology",
+      "label": "Biology",
+      "icon": "🧬",
+      "chapters": [
+        {
+          "id": "cells",
+          "title": "Cells",
+          "topic_id": "philippines-grade-10.biology.cells",
+          "syllabus_order": 1,
+          "eden_concept_slugs": [
+            "cell-structure-and-function",
+            "cell-theory",
+            "advanced-cell-theory",
+            "advanced-galvanic-cells",
+            "applications-of-cell-theory",
+            "applications-of-galvanic-cells",
+            "experimental-verification-of-cell-theory",
+            "galvanic-cells",
+            "mathematical-treatment-of-cell-theory",
+            "visualizing-cell-theory",
+            "structure-and-function-of-enzymes",
+            "advanced-cell-wall",
+            "applications-of-cell-wall",
+            "experimental-verification-of-cell-wall",
+            "mathematical-treatment-of-cell-wall"
+          ]
+        },
+        {
+          "id": "ecosystems",
+          "title": "Ecosystems",
+          "topic_id": "philippines-grade-10.biology.ecosystems",
+          "syllabus_order": 2,
+          "eden_concept_slugs": [
+            "ecological-succession",
+            "evolution-by-natural-selection",
+            "advanced-ecological-succession",
+            "applications-of-ecological-succession",
+            "experimental-verification-of-ecological-succession",
+            "mathematical-treatment-of-ecological-succession"
+          ]
+        },
+        {
+          "id": "biodiversity",
+          "title": "Biodiversity",
+          "topic_id": "philippines-grade-10.biology.biodiversity",
+          "syllabus_order": 3,
+          "eden_concept_slugs": [
+            "ecological-succession",
+            "evolution-by-natural-selection",
+            "advanced-ecological-succession",
+            "applications-of-ecological-succession",
+            "experimental-verification-of-ecological-succession",
+            "mathematical-treatment-of-ecological-succession"
+          ]
+        },
+        {
+          "id": "genetics",
+          "title": "Genetics",
+          "topic_id": "philippines-grade-10.biology.genetics",
+          "syllabus_order": 4,
+          "eden_concept_slugs": [
+            "mendelian-genetics",
+            "evolution-by-natural-selection",
+            "advanced-sex-linked-inheritance",
+            "applications-of-sex-linked-inheritance",
+            "experimental-verification-of-sex-linked-inheritance",
+            "mathematical-treatment-of-sex-linked-inheritance",
+            "sex-linked-inheritance"
+          ]
+        },
+        {
+          "id": "human-body-systems",
+          "title": "Human Body Systems",
+          "topic_id": "philippines-grade-10.biology.human-body-systems",
+          "syllabus_order": 5,
+          "eden_concept_slugs": [
+            "human-lungs",
+            "human-carbon-impact",
+            "advanced-human-lungs",
+            "human-digestion-anatomy",
+            "applications-of-human-lungs",
+            "advanced-human-carbon-impact",
+            "advanced-human-digestion-anatomy",
+            "applications-of-human-carbon-impact",
+            "mathematical-treatment-of-human-lungs",
+            "applications-of-human-digestion-anatomy",
+            "experimental-verification-of-human-lungs",
+            "mathematical-treatment-of-human-carbon-impact",
+            "experimental-verification-of-human-carbon-impact",
+            "mathematical-treatment-of-human-digestion-anatomy",
+            "experimental-verification-of-human-digestion-anatomy"
+          ]
+        },
+        {
+          "id": "biology-foundation",
+          "title": "Practice bank (all topics)",
+          "topic_id": "philippines-grade-10.biology.foundation",
+          "syllabus_order": 999,
+          "practice_pool": "foundation"
+        }
+      ]
+    }
+  }
+}

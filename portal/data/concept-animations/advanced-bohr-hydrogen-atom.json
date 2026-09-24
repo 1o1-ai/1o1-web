@@ -1,0 +1,62 @@
+{
+  "slug": "advanced-bohr-hydrogen-atom",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Advanced Bohr Hydrogen Atom",
+  "theme": "atomic",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Advanced Bohr Hydrogen Atom",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Advanced Bohr Hydrogen Atom.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a digital camera captures images at specific resolutions, the Advanced Bohr Hydrogen Atom model describes how electrons in a hydroge…",
+    "Pause and restate what Advanced Bohr Hydrogen Atom means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Advanced Bohr Hydrogen Atom: nucleus + electron shells",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Bohr Hydrogen Atom</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">atomic</text><circle cx=\"320\" cy=\"190\" r=\"28\" fill=\"#fcd34d\"/><ellipse cx=\"320\" cy=\"190\" rx=\"90\" ry=\"45\" fill=\"none\" stroke=\"#67e8f9\" stroke-width=\"2\"/><ellipse cx=\"320\" cy=\"190\" rx=\"150\" ry=\"75\" fill=\"none\" stroke=\"#5eead4\" stroke-width=\"2\"/><circle cx=\"410\" cy=\"190\" r=\"9\" fill=\"#67e8f9\"/><circle cx=\"180\" cy=\"210\" r=\"9\" fill=\"#5eead4\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Energy levels — electrons jump floors",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Bohr Hydrogen Atom</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><line x1=\"140\" y1=\"280\" x2=\"500\" y2=\"280\" stroke=\"#a5f3fc\" stroke-width=\"3\"/><line x1=\"140\" y1=\"200\" x2=\"500\" y2=\"200\" stroke=\"#67e8f9\" stroke-width=\"3\"/><line x1=\"140\" y1=\"120\" x2=\"500\" y2=\"120\" stroke=\"#5eead4\" stroke-width=\"3\"/><line x1=\"300\" y1=\"280\" x2=\"300\" y2=\"120\" stroke=\"#fcd34d\" stroke-width=\"3\"/><text x=\"320\" y=\"100\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"16\" font-family=\"Segoe UI,Arial\">ΔE = h f</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Absorb photon → jump up; emit → fall down",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Bohr Hydrogen Atom</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">photon</text><circle cx=\"200\" cy=\"200\" r=\"40\" fill=\"#fcd34d\"/><path d=\"M260 200 Q340 100, 420 200\" fill=\"none\" stroke=\"#67e8f9\" stroke-width=\"3\"/><circle cx=\"460\" cy=\"120\" r=\"16\" fill=\"#5eead4\"/><text x=\"460\" y=\"90\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"12\" font-family=\"Segoe UI,Arial\">photon</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a digital camera captures images at specific resolutions, the Advanced Bohr Hydrog",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Bohr Hydrogen Atom</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a digital camera captures images at specific res</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Advanced Bohr Hydrogen Atom",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Bohr Hydrogen Atom</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#67e8f9\" font-size=\"22\" font-family=\"Segoe UI,Arial\">shells · jumps · photons</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AdvancedBohrHydrogenAtomScene",
+    "notes": "Domain=atomic motif=atom. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/advanced_bohr_hydrogen_atom.py ConceptScene"
+  },
+  "motif": "atom",
+  "generated_by": "template-stem-v5-atomic-atom",
+  "generated_at": "2026-07-12T22:34:05Z"
+}

@@ -1,0 +1,125 @@
+<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+
+  Mystery Files — a narrative detective game for CBSE Class 10. Each level is a
+  self-contained CASE with an authored story: the student earns CLUES by answering
+  chapter questions and burns LEADS on mistakes, then faces a final DEDUCTION to
+  name the culprit. Six cases ramp from gentle two-mistake budgets and no timer
+  (Electricity, Metals) up to timed, red-herring investigations in Probability and
+  Trigonometry. Solving cases raises the detective's rank from Trainee to Legendary
+  Detective. The soul of the game is the writing — the physics, chemistry and maths
+  are the evidence a real mystery turns on.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mystery Files · CBSE Class 10 Detective Cases</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/theme.css?v=saas-layout-19" />
+  <link rel="stylesheet" href="../../../assets/landing.css?v=saas-layout-12" />
+  <link rel="stylesheet" href="../../assets/portal.css?v=11" />
+  <link rel="stylesheet" href="../../assets/education-layout.css" />
+  <link rel="stylesheet" href="game-room.css" />
+  <link rel="stylesheet" href="mystery-files.css?v=1" />
+</head>
+<body class="portal-page education-compact">
+
+  <header class="portal-header">
+    <a class="back-link" href="game-room.html">← Game Room</a>
+    <h1>Mystery Files <span class="sr-open-badge">Play</span></h1>
+  </header>
+
+  <main class="portal-main">
+    <div class="mf">
+
+      <!-- ── CASE BOARD (home) ─────────────────────────────────────── -->
+      <section class="mf-home" id="mf-home">
+        <div class="mf-board-head">
+          <div class="mf-board-intro">
+            <p class="mf-kicker">Central Investigation Cell · Class X Bureau</p>
+            <h2 class="mf-board-title">The Case Board</h2>
+            <p class="mf-board-sub">Six files. Each one runs on physics, chemistry or maths. Close them to rise through the ranks.</p>
+          </div>
+          <div class="mf-rank" id="mf-rank">
+            <span class="mf-rank-label">Rank</span>
+            <span class="mf-rank-name" id="mf-rankName">Trainee</span>
+            <span class="mf-rank-meta" id="mf-rankMeta">0 / 6 cases closed</span>
+          </div>
+        </div>
+        <div class="mf-corkboard" id="mf-folders"></div>
+      </section>
+
+      <!-- ── CASE PLAY ─────────────────────────────────────────────── -->
+      <section class="mf-case" id="mf-case" hidden>
+        <div class="mf-case-head">
+          <button type="button" class="mf-btn mf-btn--ghost" id="mf-exitCase">← Case board</button>
+          <div class="mf-case-title" id="mf-caseTitle">Case</div>
+          <div class="mf-leads-wrap">
+            <span class="mf-leads-label">Leads</span>
+            <div class="mf-leads" id="mf-leads" aria-label="Leads remaining"></div>
+          </div>
+        </div>
+
+        <div class="mf-play">
+          <!-- Evidence board -->
+          <section class="mf-panel mf-evidence" id="mf-evidence">
+            <h3 class="mf-panel-title">Evidence Board</h3>
+            <div class="mf-clue-stage" id="mf-clueStage">
+              <svg class="mf-string" id="mf-string" aria-hidden="true" preserveAspectRatio="none">
+                <defs>
+                  <!-- The red string runs point-to-point across the board; a userSpaceOnUse
+                       gradient keeps the stroke coloured even where segments are axis-aligned
+                       (an objectBoundingBox gradient would collapse on a horizontal/vertical run). -->
+                  <linearGradient id="mfString" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="600">
+                    <stop offset="0%" stop-color="#f87171" />
+                    <stop offset="100%" stop-color="#b91c1c" />
+                  </linearGradient>
+                </defs>
+                <polyline id="mf-stringLine" fill="none" stroke="url(#mfString)" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round" points="" />
+              </svg>
+              <div class="mf-clues" id="mf-clues"></div>
+              <p class="mf-clues-empty" id="mf-cluesEmpty">No evidence yet. Answer the interrogation to pin your first clue.</p>
+            </div>
+          </section>
+
+          <!-- Interrogation -->
+          <section class="mf-panel mf-interrogate" id="mf-interrogate">
+            <div class="mf-timer" id="mf-timerWrap" hidden>
+              <div class="mf-timer-fill" id="mf-timerFill"></div>
+            </div>
+            <div class="mf-interro-head">
+              <span class="mf-progress" id="mf-progress">Clue 1</span>
+              <span class="mf-tag" id="mf-chapterTag">Chapter</span>
+            </div>
+            <p class="mf-transcript" id="mf-transcript">Q: Loading the case file…</p>
+            <div class="mf-options" id="mf-options"></div>
+            <div class="mf-suspects" id="mf-suspects" hidden></div>
+            <div class="mf-note" id="mf-note"></div>
+            <div class="mf-actions">
+              <button type="button" class="mf-btn" id="mf-nextBtn" hidden>Next lead →</button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Classy "case solved" light sweep -->
+  <div class="mf-sweep" id="mf-sweep" aria-hidden="true"></div>
+
+  <!-- Overlay: intro / resolution / case cold -->
+  <div class="mf-overlay" id="mf-overlay" hidden>
+    <div class="mf-card" id="mf-overlayBody"></div>
+  </div>
+
+  <script src="cbse10-quiz-bank.js?v=3"></script>
+  <script src="mystery-files.js?v=1"></script>
+</body>
+</html>

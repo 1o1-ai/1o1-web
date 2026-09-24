@@ -1,0 +1,62 @@
+{
+  "slug": "lens-maker-formula",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Lens Maker Formula",
+  "theme": "optics",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Lens Maker Formula",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Lens Maker Formula.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "The Lens Maker Formula is like a recipe for camera lens designers, helping them mix and match different lens materials and curvatures to ach…",
+    "Pause and restate what Lens Maker Formula means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Lens Maker Formula: rays through a lens",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Lens Maker Formula</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">optics</text><ellipse cx=\"320\" cy=\"190\" rx=\"18\" ry=\"110\" fill=\"#fb923c\" opacity=\"0.5\" stroke=\"#f97316\" stroke-width=\"3\"/><line x1=\"80\" y1=\"100\" x2=\"320\" y2=\"190\" stroke=\"#fde68a\" stroke-width=\"3\"/><line x1=\"80\" y1=\"190\" x2=\"560\" y2=\"190\" stroke=\"#fde68a\" stroke-width=\"3\"/><line x1=\"80\" y1=\"280\" x2=\"320\" y2=\"190\" stroke=\"#fde68a\" stroke-width=\"3\"/><line x1=\"320\" y1=\"190\" x2=\"440\" y2=\"120\" stroke=\"#f97316\" stroke-width=\"3\"/><line x1=\"320\" y1=\"190\" x2=\"440\" y2=\"260\" stroke=\"#f97316\" stroke-width=\"3\"/><circle cx=\"440\" cy=\"190\" r=\"6\" fill=\"#fde68a\"/><text x=\"440\" y=\"310\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"12\" font-family=\"Segoe UI,Arial\">focus</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Parallel rays meet at the focal point",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Lens Maker Formula</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">focus</text><ellipse cx=\"300\" cy=\"190\" rx=\"16\" ry=\"100\" fill=\"#7c2d12\" stroke=\"#fb923c\" stroke-width=\"3\"/><line x1=\"60\" y1=\"120\" x2=\"300\" y2=\"120\" stroke=\"#fde68a\" stroke-width=\"3\"/><line x1=\"60\" y1=\"190\" x2=\"300\" y2=\"190\" stroke=\"#fde68a\" stroke-width=\"3\"/><line x1=\"60\" y1=\"260\" x2=\"300\" y2=\"260\" stroke=\"#fde68a\" stroke-width=\"3\"/><line x1=\"300\" y1=\"120\" x2=\"480\" y2=\"190\" stroke=\"#f97316\" stroke-width=\"3\"/><line x1=\"300\" y1=\"260\" x2=\"480\" y2=\"190\" stroke=\"#f97316\" stroke-width=\"3\"/><circle cx=\"480\" cy=\"190\" r=\"8\" fill=\"#f97316\"/>"
+    },
+    {
+      "id": "core",
+      "caption": "1/f = 1/v + 1/u (sign convention matters)",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Lens Maker Formula</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">formula</text><rect x=\"90\" y=\"110\" width=\"460\" height=\"150\" rx=\"14\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"26\" font-family=\"Segoe UI,Arial\">1/f = 1/v + 1/u</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "The Lens Maker Formula is like a recipe for camera lens designers, helping them mix and ma",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Lens Maker Formula</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">The Lens Maker Formula is like a recipe for camera lens </text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Lens Maker Formula",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Lens Maker Formula</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"22\" font-family=\"Segoe UI,Arial\">rays · focus · image</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "LensMakerFormulaScene",
+    "notes": "Domain=optics motif=lens. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/lens_maker_formula.py ConceptScene"
+  },
+  "motif": "lens",
+  "generated_by": "template-stem-v5-optics-lens",
+  "generated_at": "2026-07-12T22:34:59Z"
+}

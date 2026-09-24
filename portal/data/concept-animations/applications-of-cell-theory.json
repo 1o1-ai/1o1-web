@@ -1,0 +1,62 @@
+{
+  "slug": "applications-of-cell-theory",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Applications of Cell Theory",
+  "theme": "biology",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Applications of Cell Theory",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Applications of Cell Theory.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a city is divided into different neighborhoods, each with its own unique characteristics and functions, cells are the basic structur…",
+    "Pause and restate what Applications of Cell Theory means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Applications of Cell Theory: structure inside a living cell",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Cell Theory</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">biology</text><ellipse cx=\"320\" cy=\"200\" rx=\"200\" ry=\"120\" fill=\"#082f49\" stroke=\"#34d399\" stroke-width=\"4\"/><circle cx=\"320\" cy=\"200\" r=\"50\" fill=\"#38bdf8\"/><text x=\"320\" y=\"205\" text-anchor=\"middle\" fill=\"#0b1220\" font-size=\"12\" font-family=\"Segoe UI,Arial\">nucleus</text><circle cx=\"265\" cy=\"140\" r=\"16\" fill=\"#fbbf24\"/><ellipse cx=\"420\" cy=\"240\" rx=\"30\" ry=\"16\" fill=\"#34d399\"/><text x=\"265\" y=\"120\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"11\" font-family=\"Segoe UI,Arial\">mito</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Parts have jobs — membrane, nucleus, organelles",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Cell Theory</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">parts</text><ellipse cx=\"280\" cy=\"200\" rx=\"160\" ry=\"100\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"4\"/><circle cx=\"280\" cy=\"200\" r=\"40\" fill=\"#38bdf8\"/><rect x=\"460\" y=\"100\" width=\"140\" height=\"200\" rx=\"10\" fill=\"#111827\" stroke=\"#fbbf24\" stroke-width=\"2\"/><text x=\"530\" y=\"140\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">membrane</text><text x=\"530\" y=\"180\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">nucleus</text><text x=\"530\" y=\"220\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">organelles</text><text x=\"530\" y=\"260\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">cytoplasm</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Process: input → transformation → output",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Cell Theory</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">flow</text><rect x=\"50\" y=\"140\" width=\"130\" height=\"80\" rx=\"10\" fill=\"#111827\" stroke=\"#38bdf8\" stroke-width=\"2\"/><text x=\"115\" y=\"185\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">input</text><text x=\"210\" y=\"185\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"250\" y=\"140\" width=\"140\" height=\"80\" rx=\"10\" fill=\"#082f49\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">cell work</text><text x=\"420\" y=\"185\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"460\" y=\"140\" width=\"130\" height=\"80\" rx=\"10\" fill=\"#111827\" stroke=\"#fbbf24\" stroke-width=\"2\"/><text x=\"525\" y=\"185\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">output</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a city is divided into different neighborhoods, each with its own unique character",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Cell Theory</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><rect x=\"70\" y=\"100\" width=\"500\" height=\"180\" rx=\"14\" fill=\"#111827\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"320\" y=\"170\" text-anchor=\"middle\" fill=\"#34d399\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Living factory</text><text x=\"320\" y=\"220\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Just as a city is divided into different neighborhoods, </text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Applications of Cell Theory",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Cell Theory</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><ellipse cx=\"320\" cy=\"200\" rx=\"120\" ry=\"70\" fill=\"#082f49\" stroke=\"#34d399\" stroke-width=\"3\"/><circle cx=\"320\" cy=\"200\" r=\"35\" fill=\"#38bdf8\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"14\" font-family=\"Segoe UI,Arial\">structure supports function</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ApplicationsofCellTheoryScene",
+    "notes": "Domain=biology motif=cell. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/applications_of_cell_theory.py ConceptScene"
+  },
+  "motif": "cell",
+  "generated_by": "template-stem-v5-biology-cell",
+  "generated_at": "2026-07-12T22:34:36Z"
+}

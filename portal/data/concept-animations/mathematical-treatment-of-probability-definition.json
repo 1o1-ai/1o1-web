@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-probability-definition",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Probability definition",
+  "theme": "stats",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Probability definition",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Probability definition.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Mathematical treatment of probability is like forecasting the weather. Just as meteorologists use data and statistical models to predict the…",
+    "Pause and restate what Mathematical Treatment of Probability definition means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Probability definition: chance as a distribution",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Probability definition</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">stats</text><rect x=\"100\" y=\"196\" width=\"55\" height=\"104\" fill=\"#c084fc\" opacity=\"0.5\"/><rect x=\"175\" y=\"155\" width=\"55\" height=\"145\" fill=\"#c084fc\" opacity=\"0.6\"/><rect x=\"250\" y=\"114\" width=\"55\" height=\"186\" fill=\"#c084fc\" opacity=\"0.7\"/><rect x=\"325\" y=\"203\" width=\"55\" height=\"97\" fill=\"#c084fc\" opacity=\"0.8\"/><rect x=\"400\" y=\"162\" width=\"55\" height=\"138\" fill=\"#c084fc\" opacity=\"0.5\"/><rect x=\"475\" y=\"121\" width=\"55\" height=\"179\" fill=\"#c084fc\" opacity=\"0.6\"/><line x1=\"80\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#c4b5fd\" stroke-width=\"2\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Favorable outcomes over possible outcomes",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Probability definition</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">ratio</text><circle cx=\"220\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#c084fc\" stroke-width=\"4\"/><path d=\"M220 190 L220 110 A80 80 0 0 1 290 160 Z\" fill=\"#f472b6\"/><text x=\"420\" y=\"180\" text-anchor=\"start\" fill=\"#faf5ff\" font-size=\"14\" font-family=\"Segoe UI,Arial\">P = favorable / possible</text>"
+    },
+    {
+      "id": "core",
+      "caption": "0 ≤ P ≤ 1",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Probability definition</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><line x1=\"100\" y1=\"200\" x2=\"540\" y2=\"200\" stroke=\"#c4b5fd\" stroke-width=\"6\"/><circle cx=\"460\" cy=\"200\" r=\"16\" fill=\"#f472b6\"/><text x=\"100\" y=\"240\" text-anchor=\"start\" fill=\"#c4b5fd\" font-size=\"14\" font-family=\"Segoe UI,Arial\">0</text><text x=\"540\" y=\"240\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"14\" font-family=\"Segoe UI,Arial\">1</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Mathematical treatment of probability is like forecasting the weather. Just as meteorologi",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Probability definition</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#faf5ff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical treatment of probability is like forecastin</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember probability bounds",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#120b1a\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#1e1230\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#c084fc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Probability definition</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#c4b5fd\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#c084fc\" font-size=\"24\" font-family=\"Segoe UI,Arial\">0 → certainty ← 1</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofProbabilitydefiniScene",
+    "notes": "Domain=stats motif=probability. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_probability_definition.py ConceptScene"
+  },
+  "motif": "probability",
+  "generated_by": "template-stem-v5-stats-probability",
+  "generated_at": "2026-07-12T22:35:04Z"
+}

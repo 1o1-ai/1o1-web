@@ -1,0 +1,68 @@
+{
+  "slug": "snell-law",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Snell's Law — Light Bends at the Boundary",
+  "theme": "optics-lab",
+  "fps": 0.55,
+  "duration_sec": 28,
+  "learning_objectives": [
+    "State n₁ sin θ₁ = n₂ sin θ₂",
+    "Predict bend toward/away from the normal",
+    "Recognize total internal reflection past the critical angle"
+  ],
+  "voiceover": [
+    "Light travels in straight lines — until it meets a new medium.",
+    "At the air–water boundary, part of the ray reflects, and part refracts.",
+    "Snell's Law says n-one sine theta-one equals n-two sine theta-two.",
+    "From air into water, the ray bends toward the normal.",
+    "From water into air, beyond the critical angle, the ray reflects totally — fiber optics use this."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "setup",
+      "caption": "A light ray approaches the air–water boundary",
+      "duration_frames": 3,
+      "svg": "<rect width='640' height='180' fill='#0b1220'/><rect y='180' width='640' height='180' fill='#0c4a6e'/><text x='24' y='40' fill='#94a3b8' font-size='16' font-family='Segoe UI,sans-serif'>AIR  n₁ ≈ 1.00</text><text x='24' y='320' fill='#7dd3fc' font-size='16' font-family='Segoe UI,sans-serif'>WATER  n₂ ≈ 1.33</text><line x1='320' y1='40' x2='320' y2='320' stroke='#64748b' stroke-dasharray='6 6' stroke-width='2'/><text x='328' y='56' fill='#94a3b8' font-size='12'>normal</text><line x1='80' y1='60' x2='320' y2='180' stroke='#fde68a' stroke-width='3' stroke-linecap='round'/><circle cx='80' cy='60' r='5' fill='#fbbf24'/>"
+    },
+    {
+      "id": "incident-angle",
+      "caption": "Angle of incidence θ₁ is measured from the normal",
+      "duration_frames": 3,
+      "svg": "<rect width='640' height='180' fill='#0b1220'/><rect y='180' width='640' height='180' fill='#0c4a6e'/><text x='24' y='40' fill='#94a3b8' font-size='16' font-family='Segoe UI,sans-serif'>AIR  n₁ ≈ 1.00</text><text x='24' y='320' fill='#7dd3fc' font-size='16' font-family='Segoe UI,sans-serif'>WATER  n₂ ≈ 1.33</text><line x1='320' y1='40' x2='320' y2='320' stroke='#64748b' stroke-dasharray='6 6' stroke-width='2'/><line x1='80' y1='60' x2='320' y2='180' stroke='#fde68a' stroke-width='3' stroke-linecap='round'/><path d='M320 140 A40 40 0 0 0 292 158' fill='none' stroke='#f472b6' stroke-width='2'/><text x='250' y='130' fill='#f9a8d4' font-size='18' font-family='Segoe UI,sans-serif'>θ₁</text>"
+    },
+    {
+      "id": "refract",
+      "caption": "The refracted ray bends toward the normal in water",
+      "duration_frames": 4,
+      "svg": "<rect width='640' height='180' fill='#0b1220'/><rect y='180' width='640' height='180' fill='#0c4a6e'/><text x='24' y='40' fill='#94a3b8' font-size='16' font-family='Segoe UI,sans-serif'>AIR  n₁ ≈ 1.00</text><text x='24' y='320' fill='#7dd3fc' font-size='16' font-family='Segoe UI,sans-serif'>WATER  n₂ ≈ 1.33</text><line x1='320' y1='40' x2='320' y2='320' stroke='#64748b' stroke-dasharray='6 6' stroke-width='2'/><line x1='80' y1='60' x2='320' y2='180' stroke='#fde68a' stroke-width='3' stroke-linecap='round'/><line x1='320' y1='180' x2='380' y2='300' stroke='#38bdf8' stroke-width='3' stroke-linecap='round'/><path d='M320 140 A40 40 0 0 0 292 158' fill='none' stroke='#f472b6' stroke-width='2'/><path d='M320 220 A36 36 0 0 1 348 248' fill='none' stroke='#22d3ee' stroke-width='2'/><text x='250' y='130' fill='#f9a8d4' font-size='18'>θ₁</text><text x='360' y='250' fill='#67e8f9' font-size='18'>θ₂</text><text x='400' y='100' fill='#f8fafc' font-size='20' font-family='Segoe UI,sans-serif'>n₁ sin θ₁ = n₂ sin θ₂</text>"
+    },
+    {
+      "id": "formula",
+      "caption": "Snell's Law: n₁ sin θ₁ = n₂ sin θ₂",
+      "duration_frames": 3,
+      "svg": "<rect width='640' height='360' fill='#0b1220'/><text x='320' y='120' text-anchor='middle' fill='#f8fafc' font-size='28' font-family='Segoe UI,sans-serif'>Snell's Law</text><text x='320' y='180' text-anchor='middle' fill='#fde68a' font-size='36' font-family='Cambria Math,serif'>n₁ sin θ₁ = n₂ sin θ₂</text><text x='320' y='240' text-anchor='middle' fill='#94a3b8' font-size='16'>Denser medium → smaller angle (bends toward normal)</text><text x='320' y='270' text-anchor='middle' fill='#94a3b8' font-size='16'>Rarer medium → larger angle (bends away from normal)</text>"
+    },
+    {
+      "id": "tir",
+      "caption": "Beyond the critical angle: total internal reflection",
+      "duration_frames": 4,
+      "svg": "<rect width='640' height='180' fill='#0c4a6e'/><rect y='180' width='640' height='180' fill='#0b1220'/><text x='24' y='40' fill='#7dd3fc' font-size='16'>WATER  n₁ ≈ 1.33</text><text x='24' y='320' fill='#94a3b8' font-size='16'>AIR  n₂ ≈ 1.00</text><line x1='320' y1='40' x2='320' y2='320' stroke='#64748b' stroke-dasharray='6 6' stroke-width='2'/><line x1='120' y1='80' x2='320' y2='180' stroke='#38bdf8' stroke-width='3' stroke-linecap='round'/><line x1='320' y1='180' x2='520' y2='80' stroke='#fbbf24' stroke-width='3' stroke-linecap='round'/><text x='400' y='140' fill='#fde68a' font-size='16'>θ &gt; θ_c → TIR</text><text x='40' y='350' fill='#a5b4fc' font-size='14'>Fiber optics trap light by total internal reflection</text>"
+    },
+    {
+      "id": "summary",
+      "caption": "Remember: sine relation + normal + critical angle",
+      "duration_frames": 3,
+      "svg": "<rect width='640' height='360' fill='#0b1220'/><text x='320' y='80' text-anchor='middle' fill='#67e8f9' font-size='22'>Takeaways</text><text x='80' y='140' fill='#f8fafc' font-size='18'>1. Measure angles from the normal</text><text x='80' y='180' fill='#f8fafc' font-size='18'>2. n₁ sin θ₁ = n₂ sin θ₂</text><text x='80' y='220' fill='#f8fafc' font-size='18'>3. Into denser → toward normal</text><text x='80' y='260' fill='#f8fafc' font-size='18'>4. Past critical angle → total internal reflection</text><text x='80' y='310' fill='#fbbf24' font-size='16'>Used in lenses · fiber internet · endoscopes · rainbows</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "SnellsLawScene",
+    "notes": "Render with Manim Community Edition: light ray ValueTracker for theta, DashedLine normal, MathTex for formula, Flash on TIR.",
+    "cli": "manim -pqh scripts/manim_scenes/snell_law.py SnellsLawScene"
+  },
+  "generated_by": "hand-crafted-stem-svg-v3",
+  "generated_at": "2026-07-11T03:40:00Z",
+  "inspired_by_quality_bar": "YouTube STEM optics explainers (Snell's Law light-ray style)"
+}

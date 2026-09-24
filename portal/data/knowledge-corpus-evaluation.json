@@ -1,0 +1,253 @@
+{
+  "evaluated_at": "2026-07-09T22:52:43.050528+00:00",
+  "knowledge_root": "D:\\knowledge",
+  "education_root": "D:\\knowledge\\India",
+  "regions": {
+    ".cursor": {
+      "questions_json_files": 0,
+      "questions_total": 0,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 1
+    },
+    "Bangladesh": {
+      "questions_json_files": 76,
+      "questions_total": 3107,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 328
+    },
+    "Canada": {
+      "questions_json_files": 76,
+      "questions_total": 2801,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 345
+    },
+    "chapters": {
+      "questions_json_files": 0,
+      "questions_total": 0,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 15
+    },
+    "COTE": {
+      "questions_json_files": 0,
+      "questions_total": 0,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 0
+    },
+    "Finland": {
+      "questions_json_files": 76,
+      "questions_total": 3315,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 328
+    },
+    "India": {
+      "questions_json_files": 92,
+      "questions_total": 1420,
+      "question_bank_json_files": 8,
+      "study_knowledge_md": 83,
+      "study_extracted_txt": 83,
+      "file_count": 5279
+    },
+    "Japan": {
+      "questions_json_files": 76,
+      "questions_total": 569,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 328
+    },
+    "lnternational": {
+      "questions_json_files": 0,
+      "questions_total": 0,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 0
+    },
+    "Malaysia": {
+      "questions_json_files": 76,
+      "questions_total": 533,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 328
+    },
+    "Mexico": {
+      "questions_json_files": 3,
+      "questions_total": 24,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 3
+    },
+    "Nigeria": {
+      "questions_json_files": 76,
+      "questions_total": 1114,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 328
+    },
+    "Pakistan": {
+      "questions_json_files": 76,
+      "questions_total": 2992,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 328
+    },
+    "Philippines": {
+      "questions_json_files": 76,
+      "questions_total": 842,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 328
+    },
+    "Singapore": {
+      "questions_json_files": 76,
+      "questions_total": 541,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 390
+    },
+    "South Korea": {
+      "questions_json_files": 76,
+      "questions_total": 406,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 328
+    },
+    "UK": {
+      "questions_json_files": 76,
+      "questions_total": 169,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 328
+    },
+    "USA": {
+      "questions_json_files": 76,
+      "questions_total": 1697,
+      "question_bank_json_files": 0,
+      "study_knowledge_md": 0,
+      "study_extracted_txt": 0,
+      "file_count": 328
+    }
+  },
+  "india_tracks": {
+    "CBSE-10-MATH-SCIENCE": {
+      "questions_json_files": 36,
+      "question_bank_files": 67,
+      "question_bank_items": 4981,
+      "knowledge_md": 0,
+      "extracted_txt": 0,
+      "study_material_md": 65,
+      "pdf_count": 678
+    },
+    "CBSE-11-12-Arts": {
+      "questions_json_files": 0,
+      "question_bank_files": 0,
+      "question_bank_items": 0,
+      "knowledge_md": 24,
+      "extracted_txt": 24,
+      "study_material_md": 0,
+      "pdf_count": 26
+    },
+    "CBSE-11-12-Commerce": {
+      "questions_json_files": 0,
+      "question_bank_files": 0,
+      "question_bank_items": 0,
+      "knowledge_md": 24,
+      "extracted_txt": 24,
+      "study_material_md": 0,
+      "pdf_count": 20
+    },
+    "CBSE-11-12-SCIENCE": {
+      "questions_json_files": 52,
+      "question_bank_files": 0,
+      "question_bank_items": 0,
+      "knowledge_md": 0,
+      "extracted_txt": 0,
+      "study_material_md": 0,
+      "pdf_count": 0
+    },
+    "CBSE-5-8-Geography": {
+      "questions_json_files": 0,
+      "question_bank_files": 0,
+      "question_bank_items": 0,
+      "knowledge_md": 9,
+      "extracted_txt": 9,
+      "study_material_md": 0,
+      "pdf_count": 9
+    },
+    "CBSE-5-8-History": {
+      "questions_json_files": 0,
+      "question_bank_files": 0,
+      "question_bank_items": 0,
+      "knowledge_md": 8,
+      "extracted_txt": 8,
+      "study_material_md": 0,
+      "pdf_count": 8
+    },
+    "CBSE-5-8-Science": {
+      "questions_json_files": 0,
+      "question_bank_files": 0,
+      "question_bank_items": 0,
+      "knowledge_md": 18,
+      "extracted_txt": 18,
+      "study_material_md": 0,
+      "pdf_count": 18
+    },
+    "CISCE": {
+      "questions_json_files": 0,
+      "question_bank_files": 0,
+      "question_bank_items": 0,
+      "knowledge_md": 0,
+      "extracted_txt": 0,
+      "study_material_md": 0,
+      "pdf_count": 93
+    },
+    "Grade 10": {
+      "questions_json_files": 4,
+      "question_bank_files": 0,
+      "question_bank_items": 0,
+      "knowledge_md": 0,
+      "extracted_txt": 0,
+      "study_material_md": 0,
+      "pdf_count": 0
+    }
+  },
+  "concepts": {
+    "registry_files": [
+      "23-global-science-concepts-master.json",
+      "25-global-math-concepts-master.json",
+      "29-expanded-physics-concepts.json",
+      "30-expanded-chemistry-concepts.json",
+      "31-expanded-biology-concepts.json",
+      "32-expanded-math-concepts.json",
+      "concepts-enriched-math.json",
+      "concepts-enriched-science.json"
+    ],
+    "estimated_records": 1990,
+    "markdown_exports": 1942
+  },
+  "totals": {
+    "questions": 19530,
+    "regions": 18,
+    "cbse_qbank_items": 4981
+  }
+}

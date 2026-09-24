@@ -1,0 +1,62 @@
+{
+  "slug": "advanced-projectile-motion",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Advanced Projectile Motion",
+  "theme": "mechanics",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Advanced Projectile Motion",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Advanced Projectile Motion.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Advanced Projectile Motion is like a golf ball's trajectory, where the initial velocity, angle of launch, and air resistance all contribute …",
+    "Pause and restate what Advanced Projectile Motion means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Advanced Projectile Motion: launched object in flight",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Projectile Motion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mechanics</text><line x1=\"60\" y1=\"300\" x2=\"580\" y2=\"300\" stroke=\"#fdba74\" stroke-width=\"4\"/><path d=\"M100 280 Q260 60, 500 280\" fill=\"none\" stroke=\"#fde68a\" stroke-width=\"4\"/><circle cx=\"300\" cy=\"140\" r=\"16\" fill=\"#fb923c\"/><line x1=\"100\" y1=\"280\" x2=\"160\" y2=\"220\" stroke=\"#f97316\" stroke-width=\"3\"/><text x=\"180\" y=\"210\" text-anchor=\"start\" fill=\"#f97316\" font-size=\"13\" font-family=\"Segoe UI,Arial\">v0</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Horizontal speed steady; vertical feels gravity",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Projectile Motion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">components</text><line x1=\"120\" y1=\"200\" x2=\"320\" y2=\"200\" stroke=\"#fb923c\" stroke-width=\"4\"/><line x1=\"120\" y1=\"200\" x2=\"120\" y2=\"80\" stroke=\"#fde68a\" stroke-width=\"4\"/><text x=\"220\" y=\"190\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"14\" font-family=\"Segoe UI,Arial\">vx</text><text x=\"140\" y=\"120\" text-anchor=\"start\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">vy</text><circle cx=\"400\" cy=\"180\" r=\"24\" fill=\"#f97316\"/>"
+    },
+    {
+      "id": "core",
+      "caption": "Range and time of flight from components",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Projectile Motion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"80\" y=\"110\" width=\"480\" height=\"150\" rx=\"12\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"2\"/><text x=\"320\" y=\"170\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"18\" font-family=\"Segoe UI,Arial\">x = v0 cosθ · t</text><text x=\"320\" y=\"215\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"18\" font-family=\"Segoe UI,Arial\">y = v0 sinθ · t − ½ g t²</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Advanced Projectile Motion is like a golf balls trajectory, where the initial velocity, an",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Projectile Motion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Projectile Motion is like a golf balls trajecto</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Advanced Projectile Motion",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Projectile Motion</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"22\" font-family=\"Segoe UI,Arial\">arc under gravity</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AdvancedProjectileMotionScene",
+    "notes": "Domain=mechanics motif=projectile. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/advanced_projectile_motion.py ConceptScene"
+  },
+  "motif": "projectile",
+  "generated_by": "template-stem-v5-mechanics-projectile",
+  "generated_at": "2026-07-12T22:34:24Z"
+}

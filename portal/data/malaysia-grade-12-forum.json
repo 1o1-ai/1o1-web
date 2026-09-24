@@ -1,0 +1,2989 @@
+{
+  "version": 1,
+  "sku": "malaysia-grade-12",
+  "title": "Grade 12",
+  "displayName": "Malaysia · Grade 12",
+  "generated_at": "2026-07-13T12:21:29.691805+00:00",
+  "locale": "my",
+  "threads": [
+    {
+      "id": "thr_malaysia-grade-12_solid-state_000",
+      "title": "Best resources for Solid State? Textbook vs online notes",
+      "subject": "chemistry",
+      "chapter": "solid-state",
+      "chapter_title": "Solid State",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Is it normal that Solid State takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-06-22T15:57:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Solid State.",
+          "created_at": "2026-06-23T07:04:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Don't ignore the worked examples. For Solid State they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-23T10:40:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Solid State.",
+          "created_at": "2026-06-23T14:33:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Honestly I skipped ahead then came back — Solid State clicked after seeing later examples.",
+          "created_at": "2026-06-23T21:38:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Anyone else want to sync study times for Solid State this week?",
+          "created_at": "2026-06-24T08:26:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_biomolecules_001",
+      "title": "I keep mixing up steps in Biomolecules. What helped you?",
+      "subject": "chemistry",
+      "chapter": "biomolecules",
+      "chapter_title": "Biomolecules",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Is it normal that Biomolecules takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-06-09T01:12:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-09T12:32:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Biomolecules fixed most of it.",
+          "created_at": "2026-06-10T01:33:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "If you cannot explain Biomolecules to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-10T05:33:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I record myself explaining Biomolecules out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-10T11:11:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Biomolecules.",
+          "created_at": "2026-06-10T17:00:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Biomolecules.",
+          "created_at": "2026-06-11T01:19:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_amines_002",
+      "title": "Teacher said Amines will definitely show up — panic mode?",
+      "subject": "chemistry",
+      "chapter": "amines",
+      "chapter_title": "Amines",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Past paper had two weird Amines items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-05T07:15:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Amines problem cold.",
+          "created_at": "2026-07-05T19:40:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-06T03:04:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_probability_003",
+      "title": "Concept check: Probability before the mock test",
+      "subject": "mathematics",
+      "chapter": "probability",
+      "chapter_title": "Probability",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I can recite definitions for Probability but freeze on application questions. Same for anyone? (Grade 12)",
+          "created_at": "2026-06-27T04:47:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Probability.",
+          "created_at": "2026-06-27T22:59:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Not proud of it, but I left Probability late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-28T01:40:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Probability fixed most of it.",
+          "created_at": "2026-06-28T09:11:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Probability set.",
+          "created_at": "2026-06-28T10:15:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_magnetism-and-matter_004",
+      "title": "Stuck on Magnetism and Matter — anyone have a clear way to revise this?",
+      "subject": "physics",
+      "chapter": "magnetism-and-matter",
+      "chapter_title": "Magnetism and Matter",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I can recite definitions for Magnetism and Matter but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-30T11:03:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I keep a 'mistake log' only for Magnetism and Matter. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-01T03:55:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Magnetism and Matter.",
+          "created_at": "2026-07-01T21:24:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-02T12:14:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Magnetism and Matter.",
+          "created_at": "2026-07-02T16:33:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Magnetism and Matter — the diagrams helped.",
+          "created_at": "2026-07-03T10:46:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-07-03T16:01:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Appreciate the tip. Going to redo my notes for Magnetism and Matter from scratch.",
+          "created_at": "2026-07-04T01:21:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_organisms-and-populations_005",
+      "title": "How are you preparing Organisms and Populations for the final exam?",
+      "subject": "biology",
+      "chapter": "organisms-and-populations",
+      "chapter_title": "Organisms and Populations",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Group chat from school is quiet on Organisms and Populations. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-25T18:29:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Organisms and Populations marks.",
+          "created_at": "2026-06-26T04:23:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-26T07:28:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Organisms and Populations.",
+          "created_at": "2026-06-26T23:36:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Break Organisms and Populations into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-27T02:43:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Thanks — trying that tonight for Organisms and Populations.",
+          "created_at": "2026-06-27T16:02:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I keep a 'mistake log' only for Organisms and Populations. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-28T01:31:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Organisms and Populations.",
+          "created_at": "2026-06-28T12:14:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_electric-charges-and-fields_006",
+      "title": "Is Electric Charges and Fields more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "electric-charges-and-fields",
+      "chapter_title": "Electric Charges and Fields",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Our teacher hinted Electric Charges and Fields is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-17T09:49:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Whiteboard + friend teaching me Electric Charges and Fields beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-18T02:32:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_evolution_007",
+      "title": "Is Evolution more theory-heavy or numerical for our board?",
+      "subject": "biology",
+      "chapter": "evolution",
+      "chapter_title": "Evolution",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Making flashcards for Evolution tonight — what should absolutely be on them?",
+          "created_at": "2026-06-24T01:39:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Short sessions beat marathon cramming for Evolution. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-24T10:16:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Evolution unit.",
+          "created_at": "2026-06-25T01:59:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I keep a 'mistake log' only for Evolution. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-25T04:51:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I record myself explaining Evolution out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-25T10:56:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Evolution.",
+          "created_at": "2026-06-26T00:08:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Our senior shared last year's notes on Evolution; still accurate for the current syllabus.",
+          "created_at": "2026-06-26T13:13:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_biotechnology-and-applications_008",
+      "title": "Need a simple analogy for Biotechnology and Applications that actually sticks",
+      "subject": "biology",
+      "chapter": "biotechnology-and-applications",
+      "chapter_title": "Biotechnology and Applications",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "We just started Biotechnology and Applications in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-26T01:07:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Biotechnology and Applications fixed most of it.",
+          "created_at": "2026-06-26T07:53:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Biotechnology and Applications.",
+          "created_at": "2026-06-26T22:21:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_electromagnetic-induction_009",
+      "title": "Quick poll: how many hours are you giving Electromagnetic Induction this week?",
+      "subject": "physics",
+      "chapter": "electromagnetic-induction",
+      "chapter_title": "Electromagnetic Induction",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "We just started Electromagnetic Induction in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-29T02:21:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Don't ignore the worked examples. For Electromagnetic Induction they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-29T09:57:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Check units and significant figures on every Electromagnetic Induction numerical before you move on.",
+          "created_at": "2026-06-29T21:57:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Electromagnetic Induction fixed most of it.",
+          "created_at": "2026-06-30T14:24:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_atoms-and-nuclei_010",
+      "title": "Who already finished Atoms and Nuclei? Worth starting early?",
+      "subject": "physics",
+      "chapter": "atoms-and-nuclei",
+      "chapter_title": "Atoms and Nuclei",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Group chat from school is quiet on Atoms and Nuclei. Hoping this forum has clearer answers.",
+          "created_at": "2026-07-11T00:44:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Atoms and Nuclei marks.",
+          "created_at": "2026-07-11T05:33:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Atoms and Nuclei.",
+          "created_at": "2026-07-11T16:53:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Not proud of it, but I left Atoms and Nuclei late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-12T01:59:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Past papers > notes for me on Atoms and Nuclei. Pattern recognition beats rereading.",
+          "created_at": "2026-07-12T10:30:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_vectors_011",
+      "title": "Sharing my Vectors mistake from yesterday's quiz — what did I miss?",
+      "subject": "mathematics",
+      "chapter": "vectors",
+      "chapter_title": "Vectors",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Got stuck on a homework problem from Vectors. Happy to post the exact question if that helps. (Grade 12)",
+          "created_at": "2026-07-05T19:45:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-06T14:25:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Do the odd-numbered textbook exercises for Vectors; answers are usually in the back.",
+          "created_at": "2026-07-06T19:29:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Vectors problem cold.",
+          "created_at": "2026-07-06T21:05:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Vectors idea.",
+          "created_at": "2026-07-07T01:47:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Vectors.",
+          "created_at": "2026-07-07T19:57:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Short sessions beat marathon cramming for Vectors. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-08T02:39:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_polymers_012",
+      "title": "How are you preparing Polymers for the final exam?",
+      "subject": "chemistry",
+      "chapter": "polymers",
+      "chapter_title": "Polymers",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Group chat from school is quiet on Polymers. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-09T08:49:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Polymers.",
+          "created_at": "2026-06-09T12:23:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-10T04:13:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_alcohols-phenols-and-ethers_013",
+      "title": "Sharing my Alcohols Phenols and Ethers mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "alcohols-phenols-and-ethers",
+      "chapter_title": "Alcohols Phenols and Ethers",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Tried three YouTube explainers for Alcohols Phenols and Ethers and still confused. Prefer textbook-first approaches? (Grade 12)",
+          "created_at": "2026-07-03T00:01:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Alcohols Phenols and Ethers idea.",
+          "created_at": "2026-07-03T07:16:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Alcohols Phenols and Ethers fixed most of it.",
+          "created_at": "2026-07-03T14:28:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Short sessions beat marathon cramming for Alcohols Phenols and Ethers. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-04T00:39:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Whiteboard + friend teaching me Alcohols Phenols and Ethers beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-04T10:41:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_sexual-reproduction-in-flowering-plants_014",
+      "title": "Sharing my Sexual Reproduction in Flowering Plants mistake from yesterday's quiz — what did I miss?",
+      "subject": "biology",
+      "chapter": "sexual-reproduction-in-flowering-plants",
+      "chapter_title": "Sexual Reproduction in Flowering Plants",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Is it normal that Sexual Reproduction in Flowering Plants takes longer than neighboring chapters in Biology?",
+          "created_at": "2026-06-25T13:21:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-26T03:50:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Honestly I skipped ahead then came back — Sexual Reproduction in Flowering Plants clicked after seeing later examples.",
+          "created_at": "2026-06-26T20:02:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Sexual Reproduction in Flowering Plants.",
+          "created_at": "2026-06-27T14:56:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Sexual Reproduction in Flowering Plants fixed most of it.",
+          "created_at": "2026-06-27T18:25:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_electrochemistry_015",
+      "title": "I keep mixing up steps in Electrochemistry. What helped you?",
+      "subject": "chemistry",
+      "chapter": "electrochemistry",
+      "chapter_title": "Electrochemistry",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Tried three YouTube explainers for Electrochemistry and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-22T02:30:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-22T17:04:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Check units and significant figures on every Electrochemistry numerical before you move on.",
+          "created_at": "2026-06-23T01:21:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_reproductive-health_016",
+      "title": "Need a simple analogy for Reproductive Health that actually sticks",
+      "subject": "biology",
+      "chapter": "reproductive-health",
+      "chapter_title": "Reproductive Health",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Scored poorly on the last Reproductive Health quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-27T06:19:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I record myself explaining Reproductive Health out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-27T23:46:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Someone in my class made a mind map for Reproductive Health — copying that format helped a lot.",
+          "created_at": "2026-06-28T01:58:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Official syllabus lists Reproductive Health as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-28T04:15:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Reproductive Health.",
+          "created_at": "2026-06-28T20:21:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_wave-optics_017",
+      "title": "Is Wave Optics more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "wave-optics",
+      "chapter_title": "Wave Optics",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Starting from zero on Wave Optics after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-23T23:29:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Short sessions beat marathon cramming for Wave Optics. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-24T14:35:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Wave Optics — the diagrams helped.",
+          "created_at": "2026-06-25T03:41:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Wave Optics question though.",
+          "created_at": "2026-06-25T10:10:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Wave Optics problem cold.",
+          "created_at": "2026-06-26T02:14:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Wave Optics set.",
+          "created_at": "2026-06-26T12:00:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Wave Optics already.",
+          "created_at": "2026-06-26T15:55:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Someone in my class made a mind map for Wave Optics — copying that format helped a lot.",
+          "created_at": "2026-06-27T08:11:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_molecular-basis-of-inheritance_018",
+      "title": "Stuck on Molecular Basis of Inheritance — anyone have a clear way to revise this?",
+      "subject": "biology",
+      "chapter": "molecular-basis-of-inheritance",
+      "chapter_title": "Molecular Basis of Inheritance",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Tried three YouTube explainers for Molecular Basis of Inheritance and still confused. Prefer textbook-first approaches? (Grade 12)",
+          "created_at": "2026-06-21T21:51:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-22T00:33:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Molecular Basis of Inheritance.",
+          "created_at": "2026-06-22T14:19:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I keep a 'mistake log' only for Molecular Basis of Inheritance. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-23T07:31:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Molecular Basis of Inheritance marks.",
+          "created_at": "2026-06-24T02:01:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_matrices_019",
+      "title": "Is Matrices more theory-heavy or numerical for our board?",
+      "subject": "mathematics",
+      "chapter": "matrices",
+      "chapter_title": "Matrices",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Got stuck on a homework problem from Matrices. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-10T19:36:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Matrices.",
+          "created_at": "2026-06-11T06:20:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Matrices marks.",
+          "created_at": "2026-06-11T22:33:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_haloalkanes-and-haloarenes_020",
+      "title": "Sharing my Haloalkanes and Haloarenes mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "haloalkanes-and-haloarenes",
+      "chapter_title": "Haloalkanes and Haloarenes",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Is it normal that Haloalkanes and Haloarenes takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-07-05T05:26:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Mark scheme language for Haloalkanes and Haloarenes is specific — practice writing to that style.",
+          "created_at": "2026-07-05T14:56:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Our senior shared last year's notes on Haloalkanes and Haloarenes; still accurate for the current syllabus.",
+          "created_at": "2026-07-05T16:12:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-06T08:07:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_principles-of-inheritance-and-variation_021",
+      "title": "Best resources for Principles of Inheritance and Variation? Textbook vs online notes",
+      "subject": "biology",
+      "chapter": "principles-of-inheritance-and-variation",
+      "chapter_title": "Principles of Inheritance and Variation",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Past paper had two weird Principles of Inheritance and Variation items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-07T09:36:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Principles of Inheritance and Variation unit.",
+          "created_at": "2026-07-07T22:14:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Principles of Inheritance and Variation.",
+          "created_at": "2026-07-08T06:33:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_functions_022",
+      "title": "Need a simple analogy for Functions that actually sticks",
+      "subject": "mathematics",
+      "chapter": "functions",
+      "chapter_title": "Functions",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Our teacher hinted Functions is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-07-04T23:55:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Honestly I skipped ahead then came back — Functions clicked after seeing later examples.",
+          "created_at": "2026-07-05T03:37:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Functions — the diagrams helped.",
+          "created_at": "2026-07-05T14:53:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Functions problem cold.",
+          "created_at": "2026-07-06T04:27:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_human-reproduction_023",
+      "title": "Best resources for Human Reproduction? Textbook vs online notes",
+      "subject": "biology",
+      "chapter": "human-reproduction",
+      "chapter_title": "Human Reproduction",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "We just started Human Reproduction in class and I'm lost on the basics. Any tips before I dig into numericals? (Grade 12)",
+          "created_at": "2026-06-27T08:06:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "For Human Reproduction, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-27T20:31:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Don't ignore the worked examples. For Human Reproduction they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-28T06:19:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-06-28T20:58:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_electromagnetic-waves_024",
+      "title": "Need a simple analogy for Electromagnetic Waves that actually sticks",
+      "subject": "physics",
+      "chapter": "electromagnetic-waves",
+      "chapter_title": "Electromagnetic Waves",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I can recite definitions for Electromagnetic Waves but freeze on application questions. Same for anyone?",
+          "created_at": "2026-07-11T00:44:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-11T06:13:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I record myself explaining Electromagnetic Waves out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-11T13:30:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-11T21:17:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Electromagnetic Waves.",
+          "created_at": "2026-07-12T07:04:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_microbes-in-human-welfare_025",
+      "title": "Is Microbes in Human Welfare more theory-heavy or numerical for our board?",
+      "subject": "biology",
+      "chapter": "microbes-in-human-welfare",
+      "chapter_title": "Microbes in Human Welfare",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Past paper had two weird Microbes in Human Welfare items back-to-back. Want to compare approaches. (Grade 12)",
+          "created_at": "2026-06-21T04:23:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Official syllabus lists Microbes in Human Welfare as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-21T19:17:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Honestly I skipped ahead then came back — Microbes in Human Welfare clicked after seeing later examples.",
+          "created_at": "2026-06-22T03:00:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-22T07:03:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Microbes in Human Welfare idea.",
+          "created_at": "2026-06-22T18:10:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Microbes in Human Welfare.",
+          "created_at": "2026-06-22T23:23:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Microbes in Human Welfare set.",
+          "created_at": "2026-06-23T14:33:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_current-electricity_026",
+      "title": "I keep mixing up steps in Current Electricity. What helped you?",
+      "subject": "physics",
+      "chapter": "current-electricity",
+      "chapter_title": "Current Electricity",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Revision week — Current Electricity is the weak spot on my checklist for Physics. How are you tackling it?",
+          "created_at": "2026-06-11T18:59:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I keep a 'mistake log' only for Current Electricity. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-12T07:35:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Past papers > notes for me on Current Electricity. Pattern recognition beats rereading.",
+          "created_at": "2026-06-13T01:12:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Current Electricity.",
+          "created_at": "2026-06-13T09:23:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Our senior shared last year's notes on Current Electricity; still accurate for the current syllabus.",
+          "created_at": "2026-06-14T00:23:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-14T18:10:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_ecosystem_027",
+      "title": "How are you preparing Ecosystem for the final exam?",
+      "subject": "biology",
+      "chapter": "ecosystem",
+      "chapter_title": "Ecosystem",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Scored poorly on the last Ecosystem quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-26T11:39:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Ecosystem set.",
+          "created_at": "2026-06-26T15:49:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-26T17:49:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Ecosystem fixed most of it.",
+          "created_at": "2026-06-27T08:11:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Appreciate the tip. Going to redo my notes for Ecosystem from scratch.",
+          "created_at": "2026-06-27T13:23:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Official syllabus lists Ecosystem as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-28T06:40:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_alternating-current_028",
+      "title": "How are you preparing Alternating Current for the final exam?",
+      "subject": "physics",
+      "chapter": "alternating-current",
+      "chapter_title": "Alternating Current",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "We just started Alternating Current in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-10T08:57:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I record myself explaining Alternating Current out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-10T11:52:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Don't ignore the worked examples. For Alternating Current they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-11T05:58:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Official syllabus lists Alternating Current as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-11T08:39:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_integration_029",
+      "title": "Quick poll: how many hours are you giving Integration this week?",
+      "subject": "mathematics",
+      "chapter": "integration",
+      "chapter_title": "Integration",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I can recite definitions for Integration but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-22T12:40:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Someone in my class made a mind map for Integration — copying that format helped a lot.",
+          "created_at": "2026-06-23T05:19:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Integration live.",
+          "created_at": "2026-06-23T11:52:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_statistics_030",
+      "title": "Our class test had a tricky Mathematics question from Statistics",
+      "subject": "mathematics",
+      "chapter": "statistics",
+      "chapter_title": "Statistics",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Starting from zero on Statistics after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-18T19:53:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Whiteboard + friend teaching me Statistics beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-19T09:27:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-20T03:33:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_chemistry-in-everyday-life_031",
+      "title": "Who already finished Chemistry in Everyday Life? Worth starting early?",
+      "subject": "chemistry",
+      "chapter": "chemistry-in-everyday-life",
+      "chapter_title": "Chemistry in Everyday Life",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Starting from zero on Chemistry in Everyday Life after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-09T00:42:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I write every Chemistry in Everyday Life formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-09T17:14:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Our senior shared last year's notes on Chemistry in Everyday Life; still accurate for the current syllabus.",
+          "created_at": "2026-06-09T21:32:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Chemistry in Everyday Life.",
+          "created_at": "2026-06-10T06:11:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_reproduction-in-organisms_032",
+      "title": "Who already finished Reproduction in Organisms? Worth starting early?",
+      "subject": "biology",
+      "chapter": "reproduction-in-organisms",
+      "chapter_title": "Reproduction in Organisms",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I can recite definitions for Reproduction in Organisms but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-10T02:46:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Not proud of it, but I left Reproduction in Organisms late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-10T20:17:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Whiteboard + friend teaching me Reproduction in Organisms beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-10T22:52:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I'll try Evaluate mode after dinner and report back.",
+          "created_at": "2026-06-11T10:11:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_biodiversity-and-conservation_033",
+      "title": "Past paper question on Biodiversity and Conservation — which formula do you use first?",
+      "subject": "biology",
+      "chapter": "biodiversity-and-conservation",
+      "chapter_title": "Biodiversity and Conservation",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I can recite definitions for Biodiversity and Conservation but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-08T19:32:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Biodiversity and Conservation.",
+          "created_at": "2026-06-09T04:19:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_aldehydes-ketones-and-carboxylic-acids_034",
+      "title": "Anyone else find Aldehydes Ketones and Carboxylic Acids denser than the rest of Chemistry?",
+      "subject": "chemistry",
+      "chapter": "aldehydes-ketones-and-carboxylic-acids",
+      "chapter_title": "Aldehydes Ketones and Carboxylic Acids",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Scored poorly on the last Aldehydes Ketones and Carboxylic Acids quiz. Resetting my notes — open to structure advice. (Grade 12)",
+          "created_at": "2026-07-01T20:38:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Honestly I skipped ahead then came back — Aldehydes Ketones and Carboxylic Acids clicked after seeing later examples.",
+          "created_at": "2026-07-02T04:53:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_chemical-kinetics_035",
+      "title": "Anyone else find Chemical Kinetics denser than the rest of Chemistry?",
+      "subject": "chemistry",
+      "chapter": "chemical-kinetics",
+      "chapter_title": "Chemical Kinetics",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Our teacher hinted Chemical Kinetics is high-weight this year. Looking for a realistic study plan. (Grade 12)",
+          "created_at": "2026-07-12T06:00:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Past papers > notes for me on Chemical Kinetics. Pattern recognition beats rereading.",
+          "created_at": "2026-07-12T18:13:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_solutions_036",
+      "title": "Teacher said Solutions will definitely show up — panic mode?",
+      "subject": "chemistry",
+      "chapter": "solutions",
+      "chapter_title": "Solutions",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Is it normal that Solutions takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-06-29T18:12:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-30T01:02:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Solutions unit.",
+          "created_at": "2026-06-30T17:47:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Our senior shared last year's notes on Solutions; still accurate for the current syllabus.",
+          "created_at": "2026-06-30T20:08:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Solutions — the diagrams helped.",
+          "created_at": "2026-07-01T11:55:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_d-and-f-block-elements_037",
+      "title": "Is d- and f-Block Elements more theory-heavy or numerical for our board?",
+      "subject": "chemistry",
+      "chapter": "d-and-f-block-elements",
+      "chapter_title": "d- and f-Block Elements",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Past paper had two weird d- and f-Block Elements items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-30T14:18:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Official syllabus lists d- and f-Block Elements as core — revise worked examples from your textbook.",
+          "created_at": "2026-07-01T07:58:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I record myself explaining d- and f-Block Elements out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-01T19:32:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of d- and f-Block Elements question though.",
+          "created_at": "2026-07-02T08:42:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-02T12:25:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_ray-optics_038",
+      "title": "Concept check: Ray Optics before the mock test",
+      "subject": "physics",
+      "chapter": "ray-optics",
+      "chapter_title": "Ray Optics",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Tried three YouTube explainers for Ray Optics and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-07-05T09:19:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Ray Optics.",
+          "created_at": "2026-07-05T10:19:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Ray Optics.",
+          "created_at": "2026-07-06T00:34:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "That sequencing (theory then numericals) matches what our teacher said too.",
+          "created_at": "2026-07-06T15:55:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Ray Optics.",
+          "created_at": "2026-07-06T19:14:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Appreciate the tip. Going to redo my notes for Ray Optics from scratch.",
+          "created_at": "2026-07-06T23:48:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_surface-chemistry_039",
+      "title": "Need a simple analogy for Surface Chemistry that actually sticks",
+      "subject": "chemistry",
+      "chapter": "surface-chemistry",
+      "chapter_title": "Surface Chemistry",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "We just started Surface Chemistry in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-17T13:34:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Surface Chemistry already.",
+          "created_at": "2026-06-18T03:59:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Whiteboard + friend teaching me Surface Chemistry beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-18T06:11:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-18T14:42:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "If you cannot explain Surface Chemistry to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-19T07:19:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Surface Chemistry.",
+          "created_at": "2026-06-19T20:06:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Someone in my class made a mind map for Surface Chemistry — copying that format helped a lot.",
+          "created_at": "2026-06-20T07:24:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_human-health-and-disease_040",
+      "title": "Stuck on Human Health and Disease — anyone have a clear way to revise this?",
+      "subject": "biology",
+      "chapter": "human-health-and-disease",
+      "chapter_title": "Human Health and Disease",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Making flashcards for Human Health and Disease tonight — what should absolutely be on them?",
+          "created_at": "2026-07-04T22:05:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Human Health and Disease.",
+          "created_at": "2026-07-05T11:29:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Whiteboard + friend teaching me Human Health and Disease beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-05T19:10:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Break Human Health and Disease into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-06T05:46:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Human Health and Disease.",
+          "created_at": "2026-07-07T00:03:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_sequences-and-series_041",
+      "title": "Need a simple analogy for Sequences and Series that actually sticks",
+      "subject": "mathematics",
+      "chapter": "sequences-and-series",
+      "chapter_title": "Sequences and Series",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Group chat from school is quiet on Sequences and Series. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-24T03:45:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I keep a 'mistake log' only for Sequences and Series. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-24T16:35:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Honestly I skipped ahead then came back — Sequences and Series clicked after seeing later examples.",
+          "created_at": "2026-06-25T05:30:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Whiteboard + friend teaching me Sequences and Series beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-25T10:05:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Anyone else want to sync study times for Sequences and Series this week?",
+          "created_at": "2026-06-26T00:19:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Sequences and Series.",
+          "created_at": "2026-06-26T14:29:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_coordinate-geometry_042",
+      "title": "Teacher said Coordinate Geometry will definitely show up — panic mode?",
+      "subject": "mathematics",
+      "chapter": "coordinate-geometry",
+      "chapter_title": "Coordinate Geometry",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Past paper had two weird Coordinate Geometry items back-to-back. Want to compare approaches. (Grade 12)",
+          "created_at": "2026-06-23T08:08:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Coordinate Geometry already.",
+          "created_at": "2026-06-23T23:15:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Our senior shared last year's notes on Coordinate Geometry; still accurate for the current syllabus.",
+          "created_at": "2026-06-24T16:02:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Coordinate Geometry.",
+          "created_at": "2026-06-25T01:39:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_magnetic-effects-of-current_043",
+      "title": "Stuck on Magnetic Effects of Current — anyone have a clear way to revise this?",
+      "subject": "physics",
+      "chapter": "magnetic-effects-of-current",
+      "chapter_title": "Magnetic Effects of Current",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Scored poorly on the last Magnetic Effects of Current quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-21T06:59:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Magnetic Effects of Current marks.",
+          "created_at": "2026-06-21T08:13:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-21T09:33:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_dual-nature-of-radiation-and-matter_044",
+      "title": "Is Dual Nature of Radiation and Matter more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "dual-nature-of-radiation-and-matter",
+      "chapter_title": "Dual Nature of Radiation and Matter",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "We just started Dual Nature of Radiation and Matter in class and I'm lost on the basics. Any tips before I dig into numericals? (Grade 12)",
+          "created_at": "2026-06-17T02:11:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Do the odd-numbered textbook exercises for Dual Nature of Radiation and Matter; answers are usually in the back.",
+          "created_at": "2026-06-17T18:51:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Dual Nature of Radiation and Matter.",
+          "created_at": "2026-06-17T20:16:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Dual Nature of Radiation and Matter question though.",
+          "created_at": "2026-06-17T22:54:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Appreciate the tip. Going to redo my notes for Dual Nature of Radiation and Matter from scratch.",
+          "created_at": "2026-06-18T12:20:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Dual Nature of Radiation and Matter.",
+          "created_at": "2026-06-18T22:07:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Dual Nature of Radiation and Matter fixed most of it.",
+          "created_at": "2026-06-19T09:54:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_electrostatic-potential-and-capacitance_045",
+      "title": "How are you preparing Electrostatic Potential and Capacitance for the final exam?",
+      "subject": "physics",
+      "chapter": "electrostatic-potential-and-capacitance",
+      "chapter_title": "Electrostatic Potential and Capacitance",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Scored poorly on the last Electrostatic Potential and Capacitance quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-06-28T08:24:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-28T16:42:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Do the odd-numbered textbook exercises for Electrostatic Potential and Capacitance; answers are usually in the back.",
+          "created_at": "2026-06-29T06:53:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Short sessions beat marathon cramming for Electrostatic Potential and Capacitance. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-29T17:53:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_coordination-compounds_046",
+      "title": "I keep mixing up steps in Coordination Compounds. What helped you?",
+      "subject": "chemistry",
+      "chapter": "coordination-compounds",
+      "chapter_title": "Coordination Compounds",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Is it normal that Coordination Compounds takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-06-29T03:31:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Coordination Compounds set.",
+          "created_at": "2026-06-29T10:44:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_semiconductor-electronics_047",
+      "title": "Best resources for Semiconductor Electronics? Textbook vs online notes",
+      "subject": "physics",
+      "chapter": "semiconductor-electronics",
+      "chapter_title": "Semiconductor Electronics",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Past paper had two weird Semiconductor Electronics items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-18T14:22:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I keep a 'mistake log' only for Semiconductor Electronics. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-18T21:59:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Whiteboard + friend teaching me Semiconductor Electronics beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-19T16:26:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I write every Semiconductor Electronics formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-20T00:13:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Semiconductor Electronics — the diagrams helped.",
+          "created_at": "2026-06-20T17:04:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Don't ignore the worked examples. For Semiconductor Electronics they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-21T09:16:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Not proud of it, but I left Semiconductor Electronics late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-21T23:51:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_trigonometry_048",
+      "title": "Our class test had a tricky Mathematics question from Trigonometry",
+      "subject": "mathematics",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Our teacher hinted Trigonometry is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-28T11:04:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Trigonometry set.",
+          "created_at": "2026-06-28T17:50:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "I record myself explaining Trigonometry out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-29T01:03:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Trigonometry already.",
+          "created_at": "2026-06-29T04:15:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Whiteboard + friend teaching me Trigonometry beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-29T20:21:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Official syllabus lists Trigonometry as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-30T04:57:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_differentiation_049",
+      "title": "Teacher said Differentiation will definitely show up — panic mode?",
+      "subject": "mathematics",
+      "chapter": "differentiation",
+      "chapter_title": "Differentiation",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Past paper had two weird Differentiation items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-22T00:24:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Our senior shared last year's notes on Differentiation; still accurate for the current syllabus.",
+          "created_at": "2026-06-22T05:40:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "I write every Differentiation formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-22T23:40:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Differentiation — the diagrams helped.",
+          "created_at": "2026-06-23T11:45:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Mark scheme language for Differentiation is specific — practice writing to that style.",
+          "created_at": "2026-06-23T19:09:29.691805+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_malaysia-grade-12_biotechnology-principles-and-processes_050",
+      "title": "Best resources for Biotechnology Principles and Processes? Textbook vs online notes",
+      "subject": "biology",
+      "chapter": "biotechnology-principles-and-processes",
+      "chapter_title": "Biotechnology Principles and Processes",
+      "track": "malaysia-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Revision week — Biotechnology Principles and Processes is the weak spot on my checklist for Biology. How are you tackling it? (Grade 12)",
+          "created_at": "2026-07-11T02:21:29.691805+00:00"
+        },
+        {
+          "author_id": "s_wei_ming_tan",
+          "author_name": "Wei Ming Tan",
+          "author_role": "student",
+          "location": "Penang Free School, George Town",
+          "photo": "https://randomuser.me/api/portraits/men/57.jpg",
+          "body": "Someone in my class made a mind map for Biotechnology Principles and Processes — copying that format helped a lot.",
+          "created_at": "2026-07-11T14:31:29.691805+00:00"
+        },
+        {
+          "author_id": "t_hafiz_rahman",
+          "author_name": "Hafiz Rahman",
+          "author_role": "teacher",
+          "location": "SMK Sultan Abdul Samad, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/men/59.jpg",
+          "body": "Exam boards repeat similar Biology patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-07-11T21:44:29.691805+00:00"
+        },
+        {
+          "author_id": "s_priya_devi",
+          "author_name": "Priya Devi",
+          "author_role": "student",
+          "location": "SMK Convent Bukit Nanas, Kuala Lumpur",
+          "photo": "https://randomuser.me/api/portraits/women/58.jpg",
+          "body": "Not proud of it, but I left Biotechnology Principles and Processes late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-12T12:19:29.691805+00:00"
+        },
+        {
+          "author_id": "s_aisyah_ibrahim",
+          "author_name": "Aisyah Ibrahim",
+          "author_role": "student",
+          "location": "SMK Bandar Utama, Petaling Jaya",
+          "photo": "https://randomuser.me/api/portraits/women/56.jpg",
+          "body": "Don't ignore the worked examples. For Biotechnology Principles and Processes they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-13T03:21:29.691805+00:00"
+        }
+      ]
+    }
+  ]
+}

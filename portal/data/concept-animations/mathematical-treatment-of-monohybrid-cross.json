@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-monohybrid-cross",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Monohybrid Cross",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Monohybrid Cross",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Monohybrid Cross.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Imagine a vending machine that only stocks two types of snacks, and every time you press a button, it randomly dispenses one. If 75% of the …",
+    "Pause and restate what Mathematical Treatment of Monohybrid Cross means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Monohybrid Cross: atoms stick by sharing/transfer",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Monohybrid Cross</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">chemistry</text><circle cx=\"200\" cy=\"190\" r=\"45\" fill=\"#fb7185\"/><text x=\"200\" y=\"196\" text-anchor=\"middle\" fill=\"#1a0b10\" font-size=\"20\" font-family=\"Segoe UI,Arial\">A</text><circle cx=\"440\" cy=\"190\" r=\"45\" fill=\"#fdba74\"/><text x=\"440\" y=\"196\" text-anchor=\"middle\" fill=\"#1a0b10\" font-size=\"20\" font-family=\"Segoe UI,Arial\">B</text><line x1=\"245\" y1=\"190\" x2=\"395\" y2=\"190\" stroke=\"#f9a8d4\" stroke-width=\"6\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Ionic transfer vs covalent share",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Monohybrid Cross</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">types</text><rect x=\"60\" y=\"100\" width=\"240\" height=\"160\" rx=\"12\" fill=\"#2a1219\" stroke=\"#fdba74\" stroke-width=\"2\"/><text x=\"180\" y=\"160\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"18\" font-family=\"Segoe UI,Arial\">ionic</text><text x=\"180\" y=\"200\" text-anchor=\"middle\" fill=\"#fda4af\" font-size=\"13\" font-family=\"Segoe UI,Arial\">electron transfer</text><rect x=\"340\" y=\"100\" width=\"240\" height=\"160\" rx=\"12\" fill=\"#2a1219\" stroke=\"#f9a8d4\" stroke-width=\"2\"/><text x=\"460\" y=\"160\" text-anchor=\"middle\" fill=\"#f9a8d4\" font-size=\"18\" font-family=\"Segoe UI,Arial\">covalent</text><text x=\"460\" y=\"200\" text-anchor=\"middle\" fill=\"#fda4af\" font-size=\"13\" font-family=\"Segoe UI,Arial\">electron share</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Lewis / VSEPR shapes follow electron pairs",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Monohybrid Cross</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">shape</text><circle cx=\"320\" cy=\"190\" r=\"30\" fill=\"#fb7185\"/><circle cx=\"427\" cy=\"203\" r=\"18\" fill=\"#fdba74\"/><circle cx=\"247\" cy=\"242\" r=\"18\" fill=\"#fdba74\"/><circle cx=\"233\" cy=\"148\" r=\"18\" fill=\"#fdba74\"/><text x=\"320\" y=\"320\" text-anchor=\"middle\" fill=\"#fda4af\" font-size=\"13\" font-family=\"Segoe UI,Arial\">pairs repel → geometry</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Imagine a vending machine that only stocks two types of snacks, and every time you press a",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Monohybrid Cross</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Imagine a vending machine that only stocks two types of </text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Mathematical Treatment of Monohybrid Cro",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Monohybrid Cross</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fb7185\" font-size=\"24\" font-family=\"Segoe UI,Arial\">share or transfer</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofMonohybridCrossScene",
+    "notes": "Domain=general motif=bond. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_monohybrid_cross.py ConceptScene"
+  },
+  "motif": "bond",
+  "generated_by": "template-stem-v5-general-bond",
+  "generated_at": "2026-07-12T22:35:03Z"
+}

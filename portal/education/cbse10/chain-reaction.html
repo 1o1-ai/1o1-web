@@ -1,0 +1,103 @@
+<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+
+  Chain Reaction — reactor-engineer quiz game on the CBSE Class 10 syllabus.
+  The student brings the "Gyan Reactor" online across eight Marks (Mk-I to
+  Mk-VIII). Each correct answer slots an energy core into the reactor ring;
+  every mistake raises instability — at three the reactor melts down and the
+  Mark must be retried. Three correct answers in a row trigger a chain surge
+  that vents instability, raises the score multiplier and arcs lightning
+  across the ring. Level design: the ring grows from 6 to 12 cores while the
+  per-question timer shrinks from 30s to 13s and the difficulty mix ramps
+  from 80/20/0 (d1/d2/d3) at Mk-I to 15/45/40 at Mk-VIII. One power-up
+  (Coolant, Time Dilation or Insight) is fabricated per completed Mark,
+  with at most two held at once.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chain Reaction · CBSE Class 10</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/theme.css?v=saas-layout-19" />
+  <link rel="stylesheet" href="../../../assets/landing.css?v=saas-layout-12" />
+  <link rel="stylesheet" href="../../assets/portal.css?v=11" />
+  <link rel="stylesheet" href="../../assets/education-layout.css" />
+  <link rel="stylesheet" href="game-room.css" />
+  <link rel="stylesheet" href="chain-reaction.css?v=1" />
+</head>
+<body class="portal-page education-compact">
+  <canvas id="cr-fx" aria-hidden="true"></canvas>
+
+  <header class="portal-header">
+    <a class="back-link" href="game-room.html">← Game Room</a>
+    <h1>Chain Reaction <span class="sr-open-badge">Play</span></h1>
+  </header>
+
+  <main class="portal-main">
+    <div class="cr" id="cr-root">
+      <!-- Run stats -->
+      <div class="cr-top">
+        <div class="cr-chip" style="--cr-accent:#22d3ee"><span>Reactor</span><b id="cr-mark">Mk-I</b></div>
+        <div class="cr-chip" style="--cr-accent:#a78bfa"><span>Cores</span><b id="cr-cores">0 / 6</b></div>
+        <div class="cr-chip" style="--cr-accent:#fbbf24"><span>Score</span><b id="cr-score">0</b></div>
+        <div class="cr-chip" style="--cr-accent:#34d399"><span>Multiplier</span><b id="cr-mult">1.0×</b>
+          <span class="cr-pips" id="cr-pips" title="Chain progress — 3 in a row surges"><i></i><i></i><i></i></span>
+        </div>
+      </div>
+
+      <!-- Reactor stage -->
+      <section class="cr-stage" id="cr-stage">
+        <div class="cr-gauge" id="cr-gauge" data-level="0" role="img" aria-label="Instability: 0 of 3">
+          <div class="cr-gauge-track">
+            <i class="cr-gseg" data-seg="3"></i>
+            <i class="cr-gseg" data-seg="2"></i>
+            <i class="cr-gseg" data-seg="1"></i>
+            <i class="cr-needle" id="cr-needle"></i>
+          </div>
+          <span class="cr-gauge-label">Instab.</span>
+        </div>
+
+        <div class="cr-reactor" id="cr-reactor">
+          <svg id="cr-ring" viewBox="0 0 240 240" aria-hidden="true"></svg>
+          <div class="cr-orb" id="cr-orb"></div>
+        </div>
+
+        <div class="cr-side">
+          <span class="cr-side-label">Power cells</span>
+          <div class="cr-powerslots" id="cr-powers"></div>
+        </div>
+      </section>
+
+      <!-- Question console -->
+      <section class="cr-console">
+        <div class="cr-timer-row">
+          <div class="cr-timer"><div class="cr-timer-fill" id="cr-timerFill"></div></div>
+          <span class="cr-secs" id="cr-secs">–</span>
+        </div>
+        <div class="cr-tags" id="cr-tags"></div>
+        <p class="cr-question" id="cr-question">Reactor initialising…</p>
+        <div class="cr-options" id="cr-options"></div>
+        <p class="cr-log" id="cr-log" aria-live="polite"></p>
+        <div class="cr-actions">
+          <button type="button" class="cr-btn cr-btn--ghost" id="cr-abortBtn">Abort to Mark select</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="cr-tint" id="cr-tint" data-level="0" aria-hidden="true"></div>
+  <div class="cr-flash" id="cr-flash" aria-hidden="true"></div>
+
+  <div class="cr-overlay" id="cr-overlay" hidden>
+    <div class="cr-card" id="cr-overlayBody"></div>
+  </div>
+
+  <script src="cbse10-quiz-bank.js?v=2"></script>
+  <script src="chain-reaction.js?v=1"></script>
+</body>
+</html>

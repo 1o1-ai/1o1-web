@@ -1,0 +1,2485 @@
+{
+  "version": 1,
+  "sku": "uk-gce-a-level",
+  "title": "Grade 12",
+  "displayName": "United Kingdom · Grade 12",
+  "generated_at": "2026-07-13T12:21:29.863295+00:00",
+  "locale": "uk",
+  "threads": [
+    {
+      "id": "thr_uk-gce-a-level_electricity_000",
+      "title": "How are you preparing Electricity for the final exam?",
+      "subject": "physics",
+      "chapter": "electricity",
+      "chapter_title": "Electricity",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 8,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Group chat from school is quiet on Electricity. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-24T23:18:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Electricity live.",
+          "created_at": "2026-06-25T04:53:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Electricity.",
+          "created_at": "2026-06-25T20:57:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I'll try Evaluate mode after dinner and report back.",
+          "created_at": "2026-06-25T23:33:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Past papers > notes for me on Electricity. Pattern recognition beats rereading.",
+          "created_at": "2026-06-26T10:43:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Electricity.",
+          "created_at": "2026-06-26T18:23:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-06-27T05:27:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-27T21:33:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_nuclear-physics_001",
+      "title": "Best resources for Nuclear Physics? Textbook vs online notes",
+      "subject": "physics",
+      "chapter": "nuclear-physics",
+      "chapter_title": "Nuclear Physics",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Starting from zero on Nuclear Physics after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-08T17:42:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Check units and significant figures on every Nuclear Physics numerical before you move on.",
+          "created_at": "2026-06-09T05:58:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Do the odd-numbered textbook exercises for Nuclear Physics; answers are usually in the back.",
+          "created_at": "2026-06-09T08:28:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_aromatic-chemistry_002",
+      "title": "Need a simple analogy for Aromatic Chemistry that actually sticks",
+      "subject": "chemistry",
+      "chapter": "aromatic-chemistry",
+      "chapter_title": "Aromatic Chemistry",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Scored poorly on the last Aromatic Chemistry quiz. Resetting my notes — open to structure advice. (Grade 12)",
+          "created_at": "2026-06-29T19:22:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I record myself explaining Aromatic Chemistry out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-29T22:38:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Aromatic Chemistry live.",
+          "created_at": "2026-06-30T14:31:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_transition-metals_003",
+      "title": "Teacher said Transition Metals will definitely show up — panic mode?",
+      "subject": "chemistry",
+      "chapter": "transition-metals",
+      "chapter_title": "Transition Metals",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Past paper had two weird Transition Metals items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-20T22:02:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Not proud of it, but I left Transition Metals late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-21T02:34:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Exam boards repeat similar Chemistry patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-06-21T18:08:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_algebra-and-functions_004",
+      "title": "Quick poll: how many hours are you giving Algebra and Functions this week?",
+      "subject": "mathematics",
+      "chapter": "algebra-and-functions",
+      "chapter_title": "Algebra and Functions",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Starting from zero on Algebra and Functions after a gap. Best first 30 minutes? (Grade 12)",
+          "created_at": "2026-06-12T02:12:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Mark scheme language for Algebra and Functions is specific — practice writing to that style.",
+          "created_at": "2026-06-12T10:33:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Algebra and Functions.",
+          "created_at": "2026-06-13T01:24:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_mechanics-and-materials_005",
+      "title": "Need a simple analogy for Mechanics and Materials that actually sticks",
+      "subject": "physics",
+      "chapter": "mechanics-and-materials",
+      "chapter_title": "Mechanics and Materials",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Is it normal that Mechanics and Materials takes longer than neighboring chapters in Physics?",
+          "created_at": "2026-06-13T02:49:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Mechanics and Materials.",
+          "created_at": "2026-06-13T15:03:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Don't ignore the worked examples. For Mechanics and Materials they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-14T04:15:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Honestly I skipped ahead then came back — Mechanics and Materials clicked after seeing later examples.",
+          "created_at": "2026-06-14T16:38:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Mechanics and Materials.",
+          "created_at": "2026-06-14T22:48:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Mechanics and Materials already.",
+          "created_at": "2026-06-15T05:29:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_fields_006",
+      "title": "Quick poll: how many hours are you giving Fields this week?",
+      "subject": "physics",
+      "chapter": "fields",
+      "chapter_title": "Fields",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "We just started Fields in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-09T10:26:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Our senior shared last year's notes on Fields; still accurate for the current syllabus.",
+          "created_at": "2026-06-09T14:39:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-10T01:52:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Anyone else want to sync study times for Fields this week?",
+          "created_at": "2026-06-10T08:10:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_further-mechanics_007",
+      "title": "Quick poll: how many hours are you giving Further Mechanics this week?",
+      "subject": "physics",
+      "chapter": "further-mechanics",
+      "chapter_title": "Further Mechanics",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Tried three YouTube explainers for Further Mechanics and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-11T06:39:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Further Mechanics set.",
+          "created_at": "2026-06-11T21:59:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Short sessions beat marathon cramming for Further Mechanics. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-12T06:26:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "If you cannot explain Further Mechanics to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-12T11:00:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Further Mechanics.",
+          "created_at": "2026-06-12T23:08:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Thanks — trying that tonight for Further Mechanics.",
+          "created_at": "2026-06-13T02:40:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Further Mechanics — the diagrams helped.",
+          "created_at": "2026-06-13T11:05:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "I write every Further Mechanics formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-14T00:53:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I keep a 'mistake log' only for Further Mechanics. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-14T02:13:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_vectors_008",
+      "title": "Need a simple analogy for Vectors that actually sticks",
+      "subject": "mathematics",
+      "chapter": "vectors",
+      "chapter_title": "Vectors",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Is it normal that Vectors takes longer than neighboring chapters in Mathematics?",
+          "created_at": "2026-06-28T23:16:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Vectors.",
+          "created_at": "2026-06-29T02:09:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Do the odd-numbered textbook exercises for Vectors; answers are usually in the back.",
+          "created_at": "2026-06-29T12:49:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Short sessions beat marathon cramming for Vectors. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-29T17:54:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Vectors question though.",
+          "created_at": "2026-06-30T10:17:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Vectors.",
+          "created_at": "2026-06-30T14:03:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Official syllabus lists Vectors as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-30T20:10:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_control-of-gene-expression_009",
+      "title": "I keep mixing up steps in Control of Gene Expression. What helped you?",
+      "subject": "biology",
+      "chapter": "control-of-gene-expression",
+      "chapter_title": "Control of Gene Expression",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "We just started Control of Gene Expression in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-07-03T11:35:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Someone in my class made a mind map for Control of Gene Expression — copying that format helped a lot.",
+          "created_at": "2026-07-04T03:54:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I keep a 'mistake log' only for Control of Gene Expression. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-04T05:12:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Past papers > notes for me on Control of Gene Expression. Pattern recognition beats rereading.",
+          "created_at": "2026-07-04T19:12:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Control of Gene Expression set.",
+          "created_at": "2026-07-05T05:43:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Control of Gene Expression — the diagrams helped.",
+          "created_at": "2026-07-05T07:06:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Not proud of it, but I left Control of Gene Expression late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-05T18:34:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_energetics_010",
+      "title": "Who already finished Energetics? Worth starting early?",
+      "subject": "chemistry",
+      "chapter": "energetics",
+      "chapter_title": "Energetics",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Making flashcards for Energetics tonight — what should absolutely be on them? (Grade 12)",
+          "created_at": "2026-07-10T06:52:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Don't ignore the worked examples. For Energetics they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-10T08:09:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Do the odd-numbered textbook exercises for Energetics; answers are usually in the back.",
+          "created_at": "2026-07-10T10:44:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Energetics idea.",
+          "created_at": "2026-07-10T16:46:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Energetics.",
+          "created_at": "2026-07-11T08:06:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_atomic-structure_011",
+      "title": "Sharing my Atomic Structure mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "atomic-structure",
+      "chapter_title": "Atomic Structure",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Got stuck on a homework problem from Atomic Structure. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-21T03:07:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Atomic Structure set.",
+          "created_at": "2026-06-21T11:11:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Short sessions beat marathon cramming for Atomic Structure. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-21T14:47:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Atomic Structure — the diagrams helped.",
+          "created_at": "2026-06-22T03:39:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Mark scheme language for Atomic Structure is specific — practice writing to that style.",
+          "created_at": "2026-06-22T09:09:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Atomic Structure.",
+          "created_at": "2026-06-22T23:10:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_analytical-chemistry_012",
+      "title": "Best resources for Analytical Chemistry? Textbook vs online notes",
+      "subject": "chemistry",
+      "chapter": "analytical-chemistry",
+      "chapter_title": "Analytical Chemistry",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I can recite definitions for Analytical Chemistry but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-30T11:54:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-30T12:58:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Honestly I skipped ahead then came back — Analytical Chemistry clicked after seeing later examples.",
+          "created_at": "2026-07-01T05:18:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "If you cannot explain Analytical Chemistry to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-07-02T00:10:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_exponentials-and-logarithms_013",
+      "title": "Our class test had a tricky Mathematics question from Exponentials and Logarithms",
+      "subject": "mathematics",
+      "chapter": "exponentials-and-logarithms",
+      "chapter_title": "Exponentials and Logarithms",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Tried three YouTube explainers for Exponentials and Logarithms and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-18T13:19:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Exponentials and Logarithms marks.",
+          "created_at": "2026-06-18T21:09:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_response-to-stimuli_014",
+      "title": "Concept check: Response to Stimuli before the mock test",
+      "subject": "biology",
+      "chapter": "response-to-stimuli",
+      "chapter_title": "Response to Stimuli",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I can recite definitions for Response to Stimuli but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-26T20:18:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Past papers > notes for me on Response to Stimuli. Pattern recognition beats rereading.",
+          "created_at": "2026-06-27T09:26:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-27T21:14:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Do the odd-numbered textbook exercises for Response to Stimuli; answers are usually in the back.",
+          "created_at": "2026-06-28T15:40:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_organic-chemistry_015",
+      "title": "Quick poll: how many hours are you giving Organic Chemistry this week?",
+      "subject": "chemistry",
+      "chapter": "organic-chemistry",
+      "chapter_title": "Organic Chemistry",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Is it normal that Organic Chemistry takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-07-12T08:43:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Do the odd-numbered textbook exercises for Organic Chemistry; answers are usually in the back.",
+          "created_at": "2026-07-13T03:38:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Past papers > notes for me on Organic Chemistry. Pattern recognition beats rereading.",
+          "created_at": "2026-07-13T11:10:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Not proud of it, but I left Organic Chemistry late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-13T22:47:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Organic Chemistry set.",
+          "created_at": "2026-07-14T03:42:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_cells_016",
+      "title": "Past paper question on Cells — which formula do you use first?",
+      "subject": "biology",
+      "chapter": "cells",
+      "chapter_title": "Cells",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "We just started Cells in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-07-05T04:17:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Past papers > notes for me on Cells. Pattern recognition beats rereading.",
+          "created_at": "2026-07-05T20:02:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Exam boards repeat similar Biology patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-07-06T00:26:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Cells — the diagrams helped.",
+          "created_at": "2026-07-06T11:47:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_equilibria_017",
+      "title": "I keep mixing up steps in Equilibria. What helped you?",
+      "subject": "chemistry",
+      "chapter": "equilibria",
+      "chapter_title": "Equilibria",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Got stuck on a homework problem from Equilibria. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-12T11:43:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-12T15:52:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Whiteboard + friend teaching me Equilibria beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-13T01:54:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Noted on method marks — I was losing easy points there.",
+          "created_at": "2026-06-13T08:36:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_optional-astrophysics-medical-engineerin_018",
+      "title": "Need a simple analogy for Optional Astrophysics/Medical/Engineering Physics that actually sticks",
+      "subject": "physics",
+      "chapter": "optional-astrophysics-medical-engineering-physic",
+      "chapter_title": "Optional Astrophysics/Medical/Engineering Physics",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I can recite definitions for Optional Astrophysics/Medical/Engineering Physics but freeze on application questions. Same for anyone?",
+          "created_at": "2026-06-15T00:08:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Our senior shared last year's notes on Optional Astrophysics/Medical/Engineering Physics; still accurate for the current syllabus.",
+          "created_at": "2026-06-15T10:01:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Bring one stuck question to the next class — we will unpack Optional Astrophysics/Medical/Engineering Physics live.",
+          "created_at": "2026-06-15T18:43:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_redox_019",
+      "title": "Our class test had a tricky Chemistry question from Redox",
+      "subject": "chemistry",
+      "chapter": "redox",
+      "chapter_title": "Redox",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Revision week — Redox is the weak spot on my checklist for Chemistry. How are you tackling it?",
+          "created_at": "2026-06-09T18:52:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Redox — the diagrams helped.",
+          "created_at": "2026-06-10T10:03:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Not proud of it, but I left Redox late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-10T11:35:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Mark scheme language for Redox is specific — practice writing to that style.",
+          "created_at": "2026-06-10T19:08:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_pure-mathematics-proof_020",
+      "title": "I keep mixing up steps in Pure Mathematics: Proof. What helped you?",
+      "subject": "mathematics",
+      "chapter": "pure-mathematics-proof",
+      "chapter_title": "Pure Mathematics: Proof",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Past paper had two weird Pure Mathematics: Proof items back-to-back. Want to compare approaches. (Grade 12)",
+          "created_at": "2026-07-09T08:57:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Pure Mathematics: Proof idea.",
+          "created_at": "2026-07-09T17:03:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Whiteboard + friend teaching me Pure Mathematics: Proof beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-10T11:56:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_numerical-methods_021",
+      "title": "Stuck on Numerical Methods — anyone have a clear way to revise this?",
+      "subject": "mathematics",
+      "chapter": "numerical-methods",
+      "chapter_title": "Numerical Methods",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Starting from zero on Numerical Methods after a gap. Best first 30 minutes?",
+          "created_at": "2026-07-11T09:01:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Honestly I skipped ahead then came back — Numerical Methods clicked after seeing later examples.",
+          "created_at": "2026-07-11T10:43:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Numerical Methods.",
+          "created_at": "2026-07-11T21:29:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Makes sense. I was jumping to hard problems too early on Numerical Methods.",
+          "created_at": "2026-07-12T10:50:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Numerical Methods.",
+          "created_at": "2026-07-12T18:20:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Our senior shared last year's notes on Numerical Methods; still accurate for the current syllabus.",
+          "created_at": "2026-07-13T12:13:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Numerical Methods.",
+          "created_at": "2026-07-13T16:59:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_differentiation_022",
+      "title": "Is Differentiation more theory-heavy or numerical for our board?",
+      "subject": "mathematics",
+      "chapter": "differentiation",
+      "chapter_title": "Differentiation",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Starting from zero on Differentiation after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-16T07:15:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Differentiation marks.",
+          "created_at": "2026-06-16T23:47:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_genetics-populations-evolution-and-ecosy_023",
+      "title": "Quick poll: how many hours are you giving Genetics Populations Evolution and Ecosystems this week?",
+      "subject": "biology",
+      "chapter": "genetics-populations-evolution-and-ecosystems",
+      "chapter_title": "Genetics Populations Evolution and Ecosystems",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Group chat from school is quiet on Genetics Populations Evolution and Ecosystems. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-21T20:14:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Official syllabus lists Genetics Populations Evolution and Ecosystems as core — revise worked examples from your textbook.",
+          "created_at": "2026-06-21T23:50:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-06-22T01:32:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_statistics_024",
+      "title": "Who already finished Statistics? Worth starting early?",
+      "subject": "mathematics",
+      "chapter": "statistics",
+      "chapter_title": "Statistics",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Got stuck on a homework problem from Statistics. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-22T13:55:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Exam boards repeat similar Mathematics patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-06-23T07:58:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "I record myself explaining Statistics out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-06-23T21:13:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_amount-of-substance_025",
+      "title": "Who already finished Amount of Substance? Worth starting early?",
+      "subject": "chemistry",
+      "chapter": "amount-of-substance",
+      "chapter_title": "Amount of Substance",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Our teacher hinted Amount of Substance is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-13T11:46:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Our senior shared last year's notes on Amount of Substance; still accurate for the current syllabus.",
+          "created_at": "2026-06-14T04:36:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Amount of Substance already.",
+          "created_at": "2026-06-14T22:12:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_exchange-and-transport_026",
+      "title": "Quick poll: how many hours are you giving Exchange and Transport this week?",
+      "subject": "biology",
+      "chapter": "exchange-and-transport",
+      "chapter_title": "Exchange and Transport",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Our teacher hinted Exchange and Transport is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-16T20:44:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Exchange and Transport marks.",
+          "created_at": "2026-06-17T05:56:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Exchange and Transport set.",
+          "created_at": "2026-06-17T15:11:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Someone in my class made a mind map for Exchange and Transport — copying that format helped a lot.",
+          "created_at": "2026-06-17T19:49:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-18T10:37:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_waves_027",
+      "title": "Best resources for Waves? Textbook vs online notes",
+      "subject": "physics",
+      "chapter": "waves",
+      "chapter_title": "Waves",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Got stuck on a homework problem from Waves. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-21T02:06:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Don't ignore the worked examples. For Waves they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-21T17:17:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "If you cannot explain Waves to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-22T06:53:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Waves.",
+          "created_at": "2026-06-22T10:11:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_genetics-and-diversity_028",
+      "title": "Our class test had a tricky Biology question from Genetics and Diversity",
+      "subject": "biology",
+      "chapter": "genetics-and-diversity",
+      "chapter_title": "Genetics and Diversity",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Tried three YouTube explainers for Genetics and Diversity and still confused. Prefer textbook-first approaches? (Grade 12)",
+          "created_at": "2026-06-21T13:24:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Genetics and Diversity already.",
+          "created_at": "2026-06-22T00:37:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "For Genetics and Diversity, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-06-22T07:12:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Genetics and Diversity.",
+          "created_at": "2026-06-22T23:20:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_integration_029",
+      "title": "How are you preparing Integration for the final exam?",
+      "subject": "mathematics",
+      "chapter": "integration",
+      "chapter_title": "Integration",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Making flashcards for Integration tonight — what should absolutely be on them?",
+          "created_at": "2026-07-03T20:15:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I keep a 'mistake log' only for Integration. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-04T00:35:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I write every Integration formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-04T03:39:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Break Integration into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-04T14:41:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_mechanics_030",
+      "title": "Best resources for Mechanics? Textbook vs online notes",
+      "subject": "mathematics",
+      "chapter": "mechanics",
+      "chapter_title": "Mechanics",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I can recite definitions for Mechanics but freeze on application questions. Same for anyone?",
+          "created_at": "2026-07-08T05:21:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I record myself explaining Mechanics out loud. If I stumble, that part needs more work.",
+          "created_at": "2026-07-08T15:22:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Mechanics set.",
+          "created_at": "2026-07-08T20:25:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Past papers > notes for me on Mechanics. Pattern recognition beats rereading.",
+          "created_at": "2026-07-09T14:48:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Mechanics.",
+          "created_at": "2026-07-10T04:13:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_particles-and-radiation_031",
+      "title": "Quick poll: how many hours are you giving Particles and Radiation this week?",
+      "subject": "physics",
+      "chapter": "particles-and-radiation",
+      "chapter_title": "Particles and Radiation",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Got stuck on a homework problem from Particles and Radiation. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-28T13:04:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Particles and Radiation problem cold.",
+          "created_at": "2026-06-28T20:08:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Particles and Radiation.",
+          "created_at": "2026-06-29T08:51:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_sequences-and-series_032",
+      "title": "Quick poll: how many hours are you giving Sequences and Series this week?",
+      "subject": "mathematics",
+      "chapter": "sequences-and-series",
+      "chapter_title": "Sequences and Series",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Revision week — Sequences and Series is the weak spot on my checklist for Mathematics. How are you tackling it?",
+          "created_at": "2026-07-06T02:00:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Our senior shared last year's notes on Sequences and Series; still accurate for the current syllabus.",
+          "created_at": "2026-07-06T10:13:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Sequences and Series.",
+          "created_at": "2026-07-06T22:43:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I write every Sequences and Series formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-07T04:56:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Short sessions beat marathon cramming for Sequences and Series. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-07T19:14:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_energy-transfers_033",
+      "title": "How are you preparing Energy Transfers for the final exam?",
+      "subject": "biology",
+      "chapter": "energy-transfers",
+      "chapter_title": "Energy Transfers",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Making flashcards for Energy Transfers tonight — what should absolutely be on them?",
+          "created_at": "2026-06-18T20:35:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Energy Transfers.",
+          "created_at": "2026-06-19T13:28:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Do the odd-numbered textbook exercises for Energy Transfers; answers are usually in the back.",
+          "created_at": "2026-06-19T20:45:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Past papers > notes for me on Energy Transfers. Pattern recognition beats rereading.",
+          "created_at": "2026-06-19T23:03:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Energy Transfers idea.",
+          "created_at": "2026-06-20T12:16:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Energy Transfers unit.",
+          "created_at": "2026-06-21T06:55:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_thermodynamics_034",
+      "title": "Concept check: Thermodynamics before the mock test",
+      "subject": "chemistry",
+      "chapter": "thermodynamics",
+      "chapter_title": "Thermodynamics",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 7,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Our teacher hinted Thermodynamics is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-06-27T19:18:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Thermodynamics set.",
+          "created_at": "2026-06-27T22:11:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Thermodynamics marks.",
+          "created_at": "2026-06-28T15:22:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "If you cannot explain Thermodynamics to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-28T18:14:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Honestly I skipped ahead then came back — Thermodynamics clicked after seeing later examples.",
+          "created_at": "2026-06-29T10:50:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Thermodynamics fixed most of it.",
+          "created_at": "2026-06-29T18:19:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Don't ignore the worked examples. For Thermodynamics they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-29T22:39:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_thermal-physics_035",
+      "title": "Is Thermal Physics more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "thermal-physics",
+      "chapter_title": "Thermal Physics",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Is it normal that Thermal Physics takes longer than neighboring chapters in Physics? (Grade 12)",
+          "created_at": "2026-06-24T04:35:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Thermal Physics idea.",
+          "created_at": "2026-06-24T20:26:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Thermal Physics.",
+          "created_at": "2026-06-25T00:20:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Update: the formula sheet idea helped. Still shaky on one type of Thermal Physics question though.",
+          "created_at": "2026-06-25T04:22:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Thermal Physics set.",
+          "created_at": "2026-06-25T18:34:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_bonding_036",
+      "title": "Sharing my Bonding mistake from yesterday's quiz — what did I miss?",
+      "subject": "chemistry",
+      "chapter": "bonding",
+      "chapter_title": "Bonding",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I can recite definitions for Bonding but freeze on application questions. Same for anyone?",
+          "created_at": "2026-07-06T21:02:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Whiteboard + friend teaching me Bonding beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-07T03:57:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_measurements-and-errors_037",
+      "title": "Concept check: Measurements and Errors before the mock test",
+      "subject": "physics",
+      "chapter": "measurements-and-errors",
+      "chapter_title": "Measurements and Errors",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Making flashcards for Measurements and Errors tonight — what should absolutely be on them?",
+          "created_at": "2026-06-29T13:28:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Measurements and Errors fixed most of it.",
+          "created_at": "2026-06-30T08:03:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Measurements and Errors.",
+          "created_at": "2026-06-30T16:39:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Short sessions beat marathon cramming for Measurements and Errors. Two focused hours > six distracted ones.",
+          "created_at": "2026-07-01T11:24:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "For Measurements and Errors, I want clear steps on paper, not just a final number. Method marks matter.",
+          "created_at": "2026-07-01T14:24:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Measurements and Errors set.",
+          "created_at": "2026-07-01T21:37:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_coordinate-geometry_038",
+      "title": "Who already finished Coordinate Geometry? Worth starting early?",
+      "subject": "mathematics",
+      "chapter": "coordinate-geometry",
+      "chapter_title": "Coordinate Geometry",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Revision week — Coordinate Geometry is the weak spot on my checklist for Mathematics. How are you tackling it? (Grade 12)",
+          "created_at": "2026-06-29T07:00:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Coordinate Geometry.",
+          "created_at": "2026-06-29T20:29:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Someone in my class made a mind map for Coordinate Geometry — copying that format helped a lot.",
+          "created_at": "2026-06-30T07:56:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Exam boards repeat similar Mathematics patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-06-30T13:44:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Coordinate Geometry idea.",
+          "created_at": "2026-06-30T18:27:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Anyone else want to sync study times for Coordinate Geometry this week?",
+          "created_at": "2026-07-01T01:04:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_periodicity_039",
+      "title": "Teacher said Periodicity will definitely show up — panic mode?",
+      "subject": "chemistry",
+      "chapter": "periodicity",
+      "chapter_title": "Periodicity",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Past paper had two weird Periodicity items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-10T09:58:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Periodicity — the diagrams helped.",
+          "created_at": "2026-06-10T16:35:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Periodicity already.",
+          "created_at": "2026-06-11T06:26:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-11T17:10:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Whiteboard + friend teaching me Periodicity beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-12T02:05:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_biological-molecules_040",
+      "title": "Need a simple analogy for Biological Molecules that actually sticks",
+      "subject": "biology",
+      "chapter": "biological-molecules",
+      "chapter_title": "Biological Molecules",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Group chat from school is quiet on Biological Molecules. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-25T15:28:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I keep a 'mistake log' only for Biological Molecules. Reviewing it before mocks is gold.",
+          "created_at": "2026-06-25T17:06:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "I write every Biological Molecules formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-26T05:12:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Biological Molecules.",
+          "created_at": "2026-06-26T17:18:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_trigonometry_041",
+      "title": "Past paper question on Trigonometry — which formula do you use first?",
+      "subject": "mathematics",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "definitions",
+        "chapter_help"
+      ],
+      "reply_count": 10,
+      "posts": [
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "We just started Trigonometry in class and I'm lost on the basics. Any tips before I dig into numericals?",
+          "created_at": "2026-06-29T14:29:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Trigonometry.",
+          "created_at": "2026-06-30T02:57:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Someone in my class made a mind map for Trigonometry — copying that format helped a lot.",
+          "created_at": "2026-06-30T15:13:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "Honestly I skipped ahead then came back — Trigonometry clicked after seeing later examples.",
+          "created_at": "2026-07-01T03:39:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Trigonometry — the diagrams helped.",
+          "created_at": "2026-07-01T06:01:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Do the odd-numbered textbook exercises for Trigonometry; answers are usually in the back.",
+          "created_at": "2026-07-01T13:30:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "That sequencing (theory then numericals) matches what our teacher said too.",
+          "created_at": "2026-07-01T23:35:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Break Trigonometry into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-02T13:45:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Our senior shared last year's notes on Trigonometry; still accurate for the current syllabus.",
+          "created_at": "2026-07-03T01:12:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Anyone else want to sync study times for Trigonometry this week?",
+          "created_at": "2026-07-03T02:31:29.863295+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_uk-gce-a-level_kinetics_042",
+      "title": "Concept check: Kinetics before the mock test",
+      "subject": "chemistry",
+      "chapter": "kinetics",
+      "chapter_title": "Kinetics",
+      "track": "uk-gce-a-level",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Got stuck on a homework problem from Kinetics. Happy to post the exact question if that helps.",
+          "created_at": "2026-06-29T00:20:29.863295+00:00"
+        },
+        {
+          "author_id": "t_charlotte_evans",
+          "author_name": "Charlotte Evans",
+          "author_role": "teacher",
+          "location": "Westminster School, London",
+          "photo": "https://randomuser.me/api/portraits/women/83.jpg",
+          "body": "Exam boards repeat similar Chemistry patterns — annotate your mistakes from mocks.",
+          "created_at": "2026-06-29T07:54:29.863295+00:00"
+        },
+        {
+          "author_id": "s_olivia_hughes",
+          "author_name": "Olivia Hughes",
+          "author_role": "student",
+          "location": "KE Camp Hill, Birmingham",
+          "photo": "https://randomuser.me/api/portraits/women/80.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Kinetics.",
+          "created_at": "2026-06-29T12:59:29.863295+00:00"
+        },
+        {
+          "author_id": "s_amara_patel",
+          "author_name": "Amara Patel",
+          "author_role": "student",
+          "location": "Harrow School, London",
+          "photo": "https://randomuser.me/api/portraits/women/82.jpg",
+          "body": "Past papers > notes for me on Kinetics. Pattern recognition beats rereading.",
+          "created_at": "2026-06-30T01:28:29.863295+00:00"
+        },
+        {
+          "author_id": "s_james_wright",
+          "author_name": "James Wright",
+          "author_role": "student",
+          "location": "Manchester Grammar School, Manchester",
+          "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Kinetics — the diagrams helped.",
+          "created_at": "2026-06-30T19:57:29.863295+00:00"
+        }
+      ]
+    }
+  ]
+}

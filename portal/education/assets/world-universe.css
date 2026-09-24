@@ -1,0 +1,1057 @@
+/* Brahmexa Anyo Academy — curriculum universe (orbit v5 viewport) */
+
+.world-universe-page {
+  --uni-muted: #94a3b8;
+  --uni-ring: rgba(103, 232, 249, 0.18);
+  --uni-header-h: 56px;
+  --uni-scale: 1;
+}
+
+.world-universe-page .portal-main.universe-main {
+  max-width: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.world-universe-page.portal-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.universe-top-bar {
+  flex-shrink: 0;
+}
+
+.universe-top-brand {
+  text-align: center;
+  line-height: 1.25;
+}
+
+.universe-top-brand strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #f1f5f9;
+}
+
+.universe-top-brand span {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--uni-muted);
+  margin-top: 2px;
+}
+
+.universe-viewport {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  height: auto;
+  max-height: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: visible;
+  padding: 8px 0 16px;
+}
+
+.universe-hub-stage {
+  position: relative;
+  z-index: 5;
+  transform: scale(var(--uni-scale));
+  transform-origin: top center;
+  will-change: transform;
+  margin-top: 0;
+}
+
+/* Search — top-right corner */
+.universe-search-corner {
+  position: absolute;
+  top: 10px;
+  right: clamp(12px, 2.5vw, 28px);
+  z-index: 40;
+  max-width: min(360px, calc(100vw - 24px));
+  margin: 0;
+}
+
+.universe-search-corner .world-hub-search-row {
+  border-color: rgba(56, 189, 248, 0.25);
+  background: rgba(15, 23, 42, 0.82);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.35);
+}
+
+.universe-search-corner .world-hub-search-row input {
+  padding: 11px 14px;
+  font-size: 0.88rem;
+}
+
+.universe-search-corner .world-hub-search-btn {
+  padding: 0 16px;
+  font-size: 0.8rem;
+}
+
+.universe-search-corner #countrySearchResults {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  left: 0;
+  margin: 0;
+}
+
+/* Signature countries — large flank portals with flag + landmark */
+.signature-country-slot {
+  position: absolute;
+  z-index: 35;
+  width: min(280px, 30vw);
+  height: min(280px, 30vw);
+  pointer-events: none;
+}
+
+.signature-country-slot:not([hidden]) {
+  display: block;
+  pointer-events: auto;
+}
+
+.signature-country-slot--left {
+  left: clamp(8px, 1.5vw, 24px);
+  top: 10%;
+}
+
+.signature-country-slot--right {
+  right: clamp(8px, 1.5vw, 24px);
+  top: 12%;
+}
+
+.signature-country-slot .portal {
+  width: 100%;
+  height: 100%;
+}
+
+.signature-country-slot .portal:not(:hover) {
+  transform: none;
+}
+
+.signature-country-slot .portal-core {
+  padding: 1rem 0.75rem;
+}
+
+.signature-country-slot .sig-emblem-main {
+  display: block;
+  font-size: clamp(2.4rem, 5vw, 3.25rem);
+  line-height: 1;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.45));
+}
+
+.signature-country-slot .sig-emblem-alt {
+  display: block;
+  font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+  line-height: 1;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.signature-country-slot .portal-title {
+  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+  font-weight: 800;
+}
+
+.signature-country-slot .portal-sub {
+  font-size: 0.72rem;
+  opacity: 0.85;
+}
+
+.signature-country-slot .sig-hover-panel {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(103, 232, 249, 0.2);
+  text-align: center;
+  width: 100%;
+}
+
+.signature-country-slot .portal:hover .sig-hover-panel,
+.signature-country-slot .portal:focus-visible .sig-hover-panel {
+  display: flex;
+}
+
+.signature-country-slot .sig-landmark-name {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.signature-country-slot .sig-curriculum-line {
+  font-size: 0.68rem;
+  color: #cbd5e1;
+  line-height: 1.35;
+}
+
+.signature-country-slot .sig-grades-line {
+  font-size: 0.62rem;
+  color: #67e8f9;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.signature-country-slot .portal:hover .portal-core,
+.signature-country-slot .portal:focus-visible .portal-core {
+  transform: scale(1.04);
+}
+
+a.signature-country-portal.signature-country--active .portal-core {
+  border-color: rgba(251, 191, 36, 0.65);
+  box-shadow: inset 0 0 24px rgba(0, 0, 0, 0.35), 0 0 0 2px rgba(251, 191, 36, 0.55);
+}
+
+.world-universe-page .world-hub-search {
+  margin-bottom: 0;
+}
+
+.world-universe-page .world-hub.universe-orbit-system {
+  margin: 0 !important;
+}
+
+/* ── Orbit stage v6: elliptical rings, larger planets ── */
+.world-universe-page .world-hub.universe-orbit-system {
+  position: relative !important;
+  width: 1080px !important;
+  height: 1080px !important;
+  max-width: 98vw !important;
+  max-height: min(98vw, 92vh) !important;
+  margin: 0 auto 16px !important;
+  overflow: visible !important;
+  display: block !important;
+}
+
+.world-universe-page .orbit-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.world-universe-page .orbit-guides {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.world-universe-page .orbit-ring-guide {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(103, 232, 249, 0.22);
+  animation: orbit-ring-breathe 6s ease-in-out infinite;
+}
+
+.world-universe-page .orbit-ring-guide--ellipse {
+  box-shadow: 0 0 0 1px rgba(103, 232, 249, 0.28), inset 0 0 40px rgba(56, 189, 248, 0.03);
+}
+
+.world-universe-page .orbit-ring-guide:nth-child(2) { animation-delay: 1.2s; }
+.world-universe-page .orbit-ring-guide:nth-child(3) { animation-delay: 2.4s; }
+.world-universe-page .orbit-ring-guide:nth-child(4) { animation-delay: 3.6s; }
+
+@keyframes orbit-ring-breathe {
+  0%, 100% { opacity: 0.45; box-shadow: 0 0 0 1px rgba(103, 232, 249, 0.18); }
+  50% { opacity: 0.95; box-shadow: 0 0 0 1px rgba(103, 232, 249, 0.38), 0 0 24px rgba(56, 189, 248, 0.08); }
+}
+
+.world-universe-page .orbit-bands {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.world-universe-page .orbit-ring-band {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.world-universe-page .orbit-ring-spin {
+  position: absolute;
+  inset: 0;
+  animation: uni-orbit-spin var(--ring-spin, 240s) linear infinite;
+  animation-direction: var(--ring-dir, normal);
+  transform-origin: 50% 50%;
+}
+
+@keyframes uni-orbit-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.world-universe-page a.country-planet {
+  position: absolute !important;
+  display: block !important;
+  transform: translate(-50%, -50%) !important;
+  text-decoration: none;
+  color: inherit;
+  pointer-events: auto;
+  z-index: 6;
+  transition: transform 0.38s cubic-bezier(0.34, 1.25, 0.64, 1), z-index 0s;
+}
+
+.world-universe-page .planet-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 38% 28%, rgba(55, 70, 95, 0.98), rgba(12, 20, 38, 0.99));
+  border: none;
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.35), 0 6px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition:
+    width 0.38s cubic-bezier(0.34, 1.25, 0.64, 1),
+    height 0.38s cubic-bezier(0.34, 1.25, 0.64, 1),
+    box-shadow 0.32s ease;
+  animation: uni-orbit-spin var(--ring-spin, 240s) linear infinite;
+  animation-direction: var(--body-dir, reverse);
+}
+
+.world-universe-page .planet-emblem-primary {
+  font-size: 2rem;
+  line-height: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.45));
+}
+
+.world-universe-page .planet-emblem-secondary {
+  font-size: 1.1rem;
+  line-height: 1;
+  opacity: 0.9;
+}
+
+.world-universe-page .planet-landmark-primary {
+  font-size: 2.15rem;
+}
+
+.world-universe-page .planet-flag-primary {
+  font-size: 2.1rem;
+}
+
+.world-universe-page .country-planet--india .planet-body {
+  box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.55), 0 0 20px rgba(251, 191, 36, 0.22), 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.world-universe-page .planet-compact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.world-universe-page .planet-flag,
+.world-universe-page .planet-landmark-sm {
+  display: none;
+}
+
+.world-universe-page .planet-code {
+  font-size: 0.58rem;
+  font-weight: 800;
+  color: #a8b4c4;
+  letter-spacing: 0.08em;
+}
+
+.world-universe-page .planet-expanded {
+  display: none !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 14px 12px;
+  text-align: center;
+  width: 100%;
+}
+
+.world-universe-page .planet-flag-lg {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.world-universe-page .planet-landmark-lg {
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
+.world-universe-page .planet-landmark-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #fbbf24;
+  letter-spacing: 0.04em;
+}
+
+.world-universe-page .planet-title {
+  font-size: 0.88rem;
+  font-weight: 800;
+  color: #f8fafc;
+  line-height: 1.25;
+}
+
+.world-universe-page .planet-curriculum {
+  font-size: 0.68rem;
+  color: #cbd5e1;
+  line-height: 1.35;
+  max-width: 96%;
+  white-space: normal;
+}
+
+.world-universe-page .planet-grades {
+  font-size: 0.62rem;
+  color: #67e8f9;
+  line-height: 1.3;
+  font-weight: 600;
+  max-width: 96%;
+  white-space: normal;
+}
+
+.world-universe-page a.country-planet:hover,
+.world-universe-page a.country-planet.is-search-focus {
+  z-index: 80 !important;
+  transform: translate(-50%, -50%) scale(1.12) !important;
+}
+
+.world-universe-page .orbit-ring-band:has(.country-planet:hover) .orbit-ring-spin,
+.world-universe-page .orbit-ring-band:has(.country-planet.is-search-focus) .orbit-ring-spin {
+  animation-play-state: paused;
+}
+
+.world-universe-page .orbit-ring-band:has(.country-planet:hover) .planet-body,
+.world-universe-page .orbit-ring-band:has(.country-planet.is-search-focus) .planet-body {
+  animation-play-state: paused;
+}
+
+.world-universe-page a.country-planet:hover .planet-body,
+.world-universe-page a.country-planet.is-search-focus .planet-body {
+  width: 196px;
+  height: 196px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 2px rgba(56, 189, 248, 0.75),
+    0 0 48px rgba(56, 189, 248, 0.45),
+    0 0 96px rgba(56, 189, 248, 0.15),
+    0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+.world-universe-page a.country-planet.is-search-match .planet-body {
+  box-shadow:
+    0 0 0 2px rgba(167, 139, 250, 0.6),
+    0 0 32px rgba(167, 139, 250, 0.35),
+    0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.world-universe-page a.country-planet:hover .planet-compact,
+.world-universe-page a.country-planet.is-search-focus .planet-compact {
+  display: none;
+}
+
+.world-universe-page a.country-planet:hover .planet-expanded,
+.world-universe-page a.country-planet.is-search-focus .planet-expanded,
+.world-universe-page a.country-planet.is-search-match .planet-expanded {
+  display: flex !important;
+}
+
+.world-universe-page a.country-planet.is-search-dim .planet-body {
+  opacity: 0.28;
+  filter: grayscale(0.55);
+}
+
+/* International core — slightly smaller, centered in orbit */
+.world-universe-page .universe-core {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 10;
+  width: 186px;
+  height: 186px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  background: radial-gradient(circle at 35% 30%, rgba(56, 189, 248, 0.4), rgba(30, 58, 138, 0.88) 55%, rgba(12, 18, 35, 0.98));
+  border: none;
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.45), 0 0 56px rgba(56, 189, 248, 0.32);
+  padding: 12px;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.world-universe-page .universe-core:hover {
+  transform: translate(-50%, -50%) scale(1.06) !important;
+  box-shadow: 0 0 0 1px rgba(125, 211, 252, 0.65), 0 0 96px rgba(56, 189, 248, 0.5);
+}
+
+.universe-core-glow {
+  position: absolute;
+  inset: -14%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, transparent 68%);
+  animation: uni-pulse 5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes uni-pulse {
+  0%, 100% { opacity: 0.65; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+.universe-core-globe {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 4px;
+}
+
+.universe-core-globe svg {
+  width: 100%;
+  height: 100%;
+}
+
+.universe-core-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #f0f9ff;
+}
+
+.universe-core-tagline {
+  font-size: 0.62rem;
+  color: #bae6fd;
+  margin-top: 5px;
+  line-height: 1.3;
+  max-width: 92%;
+}
+
+.universe-core-sub {
+  font-size: 0.6rem;
+  color: var(--uni-muted);
+  margin-top: 5px;
+}
+
+.universe-orbit-hint {
+  display: none;
+}
+
+.world-universe-page .world-hub-search-row {
+  border-color: rgba(56, 189, 248, 0.25);
+  background: rgba(15, 23, 42, 0.75);
+}
+
+.world-hub--filtered .orbit-ring-guide {
+  border-color: rgba(167, 139, 250, 0.35);
+}
+
+/* Country dashboard (unchanged) */
+.country-dashboard-root {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.universe-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  z-index: 2;
+  position: relative;
+}
+
+.universe-brand {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--uni-muted);
+}
+
+.country-dashboard {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) 1fr;
+  gap: clamp(20px, 4vw, 40px);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 8px 24px 48px;
+}
+
+.country-identity-panel {
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(165deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.country-identity-visual {
+  min-height: 140px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.35), rgba(15, 23, 42, 0.8));
+}
+
+.country-identity-landmark {
+  font-size: 4rem;
+}
+
+.country-identity-body {
+  padding: 20px;
+}
+
+.country-identity-body h1 {
+  margin: 8px 0;
+  color: #f8fafc;
+}
+
+.country-identity-meta {
+  color: #67e8f9;
+  font-size: 0.85rem;
+}
+
+.track-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.track-pill {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(15, 23, 42, 0.6);
+  color: #e2e8f0;
+  font: inherit;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.track-pill.is-active,
+.track-pill:hover {
+  border-color: rgba(56, 189, 248, 0.55);
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.academic-orbit-menu {
+  position: relative;
+  width: min(420px, 88vw);
+  height: min(420px, 88vw);
+  margin: 0 auto 24px;
+}
+
+.academic-orbit-ring {
+  position: absolute;
+  inset: 8%;
+  border: 1px dashed rgba(167, 139, 250, 0.25);
+  border-radius: 50%;
+}
+
+.academic-orbit-core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.35), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(167, 139, 250, 0.35);
+}
+
+.academic-module {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  margin: -50px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(15, 23, 42, 0.88);
+  transform: rotate(var(--module-angle, 0deg)) translateY(-42%) rotate(calc(-1 * var(--module-angle, 0deg)));
+}
+
+.subject-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.subject-pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: #e2e8f0;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+/* Legacy sidebar mount — unused on universe page */
+.universe-hub-shell {
+  display: contents;
+}
+
+.universe-hub-main {
+  display: contents;
+}
+
+.signature-countries {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .universe-viewport {
+    min-height: 0;
+    height: auto;
+    padding: 8px 8px 16px;
+    overflow: visible;
+  }
+
+  .universe-search-corner {
+    top: 6px;
+    right: 8px;
+    left: 8px;
+    max-width: none;
+  }
+
+  .signature-country-slot {
+    position: static;
+    width: min(200px, 42vw);
+    height: min(200px, 42vw);
+    margin: 0 auto;
+  }
+
+  .signature-country-slot--left,
+  .signature-country-slot--right {
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+
+  .universe-viewport:has(.signature-country-slot:not([hidden])) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 8px 12px;
+    align-items: start;
+    justify-items: center;
+  }
+
+  .universe-viewport:has(.signature-country-slot:not([hidden])) .universe-search-corner {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    width: 100%;
+  }
+
+  .universe-viewport:has(.signature-country-slot:not([hidden])) .signature-country-slot--left {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .universe-viewport:has(.signature-country-slot:not([hidden])) .signature-country-slot--right {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .universe-viewport:has(.signature-country-slot:not([hidden])) .universe-hub-stage {
+    grid-column: 1 / -1;
+    grid-row: 3;
+  }
+
+  .world-universe-page .world-hub.universe-orbit-system {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .world-universe-page .orbit-stage {
+    width: 100% !important;
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 24px;
+  }
+
+  .world-universe-page .orbit-guides {
+    display: none;
+  }
+
+  .world-universe-page .orbit-bands {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 14px;
+    width: 100%;
+    max-width: 540px;
+    pointer-events: auto;
+  }
+
+  .world-universe-page .orbit-ring-band,
+  .world-universe-page .orbit-ring-spin {
+    display: contents;
+  }
+
+  .world-universe-page .orbit-ring-spin {
+    animation: none !important;
+  }
+
+  .world-universe-page a.country-planet {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    justify-self: center;
+  }
+
+  .world-universe-page .planet-body {
+    width: 132px;
+    height: 132px;
+    animation: none !important;
+  }
+
+  .world-universe-page .planet-emblem-primary {
+    font-size: 2.25rem;
+  }
+
+  .world-universe-page .planet-compact {
+    display: none;
+  }
+
+  .world-universe-page .planet-expanded {
+    display: flex !important;
+  }
+
+  .world-universe-page .universe-core {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+  }
+
+  .country-dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .universe-core-glow,
+  .orbit-ring-guide {
+    animation: none;
+  }
+  .orbit-ring-spin,
+  .planet-body {
+    animation: none !important;
+  }
+}
+
+/* Detected country highlight (onboarding resolution) */
+.world-universe-page a.country-planet.is-detected-country .planet-body,
+.world-universe-page .universe-core.is-detected-center .universe-core-globe {
+  box-shadow:
+    0 0 0 3px rgba(52, 211, 153, 0.85),
+    0 0 56px rgba(52, 211, 153, 0.45);
+}
+a.signature-country-portal.signature-country--detected .portal-core {
+  box-shadow: 0 0 0 2px rgba(52, 211, 153, 0.7), 0 0 28px rgba(52, 211, 153, 0.35);
+}
+
+.anyo-country-field {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.anyo-country-field label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 0.35rem;
+}
+.anyo-country-select {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.9);
+  color: #f8fafc;
+  font-size: 0.9rem;
+}
+.anyo-country-hint {
+  margin: 0.4rem 0 0;
+  font-size: 0.72rem;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+/* Onboarding overlay — always viewport-centered */
+.anyo-onboard-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  z-index: 2147483000;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: max(12px, env(safe-area-inset-top)) 16px max(12px, env(safe-area-inset-bottom));
+  box-sizing: border-box;
+  overflow-y: auto;
+  background: rgba(2, 6, 23, 0.84);
+  backdrop-filter: blur(8px);
+}
+.anyo-onboard-card {
+  width: min(440px, 100%);
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding: 1.5rem 1.35rem 1.2rem;
+  border-radius: 20px;
+  background: linear-gradient(165deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.92));
+  border: 1px solid rgba(103, 232, 249, 0.25);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  box-sizing: border-box;
+}
+.anyo-onboard-card .eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #67e8f9;
+  margin-bottom: 0.5rem;
+}
+.anyo-onboard-card h2 {
+  font-size: clamp(1.15rem, 4vw, 1.35rem);
+  font-weight: 800;
+  color: #f8fafc;
+  margin: 0 0 0.75rem;
+}
+.anyo-onboard-lead {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-bottom: 0.9rem;
+}
+.anyo-onboard-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0.25rem 0 0.85rem;
+}
+.anyo-onboard-guest {
+  width: 100%;
+  min-height: 44px;
+}
+.anyo-onboard-fine {
+  margin: 0.75rem 0 0;
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+html.anyo-onboard-locked,
+body.anyo-onboard-locked {
+  overflow: hidden !important;
+}
+body.anyo-onboard-locked > *:not(#anyoOnboardingOverlay) {
+  pointer-events: none;
+  user-select: none;
+}
+body.anyo-onboard-locked #anyoOnboardingOverlay {
+  pointer-events: auto;
+}
+
+.anyo-guest-banner {
+  position: sticky;
+  top: 0;
+  z-index: 4000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 0.55rem 1rem;
+  background: rgba(120, 53, 15, 0.92);
+  border-bottom: 1px solid rgba(251, 191, 36, 0.35);
+  color: #fde68a;
+  font-size: 0.85rem;
+}
+.anyo-guest-banner-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  background: #fbbf24;
+  color: #1e293b;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+/* Guest read-only toast */
+.anyo-guest-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  z-index: 6000;
+  max-width: min(480px, 92vw);
+  padding: 0.85rem 1.1rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(251, 191, 36, 0.45);
+  color: #fde68a;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+.anyo-guest-toast.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.saas-register-panel-minimal .saas-oauth-stack {
+  gap: 10px;
+}
+.saas-register-card-wrap--minimal .saas-guest-entry {
+  width: 100%;
+}

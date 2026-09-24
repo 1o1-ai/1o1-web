@@ -1,0 +1,1272 @@
+{
+  "version": 1,
+  "sku": "nigeria-grade-12",
+  "title": "Grade 12",
+  "displayName": "Nigeria · Grade 12",
+  "generated_at": "2026-07-13T12:21:29.717993+00:00",
+  "locale": "ng",
+  "threads": [
+    {
+      "id": "thr_nigeria-grade-12_electronics_000",
+      "title": "Need a simple analogy for Electronics that actually sticks",
+      "subject": "physics",
+      "chapter": "electronics",
+      "chapter_title": "Electronics",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Tried three YouTube explainers for Electronics and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-07-06T17:23:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Electronics fixed most of it.",
+          "created_at": "2026-07-06T21:09:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Break Electronics into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-07T06:14:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Electronics.",
+          "created_at": "2026-07-07T13:32:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Electronics marks.",
+          "created_at": "2026-07-07T19:09:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_genetics_001",
+      "title": "Stuck on Genetics — anyone have a clear way to revise this?",
+      "subject": "biology",
+      "chapter": "genetics",
+      "chapter_title": "Genetics",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "I can recite definitions for Genetics but freeze on application questions. Same for anyone?",
+          "created_at": "2026-07-07T03:46:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Someone in my class made a mind map for Genetics — copying that format helped a lot.",
+          "created_at": "2026-07-07T19:51:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Genetics.",
+          "created_at": "2026-07-07T22:43:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Genetics problem cold.",
+          "created_at": "2026-07-08T12:05:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_electrochemistry_002",
+      "title": "Teacher said Electrochemistry will definitely show up — panic mode?",
+      "subject": "chemistry",
+      "chapter": "electrochemistry",
+      "chapter_title": "Electrochemistry",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "exam_prep"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Tried three YouTube explainers for Electrochemistry and still confused. Prefer textbook-first approaches?",
+          "created_at": "2026-06-30T21:29:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Electrochemistry.",
+          "created_at": "2026-07-01T03:29:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "I keep a 'mistake log' only for Electrochemistry. Reviewing it before mocks is gold.",
+          "created_at": "2026-07-01T16:55:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_functions_003",
+      "title": "Who already finished Functions? Worth starting early?",
+      "subject": "mathematics",
+      "chapter": "functions",
+      "chapter_title": "Functions",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Starting from zero on Functions after a gap. Best first 30 minutes?",
+          "created_at": "2026-07-11T10:44:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Not proud of it, but I left Functions late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-11T14:48:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Don't ignore the worked examples. For Functions they mirror exam wording almost 1:1.",
+          "created_at": "2026-07-12T04:20:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Functions fixed most of it.",
+          "created_at": "2026-07-12T15:44:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_trigonometry_004",
+      "title": "Quick poll: how many hours are you giving Trigonometry this week?",
+      "subject": "mathematics",
+      "chapter": "trigonometry",
+      "chapter_title": "Trigonometry",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Is it normal that Trigonometry takes longer than neighboring chapters in Mathematics?",
+          "created_at": "2026-06-11T00:53:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Trigonometry already.",
+          "created_at": "2026-06-11T02:30:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Trigonometry fixed most of it.",
+          "created_at": "2026-06-11T08:51:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Honestly I skipped ahead then came back — Trigonometry clicked after seeing later examples.",
+          "created_at": "2026-06-11T10:37:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Trigonometry set.",
+          "created_at": "2026-06-11T17:58:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_organic-chemistry_005",
+      "title": "Is Organic Chemistry more theory-heavy or numerical for our board?",
+      "subject": "chemistry",
+      "chapter": "organic-chemistry",
+      "chapter_title": "Organic Chemistry",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Revision week — Organic Chemistry is the weak spot on my checklist for Chemistry. How are you tackling it?",
+          "created_at": "2026-07-04T01:58:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Ask in Study Room if a concept is fuzzy — I did that twice for Organic Chemistry already.",
+          "created_at": "2026-07-04T08:38:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Organic Chemistry.",
+          "created_at": "2026-07-04T11:46:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-04T14:59:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Not proud of it, but I left Organic Chemistry late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-04T23:38:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Whiteboard + friend teaching me Organic Chemistry beat reading alone. Teach-back method works.",
+          "created_at": "2026-07-05T05:56:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_vectors_006",
+      "title": "How are you preparing Vectors for the final exam?",
+      "subject": "mathematics",
+      "chapter": "vectors",
+      "chapter_title": "Vectors",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Is it normal that Vectors takes longer than neighboring chapters in Mathematics? (Grade 12)",
+          "created_at": "2026-06-13T04:14:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Vectors.",
+          "created_at": "2026-06-13T20:14:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Don't ignore the worked examples. For Vectors they mirror exam wording almost 1:1.",
+          "created_at": "2026-06-14T07:07:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Prioritize the learning outcomes printed at the start of the Vectors unit.",
+          "created_at": "2026-06-14T21:13:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Do the odd-numbered textbook exercises for Vectors; answers are usually in the back.",
+          "created_at": "2026-06-15T11:44:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Short sessions beat marathon cramming for Vectors. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-15T17:52:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_reaction-rates_007",
+      "title": "Who already finished Reaction Rates? Worth starting early?",
+      "subject": "chemistry",
+      "chapter": "reaction-rates",
+      "chapter_title": "Reaction Rates",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 11,
+      "posts": [
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Is it normal that Reaction Rates takes longer than neighboring chapters in Chemistry?",
+          "created_at": "2026-07-02T14:22:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Same unit — I made a one-page formula sheet and drill 5 questions daily.",
+          "created_at": "2026-07-02T20:22:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Reaction Rates marks.",
+          "created_at": "2026-07-03T00:34:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Honestly I skipped ahead then came back — Reaction Rates clicked after seeing later examples.",
+          "created_at": "2026-07-03T16:42:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "I write every Reaction Rates formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-07-04T10:43:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Good call on past papers. Doing two sets this weekend.",
+          "created_at": "2026-07-05T02:53:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Reaction Rates problem cold.",
+          "created_at": "2026-07-05T14:36:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Our senior shared last year's notes on Reaction Rates; still accurate for the current syllabus.",
+          "created_at": "2026-07-06T08:28:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Reaction Rates.",
+          "created_at": "2026-07-06T14:37:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Do the odd-numbered textbook exercises for Reaction Rates; answers are usually in the back.",
+          "created_at": "2026-07-07T02:22:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "I'll try Evaluate mode after dinner and report back.",
+          "created_at": "2026-07-07T05:01:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_introductory-calculus_008",
+      "title": "Anyone else find Introductory Calculus denser than the rest of Mathematics?",
+      "subject": "mathematics",
+      "chapter": "introductory-calculus",
+      "chapter_title": "Introductory Calculus",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Revision week — Introductory Calculus is the weak spot on my checklist for Mathematics. How are you tackling it? (Grade 12)",
+          "created_at": "2026-06-27T10:45:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Introductory Calculus.",
+          "created_at": "2026-06-28T02:45:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Compare your solution steps with a friend — small algebra slips kill Introductory Calculus marks.",
+          "created_at": "2026-06-28T20:47:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Someone in my class made a mind map for Introductory Calculus — copying that format helped a lot.",
+          "created_at": "2026-06-29T12:14:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_mechanics_009",
+      "title": "Quick poll: how many hours are you giving Mechanics this week?",
+      "subject": "physics",
+      "chapter": "mechanics",
+      "chapter_title": "Mechanics",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "study_group"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Past paper had two weird Mechanics items back-to-back. Want to compare approaches. (Grade 12)",
+          "created_at": "2026-07-06T00:46:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Mechanics set.",
+          "created_at": "2026-07-06T17:50:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_human-physiology_010",
+      "title": "Need a simple analogy for Human Physiology that actually sticks",
+      "subject": "biology",
+      "chapter": "human-physiology",
+      "chapter_title": "Human Physiology",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "numericals",
+        "exam_prep"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Past paper had two weird Human Physiology items back-to-back. Want to compare approaches.",
+          "created_at": "2026-07-01T13:01:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Human Physiology.",
+          "created_at": "2026-07-01T17:36:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Our senior shared last year's notes on Human Physiology; still accurate for the current syllabus.",
+          "created_at": "2026-07-02T05:40:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Avoid copying solutions. Cover the answer and redo the Human Physiology problem cold.",
+          "created_at": "2026-07-02T15:01:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Not proud of it, but I left Human Physiology late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-02T17:36:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Human Physiology — the diagrams helped.",
+          "created_at": "2026-07-03T11:00:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_electricity_011",
+      "title": "Best resources for Electricity? Textbook vs online notes",
+      "subject": "physics",
+      "chapter": "electricity",
+      "chapter_title": "Electricity",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Scored poorly on the last Electricity quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-07-09T03:54:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Electricity fixed most of it.",
+          "created_at": "2026-07-09T21:59:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_probability_012",
+      "title": "Concept check: Probability before the mock test",
+      "subject": "mathematics",
+      "chapter": "probability",
+      "chapter_title": "Probability",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 6,
+      "posts": [
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Scored poorly on the last Probability quiz. Resetting my notes — open to structure advice.",
+          "created_at": "2026-07-12T07:59:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Not proud of it, but I left Probability late and regretted it. Start earlier than you think.",
+          "created_at": "2026-07-12T14:01:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "I was weak here too. Spaced repetition on key terms from Probability fixed most of it.",
+          "created_at": "2026-07-12T17:44:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "I rewatched the Concepts & Syllabus tab for Probability — the diagrams helped.",
+          "created_at": "2026-07-13T05:51:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Probability set.",
+          "created_at": "2026-07-13T08:54:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Break Probability into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-13T11:37:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_equilibrium_013",
+      "title": "Quick poll: how many hours are you giving Equilibrium this week?",
+      "subject": "chemistry",
+      "chapter": "equilibrium",
+      "chapter_title": "Equilibrium",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Our teacher hinted Equilibrium is high-weight this year. Looking for a realistic study plan.",
+          "created_at": "2026-07-07T08:18:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Break Equilibrium into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-07-07T15:08:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Do the odd-numbered textbook exercises for Equilibrium; answers are usually in the back.",
+          "created_at": "2026-07-08T01:12:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_biotechnology_014",
+      "title": "Past paper question on Biotechnology — which formula do you use first?",
+      "subject": "biology",
+      "chapter": "biotechnology",
+      "chapter_title": "Biotechnology",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Making flashcards for Biotechnology tonight — what should absolutely be on them?",
+          "created_at": "2026-06-29T07:44:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "I timed myself: 25 minutes theory, 35 minutes problems. That balance works for Biotechnology.",
+          "created_at": "2026-06-29T21:11:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Biotechnology set.",
+          "created_at": "2026-06-30T14:24:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "I group-study with two classmates after school — we quiz each other on Biotechnology.",
+          "created_at": "2026-07-01T00:01:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_waves_015",
+      "title": "Stuck on Waves — anyone have a clear way to revise this?",
+      "subject": "physics",
+      "chapter": "waves",
+      "chapter_title": "Waves",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 9,
+      "posts": [
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Starting from zero on Waves after a gap. Best first 30 minutes?",
+          "created_at": "2026-06-27T22:49:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "I write every Waves formula on sticky notes and stick them on my desk for a week.",
+          "created_at": "2026-06-28T07:39:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Start with easy questions so confidence builds, then jump to the hard Waves set.",
+          "created_at": "2026-06-28T14:01:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Short sessions beat marathon cramming for Waves. Two focused hours > six distracted ones.",
+          "created_at": "2026-06-29T01:32:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Waves idea.",
+          "created_at": "2026-06-29T19:49:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-06-30T01:51:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Pair reading with one diagram redraw. Visual recall is strong for Waves.",
+          "created_at": "2026-06-30T05:57:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Do the odd-numbered textbook exercises for Waves; answers are usually in the back.",
+          "created_at": "2026-06-30T17:50:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Our senior shared last year's notes on Waves; still accurate for the current syllabus.",
+          "created_at": "2026-07-01T06:26:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_modern-physics_016",
+      "title": "Our class test had a tricky Physics question from Modern Physics",
+      "subject": "physics",
+      "chapter": "modern-physics",
+      "chapter_title": "Modern Physics",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "past_papers",
+        "chapter_help"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Starting from zero on Modern Physics after a gap. Best first 30 minutes?",
+          "created_at": "2026-07-04T21:20:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Try the chapter quiz in Evaluate mode — it flags weak spots fast.",
+          "created_at": "2026-07-05T01:03:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Mark scheme language for Modern Physics is specific — practice writing to that style.",
+          "created_at": "2026-07-05T03:38:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Same here. I'll post if I get another stuck problem from Modern Physics.",
+          "created_at": "2026-07-05T16:57:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_evolution_017",
+      "title": "Sharing my Evolution mistake from yesterday's quiz — what did I miss?",
+      "subject": "biology",
+      "chapter": "evolution",
+      "chapter_title": "Evolution",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "doubt",
+        "peer_study"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Revision week — Evolution is the weak spot on my checklist for Biology. How are you tackling it? (Grade 12)",
+          "created_at": "2026-06-24T08:17:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "If definitions feel abstract, sketch a tiny real-world example next to each Evolution idea.",
+          "created_at": "2026-06-24T18:58:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Not proud of it, but I left Evolution late and regretted it. Start earlier than you think.",
+          "created_at": "2026-06-25T08:21:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Use the Study Room Concepts tab — it links Eden concepts mapped to Evolution.",
+          "created_at": "2026-06-25T10:23:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_magnetism_018",
+      "title": "Is Magnetism more theory-heavy or numerical for our board?",
+      "subject": "physics",
+      "chapter": "magnetism",
+      "chapter_title": "Magnetism",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "peer_study",
+        "chapter_help"
+      ],
+      "reply_count": 5,
+      "posts": [
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Past paper had two weird Magnetism items back-to-back. Want to compare approaches.",
+          "created_at": "2026-06-26T04:57:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "I underline command words in the question — 'explain' vs 'calculate' changes how I answer Magnetism.",
+          "created_at": "2026-06-26T20:36:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "If you cannot explain Magnetism to a younger student in two minutes, revisit the basics.",
+          "created_at": "2026-06-26T23:26:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Thanks — trying that tonight for Magnetism.",
+          "created_at": "2026-06-27T03:57:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Past papers > notes for me on Magnetism. Pattern recognition beats rereading.",
+          "created_at": "2026-06-27T21:52:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_ecology_019",
+      "title": "Sharing my Ecology mistake from yesterday's quiz — what did I miss?",
+      "subject": "biology",
+      "chapter": "ecology",
+      "chapter_title": "Ecology",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "teacher_tip",
+        "revision"
+      ],
+      "reply_count": 2,
+      "posts": [
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Is it normal that Ecology takes longer than neighboring chapters in Biology? (Grade 12)",
+          "created_at": "2026-06-16T19:40:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Our teacher said focus on definitions first, then numericals for Ecology.",
+          "created_at": "2026-06-17T07:26:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_thermochemistry_020",
+      "title": "Teacher said Thermochemistry will definitely show up — panic mode?",
+      "subject": "chemistry",
+      "chapter": "thermochemistry",
+      "chapter_title": "Thermochemistry",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "revision"
+      ],
+      "reply_count": 4,
+      "posts": [
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Group chat from school is quiet on Thermochemistry. Hoping this forum has clearer answers.",
+          "created_at": "2026-06-29T19:32:29.717993+00:00"
+        },
+        {
+          "author_id": "s_chiamaka_okafor",
+          "author_name": "Chiamaka Okafor",
+          "author_role": "student",
+          "location": "Queens College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/women/60.jpg",
+          "body": "Someone in my class made a mind map for Thermochemistry — copying that format helped a lot.",
+          "created_at": "2026-06-30T01:47:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Whiteboard + friend teaching me Thermochemistry beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-30T03:12:29.717993+00:00"
+        },
+        {
+          "author_id": "t_adebayo_adeyemi",
+          "author_name": "Adebayo Adeyemi",
+          "author_role": "teacher",
+          "location": "King's College, Lagos",
+          "photo": "https://randomuser.me/api/portraits/men/63.jpg",
+          "body": "Break Thermochemistry into two sessions: theory today, practice problems tomorrow.",
+          "created_at": "2026-06-30T17:50:29.717993+00:00"
+        }
+      ]
+    },
+    {
+      "id": "thr_nigeria-grade-12_statistics_021",
+      "title": "I keep mixing up steps in Statistics. What helped you?",
+      "subject": "mathematics",
+      "chapter": "statistics",
+      "chapter_title": "Statistics",
+      "track": "nigeria-grade-12",
+      "grade": "Grade 12",
+      "tags": [
+        "mock_test"
+      ],
+      "reply_count": 3,
+      "posts": [
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Making flashcards for Statistics tonight — what should absolutely be on them?",
+          "created_at": "2026-06-23T16:11:29.717993+00:00"
+        },
+        {
+          "author_id": "s_fatima_bello",
+          "author_name": "Fatima Bello",
+          "author_role": "student",
+          "location": "GSS Keffi, Nasarawa",
+          "photo": "https://randomuser.me/api/portraits/women/62.jpg",
+          "body": "Our senior shared last year's notes on Statistics; still accurate for the current syllabus.",
+          "created_at": "2026-06-23T22:28:29.717993+00:00"
+        },
+        {
+          "author_id": "s_emeka_nwosu",
+          "author_name": "Emeka Nwosu",
+          "author_role": "student",
+          "location": "FGC Enugu, Enugu",
+          "photo": "https://randomuser.me/api/portraits/men/61.jpg",
+          "body": "Whiteboard + friend teaching me Statistics beat reading alone. Teach-back method works.",
+          "created_at": "2026-06-24T11:44:29.717993+00:00"
+        }
+      ]
+    }
+  ]
+}

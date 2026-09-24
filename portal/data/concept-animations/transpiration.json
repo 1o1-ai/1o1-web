@@ -1,0 +1,62 @@
+{
+  "slug": "transpiration",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Transpiration",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Transpiration",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Transpiration.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Transpiration in plants is similar to the condensation process in an air conditioner, where water vapor is released into the air, cooling th…",
+    "Pause and restate what Transpiration means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Transpiration: plant transport & response",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Transpiration</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">biology</text><rect x=\"300\" y=\"80\" width=\"40\" height=\"200\" fill=\"#854d0e\"/><ellipse cx=\"250\" cy=\"140\" rx=\"60\" ry=\"30\" fill=\"#5eead4\"/><ellipse cx=\"390\" cy=\"160\" rx=\"60\" ry=\"30\" fill=\"#5eead4\"/><ellipse cx=\"320\" cy=\"100\" rx=\"50\" ry=\"28\" fill=\"#22c55e\"/><text x=\"100\" y=\"250\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"13\" font-family=\"Segoe UI,Arial\">xylem ↑</text><text x=\"480\" y=\"250\" text-anchor=\"start\" fill=\"#fcd34d\" font-size=\"13\" font-family=\"Segoe UI,Arial\">phloem ↕</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Water up, sugars around",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Transpiration</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">flow</text><rect x=\"200\" y=\"80\" width=\"50\" height=\"220\" fill=\"#a3e635\"/><text x=\"225\" y=\"70\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"12\" font-family=\"Segoe UI,Arial\">xylem</text><rect x=\"390\" y=\"80\" width=\"50\" height=\"220\" fill=\"#fbbf24\"/><text x=\"415\" y=\"70\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"12\" font-family=\"Segoe UI,Arial\">phloem</text><polygon points=\"225,120 215,140 235,140\" fill=\"#67e8f9\"/><polygon points=\"415,220 405,200 425,200\" fill=\"#fcd34d\"/>"
+    },
+    {
+      "id": "core",
+      "caption": "Tropisms: grow toward useful signals",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Transpiration</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">tropism</text><line x1=\"160\" y1=\"300\" x2=\"160\" y2=\"120\" stroke=\"#854d0e\" stroke-width=\"8\"/><line x1=\"160\" y1=\"120\" x2=\"280\" y2=\"70\" stroke=\"#854d0e\" stroke-width=\"8\"/><circle cx=\"520\" cy=\"90\" r=\"30\" fill=\"#fcd34d\"/><text x=\"320\" y=\"320\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"13\" font-family=\"Segoe UI,Arial\">grow toward light / water / gravity cues</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Transpiration in plants is similar to the condensation process in an air conditioner, wher",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Transpiration</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Transpiration in plants is similar to the condensation p</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Transpiration",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Transpiration</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"20\" font-family=\"Segoe UI,Arial\">transport · response · growth</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "TranspirationScene",
+    "notes": "Domain=general motif=plant. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/transpiration.py ConceptScene"
+  },
+  "motif": "plant",
+  "generated_by": "template-stem-v5-general-plant",
+  "generated_at": "2026-07-12T22:35:09Z"
+}

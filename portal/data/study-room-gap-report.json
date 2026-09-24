@@ -1,0 +1,1025 @@
+{
+  "version": 3,
+  "generated": "2026-07-11T10:33:22Z",
+  "summary": {
+    "curriculum_count": 34,
+    "subjects_with_zero_chapters": 0,
+    "wiring_gap_count": 0,
+    "normalize_change_count": 0
+  },
+  "wiring_gaps": [],
+  "normalize_changes": [],
+  "skus": [
+    {
+      "sku": "australia-grade-10",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 9
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 13
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 11
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 11
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 11621
+    },
+    {
+      "sku": "australia-grade-12",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 10
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 14
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 15
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 15
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 14939
+    },
+    {
+      "sku": "bangladesh-hsc",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 12
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 14
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 15
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 15
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 73895
+    },
+    {
+      "sku": "bangladesh-ssc",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 11
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 13
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 11
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 11
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 59646
+    },
+    {
+      "sku": "canada-grade-10",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 8
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 13
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 11
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 11
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 56667
+    },
+    {
+      "sku": "canada-grade-12",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 11
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 14
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 15
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 15
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 73053
+    },
+    {
+      "sku": "cbse10-core",
+      "subjects": {
+        "science": {
+          "id": "science",
+          "label": "science",
+          "chapter_count": 13
+        },
+        "mathematics": {
+          "id": "mathematics",
+          "label": "mathematics",
+          "chapter_count": 15
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": false,
+      "has_questions": false,
+      "study_material_bytes": 0
+    },
+    {
+      "sku": "cbse10",
+      "subjects": {
+        "science": {
+          "id": "science",
+          "label": "science",
+          "chapter_count": 12
+        },
+        "mathematics": {
+          "id": "mathematics",
+          "label": "mathematics",
+          "chapter_count": 14
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": false,
+      "study_material_bytes": 2998292
+    },
+    {
+      "sku": "cbse12-commerce",
+      "subjects": {
+        "accountancy": {
+          "id": "accountancy",
+          "label": "Accountancy",
+          "chapter_count": 7
+        },
+        "business-studies": {
+          "id": "business-studies",
+          "label": "Business Studies",
+          "chapter_count": 22
+        },
+        "economics": {
+          "id": "economics",
+          "label": "Economics",
+          "chapter_count": 15
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 78842
+    },
+    {
+      "sku": "cbse12-science",
+      "subjects": {
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 13
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 10
+        },
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 13
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 14
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 382552
+    },
+    {
+      "sku": "english-tests",
+      "subjects": {
+        "toefl-reading": {
+          "id": "toefl-reading",
+          "label": "Reading",
+          "chapter_count": 1
+        },
+        "toefl-listening": {
+          "id": "toefl-listening",
+          "label": "Listening",
+          "chapter_count": 1
+        },
+        "toefl-speaking": {
+          "id": "toefl-speaking",
+          "label": "Speaking",
+          "chapter_count": 1
+        },
+        "toefl-writing": {
+          "id": "toefl-writing",
+          "label": "Writing",
+          "chapter_count": 1
+        },
+        "ielts-listening": {
+          "id": "ielts-listening",
+          "label": "Listening",
+          "chapter_count": 1
+        },
+        "ielts-reading": {
+          "id": "ielts-reading",
+          "label": "Reading",
+          "chapter_count": 1
+        },
+        "ielts-speaking": {
+          "id": "ielts-speaking",
+          "label": "Speaking",
+          "chapter_count": 1
+        },
+        "ielts-writing": {
+          "id": "ielts-writing",
+          "label": "Writing",
+          "chapter_count": 1
+        },
+        "det-literacy": {
+          "id": "det-literacy",
+          "label": "Literacy",
+          "chapter_count": 1
+        },
+        "det-comprehension": {
+          "id": "det-comprehension",
+          "label": "Comprehension",
+          "chapter_count": 1
+        },
+        "det-conversation": {
+          "id": "det-conversation",
+          "label": "Conversation",
+          "chapter_count": 1
+        },
+        "det-production": {
+          "id": "det-production",
+          "label": "Production",
+          "chapter_count": 1
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 26164
+    },
+    {
+      "sku": "finland-grade-10",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 9
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 13
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 11
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 11
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 57155
+    },
+    {
+      "sku": "finland-grade-12",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 10
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 14
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 15
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 15
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 71384
+    },
+    {
+      "sku": "gre-gmat",
+      "subjects": {
+        "gre-verbal": {
+          "id": "gre-verbal",
+          "label": "Verbal Reasoning",
+          "chapter_count": 3
+        },
+        "gre-quantitative": {
+          "id": "gre-quantitative",
+          "label": "Quantitative Reasoning",
+          "chapter_count": 4
+        },
+        "gre-awa": {
+          "id": "gre-awa",
+          "label": "Analytical Writing",
+          "chapter_count": 1
+        },
+        "gmat-quantitative": {
+          "id": "gmat-quantitative",
+          "label": "Quantitative Reasoning",
+          "chapter_count": 2
+        },
+        "gmat-verbal": {
+          "id": "gmat-verbal",
+          "label": "Verbal Reasoning",
+          "chapter_count": 3
+        },
+        "gmat-data-insights": {
+          "id": "gmat-data-insights",
+          "label": "Data Insights",
+          "chapter_count": 4
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 80182
+    },
+    {
+      "sku": "japan-grade-10",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 7
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 13
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 11
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 11
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 55415
+    },
+    {
+      "sku": "japan-grade-12",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 10
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 14
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 15
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 15
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 71787
+    },
+    {
+      "sku": "malaysia-grade-10",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 12
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 13
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 11
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 11
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 59770
+    },
+    {
+      "sku": "malaysia-grade-12",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 11
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 14
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 15
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 15
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 70960
+    },
+    {
+      "sku": "nigeria-grade-10",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 10
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 10
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 9
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 9
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 46885
+    },
+    {
+      "sku": "nigeria-grade-12",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 7
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 7
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 6
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 6
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 32353
+    },
+    {
+      "sku": "pakistan-hssc",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 7
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 7
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 7
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 7
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 34120
+    },
+    {
+      "sku": "pakistan-ssc",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 8
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 8
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 7
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 8
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 39055
+    },
+    {
+      "sku": "philippines-grade-10",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 5
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 7
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 6
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 6
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 29707
+    },
+    {
+      "sku": "philippines-grade-12",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 5
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 6
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 6
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 6
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 28678
+    },
+    {
+      "sku": "rhytoma",
+      "subjects": {
+        "science": {
+          "id": "science",
+          "label": "Science",
+          "chapter_count": 5
+        },
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 5
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": false,
+      "has_questions": true,
+      "study_material_bytes": 0
+    },
+    {
+      "sku": "sat-act",
+      "subjects": {
+        "sat-reading-writing": {
+          "id": "sat-reading-writing",
+          "label": "SAT Reading & Writing",
+          "chapter_count": 10
+        },
+        "sat-math": {
+          "id": "sat-math",
+          "label": "SAT Math",
+          "chapter_count": 14
+        },
+        "act-english": {
+          "id": "act-english",
+          "label": "ACT English",
+          "chapter_count": 5
+        },
+        "act-math": {
+          "id": "act-math",
+          "label": "ACT Math",
+          "chapter_count": 5
+        },
+        "act-reading": {
+          "id": "act-reading",
+          "label": "ACT Reading",
+          "chapter_count": 3
+        },
+        "act-science": {
+          "id": "act-science",
+          "label": "ACT Science",
+          "chapter_count": 3
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 21015
+    },
+    {
+      "sku": "singapore-gce-a-level",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 12
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 14
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 15
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 15
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 73878
+    },
+    {
+      "sku": "singapore-gce-o-level",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 12
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 13
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 11
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 11
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 61249
+    },
+    {
+      "sku": "south-korea-grade-10",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 6
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 6
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 5
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 5
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 27245
+    },
+    {
+      "sku": "south-korea-grade-12",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 6
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 6
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 5
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 5
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 27376
+    },
+    {
+      "sku": "uk-gce-a-level",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 13
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 11
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 14
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 9
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 78427
+    },
+    {
+      "sku": "uk-gcse",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 11
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 13
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 11
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 11
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 78391
+    },
+    {
+      "sku": "usa-grade-10",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 15
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 12
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 13
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 12
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 67482
+    },
+    {
+      "sku": "usa-grade-12",
+      "subjects": {
+        "mathematics": {
+          "id": "mathematics",
+          "label": "Mathematics",
+          "chapter_count": 15
+        },
+        "physics": {
+          "id": "physics",
+          "label": "Physics",
+          "chapter_count": 15
+        },
+        "chemistry": {
+          "id": "chemistry",
+          "label": "Chemistry",
+          "chapter_count": 12
+        },
+        "biology": {
+          "id": "biology",
+          "label": "Biology",
+          "chapter_count": 10
+        }
+      },
+      "empty_chapter_subjects": [],
+      "has_study_material": true,
+      "has_questions": true,
+      "study_material_bytes": 69225
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "started_at": "2026-07-06T05:47:00.979232+00:00",
+  "apply": true,
+  "llm": false,
+  "ollama_base": null,
+  "ollama_model": null,
+  "files": [
+    {
+      "file": "portal\\data\\cbse10-verified-questions.json",
+      "exists": true,
+      "grade": "10",
+      "total": 193,
+      "touched": 0,
+      "flag_counts": {
+        "figure_reference_missing_asset": 11,
+        "prompt_too_short": 1
+      },
+      "samples": [],
+      "elapsed_s": 0.0
+    },
+    {
+      "file": "portal\\data\\board_questions.json",
+      "exists": true,
+      "grade": "10",
+      "total": 1030,
+      "touched": 0,
+      "flag_counts": {
+        "figure_reference_missing_asset": 19,
+        "prompt_too_short": 1
+      },
+      "samples": [],
+      "elapsed_s": 0.1
+    },
+    {
+      "file": "portal\\data\\cbse10-curriculum.json",
+      "exists": true,
+      "grade": "10",
+      "total": 0,
+      "touched": 0,
+      "flag_counts": {},
+      "samples": [],
+      "elapsed_s": 0.0
+    },
+    {
+      "file": "portal\\data\\cbse10-master-catalog.json",
+      "exists": true,
+      "grade": "10",
+      "total": 1411,
+      "touched": 0,
+      "flag_counts": {
+        "zinc_prefix_garble": 188,
+        "internal_set_tag": 188,
+        "figure_reference_missing_asset": 8
+      },
+      "samples": [],
+      "elapsed_s": 0.3
+    },
+    {
+      "file": "portal\\data\\synthetic_questions.json",
+      "exists": true,
+      "grade": "10",
+      "total": 639,
+      "touched": 0,
+      "flag_counts": {
+        "opt_synthetic_placeholder_option": 61
+      },
+      "samples": [],
+      "elapsed_s": 0.1
+    },
+    {
+      "file": "portal\\data\\question_bank-live.json",
+      "exists": true,
+      "grade": "10",
+      "total": 390,
+      "touched": 0,
+      "flag_counts": {
+        "figure_reference_missing_asset": 28,
+        "prompt_too_short": 5
+      },
+      "samples": [],
+      "elapsed_s": 0.1
+    },
+    {
+      "file": "services\\education-portal\\data\\cbse10\\board_questions.json",
+      "exists": true,
+      "grade": "10",
+      "total": 1030,
+      "touched": 0,
+      "flag_counts": {
+        "figure_reference_missing_asset": 19,
+        "prompt_too_short": 1
+      },
+      "samples": [],
+      "elapsed_s": 0.2
+    },
+    {
+      "file": "services\\education-portal\\data\\cbse10\\question_bank.json",
+      "exists": true,
+      "grade": "10",
+      "total": 390,
+      "touched": 0,
+      "flag_counts": {
+        "figure_reference_missing_asset": 28,
+        "prompt_too_short": 5
+      },
+      "samples": [],
+      "elapsed_s": 0.1
+    },
+    {
+      "file": "portal\\data\\cbse12-science-questions.json",
+      "exists": true,
+      "grade": "12",
+      "total": 8668,
+      "touched": 0,
+      "flag_counts": {
+        "figure_reference_missing_asset": 243,
+        "exam_header_ocr": 208,
+        "triangle_context_missing": 15
+      },
+      "samples": [],
+      "elapsed_s": 3.1
+    },
+    {
+      "file": "portal\\data\\cbse12-science-board_questions.json",
+      "exists": true,
+      "grade": "12",
+      "total": 7236,
+      "touched": 0,
+      "flag_counts": {
+        "figure_reference_missing_asset": 225,
+        "exam_header_ocr": 208,
+        "triangle_context_missing": 11
+      },
+      "samples": [],
+      "elapsed_s": 2.3
+    },
+    {
+      "file": "portal\\data\\cbse12-science-curriculum.json",
+      "exists": true,
+      "grade": "12",
+      "total": 0,
+      "touched": 0,
+      "flag_counts": {},
+      "samples": [],
+      "elapsed_s": 0.0
+    },
+    {
+      "file": "portal\\data\\cbse12-commerce-questions.json",
+      "exists": true,
+      "grade": "12",
+      "total": 0,
+      "touched": 0,
+      "flag_counts": {},
+      "samples": [],
+      "elapsed_s": 0.0
+    },
+    {
+      "file": "portal\\data\\cbse12-commerce-curriculum.json",
+      "exists": true,
+      "grade": "12",
+      "total": 0,
+      "touched": 0,
+      "flag_counts": {},
+      "samples": [],
+      "elapsed_s": 0.0
+    },
+    {
+      "file": "services\\education-portal\\data\\cbse12_science\\board_questions.json",
+      "exists": true,
+      "grade": "12",
+      "total": 7236,
+      "touched": 0,
+      "flag_counts": {
+        "figure_reference_missing_asset": 225,
+        "exam_header_ocr": 208,
+        "triangle_context_missing": 11
+      },
+      "samples": [],
+      "elapsed_s": 3.2
+    }
+  ],
+  "finished_at": "2026-07-06T05:47:10.600874+00:00",
+  "summary": {
+    "files_processed": 14,
+    "total_questions": 28223,
+    "total_touched": 0
+  }
+}

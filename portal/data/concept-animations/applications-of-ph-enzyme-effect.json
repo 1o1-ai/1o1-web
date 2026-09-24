@@ -1,0 +1,62 @@
+{
+  "slug": "applications-of-ph-enzyme-effect",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Applications of pH Enzyme Effect",
+  "theme": "biology",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Applications of pH Enzyme Effect",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Applications of pH Enzyme Effect.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a wine cellar's temperature and acidity levels must be carefully controlled for optimal fermentation, enzymes in our bodies require …",
+    "Pause and restate what Applications of pH Enzyme Effect means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Applications of pH Enzyme Effect: lock-and-key catalyst",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of pH Enzyme Effect</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">biology</text><path d=\"M120 140 H260 V220 H200 L180 260 H140 L120 220 Z\" fill=\"#fb7185\"/><rect x=\"320\" y=\"170\" width=\"70\" height=\"40\" rx=\"8\" fill=\"#fdba74\"/><text x=\"190\" y=\"120\" text-anchor=\"middle\" fill=\"#fb7185\" font-size=\"13\" font-family=\"Segoe UI,Arial\">enzyme</text><text x=\"355\" y=\"150\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">substrate</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Active site fits the substrate",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of pH Enzyme Effect</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">fit</text><path d=\"M180 120 H340 V200 H280 L250 250 H210 L180 200 Z\" fill=\"#881337\" stroke=\"#f9a8d4\" stroke-width=\"3\"/><rect x=\"230\" y=\"160\" width=\"60\" height=\"35\" rx=\"6\" fill=\"#fdba74\"/><text x=\"450\" y=\"180\" text-anchor=\"start\" fill=\"#fda4af\" font-size=\"14\" font-family=\"Segoe UI,Arial\">active site</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Reaction speeds up; enzyme reused",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of pH Enzyme Effect</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">catalysis</text><rect x=\"60\" y=\"140\" width=\"120\" height=\"70\" rx=\"8\" fill=\"#2a1219\" stroke=\"#fb7185\" stroke-width=\"2\"/><text x=\"120\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"12\" font-family=\"Segoe UI,Arial\">reactants</text><text x=\"210\" y=\"180\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"250\" y=\"130\" width=\"140\" height=\"90\" rx=\"10\" fill=\"#881337\" stroke=\"#f9a8d4\" stroke-width=\"2\"/><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"14\" font-family=\"Segoe UI,Arial\">enzyme</text><text x=\"420\" y=\"180\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"24\" font-family=\"Segoe UI,Arial\">→</text><rect x=\"460\" y=\"140\" width=\"120\" height=\"70\" rx=\"8\" fill=\"#2a1219\" stroke=\"#fdba74\" stroke-width=\"2\"/><text x=\"520\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"12\" font-family=\"Segoe UI,Arial\">products</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a wine cellars temperature and acidity levels must be carefully controlled for opt",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of pH Enzyme Effect</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a wine cellars temperature and acidity levels mu</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Applications of pH Enzyme Effect",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of pH Enzyme Effect</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f9a8d4\" font-size=\"24\" font-family=\"Segoe UI,Arial\">fit · speed · reuse</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ApplicationsofpHEnzymeEffectScene",
+    "notes": "Domain=biology motif=enzyme. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/applications_of_ph_enzyme_effect.py ConceptScene"
+  },
+  "motif": "enzyme",
+  "generated_by": "template-stem-v5-biology-enzyme",
+  "generated_at": "2026-07-12T22:34:47Z"
+}

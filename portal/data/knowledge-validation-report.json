@@ -1,0 +1,14 @@
+{
+  "started_at": "2026-07-06T22:37:50.648677+00:00",
+  "apply": true,
+  "llm": false,
+  "scopes": {
+    "countries": {
+      "skipped_checkpoint": 2607,
+      "processed": 3034,
+      "approved": 3034
+    }
+  },
+  "finished_at": "2026-07-06T22:37:56.094082+00:00",
+  "elapsed_s": 5.4
+}

@@ -1,0 +1,545 @@
+/*
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+  CBSE Hangman Quiz — premium game shell.
+*/
+
+/* Tokens live on :root — the overlay and streak badge render outside .hq,
+   so scoping them to .hq would leave those elements with unresolved vars. */
+:root {
+  --hq-sci: #22d3ee;
+  --hq-math: #f472b6;
+  --hq-gold: #fbbf24;
+  --hq-good: #34d399;
+  --hq-bad: #fb7185;
+  --hq-ink: #e8edf7;
+  --hq-dim: #93a3bd;
+  --hq-panel: rgba(13, 20, 38, 0.82);
+  --hq-line: rgba(129, 150, 190, 0.22);
+}
+
+.hq {
+  max-width: min(1180px, 96vw);
+  margin: 0 auto;
+  color: var(--hq-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── HUD ──────────────────────────────────────────────────────────── */
+.hq-hud {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.hq-stat {
+  position: relative;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--hq-panel);
+  border: 1px solid var(--hq-line);
+  overflow: hidden;
+}
+
+.hq-stat::after {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--hq-accent, var(--hq-sci));
+}
+
+.hq-stat-label {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hq-dim);
+}
+
+.hq-stat-value {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.hq-stat-value.is-bump {
+  animation: hq-bump 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes hq-bump {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.28); color: var(--hq-gold); }
+  100% { transform: scale(1); }
+}
+
+.hq-lives {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.hq-life.is-lost {
+  filter: grayscale(1) brightness(0.5);
+  transform: scale(0.82);
+}
+
+.hq-life {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* ── Board layout ─────────────────────────────────────────────────── */
+.hq-board {
+  display: grid;
+  grid-template-columns: minmax(260px, 340px) 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .hq-board { grid-template-columns: 1fr; }
+}
+
+.hq-panel {
+  background: var(--hq-panel);
+  border: 1px solid var(--hq-line);
+  border-radius: 18px;
+  padding: 18px;
+  backdrop-filter: blur(8px);
+}
+
+/* ── Gallows ──────────────────────────────────────────────────────── */
+.hq-stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.hq-gallows {
+  width: 100%;
+  max-width: 230px;
+  max-height: 290px;
+  height: auto;
+  overflow: visible;
+}
+
+.hq-gallows .hq-part {
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+.hq-gallows .hq-part.is-on {
+  opacity: 1;
+  animation: hq-draw 0.55s ease both;
+}
+
+@keyframes hq-draw {
+  from { stroke-dashoffset: 220; opacity: 0.2; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+
+.hq-gallows .hq-stroke {
+  stroke-dasharray: 220;
+}
+
+.hq-gallows.is-doomed {
+  animation: hq-shake 0.6s ease;
+}
+
+@keyframes hq-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-8px) rotate(-1.5deg); }
+  50% { transform: translateX(7px) rotate(1.5deg); }
+  80% { transform: translateX(-4px); }
+}
+
+.hq-danger {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--hq-dim);
+}
+
+.hq-danger b { color: var(--hq-bad); }
+
+/* ── Secret word ──────────────────────────────────────────────────── */
+.hq-word-wrap { text-align: center; }
+
+.hq-word-hint {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--hq-dim);
+  margin-bottom: 10px;
+}
+
+.hq-word {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.hq-slot {
+  width: 26px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 1.02rem;
+  border-bottom: 2px solid rgba(129, 150, 190, 0.4);
+  color: transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.hq-slot.is-space {
+  border-bottom-color: transparent;
+  width: 12px;
+}
+
+.hq-slot.is-shown {
+  color: var(--hq-gold);
+  border-bottom-color: var(--hq-gold);
+  animation: hq-reveal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes hq-reveal {
+  from { transform: translateY(10px) scale(0.5); opacity: 0; }
+  to { transform: none; opacity: 1; }
+}
+
+/* ── Question card ────────────────────────────────────────────────── */
+.hq-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.hq-tag {
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+}
+
+.hq-tag--science { color: var(--hq-sci); background: rgba(34, 211, 238, 0.1); }
+.hq-tag--mathematics { color: var(--hq-math); background: rgba(244, 114, 182, 0.1); }
+.hq-tag--chapter { color: var(--hq-dim); background: rgba(147, 163, 189, 0.08); }
+.hq-tag--diff { color: var(--hq-gold); background: rgba(251, 191, 36, 0.1); }
+
+.hq-question {
+  font-size: clamp(1rem, 2.1vw, 1.22rem);
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.hq-options {
+  display: grid;
+  gap: 10px;
+}
+
+.hq-opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--hq-line);
+  background: rgba(23, 33, 58, 0.7);
+  color: var(--hq-ink);
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+}
+
+.hq-opt:hover:not(:disabled) {
+  transform: translateX(5px);
+  border-color: rgba(34, 211, 238, 0.6);
+  background: rgba(34, 211, 238, 0.1);
+}
+
+.hq-opt:disabled { cursor: default; }
+
+.hq-opt-key {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(129, 150, 190, 0.16);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.hq-opt.is-correct {
+  border-color: var(--hq-good);
+  background: rgba(52, 211, 153, 0.16);
+  animation: hq-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hq-opt.is-correct .hq-opt-key { background: var(--hq-good); color: #06251a; }
+
+.hq-opt.is-wrong {
+  border-color: var(--hq-bad);
+  background: rgba(251, 113, 133, 0.16);
+  animation: hq-shake 0.45s ease;
+}
+
+.hq-opt.is-wrong .hq-opt-key { background: var(--hq-bad); color: #3b0a14; }
+
+@keyframes hq-pop {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+/* ── Feedback ─────────────────────────────────────────────────────── */
+.hq-feedback {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  border: 1px solid transparent;
+  display: none;
+}
+
+.hq-feedback.is-on { display: block; animation: hq-slide 0.35s ease both; }
+.hq-feedback[data-ok='1'] { border-color: rgba(52, 211, 153, 0.45); background: rgba(52, 211, 153, 0.1); }
+.hq-feedback[data-ok='0'] { border-color: rgba(251, 113, 133, 0.45); background: rgba(251, 113, 133, 0.1); }
+.hq-feedback b { display: block; margin-bottom: 3px; }
+
+@keyframes hq-slide {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* ── Timer bar ────────────────────────────────────────────────────── */
+.hq-timer {
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(129, 150, 190, 0.18);
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.hq-timer-fill {
+  height: 100%;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--hq-good), var(--hq-gold));
+  transition: width 0.25s linear, background 0.4s ease;
+}
+
+.hq-timer-fill.is-low { background: linear-gradient(90deg, var(--hq-gold), var(--hq-bad)); }
+
+/* ── Streak flame ─────────────────────────────────────────────────── */
+/* theme.css pins every direct child of body with
+   `body > :not(#cosmos):not(.mesh):not(.orb) { position: relative; z-index: 2 }`,
+   which outranks plain class selectors. The viewport-pinned layers below must
+   therefore assert position/z-index with !important or they fall into flow. */
+.hq-streak-badge {
+  position: fixed !important;
+  left: 50%;
+  top: 22%;
+  transform: translateX(-50%);
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: linear-gradient(120deg, #f59e0b, #ef4444);
+  color: #fff;
+  box-shadow: 0 12px 40px rgba(239, 68, 68, 0.45);
+  pointer-events: none;
+  opacity: 0;
+  z-index: 40 !important;
+}
+
+.hq-streak-badge.is-on {
+  animation: hq-streak 1.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes hq-streak {
+  0% { opacity: 0; transform: translateX(-50%) scale(0.5); }
+  22% { opacity: 1; transform: translateX(-50%) scale(1.12); }
+  70% { opacity: 1; transform: translateX(-50%) scale(1); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-38px) scale(0.95); }
+}
+
+/* ── Buttons ──────────────────────────────────────────────────────── */
+.hq-btn {
+  border: 1px solid rgba(34, 211, 238, 0.5);
+  background: linear-gradient(120deg, rgba(34, 211, 238, 0.2), rgba(129, 140, 248, 0.2));
+  color: var(--hq-ink);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 11px 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.hq-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(34, 211, 238, 0.28); }
+.hq-btn--ghost { background: transparent; border-color: var(--hq-line); }
+.hq-btn[hidden] { display: none; }
+
+.hq-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+/* ── Overlay (start / level / game over) ──────────────────────────── */
+.hq-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(5, 9, 20, 0.86);
+  backdrop-filter: blur(10px);
+  z-index: 60 !important;
+  overflow-y: auto;
+}
+
+.hq-overlay[hidden] { display: none; }
+
+.hq-card {
+  width: min(560px, 94vw);
+  padding: clamp(24px, 4vw, 38px);
+  border-radius: 22px;
+  text-align: center;
+  background: linear-gradient(160deg, rgba(30, 41, 72, 0.96), rgba(12, 18, 36, 0.98));
+  border: 1px solid var(--hq-line);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+  animation: hq-card-in 0.45s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+
+@keyframes hq-card-in {
+  from { opacity: 0; transform: translateY(24px) scale(0.95); }
+  to { opacity: 1; transform: none; }
+}
+
+.hq-card h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  color: var(--hq-ink);
+  background: linear-gradient(100deg, var(--hq-sci), var(--hq-math), var(--hq-gold));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* Only go transparent where the clipped gradient is actually supported,
+   so the heading can never end up invisible. */
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .hq-card h2 { color: transparent; -webkit-text-fill-color: transparent; }
+}
+
+.hq-card p { color: var(--hq-dim); line-height: 1.65; margin: 0 0 8px; font-size: 0.94rem; }
+.hq-card-emoji { font-size: 3rem; line-height: 1; display: block; margin-bottom: 10px; }
+
+.hq-scoreline {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin: 18px 0 6px;
+}
+
+.hq-scoreline div { min-width: 76px; }
+.hq-scoreline span { display: block; font-size: 0.62rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--hq-dim); }
+.hq-scoreline b { font-size: 1.45rem; color: var(--hq-gold); }
+
+.hq-setup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin: 18px 0;
+}
+
+.hq-chip {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--hq-line);
+  background: rgba(23, 33, 58, 0.7);
+  color: var(--hq-dim);
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.hq-chip[aria-pressed='true'] {
+  border-color: var(--hq-sci);
+  background: rgba(34, 211, 238, 0.16);
+  color: var(--hq-ink);
+}
+
+.hq-chip-group { width: 100%; }
+.hq-chip-group > p { font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 8px; }
+
+/* ── Chapter recap on game over ───────────────────────────────────── */
+.hq-recap {
+  margin-top: 16px;
+  text-align: left;
+  max-height: 190px;
+  overflow-y: auto;
+  border-top: 1px solid var(--hq-line);
+  padding-top: 12px;
+}
+
+.hq-recap h3 {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hq-dim);
+  margin: 0 0 8px;
+}
+
+.hq-recap li {
+  list-style: none;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding: 7px 0;
+  border-bottom: 1px dashed rgba(129, 150, 190, 0.16);
+  color: var(--hq-dim);
+}
+
+.hq-recap li b { color: var(--hq-ink); display: block; }
+.hq-recap li em { color: var(--hq-good); font-style: normal; }
+
+/* Confetti */
+.hq-confetti {
+  position: fixed !important;
+  top: -12px;
+  width: 9px;
+  height: 14px;
+  z-index: 70 !important;
+  pointer-events: none;
+  animation: hq-fall linear forwards;
+}
+
+@keyframes hq-fall {
+  to { transform: translateY(104vh) rotate(760deg); opacity: 0; }
+}

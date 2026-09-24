@@ -1,0 +1,20 @@
+{
+  "education_root": "D:\\knowledge\\India",
+  "science": {
+    "files": 46,
+    "raw_rows": 350,
+    "unique_questions": 350,
+    "by_subject": {
+      "biology": 75,
+      "chemistry": 91,
+      "mathematics": 84,
+      "physics": 100
+    }
+  },
+  "commerce": {
+    "files": 0,
+    "raw_rows": 0,
+    "unique_questions": 0,
+    "by_subject": {}
+  }
+}

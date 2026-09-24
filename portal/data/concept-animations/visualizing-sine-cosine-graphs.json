@@ -1,0 +1,62 @@
+{
+  "slug": "visualizing-sine-cosine-graphs",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Visualizing Sine Cosine Graphs",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Visualizing Sine Cosine Graphs",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Visualizing Sine Cosine Graphs.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a lighthouse beam rotates in a circular motion, the sine and cosine graphs can be thought of as a visual representation of this rota…",
+    "Pause and restate what Visualizing Sine Cosine Graphs means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Visualizing Sine Cosine Graphs: mark sides and angles",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Visualizing Sine Cosine Graphs</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">geometry</text><polygon points=\"160,280 320,70 480,280\" fill=\"none\" stroke=\"#67e8f9\" stroke-width=\"4\"/><text x=\"220\" y=\"190\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"16\" font-family=\"Segoe UI,Arial\">a</text><text x=\"400\" y=\"190\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"16\" font-family=\"Segoe UI,Arial\">b</text><text x=\"320\" y=\"310\" text-anchor=\"middle\" fill=\"#5eead4\" font-size=\"16\" font-family=\"Segoe UI,Arial\">c</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Right triangle: a² + b² = c²",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Visualizing Sine Cosine Graphs</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">relation</text><polygon points=\"140,280 140,100 420,280\" fill=\"none\" stroke=\"#fcd34d\" stroke-width=\"4\"/><rect x=\"140\" y=\"250\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"#5eead4\" stroke-width=\"2\"/><text x=\"280\" y=\"80\" text-anchor=\"middle\" fill=\"#67e8f9\" font-size=\"22\" font-family=\"Segoe UI,Arial\">a² + b² = c²</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Use the relation that matches the figure",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Visualizing Sine Cosine Graphs</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">apply</text><polygon points=\"100,300 300,80 500,300\" fill=\"#164e63\" opacity=\"0.5\" stroke=\"#67e8f9\" stroke-width=\"3\"/><rect x=\"360\" y=\"120\" width=\"220\" height=\"120\" rx=\"10\" fill=\"#132033\" stroke=\"#fcd34d\" stroke-width=\"2\"/><text x=\"470\" y=\"175\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"13\" font-family=\"Segoe UI,Arial\">Visualizing Sine Cosine Gr</text><text x=\"470\" y=\"205\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mark · relate · solve</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a lighthouse beam rotates in a circular motion, the sine and cosine graphs can be ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Visualizing Sine Cosine Graphs</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><rect x=\"80\" y=\"110\" width=\"480\" height=\"150\" rx=\"12\" fill=\"#132033\" stroke=\"#5eead4\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a lighthouse beam rotates in a circular motion, </text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember the marked figure",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Visualizing Sine Cosine Graphs</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><polygon points=\"200,280 320,100 440,280\" fill=\"none\" stroke=\"#fcd34d\" stroke-width=\"4\"/><text x=\"320\" y=\"320\" text-anchor=\"middle\" fill=\"#a5f3fc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Visualizing Sine Cosine Graphs</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "VisualizingSineCosineGraphsScene",
+    "notes": "Domain=general motif=triangle. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/visualizing_sine_cosine_graphs.py ConceptScene"
+  },
+  "motif": "triangle",
+  "generated_by": "template-stem-v5-general-triangle",
+  "generated_at": "2026-07-12T22:35:10Z"
+}

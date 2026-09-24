@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-closed-circulatory-system",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Closed Circulatory System",
+  "theme": "biology",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Closed Circulatory System",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Closed Circulatory System.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a city’s water system uses pipes, pumps, and valves to regulate pressure and flow to every building, a closed circulatory system use…",
+    "Pause and restate what Mathematical Treatment of Closed Circulatory System means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Closed Circulatory System: pattern in points",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Closed Circulatory Sys</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">data</text><line x1=\"80\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><line x1=\"80\" y1=\"300\" x2=\"80\" y2=\"60\" stroke=\"#a5f3fc\" stroke-width=\"2\"/><circle cx=\"146\" cy=\"242\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"213\" cy=\"199\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"280\" cy=\"156\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"347\" cy=\"113\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"414\" cy=\"270\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"481\" cy=\"227\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"128\" cy=\"184\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"195\" cy=\"141\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"262\" cy=\"98\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"329\" cy=\"255\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"396\" cy=\"212\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"463\" cy=\"169\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"530\" cy=\"126\" r=\"7\" fill=\"#67e8f9\"/><circle cx=\"177\" cy=\"83\" r=\"7\" fill=\"#67e8f9\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Trend line vs noise",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Closed Circulatory Sys</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">trend</text><line x1=\"100\" y1=\"260\" x2=\"520\" y2=\"100\" stroke=\"#fcd34d\" stroke-width=\"3\"/><circle cx=\"140\" cy=\"240\" r=\"6\" fill=\"#5eead4\"/><circle cx=\"190\" cy=\"237\" r=\"6\" fill=\"#5eead4\"/><circle cx=\"240\" cy=\"234\" r=\"6\" fill=\"#5eead4\"/><circle cx=\"290\" cy=\"186\" r=\"6\" fill=\"#5eead4\"/><circle cx=\"340\" cy=\"183\" r=\"6\" fill=\"#5eead4\"/><circle cx=\"390\" cy=\"180\" r=\"6\" fill=\"#5eead4\"/><circle cx=\"440\" cy=\"132\" r=\"6\" fill=\"#5eead4\"/><circle cx=\"490\" cy=\"129\" r=\"6\" fill=\"#5eead4\"/>"
+    },
+    {
+      "id": "core",
+      "caption": "Read the signal",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Closed Circulatory Sys</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"90\" y=\"110\" width=\"460\" height=\"150\" rx=\"12\" fill=\"#132033\" stroke=\"#67e8f9\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"16\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Closed Circulato</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a city’s water system uses pipes, pumps, and valves to regulate pressure and flow ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Closed Circulatory Sys</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfeff\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a city’s water system uses pipes, pumps, and val</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Mathematical Treatment of Closed Circula",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1520\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#132033\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#67e8f9\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Closed Circulatory Sys</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#a5f3fc\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fcd34d\" font-size=\"24\" font-family=\"Segoe UI,Arial\">see the pattern</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofClosedCirculatoryScene",
+    "notes": "Domain=biology motif=family-10. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_closed_circulatory_system.py ConceptScene"
+  },
+  "motif": "family-10",
+  "generated_by": "template-stem-v5-biology-family-10",
+  "generated_at": "2026-07-12T22:35:00Z"
+}

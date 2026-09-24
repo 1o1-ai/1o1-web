@@ -1,0 +1,62 @@
+{
+  "slug": "advanced-carbon-cycle",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Advanced Carbon Cycle",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Advanced Carbon Cycle",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Advanced Carbon Cycle.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a city's water supply and sewage system circulates water through various treatment plants, pipes, and reservoirs, the advanced carbo…",
+    "Pause and restate what Advanced Carbon Cycle means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Advanced Carbon Cycle: keep both sides equal",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Carbon Cycle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">balance</text><line x1=\"120\" y1=\"200\" x2=\"520\" y2=\"200\" stroke=\"#94a3b8\" stroke-width=\"8\"/><line x1=\"320\" y1=\"200\" x2=\"320\" y2=\"280\" stroke=\"#38bdf8\" stroke-width=\"8\"/><rect x=\"140\" y=\"140\" width=\"100\" height=\"55\" fill=\"#fbbf24\"/><rect x=\"400\" y=\"140\" width=\"100\" height=\"55\" fill=\"#34d399\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Same operation on both sides",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Carbon Cycle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">ops</text><text x=\"320\" y=\"140\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"28\" font-family=\"Segoe UI,Arial\">L = R</text><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"22\" font-family=\"Segoe UI,Arial\">L − a = R − a</text><text x=\"320\" y=\"260\" text-anchor=\"middle\" fill=\"#34d399\" font-size=\"16\" font-family=\"Segoe UI,Arial\">still equal</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Arrive at the unknown",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Carbon Cycle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><rect x=\"120\" y=\"120\" width=\"400\" height=\"140\" rx=\"12\" fill=\"#111827\" stroke=\"#38bdf8\" stroke-width=\"2\"/><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Advanced Carbon Cycle</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a citys water supply and sewage system circulates water through various treatment ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Carbon Cycle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a citys water supply and sewage system circulate</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Advanced Carbon Cycle",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Carbon Cycle</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"24\" font-family=\"Segoe UI,Arial\">balance always</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AdvancedCarbonCycleScene",
+    "notes": "Domain=general motif=family-7. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/advanced_carbon_cycle.py ConceptScene"
+  },
+  "motif": "family-7",
+  "generated_by": "template-stem-v5-general-family-7",
+  "generated_at": "2026-07-12T22:34:06Z"
+}

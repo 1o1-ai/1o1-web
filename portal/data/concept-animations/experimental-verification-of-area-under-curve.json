@@ -1,0 +1,62 @@
+{
+  "slug": "experimental-verification-of-area-under-curve",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Experimental Verification of Area Under Curve",
+  "theme": "geometry",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Experimental Verification of Area Under Curve",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Experimental Verification of Area Under Curve.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Experimental verification of the area under a curve is like GPS navigation calculating the optimal route by breaking down the journey into s…",
+    "Pause and restate what Experimental Verification of Area Under Curve means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Experimental Verification of Area Under Curve: area under a curve",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Area Under Curve</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">calculus</text><line x1=\"70\" y1=\"300\" x2=\"570\" y2=\"300\" stroke=\"#fdba74\" stroke-width=\"2\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"50\" stroke=\"#fdba74\" stroke-width=\"2\"/><path d=\"M100 260 C200 80, 320 80, 500 220\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"4\"/><path d=\"M140 300 L140 200 Q220 100 300 180 L300 300 Z\" fill=\"#f97316\" opacity=\"0.4\"/><text x=\"220\" y=\"280\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"14\" font-family=\"Segoe UI,Arial\">area</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Riemann sums — stack thin rectangles",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Area Under Curve</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">sums</text><line x1=\"70\" y1=\"300\" x2=\"570\" y2=\"300\" stroke=\"#fdba74\" stroke-width=\"2\"/><rect x=\"120\" y=\"238\" width=\"50\" height=\"62\" fill=\"#fb923c\" opacity=\"0.55\"/><rect x=\"180\" y=\"201\" width=\"50\" height=\"99\" fill=\"#fb923c\" opacity=\"0.55\"/><rect x=\"240\" y=\"164\" width=\"50\" height=\"136\" fill=\"#fb923c\" opacity=\"0.55\"/><rect x=\"300\" y=\"127\" width=\"50\" height=\"173\" fill=\"#fb923c\" opacity=\"0.55\"/><rect x=\"360\" y=\"230\" width=\"50\" height=\"70\" fill=\"#fb923c\" opacity=\"0.55\"/><rect x=\"420\" y=\"193\" width=\"50\" height=\"107\" fill=\"#fb923c\" opacity=\"0.55\"/><rect x=\"480\" y=\"156\" width=\"50\" height=\"144\" fill=\"#fb923c\" opacity=\"0.55\"/><rect x=\"540\" y=\"259\" width=\"50\" height=\"41\" fill=\"#fb923c\" opacity=\"0.55\"/><text x=\"320\" y=\"80\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">sum of heights × widths</text>"
+    },
+    {
+      "id": "core",
+      "caption": "∫ f(x) dx accumulates quantity",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Area Under Curve</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">integral</text><rect x=\"90\" y=\"110\" width=\"460\" height=\"150\" rx=\"14\" fill=\"#2a1a0c\" stroke=\"#f97316\" stroke-width=\"2\"/><text x=\"320\" y=\"185\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"24\" font-family=\"Segoe UI,Arial\">∫ₐᵇ f(x) dx = net area</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Experimental verification of the area under a curve is like GPS navigation calculating the",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Area Under Curve</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"16\" font-family=\"Segoe UI,Arial\">Experimental verification of the area under a curve is l</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: integral accumulates",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Area Under Curve</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"26\" font-family=\"Segoe UI,Arial\">area ↔ accumulation</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ExperimentalVerificationofAreaUnderCurveScene",
+    "notes": "Domain=geometry motif=integral. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/experimental_verification_of_area_under_curve.py ConceptScene"
+  },
+  "motif": "integral",
+  "generated_by": "template-stem-v5-geometry-integral",
+  "generated_at": "2026-07-12T22:34:54Z"
+}

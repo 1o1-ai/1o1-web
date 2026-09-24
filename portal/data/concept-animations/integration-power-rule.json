@@ -1,0 +1,62 @@
+{
+  "slug": "integration-power-rule",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Integration Power Rule",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Integration Power Rule",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Integration Power Rule.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "The Integration Power Rule is like the precise mathematical tool for answering that question. If the rate of flow (like 2 gallons per second…",
+    "Pause and restate what Integration Power Rule means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Integration Power Rule: energy transforms, total conserved",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Integration Power Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mechanics</text><circle cx=\"180\" cy=\"120\" r=\"28\" fill=\"#facc15\"/><path d=\"M180 148 Q250 300, 420 280\" fill=\"none\" stroke=\"#4ade80\" stroke-width=\"4\"/><circle cx=\"420\" cy=\"280\" r=\"28\" fill=\"#2dd4bf\"/><text x=\"180\" y=\"90\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"14\" font-family=\"Segoe UI,Arial\">PE</text><text x=\"460\" y=\"280\" text-anchor=\"start\" fill=\"#2dd4bf\" font-size=\"14\" font-family=\"Segoe UI,Arial\">KE</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Work transfers energy: W = F · d",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Integration Power Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">work</text><rect x=\"200\" y=\"160\" width=\"100\" height=\"70\" fill=\"#4ade80\"/><line x1=\"300\" y1=\"195\" x2=\"480\" y2=\"195\" stroke=\"#facc15\" stroke-width=\"5\"/><polygon points=\"480,195 455,180 455,210\" fill=\"#facc15\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#86efac\" font-size=\"14\" font-family=\"Segoe UI,Arial\">force across distance</text>"
+    },
+    {
+      "id": "core",
+      "caption": "KE = ½mv² · PE = mgh (common forms)",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Integration Power Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">forms</text><rect x=\"70\" y=\"110\" width=\"220\" height=\"140\" rx=\"12\" fill=\"#10251c\" stroke=\"#2dd4bf\" stroke-width=\"2\"/><text x=\"180\" y=\"180\" text-anchor=\"middle\" fill=\"#2dd4bf\" font-size=\"22\" font-family=\"Segoe UI,Arial\">½ m v²</text><rect x=\"350\" y=\"110\" width=\"220\" height=\"140\" rx=\"12\" fill=\"#10251c\" stroke=\"#facc15\" stroke-width=\"2\"/><text x=\"460\" y=\"180\" text-anchor=\"middle\" fill=\"#facc15\" font-size=\"22\" font-family=\"Segoe UI,Arial\">m g h</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "The Integration Power Rule is like the precise mathematical tool for answering that questi",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Integration Power Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#ecfdf5\" font-size=\"15\" font-family=\"Segoe UI,Arial\">The Integration Power Rule is like the precise mathemati</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember conservation",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0a1a14\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#10251c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#4ade80\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Integration Power Rule</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#86efac\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#4ade80\" font-size=\"22\" font-family=\"Segoe UI,Arial\">transform, dont vanish</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "IntegrationPowerRuleScene",
+    "notes": "Domain=general motif=energy. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/integration_power_rule.py ConceptScene"
+  },
+  "motif": "energy",
+  "generated_by": "template-stem-v5-general-energy",
+  "generated_at": "2026-07-12T22:34:59Z"
+}

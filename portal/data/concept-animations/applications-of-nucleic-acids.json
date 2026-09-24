@@ -1,0 +1,62 @@
+{
+  "slug": "applications-of-nucleic-acids",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Applications of Nucleic Acids",
+  "theme": "chemistry",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Applications of Nucleic Acids",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Applications of Nucleic Acids.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a computer's hard drive uses binary code to store and process information, nucleic acids like DNA and RNA use their unique sequences…",
+    "Pause and restate what Applications of Nucleic Acids means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Applications of Nucleic Acids: acids, bases, and pH scale",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Nucleic Acids</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">chemistry</text><rect x=\"80\" y=\"120\" width=\"200\" height=\"160\" rx=\"12\" fill=\"#ef4444\" opacity=\"0.85\"/><text x=\"180\" y=\"200\" text-anchor=\"middle\" fill=\"white\" font-size=\"22\" font-family=\"Segoe UI,Arial\">ACID</text><rect x=\"360\" y=\"120\" width=\"200\" height=\"160\" rx=\"12\" fill=\"#3b82f6\" opacity=\"0.85\"/><text x=\"460\" y=\"200\" text-anchor=\"middle\" fill=\"white\" font-size=\"22\" font-family=\"Segoe UI,Arial\">BASE</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "pH scale from 0 (acidic) to 14 (basic)",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Nucleic Acids</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">pH</text><rect x=\"80\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(255,80,0)\"/><rect x=\"115\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(240,90,18)\"/><rect x=\"150\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(225,100,36)\"/><rect x=\"185\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(210,110,54)\"/><rect x=\"220\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(195,120,72)\"/><rect x=\"255\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(180,130,90)\"/><rect x=\"290\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(165,140,108)\"/><rect x=\"325\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(150,150,126)\"/><rect x=\"360\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(135,160,144)\"/><rect x=\"395\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(120,170,162)\"/><rect x=\"430\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(105,180,180)\"/><rect x=\"465\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(90,190,198)\"/><rect x=\"500\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(75,200,216)\"/><rect x=\"535\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(60,210,234)\"/><rect x=\"570\" y=\"160\" width=\"30\" height=\"80\" fill=\"rgb(45,220,252)\"/><text x=\"100\" y=\"280\" text-anchor=\"start\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">0</text><text x=\"320\" y=\"280\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">7</text><text x=\"540\" y=\"280\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">14</text>"
+    },
+    {
+      "id": "core",
+      "caption": "H+ / OH− decide the character",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Nucleic Acids</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">ions</text><circle cx=\"200\" cy=\"190\" r=\"50\" fill=\"#fbbf24\"/><text x=\"200\" y=\"196\" text-anchor=\"middle\" fill=\"#0b1220\" font-size=\"20\" font-family=\"Segoe UI,Arial\">H+</text><circle cx=\"440\" cy=\"190\" r=\"50\" fill=\"#38bdf8\"/><text x=\"440\" y=\"196\" text-anchor=\"middle\" fill=\"#0b1220\" font-size=\"18\" font-family=\"Segoe UI,Arial\">OH−</text><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"13\" font-family=\"Segoe UI,Arial\">Applications of Nucleic Acids</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a computers hard drive uses binary code to store and process information, nucleic ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Nucleic Acids</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a computers hard drive uses binary code to store</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember the pH story",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Nucleic Acids</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"24\" font-family=\"Segoe UI,Arial\">acid · neutral · base</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ApplicationsofNucleicAcidsScene",
+    "notes": "Domain=chemistry motif=acidbase. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/applications_of_nucleic_acids.py ConceptScene"
+  },
+  "motif": "acidbase",
+  "generated_by": "template-stem-v5-chemistry-acidbase",
+  "generated_at": "2026-07-12T22:34:46Z"
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "advanced-parabola-properties",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Advanced Parabola properties",
+  "theme": "algebra",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Advanced Parabola properties",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Advanced Parabola properties.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "The curved shape of a satellite dish antenna is a real-world representation of a parabola. Just as a parabola has a focal point where all li…",
+    "Pause and restate what Advanced Parabola properties means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Advanced Parabola properties: a ball's path is a parabola",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Parabola properties</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">algebra</text><line x1=\"60\" y1=\"300\" x2=\"580\" y2=\"300\" stroke=\"#fdba74\" stroke-width=\"4\"/><path d=\"M120 280 Q320 120, 520 280\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"4\"/><circle cx=\"220\" cy=\"210\" r=\"18\" fill=\"#fde68a\"/><text x=\"100\" y=\"80\" text-anchor=\"start\" fill=\"#fde68a\" font-size=\"14\" font-family=\"Segoe UI,Arial\">kick</text><circle cx=\"90\" cy=\"250\" r=\"22\" fill=\"#f97316\"/><line x1=\"90\" y1=\"272\" x2=\"90\" y2=\"320\" stroke=\"#f97316\" stroke-width=\"4\"/><line x1=\"90\" y1=\"290\" x2=\"120\" y2=\"270\" stroke=\"#f97316\" stroke-width=\"4\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Two ground hits ⇒ two solutions for x",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Parabola properties</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">roots</text><line x1=\"80\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#fdba74\" stroke-width=\"2\"/><line x1=\"80\" y1=\"300\" x2=\"80\" y2=\"60\" stroke=\"#fdba74\" stroke-width=\"2\"/><path d=\"M100 280 Q240 40, 380 280\" fill=\"none\" stroke=\"#fde68a\" stroke-width=\"4\"/><circle cx=\"140\" cy=\"280\" r=\"8\" fill=\"#f97316\"/><text x=\"140\" y=\"310\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"13\" font-family=\"Segoe UI,Arial\">x1</text><circle cx=\"340\" cy=\"280\" r=\"8\" fill=\"#f97316\"/><text x=\"340\" y=\"310\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"13\" font-family=\"Segoe UI,Arial\">x2</text><text x=\"420\" y=\"100\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"16\" font-family=\"Segoe UI,Arial\">y = ax^2+bx+c</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Equation falls onto the path — match the curve",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Parabola properties</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">equation</text><line x1=\"80\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#fdba74\" stroke-width=\"2\"/><path d=\"M110 270 Q260 50, 420 270\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"4\"/><rect x=\"200\" y=\"70\" width=\"240\" height=\"50\" rx=\"8\" fill=\"#2a1a0c\" stroke=\"#fde68a\" stroke-width=\"2\"/><text x=\"320\" y=\"100\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"16\" font-family=\"Segoe UI,Arial\">0 = ax^2 + bx + c</text><text x=\"320\" y=\"330\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"13\" font-family=\"Segoe UI,Arial\">roots where curve meets ground</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "The curved shape of a satellite dish antenna is a real-world representation of a parabola.",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Parabola properties</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><rect x=\"60\" y=\"90\" width=\"520\" height=\"200\" rx=\"14\" fill=\"#2a1a0c\" stroke=\"#fb923c\" stroke-width=\"2\"/><text x=\"320\" y=\"160\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"17\" font-family=\"Segoe UI,Arial\">Sports trajectory = math curve</text><text x=\"320\" y=\"210\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"14\" font-family=\"Segoe UI,Arial\">The curved shape of a satellite dish antenna is a real-w</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: parabola ↔ quadratic solutions",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Advanced Parabola properties</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><path d=\"M80 280 Q200 60, 320 280 Q440 60, 560 280\" fill=\"none\" stroke=\"#fde68a\" stroke-width=\"3\"/><circle cx=\"160\" cy=\"250\" r=\"10\" fill=\"#f97316\"/><circle cx=\"480\" cy=\"250\" r=\"10\" fill=\"#f97316\"/><text x=\"320\" y=\"330\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">two roots · one shape</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "AdvancedParabolapropertiesScene",
+    "notes": "Domain=algebra motif=quadratic. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/advanced_parabola_properties.py ConceptScene"
+  },
+  "motif": "quadratic",
+  "generated_by": "template-stem-v5-algebra-quadratic",
+  "generated_at": "2026-07-12T22:34:18Z"
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-expected-value-variance",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Expected Value Variance",
+  "theme": "stats",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Expected Value Variance",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Expected Value Variance.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "The expected value of a basketball player’s free-throw shooting is like their average success rate over many attempts—it tells you what to g…",
+    "Pause and restate what Mathematical Treatment of Expected Value Variance means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Expected Value Variance: chance as a distribution",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Expected Value Varianc</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">stats</text><rect x=\"100\" y=\"230\" width=\"55\" height=\"70\" fill=\"#fb7185\" opacity=\"0.5\"/><rect x=\"175\" y=\"189\" width=\"55\" height=\"111\" fill=\"#fb7185\" opacity=\"0.6\"/><rect x=\"250\" y=\"148\" width=\"55\" height=\"152\" fill=\"#fb7185\" opacity=\"0.7\"/><rect x=\"325\" y=\"107\" width=\"55\" height=\"193\" fill=\"#fb7185\" opacity=\"0.8\"/><rect x=\"400\" y=\"196\" width=\"55\" height=\"104\" fill=\"#fb7185\" opacity=\"0.5\"/><rect x=\"475\" y=\"155\" width=\"55\" height=\"145\" fill=\"#fb7185\" opacity=\"0.6\"/><line x1=\"80\" y1=\"300\" x2=\"560\" y2=\"300\" stroke=\"#fda4af\" stroke-width=\"2\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Favorable outcomes over possible outcomes",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Expected Value Varianc</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">ratio</text><circle cx=\"220\" cy=\"190\" r=\"80\" fill=\"none\" stroke=\"#fb7185\" stroke-width=\"4\"/><path d=\"M220 190 L220 110 A80 80 0 0 1 290 160 Z\" fill=\"#fdba74\"/><text x=\"420\" y=\"180\" text-anchor=\"start\" fill=\"#fff1f2\" font-size=\"14\" font-family=\"Segoe UI,Arial\">P = favorable / possible</text>"
+    },
+    {
+      "id": "core",
+      "caption": "0 ≤ P ≤ 1",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Expected Value Varianc</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">scale</text><line x1=\"100\" y1=\"200\" x2=\"540\" y2=\"200\" stroke=\"#fda4af\" stroke-width=\"6\"/><circle cx=\"180\" cy=\"200\" r=\"16\" fill=\"#fdba74\"/><text x=\"100\" y=\"240\" text-anchor=\"start\" fill=\"#fda4af\" font-size=\"14\" font-family=\"Segoe UI,Arial\">0</text><text x=\"540\" y=\"240\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"14\" font-family=\"Segoe UI,Arial\">1</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "The expected value of a basketball player’s free-throw shooting is like their average succ",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Expected Value Varianc</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"15\" font-family=\"Segoe UI,Arial\">The expected value of a basketball player’s free-throw s</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember probability bounds",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Expected Value Varianc</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fb7185\" font-size=\"24\" font-family=\"Segoe UI,Arial\">0 → certainty ← 1</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofExpectedValueVariScene",
+    "notes": "Domain=stats motif=probability. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_expected_value_variance.py ConceptScene"
+  },
+  "motif": "probability",
+  "generated_by": "template-stem-v5-stats-probability",
+  "generated_at": "2026-07-12T22:35:01Z"
+}

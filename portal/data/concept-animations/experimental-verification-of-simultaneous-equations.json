@@ -1,0 +1,62 @@
+{
+  "slug": "experimental-verification-of-simultaneous-equations",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Experimental Verification of Simultaneous Equations",
+  "theme": "algebra",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Experimental Verification of Simultaneous Equations",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Experimental Verification of Simultaneous Equations.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Experimental verification of simultaneous equations is like air traffic control, where multiple planes (equations) are flying in the same ai…",
+    "Pause and restate what Experimental Verification of Simultaneous Equations means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Experimental Verification of Simultaneous Equations: straight-line relationships",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Simultaneous Equati</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">algebra</text><line x1=\"70\" y1=\"300\" x2=\"570\" y2=\"300\" stroke=\"#fda4af\" stroke-width=\"2\"/><line x1=\"70\" y1=\"300\" x2=\"70\" y2=\"50\" stroke=\"#fda4af\" stroke-width=\"2\"/><line x1=\"100\" y1=\"260\" x2=\"520\" y2=\"80\" stroke=\"#fdba74\" stroke-width=\"4\"/><text x=\"400\" y=\"100\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"16\" font-family=\"Segoe UI,Arial\">y = mx + c</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Slope m = rise / run",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Simultaneous Equati</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">slope</text><line x1=\"120\" y1=\"260\" x2=\"420\" y2=\"100\" stroke=\"#f9a8d4\" stroke-width=\"4\"/><line x1=\"120\" y1=\"260\" x2=\"320\" y2=\"260\" stroke=\"#fdba74\" stroke-width=\"3\"/><line x1=\"320\" y1=\"260\" x2=\"320\" y2=\"150\" stroke=\"#fb7185\" stroke-width=\"3\"/><text x=\"220\" y=\"285\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"13\" font-family=\"Segoe UI,Arial\">run</text><text x=\"340\" y=\"200\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"13\" font-family=\"Segoe UI,Arial\">rise</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Balance / substitute to solve systems",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Simultaneous Equati</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">solve</text><rect x=\"80\" y=\"100\" width=\"480\" height=\"160\" rx=\"12\" fill=\"#2a1219\" stroke=\"#fb7185\" stroke-width=\"2\"/><text x=\"320\" y=\"160\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"20\" font-family=\"Segoe UI,Arial\">2x + y = 8</text><text x=\"320\" y=\"210\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"20\" font-family=\"Segoe UI,Arial\">x − y = 1</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Experimental verification of simultaneous equations is like air traffic control, where mul",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Simultaneous Equati</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff1f2\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental verification of simultaneous equations is l</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember linear form",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a0b10\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1219\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb7185\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Experimental Verification of Simultaneous Equati</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fda4af\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fdba74\" font-size=\"28\" font-family=\"Segoe UI,Arial\">y = mx + c</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ExperimentalVerificationofSimultaneousEqScene",
+    "notes": "Domain=algebra motif=linear. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/experimental_verification_of_simultaneous_equations.py ConceptScene"
+  },
+  "motif": "linear",
+  "generated_by": "template-stem-v5-algebra-linear",
+  "generated_at": "2026-07-12T22:34:58Z"
+}

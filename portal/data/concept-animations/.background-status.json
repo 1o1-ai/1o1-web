@@ -1,0 +1,10 @@
+﻿{
+  "job": "concept-stem-animations",
+  "status": "completed",
+  "completed_at": "2026-07-12T22:39:12Z",
+  "ok": 1941,
+  "fail": 0,
+  "format": "stem-svg-v5",
+  "mode": "templates-only",
+  "note": "Full regen on laptop after gpuserver status claimed 1941 but only 4 JSON files existed. Claude/OpenRouter polish pending (OpenRouter 402 no credits; CLAUDE_API_KEY is GH secret only)."
+}

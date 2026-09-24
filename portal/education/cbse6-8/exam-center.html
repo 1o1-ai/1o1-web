@@ -1,0 +1,34 @@
+<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exam Center · CBSE Classes 6-8</title>
+  <link rel="stylesheet" href="/assets/theme.css?v=saas-layout-19" />
+  <link rel="stylesheet" href="../../assets/portal.css?v=11" />
+  <link rel="stylesheet" href="../../assets/education-layout.css" />
+  <link rel="stylesheet" href="../../assets/exam-center.css" />
+</head>
+<body class="portal-page education-compact education-ambient" data-sku="cbse6-8">
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <header class="portal-header">
+    <a class="back-link" href="index.html">← CBSE XII Hub</a>
+    <h1>Exam Center</h1>
+  </header>
+  <main class="portal-main" id="examCenterRoot"></main>
+  <script src="../../../assets/cosmic.js?v=brand-phase4-1"></script>
+  <script src="../../assets/education-ambient.js"></script>
+  <script src="/portal/education/assets/anyo-education-bootstrap.js?v=4"></script>
+  <script src="../../assets/exam-center-hub.js?v=3"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      ExamCenterHub.mount(document.getElementById('examCenterRoot'), document.body.dataset.sku);
+    });
+  </script>
+</body>
+</html>

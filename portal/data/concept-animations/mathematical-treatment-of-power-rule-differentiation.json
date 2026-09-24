@@ -1,0 +1,62 @@
+{
+  "slug": "mathematical-treatment-of-power-rule-differentiation",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Mathematical Treatment of Power Rule Differentiation",
+  "theme": "calculus",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Mathematical Treatment of Power Rule Differentiation",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Mathematical Treatment of Power Rule Differentiation.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as a speedometer uses the car’s current speed and how quickly it’s changing to predict acceleration, the power rule in differentiation …",
+    "Pause and restate what Mathematical Treatment of Power Rule Differentiation means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Mathematical Treatment of Power Rule Differentiation: energy transforms, total conserved",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Power Rule Differentia</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">mechanics</text><circle cx=\"180\" cy=\"120\" r=\"28\" fill=\"#fbbf24\"/><path d=\"M180 148 Q250 300, 420 280\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"4\"/><circle cx=\"420\" cy=\"280\" r=\"28\" fill=\"#34d399\"/><text x=\"180\" y=\"90\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"14\" font-family=\"Segoe UI,Arial\">PE</text><text x=\"460\" y=\"280\" text-anchor=\"start\" fill=\"#34d399\" font-size=\"14\" font-family=\"Segoe UI,Arial\">KE</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Work transfers energy: W = F · d",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Power Rule Differentia</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">work</text><rect x=\"200\" y=\"160\" width=\"100\" height=\"70\" fill=\"#38bdf8\"/><line x1=\"300\" y1=\"195\" x2=\"480\" y2=\"195\" stroke=\"#fbbf24\" stroke-width=\"5\"/><polygon points=\"480,195 455,180 455,210\" fill=\"#fbbf24\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"14\" font-family=\"Segoe UI,Arial\">force across distance</text>"
+    },
+    {
+      "id": "core",
+      "caption": "KE = ½mv² · PE = mgh (common forms)",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Power Rule Differentia</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">forms</text><rect x=\"70\" y=\"110\" width=\"220\" height=\"140\" rx=\"12\" fill=\"#111827\" stroke=\"#34d399\" stroke-width=\"2\"/><text x=\"180\" y=\"180\" text-anchor=\"middle\" fill=\"#34d399\" font-size=\"22\" font-family=\"Segoe UI,Arial\">½ m v²</text><rect x=\"350\" y=\"110\" width=\"220\" height=\"140\" rx=\"12\" fill=\"#111827\" stroke=\"#fbbf24\" stroke-width=\"2\"/><text x=\"460\" y=\"180\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"22\" font-family=\"Segoe UI,Arial\">m g h</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as a speedometer uses the car’s current speed and how quickly it’s changing to predic",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Power Rule Differentia</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as a speedometer uses the car’s current speed and h</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember conservation",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Mathematical Treatment of Power Rule Differentia</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#38bdf8\" font-size=\"22\" font-family=\"Segoe UI,Arial\">transform, dont vanish</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "MathematicalTreatmentofPowerRuleDifferenScene",
+    "notes": "Domain=calculus motif=energy. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/mathematical_treatment_of_power_rule_differentiation.py ConceptScene"
+  },
+  "motif": "energy",
+  "generated_by": "template-stem-v5-calculus-energy",
+  "generated_at": "2026-07-12T22:35:04Z"
+}

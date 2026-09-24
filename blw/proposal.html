@@ -382,85 +382,80 @@
         </div>
       </div>
 
-      <!-- 6 CONNECTED WORKFLOW STEPS -->
+      <!-- 6 VISUAL CONNECTED WORKFLOW STEP NODES (CLEAN & LOW TEXT) -->
       <div class="workflow-steps-grid">
         <!-- STEP 1: FIND -->
-        <div class="workflow-step-card active-step" id="wfStep1">
+        <div class="workflow-step-card active-step" id="wfStep1" onclick="jumpToJourneyStep(1)">
           <div class="step-number-badge">1</div>
-          <div class="step-title">1. Find</div>
-          <div class="step-role-tag">Overseas Buyer</div>
-          <p class="step-desc">Importer searches catalog by BLW part number, vehicle make, or product family.</p>
-          <div class="step-data-captured"><strong>Captures:</strong> Search term <code>Pulsar 220</code>, category filter, zero-result fallback.</div>
-          <div class="sample-data-pill"><i class="fa-solid fa-magnifying-glass"></i> Searching: Pulsar 220 & Apache 180</div>
-          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> 80% faster product discovery</div>
-          <a href="index.html#products" class="btn btn-outline btn-sm btn-full" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 1</a>
+          <div class="step-title"><i class="fa-solid fa-magnifying-glass text-primary"></i> 1. Find SKU</div>
+          <div class="step-role-tag">Overseas Importer</div>
+          <div class="sample-data-pill"><i class="fa-solid fa-tag"></i> Search: Pulsar 220</div>
+          <div class="step-benefit"><i class="fa-solid fa-bolt"></i> 80% Faster Discovery</div>
+          <a href="index.html#products" class="btn btn-outline btn-sm btn-full" target="_blank" onclick="event.stopPropagation()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 1</a>
         </div>
 
         <!-- STEP 2: EVALUATE -->
-        <div class="workflow-step-card" id="wfStep2">
+        <div class="workflow-step-card" id="wfStep2" onclick="jumpToJourneyStep(2)">
           <div class="step-number-badge">2</div>
-          <div class="step-title">2. Evaluate</div>
-          <div class="step-role-tag">Overseas Buyer</div>
-          <p class="step-desc">Buyer verifies stem specs, materials (SUH3/21-4N), and surface nitriding options.</p>
-          <div class="step-data-captured"><strong>Displays:</strong> Verified specs, nitriding depth, and fitment status tags.</div>
-          <div class="sample-data-pill"><i class="fa-solid fa-circle-info"></i> Part: BLW-EV-P220 (SUH3/21-4N)</div>
-          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> High buyer engineering trust</div>
-          <button class="btn btn-outline btn-sm btn-full" onclick="openDemoSpecPreview()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 2</button>
+          <div class="step-title"><i class="fa-solid fa-microscope text-primary"></i> 2. Specs Check</div>
+          <div class="step-role-tag">Overseas Importer</div>
+          <div class="sample-data-pill"><i class="fa-solid fa-shield-halved"></i> SUH3 / 21-4N LCN</div>
+          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> High Buyer Trust</div>
+          <button class="btn btn-outline btn-sm btn-full" onclick="event.stopPropagation(); openDemoSpecPreview()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 2</button>
         </div>
 
         <!-- STEP 3: REQUEST -->
-        <div class="workflow-step-card" id="wfStep3">
+        <div class="workflow-step-card" id="wfStep3" onclick="jumpToJourneyStep(3)">
           <div class="step-number-badge">3</div>
-          <div class="step-title">3. Request</div>
-          <div class="step-role-tag">Overseas Buyer</div>
-          <p class="step-desc">Adds 2 SKUs to RFQ Basket, sets destination, quantities, and delivery timeline.</p>
-          <div class="step-data-captured"><strong>Captures:</strong> Company, country, email, 7,500 total sets, timeline.</div>
-          <div class="sample-data-pill"><i class="fa-solid fa-basket-shopping"></i> Ref: BLW-RFQ-2026-9041 (Egypt)</div>
-          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> Consolidated multi-part lead</div>
-          <button class="btn btn-outline btn-sm btn-full" onclick="openDemoRfqDrawer()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 3</button>
+          <div class="step-title"><i class="fa-solid fa-basket-shopping text-primary"></i> 3. RFQ Basket</div>
+          <div class="step-role-tag">Overseas Importer</div>
+          <div class="sample-data-pill"><i class="fa-solid fa-barcode"></i> Ref: BLW-RFQ-9041</div>
+          <div class="step-benefit"><i class="fa-solid fa-layer-group"></i> Multi-SKU Order</div>
+          <button class="btn btn-outline btn-sm btn-full" onclick="event.stopPropagation(); openDemoRfqDrawer()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 3</button>
         </div>
 
         <!-- STEP 4: TRIAGE -->
-        <div class="workflow-step-card" id="wfStep4">
+        <div class="workflow-step-card" id="wfStep4" onclick="jumpToJourneyStep(4)">
           <div class="step-number-badge">4</div>
-          <div class="step-title">4. Triage</div>
+          <div class="step-title"><i class="fa-solid fa-user-check text-primary"></i> 4. Sales Triage</div>
           <div class="step-role-tag">BLW Export Rep</div>
-          <p class="step-desc">Export rep views lead in dashboard, assigns owner, and starts first-response timer.</p>
-          <div class="step-data-captured"><strong>Tracks:</strong> Channel (RFQ Basket), Response SLA (1.2 hrs), assigned rep.</div>
-          <div class="sample-data-pill"><i class="fa-solid fa-user-check"></i> Assigned: Rajesh V. (Export Mgr)</div>
-          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> Zero dropped sales inquiries</div>
-          <a href="admin.html" class="btn btn-outline btn-sm btn-full" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 4</a>
+          <div class="sample-data-pill"><i class="fa-solid fa-user-tie"></i> Rep: Rajesh V.</div>
+          <div class="step-benefit"><i class="fa-solid fa-clock"></i> SLA: 1.2 Hour Response</div>
+          <a href="admin.html" class="btn btn-outline btn-sm btn-full" target="_blank" onclick="event.stopPropagation()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 4</a>
         </div>
 
         <!-- STEP 5: QUOTE -->
-        <div class="workflow-step-card" id="wfStep5">
+        <div class="workflow-step-card" id="wfStep5" onclick="jumpToJourneyStep(5)">
           <div class="step-number-badge">5</div>
-          <div class="step-title">5. Quote</div>
+          <div class="step-title"><i class="fa-solid fa-file-invoice text-primary"></i> 5. Quotation</div>
           <div class="step-role-tag">BLW Export Team</div>
-          <p class="step-desc">BLW team verifies checklist (specs, freight destination) and prepares formal quotation.</p>
-          <div class="step-data-captured"><strong>Displays:</strong> Verified checklist, sample PDF quote preview.</div>
-          <div class="sample-data-pill"><i class="fa-solid fa-file-invoice"></i> Formal Quote: Cairo Moto Parts</div>
-          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> Faster turnaround time</div>
-          <button class="btn btn-outline btn-sm btn-full" onclick="openQuoteChecklistModal()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 5</button>
+          <div class="sample-data-pill"><i class="fa-solid fa-circle-check"></i> Checklist Verified</div>
+          <div class="step-benefit"><i class="fa-solid fa-file-pdf"></i> PDF Quote Ready</div>
+          <button class="btn btn-outline btn-sm btn-full" onclick="event.stopPropagation(); openQuoteChecklistModal()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 5</button>
         </div>
 
         <!-- STEP 6: FOLLOW UP -->
-        <div class="workflow-step-card" id="wfStep6">
+        <div class="workflow-step-card" id="wfStep6" onclick="jumpToJourneyStep(6)">
           <div class="step-number-badge">6</div>
-          <div class="step-title">6. Follow Up</div>
+          <div class="step-title"><i class="fa-solid fa-chart-line text-primary"></i> 6. Export Order</div>
           <div class="step-role-tag">BLW Sales Pipeline</div>
-          <p class="step-desc">Tracks deal stage: New &rarr; Clarification &rarr; Quoted &rarr; Won/Lost with next action.</p>
-          <div class="step-data-captured"><strong>Tracks:</strong> Pipeline stage (Quoted), next action, target close date.</div>
-          <div class="sample-data-pill"><i class="fa-solid fa-chart-line"></i> Stage: Quoted (Follow up Sept 28)</div>
-          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> Higher conversion to export order</div>
-          <button class="btn btn-outline btn-sm btn-full" onclick="openPipelineModal()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 6</button>
+          <div class="sample-data-pill"><i class="fa-solid fa-flag-checkered"></i> Stage: Quoted</div>
+          <div class="step-benefit"><i class="fa-solid fa-trophy"></i> Higher Win Rate</div>
+          <button class="btn btn-outline btn-sm btn-full" onclick="event.stopPropagation(); openPipelineModal()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 6</button>
         </div>
       </div>
 
       <!-- ACTIVE STEP DETAIL SUMMARY BOX -->
       <div class="card-panel" style="padding:1.25rem; background:var(--bg-subtle);" id="stepDetailBox">
-        <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-main); margin-bottom:0.25rem;" id="detailStepTitle">Step 1: Find Components</h4>
-        <p style="font-size:0.85rem; color:var(--text-muted); margin:0;" id="detailStepDesc">Overseas buyers use the Product Finder to filter 1,100+ BLW engine valve SKUs by part number, vehicle model, or family. Try searching "Pulsar 220" on the live catalog.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+          <div>
+            <h4 style="font-size:1.05rem; font-weight:800; color:var(--text-main); margin:0;" id="detailStepTitle">Step 1: Find Components</h4>
+            <p style="font-size:0.875rem; color:var(--text-muted); margin:0.3rem 0 0;" id="detailStepDesc">Overseas buyers use the Product Finder to filter 1,100+ BLW engine valve SKUs by part number, vehicle model, or family.</p>
+          </div>
+          <div id="detailStepActionBtn">
+            <a href="index.html#products" class="btn btn-primary btn-sm" target="_blank"><i class="fa-solid fa-play"></i> Try Search Flow</a>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -656,6 +651,44 @@
     </div>
   </div>
 
+  <!-- FLOATING ADITYA AI CHATBOT (ALWAYS VISIBLE) -->
+  <div class="nexus-chatbot-container" id="nexusChatbotContainer">
+    <button class="nexus-trigger-btn" id="nexusTriggerBtn" onclick="toggleNexusChat()">
+      <div class="nexus-online-badge"></div>
+      <div class="nexus-avatar"><i class="fa-solid fa-robot"></i></div>
+      <span>Ask Aditya AI</span>
+    </button>
+
+    <div class="nexus-chat-window card-panel" id="nexusChatWindow">
+      <div class="nexus-chat-header">
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+          <div style="width:32px; height:32px; background:var(--accent-primary); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center;">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div>
+            <h4 style="font-size:0.9rem; font-weight:800; color:var(--text-main); margin:0;">Aditya <span style="font-size:0.65rem; background:var(--bg-subtle); padding:1px 4px; border-radius:3px; color:var(--accent-primary);">AI Specialist</span></h4>
+            <span style="font-size:0.7rem; color:var(--text-muted);">Online &bull; Valvetrain Engineering Support</span>
+          </div>
+        </div>
+        <button class="modal-close-btn" onclick="toggleNexusChat()"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="nexus-chat-body" id="nexusChatBody">
+        <div class="chat-msg bot-msg">
+          <div class="msg-content">
+            <p><strong>Hello! I am Aditya, Valvetrain & Product Specialist at BLW Engine Valves.</strong> 👋</p>
+            <p>How can I assist you with engine valve specifications, nitriding surface treatments, or sample export quotes today?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nexus-chat-input-bar">
+        <input type="text" id="nexusUserInput" placeholder="Ask Aditya a question..." onkeypress="handleNexusKeyPress(event)">
+        <button class="btn btn-primary btn-sm" onclick="sendNexusMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
   <script>
     // JOURNEY PLAYER & AUTO-PLAY ANIMATION LOGIC
@@ -691,6 +724,15 @@
         title: "Step 6: Follow Up Pipeline to Order",
         desc: "Deal stage moves to 'Quoted' with next follow-up action scheduled for Sept 28 to finalize sea freight loading to Alexandria Port."
       }
+    ];
+
+    const STEP_ACTIONS = [
+      '<a href="index.html#products" class="btn btn-primary btn-sm" target="_blank"><i class="fa-solid fa-play"></i> Try Search Flow</a>',
+      '<button class="btn btn-primary btn-sm" onclick="openDemoSpecPreview()"><i class="fa-solid fa-microscope"></i> View Spec Modal</button>',
+      '<button class="btn btn-primary btn-sm" onclick="openDemoRfqDrawer()"><i class="fa-solid fa-basket-shopping"></i> Open RFQ Basket</button>',
+      '<a href="admin.html" class="btn btn-primary btn-sm" target="_blank"><i class="fa-solid fa-user-gear"></i> Open Sales Triage</a>',
+      '<button class="btn btn-primary btn-sm" onclick="openQuoteChecklistModal()"><i class="fa-solid fa-file-invoice"></i> Prepare Quotation</button>',
+      '<button class="btn btn-primary btn-sm" onclick="openPipelineModal()"><i class="fa-solid fa-chart-line"></i> Track Pipeline</button>'
     ];
 
     function updateJourneyUI() {
@@ -736,6 +778,11 @@
       const detail = STEP_DETAILS[currentJourneyStep - 1];
       document.getElementById("detailStepTitle").innerText = detail.title;
       document.getElementById("detailStepDesc").innerText = detail.desc;
+      
+      const actionContainer = document.getElementById("detailStepActionBtn");
+      if (actionContainer) {
+        actionContainer.innerHTML = STEP_ACTIONS[currentJourneyStep - 1];
+      }
     }
 
     function stepJourney(delta) {

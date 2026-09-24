@@ -1,0 +1,62 @@
+{
+  "slug": "domain-and-range",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Domain and Range",
+  "theme": "general",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Domain and Range",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Domain and Range.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "In a house, each light switch represents an input; the set of all possible switch positions (on/off for each switch) forms the domain. The r…",
+    "Pause and restate what Domain and Range means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Domain and Range: compare two cases",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Domain and Range</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">compare</text><rect x=\"60\" y=\"90\" width=\"240\" height=\"200\" rx=\"14\" fill=\"#111827\" stroke=\"#38bdf8\" stroke-width=\"3\"/><rect x=\"340\" y=\"90\" width=\"240\" height=\"200\" rx=\"14\" fill=\"#082f49\" stroke=\"#fbbf24\" stroke-width=\"3\"/><text x=\"180\" y=\"180\" text-anchor=\"middle\" fill=\"#38bdf8\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Case A</text><text x=\"460\" y=\"180\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"18\" font-family=\"Segoe UI,Arial\">Case B</text>"
+    },
+    {
+      "id": "setup",
+      "caption": "Spot what changes vs what stays",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Domain and Range</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">diff</text><rect x=\"80\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#34d399\" opacity=\"0.35\"/><rect x=\"240\" y=\"120\" width=\"160\" height=\"140\" rx=\"10\" fill=\"#fbbf24\" opacity=\"0.45\"/><rect x=\"360\" y=\"120\" width=\"200\" height=\"140\" rx=\"10\" fill=\"#38bdf8\" opacity=\"0.35\"/><text x=\"320\" y=\"300\" text-anchor=\"middle\" fill=\"#94a3b8\" font-size=\"14\" font-family=\"Segoe UI,Arial\">overlap = shared rule</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Decision rule",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Domain and Range</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">core</text><polygon points=\"320,90 500,280 140,280\" fill=\"none\" stroke=\"#34d399\" stroke-width=\"3\"/><text x=\"320\" y=\"200\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"14\" font-family=\"Segoe UI,Arial\">Domain and Range</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "In a house, each light switch represents an input; the set of all possible switch position",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Domain and Range</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#f8fafc\" font-size=\"15\" font-family=\"Segoe UI,Arial\">In a house, each light switch represents an input; the s</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Domain and Range",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#0b1220\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#111827\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#38bdf8\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Domain and Range</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#94a3b8\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fbbf24\" font-size=\"24\" font-family=\"Segoe UI,Arial\">A vs B → rule</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "DomainandRangeScene",
+    "notes": "Domain=general motif=family-2. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/domain_and_range.py ConceptScene"
+  },
+  "motif": "family-2",
+  "generated_by": "template-stem-v5-general-family-2",
+  "generated_at": "2026-07-12T22:34:53Z"
+}

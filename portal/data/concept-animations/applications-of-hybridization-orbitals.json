@@ -1,0 +1,62 @@
+{
+  "slug": "applications-of-hybridization-orbitals",
+  "version": 3,
+  "format": "stem-svg",
+  "title": "Applications of Hybridization orbitals",
+  "theme": "mechanics",
+  "fps": 0.55,
+  "duration_sec": 22,
+  "learning_objectives": [
+    "Explain Applications of Hybridization orbitals",
+    "Connect the idea to a real-world example",
+    "Recall the key diagram"
+  ],
+  "voiceover": [
+    "Let's explore Applications of Hybridization orbitals.",
+    "Watch how the diagram builds step by step.",
+    "Connect each label to the core idea.",
+    "Just as LEGO uses specialized connector pieces to combine basic blocks into complex, stable structures, hybridization orbitals allow atoms t…",
+    "Pause and restate what Applications of Hybridization orbitals means."
+  ],
+  "viewBox": "0 0 640 360",
+  "scenes": [
+    {
+      "id": "hook",
+      "caption": "Applications of Hybridization orbitals: nucleus + electron shells",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Hybridization orbitals</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">atomic</text><circle cx=\"320\" cy=\"190\" r=\"28\" fill=\"#fde68a\"/><ellipse cx=\"320\" cy=\"190\" rx=\"90\" ry=\"45\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"2\"/><ellipse cx=\"320\" cy=\"190\" rx=\"150\" ry=\"75\" fill=\"none\" stroke=\"#f97316\" stroke-width=\"2\"/><circle cx=\"410\" cy=\"190\" r=\"9\" fill=\"#fb923c\"/><circle cx=\"180\" cy=\"190\" r=\"9\" fill=\"#f97316\"/>"
+    },
+    {
+      "id": "setup",
+      "caption": "Energy levels — electrons jump floors",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Hybridization orbitals</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">levels</text><line x1=\"140\" y1=\"280\" x2=\"500\" y2=\"280\" stroke=\"#fdba74\" stroke-width=\"3\"/><line x1=\"140\" y1=\"200\" x2=\"500\" y2=\"200\" stroke=\"#fb923c\" stroke-width=\"3\"/><line x1=\"140\" y1=\"120\" x2=\"500\" y2=\"120\" stroke=\"#f97316\" stroke-width=\"3\"/><line x1=\"300\" y1=\"280\" x2=\"300\" y2=\"120\" stroke=\"#fde68a\" stroke-width=\"3\"/><text x=\"320\" y=\"100\" text-anchor=\"middle\" fill=\"#fde68a\" font-size=\"16\" font-family=\"Segoe UI,Arial\">ΔE = h f</text>"
+    },
+    {
+      "id": "core",
+      "caption": "Absorb photon → jump up; emit → fall down",
+      "duration_frames": 4,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Hybridization orbitals</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">photon</text><circle cx=\"200\" cy=\"200\" r=\"40\" fill=\"#fde68a\"/><path d=\"M260 200 Q340 100, 420 200\" fill=\"none\" stroke=\"#fb923c\" stroke-width=\"3\"/><circle cx=\"460\" cy=\"120\" r=\"16\" fill=\"#f97316\"/><text x=\"460\" y=\"90\" text-anchor=\"middle\" fill=\"#f97316\" font-size=\"12\" font-family=\"Segoe UI,Arial\">photon</text>"
+    },
+    {
+      "id": "analogy",
+      "caption": "Just as LEGO uses specialized connector pieces to combine basic blocks into complex, stabl",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Hybridization orbitals</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">analogy</text><text x=\"320\" y=\"180\" text-anchor=\"middle\" fill=\"#fff7ed\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Just as LEGO uses specialized connector pieces to combin</text>"
+    },
+    {
+      "id": "takeaway",
+      "caption": "Remember: Applications of Hybridization orbitals",
+      "duration_frames": 3,
+      "svg": "<rect x=\"0\" y=\"0\" width=\"640\" height=\"360\" fill=\"#1a1008\"/><rect x=\"0\" y=\"0\" width=\"640\" height=\"42\" fill=\"#2a1a0c\" opacity=\"0.95\"/><text x=\"16\" y=\"28\" text-anchor=\"start\" fill=\"#fb923c\" font-size=\"15\" font-family=\"Segoe UI,Arial\">Applications of Hybridization orbitals</text><text x=\"624\" y=\"28\" text-anchor=\"end\" fill=\"#fdba74\" font-size=\"12\" font-family=\"Segoe UI,Arial\">takeaway</text><text x=\"320\" y=\"190\" text-anchor=\"middle\" fill=\"#fb923c\" font-size=\"22\" font-family=\"Segoe UI,Arial\">shells · jumps · photons</text>"
+    }
+  ],
+  "manim_plan": {
+    "class_name": "ApplicationsofHybridizationorbitalsScene",
+    "notes": "Domain=mechanics motif=atom. Recreate with Manim CE matching the SVG storyboard.",
+    "cli": "manim -pqh scripts/manim_scenes/applications_of_hybridization_orbitals.py ConceptScene"
+  },
+  "motif": "atom",
+  "generated_by": "template-stem-v5-mechanics-atom",
+  "generated_at": "2026-07-12T22:34:42Z"
+}
