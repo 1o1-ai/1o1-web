@@ -31,7 +31,7 @@ const PRODUCTS_DATA = [
     segment: "2-Wheeler (Bajaj)",
     imageIcon: "fa-solid fa-bolt",
     badge: "BS6 Compliant",
-    badgeType: "p-tag-orange",
+    badgeType: "p-tag-blue",
     desc: "High-end 4-valve configuration valve kit for Pulsar NS200, featuring micro-finished stems and friction-welded tips.",
     specs: {
       "Material": "Austenitic Stainless 21-4N",
@@ -82,7 +82,7 @@ const PRODUCTS_DATA = [
     segment: "2-Wheeler (Yamaha)",
     imageIcon: "fa-solid fa-motorcycle",
     badge: "Export Grade",
-    badgeType: "p-tag-orange",
+    badgeType: "p-tag-blue",
     desc: "Premium engine valves for Yamaha FZ-S and FZ16 motorcycles exported to SAARC and Latin American markets.",
     specs: {
       "Material": "Bi-Metallic 4Cr9Si2 / 21-4N",
@@ -116,7 +116,7 @@ const PRODUCTS_DATA = [
     segment: "3-Wheeler (Piaggio)",
     imageIcon: "fa-solid fa-truck-pickup",
     badge: "3-Wheeler OEM",
-    badgeType: "p-tag-orange",
+    badgeType: "p-tag-blue",
     desc: "High-durability engine valves for Piaggio Ape City Diesel & CNG commercial passenger 3-wheelers.",
     specs: {
       "Engine Type": "Single Cylinder Commercial",
@@ -167,7 +167,7 @@ const PRODUCTS_DATA = [
     segment: "2W Engine",
     imageIcon: "fa-solid fa-compact-disc",
     badge: "Chilled Cast",
-    badgeType: "p-tag-orange",
+    badgeType: "p-tag-blue",
     desc: "Chilled cast iron camshaft assembly with hardened lobes to minimize valvetrain friction and wear.",
     specs: {
       "Material": "Chilled Cast Iron Grade FG300",
@@ -201,7 +201,7 @@ const PRODUCTS_DATA = [
     segment: "Hydraulic & Tractor",
     imageIcon: "fa-solid fa-gears",
     badge: "Custom Precision",
-    badgeType: "p-tag-orange",
+    badgeType: "p-tag-blue",
     desc: "Precision turned and nitrided spool valves for agricultural tractor hydraulic lifts and industrial control blocks.",
     specs: {
       "Material": "EN31 Hardened Steel",
@@ -212,7 +212,7 @@ const PRODUCTS_DATA = [
   }
 ];
 
-// --- ADITYA AI CHATBOT KNOWLEDGE ENGINE & RESPONSES ---
+// --- ADITYA AI KNOWLEDGE BASE ---
 const ADITYA_KNOWLEDGE = [
   {
     keywords: ["pulsar", "220", "ns200", "bajaj", "discover", "ct100", "boxer"],
@@ -232,14 +232,14 @@ const ADITYA_KNOWLEDGE = [
     response: `
       <p><strong>BLW Advanced Surface Treatment Comparison:</strong></p>
       <table style="width:100%; border-collapse:collapse; font-size:0.8rem; margin:8px 0;">
-        <tr style="background:rgba(255,255,255,0.05); text-align:left;">
+        <tr style="background:var(--bg-subtle); text-align:left;">
           <th style="padding:4px;">Feature</th>
           <th style="padding:4px;">Liquid Nitriding (LCN)</th>
           <th style="padding:4px;">Manganese Phosphating</th>
         </tr>
         <tr>
           <td style="padding:4px;"><strong>Surface Hardness</strong></td>
-          <td style="padding:4px; color:#00f2fe;">850 - 1000 HV</td>
+          <td style="padding:4px; color:var(--accent-primary); font-weight:700;">850 - 1000 HV</td>
           <td style="padding:4px;">200 - 300 HV</td>
         </tr>
         <tr>
@@ -266,7 +266,7 @@ const ADITYA_KNOWLEDGE = [
         <li><strong>Mass Production Capacity:</strong> Over 1.2 Million valves & components monthly.</li>
         <li><strong>Lead Time:</strong> 12 - 18 business days from order confirmation to sea/air freight loading.</li>
       </ul>
-      <p>You can use the <strong>B2B Quote Estimator</strong> on this page, or I can immediately send your specification sheet to our Export Director!</p>
+      <p>You can use the <strong>RFQ Estimator</strong> on this page, or I can immediately send your specification sheet to our Export Director!</p>
     `
   },
   {
@@ -312,7 +312,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // --- THEME SWITCHER LOGIC ---
-function toggleThemeDropdown() {
+function toggleThemeDropdown(e) {
+  if (e) e.stopPropagation();
   const dropdown = document.getElementById("themeDropdown");
   if (dropdown) dropdown.classList.toggle("open");
 }
@@ -358,33 +359,33 @@ function updateRfqBasketUI() {
 
   if (rfqBasket.length === 0) {
     listContainer.innerHTML = `
-      <div style="text-align:center; padding:2rem; color:var(--text-muted);">
-        <i class="fa-solid fa-basket-shopping" style="font-size:2rem; margin-bottom:0.5rem; color:var(--text-dim);"></i>
-        <p>Your RFQ Basket is empty. Click "<strong>+ RFQ</strong>" on components to consolidate your inquiry.</p>
+      <div style="text-align:center; padding:1.5rem; color:var(--text-muted);">
+        <i class="fa-solid fa-basket-shopping" style="font-size:1.75rem; margin-bottom:0.5rem; color:var(--text-dim);"></i>
+        <p>Your RFQ Basket is empty. Click "<strong>+ RFQ</strong>" on components to add items to your consolidated inquiry.</p>
       </div>
     `;
     return;
   }
 
   listContainer.innerHTML = rfqBasket.map((item, index) => `
-    <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,255,255,0.04); border:1px solid var(--border-color); padding:0.75rem 1rem; border-radius:6px; margin-bottom:0.5rem;">
+    <div style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-subtle); border:1px solid var(--border-color); padding:0.6rem 0.85rem; border-radius:4px; margin-bottom:0.4rem;">
       <div>
-        <strong style="color:#fff; font-size:0.9rem;">${item.name}</strong>
-        <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">${item.oemCode}</div>
+        <strong style="color:var(--text-main); font-size:0.85rem;">${escapeHtml(item.name)}</strong>
+        <div style="font-size:0.7rem; color:var(--text-muted); font-family:var(--font-mono);">${escapeHtml(item.oemCode)}</div>
       </div>
-      <div style="display:flex; align-items:center; gap:0.75rem;">
-        <input type="number" value="${item.qty || 1000}" min="100" step="100" style="width:85px; padding:3px 6px; font-size:0.8rem;" class="calc-input" onchange="updateRfqItemQty(${index}, this.value)">
-        <button class="btn btn-sm btn-outline" style="color:#ef4444; border-color:rgba(239,68,68,0.4);" onclick="removeFromRfq(${index})"><i class="fa-solid fa-trash"></i></button>
+      <div style="display:flex; align-items:center; gap:0.5rem;">
+        <input type="number" value="${item.qty || 1000}" min="100" step="100" style="width:75px; padding:2px 4px; font-size:0.8rem;" class="calc-input" onchange="updateRfqItemQty(${index}, this.value)">
+        <button class="btn btn-sm btn-outline" style="color:var(--text-muted);" onclick="removeFromRfq(${index})"><i class="fa-solid fa-trash"></i></button>
       </div>
     </div>
   `).join('');
 }
 
-function addToRfq(productName) {
-  const product = PRODUCTS_DATA.find(p => p.name === productName);
+function addToRfq(idOrName) {
+  const product = PRODUCTS_DATA.find(p => p.id === idOrName || p.name === idOrName);
   if (!product) return;
 
-  const existing = rfqBasket.find(item => item.name === productName);
+  const existing = rfqBasket.find(item => item.name === product.name);
   if (existing) {
     existing.qty = (existing.qty || 1000) + 500;
   } else {
@@ -408,8 +409,10 @@ function updateRfqItemQty(index, qty) {
 function toggleRfqBasket(forceOpen = false) {
   const overlay = document.getElementById("rfqBasketOverlay");
   if (!overlay) return;
-  if (forceOpen) {
+  if (forceOpen === true) {
     overlay.classList.add("open");
+  } else if (forceOpen === false && overlay.classList.contains("open")) {
+    overlay.classList.remove("open");
   } else {
     overlay.classList.toggle("open");
   }
@@ -423,10 +426,10 @@ function submitRfqBasket(e) {
     return;
   }
 
-  const name = document.getElementById("rfqName").value;
-  const email = document.getElementById("rfqEmail").value;
-  const company = document.getElementById("rfqCompany").value;
-  const country = document.getElementById("rfqCountry").value;
+  const name = document.getElementById("rfqName")?.value || "Valued Buyer";
+  const email = document.getElementById("rfqEmail")?.value || "buyer@company.com";
+  const company = document.getElementById("rfqCompany")?.value || "Automotive Importer";
+  const country = document.getElementById("rfqCountry")?.value || "Global";
 
   const refId = "BLW-RFQ-2026-" + Math.floor(1000 + Math.random() * 9000);
 
@@ -452,9 +455,9 @@ function submitRfqBasket(e) {
 
 // --- MULTILINGUAL PROOF ---
 const TRANSLATIONS = {
-  en: { nav_overview: "Overview", nav_products: "Product Catalog", nav_services: "Surface Tech", nav_quality: "Quality & Testing", nav_export: "Global Reach", nav_calculator: "Quote Estimator", nav_contact: "Contact" },
-  es: { nav_overview: "Resumen", nav_products: "Catálogo de Productos", nav_services: "Tecnología de Superficie", nav_quality: "Calidad y Ensayos", nav_export: "Alcance Global", nav_calculator: "Calculadora de Cotización", nav_contact: "Contacto" },
-  ar: { nav_overview: "ملخص", nav_products: "كتالوج المنتجات", nav_services: "تكنولوجيا السطح", nav_quality: "الجودة والاختبار", nav_export: "الانتشار العالمي", nav_calculator: "حاسبة الأسعار", nav_contact: "اتصل بنا" }
+  en: { nav_overview: "Overview", nav_products: "Products", nav_services: "Surface Tech", nav_quality: "Quality & Testing", nav_export: "Global Reach", nav_calculator: "RFQ Estimator", nav_contact: "Contact" },
+  es: { nav_overview: "Resumen", nav_products: "Productos", nav_services: "Superficie", nav_quality: "Calidad", nav_export: "Exportación", nav_calculator: "Cotización", nav_contact: "Contacto" },
+  ar: { nav_overview: "ملخص", nav_products: "المنتجات", nav_services: "السطح", nav_quality: "الجودة", nav_export: "التصدير", nav_calculator: "حاسبة", nav_contact: "اتصل" }
 };
 
 function switchLanguage(lang) {
@@ -475,7 +478,7 @@ function renderCatalog(category = "all") {
   const filtered = PRODUCTS_DATA.filter(p => category === "all" || p.category === category);
 
   if (filtered.length === 0) {
-    grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 3rem; color: var(--text-muted);">No components matched your search. Try another keyword or category!</div>`;
+    grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 2.5rem; color: var(--text-muted);">No components matched your search. Try another keyword or category!</div>`;
     return;
   }
 
@@ -484,32 +487,32 @@ function renderCatalog(category = "all") {
     card.className = "product-card";
     card.innerHTML = `
       <div class="product-badge-bar">
-        <span class="p-tag ${p.badgeType}">${p.badge}</span>
-        <span class="oem-code">${p.oemCode}</span>
+        <span class="p-tag ${p.badgeType}">${escapeHtml(p.badge)}</span>
+        <span class="oem-code">${escapeHtml(p.oemCode)}</span>
       </div>
       <div class="product-img-box">
         <i class="${p.imageIcon}"></i>
       </div>
-      <h3 class="product-title">${p.name}</h3>
-      <p class="product-desc">${p.desc}</p>
+      <h3 class="product-title">${escapeHtml(p.name)}</h3>
+      <p class="product-desc">${escapeHtml(p.desc)}</p>
       
       <table class="product-spec-table">
         ${Object.entries(p.specs).slice(0, 3).map(([k, v]) => `
           <tr>
-            <td>${k}:</td>
-            <td>${v}</td>
+            <td>${escapeHtml(k)}:</td>
+            <td>${escapeHtml(v)}</td>
           </tr>
         `).join('')}
       </table>
 
       <div class="product-card-footer">
-        <button class="btn btn-sm btn-outline" onclick="openSpecModal('${p.name}')" title="View Technical Spec Sheet">
+        <button class="btn btn-sm btn-outline" onclick="openSpecModal('${p.id}')" title="View Spec Sheet">
           <i class="fa-solid fa-info-circle"></i> Spec
         </button>
-        <button class="btn btn-sm btn-hero-primary" onclick="addToRfq('${p.name}')" title="Add to RFQ Basket">
+        <button class="btn btn-sm btn-secondary" onclick="addToRfq('${p.id}')" title="Add to RFQ Basket">
           <i class="fa-solid fa-cart-plus"></i> + RFQ
         </button>
-        <button class="btn btn-sm btn-primary-glow" onclick="askAdityaAbout('${p.name}')" title="Ask Aditya AI">
+        <button class="btn btn-sm btn-primary" onclick="askAdityaAbout('${p.id}')" title="Ask Aditya AI">
           <i class="fa-solid fa-robot"></i> Ask AI
         </button>
       </div>
@@ -518,50 +521,19 @@ function renderCatalog(category = "all") {
   });
 }
 
-  filtered.forEach(p => {
-    const card = document.createElement("div");
-    card.className = "product-card";
-    card.innerHTML = `
-      <div class="product-badge-bar">
-        <span class="p-tag ${p.badgeType}">${p.badge}</span>
-        <span class="oem-code">${p.oemCode}</span>
-      </div>
-      <div class="product-img-box">
-        <i class="${p.imageIcon}"></i>
-      </div>
-      <h3 class="product-title">${p.name}</h3>
-      <p class="product-desc">${p.desc}</p>
-      
-      <table class="product-spec-table">
-        ${Object.entries(p.specs).slice(0, 3).map(([k, v]) => `
-          <tr>
-            <td>${k}:</td>
-            <td>${v}</td>
-          </tr>
-        `).join('')}
-      </table>
-
-      <div class="product-card-footer">
-        <button class="btn btn-sm btn-outline btn-full" onclick="openSpecModal('${p.name}')">
-          <i class="fa-solid fa-info-circle"></i> Spec Sheet
-        </button>
-        <button class="btn btn-sm btn-primary-glow" onclick="askAdityaAbout('${p.name}')">
-          <i class="fa-solid fa-robot"></i> Ask Aditya
-        </button>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
-}
-
-function switchCatalogCategory(cat) {
-  document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
-  event.target.classList.add("active");
+function switchCatalogCategory(cat, evt) {
+  if (evt) {
+    document.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+    evt.target.classList.add("active");
+  }
   renderCatalog(cat);
 }
 
 function filterCatalog() {
-  const query = document.getElementById("catalogSearchInput").value.toLowerCase();
+  const query = document.getElementById("catalogSearchInput")?.value.toLowerCase() || "";
+  const grid = document.getElementById("catalogGrid");
+  if (!grid) return;
+
   const filtered = PRODUCTS_DATA.filter(p => 
     p.name.toLowerCase().includes(query) || 
     p.oemCode.toLowerCase().includes(query) ||
@@ -569,11 +541,10 @@ function filterCatalog() {
     p.desc.toLowerCase().includes(query)
   );
 
-  const grid = document.getElementById("catalogGrid");
   grid.innerHTML = "";
 
   if (filtered.length === 0) {
-    grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 3rem; color: var(--text-muted);">No components matched "${query}".</div>`;
+    grid.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding: 2.5rem; color: var(--text-muted);">No components matched "${escapeHtml(query)}".</div>`;
     return;
   }
 
@@ -582,30 +553,33 @@ function filterCatalog() {
     card.className = "product-card";
     card.innerHTML = `
       <div class="product-badge-bar">
-        <span class="p-tag ${p.badgeType}">${p.badge}</span>
-        <span class="oem-code">${p.oemCode}</span>
+        <span class="p-tag ${p.badgeType}">${escapeHtml(p.badge)}</span>
+        <span class="oem-code">${escapeHtml(p.oemCode)}</span>
       </div>
       <div class="product-img-box">
         <i class="${p.imageIcon}"></i>
       </div>
-      <h3 class="product-title">${p.name}</h3>
-      <p class="product-desc">${p.desc}</p>
+      <h3 class="product-title">${escapeHtml(p.name)}</h3>
+      <p class="product-desc">${escapeHtml(p.desc)}</p>
       
       <table class="product-spec-table">
         ${Object.entries(p.specs).slice(0, 3).map(([k, v]) => `
           <tr>
-            <td>${k}:</td>
-            <td>${v}</td>
+            <td>${escapeHtml(k)}:</td>
+            <td>${escapeHtml(v)}</td>
           </tr>
         `).join('')}
       </table>
 
       <div class="product-card-footer">
-        <button class="btn btn-sm btn-outline btn-full" onclick="openSpecModal('${p.name}')">
-          <i class="fa-solid fa-info-circle"></i> Spec Sheet
+        <button class="btn btn-sm btn-outline" onclick="openSpecModal('${p.id}')" title="View Spec Sheet">
+          <i class="fa-solid fa-info-circle"></i> Spec
         </button>
-        <button class="btn btn-sm btn-primary-glow" onclick="askAdityaAbout('${p.name}')">
-          <i class="fa-solid fa-robot"></i> Ask Aditya
+        <button class="btn btn-sm btn-secondary" onclick="addToRfq('${p.id}')" title="Add to RFQ Basket">
+          <i class="fa-solid fa-cart-plus"></i> + RFQ
+        </button>
+        <button class="btn btn-sm btn-primary" onclick="askAdityaAbout('${p.id}')" title="Ask Aditya AI">
+          <i class="fa-solid fa-robot"></i> Ask AI
         </button>
       </div>
     `;
@@ -613,46 +587,41 @@ function filterCatalog() {
   });
 }
 
-// --- 3D INTERACTIVE VISUALIZER MODES ---
-function setVizMode(mode) {
-  document.querySelectorAll(".viz-btn").forEach(b => b.classList.remove("active"));
-  event.target.classList.add("active");
+// --- 3D VISUALIZER STAGE ---
+function setVizMode(mode, evt) {
+  if (evt) {
+    document.querySelectorAll(".viz-btn").forEach(b => b.classList.remove("active"));
+    evt.target.classList.add("active");
+  }
 
-  const model = document.getElementById("valveModel");
-  const overlay = document.getElementById("nitrideOverlay");
   const infoBox = document.getElementById("stageInfoBox");
+  if (!infoBox) return;
 
   if (mode === "nitride") {
-    model.style.transform = "scale(1) translateY(0)";
-    overlay.style.opacity = "0.85";
     infoBox.innerHTML = `
-      <div class="info-item"><span class="info-key">Process:</span> <span class="info-val highlight-blue">Liquid Carbo-Nitriding (LCN)</span></div>
-      <div class="info-item"><span class="info-key">Depth:</span> <span class="info-val">15 - 25 Microns Diffusion Layer</span></div>
-      <div class="info-item"><span class="info-key">Corrosion:</span> <span class="info-val green-text">96+ Hours Salt Spray Compliant</span></div>
-      <div class="info-item"><span class="info-key">OEM Support:</span> <span class="info-val">Bajaj, TVS, Honda, Hero, Piaggio</span></div>
+      <div class="info-item"><span class="info-key">Process:</span> <span class="info-val">Liquid Carbo-Nitriding (LCN)</span></div>
+      <div class="info-item"><span class="info-key">Depth:</span> <span class="info-val">15 - 25 Microns</span></div>
+      <div class="info-item"><span class="info-key">Hardness:</span> <span class="info-val">HV 850 - 1000</span></div>
+      <div class="info-item"><span class="info-key">Salt Spray:</span> <span class="info-val">96+ Hours Compliant</span></div>
     `;
   } else if (mode === "specs") {
-    model.style.transform = "scale(1.1) translateY(-10px)";
-    overlay.style.opacity = "0.4";
     infoBox.innerHTML = `
-      <div class="info-item"><span class="info-key">Stem Diameter:</span> <span class="info-val">4.98 mm &plusmn; 0.005</span></div>
-      <div class="info-item"><span class="info-key">Head Diameter:</span> <span class="info-val">29.0 mm (Intake) / 25.0 mm (Exh)</span></div>
-      <div class="info-item"><span class="info-key">Concentricity:</span> <span class="info-val green-text">&lt; 0.012 mm TIR</span></div>
+      <div class="info-item"><span class="info-key">Stem OD:</span> <span class="info-val">4.98 mm &plusmn; 0.005</span></div>
+      <div class="info-item"><span class="info-key">Head OD:</span> <span class="info-val">29.0 mm (Intake) / 25.0 mm (Exh)</span></div>
+      <div class="info-item"><span class="info-key">Concentricity:</span> <span class="info-val">&lt; 0.012 mm TIR</span></div>
       <div class="info-item"><span class="info-key">Tip Hardness:</span> <span class="info-val">55 - 60 HRC Induction</span></div>
     `;
   } else if (mode === "motion") {
-    model.style.transform = "translateY(0)";
-    overlay.style.opacity = "0.7";
     infoBox.innerHTML = `
-      <div class="info-item"><span class="info-key">Valvetrain Motion:</span> <span class="info-val highlight-blue">Simulated 8,500 RPM Reciprocation</span></div>
-      <div class="info-item"><span class="info-key">Friction Coeff:</span> <span class="info-val green-text">0.08 &mu; (Ultra Low)</span></div>
-      <div class="info-item"><span class="info-key">Thermal Stress:</span> <span class="info-val">Up to 800&deg;C Resilient</span></div>
-      <div class="info-item"><span class="info-key">Status:</span> <span class="info-val green-text">Zero Scuffing Verified</span></div>
+      <div class="info-item"><span class="info-key">Valvetrain Speed:</span> <span class="info-val">8,500 RPM Rated</span></div>
+      <div class="info-item"><span class="info-key">Friction Coeff:</span> <span class="info-val">0.08 &mu; (Ultra Low)</span></div>
+      <div class="info-item"><span class="info-key">Thermal Max:</span> <span class="info-val">800&deg;C Resilient</span></div>
+      <div class="info-item"><span class="info-key">Scuff Defense:</span> <span class="info-val">Zero Seizure Verified</span></div>
     `;
   }
 }
 
-// --- B2B PRICE ESTIMATOR LOGIC ---
+// --- PRICE ESTIMATOR ---
 function updateCalcEstimate() {
   const cat = document.getElementById("calcCategory")?.value;
   const qty = parseInt(document.getElementById("calcQuantity")?.value || "1000");
@@ -669,7 +638,6 @@ function updateCalcEstimate() {
   if (treatment === "lcn") basePrice += 0.20;
   if (treatment === "stellite") basePrice += 0.45;
 
-  // Quantity Discount
   if (qty > 5000) basePrice *= 0.85;
   if (qty > 10000) basePrice *= 0.75;
 
@@ -679,45 +647,32 @@ function updateCalcEstimate() {
   const lowTotal = Math.round(lowUnit * qty).toLocaleString();
   const highTotal = Math.round(highUnit * qty).toLocaleString();
 
-  document.getElementById("summaryUnitPrice").innerText = `$${lowUnit} - $${highUnit} / unit`;
-  document.getElementById("summaryTotalVal").innerText = `$${lowTotal} - $${highTotal}`;
+  const unitEl = document.getElementById("summaryUnitPrice");
+  const totalEl = document.getElementById("summaryTotalVal");
+  if (unitEl) unitEl.innerText = `$${lowUnit} - $${highUnit} / unit`;
+  if (totalEl) totalEl.innerText = `$${lowTotal} - $${highTotal}`;
 }
 
 function submitQuoteToAditya() {
-  const cat = document.getElementById("calcCategory").value;
-  const seg = document.getElementById("calcSegment").value;
-  const treat = document.getElementById("calcTreatment").value;
-  const qty = document.getElementById("calcQuantity").value;
+  const cat = document.getElementById("calcCategory")?.value || "Engine Valves";
+  const seg = document.getElementById("calcSegment")?.value || "2-Wheeler";
+  const qty = document.getElementById("calcQuantity")?.value || "1000";
 
   toggleNexusChat(true);
-
-  const prompt = `Hello Aditya! I calculated a quote for ${qty} units of ${cat} for ${seg} with ${treat} surface treatment. Can we finalize specs and sample shipping?`;
+  const prompt = `Hello Aditya! I calculated a quote for ${qty} units of ${cat} for ${seg}. Can we finalize specs and shipping?`;
   sendUserChatMsg(prompt);
   processAdityaResponse(prompt);
 }
 
-// --- ADITYA AI CHATBOT SYSTEM ---
+// --- ADITYA AI CHATBOT ---
 function toggleNexusChat(forceOpen = false) {
   const windowEl = document.getElementById("nexusChatWindow");
-  if (forceOpen) {
+  if (!windowEl) return;
+  if (forceOpen === true) {
     windowEl.classList.add("open");
   } else {
     windowEl.classList.toggle("open");
   }
-}
-
-function clearNexusChat() {
-  const body = document.getElementById("nexusChatBody");
-  body.innerHTML = `
-    <div class="chat-msg bot-msg">
-      <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
-      <div class="msg-content">
-        <p><strong>Hello! I am Aditya, Senior Valvetrain & Product Specialist at BLW Engine Valves.</strong> 👋</p>
-        <p>Chat cleared! How can I assist you with BLW engine component engineering or export pricing today?</p>
-        <p class="msg-timestamp">Just now</p>
-      </div>
-    </div>
-  `;
 }
 
 function handleNexusKeyPress(e) {
@@ -726,13 +681,9 @@ function handleNexusKeyPress(e) {
   }
 }
 
-function sendQuickPrompt(promptText) {
-  toggleNexusChat(true);
-  sendUserChatMsg(promptText);
-  processAdityaResponse(promptText);
-}
-
-function askAdityaAbout(topic) {
+function askAdityaAbout(idOrTopic) {
+  const product = PRODUCTS_DATA.find(p => p.id === idOrTopic || p.name === idOrTopic);
+  const topic = product ? product.name : idOrTopic;
   toggleNexusChat(true);
   const prompt = `Can you provide technical details, OEM compatibility, and quality specs for: ${topic}?`;
   sendUserChatMsg(prompt);
@@ -741,6 +692,7 @@ function askAdityaAbout(topic) {
 
 function sendNexusMessage() {
   const input = document.getElementById("nexusUserInput");
+  if (!input) return;
   const text = input.value.trim();
   if (!text) return;
 
@@ -751,12 +703,12 @@ function sendNexusMessage() {
 
 function sendUserChatMsg(text) {
   const body = document.getElementById("nexusChatBody");
+  if (!body) return;
   const userMsg = document.createElement("div");
   userMsg.className = "chat-msg user-msg";
   userMsg.innerHTML = `
     <div class="msg-content">
       <p>${escapeHtml(text)}</p>
-      <p class="msg-timestamp">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
     </div>
   `;
   body.appendChild(userMsg);
@@ -764,9 +716,6 @@ function sendUserChatMsg(text) {
 }
 
 function processAdityaResponse(userQuery) {
-  const typing = document.getElementById("typingIndicator");
-  typing.style.display = "flex";
-
   const lower = userQuery.toLowerCase();
   let match = ADITYA_KNOWLEDGE.find(k => k.keywords.some(kw => lower.includes(kw)));
 
@@ -777,72 +726,67 @@ function processAdityaResponse(userQuery) {
   } else {
     responseHTML = `
       <p>Thank you for reaching out regarding <strong>"${escapeHtml(userQuery)}"</strong>!</p>
-      <p>As BLW's Senior AI Engineer, I can confirm that our 1,10,000 sq. ft. Bahadurgarh plant manufactures precision engine valves, guides, and nitrided components engineered to exact OEM blueprints.</p>
-      <p>Our sales engineering team can assist you directly at <a href="mailto:info@blwenginevalves.com" style="color:var(--accent-cyan)">info@blwenginevalves.com</a> or WhatsApp (+91-9810000000). Would you like to leave your email and target vehicle model?</p>
+      <p>BLW's 1,10,000 sq. ft. plant manufactures precision engine valves, guides, and nitrided components engineered to exact OEM blueprints.</p>
+      <p>Our sales engineering team can assist you directly at <a href="mailto:info@blwenginevalves.com">info@blwenginevalves.com</a>. Would you like to leave your email and target vehicle model?</p>
     `;
   }
 
   setTimeout(() => {
-    typing.style.display = "none";
     const body = document.getElementById("nexusChatBody");
+    if (!body) return;
     const botMsg = document.createElement("div");
     botMsg.className = "chat-msg bot-msg";
     botMsg.innerHTML = `
-      <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
       <div class="msg-content">
         ${responseHTML}
-        <p class="msg-timestamp">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</p>
       </div>
     `;
     body.appendChild(botMsg);
     body.scrollTop = body.scrollHeight;
-  }, 900);
+  }, 600);
 }
 
-// --- SPEC MODAL HANDLERS ---
-function openSpecModal(productName) {
+// --- SPEC MODAL ---
+function openSpecModal(idOrName) {
   const overlay = document.getElementById("specModalOverlay");
   const modalBody = document.getElementById("specModalBody");
+  if (!overlay || !modalBody) return;
 
-  const product = PRODUCTS_DATA.find(p => p.name === productName) || PRODUCTS_DATA[0];
+  const product = PRODUCTS_DATA.find(p => p.id === idOrName || p.name === idOrName) || PRODUCTS_DATA[0];
 
   modalBody.innerHTML = `
-    <div style="display:flex; gap:1rem; align-items:center; margin-bottom:1.5rem;">
-      <div style="width:50px; height:50px; background:var(--gradient-primary); color:#000; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.5rem; font-weight:800;">
+    <div style="display:flex; gap:1rem; align-items:center; margin-bottom:1.25rem;">
+      <div style="width:44px; height:44px; background:var(--accent-primary); color:#fff; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:1.3rem;">
         <i class="${product.imageIcon}"></i>
       </div>
       <div>
-        <h2 style="font-size:1.4rem; font-weight:800; color:#fff; margin:0;">${product.name}</h2>
-        <span style="font-size:0.8rem; color:var(--accent-cyan); font-family:var(--font-mono);">${product.oemCode} &bull; ${product.segment}</span>
+        <h3 style="font-size:1.2rem; font-weight:800; color:var(--text-main); margin:0;">${escapeHtml(product.name)}</h3>
+        <span style="font-size:0.75rem; color:var(--accent-primary); font-family:var(--font-mono);">${escapeHtml(product.oemCode)} &bull; ${escapeHtml(product.segment)}</span>
       </div>
     </div>
 
-    <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.5rem; line-height:1.6;">${product.desc}</p>
+    <p style="color:var(--text-muted); font-size:0.875rem; margin-bottom:1.25rem;">${escapeHtml(product.desc)}</p>
 
-    <h4 style="font-size:1rem; font-weight:700; color:#fff; margin-bottom:0.75rem;">Technical Specification & Metallurgy Sheet:</h4>
-    <table style="width:100%; font-size:0.875rem; border-collapse:collapse; margin-bottom:1.5rem;">
+    <h4 style="font-size:0.9rem; font-weight:700; color:var(--text-main); margin-bottom:0.5rem;">Technical Specification & Metallurgy:</h4>
+    <table style="width:100%; font-size:0.825rem; border-collapse:collapse; margin-bottom:1.25rem;">
       ${Object.entries(product.specs).map(([k, v]) => `
-        <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
-          <td style="padding:8px 0; color:var(--text-muted); font-weight:600;">${k}</td>
-          <td style="padding:8px 0; color:#fff; text-align:right; font-weight:700;">${v}</td>
+        <tr style="border-bottom:1px solid var(--border-color);">
+          <td style="padding:6px 0; color:var(--text-muted);">${escapeHtml(k)}</td>
+          <td style="padding:6px 0; color:var(--text-main); text-align:right; font-weight:700;">${escapeHtml(v)}</td>
         </tr>
       `).join('')}
-      <tr style="border-bottom:1px solid rgba(255,255,255,0.08);">
-        <td style="padding:8px 0; color:var(--text-muted); font-weight:600;">Facility Compliance</td>
-        <td style="padding:8px 0; color:var(--accent-green); text-align:right; font-weight:700;">IATF 16949:2016 Certified</td>
-      </tr>
-      <tr>
-        <td style="padding:8px 0; color:var(--text-muted); font-weight:600;">Plant Location</td>
-        <td style="padding:8px 0; color:#fff; text-align:right;">Bahadurgarh, Haryana, India</td>
+      <tr style="border-bottom:1px solid var(--border-color);">
+        <td style="padding:6px 0; color:var(--text-muted);">Facility Compliance</td>
+        <td style="padding:6px 0; color:var(--accent-success); text-align:right; font-weight:700;">IATF 16949:2016 Certified</td>
       </tr>
     </table>
 
-    <div style="display:flex; gap:1rem;">
-      <button class="btn btn-primary-glow btn-full" onclick="closeSpecModal(); askAdityaAbout('${product.name}')">
-        <i class="fa-solid fa-robot"></i> Ask Aditya For Samples
+    <div style="display:flex; gap:0.75rem;">
+      <button class="btn btn-secondary btn-full btn-sm" onclick="closeSpecModal(); addToRfq('${product.id}')">
+        <i class="fa-solid fa-cart-plus"></i> + Add to RFQ Basket
       </button>
-      <button class="btn btn-outline btn-full" onclick="closeSpecModal()">
-        Close Window
+      <button class="btn btn-primary btn-full btn-sm" onclick="closeSpecModal(); askAdityaAbout('${product.id}')">
+        <i class="fa-solid fa-robot"></i> Ask Aditya AI
       </button>
     </div>
   `;
@@ -851,26 +795,28 @@ function openSpecModal(productName) {
 }
 
 function closeSpecModal() {
-  document.getElementById("specModalOverlay").classList.remove("open");
+  const overlay = document.getElementById("specModalOverlay");
+  if (overlay) overlay.classList.remove("open");
 }
 
 function handleFormSubmit(e) {
   e.preventDefault();
-  alert("Thank you! Your direct inquiry has been transmitted to BLW Sales Engineering & Aditya AI Team. We will respond within 2 business hours.");
+  alert("Thank you! Your direct inquiry has been recorded in the BLW Sales Triage Stream. We will respond within 2 business hours.");
   e.target.reset();
 }
 
 function toggleMobileMenu() {
   const menu = document.getElementById("navMenu");
+  if (!menu) return;
   menu.style.display = menu.style.display === "flex" ? "none" : "flex";
 }
 
 function escapeHtml(str) {
-  return str.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m]));
+  if (!str) return "";
+  return String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m]));
 }
 
 function setupScrollAnimations() {
-  // Smooth active link highlighting on scroll
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
 
