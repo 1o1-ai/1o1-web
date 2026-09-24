@@ -608,19 +608,19 @@
           {
             id: "e_o2c_4",
             stepNum: 4,
-            title: "4. Pricing & Quotation",
-            role: "Export Sales Manager (Sample Role)",
-            execMode: "Approval Required",
-            execClass: "exec-approval",
+            title: "4. Pricing & Quotation (Manual Input)",
+            role: "Export Sales Manager (Manual Input Required)",
+            execMode: "Manual Task",
+            execClass: "exec-manual",
             status: "idle",
-            statusLabel: "Pending Tech Sign-off",
+            statusLabel: "Pending Manual Pricing",
             waitTime: "1.2 hrs avg",
             x: 890, y: 160,
-            inputs: ["Approved Unit Cost", "Shipping & Freight Matrix (Sample)"],
-            outputs: ["Formal Quotation Preview: BLW-QUOTE-2026-9041"],
-            checklist: ["Apply Volume Discount (Sample 5%)", "Verify 30-day price validity terms", "Generate quotation preview"],
+            inputs: ["Technical Review Clearance", "Steel Price Index", "Manual Unit Price & Surcharge Entry"],
+            outputs: ["Formal Quotation Preview: BLW-QUOTE-2026-9041 (Manual Input)"],
+            checklist: ["Manually enter base unit price & nitriding surcharge", "Select volume discount tier", "Verify 30-day price validity terms", "Export Sales Manager manual sign-off"],
             doc: "Sample-Quotation-Preview.pdf",
-            history: ["Awaiting completion of Technical Review"]
+            history: ["Pricing stage requires manual input by Export Sales Manager"]
           },
           {
             id: "e_o2c_4a",
@@ -1066,6 +1066,48 @@
           </div>
         ` : ''}
 
+        ${node.id === 'e_o2c_4' || node.id === 'e_o2c_4a' ? `
+          <div style="background:#eff6ff; border:1px solid #bfdbfe; padding:0.85rem; border-radius:6px; margin-bottom:0.75rem;">
+            <strong style="color:#1d4ed8; font-size:0.85rem;"><i class="fa-solid fa-calculator"></i> Manual Pricing Input & Sign-off Panel</strong>
+            <p style="font-size:0.775rem; color:#475569; margin:0.3rem 0 0.75rem; line-height:1.4;">
+              <strong>Mandatory Policy:</strong> Pricing requires manual input from the Export Sales Manager. System rules cannot auto-dispatch quotations without human price validation.
+            </p>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.775rem; margin-bottom:0.75rem;">
+              <div>
+                <label style="font-weight:700; color:var(--text-muted); display:block; margin-bottom:2px;">Unit Base Price (USD):</label>
+                <input type="number" id="manualBasePrice" class="calc-input" value="2.15" step="0.05" style="padding:4px 8px; font-size:0.8rem; width:100%;" oninput="updateManualQuoteTotal()">
+              </div>
+              <div>
+                <label style="font-weight:700; color:var(--text-muted); display:block; margin-bottom:2px;">Nitriding Surcharge:</label>
+                <input type="number" id="manualSurchargePrice" class="calc-input" value="0.15" step="0.05" style="padding:4px 8px; font-size:0.8rem; width:100%;" oninput="updateManualQuoteTotal()">
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.5rem; font-size:0.775rem; margin-bottom:0.75rem;">
+              <div>
+                <label style="font-weight:700; color:var(--text-muted); display:block; margin-bottom:2px;">Volume Discount:</label>
+                <select id="manualDiscountSelect" class="calc-input" style="padding:4px 6px; font-size:0.775rem; width:100%;" onchange="updateManualQuoteTotal()">
+                  <option value="0">0% (Standard)</option>
+                  <option value="5" selected>5% (Volume Tier 1)</option>
+                  <option value="10">10% (Director Approval Req)</option>
+                </select>
+              </div>
+              <div>
+                <label style="font-weight:700; color:var(--text-muted); display:block; margin-bottom:2px;">Freight Fee (USD):</label>
+                <input type="number" id="manualFreightPrice" class="calc-input" value="450" step="50" style="padding:4px 8px; font-size:0.8rem; width:100%;" oninput="updateManualQuoteTotal()">
+              </div>
+            </div>
+
+            <div style="background:var(--bg-surface); padding:0.6rem; border-radius:4px; border:1px solid var(--border-color); margin-bottom:0.75rem; font-size:0.8rem; display:flex; justify-content:space-between; align-items:center;">
+              <span>Calculated Quote (6,000 units):</span>
+              <strong style="color:var(--accent-primary); font-size:0.95rem; font-family:var(--font-mono);" id="manualQuoteTotalDisplay">$13,560.00 FOB</strong>
+            </div>
+
+            <button class="btn btn-primary btn-sm btn-full" onclick="submitManualPricingInput()"><i class="fa-solid fa-check"></i> Sign off Pricing & Generate Quote BLW-QUOTE-2026-9041</button>
+          </div>
+        ` : ''}
+
         <div>
           <div class="n8n-detail-section-title"><i class="fa-solid fa-history"></i> Audit Trail History (Local Simulation)</div>
           <div style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono); background:var(--bg-subtle); padding:0.75rem; border-radius:4px; max-height:120px; overflow-y:auto; border:1px solid var(--border-color);">
@@ -1075,6 +1117,48 @@
       `;
 
       panel.classList.add("open");
+    }
+
+    function updateManualQuoteTotal() {
+      const base = parseFloat(document.getElementById("manualBasePrice")?.value || 2.15);
+      const surcharge = parseFloat(document.getElementById("manualSurchargePrice")?.value || 0.15);
+      const discountPct = parseFloat(document.getElementById("manualDiscountSelect")?.value || 5);
+      const freight = parseFloat(document.getElementById("manualFreightPrice")?.value || 450);
+      const qty = 6000;
+
+      const unitTotal = (base + surcharge) * (1 - (discountPct / 100));
+      const subtotal = unitTotal * qty;
+      const grandTotal = subtotal + freight;
+
+      const display = document.getElementById("manualQuoteTotalDisplay");
+      if (display) {
+        display.innerText = `$${grandTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} FOB`;
+      }
+    }
+
+    function submitManualPricingInput() {
+      const totalText = document.getElementById("manualQuoteTotalDisplay")?.innerText || "$13,560.00 FOB";
+      const template = WORKFLOW_TEMPLATES["export_o2c"];
+      if (template) {
+        const n4 = template.nodes.find(n => n.id === "e_o2c_4");
+        if (n4) {
+          n4.status = "completed";
+          n4.statusLabel = "Completed (Manual Input)";
+          n4.outputs = [`Formal Quotation Issued: BLW-QUOTE-2026-9041 (${totalText})`];
+          n4.history.unshift(`Manual pricing entered: Base + Nitriding surcharge = ${totalText}. Signed off by Export Sales Manager.`);
+        }
+
+        const n5 = template.nodes.find(n => n.id === "e_o2c_5");
+        if (n5) {
+          n5.status = "active";
+          n5.statusLabel = "Awaiting PO";
+        }
+
+        renderCanvasNodes();
+        selectCanvasNode("e_o2c_4");
+      }
+
+      alert(`✅ Manual Pricing Sign-off Complete!\n\nExport Sales Manager manually entered unit prices & nitriding surcharges.\n\nTotal Quote Generated: ${totalText}\nWorkflow advanced to Step 5: Customer PO Check.`);
     }
 
     function closeNodeDetailPanel() {
