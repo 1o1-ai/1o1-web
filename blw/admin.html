@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLW Sales Triage Dashboard | Internal Demo Admin Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .admin-banner {
+      background: #8b5cf6;
+      color: #fff;
+      font-size: 0.825rem;
+      font-weight: 800;
+      padding: 0.4rem;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .admin-nav {
+      background: #060c18;
+      border-bottom: 1px solid var(--border-color);
+      padding: 0.85rem 0;
+    }
+    .admin-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+    .admin-stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+    }
+    .lead-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      margin-top: 1rem;
+    }
+    .lead-table th, .lead-table td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: left;
+    }
+    .lead-table th {
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+    .status-pill {
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .st-new { background: rgba(0, 242, 254, 0.15); color: var(--accent-cyan); border: 1px solid rgba(0, 242, 254, 0.3); }
+    .st-review { background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .st-quoted { background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); }
+  </style>
+</head>
+<body>
+
+  <!-- DEMO ADMIN DISCLAIMER BANNER -->
+  <div class="admin-banner">
+    <i class="fa-solid fa-user-shield"></i> INTERNAL DEMO ADMIN PORTAL — SALES TRIAGE & LEAD GOVERNANCE SYSTEM
+  </div>
+
+  <header class="admin-nav">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <div style="width:36px; height:36px; background:var(--accent-purple); border-radius:6px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:1.2rem;">
+          <i class="fa-solid fa-gauge-high"></i>
+        </div>
+        <span style="font-weight:800; color:#fff; font-size:1.1rem;">BLW Sales Triage Admin <span style="font-size:0.75rem; color:var(--text-muted); font-weight:400;">v1.2 Demo</span></span>
+      </div>
+
+      <div style="display:flex; gap:0.75rem;">
+        <button class="btn btn-sm btn-outline" onclick="exportDemoCSV()"><i class="fa-solid fa-download"></i> Export Leads CSV</button>
+        <a href="proposal.html" class="btn btn-sm btn-outline-nexus"><i class="fa-solid fa-file-contract"></i> View Partnership Deck</a>
+        <a href="index.html" class="btn btn-sm btn-primary-glow"><i class="fa-solid fa-arrow-left"></i> Live Concept Site</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container section-padding">
+    <div class="section-header" style="margin-bottom:2rem;">
+      <span class="section-subtitle">DEMO SALES METRICS & LEADS OVERVIEW</span>
+      <h2 class="section-title">International Inquiry & RFQ Triage Stream</h2>
+    </div>
+
+    <!-- METRICS CARDS -->
+    <div class="admin-grid">
+      <div class="admin-stat-card">
+        <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-inbox text-primary"></i> Total Inquiries (Demo)</span>
+        <h2 style="font-size:1.8rem; font-weight:900; color:#fff; margin-top:0.3rem;" id="statTotalCount">8 Inquiries</h2>
+        <span style="font-size:0.75rem; color:var(--accent-green);"><i class="fa-solid fa-arrow-trend-up"></i> +3 New Today</span>
+      </div>
+
+      <div class="admin-stat-card">
+        <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-clock text-warning"></i> Avg Response SLA</span>
+        <h2 style="font-size:1.8rem; font-weight:900; color:#fff; margin-top:0.3rem;">1.4 Hours</h2>
+        <span style="font-size:0.75rem; color:var(--accent-cyan);"><i class="fa-solid fa-bolt"></i> Fast Lead Routing</span>
+      </div>
+
+      <div class="admin-stat-card">
+        <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-earth-americas text-purple"></i> Top Destination</span>
+        <h2 style="font-size:1.8rem; font-weight:900; color:#fff; margin-top:0.3rem;">Egypt & Colombia</h2>
+        <span style="font-size:0.75rem; color:var(--text-muted);">25+ Export Nations</span>
+      </div>
+
+      <div class="admin-stat-card">
+        <span style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-shield-check text-success"></i> Pending Verifications</span>
+        <h2 style="font-size:1.8rem; font-weight:900; color:#fff; margin-top:0.3rem;">3 Items</h2>
+        <span style="font-size:0.75rem; color:var(--accent-orange);"><i class="fa-solid fa-flag"></i> Flagged for BLW Review</span>
+      </div>
+    </div>
+
+    <!-- FILTER & LEADS TABLE -->
+    <div class="glass-panel" style="padding:1.5rem;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.25rem;">
+        <h3 style="font-size:1.15rem; font-weight:800; color:#fff;"><i class="fa-solid fa-list-check"></i> Live RFQ & Inquiry Triage Log</h3>
+        <div style="display:flex; gap:0.5rem;">
+          <select id="adminChannelFilter" class="calc-input" style="padding:0.4rem 0.8rem; font-size:0.8rem;" onchange="filterAdminLeads()">
+            <option value="all">All Channels</option>
+            <option value="rfq_basket">RFQ Basket</option>
+            <option value="aditya_ai">Aditya AI Chatbot</option>
+            <option value="calculator">B2B Estimator</option>
+            <option value="direct_form">Direct Contact Form</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="lead-table" id="adminLeadsTable">
+          <thead>
+            <tr>
+              <th>Ref ID</th>
+              <th>Buyer / Company</th>
+              <th>Country</th>
+              <th>Channel</th>
+              <th>Target SKUs / Product</th>
+              <th>Est. Quantity</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="adminLeadsBody">
+            <!-- Dynamically populated -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const DEMO_LEADS = [
+      {
+        refId: "BLW-RFQ-2026-9041",
+        buyer: "Cairo Moto Parts Ltd (Ahmed Hassan)",
+        country: "Egypt",
+        channel: "RFQ Basket",
+        skus: "Bajaj Pulsar 220 Valves + TVS Apache Guides",
+        qty: "5,000 sets",
+        status: "New",
+        statusClass: "st-new"
+      },
+      {
+        refId: "BLW-AI-2026-8812",
+        buyer: "Autopartes del Sol (Carlos Ruiz)",
+        country: "Colombia",
+        channel: "Aditya AI Chatbot",
+        skus: "Liquid Nitrided Valve Set (Pulsar NS200)",
+        qty: "2,500 sets",
+        status: "Technical Review",
+        statusClass: "st-review"
+      },
+      {
+        refId: "BLW-CALC-2026-7731",
+        buyer: "Dhaka Commercial Spares (Farhan R.)",
+        country: "Bangladesh",
+        channel: "B2B Estimator",
+        skus: "Bajaj Compact RE 3-Wheeler Valves",
+        qty: "10,000 units",
+        status: "Quoted",
+        statusClass: "st-quoted"
+      },
+      {
+        refId: "BLW-FORM-2026-6104",
+        buyer: "Himalaya Auto (Suresh Thapa)",
+        country: "Nepal",
+        channel: "Direct Contact Form",
+        skus: "Honda Activa 100 & Hero Eco Deluxe Valves",
+        qty: "1,500 sets",
+        status: "Quoted",
+        statusClass: "st-quoted"
+      },
+      {
+        refId: "BLW-RFQ-2026-5099",
+        buyer: "Tanzania Power Engines (Grace M.)",
+        country: "Tanzania",
+        channel: "RFQ Basket",
+        skus: "Boxer BM150 Nitrided Valves & Guides",
+        qty: "3,000 sets",
+        status: "New",
+        statusClass: "st-new"
+      }
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Check for user submitted local storage RFQs
+      const userRFQs = JSON.parse(localStorage.getItem("blw_demo_rfqs") || "[]");
+      userRFQs.forEach(rfq => {
+        DEMO_LEADS.unshift({
+          refId: rfq.refId || "BLW-RFQ-LIVE",
+          buyer: rfq.name || "Live Web Inquiry",
+          country: rfq.country || "International",
+          channel: rfq.channel || "RFQ Basket",
+          skus: rfq.skus || "Custom Component Request",
+          qty: rfq.qty || "1,000 units",
+          status: "New",
+          statusClass: "st-new"
+        });
+      });
+
+      renderAdminLeads("all");
+    });
+
+    function renderAdminLeads(filterChannel) {
+      const body = document.getElementById("adminLeadsBody");
+      body.innerHTML = "";
+
+      const filtered = DEMO_LEADS.filter(l => filterChannel === "all" || l.channel.toLowerCase().replace(/\s+/g, '_') === filterChannel);
+
+      filtered.forEach(lead => {
+        const row = document.createElement("tr");
+        row.innerHTML = `
+          <td><code style="color:var(--accent-cyan); font-weight:700;">${lead.refId}</code></td>
+          <td><strong>${lead.buyer}</strong></td>
+          <td><i class="fa-solid fa-location-dot text-orange"></i> ${lead.country}</td>
+          <td><span class="p-tag p-tag-blue">${lead.channel}</span></td>
+          <td>${lead.skus}</td>
+          <td><strong>${lead.qty}</strong></td>
+          <td><span class="status-pill ${lead.statusClass}">${lead.status}</span></td>
+          <td>
+            <button class="btn btn-sm btn-outline" onclick="viewLeadDetail('${lead.refId}')"><i class="fa-solid fa-eye"></i> Detail</button>
+          </td>
+        `;
+        body.appendChild(row);
+      });
+
+      document.getElementById("statTotalCount").innerText = `${DEMO_LEADS.length} Inquiries`;
+    }
+
+    function filterAdminLeads() {
+      const val = document.getElementById("adminChannelFilter").value;
+      renderAdminLeads(val);
+    }
+
+    function viewLeadDetail(refId) {
+      const lead = DEMO_LEADS.find(l => l.refId === refId);
+      if (!lead) return;
+      alert(`DEMO LEAD DETAIL [${lead.refId}]\nBuyer: ${lead.buyer}\nCountry: ${lead.country}\nSKUs: ${lead.skus}\nQuantity: ${lead.qty}\nStatus: ${lead.status}\n\nNote: All demo leads are safely persisted in local demo state and NOT sent to live third-party inboxes.`);
+    }
+
+    function exportDemoCSV() {
+      alert("Downloading Simulated Demo Leads CSV Export (demo_leads_export.csv)...");
+    }
+  </script>
+</body>
+</html>

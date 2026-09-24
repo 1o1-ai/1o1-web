@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLW Digital Sales & IT Partnership Proposal | Prepared by Brahmexa + JSI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .proposal-banner {
+      background: #f59e0b;
+      color: #000;
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 0.5rem;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .proposal-nav {
+      background: rgba(15, 23, 42, 0.9);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .proposal-header {
+      padding: 4rem 0 2rem;
+    }
+    .panel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .evidence-list {
+      background: rgba(239, 68, 68, 0.08);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .evidence-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+    .evidence-item i { color: #ef4444; font-size: 1.1rem; margin-top: 2px; }
+    .roadmap-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.9rem;
+    }
+    .roadmap-table th, .roadmap-table td {
+      padding: 12px 16px;
+      border: 1px solid var(--border-color);
+      text-align: left;
+    }
+    .roadmap-table th {
+      background: rgba(0, 136, 255, 0.1);
+      color: var(--accent-cyan);
+    }
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 1.5rem 0;
+    }
+    .comp-box {
+      padding: 1.5rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-color);
+    }
+    .comp-before { background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.3); }
+    .comp-after { background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3); }
+  </style>
+</head>
+<body>
+
+  <!-- PROPOSAL DISCLAIMER BANNER -->
+  <div class="proposal-banner">
+    <i class="fa-solid fa-lock"></i> PRIVATE PROPOSAL & PARTNERSHIP DEMO — PREPARED FOR BLW ENGINE VALVES LEADERSHIP
+  </div>
+
+  <nav class="proposal-nav">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <div style="display:flex; align-items:center; gap:0.75rem;">
+        <div style="width:36px; height:36px; background:var(--gradient-primary); border-radius:6px; display:flex; align-items:center; justify-content:center; color:#000; font-weight:900;">B</div>
+        <span style="font-weight:800; color:#fff; font-size:1.1rem;">BLW Partnership Deck <span style="font-size:0.75rem; color:var(--text-muted); font-weight:400;">by Brahmexa LLC / JSI</span></span>
+      </div>
+      <div>
+        <a href="index.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-desktop"></i> View Live Demo Site</a>
+        <a href="admin.html" class="btn btn-sm btn-outline-nexus"><i class="fa-solid fa-user-gear"></i> Demo Triage Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="proposal-header text-center">
+      <span class="section-subtitle">STRATEGIC DIGITAL SALES & IT TRANSFORMATION</span>
+      <h1 class="hero-title" style="font-size:2.8rem;">Accelerating BLW's Global OEM & Aftermarket Sales</h1>
+      <p class="section-desc max-w-2xl">A comprehensive technical proposal demonstrating how a modern product finder, persistent RFQ basket, sales triage dashboard, and managed IT hosting can convert more international buyers for BLW Engine Valves Pvt. Ltd.</p>
+    </div>
+
+    <!-- PANEL 1: THE OPPORTUNITY & AUDIT FINDINGS -->
+    <section class="panel-card">
+      <h2><i class="fa-solid fa-magnifying-glass-chart text-primary"></i> 1. Executive Summary & Website Audit Findings</h2>
+      <p style="color:var(--text-muted); margin-top:0.5rem;">Our technical team performed a thorough analysis of BLW's current online portal at <code>https://blwenginevalves.com/</code>. While BLW's 50+ year manufacturing legacy and IATF 16949 credentials are exceptionally strong, several friction points slow down B2B buyers:</p>
+
+      <div class="evidence-list">
+        <h4 style="color:#ef4444; margin-bottom:0.75rem;"><i class="fa-solid fa-triangle-exclamation"></i> Key Audit Evidence Items Identified:</h4>
+        <div class="evidence-item">
+          <i class="fa-solid fa-bug"></i>
+          <div>
+            <strong>Hardcoded Template Address Artifact:</strong> The current website header displays <code>304 North Cardinal St. Dorchester Center, MA 02124</code> (a generic template placeholder) alongside the real Bahadurgarh, Haryana address, causing customer confusion.
+          </div>
+        </div>
+        <div class="evidence-item">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <div>
+            <strong>Missing RFQ Basket System:</strong> Overseas buyers purchasing multiple SKUs (e.g. Pulsar 220 valves + Apache guides) cannot combine parts into a single inquiry; they must re-submit separate contact forms for every single SKU.
+          </div>
+        </div>
+        <div class="evidence-item">
+          <i class="fa-solid fa-shield-cat"></i>
+          <div>
+            <strong>Unverified Certification & Numbers Display:</strong> Some pages display unverified numeric stats and conflicting ISO wording. Our demo introduces a strict <em>"Pending BLW Verification"</em> governance model to protect brand trust.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 2: BEFORE / AFTER BUYER JOURNEY -->
+    <section class="panel-card">
+      <h2><i class="fa-solid fa-route text-primary"></i> 2. The Before vs. After Buyer Journey</h2>
+      <p style="color:var(--text-muted); margin-top:0.5rem;">How our redesigned web application transforms an international importer's procurement experience:</p>
+
+      <div class="comparison-grid">
+        <div class="comp-box comp-before">
+          <h4 style="color:#ef4444;"><i class="fa-solid fa-xmark"></i> Existing Legacy Buyer Experience</h4>
+          <ul style="list-style:none; margin-top:1rem; font-size:0.875rem; color:var(--text-muted);">
+            <li style="margin-bottom:0.5rem;">❌ Static WordPress product catalog with difficult category navigation.</li>
+            <li style="margin-bottom:0.5rem;">❌ Single-item inquiry buttons with no multi-part cart.</li>
+            <li style="margin-bottom:0.5rem;">❌ No instant engineering specification filters or metallurgy explanations.</li>
+            <li style="margin-bottom:0.5rem;">❌ Inquiries sent to unmonitored generic email inboxes with no SLA tracking.</li>
+          </ul>
+        </div>
+
+        <div class="comp-box comp-after">
+          <h4 style="color:#10b981;"><i class="fa-solid fa-check"></i> Proposed Next-Gen Experience (This Demo)</h4>
+          <ul style="list-style:none; margin-top:1rem; font-size:0.875rem; color:var(--text-main);">
+            <li style="margin-bottom:0.5rem;">✅ Fast instant search across 1,100+ SKUs by OEM code, make, or part name.</li>
+            <li style="margin-bottom:0.5rem;">✅ Persistent <strong>RFQ Basket & Drawer</strong> for bulk international orders.</li>
+            <li style="margin-bottom:0.5rem;">✅ Integrated <strong>Aditya AI Specialist</strong> providing 24/7 valvetrain & nitriding advice.</li>
+            <li style="margin-bottom:0.5rem;">✅ Instant Sales Triage Dashboard (<code>/demo-admin</code>) with response SLA tracking.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 3: SALES OPERATIONS & DEMO ADMIN -->
+    <section class="panel-card">
+      <h2><i class="fa-solid fa-chart-line text-primary"></i> 3. Sales Triage Dashboard & Lead Governance</h2>
+      <p style="color:var(--text-muted); margin-top:0.5rem;">Every inquiry submitted through the RFQ basket or Aditya AI is immediately routed into an internal demo admin portal (<code>/demo-admin</code>). Sales managers can filter leads by country, target volume, buyer type (OEM vs Distributor), assign sales engineers, and track lead conversion stages.</p>
+      <div style="margin-top:1.5rem;">
+        <a href="admin.html" class="btn btn-hero-primary"><i class="fa-solid fa-gauge-high"></i> Launch Demo Sales Triage Dashboard</a>
+      </div>
+    </section>
+
+    <!-- PANEL 4: MANAGED HOSTING & SUPPORT ARCHITECTURE -->
+    <section class="panel-card">
+      <h2><i class="fa-solid fa-server text-primary"></i> 4. Managed Hosting & Infrastructure Architecture</h2>
+      <p style="color:var(--text-muted); margin-top:0.5rem;">Proposed infrastructure management provided by Brahmexa LLC / JSI Software Solutions:</p>
+      <div class="grid grid-cols-3 gap-md" style="margin-top:1.5rem;">
+        <div class="glass-panel" style="padding:1.25rem;">
+          <h4><i class="fa-solid fa-shield-halved text-success"></i> Monitored Security</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;">Automated SSL certificates, DDoS protection via Cloudflare Edge, regular security patching, and vulnerability scanning.</p>
+        </div>
+        <div class="glass-panel" style="padding:1.25rem;">
+          <h4><i class="fa-solid fa-rotate text-success"></i> Zero-Downtime Rollouts</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;">Staging environments for catalog updates, version control, and instant rollback capability in under 60 seconds.</p>
+        </div>
+        <div class="glass-panel" style="padding:1.25rem;">
+          <h4><i class="fa-solid fa-key text-success"></i> Full BLW Ownership</h4>
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;">BLW retains 100% ownership of domain names, DNS, email systems, and customer database assets at all times.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 5: PHASED ENGAGEMENT ROADMAP -->
+    <section class="panel-card">
+      <h2><i class="fa-solid fa-timeline text-primary"></i> 5. Proposed Phased Engagement Roadmap</h2>
+      <table class="roadmap-table">
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Deliverables & Scope</th>
+            <th>Duration</th>
+            <th>Commercial Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Phase 1: Discovery & Audit</strong></td>
+            <td>Finalize verified catalog CSV, audit OEM approvals, review IATF documents, align sales lead routing.</td>
+            <td>1 Week</td>
+            <td>Included in Proposal</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 2: Pilot Deployment</strong></td>
+            <td>Deploy 30 priority product pages + RFQ Basket + Aditya AI on production staging server.</td>
+            <td>2 Weeks</td>
+            <td>To be quoted after discovery</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 3: Production Rollout</strong></td>
+            <td>Full 1,100+ SKU database import, DNS migration, Cloudflare setup, sales team training.</td>
+            <td>2 Weeks</td>
+            <td>To be quoted after discovery</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 4: Monthly IT & Catalog Management</strong></td>
+            <td>Continuous catalog additions, SEO optimization, 99.9% uptime SLA, security updates, monthly report.</td>
+            <td>Ongoing</td>
+            <td>Monthly Managed Service SLA</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- PANEL 6: DECISION & NEXT STEPS -->
+    <section class="panel-card text-center" style="background:linear-gradient(135deg, rgba(0,136,255,0.1) 0%, rgba(0,242,254,0.05) 100%); border-color:var(--accent-blue);">
+      <h2 style="font-size:2rem;"><i class="fa-solid fa-handshake text-primary"></i> Next Steps & Alignment Workshop</h2>
+      <p class="section-desc max-w-2xl" style="margin:1rem auto 2rem;">We invite BLW's leadership team to a 30-minute discovery workshop to review priority SKUs, verify certification documents, and align on sales triage targets.</p>
+      <div style="display:flex; justify-content:center; gap:1rem;">
+        <a href="mailto:info@blwenginevalves.com?subject=BLW%20Digital%20Partnership%20Workshop" class="btn btn-hero-primary"><i class="fa-solid fa-calendar-check"></i> Schedule 30-Min Workshop</a>
+        <a href="index.html" class="btn btn-hero-secondary"><i class="fa-solid fa-arrow-left"></i> Return to Demo Site</a>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
