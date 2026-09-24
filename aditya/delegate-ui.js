@@ -2,6 +2,16 @@
  * Platform Category: KAI247 -> SMB | Service: Delegate | Assistant: Adityam
  */
 
+function getSeedGroups() {
+  const src = (typeof DELEGATE_GROUPS !== "undefined" ? DELEGATE_GROUPS : (typeof window !== "undefined" ? window.DELEGATE_GROUPS : null));
+  if (!src) return [];
+  try {
+    return JSON.parse(JSON.stringify(src));
+  } catch (e) {
+    return src;
+  }
+}
+
 let delegateState = {
   isPaused: false,
   activeGroupId: "g8", // Default to Customer - Apex Mobility OEM
@@ -12,21 +22,33 @@ let delegateState = {
   tourStep: 0,
   isTourActive: false,
   replyDrafts: {},
-  groups: JSON.parse(JSON.stringify(DELEGATE_GROUPS))
+  groups: getSeedGroups()
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+function startDelegateApp() {
+  if (!delegateState.groups || delegateState.groups.length === 0) {
+    delegateState.groups = getSeedGroups();
+  }
+
   // Check URL params or hash
-  const hash = window.location.hash;
-  if (hash === "#delegate" || window.location.search.includes("tab=delegate")) {
+  const hash = typeof window !== "undefined" ? window.location.hash : "";
+  if (hash === "#delegate" || (typeof window !== "undefined" && window.location.search.includes("tab=delegate"))) {
     if (typeof switchAdminTab === "function") switchAdminTab("delegate");
   }
-  
+
   renderDelegateBriefing();
   renderDelegateGroups();
   renderDelegateChat();
   renderDelegateIntel();
-});
+}
+
+if (typeof document !== "undefined") {
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", startDelegateApp);
+  } else {
+    setTimeout(startDelegateApp, 10);
+  }
+}
 
 // MAIN TAB / VIEW SWITCHING
 function setDelegateViewMode(mode) {

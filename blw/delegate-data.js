@@ -492,3 +492,9 @@ const DELEGATE_SOURCES = {
     fact: "30 Wooden Cases (3,000 sets Boxer BM150 Valves). Truck MH-04-CG-9041. Port of Nhava Sheva destination."
   }
 };
+
+if (typeof window !== "undefined") {
+  window.DELEGATE_BRIEFING = DELEGATE_BRIEFING;
+  window.DELEGATE_GROUPS = DELEGATE_GROUPS;
+  window.DELEGATE_SOURCES = DELEGATE_SOURCES;
+}
