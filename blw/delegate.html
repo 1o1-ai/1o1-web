@@ -69,12 +69,12 @@
 
     <!-- MAIN VIEW MODE TOGGLE BAR -->
     <div style="display:flex; gap:0.5rem; margin-bottom:1.5rem; border-bottom:1px solid var(--border-color); padding-bottom:0.75rem;">
-      <button class="admin-tab-btn active" id="btnViewBriefing" onclick="setDelegateViewMode('briefing')"><i class="fa-solid fa-sun"></i> Executive Morning Briefing</button>
-      <button class="admin-tab-btn" id="btnViewWorkspace" onclick="setDelegateViewMode('workspace')"><i class="fa-solid fa-comments"></i> 3-Column Executive Workspace (12 Groups)</button>
+      <button class="admin-tab-btn active" id="btnViewWorkspace" onclick="setDelegateViewMode('workspace')"><i class="fa-solid fa-comments"></i> WhatsApp Business Workspace (12 Groups)</button>
+      <button class="admin-tab-btn" id="btnViewBriefing" onclick="setDelegateViewMode('briefing')"><i class="fa-solid fa-sun"></i> Executive Morning Briefing</button>
     </div>
 
-    <!-- 1. LANDING VIEW: EXECUTIVE MORNING BRIEFING -->
-    <div id="delegateBriefingView">
+    <!-- 1. LANDING VIEW: EXECUTIVE MORNING BRIEFING (HIDDEN BY DEFAULT) -->
+    <div id="delegateBriefingView" style="display:none;">
       <div class="card-panel" style="padding:1.5rem; margin-bottom:1.5rem; background:linear-gradient(to right, var(--bg-surface), var(--bg-subtle));">
         <h3 style="font-size:1.4rem; font-weight:900; color:var(--text-main); margin-bottom:0.3rem;">Good morning, Aditya 👋</h3>
         <p style="font-size:0.95rem; color:var(--text-muted); margin:0;">Delegate reviewed <strong>186 messages across 12 groups</strong> since your last visit. Only <strong>7 need your attention</strong>.</p>
@@ -122,8 +122,8 @@
       </div>
     </div>
 
-    <!-- 2. 3-COLUMN EXECUTIVE WORKSPACE VIEW -->
-    <div id="delegateWorkspaceView" style="display:none;">
+    <!-- 2. 3-COLUMN EXECUTIVE WORKSPACE VIEW (VISIBLE BY DEFAULT) -->
+    <div id="delegateWorkspaceView" style="display:flex;">
       <div class="delegate-workspace">
         
         <!-- LEFT COLUMN: CONVERSATION GROUPS -->
