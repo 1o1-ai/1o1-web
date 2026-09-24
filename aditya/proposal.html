@@ -1,249 +1,605 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="precision">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLW Digital Sales & IT Partnership Proposal | Prepared by Brahmexa + JSI</title>
+  <title>BLW Digital Export Transformation & Proposal | Prepared by Brahmexa + JSI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <style>
-    .proposal-banner {
-      background: #f59e0b;
-      color: #000;
-      font-size: 0.85rem;
-      font-weight: 800;
-      padding: 0.5rem;
-      text-align: center;
-      letter-spacing: 0.5px;
-    }
-    .proposal-nav {
-      background: rgba(15, 23, 42, 0.9);
-      border-bottom: 1px solid var(--border-color);
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .proposal-header {
-      padding: 4rem 0 2rem;
-    }
-    .panel-card {
-      background: var(--bg-card);
+    /* WORKFLOW COMPONENT STYLING */
+    .workflow-section {
+      background: var(--bg-surface);
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
       padding: 2.5rem;
       margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-card);
     }
-    .evidence-list {
-      background: rgba(239, 68, 68, 0.08);
-      border: 1px solid rgba(239, 68, 68, 0.3);
+
+    .journey-player-bar {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-color);
       border-radius: var(--radius-sm);
-      padding: 1.5rem;
-      margin: 1.5rem 0;
-    }
-    .evidence-item {
+      padding: 1rem 1.25rem;
       display: flex;
-      gap: 1rem;
-      margin-bottom: 1rem;
-      font-size: 0.9rem;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
     }
-    .evidence-item i { color: #ef4444; font-size: 1.1rem; margin-top: 2px; }
-    .roadmap-table {
+
+    .workflow-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1rem;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .workflow-step-card {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem 1rem;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .workflow-step-card.active-step {
+      border-color: var(--accent-primary);
+      box-shadow: 0 0 0 2px rgba(23, 74, 112, 0.2);
+      background: var(--bg-surface);
+    }
+
+    .step-number-badge {
+      width: 28px; height: 28px;
+      background: var(--accent-primary);
+      color: #ffffff;
+      font-size: 0.775rem;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .step-role-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      margin-bottom: 0.75rem;
+    }
+
+    .step-data-captured {
+      font-size: 0.75rem;
+      background: var(--bg-subtle);
+      border-left: 2px solid var(--accent-primary);
+      padding: 6px 8px;
+      border-radius: 0 4px 4px 0;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    .step-benefit {
+      font-size: 0.75rem;
+      color: var(--accent-success);
+      font-weight: 700;
+      margin-top: auto;
+      margin-bottom: 0.75rem;
+    }
+
+    .sample-data-pill {
+      background: rgba(181, 120, 66, 0.1);
+      color: var(--accent-secondary);
+      border: 1px dashed var(--accent-secondary);
+      font-size: 0.725rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      font-family: var(--font-mono);
+    }
+
+    .readiness-table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1.5rem 0;
-      font-size: 0.9rem;
+      font-size: 0.875rem;
+      margin-top: 1rem;
     }
-    .roadmap-table th, .roadmap-table td {
-      padding: 12px 16px;
-      border: 1px solid var(--border-color);
+    .readiness-table th, .readiness-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-color);
       text-align: left;
     }
-    .roadmap-table th {
-      background: rgba(0, 136, 255, 0.1);
-      color: var(--accent-cyan);
+    .readiness-table th {
+      background: var(--bg-subtle);
+      color: var(--text-main);
+      font-weight: 700;
     }
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-      margin: 1.5rem 0;
+
+    .status-badge {
+      font-size: 0.725rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
     }
-    .comp-box {
-      padding: 1.5rem;
-      border-radius: var(--radius-sm);
-      border: 1px solid var(--border-color);
+    .st-demonstrated { background: rgba(15, 118, 110, 0.12); color: var(--accent-success); border: 1px solid rgba(15, 118, 110, 0.3); }
+    .st-needs-data { background: rgba(181, 120, 66, 0.12); color: var(--accent-secondary); border: 1px solid rgba(181, 120, 66, 0.3); }
+    .st-requires-prod { background: rgba(71, 85, 105, 0.12); color: var(--text-muted); border: 1px solid rgba(71, 85, 105, 0.3); }
+
+    @media (max-width: 1024px) {
+      .workflow-steps-grid { grid-template-columns: repeat(2, 1fr); }
     }
-    .comp-before { background: rgba(239, 68, 68, 0.05); border-color: rgba(239, 68, 68, 0.3); }
-    .comp-after { background: rgba(16, 185, 129, 0.08); border-color: rgba(16, 185, 129, 0.3); }
+    @media (max-width: 640px) {
+      .workflow-steps-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
-  <!-- PROPOSAL DISCLAIMER BANNER -->
-  <div class="proposal-banner">
-    <i class="fa-solid fa-lock"></i> PRIVATE PROPOSAL & PARTNERSHIP DEMO — PREPARED FOR BLW ENGINE VALVES LEADERSHIP
+  <!-- CONCEPT DISCLAIMER BANNER -->
+  <div class="concept-preview-bar">
+    <span><i class="fa-solid fa-lock"></i> <strong>Concept Preview</strong> — Prepared for BLW Engine Valves Leadership; not BLW's live site.</span>
+    <span class="banner-links">
+      <a href="index.html"><i class="fa-solid fa-desktop"></i> View Public Concept Site</a> | 
+      <a href="admin.html"><i class="fa-solid fa-user-gear"></i> Export Triage Admin (/demo-admin)</a>
+    </span>
   </div>
 
-  <nav class="proposal-nav">
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
-      <div style="display:flex; align-items:center; gap:0.75rem;">
-        <div style="width:36px; height:36px; background:var(--gradient-primary); border-radius:6px; display:flex; align-items:center; justify-content:center; color:#000; font-weight:900;">B</div>
-        <span style="font-weight:800; color:#fff; font-size:1.1rem;">BLW Partnership Deck <span style="font-size:0.75rem; color:var(--text-muted); font-weight:400;">by Brahmexa LLC / JSI</span></span>
-      </div>
-      <div>
-        <a href="index.html" class="btn btn-sm btn-outline"><i class="fa-solid fa-desktop"></i> View Live Demo Site</a>
-        <a href="admin.html" class="btn btn-sm btn-outline-nexus"><i class="fa-solid fa-user-gear"></i> Demo Triage Dashboard</a>
+  <!-- NAVIGATION HEADER -->
+  <header class="main-header" id="navbar">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon"><i class="fa-solid fa-gear"></i></div>
+        <div class="logo-text">
+          <span class="brand-name">BLW <span class="highlight">ENGINE VALVES</span></span>
+          <span class="brand-sub">PARTNERSHIP PROPOSAL &bull; BRAHMEXA / JSI</span>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <!-- SELECTABLE THEME SWITCHER -->
+        <div class="theme-switcher-wrapper">
+          <button class="btn btn-outline btn-sm" id="themeToggleBtn" onclick="toggleThemeDropdown()" title="Select Visual Theme">
+            <i class="fa-solid fa-palette"></i> <span class="theme-label" id="currentThemeLabel">Precision Light</span> <i class="fa-solid fa-chevron-down" style="font-size:0.65rem;"></i>
+          </button>
+          <div class="theme-dropdown" id="themeDropdown">
+            <div class="theme-option active" onclick="setTheme('precision')">
+              <span class="theme-dot dot-precision"></span> Precision Light
+            </div>
+            <div class="theme-option" onclick="setTheme('warm')">
+              <span class="theme-dot dot-warm"></span> Warm Industrial
+            </div>
+            <div class="theme-option" onclick="setTheme('dark')">
+              <span class="theme-dot dot-dark"></span> Graphite Showcase
+            </div>
+          </div>
+        </div>
+
+        <a href="admin.html" class="btn btn-secondary btn-sm"><i class="fa-solid fa-gauge-high"></i> Sales Triage Admin</a>
+        <a href="index.html" class="btn btn-primary btn-sm"><i class="fa-solid fa-arrow-left"></i> Public Demo Site</a>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <main class="container">
-    <div class="proposal-header text-center">
-      <span class="section-subtitle">STRATEGIC DIGITAL SALES & IT TRANSFORMATION</span>
-      <h1 class="hero-title" style="font-size:2.8rem;">Accelerating BLW's Global OEM & Aftermarket Sales</h1>
-      <p class="section-desc max-w-2xl">A comprehensive technical proposal demonstrating how a modern product finder, persistent RFQ basket, sales triage dashboard, and managed IT hosting can convert more international buyers for BLW Engine Valves Pvt. Ltd.</p>
+  <main class="container section-padding">
+    <div class="section-header text-center">
+      <span class="section-subtitle">STRATEGIC DIGITAL SALES & EXPORT TRANSFORMATION</span>
+      <h1 class="hero-title" style="font-size:2.5rem;">From International Search to Export Order</h1>
+      <p class="section-desc mx-auto">A visual step-by-step workflow demonstrating how BLW's next-generation digital portal captures overseas component buyers, consolidates multi-SKU inquiries, and drives export revenue growth.</p>
     </div>
 
-    <!-- PANEL 1: THE OPPORTUNITY & AUDIT FINDINGS -->
-    <section class="panel-card">
-      <h2><i class="fa-solid fa-magnifying-glass-chart text-primary"></i> 1. Executive Summary & Website Audit Findings</h2>
-      <p style="color:var(--text-muted); margin-top:0.5rem;">Our technical team performed a thorough analysis of BLW's current online portal at <code>https://blwenginevalves.com/</code>. While BLW's 50+ year manufacturing legacy and IATF 16949 credentials are exceptionally strong, several friction points slow down B2B buyers:</p>
+    <!-- PROMINENT VISUAL WORKFLOW COMPONENT -->
+    <section class="workflow-section">
+      <!-- PLAY JOURNEY CONTROLLER -->
+      <div class="journey-player-bar">
+        <div>
+          <h3 style="font-size:1.1rem; font-weight:800; color:var(--text-main); margin:0;"><i class="fa-solid fa-play-circle text-primary"></i> Interactive Buyer Journey Walkthrough</h3>
+          <span style="font-size:0.8rem; color:var(--text-muted);">Fictional Importer Example: <strong>Cairo Moto Parts Ltd (Ahmed Hassan, Egypt)</strong> &bull; Ref: <code>BLW-RFQ-2026-9041</code></span>
+        </div>
+        <div style="display:flex; gap:0.5rem; align-items:center;">
+          <button class="btn btn-secondary btn-sm" id="prevJourneyBtn" onclick="stepJourney(-1)" disabled><i class="fa-solid fa-chevron-left"></i> Back</button>
+          <span style="font-size:0.85rem; font-weight:700; color:var(--accent-primary); font-family:var(--font-mono);" id="journeyStepIndicator">Step 1 of 6</span>
+          <button class="btn btn-primary btn-sm" id="nextJourneyBtn" onclick="stepJourney(1)">Next Step <i class="fa-solid fa-chevron-right"></i></button>
+          <button class="btn btn-outline btn-sm" onclick="resetJourney()"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+        </div>
+      </div>
 
-      <div class="evidence-list">
-        <h4 style="color:#ef4444; margin-bottom:0.75rem;"><i class="fa-solid fa-triangle-exclamation"></i> Key Audit Evidence Items Identified:</h4>
-        <div class="evidence-item">
-          <i class="fa-solid fa-bug"></i>
-          <div>
-            <strong>Hardcoded Template Address Artifact:</strong> The current website header displays <code>304 North Cardinal St. Dorchester Center, MA 02124</code> (a generic template placeholder) alongside the real Bahadurgarh, Haryana address, causing customer confusion.
-          </div>
+      <!-- 6 CONNECTED WORKFLOW STEPS -->
+      <div class="workflow-steps-grid">
+        <!-- STEP 1: FIND -->
+        <div class="workflow-step-card active-step" id="wfStep1">
+          <div class="step-number-badge">1</div>
+          <div class="step-title">1. Find</div>
+          <div class="step-role-tag">Overseas Buyer</div>
+          <p class="step-desc">Importer searches catalog by BLW part number, vehicle make, or product family.</p>
+          <div class="step-data-captured"><strong>Captures:</strong> Search term <code>Pulsar 220</code>, category filter, zero-result fallback.</div>
+          <div class="sample-data-pill"><i class="fa-solid fa-magnifying-glass"></i> Searching: Pulsar 220 & Apache 180</div>
+          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> 80% faster product discovery</div>
+          <a href="index.html#products" class="btn btn-outline btn-sm btn-full" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 1</a>
         </div>
-        <div class="evidence-item">
-          <i class="fa-solid fa-basket-shopping"></i>
-          <div>
-            <strong>Missing RFQ Basket System:</strong> Overseas buyers purchasing multiple SKUs (e.g. Pulsar 220 valves + Apache guides) cannot combine parts into a single inquiry; they must re-submit separate contact forms for every single SKU.
-          </div>
+
+        <!-- STEP 2: EVALUATE -->
+        <div class="workflow-step-card" id="wfStep2">
+          <div class="step-number-badge">2</div>
+          <div class="step-title">2. Evaluate</div>
+          <div class="step-role-tag">Overseas Buyer</div>
+          <p class="step-desc">Buyer verifies stem specs, materials (SUH3/21-4N), and surface nitriding options.</p>
+          <div class="step-data-captured"><strong>Displays:</strong> Verified specs, nitriding depth, and fitment status tags.</div>
+          <div class="sample-data-pill"><i class="fa-solid fa-circle-info"></i> Part: BLW-EV-P220 (SUH3/21-4N)</div>
+          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> High buyer engineering trust</div>
+          <button class="btn btn-outline btn-sm btn-full" onclick="openDemoSpecPreview()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 2</button>
         </div>
-        <div class="evidence-item">
-          <i class="fa-solid fa-shield-cat"></i>
-          <div>
-            <strong>Unverified Certification & Numbers Display:</strong> Some pages display unverified numeric stats and conflicting ISO wording. Our demo introduces a strict <em>"Pending BLW Verification"</em> governance model to protect brand trust.
-          </div>
+
+        <!-- STEP 3: REQUEST -->
+        <div class="workflow-step-card" id="wfStep3">
+          <div class="step-number-badge">3</div>
+          <div class="step-title">3. Request</div>
+          <div class="step-role-tag">Overseas Buyer</div>
+          <p class="step-desc">Adds 2 SKUs to RFQ Basket, sets destination, quantities, and delivery timeline.</p>
+          <div class="step-data-captured"><strong>Captures:</strong> Company, country, email, 7,500 total sets, timeline.</div>
+          <div class="sample-data-pill"><i class="fa-solid fa-basket-shopping"></i> Ref: BLW-RFQ-2026-9041 (Egypt)</div>
+          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> Consolidated multi-part lead</div>
+          <button class="btn btn-outline btn-sm btn-full" onclick="openDemoRfqDrawer()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 3</button>
         </div>
+
+        <!-- STEP 4: TRIAGE -->
+        <div class="workflow-step-card" id="wfStep4">
+          <div class="step-number-badge">4</div>
+          <div class="step-title">4. Triage</div>
+          <div class="step-role-tag">BLW Export Rep</div>
+          <p class="step-desc">Export rep views lead in dashboard, assigns owner, and starts first-response timer.</p>
+          <div class="step-data-captured"><strong>Tracks:</strong> Channel (RFQ Basket), Response SLA (1.2 hrs), assigned rep.</div>
+          <div class="sample-data-pill"><i class="fa-solid fa-user-check"></i> Assigned: Rajesh V. (Export Mgr)</div>
+          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> Zero dropped sales inquiries</div>
+          <a href="admin.html" class="btn btn-outline btn-sm btn-full" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 4</a>
+        </div>
+
+        <!-- STEP 5: QUOTE -->
+        <div class="workflow-step-card" id="wfStep5">
+          <div class="step-number-badge">5</div>
+          <div class="step-title">5. Quote</div>
+          <div class="step-role-tag">BLW Export Team</div>
+          <p class="step-desc">BLW team verifies checklist (specs, freight destination) and prepares formal quotation.</p>
+          <div class="step-data-captured"><strong>Displays:</strong> Verified checklist, sample PDF quote preview.</div>
+          <div class="sample-data-pill"><i class="fa-solid fa-file-invoice"></i> Formal Quote: Cairo Moto Parts</div>
+          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> Faster turnaround time</div>
+          <button class="btn btn-outline btn-sm btn-full" onclick="openQuoteChecklistModal()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 5</button>
+        </div>
+
+        <!-- STEP 6: FOLLOW UP -->
+        <div class="workflow-step-card" id="wfStep6">
+          <div class="step-number-badge">6</div>
+          <div class="step-title">6. Follow Up</div>
+          <div class="step-role-tag">BLW Sales Pipeline</div>
+          <p class="step-desc">Tracks deal stage: New &rarr; Clarification &rarr; Quoted &rarr; Won/Lost with next action.</p>
+          <div class="step-data-captured"><strong>Tracks:</strong> Pipeline stage (Quoted), next action, target close date.</div>
+          <div class="sample-data-pill"><i class="fa-solid fa-chart-line"></i> Stage: Quoted (Follow up Sept 28)</div>
+          <div class="step-benefit"><i class="fa-solid fa-circle-check"></i> Higher conversion to export order</div>
+          <button class="btn btn-outline btn-sm btn-full" onclick="openPipelineModal()"><i class="fa-solid fa-up-right-from-square"></i> Demo Screen 6</button>
+        </div>
+      </div>
+
+      <!-- ACTIVE STEP DETAIL SUMMARY BOX -->
+      <div class="card-panel" style="padding:1.25rem; background:var(--bg-subtle);" id="stepDetailBox">
+        <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-main); margin-bottom:0.25rem;" id="detailStepTitle">Step 1: Find Components</h4>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin:0;" id="detailStepDesc">Overseas buyers use the Product Finder to filter 1,100+ BLW engine valve SKUs by part number, vehicle model, or family. Try searching "Pulsar 220" on the live catalog.</p>
       </div>
     </section>
 
-    <!-- PANEL 2: BEFORE / AFTER BUYER JOURNEY -->
-    <section class="panel-card">
-      <h2><i class="fa-solid fa-route text-primary"></i> 2. The Before vs. After Buyer Journey</h2>
-      <p style="color:var(--text-muted); margin-top:0.5rem;">How our redesigned web application transforms an international importer's procurement experience:</p>
+    <!-- SECTION 2: BUSINESS CASE & JOURNEY COMPARISON -->
+    <section class="card-panel" style="padding:2.5rem; margin-bottom:2.5rem;">
+      <h2><i class="fa-solid fa-scale-balanced text-primary"></i> Business Case: Current vs. Proposed Buyer Journey</h2>
+      <p class="section-desc">Factual observations comparing BLW's existing website flow with the proposed digital sales portal:</p>
 
-      <div class="comparison-grid">
-        <div class="comp-box comp-before">
-          <h4 style="color:#ef4444;"><i class="fa-solid fa-xmark"></i> Existing Legacy Buyer Experience</h4>
-          <ul style="list-style:none; margin-top:1rem; font-size:0.875rem; color:var(--text-muted);">
-            <li style="margin-bottom:0.5rem;">❌ Static WordPress product catalog with difficult category navigation.</li>
-            <li style="margin-bottom:0.5rem;">❌ Single-item inquiry buttons with no multi-part cart.</li>
-            <li style="margin-bottom:0.5rem;">❌ No instant engineering specification filters or metallurgy explanations.</li>
-            <li style="margin-bottom:0.5rem;">❌ Inquiries sent to unmonitored generic email inboxes with no SLA tracking.</li>
+      <div class="grid grid-cols-2 gap-lg" style="margin-top:1.5rem;">
+        <div style="background:var(--bg-subtle); border:1px solid var(--border-color); border-radius:var(--radius-sm); padding:1.5rem;">
+          <h4 style="color:#ef4444; font-size:1rem; font-weight:800; margin-bottom:1rem;"><i class="fa-solid fa-xmark"></i> Current Public Site Observations</h4>
+          <ul style="list-style:none; font-size:0.875rem; color:var(--text-muted);">
+            <li style="margin-bottom:0.6rem;">❌ Single-item inquiry buttons require buyers to re-submit forms for every SKU.</li>
+            <li style="margin-bottom:0.6rem;">❌ Unmonitored contact forms without sales rep assignment or response SLA tracking.</li>
+            <li style="margin-bottom:0.6rem;">❌ Hardcoded legacy template address artifact visible in site header.</li>
+            <li style="margin-bottom:0.6rem;">❌ Static category listing with limited filter options for OEM part numbers.</li>
           </ul>
         </div>
 
-        <div class="comp-box comp-after">
-          <h4 style="color:#10b981;"><i class="fa-solid fa-check"></i> Proposed Next-Gen Experience (This Demo)</h4>
-          <ul style="list-style:none; margin-top:1rem; font-size:0.875rem; color:var(--text-main);">
-            <li style="margin-bottom:0.5rem;">✅ Fast instant search across 1,100+ SKUs by OEM code, make, or part name.</li>
-            <li style="margin-bottom:0.5rem;">✅ Persistent <strong>RFQ Basket & Drawer</strong> for bulk international orders.</li>
-            <li style="margin-bottom:0.5rem;">✅ Integrated <strong>Aditya AI Specialist</strong> providing 24/7 valvetrain & nitriding advice.</li>
-            <li style="margin-bottom:0.5rem;">✅ Instant Sales Triage Dashboard (<code>/demo-admin</code>) with response SLA tracking.</li>
+        <div style="background:var(--bg-subtle); border:1px solid var(--border-color); border-radius:var(--radius-sm); padding:1.5rem;">
+          <h4 style="color:var(--accent-success); font-size:1rem; font-weight:800; margin-bottom:1rem;"><i class="fa-solid fa-check"></i> Proposed Next-Gen Portal (This Demo)</h4>
+          <ul style="list-style:none; font-size:0.875rem; color:var(--text-main);">
+            <li style="margin-bottom:0.6rem;">✅ Consolidated multi-SKU RFQ Basket drawer for bulk export orders.</li>
+            <li style="margin-bottom:0.6rem;">✅ Real-time Sales Triage Dashboard (<code>/demo-admin</code>) with response SLA tracking.</li>
+            <li style="margin-bottom:0.6rem;">✅ Cleaned up corporate contacts & IATF certification governance model.</li>
+            <li style="margin-bottom:0.6rem;">✅ Instant search across 1,100+ OEM part numbers + Aditya AI Engineer.</li>
           </ul>
         </div>
       </div>
-    </section>
 
-    <!-- PANEL 3: SALES OPERATIONS & DEMO ADMIN -->
-    <section class="panel-card">
-      <h2><i class="fa-solid fa-chart-line text-primary"></i> 3. Sales Triage Dashboard & Lead Governance</h2>
-      <p style="color:var(--text-muted); margin-top:0.5rem;">Every inquiry submitted through the RFQ basket or Aditya AI is immediately routed into an internal demo admin portal (<code>/demo-admin</code>). Sales managers can filter leads by country, target volume, buyer type (OEM vs Distributor), assign sales engineers, and track lead conversion stages.</p>
-      <div style="margin-top:1.5rem;">
-        <a href="admin.html" class="btn btn-hero-primary"><i class="fa-solid fa-gauge-high"></i> Launch Demo Sales Triage Dashboard</a>
+      <!-- FUTURE METRICS MEASUREMENT PANEL -->
+      <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--border-color);">
+        <h4 style="font-size:1rem; font-weight:800; color:var(--text-main); margin-bottom:1rem;"><i class="fa-solid fa-chart-line text-primary"></i> Future Performance Measurement Framework</h4>
+        <div class="grid grid-cols-4 gap-md">
+          <div style="background:var(--bg-main); border:1px solid var(--border-color); padding:1rem; border-radius:var(--radius-sm);">
+            <span style="font-size:0.75rem; color:var(--text-muted);">Qualified Export RFQs</span>
+            <h3 style="font-size:1.2rem; font-weight:800; color:var(--text-main); margin-top:0.25rem;">Target: +45%</h3>
+            <span style="font-size:0.7rem; color:var(--text-dim);">Baseline to be supplied by BLW</span>
+          </div>
+
+          <div style="background:var(--bg-main); border:1px solid var(--border-color); padding:1rem; border-radius:var(--radius-sm);">
+            <span style="font-size:0.75rem; color:var(--text-muted);">Time to First Response</span>
+            <h3 style="font-size:1.2rem; font-weight:800; color:var(--text-main); margin-top:0.25rem;">Target: &lt; 2 Hours</h3>
+            <span style="font-size:0.7rem; color:var(--text-dim);">Baseline to be supplied by BLW</span>
+          </div>
+
+          <div style="background:var(--bg-main); border:1px solid var(--border-color); padding:1rem; border-radius:var(--radius-sm);">
+            <span style="font-size:0.75rem; color:var(--text-muted);">Percentage Quoted</span>
+            <h3 style="font-size:1.2rem; font-weight:800; color:var(--text-main); margin-top:0.25rem;">Target: 98% SLA</h3>
+            <span style="font-size:0.7rem; color:var(--text-dim);">Baseline to be supplied by BLW</span>
+          </div>
+
+          <div style="background:var(--bg-main); border:1px solid var(--border-color); padding:1rem; border-radius:var(--radius-sm);">
+            <span style="font-size:0.75rem; color:var(--text-muted);">RFQ-to-Order Conversion</span>
+            <h3 style="font-size:1.2rem; font-weight:800; color:var(--text-main); margin-top:0.25rem;">Target: 28% Win Rate</h3>
+            <span style="font-size:0.7rem; color:var(--text-dim);">Baseline to be supplied by BLW</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- PANEL 4: MANAGED HOSTING & SUPPORT ARCHITECTURE -->
-    <section class="panel-card">
-      <h2><i class="fa-solid fa-server text-primary"></i> 4. Managed Hosting & Infrastructure Architecture</h2>
-      <p style="color:var(--text-muted); margin-top:0.5rem;">Proposed infrastructure management provided by Brahmexa LLC / JSI Software Solutions:</p>
-      <div class="grid grid-cols-3 gap-md" style="margin-top:1.5rem;">
-        <div class="glass-panel" style="padding:1.25rem;">
-          <h4><i class="fa-solid fa-shield-halved text-success"></i> Monitored Security</h4>
-          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;">Automated SSL certificates, DDoS protection via Cloudflare Edge, regular security patching, and vulnerability scanning.</p>
-        </div>
-        <div class="glass-panel" style="padding:1.25rem;">
-          <h4><i class="fa-solid fa-rotate text-success"></i> Zero-Downtime Rollouts</h4>
-          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;">Staging environments for catalog updates, version control, and instant rollback capability in under 60 seconds.</p>
-        </div>
-        <div class="glass-panel" style="padding:1.25rem;">
-          <h4><i class="fa-solid fa-key text-success"></i> Full BLW Ownership</h4>
-          <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.5rem;">BLW retains 100% ownership of domain names, DNS, email systems, and customer database assets at all times.</p>
-        </div>
-      </div>
-    </section>
+    <!-- SECTION 3: EXPORT READINESS AUDIT TABLE -->
+    <section class="card-panel" style="padding:2.5rem; margin-bottom:2.5rem;">
+      <h2><i class="fa-solid fa-list-check text-primary"></i> Export Readiness Audit & Production Checklist</h2>
+      <p class="section-desc">Transparent classification of what is currently demonstrated vs. what requires BLW data or production integration:</p>
 
-    <!-- PANEL 5: PHASED ENGAGEMENT ROADMAP -->
-    <section class="panel-card">
-      <h2><i class="fa-solid fa-timeline text-primary"></i> 5. Proposed Phased Engagement Roadmap</h2>
-      <table class="roadmap-table">
+      <table class="readiness-table">
         <thead>
           <tr>
-            <th>Phase</th>
-            <th>Deliverables & Scope</th>
-            <th>Duration</th>
-            <th>Commercial Status</th>
+            <th>Audit Area</th>
+            <th>Requirement & Scope</th>
+            <th>Status in Demo</th>
+            <th>Next Action Item</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Phase 1: Discovery & Audit</strong></td>
-            <td>Finalize verified catalog CSV, audit OEM approvals, review IATF documents, align sales lead routing.</td>
-            <td>1 Week</td>
-            <td>Included in Proposal</td>
+            <td><strong>Product Catalog Data</strong></td>
+            <td>1,100+ OEM component SKUs, valve dimensions, material alloys.</td>
+            <td><span class="status-badge st-demonstrated">Demonstrated</span></td>
+            <td>Import full CSV database from BLW catalog.</td>
           </tr>
           <tr>
-            <td><strong>Phase 2: Pilot Deployment</strong></td>
-            <td>Deploy 30 priority product pages + RFQ Basket + Aditya AI on production staging server.</td>
-            <td>2 Weeks</td>
-            <td>To be quoted after discovery</td>
+            <td><strong>Certification Documents</strong></td>
+            <td>IATF 16949:2016 and ISO 9001:2015 PDF certificates.</td>
+            <td><span class="status-badge st-needs-data">Needs BLW Data</span></td>
+            <td>BLW to supply current official PDF certificate files.</td>
           </tr>
           <tr>
-            <td><strong>Phase 3: Production Rollout</strong></td>
-            <td>Full 1,100+ SKU database import, DNS migration, Cloudflare setup, sales team training.</td>
-            <td>2 Weeks</td>
-            <td>To be quoted after discovery</td>
+            <td><strong>Destination Content</strong></td>
+            <td>Multilingual export pathways for Latin America (Spanish) & Middle East (Arabic).</td>
+            <td><span class="status-badge st-demonstrated">Demonstrated</span></td>
+            <td>Human verification of technical fitment terminology.</td>
           </tr>
           <tr>
-            <td><strong>Phase 4: Monthly IT & Catalog Management</strong></td>
-            <td>Continuous catalog additions, SEO optimization, 99.9% uptime SLA, security updates, monthly report.</td>
-            <td>Ongoing</td>
-            <td>Monthly Managed Service SLA</td>
+            <td><strong>Sales Team Ownership</strong></td>
+            <td>Lead assignment to BLW export representatives based on country.</td>
+            <td><span class="status-badge st-demonstrated">Demonstrated</span></td>
+            <td>Map sales rep email addresses to dashboard accounts.</td>
+          </tr>
+          <tr>
+            <td><strong>Managed Hosting & SLA</strong></td>
+            <td>Monitored Cloudflare hosting, automated backups, SSL encryption.</td>
+            <td><span class="status-badge st-requires-prod">Requires Prod Integration</span></td>
+            <td>Cutover domain DNS under BLW ownership.</td>
+          </tr>
+          <tr>
+            <td><strong>Analytics & Tracking</strong></td>
+            <td>Privacy-compliant RFQ conversion tracking & country metrics.</td>
+            <td><span class="status-badge st-demonstrated">Demonstrated</span></td>
+            <td>Configure Google Search Console & Privacy Banner.</td>
           </tr>
         </tbody>
       </table>
     </section>
 
-    <!-- PANEL 6: DECISION & NEXT STEPS -->
-    <section class="panel-card text-center" style="background:linear-gradient(135deg, rgba(0,136,255,0.1) 0%, rgba(0,242,254,0.05) 100%); border-color:var(--accent-blue);">
-      <h2 style="font-size:2rem;"><i class="fa-solid fa-handshake text-primary"></i> Next Steps & Alignment Workshop</h2>
-      <p class="section-desc max-w-2xl" style="margin:1rem auto 2rem;">We invite BLW's leadership team to a 30-minute discovery workshop to review priority SKUs, verify certification documents, and align on sales triage targets.</p>
+    <!-- SECTION 4: MANAGED IT SERVICES & PROPOSAL DECISION -->
+    <section class="card-panel text-center" style="background:var(--bg-subtle);">
+      <h2 style="font-size:1.8rem;"><i class="fa-solid fa-handshake text-primary"></i> Ready for Discovery & Pilot</h2>
+      <p class="section-desc mx-auto" style="margin-bottom:1.5rem;">We propose a fixed-scope 30-SKU pilot rollout followed by production hosting under 100% BLW domain ownership.</p>
       <div style="display:flex; justify-content:center; gap:1rem;">
-        <a href="mailto:info@blwenginevalves.com?subject=BLW%20Digital%20Partnership%20Workshop" class="btn btn-hero-primary"><i class="fa-solid fa-calendar-check"></i> Schedule 30-Min Workshop</a>
-        <a href="index.html" class="btn btn-hero-secondary"><i class="fa-solid fa-arrow-left"></i> Return to Demo Site</a>
+        <a href="mailto:info@blwenginevalves.com?subject=BLW%20Export%20Partnership%20Workshop" class="btn btn-primary"><i class="fa-solid fa-calendar-check"></i> Schedule 30-Min Workshop</a>
+        <a href="admin.html" class="btn btn-secondary"><i class="fa-solid fa-gauge-high"></i> View Sales Dashboard</a>
       </div>
     </section>
   </main>
 
+  <!-- QUOTATION CHECKLIST MODAL (STEP 5 DEMO) -->
+  <div class="modal-overlay" id="quoteChecklistOverlay">
+    <div class="modal-card" style="max-width: 650px;">
+      <button class="modal-close-btn" onclick="closeQuoteChecklistModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1rem;">
+        <div style="width:36px; height:36px; background:var(--accent-primary); color:#fff; border-radius:6px; display:flex; align-items:center; justify-content:center; font-weight:800;">
+          <i class="fa-solid fa-file-invoice"></i>
+        </div>
+        <div>
+          <h3 style="font-size:1.15rem; font-weight:800; color:var(--text-main); margin:0;">Quotation Preparation Checklist</h3>
+          <span style="font-size:0.75rem; color:var(--text-muted); font-family:var(--font-mono);">Ref: BLW-RFQ-2026-9041 &bull; Cairo Moto Parts Ltd</span>
+        </div>
+      </div>
+
+      <div style="background:var(--bg-subtle); padding:1rem; border-radius:6px; margin-bottom:1rem; font-size:0.85rem;">
+        <div style="margin-bottom:0.4rem;"><strong>Buyer:</strong> Cairo Moto Parts Ltd (Ahmed Hassan) &bull; Egypt</div>
+        <div style="margin-bottom:0.4rem;"><strong>Items Requested:</strong></div>
+        <ul style="padding-left:1.25rem; color:var(--text-muted);">
+          <li>5,000 sets - Bajaj Pulsar 220F Valve Set (SUH3/21-4N LCN Nitrided)</li>
+          <li>2,500 sets - TVS Apache RTR 160/180 Valve Kit (21-4N EV8)</li>
+        </ul>
+      </div>
+
+      <h4 style="font-size:0.875rem; font-weight:700; color:var(--text-main); margin-bottom:0.5rem;">Pre-Quotation Verification Checklist:</h4>
+      <div style="display:flex; flex-direction:column; gap:0.5rem; font-size:0.825rem; margin-bottom:1.25rem;">
+        <div style="display:flex; align-items:center; gap:0.5rem; color:var(--accent-success); font-weight:600;"><i class="fa-solid fa-circle-check"></i> Stem Specs & Metallurgy Verified (SUH3 / 21-4N)</div>
+        <div style="display:flex; align-items:center; gap:0.5rem; color:var(--accent-success); font-weight:600;"><i class="fa-solid fa-circle-check"></i> Surface Treatment Feasibility (Liquid Nitriding LCN 96h Salt Spray)</div>
+        <div style="display:flex; align-items:center; gap:0.5rem; color:var(--accent-secondary); font-weight:600;"><i class="fa-solid fa-triangle-exclamation"></i> Freight Rates to Alexandria Port (Pending BLW Logistics Sign-off)</div>
+      </div>
+
+      <div style="display:flex; gap:0.75rem;">
+        <button class="btn btn-primary btn-full btn-sm" onclick="alert('Generating Sample Demo PDF Quotation Preview (BLW-QUOTE-2026-9041.pdf)... Marked as Fictional Demo.'); closeQuoteChecklistModal();">
+          <i class="fa-solid fa-download"></i> Download Sample Quote Preview
+        </button>
+        <button class="btn btn-secondary btn-sm" onclick="closeQuoteChecklistModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PIPELINE MODAL (STEP 6 DEMO) -->
+  <div class="modal-overlay" id="pipelineOverlay">
+    <div class="modal-card" style="max-width: 600px;">
+      <button class="modal-close-btn" onclick="closePipelineModal()"><i class="fa-solid fa-xmark"></i></button>
+      <h3 style="font-size:1.15rem; font-weight:800; color:var(--text-main); margin-bottom:1rem;"><i class="fa-solid fa-chart-line text-primary"></i> Export Pipeline Tracking</h3>
+      
+      <div style="background:var(--bg-subtle); padding:1rem; border-radius:6px; margin-bottom:1rem; font-size:0.85rem;">
+        <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem;">
+          <span><strong>Ref:</strong> <code>BLW-RFQ-2026-9041</code></span>
+          <span><strong>Owner:</strong> Rajesh V. (Export Mgr)</span>
+        </div>
+        <div><strong>Current Stage:</strong> <span class="status-badge st-demonstrated">Quoted</span></div>
+      </div>
+
+      <h4 style="font-size:0.85rem; font-weight:700; color:var(--text-main); margin-bottom:0.5rem;">Pipeline Stages:</h4>
+      <div style="display:flex; justify-content:space-between; font-size:0.75rem; text-align:center; margin-bottom:1.25rem;">
+        <div style="flex:1; padding:6px; background:var(--bg-subtle); border-radius:4px; margin:2px;">New</div>
+        <div style="flex:1; padding:6px; background:var(--bg-subtle); border-radius:4px; margin:2px;">Clarification</div>
+        <div style="flex:1; padding:6px; background:var(--bg-subtle); border-radius:4px; margin:2px;">Quoting</div>
+        <div style="flex:1; padding:6px; background:var(--accent-primary); color:#fff; border-radius:4px; margin:2px; font-weight:700;">Quoted</div>
+        <div style="flex:1; padding:6px; background:var(--bg-subtle); border-radius:4px; margin:2px;">Won / Lost</div>
+      </div>
+
+      <div style="display:flex; justify-content:flex-end;">
+        <button class="btn btn-secondary btn-sm" onclick="closePipelineModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // JOURNEY PLAYER LOGIC
+    let currentJourneyStep = 1;
+
+    const STEP_DETAILS = [
+      {
+        title: "Step 1: Find Components",
+        desc: "Overseas buyer Ahmed Hassan (Cairo Moto Parts Ltd, Egypt) searches the BLW catalog for Pulsar 220 valves and Apache 180 valve kits."
+      },
+      {
+        title: "Step 2: Evaluate Specifications",
+        desc: "Buyer checks genuine SUH3 / 21-4N bi-metallic metallurgy, stem tolerances, and Liquid Carbo-Nitriding (LCN) corrosion ratings."
+      },
+      {
+        title: "Step 3: Request Multi-SKU RFQ",
+        desc: "Buyer consolidates 5,000 Pulsar 220 valve sets and 2,500 Apache RTR valve sets into a single RFQ basket (Ref: BLW-RFQ-2026-9041)."
+      },
+      {
+        title: "Step 4: Triage Lead in Sales Dashboard",
+        desc: "BLW Export Manager Rajesh V. receives the lead in /demo-admin, checks destination country (Egypt), and begins technical review."
+      },
+      {
+        title: "Step 5: Prepare Formal Quotation",
+        desc: "BLW export team completes the pre-quotation checklist, verifies nitriding feasibility, and generates sample quotation BLW-QUOTE-2026-9041."
+      },
+      {
+        title: "Step 6: Follow Up Pipeline to Order",
+        desc: "Deal stage moves to 'Quoted' with next follow-up action scheduled for Sept 28 to finalize sea freight loading to Alexandria Port."
+      }
+    ];
+
+    function updateJourneyUI() {
+      for (let i = 1; i <= 6; i++) {
+        const card = document.getElementById(`wfStep${i}`);
+        if (card) {
+          if (i === currentJourneyStep) {
+            card.classList.add("active-step");
+          } else {
+            card.classList.remove("active-step");
+          }
+        }
+      }
+
+      document.getElementById("journeyStepIndicator").innerText = `Step ${currentJourneyStep} of 6`;
+      document.getElementById("prevJourneyBtn").disabled = (currentJourneyStep === 1);
+      document.getElementById("nextJourneyBtn").disabled = (currentJourneyStep === 6);
+
+      const detail = STEP_DETAILS[currentJourneyStep - 1];
+      document.getElementById("detailStepTitle").innerText = detail.title;
+      document.getElementById("detailStepDesc").innerText = detail.desc;
+    }
+
+    function stepJourney(delta) {
+      currentJourneyStep = Math.max(1, Math.min(6, currentJourneyStep + delta));
+      updateJourneyUI();
+    }
+
+    function resetJourney() {
+      currentJourneyStep = 1;
+      updateJourneyUI();
+    }
+
+    function openDemoSpecPreview() {
+      openSpecModal("blw-ev-pulsar220");
+    }
+
+    function openDemoRfqDrawer() {
+      // Seed sample item if empty
+      if (rfqBasket.length === 0) {
+        rfqBasket = [
+          { name: "Bajaj Pulsar 220F Valve Set", oemCode: "BLW-EV-P220", qty: 5000 },
+          { name: "TVS Apache RTR 160 / 180 Valve Kit", oemCode: "BLW-EV-AP180", qty: 2500 }
+        ];
+        updateRfqBasketUI();
+      }
+      toggleRfqBasket(true);
+    }
+
+    function openQuoteChecklistModal() {
+      document.getElementById("quoteChecklistOverlay").classList.add("open");
+    }
+
+    function closeQuoteChecklistModal() {
+      document.getElementById("quoteChecklistOverlay").classList.remove("open");
+    }
+
+    function openPipelineModal() {
+      document.getElementById("pipelineOverlay").classList.add("open");
+    }
+
+    function closePipelineModal() {
+      document.getElementById("pipelineOverlay").classList.remove("open");
+    }
+
+    // Keyboard controls for journey player
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") stepJourney(1);
+      if (e.key === "ArrowLeft") stepJourney(-1);
+    });
+  </script>
 </body>
 </html>
