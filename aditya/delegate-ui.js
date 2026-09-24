@@ -36,15 +36,23 @@ function setDelegateViewMode(mode) {
   const btnWorkspace = document.getElementById("btnViewWorkspace");
 
   if (mode === "briefing") {
-    briefingView.style.display = "block";
-    workspaceView.style.display = "none";
+    if (briefingView) briefingView.style.display = "block";
+    if (workspaceView) workspaceView.style.display = "none";
     if (btnBriefing) btnBriefing.classList.add("active");
     if (btnWorkspace) btnWorkspace.classList.remove("active");
   } else {
-    briefingView.style.display = "none";
-    workspaceView.style.display = "flex";
+    if (briefingView) briefingView.style.display = "none";
+    if (workspaceView) workspaceView.style.display = "flex";
     if (btnBriefing) btnBriefing.classList.remove("active");
     if (btnWorkspace) btnWorkspace.classList.add("active");
+
+    renderDelegateGroups();
+    renderDelegateChat();
+    renderDelegateIntel();
+
+    if (workspaceView) {
+      workspaceView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }
 
@@ -55,7 +63,7 @@ function renderDelegateBriefing() {
   if (!cardsContainer) return;
 
   cardsContainer.innerHTML = b.priorityCards.map(c => `
-    <div class="card-panel priority-card priority-${c.urgency}">
+    <div class="card-panel priority-card priority-${c.urgency}" style="cursor:pointer;" onclick="openGroupFromBriefing('${c.groupId}')">
       <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem;">
         <span class="status-badge st-${c.urgency === 'critical' ? 'needs-data' : 'demonstrated'}" style="font-size:0.7rem;">
           <i class="fa-solid fa-triangle-exclamation"></i> ${c.type}
@@ -64,7 +72,7 @@ function renderDelegateBriefing() {
       </div>
       <h4 style="font-size:0.95rem; font-weight:800; color:var(--text-main); margin-bottom:0.4rem;">${c.title}</h4>
       <p style="font-size:0.825rem; color:var(--text-muted); margin-bottom:1rem; line-height:1.45;">${c.desc}</p>
-      <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap;" onclick="event.stopPropagation()">
         <button class="btn btn-primary btn-xs" onclick="openGroupFromBriefing('${c.groupId}')"><i class="fa-solid fa-reply"></i> ${c.actionLabel}</button>
         <button class="btn btn-outline btn-xs" onclick="openGroupFromBriefing('${c.groupId}')">${c.secondaryAction}</button>
         <button class="btn btn-secondary btn-xs" onclick="openDelegateModal('${c.groupId}')">${c.delegateAction}</button>
@@ -75,7 +83,7 @@ function renderDelegateBriefing() {
   const digestContainer = document.getElementById("briefingDigestContainer");
   if (digestContainer) {
     digestContainer.innerHTML = b.digest.map(d => `
-      <div style="display:flex; gap:0.75rem; align-items:center; padding:8px 0; border-bottom:1px solid var(--border-color); font-size:0.825rem;">
+      <div style="display:flex; gap:0.75rem; align-items:center; padding:8px 0; border-bottom:1px solid var(--border-color); font-size:0.825rem; cursor:pointer;" onclick="setDelegateViewMode('workspace')">
         <span style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-muted); min-width:65px;">${d.time}</span>
         <span class="p-tag p-tag-blue" style="font-size:0.7rem; min-width:140px;">${d.group}</span>
         <span style="color:var(--text-main);">${d.text}</span>
@@ -87,9 +95,6 @@ function renderDelegateBriefing() {
 function openGroupFromBriefing(groupId) {
   delegateState.activeGroupId = groupId;
   setDelegateViewMode("workspace");
-  renderDelegateGroups();
-  renderDelegateChat();
-  renderDelegateIntel();
 }
 
 // RENDER GROUPS LIST (LEFT COLUMN)
@@ -155,7 +160,7 @@ function handleGroupSearch(q) {
   renderDelegateGroups();
 }
 
-// RENDER CHAT THREAD (CENTRE COLUMN)
+// RENDER CHAT THREAD (CENTRE COLUMN - WHATSAPP BUSINESS WEB SIMULATOR)
 function renderDelegateChat() {
   const g = delegateState.groups.find(group => group.id === delegateState.activeGroupId);
   if (!g) return;
@@ -163,21 +168,35 @@ function renderDelegateChat() {
   const header = document.getElementById("chatHeaderArea");
   const thread = document.getElementById("chatThreadArea");
 
+  // Determine group participants list string
+  const memberList = g.membersList || `Aditya (Founder), Gaurav (Ops Head), ${g.name} Team, Adityam (AI Copilot)`;
+
   if (header) {
     header.innerHTML = `
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <div>
-          <h3 style="font-size:1.05rem; font-weight:800; color:var(--text-main); margin:0; display:flex; align-items:center; gap:0.5rem;">
-            <i class="fa-solid ${g.avatarIcon} text-primary"></i> ${g.name}
-            <span class="p-tag p-tag-blue" style="font-size:0.7rem;">${g.type}</span>
-          </h3>
-          <span style="font-size:0.75rem; color:var(--text-muted);">${g.participants} Participants &bull; Topic: ${g.topic}</span>
+      <div class="wa-header-bar">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <div class="wa-header-avatar">
+            <i class="fa-solid ${g.avatarIcon}"></i>
+          </div>
+          <div>
+            <div style="font-weight:800; font-size:0.95rem; color:#ffffff; display:flex; align-items:center; gap:0.5rem;">
+              ${g.name}
+              <span style="font-size:0.65rem; background:rgba(255,255,255,0.2); color:#ffffff; padding:1px 6px; border-radius:4px; font-weight:600;">${g.type}</span>
+            </div>
+            <div class="wa-header-members" title="${memberList}">
+              <i class="fa-solid fa-users" style="font-size:0.65rem;"></i> ${memberList}
+            </div>
+          </div>
         </div>
 
-        <!-- EXECUTIVE TOGGLE: FULL VS SIGNAL ONLY -->
-        <div style="display:flex; gap:2px; background:var(--bg-subtle); padding:2px; border-radius:var(--radius-sm); border:1px solid var(--border-color);">
-          <button class="btn btn-xs ${!delegateState.signalOnly ? 'btn-primary' : 'btn-outline'}" onclick="toggleSignalOnly(false)" style="font-size:0.725rem;">Full conversation (${g.fullCount})</button>
-          <button class="btn btn-xs ${delegateState.signalOnly ? 'btn-primary' : 'btn-outline'}" onclick="toggleSignalOnly(true)" style="font-size:0.725rem;"><i class="fa-solid fa-filter"></i> Signal only (${g.signalCount})</button>
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <!-- EXECUTIVE TOGGLE: FULL VS SIGNAL ONLY -->
+          <div style="display:flex; gap:2px; background:rgba(0,0,0,0.25); padding:2px; border-radius:6px;">
+            <button class="btn btn-xs ${!delegateState.signalOnly ? 'btn-primary' : 'btn-outline'}" onclick="toggleSignalOnly(false)" style="font-size:0.7rem; color:#fff; border-color:transparent;">Full Chat (${g.fullCount || g.messages.length})</button>
+            <button class="btn btn-xs ${delegateState.signalOnly ? 'btn-primary' : 'btn-outline'}" onclick="toggleSignalOnly(true)" style="font-size:0.7rem; color:#fff; border-color:transparent;"><i class="fa-solid fa-filter"></i> Signal Only (${g.signalCount || 3})</button>
+          </div>
+          <i class="fa-solid fa-magnifying-glass" style="font-size:0.9rem; cursor:pointer; color:#ffffff; opacity:0.85;" title="Search in chat"></i>
+          <i class="fa-solid fa-ellipsis-vertical" style="font-size:0.9rem; cursor:pointer; color:#ffffff; opacity:0.85;" title="Group settings"></i>
         </div>
       </div>
     `;
@@ -186,51 +205,144 @@ function renderDelegateChat() {
   if (thread) {
     let msgs = g.messages;
     if (delegateState.signalOnly) {
-      msgs = msgs.filter(m => m.isSignal || m.isDraft || m.isBot);
+      msgs = msgs.filter(m => m.isSignal || m.isDraft || m.isBot || m.isUser);
     }
 
     const compressedCount = g.messages.length - msgs.length;
 
+    thread.className = "wa-chat-bg";
     thread.innerHTML = `
+      <div class="wa-date-divider"><i class="fa-solid fa-lock" style="font-size:0.65rem;"></i> End-to-end encrypted &bull; Adityam AI Copilot Active</div>
+
       ${delegateState.signalOnly && compressedCount > 0 ? `
-        <div class="noise-compressed-bar" onclick="toggleSignalOnly(false)">
-          <i class="fa-solid fa-compress text-primary"></i> <strong>${compressedCount} routine messages compressed</strong> (greetings, 'noted', attendance). Click to expand.
+        <div class="noise-compressed-bar" onclick="toggleSignalOnly(false)" style="margin:4px auto; max-width:92%; cursor:pointer; font-size:0.775rem;">
+          <i class="fa-solid fa-compress text-primary"></i> <strong>${compressedCount} routine messages compressed</strong> (greetings, 'noted', attendance). Click to expand full conversation.
         </div>
       ` : ''}
 
-      ${msgs.map(m => `
-        <div class="chat-bubble ${m.isBot ? 'bot-bubble' : (m.sender.includes('Aditya') ? 'user-bubble' : 'customer-bubble')} ${m.isDraft ? 'draft-bubble' : ''}">
-          <div class="bubble-sender">
-            <span>${m.sender}</span>
-            <span class="bubble-time">${m.time}</span>
+      ${msgs.map(m => {
+        const isUser = m.isUser || (m.sender && (m.sender.includes("Aditya (") || m.sender === "Aditya"));
+        const isBot = m.isBot;
+        const bubbleClass = isBot ? 'wa-bubble-ai' : (isUser ? 'wa-bubble-outgoing' : 'wa-bubble-incoming');
+
+        let senderColor = "#075e54";
+        if (m.sender && m.sender.includes("Gaurav")) senderColor = "#16a34a";
+        else if (m.sender && (m.sender.includes("Vikram") || m.sender.includes("QA"))) senderColor = "#d97706";
+        else if (m.sender && (m.sender.includes("Customer") || m.sender.includes("Mark") || m.sender.includes("Sarah") || m.sender.includes("Ahmed"))) senderColor = "#2563eb";
+        else if (m.sender && m.sender.includes("Aditya")) senderColor = "#174a70";
+
+        return `
+          <div class="wa-bubble ${bubbleClass} ${m.isDraft ? 'draft-bubble' : ''}">
+            ${!isUser ? `
+              <div class="wa-sender-name" style="color:${senderColor};">
+                ${m.sender}
+                ${isBot ? '<span style="font-size:0.65rem; background:#dcfce7; color:#166534; padding:1px 5px; border-radius:3px; margin-left:6px;"><i class="fa-solid fa-robot"></i> Adityam AI</span>' : ''}
+              </div>
+            ` : ''}
+
+            <div style="font-size:0.85rem; color:#111b21; margin-top:2px;">
+              ${m.text}
+            </div>
+
+            ${m.attachment ? `
+              <div class="bubble-attachment" onclick="previewSourceDoc('${m.attachment}')" style="margin-top:6px; background:rgba(0,0,0,0.05); padding:6px 10px; border-radius:6px; font-size:0.775rem;">
+                <i class="fa-solid fa-file-pdf text-danger" style="font-size:1.05rem;"></i> <span>Document Attachment: <strong>${m.attachment}</strong></span>
+              </div>
+            ` : ''}
+
+            ${isBot && !m.isDraft ? `
+              <div class="bot-disclosure-tag" style="margin-top:6px; font-size:0.675rem; color:#166534; font-weight:700;">
+                <i class="fa-solid fa-robot"></i> ${g.state === 'Auto-approved' ? 'Sent automatically by Adityam under Approved Documents policy' : 'Sent for Aditya by Adityam'}
+              </div>
+            ` : ''}
+
+            ${m.isDraft ? `
+              <div class="draft-badge-bar" style="margin-top:8px; padding-top:6px; border-top:1px dashed #d97706; display:flex; justify-content:space-between; align-items:center;">
+                <span style="font-size:0.75rem; color:#d97706; font-weight:700;"><i class="fa-solid fa-pen-ruler"></i> Draft held for Aditya approval</span>
+                <button class="btn btn-xs btn-primary" onclick="openApproveModal('${g.id}')"><i class="fa-solid fa-check"></i> Approve & Send</button>
+              </div>
+            ` : ''}
+
+            <div class="wa-msg-meta">
+              <span>${m.time}</span>
+              ${isUser ? '<span class="wa-tick-blue">✓✓</span>' : ''}
+            </div>
           </div>
-
-          <div class="bubble-text">
-            ${m.text}
-          </div>
-
-          ${m.attachment ? `
-            <div class="bubble-attachment" onclick="previewSourceDoc('${m.attachment}')">
-              <i class="fa-solid fa-file-pdf text-danger"></i> <span>Attachment: <code>${m.attachment}</code></span>
-            </div>
-          ` : ''}
-
-          ${m.isBot && !m.isDraft ? `
-            <div class="bot-disclosure-tag">
-              <i class="fa-solid fa-robot"></i> ${g.state === 'Auto-approved' ? 'Sent automatically by Adityam under "Approved Documents" policy' : 'Sent for Aditya by Adityam'}
-            </div>
-          ` : ''}
-
-          ${m.isDraft ? `
-            <div class="draft-badge-bar">
-              <span><i class="fa-solid fa-pen-ruler"></i> Draft held for Aditya approval</span>
-              <button class="btn btn-xs btn-primary" onclick="openApproveModal('${g.id}')">Approve & Send</button>
-            </div>
-          ` : ''}
-        </div>
-      `).join('')}
+        `;
+      }).join('')}
     `;
+
+    // Input Bar Area
+    let inputBarWrapper = document.getElementById("waInputBarWrapper");
+    if (!inputBarWrapper) {
+      inputBarWrapper = document.createElement("div");
+      inputBarWrapper.id = "waInputBarWrapper";
+      if (thread.parentNode) thread.parentNode.appendChild(inputBarWrapper);
+    }
+
+    inputBarWrapper.innerHTML = `
+      <div class="wa-input-bar">
+        <button class="btn btn-sm btn-outline" style="border:none; color:#54656f;" title="Emoji"><i class="fa-regular fa-face-smile" style="font-size:1.2rem;"></i></button>
+        <button class="btn btn-sm btn-outline" style="border:none; color:#54656f;" title="Attach File" onclick="alert('Synthetic Attachment Demo: Pick any material cert or quality drawing from the Sources panel.')"><i class="fa-solid fa-paperclip" style="font-size:1.1rem;"></i></button>
+        <input type="text" class="wa-input-field" id="waMessageInput" placeholder="Type a message as Aditya in ${g.name}..." onkeypress="handleWaInputKeyPress(event)">
+        <button class="wa-send-btn" onclick="sendWaMessage()" title="Send Message as Aditya"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    `;
+
+    setTimeout(() => { thread.scrollTop = thread.scrollHeight; }, 50);
   }
+}
+
+function handleWaInputKeyPress(e) {
+  if (e.key === "Enter") sendWaMessage();
+}
+
+function sendWaMessage() {
+  const input = document.getElementById("waMessageInput");
+  if (!input) return;
+  const val = input.value.trim();
+  if (!val) return;
+
+  const g = delegateState.groups.find(group => group.id === delegateState.activeGroupId);
+  if (!g) return;
+
+  const newMsg = {
+    id: "m_user_" + Date.now(),
+    sender: "Aditya (BLW Founder)",
+    text: val,
+    time: "Just now",
+    isHuman: true,
+    isSignal: true,
+    isUser: true
+  };
+
+  g.messages.push(newMsg);
+  g.fullCount = (g.fullCount || g.messages.length) + 1;
+  g.signalCount = (g.signalCount || 3) + 1;
+  input.value = "";
+  renderDelegateChat();
+
+  showDelegateToast(`💬 Sent WhatsApp message as Aditya in ${g.name}`);
+
+  // Simulated auto-reply after 1.2s
+  setTimeout(() => {
+    const isBotReply = Math.random() > 0.4;
+    const replySender = isBotReply ? "Adityam (AI Copilot)" : "Gaurav (Operations Head)";
+    const replyText = isBotReply 
+      ? `Received Aditya. Adityam has logged this in the BLW export triage log and notified the concerned department.`
+      : `Noted Aditya. Gaurav and the team are reviewing this now.`;
+
+    g.messages.push({
+      id: "m_reply_" + Date.now(),
+      sender: replySender,
+      text: replyText,
+      time: "Just now",
+      isHuman: !isBotReply,
+      isBot: isBotReply,
+      isSignal: true
+    });
+    renderDelegateChat();
+  }, 1200);
 }
 
 function toggleSignalOnly(val) {

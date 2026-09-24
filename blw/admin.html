@@ -878,6 +878,13 @@
       }
     });
 
+    window.addEventListener("hashchange", () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash === "delegate" || hash === "triage" || hash === "workflows") {
+        switchAdminTab(hash);
+      }
+    });
+
     function switchAdminTab(tabName) {
       const wTab = document.getElementById("adminWorkflowsTab");
       const tTab = document.getElementById("adminTriageTab");
