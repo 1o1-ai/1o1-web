@@ -681,11 +681,11 @@ function showTourStepUI() {
   if (!overlay) return;
 
   const steps = [
-    { title: "Step 1: 186 Messages Became 7 Decisions", text: "Delegate reviews all authorized BLW WhatsApp groups and extracts only what requires Aditya's attention.", action: () => setDelegateViewMode("briefing") },
+    { title: "Step 1: 186 Messages Became 7 Decisions", text: "Delegate reviews all authorized BLW WhatsApp groups and extracts only what requires Aditya's attention.", action: () => { setDelegateViewMode("briefing"); } },
     { title: "Step 2: Signal Only Noise Compression", text: "In any thread, click 'Signal Only' to hide greetings and 'noted' chatter, keeping only key facts and decisions.", action: () => { setDelegateViewMode("workspace"); selectDelegateGroup("g2"); } },
-    { title: "Step 3: Source-Backed Suggested Replies", text: "Adityam drafts responses in Aditya's style and backs every fact with operational sources (Production Board, QA Plan).", action: () => selectDelegateGroup("g8"); },
-    { title: "Step 4: Safety & Risk Boundaries", text: "High-risk messages (Quality complaints, delivery commitments) are held for human approval. Low-risk document requests are handled safely.", action: () => selectDelegateGroup("g9"); },
-    { title: "Step 5: Full Control & Audit Trail", text: "Aditya retains complete control with Approve, Edit, Delegate, Pause, and complete Audit timeline visibility.", action: () => setIntelTab("audit"); }
+    { title: "Step 3: Source-Backed Suggested Replies", text: "Adityam drafts responses in Aditya's style and backs every fact with operational sources (Production Board, QA Plan).", action: () => { selectDelegateGroup("g8"); } },
+    { title: "Step 4: Safety & Risk Boundaries", text: "High-risk messages (Quality complaints, delivery commitments) are held for human approval. Low-risk document requests are handled safely.", action: () => { selectDelegateGroup("g9"); } },
+    { title: "Step 5: Full Control & Audit Trail", text: "Aditya retains complete control with Approve, Edit, Delegate, Pause, and complete Audit timeline visibility.", action: () => { setIntelTab("audit"); } }
   ];
 
   const current = steps[delegateState.tourStep - 1];
