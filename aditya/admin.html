@@ -1029,7 +1029,11 @@
       if (saved) {
         try {
           const parsed = JSON.parse(saved);
-          Object.assign(WORKFLOW_TEMPLATES, parsed);
+          Object.keys(parsed).forEach(key => {
+            if (Array.isArray(parsed[key]?.nodes) && parsed[key].nodes.length > 0) {
+              WORKFLOW_TEMPLATES[key] = parsed[key];
+            }
+          });
         } catch(e) {
           console.warn("Failed loading custom templates from localStorage", e);
         }
