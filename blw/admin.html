@@ -1062,12 +1062,13 @@
       document.getElementById("editNodeChecklist").value = (node.checklist || []).join("\n");
       document.getElementById("editNodeDoc").value = node.doc || "";
 
-      document.getElementById("nodeConfigModal").style.display = "flex";
+      const modal = document.getElementById("nodeConfigModal");
+      if (modal) modal.classList.add("open");
     }
 
     function closeNodeConfigModal() {
       const modal = document.getElementById("nodeConfigModal");
-      if (modal) modal.style.display = "none";
+      if (modal) modal.classList.remove("open");
     }
 
     function saveNodeConfig(e) {
