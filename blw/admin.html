@@ -1029,13 +1029,20 @@
       if (saved) {
         try {
           const parsed = JSON.parse(saved);
+          let validKeys = 0;
           Object.keys(parsed).forEach(key => {
-            if (Array.isArray(parsed[key]?.nodes) && parsed[key].nodes.length > 0) {
+            if (WORKFLOW_TEMPLATES[key] && Array.isArray(parsed[key]?.nodes) && parsed[key].nodes.length >= 3) {
               WORKFLOW_TEMPLATES[key] = parsed[key];
+              validKeys++;
             }
           });
+          if (validKeys === 0) {
+            console.warn("Invalid localStorage workflow template state detected. Auto-clearing.");
+            localStorage.removeItem('BLW_WORKFLOW_TEMPLATES');
+          }
         } catch(e) {
-          console.warn("Failed loading custom templates from localStorage", e);
+          console.warn("Corrupt JSON in BLW_WORKFLOW_TEMPLATES localStorage. Resetting.", e);
+          localStorage.removeItem('BLW_WORKFLOW_TEMPLATES');
         }
       }
     }
@@ -1228,7 +1235,16 @@
     }
 
     function loadSelectedWorkflowTemplate() {
-      currentTemplateId = document.getElementById("workflowTemplateSelect").value;
+      const selectEl = document.getElementById("workflowTemplateSelect");
+      if (selectEl && selectEl.value) {
+        currentTemplateId = selectEl.value;
+      }
+      if (!WORKFLOW_TEMPLATES[currentTemplateId] || !Array.isArray(WORKFLOW_TEMPLATES[currentTemplateId].nodes) || WORKFLOW_TEMPLATES[currentTemplateId].nodes.length === 0) {
+        console.warn("Template missing or empty. Restoring default pre-packaged templates.");
+        localStorage.removeItem('BLW_WORKFLOW_TEMPLATES');
+        location.reload();
+        return;
+      }
       renderCanvasNodes();
       renderListViewTable();
       closeNodeDetailPanel();
