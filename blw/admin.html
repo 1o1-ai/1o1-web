@@ -174,8 +174,9 @@
         </div>
 
         <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
-          <button class="btn btn-primary btn-sm" id="btnFollowSampleOrder" onclick="runSampleOrderSimulation()"><i class="fa-solid fa-play"></i> Follow Sample Order (BLW-RFQ-2026-9041)</button>
-          <button class="btn btn-outline btn-sm" onclick="exportWorkflowConfig()"><i class="fa-solid fa-download"></i> Export Config JSON</button>
+          <button class="btn btn-primary btn-sm" id="btnToggleStudioMode" onclick="toggleStudioEditMode()"><i class="fa-solid fa-pen-to-square"></i> Open Studio Mode</button>
+          <button class="btn btn-outline btn-sm" id="btnFollowSampleOrder" onclick="runSampleOrderSimulation()"><i class="fa-solid fa-play"></i> Follow Sample Order</button>
+          <button class="btn btn-outline btn-sm" onclick="exportWorkflowConfig()"><i class="fa-solid fa-download"></i> Export JSON</button>
           <button class="btn btn-outline btn-sm" onclick="resetWorkflowCanvas()"><i class="fa-solid fa-rotate-left"></i> Reset Canvas</button>
           <button class="btn btn-secondary btn-sm" id="btnToggleGraphList" onclick="toggleGraphListView()"><i class="fa-solid fa-list"></i> Task List View</button>
           
@@ -189,6 +190,61 @@
 
       <!-- CANVAS GRAPH VIEW -->
       <div class="n8n-canvas-wrapper" id="n8nGraphView">
+        <!-- CAMUNDA / TIBCO STUDIO PALETTE PANEL -->
+        <div class="n8n-studio-palette" id="n8nStudioPalette">
+          <div style="padding:0.75rem 1rem; background:var(--bg-subtle); border-bottom:1px solid var(--border-color); display:flex; justify-content:space-between; align-items:center;">
+            <strong style="font-size:0.85rem; color:var(--text-main);"><i class="fa-solid fa-shapes text-primary"></i> Studio Palette</strong>
+            <span style="font-size:0.65rem; color:var(--text-muted); font-weight:700; font-family:var(--font-mono);">ZERO-CODE BPMN</span>
+          </div>
+
+          <div class="palette-category-title">1. Events & Triggers</div>
+          <div class="palette-item" onclick="addNodeFromPalette('trigger', 'Public RFQ Basket Ingest', 'Sales Ops / Web Ingest', 'Rule-Based', 'exec-rule')">
+            <div class="palette-item-icon palette-icon-trigger"><i class="fa-solid fa-cloud-arrow-down"></i></div>
+            <span>Public RFQ Ingest</span>
+          </div>
+          <div class="palette-item" onclick="addNodeFromPalette('trigger', 'WhatsApp Message Event', 'Delegate Copilot', 'Rule-Based', 'exec-rule')">
+            <div class="palette-item-icon palette-icon-trigger"><i class="fa-brands fa-whatsapp"></i></div>
+            <span>WhatsApp Event Ingest</span>
+          </div>
+          <div class="palette-item" onclick="addNodeFromPalette('trigger', 'ERP Inventory Alert', 'PPC / Stock System', 'Rule-Based', 'exec-rule')">
+            <div class="palette-item-icon palette-icon-trigger"><i class="fa-solid fa-boxes-stacked"></i></div>
+            <span>ERP Stock Event</span>
+          </div>
+
+          <div class="palette-category-title">2. Human Approval & Tasks</div>
+          <div class="palette-item" onclick="addNodeFromPalette('task', 'Valvetrain Engineering Review', 'Lead Engineer', 'Approval Required', 'exec-approval')">
+            <div class="palette-item-icon palette-icon-task"><i class="fa-solid fa-microscope"></i></div>
+            <span>Technical Eng Review</span>
+          </div>
+          <div class="palette-item" onclick="addNodeFromPalette('task', 'QC Nitriding Lab Inspection', 'QC Supervisor', 'Manual Task', 'exec-manual')">
+            <div class="palette-item-icon palette-icon-task"><i class="fa-solid fa-flask-vial"></i></div>
+            <span>QC Lab Sign-off</span>
+          </div>
+          <div class="palette-item" onclick="addNodeFromPalette('task', 'Manual Pricing & Terms', 'Export Sales Mgr', 'Approval Required', 'exec-approval')">
+            <div class="palette-item-icon palette-icon-task"><i class="fa-solid fa-calculator"></i></div>
+            <span>Manual Pricing Input</span>
+          </div>
+
+          <div class="palette-category-title">3. AI & Rule Engine</div>
+          <div class="palette-item" onclick="addNodeFromPalette('ai', 'Adityam Auto-Quote Generator', 'Adityam AI Copilot', 'AI Auto-Pilot', 'exec-rule')">
+            <div class="palette-item-icon palette-icon-ai"><i class="fa-solid fa-robot"></i></div>
+            <span>Adityam Auto-Quote</span>
+          </div>
+          <div class="palette-item" onclick="addNodeFromPalette('ai', 'Phytosanitary Doc Auto-Matcher', 'Adityam AI Copilot', 'AI Auto-Pilot', 'exec-rule')">
+            <div class="palette-item-icon palette-icon-ai"><i class="fa-solid fa-shield-cat"></i></div>
+            <span>Doc Auto-Matcher</span>
+          </div>
+
+          <div class="palette-category-title">4. End & Gateway Gates</div>
+          <div class="palette-item" onclick="addNodeFromPalette('end', 'Export Order Dispatched', 'Plant Logistics', 'Manual Task', 'exec-manual')">
+            <div class="palette-item-icon palette-icon-end"><i class="fa-solid fa-truck-fast"></i></div>
+            <span>Export Dispatched</span>
+          </div>
+          <div class="palette-item" onclick="addNodeFromPalette('end', 'Director Escalation Gate', 'Export Director', 'Approval Required', 'exec-approval')">
+            <div class="palette-item-icon palette-icon-end"><i class="fa-solid fa-user-shield"></i></div>
+            <span>Director Escalation</span>
+          </div>
+        </div>
         <!-- CANVAS VIEWPORT -->
         <div class="n8n-canvas-viewport" id="n8nViewport">
           <div class="n8n-canvas-area" id="n8nCanvasArea">
@@ -869,6 +925,103 @@
     let selectedNodeId = null;
     let isSimulating = false;
     let isGraphView = true;
+    let isStudioEditMode = false;
+    let connectingFromNodeId = null;
+
+    function toggleStudioEditMode() {
+      isStudioEditMode = !isStudioEditMode;
+      const btn = document.getElementById("btnToggleStudioMode");
+      const palette = document.getElementById("n8nStudioPalette");
+
+      if (isStudioEditMode) {
+        if (btn) {
+          btn.innerHTML = `<i class="fa-solid fa-check"></i> Close Studio Mode`;
+          btn.className = "btn btn-secondary btn-sm";
+        }
+        if (palette) palette.classList.add("open");
+      } else {
+        if (btn) {
+          btn.innerHTML = `<i class="fa-solid fa-pen-to-square"></i> Open Studio Mode`;
+          btn.className = "btn btn-primary btn-sm";
+        }
+        if (palette) palette.classList.remove("open");
+        connectingFromNodeId = null;
+      }
+      renderCanvasNodes();
+    }
+
+    function addNodeFromPalette(category, title, role, execMode, execClass) {
+      const template = WORKFLOW_TEMPLATES[currentTemplateId];
+      if (!template) return;
+
+      const newId = `n_custom_${Date.now()}`;
+      const stepNum = template.nodes.length + 1;
+
+      let lastX = 50;
+      let lastY = 160;
+      if (template.nodes.length > 0) {
+        const lastNode = template.nodes[template.nodes.length - 1];
+        lastX = lastNode.x + 290;
+        lastY = lastNode.y;
+      }
+
+      const newNode = {
+        id: newId,
+        stepNum: stepNum,
+        title: `${stepNum}. ${title}`,
+        role: role,
+        execMode: execMode,
+        execClass: execClass,
+        status: "idle",
+        statusLabel: "New Custom Step",
+        waitTime: "15 min",
+        x: lastX,
+        y: lastY,
+        inputs: ["Custom Workflow Input Signal"],
+        outputs: ["Custom Output Record"],
+        checklist: ["Verify step requirements", "Approve execution"],
+        doc: "Custom-Process-Spec.pdf",
+        history: [`${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} • Created in Zero-Code Studio`]
+      };
+
+      template.nodes.push(newNode);
+
+      if (template.nodes.length > 1) {
+        const prevNode = template.nodes[template.nodes.length - 2];
+        template.connections.push({ from: prevNode.id, to: newId, active: true });
+      }
+
+      localStorage.setItem('BLW_WORKFLOW_TEMPLATES', JSON.stringify(WORKFLOW_TEMPLATES));
+
+      renderCanvasNodes();
+      selectCanvasNode(newId);
+    }
+
+    function startConnectNodes(e, fromId) {
+      if (e) e.stopPropagation();
+      connectingFromNodeId = fromId;
+      const fromNode = WORKFLOW_TEMPLATES[currentTemplateId].nodes.find(n => n.id === fromId);
+      alert(`LINKING MODE ACTIVE: Click any target node on the canvas to link it to "${fromNode ? fromNode.title : fromId}".`);
+    }
+
+    function deleteCanvasNode(e, nodeId) {
+      if (e) e.stopPropagation();
+      const template = WORKFLOW_TEMPLATES[currentTemplateId];
+      if (!template) return;
+
+      const nodeIndex = template.nodes.findIndex(n => n.id === nodeId);
+      if (nodeIndex === -1) return;
+
+      const title = template.nodes[nodeIndex].title;
+      if (confirm(`Delete workflow step "${title}"?`)) {
+        template.nodes.splice(nodeIndex, 1);
+        template.connections = template.connections.filter(c => c.from !== nodeId && c.to !== nodeId);
+
+        localStorage.setItem('BLW_WORKFLOW_TEMPLATES', JSON.stringify(WORKFLOW_TEMPLATES));
+        closeNodeDetailPanel();
+        renderCanvasNodes();
+      }
+    }
 
     function loadSavedWorkflowTemplates() {
       const saved = localStorage.getItem('BLW_WORKFLOW_TEMPLATES');
@@ -1076,6 +1229,12 @@
               <span class="status-pill st-${node.status === 'completed' ? 'quoted' : (node.status === 'active' || node.status === 'waiting' ? 'review' : 'new')}">${node.statusLabel || node.status}</span>
               <span style="color:var(--text-muted);"><i class="fa-regular fa-clock"></i> ${node.waitTime || 'N/A'}</span>
             </div>
+            ${isStudioEditMode ? `
+              <div class="node-studio-actions">
+                <button class="node-action-btn" onclick="startConnectNodes(event, '${node.id}')" title="Link to another node"><i class="fa-solid fa-link"></i> Link</button>
+                <button class="node-action-btn" style="color:#dc2626;" onclick="deleteCanvasNode(event, '${node.id}')" title="Delete step"><i class="fa-solid fa-trash-can"></i> Delete</button>
+              </div>
+            ` : ''}
           </div>
         `;
         area.appendChild(div);
@@ -1107,8 +1266,23 @@
     }
 
     function selectCanvasNode(nodeId) {
-      selectedNodeId = nodeId;
       const template = WORKFLOW_TEMPLATES[currentTemplateId];
+
+      if (connectingFromNodeId && connectingFromNodeId !== nodeId) {
+        const exists = template.connections.some(c => c.from === connectingFromNodeId && c.to === nodeId);
+        if (!exists) {
+          template.connections.push({ from: connectingFromNodeId, to: nodeId, active: true });
+          localStorage.setItem('BLW_WORKFLOW_TEMPLATES', JSON.stringify(WORKFLOW_TEMPLATES));
+        }
+        const fromNode = template.nodes.find(n => n.id === connectingFromNodeId);
+        const toNode = template.nodes.find(n => n.id === nodeId);
+        connectingFromNodeId = null;
+        renderCanvasNodes();
+        alert(`CONNECTED STEPS:\n"${fromNode ? fromNode.title : 'Step'}" ➔ "${toNode ? toNode.title : 'Step'}"`);
+        return;
+      }
+
+      selectedNodeId = nodeId;
       const node = template.nodes.find(n => n.id === nodeId);
       if (!node) return;
 
