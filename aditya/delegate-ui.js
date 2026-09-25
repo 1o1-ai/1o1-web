@@ -623,25 +623,39 @@ function resetDelegateDemo() {
 
 function openAdityaStyleProfile() {
   const modal = document.getElementById("adityaStyleModal");
-  if (modal) modal.classList.add("open");
-  else alert("👑 ADITYA STYLE PROFILE\n\nStyle Match: 87%\nReviewed Drafts: 84\nApproved without edit: 68\n\nGuidelines:\n- Concise & decisive\n- Professional but warm with customers\n- Never promise unconfirmed dates\n- English for external, Hinglish for internal");
+  if (modal) {
+    modal.classList.add("open");
+    modal.style.display = "flex";
+  } else {
+    alert("👑 ADITYA STYLE PROFILE\n\nStyle Match: 87%\nReviewed Drafts: 84\nApproved without edit: 68\n\nGuidelines:\n- Concise & decisive\n- Professional but warm with customers\n- Never promise unconfirmed dates\n- English for external, Hinglish for internal");
+  }
 }
 
 function closeAdityaStyleProfile() {
   const modal = document.getElementById("adityaStyleModal");
-  if (modal) modal.classList.remove("open");
+  if (modal) {
+    modal.classList.remove("open");
+    modal.style.display = "none";
+  }
 }
 
 function openAutomationRulesModal() {
   loadAutonomyPolicies();
   const modal = document.getElementById("automationRulesModal");
-  if (modal) modal.classList.add("open");
-  else alert("⚙️ AUTOMATION RULES & AUTONOMY BOUNDARIES\n\nPermitted Auto-Actions:\n- Approved Document Delivery (Active)\n- Order Tracking Link Dispatch (Active)\n\nStrictly Prohibited Auto-Actions:\n- Pricing & Discount Negotiation\n- Delivery Commitments\n- Quality Liability Statements");
+  if (modal) {
+    modal.classList.add("open");
+    modal.style.display = "flex";
+  } else {
+    alert("⚙️ AUTOMATION RULES & AUTONOMY BOUNDARIES\n\nPermitted Auto-Actions:\n- Approved Document Delivery (Active)\n- Order Tracking Link Dispatch (Active)\n\nStrictly Prohibited Auto-Actions:\n- Pricing & Discount Negotiation\n- Delivery Commitments\n- Quality Liability Statements");
+  }
 }
 
 function closeAutomationRulesModal() {
   const modal = document.getElementById("automationRulesModal");
-  if (modal) modal.classList.remove("open");
+  if (modal) {
+    modal.classList.remove("open");
+    modal.style.display = "none";
+  }
 }
 
 function loadAutonomyPolicies() {

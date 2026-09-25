@@ -1036,39 +1036,67 @@
     }
 
     function openNodeConfigModal(nodeId) {
-      const template = WORKFLOW_TEMPLATES[currentTemplateId];
-      if (!template) return;
-      const node = template.nodes.find(n => n.id === nodeId);
-      if (!node) return;
-
-      document.getElementById("editNodeId").value = node.id;
-      document.getElementById("editNodeTitle").value = node.title || "";
-      document.getElementById("editNodeRole").value = node.role || "";
-      
-      const select = document.getElementById("editNodeExecMode");
-      if (select) {
-        let found = false;
-        for (let opt of select.options) {
-          if (opt.value.startsWith(node.execMode)) {
-            opt.selected = true;
-            found = true;
-            break;
-          }
+      try {
+        const targetId = nodeId || selectedNodeId;
+        const template = WORKFLOW_TEMPLATES[currentTemplateId];
+        if (!template) {
+          alert("No active workflow template loaded.");
+          return;
         }
-        if (!found) select.selectedIndex = 0;
+        const node = template.nodes.find(n => n.id === targetId);
+        if (!node) {
+          alert("Please select a workflow step on the canvas first.");
+          return;
+        }
+
+        const idEl = document.getElementById("editNodeId");
+        if (idEl) idEl.value = node.id;
+        
+        const titleEl = document.getElementById("editNodeTitle");
+        if (titleEl) titleEl.value = node.title || "";
+        
+        const roleEl = document.getElementById("editNodeRole");
+        if (roleEl) roleEl.value = node.role || "";
+        
+        const select = document.getElementById("editNodeExecMode");
+        if (select) {
+          let found = false;
+          for (let opt of select.options) {
+            if (opt.value.startsWith(node.execMode)) {
+              opt.selected = true;
+              found = true;
+              break;
+            }
+          }
+          if (!found) select.selectedIndex = 0;
+        }
+
+        const slaEl = document.getElementById("editNodeSLA");
+        if (slaEl) slaEl.value = node.waitTime || "15 min";
+        
+        const checklistEl = document.getElementById("editNodeChecklist");
+        if (checklistEl) checklistEl.value = (node.checklist || []).join("\n");
+        
+        const docEl = document.getElementById("editNodeDoc");
+        if (docEl) docEl.value = node.doc || "";
+
+        const modal = document.getElementById("nodeConfigModal");
+        if (modal) {
+          modal.classList.add("open");
+          modal.style.display = "flex";
+        }
+      } catch (err) {
+        console.error("Error opening node config modal:", err);
+        alert("Error opening node configuration: " + err.message);
       }
-
-      document.getElementById("editNodeSLA").value = node.waitTime || "15 min";
-      document.getElementById("editNodeChecklist").value = (node.checklist || []).join("\n");
-      document.getElementById("editNodeDoc").value = node.doc || "";
-
-      const modal = document.getElementById("nodeConfigModal");
-      if (modal) modal.classList.add("open");
     }
 
     function closeNodeConfigModal() {
       const modal = document.getElementById("nodeConfigModal");
-      if (modal) modal.classList.remove("open");
+      if (modal) {
+        modal.classList.remove("open");
+        modal.style.display = "none";
+      }
     }
 
     function saveNodeConfig(e) {
