@@ -633,6 +633,7 @@ function closeAdityaStyleProfile() {
 }
 
 function openAutomationRulesModal() {
+  loadAutonomyPolicies();
   const modal = document.getElementById("automationRulesModal");
   if (modal) modal.classList.add("open");
   else alert("⚙️ AUTOMATION RULES & AUTONOMY BOUNDARIES\n\nPermitted Auto-Actions:\n- Approved Document Delivery (Active)\n- Order Tracking Link Dispatch (Active)\n\nStrictly Prohibited Auto-Actions:\n- Pricing & Discount Negotiation\n- Delivery Commitments\n- Quality Liability Statements");
@@ -641,6 +642,85 @@ function openAutomationRulesModal() {
 function closeAutomationRulesModal() {
   const modal = document.getElementById("automationRulesModal");
   if (modal) modal.classList.remove("open");
+}
+
+function loadAutonomyPolicies() {
+  const saved = localStorage.getItem('BLW_AUTONOMY_POLICIES');
+  if (!saved) return;
+  try {
+    const p = JSON.parse(saved);
+    if (document.getElementById("pol_mtc")) document.getElementById("pol_mtc").checked = p.mtc !== false;
+    if (document.getElementById("pol_gps")) document.getElementById("pol_gps").checked = p.gps !== false;
+    if (document.getElementById("pol_phyto")) document.getElementById("pol_phyto").checked = p.phyto !== false;
+    if (document.getElementById("pol_ack")) document.getElementById("pol_ack").checked = p.ack !== false;
+    if (document.getElementById("pol_discount_ceiling")) document.getElementById("pol_discount_ceiling").value = p.discountCeiling || "5";
+  } catch(e) {
+    console.warn("Could not load autonomy policies", e);
+  }
+}
+
+function saveAutonomyPolicies(e) {
+  if (e) e.preventDefault();
+  const policies = {
+    mtc: document.getElementById("pol_mtc") ? document.getElementById("pol_mtc").checked : true,
+    gps: document.getElementById("pol_gps") ? document.getElementById("pol_gps").checked : true,
+    phyto: document.getElementById("pol_phyto") ? document.getElementById("pol_phyto").checked : true,
+    ack: document.getElementById("pol_ack") ? document.getElementById("pol_ack").checked : true,
+    discountCeiling: document.getElementById("pol_discount_ceiling") ? document.getElementById("pol_discount_ceiling").value : "5"
+  };
+
+  localStorage.setItem('BLW_AUTONOMY_POLICIES', JSON.stringify(policies));
+  closeAutomationRulesModal();
+
+  applyAutonomyPolicyToGroups(policies);
+}
+
+function applyAutonomyPolicyToGroups(policies) {
+  if (!delegateState || !delegateState.groups) return;
+
+  const g5 = delegateState.groups.find(g => g.id === "g5");
+  if (g5) {
+    if (!policies.gps) {
+      g5.state = "Supervised";
+      g5.stateClass = "st-supervised";
+      g5.intel.decisionNeeded = "Held for review: Consignment GPS auto-dispatch disabled in Autonomy Policy.";
+    } else {
+      g5.state = "Auto-approved";
+      g5.stateClass = "st-auto";
+      g5.intel.decisionNeeded = "Automated under 'Tracking Updates' policy.";
+    }
+  }
+
+  const g10 = delegateState.groups.find(g => g.id === "g10");
+  if (g10) {
+    if (!policies.mtc) {
+      g10.state = "Supervised";
+      g10.stateClass = "st-supervised";
+      g10.intel.decisionNeeded = "Held for review: Material Certificate auto-dispatch disabled in Autonomy Policy.";
+    } else {
+      g10.state = "Auto-approved";
+      g10.stateClass = "st-auto";
+      g10.intel.decisionNeeded = "Automated under 'Approved Documents' policy.";
+    }
+  }
+
+  const g12 = delegateState.groups.find(g => g.id === "g12");
+  if (g12) {
+    if (!policies.phyto) {
+      g12.state = "Supervised";
+      g12.stateClass = "st-supervised";
+      g12.intel.decisionNeeded = "Held for review: Phytosanitary Certificate auto-dispatch disabled in Autonomy Policy.";
+    } else {
+      g12.state = "Auto-approved";
+      g12.stateClass = "st-auto";
+      g12.intel.decisionNeeded = "Automated under 'Approved Phytosanitary Documents' policy.";
+    }
+  }
+
+  renderDelegateGroups();
+  renderDelegateIntel();
+  renderDelegateChat();
+  showDelegateToast("🛡️ Autonomy Policy updated! Group automation states re-evaluated.");
 }
 
 function revokeAutonomy(groupId) {

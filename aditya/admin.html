@@ -175,6 +175,7 @@
 
         <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
           <button class="btn btn-primary btn-sm" id="btnFollowSampleOrder" onclick="runSampleOrderSimulation()"><i class="fa-solid fa-play"></i> Follow Sample Order (BLW-RFQ-2026-9041)</button>
+          <button class="btn btn-outline btn-sm" onclick="exportWorkflowConfig()"><i class="fa-solid fa-download"></i> Export Config JSON</button>
           <button class="btn btn-outline btn-sm" onclick="resetWorkflowCanvas()"><i class="fa-solid fa-rotate-left"></i> Reset Canvas</button>
           <button class="btn btn-secondary btn-sm" id="btnToggleGraphList" onclick="toggleGraphListView()"><i class="fa-solid fa-list"></i> Task List View</button>
           
@@ -869,7 +870,110 @@
     let isSimulating = false;
     let isGraphView = true;
 
+    function loadSavedWorkflowTemplates() {
+      const saved = localStorage.getItem('BLW_WORKFLOW_TEMPLATES');
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          Object.assign(WORKFLOW_TEMPLATES, parsed);
+        } catch(e) {
+          console.warn("Failed loading custom templates from localStorage", e);
+        }
+      }
+    }
+
+    function openNodeConfigModal(nodeId) {
+      const template = WORKFLOW_TEMPLATES[currentTemplateId];
+      if (!template) return;
+      const node = template.nodes.find(n => n.id === nodeId);
+      if (!node) return;
+
+      document.getElementById("editNodeId").value = node.id;
+      document.getElementById("editNodeTitle").value = node.title || "";
+      document.getElementById("editNodeRole").value = node.role || "";
+      
+      const select = document.getElementById("editNodeExecMode");
+      if (select) {
+        let found = false;
+        for (let opt of select.options) {
+          if (opt.value.startsWith(node.execMode)) {
+            opt.selected = true;
+            found = true;
+            break;
+          }
+        }
+        if (!found) select.selectedIndex = 0;
+      }
+
+      document.getElementById("editNodeSLA").value = node.waitTime || "15 min";
+      document.getElementById("editNodeChecklist").value = (node.checklist || []).join("\n");
+      document.getElementById("editNodeDoc").value = node.doc || "";
+
+      document.getElementById("nodeConfigModal").style.display = "flex";
+    }
+
+    function closeNodeConfigModal() {
+      const modal = document.getElementById("nodeConfigModal");
+      if (modal) modal.style.display = "none";
+    }
+
+    function saveNodeConfig(e) {
+      if (e) e.preventDefault();
+      const nodeId = document.getElementById("editNodeId").value;
+      const template = WORKFLOW_TEMPLATES[currentTemplateId];
+      if (!template) return;
+
+      const node = template.nodes.find(n => n.id === nodeId);
+      if (!node) return;
+
+      const execVal = document.getElementById("editNodeExecMode").value;
+      const parts = execVal.split("|");
+      const execMode = parts[0];
+      const execClass = parts[1] || "exec-manual";
+
+      node.title = document.getElementById("editNodeTitle").value;
+      node.role = document.getElementById("editNodeRole").value;
+      node.execMode = execMode;
+      node.execClass = execClass;
+      node.waitTime = document.getElementById("editNodeSLA").value;
+      node.doc = document.getElementById("editNodeDoc").value;
+
+      const checklistText = document.getElementById("editNodeChecklist").value;
+      node.checklist = checklistText.split("\n").map(s => s.trim()).filter(Boolean);
+
+      if (!node.history) node.history = [];
+      const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+      node.history.unshift(`${timeStr} • Configuration updated by user in Node Editor`);
+
+      localStorage.setItem('BLW_WORKFLOW_TEMPLATES', JSON.stringify(WORKFLOW_TEMPLATES));
+
+      closeNodeConfigModal();
+      renderCanvasNodes();
+      selectCanvasNode(nodeId);
+
+      alert(`Workflow Node "${node.title}" updated successfully! Saved to workflow configuration.`);
+    }
+
+    function resetWorkflowCanvas() {
+      if (confirm("Reset current workflow template configuration to defaults?")) {
+        localStorage.removeItem('BLW_WORKFLOW_TEMPLATES');
+        location.reload();
+      }
+    }
+
+    function exportWorkflowConfig() {
+      const template = WORKFLOW_TEMPLATES[currentTemplateId];
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(template, null, 2));
+      const anchor = document.createElement('a');
+      anchor.setAttribute("href", dataStr);
+      anchor.setAttribute("download", `BLW_Workflow_${currentTemplateId}_Config.json`);
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
+      loadSavedWorkflowTemplates();
       loadSelectedWorkflowTemplate();
       renderTriageStreamData();
       const hash = window.location.hash.replace('#', '');
@@ -1021,6 +1125,10 @@
       sub.innerText = `Role: ${node.role} • Exec: ${node.execMode}`;
 
       body.innerHTML = `
+        <div style="margin-bottom:0.85rem;">
+          <button class="btn btn-primary btn-sm btn-full" onclick="openNodeConfigModal('${node.id}')"><i class="fa-solid fa-sliders"></i> Configure Node Properties & Rules</button>
+        </div>
+
         <div>
           <div class="n8n-detail-section-title"><i class="fa-solid fa-gear"></i> Execution Profile (Sample)</div>
           <div style="background:var(--bg-subtle); padding:0.85rem; border-radius:6px; font-size:0.825rem; border:1px solid var(--border-color);">
@@ -1432,33 +1540,135 @@
 
   <!-- MODAL: AUTOMATION RULES & AUTONOMY BOUNDARIES -->
   <div class="modal-overlay" id="automationRulesModal">
-    <div class="modal-card">
+    <div class="modal-card" style="max-width:560px;">
       <button class="modal-close-btn" onclick="closeAutomationRulesModal()"><i class="fa-solid fa-xmark"></i></button>
-      <h3 style="font-size:1.15rem; font-weight:800; color:var(--text-main); margin-bottom:0.5rem;"><i class="fa-solid fa-shield-halved text-primary"></i> Autonomy Rules & Safety Boundaries</h3>
-      <p style="font-size:0.825rem; color:var(--text-muted); margin-bottom:1rem;">Configured permissions for automated response dispatch.</p>
+      <h3 style="font-size:1.15rem; font-weight:800; color:var(--text-main); margin-bottom:0.4rem;">
+        <i class="fa-solid fa-shield-halved text-primary"></i> Autonomy Rules & Policy Configuration
+      </h3>
+      <p style="font-size:0.825rem; color:var(--text-muted); margin-bottom:1rem;">
+        Configure permissions and safety threshold boundaries for automated response dispatches by Adityam.
+      </p>
 
-      <div style="background:#ecfdf5; border:1px solid #a7f3d0; padding:0.85rem; border-radius:6px; margin-bottom:1rem; font-size:0.825rem; color:#065f46;">
-        <strong><i class="fa-solid fa-circle-check"></i> Permitted Automatic Intent Dispatches:</strong>
-        <ul style="margin:0.4rem 0 0; padding-left:1.25rem;">
-          <li>Approved Material Test Certificates (e.g. Meridian Spares)</li>
-          <li>Consignment GPS tracking updates (e.g. Logistics)</li>
-          <li>Acknowledgement of non-critical receipt</li>
-        </ul>
-      </div>
+      <form id="autonomyPoliciesForm" onsubmit="saveAutonomyPolicies(event)">
+        <div style="background:#ecfdf5; border:1px solid #a7f3d0; padding:0.85rem; border-radius:6px; margin-bottom:1rem; font-size:0.825rem; color:#065f46;">
+          <strong style="display:block; margin-bottom:0.4rem;"><i class="fa-solid fa-circle-check"></i> Permitted Automated Response Intent Dispatches:</strong>
+          <div style="display:flex; flex-direction:column; gap:0.4rem;">
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+              <input type="checkbox" id="pol_mtc" checked>
+              <span>Material Test Certificates (MTC / Chemical Analysis)</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+              <input type="checkbox" id="pol_gps" checked>
+              <span>Consignment Departure & Live GPS Tracking Links</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+              <input type="checkbox" id="pol_phyto" checked>
+              <span>ISPM-15 Wooden Pallet Phytosanitary Certificates</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+              <input type="checkbox" id="pol_ack" checked>
+              <span>Non-Critical Receipt Acknowledgements & Greetings</span>
+            </label>
+          </div>
+        </div>
 
-      <div style="background:#fef2f2; border:1px solid #fecaca; padding:0.85rem; border-radius:6px; margin-bottom:1.25rem; font-size:0.825rem; color:#991b1b;">
-        <strong><i class="fa-solid fa-ban"></i> Strictly Prohibited Automatic Actions (Mandatory Human Sign-off):</strong>
-        <ul style="margin:0.4rem 0 0; padding-left:1.25rem;">
-          <li>Pricing & discount negotiation</li>
-          <li>Delivery date commitments</li>
-          <li>Quality complaint admissions or liability statements</li>
-          <li>Payment & overdue disputes</li>
-        </ul>
-      </div>
+        <div style="background:#fef2f2; border:1px solid #fecaca; padding:0.85rem; border-radius:6px; margin-bottom:1rem; font-size:0.825rem; color:#991b1b;">
+          <strong style="display:block; margin-bottom:0.4rem;"><i class="fa-solid fa-ban"></i> Strictly Prohibited Automatic Actions (Mandatory Human Sign-off):</strong>
+          <div style="display:flex; flex-direction:column; gap:0.4rem;">
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+              <input type="checkbox" id="pol_pricing" checked disabled>
+              <span>Pricing & Commercial Quotations (Human Sign-off Mandatory)</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+              <input type="checkbox" id="pol_dates" checked disabled>
+              <span>Unconfirmed Delivery Date Commitments</span>
+            </label>
+            <label style="display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
+              <input type="checkbox" id="pol_qa_complaint" checked disabled>
+              <span>Quality Complaint Admissions or Financial Liability</span>
+            </label>
+          </div>
+        </div>
 
-      <div style="display:flex; justify-content:flex-end;">
-        <button class="btn btn-secondary btn-sm" onclick="closeAutomationRulesModal()">Close</button>
-      </div>
+        <div style="background:var(--bg-subtle); border:1px solid var(--border-color); padding:0.85rem; border-radius:6px; margin-bottom:1.25rem; font-size:0.825rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; gap:1rem;">
+            <div>
+              <strong style="color:var(--text-main); display:block;">Max Automated Volume Discount Ceiling:</strong>
+              <span style="font-size:0.75rem; color:var(--text-muted);">Quotes exceeding this discount require Export Director sign-off</span>
+            </div>
+            <select id="pol_discount_ceiling" class="calc-input" style="padding:4px 8px; font-size:0.8rem;">
+              <option value="0">0% (No auto discounts allowed)</option>
+              <option value="5" selected>5% (Standard Volume Tier)</option>
+              <option value="10">10% (Director Pre-approved Limit)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:0.5rem;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="closeAutomationRulesModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-floppy-disk"></i> Apply & Save Policy Rules</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: CONFIGURE WORKFLOW NODE -->
+  <div class="modal-overlay" id="nodeConfigModal">
+    <div class="modal-card" style="max-width:550px;">
+      <button class="modal-close-btn" onclick="closeNodeConfigModal()"><i class="fa-solid fa-xmark"></i></button>
+      <h3 style="font-size:1.15rem; font-weight:800; color:var(--text-main); margin-bottom:0.4rem;">
+        <i class="fa-solid fa-sliders text-primary"></i> Configure Workflow Node Properties
+      </h3>
+      <p style="font-size:0.825rem; color:var(--text-muted); margin-bottom:1rem;">
+        Customize owner role, autonomy mode, target SLA, verification checklist, and sample documents.
+      </p>
+
+      <form id="nodeConfigForm" onsubmit="saveNodeConfig(event)">
+        <input type="hidden" id="editNodeId">
+        
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
+          <div>
+            <label style="font-weight:700; font-size:0.8rem; color:var(--text-main); display:block; margin-bottom:3px;">Node Title:</label>
+            <input type="text" id="editNodeTitle" class="calc-input" style="width:100%; padding:6px 10px; font-size:0.825rem;" required>
+          </div>
+          <div>
+            <label style="font-weight:700; font-size:0.8rem; color:var(--text-main); display:block; margin-bottom:3px;">Assigned Role:</label>
+            <input type="text" id="editNodeRole" class="calc-input" style="width:100%; padding:6px 10px; font-size:0.825rem;" required>
+          </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem;">
+          <div>
+            <label style="font-weight:700; font-size:0.8rem; color:var(--text-main); display:block; margin-bottom:3px;">Execution Mode:</label>
+            <select id="editNodeExecMode" class="calc-input" style="width:100%; padding:6px 10px; font-size:0.825rem;">
+              <option value="Approval Required|exec-approval">Approval Required (Human Gate)</option>
+              <option value="Rule-Based|exec-rule">Rule-Based Automation</option>
+              <option value="AI Auto-Pilot|exec-rule">Adityam AI Auto-Pilot</option>
+              <option value="Manual Task|exec-manual">Manual Operations Task</option>
+              <option value="Future Integration|exec-integration">Target ERP/System Integration</option>
+            </select>
+          </div>
+          <div>
+            <label style="font-weight:700; font-size:0.8rem; color:var(--text-main); display:block; margin-bottom:3px;">Avg Wait SLA:</label>
+            <input type="text" id="editNodeSLA" class="calc-input" style="width:100%; padding:6px 10px; font-size:0.825rem;" placeholder="e.g. 15 min, 2 hrs, 1 Day" required>
+          </div>
+        </div>
+
+        <div style="margin-bottom:0.75rem;">
+          <label style="font-weight:700; font-size:0.8rem; color:var(--text-main); display:block; margin-bottom:3px;">Verification Checklist (1 item per line):</label>
+          <textarea id="editNodeChecklist" class="calc-input" style="width:100%; height:75px; padding:6px 10px; font-size:0.8rem; font-family:var(--font-mono); resize:vertical;" placeholder="Check item 1&#10;Check item 2"></textarea>
+        </div>
+
+        <div style="margin-bottom:1.25rem;">
+          <label style="font-weight:700; font-size:0.8rem; color:var(--text-main); display:block; margin-bottom:3px;">Associated Sample Document:</label>
+          <input type="text" id="editNodeDoc" class="calc-input" style="width:100%; padding:6px 10px; font-size:0.825rem;" placeholder="e.g. MTC-Certificate-Sample.pdf">
+        </div>
+
+        <div style="display:flex; justify-content:flex-end; gap:0.5rem;">
+          <button type="button" class="btn btn-secondary btn-sm" onclick="closeNodeConfigModal()">Cancel</button>
+          <button type="submit" class="btn btn-primary btn-sm"><i class="fa-solid fa-floppy-disk"></i> Save Node Configuration</button>
+        </div>
+      </form>
     </div>
   </div>
 
