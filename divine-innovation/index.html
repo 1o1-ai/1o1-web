@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Divine Innovation — CAD-to-BOQ Studio | Yogabrata.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <div id="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo-icon">DI</div>
+        <div>
+          <div class="sidebar-title">Divine Innovation</div>
+          <div class="sidebar-subtitle">CAD-to-BOQ · Yogabrata.com</div>
+        </div>
+      </div>
+      
+      <nav class="sidebar-nav">
+        <div class="nav-item active" data-tab="project">
+          <i class="fa-solid fa-folder-open"></i>
+          <span>1. Project & Files</span>
+        </div>
+        <div class="nav-item" data-tab="upload-cad">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <span>2. Upload CAD & Adobe</span>
+          <span class="badge badge-info" style="margin-left: auto;">New</span>
+        </div>
+        <div class="nav-item" data-tab="drawing">
+          <i class="fa-solid fa-ruler-combined"></i>
+          <span>3. Drawing & Measure</span>
+        </div>
+        <div class="nav-item" data-tab="boq">
+          <i class="fa-solid fa-table-list"></i>
+          <span>4. Bill of Quantities</span>
+        </div>
+        <div class="nav-item" data-tab="admin-bom">
+          <i class="fa-solid fa-calculator"></i>
+          <span>5. Admin BOM & Costing</span>
+        </div>
+        <div class="nav-item" data-tab="compare">
+          <i class="fa-solid fa-code-compare"></i>
+          <span>6. Upload & Compare BOQ</span>
+        </div>
+        <div class="nav-item" data-tab="review">
+          <i class="fa-solid fa-clipboard-check"></i>
+          <span>7. Review & Export</span>
+          <span id="badge-issue-count" class="badge badge-warning" style="margin-left: auto; display: none;">7</span>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div style="margin-bottom: 0.5rem;"><i class="fa-solid fa-user"></i> User: <strong id="sidebar-user-name">Yoga</strong></div>
+        <div>Client: <strong>Divine Innovation / Fusion Pipes</strong></div>
+        <div>Revision: <strong id="sidebar-rev-label">Rev 07</strong></div>
+        <button class="btn btn-secondary btn-sm" id="btn-logout" style="margin-top: 0.75rem; width: 100%;"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <!-- Top Bar -->
+      <header class="top-bar">
+        <div class="top-bar-title" id="page-heading">Divine Innovation — CAD-to-BOQ Studio</div>
+        
+        <!-- Global Pricing Quick Config -->
+        <div style="display: flex; align-items: center; gap: 1rem; font-size: 0.85rem; background: rgba(15, 23, 42, 0.05); padding: 0.4rem 0.8rem; border-radius: 8px;">
+          <div>Misc: <input type="number" id="global-misc-pct" value="10.0" step="0.5" style="width: 55px; padding: 0.2rem; border-radius: 4px; border: 1px solid var(--border-color);">%</div>
+          <div>Margin: <input type="number" id="global-margin-pct" value="30.0" step="0.5" style="width: 55px; padding: 0.2rem; border-radius: 4px; border: 1px solid var(--border-color);">%</div>
+          <button class="btn btn-primary btn-sm" id="btn-apply-global-pricing"><i class="fa-solid fa-check"></i> Apply Pricing</button>
+        </div>
+
+        <div class="top-bar-actions">
+          <button class="btn btn-secondary" id="btn-import-sample">
+            <i class="fa-solid fa-sync"></i> Import Sample
+          </button>
+          <button class="btn btn-accent" id="btn-export-excel-quick">
+            <i class="fa-solid fa-file-excel"></i> Export Excel
+          </button>
+        </div>
+      </header>
+
+      <!-- Content Views -->
+      <div class="content-body">
+        
+        <!-- TAB 1: PROJECT & DOCUMENTS -->
+        <section id="view-project" class="tab-view">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><i class="fa-solid fa-building"></i> Customer Project Summary (Divine Innovation)</div>
+              <span class="badge badge-info" id="proj-status-badge">Loaded</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; font-size: 0.9rem;">
+              <div><span style="color: var(--text-muted);">Contractor / Client:</span><br><strong id="summary-customer">Divine Innovation / M/s Fusion Pipes</strong></div>
+              <div><span style="color: var(--text-muted);">Location:</span><br><strong id="summary-location">Faridabad, Haryana</strong></div>
+              <div><span style="color: var(--text-muted);">Drawing Revision:</span><br><strong id="summary-revision">Rev 07 (25 Sept 2026)</strong></div>
+              <div><span style="color: var(--text-muted);">Total Selling Amount:</span><br><strong id="summary-total-amount" style="color: var(--primary-cyan); font-size: 1.15rem;">₹ 3,152,738.09</strong></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><i class="fa-solid fa-file-arrow-up"></i> Document Inventory & CAD Adapter Status</div>
+              <button class="btn btn-secondary btn-sm" id="btn-re-discover"><i class="fa-solid fa-magnifying-glass"></i> Re-Scan</button>
+            </div>
+            
+            <div style="margin-bottom: 1rem; padding: 0.75rem; background: #e0f2fe; border-radius: 6px; font-size: 0.85rem; color: #0369a1;">
+              <i class="fa-solid fa-circle-info"></i> <strong>CAD Adapter Boundary:</strong> Native CAD extraction reports: <span id="cad-adapter-status-text" style="font-weight: 700;">Uploaded — geometry extraction unavailable</span> for DWG (`Fusion.dwg`). High-resolution PDF layout drawing viewer and Excel workbook parser active.
+            </div>
+
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>File Name</th>
+                    <th>Document Category</th>
+                    <th>File Size</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="inventory-table-body">
+                  <tr><td colspan="5" style="text-align: center; color: var(--text-muted);">Loading documents...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 2: UPLOAD CAD & ADOBE WORKFLOW -->
+        <section id="view-upload-cad" class="tab-view" style="display: none;">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><i class="fa-solid fa-cloud-arrow-up"></i> Upload AutoCAD DWG/DXF & Adobe PDF/AI Drawings</div>
+            </div>
+
+            <!-- Upload Dropzone Container -->
+            <div style="border: 2px dashed var(--border-focus); border-radius: 12px; padding: 2.5rem; text-align: center; background: rgba(6, 182, 212, 0.03); margin-bottom: 1.5rem;">
+              <div style="font-size: 3rem; color: var(--primary-cyan); margin-bottom: 1rem;">
+                <i class="fa-solid fa-drafting-compass"></i> <i class="fa-solid fa-file-pdf" style="color: #ef4444; margin-left: 0.5rem;"></i>
+              </div>
+              <h3 style="margin-bottom: 0.5rem; color: var(--text-main);">Upload Architectural Drawings & Adobe Design Layouts</h3>
+              <p style="font-size: 0.9rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 1.5rem auto;">
+                Supported Formats: <strong>AutoCAD DWG (`.dwg`), DXF (`.dxf`)</strong> and <strong>Adobe PDF (`.pdf`), Illustrator (`.ai`), EPS (`.eps`), Photoshop (`.psd`)</strong>.
+              </p>
+
+              <input type="file" id="input-cad-adobe-file" accept=".dwg,.dxf,.pdf,.ai,.eps,.psd,.zip" style="display: none;">
+              
+              <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="document.getElementById('input-cad-adobe-file').click()">
+                  <i class="fa-solid fa-folder-open"></i> Browse Files to Upload
+                </button>
+                <button class="btn btn-secondary" id="btn-load-sample-dwg-pdf">
+                  <i class="fa-solid fa-sync"></i> Reload Sample DWG & PDF Drawing
+                </button>
+              </div>
+            </div>
+
+            <!-- Document Processing Pipeline Summary -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+              <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: #ffffff;">
+                <div style="font-weight: 700; color: var(--primary-cyan); margin-bottom: 0.5rem;"><i class="fa-solid fa-vector-square"></i> AutoCAD DWG / DXF Pipeline</div>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Parses DXF layers, entity lengths, polylines, and block attributes via `ezdxf`. Stores raw binary DWG drawings safely with capability reporting.</p>
+              </div>
+
+              <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: #ffffff;">
+                <div style="font-weight: 700; color: #ef4444; margin-bottom: 0.5rem;"><i class="fa-solid fa-file-pdf"></i> Adobe PDF / AI Layout Engine</div>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Renders high-resolution 150 DPI vector layout pages for the interactive canvas viewer. Detects NTS title blocks and extracts drawing text.</p>
+              </div>
+
+              <div style="padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: #ffffff;">
+                <div style="font-weight: 700; color: var(--accent-violet); margin-bottom: 0.5rem;"><i class="fa-solid fa-arrows-rotate"></i> Drawing Revision Control</div>
+                <p style="font-size: 0.8rem; color: var(--text-muted);">Uploading a new drawing updates the revision label (e.g. Rev 08) and automatically flags earlier measurements for estimator re-verification.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 3: DRAWING & MEASUREMENTS -->
+        <section id="view-drawing" class="tab-view" style="display: none;">
+          <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 1.5rem;">
+            <!-- Left: PDF Canvas Viewer -->
+            <div class="card" style="margin-bottom: 0;">
+              <div class="card-header">
+                <div class="card-title"><i class="fa-solid fa-map-location-dot"></i> Layout Drawing Viewer (Rev 07)</div>
+                <div>
+                  <span class="badge badge-warning" id="scale-calibration-badge">NTS Title Block (Calibrated 40px/ft)</span>
+                </div>
+              </div>
+              
+              <div class="canvas-viewer-container">
+                <div class="canvas-toolbar">
+                  <button id="btn-zoom-in"><i class="fa-solid fa-plus"></i></button>
+                  <button id="btn-zoom-out"><i class="fa-solid fa-minus"></i></button>
+                  <button id="btn-zoom-reset"><i class="fa-solid fa-arrows-to-dot"></i> Fit</button>
+                </div>
+                <img id="pdf-rendered-img" src="src/layout_drawing.png" alt="PDF Drawing Layout" style="max-width: 100%; max-height: 100%; object-fit: contain; transition: transform 0.2s ease;">
+              </div>
+            </div>
+
+            <!-- Right: Zone List & Add Measurement -->
+            <div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title"><i class="fa-solid fa-vector-square"></i> Room / Zone Inventory</div>
+                </div>
+                <div id="zones-list-container" style="display: flex; flex-direction: column; gap: 0.5rem; max-height: 230px; overflow-y: auto;"></div>
+              </div>
+
+              <div class="card">
+                <div class="card-header">
+                  <div class="card-title"><i class="fa-solid fa-plus"></i> Add Measurement Entry</div>
+                </div>
+                <form id="form-add-measurement" style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.85rem;">
+                  <div>
+                    <label style="font-weight: 600;">Target BOQ Item:</label>
+                    <select id="meas-boq-select" style="width: 100%; padding: 0.4rem; border-radius: 4px; border: 1px solid var(--border-color);"></select>
+                  </div>
+                  <div>
+                    <label style="font-weight: 600;">Measurement Label:</label>
+                    <input type="text" id="meas-label" placeholder="e.g. Executive Cabin Partition" required style="width: 100%; padding: 0.4rem; border-radius: 4px; border: 1px solid var(--border-color);">
+                  </div>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                    <div>
+                      <label style="font-weight: 600;">Length (ft):</label>
+                      <input type="number" step="0.1" id="meas-length" value="16.0" style="width: 100%; padding: 0.4rem; border-radius: 4px; border: 1px solid var(--border-color);">
+                    </div>
+                    <div>
+                      <label style="font-weight: 600;">Height (ft):</label>
+                      <input type="number" step="0.1" id="meas-height" value="14.0" style="width: 100%; padding: 0.4rem; border-radius: 4px; border: 1px solid var(--border-color);">
+                    </div>
+                  </div>
+                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                    <div>
+                      <label style="font-weight: 600;">Opening Deductions (sq ft):</label>
+                      <input type="number" step="0.1" id="meas-deduction" value="0.0" style="width: 100%; padding: 0.4rem; border-radius: 4px; border: 1px solid var(--border-color);">
+                    </div>
+                    <div>
+                      <label style="font-weight: 600;">Partition Face:</label>
+                      <select id="meas-face" style="width: 100%; padding: 0.4rem; border-radius: 4px; border: 1px solid var(--border-color);">
+                        <option value="centreline">Centreline (1.0x)</option>
+                        <option value="single_face">Single Face (1.0x)</option>
+                        <option value="double_face">Double Face (2.0x)</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem;"><i class="fa-solid fa-check"></i> Add & Recalculate BOQ</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 4: BILL OF QUANTITIES -->
+        <section id="view-boq" class="tab-view" style="display: none;">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><i class="fa-solid fa-list-check"></i> Bill of Quantities (BOQ Items)</div>
+              <div style="display: flex; gap: 0.5rem;">
+                <input type="text" id="boq-search" placeholder="Search item code or description..." style="padding: 0.4rem 0.75rem; border-radius: 4px; border: 1px solid var(--border-color); font-size: 0.85rem;">
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table class="table" id="boq-table">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    <th>Unit</th>
+                    <th>Quantity</th>
+                    <th>Selling Rate (₹)</th>
+                    <th>Amount (₹)</th>
+                    <th>Margin %</th>
+                    <th>Origin</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="boq-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 5: ADMIN BOM & COSTING INTERFACE -->
+        <section id="view-admin-bom" class="tab-view" style="display: none;">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><i class="fa-solid fa-sliders"></i> Admin BOM Costing & Pricing Manager</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Log-in User: <strong id="admin-user-display">Yoga</strong></div>
+            </div>
+            
+            <div style="margin-bottom: 1rem; padding: 0.75rem; background: #e0e7ff; border-radius: 6px; font-size: 0.85rem; color: #3730a3; display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <i class="fa-solid fa-coins"></i> <strong>Cost Build-up Formula:</strong> Base Cost = Material + Labour + Transport. Total Cost Rate = Base Cost × (1 + Misc % / 100). Selling Rate = Total Cost Rate / (1 - Margin % / 100).
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Item Description</th>
+                    <th>Material (₹)</th>
+                    <th>Labour (₹)</th>
+                    <th>Transport (₹)</th>
+                    <th>Misc % (10% Def)</th>
+                    <th>Base Cost (₹)</th>
+                    <th>Margin % (30% Def)</th>
+                    <th>Selling Rate (₹)</th>
+                    <th>Qty</th>
+                    <th>Net Amount (₹)</th>
+                    <th>Save</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-bom-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 6: UPLOAD & COMPARE BOQ -->
+        <section id="view-compare" class="tab-view" style="display: none;">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><i class="fa-solid fa-code-compare"></i> Upload Customer / Vendor BOQ for Side-by-Side Comparison</div>
+              <button class="btn btn-secondary btn-sm" id="btn-load-default-compare"><i class="fa-solid fa-rotate-left"></i> Load Sample Reference BOQ</button>
+            </div>
+
+            <!-- Upload Dropzone -->
+            <div style="border: 2px dashed var(--border-color); border-radius: 8px; padding: 1.5rem; text-align: center; background: rgba(15, 23, 42, 0.02); margin-bottom: 1.5rem;">
+              <i class="fa-solid fa-cloud-arrow-up" style="font-size: 2.5rem; color: var(--primary-cyan); margin-bottom: 0.75rem;"></i>
+              <h4 style="margin-bottom: 0.25rem;">Upload Reference BOQ (.xlsx, .xls, .csv)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Upload customer or vendor BOQ to compare quantities, unit rates, and totals against Divine Innovation generated pricing (10% Misc, 30% Margin).</p>
+              <input type="file" id="input-upload-boq" accept=".xlsx,.xls,.csv" style="display: none;">
+              <button class="btn btn-primary" onclick="document.getElementById('input-upload-boq').click()"><i class="fa-solid fa-folder-open"></i> Select Reference BOQ File</button>
+            </div>
+
+            <!-- Variance Summary Banner -->
+            <div id="compare-summary-banner" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem; padding: 1rem; background: #0f172a; color: white; border-radius: 8px;">
+              <div>
+                <span style="font-size: 0.75rem; color: #94a3b8;">DIVINE INNOVATION BOQ</span><br>
+                <strong id="cmp-gen-total" style="font-size: 1.1rem; color: #38bdf8;">₹ 0.00</strong>
+              </div>
+              <div>
+                <span style="font-size: 0.75rem; color: #94a3b8;">UPLOADED REFERENCE BOQ</span><br>
+                <strong id="cmp-up-total" style="font-size: 1.1rem; color: #a78bfa;">₹ 0.00</strong>
+              </div>
+              <div>
+                <span style="font-size: 0.75rem; color: #94a3b8;">NET VARIANCE (OVER / UNDER)</span><br>
+                <strong id="cmp-var-total" style="font-size: 1.1rem; color: #f59e0b;">₹ 0.00 (0%)</strong>
+              </div>
+              <div>
+                <span style="font-size: 0.75rem; color: #94a3b8;">ITEMS COMPARED</span><br>
+                <strong id="cmp-items-count" style="font-size: 1.1rem; color: #10b981;">0 items</strong>
+              </div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+              <button class="btn btn-secondary btn-sm filter-cmp active" data-filter="all">All Items</button>
+              <button class="btn btn-secondary btn-sm filter-cmp" data-filter="variances">Variances Only</button>
+              <button class="btn btn-secondary btn-sm filter-cmp" data-filter="qty">Qty Mismatches</button>
+              <button class="btn btn-secondary btn-sm filter-cmp" data-filter="rate">Rate Mismatches</button>
+              <button class="btn btn-secondary btn-sm filter-cmp" data-filter="missing">Missing Items</button>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="table-container">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Item Description</th>
+                    <th>Gen Qty</th>
+                    <th>Up Qty</th>
+                    <th>Qty Var</th>
+                    <th>Gen Rate (₹)</th>
+                    <th>Up Rate (₹)</th>
+                    <th>Rate Var (₹)</th>
+                    <th>Gen Amount (₹)</th>
+                    <th>Up Amount (₹)</th>
+                    <th>Net Var (₹)</th>
+                    <th>Comparison Status</th>
+                  </tr>
+                </thead>
+                <tbody id="compare-table-body">
+                  <tr><td colspan="12" style="text-align: center; color: var(--text-muted);">Upload a reference BOQ or click 'Load Sample Reference BOQ' to run side-by-side comparison.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 7: REVIEW & EXPORT -->
+        <section id="view-review" class="tab-view" style="display: none;">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><i class="fa-solid fa-triangle-exclamation"></i> Discrepancy & Reconciliation Review (7 Audit Flags)</div>
+            </div>
+
+            <div id="issues-list-container" style="display: flex; flex-direction: column; gap: 1rem;"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title"><i class="fa-solid fa-download"></i> Export Excel Spreadsheets</div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+              <div style="padding: 1.25rem; border: 1px solid var(--border-color); border-radius: 8px; background: #ffffff;">
+                <h4 style="margin-bottom: 0.5rem; color: var(--text-main);"><i class="fa-solid fa-file-excel" style="color: #10b981;"></i> Customer BOQ Export</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Customer quotation sheet with item details, quantities, selling rates, amounts, category subtotals, exclusions, and GST terms. Internal cost columns excluded.</p>
+                <button class="btn btn-primary" id="btn-export-customer"><i class="fa-solid fa-download"></i> Download Customer BOQ (.xlsx)</button>
+              </div>
+
+              <div style="padding: 1.25rem; border: 1px solid var(--border-color); border-radius: 8px; background: #ffffff;">
+                <h4 style="margin-bottom: 0.5rem; color: var(--text-main);"><i class="fa-solid fa-lock" style="color: var(--accent-violet);"></i> Internal Estimator Costing Export</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Includes all customer sheets PLUS the full internal costing tab containing cost rates, material/labour/transport breakdowns, 10% misc cost, and 30% margin columns.</p>
+                <button class="btn btn-accent" id="btn-export-internal"><i class="fa-solid fa-download"></i> Download Internal Costing (.xlsx)</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- AUTHENTICATION LOGIN MODAL -->
+  <div id="login-modal" class="modal-overlay" style="display: none;">
+    <div class="modal">
+      <div style="text-align: center; margin-bottom: 1.5rem;">
+        <div style="width: 50px; height: 50px; background: linear-gradient(135deg, var(--accent-violet), var(--primary-cyan)); border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; font-weight: 800; margin-bottom: 0.5rem;">DI</div>
+        <h2 style="font-size: 1.35rem; color: var(--text-main);">Divine Innovation</h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">CAD-to-BOQ Studio · Yogabrata.com</p>
+      </div>
+
+      <form id="form-login" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 600;">Username (yoga or Akhil):</label>
+          <input type="text" id="login-username" placeholder="Enter username (case-insensitive)" required style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid var(--border-color);">
+        </div>
+        <div>
+          <label style="font-size: 0.85rem; font-weight: 600;">Password:</label>
+          <input type="password" id="login-password" placeholder="Enter password" required style="width: 100%; padding: 0.6rem; border-radius: 6px; border: 1px solid var(--border-color);">
+        </div>
+        <button type="submit" class="btn btn-accent" style="width: 100%; justify-content: center; padding: 0.75rem; font-size: 0.95rem;">
+          <i class="fa-solid fa-lock"></i> Log In
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
