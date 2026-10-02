@@ -52,6 +52,7 @@ function handleLogin(e) {
   if (found) {
     state.currentUser = { username: found.displayName, role: found.role };
     localStorage.setItem("di_user", JSON.stringify(state.currentUser));
+    engineLogin(uInput, pInput);
     document.getElementById("login-modal").style.display = "none";
     updateUserUI();
     loadData();
@@ -63,6 +64,7 @@ function handleLogin(e) {
 function handleLogout() {
   state.currentUser = null;
   localStorage.removeItem("di_user");
+  localStorage.removeItem("di_api_token");
   document.getElementById("login-modal").style.display = "flex";
 }
 
@@ -159,6 +161,16 @@ async function resetProjectData() {
 
   const btn = document.getElementById("btn-reset-data");
   if (btn) btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Resetting...`;
+  localStorage.removeItem("di_boq_items");
+  localStorage.removeItem("di_boq_meta");
+  state.comparisonData = null;
+  state.cmpScope = "all";
+  const cmpBox = document.getElementById("cmp-scope-summary"); if (cmpBox) cmpBox.remove();
+  const cmpBody = document.getElementById("compare-table-body");
+  if (cmpBody) cmpBody.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-muted);">Upload a reference BOQ to compare it with the BOQ generated from your drawing.</td></tr>`;
+  ["cmp-gen-total", "cmp-up-total"].forEach(id => { const el = document.getElementById(id); if (el) el.textContent = "₹ 0.00"; });
+  const cv = document.getElementById("cmp-var-total"); if (cv) cv.textContent = "₹ 0.00 (0%)";
+  const ci = document.getElementById("cmp-items-count"); if (ci) ci.textContent = "0 items";
 
   try {
     const res = await fetch(`${API_BASE}/project/reset?project_id=${currentProjectId}`, { method: "POST" });
@@ -204,121 +216,308 @@ async function loadPDFDrawing() {
   pdfImg.onerror = () => { pdfImg.src = "src/layout_drawing.png"; };
 }
 
-async function handleCADAdobeUpload(e) {
-  const file = e.target.files[0];
-  if (!file) return;
+// ---------------- DRAWING-BASED BOQ ENGINE (live API) ----------------
+// The BOQ is generated from the uploaded drawing by the Divine Studio engine
+// (https://divine-api.brahmexa.com): the drawing is measured, and anything the
+// drawing does not state (heights, finishes) is filled with the standard
+// assumptions below. Every assumed value is labelled on its line.
+const ENGINE_API = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? location.origin + "/api" : "https://divine-api.brahmexa.com/api";
+const STANDARD_ASSUMPTIONS = {
+  partition_height_mm: "3048",          // 10 ft
+  glass_partition_height_mm: "2438",    // 8 ft
+  window_height_mm: "1524",             // 5 ft
+  wall_paint_height_mm: "3048",
+  glass_specification: "12 mm toughened clear glass",
+  floor_finish: "Vitrified tiles 600x600",
+  ceiling_enclosed_spec: "600x600 mineral fibre grid ceiling",
+  wall_paint_faces: "both",
+  approve_flooring: "yes", approve_skirting: "yes", approve_ceiling_paint: "yes",
+  approve_ceiling_enclosed: "yes", approve_ceiling_open: "no", approve_wall_paint: "yes",
+  approve_blinds: "yes", approve_pelmet: "yes", approve_infill_above_glass: "yes"
+};
+const ASSUMPTION_LABEL = "partitions 10 ft, glass 8 ft, windows 5 ft, gypsum partitions, 12 mm toughened glass, vitrified flooring, grid ceiling in cabins, paint both faces";
+// Base cost B per unit (pre-misc, pre-margin)
+const RATE_BOOK = {
+  "partition.gypsum": [201.25, "Divine costing: gypsum partition"],
+  "partition.gypsum.above_glass": [201.25, "Divine costing: gypsum partition"],
+  "partition.glass": [435, "standard rate"],
+  "door.glass": [18301.5, "Divine costing: glass door 900x2100"],
+  "door.flush": [11300, "standard rate"],
+  "door.generic": [11300, "standard rate"],
+  "floor.tile.vitrified": [157.75, "Divine costing: vitrified tiles"],
+  "floor.skirting": [99.51, "Divine costing: tiles skirting"],
+  "ceiling.grid": [115, "standard rate"],
+  "paint.wall": [44, "standard rate"],
+  "paint.ceiling": [44, "standard rate"]
+};
+const SECTION_ORDER = ["Partitions & glazing", "Doors", "Flooring", "Ceilings", "Painting", "Windows", "Furniture & loose items"];
 
-  const formData = new FormData();
-  formData.append("file", file);
+function engineToken() { return localStorage.getItem("di_api_token"); }
 
-  const ext = file.name.split('.').pop().toLowerCase();
-  const fileTypeStr = ext === 'dwg' || ext === 'dxf' ? 'AutoCAD Drawing' : 'Adobe Layout / PDF Document';
-
-  try {
-    const res = await fetch(`${API_BASE}/documents/upload-process?project_id=${currentProjectId}`, {
-      method: "POST",
-      body: formData
-    });
-
-    if (res.ok) {
-      const data = await res.json();
-      const count = data.boq_generation?.generated_items_count || 17;
-      alert(`Uploaded and processed ${fileTypeStr} '${file.name}'!\n\nDivine Innovation Engine Generated:\n- ${count} Fitout BOQ Items\n- Applied 10% Misc Cost & 30% Margin Defaults\n- Revision set to Rev 01 (${file.name})`);
-      await loadData();
-      document.querySelector('.nav-item[data-tab="boq"]')?.click();
-      return;
-    }
-  } catch (err) {
-    console.warn("Backend API offline, generating DWG BOQ locally.");
-  }
-
-  // Local fallback BOQ generator when running static offline
-  state.boqItems = generateLocalDWGBOQ(file.name);
-  state.inventory = [{ name: file.name, category: ext === 'dwg' ? 'cad_drawing' : 'pdf_layout', size_bytes: file.size }];
-  renderBOQTable(state.boqItems);
-  renderAdminBOMTable(state.boqItems);
-  renderInventoryTable(state.inventory);
-  
-  const totalAmt = state.boqItems.reduce((acc, i) => acc + (i.selling_amount || 0), 0);
-  document.getElementById("summary-customer").textContent = `Divine Innovation / ${file.name.replace(/\.[^/.]+$/, "")}`;
-  document.getElementById("summary-location").textContent = "Uploaded Drawing Site";
-  document.getElementById("summary-total-amount").textContent = `₹ ${totalAmt.toLocaleString('en-IN', {minimumFractionDigits: 2})}`;
-  document.getElementById("summary-revision").textContent = `Rev 01 (${file.name})`;
-  document.getElementById("sidebar-rev-label").textContent = "Rev 01";
-  
-  const badge = document.getElementById("proj-status-badge");
-  if (badge) {
-    badge.textContent = "BOQ GENERATED";
-    badge.className = "badge badge-success";
-  }
-
-  alert(`Uploaded ${fileTypeStr} '${file.name}'!\n\nDivine Innovation Engine Generated:\n- 15 Fitout BOQ Items from CAD drawing\n- Applied 10% Misc Cost & 30% Margin Defaults\n- Total Selling Amount: ₹ ${totalAmt.toLocaleString('en-IN')}`);
-
-  document.querySelector('.nav-item[data-tab="boq"]')?.click();
+async function engineCall(method, path, body, isForm) {
+  const headers = {};
+  const tok = engineToken();
+  if (tok) headers.Authorization = "Bearer " + tok;
+  if (body && !isForm) headers["Content-Type"] = "application/json";
+  const res = await fetch(ENGINE_API + path, { method, headers, body: isForm ? body : (body ? JSON.stringify(body) : undefined) });
+  const text = await res.text();
+  let data = null;
+  try { data = text ? JSON.parse(text) : null; } catch (e) { data = { error: text }; }
+  if (res.status === 401) { localStorage.removeItem("di_api_token"); throw new Error("Session expired — please log out and sign in again."); }
+  if (!res.ok) throw new Error((data && (data.error || data.detail)) || ("HTTP " + res.status));
+  return data;
 }
 
-function generateLocalDWGBOQ(filename) {
+async function engineLogin(username, password) {
+  try {
+    const res = await fetch(ENGINE_API + "/auth/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ username, password }) });
+    if (res.ok) { localStorage.setItem("di_api_token", (await res.json()).token); return true; }
+  } catch (e) { /* engine unreachable */ }
+  return false;
+}
+
+function setStatus(msg) {
+  let el = document.getElementById("engine-status");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "engine-status";
+    el.style.cssText = "position:fixed;bottom:18px;right:18px;z-index:9999;background:#0f172a;color:#fff;padding:10px 16px;border-radius:8px;font-size:14px;max-width:420px;box-shadow:0 6px 24px rgba(0,0,0,.25)";
+    document.body.appendChild(el);
+  }
+  el.style.display = msg ? "block" : "none";
+  el.textContent = msg || "";
+}
+
+async function waitForJob(jobId) {
+  for (let i = 0; i < 240; i++) {
+    const j = await engineCall("GET", `/jobs/${jobId}`);
+    if (j.status === "completed") return j;
+    if (j.status === "failed") throw new Error(j.message || "Drawing processing failed");
+    setStatus(`Reading drawing… ${j.message || ""}`);
+    await new Promise(r => setTimeout(r, 1500));
+  }
+  throw new Error("Drawing processing timed out");
+}
+
+function assumptionAnswers(questions) {
+  const a = Object.assign({}, STANDARD_ASSUMPTIONS);
+  questions.forEach(q => {
+    if (STANDARD_ASSUMPTIONS[q.key] !== undefined) a[q.key] = STANDARD_ASSUMPTIONS[q.key];
+    else if (q.key.startsWith("layer_material:")) a[q.key] = "Gypsum board partition";
+    else if (q.key.startsWith("door_type:")) a[q.key] = "Flush door";
+    else if (q.key.startsWith("identify:") && q.options && q.options.length && q.options[0].fit_mm <= 60) a[q.key] = q.options[0].entry_key;
+  });
+  return a;
+}
+
+async function catalogueBase(entryKey) {
+  try {
+    const j = await engineCall("GET", `/costing/entries/${encodeURIComponent(entryKey)}`);
+    return j.entry && j.entry.base_cost ? [Number(j.entry.base_cost), "Divine costing: " + j.entry.description] : null;
+  } catch (e) { return null; }
+}
+
+async function buildOldStyleItems(rev, filename) {
   const misc = state.globalMiscPct || 10.0;
   const margin = state.globalMarginPct || 30.0;
-
-  const raw = [
-    { code: "1.0", desc: "DEMOLITION & SITE PREPARATION", is_heading: true },
-    { code: "1.1", desc: "Demolition of existing partitions & soft finishes", unit: "sq ft", qty: 450, mat: 0, lab: 35, trans: 10 },
-    { code: "1.2", desc: "Debris removal & cartage to municipal dump site", unit: "LS", qty: 1, mat: 0, lab: 12000, trans: 8000 },
-    
-    { code: "2.0", desc: "PARTITIONS & WALL FINISHES", is_heading: true },
-    { code: "2.1", desc: "75mm Double Skin Gypsum Board Partition with GI Framework", unit: "sq ft", qty: 1250, mat: 110, lab: 45, trans: 15 },
-    { code: "2.2", desc: "Acoustic Glass Wool Insulation inside Gypsum Partition", unit: "sq ft", qty: 850, mat: 45, lab: 20, trans: 5 },
-    { code: "2.3", desc: "Toughened 12mm Clear Glass Partition with Aluminum Channels", unit: "sq ft", qty: 380, mat: 320, lab: 85, trans: 30 },
-    { code: "2.4", desc: "Premium Acrylic Emulsion Paint over Wall Surfaces", unit: "sq ft", qty: 2800, mat: 22, lab: 18, trans: 4 },
-
-    { code: "3.0", desc: "FALSE CEILING & FLOORING WORKS", is_heading: true },
-    { code: "3.1", desc: "600x600mm Mineral Fiber Grid False Ceiling", unit: "sq ft", qty: 1850, mat: 75, lab: 30, trans: 10 },
-    { code: "3.2", desc: "Gypsum Board Perimeter Cove Ceiling with LED Light Trough", unit: "rft", qty: 240, mat: 140, lab: 60, trans: 15 },
-    { code: "3.3", desc: "Heavy-duty Vitrified Tile Flooring (600x600mm)", unit: "sq ft", qty: 1450, mat: 115, lab: 55, trans: 15 },
-
-    { code: "4.0", desc: "DOORS, JOINERY & HARDWARE", is_heading: true },
-    { code: "4.1", desc: "Single Leaf Commercial Flush Door with Lockset", unit: "nos", qty: 8, mat: 8500, lab: 2200, trans: 600 },
-    { code: "4.2", desc: "Double Leaf Glazed Entrance Door with Floor Spring", unit: "nos", qty: 2, mat: 24000, lab: 5500, trans: 1500 },
-
-    { code: "5.0", desc: "ELECTRICAL & PLUMBING PIPING", is_heading: true },
-    { code: "5.1", desc: "2x2 Modular LED Ceiling Panel Lights (36W)", unit: "nos", qty: 45, mat: 1800, lab: 450, trans: 100 },
-    { code: "5.2", desc: "6A/16A Modular Power Outlets with FRLS Wire Conduit", unit: "nos", qty: 60, mat: 650, lab: 300, trans: 50 },
-    { code: "5.3", desc: "CAT6 Ethernet Data Cabling with Dual RJ45 Outlets", unit: "nos", qty: 35, mat: 1200, lab: 500, trans: 80 }
-  ];
-
-  let items = [];
-  raw.forEach((r, idx) => {
-    if (r.is_heading) {
-      items.push({ id: `item-${idx}`, item_code: r.code, description: r.desc, is_heading: true });
-    } else {
-      const baseCost = r.mat + r.lab + r.trans;
-      const totalCostRate = baseCost * (1.0 + misc / 100.0);
-      const sellingRate = totalCostRate / (1.0 - margin / 100.0);
-      const sellingAmt = Math.round(r.qty * sellingRate * 100) / 100;
-
+  const lines = rev.lines.filter(l => !l.removed);
+  const bySection = {};
+  for (const l of lines) (bySection[l.section] = bySection[l.section] || []).push(l);
+  const rank = s => { const i = SECTION_ORDER.indexOf(s); return i < 0 ? 99 : i; };
+  const sections = Object.keys(bySection).sort((a, b) => rank(a) - rank(b));
+  const items = [];
+  let s = 0;
+  for (const sec of sections) {
+    s += 1;
+    items.push({ id: `h-${s}`, item_code: `${s}.0`, description: sec.toUpperCase(), is_heading: true });
+    let n = 0;
+    for (const l of bySection[sec]) {
+      n += 1;
+      let rate = RATE_BOOK[l.scope_key] || null;
+      const ck = (l.attributes || {}).catalogue_entry_key;
+      if (ck) rate = (await catalogueBase(ck)) || rate;
+      const base = rate ? rate[0] : 0;
+      const qty = l.quantity !== null && l.quantity !== undefined ? Number(l.quantity) : 0;
+      const totalCostRate = base * (1 + misc / 100);
+      const sellingRate = totalCostRate / (1 - margin / 100);
+      const formula = (l.evidence || {}).formula || `measured from ${filename}`;
+      const assumed = l.origin !== "drawing_measured" || /height|ceiling|paint|blind|pelmet|skirting|floor finish/i.test(formula + " " + l.description);
       items.push({
-        id: `item-${idx}`,
-        item_code: r.code,
-        description: r.desc,
-        unit: r.unit,
-        current_qty: r.qty,
-        material_cost: r.mat,
-        labour_cost: r.lab,
-        transport_cost: r.trans,
-        cost_rate: Math.round(totalCostRate * 100) / 100,
-        misc_pct: misc,
-        margin_pct: margin,
-        selling_rate: Math.round(sellingRate * 100) / 100,
-        selling_amount: sellingAmt,
-        provenance_type: `Extracted from ${filename}`,
-        review_status: "Approved"
+        id: l.lineage_id, item_code: `${s}.${n}`,
+        description: l.description.replace(/\s*\(variant \d+ of \d+\)/, "") + (l.specification && !l.description.includes(l.specification) && !/^layer |rule|project answer/.test(l.specification) ? ` — ${l.specification}` : ""),
+        location: l.location || "-", unit: l.unit === "sqft" ? "sq ft" : l.unit === "ft" ? "rft" : l.unit,
+        current_qty: Math.round(qty * 100) / 100,
+        material_cost: base, labour_cost: 0, transport_cost: 0, misc_pct: misc, margin_pct: margin,
+        cost_rate: Math.round(totalCostRate * 100) / 100, selling_rate: Math.round(sellingRate * 100) / 100,
+        selling_amount: Math.round(qty * sellingRate * 100) / 100,
+        provenance_type: formula + (assumed ? " [standard assumption — edit if different]" : ""),
+        rate_source: rate ? rate[1] : "rate needed",
+        review_status: rate ? (assumed ? "Needs review" : "Approved") : "Rate needed",
+        scope_key: l.scope_key
       });
     }
-  });
-
+  }
   return items;
 }
+
+function showGeneratedBOQ(items, filename, meta) {
+  state.boqItems = items;
+  localStorage.setItem("di_boq_items", JSON.stringify(items));
+  localStorage.setItem("di_boq_meta", JSON.stringify(Object.assign({ filename }, meta)));
+  renderBOQTable(items);
+  renderAdminBOMTable(items);
+  populateMeasBOQSelect(items);
+  const totalAmt = items.reduce((acc, i) => acc + (i.selling_amount || 0), 0);
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  set("summary-customer", `Divine Innovation / ${filename.replace(/\.[^/.]+$/, "")}`);
+  set("summary-location", meta.title || "Uploaded drawing");
+  set("summary-total-amount", `₹ ${totalAmt.toLocaleString('en-IN', { minimumFractionDigits: 2 })}`);
+  set("summary-revision", `${meta.revision || "Rev 01"} (${filename})`);
+  set("sidebar-rev-label", meta.revision || "Rev 01");
+  const badge = document.getElementById("proj-status-badge");
+  if (badge) { badge.textContent = "BOQ GENERATED FROM DRAWING"; badge.className = "badge badge-success"; }
+}
+
+function restoreGeneratedBOQ() {
+  try {
+    const items = JSON.parse(localStorage.getItem("di_boq_items") || "null");
+    const meta = JSON.parse(localStorage.getItem("di_boq_meta") || "null");
+    if (items && items.length && meta) { showGeneratedBOQ(items, meta.filename || "drawing", meta); return true; }
+  } catch (e) { /* ignore */ }
+  return false;
+}
+
+async function handleCADAdobeUpload(e) {
+  const files = Array.from(e.target.files || []);
+  if (!files.length) return;
+  if (!engineToken()) { alert("Please log out and sign in again to connect to the drawing engine."); return; }
+  try {
+    setStatus("Creating project…");
+    const name = files.map(f => f.name).join(" + ");
+    const proj = await engineCall("POST", "/projects", { name: `${name} — ${new Date().toLocaleString("en-IN")}`, client: "Divine Innovation" });
+    for (const f of files) {
+      setStatus(`Uploading ${f.name}…`);
+      const fd = new FormData(); fd.append("file", f);
+      const up = await engineCall("POST", `/projects/${proj.id}/documents`, fd, true);
+      await waitForJob(up.job.id);
+    }
+    setStatus("Measuring partitions, glazing, doors, floor and rooms…");
+    let tk = await engineCall("GET", `/projects/${proj.id}/takeoff`);
+    for (let pass = 0; pass < 3; pass++) {
+      const answers = assumptionAnswers(tk.questions);
+      const fresh = Object.keys(answers).filter(k => !(k in (tk.inputs_used || {})));
+      if (!fresh.length) break;
+      await engineCall("POST", `/projects/${proj.id}/inputs`, { answers, reason: "Standard assumptions (auto-filled): " + ASSUMPTION_LABEL, save_rules: false });
+      tk = await engineCall("GET", `/projects/${proj.id}/takeoff`);
+    }
+    setStatus("Generating BOQ…");
+    const rev = await engineCall("POST", `/projects/${proj.id}/revisions/generate`);
+    const tb = (tk.sources || {}).title_block || {};
+    const items = await buildOldStyleItems(rev, files[0].name);
+    showGeneratedBOQ(items, files[0].name, { project: proj.id, revision_id: rev.id, revision: tb.revision ? `Rev ${tb.revision}` : "Rev 01", title: tb.drawing_title || "" });
+    setStatus("");
+    const lines = items.filter(i => !i.is_heading).length;
+    const open = tk.questions.filter(q => !(q.key in (tk.inputs_used || {}))).length;
+    alert(`BOQ generated from '${name}'.\n\n- ${lines} BOQ lines measured from this drawing\n- Details the drawing does not state were filled with standard assumptions: ${ASSUMPTION_LABEL}\n- Lines that use an assumption are marked "Needs review" — edit any quantity in the table` + (open ? `\n- ${open} drawn items could not be identified automatically (see /divine-innovation/studio/)` : ""));
+    document.querySelector('.nav-item[data-tab="boq"]')?.click();
+  } catch (err) {
+    setStatus("");
+    alert("Could not generate the BOQ from this drawing:\n\n" + err.message);
+  }
+}
+
+// ---- customer BOQ comparison: summary first, then line detail ----
+async function handleBOQUpload(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const meta = JSON.parse(localStorage.getItem("di_boq_meta") || "null");
+  if (!meta || !meta.project) { alert("Upload the drawing first (step 2) so there is a BOQ to compare against."); return; }
+  try {
+    setStatus("Freezing the drawing BOQ and reading the customer BOQ…");
+    const rev = await engineCall("GET", `/revisions/${meta.revision_id}`);
+    if (rev.status !== "frozen") await engineCall("POST", `/revisions/${meta.revision_id}/freeze`);
+    const fd = new FormData(); fd.append("file", file);
+    const ref = await engineCall("POST", `/projects/${meta.project}/references`, fd, true);
+    const cmp = await engineCall("GET", `/projects/${meta.project}/references/${ref.reference_id}/comparison`);
+    state.comparisonData = toOldComparison(cmp);
+    renderComparisonTable(state.comparisonData);
+    setStatus("");
+  } catch (err) {
+    setStatus("");
+    alert("Could not compare the customer BOQ:\n\n" + err.message);
+  }
+}
+
+function toOldComparison(cmp) {
+  const ours = {};
+  (state.boqItems || []).forEach(i => { if (!i.is_heading) ours[i.id] = i; });
+  const rows = cmp.rows.map(r => {
+    const mine = r.lines.map(l => ours[l.lineage_id]).filter(Boolean);
+    const genQty = mine.reduce((a, i) => a + (i.current_qty || 0), 0);
+    const genAmt = mine.reduce((a, i) => a + (i.selling_amount || 0), 0);
+    const genRate = mine.length === 1 ? mine[0].selling_rate : (genQty ? genAmt / genQty : 0);
+    const upQty = Number(r.quantity || 0), upRate = Number(r.rate || 0), upAmt = Number(r.amount || upQty * upRate);
+    const label = { covered: "COVERED", partly: "PARTLY COVERED", missing: "MISSING IN OURS", needs_review: "NEEDS REVIEW" }[r.status];
+    const color = { covered: "success", partly: "warning", missing: "danger", needs_review: "info" }[r.status];
+    return {
+      item_code: r.code, description: (r.full_description || "").split("\n")[0] + (mine.length ? `  ↔  ours: ${mine.map(i => i.description).join("; ")}` : `  —  ${r.cause_label || r.reason || ""}`),
+      generated_qty: Math.round(genQty * 100) / 100, uploaded_qty: upQty, qty_variance: mine.length ? Math.round((genQty - upQty) * 100) / 100 : 0,
+      generated_rate: genRate || 0, uploaded_rate: upRate, rate_variance: mine.length ? Math.round(((genRate || 0) - upRate) * 100) / 100 : 0,
+      generated_amount: Math.round(genAmt * 100) / 100, uploaded_amount: Math.round(upAmt * 100) / 100,
+      amount_variance: Math.round((genAmt - upAmt) * 100) / 100, status: label, status_color: color, scope: r.status, section: r.section
+    };
+  });
+  const extra = cmp.extra_lines.map(l => ours[l.lineage_id]).filter(Boolean).map(i => ({
+    item_code: i.item_code, description: i.description + "  —  extra in ours (not in customer BOQ)", generated_qty: i.current_qty, uploaded_qty: 0,
+    qty_variance: i.current_qty, generated_rate: i.selling_rate, uploaded_rate: 0, rate_variance: i.selling_rate,
+    generated_amount: i.selling_amount, uploaded_amount: 0, amount_variance: i.selling_amount, status: "EXTRA IN OURS", status_color: "info", scope: "extra"
+  }));
+  const genTotal = (state.boqItems || []).reduce((a, i) => a + (i.selling_amount || 0), 0);
+  const upTotal = rows.reduce((a, r) => a + r.uploaded_amount, 0);
+  return {
+    total_generated_amount: Math.round(genTotal * 100) / 100, total_uploaded_amount: Math.round(upTotal * 100) / 100,
+    net_variance: Math.round((genTotal - upTotal) * 100) / 100, variance_pct: upTotal ? Math.round((genTotal - upTotal) / upTotal * 1000) / 10 : 0,
+    items_compared: rows.length, comparison: rows.concat(extra), engine: cmp
+  };
+}
+
+function renderComparisonSummary(data) {
+  const tbody = document.getElementById("compare-table-body");
+  if (!tbody) return;
+  const table = tbody.closest(".table-container") || tbody.closest("table");
+  let box = document.getElementById("cmp-scope-summary");
+  if (!box) {
+    box = document.createElement("div");
+    box.id = "cmp-scope-summary";
+    box.style.cssText = "margin:0 0 14px;padding:16px;border:1px solid var(--border-color);border-radius:10px;background:#fff";
+    table.parentNode.insertBefore(box, table);
+  }
+  const c = data.engine.counts;
+  const secs = data.engine.sections.map(s => `<tr><td>${s.section}</td><td style="text-align:right">${s.customer_items}</td><td style="text-align:right">${s.covered}</td><td style="text-align:right">${s.partly}</td><td style="text-align:right">${s.missing}</td><td style="text-align:right">${s.needs_review}</td></tr>`).join("");
+  const causes = {};
+  data.engine.rows.filter(r => r.status === "missing").forEach(r => { const k = r.cause_label || "Not found in our BOQ"; causes[k] = (causes[k] || 0) + 1; });
+  const causeList = Object.keys(causes).map(k => `<li>${causes[k]} × ${k}</li>`).join("");
+  const filterBtn = (f, label, n) => `<a href="#" data-scope="${f}" class="cmp-scope-link" style="font-weight:700">${n}</a> ${label}`;
+  box.innerHTML = `
+    <div style="font-size:1.05rem;font-weight:700;margin-bottom:8px">Summary of differences</div>
+    <div style="font-size:1.1rem;margin-bottom:10px">${data.engine.verdict}</div>
+    <div style="display:flex;gap:22px;flex-wrap:wrap;margin-bottom:10px">
+      <span>${filterBtn("covered", "covered", c.covered)}</span><span>${filterBtn("partly", "partly covered", c.partly)}</span>
+      <span>${filterBtn("missing", "missing in ours", c.missing)}</span><span>${filterBtn("needs_review", "need review", c.needs_review)}</span>
+      <span>${filterBtn("extra", "extra in ours", c.extra_ours)}</span><span>${filterBtn("all", "customer items in total", c.total)}</span>
+    </div>
+    <div style="margin-bottom:6px">Scope coverage: <strong>${data.engine.coverage_pct === null ? "—" : data.engine.coverage_pct + "%"}</strong> (covered ÷ ${c.total} customer items). Customer BOQ total counts real line items only (no subtotals): <strong>₹ ${data.total_uploaded_amount.toLocaleString("en-IN")}</strong>.</div>
+    ${causeList ? `<div style="margin-bottom:6px">Why items are missing:<ul style="margin:4px 0 0 18px">${causeList}</ul></div>` : ""}
+    <table class="table" style="margin-top:8px"><thead><tr><th>Section</th><th>Customer items</th><th>Covered</th><th>Partial</th><th>Missing</th><th>Review</th></tr></thead><tbody>${secs}</tbody></table>
+    <div style="color:var(--text-muted);font-size:.85rem;margin-top:6px">Click a number to see those lines in detail below.</div>`;
+  box.querySelectorAll(".cmp-scope-link").forEach(a => a.addEventListener("click", ev => {
+    ev.preventDefault();
+    state.cmpScope = a.getAttribute("data-scope");
+    renderComparisonTable(state.comparisonData);
+    tbody.closest("table").scrollIntoView({ behavior: "smooth" });
+  }));
+}
+
 
 async function loadProjectSummary() {
   try {
@@ -444,6 +643,7 @@ async function importSample() {
 }
 
 async function loadBOQItems() {
+  if (restoreGeneratedBOQ()) return;
   try {
     const res = await fetch(`${API_BASE}/boq-items?project_id=${currentProjectId}`);
     if (res.ok) {
@@ -592,31 +792,9 @@ async function loadDefaultComparison() {
   }
 }
 
-async function handleBOQUpload(e) {
-  const file = e.target.files[0];
-  if (!file) return;
-
-  const formData = new FormData();
-  formData.append("file", file);
-
-  try {
-    const res = await fetch(`${API_BASE}/boq/upload-compare?project_id=${currentProjectId}`, {
-      method: "POST",
-      body: formData
-    });
-    if (res.ok) {
-      const data = await res.json();
-      state.comparisonData = data;
-      renderComparisonTable(data);
-      alert(`Parsed reference BOQ '${file.name}'!\nCompared ${data.items_compared} line items against Divine Innovation BOQ.`);
-    }
-  } catch (err) {
-    alert("Uploaded reference file parsed.");
-  }
-}
-
 function renderComparisonTable(data) {
   if (!data) return;
+  if (data.engine) renderComparisonSummary(data);
 
   document.getElementById("cmp-gen-total").textContent = `₹ ${(data.total_generated_amount || 0).toLocaleString('en-IN')}`;
   document.getElementById("cmp-up-total").textContent = `₹ ${(data.total_uploaded_amount || 0).toLocaleString('en-IN')}`;
@@ -630,6 +808,7 @@ function renderComparisonTable(data) {
   document.getElementById("cmp-items-count").textContent = `${data.items_compared || 0} items`;
 
   let items = data.comparison || [];
+  if (data.engine && state.cmpScope && state.cmpScope !== "all") items = items.filter(i => i.scope === state.cmpScope);
 
   if (state.cmpFilter === "variances") {
     items = items.filter(i => i.status !== "MATCH");
@@ -955,3 +1134,140 @@ window.updateBOMMarginPct = updateBOMMarginPct;
 window.updateBOMCostComp = updateBOMCostComp;
 window.approveBOQItem = approveBOQItem;
 window.resolveIssue = resolveIssue;
+
+// ---------------- When the BOQ comes from the drawing engine, keep every screen on it ----------------
+function engineBOQActive() { return !!localStorage.getItem("di_boq_meta"); }
+
+function recalcEngineItem(item) {
+  const base = (item.material_cost || 0) + (item.labour_cost || 0) + (item.transport_cost || 0);
+  const misc = item.misc_pct !== undefined ? Number(item.misc_pct) : 10;
+  const margin = item.margin_pct !== undefined ? Number(item.margin_pct) : 30;
+  const totalCostRate = base * (1 + misc / 100);
+  const sellingRate = margin < 100 ? totalCostRate / (1 - margin / 100) : 0;
+  item.cost_rate = Math.round(totalCostRate * 100) / 100;
+  item.selling_rate = Math.round(sellingRate * 100) / 100;
+  item.selling_amount = Math.round((item.current_qty || 0) * sellingRate * 100) / 100;
+  if (base > 0 && item.review_status === "Rate needed") item.review_status = "Needs review";
+}
+
+function saveAndRefreshEngineBOQ() {
+  const meta = JSON.parse(localStorage.getItem("di_boq_meta") || "{}");
+  state.boqItems.forEach(i => { if (!i.is_heading) recalcEngineItem(i); });
+  showGeneratedBOQ(state.boqItems, meta.filename || "drawing", meta);
+  if (state.comparisonData && state.comparisonData.engine) {
+    state.comparisonData = toOldComparison(state.comparisonData.engine);
+    renderComparisonTable(state.comparisonData);
+  }
+}
+
+const _origLoadProjectSummary = loadProjectSummary;
+loadProjectSummary = async function () {
+  if (engineBOQActive()) { restoreGeneratedBOQ(); return; }
+  return _origLoadProjectSummary();
+};
+
+const _origLoadDefaultComparison = loadDefaultComparison;
+loadDefaultComparison = async function () {
+  if (engineBOQActive()) {
+    if (state.comparisonData && state.comparisonData.engine) renderComparisonTable(state.comparisonData);
+    return;
+  }
+  return _origLoadDefaultComparison();
+};
+
+const _origApplyPricing = applyGlobalPricingDefaults;
+applyGlobalPricingDefaults = async function () {
+  if (!engineBOQActive()) return _origApplyPricing();
+  const misc = parseFloat(document.getElementById("global-misc-pct").value || 10.0);
+  const margin = parseFloat(document.getElementById("global-margin-pct").value || 30.0);
+  if (!(margin >= 0 && margin < 100) || !(misc >= 0)) { alert("Margin must be between 0 and 99.9%, misc 0% or more."); return; }
+  state.globalMiscPct = misc; state.globalMarginPct = margin;
+  state.boqItems.forEach(i => { if (!i.is_heading) { i.misc_pct = misc; i.margin_pct = margin; } });
+  saveAndRefreshEngineBOQ();
+  alert(`Applied pricing to every line:\n- Miscellaneous cost: ${misc}%\n- Gross margin: ${margin}%`);
+};
+
+const _origUpdateQty = updateBOQQty;
+updateBOQQty = async function (itemId, val) {
+  if (!engineBOQActive()) return _origUpdateQty(itemId, val);
+  const it = state.boqItems.find(i => i.id === itemId); if (!it) return;
+  it.current_qty = parseFloat(val) || 0;
+  if (it.provenance_type && !/edited/.test(it.provenance_type)) it.provenance_type += " [quantity edited]";
+  saveAndRefreshEngineBOQ();
+};
+const _origUpdateMisc = updateBOMMiscPct;
+updateBOMMiscPct = async function (itemId, val) {
+  if (!engineBOQActive()) return _origUpdateMisc(itemId, val);
+  const it = state.boqItems.find(i => i.id === itemId); if (!it) return;
+  it.misc_pct = parseFloat(val) || 0; saveAndRefreshEngineBOQ();
+};
+const _origUpdateMargin = updateBOMMarginPct;
+updateBOMMarginPct = async function (itemId, val) {
+  if (!engineBOQActive()) return _origUpdateMargin(itemId, val);
+  const it = state.boqItems.find(i => i.id === itemId); if (!it) return;
+  const m = parseFloat(val); if (!(m >= 0 && m < 100)) { alert("Margin must be below 100%."); return; }
+  it.margin_pct = m; saveAndRefreshEngineBOQ();
+};
+const _origUpdateComp = updateBOMCostComp;
+updateBOMCostComp = async function (itemId, type, val) {
+  if (!engineBOQActive()) return _origUpdateComp(itemId, type, val);
+  const it = state.boqItems.find(i => i.id === itemId); if (!it) return;
+  const v = parseFloat(val) || 0;
+  if (type === "mat") it.material_cost = v; if (type === "lab") it.labour_cost = v; if (type === "trans") it.transport_cost = v;
+  if (it.rate_source === "rate needed") it.rate_source = "entered by estimator";
+  saveAndRefreshEngineBOQ();
+};
+const _origApprove = approveBOQItem;
+approveBOQItem = async function (itemId) {
+  if (!engineBOQActive()) return _origApprove(itemId);
+  const it = state.boqItems.find(i => i.id === itemId); if (!it) return;
+  it.review_status = "Approved"; saveAndRefreshEngineBOQ();
+};
+window.updateBOQQty = updateBOQQty;
+window.updateBOMMiscPct = updateBOMMiscPct;
+window.updateBOMMarginPct = updateBOMMarginPct;
+window.updateBOMCostComp = updateBOMCostComp;
+window.approveBOQItem = approveBOQItem;
+
+function loadSheetJS() {
+  if (window.XLSX) return Promise.resolve(window.XLSX);
+  return new Promise((res, rej) => {
+    const s = document.createElement("script");
+    s.src = "https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js";
+    s.onload = () => res(window.XLSX); s.onerror = () => rej(new Error("Could not load the Excel library"));
+    document.head.appendChild(s);
+  });
+}
+
+const _origExport = exportExcel;
+exportExcel = async function (includeInternal) {
+  if (!engineBOQActive()) return _origExport(includeInternal);
+  try {
+    const XLSX = await loadSheetJS();
+    const meta = JSON.parse(localStorage.getItem("di_boq_meta") || "{}");
+    const head = ["Code", "Description", "Location", "Unit", "Quantity", "Rate (₹)", "Amount (₹)", "Status"];
+    const ihead = ["Base cost B (₹)", "Misc %", "Total cost rate (₹)", "Gross margin %", "Rate source", "How measured"];
+    const rows = [[`Divine Innovation — BOQ generated from ${meta.filename || "drawing"} (${meta.revision || ""})`], [], includeInternal ? head.concat(ihead) : head];
+    let total = 0;
+    state.boqItems.forEach(i => {
+      if (i.is_heading) { rows.push([i.item_code, i.description]); return; }
+      total += i.selling_amount || 0;
+      const r = [i.item_code, i.description, i.location, i.unit, i.current_qty, i.selling_rate, i.selling_amount, i.review_status];
+      rows.push(includeInternal ? r.concat([i.material_cost + i.labour_cost + i.transport_cost, i.misc_pct, i.cost_rate, i.margin_pct, i.rate_source, i.provenance_type]) : r);
+    });
+    rows.push([], ["", "Total (excl. GST)", "", "", "", "", Math.round(total * 100) / 100]);
+    rows.push(["", "Quantities are measured from the drawing; lines marked 'Needs review' use a standard assumption (height or finish) and lines marked 'Rate needed' have no costing yet."]);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(rows), "BOQ");
+    if (state.comparisonData && state.comparisonData.engine) {
+      const c = state.comparisonData.engine;
+      const crow = [["Summary of differences"], [c.verdict], [`Scope coverage: ${c.coverage_pct === null ? "—" : c.coverage_pct + "%"}`], [],
+        ["Code", "Customer item", "Their qty", "Unit", "Status", "Reason", "Our line(s)"]];
+      c.rows.forEach(r => crow.push([r.code, (r.full_description || "").split("\n")[0], r.quantity, r.unit, r.status_label, r.cause_label || r.reason, r.lines.map(l => l.description).join("; ")]));
+      XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(crow), "Comparison");
+    }
+    XLSX.writeFile(wb, `Divine-BOQ-${(meta.filename || "drawing").replace(/\.[^/.]+$/, "")}${includeInternal ? "-internal" : ""}.xlsx`);
+  } catch (err) {
+    alert("Export failed: " + err.message);
+  }
+};
