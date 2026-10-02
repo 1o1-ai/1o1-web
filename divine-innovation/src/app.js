@@ -52,7 +52,7 @@ function handleLogin(e) {
   if (found) {
     state.currentUser = { username: found.displayName, role: found.role };
     localStorage.setItem("di_user", JSON.stringify(state.currentUser));
-    engineLogin(uInput, pInput);
+    engineLogin(found.displayName, pInput);
     document.getElementById("login-modal").style.display = "none";
     updateUserUI();
     loadData();
@@ -255,7 +255,8 @@ const SECTION_ORDER = ["Partitions & glazing", "Doors", "Flooring", "Ceilings", 
 
 function engineToken() { return localStorage.getItem("di_api_token"); }
 
-async function engineCall(method, path, body, isForm) {
+async function engineCall(method, path, body, isForm, retried) {
+  if (!engineToken() && !retried) await ensureEngineSession();
   const headers = {};
   const tok = engineToken();
   if (tok) headers.Authorization = "Bearer " + tok;
@@ -264,16 +265,37 @@ async function engineCall(method, path, body, isForm) {
   const text = await res.text();
   let data = null;
   try { data = text ? JSON.parse(text) : null; } catch (e) { data = { error: text }; }
-  if (res.status === 401) { localStorage.removeItem("di_api_token"); throw new Error("Session expired — please log out and sign in again."); }
+  if (res.status === 401) {
+    localStorage.removeItem("di_api_token");
+    if (!retried && await ensureEngineSession()) return engineCall(method, path, body, isForm, true);
+    throw new Error("Could not connect to the drawing engine — please sign in again.");
+  }
   if (!res.ok) throw new Error((data && (data.error || data.detail)) || ("HTTP " + res.status));
   return data;
 }
 
 async function engineLogin(username, password) {
-  try {
-    const res = await fetch(ENGINE_API + "/auth/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ username, password }) });
-    if (res.ok) { localStorage.setItem("di_api_token", (await res.json()).token); return true; }
-  } catch (e) { /* engine unreachable */ }
+  const names = [...new Set([username, username.toLowerCase(), username.charAt(0).toUpperCase() + username.slice(1).toLowerCase()])];
+  for (const name of names) {
+    try {
+      const res = await fetch(ENGINE_API + "/auth/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ username: name, password }) });
+      if (res.ok) { localStorage.setItem("di_api_token", (await res.json()).token); return true; }
+    } catch (e) { /* engine unreachable */ }
+  }
+  return false;
+}
+
+// Older sessions signed in before the engine existed (or with a lower-case name the engine rejected):
+// ask for the password once, connect, and carry on — no log-out needed.
+async function ensureEngineSession() {
+  if (engineToken()) return true;
+  const user = state.currentUser && state.currentUser.username;
+  const found = VALID_USERS.find(u => user && (u.displayName === user || u.username === String(user).toLowerCase()));
+  if (found && await engineLogin(found.displayName, found.password)) return true;
+  const pw = prompt(`Enter the password for ${user || "your account"} to connect to the drawing engine:`);
+  if (!pw) return false;
+  if (await engineLogin(user || "", pw)) return true;
+  alert("Could not connect to the drawing engine with that password.");
   return false;
 }
 
@@ -391,7 +413,7 @@ function restoreGeneratedBOQ() {
 async function handleCADAdobeUpload(e) {
   const files = Array.from(e.target.files || []);
   if (!files.length) return;
-  if (!engineToken()) { alert("Please log out and sign in again to connect to the drawing engine."); return; }
+  if (!(await ensureEngineSession())) { e.target.value = ""; return; }
   try {
     setStatus("Creating project…");
     const name = files.map(f => f.name).join(" + ");
