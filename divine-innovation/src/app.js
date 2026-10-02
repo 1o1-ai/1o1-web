@@ -163,6 +163,7 @@ async function resetProjectData() {
   if (btn) btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Resetting...`;
   localStorage.removeItem("di_boq_items");
   localStorage.removeItem("di_boq_meta");
+  localStorage.removeItem("di_cmp");
   state.comparisonData = null;
   state.cmpScope = "all";
   const cmpBox = document.getElementById("cmp-scope-summary"); if (cmpBox) cmpBox.remove();
@@ -395,11 +396,13 @@ async function handleCADAdobeUpload(e) {
     setStatus("Creating project…");
     const name = files.map(f => f.name).join(" + ");
     const proj = await engineCall("POST", "/projects", { name: `${name} — ${new Date().toLocaleString("en-IN")}`, client: "Divine Innovation" });
+    const uploaded = [];
     for (const f of files) {
       setStatus(`Uploading ${f.name}…`);
       const fd = new FormData(); fd.append("file", f);
       const up = await engineCall("POST", `/projects/${proj.id}/documents`, fd, true);
       await waitForJob(up.job.id);
+      uploaded.push({ id: up.document.id, name: f.name, size: f.size, kind: up.document.kind });
     }
     setStatus("Measuring partitions, glazing, doors, floor and rooms…");
     let tk = await engineCall("GET", `/projects/${proj.id}/takeoff`);
@@ -414,7 +417,15 @@ async function handleCADAdobeUpload(e) {
     const rev = await engineCall("POST", `/projects/${proj.id}/revisions/generate`);
     const tb = (tk.sources || {}).title_block || {};
     const items = await buildOldStyleItems(rev, files[0].name);
-    showGeneratedBOQ(items, files[0].name, { project: proj.id, revision_id: rev.id, revision: tb.revision ? `Rev ${tb.revision}` : "Rev 01", title: tb.drawing_title || "" });
+    const issues = tk.questions.filter(q => !(q.key in (tk.inputs_used || {}))).map((q, k) => ({ id: `q${k}`, code: `Q-${k + 1}`, title: q.text.slice(0, 90),
+      category: "question", severity: "warning", description: q.text, sample_source: "drawing", status: "unresolved" }))
+      .concat((tk.discrepancies || []).map((d, k) => ({ id: `d${k}`, code: `CHK-${k + 1}`, title: d.message.slice(0, 90), category: d.code, severity: "info",
+        description: d.message, sample_source: "drawing check", status: "unresolved" })));
+    localStorage.removeItem("di_cmp");
+    showGeneratedBOQ(items, files[0].name, { project: proj.id, revision_id: rev.id, revision: tb.revision ? `Rev ${tb.revision}` : "Rev 01", title: tb.drawing_title || "",
+      files: uploaded, rooms: (tk.rooms || []).map(r => ({ room: r.room, area_m2: r.area_m2, enclosed: r.enclosed })), issues,
+      scale_note: (tk.sources && tk.sources.units ? "Units: " + tk.sources.units.name : "") });
+    loadInventory(); loadZones(); loadReviewIssues(); loadPDFDrawing(); clearComparisonView();
     setStatus("");
     const lines = items.filter(i => !i.is_heading).length;
     const open = tk.questions.filter(q => !(q.key in (tk.inputs_used || {}))).length;
@@ -439,6 +450,7 @@ async function handleBOQUpload(e) {
     const fd = new FormData(); fd.append("file", file);
     const ref = await engineCall("POST", `/projects/${meta.project}/references`, fd, true);
     const cmp = await engineCall("GET", `/projects/${meta.project}/references/${ref.reference_id}/comparison`);
+    try { localStorage.setItem("di_cmp", JSON.stringify(cmp)); } catch (e) { /* too large to keep */ }
     state.comparisonData = toOldComparison(cmp);
     renderComparisonTable(state.comparisonData);
     setStatus("");
@@ -1270,4 +1282,118 @@ exportExcel = async function (includeInternal) {
   } catch (err) {
     alert("Export failed: " + err.message);
   }
+};
+
+// ---------------- Every screen shows only the uploaded drawing's data (no local server, no bundled sample) ----------------
+function engineMeta() { try { return JSON.parse(localStorage.getItem("di_boq_meta") || "null"); } catch (e) { return null; } }
+
+loadInventory = async function () {
+  const meta = engineMeta();
+  state.inventory = meta && meta.files ? meta.files.map(f => ({ name: f.name, category: f.kind === "pdf" ? "pdf_layout" : "cad_drawing", size_bytes: f.size })) : [];
+  renderInventoryTable(state.inventory);
+};
+
+loadZones = async function () {
+  const meta = engineMeta();
+  state.zones = meta && meta.rooms ? meta.rooms.map(r => ({ name: r.room, category: r.enclosed ? "room" : "open area", gross_area_sqft: Math.round(r.area_m2 * 10.7639 * 10) / 10 })) : [];
+  renderZonesList(state.zones);
+};
+
+loadReviewIssues = async function () {
+  const meta = engineMeta();
+  state.issues = meta && meta.issues ? meta.issues : [];
+  renderReviewIssues(state.issues);
+  const badge = document.getElementById("badge-issue-count");
+  if (badge) { badge.textContent = state.issues.length; badge.style.display = state.issues.length ? "inline-flex" : "none"; }
+};
+
+loadBOQItems = async function () {
+  if (restoreGeneratedBOQ()) return;
+  state.boqItems = [];
+  renderBOQTable([]); renderAdminBOMTable([]); populateMeasBOQSelect([]);
+};
+
+loadProjectSummary = async function () {
+  if (engineBOQActive()) { restoreGeneratedBOQ(); return; }
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  set("summary-customer", "Divine Innovation (Workspace Clean)");
+  set("summary-location", "Pending Drawing Upload");
+  set("summary-total-amount", "₹ 0.00");
+  set("summary-revision", "Rev 00 (no drawing)");
+  set("sidebar-rev-label", "Rev 00");
+  const badge = document.getElementById("proj-status-badge");
+  if (badge) { badge.textContent = "CLEAN"; badge.className = "badge badge-secondary"; }
+};
+
+function clearComparisonView() {
+  const box = document.getElementById("cmp-scope-summary"); if (box) box.remove();
+  const body = document.getElementById("compare-table-body");
+  if (body) body.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-muted);">Upload the customer's BOQ to compare it with the BOQ generated from your drawing.</td></tr>`;
+  const set = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+  set("cmp-gen-total", "₹ 0.00"); set("cmp-up-total", "₹ 0.00"); set("cmp-var-total", "₹ 0.00 (0%)"); set("cmp-items-count", "0 items");
+}
+
+loadDefaultComparison = async function () {
+  let cmp = null;
+  try { cmp = JSON.parse(localStorage.getItem("di_cmp") || "null"); } catch (e) { cmp = null; }
+  if (engineBOQActive() && cmp) { state.comparisonData = toOldComparison(cmp); renderComparisonTable(state.comparisonData); return; }
+  state.comparisonData = null;
+  clearComparisonView();
+};
+
+importSample = async function () {
+  alert("Upload the drawing (DWG, DXF or PDF) in step 2 — the BOQ is generated from that drawing.");
+  document.querySelector('.nav-item[data-tab="upload-cad"]')?.click();
+};
+
+function setViewerHeader(meta) {
+  document.querySelectorAll(".card-title").forEach(el => {
+    if (/Layout Drawing Viewer/.test(el.textContent)) el.innerHTML = `<i class="fa-solid fa-map-location-dot"></i> Layout Drawing Viewer${meta ? " — " + (meta.filename || "") + (meta.revision ? " (" + meta.revision + ")" : "") : ""}`;
+  });
+  document.querySelectorAll(".badge").forEach(el => {
+    if (/NTS TITLE BLOCK|CALIBRATED/i.test(el.textContent)) el.textContent = meta ? (meta.scale_note || "Measured from drawing geometry") : "No drawing uploaded";
+  });
+}
+
+async function geometryImage(projectId, docId) {
+  const g = await engineCall("GET", `/projects/${projectId}/documents/${docId}/geometry`);
+  if (!g.bbox) return null;
+  const [x0, y0, x1, y1] = g.bbox;
+  const W = 2000, H = Math.max(400, Math.round(W * (y1 - y0) / Math.max(1, x1 - x0)));
+  const c = document.createElement("canvas"); c.width = W; c.height = H;
+  const ctx = c.getContext("2d");
+  ctx.fillStyle = "#ffffff"; ctx.fillRect(0, 0, W, H);
+  const s = Math.min(W / (x1 - x0), H / (y1 - y0)) * 0.96;
+  const ox = (W - (x1 - x0) * s) / 2, oy = (H - (y1 - y0) * s) / 2;
+  const colour = { glazing: "#0e7490", partition: "#0f766e", external_wall: "#334155", wall_hatch: "#94a3b8", door: "#2563eb", dimension: "#cbd5e1", ceiling_grid: "#a78bfa" };
+  ctx.lineWidth = 1;
+  Object.keys(g.layers).forEach(ln => {
+    const L = g.layers[ln];
+    ctx.strokeStyle = colour[L.role] || "#64748b";
+    L.paths.forEach(p => { ctx.beginPath(); p.forEach((pt, i) => { const x = ox + (pt[0] - x0) * s, y = H - (oy + (pt[1] - y0) * s); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); ctx.stroke(); });
+  });
+  return c.toDataURL("image/png");
+}
+
+loadPDFDrawing = async function () {
+  const img = document.getElementById("pdf-rendered-img");
+  if (!img) return;
+  img.onerror = null;
+  const meta = engineMeta();
+  setViewerHeader(meta);
+  if (!meta || !meta.files || !meta.files.length || !engineToken()) {
+    img.removeAttribute("src"); img.alt = "No drawing uploaded yet — upload a DWG, DXF or PDF in step 2.";
+    img.style.minHeight = "120px";
+    return;
+  }
+  try {
+    const pdf = meta.files.find(f => f.kind === "pdf");
+    if (pdf) {
+      const res = await fetch(`${ENGINE_API}/projects/${meta.project}/documents/${pdf.id}/render/1`, { headers: { Authorization: "Bearer " + engineToken() } });
+      if (res.ok) { img.src = URL.createObjectURL(await res.blob()); return; }
+    }
+    const cad = meta.files.find(f => f.kind !== "pdf");
+    if (cad) { const url = await geometryImage(meta.project, cad.id); if (url) { img.src = url; return; } }
+  } catch (e) { console.warn("viewer:", e.message); }
+  img.removeAttribute("src"); img.alt = "The drawing could not be displayed.";
 };
