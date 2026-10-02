@@ -352,7 +352,7 @@ async function buildOldStyleItems(rev, filename) {
         selling_amount: Math.round(qty * sellingRate * 100) / 100,
         provenance_type: formula + (assumed ? " [standard assumption — edit if different]" : ""),
         rate_source: rate ? rate[1] : "rate needed",
-        review_status: rate ? (assumed ? "Needs review" : "Approved") : "Rate needed",
+        review_status: rate ? "Under review" : "Rate needed",
         scope_key: l.scope_key
       });
     }
@@ -418,7 +418,7 @@ async function handleCADAdobeUpload(e) {
     setStatus("");
     const lines = items.filter(i => !i.is_heading).length;
     const open = tk.questions.filter(q => !(q.key in (tk.inputs_used || {}))).length;
-    alert(`BOQ generated from '${name}'.\n\n- ${lines} BOQ lines measured from this drawing\n- Details the drawing does not state were filled with standard assumptions: ${ASSUMPTION_LABEL}\n- Lines that use an assumption are marked "Needs review" — edit any quantity in the table` + (open ? `\n- ${open} drawn items could not be identified automatically (see /divine-innovation/studio/)` : ""));
+    alert(`BOQ generated from '${name}'.\n\n- ${lines} BOQ lines measured from this drawing\n- Details the drawing does not state were filled with standard assumptions: ${ASSUMPTION_LABEL}\n- Every line starts "Under review"; lines using an assumption say so in their source column — edit any quantity, then approve` + (open ? `\n- ${open} drawn items could not be identified automatically (see /divine-innovation/studio/)` : ""));
     document.querySelector('.nav-item[data-tab="boq"]')?.click();
   } catch (err) {
     setStatus("");
@@ -1147,7 +1147,7 @@ function recalcEngineItem(item) {
   item.cost_rate = Math.round(totalCostRate * 100) / 100;
   item.selling_rate = Math.round(sellingRate * 100) / 100;
   item.selling_amount = Math.round((item.current_qty || 0) * sellingRate * 100) / 100;
-  if (base > 0 && item.review_status === "Rate needed") item.review_status = "Needs review";
+  if (base > 0 && item.review_status === "Rate needed") item.review_status = "Under review";
 }
 
 function saveAndRefreshEngineBOQ() {
@@ -1256,7 +1256,7 @@ exportExcel = async function (includeInternal) {
       rows.push(includeInternal ? r.concat([i.material_cost + i.labour_cost + i.transport_cost, i.misc_pct, i.cost_rate, i.margin_pct, i.rate_source, i.provenance_type]) : r);
     });
     rows.push([], ["", "Total (excl. GST)", "", "", "", "", Math.round(total * 100) / 100]);
-    rows.push(["", "Quantities are measured from the drawing; lines marked 'Needs review' use a standard assumption (height or finish) and lines marked 'Rate needed' have no costing yet."]);
+    rows.push(["", "Quantities are measured from the drawing; lines stay 'Under review' until approved; '[standard assumption]' marks a height or finish not stated on the drawing; 'Rate needed' means no costing yet."]);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(rows), "BOQ");
     if (state.comparisonData && state.comparisonData.engine) {
