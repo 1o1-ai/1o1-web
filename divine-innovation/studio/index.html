@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Divine Innovation — CAD-to-BOQ Studio</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="mark">DI</span><div><strong>Divine Innovation</strong><small>CAD-to-BOQ Studio</small></div></div>
+    <nav id="nav" class="nav" aria-label="Main"></nav>
+    <div class="top-right">
+      <span id="api-status" class="api-status" role="status" aria-live="polite">Checking server…</span>
+      <span id="user-box" class="user-box"></span>
+    </div>
+  </header>
+  <div id="banner" class="banner" hidden></div>
+  <main id="main" class="main" tabindex="-1"></main>
+  <aside id="drawer" class="drawer" aria-hidden="true" aria-label="Details">
+    <div class="drawer-head"><button class="btn ghost" id="drawer-close" aria-label="Close details">← Back</button><h2 id="drawer-title"></h2></div>
+    <div id="drawer-body" class="drawer-body"></div>
+  </aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="login">
+    <form method="dialog" id="login-form" class="login">
+      <div class="brand big"><span class="mark">DI</span><div><strong>Divine Innovation</strong><small>CAD-to-BOQ Studio</small></div></div>
+      <label>User ID <input name="username" autocomplete="username" required></label>
+      <label>Password <input name="password" type="password" autocomplete="current-password" required></label>
+      <p id="login-error" class="error" role="alert"></p>
+      <button class="btn primary" type="submit">Sign in</button>
+      <p class="muted small">Accounts are managed on the server. Passwords are case-sensitive.</p>
+    </form>
+  </dialog>
+  <script src="src/config.js"></script>
+  <script src="src/app.js"></script>
+</body>
+</html>
