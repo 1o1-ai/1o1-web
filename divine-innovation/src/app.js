@@ -113,6 +113,7 @@ function initEventListeners() {
   document.getElementById("form-login")?.addEventListener("submit", handleLogin);
   document.getElementById("btn-logout")?.addEventListener("click", handleLogout);
 
+  document.getElementById("btn-reset-data")?.addEventListener("click", resetProjectData);
   document.getElementById("btn-import-sample")?.addEventListener("click", importSample);
   document.getElementById("btn-re-discover")?.addEventListener("click", loadInventory);
   document.getElementById("btn-export-excel-quick")?.addEventListener("click", () => exportExcel(false));
@@ -151,11 +152,43 @@ function initEventListeners() {
   document.getElementById("boq-search")?.addEventListener("input", (e) => filterBOQItems(e.target.value));
 }
 
+async function resetProjectData() {
+  if (!confirm("Are you sure you want to clean up all workspace data?\n\nThis will reset the workspace to a pristine state so you can upload your DWG file or PDF drawing from scratch.")) {
+    return;
+  }
+
+  const btn = document.getElementById("btn-reset-data");
+  if (btn) btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Resetting...`;
+
+  try {
+    const res = await fetch(`${API_BASE}/project/reset?project_id=${currentProjectId}`, { method: "POST" });
+    const data = await res.json();
+    state.inventory = [];
+    state.boqItems = [];
+    state.zones = [];
+    state.issues = [];
+    state.comparisonData = null;
+
+    alert(data.message || "Workspace data cleaned up successfully!");
+    await loadData();
+  } catch (err) {
+    state.inventory = [];
+    state.boqItems = [];
+    state.zones = [];
+    state.issues = [];
+    state.comparisonData = null;
+    alert("Workspace data cleaned up locally to pristine state.");
+    await loadData();
+  } finally {
+    if (btn) btn.innerHTML = `<i class="fa-solid fa-trash-can"></i> Clean Data / Reset`;
+  }
+}
+
 async function loadData() {
   try {
+    await loadBOQItems();
     await loadProjectSummary();
     await loadInventory();
-    await loadBOQItems();
     await loadZones();
     await loadReviewIssues();
     await loadPDFDrawing();
@@ -193,11 +226,19 @@ async function loadProjectSummary() {
     if (res.ok) {
       const data = await res.json();
       state.project = data;
-      document.getElementById("summary-customer").textContent = data.project.customer_name || "Divine Innovation / M/s Fusion Pipes";
-      document.getElementById("summary-location").textContent = data.project.location || "Faridabad, Haryana";
-      document.getElementById("summary-total-amount").textContent = `₹ ${(data.total_selling_amount || 0).toLocaleString('en-IN')}`;
-      document.getElementById("summary-revision").textContent = data.drawing_revision;
-      document.getElementById("sidebar-rev-label").textContent = data.drawing_revision.split(' ')[0];
+      const isClean = (data.total_items || 0) === 0;
+
+      document.getElementById("summary-customer").textContent = isClean ? "Divine Innovation (Workspace Clean)" : (data.project.customer_name || "Divine Innovation / M/s Fusion Pipes");
+      document.getElementById("summary-location").textContent = isClean ? "Pending Drawing Upload" : (data.project.location || "Faridabad, Haryana");
+      document.getElementById("summary-total-amount").textContent = `₹ ${(data.total_selling_amount || 0).toLocaleString('en-IN', {minimumFractionDigits: 2})}`;
+      document.getElementById("summary-revision").textContent = data.drawing_revision || (isClean ? "Rev 00 (Pristine)" : "Rev 07");
+      document.getElementById("sidebar-rev-label").textContent = isClean ? "Rev 00" : (data.drawing_revision ? data.drawing_revision.split(' ')[0] : "Rev 07");
+
+      const badge = document.getElementById("proj-status-badge");
+      if (badge) {
+        badge.textContent = isClean ? "PRISTINE CLEAN" : "LOADED";
+        badge.className = isClean ? "badge badge-secondary" : "badge badge-info";
+      }
 
       if (data.default_misc_pct !== undefined) document.getElementById("global-misc-pct").value = data.default_misc_pct;
       if (data.default_margin_pct !== undefined) document.getElementById("global-margin-pct").value = data.default_margin_pct;
@@ -207,8 +248,25 @@ async function loadProjectSummary() {
         issueBadge.textContent = data.unresolved_issues;
         issueBadge.style.display = data.unresolved_issues > 0 ? "inline-flex" : "none";
       }
+      return;
     }
-  } catch (e) { console.warn("Backend API not reachable, running offline mode."); }
+  } catch (e) {
+    console.warn("Backend API not reachable, running offline clean check.");
+  }
+
+  const isClean = !state.boqItems || state.boqItems.length === 0;
+  if (isClean) {
+    document.getElementById("summary-customer").textContent = "Divine Innovation (Workspace Clean)";
+    document.getElementById("summary-location").textContent = "Pending Drawing Upload";
+    document.getElementById("summary-total-amount").textContent = "₹ 0.00";
+    document.getElementById("summary-revision").textContent = "Rev 00 (Pristine)";
+    document.getElementById("sidebar-rev-label").textContent = "Rev 00";
+    const badge = document.getElementById("proj-status-badge");
+    if (badge) {
+      badge.textContent = "PRISTINE CLEAN";
+      badge.className = "badge badge-secondary";
+    }
+  }
 }
 
 async function loadInventory() {
@@ -216,27 +274,49 @@ async function loadInventory() {
     const res = await fetch(`${API_BASE}/sample/discover`);
     if (res.ok) {
       const data = await res.json();
-      state.inventory = data.inventory || [];
+      if (!state.boqItems || state.boqItems.length === 0) {
+        state.inventory = [];
+      } else {
+        state.inventory = data.inventory || [];
+      }
       renderInventoryTable(state.inventory);
+      return;
     }
-  } catch (e) {
+  } catch (e) {}
+
+  if (!state.boqItems || state.boqItems.length === 0) {
+    state.inventory = [];
+  } else {
     state.inventory = [
       { name: "Fusion.dwg", category: "cad_drawing", size_bytes: 127887 },
       { name: "Fusion Pipe Layout R7 (1).pdf", category: "pdf_layout", size_bytes: 300622 },
       { name: "M_s Fusion Pipe _ BOQ_.xlsx", category: "boq_workbook", size_bytes: 456158 }
     ];
-    renderInventoryTable(state.inventory);
   }
+  renderInventoryTable(state.inventory);
 }
 
 function renderInventoryTable(items) {
   const tbody = document.getElementById("inventory-table-body");
   if (!tbody) return;
 
+  if (!items || items.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="5" style="text-align: center; padding: 2rem; color: var(--text-muted);">
+          <i class="fa-solid fa-folder-open" style="font-size: 2rem; margin-bottom: 0.5rem; display: block; opacity: 0.5;"></i>
+          Workspace is clean (No documents loaded).<br>
+          <span style="font-size: 0.85rem;">Upload a DWG file under <strong>2. Upload CAD & Adobe</strong> or click <strong>Import Sample</strong> to load sample files.</span>
+        </td>
+      </tr>
+    `;
+    return;
+  }
+
   tbody.innerHTML = items.map(item => `
     <tr>
       <td><strong>${item.name}</strong></td>
-      <td><span class="badge badge-info">${item.category.replace('_', ' ').toUpperCase()}</span></td>
+      <td><span class="badge badge-info">${(item.category || '').replace('_', ' ').toUpperCase()}</span></td>
       <td>${(item.size_bytes / 1024).toFixed(1)} KB</td>
       <td><span class="badge badge-success">Available</span></td>
       <td><button class="btn btn-secondary btn-sm" onclick="alert('File ${item.name} ready for inspection.')">Inspect</button></td>
@@ -275,12 +355,27 @@ async function loadBOQItems() {
     }
   } catch (e) {
     console.warn("Using cached BOQ items.");
+    renderBOQTable(state.boqItems);
+    renderAdminBOMTable(state.boqItems);
   }
 }
 
 function renderBOQTable(items) {
   const tbody = document.getElementById("boq-table-body");
   if (!tbody) return;
+
+  if (!items || items.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="11" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
+          <i class="fa-solid fa-list-check" style="font-size: 2.5rem; margin-bottom: 0.5rem; display: block; opacity: 0.5;"></i>
+          Workspace is clean (0 BOQ items).<br>
+          <span style="font-size: 0.85rem;">Upload your AutoCAD DWG file or PDF drawing under <strong>2. Upload CAD & Adobe</strong> to generate BOQ from scratch, or click <strong>Import Sample</strong>.</span>
+        </td>
+      </tr>
+    `;
+    return;
+  }
 
   tbody.innerHTML = items.map(item => {
     if (item.is_heading) {
@@ -336,7 +431,18 @@ function renderAdminBOMTable(items) {
   const tbody = document.getElementById("admin-bom-table-body");
   if (!tbody) return;
 
-  const validItems = items.filter(i => !i.is_heading && !i.is_subtotal);
+  const validItems = (items || []).filter(i => !i.is_heading && !i.is_subtotal);
+
+  if (!validItems || validItems.length === 0) {
+    tbody.innerHTML = `
+      <tr>
+        <td colspan="12" style="text-align: center; padding: 2.5rem; color: var(--text-muted);">
+          Workspace is clean (0 BOM items). Upload a DWG/PDF file or click <strong>Import Sample</strong> to populate items.
+        </td>
+      </tr>
+    `;
+    return;
+  }
 
   tbody.innerHTML = validItems.map(item => {
     const mat = item.material_cost || ((item.cost_rate || 0) * 0.6);
