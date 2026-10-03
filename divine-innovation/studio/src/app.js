@@ -115,7 +115,7 @@
     add(box, [h("span", { text: S.user.display_name + " · " + S.user.role }),
       h("button", { class: "btn small", onclick: function () { api("POST", "/api/auth/logout").catch(function () {}); S.token = null; S.user = null; try { localStorage.removeItem("divine.token"); } catch (e) { /**/ } clear($("main")); showLogin(); } }, "Sign out")]);
   }
-  var NAV = [["projects", "Projects"], ["costing", "Master Costing"], ["settings", "Settings"]];
+  var NAV = [["projects", "Projects"], ["costing", "Master Costing"], ["knowledge", "Knowledge"], ["settings", "Settings"]];
   function renderNav() {
     var nav = clear($("nav"));
     NAV.forEach(function (n) {
@@ -132,7 +132,7 @@
     closeDrawer();
     var main = clear($("main"));
     var v = S.route.view;
-    var p = v === "project" ? viewProject(main) : v === "costing" ? viewCosting(main) : v === "settings" ? viewSettings(main) : viewProjects(main);
+    var p = v === "project" ? viewProject(main) : v === "costing" ? viewCosting(main) : v === "knowledge" ? viewKnowledge(main) : v === "settings" ? viewSettings(main) : viewProjects(main);
     if (p && p.catch) p.catch(function (e) { add(main, h("div", { class: "card error" }, e.message)); });
   }
   window.addEventListener("hashchange", route);
@@ -252,7 +252,10 @@
       var head = h("div", { class: "row spread" },
         h("div", {}, h("h1", {}, p.name, p.is_demo ? h("span", { class: "tag" }, "DEMO") : null),
           h("div", { class: "muted" }, [p.client, p.location].filter(Boolean).join(" · ") || "—", " · ",
-            revA ? (revA.title + " (" + LABEL[revA.status] + ")") : "Rev 00 — no BOQ yet")),
+            revA ? (revA.title + " (" + LABEL[revA.status] + ")") : "Rev 00 — no BOQ yet"),
+          can("users.manage") ? h("div", { class: "row", style: "margin-top:6px" },
+            h("button", { class: "btn small", onclick: function () { resetProject(p); } }, "Reset outputs"),
+            h("button", { class: "btn small danger", onclick: function () { deleteProject(p); } }, "Delete project")) : null),
         pricingBox(p));
       var steps = h("nav", { class: "steps", "aria-label": "Workflow steps" });
       STEPS.forEach(function (s, i) {
@@ -331,6 +334,22 @@
         h("dt", {}, "duplicates"), h("dd", {}, (d.duplicates_excluded || []).length + " identical entities counted once")),
       (d.warnings || []).map(function (w) { return h("p", { class: "muted small" }, "⚠ " + w); }),
       featureTable(d.features || []), h("div", { style: "margin-top:8px" }, viewer(x.document_id, "cad", []))]);
+    }
+    if (d && d.readiness) {
+      var rd = d.readiness;
+      add(card, h("details", { open: rd.status !== "ok" ? "" : null }, h("summary", {}, "Drawing check: ", badge(rd.status === "ok" ? "ok" : rd.status === "blocked" ? "bad" : "warn", rd.status), " ", rd.verdict),
+        h("ul", {}, rd.checks.map(function (c) { return h("li", { class: "small" }, badge(c.status === "ok" ? "ok" : c.status === "blocked" ? "bad" : c.status === "not_checked" ? "note" : "warn", c.check.replace(/_/g, " ")), " ", c.message); }))));
+    }
+    if (can("project.edit")) {
+      var rows = [0, 1].map(function () { return { u: h("input", { type: "number", min: "0", placeholder: x.kind === "pdf" ? "length in PDF points" : "length in drawing units", style: "width:170px" }),
+        mm: h("input", { type: "number", min: "0", placeholder: "true length in mm", style: "width:150px" }), what: h("input", { placeholder: "what (e.g. room width)", style: "width:170px" }) }; });
+      add(card, h("details", {}, h("summary", {}, "Calibrate the scale from two known dimensions"),
+        h("p", { class: "small muted" }, "For a drawing that is not to scale or has no units: give two dimensions you know. They must agree within 1 % or the calibration is refused; the drawing is then re-read at that scale and the basis is recorded."),
+        rows.map(function (r) { return h("div", { class: "row" }, r.u, r.mm, r.what); }),
+        h("button", { class: "btn small", onclick: function () {
+          var ms = rows.map(function (r) { return { units: r.u.value, mm: r.mm.value, what: r.what.value }; }).filter(function (m) { return m.units && m.mm; });
+          api("POST", "/api/projects/" + p.id + "/documents/" + x.document_id + "/calibrate", { measurements: ms }).then(function (res) { toast("Calibrated: " + res.mm_per_unit + " mm per unit — re-reading the drawing."); route(); }).catch(softFail);
+        } }, "Calibrate and re-read")));
     }
     return card;
   }
@@ -473,6 +492,74 @@
     }).catch(function (e) { clear(card); card.appendChild(h("p", { class: "error" }, "Measurement book unavailable: " + e.message)); });
   }
 
+  // ------------------------------------------------------------ knowledge: what the system learned, and proof that it helps
+  var KSTATUS = { proposed: "review", active: "ok", trusted: "covered", suspended: "warn", withdrawn: "excluded" };
+  function viewKnowledge(main) {
+    return Promise.all([api("GET", "/api/knowledge"), api("GET", "/api/evaluation/cases"), api("GET", "/api/evaluation/runs"), api("GET", "/api/projects")]).then(function (r) {
+      var k = r[0], cases = r[1].cases, runs = r[2].runs, projs = r[3].projects || r[3];
+      var head = h("div", { class: "card" }, h("h1", {}, "Knowledge"),
+        h("p", { class: "muted" }, "Every answer and correction is recorded. Answers that recur across projects become rules: proposed → active (shown as a suggestion with its track record) → trusted (filled in automatically and labelled). A rule never creates a quantity. Trusting needs " +
+          "3 agreeing projects, no contradiction, and no regression in the latest validation run; a contradiction suspends a trusted rule. Knowledge version " + k.knowledge_hash + "."),
+        h("button", { class: "btn small", onclick: function () { download("/api/knowledge/export", "knowledge-" + k.knowledge_hash + ".json"); } }, "Export knowledge (.json)"));
+      var t = h("table", {}, h("thead", {}, h("tr", {}, ["Rule", "Value", "Status", "Track record", "Gate", ""].map(function (x) { return h("th", {}, x); }))));
+      var tb = h("tbody"); t.appendChild(tb);
+      if (!k.rules.length) tb.appendChild(h("tr", {}, h("td", { colspan: 6, class: "muted" }, "Nothing learned yet. Answers on projects (not auto-filled assumptions) and corrections to reviewed BOQs appear here.")));
+      k.rules.forEach(function (ru) {
+        var acts = h("div", { class: "row" });
+        function decide(status, needReason) {
+          var reason = needReason ? ask("Reason for marking this rule " + status + ":") : "";
+          if (needReason && !reason) return;
+          api("POST", "/api/knowledge/" + ru.id + "/decision", { status: status, reason: reason }).then(function () { toast("Rule " + status + "."); route(); }).catch(softFail);
+        }
+        if (can("costing.edit")) {
+          if (ru.status === "proposed" || ru.status === "suspended") acts.appendChild(h("button", { class: "btn small", onclick: function () { decide("active", false); } }, "Approve as suggestion"));
+          if (ru.status === "active") acts.appendChild(h("button", { class: "btn small primary", disabled: ru.gate.ok ? null : "", title: ru.gate.reasons.join("; "), onclick: function () { decide("trusted", true); } }, "Trust (apply automatically)"));
+          if (ru.status === "trusted" || ru.status === "active") acts.appendChild(h("button", { class: "btn small", onclick: function () { decide("suspended", true); } }, "Suspend"));
+          acts.appendChild(h("button", { class: "btn small danger", onclick: function () { decide("withdrawn", true); } }, "Withdraw"));
+        }
+        tb.appendChild(h("tr", {}, h("td", { class: "small" }, ru.kind === "scope_prompt" ? "Prompt: " + ru.key : ru.key),
+          h("td", {}, ru.value), h("td", {}, badge(KSTATUS[ru.status] || "note", ru.status)),
+          h("td", { class: "small" }, ru.confirmations + " agree · " + ru.contradictions + " disagree · " + ru.project_count + " project(s)"),
+          h("td", { class: "small muted" }, ru.gate.ok ? "can be trusted" : ru.gate.reasons.join("; ")), h("td", {}, acts)));
+      });
+      var rulesCard = h("div", { class: "card" }, h("h2", {}, "Rules (" + k.rules.length + ")"), h("div", { class: "table-wrap" }, t));
+      // evaluation
+      var ev = h("div", { class: "card" }, h("h2", {}, "Evaluation — does the knowledge help?"),
+        h("p", { class: "muted" }, "Mark finished projects (with their customer BOQ) as training, validation or test. Validation and test projects never teach. A run regenerates each case from its drawing alone — once without knowledge, once with the active and trusted rules — and scores both against the case's BOQ, which the generator never sees. Keep the test split for occasional independent checks; tuning against it turns it into validation."));
+      var ct = h("table", {}, h("thead", {}, h("tr", {}, ["Project", "Split"].map(function (x) { return h("th", {}, x); }))));
+      var ctb = h("tbody"); ct.appendChild(ctb);
+      cases.forEach(function (c) { ctb.appendChild(h("tr", {}, h("td", {}, c.project_name), h("td", {}, badge(c.split === "test" ? "warn" : "note", c.split)))); });
+      if (!cases.length) ctb.appendChild(h("tr", {}, h("td", { colspan: 2, class: "muted" }, "No evaluation cases yet.")));
+      ev.appendChild(ct);
+      if (can("costing.edit")) {
+        var withRefs = (projs || []).filter(function (p) { return true; });
+        var psel = h("select", {}, withRefs.map(function (p) { return h("option", { value: p.id }, p.name); }));
+        var ssel = h("select", {}, ["validation", "test", "training", "none"].map(function (x) { return h("option", { value: x }, x); }));
+        ev.appendChild(h("div", { class: "row", style: "margin-top:8px" }, psel, ssel, h("button", { class: "btn small", onclick: function () {
+          api("GET", "/api/projects/" + psel.value).then(function (pr) {
+            var ref = (pr.references || [])[0];
+            if (!ref && ssel.value !== "none") return toast("That project has no customer BOQ yet.");
+            return api("POST", "/api/evaluation/cases", { project_id: psel.value, reference_id: ref ? ref.id : null, split: ssel.value }).then(function () { toast("Saved."); route(); });
+          }).catch(softFail);
+        } }, "Set split")));
+        ev.appendChild(h("div", { class: "row", style: "margin-top:8px" },
+          h("button", { class: "btn primary", onclick: function () { api("POST", "/api/evaluation/runs", { split: "validation" }).then(function () { toast("Validation run complete."); route(); }).catch(softFail); } }, "Run validation"),
+          h("button", { class: "btn", onclick: function () { if (!confirm("Run the sealed test split? Use it rarely — repeated tuning against it makes it a validation set.")) return; api("POST", "/api/evaluation/runs", { split: "test" }).then(function () { toast("Test run complete."); route(); }).catch(softFail); } }, "Run blind test")));
+      }
+      var rt = h("table", {}, h("thead", {}, h("tr", {}, ["When", "Split", "Cases", "Scope recall without → with", "Questions without → with", "Qty error (median) without → with", "Knowledge"].map(function (x) { return h("th", {}, x); }))));
+      var rtb = h("tbody"); rt.appendChild(rtb);
+      runs.forEach(function (x) { var m = x.metrics;
+        rtb.appendChild(h("tr", {}, h("td", { class: "small" }, (x.created_at || "").slice(0, 16).replace("T", " ")), h("td", {}, x.split), h("td", { class: "num" }, m.cases),
+          h("td", { class: "num" }, (m.scope_recall_without ?? "—") + "% → " + (m.scope_recall_with ?? "—") + "%"),
+          h("td", { class: "num" }, (m.questions_without ?? "—") + " → " + (m.questions_with ?? "—")),
+          h("td", { class: "num" }, (m.quantity_error_without ?? "—") + "% → " + (m.quantity_error_with ?? "—") + "%"), h("td", { class: "small muted" }, x.knowledge_hash))); });
+      if (!runs.length) rtb.appendChild(h("tr", {}, h("td", { colspan: 7, class: "muted" }, "No runs yet.")));
+      ev.appendChild(h("h3", { style: "margin-top:12px" }, "Runs"));
+      ev.appendChild(h("div", { class: "table-wrap" }, rt));
+      add(main, [head, rulesCard, ev]);
+    });
+  }
+
   // ---- step 3: Drawing BOQ (Rev A)
   function stepBoq(body, p) {
     var revA = p.revisions.filter(function (r) { return r.kind === "drawing"; })[0];
@@ -555,9 +642,20 @@
     }
     openDrawer("Line " + l.line_no + " — " + l.description, parts);
   }
+  var CAUSES = [["recognition", "a drawn item was misread"], ["missing_object", "something was not measured"], ["geometry_repair", "the drawing geometry needed repair"],
+    ["height", "the height was different"], ["measurement_convention", "a measuring convention (faces, openings)"], ["revision", "the drawing revision changed"],
+    ["billing_unit", "billed in a different unit"], ["wastage", "wastage / allowance"], ["commercial_scope", "a commercial scope decision"], ["other", "other"]];
   function editLine(rev, l, changes, prompt) {
+    var cause = null;
+    if (changes.quantity !== undefined) {
+      var pick = ask("Why did the quantity change? (the cause is what the system learns from — the number itself is never reused)\n" +
+        CAUSES.map(function (c, i) { return (i + 1) + " = " + c[1]; }).join("\n"), "");
+      if (pick === null) return;
+      var c = CAUSES[parseInt(pick, 10) - 1]; if (!c) return toast("Choose a number from the list.");
+      cause = c[0];
+    }
     var reason = ask(prompt + " — reason (kept in the change log):"); if (!reason) return;
-    api("PATCH", "/api/revisions/" + rev.id + "/lines/" + l.id, { changes: changes, reason: reason }).then(function () { toast("Saved."); closeDrawer(); route(); }).catch(softFail);
+    api("PATCH", "/api/revisions/" + rev.id + "/lines/" + l.id, { changes: changes, reason: reason, cause: cause }).then(function () { toast("Saved."); closeDrawer(); route(); }).catch(softFail);
   }
 
   // ---- step 4: customer BOQ
@@ -987,6 +1085,31 @@
   }
 
   // ------------------------------------------------------------ settings
+  function describe(pre) {
+    return Object.keys(pre).filter(function (k) { return k !== "project" && k !== "files_folder"; }).map(function (k) {
+      var v = pre[k]; return "• " + k.replace(/_/g, " ") + ": " + (Array.isArray(v) ? (v.length ? v.map(function (x) { return x.key || x.name || JSON.stringify(x); }).join(", ") : "none") : (v && typeof v === "object" ? JSON.stringify(v) : v));
+    }).join("\n");
+  }
+  function deleteProject(p) {
+    api("GET", "/api/projects/" + p.id + "/delete-preview").then(function (pre) {
+      var name = ask("Delete “" + p.name + "” and everything below? This cannot be undone here (a backup is written first).\n\n" + describe(pre) + "\n\nType the project name to confirm:");
+      if (name === null) return;
+      return api("DELETE", "/api/projects/" + p.id, { confirm: name }).then(function (r) { toast("Deleted. " + r.retention); location.hash = "#/projects"; });
+    }).catch(softFail);
+  }
+  function resetProject(p) {
+    if (!confirm("Reset “" + p.name + "”? Revisions, the customer BOQ, comparisons and the evaluation mark are removed; drawings, measurements and answers are kept. A backup is written first.")) return;
+    api("POST", "/api/projects/" + p.id + "/reset", { keep_answers: true }).then(function () { toast("Outputs reset — regenerate the BOQ from the drawing."); route(); }).catch(softFail);
+  }
+  function resetScope(scope, label) {
+    api("GET", "/api/admin/reset-preview?scope=" + scope).then(function (pre) {
+      var msg = "Reset " + label + "? A backup is written first.\n\n" + describe(pre);
+      var body = { scope: scope };
+      if (scope === "all") { var c = ask(msg + "\n\nType RESET EVERYTHING to confirm:"); if (c === null) return; body.confirm = c; }
+      else if (!confirm(msg)) return;
+      return api("POST", "/api/admin/reset", body).then(function (r) { toast(label + " reset. " + (r.retention || "")); route(); });
+    }).catch(softFail);
+  }
   function viewSettings(main) {
     var api_in = h("input", { value: API || location.origin, style: "min-width:320px" });
     add(main, [h("h1", {}, "Settings"), h("div", { class: "card" }, h("h2", {}, "Server"),
@@ -995,7 +1118,13 @@
         h("dt", {}, "OCR for scanned PDFs"), h("dd", {}, S.health && S.health.ocr ? "available (title-block text only; scans are never measured)" : "not available"),
         h("dt", {}, "Pricing defaults"), h("dd", {}, "10% additional misc on cost, then 30% gross selling margin (editable per project and per line)")),
       h("div", { class: "row", style: "margin-top:10px" }, api_in, h("button", { class: "btn", onclick: function () { location.search = "?api=" + encodeURIComponent(api_in.value); } }, "Use this API"), h("button", { class: "btn ghost", onclick: function () { location.search = "?api=reset"; } }, "Reset"))),
-      h("div", { class: "card" }, h("h2", {}, "Your account"), h("p", {}, S.user.display_name + " · role " + S.user.role), h("p", { class: "small muted" }, "Permissions: " + S.user.permissions.join(", ")))]);
+      h("div", { class: "card" }, h("h2", {}, "Your account"), h("p", {}, S.user.display_name + " · role " + S.user.role), h("p", { class: "small muted" }, "Permissions: " + S.user.permissions.join(", "))),
+      can("users.manage") ? h("div", { class: "card" }, h("h2", {}, "Clean up"),
+        h("p", { class: "muted" }, "Each action shows exactly what it affects before you confirm, and writes a database backup first. Knowledge and costing reset independently of projects."),
+        h("div", { class: "row" },
+          h("button", { class: "btn", onclick: function () { resetScope("knowledge", "learned knowledge"); } }, "Reset learned knowledge"),
+          h("button", { class: "btn", onclick: function () { resetScope("costing", "master costing"); } }, "Reset master costing"),
+          h("button", { class: "btn danger", onclick: function () { resetScope("all", "the whole workspace"); } }, "Full reset (pilot demo)"))) : null]);
     return Promise.resolve();
   }
 
