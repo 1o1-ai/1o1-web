@@ -350,11 +350,14 @@
     return api("GET", "/api/projects/" + p.id + "/takeoff").then(function (tk) {
       var revA = p.revisions.filter(function (r) { return r.kind === "drawing"; })[0];
       var frozen = revA && revA.status === "frozen";
-      var qcard = h("div", { class: "card" }, h("h2", {}, "Questions for the estimator (" + tk.questions.length + ")"),
-        h("p", { class: "muted" }, "Missing information is asked, never guessed. Answers are stored with your name and reused when Revision A is generated. Layer and block answers become rules for future drawings."));
+      var groups = tk.decision_groups || [{ key: "all", title: "Questions", why: "", bulk: false, question_keys: tk.questions.map(function (q) { return q.key; }), open: tk.questions.length, total: tk.questions.length }];
+      var openTotal = groups.reduce(function (a, g) { return a + (g.open ? 1 : 0); }, 0);
+      var qcard = h("div", { class: "card" }, h("h2", {}, "Decisions for the estimator (" + openTotal + " open of " + groups.length + ")"),
+        h("p", { class: "muted" }, tk.questions.length + " questions grouped into " + groups.length + " decisions, most quantity-affecting first. Missing information is asked, never guessed; answers are stored with your name. Groups marked “one answer for all” accept a single answer that you can still override per item."));
       if (frozen) qcard.appendChild(h("p", { class: "muted" }, "Revision A is frozen; answers now apply to the reviewed revision."));
       var inputs = {};
-      tk.questions.forEach(function (q) {
+      var byKey = {}; tk.questions.forEach(function (q) { byKey[q.key] = q; });
+      function renderQ(q, box) {
         var cur = (p.inputs[q.key] || {}).value || "";
         var field;
         if (q.kind === "yesno") field = h("select", {}, h("option", { value: "" }, "— not answered —"), h("option", { value: "yes", selected: cur === "yes" ? "" : null }, "Yes — include"), h("option", { value: "no", selected: cur === "no" ? "" : null }, "No — not in scope"));
@@ -364,14 +367,39 @@
           (q.options || []).forEach(function (o) { field.appendChild(h("option", { value: o.entry_key, selected: cur === o.entry_key ? "" : null }, o.description + " · fits within " + o.fit_mm + " mm" + (o.units_per_block > 1 ? " · " + o.units_per_block + " per block" : "") + (o.status !== "usable" ? " · cost needs review" : ""))); });
           var free = h("input", { placeholder: "…or describe it", value: cur && !/^furn-|^exclude$/.test(cur) ? cur : "" });
           inputs[q.key] = { get: function () { return free.value.trim() || field.value; } };
-          qcard.appendChild(h("div", { class: "question" }, h("div", { class: "q" }, q.text), h("div", { class: "row" }, field, free)));
+          box.appendChild(h("div", { class: "question" }, h("div", { class: "q" }, q.text), h("div", { class: "row" }, field, free)));
           return;
         } else field = h("input", { type: q.kind === "number" ? "number" : "text", value: cur, placeholder: q.unit ? "in " + q.unit : "", style: "min-width:260px" });
         inputs[q.key] = { get: function () { return field.value.trim(); } };
-        qcard.appendChild(h("div", { class: "question" }, h("div", { class: "q" }, q.text), h("div", { class: "row" }, field, q.unit ? h("span", { class: "muted small" }, q.unit) : null)));
+        var sugg = (q.suggestions || []).map(function (sg) {
+          return h("div", { class: "suggestion" + (sg.caution ? " caution" : "") },
+            h("button", { class: "btn small", onclick: function () { field.value = sg.value; } }, "Use " + sg.value + (q.unit ? " " + q.unit : "")),
+            h("span", { class: "small" }, " " + sg.source + (sg.caution ? " — ⚠ " + sg.caution : "")));
+        });
+        box.appendChild(h("div", { class: "question" }, h("div", { class: "q" }, q.text), h("div", { class: "row" }, field, q.unit ? h("span", { class: "muted small" }, q.unit) : null), sugg));
+      }
+      var bulkInputs = [];
+      groups.forEach(function (g, gi) {
+        var qs = g.question_keys.map(function (k) { return byKey[k]; }).filter(Boolean);
+        var head = h("div", { class: "decision-head" },
+          h("div", {}, h("strong", {}, (gi + 1) + ". " + g.title), " ", g.open ? badge("unresolved", g.open + " open") : badge("ok", "answered")),
+          h("div", { class: "muted small" }, [g.why, g.impact].filter(Boolean).join(" — ")));
+        var box = h("div", { class: "decision" }, head);
+        if (g.bulk && can("project.edit")) {
+          var allField = h("input", { placeholder: g.key.indexOf("identify") === 0 ? "One answer for all " + qs.length + " (e.g. exclude, or a description)" : "One answer for all " + qs.length, style: "min-width:320px" });
+          bulkInputs.push({ field: allField, keys: g.question_keys });
+          box.appendChild(h("div", { class: "row" }, allField, h("span", { class: "muted small" }, "applies to every unanswered item below; per-item answers win")));
+        }
+        var list = h("div", {});
+        qs.forEach(function (q) { renderQ(q, list); });
+        if (qs.length > 3) box.appendChild(h("details", { open: gi < 2 ? "" : null }, h("summary", {}, "Show the " + qs.length + " questions"), list));
+        else box.appendChild(list);
+        qcard.appendChild(box);
       });
       if (can("project.edit") && tk.questions.length) qcard.appendChild(h("div", { class: "row" }, h("button", { class: "btn primary", onclick: function () {
-        var answers = {}; Object.keys(inputs).forEach(function (k) { var v = inputs[k].get(); if (v) answers[k] = v; });
+        var answers = {};
+        bulkInputs.forEach(function (b) { var v = b.field.value.trim(); if (v) b.keys.forEach(function (k) { answers[k] = v; }); });
+        Object.keys(inputs).forEach(function (k) { var v = inputs[k].get(); if (v) answers[k] = v; });
         if (!Object.keys(answers).length) return toast("Nothing answered yet.");
         var reason = ask("Source of these answers (e.g. site survey, client brief):", "estimator"); if (reason === null) return;
         api("POST", "/api/projects/" + p.id + "/inputs", { answers: answers, reason: reason }).then(function () { toast("Answers saved."); route(); }).catch(softFail);
@@ -395,8 +423,54 @@
         h("dt", {}, "Cross-checked with"), h("dd", {}, src.cross_check ? src.cross_check.filename : "—"),
         h("dt", {}, "Title block"), h("dd", {}, src.title_block ? ["Rev " + (src.title_block.revision || "?"), src.title_block.drawing_no, src.title_block.date, "Scale " + (src.title_block.scale_text || "?")].filter(Boolean).join(" · ") : "—"),
         h("dt", {}, "Units"), h("dd", {}, src.units ? src.units.name : (src.scale ? "from dimension annotations" : "—"))));
-      add(body, [h("div", { class: "grid two" }, qcard, h("div", {}, srcCard, cross)), led, chk]);
+      var mbCard = h("div", { class: "card" }, h("h2", {}, "Measurement book"), h("p", { class: "muted" }, "Loading…"));
+      add(body, [h("div", { class: "grid two" }, qcard, h("div", {}, srcCard, cross)), mbCard, led, chk]);
+      measurementBook(mbCard, p);
     }).catch(function (e) { add(body, h("div", { class: "card" }, h("p", { class: "error" }, e.message))); });
+  }
+
+  // ---- measurement book: exact geometry → your conventions → billable, every line
+  function measurementBook(card, p) {
+    api("GET", "/api/projects/" + p.id + "/measurement-book").then(function (mb) {
+      clear(card);
+      card.appendChild(h("div", { class: "row spread" }, h("h2", {}, "Measurement book (" + mb.source + ")"),
+        h("button", { class: "btn small", onclick: function () { download("/api/projects/" + p.id + "/measurement-book.xlsx", p.name + "-measurement-book.xlsx"); } }, "Download .xlsx")));
+      card.appendChild(h("p", { class: "muted" }, "Exact = measured from the drawing. Adjustments are only the conventions you set below; billable is what gets priced. Nothing is rounded, deducted or wasted unless you choose it."));
+      var av = mb.available, cur = mb.conventions, fields = {};
+      function sel(key) {
+        var d = av[key], f = h("select", {});
+        d.options.forEach(function (o) { f.appendChild(h("option", { value: o, selected: (cur[key] || d.default) === o ? "" : null }, o.replace(/_/g, " "))); });
+        fields[key] = f; return h("label", { class: "small" }, d.label, h("br"), f);
+      }
+      var dh = h("input", { type: "number", value: cur.conv_door_height_mm || "", placeholder: "mm", style: "width:110px" }); fields.conv_door_height_mm = dh;
+      var waste = h("div", { class: "row" });
+      av.conv_wastage_pct.disciplines.forEach(function (d) {
+        var f = h("input", { type: "number", min: "0", step: "0.5", value: cur["conv_wastage_pct:" + d] || "", placeholder: "0", style: "width:70px" });
+        fields["conv_wastage_pct:" + d] = f; waste.appendChild(h("label", { class: "small" }, d, h("br"), f, " %"));
+      });
+      var form = h("div", { class: "row", style: "align-items:flex-end;gap:14px;flex-wrap:wrap" }, sel("conv_deduct_door_openings"),
+        h("label", { class: "small" }, av.conv_door_height_mm.label, h("br"), dh), sel("conv_rounding"), sel("conv_order"));
+      card.appendChild(form);
+      card.appendChild(h("p", { class: "muted small" }, av.conv_rounding.help));
+      card.appendChild(h("div", { class: "small", style: "margin:6px 0" }, "Wastage by trade:"));
+      card.appendChild(waste);
+      if (can("project.edit")) card.appendChild(h("div", { class: "row" }, h("button", { class: "btn", onclick: function () {
+        var answers = {}; Object.keys(fields).forEach(function (k) { var v = String(fields[k].value || "").trim(); if (v !== "" || cur[k]) answers[k] = v || (k.indexOf("wastage") > 0 ? "0" : ""); });
+        Object.keys(answers).forEach(function (k) { if (answers[k] === "") delete answers[k]; });
+        api("POST", "/api/projects/" + p.id + "/inputs", { answers: answers, reason: "measurement conventions", save_rules: false }).then(function () { toast("Conventions saved."); route(); }).catch(softFail);
+      } }, "Apply conventions")));
+      var t = h("table", {}, h("thead", {}, h("tr", {}, ["#", "Item", "Floor / location", "Unit", "Exact", "Adjustments", "Billable", "How measured"].map(function (x) { return h("th", {}, x); }))));
+      var tb = h("tbody"); t.appendChild(tb);
+      mb.rows.forEach(function (r) {
+        tb.appendChild(h("tr", {}, h("td", {}, String(r.line_no || "")), h("td", {}, r.description),
+          h("td", { class: "small" }, r.location || "—"), h("td", {}, r.unit || ""),
+          h("td", { class: "num" }, r.exact != null ? NUM.format(+r.exact) : "awaiting"),
+          h("td", { class: "small" }, r.adjustments.length ? r.adjustments.join("; ") : "none"),
+          h("td", { class: "num" }, r.billable != null ? h("strong", {}, NUM.format(+r.billable)) : "—"),
+          h("td", { class: "small muted" }, (r.formula || "") + (r.evidence_items ? " · " + r.evidence_items + " drawn item(s)" : ""))));
+      });
+      card.appendChild(h("div", { class: "table-wrap", style: "max-height:420px" }, t));
+    }).catch(function (e) { clear(card); card.appendChild(h("p", { class: "error" }, "Measurement book unavailable: " + e.message)); });
   }
 
   // ---- step 3: Drawing BOQ (Rev A)

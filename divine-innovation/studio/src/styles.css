@@ -115,3 +115,10 @@ pre.code { background: var(--surface-2); padding: 8px; border-radius: 6px; white
   .main { padding: 14px 16px 60px; }
   .kv { grid-template-columns: 1fr; }
 }
+
+.decision { border: 1px solid var(--line, #e2e8f0); border-radius: 10px; padding: 10px 12px; margin: 10px 0; }
+.decision-head { margin-bottom: 6px; }
+.decision details summary { cursor: pointer; color: var(--accent, #0e7490); font-size: 13px; margin: 6px 0; }
+
+.suggestion { margin-top: 6px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; color: #0e7490; }
+.suggestion.caution { color: #b45309; }

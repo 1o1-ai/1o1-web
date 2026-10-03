@@ -325,7 +325,9 @@ async function waitForJob(jobId) {
 function assumptionAnswers(questions) {
   const a = Object.assign({}, STANDARD_ASSUMPTIONS);
   questions.forEach(q => {
-    if (STANDARD_ASSUMPTIONS[q.key] !== undefined) a[q.key] = STANDARD_ASSUMPTIONS[q.key];
+    // a height written on the drawing for this very element beats the standard assumption; a ceiling height never does
+    const stated = (q.suggestions || []).find(sg => !sg.caution && /stated on the drawing/.test(sg.source || ""));
+    if (STANDARD_ASSUMPTIONS[q.key] !== undefined) a[q.key] = stated ? String(stated.value) : STANDARD_ASSUMPTIONS[q.key];
     else if (q.key.startsWith("layer_material:")) a[q.key] = "Gypsum board partition";
     else if (q.key.startsWith("door_type:")) a[q.key] = "Flush door";
     else if (q.key.startsWith("identify:") && q.options && q.options.length && q.options[0].fit_mm <= 60) a[q.key] = q.options[0].entry_key;
@@ -732,8 +734,15 @@ async function handleCADAdobeUpload(e) {
     await ui.go("price");
     const tb = (tk.sources || {}).title_block || {};
     const items = await buildOldStyleItems(rev, files[0].name);
-    const issues = tk.questions.filter(q => !(q.key in (tk.inputs_used || {}))).map((q, k) => ({ id: `q${k}`, code: `Q-${k + 1}`, title: q.text.slice(0, 90),
-      category: "question", severity: "warning", description: q.text, sample_source: "drawing", status: "unresolved" }))
+    const openQs = tk.questions.filter(q => !(q.key in (tk.inputs_used || {})));
+    const openKeys = new Set(openQs.map(q => q.key));
+    const groups = (tk.decision_groups || []).map(g => Object.assign({}, g, { keys: g.question_keys.filter(k => openKeys.has(k)) })).filter(g => g.keys.length);
+    const issues = (groups.length ? groups.map((g, k) => ({ id: `g${k}`, code: `D-${k + 1}`, title: `${g.title} (${g.keys.length})`,
+      category: "decision", severity: "warning", sample_source: "drawing", status: "unresolved",
+      description: [g.why, g.impact].filter(Boolean).join(" — ") + " | " + openQs.filter(q => g.keys.includes(q.key)).slice(0, 6).map(q => "• " + q.text).join(" ")
+        + (g.keys.length > 6 ? ` … and ${g.keys.length - 6} more (answer them in /divine-innovation/studio/)` : "") }))
+      : openQs.map((q, k) => ({ id: `q${k}`, code: `Q-${k + 1}`, title: q.text.slice(0, 90),
+      category: "question", severity: "warning", description: q.text, sample_source: "drawing", status: "unresolved" })))
       .concat((tk.discrepancies || []).map((d, k) => ({ id: `d${k}`, code: `CHK-${k + 1}`, title: d.message.slice(0, 90), category: d.code, severity: "info",
         description: d.message, sample_source: "drawing check", status: "unresolved" })));
     localStorage.removeItem("di_cmp");
@@ -745,7 +754,7 @@ async function handleCADAdobeUpload(e) {
 
     const lines = items.filter(i => !i.is_heading);
     const total = lines.reduce((a, i) => a + (i.selling_amount || 0), 0);
-    const open = tk.questions.filter(q => !(q.key in (tk.inputs_used || {}))).length;
+    const open = groups.length;
     const floor = data && (data.features || []).find(x => x.kind === "floor_area");
     const rd = data && data.readiness;
     const flagged = rd ? rd.checks.filter(c => c.status !== "ok") : [];
@@ -756,7 +765,7 @@ async function handleCADAdobeUpload(e) {
         <div class="ing-kpi"><b>${floor ? floor.value_m2.toLocaleString("en-IN") + " m²" : "—"}</b><span>floor measured</span></div>
         <div class="ing-kpi"><b>${(tk.rooms || []).length}</b><span>rooms named</span></div>
         <div class="ing-kpi"><b>${lines.filter(i => i.review_status === "Rate needed").length}</b><span>lines need a rate</span></div>
-        <div class="ing-kpi"><b>${open}</b><span>items to identify</span></div>
+        <div class="ing-kpi"><b>${open}</b><span>decisions open (${openQs.length} questions)</span></div>
       </div>
       ${rd ? `<div class="ing-verdict ${rd.status === "ok" ? "ok" : rd.status === "blocked" ? "err" : ""}"><b>Drawing check:</b> ${ingEsc(rd.verdict)}</div>
       ${flagged.length ? `<div class="ing-checks">${flagged.map(c => `<div><b>${ingEsc(c.check.replace(/_/g, " "))}:</b> ${ingEsc(c.message)}</div>`).join("")}</div>` : ""}` : ""}
