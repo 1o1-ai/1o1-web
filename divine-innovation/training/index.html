@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOQ Training — Divine Innovation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --bg: #f8fafc; --card: #ffffff; --ink: #1e293b; --muted: #64748b; --line: #e2e8f0;
+      --side: #0f172a; --cyan: #06b6d4; --cyan-d: #0891b2; --ok: #059669; --ok-bg: #ecfdf5;
+      --warn: #b45309; --warn-bg: #fffbeb; --bad: #b91c1c; --bad-bg: #fef2f2; --chip: #f1f5f9;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Plus Jakarta Sans", system-ui, sans-serif; background: var(--bg); color: var(--ink); font-size: 14px; }
+    header { background: var(--side); color: #f8fafc; padding: 14px 24px; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+    header .logo { width: 36px; height: 36px; border-radius: 9px; background: linear-gradient(135deg, #06b6d4, #8b5cf6); display: grid; place-items: center; font-weight: 800; }
+    header h1 { font-size: 17px; margin: 0; }
+    header .sub { color: #94a3b8; font-size: 12px; }
+    header a { color: #67e8f9; text-decoration: none; margin-left: auto; font-weight: 600; }
+    main { max-width: 1280px; margin: 0 auto; padding: 20px 16px 60px; }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+    .card h2 { font-size: 16px; margin: 0 0 4px; }
+    .muted { color: var(--muted); }
+    .rule { background: #ecfeff; border: 1px solid #a5f3fc; color: #155e75; border-radius: 10px; padding: 10px 14px; font-size: 13px; margin-bottom: 16px; }
+    .grid { display: grid; grid-template-columns: 320px 1fr; gap: 16px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+    form .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 12px; }
+    label { display: block; font-weight: 600; font-size: 12px; margin-bottom: 4px; }
+    input[type=text], input[type=password], input[type=file], textarea { width: 100%; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: #fff; }
+    .btn { border: 0; border-radius: 8px; padding: 8px 14px; font: inherit; font-weight: 600; cursor: pointer; background: var(--cyan); color: #fff; }
+    .btn:hover { background: var(--cyan-d); }
+    .btn.ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+    .btn.ok { background: var(--ok); } .btn.bad { background: #fff; color: var(--bad); border: 1px solid #fecaca; }
+    .btn.sm { padding: 5px 10px; font-size: 12px; }
+    .btn:disabled { opacity: .5; cursor: default; }
+    .case { padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; margin-bottom: 8px; cursor: pointer; background: #fff; }
+    .case.active { border-color: var(--cyan); box-shadow: 0 0 0 2px #cffafe; }
+    .case .name { font-weight: 700; }
+    .chip { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; background: var(--chip); color: var(--muted); margin-right: 4px; }
+    .chip.ok { background: var(--ok-bg); color: var(--ok); } .chip.warn { background: var(--warn-bg); color: var(--warn); } .chip.bad { background: var(--bad-bg); color: var(--bad); }
+    .stats { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+    .stat { background: var(--chip); border-radius: 10px; padding: 10px 14px; min-width: 120px; }
+    .stat b { display: block; font-size: 20px; }
+    .sugg { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; margin-bottom: 10px; background: #fff; }
+    .sugg.approved { border-color: #a7f3d0; background: #f0fdf4; } .sugg.rejected { opacity: .6; }
+    .sugg .top { display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap; }
+    .sugg .title { font-weight: 700; flex: 1; min-width: 220px; }
+    .sugg .actions { display: flex; gap: 6px; flex-wrap: wrap; }
+    details { margin-top: 8px; } summary { cursor: pointer; color: var(--cyan-d); font-weight: 600; font-size: 12px; }
+    table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 6px; }
+    th, td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; }
+    .tabs { display: flex; gap: 6px; margin-bottom: 12px; }
+    .tabs button { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 7px 14px; font: inherit; font-weight: 600; cursor: pointer; }
+    .tabs button.on { background: var(--side); color: #fff; border-color: var(--side); }
+    .empty { text-align: center; color: var(--muted); padding: 30px 10px; }
+    #login { max-width: 380px; margin: 60px auto; }
+    .status { position: fixed; bottom: 18px; right: 18px; background: var(--side); color: #fff; padding: 10px 16px; border-radius: 8px; display: none; max-width: 420px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DI</div>
+    <div><h1>BOQ Training</h1><div class="sub">Teach the system from past drawings and the BOQs priced from them</div></div>
+    <a href="../"><i class="fa-solid fa-arrow-left"></i> Back to CAD-to-BOQ Studio</a>
+  </header>
+
+  <main id="app" style="display:none">
+    <div class="rule"><i class="fa-solid fa-shield-halved"></i>
+      The system <b>proposes</b> what it learns from each past job; nothing is used until an estimator approves it.
+      Approved knowledge only <b>pre-fills a question as a suggestion</b> (e.g. a usual partition height) or <b>raises a prompt</b> to check a trade —
+      it never adds a quantity, a BOQ line or a price by itself.</div>
+
+    <div class="card">
+      <h2><i class="fa-solid fa-graduation-cap"></i> Add a training case</h2>
+      <div class="muted">Upload a past drawing (DWG, DXF or PDF) and the BOQ that was prepared for it (.xlsx or .csv).</div>
+      <form id="case-form">
+        <div class="row">
+          <div><label>Case name</label><input type="text" name="name" placeholder="e.g. Fusion office, Faridabad"></div>
+          <div><label>Drawing</label><input type="file" name="drawing" accept=".dwg,.dxf,.pdf" required></div>
+          <div><label>BOQ</label><input type="file" name="boq" accept=".xlsx,.xlsm,.csv" required></div>
+          <div><label>BOQ sheet (optional)</label><input type="text" name="sheet" placeholder="latest revision is picked automatically"></div>
+        </div>
+        <div style="margin-top:12px"><button class="btn" type="submit"><i class="fa-solid fa-upload"></i> Upload &amp; learn</button></div>
+      </form>
+    </div>
+
+    <div class="tabs"><button class="on" data-view="cases">Training cases</button><button data-view="knowledge">Approved knowledge</button></div>
+
+    <div id="view-cases" class="grid">
+      <div><div id="case-list"></div></div>
+      <div id="case-detail" class="card"><div class="empty">Select a training case, or add one above.</div></div>
+    </div>
+    <div id="view-knowledge" class="card" style="display:none"></div>
+  </main>
+
+  <div id="login" class="card" style="display:none">
+    <h2>Sign in</h2>
+    <div class="muted" style="margin-bottom:12px">Use your Divine Innovation account.</div>
+    <form id="login-form">
+      <label>User</label><input type="text" name="username" autocomplete="username" required>
+      <div style="height:10px"></div>
+      <label>Password</label><input type="password" name="password" autocomplete="current-password" required>
+      <div style="height:14px"></div>
+      <button class="btn" type="submit" style="width:100%">Sign in</button>
+    </form>
+  </div>
+  <div class="status" id="status"></div>
+
+<script>
+const API = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ? location.origin + "/api" : "https://divine-api.brahmexa.com/api";
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+let current = null;
+
+function token() { try { return localStorage.getItem("di_api_token"); } catch (e) { return null; } }
+function status(msg) { const el = $("#status"); el.textContent = msg || ""; el.style.display = msg ? "block" : "none"; }
+
+async function call(method, path, body, isForm) {
+  const headers = { Authorization: "Bearer " + token() };
+  if (body && !isForm) headers["Content-Type"] = "application/json";
+  const res = await fetch(API + path, { method, headers, body: isForm ? body : body ? JSON.stringify(body) : undefined });
+  const text = await res.text();
+  let data; try { data = text ? JSON.parse(text) : null; } catch (e) { data = { error: text }; }
+  if (res.status === 401) { showLogin(); throw new Error("Please sign in."); }
+  if (!res.ok) throw new Error((data && (data.error || data.detail)) || "HTTP " + res.status);
+  return data;
+}
+
+function showLogin() { $("#app").style.display = "none"; $("#login").style.display = "block"; }
+$("#login-form").addEventListener("submit", async e => {
+  e.preventDefault();
+  const f = new FormData(e.target);
+  const u = String(f.get("username")).trim(), p = String(f.get("password"));
+  const res = await fetch(API + "/auth/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ username: u, password: p }) });
+  if (!res.ok) { alert("Sign-in failed — check the user name and password."); return; }
+  try { localStorage.setItem("di_api_token", (await res.json()).token); } catch (err) { /* private mode */ }
+  start();
+});
+
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll(".tabs button").forEach(x => x.classList.toggle("on", x === b));
+  $("#view-cases").style.display = b.dataset.view === "cases" ? "" : "none";
+  $("#view-knowledge").style.display = b.dataset.view === "knowledge" ? "" : "none";
+  if (b.dataset.view === "knowledge") loadKnowledge();
+}));
+
+$("#case-form").addEventListener("submit", async e => {
+  e.preventDefault();
+  const btn = e.target.querySelector("button"); btn.disabled = true;
+  try {
+    status("Uploading the drawing and reading the BOQ…");
+    const c = await call("POST", "/training/cases", new FormData(e.target), true);
+    e.target.reset();
+    await waitForCase(c.id);
+  } catch (err) { alert("Could not add the training case:\n\n" + err.message); }
+  finally { status(""); btn.disabled = false; }
+});
+
+async function waitForCase(id) {
+  for (let i = 0; i < 200; i++) {
+    const c = await call("GET", "/training/cases/" + id);
+    if (c.status !== "reading") { await loadCases(id); return c; }
+    status("Reading the drawing… " + ((c.job && c.job.message) || ""));
+    await new Promise(r => setTimeout(r, 1500));
+  }
+  status(""); await loadCases(id);
+}
+
+async function loadCases(select) {
+  const { cases } = await call("GET", "/training/cases");
+  const list = $("#case-list");
+  if (!cases.length) { list.innerHTML = `<div class="case muted">No training cases yet.</div>`; return; }
+  list.innerHTML = cases.map(c => {
+    const s = c.suggestions || {};
+    const st = c.status === "learned" ? `<span class="chip ok">learned</span>` : c.status === "failed" ? `<span class="chip bad">failed</span>` : `<span class="chip warn">reading</span>`;
+    return `<div class="case ${c.id === (select || current) ? "active" : ""}" data-id="${c.id}">
+      <div class="name">${esc(c.name)}</div>
+      <div class="muted" style="font-size:12px;margin:3px 0 6px">${esc(c.drawing_filename)} · ${esc(c.boq_filename)}</div>
+      ${st}${s.proposed ? `<span class="chip">${s.proposed} to review</span>` : ""}${s.approved ? `<span class="chip ok">${s.approved} approved</span>` : ""}</div>`;
+  }).join("");
+  list.querySelectorAll(".case[data-id]").forEach(el => el.addEventListener("click", () => openCase(el.dataset.id)));
+  if (select || current) openCase(select || current);
+}
+
+async function openCase(id) {
+  current = id;
+  document.querySelectorAll(".case[data-id]").forEach(el => el.classList.toggle("active", el.dataset.id === id));
+  const c = await call("GET", "/training/cases/" + id);
+  const d = $("#case-detail");
+  const p = c.boq_parse || {}, m = c.measured || {}, b = c.boq_summary || {};
+  let html = `<div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <h2 style="flex:1">${esc(c.name)}</h2>
+      <button class="btn ghost sm" id="relearn"><i class="fa-solid fa-rotate"></i> Re-learn</button>
+      <button class="btn bad sm" id="delete"><i class="fa-solid fa-trash"></i> Delete case</button></div>
+    <div class="muted">Drawing <b>${esc(c.drawing_filename)}</b> · BOQ <b>${esc(c.boq_filename)}</b>${p.selected_sheet ? ` (sheet “${esc(p.selected_sheet)}”)` : ""}</div>`;
+  if (c.status === "failed") html += `<div class="sugg rejected" style="margin-top:12px;opacity:1"><b style="color:var(--bad)">Could not learn from this case.</b><div>${esc(c.error)}</div></div>`;
+  if (c.status === "reading") html += `<div class="empty">Reading the drawing… ${esc((c.job && c.job.message) || "")}</div>`;
+  html += `<div class="stats">
+      <div class="stat"><b>${b.scope_rows ?? "–"}</b>BOQ items</div>
+      <div class="stat"><b>${b.recognised ?? "–"}</b>items recognised</div>
+      <div class="stat"><b>${m.lines ?? "–"}</b>items measured on drawing</div>
+      <div class="stat"><b>${c.suggestions.length}</b>proposals</div></div>`;
+  if (p.sheets && p.sheets.length > 1) {
+    html += `<details><summary>BOQ sheets (${p.sheets.length})</summary><table><tr><th>Sheet</th><th>Used</th><th>Why</th></tr>` +
+      p.sheets.map(s => `<tr><td>${esc(s.name)}</td><td>${s.used ? "yes" : "no"}</td><td>${esc(s.reason || "")}</td></tr>`).join("") + `</table></details>`;
+  }
+  const groups = [["default_answer", "Usual answers to the system's questions", "Pre-filled as a suggestion on future drawings — the estimator still confirms each answer."],
+                  ["scope_prompt", "Trades to ask about", "The past BOQ priced these, but the drawing does not show them. Approved prompts remind the estimator to ask — they never add lines."]];
+  for (const [kind, title, help] of groups) {
+    const items = c.suggestions.filter(s => s.kind === kind);
+    html += `<h3 style="margin:18px 0 2px;font-size:14px">${title}</h3><div class="muted" style="margin-bottom:8px;font-size:12px">${help}</div>`;
+    if (!items.length) { html += `<div class="muted" style="font-size:12px">Nothing proposed from this case.</div>`; continue; }
+    html += items.map(suggHTML).join("");
+  }
+  d.innerHTML = html;
+  $("#relearn").onclick = async () => { status("Re-learning…"); try { await call("POST", `/training/cases/${id}/learn`); await loadCases(id); } catch (e) { alert(e.message); } status(""); };
+  $("#delete").onclick = async () => {
+    if (!confirm(`Delete the training case “${c.name}”?`)) return;
+    try { await call("DELETE", "/training/cases/" + id); current = null; d.innerHTML = `<div class="empty">Case deleted.</div>`; loadCases(); } catch (e) { alert(e.message); }
+  };
+  d.querySelectorAll("[data-decide]").forEach(btn => btn.addEventListener("click", () => decide(btn.dataset.sid, btn.dataset.decide, btn.dataset.edit === "1")));
+}
+
+function valueText(s) { return s.kind === "scope_prompt" ? (s.value.examples || []).join(", ") : typeof s.value === "number" ? `${s.value} mm (${(s.value / 304.8).toFixed(2)} ft)` : s.value; }
+
+function suggHTML(s) {
+  const conf = s.confidence === "high" ? "ok" : s.confidence === "low" ? "bad" : "warn";
+  const st = s.status === "approved" ? `<span class="chip ok">approved</span>` : s.status === "rejected" ? `<span class="chip bad">rejected</span>` : s.status === "superseded" ? `<span class="chip">replaced by a newer approval</span>` : "";
+  const ev = s.evidence || {};
+  const rows = (ev.boq_rows || []).map(r => `<tr><td>${esc(r.sheet || "")} ${esc(r.row ?? "")}</td><td>${esc(r.code || "")}</td><td>${esc(r.description)}</td><td>${esc(r.quantity ?? "")} ${esc(r.unit || "")}</td></tr>`).join("");
+  const actions = s.status === "proposed"
+    ? `<button class="btn ok sm" data-decide="approved" data-sid="${s.id}"><i class="fa-solid fa-check"></i> Approve</button>
+       ${s.kind === "default_answer" ? `<button class="btn ghost sm" data-decide="approved" data-edit="1" data-sid="${s.id}"><i class="fa-solid fa-pen"></i> Edit &amp; approve</button>` : ""}
+       <button class="btn bad sm" data-decide="rejected" data-sid="${s.id}"><i class="fa-solid fa-xmark"></i> Reject</button>`
+    : `<button class="btn ghost sm" data-decide="proposed" data-sid="${s.id}"><i class="fa-solid fa-rotate-left"></i> Undo</button>`;
+  return `<div class="sugg ${s.status}"><div class="top"><div class="title">${esc(s.label)}<div style="font-weight:500;margin-top:3px">${esc(valueText(s))}</div></div>
+      <div><span class="chip ${conf}">${esc(s.confidence)} confidence</span>${st}</div><div class="actions">${actions}</div></div>
+      <div class="muted" style="font-size:12px;margin-top:6px">${esc(ev.method || "")}</div>
+      ${ev.note ? `<div style="font-size:12px;color:var(--warn);margin-top:4px"><i class="fa-solid fa-triangle-exclamation"></i> ${esc(ev.note)}</div>` : ""}
+      ${rows ? `<details><summary>BOQ evidence (${(ev.boq_rows || []).length})</summary><table><tr><th>Sheet / row</th><th>Code</th><th>Description</th><th>Qty</th></tr>${rows}</table></details>` : ""}
+      ${s.reason ? `<div class="muted" style="font-size:12px;margin-top:4px">Reason: ${esc(s.reason)}</div>` : ""}</div>`;
+}
+
+async function decide(sid, decision, edit) {
+  const body = { decision };
+  if (edit) {
+    const c = await call("GET", "/training/cases/" + current);
+    const s = c.suggestions.find(x => x.id === sid);
+    const v = prompt("Value to approve:", s.value);
+    if (v === null) return;
+    body.value = typeof s.value === "number" ? Number(v) : v;
+    if (typeof s.value === "number" && !(body.value > 0)) { alert("Enter a number in mm."); return; }
+  }
+  if (decision !== "proposed") {
+    const r = prompt(decision === "approved" ? "Why is this right? (optional)" : "Why reject it? (optional)", "");
+    if (r === null) return;
+    body.reason = r || null;
+  }
+  try { await call("POST", `/training/suggestions/${sid}/decision`, body); await loadCases(current); } catch (e) { alert(e.message); }
+}
+
+async function loadKnowledge() {
+  const { knowledge } = await call("GET", "/training/knowledge");
+  const el = $("#view-knowledge");
+  if (!knowledge.length) { el.innerHTML = `<div class="empty">Nothing approved yet. Approve proposals from a training case to build the knowledge base.</div>`; return; }
+  el.innerHTML = `<h2>Approved knowledge (${knowledge.length})</h2><div class="muted" style="margin-bottom:10px">Used on every new drawing as suggestions and prompts only.</div>
+    <table><tr><th>Kind</th><th>What</th><th>Value</th><th>From case</th><th>Approved</th></tr>` +
+    knowledge.map(k => `<tr><td>${k.kind === "scope_prompt" ? "Prompt" : "Suggested answer"}</td><td>${esc(k.label)}</td><td>${esc(valueText(k))}</td>
+      <td>${esc(k.case_name)}</td><td>${esc((k.decided_at || "").slice(0, 10))}${k.reason ? `<div class="muted">${esc(k.reason)}</div>` : ""}</td></tr>`).join("") + `</table>`;
+}
+
+async function start() {
+  if (!token()) { showLogin(); return; }
+  try {
+    await call("GET", "/auth/me");
+    $("#login").style.display = "none"; $("#app").style.display = "block";
+    await loadCases();
+  } catch (e) { if (!/sign in/i.test(e.message)) alert(e.message); }
+}
+start();
+</script>
+</body>
+</html>

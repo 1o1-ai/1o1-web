@@ -76,7 +76,7 @@ function updateUserUI() {
 }
 
 function initNavigation() {
-  const navItems = document.querySelectorAll(".nav-item");
+  const navItems = document.querySelectorAll(".nav-item:not(.nav-external)");
   const tabViews = document.querySelectorAll(".tab-view");
   const heading = document.getElementById("page-heading");
 
