@@ -410,24 +410,315 @@ function restoreGeneratedBOQ() {
   return false;
 }
 
+
+// ---------------- Drawing ingestion screen: full-screen, step by step, traces the real drawing ----------------
+const REDUCED_MOTION = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const ingEsc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+class Ingest {
+  constructor(title, subtitle, steps) {
+    this.steps = steps.map(s => Object.assign({ state: "pending", detail: "" }, s));
+    this.queue = Promise.resolve();
+    this.el = document.createElement("div");
+    this.el.className = "ing-overlay";
+    this.el.setAttribute("role", "dialog");
+    this.el.setAttribute("aria-modal", "true");
+    this.el.setAttribute("aria-label", title);
+    this.el.innerHTML = `
+      <div class="ing-card">
+        <div class="ing-stage"><canvas></canvas><div class="ing-scan"></div>
+          <div class="ing-file"><div class="ing-doc">${ingEsc(subtitle.split(".").pop().toUpperCase().slice(0, 4))}</div><div class="ing-name">${ingEsc(subtitle)}</div></div>
+          <div class="ing-caption"><span class="dot"></span><span class="cap">Starting…</span></div></div>
+        <div class="ing-side">
+          <div class="ing-title">${ingEsc(title)}</div><div class="ing-sub">${ingEsc(subtitle)}</div>
+          <div class="ing-bar"><div></div></div><div class="ing-pct"><span class="now">Preparing</span><span class="pc">0%</span></div>
+          <ol class="ing-steps" aria-live="polite"></ol>
+          <div class="ing-finds"></div>
+          <div class="ing-summary" hidden></div>
+        </div>
+      </div>`;
+    document.body.appendChild(this.el);
+    this.canvas = this.el.querySelector("canvas");
+    this.stage = this.el.querySelector(".ing-stage");
+    this.renderSteps();
+  }
+  q(sel) { return this.el.querySelector(sel); }
+  renderSteps() {
+    this.q(".ing-steps").innerHTML = this.steps.map(s =>
+      `<li class="ing-step ${s.state}" data-k="${s.key}"><span class="ic"></span><span>${ingEsc(s.label)}${s.detail ? `<span class="det">${ingEsc(s.detail)}</span>` : ""}</span></li>`).join("");
+    const done = this.steps.filter(s => s.state === "done" || s.state === "skipped").length;
+    const pct = Math.round(100 * done / this.steps.length);
+    this.q(".ing-bar > div").style.width = pct + "%";
+    this.q(".pc").textContent = pct + "%";
+    const act = this.steps.find(s => s.state === "active");
+    this.q(".now").textContent = act ? act.label : (pct === 100 ? "Complete" : "Working");
+    if (act) this.q(".cap").textContent = act.label + (act.detail ? " — " + act.detail : "");
+    const li = this.q(`.ing-step[data-k="${act ? act.key : ""}"]`);
+    if (li) li.scrollIntoView({ block: "nearest" });
+  }
+  // Move to step `key`: every earlier step is done (or skipped). Each step stays visible briefly, so fast work still reads as steps.
+  go(key, detail) {
+    this.queue = this.queue.then(async () => {
+      const idx = this.steps.findIndex(s => s.key === key);
+      if (idx < 0) return;
+      for (let i = 0; i < idx; i++) {
+        const s = this.steps[i];
+        if (s.state === "pending" || s.state === "active") {
+          s.state = "active"; this.renderSteps(); await this.pause(260);
+          s.state = "done";
+        }
+      }
+      const cur = this.steps[idx];
+      if (cur.state !== "done") cur.state = "active";
+      if (detail !== undefined) cur.detail = detail;
+      this.renderSteps();
+      await this.pause(200);
+    });
+    return this.queue;
+  }
+  detail(key, text) {
+    this.queue = this.queue.then(() => { const s = this.steps.find(x => x.key === key); if (s) { s.detail = text; this.renderSteps(); } });
+    return this.queue;
+  }
+  skip(key) { const s = this.steps.find(x => x.key === key); if (s && s.state === "pending") s.state = "skipped"; }
+  async finish() {
+    await this.queue;
+    this.steps.forEach(s => { if (s.state !== "skipped") s.state = "done"; });
+    this.renderSteps();
+    const list = this.q(".ing-steps");
+    const n = this.steps.filter(s => s.state === "done").length;
+    const tog = document.createElement("button");
+    tog.type = "button";
+    tog.className = "ing-fold";
+    tog.innerHTML = `<i class="fa-solid fa-circle-check"></i> All ${n} steps complete <span>show</span>`;
+    tog.addEventListener("click", () => { const open = list.classList.toggle("open"); tog.querySelector("span").textContent = open ? "hide" : "show"; });
+    list.classList.add("folded");
+    list.parentNode.insertBefore(tog, list);
+    this.q(".cap").textContent = "Complete";
+    this.q(".ing-caption .dot").style.animation = "none";
+  }
+  fail(message) {
+    this.queue = this.queue.then(() => {
+      const s = this.steps.find(x => x.state === "active") || this.steps.find(x => x.state === "pending");
+      if (s) { s.state = "failed"; s.detail = message; }
+      this.renderSteps();
+      this.stage.classList.add("done");
+      this.summary(`<div class="ing-verdict err"><b>Could not finish.</b> ${ingEsc(message)}</div>`, [{ label: "Close", primary: true, onClick: () => this.close() }]);
+    });
+    return this.queue;
+  }
+  find(text, warn) {
+    const c = document.createElement("span");
+    c.className = "ing-chip" + (warn ? " warn" : "");
+    c.textContent = text;
+    this.q(".ing-finds").appendChild(c);
+  }
+  summary(html, actions) {
+    const box = this.q(".ing-summary");
+    box.hidden = false;
+    box.innerHTML = html + `<div class="ing-actions">${actions.map((a, i) =>
+      `<button class="btn ${a.primary ? "btn-primary" : "btn-secondary"}" data-i="${i}">${a.icon ? `<i class="fa-solid ${a.icon}"></i> ` : ""}${ingEsc(a.label)}</button>`).join("")}</div>`;
+    box.querySelectorAll("button").forEach(b => b.addEventListener("click", () => actions[+b.dataset.i].onClick()));
+    const first = box.querySelector("button.btn-primary") || box.querySelector("button");
+    if (first) first.focus();
+  }
+  pause(ms) { return new Promise(r => setTimeout(r, REDUCED_MOTION ? 0 : ms)); }
+  close() { if (this._ro) this._ro.disconnect(); this.el.remove(); }
+
+  // Trace the drawing's real geometry onto the stage, structure first, then everything else.
+  async trace(g, focusBoxes) {
+    if (!g || !g.bbox) return;
+    this._trace = { g, focusBoxes };
+    if (!this._ro && window.ResizeObserver) {
+      let t = null;
+      this._ro = new ResizeObserver(() => { clearTimeout(t); t = setTimeout(() => this._trace && this.draw(true), 120); });
+      this._ro.observe(this.stage);
+    }
+    this.q(".ing-file").style.opacity = "0";
+    await this.draw(REDUCED_MOTION);
+    this.stage.classList.add("done");
+  }
+  async draw(instant) {
+    const { g, focusBoxes } = this._trace;
+    const c = this.canvas, dpr = window.devicePixelRatio || 1;
+    const r = this.stage.getBoundingClientRect();
+    const W = Math.max(r.width, 320), H = Math.max(r.height, 240);
+    c.width = Math.round(W * dpr); c.height = Math.round(H * dpr);
+    const ctx = c.getContext("2d");
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    let [x0, y0, x1, y1] = g.bbox;
+    if (focusBoxes && focusBoxes.length) {
+      x0 = Math.min(...focusBoxes.map(b => b[0])); y0 = Math.min(...focusBoxes.map(b => b[1]));
+      x1 = Math.max(...focusBoxes.map(b => b[2])); y1 = Math.max(...focusBoxes.map(b => b[3]));
+    }
+    const pad = 28, s = Math.min((W - 2 * pad) / Math.max(1, x1 - x0), (H - 2 * pad - 24) / Math.max(1, y1 - y0));
+    const ox = (W - (x1 - x0) * s) / 2, oy = (H - 24 - (y1 - y0) * s) / 2;
+    const X = x => ox + (x - x0) * s, Y = y => H - 24 - (oy + (y - y0) * s);
+    const colour = { external_wall: "#e2e8f0", partition: "#22d3ee", glazing: "#a78bfa", door: "#fbbf24", column: "#94a3b8",
+      wall_hatch: "#334155", furniture: "#34d399", chair: "#34d399", ceiling_grid: "#818cf8", dimension: "#1e3a5f", annotation: "#1e3a5f" };
+    const order = ["external_wall", "column", "partition", "glazing", "door", "furniture", "chair", "fixture"];
+    const layers = Object.entries(g.layers || {}).sort((a, b) => {
+      const ia = order.indexOf(a[1].role), ib = order.indexOf(b[1].role);
+      return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+    });
+    const paths = [];
+    layers.forEach(([name, L]) => (L.paths || []).forEach(p => paths.push([colour[L.role] || "#38bdf8", L.role, p])));
+    const total = paths.length, frames = instant ? 1 : 70, per = Math.max(1, Math.ceil(total / frames));
+    ctx.lineCap = "round";
+    for (let i = 0; i < total; i += per) {
+      for (const [col, role, p] of paths.slice(i, i + per)) {
+        ctx.strokeStyle = col;
+        ctx.globalAlpha = role === "dimension" || role === "annotation" ? 0.35 : 0.95;
+        ctx.lineWidth = role === "external_wall" ? 1.6 : role === "partition" || role === "glazing" ? 1.3 : 0.8;
+        ctx.beginPath();
+        p.forEach((pt, k) => (k ? ctx.lineTo(X(pt[0]), Y(pt[1])) : ctx.moveTo(X(pt[0]), Y(pt[1]))));
+        ctx.stroke();
+      }
+      // requestAnimationFrame stops in a background tab; the timer keeps the work moving there
+      if (!instant) await new Promise(r => { requestAnimationFrame(() => r()); setTimeout(r, 40); });
+    }
+    ctx.globalAlpha = 1;
+  }
+  // While the engine works on a step there is no geometry yet: the scan line and the pulsing file carry the motion.
+}
+
+function uploadWithProgress(path, file, onProgress, retried) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", ENGINE_API + path);
+    const tok = engineToken();
+    if (tok) xhr.setRequestHeader("Authorization", "Bearer " + tok);
+    xhr.upload.onprogress = ev => { if (ev.lengthComputable) onProgress(ev.loaded / ev.total); };
+    xhr.onerror = () => reject(new Error("Network error while uploading the drawing"));
+    xhr.onload = async () => {
+      let data = null;
+      try { data = JSON.parse(xhr.responseText || "null"); } catch (e) { data = { error: xhr.responseText }; }
+      if (xhr.status === 401 && !retried) {
+        localStorage.removeItem("di_api_token");
+        if (await ensureEngineSession()) return uploadWithProgress(path, file, onProgress, true).then(resolve, reject);
+      }
+      if (xhr.status >= 300) return reject(new Error((data && (data.error || data.detail)) || "HTTP " + xhr.status));
+      resolve(data);
+    };
+    const fd = new FormData(); fd.append("file", file);
+    xhr.send(fd);
+  });
+}
+
+// Engine job progress → screen steps (the engine reports each stage with a percentage).
+const JOB_STAGES = [[15, "convert"], [30, "verify"], [40, "layers"], [46, "views"], [54, "named"], [62, "shapes"], [70, "blocks"], [78, "rooms"], [88, "checks"], [94, "save"]];
+
+async function followJob(ui, jobId) {
+  let last = null;
+  for (let i = 0; i < 600; i++) {
+    const j = await engineCall("GET", `/jobs/${jobId}`);
+    if (j.status === "failed") throw new Error(j.message || "Drawing processing failed");
+    const stage = JOB_STAGES.filter(([p]) => (j.progress || 0) >= p).pop();
+    if (stage && stage[1] !== last) { last = stage[1]; ui.go(stage[1]); }
+    if (j.status === "completed") return j;
+    await new Promise(r => setTimeout(r, 600));
+  }
+  throw new Error("Drawing processing timed out");
+}
+
+function discoveries(ui, data) {
+  const f = data.features || [];
+  const sum = kind => f.filter(x => x.kind === kind).reduce((a, x) => a + (x.value_mm || 0), 0);
+  const count = (kind, pred) => f.filter(x => x.kind === kind && (!pred || pred(x))).reduce((a, x) => a + (x.value || 0), 0);
+  const m = v => (v / 1000).toLocaleString("en-IN", { maximumFractionDigits: 1 }) + " m";
+  const views = (data.views || {}).groups || [];
+  const copies = views.filter(v => v.role === "copy").length, seps = views.filter(v => v.role === "separate").length;
+  const rec = data.recognition || {};
+  const chips = [];
+  if (data.units && data.units.name) chips.push([`Units: ${data.units.name}`]);
+  if (copies) chips.push([`${copies} copied plan${copies > 1 ? "s" : ""} not counted twice`, true]);
+  if (rec.used_for_quantities) chips.push(["Walls recognised from shapes", true]);
+  if (rec.hatch_lines) chips.push([`${rec.hatch_lines.toLocaleString("en-IN")} hatch lines ignored`]);
+  if (sum("partition_run")) chips.push([`Partitions ${m(sum("partition_run"))}`]);
+  if (sum("glass_partition_run")) chips.push([`Glass ${m(sum("glass_partition_run"))}`]);
+  if (count("door")) chips.push([`${count("door")} doors`]);
+  const chairs = count("chair");
+  if (chairs) chips.push([`${chairs} chairs`]);
+  const seatLike = count("other_block", x => /drawn shape/.test(x.block || "") && (x.size_mm || []).length === 2 &&
+    Math.max(...x.size_mm) <= 900 && Math.min(...x.size_mm) >= 350);
+  if (seatLike) chips.push([`${seatLike} chair-sized shapes to identify`]);
+  const desks = count("furniture_block");
+  if (desks) chips.push([`${desks} furniture items`]);
+  const floor = f.find(x => x.kind === "floor_area");
+  if (floor) chips.push([`Floor ${floor.value_m2.toLocaleString("en-IN")} m²`, floor.confidence === "low"]);
+  const rooms = f.filter(x => x.kind === "room_area").length;
+  if (rooms) chips.push([`${rooms} rooms named`]);
+  if ((rec.steps || []).length) chips.push([`${rec.steps.length} stair flight${rec.steps.length > 1 ? "s" : ""}`]);
+  if ((rec.voids || []).length) chips.push([`${rec.voids.length} shaft / void`]);
+  if (seps) chips.push([`${seps} separate structure${seps > 1 ? "s" : ""} to confirm`, true]);
+  ((data.stated || {}).heights || []).slice(0, 2).forEach(h => chips.push([`Drawing states ${h.what} ${(h.mm / 1000).toFixed(1)} m`]));
+  return chips;
+}
+
 async function handleCADAdobeUpload(e) {
   const files = Array.from(e.target.files || []);
   if (!files.length) return;
   if (!(await ensureEngineSession())) { e.target.value = ""; return; }
+  const name = files.map(f => f.name).join(" + ");
+  const ext = (files[0].name.split(".").pop() || "").toLowerCase();
+  const isPdf = ext === "pdf", isDwg = ext === "dwg";
+  const ui = new Ingest("Reading your drawing", name, [
+    { key: "connect", label: "Connecting to the drawing engine" },
+    { key: "upload", label: `Uploading ${files.length > 1 ? files.length + " files" : files[0].name}` },
+    { key: "convert", label: "Converting the DWG (LibreDWG)", optional: true },
+    { key: "verify", label: "Verifying the conversion against the original DWG", optional: true },
+    { key: "layers", label: isPdf ? "Reading PDF vectors, title block and scale" : "Reading layers, units and drawing notes" },
+    { key: "views", label: "Separating plans from copies, title blocks and legends", optional: true },
+    { key: "named", label: "Measuring partitions and glazing", optional: true },
+    { key: "shapes", label: "Recognising walls, furniture, stairs and shafts from shapes", optional: true },
+    { key: "blocks", label: "Counting doors, furniture and fittings", optional: true },
+    { key: "rooms", label: "Measuring the floor and naming rooms", optional: true },
+    { key: "checks", label: "Checking the drawing: conversion, units, copies", optional: true },
+    { key: "save", label: "Saving the measurements" },
+    { key: "trace", label: "Tracing the drawing" },
+    { key: "takeoff", label: "Building the take-off and questions" },
+    { key: "assume", label: "Filling unstated details with standard assumptions" },
+    { key: "generate", label: "Generating the BOQ — Revision A" },
+    { key: "price", label: "Pricing from the Divine costing" }
+  ]);
+  if (!isDwg) { ui.skip("convert"); ui.skip("verify"); }
+  if (isPdf) { ["views", "shapes", "checks"].forEach(k => ui.skip(k)); }
   try {
-    setStatus("Creating project…");
-    const name = files.map(f => f.name).join(" + ");
+    ui.go("connect");
     const proj = await engineCall("POST", "/projects", { name: `${name} — ${new Date().toLocaleString("en-IN")}`, client: "Divine Innovation" });
     const uploaded = [];
     for (const f of files) {
-      setStatus(`Uploading ${f.name}…`);
-      const fd = new FormData(); fd.append("file", f);
-      const up = await engineCall("POST", `/projects/${proj.id}/documents`, fd, true);
-      await waitForJob(up.job.id);
+      await ui.go("upload", `${f.name} — 0%`);
+      const up = await uploadWithProgress(`/projects/${proj.id}/documents`, f, p => ui.detail("upload", `${f.name} — ${Math.round(p * 100)}%  (${(f.size / 1048576).toFixed(1)} MB)`));
+      await ui.detail("upload", `${f.name} — ${(f.size / 1048576).toFixed(1)} MB received`);
+      await followJob(ui, up.job.id);
       uploaded.push({ id: up.document.id, name: f.name, size: f.size, kind: up.document.kind });
     }
-    setStatus("Measuring partitions, glazing, doors, floor and rooms…");
+    await ui.go("trace");
+    let data = null;
+    try {
+      const ex = await engineCall("GET", `/projects/${proj.id}/extractions`);
+      data = (ex.extractions || []).map(x => x.data).find(d => d && d.kind === "cad") || ((ex.extractions || [])[0] || {}).data || null;
+    } catch (err) { data = null; }
+    const cadDoc = uploaded.find(u => u.kind !== "pdf");
+    const tracing = (async () => {
+      if (!cadDoc) return;
+      try {
+        const g = await engineCall("GET", `/projects/${proj.id}/documents/${cadDoc.id}/geometry`);
+        const mmu = data && data.units && data.units.mm_per_unit;
+        const focus = mmu && data.views ? (data.views.measured_bboxes || []).map(b => b.map(v => v / mmu)) : null;
+        await ui.trace(g, focus);
+      } catch (err) { /* the drawing preview is optional */ }
+    })();
+    if (data) {
+      for (const [text, warn] of discoveries(ui, data)) { ui.find(text, warn); await ui.pause(140); }
+    }
+    await tracing;
+    await ui.go("takeoff");
     let tk = await engineCall("GET", `/projects/${proj.id}/takeoff`);
+    await ui.detail("takeoff", `${tk.lines.length} items measured, ${tk.questions.length} questions`);
+    await ui.go("assume");
     for (let pass = 0; pass < 3; pass++) {
       const answers = assumptionAnswers(tk.questions);
       const fresh = Object.keys(answers).filter(k => !(k in (tk.inputs_used || {})));
@@ -435,8 +726,10 @@ async function handleCADAdobeUpload(e) {
       await engineCall("POST", `/projects/${proj.id}/inputs`, { answers, reason: "Standard assumptions (auto-filled): " + ASSUMPTION_LABEL, save_rules: false });
       tk = await engineCall("GET", `/projects/${proj.id}/takeoff`);
     }
-    setStatus("Generating BOQ…");
+    await ui.detail("assume", ASSUMPTION_LABEL);
+    await ui.go("generate");
     const rev = await engineCall("POST", `/projects/${proj.id}/revisions/generate`);
+    await ui.go("price");
     const tb = (tk.sources || {}).title_block || {};
     const items = await buildOldStyleItems(rev, files[0].name);
     const issues = tk.questions.filter(q => !(q.key in (tk.inputs_used || {}))).map((q, k) => ({ id: `q${k}`, code: `Q-${k + 1}`, title: q.text.slice(0, 90),
@@ -448,14 +741,33 @@ async function handleCADAdobeUpload(e) {
       files: uploaded, rooms: (tk.rooms || []).map(r => ({ room: r.room, area_m2: r.area_m2, enclosed: r.enclosed })), issues,
       scale_note: (tk.sources && tk.sources.units ? "Units: " + tk.sources.units.name : "") });
     loadInventory(); loadZones(); loadReviewIssues(); loadPDFDrawing(); clearComparisonView();
-    setStatus("");
-    const lines = items.filter(i => !i.is_heading).length;
+    await ui.finish();
+
+    const lines = items.filter(i => !i.is_heading);
+    const total = lines.reduce((a, i) => a + (i.selling_amount || 0), 0);
     const open = tk.questions.filter(q => !(q.key in (tk.inputs_used || {}))).length;
-    alert(`BOQ generated from '${name}'.\n\n- ${lines} BOQ lines measured from this drawing\n- Details the drawing does not state were filled with standard assumptions: ${ASSUMPTION_LABEL}\n- Every line starts "Under review"; lines using an assumption say so in their source column — edit any quantity, then approve` + (open ? `\n- ${open} drawn items could not be identified automatically (see /divine-innovation/studio/)` : ""));
-    document.querySelector('.nav-item[data-tab="boq"]')?.click();
+    const floor = data && (data.features || []).find(x => x.kind === "floor_area");
+    const rd = data && data.readiness;
+    const flagged = rd ? rd.checks.filter(c => c.status !== "ok") : [];
+    ui.summary(`
+      <div class="ing-kpis">
+        <div class="ing-kpi"><b>${lines.length}</b><span>BOQ lines</span></div>
+        <div class="ing-kpi"><b>₹${Math.round(total).toLocaleString("en-IN")}</b><span>total (excl. GST)</span></div>
+        <div class="ing-kpi"><b>${floor ? floor.value_m2.toLocaleString("en-IN") + " m²" : "—"}</b><span>floor measured</span></div>
+        <div class="ing-kpi"><b>${(tk.rooms || []).length}</b><span>rooms named</span></div>
+        <div class="ing-kpi"><b>${lines.filter(i => i.review_status === "Rate needed").length}</b><span>lines need a rate</span></div>
+        <div class="ing-kpi"><b>${open}</b><span>items to identify</span></div>
+      </div>
+      ${rd ? `<div class="ing-verdict ${rd.status === "ok" ? "ok" : rd.status === "blocked" ? "err" : ""}"><b>Drawing check:</b> ${ingEsc(rd.verdict)}</div>
+      ${flagged.length ? `<div class="ing-checks">${flagged.map(c => `<div><b>${ingEsc(c.check.replace(/_/g, " "))}:</b> ${ingEsc(c.message)}</div>`).join("")}</div>` : ""}` : ""}
+      <div class="ing-checks"><div>Every line starts “Under review”. Heights and finishes the drawing does not state use standard assumptions (${ingEsc(ASSUMPTION_LABEL)}) — edit any quantity, then approve.</div></div>`,
+      [{ label: "Open the BOQ", primary: true, icon: "fa-table-list", onClick: () => { ui.close(); document.querySelector('.nav-item[data-tab="boq"]')?.click(); } },
+       { label: "View drawing", icon: "fa-ruler-combined", onClick: () => { ui.close(); document.querySelector('.nav-item[data-tab="drawing"]')?.click(); } },
+       { label: "Review issues", icon: "fa-clipboard-check", onClick: () => { ui.close(); document.querySelector('.nav-item[data-tab="review"]')?.click(); } }]);
   } catch (err) {
-    setStatus("");
-    alert("Could not generate the BOQ from this drawing:\n\n" + err.message);
+    await ui.fail(err.message);
+  } finally {
+    e.target.value = "";
   }
 }
 
@@ -464,21 +776,57 @@ async function handleBOQUpload(e) {
   const file = e.target.files[0];
   if (!file) return;
   const meta = JSON.parse(localStorage.getItem("di_boq_meta") || "null");
-  if (!meta || !meta.project) { alert("Upload the drawing first (step 2) so there is a BOQ to compare against."); return; }
+  if (!meta || !meta.project) { alert("Upload the drawing first (step 2) so there is a BOQ to compare against."); e.target.value = ""; return; }
+  if (!(await ensureEngineSession())) { e.target.value = ""; return; }
+  const ui = new Ingest("Comparing the customer's BOQ", file.name, [
+    { key: "freeze", label: "Freezing our drawing BOQ — Revision A (before we read theirs)" },
+    { key: "upload", label: `Uploading ${file.name}` },
+    { key: "read", label: "Reading sheets and choosing the current revision" },
+    { key: "classify", label: "Separating items from headings, subtotals, notes and terms" },
+    { key: "match", label: "Matching their items to ours: scope, specification, unit" },
+    { key: "summary", label: "Summarising the differences" }
+  ]);
   try {
-    setStatus("Freezing the drawing BOQ and reading the customer BOQ…");
+    // the drawing stays on screen while the BOQ is compared against it
+    const cad = (meta.files || []).find(f => f.kind !== "pdf");
+    const tracing = cad ? engineCall("GET", `/projects/${meta.project}/documents/${cad.id}/geometry`).then(g => ui.trace(g)).catch(() => null) : null;
+    ui.go("freeze");
     const rev = await engineCall("GET", `/revisions/${meta.revision_id}`);
     if (rev.status !== "frozen") await engineCall("POST", `/revisions/${meta.revision_id}/freeze`);
-    const fd = new FormData(); fd.append("file", file);
-    const ref = await engineCall("POST", `/projects/${meta.project}/references`, fd, true);
+    await ui.detail("freeze", `${(rev.lines || []).filter(l => !l.removed).length} lines frozen`);
+    await ui.go("upload", "0%");
+    const ref = await uploadWithProgress(`/projects/${meta.project}/references`, file, p => ui.detail("upload", `${Math.round(p * 100)}%  (${(file.size / 1048576).toFixed(1)} MB)`));
+    const parse = ref.parse || {};
+    await ui.go("read", parse.selected_sheet ? `using sheet “${parse.selected_sheet}”${(parse.sheets || []).length > 1 ? ` of ${(parse.sheets || []).length}` : ""}` : "");
+    const counts = parse.counts || {};
+    await ui.go("classify", Object.entries(counts).map(([k, v]) => `${v} ${k.replace(/_/g, " ")}`).join(", "));
+    await ui.go("match");
     const cmp = await engineCall("GET", `/projects/${meta.project}/references/${ref.reference_id}/comparison`);
-    try { localStorage.setItem("di_cmp", JSON.stringify(cmp)); } catch (e) { /* too large to keep */ }
+    await ui.go("summary");
+    try { localStorage.setItem("di_cmp", JSON.stringify(cmp)); } catch (err) { /* too large to keep */ }
     state.comparisonData = toOldComparison(cmp);
     renderComparisonTable(state.comparisonData);
-    setStatus("");
+    if (tracing) await tracing;
+    await ui.finish();
+    const c = cmp.counts || {};
+    if (c.covered) ui.find(`${c.covered} covered`);
+    if (c.partly) ui.find(`${c.partly} partly covered`, true);
+    if (c.missing) ui.find(`${c.missing} missing in ours`, true);
+    if (c.needs_review) ui.find(`${c.needs_review} need review`, true);
+    if (c.extra_ours) ui.find(`${c.extra_ours} extra in ours`);
+    ui.summary(`
+      <div class="ing-kpis">
+        <div class="ing-kpi"><b>${cmp.coverage_pct === null ? "—" : cmp.coverage_pct + "%"}</b><span>scope coverage</span></div>
+        <div class="ing-kpi"><b>${c.total || 0}</b><span>customer items</span></div>
+        <div class="ing-kpi"><b>${c.missing || 0}</b><span>missing in ours</span></div>
+      </div>
+      <div class="ing-verdict ${cmp.provisional ? "" : "ok"}">${ingEsc(cmp.verdict)}</div>`,
+      [{ label: "Open the comparison", primary: true, icon: "fa-code-compare", onClick: () => { ui.close(); document.querySelector('.nav-item[data-tab="compare"]')?.click(); } },
+       { label: "Close", onClick: () => ui.close() }]);
   } catch (err) {
-    setStatus("");
-    alert("Could not compare the customer BOQ:\n\n" + err.message);
+    await ui.fail(err.message);
+  } finally {
+    e.target.value = "";
   }
 }
 
