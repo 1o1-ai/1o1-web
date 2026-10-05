@@ -166,19 +166,42 @@
     return ym_state.receipts.reduce(function (ym_sum, ym_row) { return ym_sum + ym_row.total; }, 0);
   }
 
+  function ym_isOriginal() {
+    return document.body.getAttribute("data-skin") === "original";
+  }
+
+  function ym_applySkin(ym_next) {
+    document.body.setAttribute("data-skin", ym_next === "original" ? "original" : "atelier");
+    localStorage.setItem("kuexa-skin", document.body.getAttribute("data-skin"));
+    var ym_box = document.getElementById("ym-skin");
+    if (ym_box) ym_box.setAttribute("aria-pressed", ym_isOriginal() ? "true" : "false");
+    ym_renderNav();
+  }
+
   function ym_renderNav() {
-    var ym_titles = { register: "Register", book: "Book", clients: "Clients", day: "Day" };
-    var ym_crumbs = {
-      register: "Till 01 · Bandra West",
-      book: "Today’s chair",
-      clients: "House book",
-      day: "Takings"
-    };
+    var ym_original = ym_isOriginal();
+    var ym_titles = ym_original
+      ? { register: "Billing", book: "Appointments", clients: "Customers", day: "Dashboard" }
+      : { register: "Register", book: "Book", clients: "Clients", day: "Day" };
+    var ym_crumbs = ym_original
+      ? { register: "KUEXA", book: "KUEXA", clients: "KUEXA", day: "KUEXA" }
+      : {
+        register: "Till 01 · Bandra West",
+        book: "Today’s chair",
+        clients: "House book",
+        day: "Takings"
+      };
     document.getElementById("ym-title").textContent = ym_titles[ym_state.view];
     document.getElementById("ym-crumb").textContent = ym_crumbs[ym_state.view];
     document.getElementById("ym-today").textContent = ym_inr(ym_todayTotal());
+    var ym_place = document.querySelector(".rail-foot span");
+    var ym_note = document.querySelector(".rail-foot em");
+    if (ym_place) ym_place.textContent = ym_original ? "Admin" : "Bandra West · Till 01";
+    if (ym_note) ym_note.textContent = ym_original ? "Powered by KUEXA · v1.0.0" : "Today on this till";
     Array.prototype.forEach.call(document.querySelectorAll("#ym-nav button"), function (ym_btn) {
-      ym_btn.classList.toggle("is-on", ym_btn.getAttribute("data-view") === ym_state.view);
+      var ym_view = ym_btn.getAttribute("data-view");
+      ym_btn.textContent = ym_titles[ym_view];
+      ym_btn.classList.toggle("is-on", ym_view === ym_state.view);
     });
   }
 
@@ -458,7 +481,9 @@
     if (!ym_el) return;
     var ym_act = ym_el.getAttribute("data-act");
     var ym_id = ym_el.getAttribute("data-id");
-    if (ym_act === "nav") {
+    if (ym_act === "skin") {
+      ym_applySkin(ym_isOriginal() ? "atelier" : "original");
+    } else if (ym_act === "nav") {
       ym_state.view = ym_el.getAttribute("data-view");
       ym_render();
     } else if (ym_act === "add") ym_add(ym_id);
@@ -531,6 +556,7 @@
     ym_completeSale();
   });
 
+  ym_applySkin(localStorage.getItem("kuexa-skin") || "atelier");
   ym_clock();
   setInterval(ym_clock, 30000);
   ym_render();

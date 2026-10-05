@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,620&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="app.css" />
+  <link rel="stylesheet" href="app.css?v=3" />
 </head>
 <body>
   <aside class="rail">
@@ -36,6 +36,10 @@
         <h1 id="ym-title">Register</h1>
       </div>
       <div class="top-meta">
+        <button type="button" class="look-switch" id="ym-skin" data-act="skin" aria-pressed="false">
+          <span class="look-ui" aria-hidden="true"></span>
+          <span class="look-name">Original look</span>
+        </button>
         <span class="pill">Demo floor</span>
         <time id="ym-clock" datetime=""></time>
       </div>
@@ -67,6 +71,6 @@
     </footer>
   </dialog>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=3"></script>
 </body>
 </html>
