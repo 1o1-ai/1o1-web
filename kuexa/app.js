@@ -175,7 +175,7 @@
     localStorage.setItem("kuexa-skin", document.body.getAttribute("data-skin"));
     var ym_box = document.getElementById("ym-skin");
     if (ym_box) ym_box.setAttribute("aria-pressed", ym_isOriginal() ? "true" : "false");
-    ym_renderNav();
+    ym_render();
   }
 
   function ym_renderNav() {
@@ -209,7 +209,7 @@
     ym_save();
     ym_renderNav();
     var ym_stage = document.getElementById("ym-stage");
-    if (ym_state.view === "register") ym_stage.innerHTML = ym_registerHtml();
+    if (ym_state.view === "register") ym_stage.innerHTML = ym_isOriginal() ? ym_originalBillHtml() : ym_registerHtml();
     else if (ym_state.view === "book") ym_stage.innerHTML = ym_bookHtml();
     else if (ym_state.view === "clients") ym_stage.innerHTML = ym_clientsHtml();
     else ym_stage.innerHTML = ym_dayHtml();
@@ -269,6 +269,95 @@
       '<div class="grand"><span>Total</span><b>' + ym_inr(ym_bill.total) + '</b></div></div>' +
       '<footer><div class="seg" aria-label="Courtesy">' + ym_discounts + '</div>' +
       '<button type="button" class="solid" data-act="pay" ' + (ym_state.lines.length ? "" : "disabled") + '>Take payment</button></footer></aside></section>';
+  }
+
+  function ym_inr2(ym_n) {
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    }).format(ym_n || 0);
+  }
+
+  function ym_originalBillHtml() {
+    var ym_bill = ym_money(ym_state.lines, ym_state.discount);
+    var ym_tab = ym_state.guestTab || "1";
+    var ym_who = ym_client(ym_state.clientId);
+    var ym_count = ym_state.lines.length;
+    var ym_pills = '<button type="button" class="nb-pill' + (ym_tab === "all" ? " is-on" : "") + '" data-act="guest" data-id="all">All · ' + ym_count + '</button>' +
+      '<button type="button" class="nb-pill' + (ym_tab === "1" ? " is-on" : "") + '" data-act="guest" data-id="1">Guest 1 · ' + ym_count + '</button>' +
+      '<button type="button" class="nb-add" data-act="guest" data-id="1">+ Add Guest</button>';
+    var ym_clientOpts = ym_clients.map(function (ym_c) {
+      return '<option value="' + ym_c.id + '"' + (ym_c.id === ym_state.clientId ? " selected" : "") + ">" + ym_esc(ym_c.name) + "</option>";
+    }).join("");
+    var ym_rows = ym_state.lines.map(function (ym_line, ym_i) {
+      var ym_row = ym_item(ym_line.catalogId);
+      var ym_amount = ym_row.price * ym_line.qty;
+      var ym_share = ym_bill.sub ? (ym_amount / ym_bill.sub) * ym_bill.off : 0;
+      var ym_after = ym_amount - ym_share;
+      var ym_tax = Math.round(ym_after * YM_GST);
+      var ym_kind = ym_row.kind === "retail" ? "Product" : "Service";
+      var ym_opts = ym_stylists.map(function (ym_s) {
+        return '<option value="' + ym_s.id + '"' + (ym_s.id === ym_line.stylistId ? " selected" : "") + ">" + ym_esc(ym_s.name) + "</option>";
+      }).join("");
+      var ym_stylist = ym_kind === "Service"
+        ? '<td><select data-act="stylist" data-index="' + ym_i + '">' + ym_opts + "</select></td>"
+        : "<td></td>";
+      return '<tr class="nb-' + ym_kind.toLowerCase() + '"><td><span class="nb-idx">' + (ym_i + 1) + "</span>" + ym_esc(ym_row.name) +
+        '<em>' + ym_kind + "</em></td>" + ym_stylist +
+        "<td>" + ym_inr2(ym_row.price) + "</td><td>" + ym_line.qty + "</td><td>" + ym_inr2(ym_amount) + "</td><td>" + ym_inr2(ym_share) +
+        "</td><td>" + ym_inr2(ym_after) + "</td><td>" + ym_inr2(ym_tax) + "</td><td>" + ym_inr2(ym_after + ym_tax) +
+        '</td><td><button type="button" class="nb-x" data-act="remove" data-index="' + ym_i + '">Remove</button></td></tr>';
+    }).join("");
+    var ym_table = ym_rows
+      ? '<table class="nb-table"><thead><tr><th>Service / Item</th><th>*Stylist</th><th>Price</th><th>Qty.</th><th>Amount</th><th>Disc. Amt.</th><th>Amt. After Disc.</th><th>Tax Amt.</th><th>Amt. Incl. Tax</th><th></th></tr></thead><tbody>' + ym_rows + "</tbody></table>"
+      : '<div class="nb-empty">No items yet — use the buttons below to add services or products</div>';
+    var ym_picker = ym_state.picker || "";
+    var ym_tiles = "";
+    if (ym_picker) {
+      var ym_q = (ym_state.query || "").trim().toLowerCase();
+      ym_tiles = '<div class="nb-picker"><input class="nb-search" id="ym-query" placeholder="Search or select items" value="' + ym_esc(ym_state.query || "") + '" />' +
+        '<div class="grid nb-tiles">' + ym_catalog.filter(function (ym_row) {
+          var ym_ok = ym_picker === "products" ? ym_row.kind === "retail" : ym_row.kind === "service";
+          return ym_ok && (!ym_q || ym_row.name.toLowerCase().indexOf(ym_q) >= 0);
+        }).map(function (ym_row) {
+          return '<button type="button" class="nb-tile" data-act="add" data-id="' + ym_row.id + '"><strong>' + ym_esc(ym_row.name) + "</strong><span>" + ym_inr2(ym_row.price) + "</span></button>";
+        }).join("") + "</div></div>";
+    }
+    var ym_discounts = [0, 5, 10, 15].map(function (ym_n) {
+      return '<button type="button" data-act="discount" data-id="' + ym_n + '" class="nb-over' + (ym_state.discount === ym_n ? " is-on" : "") + '">' + (ym_n === 0 ? "None" : ym_n + "%") + "</button>";
+    }).join("");
+    var ym_body = ym_tab === "all"
+      ? '<article class="nb-card"><header><span class="nb-num">1</span><strong>' + ym_esc(ym_who.name) + "</strong>" +
+        (ym_who.phone ? "<span>" + ym_esc(ym_who.phone) + "</span>" : "") +
+        '<button type="button" data-act="guest" data-id="1">Edit →</button></header>' +
+        (ym_rows ? '<div class="nb-pills">' + ym_state.lines.map(function (ym_line) {
+          var ym_row = ym_item(ym_line.catalogId);
+          var ym_kind = ym_row.kind === "retail" ? "product" : "service";
+          return '<div class="nb-line nb-line-' + ym_kind + '"><span>' + ym_esc(ym_row.name) + "</span><em>" + (ym_kind === "service" ? "Service" : "Product") + "</em><b>" + ym_inr2(ym_row.price * ym_line.qty) + "</b></div>";
+        }).join("") + "</div>" : '<p class="nb-empty">No items yet — use Edit → to add</p>') +
+        '<footer><span>Price <b>' + ym_inr2(ym_bill.sub) + "</b></span><span>Disc <b>" + ym_inr2(ym_bill.off) + "</b></span><span>Tax <b>" + ym_inr2(ym_bill.gst) + "</b></span><span>Total <b>" + ym_inr2(ym_bill.total) + "</b></span></footer></article>"
+      : '<div class="nb-client"><div>*Customer</div><div class="nb-client-row"><select data-act="client">' + ym_clientOpts + "</select>" +
+        '<button type="button" data-act="nav" data-view="book">Load from Appt.</button>' +
+        '<button type="button" data-act="offers">View offers</button></div>' +
+        (ym_state.offerNote ? '<p class="nb-offer">' + ym_esc(ym_state.offerNote) + "</p>" : "") +
+        "</div>" + ym_table +
+        '<div class="nb-adds"><button type="button" data-act="picker" data-id="services" class="' + (ym_picker === "services" ? "is-on" : "") + '">Add Services</button>' +
+        '<button type="button" data-act="picker" data-id="products" class="' + (ym_picker === "products" ? "is-on" : "") + '">Add Products</button></div>' + ym_tiles;
+    var ym_summary = '<section class="nb-summary"><h2>Billing Summary</h2><div class="nb-stats">' +
+      "<div><span>Total Price</span><strong>" + ym_inr2(ym_bill.sub) + "</strong></div>" +
+      "<div><span>Total Discount</span><strong class=\"ok\">− " + ym_inr2(ym_bill.off) + "</strong><div class=\"nb-overs\">" + ym_discounts + "</div></div>" +
+      "<div><span>Amt. After Disc.</span><strong>" + ym_inr2(ym_bill.sub - ym_bill.off) + "</strong></div>" +
+      '<div><span>Total Tax <em>CGST+SGST</em></span><strong>' + ym_inr2(ym_bill.gst) + "</strong></div>" +
+      "<div><span>Sub Total</span><strong>" + ym_inr2(ym_bill.total) + "</strong></div>" +
+      '<div><span class="due">Pending amount</span><strong class="due">' + ym_inr2(0) + "</strong></div>" +
+      '<div><span>Net payable</span><strong class="net">' + ym_inr2(ym_bill.total) + "</strong></div></div>" +
+      '<button type="button" class="nb-pay" data-act="pay" ' + (ym_count ? "" : "disabled") + ">Payment</button></section>";
+    return '<section class="nb"><header class="nb-head"><div><strong>New Bill</strong>' +
+      '<span class="nb-tag lpe">LPE: ₹0.00 (0 Pts.)</span><span class="nb-tag cbe">CBE: ₹0.00</span>' +
+      '<span class="nb-tag pay">Pay: ' + ym_inr2(ym_bill.total) + "</span></div><div>" + ym_pills + "</div></header>" +
+      ym_body + ym_summary + "</section>";
   }
 
   function ym_bookHtml() {
@@ -487,7 +576,20 @@
       ym_state.view = ym_el.getAttribute("data-view");
       ym_render();
     } else if (ym_act === "add") ym_add(ym_id);
-    else if (ym_act === "category") {
+    else if (ym_act === "guest") {
+      ym_state.guestTab = ym_id;
+      ym_render();
+    } else if (ym_act === "picker") {
+      ym_state.picker = ym_state.picker === ym_id ? "" : ym_id;
+      ym_state.query = "";
+      ym_render();
+      var ym_find = document.getElementById("ym-query");
+      if (ym_find) ym_find.focus();
+    } else if (ym_act === "offers") {
+      ym_state.offerNote = "Atelier courtesy is 10% on this bill. House offers stay with the verified catalogue.";
+      if (!ym_state.discount) ym_state.discount = 10;
+      ym_render();
+    } else if (ym_act === "category") {
       ym_state.category = ym_id;
       ym_render();
       var ym_box = document.getElementById("ym-query");
@@ -543,7 +645,7 @@
       var ym_grid = document.querySelector(".grid");
       if (!ym_grid) return;
       ym_save();
-      var ym_html = ym_registerHtml();
+      var ym_html = ym_isOriginal() ? ym_originalBillHtml() : ym_registerHtml();
       var ym_wrap = document.createElement("div");
       ym_wrap.innerHTML = ym_html;
       var ym_next = ym_wrap.querySelector(".grid");
