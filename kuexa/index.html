@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KUEXA · Till 01 · Bandra West</title>
+  <meta name="description" content="KUEXA salon point of sale. Demo register for Bandra West — services, retail, appointments, and the day's takings." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,620&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <aside class="rail">
+    <a class="mark" href="/kuexa/">
+      <span>Saint</span>
+      <strong>KUEXA</strong>
+    </a>
+    <nav class="rail-nav" id="ym-nav" aria-label="Register">
+      <button type="button" data-act="nav" data-view="register">Register</button>
+      <button type="button" data-act="nav" data-view="book">Book</button>
+      <button type="button" data-act="nav" data-view="clients">Clients</button>
+      <button type="button" data-act="nav" data-view="day">Day</button>
+    </nav>
+    <div class="rail-foot">
+      <span>Bandra West · Till 01</span>
+      <strong id="ym-today">₹0</strong>
+      <em>Today on this till</em>
+    </div>
+  </aside>
+
+  <div class="shell">
+    <header class="top">
+      <div>
+        <p class="crumb" id="ym-crumb">Floor</p>
+        <h1 id="ym-title">Register</h1>
+      </div>
+      <div class="top-meta">
+        <span class="pill">Demo floor</span>
+        <time id="ym-clock" datetime=""></time>
+      </div>
+    </header>
+    <main id="ym-stage"></main>
+  </div>
+
+  <dialog id="ym-pay" class="sheet">
+    <form method="dialog" id="ym-pay-form">
+      <header>
+        <p>Take payment</p>
+        <h2 id="ym-pay-total">₹0</h2>
+      </header>
+      <div class="methods" id="ym-methods"></div>
+      <div class="tender" id="ym-tender" hidden></div>
+      <p class="pay-note" id="ym-pay-note"></p>
+      <footer>
+        <button type="button" class="ghost" data-act="close-pay">Back to ticket</button>
+        <button type="submit" class="solid" id="ym-pay-confirm">Complete sale</button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog id="ym-receipt" class="sheet receipt-sheet">
+    <article class="receipt" id="ym-receipt-body"></article>
+    <footer class="receipt-actions">
+      <button type="button" class="ghost" data-act="close-receipt">New ticket</button>
+      <button type="button" class="solid" data-act="print">Print receipt</button>
+    </footer>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
