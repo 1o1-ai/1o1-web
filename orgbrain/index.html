@@ -1,0 +1,110 @@
+<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+-->
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>OrgBrain · Yogabrata</title>
+  <meta name="description" content="OrgBrain by Brahmexa: an AI-native enterprise operating brain that learns business transactions, documents, policies, and workflows.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#071019;--panel:#0e1b28;--line:#26394b;--text:#edf6fb;--muted:#9fb2c1;--cyan:#68e1d2;--green:#6ee7b7;--gold:#f4c76a;color-scheme:dark}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(ellipse at 18% -10%,rgba(104,225,210,.22),transparent 42%),radial-gradient(ellipse at 80% 0,rgba(244,199,106,.13),transparent 36%),var(--bg);color:var(--text);font:16px/1.55 'DM Sans',sans-serif}
+    .wrap{max-width:1160px;margin:auto;padding:26px 24px 70px}
+    .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:76px}
+    .brand{font:800 17px Manrope,sans-serif;letter-spacing:-.04em;color:inherit;text-decoration:none}
+    .brand small{display:block;color:var(--muted);font:600 10px 'DM Sans';letter-spacing:.16em;text-transform:uppercase}
+    .back{color:#c7d7e2;text-decoration:none;border:1px solid var(--line);border-radius:99px;padding:9px 14px;font-size:13px}
+    .hero{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:42px;align-items:center;margin-bottom:54px}
+    .kicker{color:var(--cyan);font-size:12px;letter-spacing:.18em;font-weight:800;text-transform:uppercase}
+    h1{font:800 clamp(44px,7vw,78px)/.96 Manrope,sans-serif;letter-spacing:-.07em;margin:14px 0}
+    .lead{font-size:18px;color:#bed0dd;max-width:680px;margin:0 0 26px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;border-radius:999px;padding:10px 16px;text-decoration:none;font-weight:800;font-size:13px;border:1px solid #376175;color:#071019;background:linear-gradient(135deg,var(--cyan),var(--green))}
+    .btn.secondary{background:transparent;color:#d6e5ee;border-color:#314b5f}
+    .orb-card{border:1px solid rgba(104,225,210,.25);border-radius:28px;min-height:360px;background:radial-gradient(circle at 50% 44%,rgba(104,225,210,.2),rgba(16,31,48,.86) 42%,rgba(7,16,25,.92));display:grid;place-items:center;box-shadow:0 28px 90px rgba(0,0,0,.35)}
+    .orb{width:230px;height:230px;border-radius:50%;display:grid;place-items:center;position:relative;background:radial-gradient(circle at center,#173a45,#071019 70%);border:1px solid rgba(104,225,210,.45);box-shadow:0 0 70px rgba(104,225,210,.22),inset 0 0 46px rgba(104,225,210,.16)}
+    .orb:before,.orb:after{content:"";position:absolute;border:1px dashed rgba(244,199,106,.36);border-radius:50%;inset:-22px;animation:spin 24s linear infinite}
+    .orb:after{inset:25px;border-color:rgba(104,225,210,.28);animation-duration:16s;animation-direction:reverse}
+    .orb strong{font:800 50px Manrope,sans-serif;letter-spacing:-.08em;color:#e9fbf8}
+    .orb span{position:absolute;bottom:56px;color:#9be5d7;font-size:12px;letter-spacing:.13em;text-transform:uppercase;font-weight:800}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:28px 0 40px}
+    .card{border:1px solid var(--line);border-radius:18px;background:linear-gradient(180deg,rgba(16,31,48,.92),rgba(11,22,34,.92));padding:22px;min-height:170px}
+    .card h2{font:800 20px Manrope,sans-serif;letter-spacing:-.035em;margin:0 0 8px}
+    .card p{margin:0;color:var(--muted)}
+    .section{margin-top:48px}
+    .section h2{font:800 clamp(28px,4vw,44px)/1.05 Manrope,sans-serif;letter-spacing:-.055em;margin:0 0 14px}
+    .section>p{color:var(--muted);max-width:780px;margin:0 0 22px}
+    .flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+    .step{border:1px solid #2a4356;border-radius:16px;padding:16px;background:#0c1824;min-height:136px}
+    .step b{display:block;color:#dcfbf7;margin-bottom:8px}
+    .step span{color:#93a8b8;font-size:13px}
+    .principle{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .quote{border:1px solid rgba(244,199,106,.28);border-radius:18px;background:rgba(244,199,106,.07);padding:22px;color:#f1dfb8}
+    .footer{text-align:center;color:#788d9d;font-size:12px;margin-top:70px}
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.orb-card{min-height:300px}.grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.principle{grid-template-columns:1fr}}
+    @media(max-width:560px){.wrap{padding:20px 16px 46px}.top{margin-bottom:48px}.flow{grid-template-columns:1fr}.lead{font-size:16px}.orb{width:190px;height:190px}.orb strong{font-size:42px}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <a class="brand" href="/">Yogabrata<small>Brahmexa</small></a>
+      <a class="back" href="/">Home</a>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="kicker">AI-native enterprise operating brain</div>
+        <h1>OrgBrain</h1>
+        <p class="lead">OrgBrain is the blank-slate business brain Brahmexa is building: a system that connects to ERP, HR, payroll, finance, CRM, documents, and workflow tools, then learns the enterprise from every approved transaction.</p>
+        <div class="actions">
+          <a class="btn" href="#learning">How it learns</a>
+          <a class="btn secondary" href="https://brahmexa.com">Brahmexa</a>
+        </div>
+      </div>
+      <div class="orb-card" aria-hidden="true">
+        <div class="orb"><strong>OB</strong><span>business memory</span></div>
+      </div>
+    </section>
+
+    <section class="grid" aria-label="OrgBrain pillars">
+      <article class="card"><h2>Enterprise memory</h2><p>Appointment letters, invoices, approvals, policies, contracts, messages, and system events become governed records, not loose files.</p></article>
+      <article class="card"><h2>Learning engine</h2><p>OrgBrain does not train on everything blindly. It converts transactions into structured signals, patterns, and suggested policies.</p></article>
+      <article class="card"><h2>Nexus interface</h2><p>Nexus talks to people. OrgBrain remembers the business. Agents act only through policy, permissions, and audit trails.</p></article>
+    </section>
+
+    <section id="learning" class="section">
+      <div class="kicker">How the business is learned</div>
+      <h2>Every transaction becomes a signal.</h2>
+      <p>The first version focuses on observing, indexing, and explaining the organization before taking over responsibilities. Human approval is the bridge from detected pattern to active rule.</p>
+      <div class="flow">
+        <div class="step"><b>Ingest</b><span>ERP, HR, payroll, CRM, finance, documents, chat, email, and workflow events.</span></div>
+        <div class="step"><b>Normalize</b><span>Turn raw activity into business events with actors, dates, amounts, objects, and source proof.</span></div>
+        <div class="step"><b>Resolve</b><span>Connect people, departments, vendors, customers, documents, and transactions into an entity graph.</span></div>
+        <div class="step"><b>Detect</b><span>Find repeated approvals, exceptions, bottlenecks, risks, preferences, and hidden workflows.</span></div>
+        <div class="step"><b>Suggest</b><span>Generate explainable rules, automations, and next-best actions for review.</span></div>
+        <div class="step"><b>Govern</b><span>Approved rules become operating memory with versioning, policy checks, and audit.</span></div>
+      </div>
+    </section>
+
+    <section class="section principle">
+      <div>
+        <div class="kicker">Architecture principle</div>
+        <h2>RAG remembers. Learning Engine learns.</h2>
+        <p>LLMs help read, reason, explain, and draft. RAG retrieves evidence. The learning engine builds durable business memory from structured events, relationships, policies, and feedback.</p>
+      </div>
+      <div class="quote"><strong>OrgBrain v0 promise</strong><p>Watch first. Learn safely. Suggest with evidence. Act only after permission. Replace legacy systems phase by phase, never by surprise.</p></div>
+    </section>
+
+    <footer class="footer">A Yogabrata · Brahmexa experience</footer>
+  </main>
+</body>
+</html>
