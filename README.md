@@ -11,8 +11,11 @@ Static site for inflight Yogabrata projects on **yogabrata.com** (GitHub Pages).
 | AI-Caregiver | [1o1.ai](https://1o1.ai) |
 | 7RANGERS Hospital | `/sevenrangers/index.html` |
 | **ATLAS** | [`/atlas/`](https://yogabrata.com/atlas/) |
+| **OrgBrain** | [`/orgbrain/`](https://yogabrata.com/orgbrain/) |
 
 JSI at `/jsi/` is a static AI-infrastructure preview (private LLMs, RAG, local n8n workflows, SWAN boards). Nested routes are directories with `index.html` so GitHub Pages refresh works. In-browser demonstrations use synthetic data only and do not call live models or n8n.
+
+OrgBrain at `/orgbrain/` introduces the Brahmexa enterprise operating brain: memory, learning engine, Nexus interface, governed agents, and phased legacy-system takeover.
 
 ATLAS is a static clone of the ATOM demo UI on GitHub Pages. The browser stays on `yogabrata.com/atlas/`. Visitors must never be redirected to `atlas.kai247.com`.
 
