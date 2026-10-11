@@ -1,0 +1,78 @@
+<!--
+  Author: Yogabrata Mukhopadhyay
+  Organization: Brahmexa
+  Copyright (c) 2026 Brahmexa. All rights reserved.
+-->
+<!DOCTYPE html>
+<html lang="en" data-cosmic-theme="eden" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learn AI · Yogabrata</title>
+  <meta name="description" content="Learn AI — the first words of artificial intelligence and machine learning, one planet at a time." />
+  <script>
+    (function () {
+      var ym_saved = "eden";
+      try {
+        ym_saved = localStorage.getItem("brahmexa_cosmic_theme") || localStorage.getItem("manjulab_cosmic_theme") || "eden";
+      } catch (e) { /* keep eden */ }
+      document.documentElement.setAttribute("data-cosmic-theme", ym_saved);
+      var ym_light = ym_saved === "dawn" || ym_saved === "paper" || ym_saved === "ivory";
+      document.documentElement.setAttribute("data-theme", ym_light ? "light" : "dark");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/theme.css" />
+  <link rel="stylesheet" href="/assets/landing.css" />
+  <link rel="stylesheet" href="/learn-ai/learn-ai.css" />
+</head>
+<body class="landing-page learn-ai-page">
+  <a class="lai-skip" href="#laiMain">Skip to the classroom</a>
+  <canvas id="cosmos" aria-hidden="true"></canvas>
+  <div class="mesh" aria-hidden="true"></div>
+  <div class="orb orb-cyan" aria-hidden="true"></div>
+  <div class="orb orb-orange" aria-hidden="true"></div>
+
+  <header class="lai-top">
+    <a class="lai-back" href="/">← Yogabrata</a>
+    <div class="lai-brand">
+      <strong>Learn AI</strong>
+      <span>First words, one planet at a time</span>
+    </div>
+    <p class="lai-progress" id="laiProgress">0 of 26 words you can say</p>
+  </header>
+
+  <main class="lai-main" id="laiMain">
+    <div class="lai-toolbar">
+      <div class="lai-tabs" role="tablist" aria-label="How to explore">
+        <button type="button" class="lai-tab" id="laiTabOrbit" role="tab" aria-selected="true" aria-controls="laiOrbit">Orbit</button>
+        <button type="button" class="lai-tab" id="laiTabPath" role="tab" aria-selected="false" aria-controls="laiPath">In order</button>
+      </div>
+      <form class="lai-search" role="search" onsubmit="return false">
+        <input id="laiSearch" type="search" placeholder="Find a word — model, prompt, token…" aria-label="Find a word" autocomplete="off" />
+        <ul class="lai-results" id="laiSearchResults" hidden></ul>
+      </form>
+    </div>
+    <p class="lai-intro" id="laiIntro">Twenty-six words. The sun begins the path. Each planet is one idea, with a sentence, a picture from daily life, and a single check.</p>
+
+    <section id="laiOrbit" aria-label="Vocabulary planets">
+      <div class="lai-fit" id="laiFit">
+        <div class="lai-stage" id="laiStage"></div>
+      </div>
+      <div class="lai-legend" id="laiLegend"></div>
+    </section>
+
+    <section id="laiPath" hidden aria-label="Words in learning order"></section>
+    <article id="laiLesson" class="lai-lesson" hidden></article>
+  </main>
+
+  <footer class="lai-foot">
+    <p>A Yogabrata classroom · <a href="https://brahmexa.com">Brahmexa</a></p>
+  </footer>
+
+  <script src="/assets/cosmic.js"></script>
+  <script src="/learn-ai/vocabulary.js"></script>
+  <script src="/learn-ai/learn-ai.js"></script>
+</body>
+</html>
