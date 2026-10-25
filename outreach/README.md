@@ -1,45 +1,39 @@
-# JSI Outreach prototype
+# JSI Outreach workspace v2
 
-Interactive public prototype for the Autonomous Cold Outreach, Lead Hunter & Email Lifecycle PRD.
+Replaces the former school-only prototype at https://yogabrata.com/outreach/.
 
-Route: https://yogabrata.com/outreach/
+## Deployment boundary
 
-## What works
+This repository is the public GitHub Pages frontend. It is an interactive, browser-local preview, not the production service described in the October 25 updated PRD. It makes no live discovery, email or LLM requests. All seed contacts and simulated discoveries use reserved `.example` domains. No passwords, API keys or files are accepted for storage. Do not enter sensitive contact data into a public preview.
 
-- Eight responsive sections: overview, leads, campaigns, inbox, discovery, assets, activity and settings.
-- Browser-local persistence with 12 fictional schools, two campaigns and a sample reply.
-- CSV import with column mapping, quoted/multiline field support, normalization, duplicate detection, validation preview and review-first ingestion. CSV export guards spreadsheet formula injection. Excel files must be exported to CSV for this version.
-- Lead creation, notes, filters, source details, recipient eligibility review and suppression. Opted-out and suppressed contacts cannot be reactivated through UI/import.
-- Campaign editing, saved personalization previews, revision invalidation, content checks and explicit demo approval.
-- Simulated dispatch with rolling sender/campaign caps and minimum 180-second spacing. Exact rendered demo messages are retained in browser state.
-- Follow-up template previews, explicit approval, interval/count validation and immediate eligibility/revision rechecks.
-- Simulated inbox replies cancel pending jobs and drafts. Opt-outs also stop future demo follow-ups.
-- Simulated discovery creates fictional .example contacts in review; it has independent pause/resume.
-- Global pause/resume and kill switch. Emergency stop cancels pending jobs/drafts and returns queued leads to eligibility review.
-- PDF extension, size and header validation. Only metadata is retained; contents are discarded. Assets stay pending_scan because no malware scanner is connected.
-- Activity history, CSV exports, policy settings, workspace reset and mobile navigation.
+The target private management URL remains `https://mailmkt.brahmexa.com`. Deploying that service requires dedicated-server access and separately implemented authentication, API, database and workers. No production account or endpoint was provisioned by this frontend change.
 
-## Deliberate prototype boundaries
+## Implemented preview workflows
 
-This is a static, browser-local demonstration, not the production backend specified by the PRD. It has no live sending, crawling, external search, IMAP polling, Ollama inference, authentication, MFA, server RBAC, shared database, scheduler, Redis queue, private file storage, malware scanning, DNS verification, signed unsubscribe links, backups or encrypted secrets. Template follow-up copy is explicitly labeled as a preview, not model output. No passwords are collected. Audit history is local and editable, not a production audit trail. Production mail transport and all provider checks must be implemented before live use.
+- Create any number of discovery agents for arbitrary segments, with user-authored objectives/instructions, geographic scope, source categories, provider choice, field requirements, qualification rules, request/page/record/time budgets, cadence and pinned template/sender assignments.
+- Store configuration versions and run history. Generate explicitly fictional review candidates from an agent configuration without a spreadsheet. No real crawl is represented as successful.
+- Canonical organization records with separately normalized emails and phones, individual status and source evidence. Global email and phone duplicate checks. Ambiguous organization matches held for review. Suppression survives import and edits.
+- Search, filter, sort and paginate. Optional CSV/XLSX import with mapping and validation. CSV/XLSX export with selected columns, preserved filters, organization/email row layouts and export metadata. Spreadsheet formula escaping.
+- Reusable Template Studio with HTML/plain text, subject, preheader, segment/language tags, variable catalog, fallbacks, sanitized sandboxed preview, approval and version history. Unsupported HTML, scripts, remote content and unsafe links removed. Unresolved variables block queue creation.
+- Campaign revisions, segment/template consistency, explicit approval, pause and pinned content versions. Queue idempotency, exact rendered snapshots, suppression/reply/campaign/template rechecks and rolling sender/domain/campaign/agent caps in preview dispatch.
+- Fictional inbox with human-reply / auto-acknowledgement separation. Confirming a human reply cancels queued work. Reclassification never silently revives cancelled jobs.
+- Multiple sender connection metadata records; password entry and tests unavailable until backend exists.
+- Brochure metadata registration; upload, validation and campaign approval intentionally unavailable without private storage/scanning. Direct attachments disabled.
+- Notification addresses parsed and normalized individually; task-level Ollama/OpenAI/Gemini routing configuration with explicit cloud opt-in and no default cloud fallback.
+- Global kill switch cancels unstarted preview jobs and never restores them on resume. Local activity history labels its own limitations.
 
-Use fictional data only on this public route. State is isolated per browser/origin. Browser data clearing or Settings → Reset demo removes it.
+## Production requirements not implemented
 
-## Demo walkthrough
+FastAPI / PostgreSQL / Redis services; secure authentication, server RBAC, MFA, sessions, CSRF, password resets, secret encryption; real autonomous approved-source discovery, robots/access policies and crawling; DNS/MX/service verification; scheduler and resumable workers; SMTP/IMAP and real threaded inbox; actual follow-up drafting/scheduling; live sender health/authentication checks; backend sending windows, provider retry/backoff, complaint/bounce monitoring; real opt-out endpoint and notification delivery; private assets and malware scanning; server-side audit integrity, retention, monitoring, backup/restore.
 
-1. Leads → Import CSV → download the sample → upload → map columns → import.
-2. Review the new recipient and explicitly confirm eligibility.
-3. Campaigns → open a pending campaign → preflight and approval → confirm simulation approval.
-4. Simulate one send. A second immediate send is blocked by minimum spacing.
-5. Generate a follow-up preview for one of the older eligible sample leads, then review it.
-6. Inbox → simulate incoming reply. Pending follow-ups for that school are cancelled.
-7. Discovery → run demo discovery → review its fictional source and contact.
-8. Settings → stop and cancel all queued sends. Resume requires cancelled queued leads to be reviewed again.
+Frontend controls are not server authorization. Local audit history is not tamper resistant. Connection statuses are never fabricated. Approval in this preview authorizes only preview operations.
 
 ## Validation
 
-Run `node outreach/test-prototype.cjs` from the repository root. Nineteen checks cover CSV parsing, duplicate preservation, escaping, recipient review, rendering, pacing, caps, reply/opt-out cancellation, kill-switch recovery, follow-up eligibility and draft approval/revision gates, discovery pause and rendering of all eight sections. Desktop and 390px mobile layouts plus discovery/campaign approval interactions were checked in a browser.
+`node --check outreach/workspace.js`
 
-## Production next step
+`node outreach/test-prototype.cjs`
 
-Implement a separate private FastAPI/PostgreSQL/Redis service with Docker Compose at mailmkt.brahmexa.com. Enforce all approval, authorization, suppression, quota and idempotency rules on the server; frontend state must never be trusted. Integrate SMTP/IMAP and local Ollama only server-side, with the PRD's security, deliverability, asset-storage and operational acceptance tests. This public route can remain a synthetic showcase.
+21 focused lifecycle checks cover arbitrary segments and uniqueness, suppression, duplicates, reviewed campaign/template gating, unresolved placeholders, immutable snapshots, idempotency, stale versions, human replies versus auto acknowledgements, kill behavior, sender caps, filters and formula escaping. The lightweight VM DOM stub does not validate HTML sanitization. Browser QA separately checks the actual template sandbox, agent creation, approval and queue workflows.
+
+Static assets are `index.html`, `workspace.css`, `workspace.js` and vendored SheetJS 0.18.5 (Apache-2.0 license in `vendor/`). Browser state uses a new `jsi-outreach-workspace-v2` key; old prototype storage is not migrated or overwritten.
