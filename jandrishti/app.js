@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = '97188d7';
+  const BUILD = 'news-off-1';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -34,6 +34,8 @@
 
   const STALE_DAYS = 90;
   const NEWS_REFRESH_MS = 4 * 60 * 60 * 1000;
+  const NEWS_AUTO_KEY = 'jandrishti_news_auto_refresh';
+  let newsTimerStarted = false;
   const S = { seats: [], seatMeta: {}, sources: {}, sourceMeta: {}, profiles: {}, route: {} };
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -377,6 +379,55 @@
       <div class="drawer-block"><h4>Read this as</h4><div>Where the MLA office has the least evidence and the most unresolved signals. A high score is a reason to look, not proof that a service is failing.</div></div>`);
   }
 
+  function newsAutoEnabled() {
+    try { return localStorage.getItem(NEWS_AUTO_KEY) === '1'; } catch (e) { return false; }
+  }
+
+  function newsPanel() {
+    const enabled = newsAutoEnabled();
+    return `
+      <section class="panel news-panel" id="newsPanel" aria-labelledby="newsTitle" aria-busy="true">
+        <div class="panel-head news-head"><div><h3 id="newsTitle">Constituency news · Uttarpara</h3><p>Recent local coverage · news reports are context, not official service records.</p></div>
+          <label class="news-switch"><input type="checkbox" id="newsAutoToggle" role="switch" ${enabled ? 'checked' : ''}><span>Auto-refresh</span><small id="newsAutoState">${enabled ? 'On · every 4 hours' : 'Off by default'}</small></label>
+        </div>
+        <div class="news-toolbar"><span id="newsStatus" class="muted" role="status">Loading snapshot…</span><button class="outline-btn" id="newsReload" type="button">Refresh snapshot</button></div>
+        <div id="newsItems" class="news-grid"><div class="empty">Loading constituency news…</div></div>
+      </section>`;
+  }
+
+  function safeNewsUrl(value) {
+    try { const u = new URL(value, location.href); return ['http:', 'https:'].includes(u.protocol) ? u.href : ''; } catch (e) { return ''; }
+  }
+
+  function renderNewsSnapshot(data) {
+    const items = Array.isArray(data.items) ? data.items : [];
+    const rows = items.map(item => {
+      const url = safeNewsUrl(item.url);
+      const date = item.published_at ? new Date(item.published_at).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : 'Date not provided';
+      return `<article class="news-card"><div class="news-meta"><span>${esc(item.publisher || 'News source')}</span><span>${esc(date)}</span></div><h4>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(item.title || 'Untitled report')} ↗</a>` : esc(item.title || 'Untitled report')}</h4><p>${esc(item.summary || '')}</p><div class="news-localities">${(Array.isArray(item.localities) ? item.localities : []).map(x => `<span class="pill">${esc(x)}</span>`).join('')}</div></article>`;
+    }).join('');
+    $('#newsItems').innerHTML = rows || '<div class="empty">No recent constituency stories in the current snapshot.</div>';
+    const checked = data.last_checked_at ? new Date(data.last_checked_at).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : 'unknown';
+    const failed = (Array.isArray(data.sources) ? data.sources : []).filter(s => s.status === 'error').length;
+    $('#newsStatus').textContent = `Snapshot checked ${checked}${failed ? ` · ${failed} feed(s) unavailable` : ''}`;
+  }
+
+  async function loadNewsPanel() {
+    const panel = $('#newsPanel');
+    if (!panel) return;
+    panel.setAttribute('aria-busy', 'true');
+    try {
+      const r = await fetch(`./data/news-summary.json?refresh=${Date.now()}`, { cache: 'no-store' });
+      if (!r.ok) throw new Error(`Snapshot unavailable (HTTP ${r.status})`);
+      renderNewsSnapshot(await r.json());
+    } catch (err) {
+      $('#newsItems').innerHTML = `<div class="empty"><strong>News snapshot unavailable</strong>${esc(err.message)}. Use Refresh snapshot to try again.</div>`;
+      $('#newsStatus').textContent = 'Could not read the latest snapshot';
+    } finally {
+      panel.setAttribute('aria-busy', 'false');
+    }
+  }
+
   // ---------- views ----------
   function overview(p) {
     const est = approval(p);
@@ -435,71 +486,9 @@
         <span class="circ">${esc(j.code)}</span><strong>${esc(j.short)}</strong><small>${fmt(j.population.value)} · ${esc(j.population.period)}</small></button>`).join('')}</div>
         <div class="source-note">Populations come from different sources and scopes, so they are not added up. Gram-panchayat figures are census towns only.</div></section>
 
-      <div class="section-title news-heading"><div><h3>Constituency news</h3><p>Recent reporting that mentions Uttarpara and nearby AC 185 localities</p></div><span class="pill">Auto refresh · every 4 hours</span></div>
-      <section class="panel news-panel" id="newsPanel" aria-live="polite" aria-busy="true"><p class="muted">Loading recent coverage…</p></section>
+${newsPanel()}
 
-      <p class="footer">Values marked <span class="badge st-mock">MOCK</span> are invented demo data. News items are media reports, not official service records. Every number opens its evidence · <a href="${href(p.ac, 'sources')}">Sources &amp; freshness</a></p>`;
-  }
-
-  function newsDate(iso) {
-    if (!iso) return 'Date not supplied';
-    if (/^\d{4}-\d{2}-\d{2}$/.test(iso)) return iso;
-    const d = new Date(iso);
-    return Number.isNaN(d.getTime()) ? 'Date not supplied' : new Intl.DateTimeFormat('en-IN', { dateStyle: 'medium', timeStyle: 'short' }).format(d);
-  }
-
-  function safeNewsUrl(value) {
-    try {
-      const u = new URL(value);
-      return ['http:', 'https:'].includes(u.protocol) ? u.href : '';
-    } catch { return ''; }
-  }
-
-  function renderNews(data) {
-    const items = Array.isArray(data.items) ? data.items.slice(0, 6) : [];
-    const sourceState = Array.isArray(data.sources) ? data.sources : [];
-    const failures = sourceState.filter(s => s.status === 'error');
-    const lastChecked = Date.parse(data.last_checked_at || '');
-    const stale = !Number.isFinite(lastChecked) || Date.now() - lastChecked > 8 * 60 * 60 * 1000;
-    const cards = items.map(item => {
-      const url = safeNewsUrl(item.url);
-      const title = esc(item.title || 'Untitled report');
-      return '<article class="news-card">' +
-        '<div class="news-meta"><span class="news-publisher">' + esc(item.publisher || 'News source') + '</span><span>' + newsDate(item.published_at) + '</span></div>' +
-        '<h4>' + (url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + title + ' ↗</a>' : title) + '</h4>' +
-        '<p>' + esc(item.summary || 'Open the publisher’s report for details.') + '</p>' +
-        '<div class="news-tags">' + (Array.isArray(item.localities) ? item.localities : []).slice(0, 3).map(x => '<span class="pill">' + esc(x) + '</span>').join('') + '</div>' +
-      '</article>';
-    }).join('');
-    const empty = '<div class="news-empty">' + (data.stale ? 'The latest scheduled feed check failed. Showing the last saved snapshot.' : 'No recent constituency-specific stories matched the monitored localities.') + '</div>';
-    const warning = (failures.length ? '<p class="news-warning">' + failures.length + ' source feed' + (failures.length === 1 ? '' : 's') + ' could not be reached; available feeds are still shown.</p>' : '') + (stale ? '<p class="news-warning">The saved snapshot is older than two scheduled refresh windows.</p>' : '');
-    return '<div class="news-toolbar"><span>Last checked: ' + newsDate(data.last_checked_at) + ' · ' + esc(data.refresh_interval_hours || 4) + '-hour schedule</span>' +
-      '<button class="outline-btn" id="newsReload" type="button">Reload snapshot</button></div>' +
-      warning + (cards ? '<div class="news-grid">' + cards + '</div>' : empty) +
-      '<div class="news-attribution">Short summaries are based on publisher feed descriptions. Open each original report for full context.</div>';
-  }
-
-  async function loadNewsPanel() {
-    const panel = $('#newsPanel');
-    if (!panel) return;
-    panel.setAttribute('aria-busy', 'true');
-    try {
-      const r = await fetch('./data/news-summary.json?refresh=' + Date.now(), { cache: 'no-store' });
-      if (!r.ok) throw new Error('News snapshot: HTTP ' + r.status);
-      const data = await r.json();
-      if (panel !== $('#newsPanel')) return;
-      panel.innerHTML = renderNews(data);
-      panel.setAttribute('aria-busy', 'false');
-      const reload = $('#newsReload', panel);
-      if (reload) reload.addEventListener('click', loadNewsPanel);
-    } catch (err) {
-      if (panel !== $('#newsPanel')) return;
-      panel.innerHTML = '<div class="news-empty">News snapshot is temporarily unavailable. ' + esc(err.message) + '</div>' +
-        '<button class="outline-btn" id="newsRetry" type="button">Try again</button>';
-      panel.setAttribute('aria-busy', 'false');
-      const retry = $('#newsRetry', panel);
-      if (retry) retry.addEventListener('click', loadNewsPanel);
-    }
+      <p class="footer">Values marked <span class="badge st-mock">MOCK</span> are invented demo data. Every number opens its evidence · <a href="${href(p.ac, 'sources')}">Sources &amp; freshness</a></p>`;
   }
 
   function people(p) {
@@ -764,8 +753,12 @@
     if (ex) ex.addEventListener('click', () => exportCsv(p));
     const newsReload = $('#newsReload');
     if (newsReload) newsReload.addEventListener('click', loadNewsPanel);
-    const newsRetry = $('#newsRetry');
-    if (newsRetry) newsRetry.addEventListener('click', loadNewsPanel);
+    const newsToggle = $('#newsAutoToggle');
+    if (newsToggle) newsToggle.addEventListener('change', () => {
+      try { localStorage.setItem(NEWS_AUTO_KEY, newsToggle.checked ? '1' : '0'); } catch (e) { /* device preference only */ }
+      $('#newsAutoState').textContent = newsToggle.checked ? 'On · every 4 hours' : 'Off';
+      if (newsToggle.checked) loadNewsPanel();
+    });
     $$('#view [data-sort]').forEach(el => el.addEventListener('click', () => setStateParams({ sort: el.dataset.sort })));
     const search = $('#seatSearch');
     if (search) {
@@ -830,6 +823,11 @@
     $('#whoami').textContent = session().user;
     document.body.classList.remove('locked');
     if (!started) { window.addEventListener('hashchange', render); started = true; }
+    if (!newsTimerStarted) {
+      window.setInterval(() => { if (newsAutoEnabled() && document.visibilityState === 'visible' && S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel(); }, NEWS_REFRESH_MS);
+      document.addEventListener('visibilitychange', () => { if (newsAutoEnabled() && document.visibilityState === 'visible' && S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel(); });
+      newsTimerStarted = true;
+    }
     if (!location.hash) history.replaceState(null, '', '#/ac/185');
     await render();
   }
@@ -855,13 +853,6 @@
     }
     // Inside the Android app (it appends JanDrishtiApp to the user agent) the download link is pointless.
     if (/JanDrishtiApp\//.test(navigator.userAgent)) $$('.get-app').forEach(a => a.remove());
-    // News digest: refresh every 4 hours while the Overview is visible, and on return to the app.
-    window.setInterval(() => {
-      if (document.visibilityState === 'visible' && S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel();
-    }, NEWS_REFRESH_MS);
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible' && S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel();
-    });
     if (!session()) return showLogin('');
     try {
       await start();
