@@ -447,7 +447,9 @@
       return `<article class="news-card"><div class="news-meta"><span>${esc(item.publisher || 'News source')} · ${esc(item.section || 'News')}${isOfficial ? ' · Official notice' : ''}</span><span>${esc(date)}</span></div><h4>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(item.title || 'Untitled report')} ↗</a>` : esc(item.title || 'Untitled report')}</h4><p>${esc(item.summary || '')}</p><div class="news-localities">${(Array.isArray(item.localities) ? item.localities : []).map(x => `<span class="pill">${esc(x)}</span>`).join('')}</div></article>`;
     }).join('');
     $('#newsItems').innerHTML = rows || '<div class="empty">No recent constituency stories from this source in the collected snapshot. Try its live search above.</div>';
-    const updated = data.snapshot_updated_at || data.last_checked_at;\n    const checked = updated ? new Date(updated).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : 'unknown';\n    const feedsChecked = data.last_checked_at ? new Date(data.last_checked_at).toLocaleDateString('en-IN', { dateStyle: 'medium' }) : 'unknown';
+    const updated = data.snapshot_updated_at || data.last_checked_at;
+    const checked = updated ? new Date(updated).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : 'unknown';
+    const feedsChecked = data.last_checked_at ? new Date(data.last_checked_at).toLocaleDateString('en-IN', { dateStyle: 'medium' }) : 'unknown';
     const failed = sources.filter(s => s.status === 'error').length;
     $('#newsStatus').textContent = `Snapshot updated ${checked} · feeds last checked ${feedsChecked}${failed ? ` · ${failed} collected source(s) unavailable` : ''}`;
     $('#newsSourceFilters [data-news-filter]').forEach(button => button.addEventListener('click', () => {
