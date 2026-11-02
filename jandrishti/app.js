@@ -407,21 +407,24 @@
     const outlets = [
       ['ABP Ananda', 'https://bengali.abplive.com/district/hooghly'],
       ['Anandabazar Patrika', 'https://www.anandabazar.com/topic/uttarpara'],
-      ['Ei Samay', 'https://www.google.com/search?tbm=nws&q=site%3A eisamay.com Uttarpara Konnagar'.replace('site%3A ', 'site:')],
-      ['Bartaman', 'https://www.google.com/search?tbm=nws&q=site%3Abartamanpatrika.com Uttarpara Konnagar'],
-      ['Sangbad Pratidin', 'https://www.google.com/search?tbm=nws&q=site%3Asangbadpratidin.in Uttarpara Konnagar'],
-      ['TV9 Bangla', 'https://www.google.com/search?tbm=nws&q=site%3Atv9bangla.com Uttarpara Konnagar'],
-      ['News18 Bangla', 'https://www.google.com/search?tbm=nws&q=site%3Abengali.news18.com Uttarpara Konnagar'],
-      ['Zee 24 Ghanta', 'https://www.google.com/search?tbm=nws&q=site%3Azee24ghanta.com Uttarpara Konnagar'],
-      ['Republic Bangla', 'https://www.google.com/search?tbm=nws&q=site%3Arepublicworld.com/bangla Uttarpara Konnagar'],
       ['Public App · local', 'https://public.app/district/news-in-hooghly']
     ];
-    return outlets.map(([name, url]) => {
-      if (name === 'ABP Ananda' || name === 'Anandabazar Patrika' || name === 'Public App · local') return [name, url];
-      const u = new URL(url);
-      u.searchParams.set('q', `site:${decodeURIComponent(u.searchParams.get('q').match(/site%3A([^+ ]+)/i)?.[1] || '')} ${q}`);
-      return [name, u.href];
-    });
+    const domains = [
+      ['Ei Samay', 'eisamay.com'],
+      ['Bartaman', 'bartamanpatrika.com'],
+      ['Sangbad Pratidin', 'sangbadpratidin.in'],
+      ['TV9 Bangla', 'tv9bangla.com'],
+      ['News18 Bangla', 'bengali.news18.com'],
+      ['Zee 24 Ghanta', 'zee24ghanta.com'],
+      ['Republic Bangla', 'republicworld.com/bangla']
+    ];
+    for (const [name, domain] of domains) {
+      const search = new URL('https://www.google.com/search');
+      search.searchParams.set('tbm', 'nws');
+      search.searchParams.set('q', `site:${domain} ${q}`);
+      outlets.push([name, search.href]);
+    }
+    return outlets;
   }
 
   function renderNewsSnapshot(data) {
