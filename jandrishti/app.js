@@ -417,7 +417,7 @@
       ['TV9 Bangla', 'tv9bangla.com'],
       ['News18 Bangla', 'bengali.news18.com'],
       ['Zee 24 Ghanta', 'zee24ghanta.com'],
-      ['Republic Bangla', 'republicworld.com/bangla']
+      ['Republic Bangla', 'bangla.republicworld.com']
     ];
     return sources.map(([name, domain]) => {
       if (name === 'Anandabazar Patrika') return [name, 'https://www.anandabazar.com/topic/uttarpara'];
