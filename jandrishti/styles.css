@@ -338,6 +338,29 @@ body.locked .login{display:grid}
 .sentiment-panel>.notice{margin:10px 0}
 .sentiment-panel>small{display:block;margin-top:8px}
 @media(max-width:760px){.sentiment-summary{grid-template-columns:1fr}.sentiment-topics{grid-template-columns:1fr}.sentiment-topic{grid-template-columns:115px minmax(70px,1fr) auto;gap:7px}}
+.mood-panel{margin:14px 0}
+.mood-head{align-items:center}
+.mood-controls{display:flex;gap:7px}
+.mood-controls .chip{cursor:pointer}
+.mood-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0 16px}
+.mood-kpis>div{position:relative;display:grid;grid-template-columns:1fr auto;gap:5px 8px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:11px 13px;background:var(--surface-2);overflow:hidden}
+.mood-kpis small{font-size:11px;color:var(--muted)}
+.mood-kpis b{font-size:22px;color:var(--ink)}
+.mood-kpis i{position:absolute;left:0;bottom:0;width:100%;height:3px}
+.mood-supportive{background:var(--st-verified)}
+.mood-neutral{background:var(--accent-2)}
+.mood-concern{background:var(--st-confirm)}
+.mood-total{background:var(--accent)}
+.mood-legend{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 8px}
+.mood-legend span{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
+.mood-legend i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.mood-row{display:grid;grid-template-columns:minmax(150px,1fr) minmax(120px,2.5fr) 125px;gap:12px;align-items:center;padding:9px 2px;border-bottom:1px solid var(--line)}
+.mood-topic{font-size:12px;font-weight:600;color:var(--ink-2)}
+.mood-stack{height:12px;display:flex;overflow:hidden;border-radius:99px;background:var(--surface-3)}
+.mood-stack i{height:100%;display:block;flex:0 0 auto}
+.mood-row small{font-size:10px;color:var(--muted);text-align:right;white-space:nowrap}
+.mood-panel [hidden]{display:none!important}
+@media(max-width:760px){.mood-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.mood-row{grid-template-columns:minmax(100px,1fr) minmax(80px,2fr) 105px;gap:7px}.mood-topic{font-size:11px}}
 .ops-panel{margin:14px 0}
 .ops-panel>.panel-head{align-items:flex-start}
 .ops-kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:12px 0}
