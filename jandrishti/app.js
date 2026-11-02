@@ -405,12 +405,15 @@
   function newsLiveSources() {
     const q = '(Uttarpara OR Konnagar OR Hindmotor OR Makhla OR Bhadrakali OR Kanaipur)';
     const outlets = [
-      ['ABP Ananda', 'https://bengali.abplive.com/district/hooghly'],
-      ['Anandabazar Patrika', 'https://www.anandabazar.com/topic/uttarpara'],
-      ['Public App · local', 'https://public.app/district/news-in-hooghly']
+      ['ABP Ananda', 'bengali.abplive.com'],
+      ['Anandabazar Patrika', 'anandabazar.com'],
+      ['Public App · local', 'public.app']
     ];
     const domains = [
       ['Ei Samay', 'eisamay.com'],
+      ['The Times of India', 'timesofindia.indiatimes.com'],
+      ['India Today', 'indiatoday.in'],
+      ['Zee News', 'zeenews.india.com'],
       ['Bartaman', 'bartamanpatrika.com'],
       ['Sangbad Pratidin', 'sangbadpratidin.in'],
       ['TV9 Bangla', 'tv9bangla.com'],
@@ -418,7 +421,7 @@
       ['Zee 24 Ghanta', 'zee24ghanta.com'],
       ['Republic Bangla', 'republicworld.com/bangla']
     ];
-    for (const [name, domain] of domains) {
+    for (const [name, domain] of [...outlets, ...domains]) {
       const search = new URL('https://www.google.com/search');
       search.searchParams.set('tbm', 'nws');
       search.searchParams.set('q', `site:${domain} ${q}`);
@@ -446,9 +449,9 @@
       return `<article class="news-card"><div class="news-meta"><span>${esc(item.publisher || 'News source')} · ${esc(item.section || 'News')}${isOfficial ? ' · Official notice' : ''}</span><span>${esc(date)}</span></div><h4>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(item.title || 'Untitled report')} ↗</a>` : esc(item.title || 'Untitled report')}</h4><p>${esc(item.summary || '')}</p><div class="news-localities">${(Array.isArray(item.localities) ? item.localities : []).map(x => `<span class="pill">${esc(x)}</span>`).join('')}</div></article>`;
     }).join('');
     $('#newsItems').innerHTML = rows || '<div class="empty">No recent constituency stories from this source in the collected snapshot. Try its live search above.</div>';
-    const checked = data.last_checked_at ? new Date(data.last_checked_at).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : 'unknown';
+    const updated = data.snapshot_updated_at || data.last_checked_at;\n    const checked = updated ? new Date(updated).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : 'unknown';\n    const feedsChecked = data.last_checked_at ? new Date(data.last_checked_at).toLocaleDateString('en-IN', { dateStyle: 'medium' }) : 'unknown';
     const failed = sources.filter(s => s.status === 'error').length;
-    $('#newsStatus').textContent = `Snapshot updated ${checked}${failed ? ` · ${failed} collected source(s) unavailable` : ''}`;
+    $('#newsStatus').textContent = `Snapshot updated ${checked} · feeds last checked ${feedsChecked}${failed ? ` · ${failed} collected source(s) unavailable` : ''}`;
     $('#newsSourceFilters [data-news-filter]').forEach(button => button.addEventListener('click', () => {
       renderNewsSnapshot.activeFilter = button.dataset.newsFilter;
       renderNewsSnapshot(data);
