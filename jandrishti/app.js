@@ -451,7 +451,7 @@
     const feedsChecked = data.last_checked_at ? new Date(data.last_checked_at).toLocaleDateString('en-IN', { dateStyle: 'medium' }) : 'unknown';
     const failed = sources.filter(s => s.status === 'error').length;
     $('#newsStatus').textContent = `Snapshot updated ${checked} · feeds last checked ${feedsChecked}${failed ? ` · ${failed} collected source(s) unavailable` : ''}`;
-    $('#newsSourceFilters [data-news-filter]').forEach(button => button.addEventListener('click', () => {
+    $$('#newsSourceFilters [data-news-filter]').forEach(button => button.addEventListener('click', () => {
       renderNewsSnapshot.activeFilter = button.dataset.newsFilter;
       renderNewsSnapshot(data);
     }));
