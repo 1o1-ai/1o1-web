@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'news-operations-1';
+  const BUILD = 'service-ops-1';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -339,7 +339,7 @@
     const actions = (p.office_actions && p.office_actions.field_actions) || [];
     const open = issues.filter(x => !['Resolved', 'Closed'].includes(x.status));
     const high = open.filter(x => x.priority === 'High').length;
-    const needsCheck = open.filter(x => /pending|unverified|needs/i.test(x.evidence_status || '')).length;
+    const needsCheck = open.filter(x => /pending|unverified|needs|not verified|not attached|not recorded/i.test(x.evidence_status || '')).length;
     const verifiedClosed = issues.filter(x => ['Resolved', 'Closed'].includes(x.status) && x.closure_verified).length;
     const departments = new Map();
     open.forEach(x => {
@@ -369,6 +369,7 @@
       <div class="ops-kpis">
         <div><small>Open issue clusters</small><b>${open.length}</b></div>
         <div><small>High-priority clusters</small><b>${high}</b></div>
+        <div><small>Evidence to verify</small><b>${needsCheck}</b></div>
         <div><small>Field tasks assigned</small><b>${actions.length}</b></div>
         <div><small>Closures with verified proof</small><b>${verifiedClosed}</b></div>
       </div>
@@ -565,6 +566,8 @@
         </button>
       </div></section>
 
+      ${operationsPanel(p)}
+
       <div class="section-title"><h3>Top 3 areas needing attention</h3><button class="text-btn" id="rankMethod">How this is ranked →</button></div>
       <section class="concerns">${top.map((a, i) => `<a class="concern" href="${href(p.ac, a.id)}">
         <div class="rank">${i + 1}</div>
@@ -574,8 +577,6 @@
       </a>`).join('')}</section>
 
       <div class="section-title"><h3>Every area at a glance</h3><p>Select an area for its evidence</p></div>
-      ${operationsPanel(p)}
-
       <section class="areas">${MODULES.filter(m => p.area_summaries[m.id]).map(m => {
         const s = p.area_summaries[m.id];
         const rank = top.findIndex(a => a.id === m.id);
