@@ -17,6 +17,11 @@ const FEEDS = [
   { id: 'abp-kolkata', publisher: 'ABP Ananda', section: 'Kolkata', url: 'https://bengali.abplive.com/news/kolkata/feed' },
   { id: 'abp-states', publisher: 'ABP Ananda', section: 'West Bengal', url: 'https://bengali.abplive.com/states/feed' }
 ];
+
+const LOCAL_SOURCES = [
+  { id: 'ukm-notices', publisher: 'Uttarpara-Kotrung Municipality', section: 'Municipal notices', url: 'https://www.uttarparamunicipality.in/news-event.php', kind: 'municipal' },
+  { id: 'hooghly-notices', publisher: 'Hooghly District Administration', section: 'District notices', url: 'https://hooghly.nic.in/notice_category/important-notices/', kind: 'district' }
+];
 const LOCALITIES = [
   { name: 'Uttarpara', en: /\buttarpara\b/i, bn: ['উত্তরপাড়া', 'উত্তরপাড়া', 'উত্তরপাড়া-কোতরং', 'উত্তরপাড়া-কোটরং'] },
   { name: 'Konnagar', en: /\bkonnagar\b/i, bn: ['কোন্নগর'] },
@@ -96,6 +101,39 @@ async function fetchFeed(feed) {
   return itemsFrom(xml);
 }
 
+
+async function fetchLocalPage(source) {
+  const response = await fetch(source.url, {
+    headers: { 'User-Agent': 'Brahmexa-JanDrishti-NewsDigest/1.0 (+https://yogabrata.com/jandrishti/)', 'Accept': 'text/html' },
+    signal: AbortSignal.timeout(18000)
+  });
+  if (!response.ok) throw new Error('HTTP ' + response.status);
+  const html = await response.text();
+  if (!/<html|<body/i.test(html)) throw new Error('Response was not HTML');
+  const blocks = source.kind === 'municipal'
+    ? [...html.matchAll(/<li\b[^>]*>([\s\S]*?)<\/li\s*>/gi)].map(m => m[1])
+    : [...html.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr\s*>/gi)].map(m => m[1]);
+  const out = [];
+  for (const block of blocks) {
+    const cells = [...block.matchAll(/<t[dh]\b[^>]*>([\s\S]*?)<\/t[dh]\s*>/gi)].map(m => m[1]);
+    const titleHtml = source.kind === 'district' ? (cells[0] || block) : block;
+    const title = plainText(titleHtml).replace(/\b(download|view|click here)\b/gi, '').replace(/[|:*]+$/g, '').trim().slice(0, 260);
+    if (title.length < 12) continue;
+    const anchors = [...titleHtml.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a\s*>/gi)];
+    const href = anchors[0]?.[1] || [...block.matchAll(/<a\b[^>]*href=["']([^"']+)["']/gi)][0]?.[1];
+    if (!href) continue;
+    const url = cleanUrl(new URL(decodeEntities(href), source.url).href);
+    if (!url) continue;
+    const localities = source.kind === 'municipal' ? ['Uttarpara'] : matchLocalities({ title, summary: '' });
+    if (!localities.length) continue;
+    const rawDate = plainText(block).match(/\b(\d{1,2})[\/.-](\d{1,2})[\/.-](\d{4})\b/);
+    const published_at = rawDate ? new Date(Date.UTC(+rawDate[3], +rawDate[2] - 1, +rawDate[1])).toISOString() : null;
+    out.push({ id: createHash('sha256').update(url).digest('hex').slice(0, 16), publisher: source.publisher, section: source.section, title, summary: source.kind === 'municipal' ? 'Official municipality notice. Open the source document for details and dates.' : 'Official district notice. Open the source document for details and dates.', url, published_at, localities, source_id: source.id });
+    if (out.length >= (source.kind === 'municipal' ? 8 : 10)) break;
+  }
+  return out;
+}
+
 async function main() {
   const previous = (() => { try { return JSON.parse(readFileSync(OUT, 'utf8')); } catch { return null; } })();
   const checked = [];
@@ -125,6 +163,17 @@ async function main() {
       }
     } catch (error) {
       checked.push({ id: feed.id, publisher: feed.publisher, section: feed.section, url: feed.url, status: 'error', error: String(error.message || error).slice(0, 180) });
+    }
+  }
+
+
+  for (const source of LOCAL_SOURCES) {
+    try {
+      const entries = await fetchLocalPage(source);
+      checked.push({ id: source.id, publisher: source.publisher, section: source.section, url: source.url, status: 'ok', fetched_items: entries.length });
+      fresh.push(...entries);
+    } catch (error) {
+      checked.push({ id: source.id, publisher: source.publisher, section: source.section, url: source.url, status: 'error', error: String(error.message || error).slice(0, 180) });
     }
   }
 
