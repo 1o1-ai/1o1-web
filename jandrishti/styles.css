@@ -312,3 +312,21 @@ body.locked .login{display:grid}
   .data-table{font-size:12.5px}
 }
 .get-app{display:block;text-align:center;margin-top:10px;font-size:13px;font-weight:600}
+
+/* Constituency news digest */
+.news-heading{margin-top:28px;align-items:center}
+.news-heading>div p{margin:3px 0 0;color:var(--muted);font-size:13px}
+.news-panel{padding:16px}
+.news-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px;color:var(--muted);font-size:12px}
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.news-card{min-width:0;border:1px solid var(--line);border-radius:13px;padding:15px;background:linear-gradient(145deg,var(--surface),var(--surface-2))}
+.news-meta{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:11px}
+.news-publisher{color:var(--accent);font-weight:700}
+.news-card h4{font-size:15px;line-height:1.45;margin:9px 0}
+.news-card p{margin:0;color:var(--ink-2);font-size:13px}
+.news-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.news-tags .pill{font-size:10px;padding:2px 8px}
+.news-empty{padding:18px;border:1px dashed var(--line-strong);border-radius:12px;color:var(--muted);text-align:center}
+.news-warning{margin:0 0 10px;color:var(--st-confirm);font-size:12px}
+.news-attribution{margin-top:12px;color:var(--muted);font-size:11px}
+@media(max-width:760px){.news-grid{grid-template-columns:1fr}.news-toolbar{align-items:flex-start;flex-wrap:wrap}}
