@@ -290,16 +290,23 @@
     }).sort((a, b) => b.score - a.score);
   }
 
-  // Beta-binomial approval estimate; see approval_model.method in the profile.
+  // Weighted Beta-binomial approval estimate; see approval_model.method in the profile.
+  // Each parameter: prior (vote share × weight) + its own approve/disapprove feedback.
+  // Overall = Σ wᵢ·meanᵢ; variance = Σ wᵢ²·varᵢ (parameters treated as independent).
   function approval(p) {
     const m = p.approval_model;
     const a0 = m.prior.share * m.prior.weight, b0 = (1 - m.prior.share) * m.prior.weight;
-    const a = a0 + m.feedback.approve, b = b0 + m.feedback.disapprove;
-    const mean = a / (a + b);
-    const sd = Math.sqrt(a * b / ((a + b) ** 2 * (a + b + 1)));
+    const params = m.parameters.map(x => {
+      const a = a0 + x.approve, b = b0 + x.disapprove;
+      const mean = a / (a + b);
+      const v = a * b / ((a + b) ** 2 * (a + b + 1));
+      return { ...x, a, b, mean, v, n: x.approve + x.disapprove + x.neutral };
+    });
+    const mean = params.reduce((s, x) => s + x.weight * x.mean, 0);
+    const sd = Math.sqrt(params.reduce((s, x) => s + x.weight ** 2 * x.v, 0));
     const lo = Math.max(0, mean - 1.2816 * sd), hi = Math.min(1, mean + 1.2816 * sd);
-    const mock = !!m.feedback.mock || m.real_responses === 0;
-    return { m, a0, b0, a, b, mean, lo, hi, mock, decided: m.feedback.approve + m.feedback.disapprove };
+    const mock = m.real_responses === 0 || params.some(x => x.mock);
+    return { m, a0, b0, params, mean, lo, hi, mock };
   }
 
   function gauge(est) {
@@ -311,20 +318,27 @@
 
   function approvalDrawer(p) {
     const e = approval(p), m = e.m, pct = x => (x * 100).toFixed(1) + '%';
+    const ranked = [...e.params].sort((x, y) => y.mean - x.mean);
     openDrawer(`
       <h2 id="drawerTitle">Approval estimate · ${esc(p.representative.name)}</h2>
-      <div>${badge(e.mock ? 'Mock' : 'Estimated')} <span class="pill">Bayesian model</span></div>
-      ${e.mock ? `<div class="notice">⚠ <span><b>Demonstration only.</b> ${m.real_responses} real resident responses have been collected. The number shown comes from a DEMO feedback sample and does not measure public opinion.</span></div>` : ''}
-      <div class="drawer-block"><h4>Result</h4><div class="calc">Estimate <b>${pct(e.mean)}</b> · 80% interval ${pct(e.lo)} – ${pct(e.hi)}</div></div>
+      <div>${badge(e.mock ? 'Mock' : 'Estimated')} <span class="pill">Weighted Bayesian model</span> <span class="pill">${e.params.length} parameters</span></div>
+      ${e.mock ? `<div class="notice">⚠ <span><b>Demonstration only.</b> ${m.real_responses} real resident responses have been collected. Every parameter score below comes from a DEMO feedback sample and does not measure public opinion.</span></div>` : ''}
+      <div class="drawer-block"><h4>Overall</h4><div class="calc">Estimate <b>${pct(e.mean)}</b> · 80% interval ${pct(e.lo)} – ${pct(e.hi)}</div></div>
+      <div class="drawer-block"><h4>Parameters · highest to lowest</h4>
+        <div class="params">${ranked.map(x => `<div class="param">
+          <div class="param-head"><strong>${esc(x.label)}</strong><span class="param-score">${Math.round(x.mean * 100)}%</span></div>
+          <div class="bar" title="${pct(x.mean)}"><span style="width:${(x.mean * 100).toFixed(1)}%"></span></div>
+          <div class="param-meta">Weight ${Math.round(x.weight * 100)}% · ${x.approve} approve · ${x.disapprove} disapprove · ${x.neutral} neutral ${badge(x.mock ? 'Mock' : x.status)}</div>
+          <div class="param-q">${esc(x.question)}</div>
+          <div class="param-ev"><b>Evidence we hold:</b> ${esc(x.evidence)} <a href="${href(p.ac, x.module)}">Open ${esc(modLabel(x.module))} →</a></div>
+        </div>`).join('')}</div></div>
       <div class="drawer-block"><h4>Method</h4><div>${esc(m.method)}</div></div>
-      <div class="drawer-block"><h4>Inputs</h4><dl class="kv">
-        <dt>Prior</dt><dd>${esc(m.prior.label)}: ${pct(m.prior.share)} × ${m.prior.weight} pseudo-responses ${badge(m.prior.status)}</dd>
-        <dt>Feedback</dt><dd>${esc(m.feedback.label)}: ${m.feedback.approve} approve · ${m.feedback.disapprove} disapprove · ${m.feedback.neutral} neutral (excluded) ${badge(m.feedback.mock ? 'Mock' : m.feedback.status)}<br><small class="muted">${esc(m.feedback.channel)}</small></dd>
-        <dt>Real responses</dt><dd>${m.real_responses}</dd></dl></div>
       <div class="drawer-block"><h4>Calculation</h4><div class="calc">
-        α₀ = ${m.prior.share} × ${m.prior.weight} = ${e.a0.toFixed(2)}; β₀ = ${e.b0.toFixed(2)}<br>
-        α = α₀ + ${m.feedback.approve} = ${e.a.toFixed(2)}; β = β₀ + ${m.feedback.disapprove} = ${e.b.toFixed(2)}<br>
-        mean = α / (α + β) = ${pct(e.mean)}</div></div>
+        Prior per parameter: α₀ = ${m.prior.share} × ${m.prior.weight} = ${e.a0.toFixed(2)}, β₀ = ${e.b0.toFixed(2)} ${badge(m.prior.status)}<br>
+        Parameter estimate = (α₀ + approve) / (α₀ + β₀ + approve + disapprove)<br>
+        ${e.params.map(x => `${esc(x.label)}: ${Math.round(x.weight * 100)}% × ${pct(x.mean)}`).join('<br>')}<br>
+        <b>Overall = Σ weight × estimate = ${pct(e.mean)}</b></div></div>
+      <div class="drawer-block"><h4>Inputs</h4><dl class="kv"><dt>Feedback</dt><dd>${esc(m.feedback_channel)}</dd><dt>Real responses</dt><dd>${m.real_responses}</dd></dl></div>
       <div class="drawer-block"><h4>Caveat</h4><div>${esc(m.caveat)}</div></div>
       ${sourceBlock(m.prior.source, 'Prior source')}`);
   }
@@ -370,7 +384,7 @@
         </div></div>
         <button class="approval" id="approvalBtn" aria-label="Approval estimate ${Math.round(est.mean * 100)} percent, ${est.mock ? 'demo inputs' : 'estimated'}. Open method.">
           ${gauge(est)}
-          <div><h4>Approval estimate</h4><p>Bayesian model · open for method</p>
+          <div><h4>Approval estimate</h4><p>8 parameters · open for breakdown</p>
           <div class="range">80% range ${Math.round(est.lo * 100)}–${Math.round(est.hi * 100)}%</div>
           <div class="range">${est.mock ? `${badge('Mock')} demo feedback · ${est.m.real_responses} real responses` : badge('Estimated')}</div></div>
         </button>

@@ -268,3 +268,12 @@ blockquote{margin:0;border-left:3px solid var(--accent);padding:6px 11px;color:v
   .body-node{width:96px}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* approval parameter breakdown */
+.params{display:grid;gap:12px}
+.param{border:1px solid var(--line);border-radius:12px;padding:11px 12px;background:var(--surface-2)}
+.param-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:6px}
+.param-head strong{font-size:14px;color:var(--ink)}.param-score{font-size:18px;font-weight:750;color:var(--ink);font-variant-numeric:tabular-nums}
+.param-meta{font-size:12px;color:var(--muted);margin-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.param-q{font-size:13px;color:var(--ink-2);margin-top:4px}
+.param-ev{font-size:12.5px;color:var(--ink-2);margin-top:4px}
