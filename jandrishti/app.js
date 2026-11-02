@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'chandannagar-1';
+  const BUILD = 'ui-refresh-1';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -495,9 +495,9 @@
           <label class="news-switch"><input type="checkbox" id="newsAutoToggle" role="switch" ${enabled ? 'checked' : ''}><span>Auto-refresh</span><small id="newsAutoState">${enabled ? 'On · every 4 hours' : 'Off by default'}</small></label>
         </div>
         <div class="news-toolbar"><span id="newsStatus" class="muted" role="status">Loading snapshot…</span><button class="outline-btn" id="newsReload" type="button">Refresh latest snapshot</button></div>
-        <div class="news-source-area"><h4>Collected sources · click to filter</h4><div id="newsSourceFilters" class="chip-row" role="group" aria-label="Filter collected news by source"></div>
+        <details class="news-sources"><summary>Sources &amp; live searches</summary><div class="news-source-area"><h4>Collected sources · click to filter</h4><div id="newsSourceFilters" class="chip-row" role="group" aria-label="Filter collected news by source"></div>
           <h4>Live searches · latest matching results</h4><div id="newsLiveSources" class="chip-row" aria-label="Open source-specific locality searches"></div>
-          <small class="muted">Live searches open news results restricted to one publisher and these constituency localities. They are separate from the collected snapshot.</small></div>
+          <small class="muted">Live searches open news results restricted to one publisher and these constituency localities. They are separate from the collected snapshot.</small></div></details>
         <div id="newsItems" class="news-grid"><div class="empty">Loading constituency news…</div></div>
       </section>`;
   }

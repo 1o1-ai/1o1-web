@@ -1,0 +1,101 @@
+/* JanDrishti visual refresh — "less is more".
+ * Loaded last. Uses only the existing palette tokens (styles.css, charts.css), so every palette
+ * and the saved palette choice keep working. Calmer surfaces, clearer hierarchy, fewer words up
+ * front; detail stays one click away. */
+
+/* surfaces: hairline borders, soft depth, generous rhythm */
+.panel,.metric,.card,.concern,.area-card,.approval{box-shadow:0 1px 2px color-mix(in srgb,var(--ink) 6%,transparent),0 8px 24px -16px color-mix(in srgb,var(--ink) 22%,transparent);border-color:color-mix(in srgb,var(--line) 80%,transparent)}
+.panel{border-radius:20px;padding:22px}
+#view>*+*,.overview-secondary>*+*{margin-top:18px}
+.section-title{margin:30px 0 12px}
+.section-title h3{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.panel-head h3{font-size:17px;font-weight:700;letter-spacing:-.015em}
+.panel-head p{font-size:12.5px}
+
+/* hero: the orbit motif, quietly */
+.hero{border-radius:26px;padding:30px 30px 26px;overflow:hidden}
+.hero:before{content:"";position:absolute;right:-110px;bottom:-190px;width:420px;height:420px;border-radius:50%;border:1px solid var(--ring);box-shadow:0 0 0 38px color-mix(in srgb,var(--accent) 4%,transparent),0 0 0 76px color-mix(in srgb,var(--accent-2) 3%,transparent);pointer-events:none}
+.hero h2{font-size:40px;font-weight:800;letter-spacing:-.045em;line-height:1.05}
+.hero p{font-size:14.5px;max-width:560px}
+.hero .tag{border-color:transparent;background:color-mix(in srgb,var(--surface) 80%,transparent);backdrop-filter:blur(4px)}
+
+/* numbers read first */
+.metric-value,.mood-kpis b,.ops-kpis b,.gauge-num b{font-variant-numeric:tabular-nums;letter-spacing:-.03em}
+.mood-kpis b{font-size:34px;font-weight:750}
+.ops-kpis b{font-size:26px}
+.ops-kpis>div{background:transparent;border-color:color-mix(in srgb,var(--line) 70%,transparent)}
+
+/* charts: thinner, rounder, quieter labels */
+.mood-stack,.chart-bar{height:10px;border-radius:99px}
+.chart-row,.mood-row{font-size:13px}
+.chart-val,.mood-row small{color:var(--muted);font-weight:600}
+.chart-meta{background:transparent;border-style:dashed}
+
+/* focus cards */
+.concern{border-radius:20px;padding:20px}
+.concern ul{font-size:12.5px;color:var(--muted)}
+.concern li:nth-child(n+3){display:none}
+
+/* service areas: compact tiles; one glance, one click */
+.areas{grid-template-columns:repeat(auto-fill,minmax(min(230px,100%),1fr));gap:10px}
+.area-card{grid-template-columns:40px minmax(0,1fr);padding:14px 16px;border-radius:16px;align-items:center;transition:transform .15s ease,border-color .15s ease}
+.area-card:hover{transform:translateY(-2px)}
+.area-ico{width:40px;height:40px;font-size:16px;box-shadow:none}
+.area-card h4{font-size:14px}
+.area-card p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:12.5px;color:var(--muted);margin-top:4px}
+.area-card .key{margin-top:4px}
+
+/* local bodies: a slim orbit row */
+.bodies{gap:10px;justify-content:flex-start}
+.body-node{width:auto;flex-direction:row;gap:10px;padding:8px 14px 8px 8px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+.body-node .circ,.body-node.muni .circ{width:38px;height:38px;font-size:12px;box-shadow:none}
+.body-node strong{font-size:13px}.body-node small{display:none}
+
+/* news: headlines first, sources on demand */
+.news-head p{display:none}
+.news-sources{margin:4px 0 14px}
+.news-sources>summary{cursor:pointer;font-size:12.5px;font-weight:600;color:var(--accent);list-style:none;display:inline-flex;align-items:center;gap:6px}
+.news-sources>summary::-webkit-details-marker{display:none}
+.news-sources>summary:before{content:"+";display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1px solid currentColor;font-size:12px;line-height:1}
+.news-sources[open]>summary:before{content:"–"}
+.news-sources[open]>.news-source-area{margin-top:10px}
+.news-card{border-radius:16px;padding:16px;background:var(--surface)}
+.news-card p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.news-toolbar{font-size:12px}
+
+/* navigation */
+.nav a{border-radius:12px}
+.nav a.active{box-shadow:none;background:var(--accent-soft);font-weight:650}
+.nav a.active .ico{transform:scale(1.1)}
+.sidebar-foot{background:transparent}
+.chip{transition:background .15s ease,border-color .15s ease}
+
+@media(min-width:1100px){
+  .news-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(min-width:1280px){
+  .main{padding:28px 44px}
+}
+@media(max-width:760px){
+  /* phones: swipe rows instead of long stacks */
+  .concerns,.news-grid,.bodies{display:grid;grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:82%;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;padding-bottom:6px;scrollbar-width:none}
+  .bodies{grid-auto-columns:max-content}
+  .concerns::-webkit-scrollbar,.news-grid::-webkit-scrollbar,.bodies::-webkit-scrollbar{display:none}
+  .concerns>*,.news-grid>*,.bodies>*{scroll-snap-align:start}
+  .areas{grid-template-columns:1fr 1fr;gap:8px}
+  .area-card{grid-template-columns:1fr;gap:6px;padding:12px}
+  .area-card p{display:none}
+  .area-ico{display:none}
+  .area-card .key{font-size:12px}
+  .area-card h4{font-size:13px}
+  .area-card .badge{font-size:9.5px}
+  .hero{padding:22px 20px;border-radius:22px}
+  .hero h2{font-size:30px}
+  .panel{padding:18px;border-radius:18px}
+  .mood-kpis b{font-size:26px}
+  .body-node{padding:6px 12px 6px 6px}
+}
+@media(prefers-reduced-motion:reduce){.area-card:hover{transform:none}}
+
+/* DEMO badges keep their own readable colours, even inside disclosure summaries */
+#view summary .chart-demo,#view summary .rx-demo{color:var(--on-mock);background:var(--st-mock)}
