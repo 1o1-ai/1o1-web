@@ -393,7 +393,7 @@
         <div class="news-toolbar"><span id="newsStatus" class="muted" role="status">Loading snapshot…</span><button class="outline-btn" id="newsReload" type="button">Refresh latest snapshot</button></div>
         <div class="news-source-area"><h4>Collected sources · click to filter</h4><div id="newsSourceFilters" class="chip-row" role="group" aria-label="Filter collected news by source"></div>
           <h4>Live searches · latest matching results</h4><div id="newsLiveSources" class="chip-row" aria-label="Open source-specific locality searches"></div>
-          <small class="muted">Live searches open the publisher’s matching results. They do not appear in the collected snapshot.</small></div>
+          <small class="muted">Live searches open news results restricted to one publisher and these constituency localities. They are separate from the collected snapshot.</small></div>
         <div id="newsItems" class="news-grid"><div class="empty">Loading constituency news…</div></div>
       </section>`;
   }
@@ -432,7 +432,6 @@
     const items = Array.isArray(data.items) ? data.items : [];
     const sources = Array.isArray(data.sources) ? data.sources : [];
     const active = renderNewsSnapshot.activeFilter || 'all';
-    const sourceMap = new Map(sources.map(s => [s.id, s]));
     const filtered = active === 'all' ? items : items.filter(item => item.source_id === active);
     $('#newsSourceFilters').innerHTML = `<button type="button" class="chip ${active === 'all' ? 'on' : ''}" data-news-filter="all">All collected (${items.length})</button>` + sources.map(source => {
       const count = items.filter(item => item.source_id === source.id).length;
