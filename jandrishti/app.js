@@ -176,7 +176,7 @@
       rows.push(['Type', r.type], ['Address', r.address]);
       (r.contacts || []).forEach(([k, v]) => rows.push([k, v]));
     }
-    if (r.kind === 'issue') rows.push(['Priority', r.priority], ['Owner', r.owner], ['Opened', r.opened]);
+    if (r.kind === 'issue') rows.push(['Status', r.status || 'Not recorded'], ['Priority', r.priority], ['Owner', r.owner], ['Opened', r.opened], ['Signal sources', (r.source_channels || []).join(' · ') || 'Not recorded'], ['Evidence state', r.evidence_status || 'Not recorded']);
     const j = p.jurisdictions.find(x => x.id === r.jurisdiction);
     if (j) rows.push(['Jurisdiction', j.name]);
     rows.push(['Module', modLabel(r.module)]);
@@ -656,8 +656,8 @@ ${newsPanel()}
       const issues = recs.filter(r => r.kind === 'issue');
       extra = `<div class="notice">⚠ <span>Every issue here is <b>MOCK</b>. Total open (demo): ${fmt(p.mock_totals.open_issues)} — ${esc(p.mock_totals.note)}</span></div>
         <div class="panel"><div class="panel-head"><div><h3>Issue register (demo)</h3><p>Fields the real register must carry</p></div><span class="badge st-mock">MOCK</span></div>
-        <div class="table-wrap"><table class="data-table"><thead><tr><th>MOCK</th><th>Issue</th><th>Area</th><th>Priority</th><th>Owner</th><th>Opened</th><th class="num">Age (d)</th></tr></thead>
-        <tbody>${issues.map(r => `<tr data-rec="${esc(r.id)}"><td>${badge('Mock')}</td><td>${esc(r.title)}</td><td>${esc((p.jurisdictions.find(x => x.id === r.jurisdiction) || {}).short)}</td><td>${esc(r.priority)}</td><td>${esc(r.owner)}</td><td>${esc(r.opened)}</td><td class="num">${daysSince(r.opened)}</td></tr>`).join('')}</tbody></table></div></div>
+        <div class="table-wrap"><table class="data-table"><thead><tr><th>Issue cluster</th><th>Area</th><th>Status</th><th>Priority</th><th>Signal sources / evidence</th><th>Owner</th><th>Opened</th><th class="num">Age (d)</th></tr></thead>
+        <tbody>${issues.map(r => `<tr data-rec="${esc(r.id)}"><td>${esc(r.title)} ${badge('Mock')}</td><td>${esc((p.jurisdictions.find(x => x.id === r.jurisdiction) || {}).short)}</td><td>${esc(r.status || 'Not recorded')}</td><td>${esc(r.priority)}</td><td style="white-space:normal">${(r.source_channels || []).map(esc).join(' · ')}<br><small>${esc(r.evidence_status || 'Evidence not recorded')}</small></td><td>${esc(r.owner)}</td><td>${esc(r.opened)}</td><td class="num">${daysSince(r.opened)}</td></tr>`).join('')}</tbody></table></div></div>
         <div class="cards" style="margin-top:14px"><div class="card"><h4>Intake</h4><p>Channel, consent, locality, category, urgency, date and attachments. Assisted intake for offline residents. Minimum personal data, with retention limits.</p></div>
         <div class="card"><h4>Routing</h4><p>Owning local body or department, named owner, response target, escalation and full status history, including jurisdiction hand-offs.</p></div>
         <div class="card"><h4>Close the loop</h4><p>Resolution evidence, resident confirmation, repeat-issue links and ageing. Open/due/overdue counts appear only from the real register.</p></div></div>`;
