@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'news-off-1';
+  const BUILD = 'news-local-2';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -387,10 +387,10 @@
     const enabled = newsAutoEnabled();
     return `
       <section class="panel news-panel" id="newsPanel" aria-labelledby="newsTitle" aria-busy="true">
-        <div class="panel-head news-head"><div><h3 id="newsTitle">Constituency news · Uttarpara</h3><p>Recent local coverage · news reports are context, not official service records.</p></div>
+        <div class="panel-head news-head"><div><h3 id="newsTitle">Constituency news · Uttarpara</h3><p>Recent local coverage and official notices. Open each source for its details.</p></div>
           <label class="news-switch"><input type="checkbox" id="newsAutoToggle" role="switch" ${enabled ? 'checked' : ''}><span>Auto-refresh</span><small id="newsAutoState">${enabled ? 'On · every 4 hours' : 'Off by default'}</small></label>
         </div>
-        <div class="news-toolbar"><span id="newsStatus" class="muted" role="status">Loading snapshot…</span><button class="outline-btn" id="newsReload" type="button">Refresh snapshot</button></div>
+        <div class="news-toolbar"><span id="newsStatus" class="muted" role="status">Loading snapshot…</span><button class="outline-btn" id="newsReload" type="button">Refresh latest snapshot</button></div>
         <div id="newsItems" class="news-grid"><div class="empty">Loading constituency news…</div></div>
       </section>`;
   }
@@ -404,7 +404,7 @@
     const rows = items.map(item => {
       const url = safeNewsUrl(item.url);
       const date = item.published_at ? new Date(item.published_at).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : 'Date not provided';
-      return `<article class="news-card"><div class="news-meta"><span>${esc(item.publisher || 'News source')}</span><span>${esc(date)}</span></div><h4>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(item.title || 'Untitled report')} ↗</a>` : esc(item.title || 'Untitled report')}</h4><p>${esc(item.summary || '')}</p><div class="news-localities">${(Array.isArray(item.localities) ? item.localities : []).map(x => `<span class="pill">${esc(x)}</span>`).join('')}</div></article>`;
+      return `<article class="news-card"><div class="news-meta"><span>${esc(item.publisher || 'News source')} · ${esc(item.section || 'News')}</span><span>${esc(date)}</span></div><h4>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(item.title || 'Untitled report')} ↗</a>` : esc(item.title || 'Untitled report')}</h4><p>${esc(item.summary || '')}</p><div class="news-localities">${(Array.isArray(item.localities) ? item.localities : []).map(x => `<span class="pill">${esc(x)}</span>`).join('')}</div></article>`;
     }).join('');
     $('#newsItems').innerHTML = rows || '<div class="empty">No recent constituency stories in the current snapshot.</div>';
     const checked = data.last_checked_at ? new Date(data.last_checked_at).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : 'unknown';
@@ -421,7 +421,7 @@
       if (!r.ok) throw new Error(`Snapshot unavailable (HTTP ${r.status})`);
       renderNewsSnapshot(await r.json());
     } catch (err) {
-      $('#newsItems').innerHTML = `<div class="empty"><strong>News snapshot unavailable</strong>${esc(err.message)}. Use Refresh snapshot to try again.</div>`;
+      $('#newsItems').innerHTML = `<div class="empty"><strong>News snapshot unavailable</strong>${esc(err.message)}. Use Refresh latest snapshot to try again.</div>`;
       $('#newsStatus').textContent = 'Could not read the latest snapshot';
     } finally {
       panel.setAttribute('aria-busy', 'false');
