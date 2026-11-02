@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'self-update-1';
+  const BUILD = 'executive-ui-1';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -367,17 +367,17 @@
         <div><small>Concern</small><b>${pct(counts.concern)}%</b><i class="mood-concern"></i></div>
         <div><small>Demo response entries</small><b>${total}</b><i class="mood-total"></i></div>
       </div>
-      <dl class="chart-meta chart-meta-row">
+      <details class="insight-details"><summary>Sources &amp; method <span>View evidence</span></summary><dl class="chart-meta chart-meta-row">
         <dt>Date range</dt><dd>Not recorded — demo responses carry no dates</dd>
         <dt>Geography</dt><dd>Uttarpara AC 185 · no locality per response</dd>
         <dt>Sample</dt><dd>${total} topic-response entries · one person may answer several topics, so these are <b>not unique respondents</b></dd>
         <dt>Source mix</dt><dd>Demo feedback model only · citizen reports, social posts and protests are <b>not</b> counted here</dd>
         <dt>Verification</dt><dd>${badge('Mock')} ${p.approval_model.real_responses || 0} real responses</dd>
-      </dl>
+      </dl></details>
       <div id="sentimentChart" class="mood-chart"><div class="mood-legend"><span><i class="mood-supportive"></i>Supportive</span><span><i class="mood-neutral"></i>Neutral</span><span><i class="mood-concern"></i>Concern</span></div>${rows}</div>
       <div id="sentimentTable" class="table-wrap" hidden><table class="data-table"><caption class="chart-caption">Resident service sentiment by topic · ${total} demo entries ${(p.approval_model.real_responses || 0) === 0 ? '<span class="chart-demo">DEMO</span>' : ''}</caption><thead><tr><th>Service topic</th><th class="num">Supportive</th><th class="num">Neutral</th><th class="num">Concern</th><th>Data status</th></tr></thead><tbody>${tableRows}</tbody></table></div>
-      <div class="notice"><span>ⓘ</span><span>DEMO ONLY · ${p.approval_model.real_responses || 0} real resident responses. These are synthetic topic-response entries, not unique people or a representative poll. This view does not infer sentiment for individual voters.</span></div>
-      <small class="muted">The current sample comes from the demo feedback model. Social posts and protests remain separate, source-labelled signals until verified; their volume is not treated as public sentiment.</small>
+      <p class="demo-caption">MOCK · ${p.approval_model.real_responses || 0} real responses · synthetic topic entries, not a representative poll.</p>
+      
     </section>`;
   }
 
@@ -420,7 +420,7 @@
         <div><small>Field tasks assigned</small><b>${actions.length}</b></div>
         <div><small>Closures with verified proof</small><b>${verifiedClosed}</b></div>
       </div>
-      <div class="ops-signal-note"><strong>How signals are handled:</strong> group repeated posts and complaints into one place-based issue; preserve each source; treat social posts and protests as leads until corroborated by a field check, agency record or direct resident confirmation. A protest is an event to respond to, not a constituency-wide opinion poll.</div>
+      <details class="insight-details"><summary>Department &amp; team queues <span>Open workspace</span></summary><div class="ops-signal-note"><strong>How signals are handled:</strong> group repeated posts and complaints into one place-based issue; preserve each source; treat social posts and protests as leads until corroborated by a field check, agency record or direct resident confirmation. A protest is an event to respond to, not a constituency-wide opinion poll.</div>
       <h4 class="ops-subhead">Department &amp; agency queue</h4>
       <div class="table-wrap"><table class="data-table"><thead><tr><th>Owner / issue cluster</th><th>Open</th><th>Priority</th><th>Signal sources / evidence</th><th>Response</th></tr></thead>
         <tbody>${deptRows || '<tr><td colspan="5">No open service clusters.</td></tr>'}</tbody></table></div>
@@ -429,7 +429,7 @@
         <tbody>${actionRows || '<tr><td colspan="5">No field tasks assigned.</td></tr>'}</tbody></table></div>
       <div class="ops-measures"><strong>Department measures to build from real timestamps:</strong> acknowledgement within target · median time to resolve · closure verified by resident/field evidence · repeat reports by location · service coverage and quality. Worker view: assigned, due, updated, evidence submitted, hand-off accepted. No individual voter profiles or political-preference fields.</div>
       <div class="notice"><span>ⓘ</span><span>${demo ? 'MOCK workflow only. Current sample records do not contain reliable acknowledgement or closure timestamps, so service-level performance is not scored.' : 'Service performance is shown only where the source, period, geography and denominator are recorded.'}</span></div>
-    </section>`;
+    </details></section>`;
   }
 
   function gauge(est) {
@@ -607,7 +607,7 @@
         </div></div>
         <button class="approval" id="approvalBtn" aria-label="Approval estimate ${Math.round(est.mean * 100)} percent, ${est.mock ? 'demo inputs' : 'estimated'}. Open method.">
           ${gauge(est)}
-          <div><h4>Approval estimate</h4><p>8 service topics · open for method and assumptions</p>
+          <div><h4>Feedback model</h4><p>View assumptions →</p>
           <div class="range">80% range ${Math.round(est.lo * 100)}–${Math.round(est.hi * 100)}%</div>
           <div class="range">${est.mock ? `${badge('Mock')} demo feedback · ${est.m.real_responses} real responses` : badge('Estimated')}</div></div>
         </button>
@@ -617,16 +617,17 @@
       ${window.JDCharts ? window.JDCharts.panel(chartsContext(p)) : ''}
 
       ${operationsPanel(p)}
+      <div class="overview-secondary">
 
-      <div class="section-title"><h3>Top 3 areas needing attention</h3><button class="text-btn" id="rankMethod">How this is ranked →</button></div>
+      <div class="section-title"><h3>Focus now</h3><button class="text-btn" id="rankMethod">How this is ranked →</button></div>
       <section class="concerns">${top.map((a, i) => `<a class="concern" href="${href(p.ac, a.id)}">
         <div class="rank">${i + 1}</div>
         <h4>${esc(modLabel(a.id))}</h4>
-        <div class="score">Attention score ${a.score}${a.usesMock ? ' · includes MOCK issue inputs' : ''}</div>
-        <ul>${a.drivers.slice(0, 3).map(d => `<li>${esc(d.text.length > 92 ? d.text.slice(0, 90) + '…' : d.text)}</li>`).join('')}</ul>
+        <div class="score">Attention ${a.score}${a.usesMock ? ' · MOCK inputs' : ''}</div>
+        <ul>${a.drivers.slice(0, 1).map(d => `<li>${esc(d.text.length > 92 ? d.text.slice(0, 90) + '…' : d.text)}</li>`).join('')}</ul>
       </a>`).join('')}</section>
 
-      <div class="section-title"><h3>Every area at a glance</h3><p>Select an area for its evidence</p></div>
+      <div class="section-title"><h3>Explore services</h3><p>Open a service to explore</p></div>
       <section class="areas">${MODULES.filter(m => p.area_summaries[m.id]).map(m => {
         const s = p.area_summaries[m.id];
         const rank = top.findIndex(a => a.id === m.id);
@@ -641,7 +642,7 @@
         <div class="source-note">Populations come from different sources and scopes, so they are not added up. Gram-panchayat figures are census towns only.</div></section>
 
 ${newsPanel()}
-
+      </div>
       <p class="footer">Values marked <span class="badge st-mock">MOCK</span> are invented demo data. Every number opens its evidence · <a href="${href(p.ac, 'sources')}">Sources &amp; freshness</a></p>`;
   }
 

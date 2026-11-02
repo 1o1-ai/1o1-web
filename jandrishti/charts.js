@@ -130,9 +130,9 @@
       ${demo ? '<p class="chart-demo-note">DEMO records — illustrative clusters, not real complaints. Replace with the real issue register before use.</p>' : ''}
       <div class="chart-grid">
         <div>${state.view === 'chart' ? `<div class="chart-bars">${chart || '<div class="chart-empty">No clusters match this filter.</div>'}</div>` : `<div class="table-wrap">${table}</div>`}</div>
-        ${meta(ctx, issues)}
+        <details class="insight-details"><summary>Sources &amp; coverage <span>Inspect</span></summary>${meta(ctx, issues)}</details>
       </div>
-      <h4 class="ops-subhead">Over time ${demoTag}</h4>${trend(ctx, issues)}
+      <details class="insight-details"><summary>Timeline ${demoTag}<span>Explore</span></summary>${trend(ctx, issues)}</details>
     </section>`;
   }
 
