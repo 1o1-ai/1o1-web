@@ -5,6 +5,9 @@
 (() => {
   'use strict';
 
+  // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
+  const BUILD = '257d8ce';
+
   const MODULES = [
     { id: 'overview', label: 'Overview', ico: '◉' },
     { id: 'people', label: 'People & elections', ico: '◎', intro: 'Aggregate electoral and population records. Electors, votes and Census population are separate concepts and are never added together. No individual voter data is stored or shown.' },
@@ -74,7 +77,7 @@
 
   // ---------- data ----------
   async function getJSON(path) {
-    const r = await fetch(path, { cache: 'no-cache' });
+    const r = await fetch(`${path}?v=${BUILD}`, { cache: 'no-cache' });
     if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
     return r.json();
   }
@@ -645,6 +648,7 @@
     try {
       v.innerHTML = S.route.view === 'state' ? stateView() : await acView(S.route.ac, S.route.module);
     } catch (err) {
+      if (await recoverStale()) return;
       v.innerHTML = `<div class="empty"><strong>Could not load data</strong>${esc(err.message)}</div>`;
     }
     bindView();
@@ -714,7 +718,22 @@
     await render();
   }
 
-  init().catch(err => {
+  // A browser can hold an older cached index.html/app.js (GitHub Pages caches for ~10 min) while
+  // the data is already newer. Refresh index.html once from the server and reload.
+  async function recoverStale() {
+    try {
+      if (sessionStorage.getItem('jandrishti_reloaded') === BUILD) return false;
+      sessionStorage.setItem('jandrishti_reloaded', BUILD);
+      await fetch('./index.html', { cache: 'reload' });
+      location.reload();
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  init().catch(async err => {
+    if (await recoverStale()) return;
     $('#view').innerHTML = `<div class="empty"><strong>JanDrishti could not start</strong>${esc(err.message)}</div>`;
   });
 })();
