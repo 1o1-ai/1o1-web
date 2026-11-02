@@ -6,7 +6,10 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = '8600538';
+  const BUILD = '944ecd6';
+  // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
+  const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
+  const SESSION_KEY = 'jandrishti_session';
 
   const MODULES = [
     { id: 'overview', label: 'Overview', ico: '◉' },
@@ -30,7 +33,6 @@
   };
 
   const STALE_DAYS = 90;
-  const NEWS_REFRESH_MS = 4 * 60 * 60 * 1000;
   const S = { seats: [], seatMeta: {}, sources: {}, sourceMeta: {}, profiles: {}, route: {} };
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -76,16 +78,32 @@
     toast.t = setTimeout(() => el.classList.remove('show'), 2200);
   }
 
+  // ---------- session ----------
+  class AuthError extends Error {}
+  let memorySession = null;
+  function session() {
+    let v = memorySession;
+    try { v = JSON.parse(localStorage.getItem(SESSION_KEY) || 'null') || v; } catch (e) { /* storage blocked */ }
+    return v && v.expires > Date.now() ? v : null;
+  }
+  function saveSession(v) {
+    memorySession = v;
+    try { v ? localStorage.setItem(SESSION_KEY, JSON.stringify(v)) : localStorage.removeItem(SESSION_KEY); } catch (e) { /* in-memory only */ }
+  }
+
   // ---------- data ----------
-  async function getJSON(path) {
-    const r = await fetch(`${path}?v=${BUILD}`, { cache: 'no-cache' });
-    if (!r.ok) throw new Error(`${path}: HTTP ${r.status}`);
+  async function getJSON(name) {
+    const s = session();
+    if (!s) throw new AuthError('Sign in required');
+    const r = await fetch(`${API}/data/${name}?v=${BUILD}`, { cache: 'no-cache', headers: { Authorization: `Bearer ${s.token}` } });
+    if (r.status === 401) throw new AuthError('Session expired — please sign in again');
+    if (!r.ok) throw new Error(`${name}: HTTP ${r.status}`);
     return r.json();
   }
 
   async function profile(ac) {
     if (!(ac in S.profiles)) {
-      S.profiles[ac] = S.seatMeta.onboarded.includes(ac) ? await getJSON(`./data/ac/${ac}.json`) : null;
+      S.profiles[ac] = S.seatMeta.onboarded.includes(ac) ? await getJSON(`ac/${ac}.json`) : null;
     }
     return S.profiles[ac];
   }
@@ -416,71 +434,7 @@
         <span class="circ">${esc(j.code)}</span><strong>${esc(j.short)}</strong><small>${fmt(j.population.value)} · ${esc(j.population.period)}</small></button>`).join('')}</div>
         <div class="source-note">Populations come from different sources and scopes, so they are not added up. Gram-panchayat figures are census towns only.</div></section>
 
-      <div class="section-title news-heading"><div><h3>Constituency news</h3><p>Recent reporting that mentions Uttarpara and nearby AC 185 localities</p></div><span class="pill">Auto refresh · every 4 hours</span></div>
-      <section class="panel news-panel" id="newsPanel" aria-live="polite" aria-busy="true"><p class="muted">Loading recent coverage…</p></section>
-
-      <p class="footer">Values marked <span class="badge st-mock">MOCK</span> are invented demo data. News items are media reports, not official service records. Every number opens its evidence · <a href="${href(p.ac, 'sources')}">Sources &amp; freshness</a></p>`;
-  }
-
-  function newsDate(iso) {
-    if (!iso) return 'Date not supplied';
-    if (/^\d{4}-\d{2}-\d{2}$/.test(iso)) return iso;
-    const d = new Date(iso);
-    return Number.isNaN(d.getTime()) ? 'Date not supplied' : new Intl.DateTimeFormat('en-IN', { dateStyle: 'medium', timeStyle: 'short' }).format(d);
-  }
-
-  function safeNewsUrl(value) {
-    try {
-      const u = new URL(value);
-      return ['http:', 'https:'].includes(u.protocol) ? u.href : '';
-    } catch { return ''; }
-  }
-
-  function renderNews(data) {
-    const items = Array.isArray(data.items) ? data.items.slice(0, 6) : [];
-    const sourceState = Array.isArray(data.sources) ? data.sources : [];
-    const failures = sourceState.filter(s => s.status === 'error');
-    const lastChecked = Date.parse(data.last_checked_at || '');
-    const stale = !Number.isFinite(lastChecked) || Date.now() - lastChecked > 8 * 60 * 60 * 1000;
-    const cards = items.map(item => {
-      const url = safeNewsUrl(item.url);
-      const title = esc(item.title || 'Untitled report');
-      return '<article class="news-card">' +
-        '<div class="news-meta"><span class="news-publisher">' + esc(item.publisher || 'News source') + '</span><span>' + newsDate(item.published_at) + '</span></div>' +
-        '<h4>' + (url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + title + ' ↗</a>' : title) + '</h4>' +
-        '<p>' + esc(item.summary || 'Open the publisher’s report for details.') + '</p>' +
-        '<div class="news-tags">' + (Array.isArray(item.localities) ? item.localities : []).slice(0, 3).map(x => '<span class="pill">' + esc(x) + '</span>').join('') + '</div>' +
-      '</article>';
-    }).join('');
-    const empty = '<div class="news-empty">' + (data.stale ? 'The latest scheduled feed check failed. Showing the last saved snapshot.' : 'No recent constituency-specific stories matched the monitored localities.') + '</div>';
-    const warning = (failures.length ? '<p class="news-warning">' + failures.length + ' source feed' + (failures.length === 1 ? '' : 's') + ' could not be reached; available feeds are still shown.</p>' : '') + (stale ? '<p class="news-warning">The saved snapshot is older than two scheduled refresh windows.</p>' : '');
-    return '<div class="news-toolbar"><span>Last checked: ' + newsDate(data.last_checked_at) + ' · ' + esc(data.refresh_interval_hours || 4) + '-hour schedule</span>' +
-      '<button class="outline-btn" id="newsReload" type="button">Reload snapshot</button></div>' +
-      warning + (cards ? '<div class="news-grid">' + cards + '</div>' : empty) +
-      '<div class="news-attribution">Short summaries are based on publisher feed descriptions. Open each original report for full context.</div>';
-  }
-
-  async function loadNewsPanel() {
-    const panel = $('#newsPanel');
-    if (!panel) return;
-    panel.setAttribute('aria-busy', 'true');
-    try {
-      const r = await fetch('./data/news-summary.json?refresh=' + Date.now(), { cache: 'no-store' });
-      if (!r.ok) throw new Error('News snapshot: HTTP ' + r.status);
-      const data = await r.json();
-      if (panel !== $('#newsPanel')) return;
-      panel.innerHTML = renderNews(data);
-      panel.setAttribute('aria-busy', 'false');
-      const reload = $('#newsReload', panel);
-      if (reload) reload.addEventListener('click', loadNewsPanel);
-    } catch (err) {
-      if (panel !== $('#newsPanel')) return;
-      panel.innerHTML = '<div class="news-empty">News snapshot is temporarily unavailable. ' + esc(err.message) + '</div>' +
-        '<button class="outline-btn" id="newsRetry" type="button">Try again</button>';
-      panel.setAttribute('aria-busy', 'false');
-      const retry = $('#newsRetry', panel);
-      if (retry) retry.addEventListener('click', loadNewsPanel);
-    }
+      <p class="footer">Values marked <span class="badge st-mock">MOCK</span> are invented demo data. Every number opens its evidence · <a href="${href(p.ac, 'sources')}">Sources &amp; freshness</a></p>`;
   }
 
   function people(p) {
@@ -704,6 +658,7 @@
     }).join('');
     $$('[data-nav="state"]').forEach(a => a.classList.toggle('active', r.view === 'state'));
     $('#seatSelect').value = r.view === 'ac' ? String(r.ac) : '';
+    $$('#tabbar [data-tab]').forEach(a => a.classList.toggle('active', r.view === 'ac' && r.ac === 185 && r.module === a.dataset.tab));
   }
 
   async function render() {
@@ -713,11 +668,11 @@
     try {
       v.innerHTML = S.route.view === 'state' ? stateView() : await acView(S.route.ac, S.route.module);
     } catch (err) {
+      if (err instanceof AuthError) return showLogin(err.message);
       if (await recoverStale()) return;
       v.innerHTML = `<div class="empty"><strong>Could not load data</strong>${esc(err.message)}</div>`;
     }
     bindView();
-    if (S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel();
     closeDrawer();
     $('#sidebar').classList.remove('open');
   }
@@ -741,11 +696,7 @@
     if (rm) rm.addEventListener('click', () => attentionDrawer(p));
     const ex = $('#exportCsv');
     if (ex) ex.addEventListener('click', () => exportCsv(p));
-    const newsReload = $('#newsReload');
-    if (newsReload) newsReload.addEventListener('click', loadNewsPanel);
-    const newsRetry = $('#newsRetry');
-    if (newsRetry) newsRetry.addEventListener('click', loadNewsPanel);
-    $('#view [data-sort]').forEach(el => el.addEventListener('click', () => setStateParams({ sort: el.dataset.sort })));
+    $$('#view [data-sort]').forEach(el => el.addEventListener('click', () => setStateParams({ sort: el.dataset.sort })));
     const search = $('#seatSearch');
     if (search) {
       search.addEventListener('input', () => { clearTimeout(bindView.t); bindView.t = setTimeout(() => setStateParams({ q: search.value }, true), 250); });
@@ -764,34 +715,83 @@
   }
 
   // ---------- boot ----------
-  async function init() {
-    const [seatData, sourceData] = await Promise.all([getJSON('./data/constituencies.json'), getJSON('./data/sources.json')]);
+  function showLogin(message) {
+    saveSession(null);
+    S.profiles = {};
+    document.body.classList.add('locked');
+    $('#sidebar').classList.remove('open');
+    closeDrawer();
+    $('#loginError').textContent = message || '';
+    $('#loginBtn').disabled = false;
+    $('#loginPass').value = '';
+    setTimeout(() => ($('#loginUser').value ? $('#loginPass') : $('#loginUser')).focus(), 0);
+  }
+
+  async function signIn(e) {
+    e.preventDefault();
+    const user = $('#loginUser').value.trim(), password = $('#loginPass').value;
+    if (!user || !password) { $('#loginError').textContent = 'Enter your user ID and password.'; return; }
+    $('#loginBtn').disabled = true;
+    $('#loginError').textContent = '';
+    try {
+      const r = await fetch(`${API}/login`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ user, password }) });
+      const body = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(body.error || `Sign-in failed (HTTP ${r.status})`);
+      saveSession(body);
+      $('#loginPass').value = '';
+      await start();
+    } catch (err) {
+      $('#loginError').textContent = err.message === 'Failed to fetch' ? 'Cannot reach JanDrishti. Check your connection and try again.' : err.message;
+      $('#loginBtn').disabled = false;
+      $('#loginPass').value = '';
+      $('#loginPass').focus();
+    }
+  }
+
+  let started = false;
+  async function start() {
+    const [seatData, sourceData] = await Promise.all([getJSON('constituencies.json'), getJSON('sources.json')]);
     S.seats = seatData.seats;
     S.seatMeta = { ...seatData, onboarded: [185] };
     S.sourceMeta = sourceData;
     sourceData.sources.forEach(s => { S.sources[s.id] = s; });
-
-    const sel = $('#seatSelect');
-    sel.innerHTML = '<option value="">Select Assembly constituency…</option>' + S.seats.map(s =>
+    $('#seatSelect').innerHTML = '<option value="">Select Assembly constituency…</option>' + S.seats.map(s =>
       `<option value="${s.ac}">${String(s.ac).padStart(3, '0')} · ${esc(s.name)}${S.seatMeta.onboarded.includes(s.ac) ? ' ●' : ''}</option>`).join('');
-    sel.addEventListener('change', e => { if (e.target.value) location.hash = `#/ac/${e.target.value}`; });
-
-    $('#drawerClose').addEventListener('click', closeDrawer);
-    $('#detailMask').addEventListener('click', e => { if (e.target.id === 'detailMask') closeDrawer(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
-    $('#menuBtn').addEventListener('click', () => {
-      const open = $('#sidebar').classList.toggle('open');
-      $('#menuBtn').setAttribute('aria-expanded', String(open));
-    });
-    window.addEventListener('hashchange', render);
-    window.setInterval(() => {
-      if (document.visibilityState === 'visible' && S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel();
-    }, NEWS_REFRESH_MS);
-    document.addEventListener('visibilitychange', () => {
-      if (document.visibilityState === 'visible' && S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel();
-    });
+    $('#whoami').textContent = session().user;
+    document.body.classList.remove('locked');
+    if (!started) { window.addEventListener('hashchange', render); started = true; }
     if (!location.hash) history.replaceState(null, '', '#/ac/185');
     await render();
+  }
+
+  async function init() {
+    $('#loginForm').addEventListener('submit', signIn);
+    $('#signOut').addEventListener('click', () => { showLogin(''); toast('Signed out'); });
+    $('#seatSelect').addEventListener('change', e => { if (e.target.value) location.hash = `#/ac/${e.target.value}`; });
+    $('#drawerClose').addEventListener('click', closeDrawer);
+    $('#detailMask').addEventListener('click', e => { if (e.target.id === 'detailMask') closeDrawer(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeDrawer(); $('#sidebar').classList.remove('open'); } });
+    const toggleMenu = e => {
+      e.stopPropagation();
+      const open = $('#sidebar').classList.toggle('open');
+      $('#menuBtn').setAttribute('aria-expanded', String(open));
+    };
+    $('#menuBtn').addEventListener('click', toggleMenu);
+    $('#tabMore').addEventListener('click', toggleMenu);
+    // On phones the menu slides over the page; a tap outside it closes it.
+    $('.main').addEventListener('click', () => $('#sidebar').classList.remove('open'));
+    if ('serviceWorker' in navigator && location.protocol === 'https:') {
+      navigator.serviceWorker.register('./sw.js').catch(() => { /* offline shell is optional */ });
+    }
+    // Inside the Android app (it appends JanDrishtiApp to the user agent) the download link is pointless.
+    if (/JanDrishtiApp\//.test(navigator.userAgent)) $$('.get-app').forEach(a => a.remove());
+    if (!session()) return showLogin('');
+    try {
+      await start();
+    } catch (err) {
+      if (err instanceof AuthError) return showLogin(err.message);
+      throw err;
+    }
   }
 
   // A browser can hold an older cached index.html/app.js (GitHub Pages caches for ~10 min) while

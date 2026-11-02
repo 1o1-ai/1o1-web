@@ -2,17 +2,40 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<meta name="theme-color" content="#fbf8f2" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#0a6b67" />
 <meta name="description" content="Brahmexa JanDrishti — constituency intelligence for West Bengal Assembly seats. Every figure carries its source, period, geography and verification status." />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://jandrishti-api.brahmexa.com http://127.0.0.1:8792; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'none'" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="JanDrishti" />
 <title>Brahmexa JanDrishti</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='none' stroke='%2352d3d0' stroke-width='2'/%3E%3Cellipse cx='16' cy='16' rx='15' ry='5' fill='none' stroke='%23e9b45e' transform='rotate(-30 16 16)'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%2352d3d0'/%3E%3C/svg%3E" />
-<script src="./palette.js?v=8600538"></script>
-<link rel="stylesheet" href="./styles.css?v=8600538" />
+<link rel="manifest" href="./manifest.webmanifest" />
+<link rel="icon" href="./icons/icon-192.png" type="image/png" />
+<link rel="apple-touch-icon" href="./icons/icon-192.png" />
+<script src="./palette.js?v=944ecd6"></script>
+<link rel="stylesheet" href="./styles.css?v=944ecd6" />
 </head>
-<body>
+<body class="locked">
 <div class="cosmos" aria-hidden="true"><span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span></div>
+
+<section class="login" id="login" aria-labelledby="loginTitle">
+  <form class="login-card" id="loginForm" autocomplete="on" novalidate>
+    <div class="login-mark" aria-hidden="true"><span>B</span></div>
+    <div class="eyebrow">Brahmexa</div>
+    <h1 id="loginTitle">JanDrishti</h1>
+    <p class="login-sub">Constituency intelligence · sign in to continue</p>
+    <label for="loginUser">User ID</label>
+    <input id="loginUser" name="username" autocomplete="username" autocapitalize="none" spellcheck="false" required />
+    <label for="loginPass">Password</label>
+    <input id="loginPass" name="password" type="password" autocomplete="current-password" required />
+    <p class="login-error" id="loginError" role="alert"></p>
+    <button type="submit" class="login-btn" id="loginBtn">Sign in</button>
+    <p class="login-foot">Access is limited to the JanDrishti team. User IDs are not case-sensitive.</p>
+    <a class="get-app" href="./download/JanDrishti.apk" download>⬇ Get the Android app</a>
+  </form>
+</section>
+
 <div class="shell">
   <aside class="sidebar" id="sidebar">
     <a class="brand" href="#/ac/185">
@@ -28,8 +51,10 @@
       <nav class="nav"><a href="#/state" data-nav="state"><span class="ico">✦</span>All 294 seats</a></nav>
     </div>
     <div class="sidebar-foot">
-      <strong>Evidence first</strong>
-      <small>Every number shows its source, period, geography and status. Mock records are labelled MOCK everywhere.</small>
+      <strong>Signed in as <span id="whoami"></span></strong>
+      <small>Every number shows its source, period, geography and status. Mock records are labelled MOCK.</small>
+      <button class="outline-btn signout" id="signOut" type="button">Sign out</button>
+      <a class="get-app" href="./download/JanDrishti.apk" download>⬇ Android app</a>
     </div>
   </aside>
   <main class="main">
@@ -53,6 +78,15 @@
     </footer>
   </main>
 </div>
+
+<nav class="tabbar" id="tabbar" aria-label="Main sections">
+  <a href="#/ac/185" data-tab="overview"><span>◉</span>Home</a>
+  <a href="#/ac/185/people" data-tab="people"><span>◎</span>People</a>
+  <a href="#/ac/185/projects" data-tab="projects"><span>◌</span>Projects</a>
+  <a href="#/ac/185/issues" data-tab="issues"><span>✉</span>Issues</a>
+  <button type="button" id="tabMore" aria-controls="sidebar"><span>☰</span>More</button>
+</nav>
+
 <div class="detail-mask" id="detailMask" aria-hidden="true">
   <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
     <div class="drawer-top"><span class="eyebrow">JanDrishti · evidence panel</span><button class="drawer-close" id="drawerClose" aria-label="Close">×</button></div>
@@ -60,6 +94,6 @@
   </aside>
 </div>
 <div class="toast" id="toast" role="status"></div>
-<script src="./app.js?v=8600538"></script>
+<script src="./app.js?v=944ecd6"></script>
 </body>
 </html>
