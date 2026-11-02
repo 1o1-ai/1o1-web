@@ -1,0 +1,39 @@
+/* JanDrishti charts: sentiment + service-signal visuals.
+ * Adds chart tokens to each existing palette (the palette definitions in styles.css are untouched).
+ * Sentiment uses a colour-blind-safe blue/teal vs orange pair derived from each palette, plus
+ * patterns on neutral and concern, so colour is never the only distinction. */
+:root,[data-palette="dawn"]{--on-mock:#ffffff;--sent-support:#0a6b67;--sent-neutral:#857b6b;--sent-concern:#b35c0c;--chart-bar:#0a6b67;--chart-track:#efe7da}
+[data-palette="lotus"]{--on-mock:#ffffff;--sent-support:#3f4aa8;--sent-neutral:#857895;--sent-concern:#b5541a;--chart-bar:#9c2f6b;--chart-track:#f0e3ec}
+[data-palette="monsoon"]{--on-mock:#ffffff;--sent-support:#1a63a8;--sent-neutral:#6f8a92;--sent-concern:#c0601d;--chart-bar:#1a63a8;--chart-track:#e0eef0}
+[data-palette="cosmos"]{--on-mock:#1d1405;--sent-support:#5fdad7;--sent-neutral:#7d93a6;--sent-concern:#f0a24b;--chart-bar:#52d3d0;--chart-track:#12283a}
+
+/* sentiment segments (override the earlier status-colour mapping) */
+.mood-supportive{background:var(--sent-support)}
+.mood-neutral{background:var(--sent-neutral) repeating-linear-gradient(90deg,transparent 0 5px,color-mix(in srgb,var(--surface) 45%,transparent) 5px 7px)}
+.mood-concern{background:var(--sent-concern) repeating-linear-gradient(135deg,transparent 0 4px,color-mix(in srgb,var(--surface) 50%,transparent) 4px 6px)}
+.mood-legend i{outline:1px solid color-mix(in srgb,var(--ink) 25%,transparent)}
+
+.chart-demo{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.08em;color:var(--on-mock);background:var(--st-mock);border-radius:999px;padding:2px 8px;vertical-align:middle;margin-left:4px}
+.chart-caption{caption-side:top;text-align:left;font-size:12.5px;font-weight:600;color:var(--ink-2);padding:0 0 8px}
+.chart-meta{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 10px;font-size:12px;margin:0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface-2);align-self:start}
+.chart-meta dt{color:var(--muted);font-weight:600}.chart-meta dd{margin:0;color:var(--ink-2)}
+.chart-meta-row{margin:10px 0 12px}
+.chart-panel{margin:14px 0}
+.chart-controls{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.chart-filter{display:flex;gap:8px;align-items:center;font-size:12.5px;color:var(--ink-2);font-weight:600}
+.chart-demo-note{margin:4px 0 10px;font-size:12px;font-weight:600;color:var(--st-mock)}
+.chart-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,1fr);gap:14px;align-items:start}
+.chart-bars{display:grid;gap:9px}
+.chart-row{display:grid;grid-template-columns:minmax(120px,190px) minmax(0,1fr) 92px;gap:10px;align-items:center;font-size:13px}
+.chart-label{color:var(--ink);overflow-wrap:anywhere}
+.chart-bar{height:16px;border-radius:99px;background:var(--chart-track);overflow:hidden;box-shadow:inset 0 0 0 1px var(--line)}
+.chart-bar i{display:block;height:100%;border-radius:99px;background:var(--chart-bar);min-width:6px}
+.chart-val{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-2);font-weight:600}
+.chart-empty{padding:14px 16px;border:1px dashed var(--line-strong);border-radius:12px;color:var(--ink-2);font-size:13px;background:var(--surface)}
+.chart-trend{display:flex;gap:12px;align-items:flex-end;height:150px;padding:8px 4px}
+.chart-col{display:flex;flex-direction:column;align-items:center;gap:4px;height:100%;justify-content:flex-end;flex:1;max-width:70px}
+.chart-col span{display:block;width:100%;background:var(--chart-bar);border-radius:8px 8px 0 0;min-height:4px}
+.chart-col b{font-size:12px}.chart-col small{font-size:11px;color:var(--muted)}
+.chip:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media(max-width:900px){.chart-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.chart-row{grid-template-columns:minmax(0,1fr) 70px;gap:4px 8px}.chart-row .chart-bar{grid-column:1/-1;grid-row:2}.chart-meta{grid-template-columns:84px minmax(0,1fr)}}

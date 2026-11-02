@@ -1,6 +1,6 @@
 /* JanDrishti service worker: network-first app shell so the installed app opens offline.
  * Only same-origin GETs are cached; API data (another origin, behind sign-in) never is. */
-const VERSION = '97188d7';
+const VERSION = 'visuals-reach-1';
 const CACHE = `jandrishti-shell-${VERSION}`;
 
 self.addEventListener('install', () => self.skipWaiting());

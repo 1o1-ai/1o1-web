@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'sentiment-selector-fix-2044ccc';
+  const BUILD = 'visuals-reach-1';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -20,6 +20,7 @@
     { id: 'education', label: 'Education', ico: '⌑', intro: 'Institutions and programmes at aggregate level only. Named student records never enter this dashboard.' },
     { id: 'infrastructure', label: 'Water, roads & housing', ico: '⌂', intro: 'Asset and works register across the municipal wards and three gram panchayats.' },
     { id: 'issues', label: 'Public issues', ico: '✉', intro: 'One accountable issue register for MLA-office intake and agency follow-up. No real register is connected yet — every issue below is MOCK.' },
+    { id: 'reach', label: 'REACH · Public Service Updates', ico: '✦', intro: 'DEMO ONLY. Simulated Facebook and Instagram pages for factual, nonpartisan public-service updates. Nothing is connected to Meta; publish and schedule only change this browser’s demo state.' },
     { id: 'sources', label: 'Sources & freshness', ico: '↗', intro: 'Every non-mock value traces to a record here: publisher, exact URL, reference date, geography, retrieval date, verification and refresh cadence.' }
   ];
 
@@ -176,7 +177,7 @@
       rows.push(['Type', r.type], ['Address', r.address]);
       (r.contacts || []).forEach(([k, v]) => rows.push([k, v]));
     }
-    if (r.kind === 'issue') rows.push(['Status', r.status || 'Not recorded'], ['Priority', r.priority], ['Owner', r.owner], ['Opened', r.opened], ['Signal sources', (r.source_channels || []).join(' · ') || 'Not recorded'], ['Evidence state', r.evidence_status || 'Not recorded']);
+    if (r.kind === 'issue') rows.push(['Workflow status', r.workflow_status || 'Not recorded'], ['Priority', r.priority], ['Owner', r.owner], ['Opened', r.opened], ['Signal sources', (r.source_channels || []).join(' · ') || 'Not recorded'], ['Evidence state', r.evidence_status || 'Not recorded']);
     const j = p.jurisdictions.find(x => x.id === r.jurisdiction);
     if (j) rows.push(['Jurisdiction', j.name]);
     rows.push(['Module', modLabel(r.module)]);
@@ -357,7 +358,7 @@
     }).join('');
     const tableRows = params.map(x => `<tr><td>${esc(x.label)}</td><td class="num">${Number(x.approve) || 0}</td><td class="num">${Number(x.neutral) || 0}</td><td class="num">${Number(x.disapprove) || 0}</td><td>${badge('Mock')}</td></tr>`).join('');
     return `<section class="panel mood-panel" aria-labelledby="moodTitle">
-      <div class="panel-head mood-head"><div><h3 id="moodTitle">Resident service sentiment</h3><p>Aggregate issue-topic feedback · dashboard summary</p></div>
+      <div class="panel-head mood-head"><div><h3 id="moodTitle">Resident service sentiment ${(p.approval_model.real_responses || 0) === 0 ? '<span class="chart-demo">DEMO</span>' : ''}</h3><p>Aggregate issue-topic feedback · dashboard summary</p></div>
         <div class="mood-controls" role="group" aria-label="Sentiment display"><button type="button" class="chip on" data-sentiment-view="chart" aria-pressed="true">Chart</button><button type="button" class="chip" data-sentiment-view="table" aria-pressed="false">Table</button></div>
       </div>
       <div class="mood-kpis">
@@ -366,8 +367,15 @@
         <div><small>Concern</small><b>${pct(counts.concern)}%</b><i class="mood-concern"></i></div>
         <div><small>Demo response entries</small><b>${total}</b><i class="mood-total"></i></div>
       </div>
+      <dl class="chart-meta chart-meta-row">
+        <dt>Date range</dt><dd>Not recorded — demo responses carry no dates</dd>
+        <dt>Geography</dt><dd>Uttarpara AC 185 · no locality per response</dd>
+        <dt>Sample</dt><dd>${total} topic-response entries · one person may answer several topics, so these are <b>not unique respondents</b></dd>
+        <dt>Source mix</dt><dd>Demo feedback model only · citizen reports, social posts and protests are <b>not</b> counted here</dd>
+        <dt>Verification</dt><dd>${badge('Mock')} ${p.approval_model.real_responses || 0} real responses</dd>
+      </dl>
       <div id="sentimentChart" class="mood-chart"><div class="mood-legend"><span><i class="mood-supportive"></i>Supportive</span><span><i class="mood-neutral"></i>Neutral</span><span><i class="mood-concern"></i>Concern</span></div>${rows}</div>
-      <div id="sentimentTable" class="table-wrap" hidden><table class="data-table"><thead><tr><th>Service topic</th><th class="num">Supportive</th><th class="num">Neutral</th><th class="num">Concern</th><th>Data status</th></tr></thead><tbody>${tableRows}</tbody></table></div>
+      <div id="sentimentTable" class="table-wrap" hidden><table class="data-table"><caption class="chart-caption">Resident service sentiment by topic · ${total} demo entries ${(p.approval_model.real_responses || 0) === 0 ? '<span class="chart-demo">DEMO</span>' : ''}</caption><thead><tr><th>Service topic</th><th class="num">Supportive</th><th class="num">Neutral</th><th class="num">Concern</th><th>Data status</th></tr></thead><tbody>${tableRows}</tbody></table></div>
       <div class="notice"><span>ⓘ</span><span>DEMO ONLY · ${p.approval_model.real_responses || 0} real resident responses. These are synthetic topic-response entries, not unique people or a representative poll. This view does not infer sentiment for individual voters.</span></div>
       <small class="muted">The current sample comes from the demo feedback model. Social posts and protests remain separate, source-labelled signals until verified; their volume is not treated as public sentiment.</small>
     </section>`;
@@ -376,10 +384,10 @@
   function operationsPanel(p) {
     const issues = p.issues || [];
     const actions = (p.office_actions && p.office_actions.field_actions) || [];
-    const open = issues.filter(x => !['Resolved', 'Closed'].includes(x.status));
+    const open = issues.filter(x => !['Resolved', 'Closed'].includes(x.workflow_status));
     const high = open.filter(x => x.priority === 'High').length;
     const needsCheck = open.filter(x => /pending|unverified|needs|not verified|not attached|not recorded/i.test(x.evidence_status || '')).length;
-    const verifiedClosed = issues.filter(x => ['Resolved', 'Closed'].includes(x.status) && x.closure_verified).length;
+    const verifiedClosed = issues.filter(x => ['Resolved', 'Closed'].includes(x.workflow_status) && x.closure_verified).length;
     const departments = new Map();
     open.forEach(x => {
       const key = x.owner || 'Unassigned department';
@@ -606,6 +614,7 @@
       </div></section>
 
       ${sentimentPanel(p)}
+      ${window.JDCharts ? window.JDCharts.panel(chartsContext(p)) : ''}
 
       ${operationsPanel(p)}
 
@@ -698,7 +707,7 @@ ${newsPanel()}
       extra = `<div class="notice">⚠ <span>Every issue here is <b>MOCK</b>. Total open (demo): ${fmt(p.mock_totals.open_issues)} — ${esc(p.mock_totals.note)}</span></div>
         <div class="panel"><div class="panel-head"><div><h3>Issue register (demo)</h3><p>Fields the real register must carry</p></div><span class="badge st-mock">MOCK</span></div>
         <div class="table-wrap"><table class="data-table"><thead><tr><th>Issue cluster</th><th>Area</th><th>Status</th><th>Priority</th><th>Signal sources / evidence</th><th>Owner</th><th>Opened</th><th class="num">Age (d)</th></tr></thead>
-        <tbody>${issues.map(r => `<tr data-rec="${esc(r.id)}"><td>${esc(r.title)} ${badge('Mock')}</td><td>${esc((p.jurisdictions.find(x => x.id === r.jurisdiction) || {}).short)}</td><td>${esc(r.status || 'Not recorded')}</td><td>${esc(r.priority)}</td><td style="white-space:normal">${(r.source_channels || []).map(esc).join(' · ')}<br><small>${esc(r.evidence_status || 'Evidence not recorded')}</small></td><td>${esc(r.owner)}</td><td>${esc(r.opened)}</td><td class="num">${daysSince(r.opened)}</td></tr>`).join('')}</tbody></table></div></div>
+        <tbody>${issues.map(r => `<tr data-rec="${esc(r.id)}"><td>${esc(r.title)} ${badge('Mock')}</td><td>${esc((p.jurisdictions.find(x => x.id === r.jurisdiction) || {}).short)}</td><td>${esc(r.workflow_status || 'Not recorded')}</td><td>${esc(r.priority)}</td><td style="white-space:normal">${(r.source_channels || []).map(esc).join(' · ')}<br><small>${esc(r.evidence_status || 'Evidence not recorded')}</small></td><td>${esc(r.owner)}</td><td>${esc(r.opened)}</td><td class="num">${daysSince(r.opened)}</td></tr>`).join('')}</tbody></table></div></div>
         <div class="cards" style="margin-top:14px"><div class="card"><h4>Intake</h4><p>Channel, consent, locality, category, urgency, date and attachments. Assisted intake for offline residents. Minimum personal data, with retention limits.</p></div>
         <div class="card"><h4>Routing</h4><p>Owning local body or department, named owner, response target, escalation and full status history, including jurisdiction hand-offs.</p></div>
         <div class="card"><h4>Close the loop</h4><p>Resolution evidence, resident confirmation, repeat-issue links and ageing. Open/due/overdue counts appear only from the real register.</p></div></div>`;
@@ -760,7 +769,8 @@ ${newsPanel()}
     const m = MODULES.find(x => x.id === module);
     if (!m) return notFound();
     const head = `${crumbs(p, module)}<h2 class="module-title">${esc(m.label)}</h2><p class="module-intro">${esc(m.intro)}</p>
-      ${module !== 'sources' ? `<div class="filterbar">${jFilter(p, module)}</div>` : ''}`;
+      ${module !== 'sources' && module !== 'reach' ? `<div class="filterbar">${jFilter(p, module)}</div>` : ''}`;
+    if (module === 'reach') return head + (window.JDReach ? window.JDReach.view(reachContext(p)) : '<div class="empty">REACH demo module failed to load.</div>');
     if (module === 'people') return head + people(p);
     if (module === 'sources') return head + sourcesView(p);
     return head + moduleView(p, module);
@@ -922,6 +932,18 @@ ${newsPanel()}
     }
     const ds = $('#districtSel');
     if (ds) ds.addEventListener('change', () => setStateParams({ d: ds.value }));
+    if (S.route.module === 'reach' && p && window.JDReach) window.JDReach.bind(reachContext(p));
+    if (p && window.JDCharts) window.JDCharts.bind(chartsContext(p));
+  }
+
+  // Helpers the service-signal charts (charts.js) need from the app.
+  function chartsContext(p) {
+    return { p, esc, badge, modLabel };
+  }
+
+  // What the REACH demo workspace (reach.js) may use. It gets no network helper on purpose.
+  function reachContext(p) {
+    return { p, records: records(p), sources: S.sources, user: (session() || {}).user || 'demo-editor', toast, openDrawer };
   }
 
   function setStateParams(changes) {
