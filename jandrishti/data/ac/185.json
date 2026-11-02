@@ -162,6 +162,30 @@
   ],
   "mock_totals": { "open_issues": 126, "note": "Illustrative count — no complaint register is connected." },
 
+  "area_summaries": {
+    "people": { "summary": "228,272 electors on the 2026 roll. Dipanjan Chakraborty (BJP) won by 10,415 votes; turnout of ~89.9% awaits Form 20.", "key": "electors-total" },
+    "projects": { "summary": "One clean KMDA road tender for 12 roads, re-issued as a 2nd call. Award and spend are not yet evidenced, and a second tender is contradictory.", "key": "kmda-nit55-value" },
+    "cleanliness": { "summary": "Only a pre-2017 press figure (12–14 t/day) exists. There is no current collection, processing or coverage data.", "key": "swm-claim" },
+    "health": { "summary": "State General Hospital, Mahamaya maternity and three municipal UPHCs are listed with published contacts. Capacity and hours are unconfirmed.", "key": "uphc-count" },
+    "education": { "summary": "No current sourced record. Only the 2005 mid-day meal description; UDISE+ school data still to load.", "key": null },
+    "infrastructure": { "summary": "12 roads tendered by KMDA in Uttarpara-Kotrung. Water and housing data are absent for the three gram panchayats.", "key": null },
+    "issues": { "summary": "No real complaint register is connected. The 126 open issues shown are demo values.", "key": null }
+  },
+
+  "contradictions": [
+    { "module": "projects", "title": "KMDA NIT 27 names Uttarpara Kotrung in lot headings but Rishra in its annexure", "source": "kmda-nit27" },
+    { "module": "people", "title": "Electors: CEO 228,272 vs turnout-implied ~228,590 vs Wikipedia infobox 216,312", "source": "eci-statistical-wiki" }
+  ],
+
+  "approval_model": {
+    "subject": "Elected MLA, Uttarpara AC 185",
+    "method": "Beta-binomial (Bayesian) estimate. Prior: the 2026 vote share, weighted as 20 pseudo-responses so that real feedback quickly dominates. Evidence: resident feedback classified as approve / disapprove / neutral (neutral excluded). Output: posterior mean with an 80% credible interval. When the feedback register is live, free-text feedback is classified by an AI model before it enters this calculation.",
+    "prior": { "label": "2026 vote share of the winner", "share": 0.3924, "weight": 20, "status": "Source-reported", "source": "eci-statistical-wiki" },
+    "feedback": { "label": "Resident feedback sample", "mock": true, "status": "Mock", "approve": 52, "disapprove": 41, "neutral": 27, "period": "Demo sample", "channel": "Demo — no real responses collected" },
+    "real_responses": 0,
+    "caveat": "Vote share measures support at one election, not approval of performance. Until real, consented resident feedback is collected, this estimate is a demonstration of the method only."
+  },
+
   "data_gaps": [
     { "module": "people", "need": "Form 20 (booth-wise votes) and ECI Statistical Report for AC 185", "where": "ECI / CEO West Bengal", "priority": "High" },
     { "module": "people", "need": "Polling-station-wise electors and turnout (aggregate)", "where": "CEO West Bengal final roll / PS list", "priority": "High" },

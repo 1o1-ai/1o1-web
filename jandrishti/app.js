@@ -212,7 +212,7 @@
       <div class="drawer-block"><h4>Records for this area (${rs.length})</h4>${rs.length ? `<ul>${rs.map(r => `<li>${badge(statusOf(r))} ${esc(r.label)}</li>`).join('')}</ul>` : '<div>Nothing onboarded yet — see data gaps.</div>'}</div>
       ${sourceBlock(pop.source, 'Population source')}
       ${sourceBlock(j.membership.source, 'Membership source')}
-      <div class="drawer-block"><a class="outline-btn" href="${href(p.ac, S.route.module, id)}">Filter dashboard to ${esc(j.short)} →</a></div>`);
+      <div class="drawer-block"><a class="outline-btn" href="${href(p.ac, S.route.module === 'overview' ? 'people' : S.route.module, id)}">Filter dashboard to ${esc(j.short)} →</a></div>`);
   }
 
   // ---------- shared fragments ----------
@@ -264,101 +264,141 @@
       <div class="list">${list.map(id => { const s = S.sources[id]; return `<button class="row" data-src="${esc(id)}"><div><strong>${esc(s.record_title)}</strong><small>${esc(s.publisher)} · ${esc(s.reference_date)} · ${esc(s.kind)}</small></div><div class="right">${freshness(s)}</div></button>`; }).join('')}</div></div>`;
   }
 
-  // ---------- orbit (circular universe drill-down) ----------
-  function orbit(p) {
-    const W = 520, H = 340, cx = W / 2, cy = H / 2, rx = 200, ry = 120;
-    const n = p.jurisdictions.length;
-    const nodes = p.jurisdictions.map((j, i) => {
-      const a = -Math.PI / 2 + i * 2 * Math.PI / n;
-      const x = cx + rx * Math.cos(a), y = cy + ry * Math.sin(a);
-      const sel = S.route.j === j.id;
-      const r = j.type === 'Municipality' ? 30 : 24;
-      return `<g class="node ${sel ? 'sel' : ''}" data-j="${esc(j.id)}" tabindex="0" role="button" aria-label="${esc(j.name)}">
-        <circle class="halo" cx="${x}" cy="${y}" r="${r}"/>
-        <text class="code" x="${x}" y="${y + 4}" text-anchor="middle">${esc(j.code)}</text>
-        <text x="${x}" y="${y + r + 14}" text-anchor="middle">${esc(j.short)}</text>
-        <text class="sub" x="${x}" y="${y + r + 26}" text-anchor="middle">${esc(j.type)}</text>
-      </g>`;
-    }).join('');
-    return `<svg viewBox="0 0 ${W} ${H + 30}" role="group" aria-label="Local bodies of ${esc(p.name)} AC">
-      <ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="none" stroke="#52d3d033" stroke-dasharray="3 5"/>
-      <ellipse cx="${cx}" cy="${cy}" rx="${rx * .55}" ry="${ry * .55}" fill="none" stroke="#e9b45e22"/>
-      <circle cx="${cx}" cy="${cy}" r="44" fill="#0e2a38" stroke="#52d3d0" stroke-opacity=".6"/>
-      <circle cx="${cx}" cy="${cy}" r="56" fill="none" stroke="#52d3d0" stroke-opacity=".15"/>
-      <text x="${cx}" y="${cy - 2}" text-anchor="middle" style="font-weight:700;font-size:13px">${esc(p.name)}</text>
-      <text class="sub" x="${cx}" y="${cy + 13}" text-anchor="middle">AC ${p.ac}</text>
-      ${nodes}
-    </svg>`;
+  // ---------- landing-page models ----------
+  // Service areas that compete for "needs attention". People/elections and the issue
+  // channel are summarised but not ranked: they are not service areas.
+  const SERVICE_AREAS = ['projects', 'cleanliness', 'health', 'education', 'infrastructure'];
+  const W = { gapHigh: 3, gapMedium: 1.5, issue: { High: 3, Medium: 2, Review: 1 }, contradiction: 2, retender: 1, noCurrent: 2 };
+
+  // Attention score per area — a stated formula over the profile, never a free-form judgement.
+  function attention(p) {
+    const rs = records(p);
+    return SERVICE_AREAS.map(id => {
+      const inArea = r => id === 'projects' ? (r.kind === 'project' || r.module === 'projects') : r.module === id;
+      const drivers = [];
+      let score = 0;
+      const add = (pts, text, mock) => { score += pts; drivers.push({ pts, text, mock: !!mock }); };
+      p.data_gaps.filter(g => g.module === id).forEach(g => add(g.priority === 'High' ? W.gapHigh : W.gapMedium, `Data gap (${g.priority.toLowerCase()}): ${g.need}`));
+      rs.filter(r => r.kind === 'issue' && inArea(r)).forEach(r => add(W.issue[r.priority] || 1, `${r.title} — ${r.detail}`, true));
+      (p.contradictions || []).filter(c => c.module === id).forEach(c => add(W.contradiction, `Contradiction: ${c.title}`));
+      const retendered = new Set(rs.filter(r => r.kind === 'project' && !r.mock && inArea(r) && /2nd call/i.test(r.stage)).map(r => r.source));
+      retendered.forEach(s => add(W.retender, `Tender re-issued (2nd call); award not evidenced — ${S.sources[s]?.record_title || s}`));
+      const current = rs.some(r => inArea(r) && !r.mock && ['Verified', 'Source-reported'].includes(r.status));
+      if (!current) add(W.noCurrent, 'No current sourced record — only historical or no data');
+      drivers.sort((a, b) => b.pts - a.pts);
+      return { id, score, drivers, usesMock: drivers.some(d => d.mock) };
+    }).sort((a, b) => b.score - a.score);
   }
 
-  function areaDetail(p) {
-    const j = p.jurisdictions.find(x => x.id === S.route.j);
-    if (!j) {
-      return `<div class="area-detail"><h4>Whole constituency</h4>
-        <p>Two municipalities and three gram panchayats (2008 delimitation). Select a body on the orbit to drill down.</p>
-        <p>Populations below come from different source types and scopes, so they are <b>not summed</b> into a constituency population.</p></div>`;
-    }
-    const rs = records(p).filter(r => r.jurisdiction === j.id);
-    return `<div class="area-detail"><h4>${esc(j.name)}</h4>
-      <p>${fmt(j.population.value)} people · ${esc(j.population.period)} ${badge(j.population.status)}</p>
-      ${j.population.scope_note ? `<p><b>Scope:</b> ${esc(j.population.scope_note)}</p>` : ''}
-      <p>${rs.length} record(s) · ${j.wards ? j.wards + ' wards' : 'ward/sansad list pending'}</p>
-      <p style="margin-top:8px"><button class="outline-btn" data-jd="${esc(j.id)}">Open area evidence →</button> <a class="text-btn" href="${href(p.ac)}">Clear filter</a></p></div>`;
+  // Beta-binomial approval estimate; see approval_model.method in the profile.
+  function approval(p) {
+    const m = p.approval_model;
+    const a0 = m.prior.share * m.prior.weight, b0 = (1 - m.prior.share) * m.prior.weight;
+    const a = a0 + m.feedback.approve, b = b0 + m.feedback.disapprove;
+    const mean = a / (a + b);
+    const sd = Math.sqrt(a * b / ((a + b) ** 2 * (a + b + 1)));
+    const lo = Math.max(0, mean - 1.2816 * sd), hi = Math.min(1, mean + 1.2816 * sd);
+    const mock = !!m.feedback.mock || m.real_responses === 0;
+    return { m, a0, b0, a, b, mean, lo, hi, mock, decided: m.feedback.approve + m.feedback.disapprove };
+  }
+
+  function gauge(est) {
+    const r = 44, c = 2 * Math.PI * r;
+    const arc = (from, to, cls, w) => `<circle class="${cls}" cx="52" cy="52" r="${r}" fill="none" stroke-width="${w}" stroke-linecap="round" stroke-dasharray="${(to - from) * c} ${c}" stroke-dashoffset="${-from * c}"/>`;
+    return `<div class="gauge" aria-hidden="true"><svg viewBox="0 0 104 104">${arc(0, 1, 'track', 9)}${arc(est.lo, est.hi, 'band', 9)}${arc(0, est.mean, 'val', 5)}</svg>
+      <div class="gauge-num"><div><b>${Math.round(est.mean * 100)}%</b><small>APPROVAL</small></div></div>${est.mock ? '<span class="stamp">DEMO</span>' : ''}</div>`;
+  }
+
+  function approvalDrawer(p) {
+    const e = approval(p), m = e.m, pct = x => (x * 100).toFixed(1) + '%';
+    openDrawer(`
+      <h2 id="drawerTitle">Approval estimate · ${esc(p.representative.name)}</h2>
+      <div>${badge(e.mock ? 'Mock' : 'Estimated')} <span class="pill">Bayesian model</span></div>
+      ${e.mock ? `<div class="notice">⚠ <span><b>Demonstration only.</b> ${m.real_responses} real resident responses have been collected. The number shown comes from a DEMO feedback sample and does not measure public opinion.</span></div>` : ''}
+      <div class="drawer-block"><h4>Result</h4><div class="calc">Estimate <b>${pct(e.mean)}</b> · 80% interval ${pct(e.lo)} – ${pct(e.hi)}</div></div>
+      <div class="drawer-block"><h4>Method</h4><div>${esc(m.method)}</div></div>
+      <div class="drawer-block"><h4>Inputs</h4><dl class="kv">
+        <dt>Prior</dt><dd>${esc(m.prior.label)}: ${pct(m.prior.share)} × ${m.prior.weight} pseudo-responses ${badge(m.prior.status)}</dd>
+        <dt>Feedback</dt><dd>${esc(m.feedback.label)}: ${m.feedback.approve} approve · ${m.feedback.disapprove} disapprove · ${m.feedback.neutral} neutral (excluded) ${badge(m.feedback.mock ? 'Mock' : m.feedback.status)}<br><small class="muted">${esc(m.feedback.channel)}</small></dd>
+        <dt>Real responses</dt><dd>${m.real_responses}</dd></dl></div>
+      <div class="drawer-block"><h4>Calculation</h4><div class="calc">
+        α₀ = ${m.prior.share} × ${m.prior.weight} = ${e.a0.toFixed(2)}; β₀ = ${e.b0.toFixed(2)}<br>
+        α = α₀ + ${m.feedback.approve} = ${e.a.toFixed(2)}; β = β₀ + ${m.feedback.disapprove} = ${e.b.toFixed(2)}<br>
+        mean = α / (α + β) = ${pct(e.mean)}</div></div>
+      <div class="drawer-block"><h4>Caveat</h4><div>${esc(m.caveat)}</div></div>
+      ${sourceBlock(m.prior.source, 'Prior source')}`);
+  }
+
+  function attentionDrawer(p, id) {
+    const all = attention(p);
+    const list = id ? all.filter(a => a.id === id) : all;
+    openDrawer(`
+      <h2 id="drawerTitle">${id ? esc(modLabel(id)) + ' · attention score' : 'How areas are ranked'}</h2>
+      <div><span class="pill">Formula, not opinion</span></div>
+      <div class="drawer-block"><h4>Scoring</h4><div>High-priority data gap +${W.gapHigh} · medium gap +${W.gapMedium} · resident issue +3 / +2 / +1 by priority (currently all MOCK) · contradiction between sources +${W.contradiction} · tender re-issued without evidenced award +${W.retender} · no current sourced record +${W.noCurrent}.</div></div>
+      ${list.map(a => `<div class="drawer-block"><h4>${esc(modLabel(a.id))} · score ${a.score}</h4><ul>${a.drivers.map(d => `<li>+${d.pts} ${d.mock ? badge('Mock') + ' ' : ''}${esc(d.text)}</li>`).join('') || '<li>No drivers</li>'}</ul></div>`).join('')}
+      <div class="drawer-block"><h4>Read this as</h4><div>Where the MLA office has the least evidence and the most unresolved signals. A high score is a reason to look, not proof that a service is failing.</div></div>`);
   }
 
   // ---------- views ----------
   function overview(p) {
-    const j = S.route.j;
-    const fact = id => p.facts.find(f => f.id === id);
-    const mockTotal = { id: 'mock-open-issues', kind: 'fact', mock: true, label: 'Open civic issues', value: p.mock_totals.open_issues, unit: 'issues', period: 'Demo', status: 'Mock', module: 'issues', detail: p.mock_totals.note };
-    const popFact = p.facts.find(f => f.jurisdiction === (j || 'ukm') && f.unit === 'persons') || fact('ukm-pop');
-    const tiles = [fact('electors-total'), fact('winner-votes'), popFact, mockTotal];
-    const rs = records(p).filter(r => inJ(r, j));
-    const attention = rs.filter(r => r.kind === 'issue');
-    const highGaps = p.data_gaps.filter(g => g.priority === 'High').slice(0, 4);
-    const works = rs.filter(r => r.kind === 'project');
-
-    const cover = MODULES.filter(m => !['overview', 'sources'].includes(m.id)).map(m => {
-      const mr = rs.filter(r => r.module === m.id || (m.id === 'projects' && r.kind === 'project'));
-      const real = mr.filter(r => !r.mock).length, mock = mr.filter(r => r.mock).length;
-      const gaps = p.data_gaps.filter(g => g.module === m.id).length;
-      return { m, real, mock, gaps };
-    });
-    const maxC = Math.max(1, ...cover.map(c => c.real + c.mock));
+    const est = approval(p);
+    const ranks = attention(p);
+    const top = ranks.slice(0, 3);
+    const rs = records(p);
+    const evidence = id => {
+      const mr = rs.filter(r => id === 'projects' ? (r.kind === 'project' || r.module === 'projects') : r.module === id);
+      for (const st of ['Verified', 'Source-reported', 'Historical']) if (mr.some(r => !r.mock && r.status === st)) return badge(st);
+      return mr.length ? badge('Mock') : '<span class="badge st-confirm">No data</span>';
+    };
+    const keyLine = (id, s) => {
+      const f = s.key && p.facts.find(x => x.id === s.key);
+      if (f) return `<div class="key"><b>${val(f)}</b> ${esc(f.unit.startsWith('INR') ? 'tendered' : f.unit)}</div>`;
+      if (id === 'issues') return `<div class="key"><b>${fmt(p.mock_totals.open_issues)}</b> open issues ${badge('Mock')}</div>`;
+      if (id === 'infrastructure') return `<div class="key"><b>${p.projects.filter(x => !x.mock && x.module === 'infrastructure').reduce((n, x) => n + x.items.length, 0)}</b> roads tendered</div>`;
+      return `<div class="key">${p.data_gaps.filter(g => g.module === id).length} data gap(s) to fill</div>`;
+    };
 
     return `${crumbs(p, 'overview')}
-      <section class="hero" style="margin-top:12px"><div class="hero-content"><div>
-        <div class="eyebrow">West Bengal · ${esc(p.district)} district · Assembly constituency ${p.ac} · ${esc(p.parliamentary_constituency)} PC</div>
+      <section class="hero"><div class="hero-content"><div>
+        <div class="eyebrow">${esc(p.district)} · AC ${p.ac} · ${esc(p.parliamentary_constituency)} PC</div>
         <h2>${esc(p.name)}</h2><p>${esc(p.summary)}</p>
         <div class="hero-tags">
-          <button class="tag" data-rec="winner-votes">MLA · ${esc(p.representative.name)} (${esc(p.representative.party)}) · ${badge(p.representative.status)}</button>
-          <span class="tag">5 local bodies</span><span class="tag">${fmt(S.seats.length)}-seat statewide index</span>
+          <button class="tag" data-rec="winner-votes">MLA · ${esc(p.representative.name)} (${esc(p.representative.party)})</button>
+          <button class="tag" data-rec="electors-total">${fmt(p.facts.find(f => f.id === 'electors-total').value)} electors</button>
+          <span class="tag">2 municipalities · 3 gram panchayats</span>
         </div></div>
-        <div class="hero-date">DATA REVIEWED<strong>${esc(p.reviewed)}</strong><span>Source dates vary — see each record</span></div>
+        <button class="approval" id="approvalBtn" aria-label="Approval estimate ${Math.round(est.mean * 100)} percent, ${est.mock ? 'demo inputs' : 'estimated'}. Open method.">
+          ${gauge(est)}
+          <div><h4>Approval estimate</h4><p>Bayesian model · open for method</p>
+          <div class="range">80% range ${Math.round(est.lo * 100)}–${Math.round(est.hi * 100)}%</div>
+          <div class="range">${est.mock ? `${badge('Mock')} demo feedback · ${est.m.real_responses} real responses` : badge('Estimated')}</div></div>
+        </button>
       </div></section>
-      <div class="notice"><span>ⓘ</span><span>Sourced records and demo examples are mixed only where labelled. Anything marked <b>MOCK</b> is invented. Municipal programme pages are largely historical — their figures are never shown as current performance.</span></div>
-      <div class="filterbar">${jFilter(p, 'overview')}<button class="outline-btn" id="exportCsv">Export records CSV</button></div>
-      <section class="metric-grid">${tiles.map(metricCard).join('')}</section>
-      <section class="grid-2">
-        <div class="panel"><div class="panel-head"><div><h3>Constituency orbit · local bodies</h3><p>Select a body to focus every module. Schematic — not a boundary map.</p></div><span class="pill">${p.jurisdictions.length} jurisdictions</span></div>
-          <div class="orbit-wrap"><div class="orbit">${orbit(p)}</div>${areaDetail(p)}</div>
-          <div class="legend">${p.jurisdictions.map(x => `<span>${esc(x.code)} · ${esc(x.short)} ${fmt(x.population.value)} ${badge(x.population.status)}</span>`).join('')}</div>
-        </div>
-        <div class="panel"><div class="panel-head"><div><h3>Needs attention</h3><p>Demo issue queue and highest-priority evidence gaps</p></div><span class="badge st-mock">MOCK issues</span></div>
-          <div class="list">${attention.map(recordRow).join('') || '<div class="empty">No mock issues for this area.</div>'}</div>
-          <div class="source-note"><b>Top data gaps</b><br>${highGaps.map(g => `• ${esc(g.need)}`).join('<br>')}</div>
-        </div>
-      </section>
-      <section class="grid-2e" style="margin-top:14px">
-        <div class="panel"><div class="panel-head"><div><h3>Project watch</h3><p>Tendered works and demo tracker entries</p></div><a class="text-btn" href="${href(p.ac, 'projects', j)}">Open all →</a></div>
-          <div class="list">${works.map(recordRow).join('') || '<div class="empty">No works found for this area yet.</div>'}</div></div>
-        <div class="panel"><div class="panel-head"><div><h3>Evidence coverage by module</h3><p>Records loaded per module — not a performance score</p></div><a class="text-btn" href="${href(p.ac, 'sources')}">Evidence →</a></div>
-          ${cover.map(c => `<a class="bar-row" href="${href(p.ac, c.m.id, j)}" style="color:inherit;text-decoration:none"><span>${esc(c.m.label)}</span>
-            <div class="bar" title="${c.real} sourced · ${c.mock} mock"><span style="width:${(c.real / maxC) * 100}%;display:inline-block"></span><span class="gold" style="width:${(c.mock / maxC) * 100}%;display:inline-block"></span></div>
-            <span class="num">${c.real}${c.mock ? ` +${c.mock}m` : ''}</span></a>`).join('')}
-          <div class="legend"><span><span class="spark" style="width:14px"></span> sourced records</span><span><span class="spark" style="width:14px;background:var(--gold)"></span> mock (m)</span></div>
-          <div class="source-note">Coverage counts records, not service quality. Education has no current sourced records yet.</div></div>
-      </section>`;
+
+      <div class="section-title"><h3>Top 3 areas needing attention</h3><button class="text-btn" id="rankMethod">How this is ranked →</button></div>
+      <section class="concerns">${top.map((a, i) => `<a class="concern" href="${href(p.ac, a.id)}">
+        <div class="rank">${i + 1}</div>
+        <h4>${esc(modLabel(a.id))}</h4>
+        <div class="score">Attention score ${a.score}${a.usesMock ? ' · includes MOCK issue inputs' : ''}</div>
+        <ul>${a.drivers.slice(0, 3).map(d => `<li>${esc(d.text.length > 92 ? d.text.slice(0, 90) + '…' : d.text)}</li>`).join('')}</ul>
+      </a>`).join('')}</section>
+
+      <div class="section-title"><h3>Every area at a glance</h3><p>Select an area for its evidence</p></div>
+      <section class="areas">${MODULES.filter(m => p.area_summaries[m.id]).map(m => {
+        const s = p.area_summaries[m.id];
+        const rank = top.findIndex(a => a.id === m.id);
+        return `<a class="area-card" href="${href(p.ac, m.id)}"><div class="area-ico">${m.ico}</div><div>
+          <h4>${esc(m.label)} ${evidence(m.id)}${rank >= 0 ? ` <span class="badge st-confirm">Attention #${rank + 1}</span>` : ''}</h4>
+          <p>${esc(s.summary)}</p>${keyLine(m.id, s)}</div></a>`;
+      }).join('')}</section>
+
+      <div class="section-title"><h3>Local bodies</h3><p>Two municipalities and three gram panchayats · select one for its records</p></div>
+      <section class="panel"><div class="bodies">${p.jurisdictions.map(j => `<button class="body-node ${j.type === 'Municipality' ? 'muni' : ''}" data-jd="${esc(j.id)}">
+        <span class="circ">${esc(j.code)}</span><strong>${esc(j.short)}</strong><small>${fmt(j.population.value)} · ${esc(j.population.period)}</small></button>`).join('')}</div>
+        <div class="source-note">Populations come from different sources and scopes, so they are not added up. Gram-panchayat figures are census towns only.</div></section>
+
+      <p class="footer">Values marked <span class="badge st-mock">MOCK</span> are invented demo data. Every number opens its evidence · <a href="${href(p.ac, 'sources')}">Sources &amp; freshness</a></p>`;
   }
 
   function people(p) {
@@ -611,11 +651,10 @@
     $$('#view [data-ward]').forEach(el => el.addEventListener('click', () => wardDrawer(p, +el.dataset.ward)));
     $$('#view [data-jd]').forEach(el => el.addEventListener('click', () => jurisdictionDrawer(p, el.dataset.jd)));
     $$('#view [data-ac]').forEach(el => el.addEventListener('click', () => { location.hash = `#/ac/${el.dataset.ac}`; }));
-    $$('#view .orbit .node').forEach(el => {
-      const go = () => { location.hash = href(p.ac, 'overview', S.route.j === el.dataset.j ? null : el.dataset.j); };
-      el.addEventListener('click', go);
-      el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
-    });
+    const ap = $('#approvalBtn');
+    if (ap) ap.addEventListener('click', () => approvalDrawer(p));
+    const rm = $('#rankMethod');
+    if (rm) rm.addEventListener('click', () => attentionDrawer(p));
     const ex = $('#exportCsv');
     if (ex) ex.addEventListener('click', () => exportCsv(p));
     $$('#view [data-sort]').forEach(el => el.addEventListener('click', () => setStateParams({ sort: el.dataset.sort })));
