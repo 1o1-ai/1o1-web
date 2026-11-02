@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'news-sentiment-1';
+  const BUILD = 'news-operations-1';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -334,47 +334,53 @@
     return { m, a0, b0, params, mean, lo, hi, mock };
   }
 
-  function sentimentSummary(p) {
-    const params = p.approval_model.parameters || [];
-    const weightTotal = params.reduce((sum, x) => sum + (Number(x.weight) || 0), 0) || 1;
-    const shares = { approve: 0, neutral: 0, disapprove: 0 };
-    let responseEntries = 0;
-    const topics = params.map(x => {
-      const a = Number(x.approve) || 0, n = Number(x.neutral) || 0, d = Number(x.disapprove) || 0;
-      const total = a + n + d || 1;
-      const w = (Number(x.weight) || 0) / weightTotal;
-      shares.approve += w * a / total;
-      shares.neutral += w * n / total;
-      shares.disapprove += w * d / total;
-      responseEntries += a + n + d;
-      return { ...x, approve: a, neutral: n, disapprove: d, total, approveShare: a / total, neutralShare: n / total, disapproveShare: d / total };
+  function operationsPanel(p) {
+    const issues = p.issues || [];
+    const actions = (p.office_actions && p.office_actions.field_actions) || [];
+    const open = issues.filter(x => !['Resolved', 'Closed'].includes(x.status));
+    const high = open.filter(x => x.priority === 'High').length;
+    const needsCheck = open.filter(x => /pending|unverified|needs/i.test(x.evidence_status || '')).length;
+    const verifiedClosed = issues.filter(x => ['Resolved', 'Closed'].includes(x.status) && x.closure_verified).length;
+    const departments = new Map();
+    open.forEach(x => {
+      const key = x.owner || 'Unassigned department';
+      if (!departments.has(key)) departments.set(key, { name: key, issues: [], module: x.module || 'issues' });
+      departments.get(key).issues.push(x);
     });
-    return { shares, topics, responseEntries, realResponses: p.approval_model.real_responses || 0, demo: topics.some(x => x.mock) || !(p.approval_model.real_responses > 0) };
-  }
-
-  function sentimentPanel(p) {
-    const s = sentimentSummary(p);
-    const pct = x => (x * 100).toFixed(1);
-    const positive = pct(s.shares.approve), neutral = pct(s.shares.neutral), critical = pct(s.shares.disapprove);
-    const topics = s.topics.map(x => {
-      const a = pct(x.approveShare), n = pct(x.neutralShare), d = pct(x.disapproveShare);
-      const aria = `${x.label}: supportive ${x.approve}, neutral ${x.neutral}, critical ${x.disapprove} simulated topic responses`;
-      return `<a class="sentiment-topic" href="${href(p.ac, x.module)}" aria-label="${esc(aria)}">
-        <span class="sentiment-topic-name">${esc(x.label)}</span>
-        <span class="sentiment-stack" role="img" aria-label="${esc(aria)}"><i class="sent-positive" style="width:${a}%"></i><i class="sent-neutral" style="width:${n}%"></i><i class="sent-critical" style="width:${d}%"></i></span>
-        <small>+${a} · ~${n} · −${d}</small>
-      </a>`;
+    const deptRows = [...departments.values()].map(d => {
+      const urgent = d.issues.filter(x => x.priority === 'High').length;
+      const channels = [...new Set(d.issues.flatMap(x => x.source_channels || []))];
+      const proof = [...new Set(d.issues.map(x => x.evidence_status || 'Evidence not recorded'))];
+      return `<tr><td><strong>${esc(d.name)}</strong><small>${d.issues.map(x => esc(x.title)).join('<br>')}</small></td>
+        <td class="num">${d.issues.length}</td><td>${urgent ? `<span class="badge st-confirm">${urgent} high</span>` : '<span class="pill">Routine</span>'}</td>
+        <td style="white-space:normal">${channels.map(esc).join(' · ') || 'Source channel missing'}<br><small>${proof.map(esc).join(' · ')}</small></td>
+        <td><span class="badge st-confirm">Response SLA not measured</span><br><a href="${href(p.ac, d.module)}">Open service area →</a></td></tr>`;
     }).join('');
-    return `<section class="panel sentiment-panel" aria-labelledby="sentimentTitle">
-      <div class="panel-head"><div><h3 id="sentimentTitle">Resident sentiment · aggregate issue view</h3><p>Weighted across ${s.topics.length} service topics · not linked to voter profiles</p></div>${s.demo ? badge('Mock') : '<span class="pill">Aggregate</span>'}</div>
-      <div class="sentiment-summary">
-        <div><span class="sentiment-key"><i class="sent-positive"></i>Supportive</span><b>${positive}%</b></div>
-        <div><span class="sentiment-key"><i class="sent-neutral"></i>Neutral</span><b>${neutral}%</b></div>
-        <div><span class="sentiment-key"><i class="sent-critical"></i>Critical</span><b>${critical}%</b></div>
+    const actionRows = actions.map(x => {
+      const due = x.due ? new Date(x.due + 'T12:00:00').toLocaleDateString('en-IN', { dateStyle: 'medium' }) : 'Not set';
+      return `<tr><td><strong>${esc(x.worker)}</strong><small>${esc(x.role || 'Field follow-up · MOCK')}</small></td>
+        <td style="white-space:normal">${esc(x.task)}<small>${esc(x.area)} · ${esc(x.department)}</small></td>
+        <td>${badge('Mock')}<br>${esc(x.status)}</td><td>${esc(due)}</td>
+        <td>${esc(x.evidence_status || 'Not attached')}<br><a href="${href(p.ac, x.module || 'issues')}">Open area →</a></td></tr>`;
+    }).join('');
+    const demo = issues.some(x => x.mock) || actions.length > 0;
+    return `<section class="panel ops-panel" aria-labelledby="opsTitle">
+      <div class="panel-head"><div><h3 id="opsTitle">Service delivery &amp; office follow-up</h3><p>One action register across citizen reports, field checks, social signals, protests and official service records.</p></div>${demo ? badge('Mock') : '<span class="pill">Operations</span>'}</div>
+      <div class="ops-kpis">
+        <div><small>Open issue clusters</small><b>${open.length}</b></div>
+        <div><small>High-priority clusters</small><b>${high}</b></div>
+        <div><small>Field tasks assigned</small><b>${actions.length}</b></div>
+        <div><small>Closures with verified proof</small><b>${verifiedClosed}</b></div>
       </div>
-      <div class="sentiment-topics">${topics}</div>
-      <div class="notice"><span>ⓘ</span><span>${s.demo ? `DEMO ONLY: ${s.responseEntries} simulated topic-response entries across the categories; this is not ${s.responseEntries} unique people. There are ${s.realResponses} real resident responses. No individual political sentiment is inferred.` : 'Only consented feedback is included, pooled across topics. No individual political sentiment is inferred.'}</span></div>
-      <small class="muted">Topic bars show supportive · neutral · critical response share. Select a topic to open its service area.</small>
+      <div class="ops-signal-note"><strong>How signals are handled:</strong> group repeated posts and complaints into one place-based issue; preserve each source; treat social posts and protests as leads until corroborated by a field check, agency record or direct resident confirmation. A protest is an event to respond to, not a constituency-wide opinion poll.</div>
+      <h4 class="ops-subhead">Department &amp; agency queue</h4>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Owner / issue cluster</th><th>Open</th><th>Priority</th><th>Signal sources / evidence</th><th>Response</th></tr></thead>
+        <tbody>${deptRows || '<tr><td colspan="5">No open service clusters.</td></tr>'}</tbody></table></div>
+      <h4 class="ops-subhead">Field team · assigned follow-ups</h4>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Assigned worker</th><th>Action</th><th>Status</th><th>Due</th><th>Evidence / area</th></tr></thead>
+        <tbody>${actionRows || '<tr><td colspan="5">No field tasks assigned.</td></tr>'}</tbody></table></div>
+      <div class="ops-measures"><strong>Department measures to build from real timestamps:</strong> acknowledgement within target · median time to resolve · closure verified by resident/field evidence · repeat reports by location · service coverage and quality. Worker view: assigned, due, updated, evidence submitted, hand-off accepted. No individual voter profiles or political-preference fields.</div>
+      <div class="notice"><span>ⓘ</span><span>${demo ? 'MOCK workflow only. Current sample records do not contain reliable acknowledgement or closure timestamps, so service-level performance is not scored.' : 'Service performance is shown only where the source, period, geography and denominator are recorded.'}</span></div>
     </section>`;
   }
 
@@ -568,7 +574,7 @@
       </a>`).join('')}</section>
 
       <div class="section-title"><h3>Every area at a glance</h3><p>Select an area for its evidence</p></div>
-      ${sentimentPanel(p)}
+      ${operationsPanel(p)}
 
       <section class="areas">${MODULES.filter(m => p.area_summaries[m.id]).map(m => {
         const s = p.area_summaries[m.id];
