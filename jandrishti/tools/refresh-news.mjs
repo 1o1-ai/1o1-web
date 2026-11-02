@@ -220,7 +220,7 @@ async function main() {
   };
   mkdirSync(dirname(OUT), { recursive: true });
   writeFileSync(OUT, JSON.stringify(out, null, 2) + '\n');
-  console.log('Wrote ' + items.length + ' constituency news item(s) from ' + checked.filter(x => x.status === 'ok').length + '/' + FEEDS.length + ' feed(s) to ' + OUT);
+  console.log('Wrote ' + items.length + ' constituency news item(s) from ' + checked.filter(x => x.status === 'ok').length + '/' + (FEEDS.length + LOCAL_SOURCES.length + 1) + ' source(s) to ' + OUT);
 }
 
 main().catch(error => {
