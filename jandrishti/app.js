@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'service-ops-2';
+  const BUILD = 'service-sentiment-1';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -334,6 +334,45 @@
     return { m, a0, b0, params, mean, lo, hi, mock };
   }
 
+  function sentimentPanel(p) {
+    const params = p.approval_model.parameters || [];
+    const counts = params.reduce((a, x) => {
+      a.supportive += Number(x.approve) || 0;
+      a.neutral += Number(x.neutral) || 0;
+      a.concern += Number(x.disapprove) || 0;
+      return a;
+    }, { supportive: 0, neutral: 0, concern: 0 });
+    const total = counts.supportive + counts.neutral + counts.concern;
+    const pct = n => total ? (n * 100 / total).toFixed(1) : '0.0';
+    const rows = params.map(x => {
+      const a = Number(x.approve) || 0, n = Number(x.neutral) || 0, d = Number(x.disapprove) || 0;
+      const t = a + n + d || 1;
+      const ap = (a * 100 / t).toFixed(1), np = (n * 100 / t).toFixed(1), dp = (d * 100 / t).toFixed(1);
+      const label = `${x.label}: supportive ${a}, neutral ${n}, concern ${d} demo responses`;
+      return { x, a, n, d, ap, np, dp, label, row: `<div class="mood-row">
+        <span class="mood-topic">${esc(x.label)}</span>
+        <span class="mood-stack" role="img" aria-label="${esc(label)}"><i class="mood-supportive" style="width:${ap}%"></i><i class="mood-neutral" style="width:${np}%"></i><i class="mood-concern" style="width:${dp}%"></i></span>
+        <small>${ap}% · ${np}% · ${dp}%</small>
+      </div>` };
+    }).join('');
+    const tableRows = params.map(x => `<tr><td>${esc(x.label)}</td><td class="num">${Number(x.approve) || 0}</td><td class="num">${Number(x.neutral) || 0}</td><td class="num">${Number(x.disapprove) || 0}</td><td>${badge('Mock')}</td></tr>`).join('');
+    return `<section class="panel mood-panel" aria-labelledby="moodTitle">
+      <div class="panel-head mood-head"><div><h3 id="moodTitle">Resident service sentiment</h3><p>Aggregate issue-topic feedback · dashboard summary</p></div>
+        <div class="mood-controls" role="group" aria-label="Sentiment display"><button type="button" class="chip on" data-sentiment-view="chart" aria-pressed="true">Chart</button><button type="button" class="chip" data-sentiment-view="table" aria-pressed="false">Table</button></div>
+      </div>
+      <div class="mood-kpis">
+        <div><small>Supportive</small><b>${pct(counts.supportive)}%</b><i class="mood-supportive"></i></div>
+        <div><small>Neutral</small><b>${pct(counts.neutral)}%</b><i class="mood-neutral"></i></div>
+        <div><small>Concern</small><b>${pct(counts.concern)}%</b><i class="mood-concern"></i></div>
+        <div><small>Demo response entries</small><b>${total}</b><i class="mood-total"></i></div>
+      </div>
+      <div id="sentimentChart" class="mood-chart"><div class="mood-legend"><span><i class="mood-supportive"></i>Supportive</span><span><i class="mood-neutral"></i>Neutral</span><span><i class="mood-concern"></i>Concern</span></div>${rows}</div>
+      <div id="sentimentTable" class="table-wrap" hidden><table class="data-table"><thead><tr><th>Service topic</th><th class="num">Supportive</th><th class="num">Neutral</th><th class="num">Concern</th><th>Data status</th></tr></thead><tbody>${tableRows}</tbody></table></div>
+      <div class="notice"><span>ⓘ</span><span>DEMO ONLY · ${p.approval_model.real_responses || 0} real resident responses. These are synthetic topic-response entries, not unique people or a representative poll. This view does not infer sentiment for individual voters.</span></div>
+      <small class="muted">The current sample comes from the demo feedback model. Social posts and protests remain separate, source-labelled signals until verified; their volume is not treated as public sentiment.</small>
+    </section>`;
+  }
+
   function operationsPanel(p) {
     const issues = p.issues || [];
     const actions = (p.office_actions && p.office_actions.field_actions) || [];
@@ -565,6 +604,8 @@
           <div class="range">${est.mock ? `${badge('Mock')} demo feedback · ${est.m.real_responses} real responses` : badge('Estimated')}</div></div>
         </button>
       </div></section>
+
+      ${sentimentPanel(p)}
 
       ${operationsPanel(p)}
 
@@ -855,6 +896,16 @@ ${newsPanel()}
     if (rm) rm.addEventListener('click', () => attentionDrawer(p));
     const ex = $('#exportCsv');
     if (ex) ex.addEventListener('click', () => exportCsv(p));
+    $('[data-sentiment-view]').forEach(button => button.addEventListener('click', () => {
+      const table = button.dataset.sentimentView === 'table';
+      $('#sentimentChart').hidden = table;
+      $('#sentimentTable').hidden = !table;
+      $('[data-sentiment-view]').forEach(b => {
+        const active = b === button;
+        b.classList.toggle('on', active);
+        b.setAttribute('aria-pressed', String(active));
+      });
+    }));
     const newsReload = $('#newsReload');
     if (newsReload) newsReload.addEventListener('click', loadNewsPanel);
     const newsToggle = $('#newsAutoToggle');
