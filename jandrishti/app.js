@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'service-sentiment-1';
+  const BUILD = 'service-sentiment-2';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -349,11 +349,11 @@
       const t = a + n + d || 1;
       const ap = (a * 100 / t).toFixed(1), np = (n * 100 / t).toFixed(1), dp = (d * 100 / t).toFixed(1);
       const label = `${x.label}: supportive ${a}, neutral ${n}, concern ${d} demo responses`;
-      return { x, a, n, d, ap, np, dp, label, row: `<div class="mood-row">
+      return `<div class="mood-row">
         <span class="mood-topic">${esc(x.label)}</span>
         <span class="mood-stack" role="img" aria-label="${esc(label)}"><i class="mood-supportive" style="width:${ap}%"></i><i class="mood-neutral" style="width:${np}%"></i><i class="mood-concern" style="width:${dp}%"></i></span>
         <small>${ap}% · ${np}% · ${dp}%</small>
-      </div>` };
+      </div>`;
     }).join('');
     const tableRows = params.map(x => `<tr><td>${esc(x.label)}</td><td class="num">${Number(x.approve) || 0}</td><td class="num">${Number(x.neutral) || 0}</td><td class="num">${Number(x.disapprove) || 0}</td><td>${badge('Mock')}</td></tr>`).join('');
     return `<section class="panel mood-panel" aria-labelledby="moodTitle">
