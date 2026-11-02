@@ -1,0 +1,165 @@
+#!/usr/bin/env node
+// Refresh the static news snapshot consumed by the JanDrishti dashboard.
+// RSS links are published by ABP Ananda at https://bengali.abplive.com/rss.
+import { createHash } from 'node:crypto';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+const DEFAULT_OUT = resolve(ROOT, 'data/news-summary.json');
+const argIndex = process.argv.indexOf('--output');
+const OUT = resolve(argIndex >= 0 && process.argv[argIndex + 1] ? process.argv[argIndex + 1] : DEFAULT_OUT);
+const LOOKBACK_DAYS = 7;
+const MAX_ITEMS = 6;
+const FEEDS = [
+  { id: 'abp-district', publisher: 'ABP Ananda', section: 'District News', url: 'https://bengali.abplive.com/district/feed' },
+  { id: 'abp-kolkata', publisher: 'ABP Ananda', section: 'Kolkata', url: 'https://bengali.abplive.com/news/kolkata/feed' },
+  { id: 'abp-states', publisher: 'ABP Ananda', section: 'West Bengal', url: 'https://bengali.abplive.com/states/feed' }
+];
+const LOCALITIES = [
+  { name: 'Uttarpara', en: /\buttarpara\b/i, bn: ['উত্তরপাড়া', 'উত্তরপাড়া', 'উত্তরপাড়া-কোতরং', 'উত্তরপাড়া-কোটরং'] },
+  { name: 'Konnagar', en: /\bkonnagar\b/i, bn: ['কোন্নগর'] },
+  { name: 'Hindmotor', en: /\bhindmotor\b/i, bn: ['হিন্দমোটর', 'হিন্দ মোটর'] },
+  { name: 'Makhla', en: /\bmakhla\b/i, bn: ['মাখলা'] },
+  { name: 'Bhadrakali', en: /\bbhadrakali\b/i, bn: ['ভদ্রকালী'] },
+  { name: 'Kanaipur', en: /\bkanaipur\b/i, bn: ['কানাইপুর'] },
+  { name: 'Nabagram', en: /\bnabagram\b/i, bn: ['নবগ্রাম'] },
+  { name: 'Raghunathpur', en: /\braghunathpur\b/i, bn: ['রঘুনাথপুর'] },
+  { name: 'Serampore', en: /\b(serampore|srirampur)\b/i, bn: ['শ্রীরামপুর', 'সেরামপুর'] },
+  { name: 'Hooghly', en: /\bhooghly\b/i, bn: ['হুগলি', 'হুগলী'] }
+];
+
+function decodeEntities(value) {
+  const named = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ' };
+  return String(value || '')
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#([0-9]+);/g, (_, n) => String.fromCodePoint(parseInt(n, 10)))
+    .replace(/&([a-z]+);/gi, (all, n) => Object.hasOwn(named, n.toLowerCase()) ? named[n.toLowerCase()] : all);
+}
+
+function plainText(value) {
+  return decodeEntities(value)
+    .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ')
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function field(xml, name) {
+  const m = xml.match(new RegExp('<(?:[A-Za-z0-9_-]+:)?' + name + '\\b[^>]*>([\\s\\S]*?)<\\/(?:[A-Za-z0-9_-]+:)?' + name + '\\s*>', 'i'));
+  return m ? decodeEntities(m[1]).trim() : '';
+}
+
+function itemsFrom(xml) {
+  const blocks = [...xml.matchAll(/<(item|entry)\b[^>]*>([\s\S]*?)<\/\1\s*>/gi)];
+  return blocks.map((m) => {
+    const b = m[2];
+    const title = plainText(field(b, 'title')).slice(0, 260);
+    let link = field(b, 'link');
+    if (!link) {
+      const attr = b.match(/<link\b[^>]*href=["']([^"']+)["']/i);
+      link = attr ? decodeEntities(attr[1]) : '';
+    }
+    const description = field(b, 'description') || field(b, 'summary') || field(b, 'content');
+    const dateText = field(b, 'pubDate') || field(b, 'published') || field(b, 'updated') || field(b, 'date');
+    const published = Date.parse(dateText);
+    return { title, url: link.trim(), summary: plainText(description).slice(0, 360), published_at: Number.isFinite(published) ? new Date(published).toISOString() : null };
+  }).filter(x => x.title && /^https?:\/\//i.test(x.url));
+}
+
+function matchLocalities(item) {
+  const hay = item.title + ' ' + item.summary;
+  return LOCALITIES.filter(x => x.en.test(hay) || x.bn.some(term => hay.includes(term))).map(x => x.name);
+}
+
+function cleanUrl(value) {
+  try {
+    const u = new URL(value);
+    if (!['http:', 'https:'].includes(u.protocol)) return '';
+    u.hash = '';
+    for (const key of [...u.searchParams.keys()]) if (/^(utm_|fbclid|gclid)/i.test(key)) u.searchParams.delete(key);
+    return u.href;
+  } catch { return ''; }
+}
+
+async function fetchFeed(feed) {
+  const response = await fetch(feed.url, {
+    headers: { 'User-Agent': 'Brahmexa-JanDrishti-NewsDigest/1.0 (+https://yogabrata.com/jandrishti/)', 'Accept': 'application/rss+xml, application/atom+xml, application/xml, text/xml' },
+    signal: AbortSignal.timeout(18000)
+  });
+  if (!response.ok) throw new Error('HTTP ' + response.status);
+  const xml = await response.text();
+  if (!/<(rss|feed)\b/i.test(xml)) throw new Error('Response was not RSS or Atom XML');
+  return itemsFrom(xml);
+}
+
+async function main() {
+  const previous = (() => { try { return JSON.parse(readFileSync(OUT, 'utf8')); } catch { return null; } })();
+  const checked = [];
+  const fresh = [];
+  for (const feed of FEEDS) {
+    try {
+      const entries = await fetchFeed(feed);
+      checked.push({ id: feed.id, publisher: feed.publisher, section: feed.section, url: feed.url, status: 'ok', fetched_items: entries.length });
+      for (const entry of entries) {
+        const localities = matchLocalities(entry);
+        if (!localities.length) continue;
+        const published = entry.published_at ? Date.parse(entry.published_at) : NaN;
+        if (Number.isFinite(published) && Date.now() - published > LOOKBACK_DAYS * 86400000) continue;
+        const url = cleanUrl(entry.url);
+        if (!url) continue;
+        fresh.push({
+          id: createHash('sha256').update(url).digest('hex').slice(0, 16),
+          publisher: feed.publisher,
+          section: feed.section,
+          title: entry.title,
+          summary: entry.summary || 'Open the publisher report for the full story.',
+          url,
+          published_at: entry.published_at,
+          localities,
+          source_id: feed.id
+        });
+      }
+    } catch (error) {
+      checked.push({ id: feed.id, publisher: feed.publisher, section: feed.section, url: feed.url, status: 'error', error: String(error.message || error).slice(0, 180) });
+    }
+  }
+
+  if (!checked.some(x => x.status === 'ok')) throw new Error('Every news feed failed; keeping the existing snapshot unchanged.');
+  const failedIds = new Set(checked.filter(x => x.status !== 'ok').map(x => x.id));
+  const old = Array.isArray(previous && previous.items) ? previous.items : [];
+  const cutoff = Date.now() - LOOKBACK_DAYS * 86400000;
+  const keepOld = old.filter(x => failedIds.has(x.source_id) && (!x.published_at || Date.parse(x.published_at) >= cutoff));
+  const unique = new Map();
+  for (const item of [...fresh, ...keepOld]) {
+    const url = cleanUrl(item.url);
+    if (!url) continue;
+    const prior = unique.get(url);
+    if (!prior || (item.localities || []).length > prior.localities.length) unique.set(url, { ...item, url });
+  }
+  const items = [...unique.values()].sort((a, b) => {
+    const ta = Date.parse(a.published_at || '') || 0;
+    const tb = Date.parse(b.published_at || '') || 0;
+    return tb - ta || b.localities.length - a.localities.length;
+  }).slice(0, MAX_ITEMS);
+  const out = {
+    schema: 'jandrishti.news/v1',
+    geography: 'Uttarpara Assembly constituency (AC 185)',
+    last_checked_at: new Date().toISOString(),
+    refresh_interval_hours: 4,
+    lookback_days: LOOKBACK_DAYS,
+    sources: checked,
+    items
+  };
+  mkdirSync(dirname(OUT), { recursive: true });
+  writeFileSync(OUT, JSON.stringify(out, null, 2) + '\n');
+  console.log('Wrote ' + items.length + ' constituency news item(s) from ' + checked.filter(x => x.status === 'ok').length + '/' + FEEDS.length + ' feed(s) to ' + OUT);
+}
+
+main().catch(error => {
+  console.error(error.message || error);
+  process.exitCode = 1;
+});

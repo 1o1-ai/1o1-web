@@ -1,0 +1,49 @@
+{
+  "schema": "jandrishti.news/v1",
+  "geography": "Uttarpara Assembly constituency (AC 185)",
+  "last_checked_at": "2026-11-01",
+  "refresh_interval_hours": 4,
+  "lookback_days": 7,
+  "sources": [
+    {
+      "id": "abp-district",
+      "publisher": "ABP Ananda",
+      "section": "District News",
+      "url": "https://bengali.abplive.com/district/feed",
+      "status": "pending",
+      "fetched_items": null
+    },
+    {
+      "id": "abp-kolkata",
+      "publisher": "ABP Ananda",
+      "section": "Kolkata",
+      "url": "https://bengali.abplive.com/news/kolkata/feed",
+      "status": "pending",
+      "fetched_items": null
+    },
+    {
+      "id": "abp-states",
+      "publisher": "ABP Ananda",
+      "section": "West Bengal",
+      "url": "https://bengali.abplive.com/states/feed",
+      "status": "pending",
+      "fetched_items": null
+    }
+  ],
+  "items": [
+    {
+      "id": "abp-uttarpara-sand-20261029",
+      "publisher": "ABP Ananda",
+      "section": "District News",
+      "title": "উত্তরপাড়ায় বালি চুরির ঘটনায় ২ জন গ্রেফতার",
+      "summary": "ABP Ananda reports that Uttarpara police arrested two residents in a suspected illegal sand-extraction case near Shivmandir Ghat and seized a boat with about 4,000 cubic feet of sand. The investigation was continuing when the report was published.",
+      "url": "https://bengali.abplive.com/district/hooghly-news-uttarpara-illegal-racket-sand-stealing-police-arrested-2-accused-1197563/amp",
+      "published_at": "2026-10-29T08:37:00+05:30",
+      "localities": [
+        "Uttarpara",
+        "Hooghly"
+      ],
+      "source_id": "abp-district"
+    }
+  ]
+}

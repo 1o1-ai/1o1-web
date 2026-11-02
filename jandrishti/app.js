@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = '257d8ce';
+  const BUILD = '8600538';
 
   const MODULES = [
     { id: 'overview', label: 'Overview', ico: '◉' },
@@ -30,6 +30,7 @@
   };
 
   const STALE_DAYS = 90;
+  const NEWS_REFRESH_MS = 4 * 60 * 60 * 1000;
   const S = { seats: [], seatMeta: {}, sources: {}, sourceMeta: {}, profiles: {}, route: {} };
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -415,7 +416,71 @@
         <span class="circ">${esc(j.code)}</span><strong>${esc(j.short)}</strong><small>${fmt(j.population.value)} · ${esc(j.population.period)}</small></button>`).join('')}</div>
         <div class="source-note">Populations come from different sources and scopes, so they are not added up. Gram-panchayat figures are census towns only.</div></section>
 
-      <p class="footer">Values marked <span class="badge st-mock">MOCK</span> are invented demo data. Every number opens its evidence · <a href="${href(p.ac, 'sources')}">Sources &amp; freshness</a></p>`;
+      <div class="section-title news-heading"><div><h3>Constituency news</h3><p>Recent reporting that mentions Uttarpara and nearby AC 185 localities</p></div><span class="pill">Auto refresh · every 4 hours</span></div>
+      <section class="panel news-panel" id="newsPanel" aria-live="polite" aria-busy="true"><p class="muted">Loading recent coverage…</p></section>
+
+      <p class="footer">Values marked <span class="badge st-mock">MOCK</span> are invented demo data. News items are media reports, not official service records. Every number opens its evidence · <a href="${href(p.ac, 'sources')}">Sources &amp; freshness</a></p>`;
+  }
+
+  function newsDate(iso) {
+    if (!iso) return 'Date not supplied';
+    if (/^\d{4}-\d{2}-\d{2}$/.test(iso)) return iso;
+    const d = new Date(iso);
+    return Number.isNaN(d.getTime()) ? 'Date not supplied' : new Intl.DateTimeFormat('en-IN', { dateStyle: 'medium', timeStyle: 'short' }).format(d);
+  }
+
+  function safeNewsUrl(value) {
+    try {
+      const u = new URL(value);
+      return ['http:', 'https:'].includes(u.protocol) ? u.href : '';
+    } catch { return ''; }
+  }
+
+  function renderNews(data) {
+    const items = Array.isArray(data.items) ? data.items.slice(0, 6) : [];
+    const sourceState = Array.isArray(data.sources) ? data.sources : [];
+    const failures = sourceState.filter(s => s.status === 'error');
+    const lastChecked = Date.parse(data.last_checked_at || '');
+    const stale = !Number.isFinite(lastChecked) || Date.now() - lastChecked > 8 * 60 * 60 * 1000;
+    const cards = items.map(item => {
+      const url = safeNewsUrl(item.url);
+      const title = esc(item.title || 'Untitled report');
+      return '<article class="news-card">' +
+        '<div class="news-meta"><span class="news-publisher">' + esc(item.publisher || 'News source') + '</span><span>' + newsDate(item.published_at) + '</span></div>' +
+        '<h4>' + (url ? '<a href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + title + ' ↗</a>' : title) + '</h4>' +
+        '<p>' + esc(item.summary || 'Open the publisher’s report for details.') + '</p>' +
+        '<div class="news-tags">' + (Array.isArray(item.localities) ? item.localities : []).slice(0, 3).map(x => '<span class="pill">' + esc(x) + '</span>').join('') + '</div>' +
+      '</article>';
+    }).join('');
+    const empty = '<div class="news-empty">' + (data.stale ? 'The latest scheduled feed check failed. Showing the last saved snapshot.' : 'No recent constituency-specific stories matched the monitored localities.') + '</div>';
+    const warning = (failures.length ? '<p class="news-warning">' + failures.length + ' source feed' + (failures.length === 1 ? '' : 's') + ' could not be reached; available feeds are still shown.</p>' : '') + (stale ? '<p class="news-warning">The saved snapshot is older than two scheduled refresh windows.</p>' : '');
+    return '<div class="news-toolbar"><span>Last checked: ' + newsDate(data.last_checked_at) + ' · ' + esc(data.refresh_interval_hours || 4) + '-hour schedule</span>' +
+      '<button class="outline-btn" id="newsReload" type="button">Reload snapshot</button></div>' +
+      warning + (cards ? '<div class="news-grid">' + cards + '</div>' : empty) +
+      '<div class="news-attribution">Short summaries are based on publisher feed descriptions. Open each original report for full context.</div>';
+  }
+
+  async function loadNewsPanel() {
+    const panel = $('#newsPanel');
+    if (!panel) return;
+    panel.setAttribute('aria-busy', 'true');
+    try {
+      const r = await fetch('./data/news-summary.json?refresh=' + Date.now(), { cache: 'no-store' });
+      if (!r.ok) throw new Error('News snapshot: HTTP ' + r.status);
+      const data = await r.json();
+      if (panel !== $('#newsPanel')) return;
+      panel.innerHTML = renderNews(data);
+      panel.setAttribute('aria-busy', 'false');
+      const reload = $('#newsReload', panel);
+      if (reload) reload.addEventListener('click', loadNewsPanel);
+    } catch (err) {
+      if (panel !== $('#newsPanel')) return;
+      panel.innerHTML = '<div class="news-empty">News snapshot is temporarily unavailable. ' + esc(err.message) + '</div>' +
+        '<button class="outline-btn" id="newsRetry" type="button">Try again</button>';
+      panel.setAttribute('aria-busy', 'false');
+      const retry = $('#newsRetry', panel);
+      if (retry) retry.addEventListener('click', loadNewsPanel);
+    }
   }
 
   function people(p) {
@@ -652,6 +717,7 @@
       v.innerHTML = `<div class="empty"><strong>Could not load data</strong>${esc(err.message)}</div>`;
     }
     bindView();
+    if (S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel();
     closeDrawer();
     $('#sidebar').classList.remove('open');
   }
@@ -675,7 +741,11 @@
     if (rm) rm.addEventListener('click', () => attentionDrawer(p));
     const ex = $('#exportCsv');
     if (ex) ex.addEventListener('click', () => exportCsv(p));
-    $$('#view [data-sort]').forEach(el => el.addEventListener('click', () => setStateParams({ sort: el.dataset.sort })));
+    const newsReload = $('#newsReload');
+    if (newsReload) newsReload.addEventListener('click', loadNewsPanel);
+    const newsRetry = $('#newsRetry');
+    if (newsRetry) newsRetry.addEventListener('click', loadNewsPanel);
+    $('#view [data-sort]').forEach(el => el.addEventListener('click', () => setStateParams({ sort: el.dataset.sort })));
     const search = $('#seatSearch');
     if (search) {
       search.addEventListener('input', () => { clearTimeout(bindView.t); bindView.t = setTimeout(() => setStateParams({ q: search.value }, true), 250); });
@@ -714,6 +784,12 @@
       $('#menuBtn').setAttribute('aria-expanded', String(open));
     });
     window.addEventListener('hashchange', render);
+    window.setInterval(() => {
+      if (document.visibilityState === 'visible' && S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel();
+    }, NEWS_REFRESH_MS);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible' && S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel();
+    });
     if (!location.hash) history.replaceState(null, '', '#/ac/185');
     await render();
   }
