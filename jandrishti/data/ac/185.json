@@ -1,0 +1,179 @@
+{
+  "schema": "jandrishti.ac/v1",
+  "ac": 185,
+  "name": "Uttarpara",
+  "district": "Hooghly",
+  "parliamentary_constituency": "27 Sreerampur",
+  "reviewed": "2026-11-01",
+  "summary": "A constituency-wide view across two municipalities and three gram panchayats of the Sreerampur Uttarpara CD block.",
+  "representative": {
+    "name": "Dipanjan Chakraborty",
+    "party": "BJP",
+    "since": "2026-05-04",
+    "status": "Source-reported",
+    "source": "eci-result",
+    "corroboration": ["eci-statistical-wiki", "etv-result", "bt-result"]
+  },
+
+  "jurisdictions": [
+    {
+      "id": "ukm", "name": "Uttarpara-Kotrung Municipality", "short": "Uttarpara-Kotrung", "type": "Municipality", "code": "UK",
+      "membership": { "status": "Source-reported", "source": "delimitation" },
+      "wards": 24,
+      "population": { "value": 159413, "period": "Census 2011", "status": "Historical", "source": "municipal-pop" },
+      "notes": "Only jurisdiction with ward-level data loaded. Municipal boundary ≠ Assembly boundary."
+    },
+    {
+      "id": "knm", "name": "Konnagar Municipality", "short": "Konnagar", "type": "Municipality", "code": "KO",
+      "membership": { "status": "Source-reported", "source": "delimitation" },
+      "wards": null,
+      "population": { "value": 76172, "period": "Census 2011", "status": "Needs confirmation", "source": "konnagar-census" },
+      "notes": "Ward count, services and projects not yet onboarded. Official site (konnagarmunicipality.org) not yet read."
+    },
+    {
+      "id": "nabagram", "name": "Nabagram Gram Panchayat", "short": "Nabagram GP", "type": "Gram Panchayat", "code": "NA",
+      "membership": { "status": "Source-reported", "source": "delimitation" },
+      "wards": null,
+      "population": { "value": 18358, "period": "Census 2011", "status": "Needs confirmation", "source": "ct-census", "scope_note": "Nabagram Colony census town only — not the whole GP" },
+      "notes": "GP-level population, sansad list and service registers not yet found."
+    },
+    {
+      "id": "kanaipur", "name": "Kanaipur Gram Panchayat", "short": "Kanaipur GP", "type": "Gram Panchayat", "code": "KA",
+      "membership": { "status": "Source-reported", "source": "delimitation" },
+      "wards": null,
+      "population": { "value": 26814, "period": "Census 2011", "status": "Needs confirmation", "source": "ct-census", "scope_note": "Kanaipur census town only — not the whole GP" },
+      "notes": "GP-level population, sansad list and service registers not yet found."
+    },
+    {
+      "id": "raghunathpur", "name": "Raghunathpur Gram Panchayat", "short": "Raghunathpur GP", "type": "Gram Panchayat", "code": "RA",
+      "membership": { "status": "Source-reported", "source": "delimitation" },
+      "wards": null,
+      "population": { "value": 9650, "period": "Census 2011", "status": "Needs confirmation", "source": "ct-census", "scope_note": "Raghunathpur (PS-Dankuni) census town only — not the whole GP" },
+      "notes": "Several Hooghly places share this name; this is Raghunathpur under PS Dankuni, Sreerampur Uttarpara block."
+    }
+  ],
+
+  "facts": [
+    { "id": "electors-total", "module": "people", "label": "Registered electors", "value": 228272, "unit": "electors", "period": "2026, last date of nomination", "geography": "Uttarpara AC 185", "status": "Verified", "source": "ceo-electors", "claim": "Row 185 UTTARPARA (Hooghly, Phase 2): Male 112,794; Female 115,473; Third gender 5; Total 228,272.", "caveat": "Roll at last date of nomination — not the final roll, not votes cast, not population." },
+    { "id": "electors-male", "module": "people", "label": "Electors · male", "value": 112794, "unit": "electors", "period": "2026, last date of nomination", "geography": "Uttarpara AC 185", "status": "Verified", "source": "ceo-electors", "claim": "Row 185, Male column." },
+    { "id": "electors-female", "module": "people", "label": "Electors · female", "value": 115473, "unit": "electors", "period": "2026, last date of nomination", "geography": "Uttarpara AC 185", "status": "Verified", "source": "ceo-electors", "claim": "Row 185, Female column." },
+    { "id": "electors-third", "module": "people", "label": "Electors · third gender", "value": 5, "unit": "electors", "period": "2026, last date of nomination", "geography": "Uttarpara AC 185", "status": "Verified", "source": "ceo-electors", "claim": "Row 185, Third Gender column." },
+    { "id": "winner-votes", "module": "people", "label": "Votes for elected MLA", "value": 80612, "unit": "votes", "period": "GE 2026 (counted 2026-05-04)", "geography": "Uttarpara AC 185", "status": "Source-reported", "source": "eci-result", "corroboration": ["eci-statistical-wiki", "etv-result", "bt-result"], "claim": "Dipanjan Chakraborty (BJP) — 80,612 votes.", "caveat": "The ECI results page now returns 404; confirm against Form 20." },
+    { "id": "margin", "module": "people", "label": "Winning margin", "value": 10415, "unit": "votes", "period": "GE 2026", "geography": "Uttarpara AC 185", "status": "Source-reported", "source": "eci-result", "corroboration": ["eci-statistical-wiki", "etv-result", "bt-result"], "claim": "80,612 − 70,197 = 10,415 over Sirsanya Bandopadhyay (AITC).", "method": "Difference of winner and runner-up votes; matches all three corroborating sources." },
+    { "id": "votes-cast", "module": "people", "label": "Votes polled (turnout)", "value": 205454, "unit": "votes", "period": "GE 2026", "geography": "Uttarpara AC 185", "status": "Needs confirmation", "source": "eci-statistical-wiki", "claim": "Turnout 205,454 (89.88%).", "caveat": "205,454 ÷ 89.88% implies ~228,590 electors, 317 more than the CEO nomination-day roll — plausible post-nomination/service-voter additions, but confirm with Form 20." },
+    { "id": "ukm-pop", "module": "people", "jurisdiction": "ukm", "label": "Uttarpara-Kotrung population", "value": 159413, "unit": "persons", "period": "Census 2011", "geography": "Uttarpara-Kotrung Municipality (24 wards)", "status": "Historical", "source": "municipal-pop", "claim": "Total 159,413 of which 81,457 males and 77,956 females.", "caveat": "One of five jurisdictions; 2011 reference." },
+    { "id": "knm-pop", "module": "people", "jurisdiction": "knm", "label": "Konnagar population", "value": 76172, "unit": "persons", "period": "Census 2011", "geography": "Konnagar Municipality", "status": "Needs confirmation", "source": "konnagar-census", "claim": "76,172 (38,653 male, 37,519 female).", "caveat": "Secondary compilation; confirm with Census 2011 PCA." },
+    { "id": "kanaipur-ct-pop", "module": "people", "jurisdiction": "kanaipur", "label": "Kanaipur census town population", "value": 26814, "unit": "persons", "period": "Census 2011", "geography": "Kanaipur census town (not the whole GP)", "status": "Needs confirmation", "source": "ct-census", "claim": "26,814 (13,914 male, 12,900 female)." },
+    { "id": "nabagram-ct-pop", "module": "people", "jurisdiction": "nabagram", "label": "Nabagram Colony census town population", "value": 18358, "unit": "persons", "period": "Census 2011", "geography": "Nabagram Colony census town (not the whole GP)", "status": "Needs confirmation", "source": "ct-census", "claim": "18,358 (9,083 male, 9,275 female)." },
+    { "id": "raghunathpur-ct-pop", "module": "people", "jurisdiction": "raghunathpur", "label": "Raghunathpur census town population", "value": 9650, "unit": "persons", "period": "Census 2011", "geography": "Raghunathpur (PS-Dankuni) census town (not the whole GP)", "status": "Needs confirmation", "source": "ct-census", "claim": "9,650 (4,903 male, 4,747 female)." },
+    { "id": "kmda-nit55-value", "module": "projects", "jurisdiction": "ukm", "label": "KMDA road works tendered (NIT 55)", "value": 26795790, "unit": "INR (estimated value put to tender)", "period": "NIT dated 2026-03-09", "geography": "Uttarpara-Kotrung wards 5–10, 20, 23", "status": "Source-reported", "source": "kmda-nit55", "claim": "Three lots: ₹94,87,079 (wards 8–10) + ₹80,61,414 (wards 5–7) + ₹92,47,297 (wards 20, 23) = ₹2,67,95,790.", "method": "Sum of the three lot values; each pairs with a 2% EMD figure.", "caveat": "Tendered value, not sanctioned, awarded or spent." },
+    { "id": "uphc-count", "module": "health", "jurisdiction": "ukm", "label": "Urban primary health centres (municipal)", "value": 3, "unit": "UPHCs", "period": "Undated municipal page", "geography": "Uttarpara-Kotrung Municipality", "status": "Source-reported", "source": "municipal-projects", "claim": "'This Municipality has established three (3) no. of UPHC' — Mahamaya (UPHC I), HAU-1 Makhla (UPHC II), HAU-2 near Karai Factory (UPHC III).", "caveat": "Operating status, hours and staffing not confirmed." },
+    { "id": "swm-claim", "module": "cleanliness", "jurisdiction": "ukm", "label": "Waste collected (press claim)", "value": "12–14", "unit": "tonnes/day", "period": "Undated (pre-2017 JICA project context)", "geography": "Uttarpara-Kotrung Municipality", "status": "Historical", "source": "cleanliness", "claim": "'The municipality collects 12-14 tonnes of waste every day and produces 3-4 tonne manure daily.'", "caveat": "Reproduced newspaper text on the municipal site, not a performance report. Never a current KPI." }
+  ],
+
+  "election": {
+    "year": 2026,
+    "source": "eci-statistical-wiki",
+    "status": "Needs confirmation",
+    "note": "Top-four candidates and NOTA as transcribed from the ECI Statistical Report. Rows sum to 204,115 of 205,454 votes polled — remaining candidates not listed. Confirm all rows with Form 20.",
+    "candidates": [
+      { "name": "Dipanjan Chakraborty", "party": "BJP", "votes": 80612, "share": 39.24, "result": "Won" },
+      { "name": "Sirsanya Bandopadhyay", "party": "AITC", "votes": 70197, "share": 34.17 },
+      { "name": "Minakshi Mukherjee", "party": "CPI(M)", "votes": 49820, "share": 24.25 },
+      { "name": "Subrata Mukhopadhyay", "party": "INC", "votes": 1764, "share": 0.84 },
+      { "name": "None of the above", "party": "NOTA", "votes": 1722, "share": 0.84 }
+    ],
+    "previous": {
+      "year": 2021, "status": "Needs confirmation", "source": "eci-statistical-wiki",
+      "winner": "Kanchan Mullick (AITC) · 93,878", "runner_up": "Prabir Kumar Ghosal (BJP) · 57,889", "margin": 35989, "turnout": "199,894 (76.94%)"
+    }
+  },
+
+  "ward_population": {
+    "source": "municipal-pop", "status": "Historical", "period": "Census 2011", "geography": "Uttarpara-Kotrung Municipality",
+    "rows": [
+      [1,5505,2865,2640],[2,6292,3262,3030],[3,6935,3530,3405],[4,7250,3727,3523],[5,6244,3232,3012],[6,6045,3081,2964],
+      [7,14945,7652,7293],[8,4367,2275,2092],[9,6107,3039,3068],[10,9171,4583,4588],[11,4495,2257,2238],[12,4589,2267,2322],
+      [13,5664,2848,2816],[14,4868,2408,2460],[15,5864,2813,3051],[16,4522,2209,2313],[17,6061,3085,2976],[18,5121,2615,2506],
+      [19,5741,2915,2826],[20,8691,4777,3914],[21,11318,5890,5428],[22,9045,4650,4395],[23,8758,4507,4251],[24,1815,970,845]
+    ],
+    "totals": [159413, 81457, 77956]
+  },
+
+  "facilities": [
+    { "id": "usgh", "module": "health", "jurisdiction": "ukm", "name": "Uttarpara State General Hospital", "type": "Hospital (State)", "address": "RPM Road, Uttarpara, Hooghly 712258", "contacts": [["Phone", "033 2663 4212"]], "status": "Source-reported", "source": "municipal-home", "caveat": "Published number; capacity and services not confirmed." },
+    { "id": "mahamaya", "module": "health", "jurisdiction": "ukm", "name": "Mahamaya Sishu O Matri Mangal Kendra (UPHC I)", "type": "Municipal maternity & child hospital", "address": "Grand Trunk Road, Kotrung, Uttarpara 712232", "contacts": [["Phone / ambulance", "033 2663 1397"], ["Maternity", "98313 78557"], ["ICCU", "82760 59414"], ["Reception", "98313 11877"]], "status": "Source-reported", "source": "municipal-home", "caveat": "Home page also announces a blood storage unit here. Confirm current services." },
+    { "id": "uphc2", "module": "health", "jurisdiction": "ukm", "name": "UPHC II (HAU-1)", "type": "Urban primary health centre", "address": "Makhla, near Debeshwari Girls' High School (as published)", "contacts": [], "status": "Source-reported", "source": "municipal-projects", "caveat": "Confirm operating status, hours and catchment." },
+    { "id": "uphc3", "module": "health", "jurisdiction": "ukm", "name": "UPHC III (HAU-2)", "type": "Urban primary health centre", "address": "Near Karai Factory, Makhla (as published)", "contacts": [], "status": "Source-reported", "source": "municipal-projects", "caveat": "Confirm operating status, hours and catchment." },
+    { "id": "makhla-swm", "module": "cleanliness", "jurisdiction": "ukm", "name": "Makhla solid-waste & compost site ('Basudha' manure)", "type": "Waste processing", "address": "Makhla (ward 20 area — KMDA NIT 55 mentions 'near Makhla Plant')", "contacts": [], "status": "Historical", "source": "cleanliness", "caveat": "Described in reproduced pre-2017 press text. Current operation unconfirmed." },
+    { "id": "contact-municipal", "module": "issues", "jurisdiction": "ukm", "name": "Municipal office", "type": "Contact", "address": "New G.T. Road, Uttarpara 712258", "contacts": [["Office (10:00–17:00)", "2663-4095 / 7298 / 3863"]], "status": "Source-reported", "source": "municipal-home" },
+    { "id": "contact-fire", "module": "issues", "jurisdiction": "ukm", "name": "Fire station", "type": "Contact", "address": "Uttarpara", "contacts": [["Phone", "033 2663 6157"]], "status": "Source-reported", "source": "municipal-home" },
+    { "id": "contact-police", "module": "issues", "jurisdiction": "ukm", "name": "Uttarpara Police Station", "type": "Contact", "address": "Uttarpara", "contacts": [["Phone", "033 2663 6278"]], "status": "Source-reported", "source": "municipal-home" }
+  ],
+
+  "projects": [
+    {
+      "id": "nit55-lot1", "module": "infrastructure", "jurisdiction": "ukm", "title": "Development of roads, wards 8, 9, 10 (Pathasree Urban Scheme)",
+      "agency": "KMDA R&B Sector, Circle-II", "scheme": "Pathasree (Urban)", "tender_id": "2026_KMDA_5013473_1", "wards": [8, 9, 10],
+      "estimated_value": 9487079, "stage": "Tender invited (2nd call)", "stage_date": "2026-03-09",
+      "items": ["Shibtala Street offshoot near Aswatha Tala (ward 8)", "Existing concrete road, DPJM Sarani offshoot near Sevak Sangha (ward 8)", "Panpara Bye Lane (ward 9)", "School Lane to Subhash Brigade Club via Harish Dey Lane (ward 9)", "B.G.G. Sarani to Manik Pir junction to Shibtala Street (ward 10)"],
+      "status": "Source-reported", "source": "kmda-nit55", "unknown": ["award (AOC)", "contractor", "work order date", "spend", "completion"]
+    },
+    {
+      "id": "nit55-lot2", "module": "infrastructure", "jurisdiction": "ukm", "title": "Improvement of roads, wards 5, 6, 7",
+      "agency": "KMDA R&B Sector, Circle-II", "scheme": null, "tender_id": "2026_KMDA_5013473_2", "wards": [5, 6, 7],
+      "estimated_value": 8061414, "stage": "Tender invited (2nd call)", "stage_date": "2026-03-09",
+      "items": ["Hem Chandra Lane offshoot (ward 5)", "B.B.D. Road offshoot near Gourimata Primary School (ward 6)", "Shibtala Street, Khar Kal to D.J. Street junction (ward 7)", "Shibtala Street offshoot near Deshyapriya Balika Vidyalaya (ward 7)"],
+      "status": "Source-reported", "source": "kmda-nit55", "unknown": ["award (AOC)", "contractor", "work order date", "spend", "completion"]
+    },
+    {
+      "id": "nit55-lot3", "module": "infrastructure", "jurisdiction": "ukm", "title": "Improvement of roads, wards 20 & 23 (Makhla)",
+      "agency": "KMDA R&B Sector, Circle-II", "scheme": null, "tender_id": "2026_KMDA_5013473_3", "wards": [20, 23],
+      "estimated_value": 9247297, "stage": "Tender invited (2nd call)", "stage_date": "2026-03-09",
+      "items": ["Makhla Govt. Colony No-1 near Pamda Pukur (ward 23)", "Makhla Govt. Colony No-2 (ward 23)", "T.N. Mukherjee Road offshoot near Makhla Plant to Rose Brick Field (ward 20)"],
+      "status": "Source-reported", "source": "kmda-nit55", "unknown": ["award (AOC)", "contractor", "work order date", "spend", "completion"]
+    },
+    {
+      "id": "mock-drain", "module": "cleanliness", "jurisdiction": "ukm", "mock": true, "title": "Ward drainage hotspot response",
+      "agency": "Demo tracker · municipal engineering", "stage": "In progress", "progress": 68, "stage_date": "2026-09-30",
+      "items": ["2.4 km drain desilting (invented)"], "status": "Mock", "source": null
+    },
+    {
+      "id": "mock-streetlight", "module": "infrastructure", "jurisdiction": "ukm", "mock": true, "title": "Streetlight repair cluster · Ward 7",
+      "agency": "Demo tracker · local body", "stage": "Needs review", "progress": 64,
+      "items": ["14 lights reported, 9 resolved (invented)"], "status": "Mock", "source": null
+    }
+  ],
+
+  "programme_claims": [
+    { "module": "health", "topic": "NUHM", "claim": "Municipality describes NUHM UPHC services: OPD, basic lab diagnosis, drug/contraceptive dispensing, NCD screening and referral.", "status": "Source-reported", "source": "municipal-projects", "caveat": "Description of intended services, not delivered volumes." },
+    { "module": "cleanliness", "topic": "Solid waste", "claim": "Door-to-door segregated collection with compost plant producing 'Basudha' bio-manure; 12–14 t/day collected, 3–4 t/day manure.", "status": "Historical", "source": "cleanliness", "caveat": "Reproduced press article; JICA funding tenure 'scheduled to end in 2017'." },
+    { "module": "infrastructure", "topic": "BSUP / JNNURM", "claim": "Housing, water, drainage, road, streetlight and community-hall works originating in 2006–07.", "status": "Historical", "source": "municipal-projects", "caveat": "Legacy programme; not current status." },
+    { "module": "infrastructure", "topic": "PMAY / housing", "claim": "Project described as continuing through FY 2015-16 to 2021-22, shares subsidised by State, ULB and beneficiaries.", "status": "Historical", "source": "municipal-projects", "caveat": "Period ended; current beneficiary progress needs the PMAY-U MIS (aggregate only)." },
+    { "module": "projects", "topic": "NULM", "claim": "Self-help group, livelihood and training descriptions.", "status": "Historical", "source": "municipal-projects", "caveat": "No current enrolment or outcome data." },
+    { "module": "education", "topic": "Mid-Day Meal", "claim": "MDM started in Uttarpara in 2005 to raise enrolment, attendance and nutrition.", "status": "Historical", "source": "municipal-projects", "caveat": "School and child counts need current Education Department / UDISE+ confirmation." }
+  ],
+
+  "issues": [
+    { "id": "mock-waterlogging", "module": "infrastructure", "jurisdiction": "ukm", "mock": true, "title": "Waterlogging reports · Makhla", "detail": "23 demo cases", "priority": "High", "owner": "Municipal engineering (demo)", "opened": "2026-09-12" },
+    { "id": "mock-waste-timing", "module": "cleanliness", "jurisdiction": "ukm", "mock": true, "title": "Waste pickup timing · Ward 7", "detail": "Resident-reported schedule variance (demo)", "priority": "Review", "owner": "Conservancy (demo)", "opened": "2026-10-03" },
+    { "id": "mock-streetlights", "module": "infrastructure", "jurisdiction": "knm", "mock": true, "title": "Streetlights out · GT Road stretch", "detail": "6 demo reports", "priority": "Medium", "owner": "Konnagar Municipality (demo)", "opened": "2026-10-18" },
+    { "id": "mock-handpump", "module": "infrastructure", "jurisdiction": "kanaipur", "mock": true, "title": "Tube-well repair request", "detail": "2 demo reports", "priority": "Medium", "owner": "Kanaipur GP (demo)", "opened": "2026-10-21" }
+  ],
+  "mock_totals": { "open_issues": 126, "note": "Illustrative count — no complaint register is connected." },
+
+  "data_gaps": [
+    { "module": "people", "need": "Form 20 (booth-wise votes) and ECI Statistical Report for AC 185", "where": "ECI / CEO West Bengal", "priority": "High" },
+    { "module": "people", "need": "Polling-station-wise electors and turnout (aggregate)", "where": "CEO West Bengal final roll / PS list", "priority": "High" },
+    { "module": "people", "need": "Census 2011 PCA for Konnagar and the three GPs (village/CT level)", "where": "Census of India, Hooghly District Census Handbook", "priority": "High" },
+    { "module": "people", "need": "Delimitation Order 2008 text and AC boundary map", "where": "ECI delimitation archive / CEO WB", "priority": "High" },
+    { "module": "projects", "need": "Award (AOC), contractor and work-order status of KMDA NIT 55 lots", "where": "tenders.wb.gov.in (public AOC search) / KMDA", "priority": "High" },
+    { "module": "projects", "need": "Resolve NIT 27 ULB contradiction (Uttarpara Kotrung vs Rishra)", "where": "KMDA SE Circle-II", "priority": "Medium" },
+    { "module": "projects", "need": "Latest budget, audited accounts and capital works list", "where": "uttarparamunicipality.in finance pages; Konnagar Municipality", "priority": "High" },
+    { "module": "cleanliness", "need": "Current SWM collection, processing and door-to-door coverage", "where": "SBM-U 2.0 MIS / municipal conservancy dept.", "priority": "Medium" },
+    { "module": "health", "need": "Current facility roster with services, beds and hours for AC 185", "where": "Hooghly CMOH / NHM WB / HMIS facility list", "priority": "Medium" },
+    { "module": "education", "need": "School list with aggregate enrolment and infrastructure", "where": "UDISE+ (public school directory, aggregate)", "priority": "Medium" },
+    { "module": "infrastructure", "need": "Piped-water coverage and works for the three GPs", "where": "Jal Jeevan Mission WB PHED dashboard (village-reported)", "priority": "Medium" },
+    { "module": "issues", "need": "A real issue register with consent, owner and status history", "where": "MLA office intake + department referrals (Phase 2/3)", "priority": "High" }
+  ]
+}
