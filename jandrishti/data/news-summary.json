@@ -1,7 +1,7 @@
 {
   "schema": "jandrishti.news/v1",
   "geography": "Uttarpara Assembly constituency (AC 185)",
-  "last_checked_at": "2026-11-01",
+  "last_checked_at": "2026-11-02T17:51:03.651Z",
   "refresh_interval_hours": 4,
   "lookback_days": 7,
   "sources": [
@@ -10,91 +10,146 @@
       "publisher": "ABP Ananda",
       "section": "District News",
       "url": "https://bengali.abplive.com/district/feed",
-      "status": "pending",
-      "fetched_items": null
+      "status": "ok",
+      "fetched_items": 10
     },
     {
       "id": "abp-kolkata",
       "publisher": "ABP Ananda",
       "section": "Kolkata",
       "url": "https://bengali.abplive.com/news/kolkata/feed",
-      "status": "pending",
-      "fetched_items": null
+      "status": "ok",
+      "fetched_items": 10
     },
     {
       "id": "abp-states",
       "publisher": "ABP Ananda",
       "section": "West Bengal",
       "url": "https://bengali.abplive.com/states/feed",
-      "status": "pending",
-      "fetched_items": null
+      "status": "ok",
+      "fetched_items": 10
     },
     {
       "id": "ukm-notices",
       "publisher": "Uttarpara-Kotrung Municipality",
       "section": "Municipal notices",
       "url": "https://www.uttarparamunicipality.in/news-event.php",
-      "status": "pending",
-      "fetched_items": null
+      "status": "ok",
+      "fetched_items": 8
     },
     {
       "id": "hooghly-notices",
       "publisher": "Hooghly District Administration",
       "section": "District notices",
       "url": "https://hooghly.nic.in/notice_category/important-notices/",
-      "status": "pending",
-      "fetched_items": null
-    },
-    {
-      "id": "public-app-local",
-      "publisher": "Public App · Serampore-Uttarpara",
-      "section": "Local report",
-      "url": "https://public.app/district/news-in-hooghly",
-      "status": "curated",
-      "fetched_items": 1
+      "status": "ok",
+      "fetched_items": 0
     }
   ],
   "items": [
     {
-      "id": "abp-uttarpara-ed-20261030",
-      "publisher": "ABP Ananda",
-      "section": "District News",
-      "title": "ED searches a Uttarpara residence in a bank-fraud investigation",
-      "summary": "ABP Ananda reports that the Enforcement Directorate searched a chartered accountant’s Uttarpara residence on 30 October as part of a wider investigation. The report describes an ongoing probe; allegations are not findings of guilt.",
-      "url": "https://bengali.abplive.com/district/ed-raid-in-uttarpara-howrah-and-lake-town-i-bank-fraud-case-district-news-update-1197761",
-      "published_at": "2026-10-30",
+      "id": "c395e321be9f4c1e",
+      "publisher": "Uttarpara-Kotrung Municipality",
+      "section": "Municipal notices",
+      "title": "Department General Administration",
+      "summary": "Official municipality notice. Open the source document for details and dates.",
+      "url": "https://www.uttarparamunicipality.in/news-event.php",
+      "published_at": null,
       "localities": [
         "Uttarpara"
       ],
-      "source_id": "abp-district"
+      "source_id": "ukm-notices"
     },
     {
-      "id": "publicapp-hindmotor-20261030",
-      "publisher": "Public App · Serampore-Uttarpara",
-      "section": "Local report",
-      "title": "Police report four detentions after an operation in Hindmotor",
-      "summary": "Public App’s Serampore-Uttarpara local feed reported a police operation in Hindmotor on 30 October. This is a secondary local report; check the police or court record before operational use.",
-      "url": "https://public.app/video/sp_0hi1ifdqi3hqg",
-      "published_at": "2026-10-30",
+      "id": "d6a137c1c68d7e12",
+      "publisher": "Uttarpara-Kotrung Municipality",
+      "section": "Municipal notices",
+      "title": "Public works(PWD)",
+      "summary": "Official municipality notice. Open the source document for details and dates.",
+      "url": "https://www.uttarparamunicipality.in/pwd.php",
+      "published_at": null,
       "localities": [
-        "Hindmotor",
         "Uttarpara"
       ],
-      "source_id": "public-app-local"
+      "source_id": "ukm-notices"
     },
     {
-      "id": "abp-uttarpara-sand-20261029",
-      "publisher": "ABP Ananda",
-      "section": "District News",
-      "title": "উত্তরপাড়ায় বালি চুরির ঘটনায় ২ জন গ্রেফতার",
-      "summary": "ABP Ananda reports that Uttarpara police arrested two residents in a suspected illegal sand-extraction case near Shivmandir Ghat and seized a boat with about 4,000 cubic feet of sand. The investigation was continuing when the report was published.",
-      "url": "https://bengali.abplive.com/district/hooghly-news-uttarpara-illegal-racket-sand-stealing-police-arrested-2-accused-1197563/amp",
-      "published_at": "2026-10-29T08:37:00+05:30",
+      "id": "aaf2e341669ff846",
+      "publisher": "Uttarpara-Kotrung Municipality",
+      "section": "Municipal notices",
+      "title": "Collection Department",
+      "summary": "Official municipality notice. Open the source document for details and dates.",
+      "url": "https://www.uttarparamunicipality.in/tax.php",
+      "published_at": null,
       "localities": [
         "Uttarpara"
       ],
-      "source_id": "abp-district"
+      "source_id": "ukm-notices"
+    },
+    {
+      "id": "ae367733bb4ff598",
+      "publisher": "Uttarpara-Kotrung Municipality",
+      "section": "Municipal notices",
+      "title": "Trade License",
+      "summary": "Official municipality notice. Open the source document for details and dates.",
+      "url": "https://www.uttarparamunicipality.in/license.php",
+      "published_at": null,
+      "localities": [
+        "Uttarpara"
+      ],
+      "source_id": "ukm-notices"
+    },
+    {
+      "id": "2e16708ca28402ba",
+      "publisher": "Uttarpara-Kotrung Municipality",
+      "section": "Municipal notices",
+      "title": "Assessment and Mutation",
+      "summary": "Official municipality notice. Open the source document for details and dates.",
+      "url": "https://www.uttarparamunicipality.in/asst_mutation.php",
+      "published_at": null,
+      "localities": [
+        "Uttarpara"
+      ],
+      "source_id": "ukm-notices"
+    },
+    {
+      "id": "46e5776ebe64b773",
+      "publisher": "Uttarpara-Kotrung Municipality",
+      "section": "Municipal notices",
+      "title": "Establishment",
+      "summary": "Official municipality notice. Open the source document for details and dates.",
+      "url": "https://www.uttarparamunicipality.in/establishment.php",
+      "published_at": null,
+      "localities": [
+        "Uttarpara"
+      ],
+      "source_id": "ukm-notices"
+    },
+    {
+      "id": "3bf3631bd2f28ff0",
+      "publisher": "Uttarpara-Kotrung Municipality",
+      "section": "Municipal notices",
+      "title": "IT Department",
+      "summary": "Official municipality notice. Open the source document for details and dates.",
+      "url": "https://www.uttarparamunicipality.in/it.php",
+      "published_at": null,
+      "localities": [
+        "Uttarpara"
+      ],
+      "source_id": "ukm-notices"
+    },
+    {
+      "id": "edd9412e06c0d64e",
+      "publisher": "Uttarpara-Kotrung Municipality",
+      "section": "Municipal notices",
+      "title": "Cash Department",
+      "summary": "Official municipality notice. Open the source document for details and dates.",
+      "url": "https://www.uttarparamunicipality.in/cash.php",
+      "published_at": null,
+      "localities": [
+        "Uttarpara"
+      ],
+      "source_id": "ukm-notices"
     }
-  ],
-  "snapshot_updated_at": "2026-11-02T04:39:41.347Z"
+  ]
 }
