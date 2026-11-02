@@ -404,12 +404,10 @@
 
   function newsLiveSources() {
     const q = '(Uttarpara OR Konnagar OR Hindmotor OR Makhla OR Bhadrakali OR Kanaipur)';
-    const outlets = [
+    const sources = [
       ['ABP Ananda', 'bengali.abplive.com'],
       ['Anandabazar Patrika', 'anandabazar.com'],
-      ['Public App · local', 'public.app']
-    ];
-    const domains = [
+      ['Public App · local', 'public.app'],
       ['Ei Samay', 'eisamay.com'],
       ['The Times of India', 'timesofindia.indiatimes.com'],
       ['India Today', 'indiatoday.in'],
@@ -421,13 +419,13 @@
       ['Zee 24 Ghanta', 'zee24ghanta.com'],
       ['Republic Bangla', 'republicworld.com/bangla']
     ];
-    for (const [name, domain] of [...outlets, ...domains]) {
+    return sources.map(([name, domain]) => {
+      if (name === 'Anandabazar Patrika') return [name, 'https://www.anandabazar.com/topic/uttarpara'];
       const search = new URL('https://www.google.com/search');
       search.searchParams.set('tbm', 'nws');
       search.searchParams.set('q', `site:${domain} ${q}`);
-      outlets.push([name, search.href]);
-    }
-    return outlets;
+      return [name, search.href];
+    });
   }
 
   function renderNewsSnapshot(data) {
