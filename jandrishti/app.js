@@ -441,7 +441,7 @@
     const rows = filtered.map(item => {
       const url = safeNewsUrl(item.url);
       const rawDate = item.published_at || '';
-      const date = rawDate ? (/^\\d{4}-\\d{2}-\\d{2}$/.test(rawDate) ? new Date(rawDate + 'T12:00:00').toLocaleDateString('en-IN', { dateStyle: 'medium' }) : new Date(rawDate).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' })) : 'Date not provided';
+      const date = rawDate ? (/^\d{4}-\d{2}-\d{2}$/.test(rawDate) ? new Date(rawDate + 'T12:00:00').toLocaleDateString('en-IN', { dateStyle: 'medium' }) : new Date(rawDate).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' })) : 'Date not provided';
       const isOfficial = /notice/i.test(item.section || '');
       return `<article class="news-card"><div class="news-meta"><span>${esc(item.publisher || 'News source')} · ${esc(item.section || 'News')}${isOfficial ? ' · Official notice' : ''}</span><span>${esc(date)}</span></div><h4>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(item.title || 'Untitled report')} ↗</a>` : esc(item.title || 'Untitled report')}</h4><p>${esc(item.summary || '')}</p><div class="news-localities">${(Array.isArray(item.localities) ? item.localities : []).map(x => `<span class="pill">${esc(x)}</span>`).join('')}</div></article>`;
     }).join('');
