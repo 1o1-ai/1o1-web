@@ -11,7 +11,7 @@ const DEFAULT_OUT = resolve(ROOT, 'data/news-summary.json');
 const argIndex = process.argv.indexOf('--output');
 const OUT = resolve(argIndex >= 0 && process.argv[argIndex + 1] ? process.argv[argIndex + 1] : DEFAULT_OUT);
 const LOOKBACK_DAYS = 7;
-const MAX_ITEMS = 6;
+const MAX_ITEMS = 12;
 const FEEDS = [
   { id: 'abp-district', publisher: 'ABP Ananda', section: 'District News', url: 'https://bengali.abplive.com/district/feed' },
   { id: 'abp-kolkata', publisher: 'ABP Ananda', section: 'Kolkata', url: 'https://bengali.abplive.com/news/kolkata/feed' },
@@ -22,6 +22,23 @@ const LOCAL_SOURCES = [
   { id: 'ukm-notices', publisher: 'Uttarpara-Kotrung Municipality', section: 'Municipal notices', url: 'https://www.uttarparamunicipality.in/news-event.php', kind: 'municipal' },
   { id: 'hooghly-notices', publisher: 'Hooghly District Administration', section: 'District notices', url: 'https://hooghly.nic.in/notice_category/important-notices/', kind: 'district' }
 ];
+const CURATED_ITEMS = [
+  {
+    id: 'abp-uttarpara-ed-20261030', source_id: 'abp-district', publisher: 'ABP Ananda', section: 'District News',
+    title: 'ED searches a Uttarpara residence in a bank-fraud investigation',
+    summary: 'ABP Ananda reports that the Enforcement Directorate searched a chartered accountant’s Uttarpara residence on 30 October as part of a wider investigation. The report describes an ongoing probe; allegations are not findings of guilt.',
+    url: 'https://bengali.abplive.com/district/ed-raid-in-uttarpara-howrah-and-lake-town-i-bank-fraud-case-district-news-update-1197761',
+    published_at: '2026-10-30', localities: ['Uttarpara']
+  },
+  {
+    id: 'publicapp-hindmotor-20261030', source_id: 'public-app-local', publisher: 'Public App · Serampore-Uttarpara', section: 'Local report',
+    title: 'Police report four detentions after an operation in Hindmotor',
+    summary: 'Public App’s Serampore-Uttarpara local feed reported a police operation in Hindmotor on 30 October. This is a secondary local report; check the police or court record before operational use.',
+    url: 'https://public.app/video/sp_0hi1ifdqi3hqg',
+    published_at: '2026-10-30', localities: ['Hindmotor', 'Uttarpara']
+  }
+];
+
 const LOCALITIES = [
   { name: 'Uttarpara', en: /\buttarpara\b/i, bn: ['উত্তরপাড়া', 'উত্তরপাড়া', 'উত্তরপাড়া-কোতরং', 'উত্তরপাড়া-কোটরং'] },
   { name: 'Konnagar', en: /\bkonnagar\b/i, bn: ['কোন্নগর'] },
