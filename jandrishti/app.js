@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'executive-ui-1';
+  const BUILD = 'executive-ui-2';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -1027,7 +1027,16 @@ ${newsPanel()}
     // On phones the menu slides over the page; a tap outside it closes it.
     $('.main').addEventListener('click', () => $('#sidebar').classList.remove('open'));
     if ('serviceWorker' in navigator && location.protocol === 'https:') {
-      navigator.serviceWorker.register('./sw.js').catch(() => { /* offline shell is optional */ });
+      const hadController = Boolean(navigator.serviceWorker.controller);
+      let refreshingWorker = false;
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        if (!hadController || refreshingWorker) return;
+        refreshingWorker = true;
+        location.reload();
+      });
+      navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' })
+        .then(registration => registration.update())
+        .catch(() => { /* offline shell is optional */ });
     }
     // Pick up new releases without the user clearing caches: check on start and on return to the app.
     checkForUpdate();
