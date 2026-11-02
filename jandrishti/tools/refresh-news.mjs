@@ -48,8 +48,6 @@ const LOCALITIES = [
   { name: 'Kanaipur', en: /\bkanaipur\b/i, bn: ['কানাইপুর'] },
   { name: 'Nabagram', en: /\bnabagram\b/i, bn: ['নবগ্রাম'] },
   { name: 'Raghunathpur', en: /\braghunathpur\b/i, bn: ['রঘুনাথপুর'] },
-  { name: 'Serampore', en: /\b(serampore|srirampur)\b/i, bn: ['শ্রীরামপুর', 'সেরামপুর'] },
-  { name: 'Hooghly', en: /\bhooghly\b/i, bn: ['হুগলি', 'হুগলী'] }
 ];
 
 function decodeEntities(value) {
