@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'executive-ui-2';
+  const BUILD = 'chandannagar-1';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -760,9 +760,50 @@ ${newsPanel()}
       <div class="stack">${gapsPanel(p, null)}</div>`;
   }
 
+
+  function chandannagarView(module) {
+    const sources = [
+      ['Election results · ECI (archived search record; original currently unavailable)','https://results.eci.gov.in/ResultAcGenMay2026/ConstituencywiseS25189.htm'],
+      ['CEO West Bengal · 2026 electors','https://ceowestbengal.wb.gov.in/Downloads/Election/GE2026/Elector_WBLA2026.pdf'],
+      ['2008 delimitation order · AC 189','https://aceproject.org/ero-en/regions/asia/IN/india-delimitation-2008-english/at_download/file'],
+      ['Chandernagore corporation · services','https://www.chandernagoremunicipalcorporation.org.in/services.php'],
+      ['Corporation · education committee schools','https://www.chandernagoremunicipalcorporation.org.in/education_cmc.htm'],
+      ['Corporation · hospital directory','https://www.chandernagoremunicipalcorporation.org.in/hospital.php'],
+      ['Corporation · primary healthcare','https://chandernagoremunicipalcorporation.org.in/health_care_service.php'],
+      ['Corporation · community toilets','https://chandernagoremunicipalcorporation.org.in/ctpt.php'],
+      ['Corporation · water services','https://chandernagoremunicipalcorporation.org.in/water_works.php'],
+      ['Bhadreswar · municipal profile','https://bhadreswarmunicipality-gov.in/home/page_show/139/119'],
+      ['Hooghly district · healthcare directory','https://hooghly.nic.in/health-helpline/'],
+      ['Chandernagore · tender portal','https://www.chandernagoremunicipalcorporation.org.in/Tender/nbdp_live_tender.php'],
+      ['Bhadreswar · municipal portal and budgets','https://bhadreswarmunicipality-gov.in/']
+    ];
+    const links = sources.map(([n,u])=>`<div class="source-entry"><a href="${u}" target="_blank" rel="noopener noreferrer">${esc(n)} ↗</a></div>`).join('');
+    const box = (title,body) => `<article class="panel"><div class="panel-head"><h3>${title}</h3></div><p>${body}</p></article>`;
+    const schoolNames=['Ecole Oghor Chandra Sett','Ecole de Jeunes Filles','Jugipur Primary School','Gourhatty Primary School','Ecole Nritya Gopal','Ecole Dourga','Sramik Vidyalaya','Harijan Naisha Vidyalaya','Chandernagore Kanailal Vidyamandir (French section)','Chandernagore Kanailal Vidyamandir (English section)','Krishna Bhabini Nari Siksha Mandir','Durga Charan Rakshit Banga Vidyalaya','Chandernagore Banga Vidyalaya','Chandernagore Sri Aurobindo Vidyamandir'];
+    const schoolList=schoolNames.map((n,i)=>`<div class="row"><strong>${esc(n)}</strong><small>${i<8?'Primary':'Secondary / higher secondary'} · Corporation directory</small></div>`).join('');
+    const facts = `<div class="metric-grid"><div class="metric"><div class="metric-label">Registered electors · 2026</div><div class="metric-value">2,03,451</div><div class="metric-foot">CEO West Bengal · last nomination date</div></div><div class="metric"><div class="metric-label">Chandernagore wards</div><div class="metric-value">33</div><div class="metric-foot">Corporation website</div></div><div class="metric"><div class="metric-label">Bhadreswar wards</div><div class="metric-value">22</div><div class="metric-foot">Municipal profile · date not stated</div></div><div class="metric"><div class="metric-label">Corporation schools listed</div><div class="metric-value">14</div><div class="metric-foot">8 primary · 6 secondary / higher secondary</div></div></div>`;
+    const hero = `<div class="bread"><a href="#/state">West Bengal</a> / <b>Chandannagar · AC 189</b></div><section class="hero"><div class="eyebrow">HOOGHLY · ASSEMBLY CONSTITUENCY 189</div><h2>Chandannagar</h2><p>Chandernagore Municipal Corporation and Bhadreswar Municipality · 2008 delimitation, subject to current-boundary verification.</p><div class="hero-tags"><span class="tag">2 local bodies</span><span class="tag">Official source links below</span></div></section>`;
+    const demoFeedback = [{"label": "Water supply", "positive": 36, "neutral": 10, "negative": 54}, {"label": "Roads & drainage", "positive": 39, "neutral": 22, "negative": 39}, {"label": "Sanitation", "positive": 62, "neutral": 18, "negative": 20}, {"label": "Healthcare", "positive": 53, "neutral": 14, "negative": 33}, {"label": "Education", "positive": 64, "neutral": 10, "negative": 26}, {"label": "Street lighting", "positive": 38, "neutral": 22, "negative": 40}];
+    const mockChart = `<section class="panel mood-panel"><div class="panel-head"><h3>Service feedback <span class="chart-demo">DEMO</span></h3></div><p class="muted">Synthetic sample · 0 real responses</p><div class="mood-legend"><span><i class="mood-supportive"></i>Supportive</span><span><i class="mood-neutral"></i>Neutral</span><span><i class="mood-concern"></i>Concern</span></div>${demoFeedback.map(x=>`<div class="mood-row"><span class="mood-topic">${esc(x.label)}</span><span class="mood-stack" role="img" aria-label="${esc(x.label)}: ${x.positive}% supportive, ${x.neutral}% neutral, ${x.negative}% concern, synthetic"><i class="mood-supportive" style="width:${x.positive}%"></i><i class="mood-neutral" style="width:${x.neutral}%"></i><i class="mood-concern" style="width:${x.negative}%"></i></span><small>${x.positive}% · ${x.neutral}% · ${x.negative}%</small></div>`).join('')}<details class="insight-details"><summary>View table</summary><div class="table-wrap"><table class="data-table"><thead><tr><th>Service</th><th>Supportive</th><th>Neutral</th><th>Concern</th></tr></thead><tbody>${demoFeedback.map(x=>`<tr><td>${esc(x.label)}</td><td>${x.positive}%</td><td>${x.neutral}%</td><td>${x.negative}%</td></tr>`).join('')}</tbody></table></div></details></section>`;
+    const overview = `${facts}${mockChart}<div class="grid-2e">${box('People & elections','2026 electors: 1,00,183 male, 1,03,262 female and 6 third gender. ECI’s indexed result reported Deepanjan Kumar Guha with 86,273 votes and a 13,441 margin; the original result page currently returns 404, so reconfirm with Form 20.')}${box('Public services','The corporation lists schools, primary healthcare, water works, sanitation and public toilets. Bhadreswar publishes municipal profiles, services and financial-report links. Current coverage and performance need verification.')}</div><div class="section-title"><h3>Explore service areas</h3></div><div class="cards">${['people','health','education','infrastructure','cleanliness','projects','issues','sources'].map(id=>`<a class="area-card" href="#/ac/189/${id}"><strong>${esc(modLabel(id))}</strong><span>Explore →</span></a>`).join('')}</div>${box('Local bodies','Chandernagore corporation reports 22.03 km² and 33 wards. Bhadreswar reports 8.28 km² and 22 wards in a municipal profile containing older data. These are local-body figures, not a verified current AC boundary map.')}${box('Evidence and coverage','Service-quality metrics and resident sentiment are not yet measured. See Sources for public records and dates; the office can add verified service records as they become available.')}`;
+    let body=overview;
+    if(module==='people') body=`${facts}<div class="grid-2e">${box('2026 election · confirmation needed','Indexed ECI result: Deepanjan Kumar Guha (BJP) 86,273; Indranil Sen (AITC) 72,832; Monish Panda CPI(M) 22,760. Margin 13,441. Total votes including NOTA: 1,86,909. The original ECI result page returns 404; verify against official Form 20 before treating it as final.')}${box('Population · historical','Chandannagar Municipal Corporation: 1,66,867 (Census 2011, secondary compilation). Bhadreswar Municipality: 1,01,477 (municipal profile, Census 2011). The Bhadreswar page’s male and female values do not sum to its total; sex breakdown needs reconciliation. These municipal totals are not a current AC population.')}</div>`;
+    if(module==='education') body=`${box('Schools managed by the corporation','The corporation lists 8 primary and 6 secondary or higher secondary schools. This is a municipal committee list, not an inventory of every school in the constituency.')}<div class="panel"><h3>Published school directory</h3><div class="list">${schoolList}</div></div>`;
+    if(module==='health') body=`<div class="grid-2e">${box('Chandannagar Sub-Divisional Hospital','Hospital Road, Chandannagar. The Hooghly health directory lists 270 beds; the table is undated, so confirm current capacity, staffing, services and hours.')}${box('Primary healthcare','The corporation describes immunisation, antenatal care, basic diagnostics and non-communicable disease screening via UPHC/UHWC. Confirm present staffing and service availability with the health department.')}${box('Other published facility','E.S.I. Hospital, Gourhati · G.T. Road, Angus. Verify catchment, services and contact details.')}${box('Hospital and nursing-home directory','The corporation publishes a directory of 13 hospitals and nursing homes, including private facilities. Open the source for the full list; listing does not verify current licensing or quality.')}</div>`;
+    if(module==='infrastructure') body=`<div class="grid-2e">${box('Water services','The corporation publishes a water-works fee schedule and lists water connections and water-tank services. The schedule is undated; confirm current rates and supply hours.')}${box('Roads and drainage','Chandernagore and Bhadreswar list public works responsibilities. Obtain current road inventory, work orders, drain cleaning schedules and completion evidence from the relevant body.')}${box('Housing','Housing projects, beneficiary totals and expenditure have not yet been verified for the constituency.')}</div>`;
+    if(module==='cleanliness') body=`<div class="grid-2e">${box('Community toilets','Chandernagore publishes a ward-wise list of public and community toilets, with map links. Verify current operating condition and accessibility.')}${box('Waste and sanitation','The corporation publishes a solid-waste bye-law notice and lists sanitation services. Bhadreswar describes conservancy and drain clearing. No current collection, processing or service-quality figures are verified.')}</div>`;
+    if(module==='projects') body=`<div class="grid-2e">${box('Tender registers','Chandernagore’s tender portal lists live and archived opportunities. Bhadreswar’s portal links to tender notices, municipal budgets and financial reports.')}${box('Project status','Sanctioned amounts, awards, expenditure and completion are not yet verified. A tender listing alone does not establish a project award or completion.')}</div>`;
+    if(module==='issues') body=box('Public issues','A constituency complaint register is not connected. Add verified reports with location, responsible authority, dates, evidence and resolution status.');
+    if(module==='sources') body=`<div class="panel"><h3>Source register</h3><p>Public records reviewed 2 Nov 2026. Check dates, local-body scope and live availability before decisions.</p><div class="source-list">${links}</div></div>`;
+    if(module==='reach') body=box('REACH · Public Service Updates','Use the existing REACH demo to prepare public-service updates. Chandannagar-specific publishing data has not yet been connected.');
+    if(module!=='overview')body=`<h2 class="module-title">${esc(modLabel(module))}</h2>${body}`;
+    return `${hero}${body}<details class="panel" style="margin-top:20px"><summary>Sources &amp; evidence · ${sources.length} links</summary><div class="source-list">${links}</div></details>`;
+  }
+
   async function acView(ac, module) {
     const seat = S.seats.find(s => s.ac === ac);
     if (!seat) return notFound();
+    if (ac === 189) { $('#viewName').textContent = modLabel(module); return chandannagarView(module); }
     const p = await profile(ac);
     $('#viewName').textContent = p ? modLabel(module) : 'Seat profile';
     if (!p) return seatOnly(seat);
@@ -868,7 +909,7 @@ ${newsPanel()}
     }).join('');
     $$('[data-nav="state"]').forEach(a => a.classList.toggle('active', r.view === 'state'));
     $('#seatSelect').value = r.view === 'ac' ? String(r.ac) : '';
-    $$('#tabbar [data-tab]').forEach(a => a.classList.toggle('active', r.view === 'ac' && r.ac === 185 && r.module === a.dataset.tab));
+    $$('#tabbar [data-tab]').forEach(a => { a.href = href(r.ac || 185, a.dataset.tab); a.classList.toggle('active', r.view === 'ac' && r.module === a.dataset.tab); });
   }
 
   async function render() {
@@ -883,7 +924,7 @@ ${newsPanel()}
       v.innerHTML = `<div class="empty"><strong>Could not load data</strong>${esc(err.message)}</div>`;
     }
     bindView();
-    if (S.route.view === 'ac' && S.route.module === 'overview') loadNewsPanel();
+    if (S.route.view === 'ac' && S.route.ac === 185 && S.route.module === 'overview') loadNewsPanel();
     closeDrawer();
     $('#sidebar').classList.remove('open');
   }
@@ -993,11 +1034,20 @@ ${newsPanel()}
   async function start() {
     const [seatData, sourceData] = await Promise.all([getJSON('constituencies.json'), getJSON('sources.json')]);
     S.seats = seatData.seats;
-    S.seatMeta = { ...seatData, onboarded: [185] };
+    S.seatMeta = { ...seatData, onboarded: [185, 189] };
     S.sourceMeta = sourceData;
     sourceData.sources.forEach(s => { S.sources[s.id] = s; });
-    $('#seatSelect').innerHTML = '<option value="">Select Assembly constituency…</option>' + S.seats.map(s =>
-      `<option value="${s.ac}">${String(s.ac).padStart(3, '0')} · ${esc(s.name)}${S.seatMeta.onboarded.includes(s.ac) ? ' ●' : ''}</option>`).join('');
+    const sortedSeats = [...S.seats].sort((a,b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
+    function filterSeatPicker(query = '') {
+      const q = query.trim().toLocaleLowerCase();
+      const matches = sortedSeats.filter(s => s.name.toLocaleLowerCase().includes(q) || String(s.ac).includes(q));
+      $('#seatSelect').innerHTML = '<option value="">' + (matches.length ? 'Select constituency…' : 'No matching constituencies') + '</option>' + matches.map(s => `<option value="${s.ac}">${esc(s.name)} · ${String(s.ac).padStart(3, '0')}${S.seatMeta.onboarded.includes(s.ac) ? ' ●' : ''}</option>`).join('');
+      if (!q && S.route.ac) $('#seatSelect').value = String(S.route.ac);
+    }
+    filterSeatPicker();
+    const seatInput = $('#seatSearchTop');
+    seatInput.oninput = () => filterSeatPicker(seatInput.value);
+    seatInput.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); const first = $('#seatSelect').options[1]; if (first) { $('#seatSelect').value = first.value; $('#seatSelect').dispatchEvent(new Event('change')); } } };
     $('#whoami').textContent = session().user;
     document.body.classList.remove('locked');
     if (!started) { window.addEventListener('hashchange', render); started = true; }
@@ -1013,7 +1063,7 @@ ${newsPanel()}
   async function init() {
     $('#loginForm').addEventListener('submit', signIn);
     $('#signOut').addEventListener('click', () => { showLogin(''); toast('Signed out'); });
-    $('#seatSelect').addEventListener('change', e => { if (e.target.value) location.hash = `#/ac/${e.target.value}`; });
+    $('#seatSelect').addEventListener('change', e => { if (e.target.value) { location.hash = `#/ac/${e.target.value}`; $('#seatSearchTop').value = ''; $('#seatSearchTop').dispatchEvent(new Event('input')); } });
     $('#drawerClose').addEventListener('click', closeDrawer);
     $('#detailMask').addEventListener('click', e => { if (e.target.id === 'detailMask') closeDrawer(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeDrawer(); $('#sidebar').classList.remove('open'); } });
