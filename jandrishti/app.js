@@ -334,6 +334,50 @@
     return { m, a0, b0, params, mean, lo, hi, mock };
   }
 
+  function sentimentSummary(p) {
+    const params = p.approval_model.parameters || [];
+    const weightTotal = params.reduce((sum, x) => sum + (Number(x.weight) || 0), 0) || 1;
+    const shares = { approve: 0, neutral: 0, disapprove: 0 };
+    let responseEntries = 0;
+    const topics = params.map(x => {
+      const a = Number(x.approve) || 0, n = Number(x.neutral) || 0, d = Number(x.disapprove) || 0;
+      const total = a + n + d || 1;
+      const w = (Number(x.weight) || 0) / weightTotal;
+      shares.approve += w * a / total;
+      shares.neutral += w * n / total;
+      shares.disapprove += w * d / total;
+      responseEntries += a + n + d;
+      return { ...x, approve: a, neutral: n, disapprove: d, total, approveShare: a / total, neutralShare: n / total, disapproveShare: d / total };
+    });
+    return { shares, topics, responseEntries, realResponses: p.approval_model.real_responses || 0, demo: topics.some(x => x.mock) || !(p.approval_model.real_responses > 0) };
+  }
+
+  function sentimentPanel(p) {
+    const s = sentimentSummary(p);
+    const pct = x => (x * 100).toFixed(1);
+    const positive = pct(s.shares.approve), neutral = pct(s.shares.neutral), critical = pct(s.shares.disapprove);
+    const topics = s.topics.map(x => {
+      const a = pct(x.approveShare), n = pct(x.neutralShare), d = pct(x.disapproveShare);
+      const aria = `${x.label}: supportive ${x.approve}, neutral ${x.neutral}, critical ${x.disapprove} simulated topic responses`;
+      return `<a class="sentiment-topic" href="${href(p.ac, x.module)}" aria-label="${esc(aria)}">
+        <span class="sentiment-topic-name">${esc(x.label)}</span>
+        <span class="sentiment-stack" role="img" aria-label="${esc(aria)}"><i class="sent-positive" style="width:${a}%"></i><i class="sent-neutral" style="width:${n}%"></i><i class="sent-critical" style="width:${d}%"></i></span>
+        <small>+${a} · ~${n} · −${d}</small>
+      </a>`;
+    }).join('');
+    return `<section class="panel sentiment-panel" aria-labelledby="sentimentTitle">
+      <div class="panel-head"><div><h3 id="sentimentTitle">Resident sentiment · aggregate issue view</h3><p>Weighted across ${s.topics.length} service topics · not linked to voter profiles</p></div>${s.demo ? badge('Mock') : '<span class="pill">Aggregate</span>'}</div>
+      <div class="sentiment-summary">
+        <div><span class="sentiment-key"><i class="sent-positive"></i>Supportive</span><b>${positive}%</b></div>
+        <div><span class="sentiment-key"><i class="sent-neutral"></i>Neutral</span><b>${neutral}%</b></div>
+        <div><span class="sentiment-key"><i class="sent-critical"></i>Critical</span><b>${critical}%</b></div>
+      </div>
+      <div class="sentiment-topics">${topics}</div>
+      <div class="notice"><span>ⓘ</span><span>${s.demo ? `DEMO ONLY: ${s.responseEntries} simulated topic-response entries across the categories; this is not ${s.responseEntries} unique people. There are ${s.realResponses} real resident responses. No individual political sentiment is inferred.` : 'Only consented feedback is included, pooled across topics. No individual political sentiment is inferred.'}</span></div>
+      <small class="muted">Topic bars show supportive · neutral · critical response share. Select a topic to open its service area.</small>
+    </section>`;
+  }
+
   function gauge(est) {
     const r = 44, c = 2 * Math.PI * r;
     const arc = (from, to, cls, w) => `<circle class="${cls}" cx="52" cy="52" r="${r}" fill="none" stroke-width="${w}" stroke-linecap="round" stroke-dasharray="${(to - from) * c} ${c}" stroke-dashoffset="${-from * c}"/>`;
@@ -348,7 +392,13 @@
       <h2 id="drawerTitle">Approval estimate · ${esc(p.representative.name)}</h2>
       <div>${badge(e.mock ? 'Mock' : 'Estimated')} <span class="pill">Weighted Bayesian model</span> <span class="pill">${e.params.length} parameters</span></div>
       ${e.mock ? `<div class="notice">⚠ <span><b>Demonstration only.</b> ${m.real_responses} real resident responses have been collected. Every parameter score below comes from a DEMO feedback sample and does not measure public opinion.</span></div>` : ''}
-      <div class="drawer-block"><h4>Overall</h4><div class="calc">Estimate <b>${pct(e.mean)}</b> · 80% interval ${pct(e.lo)} – ${pct(e.hi)}</div></div>
+      <div class="drawer-block"><h4>Overall</h4><div class="calc">Estimate <b>${pct(e.mean)}</b> · approximate 80% model interval ${pct(e.lo)} – ${pct(e.hi)}</div></div>
+      <div class="drawer-block"><h4>How to read this estimate</h4><ul>
+        <li>It is a weighted summary of eight service and responsiveness topics. It is not the MLA’s vote share, an election forecast, or a representative poll result.</li>
+        <li>For each topic, approval is calculated from approve and disapprove entries; neutral entries are excluded from this approval calculation.</li>
+        <li>The 2026 winner vote share is used only as a weak starting prior, worth 20 pseudo-responses for each topic. Topic weights determine each topic’s contribution.</li>
+        <li>The interval is an approximate model range based on the current assumptions. It is not a survey margin of error.</li>
+      </ul></div>
       <div class="drawer-block"><h4>Parameters · highest to lowest</h4>
         <div class="params">${ranked.map(x => `<div class="param">
           <div class="param-head"><strong>${esc(x.label)}</strong><span class="param-score">${Math.round(x.mean * 100)}%</span></div>
@@ -503,7 +553,7 @@
         </div></div>
         <button class="approval" id="approvalBtn" aria-label="Approval estimate ${Math.round(est.mean * 100)} percent, ${est.mock ? 'demo inputs' : 'estimated'}. Open method.">
           ${gauge(est)}
-          <div><h4>Approval estimate</h4><p>8 parameters · open for breakdown</p>
+          <div><h4>Approval estimate</h4><p>8 service topics · open for method and assumptions</p>
           <div class="range">80% range ${Math.round(est.lo * 100)}–${Math.round(est.hi * 100)}%</div>
           <div class="range">${est.mock ? `${badge('Mock')} demo feedback · ${est.m.real_responses} real responses` : badge('Estimated')}</div></div>
         </button>
@@ -518,6 +568,8 @@
       </a>`).join('')}</section>
 
       <div class="section-title"><h3>Every area at a glance</h3><p>Select an area for its evidence</p></div>
+      ${sentimentPanel(p)}
+
       <section class="areas">${MODULES.filter(m => p.area_summaries[m.id]).map(m => {
         const s = p.area_summaries[m.id];
         const rank = top.findIndex(a => a.id === m.id);
