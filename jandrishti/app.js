@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'news-sources-4';
+  const BUILD = 'news-sentiment-1';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
