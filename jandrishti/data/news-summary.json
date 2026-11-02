@@ -28,6 +28,22 @@
       "url": "https://bengali.abplive.com/states/feed",
       "status": "pending",
       "fetched_items": null
+    },
+    {
+      "id": "ukm-notices",
+      "publisher": "Uttarpara-Kotrung Municipality",
+      "section": "Municipal notices",
+      "url": "https://www.uttarparamunicipality.in/news-event.php",
+      "status": "pending",
+      "fetched_items": null
+    },
+    {
+      "id": "hooghly-notices",
+      "publisher": "Hooghly District Administration",
+      "section": "District notices",
+      "url": "https://hooghly.nic.in/notice_category/important-notices/",
+      "status": "pending",
+      "fetched_items": null
     }
   ],
   "items": [
