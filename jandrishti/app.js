@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'news-local-2';
+  const BUILD = 'news-sources-3';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -387,10 +387,13 @@
     const enabled = newsAutoEnabled();
     return `
       <section class="panel news-panel" id="newsPanel" aria-labelledby="newsTitle" aria-busy="true">
-        <div class="panel-head news-head"><div><h3 id="newsTitle">Constituency news · Uttarpara</h3><p>Recent local coverage and official notices. Open each source for its details.</p></div>
+        <div class="panel-head news-head"><div><h3 id="newsTitle">Constituency news · Uttarpara</h3><p>Collected local coverage, official notices and live source searches for Uttarpara, Konnagar, Hindmotor and nearby localities.</p></div>
           <label class="news-switch"><input type="checkbox" id="newsAutoToggle" role="switch" ${enabled ? 'checked' : ''}><span>Auto-refresh</span><small id="newsAutoState">${enabled ? 'On · every 4 hours' : 'Off by default'}</small></label>
         </div>
         <div class="news-toolbar"><span id="newsStatus" class="muted" role="status">Loading snapshot…</span><button class="outline-btn" id="newsReload" type="button">Refresh latest snapshot</button></div>
+        <div class="news-source-area"><h4>Collected sources · click to filter</h4><div id="newsSourceFilters" class="chip-row" role="group" aria-label="Filter collected news by source"></div>
+          <h4>Live searches · latest matching results</h4><div id="newsLiveSources" class="chip-row" aria-label="Open source-specific locality searches"></div>
+          <small class="muted">Live searches open the publisher’s matching results. They do not appear in the collected snapshot.</small></div>
         <div id="newsItems" class="news-grid"><div class="empty">Loading constituency news…</div></div>
       </section>`;
   }
@@ -399,17 +402,54 @@
     try { const u = new URL(value, location.href); return ['http:', 'https:'].includes(u.protocol) ? u.href : ''; } catch (e) { return ''; }
   }
 
+  function newsLiveSources() {
+    const q = '(Uttarpara OR Konnagar OR Hindmotor OR Makhla OR Bhadrakali OR Kanaipur)';
+    const outlets = [
+      ['ABP Ananda', 'https://bengali.abplive.com/district/hooghly'],
+      ['Anandabazar Patrika', 'https://www.anandabazar.com/topic/uttarpara'],
+      ['Ei Samay', 'https://www.google.com/search?tbm=nws&q=site%3A eisamay.com Uttarpara Konnagar'.replace('site%3A ', 'site:')],
+      ['Bartaman', 'https://www.google.com/search?tbm=nws&q=site%3Abartamanpatrika.com Uttarpara Konnagar'],
+      ['Sangbad Pratidin', 'https://www.google.com/search?tbm=nws&q=site%3Asangbadpratidin.in Uttarpara Konnagar'],
+      ['TV9 Bangla', 'https://www.google.com/search?tbm=nws&q=site%3Atv9bangla.com Uttarpara Konnagar'],
+      ['News18 Bangla', 'https://www.google.com/search?tbm=nws&q=site%3Abengali.news18.com Uttarpara Konnagar'],
+      ['Zee 24 Ghanta', 'https://www.google.com/search?tbm=nws&q=site%3Azee24ghanta.com Uttarpara Konnagar'],
+      ['Republic Bangla', 'https://www.google.com/search?tbm=nws&q=site%3Arepublicworld.com/bangla Uttarpara Konnagar'],
+      ['Public App · local', 'https://public.app/district/news-in-hooghly']
+    ];
+    return outlets.map(([name, url]) => {
+      if (name === 'ABP Ananda' || name === 'Anandabazar Patrika' || name === 'Public App · local') return [name, url];
+      const u = new URL(url);
+      u.searchParams.set('q', `site:${decodeURIComponent(u.searchParams.get('q').match(/site%3A([^+ ]+)/i)?.[1] || '')} ${q}`);
+      return [name, u.href];
+    });
+  }
+
   function renderNewsSnapshot(data) {
     const items = Array.isArray(data.items) ? data.items : [];
-    const rows = items.map(item => {
-      const url = safeNewsUrl(item.url);
-      const date = item.published_at ? new Date(item.published_at).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : 'Date not provided';
-      return `<article class="news-card"><div class="news-meta"><span>${esc(item.publisher || 'News source')} · ${esc(item.section || 'News')}</span><span>${esc(date)}</span></div><h4>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(item.title || 'Untitled report')} ↗</a>` : esc(item.title || 'Untitled report')}</h4><p>${esc(item.summary || '')}</p><div class="news-localities">${(Array.isArray(item.localities) ? item.localities : []).map(x => `<span class="pill">${esc(x)}</span>`).join('')}</div></article>`;
+    const sources = Array.isArray(data.sources) ? data.sources : [];
+    const active = renderNewsSnapshot.activeFilter || 'all';
+    const sourceMap = new Map(sources.map(s => [s.id, s]));
+    const filtered = active === 'all' ? items : items.filter(item => item.source_id === active);
+    $('#newsSourceFilters').innerHTML = `<button type="button" class="chip ${active === 'all' ? 'on' : ''}" data-news-filter="all">All collected (${items.length})</button>` + sources.map(source => {
+      const count = items.filter(item => item.source_id === source.id).length;
+      return `<button type="button" class="chip ${active === source.id ? 'on' : ''}" data-news-filter="${esc(source.id)}">${esc(source.publisher)} · ${count}</button>`;
     }).join('');
-    $('#newsItems').innerHTML = rows || '<div class="empty">No recent constituency stories in the current snapshot.</div>';
+    $('#newsLiveSources').innerHTML = newsLiveSources().map(([name, url]) => `<a class="chip" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)} ↗</a>`).join('');
+    const rows = filtered.map(item => {
+      const url = safeNewsUrl(item.url);
+      const rawDate = item.published_at || '';
+      const date = rawDate ? (/^\\d{4}-\\d{2}-\\d{2}$/.test(rawDate) ? new Date(rawDate + 'T12:00:00').toLocaleDateString('en-IN', { dateStyle: 'medium' }) : new Date(rawDate).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' })) : 'Date not provided';
+      const isOfficial = /notice/i.test(item.section || '');
+      return `<article class="news-card"><div class="news-meta"><span>${esc(item.publisher || 'News source')} · ${esc(item.section || 'News')}${isOfficial ? ' · Official notice' : ''}</span><span>${esc(date)}</span></div><h4>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(item.title || 'Untitled report')} ↗</a>` : esc(item.title || 'Untitled report')}</h4><p>${esc(item.summary || '')}</p><div class="news-localities">${(Array.isArray(item.localities) ? item.localities : []).map(x => `<span class="pill">${esc(x)}</span>`).join('')}</div></article>`;
+    }).join('');
+    $('#newsItems').innerHTML = rows || '<div class="empty">No recent constituency stories from this source in the collected snapshot. Try its live search above.</div>';
     const checked = data.last_checked_at ? new Date(data.last_checked_at).toLocaleString('en-IN', { dateStyle: 'medium', timeStyle: 'short' }) : 'unknown';
-    const failed = (Array.isArray(data.sources) ? data.sources : []).filter(s => s.status === 'error').length;
-    $('#newsStatus').textContent = `Snapshot checked ${checked}${failed ? ` · ${failed} feed(s) unavailable` : ''}`;
+    const failed = sources.filter(s => s.status === 'error').length;
+    $('#newsStatus').textContent = `Snapshot updated ${checked}${failed ? ` · ${failed} collected source(s) unavailable` : ''}`;
+    $('#newsSourceFilters [data-news-filter]').forEach(button => button.addEventListener('click', () => {
+      renderNewsSnapshot.activeFilter = button.dataset.newsFilter;
+      renderNewsSnapshot(data);
+    }));
   }
 
   async function loadNewsPanel() {
