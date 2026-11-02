@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'visuals-reach-1';
+  const BUILD = 'self-update-1';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -1028,6 +1028,10 @@ ${newsPanel()}
     if ('serviceWorker' in navigator && location.protocol === 'https:') {
       navigator.serviceWorker.register('./sw.js').catch(() => { /* offline shell is optional */ });
     }
+    // Pick up new releases without the user clearing caches: check on start and on return to the app.
+    checkForUpdate();
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') checkForUpdate(); });
+    window.addEventListener('focus', checkForUpdate);
     // Inside the Android app (it appends JanDrishtiApp to the user agent) the download link is pointless.
     if (/JanDrishtiApp\//.test(navigator.userAgent)) $$('.get-app').forEach(a => a.remove());
     if (!session()) return showLogin('');
@@ -1037,6 +1041,26 @@ ${newsPanel()}
       if (err instanceof AuthError) return showLogin(err.message);
       throw err;
     }
+  }
+
+  // An open tab, an installed app, or the Android WebView can keep running an old release for
+  // as long as it stays open. Ask the server which release is current (bypassing every cache)
+  // and reload once if it differs from this code's BUILD. Throttled; never loops on one target.
+  let lastUpdateCheck = 0;
+  async function checkForUpdate() {
+    if (BUILD === 'dev' || Date.now() - lastUpdateCheck < 60 * 1000) return;
+    lastUpdateCheck = Date.now();
+    try {
+      const html = await (await fetch(`./index.html?check=${Date.now()}`, { cache: 'no-store' })).text();
+      const m = /app\.js\?v=([^"]+)"/.exec(html);
+      if (!m || m[1] === BUILD) return;
+      try {
+        if (sessionStorage.getItem('jandrishti_updated_to') === m[1]) return;
+        sessionStorage.setItem('jandrishti_updated_to', m[1]);
+      } catch (e) { /* no session storage: still update once per page load */ }
+      toast('Updating JanDrishti to the latest version…');
+      setTimeout(() => location.reload(), 600);
+    } catch (e) { /* offline: keep the current release */ }
   }
 
   // A browser can hold an older cached index.html/app.js (GitHub Pages caches for ~10 min) while
