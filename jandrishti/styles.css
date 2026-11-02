@@ -330,3 +330,19 @@ body.locked .login{display:grid}
 .news-warning{margin:0 0 10px;color:var(--st-confirm);font-size:12px}
 .news-attribution{margin-top:12px;color:var(--muted);font-size:11px}
 @media(max-width:760px){.news-grid{grid-template-columns:1fr}.news-toolbar{align-items:flex-start;flex-wrap:wrap}}
+
+/* Constituency news digest */
+.news-panel{margin-top:14px}
+.news-head{align-items:flex-start;gap:16px}
+.news-switch{display:grid;grid-template-columns:auto 1fr;align-items:center;column-gap:8px;row-gap:0;border:1px solid var(--line);border-radius:12px;padding:8px 10px;background:var(--surface-2);white-space:nowrap}
+.news-switch input{grid-row:span 2;width:18px;height:18px;accent-color:var(--accent)}
+.news-switch span{font-size:13px;font-weight:700}
+.news-switch small{font-size:11px;color:var(--muted)}
+.news-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:4px 0 12px}
+.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.news-card{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--surface-2);min-width:0}
+.news-meta{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:11px}
+.news-card h4{font-size:15px;line-height:1.4;margin:8px 0}
+.news-card p{font-size:13px;color:var(--ink-2);margin:0 0 10px}
+.news-localities{display:flex;gap:6px;flex-wrap:wrap}
+@media(max-width:760px){.news-grid{grid-template-columns:1fr}.news-head{flex-direction:column}.news-toolbar{align-items:flex-start}}
