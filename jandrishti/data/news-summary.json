@@ -44,9 +44,44 @@
       "url": "https://hooghly.nic.in/notice_category/important-notices/",
       "status": "pending",
       "fetched_items": null
+    },
+    {
+      "id": "public-app-local",
+      "publisher": "Public App · Serampore-Uttarpara",
+      "section": "Local report",
+      "url": "https://public.app/district/news-in-hooghly",
+      "status": "curated",
+      "fetched_items": 1
     }
   ],
   "items": [
+    {
+      "id": "abp-uttarpara-ed-20261030",
+      "publisher": "ABP Ananda",
+      "section": "District News",
+      "title": "ED searches a Uttarpara residence in a bank-fraud investigation",
+      "summary": "ABP Ananda reports that the Enforcement Directorate searched a chartered accountant’s Uttarpara residence on 30 October as part of a wider investigation. The report describes an ongoing probe; allegations are not findings of guilt.",
+      "url": "https://bengali.abplive.com/district/ed-raid-in-uttarpara-howrah-and-lake-town-i-bank-fraud-case-district-news-update-1197761",
+      "published_at": "2026-10-30",
+      "localities": [
+        "Uttarpara"
+      ],
+      "source_id": "abp-district"
+    },
+    {
+      "id": "publicapp-hindmotor-20261030",
+      "publisher": "Public App · Serampore-Uttarpara",
+      "section": "Local report",
+      "title": "Police report four detentions after an operation in Hindmotor",
+      "summary": "Public App’s Serampore-Uttarpara local feed reported a police operation in Hindmotor on 30 October. This is a secondary local report; check the police or court record before operational use.",
+      "url": "https://public.app/video/sp_0hi1ifdqi3hqg",
+      "published_at": "2026-10-30",
+      "localities": [
+        "Hindmotor",
+        "Uttarpara"
+      ],
+      "source_id": "public-app-local"
+    },
     {
       "id": "abp-uttarpara-sand-20261029",
       "publisher": "ABP Ananda",
@@ -61,5 +96,6 @@
       ],
       "source_id": "abp-district"
     }
-  ]
+  ],
+  "snapshot_updated_at": "2026-11-02T04:39:41.347Z"
 }
