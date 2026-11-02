@@ -6,7 +6,7 @@
   'use strict';
 
   // Stamped with the git commit by scripts/deploy-jandrishti.sh so code and data URLs change together.
-  const BUILD = 'service-sentiment-2';
+  const BUILD = 'sentiment-selector-fix-2044ccc';
   // Data is served only by the JanDrishti API Worker, behind sign-in (apps/jandrishti/api).
   const API = ['localhost', '127.0.0.1'].includes(location.hostname) ? 'http://127.0.0.1:8792' : 'https://jandrishti-api.brahmexa.com';
   const SESSION_KEY = 'jandrishti_session';
@@ -896,11 +896,11 @@ ${newsPanel()}
     if (rm) rm.addEventListener('click', () => attentionDrawer(p));
     const ex = $('#exportCsv');
     if (ex) ex.addEventListener('click', () => exportCsv(p));
-    $('[data-sentiment-view]').forEach(button => button.addEventListener('click', () => {
+    $$('[data-sentiment-view]').forEach(button => button.addEventListener('click', () => {
       const table = button.dataset.sentimentView === 'table';
       $('#sentimentChart').hidden = table;
       $('#sentimentTable').hidden = !table;
-      $('[data-sentiment-view]').forEach(b => {
+      $$('[data-sentiment-view]').forEach(b => {
         const active = b === button;
         b.classList.toggle('on', active);
         b.setAttribute('aria-pressed', String(active));
