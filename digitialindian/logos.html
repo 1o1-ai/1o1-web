@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Indian Golden India — Official Logo Suite (18 Color Themes | Still & Animated)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Hind+Siliguri:wght@700&family=Noto+Serif+Bengali:wght@700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold-light: #fff3b0;
+      --gold-mid: #f5c542;
+      --gold-rich: #d4af37;
+      --gold-dark: #8c6200;
+      --logo-size: 240px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at 50% 0%, #102336 0%, #060a10 70%);
+      color: #f1f5f9;
+      min-height: 100vh;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    .container {
+      max-width: 1380px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 1.75rem 1.5rem;
+      margin-bottom: 2rem;
+      background: rgba(13, 25, 38, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.32);
+      border-radius: 18px;
+      backdrop-filter: blur(12px);
+    }
+
+    .header h1 {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.35rem, 2.5vw, 2.1rem);
+      background: linear-gradient(90deg, #fff, var(--gold-mid), #5ce1ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.4rem;
+    }
+
+    .header p {
+      color: #94a3b8;
+      font-size: 0.92rem;
+      max-width: 880px;
+      margin: 0 auto 1.25rem;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #e2e8f0;
+      padding: 0.5rem 1rem;
+      border-radius: 9px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn:hover {
+      border-color: var(--gold-mid);
+      color: #fff;
+    }
+
+    .btn.active {
+      background: linear-gradient(135deg, #007399, #00445c);
+      border-color: var(--gold-mid);
+      color: #fff;
+      box-shadow: 0 0 14px rgba(0, 184, 230, 0.3);
+    }
+
+    /* Grid of 18 Color Editions */
+    .styles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 620px) {
+      .styles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .style-card {
+      background: rgba(11, 18, 29, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 18px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      box-shadow: 0 14px 35px rgba(0, 0, 0, 0.45);
+    }
+
+    .card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 0.75rem;
+    }
+
+    .card-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .color-swatch-tag {
+      padding: 0.26rem 0.68rem;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      white-space: nowrap;
+    }
+
+    .card-title-wrap h2 {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+
+    .pair-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      .pair-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .stage {
+      border-radius: 14px;
+      padding: 2.3rem 0.75rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-height: 290px;
+      transition: background 0.25s ease;
+    }
+
+    .stage.theme-light {
+      background: radial-gradient(circle at center, #ffffff 0%, #f3efe6 100%);
+      border: 1px solid #dfd8c8;
+    }
+
+    .stage.theme-dark {
+      background: radial-gradient(circle at center, #0e2235 0%, #050b12 100%);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+    }
+
+    .mode-pill {
+      position: absolute;
+      top: 9px;
+      left: 10px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 3px 9px;
+      border-radius: 99px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .mode-pill.anim {
+      background: rgba(0, 115, 153, 0.14);
+      color: #007399;
+      border: 1px solid rgba(0, 115, 153, 0.35);
+    }
+
+    .theme-dark .mode-pill.anim {
+      background: rgba(0, 184, 230, 0.18);
+      color: #67e8f9;
+      border-color: rgba(103, 232, 249, 0.35);
+    }
+
+    .mode-pill.still {
+      background: rgba(212, 175, 55, 0.18);
+      color: #7c5800;
+      border: 1px solid rgba(212, 175, 55, 0.45);
+    }
+
+    .theme-dark .mode-pill.still {
+      color: var(--gold-light);
+    }
+
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      animation: pulseOp 1.3s infinite ease-in-out;
+    }
+
+    .save-btn {
+      position: absolute;
+      top: 8px;
+      right: 9px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      border: 1px solid rgba(0, 115, 153, 0.3);
+      background: rgba(255, 255, 255, 0.78);
+      color: #005573;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .theme-dark .save-btn {
+      background: rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .save-btn:hover {
+      background: #007399;
+      color: #fff;
+    }
+
+    .compact-logo-svg {
+      width: var(--logo-size);
+      height: var(--logo-size);
+      max-width: 100%;
+      overflow: visible;
+      filter: drop-shadow(0 8px 18px rgba(0, 25, 45, 0.24));
+      transition: width 0.25s ease, height 0.25s ease;
+    }
+
+    /* =====================================================
+       ANIMATIONS
+       ===================================================== */
+    @keyframes pulseOp {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.35; transform: scale(1.4); }
+    }
+
+    @keyframes spinCW {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes spinCCW {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+
+    @keyframes corePulse {
+      0%, 100% { transform: scale(1); filter: brightness(1); }
+      50% { transform: scale(1.045); filter: brightness(1.14); }
+    }
+
+    .anim-spin-cw {
+      transform-origin: 120px 120px;
+      animation: spinCW 24s linear infinite;
+    }
+
+    .anim-spin-ccw {
+      transform-origin: 120px 120px;
+      animation: spinCCW 16s linear infinite;
+    }
+
+    .anim-core {
+      transform-origin: 120px 120px;
+      animation: corePulse 3s ease-in-out infinite;
+    }
+
+    .is-still *,
+    body.paused * {
+      animation: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Master Shared SVG Gradients, India Map, & Arc Paths (automatically embedded into exported SVGs) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs id="sharedDefs">
+      <!-- 24K Metallic Gold Rim & Accents -->
+      <linearGradient id="goldMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fff6c4" />
+        <stop offset="30%" stop-color="#f7c948" />
+        <stop offset="68%" stop-color="#d4af37" />
+        <stop offset="100%" stop-color="#8a5a00" />
+      </linearGradient>
+
+      <!-- Luminous Gold-Silver Gradient for the Fountain Pen Nib -->
+      <linearGradient id="nibSilverGold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="45%" stop-color="#ffe885" />
+        <stop offset="100%" stop-color="#b8860b" />
+      </linearGradient>
+
+      <!-- Crimson Red Metallic Gradient -->
+      <linearGradient id="crimsonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#e50914" />
+        <stop offset="55%" stop-color="#b80012" />
+        <stop offset="100%" stop-color="#6b0008" />
+      </linearGradient>
+
+      <!-- Pearl White / Ivory Gradients -->
+      <radialGradient id="pearlWhiteRadial" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="70%" stop-color="#f8f4eb" />
+        <stop offset="100%" stop-color="#e6dec8" />
+      </radialGradient>
+      <linearGradient id="pearlWhiteOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="60%" stop-color="#f5efe2" />
+        <stop offset="100%" stop-color="#e2d6be" />
+      </linearGradient>
+
+      <!-- Peacock Teal Gradients -->
+      <linearGradient id="tealOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#007399" />
+        <stop offset="100%" stop-color="#02202e" />
+      </linearGradient>
+      <radialGradient id="tealInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#0095c2" />
+        <stop offset="65%" stop-color="#005b7a" />
+        <stop offset="100%" stop-color="#032535" />
+      </radialGradient>
+
+      <!-- Light Blue / Sky Azure Gradients -->
+      <linearGradient id="skyOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#29b6f6" />
+        <stop offset="55%" stop-color="#0288d1" />
+        <stop offset="100%" stop-color="#014f86" />
+      </linearGradient>
+      <radialGradient id="skyInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#4fc3f7" />
+        <stop offset="65%" stop-color="#0277bd" />
+        <stop offset="100%" stop-color="#013a63" />
+      </radialGradient>
+
+      <!-- Saffron / Vibrant Orange Gradients -->
+      <linearGradient id="orangeOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff8c00" />
+        <stop offset="55%" stop-color="#e65100" />
+        <stop offset="100%" stop-color="#6e1e00" />
+      </linearGradient>
+      <radialGradient id="orangeInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#ffa726" />
+        <stop offset="65%" stop-color="#d84315" />
+        <stop offset="100%" stop-color="#4e1402" />
+      </radialGradient>
+
+      <!-- Royal Emerald Green Gradients -->
+      <linearGradient id="emeraldOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#109856" />
+        <stop offset="55%" stop-color="#086638" />
+        <stop offset="100%" stop-color="#032b17" />
+      </linearGradient>
+      <radialGradient id="emeraldInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#1db96b" />
+        <stop offset="65%" stop-color="#0a5c32" />
+        <stop offset="100%" stop-color="#022412" />
+      </radialGradient>
+
+      <!-- Imperial Ruby Crimson Gradients -->
+      <linearGradient id="rubyOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#c9184a" />
+        <stop offset="55%" stop-color="#800f2f" />
+        <stop offset="100%" stop-color="#3c0615" />
+      </linearGradient>
+      <radialGradient id="rubyInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#e01e5a" />
+        <stop offset="65%" stop-color="#720927" />
+        <stop offset="100%" stop-color="#2b040e" />
+      </radialGradient>
+
+      <!-- Royal Indigo / Midnight Sapphire Gradients -->
+      <linearGradient id="indigoOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3949ab" />
+        <stop offset="55%" stop-color="#1a237e" />
+        <stop offset="100%" stop-color="#090d38" />
+      </linearGradient>
+      <radialGradient id="indigoInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#5c6bc0" />
+        <stop offset="65%" stop-color="#1a237e" />
+        <stop offset="100%" stop-color="#070a2b" />
+      </radialGradient>
+
+      <!-- Royal Imperial Purple / Amethyst Gradients -->
+      <linearGradient id="purpleOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#7b2cbf" />
+        <stop offset="55%" stop-color="#4a148c" />
+        <stop offset="100%" stop-color="#1f053d" />
+      </linearGradient>
+      <radialGradient id="purpleInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#9d4edd" />
+        <stop offset="65%" stop-color="#4a148c" />
+        <stop offset="100%" stop-color="#180230" />
+      </radialGradient>
+
+      <!-- Luxury Obsidian Black & Gold Gradients -->
+      <linearGradient id="obsidianOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#2b303a" />
+        <stop offset="50%" stop-color="#11151c" />
+        <stop offset="100%" stop-color="#05070a" />
+      </linearGradient>
+      <radialGradient id="obsidianInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#222831" />
+        <stop offset="70%" stop-color="#0f1217" />
+        <stop offset="100%" stop-color="#040507" />
+      </radialGradient>
+
+      <!-- Mixed: Tiranga Fusion (Saffron -> India Green) -->
+      <linearGradient id="tirangaMixedOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff7b00" />
+        <stop offset="48%" stop-color="#b85d00" />
+        <stop offset="52%" stop-color="#0b7a43" />
+        <stop offset="100%" stop-color="#043d21" />
+      </linearGradient>
+
+      <!-- Mixed: Saffron Orange + Peacock Teal Dual-Tone -->
+      <linearGradient id="saffronTealMixOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#ff8800" />
+        <stop offset="45%" stop-color="#cc4400" />
+        <stop offset="55%" stop-color="#007399" />
+        <stop offset="100%" stop-color="#00384d" />
+      </linearGradient>
+      <radialGradient id="saffronTealMixInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#00a8cc" />
+        <stop offset="60%" stop-color="#005573" />
+        <stop offset="100%" stop-color="#ff6d00" />
+      </radialGradient>
+
+      <!-- Mixed: Red, Gold & Royal Navy Tri-Blend -->
+      <linearGradient id="redNavyMixOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#d90429" />
+        <stop offset="50%" stop-color="#6a040f" />
+        <stop offset="100%" stop-color="#031d44" />
+      </linearGradient>
+      <radialGradient id="redNavyMixInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#00509d" />
+        <stop offset="65%" stop-color="#022b54" />
+        <stop offset="100%" stop-color="#590d22" />
+      </radialGradient>
+
+      <!-- Mixed: Royal Magenta-Plum & Cyber Cyan Aurora -->
+      <linearGradient id="auroraMixOuter" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#b5179e" />
+        <stop offset="50%" stop-color="#480ca8" />
+        <stop offset="100%" stop-color="#0077b6" />
+      </linearGradient>
+      <radialGradient id="auroraMixInner" cx="50%" cy="45%" r="60%">
+        <stop offset="0%" stop-color="#7209b7" />
+        <stop offset="65%" stop-color="#3a0ca3" />
+        <stop offset="100%" stop-color="#03045e" />
+      </radialGradient>
+
+      <!-- Shared Text Arcs -->
+      <path id="topArcPath" d="M 27,120 A 93,93 0 1,1 213,120" />
+      <path id="botArcPathUpright" d="M 21,120 A 99,99 0 0,0 219,120" />
+
+      <!-- Reusable India Map Silhouette -->
+      <g id="indiaMapShape">
+        <path d="M 113,92 L 121,91 L 126,95 L 123,101 L 126,106 L 132,110 L 136,108 L 140,111 L 147,108 L 149,113 L 144,121 L 141,117 L 136,116 L 134,123 L 128,128 L 124,136 L 122,144 L 118,151 L 114,143 L 111,132 L 109,124 L 103,124 L 99,120 L 104,117 L 99,114 L 104,110 L 107,105 L 111,101 L 110,96 Z" />
+      </g>
+    </defs>
+  </svg>
+
+  <div class="container">
+    <header class="header">
+      <h1>DIGITAL INDIAN GOLDEN INDIA — 18 COLOR EDITIONS (INDIA MAP + FOUNTAIN NIB)</h1>
+      <p>
+        Featuring your selected <strong>Sample B (Golden India Map + Crowning Fountain Pen Nib)</strong> emblem and <strong>Extra-Bold upright English &amp; Bengali typography</strong> across <strong>18 color themes</strong> (including Pearl-White Ring editions, Solid bases, and Multi-Color mixes).
+      </p>
+      <div class="toolbar">
+        <a class="btn active" href="index.html" style="text-decoration:none;">⬅️ সংবাদ পোর্টালে ফিরে যান (Back to News Portal)</a>
+        <button class="btn active" id="bgLightBtn" onclick="setBg('light')">☀️ Light Background</button>
+        <button class="btn" id="bgDarkBtn" onclick="setBg('dark')">🌙 Dark Background</button>
+        <button class="btn" onclick="setSize('165px', this)">🔹 Compact (165px)</button>
+        <button class="btn active" onclick="setSize('240px', this)">🔷 Standard (240px)</button>
+        <button class="btn" id="pauseBtn" onclick="togglePause()">⏸️ Pause Animations</button>
+      </div>
+    </header>
+
+    <div class="styles-grid" id="cardsContainer"></div>
+  </div>
+
+  <script>
+    const colorThemes = [
+      // 01. Selected Sample B Flagship: Crimson Red Rim + Pearl White Ring + Crimson Core
+      {
+        id: 'red-white-flagship',
+        tag: '01 • Red & White (Selected Sample B)',
+        tagBg: 'linear-gradient(90deg, #d90429, #8d0801)',
+        title: 'Crimson Red Rim, Pearl White Ring & Red Core',
+        outerGrad: 'url(#crimsonGrad)',
+        innerGrad: 'url(#pearlWhiteRadial)',
+        coreBg: '#8d0801',
+        nodeAccent: '#d4af37',
+        orbitStroke: '#b80012',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 02. Peacock Teal Rim + Pearl White Ring + Teal Core (New White-Ring Contrast Edition!)
+      {
+        id: 'teal-white-ring',
+        tag: '02 • Peacock Teal & White',
+        tagBg: 'linear-gradient(90deg, #007399, #004d66)',
+        title: 'Peacock Teal Rim, Pearl White Ring & Teal Core',
+        outerGrad: 'url(#tealOuter)',
+        innerGrad: 'url(#pearlWhiteRadial)',
+        coreBg: '#004d66',
+        nodeAccent: '#007399',
+        orbitStroke: '#007399',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 03. Classic Full Peacock Teal & 24K Gold (Original Favorite)
+      {
+        id: 'teal-classic',
+        tag: '03 • Classic Peacock Teal',
+        tagBg: '#007399',
+        title: 'Classic Peacock Teal & 24K Gold Base',
+        outerGrad: 'url(#tealOuter)',
+        innerGrad: 'url(#tealInner)',
+        coreBg: '#032030',
+        nodeAccent: '#5ce1ff',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 04. Light Sky Blue & Gold Base
+      {
+        id: 'light-sky-blue',
+        tag: '04 • Light Sky Blue',
+        tagBg: '#0288d1',
+        title: 'Vibrant Light Sky Blue & 24K Gold Base',
+        outerGrad: 'url(#skyOuter)',
+        innerGrad: 'url(#skyInner)',
+        coreBg: '#013a63',
+        nodeAccent: '#b3e5fc',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 05. Light Blue Rim + Pearl White Ring + Azure Core (New!)
+      {
+        id: 'sky-white-ring',
+        tag: '05 • Sky Blue & White',
+        tagBg: 'linear-gradient(90deg, #0288d1, #29b6f6)',
+        title: 'Sky Blue Rim, Pearl White Ring & Azure Core',
+        outerGrad: 'url(#skyOuter)',
+        innerGrad: 'url(#pearlWhiteRadial)',
+        coreBg: '#014f86',
+        nodeAccent: '#0288d1',
+        orbitStroke: '#0277bd',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 06. Sovereign Saffron Orange & Gold Base
+      {
+        id: 'saffron-orange',
+        tag: '06 • Saffron Orange',
+        tagBg: '#e65100',
+        title: 'Sovereign Saffron Orange & Swarna Gold Base',
+        outerGrad: 'url(#orangeOuter)',
+        innerGrad: 'url(#orangeInner)',
+        coreBg: '#4e1402',
+        nodeAccent: '#fff3b0',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 07. Saffron Orange Rim + Pearl White Ring + Deep Saffron Core (New!)
+      {
+        id: 'saffron-white-ring',
+        tag: '07 • Saffron & White',
+        tagBg: 'linear-gradient(90deg, #ff8c00, #d84315)',
+        title: 'Saffron Orange Rim, Pearl White Ring & Saffron Core',
+        outerGrad: 'url(#orangeOuter)',
+        innerGrad: 'url(#pearlWhiteRadial)',
+        coreBg: '#7f2400',
+        nodeAccent: '#e65100',
+        orbitStroke: '#d84315',
+        topTextFill: '#ffffff',
+        botTextFill: '#fff6c4',
+        botTextStroke: '#fff6c4'
+      },
+      // 08. Pearl White Outer Rim + Crimson Red Ring & Core
+      {
+        id: 'white-red-rim',
+        tag: '08 • White Rim & Red Core',
+        tagBg: 'linear-gradient(90deg, #b80012, #e63946)',
+        title: 'Pearl White Outer Rim & Crimson Red Core',
+        outerGrad: 'url(#pearlWhiteOuter)',
+        innerGrad: 'url(#crimsonGrad)',
+        coreBg: '#6b0008',
+        nodeAccent: '#ffffff',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#b80012',
+        botTextFill: '#8d0801',
+        botTextStroke: '#8d0801',
+        dashedStroke: '#b80012'
+      },
+      // 09. Mixed: Saffron + Peacock Teal Dual-Tone
+      {
+        id: 'saffron-teal-mix',
+        tag: '09 • Mixed: Saffron + Teal',
+        tagBg: 'linear-gradient(90deg, #ff7b00, #007399)',
+        title: 'Golden Saffron & Peacock Teal Dual-Tone Mix',
+        outerGrad: 'url(#saffronTealMixOuter)',
+        innerGrad: 'url(#saffronTealMixInner)',
+        coreBg: '#02202e',
+        nodeAccent: '#ffe57f',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 10. Mixed: Tiranga Fusion (Saffron + White + Emerald Green + Navy Core)
+      {
+        id: 'tiranga-mix',
+        tag: '10 • Mixed: Tricolor & White',
+        tagBg: 'linear-gradient(90deg, #ff7b00, #0b7a43)',
+        title: 'Sovereign Tricolor Rim, White Ring & Ashoka Navy Core',
+        outerGrad: 'url(#tirangaMixedOuter)',
+        innerGrad: 'url(#pearlWhiteRadial)',
+        coreBg: '#0a2463',
+        nodeAccent: '#ff7b00',
+        orbitStroke: '#0a2463',
+        topTextFill: '#ffffff',
+        botTextFill: '#fff6c4',
+        botTextStroke: '#fff6c4'
+      },
+      // 11. Emerald Green & Royal Gold Base
+      {
+        id: 'emerald-green',
+        tag: '11 • Emerald Green',
+        tagBg: '#086638',
+        title: 'Prosperity Emerald Green & 24K Gold Base',
+        outerGrad: 'url(#emeraldOuter)',
+        innerGrad: 'url(#emeraldInner)',
+        coreBg: '#022412',
+        nodeAccent: '#a7f3d0',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 12. Emerald Green Rim + Pearl White Ring (New!)
+      {
+        id: 'emerald-white-ring',
+        tag: '12 • Emerald & White',
+        tagBg: 'linear-gradient(90deg, #109856, #064e2b)',
+        title: 'Emerald Green Rim, Pearl White Ring & Green Core',
+        outerGrad: 'url(#emeraldOuter)',
+        innerGrad: 'url(#pearlWhiteRadial)',
+        coreBg: '#053b20',
+        nodeAccent: '#086638',
+        orbitStroke: '#086638',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 13. Mixed: Crimson Red + Royal Sapphire Blue
+      {
+        id: 'red-navy-mix',
+        tag: '13 • Mixed: Crimson + Sapphire',
+        tagBg: 'linear-gradient(90deg, #d90429, #00509d)',
+        title: 'Crimson Red, Royal Sapphire & 24K Gold Mix',
+        outerGrad: 'url(#redNavyMixOuter)',
+        innerGrad: 'url(#redNavyMixInner)',
+        coreBg: '#1b0308',
+        nodeAccent: '#5ce1ff',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 14. Mixed: Royal Magenta + Violet + Cyber Blue Aurora
+      {
+        id: 'aurora-mix',
+        tag: '14 • Mixed: Magenta + Cyber Blue',
+        tagBg: 'linear-gradient(90deg, #b5179e, #0077b6)',
+        title: 'Royal Magenta, Violet & Cyber Blue Mix',
+        outerGrad: 'url(#auroraMixOuter)',
+        innerGrad: 'url(#auroraMixInner)',
+        coreBg: '#190438',
+        nodeAccent: '#5ce1ff',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 15. Imperial Crimson Ruby & 24K Gold
+      {
+        id: 'imperial-ruby',
+        tag: '15 • Imperial Ruby',
+        tagBg: '#800f2f',
+        title: 'Heritage Crimson Ruby & 24K Gold Base',
+        outerGrad: 'url(#rubyOuter)',
+        innerGrad: 'url(#rubyInner)',
+        coreBg: '#2b040e',
+        nodeAccent: '#ffd166',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 16. Royal Indigo Sapphire & Liquid Gold
+      {
+        id: 'royal-indigo',
+        tag: '16 • Royal Indigo',
+        tagBg: '#1a237e',
+        title: 'Royal Sapphire Indigo & Liquid Gold Base',
+        outerGrad: 'url(#indigoOuter)',
+        innerGrad: 'url(#indigoInner)',
+        coreBg: '#070a2b',
+        nodeAccent: '#82b1ff',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 17. Royal Indigo Rim + Pearl White Ring (New!)
+      {
+        id: 'indigo-white-ring',
+        tag: '17 • Royal Navy & White',
+        tagBg: 'linear-gradient(90deg, #1a237e, #3949ab)',
+        title: 'Royal Navy Rim, Pearl White Ring & Sapphire Core',
+        outerGrad: 'url(#indigoOuter)',
+        innerGrad: 'url(#pearlWhiteRadial)',
+        coreBg: '#101652',
+        nodeAccent: '#1a237e',
+        orbitStroke: '#1a237e',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      },
+      // 18. Luxury Obsidian Black & 24K Gold (New!)
+      {
+        id: 'obsidian-gold',
+        tag: '18 • Obsidian Black & Gold',
+        tagBg: '#11151c',
+        title: 'Luxury Obsidian Black & 24K Liquid Gold',
+        outerGrad: 'url(#obsidianOuter)',
+        innerGrad: 'url(#obsidianInner)',
+        coreBg: '#05070a',
+        nodeAccent: '#f7c948',
+        orbitStroke: 'url(#goldMetallic)',
+        topTextFill: '#ffffff',
+        botTextFill: 'url(#goldMetallic)',
+        botTextStroke: '#ffe28a'
+      }
+    ];
+
+    function createCoinSVG(theme, isAnimated) {
+      const spinCWClass = isAnimated ? 'class="anim-spin-cw"' : '';
+      const spinCCWClass = isAnimated ? 'class="anim-spin-ccw"' : '';
+      const coreAnimClass = isAnimated ? 'class="anim-core"' : '';
+      const orbitStroke = theme.orbitStroke || 'url(#goldMetallic)';
+      const botTextFill = theme.botTextFill || 'url(#goldMetallic)';
+      const botTextStroke = theme.botTextStroke || '#ffe28a';
+      const dashedStroke = theme.dashedStroke || 'url(#goldMetallic)';
+
+      return `
+        <svg class="compact-logo-svg" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer Gold Coin Rim -->
+          <circle cx="120" cy="120" r="114" fill="${theme.outerGrad}" stroke="url(#goldMetallic)" stroke-width="5" />
+          <circle cx="120" cy="120" r="107" fill="none" stroke="${dashedStroke}" stroke-width="1.2" stroke-dasharray="4 4" ${spinCWClass} />
+
+          <!-- Inner Ring Circle -->
+          <circle cx="120" cy="120" r="74" fill="${theme.innerGrad}" stroke="url(#goldMetallic)" stroke-width="2.5" />
+
+          <!-- Curved Top Bengali Text (Extra Bold) -->
+          <text fill="${theme.topTextFill}" font-family="'Noto Serif Bengali', 'Hind Siliguri', sans-serif" font-size="14.5" font-weight="900">
+            <textPath href="#topArcPath" startOffset="50%" text-anchor="middle">
+              ডিজিটাল ইন্ডিয়ান গোল্ডেন ইন্ডিয়া
+            </textPath>
+          </text>
+
+          <!-- Curved Bottom English Text (Extra Bold + Stroke Reinforcement so it is thick & commanding) -->
+          <text fill="${botTextFill}" stroke="${botTextStroke}" stroke-width="0.65" paint-order="stroke fill" font-family="'Cinzel', Georgia, serif" font-size="11.8" font-weight="900" letter-spacing="1.15">
+            <textPath href="#botArcPathUpright" startOffset="50%" text-anchor="middle">
+              ★ DIGITAL INDIAN GOLDEN INDIA ★
+            </textPath>
+          </text>
+
+          <!-- Counter-Rotating Orbital Dashed Ring & 4 Nodes (Clean Sample B Layout) -->
+          <g ${spinCCWClass} stroke="${orbitStroke}" stroke-width="1.5" opacity="0.88">
+            <circle cx="120" cy="120" r="58" fill="none" stroke-dasharray="10 6" />
+            <circle cx="120" cy="62" r="3.4" fill="${orbitStroke}" />
+            <circle cx="178" cy="120" r="3.4" fill="${theme.nodeAccent}" />
+            <circle cx="120" cy="178" r="3.4" fill="${orbitStroke}" />
+            <circle cx="62" cy="120" r="3.4" fill="${theme.nodeAccent}" />
+          </g>
+
+          <!-- Center Medallion: Full Golden India Map + Fountain Pen Nib Crowning at Top (Sample B) -->
+          <g ${coreAnimClass}>
+            <circle cx="120" cy="120" r="42" fill="url(#goldMetallic)" />
+            <circle cx="120" cy="120" r="38" fill="${theme.coreBg}" />
+            <!-- Full Golden India Map -->
+            <g transform="translate(0, 10) scale(0.88)" style="transform-origin: 120px 120px;">
+              <use href="#indiaMapShape" fill="url(#goldMetallic)" stroke="#fff6c4" stroke-width="0.9" />
+            </g>
+            <!-- Fountain Pen Nib Crowning Above the Map -->
+            <path d="M 120,79 L 128,94 L 124,104 L 116,104 L 112,94 Z" fill="url(#nibSilverGold)" stroke="${theme.coreBg}" stroke-width="1.2" />
+            <line x1="120" y1="79" x2="120" y2="93" stroke="${theme.coreBg}" stroke-width="1.4" />
+            <circle cx="120" cy="95" r="2.2" fill="${theme.coreBg}" />
+          </g>
+        </svg>
+      `;
+    }
+
+    function renderCards() {
+      const container = document.getElementById('cardsContainer');
+      container.innerHTML = colorThemes.map(theme => {
+        const animStageId = `stage-${theme.id}-anim`;
+        const stillStageId = `stage-${theme.id}-still`;
+        return `
+          <article class="style-card">
+            <div class="card-head">
+              <div class="card-title-wrap">
+                <span class="color-swatch-tag" style="background:${theme.tagBg}">${theme.tag}</span>
+                <h2>${theme.title}</h2>
+              </div>
+            </div>
+            <div class="pair-row">
+              <!-- ANIMATED -->
+              <div class="stage theme-light" id="${animStageId}">
+                <span class="mode-pill anim"><span class="live-dot"></span> Animated</span>
+                <button class="save-btn" onclick="exportSVG('${animStageId}', 'DIGI-Coin-${theme.id}-Animated.svg')">⬇ SVG</button>
+                ${createCoinSVG(theme, true)}
+              </div>
+              <!-- STILL -->
+              <div class="stage theme-light is-still" id="${stillStageId}">
+                <span class="mode-pill still">📌 Still</span>
+                <button class="save-btn" onclick="exportSVG('${stillStageId}', 'DIGI-Coin-${theme.id}-Still.svg')">⬇ SVG</button>
+                ${createCoinSVG(theme, false)}
+              </div>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function setBg(mode) {
+      document.querySelectorAll('.stage').forEach(el => {
+        el.classList.toggle('theme-light', mode === 'light');
+        el.classList.toggle('theme-dark', mode === 'dark');
+      });
+      document.getElementById('bgLightBtn').classList.toggle('active', mode === 'light');
+      document.getElementById('bgDarkBtn').classList.toggle('active', mode === 'dark');
+    }
+
+    function setSize(px, btn) {
+      document.documentElement.style.setProperty('--logo-size', px);
+      btn.parentElement.querySelectorAll('.btn').forEach(b => {
+        if (b.textContent.includes('px')) b.classList.remove('active');
+      });
+      btn.classList.add('active');
+    }
+
+    function togglePause() {
+      const paused = document.body.classList.toggle('paused');
+      const btn = document.getElementById('pauseBtn');
+      btn.textContent = paused ? '▶️ Resume Animations' : '⏸️ Pause Animations';
+      btn.classList.toggle('active', paused);
+    }
+
+    function exportSVG(stageId, filename) {
+      const stage = document.getElementById(stageId);
+      const svg = stage.querySelector('svg');
+      if (!svg) return;
+
+      const clone = svg.cloneNode(true);
+      clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+
+      const sharedDefs = document.getElementById('sharedDefs').cloneNode(true);
+      clone.insertBefore(sharedDefs, clone.firstChild);
+
+      const data = new XMLSerializer().serializeToString(clone);
+      const blob = new Blob([data], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    renderCards();
+  </script>
+</body>
+</html>
