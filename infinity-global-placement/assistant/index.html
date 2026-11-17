@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nursing career assistant | Infinity Global Placement</title>
+<link rel="stylesheet" href="/infinity-global-placement/site.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;800&family=Instrument+Serif:ital@0;1&display=swap"></head>
+<body><header><div class="wrap"><a class="brand" href="/infinity-global-placement/index.html"><img src="https://www.infinityglobalplacement.com/wp-content/uploads/2023/11/logo.jpg.webp" alt="">Infinity Global Placement</a><nav aria-label="Showcase">
+<a href="/infinity-global-placement/index.html" aria-current="page">Dream destinations</a><a href="/infinity-global-placement/media/">Media &amp; stories</a><a href="/infinity-global-placement/perspective/">Global Perspective</a><a href="/infinity-global-placement/assistant/">Career assistant</a><a href="/">Yogabrata projects</a></nav></div></header>
+<main><div class="wrap media-title"><p class="eyebrow">Nursing career assistant</p><h1>Plan your <em>next move.</em></h1><p class="lead">Get a destination-specific checklist here or take a prepared prompt into ChatGPT for an AI conversation.</p></div>
+<section class="wrap"><form id="planner" class="planner"><label>Destination <select name="country"><option value="ae">United Arab Emirates</option><option value="qa">Qatar</option><option value="sa">Saudi Arabia</option><option value="kw">Kuwait</option><option value="bh">Bahrain</option><option value="om">Oman</option><option value="fj">Fiji</option><option value="my">Malaysia</option><option value="sg">Singapore</option><option value="mt">Malta</option><option value="de">Germany</option><option value="gb">United Kingdom</option></select></label><label>What matters most? <select name="topic"><option>Life outside work</option><option>Clinical development</option><option>Offer and relocation</option></select></label><button class="button primary" type="submit">Build my checklist</button></form><div id="advice" aria-live="polite"></div><div id="ai" hidden><label for="prompt">Prompt for ChatGPT</label><textarea id="prompt" rows="5" readonly></textarea><div class="actions"><button class="button" id="copy" type="button">Copy prompt</button><a class="button" href="https://chatgpt.com/" target="_blank" rel="noopener">Open ChatGPT ↗</a><span id="copy-status" role="status"></span></div></div></section>
+<script>
+const profiles = {"ae": {"name": "United Arab Emirates", "lifestyle": "Imagine sunset walks along the marina and a weekend in the desert.", "opportunity": "Explore large hospital networks and culturally diverse care teams.", "question": "Ask where the facility is located and what the offer includes for housing, transport and onboarding."}, "qa": {"name": "Qatar", "lifestyle": "Picture an evening on the Corniche after a shift and weekends around Doha’s museums and markets.", "opportunity": "Look at hospital and specialty-care environments in Doha.", "question": "Ask about the assigned unit, transport for night shifts and the training period."}, "sa": {"name": "Saudi Arabia", "lifestyle": "Picture city life in Riyadh or weekends along the Red Sea in Jeddah.", "opportunity": "Compare large medical centres with specialist and acute-care teams.", "question": "Ask for the exact city, accommodation terms, roster and annual travel provisions in writing."}, "kw": {"name": "Kuwait", "lifestyle": "Imagine a waterfront weekend and time exploring the city’s cafés and markets.", "opportunity": "Compare hospital and outpatient roles based on your clinical specialty.", "question": "Ask about staff accommodation, commuting distance and coverage on your ward."}, "bh": {"name": "Bahrain", "lifestyle": "Picture evenings in Manama and weekends by the coast.", "opportunity": "Explore hospital and clinic work in a compact island setting.", "question": "Compare roster, travel time and the amount of supported orientation."}, "om": {"name": "Oman", "lifestyle": "Imagine downtime along Muscat’s coast, with mountains nearby for a longer weekend.", "opportunity": "Explore hospital and clinic roles in the capital and other cities.", "question": "Check the exact location and whether you would need a car or employer transport."}, "fj": {"name": "Fiji", "lifestyle": "Picture a Pacific island setting where your experience can differ substantially between a city and a smaller community.", "opportunity": "Explore hospital and community-care settings and read Infinity’s published Fiji candidate story.", "question": "Ask about staffing support, supplies, housing and travel between islands if relevant."}, "my": {"name": "Malaysia", "lifestyle": "Imagine city life with night markets, neighbourhood cafés and coastal weekends.", "opportunity": "Compare hospital and specialty-care environments in different cities.", "question": "Ask about communication with patients, orientation and typical late-shift transport."}, "sg": {"name": "Singapore", "lifestyle": "Imagine a train ride home after a shift and weekends in waterfront parks or hawker centres.", "opportunity": "Explore acute care, specialty services and community-care settings.", "question": "Compare expected take-home pay with real room rents and ask about the ward’s development pathway."}, "mt": {"name": "Malta", "lifestyle": "Picture a Mediterranean routine with harbour walks and compact towns.", "opportunity": "Explore hospital and community care in an island setting.", "question": "Ask about housing near the workplace and the languages used on your ward."}, "de": {"name": "Germany", "lifestyle": "Imagine exploring a new city by rail, with quieter weekends in parks or nearby towns.", "opportunity": "Compare hospital, rehabilitation and long-term care roles.", "question": "Ask about workplace German, documentation, recognition support and your duties during onboarding."}, "gb": {"name": "United Kingdom", "lifestyle": "Picture museums and parks on days off, or a quieter routine outside a major city.", "opportunity": "Explore acute hospitals, mental health, community care and specialist teams.", "question": "Compare rent, commute and supervised development across trusts and employers."}};
+const form = document.querySelector('#planner');
+const preselect = new URLSearchParams(location.search).get('country');
+if (Object.hasOwn(profiles, preselect)) form.elements.country.value = preselect;
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  const profile = profiles[form.elements.country.value];
+  const topic = form.elements.topic.value;
+  const title = document.createElement('h2');
+  title.textContent = profile.name;
+  const lines = {
+    'Life outside work': [profile.lifestyle, 'Compare housing and travel time for both day and night shifts.', 'Think about your support network and time with family.'],
+    'Clinical development': [profile.opportunity, 'Ask about your assigned ward, supervision and specialty training.', 'Check which employer or regulator can confirm current requirements.'],
+    'Offer and relocation': [profile.question, 'Request a written breakdown of base pay, overtime, deductions and housing.', 'Budget for relocation and ask what support starts before arrival.']
+  };
+  const list = document.createElement('ul');
+  for (const line of lines[topic]) {
+    const item = document.createElement('li');
+    item.textContent = line;
+    list.append(item);
+  }
+  document.querySelector('#advice').replaceChildren(title, list);
+  document.querySelector('#prompt').value = 'Help me explore nursing in ' + profile.name + '. My priority is ' + topic + '. Ask me about my specialty and work preferences, then suggest questions for recruiters and employers. Cite official sources for any current requirements. Distinguish employer-specific benefits from general country facts.';
+  document.querySelector('#copy-status').textContent = '';
+  document.querySelector('#ai').hidden = false;
+});
+document.querySelector('#copy').addEventListener('click', async () => {
+  const prompt = document.querySelector('#prompt');
+  const status = document.querySelector('#copy-status');
+  try {
+    await navigator.clipboard.writeText(prompt.value);
+    status.textContent = 'Copied.';
+  } catch {
+    prompt.focus();
+    prompt.select();
+    status.textContent = 'Prompt selected for copying.';
+  }
+});
+</script></main><footer><div class="wrap"><span>Infinity Global Placement · Design showcase</span><a href="https://www.infinityglobalplacement.com/contact-us/">Contact Infinity ↗</a></div></footer></body></html>
