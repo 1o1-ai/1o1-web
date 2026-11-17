@@ -1,0 +1,16 @@
+.hero .wrap{width:min(1330px,calc(100% - 40px));grid-template-columns:minmax(0,.76fr) minmax(0,1.24fr);min-height:680px}
+.sky{--ember:#ffab6a;--halo:#f671765e;--glass:#261531;--edge:#e8a879;--label:#fff6e8;isolation:isolate;perspective:820px}
+[data-palette=ocean] .sky{--ember:#86f3df;--halo:#54dfcf50;--glass:#123842;--edge:#78dbcc}
+[data-palette=dawn] .sky{--ember:#f48783;--halo:#df52875c;--glass:#fff8f4;--edge:#bf6488;--label:#5b2543}
+.star-orbit{position:absolute;inset:13%;border-radius:50%;border:1px solid color-mix(in srgb,var(--edge) 24%,transparent);box-shadow:inset 0 0 45px var(--halo),0 0 34px var(--halo);transform:rotateX(53deg) rotateZ(-23deg);pointer-events:none}
+.star-orbit::before,.star-orbit::after{content:"";position:absolute;border:1px solid color-mix(in srgb,var(--edge) 31%,transparent);border-radius:50%;inset:12%}
+.star-orbit::after{inset:26%}
+.sky .star-core{position:absolute;left:50%;top:50%;width:clamp(24px,5vw,60px);aspect-ratio:1;border-radius:50%;translate:-50% -50%;background:radial-gradient(circle at 36% 33%,#fffdf7 0 6%,#fff4ce 12%,var(--ember) 51%,transparent 72%);box-shadow:0 0 42px 12px var(--halo);pointer-events:none;animation:core-float 4s ease-in-out infinite}
+.sky .sat{max-width:none;z-index:2;translate:0 0;color:var(--label);padding:8px 13px;font-size:clamp(.88rem,1.42vw,1.16rem);line-height:1.2;background:linear-gradient(155deg,color-mix(in srgb,var(--glass) 80%,var(--edge)),var(--glass) 64%);border:1px solid var(--edge);box-shadow:inset 0 1px 0 #fff4,0 4px 0 color-mix(in srgb,var(--glass) 78%,#000),0 10px 19px #0004;animation:label-float 5.4s ease-in-out infinite;transition:scale .18s,box-shadow .18s}
+.sky .sat:nth-of-type(3n+1){animation-delay:-1.8s}.sky .sat:nth-of-type(3n+2){animation-delay:-3.6s}
+.sky .sat:hover,.sky .sat:focus-visible{z-index:3;animation-play-state:paused;scale:1.08;color:var(--label);background:var(--glass);box-shadow:0 0 19px var(--halo),0 8px 21px #0005}
+@keyframes label-float{50%{translate:0 -5px}}
+@keyframes core-float{50%{scale:1.15}}
+@media(max-width:850px){.hero .wrap{grid-template-columns:1fr;min-height:auto}.hero .sky{width:100%;max-width:670px}.sky .sat{font-size:clamp(.78rem,2.65vw,1.12rem);padding:7px 9px}}
+@media(max-width:440px){.hero .wrap{width:calc(100% - 30px)}.hero .sky{aspect-ratio:.98}.sky .sat{padding:7px 6px}.sky .sat::before{margin-right:3px}}
+@media(prefers-reduced-motion:reduce){.sky .sat,.sky .star-core{animation:none;transition:none}}
