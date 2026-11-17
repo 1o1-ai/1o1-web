@@ -1,7 +1,7 @@
 const palettes = ['midnight', 'ocean', 'dawn'];
 const control = document.querySelector('#palette');
 const storageKey = 'infinity-showcase-palette';
-let palette = 'midnight';
+let palette = 'dawn';
 try {
   const saved = localStorage.getItem(storageKey);
   if (palettes.includes(saved)) palette = saved;
