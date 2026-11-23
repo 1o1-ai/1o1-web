@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to use TMUA Focus</title>
+<meta name="description" content="A visual guide to registration, onboarding, practice and review in TMUA Focus.">
+<style>
+:root{color-scheme:light;--ink:#182b27;--muted:#50635a;--green:#17473b;--line:#c6d8ca;--paper:#f5f5ef;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:var(--paper);font:1rem/1.55 system-ui,sans-serif}
+header{background:#fdfdfa;border-bottom:1px solid var(--line)}
+.shell{width:min(100% - 2rem,68rem);margin-inline:auto}
+header .shell{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-block:1rem}
+main{padding-block:2rem}
+a{color:var(--green);text-underline-offset:.18em}a:focus-visible,summary:focus-visible{outline:3px solid #4475c1;outline-offset:3px}
+.brand{font-size:1.25rem;font-weight:800;text-decoration:none}
+.hero{padding:clamp(1.35rem,5vw,3rem);background:#163b33;color:white;border-radius:1.5rem}
+.hero h1{font:700 clamp(2.15rem,6vw,3.65rem)/1.08 Georgia,serif;margin:0 0 .7rem}
+.hero p{color:#e0ebe5;max-width:61ch;margin:.5rem 0 1rem}
+.actions{display:flex;gap:.7rem;flex-wrap:wrap}
+.actions a{background:#e4f4aa;color:#173529;border-radius:.6rem;padding:.65rem .9rem;text-decoration:none;font-weight:750}
+.actions a+ a{background:#fff}
+h2{font:700 clamp(1.6rem,3.5vw,2.25rem)/1.15 Georgia,serif;margin:2rem 0 .5rem}
+p{margin:.4rem 0 .8rem}
+.workflow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.45rem;list-style:none;margin:1rem 0 0;padding:0}
+.workflow li{position:relative;min-width:0;border:1px solid var(--line);border-radius:1rem;background:white;padding:1rem}
+.workflow li+li::before{content:"";position:absolute;width:.7rem;height:.7rem;border-top:2px solid #39775e;border-right:2px solid #39775e;transform:rotate(45deg);left:-1.23rem;top:50%}
+.symbol{display:grid;place-items:center;border-radius:.65rem;background:#e7f1e8;color:#17473b;width:2.65rem;height:2.65rem;font-size:1.4rem;font-weight:800;margin-bottom:.65rem}
+.workflow h3{font-size:1.05rem;margin:0}.workflow p{color:var(--muted);margin:.35rem 0 .65rem}
+.repeat{display:flex;align-items:center;gap:.75rem;border:1px solid var(--line);border-top:0;border-radius:0 0 .9rem .9rem;margin:0 .75rem;padding:.7rem 1rem;color:#264b3c}
+.repeat strong[aria-hidden]{font-size:1.35rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:.75rem;margin-top:1rem}
+.card,details{background:#fff;border:1px solid var(--line);border-radius:.9rem;padding:1rem}
+.card h3{margin:0}.card p:last-child,details p:last-child{margin-bottom:0}
+details{margin:.55rem 0}summary{cursor:pointer;font-weight:700}
+footer{padding-block:0 1.5rem;color:var(--muted)}
+@media(max-width:760px){.workflow{grid-template-columns:1fr;gap:1.1rem}.workflow li+li::before{left:50%;top:-1.03rem;transform:rotate(135deg)}.repeat{margin:0 .5rem}}
+@media print{body,.hero{background:white;color:#111}.hero p{color:#111}.actions,header nav{display:none}.shell{width:100%}.workflow{grid-template-columns:repeat(4,1fr);gap:1rem}h2,.card,li,details{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header><div class="shell"><a class="brand" href="./">TMUA Focus</a><nav aria-label="Help navigation"><a href="./">Back to the app</a></nav></div></header>
+<main class="shell">
+  <section class="hero">
+    <h1>How to use TMUA Focus</h1>
+    <p>Set up your student profile, find your starting point, then use the study coach to decide what to practise next.</p>
+    <div class="actions"><a href="./?view=register">Register a student</a><a href="./?view=profile">Explore sample students</a></div>
+  </section>
+  <section aria-labelledby="flow-heading">
+    <h2 id="flow-heading">Your preparation workflow</h2>
+    <ol class="workflow">
+      <li><span class="symbol" aria-hidden="true">＋</span><h3>1. Choose a student</h3><p>Create a profile with a name or nickname. To look around first, pick a demo student from the Student menu.</p><a href="./?view=profile">Open student profiles</a></li>
+      <li><span class="symbol" aria-hidden="true">∑</span><h3>2. Find your baseline</h3><p>Try eight reasoning questions in 12 minutes. The optional 20-question check-in tells the coach how you like to learn.</p><a href="./?view=onboarding">Open onboarding</a></li>
+      <li><span class="symbol" aria-hidden="true">✓</span><h3>3. Follow your study plan</h3><p>Read a suggested lesson, try a short drill or sit a timed mock. The coach explains why it recommends an activity.</p><a href="./?view=plan">Open the study plan</a></li>
+      <li><span class="symbol" aria-hidden="true">↺</span><h3>4. Review and retry</h3><p>Read worked answers, note what went wrong and retry questions when they are due.</p><a href="./?view=review">Open the mistake notebook</a></li>
+    </ol>
+    <p class="repeat"><strong aria-hidden="true">↺</strong> After each session, return to the study plan. The next recommendation uses your recent practice.</p>
+  </section>
+  <section aria-labelledby="practice-heading">
+    <h2 id="practice-heading">Choose the right activity</h2>
+    <div class="grid">
+      <article class="card"><h3>Learn a topic</h3><p>Open a syllabus lesson for a worked example, common traps and focused practice.</p><p><a href="./?view=learn">Browse lessons</a></p></article>
+      <article class="card"><h3>Practise exam timing</h3><p>Take a timed mock for either paper or rehearse both papers back to back. Flag questions you want to revisit.</p><p><a href="./?view=practice">Browse practice options</a></p></article>
+      <article class="card"><h3>Use official material</h3><p>Find the official syllabus, past papers and the Pearson practice player alongside the app’s original practice questions.</p><p><a href="./?view=resources">Browse resources</a></p></article>
+    </div>
+  </section>
+  <section aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Common questions</h2>
+    <details><summary>Can I try it before registering?</summary><p>Yes. Choose a fictional student in the Student menu to explore their sample coaching profile, or use My practice to start with a blank profile.</p></details>
+    <details><summary>What do the IQ-style and EQ-style activities tell me?</summary><p>The reasoning baseline shows how you did on a short set of mathematical and logic questions. The check-in records your preferences for feedback, pressure and motivation. Both guide study. They do not produce standardised IQ or EQ scores.</p></details>
+    <details><summary>What if I leave an assessment halfway through?</summary><p>Use Save and exit to return later. The reasoning timer keeps running while you are away. The EQ check-in is untimed, and you can skip any question.</p></details>
+    <details><summary>Where is my progress saved?</summary><p>Profiles, answers and notes are saved in this browser. Return on the same device and browser to see your progress, and select the same student.</p></details>
+  </section>
+</main>
+<footer class="shell">Independent TMUA preparation</footer>
+</body>
+</html>

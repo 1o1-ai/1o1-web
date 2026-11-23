@@ -7,7 +7,7 @@
 
 .coach{background:#fff;border:1px solid #b9cfba;border-radius:18px;padding:24px;margin-top:20px}.coach h2{margin-top:8px}.coach .question{margin-bottom:8px}.profile-bar{margin-bottom:12px}.profile-bar select{max-width:100%;background:#fff;color:#182b27}.coach-form{display:grid;gap:12px;margin-top:14px}.coach-form label{display:grid;gap:4px}.coach-form textarea{margin:0}.coach-form button{justify-self:start}.coach-form select{max-width:100%}.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:10px}.skill{border:1px solid #d6dfd6;background:#fff;padding:12px;border-radius:10px}.skill p{margin:0}
 </style></head>
-<body><header><div class="row between"><a class="brand" href="./">TMUA <span>Focus</span></a><a href="/">All projects</a></div></header>
+<body><header><div class="row between"><a class="brand" href="./">TMUA <span>Focus</span></a><nav class="row" aria-label="Site navigation"><a href="./help.html">Help</a><a href="/">All projects</a></nav></div></header>
 <main id="app"></main><footer>Progress is saved in this browser. · Independent practice for university applicants · <a href="https://esat-tmua.ac.uk/about-the-tests/tmua-test/" target="_blank" rel="noopener">Official UAT-UK test information</a></footer>
 <script src="course.js"></script>
 <script src="profiles.js?v=5"></script>
@@ -513,6 +513,6 @@ app.addEventListener('click' ,event=>{
   render();
 });
 const requestedView=new URLSearchParams(globalThis.location?.search).get('view');
-home(requestedView==='register'?'register':requestedView==='emotional'?'emotional':
+home(requestedView==='register'||Object.hasOwn(names,requestedView)?requestedView:
   profile.id.startsWith('student-')&&(!study.baseline||!study.eqOnboarding)?'onboarding':'plan');
 </script></body></html>
