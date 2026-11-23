@@ -10,9 +10,9 @@
 <body><header><div class="row between"><a class="brand" href="./">TMUA <span>Focus</span></a><a href="/">All projects</a></div></header>
 <main id="app"></main><footer>Progress is saved in this browser. · Independent practice for university applicants · <a href="https://esat-tmua.ac.uk/about-the-tests/tmua-test/" target="_blank" rel="noopener">Official UAT-UK test information</a></footer>
 <script src="course.js"></script>
-<script src="profiles.js?v=4"></script>
+<script src="profiles.js?v=5"></script>
 <script src="emotional.js?v=2"></script>
-<script src="registration.js?v=1"></script>
+<script src="registration.js?v=2"></script>
 <script>
 const p1='Paper 1 · Applications';
 const p2='Paper 2 · Reasoning';
@@ -58,7 +58,7 @@ const app=document.querySelector('#app');
 const key='tmua-focus-v1';
 const profileKey='tmua-focus-active-profile';
 const empty=()=>({sessions:0,answered:0,right:0,missed:[]});
-const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},attempts:[],baseline:null,stuck:'',emotional:{},eqChoices:{},eqOnboarding:null,reasons:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
+const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},attempts:[],baseline:null,stuck:'',emotional:{},eqChoices:{},eqDraft:null,eqSection:0,eqOnboarding:null,baselineDraft:null,reasons:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
 let profile=ownProfile,progress,study,session=null,clock,full=null;
 function loadProfile(id){
   profile=profiles.find(item=>item.id===id)??ownProfile;
@@ -199,7 +199,8 @@ function start(mode){
     questions=codes.map(code=>original.find(q=>q.module===code));
   }else if(mode.startsWith('coach-')||mode.startsWith('pace-')){
     const code=mode.split('-')[1];
-    const count=Math.max(2,Math.min(6,Math.floor(study.coach.minutes/4)));
+    const limit=mode.startsWith('pace-')&&study.eqChoices.pressure==='Use shorter timed drills'?3:6;
+    const count=Math.max(2,Math.min(limit,Math.floor(study.coach.minutes/4)));
     questions=bank.filter(q=>q.module===code).sort((a,b)=>(study.seen[a.id]??0)-(study.seen[b.id]??0)||Number(Boolean(b.hint))-Number(Boolean(a.hint))).slice(0,count);
   }
   else if(mode.startsWith('topic-'))questions=bank.filter(q=>q.module===mode.slice(6));
@@ -210,8 +211,25 @@ function start(mode){
   if(!questions.length)return;
   const started=Date.now();
   session={started,questions,mode,timed,idx:0,answers:{},checked:{},flags:{},confidence:{},seconds:{},since:Date.now(),deadline:started+(mode==='onboarding'?12*60000:mode.startsWith('pace-')?questions.length*225000:75*60000),ended:false};
+  saveBaselineDraft();
   render();
   if(timed&&!session.ended){updateTimer();clock=setInterval(updateTimer,250)}
+}
+function saveBaselineDraft(){
+  if(session?.mode!=='onboarding'||session.ended)return;
+  const {questions,...draft}=session;
+  study.baselineDraft={...draft,ids:questions.map(q=>q.id)};
+  saveStudy();
+}
+function resumeBaseline(){
+  const draft=study.baselineDraft;
+  if(!draft){home('baseline');return}
+  const questions=draft.ids.map(id=>bank[id]);
+  if(questions.some(q=>!q)){study.baselineDraft=null;saveStudy();home('baseline');return}
+  clearInterval(clock);
+  session={...draft,questions,since:Math.min(Date.now(),draft.deadline)};
+  render();
+  if(!session.ended)clock=setInterval(updateTimer,250);
 }
 function updateTimer(){
   const ms=session.deadline-Date.now();
@@ -241,7 +259,7 @@ function render(){
   ${locked?`<div class="feedback ${chosen===q.correct?'':'wrong'}"><strong>${chosen===q.correct?'Correct':'Correct answer · '+esc(q.correct)}</strong><br>${esc(q.why)}</div>`:''}
   <div class="row">${idx?button('Previous','prev'):''}${!timed&&!locked?'<button data-action="check" '+(chosen===undefined?'disabled':'')+'>Check answer</button>':''}${idx+1<questions.length?button('Next','next'):''}${button(flags[q.id]?'Remove flag':'Flag for review','flag',flags[q.id]?'bookmarked':'secondary')}</div>
   <div class="row nav" aria-label="Question navigation">${nav}</div>
-  <div class="row between">${button('Exit practice','exit')}${button(full?.next?'Submit Paper 1 and start Paper 2':'Finish and review','finish','')}</div></section>`;
+  <div class="row between">${button(session.mode==='onboarding'?'Save and exit':'Exit practice','exit')}${button(full?.next?'Submit Paper 1 and start Paper 2':'Finish and review','finish','')}</div></section>`;
   app.querySelector('h2').focus();
   if(timed)updateTimer();
 }
@@ -308,6 +326,7 @@ function finish(){
   progress={sessions:progress.sessions+1,answered:progress.answered+questions.length,right:progress.right+right,missed:[...missed]};
   study.attempts=study.attempts.slice(-240);
   if(session.mode==='onboarding'){
+    study.baselineDraft=null;
     study.baseline={right,total:questions.length,answered,applications:breakdown[p1],reasoning:breakdown[p2],
       elapsed:Math.floor((Math.min(Date.now(),session.deadline)-session.started)/1000),expired:Boolean(session.expired),
       rated:questions.filter(q=>answers[q.id]!==undefined&&session.confidence[q.id]).length,
@@ -329,6 +348,7 @@ app.addEventListener('change',event=>{
   if(target.id==='answer-confidence'){
     if(session.timed&&Date.now()>=session.deadline){session.expired=true;finish();return}
     session.confidence[session.questions[session.idx].id]=target.value;
+    saveBaselineDraft();
     return;
   }
   if(target.dataset?.reason!==undefined){
@@ -349,6 +369,7 @@ app.addEventListener('change',event=>{
   if(session.timed&&Date.now()>=session.deadline){session.expired=true;finish();return}
   const q=session.questions[session.idx];
   session.answers[q.id]=q.options[Number(event.target.value)];
+  saveBaselineDraft();
   const check=app.querySelector('[data-action="check"]');
   if(check)check.disabled=false;
   app.querySelector('[data-action="go'+session.idx+'"]').classList.remove('secondary');
@@ -375,15 +396,36 @@ app.addEventListener('submit',event=>{
   if(event.target.id==='eq-checkin-form'){
     event.preventDefault();
     const form=new FormData(event.target);
-    if(event.submitter?.value!=='skip'){
-      study.eqChoices=Object.fromEntries(Object.entries(eqOptions).flatMap(([id,options])=>{
-        const answer=form.get(id);
-        return options.includes(answer)?[[id,answer]]:[];
-      }));
+    const intent=event.submitter?.value??'save';
+    const draft={...(study.eqDraft??study.eqChoices)};
+    const [,aspects]=emotionalGroups[study.eqSection];
+    for(const [id] of aspects){
+      const answer=form.get(id);
+      if(eqOptions[id].includes(answer))draft[id]=answer;
+      else if(answer!==null&&answer!==undefined)delete draft[id];
     }
-    study.eqOnboarding=Object.keys(study.eqChoices).length?'completed':'skipped';
+    study.eqDraft=draft;
+    let next='eq-checkin';
+    if(intent==='skip'){
+      study.eqDraft=null;
+      study.eqSection=0;
+      study.eqOnboarding=eqAnswerCount()?'completed':'skipped';
+      next='onboarding';
+    }else if(intent==='pause'){
+      next='onboarding';
+    }else if(intent==='back'){
+      study.eqSection=Math.max(0,study.eqSection-1);
+    }else if(study.eqSection+1<eqSectionCount()){
+      study.eqSection++;
+    }else{
+      study.eqChoices=draft;
+      study.eqDraft=null;
+      study.eqSection=0;
+      study.eqOnboarding=eqAnswerCount()?'completed':'skipped';
+      next='onboarding';
+    }
     saveStudy();
-    home('onboarding');
+    home(next);
     app.querySelector('h1').focus();
     return;
   }
@@ -429,6 +471,7 @@ app.addEventListener('click' ,event=>{
   const action=event.target.closest('button')?.dataset.action;
   if(!action)return;
   if(action==='home'||action==='register'||action==='eq-checkin'||Object.hasOwn(names,action)){home(action==='home'?'plan':action);return}
+  if(action==='resume-baseline'){resumeBaseline();return}
   if(action.startsWith('role-')){
     const id=action.slice(5);
     const prompt=rolePlays[id];
@@ -448,7 +491,14 @@ app.addEventListener('click' ,event=>{
   }
   if(['diagnostic','drill1','drill2','paper1','paper2','retry','due','full','verify'].includes(action)||action==='mini'||/^(topic|coach|pace|due)-/.test(action)){start(action);return}
   if(session.timed&&Date.now()>=session.deadline){session.expired=true;finish();return}
-  if(action==='exit'){if(confirm('Leave this session? Current answers will be discarded.'))home();return}
+  if(action==='exit'){
+    if(session.mode==='onboarding'){
+      recordTime();
+      saveBaselineDraft();
+      home('onboarding');
+    }else if(confirm('Leave this session? Current answers will be discarded.'))home();
+    return;
+  }
   if(action==='finish'){if(Object.keys(session.answers).length===session.questions.length||confirm('Finish with unanswered questions?'))finish();return}
   if(action==='check')session.checked[session.questions[session.idx].id]=true;
   if(action==='flag'){
@@ -459,6 +509,7 @@ app.addEventListener('click' ,event=>{
   if(action==='prev')session.idx--;
   if(action==='next')session.idx++;
   if(action.startsWith('go'))session.idx=Number(action.slice(2));
+  saveBaselineDraft();
   render();
 });
 const requestedView=new URLSearchParams(globalThis.location?.search).get('view');

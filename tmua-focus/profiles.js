@@ -96,6 +96,8 @@ function coachingInsight(){
 
 const stuckOptions={example:'See a worked example',hint:'Get a small hint and try again',move:'Move on and come back',check:'Check my working step by step'};
 function baselineSetup(){
+  if(study.baselineDraft)return title('Learning Baseline','Your answers are saved. The 12-minute timer continues while you are away.')+
+    button('Resume reasoning baseline','resume-baseline','');
   return title('Learning Baseline','Eight TMUA-style questions in 12 minutes. Work without a calculator. You can skip and return to questions, and rate your confidence before seeing any answers.')+
     `<form id="baseline-setup" class="coach coach-form"><label>When you get stuck, what helps? <select name="stuck"><option value="">Skip this check-in</option>${Object.entries(stuckOptions).map(([value,label])=>`<option value="${value}" ${study.stuck===value?'selected':''}>${label}</option>`).join('')}</select></label><div class="row"><button name="intent" value="start">Start the 12-minute baseline</button><button class="secondary" name="intent" value="save">Save preference and return</button></div></form>`;
 }
@@ -115,11 +117,15 @@ function initialBaselineRecommendation(){
   const {applications,reasoning,answered,total,expired,firstMiss}=result;
   const lower=reasoning[0]/reasoning[1]<applications[0]/applications[1]?'Arg':'MM1';
   const topic=bank[firstMiss]?.module??lower;
+  const help=study.eqChoices.help;
+  const recovery=study.eqChoices.recovery;
   if(expired&&total-answered>=2)
     return {title:'Practise when to move on',reason:'The timer expired with '+(total-answered)+' questions unanswered. Try a short timed drill and flag questions when you stall.',action:'pace-'+topic,label:'Start a pacing drill'};
   if(fragileAttempts().length)
     return {title:'Check your reasoning on a fresh question',reason:'Your confidence ratings surfaced a guess or a confident mistake. Try a different question on the same topic.',action:'verify',label:'Start a confidence check'};
-  if(firstMiss!==undefined&&(study.stuck==='example'||study.eqChoices.help==='Show a worked example'||reasoning[0]<reasoning[1]&&lower==='Arg'))
+  if(firstMiss!==undefined&&(study.stuck==='example'||(help==='Show a worked example'||help==='Start with a simpler question')||reasoning[0]<reasoning[1]&&lower==='Arg'))
     return {title:'Start with a worked example',reason:'Your baseline flagged a question in '+bank[firstMiss].topic+'. Compare your approach with a worked example, then retry the method.',action:'lesson-'+topic,label:'Open the lesson'};
+  if(firstMiss!==undefined&&recovery==='Let me review my notes first')
+    return {title:'Review before your next attempt',reason:'You asked to review notes after a mistake. Start with the worked answer in your notebook.',action:'review',label:'Open the mistake notebook'};
   return {title:firstMiss===undefined?'Build on your baseline':'Practise '+bank[firstMiss].topic,reason:firstMiss===undefined?'You answered every baseline question correctly. Try a harder problem to check how well the method transfers.':(study.stuck==='check'?'Write each step and check it against the question before choosing an answer.':study.stuck==='move'?'Flag a question if you stall and return after the first pass.':'Try a short set in a topic where you missed a question. Open a hint if you get stuck.'),action:'coach-'+topic,label:'Start a guided drill'};
 }
