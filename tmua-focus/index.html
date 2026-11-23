@@ -4,10 +4,13 @@
 *{box-sizing:border-box}body{margin:0;background:#f5f5ef;color:#182b27;font:16px/1.55 system-ui,sans-serif}header{border-bottom:1px solid #d6dfd6;background:#fdfdfa}header div,main,footer{max-width:1060px;margin:auto;padding:18px 24px}.brand{font-weight:800;color:#193a31;text-decoration:none;font-size:20px}.brand span{color:#497569}main{padding-top:32px;min-height:76vh}.hero{background:#163b33;color:#fff;padding:clamp(24px,6vw,62px);border-radius:24px;background-image:radial-gradient(ellipse at top right,#316855,transparent 65%)}h1,h2{font-family:Georgia,serif;line-height:1.12;margin:0 0 14px}h1{font-size:clamp(37px,7vw,68px);max-width:690px}h2{font-size:32px}p{margin:0 0 16px}.hero p{max-width:610px;color:#e0ebe5}.eyebrow{font-size:14px;font-weight:750;letter-spacing:.1em;text-transform:uppercase}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,285px),1fr));gap:14px;margin:20px 0}.card,.session{border:1px solid #d6dfd6;border-radius:18px;background:#fff;padding:24px}.session{max-width:800px;margin:auto}h3{margin:0 0 6px}button{font:inherit;font-weight:700;background:#17473b;color:#fff;padding:10px 15px;border:1px solid transparent;border-radius:10px;cursor:pointer}button:hover{filter:brightness(1.13)}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #4475c1;outline-offset:3px}button:disabled{opacity:.52;cursor:default}.light{background:#e4f4aa;color:#173529}.secondary{background:#f0f5ef;color:#173529;border-color:#ccdacf}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.between{justify-content:space-between}.muted,footer{color:#50635a}.question{font-size:22px;font-weight:650}.options{display:grid;gap:8px;border:0;padding:0;margin:0 0 16px}.option{display:flex;align-items:center;gap:10px;border:1px solid #d6dfd6;border-radius:9px;padding:10px;cursor:pointer}.option:has(input:checked){border-color:#397861;background:#edf5ed}input{accent-color:#17473b}.feedback{padding:14px;background:#eef5ef;border-radius:10px;margin:12px 0}.wrong{background:#fbefe2}.nav{margin:14px 0}.nav button{min-width:35px;padding:5px 9px}.nav .current{outline:2px solid #17473b;outline-offset:2px}.review{border-top:1px solid #d6dfd6;padding-top:12px;margin:14px 0}summary{cursor:pointer;font-weight:650}a{color:#245e4a}#timer{font-variant-numeric:tabular-nums;font-weight:750}
 
 .course-nav{margin-bottom:20px}.course-nav [aria-current="page"]{background:#17473b;color:white}.section-title{margin-top:32px}.card p:last-child{margin-bottom:0}.study-copy{max-width:70ch}.stat{display:block;font-size:28px;font-weight:800}.course-nav button{flex:0 1 auto}.bookmarked{background:#f8e8ad;color:#262410}textarea{display:block;width:100%;min-height:82px;font:inherit;padding:8px;border:1px solid #82978c;border-radius:8px;margin:5px 0 12px}select,input[type=number]{font:inherit;padding:7px;border:1px solid #82978c;border-radius:8px}meter{width:100%;height:12px}.session>details{margin-bottom:16px}
+
+.coach{background:#fff;border:1px solid #b9cfba;border-radius:18px;padding:24px;margin-top:20px}.coach h2{margin-top:8px}.coach .question{margin-bottom:8px}.profile-bar{margin-bottom:12px}.profile-bar select{max-width:100%;background:#fff;color:#182b27}.coach-form{display:grid;gap:12px;margin-top:14px}.coach-form label{display:grid;gap:4px}.coach-form textarea{margin:0}.coach-form button{justify-self:start}.coach-form select{max-width:100%}.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:10px}.skill{border:1px solid #d6dfd6;background:#fff;padding:12px;border-radius:10px}.skill p{margin:0}
 </style></head>
 <body><header><div class="row between"><a class="brand" href="./">TMUA <span>Focus</span></a><a href="/">All projects</a></div></header>
 <main id="app"></main><footer>Progress is saved in this browser. · Independent practice for university applicants · <a href="https://esat-tmua.ac.uk/about-the-tests/tmua-test/" target="_blank" rel="noopener">Official UAT-UK test information</a></footer>
 <script src="course.js"></script>
+<script src="profiles.js?v=1"></script>
 <script>
 const p1='Paper 1 · Applications';
 const p2='Paper 2 · Reasoning';
@@ -51,18 +54,40 @@ for(const [code,paper,prompt,correct,wrong,hint,why] of authored){
 }
 const app=document.querySelector('#app');
 const key='tmua-focus-v1';
+const profileKey='tmua-focus-active-profile';
 const empty=()=>({sessions:0,answered:0,right:0,missed:[]});
-let progress=empty(),session=null,clock,full=null;
-const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{}});
-let study=defaultStudy();
-try{study={...study,...JSON.parse(localStorage.getItem('tmua-focus-course-v1'))}}catch{}
-function saveStudy(){try{localStorage.setItem('tmua-focus-course-v1',JSON.stringify(study))}catch{}}
+const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
+let profile=ownProfile,progress,study,session=null,clock,full=null;
+function loadProfile(id){
+  profile=profiles.find(item=>item.id===id)??ownProfile;
+  ({progress,study}=seedProfile(profile));
+  try{
+    const saved=JSON.parse(localStorage.getItem('tmua-focus-profile-v1:'+profile.id)??'null');
+    if(saved){
+      progress=saved.progress;
+      study={...study,...saved.study,coach:{...study.coach,...saved.study.coach}};
+    }else if(profile.id==='mine'){
+      progress=JSON.parse(localStorage.getItem(key))||progress;
+      study={...study,...JSON.parse(localStorage.getItem('tmua-focus-course-v1'))};
+    }
+  }catch{}
+}
+function saveStudy(){
+  try{localStorage.setItem('tmua-focus-profile-v1:'+profile.id,JSON.stringify({progress,study}))}catch{}
+}
+let activeId;
+try{activeId=localStorage.getItem(profileKey)}catch{}
+loadProfile(activeId);
 const formatDay=value=>new Date(value).toLocaleDateString(undefined,{month:'short',day:'numeric'});
-try{progress=JSON.parse(localStorage.getItem(key))||empty()}catch{}
 const esc=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char]);
 const button=(label,action,extra='secondary')=>'<button class="'+extra+'" data-action="'+action+'">'+label+'</button>';
-const names={plan:'Study plan',learn:'Learn',practice:'Practice',review:'Mistake notebook',resources:'Resources'};
-const navBar=page=>'<nav class="row course-nav" aria-label="Study sections">'+Object.entries(names).map(([id,label])=>'<button class="secondary" data-action="'+id+'" '+(page===id?'aria-current="page"':'')+'>'+label+'</button>').join('')+'</nav>';
+const names={plan:'Study plan',profile:'Student profile',learn:'Learn',practice:'Practice',review:'Mistake notebook',resources:'Resources'};
+const navBar=page=>`<div class="row between profile-bar"><label>Student <select id="active-profile">${profiles.map(item=>`<option value="${item.id}" ${item.id===profile.id?'selected':''}>${esc(item.name)}${item.id==='mine'?'':' · demo'}</option>`).join('')}</select></label><span class="muted">${esc(profile.city)}</span></div><nav class="row course-nav" aria-label="Study sections">${Object.entries(names).map(([id,label])=>'<button class="secondary" data-action="'+id+'" '+(page===id?'aria-current="page"':'')+'>'+label+'</button>').join('')}</nav>`;
+function coachingPanel(recommendation,checkIn=false){
+  const {minutes,need,confidence,reflection}=study.coach;
+  return `<section class="coach"><h2>Your next study session</h2><p class="question">${esc(recommendation.title)}</p><p>${esc(recommendation.reason)}</p>${button(recommendation.label,recommendation.action,'')}
+  ${checkIn?`<details class="section-title"><summary>Tell your coach how today is going</summary><form id="coach-checkin" class="coach-form"><label>Time available<select name="minutes">${[10,15,20,25,35,45].map(n=>`<option value="${n}" ${n===minutes?'selected':''}>${n} minutes</option>`).join('')}</select></label><label>What should we work on?<select name="need">${Object.entries(needs).map(([id,label])=>`<option value="${id}" ${id===need?'selected':''}>${label}</option>`).join('')}</select></label><label>How confident do you feel?<select name="confidence">${[1,2,3,4,5].map(n=>`<option value="${n}" ${n===confidence?'selected':''}>${n}/5${n===1?' · Unsure':n===5?' · Very confident':''}</option>`).join('')}</select></label><label>Personal reflection <textarea name="reflection" maxlength="500" placeholder="What happened in your last practice session?">${esc(reflection)}</textarea></label><button>Update my session</button></form></details>`:''}</section>`;
+}
 const title=(heading,body)=>`<h1 tabindex="-1">${heading}</h1><p class="study-copy muted">${body}</p>`;
 const retryButton=ids=>ids.length?button('Retry '+ids.length+' questions','retry',''):'';
 const missedIds=()=>progress.missed.filter(id=>bank[id]);
@@ -71,7 +96,7 @@ function home(page='plan'){
   clearInterval(clock);
   session=null;
   full=null;
-  const weakest=modules.filter(([code])=>study.stats[code]?.total).sort(([a],[b])=>study.stats[a].right/study.stats[a].total-study.stats[b].right/study.stats[b].total)[0];
+  const recommendation=getRecommendation();
   const recent=study.history.slice(-5).reverse().map(item=>`<li>${formatDay(item.at)} · ${esc(item.label)} · ${item.right}/${item.total}</li>`).join('');
   const windowWeeks=Number(study.weeks);
   const stages=[
@@ -86,12 +111,18 @@ function home(page='plan'){
     return `<section class="card"><p class="eyebrow">Week ${first}${last>first?'–'+last:''}</p><h3>${heading}</h3><p>${body}</p></section>`;
   }).join('');
   const pages={
-    plan:`<section class="hero"><p class="eyebrow">Independent TMUA preparation</p><h1>Learn the maths. Practise the reasoning.</h1><p>Build a study plan, cover the syllabus and rehearse both papers before test day.</p><div class="row">${button('Start an 18-question diagnostic','diagnostic','light')}${button('Explore the syllabus','learn')}</div></section>
+    plan:`<section class="hero"><p class="eyebrow">${esc(profile.name)} · ${profile.id==='mine'?'Your workspace':'Sample student'}</p><h1>Learn the maths. Practise the reasoning.</h1><p>Build a study plan, cover the syllabus and rehearse both papers before test day.</p><div class="row">${button('Start an 18-question diagnostic','diagnostic','light')}${button('Explore the syllabus','learn')}</div></section>
     <div class="grid"><section class="card"><strong class="stat">${study.lessons.length}/${modules.length}</strong>Lessons read</section><section class="card"><strong class="stat">${dueIds().length}</strong>Mistakes ready to retry</section><section class="card"><strong class="stat">${progress.answered?Math.round(100*progress.right/progress.answered)+'%':'—'}</strong>Practice accuracy</section></div>
-    <h2>Your next session</h2><p>${weakest?'Lowest recorded accuracy is in '+esc(weakest[1])+'. Revisit the lesson and practise without a timer.':'Start with the diagnostic to find which skills to work on first.'}</p>
-    ${weakest?button('Open recommended lesson','lesson-'+weakest[0]):''}
+    ${coachingPanel(recommendation,true)}
     <h2 class="section-title">Preparation schedule</h2><label>Weeks available <select id="weeks">${[4,6,8,12].map(n=>`<option ${n===windowWeeks?'selected':''}>${n}</option>`).join('')}</select></label><div class="grid">${plan}</div>
     <h2>Recent practice</h2>${recent?'<ul>'+recent+'</ul>':'<p>Completed sessions will appear here.</p>'}`,
+    profile:title(esc(profile.name),esc(profile.city+' · '+profile.course))+
+    `<p>${profile.id==='mine'?'Your practice and reflections are stored in this browser.':'Fictional student with sample results. Activities you complete here update this demo profile only.'}</p><div class="grid"><section class="card"><strong class="stat">${study.weeks}</strong>Weeks in study plan</section><section class="card"><strong class="stat">${study.coach.minutes}</strong>Minutes available today</section><section class="card"><strong class="stat">${study.coach.confidence}/5</strong>Confidence at check-in</section></div>
+    ${coachingPanel(recommendation,true)}
+    <h2 class="section-title">Skill record</h2><div class="skill-grid">${modules.map(([code,name])=>{
+      const stat=study.stats[code];
+      return `<section class="skill"><h3>${name}</h3>${stat?.total?`<meter min="0" max="${stat.total}" value="${stat.right}" aria-label="${name} accuracy"></meter><p>${stat.right}/${stat.total} correct${stat.timed?' · '+Math.round(stat.seconds/stat.timed)+'s avg timed':''}</p>`:'<p>Awaiting first attempt</p>'}</section>`;
+    }).join('')}</div><h2 class="section-title">Recent practice</h2>${recent?'<ul>'+recent+'</ul>':'<p>Complete a session to build your record.</p>'}`,
     learn:title('Syllabus and lessons','Work through all 18 major syllabus areas. Each lesson has a method, a worked example, a common trap, a recall prompt and targeted practice.')+
     ['Pure mathematics','Core mathematics','Paper 2 reasoning'].map((group,i)=>`<h2 class="section-title">${group}</h2><div class="grid">${modules.slice([0,8,15][i],[8,15,18][i]).map(([code,name,goal])=>{
       const stat=study.stats[code];
@@ -124,18 +155,26 @@ function start(mode){
   const rotated=(items,offset)=>[...items.slice(offset%items.length),...items.slice(0,offset%items.length)];
   const selection=(paper,count,offset)=>rotated(original.filter(q=>q.paper===paper),offset).slice(0,count);
   const side=mode.endsWith('1')?p1:p2;
-  const timed=mode.startsWith('paper')||mode==='full';
+  const timed=mode.startsWith('paper')||mode.startsWith('pace-')||mode==='full';
   let questions;
   if(mode==='retry')questions=missedIds().map(id=>bank[id]);
   else if(mode==='due')questions=dueIds().map(id=>bank[id]);
-  else if(mode==='diagnostic')questions=modules.map(([code])=>original.find(q=>q.module===code));
+  else if(mode.startsWith('due-'))questions=dueIds().map(id=>bank[id]).filter(q=>q.module===mode.slice(4)).slice(0,Math.max(2,Math.floor(study.coach.minutes/4)));
+  else if(mode==='diagnostic'||mode==='mini'){
+    const codes=mode==='mini'?['MM1','MM4','MM6','M7','Arg','Err']:modules.map(([code])=>code);
+    questions=codes.map(code=>original.find(q=>q.module===code));
+  }else if(mode.startsWith('coach-')||mode.startsWith('pace-')){
+    const code=mode.split('-')[1];
+    const count=Math.max(2,Math.min(6,Math.floor(study.coach.minutes/4)));
+    questions=bank.filter(q=>q.module===code).sort((a,b)=>(study.seen[a.id]??0)-(study.seen[b.id]??0)||Number(Boolean(b.hint))-Number(Boolean(a.hint))).slice(0,count);
+  }
   else if(mode.startsWith('topic-'))questions=bank.filter(q=>q.module===mode.slice(6));
   else if(mode==='full'){
     questions=selection(p1,20,progress.sessions);
     full={next:selection(p2,20,progress.sessions),first:[],answers:{}};
   }else questions=selection(side,timed?20:5,progress.sessions*5);
   if(!questions.length)return;
-  session={questions,mode,timed,idx:0,answers:{},checked:{},flags:{},deadline:Date.now()+75*60000,ended:false};
+  session={questions,mode,timed,idx:0,answers:{},checked:{},flags:{},seconds:{},since:Date.now(),deadline:Date.now()+(mode.startsWith('pace-')?questions.length*225000:75*60000),ended:false};
   render();
   if(timed&&!session.ended){updateTimer();clock=setInterval(updateTimer,250)}
 }
@@ -146,12 +185,19 @@ function updateTimer(){
   const timer=document.querySelector('#timer');
   if(timer)timer.textContent=Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');
 }
+function recordTime(){
+  if(!session.timed)return;
+  const now=Math.min(Date.now(),session.deadline);
+  const id=session.questions[session.idx].id;
+  session.seconds[id]=(session.seconds[id]??0)+Math.max(0,now-session.since)/1000;
+  session.since=now;
+}
 function render(){
   const {questions,idx,answers,checked,timed,flags}=session;
   const q=questions[idx],chosen=answers[q.id],locked=checked[q.id];
   const nav=questions.map((item,i)=>button((i+1)+(flags[item.id]?' ⚑':''),'go'+i,
     (answers[item.id]===undefined?'secondary':'')+(idx===i?' current':''))).join('');
-  app.innerHTML=`<section class="session"><div class="row between"><p class="eyebrow">${q.paper}</p>${timed?'<span id="timer" aria-label="Time remaining"></span>':''}</div>
+  app.innerHTML=`<section class="session"><div class="row between"><p class="eyebrow">${q.paper} · ${esc(profile.name)}</p>${timed?'<span id="timer" aria-label="Time remaining"></span>':''}</div>
   <h2 tabindex="-1">Question ${idx+1} of ${questions.length}</h2><p class="muted">${q.topic}</p>
   <p class="question" id="question">${esc(q.prompt)}</p>
   <fieldset class="options" aria-labelledby="question">${q.options.map((value,i)=>`<label class="option"><input type="radio" name="answer" value="${i}" ${chosen===value?'checked':''} ${locked?'disabled':''}> ${esc(value)}</label>`).join('')}</fieldset>
@@ -165,22 +211,25 @@ function render(){
 }
 function finish(){
   if(session.ended)return;
+  recordTime();
   session.ended=true;
   clearInterval(clock);
   if(full?.next){
     full.first=session.questions;
     full.answers=session.answers;
+    full.seconds=session.seconds;
     const next=full.next;
     full.next=null;
     const deadline=Math.min(session.deadline,Date.now())+75*60000;
-    session={questions:next,mode:'full',timed:true,idx:0,answers:{},checked:{},flags:{},deadline,ended:false};
+    session={questions:next,mode:'full',timed:true,idx:0,answers:{},checked:{},flags:{},seconds:{},since:Math.min(Date.now(),deadline),deadline,ended:false};
     render();
     if(!session.ended)clock=setInterval(updateTimer,250);
     return;
   }
   const questions=full?[...full.first,...session.questions]:session.questions;
   const answers=full?{...full.answers,...session.answers}:session.answers;
-  const retrying=['retry','due'].includes(session.mode);
+  const seconds={...full?.seconds,...session.seconds};
+  const retrying=session.mode==='retry'||session.mode==='due'||session.mode.startsWith('due-');
 
   let right=0,answered=0;
   const missed=new Set(progress.missed);
@@ -190,6 +239,11 @@ function finish(){
     if(answer!==undefined)answered++;
     const topic=study.stats[q.module]??={right:0,total:0};
     topic.total++;
+    study.seen[q.id]=Date.now();
+    if(answer!==undefined&&session.timed){
+      topic.seconds=(topic.seconds??0)+(seconds[q.id]??0);
+      topic.timed=(topic.timed??0)+1;
+    }
     if(correct){
       right++;
       topic.right++;
@@ -211,17 +265,22 @@ function finish(){
     return `<details class="review"><summary>${correct?'Correct':answer===undefined?'Unanswered':'Missed'} · ${esc(q.topic)} · ${esc(q.prompt)}</summary><p>Your answer: ${esc(answer??'Skipped')}<br>Correct answer: ${esc(q.correct)}</p><p>${esc(q.why)}</p></details>`;
   }).join('');
   progress={sessions:progress.sessions+1,answered:progress.answered+questions.length,right:progress.right+right,missed:[...missed]};
-  try{localStorage.setItem(key,JSON.stringify(progress))}catch{}
-  const label={diagnostic:'Diagnostic',full:'Full rehearsal',paper1:'Paper 1 mock',paper2:'Paper 2 mock',retry:'Mistake review',due:'Scheduled review'}[session.mode]??'Topic practice';
+  const label={diagnostic:'Diagnostic',mini:'Short baseline',full:'Full rehearsal',paper1:'Paper 1 mock',paper2:'Paper 2 mock',retry:'Mistake review',due:'Scheduled review'}[session.mode]??(session.mode.startsWith('pace-')?'Timed topic drill':'Topic practice');
   study.history.push({at:Date.now(),label,right,total:questions.length});
   study.history=study.history.slice(-50);
   saveStudy();
   full=null;
-  app.innerHTML=`<section class="session"><h2 tabindex="-1">${right} of ${questions.length} correct</h2><p>${answered} answered · ${questions.length-answered} skipped · Raw practice score</p>${Object.entries(breakdown).map(([paper,[good,total]])=>`<p>${paper} · ${good}/${total}</p>`).join('')}<div class="row">${button('Study plan','home')}${button('Open notebook','review')}${missed.size?button('Retry missed questions','retry',''):''}</div><div>${reviews}</div></section>`;
+  app.innerHTML=`<section class="session"><h2 tabindex="-1">${right} of ${questions.length} correct</h2><p>${answered} answered · ${questions.length-answered} skipped · Raw practice score</p>${Object.entries(breakdown).map(([paper,[good,total]])=>`<p>${paper} · ${good}/${total}</p>`).join('')}<div class="row">${button('Study plan','home')}${button('Open notebook','review')}${missed.size?button('Retry missed questions','retry',''):''}</div>${coachingPanel(getRecommendation(),true)}<div>${reviews}</div></section>`;
   app.querySelector('h2').focus();
 }
 app.addEventListener('change',event=>{
   const {target}=event;
+  if(target.id==='active-profile'){
+    loadProfile(target.value);
+    try{localStorage.setItem(profileKey,profile.id)}catch{}
+    home('profile');
+    return;
+  }
   if(target.id==='weeks'){study.weeks=Number(target.value);saveStudy();home();return}
   if(event.target.name!=='answer' ||!session||session.ended)return;
   if(session.timed&&Date.now()>=session.deadline){finish();return}
@@ -230,6 +289,17 @@ app.addEventListener('change',event=>{
   const check=app.querySelector('[data-action="check"]');
   if(check)check.disabled=false;
   app.querySelector('[data-action="go'+session.idx+'"]').classList.remove('secondary');
+});
+app.addEventListener('submit',event=>{
+  if(event.target.id!=='coach-checkin')return;
+  event.preventDefault();
+  const form=new FormData(event.target);
+  const need=form.get('need');
+  study.coach={minutes:Number(form.get('minutes')),need:Object.hasOwn(needs,need)?need:'general',
+    confidence:Number(form.get('confidence')),reflection:String(form.get('reflection')??'').trim().slice(0,500)};
+  saveStudy();
+  home('profile');
+  app.querySelector('h1').focus();
 });
 app.addEventListener('input',event=>{
   if(event.target.dataset.note===undefined)return;
@@ -248,7 +318,7 @@ app.addEventListener('click' ,event=>{
     lesson(code);
     return;
   }
-  if(['diagnostic','drill1','drill2','paper1','paper2','retry','due','full'].includes(action)||action.startsWith('topic-')){start(action);return}
+  if(['diagnostic','drill1','drill2','paper1','paper2','retry','due','full'].includes(action)||action==='mini'||/^(topic|coach|pace|due)-/.test(action)){start(action);return}
   if(session.timed&&Date.now()>=session.deadline){finish();return}
   if(action==='exit'){if(confirm('Leave this session? Current answers will be discarded.'))home();return}
   if(action==='finish'){if(Object.keys(session.answers).length===session.questions.length||confirm('Finish with unanswered questions?'))finish();return}
@@ -257,6 +327,7 @@ app.addEventListener('click' ,event=>{
     const id=session.questions[session.idx].id;
     session.flags[id]=!session.flags[id];
   }
+  if(action==='prev'||action==='next'||action.startsWith('go'))recordTime();
   if(action==='prev')session.idx--;
   if(action==='next')session.idx++;
   if(action.startsWith('go'))session.idx=Number(action.slice(2));

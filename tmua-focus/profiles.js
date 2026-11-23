@@ -1,0 +1,60 @@
+const demoProfiles = [
+  {id:'amelia',name:'Amelia Clarke',city:'Bristol, United Kingdom',course:'Mathematics',weeks:6,minutes:25,need:'timing',confidence:3,focus:['MM4','MM7','MM8'],strength:['MM1','MM2'],note:'I usually find a route, but spend too long on the first few questions.'},
+  {id:'luca',name:'Luca Bianchi',city:'Milan, Italy',course:'Mathematics and Computer Science',weeks:8,minutes:20,need:'reasoning',confidence:2,focus:['Arg','Prf','Err'],strength:['MM3','MM6'],note:'I mix up the converse and the contrapositive when I work quickly.'},
+  {id:'zofia',name:'Zofia Kowalska',city:'Kraków, Poland',course:'Computer Science',weeks:12,minutes:15,need:'concepts',confidence:2,focus:['MM5','MM6','MM7'],strength:['Arg','Err'],note:'I want worked examples before I try calculus on my own.'},
+  {id:'ines',name:'Inês Silva',city:'Porto, Portugal',course:'Mathematics and Statistics',weeks:4,minutes:35,need:'timing',confidence:4,focus:['M7','MM8','Prf'],strength:['M6','MM1'],note:'My untimed work is going well. I want practice making faster decisions.'},
+  {id:'elin',name:'Elin Andersson',city:'Uppsala, Sweden',course:'Mathematics and Philosophy',weeks:8,minutes:25,need:'accuracy',confidence:3,focus:['M2','MM2','Err'],strength:['Arg','Prf'],note:'Sign mistakes and missing cases cost me marks even when I know the method.'}
+];
+const needs = {general:'Balanced practice',concepts:'Understand the methods',reasoning:'Follow mathematical arguments',timing:'Manage time under pressure',accuracy:'Avoid careless errors'};
+const ownProfile={id:'mine',name:'My practice',city:'Personal workspace',course:'TMUA preparation',weeks:6,minutes:25,need:'general',confidence:3};
+const profiles=[ownProfile,...demoProfiles];
+function seedProfile(profile){
+  if(profile.id==='mine')return {progress:empty(),study:defaultStudy()};
+  const state=defaultStudy();
+  state.weeks=profile.weeks;
+  Object.assign(state.coach,{minutes:profile.minutes,need:profile.need,confidence:profile.confidence,reflection:profile.note});
+  const missed=[];
+  const now=Date.now();
+  for(const code of [...profile.focus,...profile.strength]){
+    const questions=bank.filter(q=>q.module===code&&q.hint);
+    const total=2;
+    const right=profile.focus.includes(code)?1:2;
+    state.stats[code]={right,total,seconds:profile.need==='timing'?total*260:total*155,timed:total};
+    if(right<total){
+      const q=questions[0];
+      missed.push(q.id);
+      state.due[q.id]=now-86400000;
+      state.notes[q.id]=profile.note;
+    }else state.lessons.push(code);
+  }
+  const stats=Object.values(state.stats);
+  const answered=stats.reduce((sum,item)=>sum+item.total,0);
+  const right=stats.reduce((sum,item)=>sum+item.right,0);
+  state.history.push({at:now-86400000,label:'Sample baseline',right,total:answered});
+  return {progress:{sessions:1,answered,right,missed},study:state};
+}
+function getRecommendation(){
+  const map=Object.fromEntries(modules.map(module=>[module[0],module[1]]));
+  const {need,confidence,minutes}=study.coach;
+  const attempted=Object.keys(study.stats).filter(code=>map[code]&&study.stats[code].total);
+  if(!attempted.length && !dueIds().length){
+    return {title:'Establish your baseline',reason:'Your diagnostic will show which topics to focus on first.',action:minutes<20?'mini':'diagnostic',label:minutes<20?'Start a short baseline':'Start the diagnostic'};
+  }
+  const code=Object.keys(map).sort((a,b)=>priority(b)-priority(a))[0];
+  function priority(topic){
+    const stat=study.stats[topic];
+    const accuracy=stat?.total?stat.right/stat.total:null;
+    const weakness=accuracy===null?0.25:1-accuracy;
+    const pace=stat?.timed?Math.min(0.6,Math.max(0,stat.seconds/stat.timed/225-1)):0;
+    const due=dueIds().filter(id=>bank[id].module===topic).length;
+    return weakness+due*0.12+(need==='timing'?pace*2:pace)+(need==='reasoning'&&['Arg','Prf','Err'].includes(topic)?0.45:0);
+  }
+  const stat=study.stats[code];
+  const record=stat?.total?stat.right+'/'+stat.total+' correct':'No attempts yet';
+  const pace=stat?.timed?' · '+Math.round(stat.seconds/stat.timed)+'s per answered question':'';
+  const topic='Focus on '+map[code];
+  if((confidence<=2||need==='concepts')&&!study.lessons.includes(code))return {title:topic,reason:record+pace+'. Start with the worked example, then try a short drill.',action:'lesson-'+code,label:'Open the lesson'};
+  if(need==='timing'&&minutes>=12&&stat?.total&&stat.right/stat.total>=0.5)return {title:'Practise pacing in '+map[code],reason:record+pace+'. Use the timer to practise deciding when to move on.',action:'pace-'+code,label:'Start a timed drill'};
+  if(dueIds().some(id=>bank[id].module===code))return {title:'Revisit '+map[code],reason:record+pace+'. A previous mistake in this topic is ready to retry.',action:'due-'+code,label:'Retry due questions'};
+  return {title:topic,reason:record+pace+'. Try a short set and review your reasoning after each answer.',action:'coach-'+code,label:'Start a guided drill'};
+}
