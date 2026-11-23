@@ -2,9 +2,12 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TMUA Focus</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:#f5f5ef;color:#182b27;font:16px/1.55 system-ui,sans-serif}header{border-bottom:1px solid #d6dfd6;background:#fdfdfa}header div,main,footer{max-width:1060px;margin:auto;padding:18px 24px}.brand{font-weight:800;color:#193a31;text-decoration:none;font-size:20px}.brand span{color:#497569}main{padding-top:32px;min-height:76vh}.hero{background:#163b33;color:#fff;padding:clamp(24px,6vw,62px);border-radius:24px;background-image:radial-gradient(ellipse at top right,#316855,transparent 65%)}h1,h2{font-family:Georgia,serif;line-height:1.12;margin:0 0 14px}h1{font-size:clamp(37px,7vw,68px);max-width:690px}h2{font-size:32px}p{margin:0 0 16px}.hero p{max-width:610px;color:#e0ebe5}.eyebrow{font-size:14px;font-weight:750;letter-spacing:.1em;text-transform:uppercase}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,285px),1fr));gap:14px;margin:20px 0}.card,.session{border:1px solid #d6dfd6;border-radius:18px;background:#fff;padding:24px}.session{max-width:800px;margin:auto}h3{margin:0 0 6px}button{font:inherit;font-weight:700;background:#17473b;color:#fff;padding:10px 15px;border:1px solid transparent;border-radius:10px;cursor:pointer}button:hover{filter:brightness(1.13)}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #4475c1;outline-offset:3px}button:disabled{opacity:.52;cursor:default}.light{background:#e4f4aa;color:#173529}.secondary{background:#f0f5ef;color:#173529;border-color:#ccdacf}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.between{justify-content:space-between}.muted,footer{color:#50635a}.question{font-size:22px;font-weight:650}.options{display:grid;gap:8px;border:0;padding:0;margin:0 0 16px}.option{display:flex;align-items:center;gap:10px;border:1px solid #d6dfd6;border-radius:9px;padding:10px;cursor:pointer}.option:has(input:checked){border-color:#397861;background:#edf5ed}input{accent-color:#17473b}.feedback{padding:14px;background:#eef5ef;border-radius:10px;margin:12px 0}.wrong{background:#fbefe2}.nav{margin:14px 0}.nav button{min-width:35px;padding:5px 9px}.nav .current{outline:2px solid #17473b;outline-offset:2px}.review{border-top:1px solid #d6dfd6;padding-top:12px;margin:14px 0}summary{cursor:pointer;font-weight:650}a{color:#245e4a}#timer{font-variant-numeric:tabular-nums;font-weight:750}
+
+.course-nav{margin-bottom:20px}.course-nav [aria-current="page"]{background:#17473b;color:white}.section-title{margin-top:32px}.card p:last-child{margin-bottom:0}.study-copy{max-width:70ch}.stat{display:block;font-size:28px;font-weight:800}.course-nav button{flex:0 1 auto}.bookmarked{background:#f8e8ad;color:#262410}textarea{display:block;width:100%;min-height:82px;font:inherit;padding:8px;border:1px solid #82978c;border-radius:8px;margin:5px 0 12px}select,input[type=number]{font:inherit;padding:7px;border:1px solid #82978c;border-radius:8px}meter{width:100%;height:12px}.session>details{margin-bottom:16px}
 </style></head>
 <body><header><div class="row between"><a class="brand" href="./">TMUA <span>Focus</span></a><a href="/">All projects</a></div></header>
-<main id="app"></main><footer>Independent practice for university applicants · <a href="https://esat-tmua.ac.uk/about-the-tests/tmua-test/" target="_blank" rel="noopener">Official UAT-UK test information</a></footer>
+<main id="app"></main><footer>Progress is saved in this browser. · Independent practice for university applicants · <a href="https://esat-tmua.ac.uk/about-the-tests/tmua-test/" target="_blank" rel="noopener">Official UAT-UK test information</a></footer>
+<script src="course.js"></script>
 <script>
 const p1='Paper 1 · Applications';
 const p2='Paper 2 · Reasoning';
@@ -39,34 +42,102 @@ for(const n of [2,3,4,5,6]){
     'x − '+n+' > 0',['x² > '+n*n,'|x| > '+n,'x ≥ '+n,'x + '+n+' > 0'],
     'Subtracting the same number from both sides preserves a strict inequality and is reversible.');
 }
+const legacyMap={'Algebra':'MM1','Functions':'MM1','Sequences':'MM2','Coordinate geometry':'MM3','Implications':'Arg','Counterexamples':'Err','Negation':'Arg','Proof and logic':'Prf'};
+for(const q of bank){q.module=legacyMap[q.topic];q.level='Foundation'}
+for(const [code,paper,prompt,correct,wrong,hint,why] of authored){
+  const module=modules.find(item=>item[0]===code);
+  add(paper===1?p1:p2,module[1],prompt,correct,wrong.split('|'),why);
+  Object.assign(bank.at(-1),{module:code,level:paper===2?'Reasoning':'Application',hint});
+}
 const app=document.querySelector('#app');
 const key='tmua-focus-v1';
 const empty=()=>({sessions:0,answered:0,right:0,missed:[]});
-let progress=empty(),session=null,clock;
+let progress=empty(),session=null,clock,full=null;
+const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{}});
+let study=defaultStudy();
+try{study={...study,...JSON.parse(localStorage.getItem('tmua-focus-course-v1'))}}catch{}
+function saveStudy(){try{localStorage.setItem('tmua-focus-course-v1',JSON.stringify(study))}catch{}}
+const formatDay=value=>new Date(value).toLocaleDateString(undefined,{month:'short',day:'numeric'});
 try{progress=JSON.parse(localStorage.getItem(key))||empty()}catch{}
 const esc=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char]);
 const button=(label,action,extra='secondary')=>'<button class="'+extra+'" data-action="'+action+'">'+label+'</button>';
-function home(){
+const names={plan:'Study plan',learn:'Learn',practice:'Practice',review:'Mistake notebook',resources:'Resources'};
+const navBar=page=>'<nav class="row course-nav" aria-label="Study sections">'+Object.entries(names).map(([id,label])=>'<button class="secondary" data-action="'+id+'" '+(page===id?'aria-current="page"':'')+'>'+label+'</button>').join('')+'</nav>';
+const title=(heading,body)=>`<h1 tabindex="-1">${heading}</h1><p class="study-copy muted">${body}</p>`;
+const retryButton=ids=>ids.length?button('Retry '+ids.length+' questions','retry',''):'';
+const missedIds=()=>progress.missed.filter(id=>bank[id]);
+const dueIds=()=>missedIds().filter(id=>!study.due[id]||study.due[id]<=Date.now());
+function home(page='plan'){
   clearInterval(clock);
   session=null;
-  app.innerHTML=`<section class="hero"><p class="eyebrow">University admissions practice</p><h1>Train for the TMUA.</h1><p>Practise mathematical reasoning, work against the clock, and revisit the mistakes that cost you marks.</p>${button('Start a 10-question diagnostic','diagnostic','light')}</section>
-  <div class="grid">
-  <section class="card"><h3>Paper 1</h3><p>Apply mathematics in unfamiliar situations. Practise algebra, functions, sequences and coordinate geometry.</p><div class="row">${button('Quick drill','drill1')}${button('Timed paper','paper1','')}</div></section>
-  <section class="card"><h3>Paper 2</h3><p>Check what follows from a claim. Practise implications, counterexamples, negation and proof.</p><div class="row">${button('Quick drill','drill2')}${button('Timed paper','paper2','')}</div></section>
-  <section class="card"><h3>Your practice</h3><p>${progress.sessions} sessions · ${progress.answered?Math.round(progress.right*100/progress.answered)+'% accuracy':'Accuracy appears after a session'}</p>${progress.missed.length?button('Retry '+progress.missed.length+' missed questions','retry'):''}<p class="muted">Progress is saved in this browser.</p></section></div>
-  <p class="muted">Starter bank of 40 original practice questions. Timed papers use 20 questions in 75 minutes each. Work without a calculator.</p>`;
+  full=null;
+  const weakest=modules.filter(([code])=>study.stats[code]?.total).sort(([a],[b])=>study.stats[a].right/study.stats[a].total-study.stats[b].right/study.stats[b].total)[0];
+  const recent=study.history.slice(-5).reverse().map(item=>`<li>${formatDay(item.at)} · ${esc(item.label)} · ${item.right}/${item.total}</li>`).join('');
+  const windowWeeks=Number(study.weeks);
+  const stages=[
+    ['Baseline and foundations','Take the diagnostic, then work through exact calculation, algebra, ratio and core graphs.'],
+    ['Applications and reasoning','Alternate a maths module with logic, proof and error spotting. Explain each solution before checking it.'],
+    ['Timed practice and review','Sit original mocks and official past papers. Rework missed and slow questions without looking at your notes.'],
+    ['Final rehearsal','Complete the Pearson practice player on desktop, then run both papers back to back. Check booking, ID and approved access arrangements.']
+  ];
+  const plan=stages.map(([heading,body],i)=>{
+    const first=Math.min(windowWeeks,1+Math.floor(i*windowWeeks/4));
+    const last=Math.max(first,Math.floor((i+1)*windowWeeks/4));
+    return `<section class="card"><p class="eyebrow">Week ${first}${last>first?'–'+last:''}</p><h3>${heading}</h3><p>${body}</p></section>`;
+  }).join('');
+  const pages={
+    plan:`<section class="hero"><p class="eyebrow">Independent TMUA preparation</p><h1>Learn the maths. Practise the reasoning.</h1><p>Build a study plan, cover the syllabus and rehearse both papers before test day.</p><div class="row">${button('Start an 18-question diagnostic','diagnostic','light')}${button('Explore the syllabus','learn')}</div></section>
+    <div class="grid"><section class="card"><strong class="stat">${study.lessons.length}/${modules.length}</strong>Lessons read</section><section class="card"><strong class="stat">${dueIds().length}</strong>Mistakes ready to retry</section><section class="card"><strong class="stat">${progress.answered?Math.round(100*progress.right/progress.answered)+'%':'—'}</strong>Practice accuracy</section></div>
+    <h2>Your next session</h2><p>${weakest?'Lowest recorded accuracy is in '+esc(weakest[1])+'. Revisit the lesson and practise without a timer.':'Start with the diagnostic to find which skills to work on first.'}</p>
+    ${weakest?button('Open recommended lesson','lesson-'+weakest[0]):''}
+    <h2 class="section-title">Preparation schedule</h2><label>Weeks available <select id="weeks">${[4,6,8,12].map(n=>`<option ${n===windowWeeks?'selected':''}>${n}</option>`).join('')}</select></label><div class="grid">${plan}</div>
+    <h2>Recent practice</h2>${recent?'<ul>'+recent+'</ul>':'<p>Completed sessions will appear here.</p>'}`,
+    learn:title('Syllabus and lessons','Work through all 18 major syllabus areas. Each lesson has a method, a worked example, a common trap, a recall prompt and targeted practice.')+
+    ['Pure mathematics','Core mathematics','Paper 2 reasoning'].map((group,i)=>`<h2 class="section-title">${group}</h2><div class="grid">${modules.slice([0,8,15][i],[8,15,18][i]).map(([code,name,goal])=>{
+      const stat=study.stats[code];
+      return `<section class="card"><p class="eyebrow">${code} · ${study.lessons.includes(code)?'Read':'To study'}</p><h3>${name}</h3><p>${goal}</p>${stat?`<p>${stat.right}/${stat.total} correct in practice</p>`:''}${button('Open lesson','lesson-'+code)}</section>`;
+    }).join('')}</div>`).join(''),
+    practice:title('Practise for the test','Work without a calculator. The official test has two consecutive 75-minute papers of 20 questions each. There is no penalty for wrong answers.')+
+    `<div class="grid"><section class="card"><h3>Paper 1</h3><p>Apply school mathematics in unfamiliar settings.</p><div class="row">${button('Quick drill','drill1')}${button('75-minute mock','paper1','')}</div></section>
+    <section class="card"><h3>Paper 2</h3><p>Test mathematical arguments, proof steps and counterexamples.</p><div class="row">${button('Quick drill','drill2')}${button('75-minute mock','paper2','')}</div></section>
+    <section class="card"><h3>Full rehearsal</h3><p>Both original practice papers back to back, 150 minutes total. Review solutions after both papers.</p>${button('Start full rehearsal','full','')}</section></div>
+    <section class="card"><h3>Strategy for timed papers</h3><p>Use the first pass to answer questions where you have a clear route. Flag uncertain items. On the second pass, use sketches, sign checks and simple cases to rule out distractors. Leave time to answer every item.</p><p>Mocks reuse questions from the learning bank and report raw marks. Use the official past-paper archive for unfamiliar full papers and the Pearson player for interface practice.</p>${button('Open official resources','resources')}</section>`,
+    review:title('Mistake notebook','Write down what went wrong and what you will check next time. Retry a mistake after one day, then again after three days once you get it right.')+
+    `<div class="row">${dueIds().length?button('Practice due questions','due',''):''}${retryButton(missedIds())}</div>
+    ${missedIds().length?missedIds().map(id=>{const q=bank[id];return `<section class="card review"><h3>${esc(q.topic)}</h3><p>${esc(q.prompt)}</p><p class="muted">${study.due[id]>Date.now()?'Scheduled for '+formatDay(study.due[id]):'Ready to retry'}</p><label for="note-${id}">My correction</label><textarea id="note-${id}" data-note="${id}">${esc(study.notes[id]??'')}</textarea><details><summary>Show worked answer</summary><p>${esc(q.correct)}. ${esc(q.why)}</p></details></section>`}).join(''):'<p>Complete a practice session to start your notebook.</p>'}`,
+    resources:title('Official papers and study resources','Use the syllabus for coverage, official questions for calibration and the Pearson practice player for test-day navigation.')+
+    '<div class="grid">'+resources.map(([label,source,detail,url])=>`<section class="card"><p class="eyebrow">${source}</p><h3><a target="_blank" rel="noopener" href="${url}">${label}</a></h3><p>${detail}</p></section>`).join('')+'</div>'
+  };
+  app.innerHTML=navBar(page)+pages[page];
+}
+function lesson(code){
+  const module=modules.find(item=>item[0]===code);
+  if(!module)return;
+  const [,name,goal,method,example,trap]=module;
+  const q=bank.find(item=>item.module===code&&item.hint);
+  app.innerHTML=navBar('learn')+`<article class="session"><p class="eyebrow">${code}</p><h2 tabindex="-1">${esc(name)}</h2><p>${esc(goal)}</p><h3>Method</h3><p>${esc(method)}</p><h3>Worked example</h3><p>${esc(example)}</p><h3>Common trap</h3><p>${esc(trap)}</p><details><summary>Recall prompt</summary><p>${esc(q.prompt)}</p><details><summary>Reveal answer</summary><p>${esc(q.correct)}. ${esc(q.why)}</p></details></details><div class="row">${button('Practise this topic','topic-'+code,'')}${button(study.lessons.includes(code)?'Lesson marked as read':'Mark lesson as read','read-'+code)}</div></article>`;
+  app.querySelector('h2').focus();
 }
 function start(mode){
-  const first=bank.filter(q=>q.paper===p1),second=bank.filter(q=>q.paper===p2);
-  const take=(questions,count)=>Array.from({length:count},(_,i)=>questions[(i*7+progress.sessions)%questions.length]);
-  const timed=mode.startsWith('paper');
-  const side=mode.endsWith('1')?first:second;
-  const questions=mode==='retry'?progress.missed.map(id=>bank[id]):
-    mode==='diagnostic'?[...take(first,5),...take(second,5)]:take(side,timed?20:5);
+  clearInterval(clock);
+  const original=bank.filter(q=>q.hint);
+  const rotated=(items,offset)=>[...items.slice(offset%items.length),...items.slice(0,offset%items.length)];
+  const selection=(paper,count,offset)=>rotated(original.filter(q=>q.paper===paper),offset).slice(0,count);
+  const side=mode.endsWith('1')?p1:p2;
+  const timed=mode.startsWith('paper')||mode==='full';
+  let questions;
+  if(mode==='retry')questions=missedIds().map(id=>bank[id]);
+  else if(mode==='due')questions=dueIds().map(id=>bank[id]);
+  else if(mode==='diagnostic')questions=modules.map(([code])=>original.find(q=>q.module===code));
+  else if(mode.startsWith('topic-'))questions=bank.filter(q=>q.module===mode.slice(6));
+  else if(mode==='full'){
+    questions=selection(p1,20,progress.sessions);
+    full={next:selection(p2,20,progress.sessions),first:[],answers:{}};
+  }else questions=selection(side,timed?20:5,progress.sessions*5);
   if(!questions.length)return;
-  session={questions,timed,idx:0,answers:{},checked:{},deadline:Date.now()+75*60000,ended:false};
+  session={questions,mode,timed,idx:0,answers:{},checked:{},flags:{},deadline:Date.now()+75*60000,ended:false};
   render();
-  if(timed){updateTimer();clock=setInterval(updateTimer,250)}
+  if(timed&&!session.ended){updateTimer();clock=setInterval(updateTimer,250)}
 }
 function updateTimer(){
   const ms=session.deadline-Date.now();
@@ -76,18 +147,19 @@ function updateTimer(){
   if(timer)timer.textContent=Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');
 }
 function render(){
-  const {questions,idx,answers,checked,timed}=session;
+  const {questions,idx,answers,checked,timed,flags}=session;
   const q=questions[idx],chosen=answers[q.id],locked=checked[q.id];
-  const nav=questions.map((item,i)=>button(i+1,'go'+i,
+  const nav=questions.map((item,i)=>button((i+1)+(flags[item.id]?' ⚑':''),'go'+i,
     (answers[item.id]===undefined?'secondary':'')+(idx===i?' current':''))).join('');
   app.innerHTML=`<section class="session"><div class="row between"><p class="eyebrow">${q.paper}</p>${timed?'<span id="timer" aria-label="Time remaining"></span>':''}</div>
   <h2 tabindex="-1">Question ${idx+1} of ${questions.length}</h2><p class="muted">${q.topic}</p>
   <p class="question" id="question">${esc(q.prompt)}</p>
   <fieldset class="options" aria-labelledby="question">${q.options.map((value,i)=>`<label class="option"><input type="radio" name="answer" value="${i}" ${chosen===value?'checked':''} ${locked?'disabled':''}> ${esc(value)}</label>`).join('')}</fieldset>
+  ${!timed&&!locked&&q.hint?`<details><summary>Show hint</summary><p>${esc(q.hint)}</p></details>`:''}
   ${locked?`<div class="feedback ${chosen===q.correct?'':'wrong'}"><strong>${chosen===q.correct?'Correct':'Correct answer · '+esc(q.correct)}</strong><br>${esc(q.why)}</div>`:''}
-  <div class="row">${idx?button('Previous','prev'):''}${!timed&&!locked?'<button data-action="check" '+(chosen===undefined?'disabled':'')+'>Check answer</button>':''}${idx+1<questions.length?button('Next','next'):''}</div>
+  <div class="row">${idx?button('Previous','prev'):''}${!timed&&!locked?'<button data-action="check" '+(chosen===undefined?'disabled':'')+'>Check answer</button>':''}${idx+1<questions.length?button('Next','next'):''}${button(flags[q.id]?'Remove flag':'Flag for review','flag',flags[q.id]?'bookmarked':'secondary')}</div>
   <div class="row nav" aria-label="Question navigation">${nav}</div>
-  <div class="row between">${button('Exit practice','exit')}${button('Finish and review','finish','')}</div></section>`;
+  <div class="row between">${button('Exit practice','exit')}${button(full?.next?'Submit Paper 1 and start Paper 2':'Finish and review','finish','')}</div></section>`;
   app.querySelector('h2').focus();
   if(timed)updateTimer();
 }
@@ -95,25 +167,63 @@ function finish(){
   if(session.ended)return;
   session.ended=true;
   clearInterval(clock);
-  const {questions,answers}=session;
+  if(full?.next){
+    full.first=session.questions;
+    full.answers=session.answers;
+    const next=full.next;
+    full.next=null;
+    const deadline=Math.min(session.deadline,Date.now())+75*60000;
+    session={questions:next,mode:'full',timed:true,idx:0,answers:{},checked:{},flags:{},deadline,ended:false};
+    render();
+    if(!session.ended)clock=setInterval(updateTimer,250);
+    return;
+  }
+  const questions=full?[...full.first,...session.questions]:session.questions;
+  const answers=full?{...full.answers,...session.answers}:session.answers;
+  const retrying=['retry','due'].includes(session.mode);
+
   let right=0,answered=0;
   const missed=new Set(progress.missed);
   const breakdown={};
   const reviews=questions.map(q=>{
     const answer=answers[q.id],correct=answer===q.correct;
     if(answer!==undefined)answered++;
-    if(correct){right++;missed.delete(q.id)}else missed.add(q.id);
+    const topic=study.stats[q.module]??={right:0,total:0};
+    topic.total++;
+    if(correct){
+      right++;
+      topic.right++;
+      if(retrying&&(study.due[q.id]??0)<=Date.now()&&!study.cards[q.id]){
+        study.cards[q.id]=true;
+        study.due[q.id]=Date.now()+3*86400000;
+      }else if(!retrying||(study.due[q.id]??0)<=Date.now()){
+        missed.delete(q.id);
+        delete study.due[q.id];
+        delete study.cards[q.id];
+      }
+    }else{
+      missed.add(q.id);
+      study.due[q.id]=Date.now()+86400000;
+      delete study.cards[q.id];
+    }
     const stat=breakdown[q.paper]??=[0,0];
     stat[0]+=Number(correct);stat[1]++;
     return `<details class="review"><summary>${correct?'Correct':answer===undefined?'Unanswered':'Missed'} · ${esc(q.topic)} · ${esc(q.prompt)}</summary><p>Your answer: ${esc(answer??'Skipped')}<br>Correct answer: ${esc(q.correct)}</p><p>${esc(q.why)}</p></details>`;
   }).join('');
   progress={sessions:progress.sessions+1,answered:progress.answered+questions.length,right:progress.right+right,missed:[...missed]};
   try{localStorage.setItem(key,JSON.stringify(progress))}catch{}
-  app.innerHTML=`<section class="session"><h2 tabindex="-1">${right} of ${questions.length} correct</h2><p>${answered} answered · ${questions.length-answered} skipped · Raw practice score</p>${Object.entries(breakdown).map(([paper,[good,total]])=>`<p>${paper} · ${good}/${total}</p>`).join('')}<div class="row">${button('Back to practice','home')}${missed.size?button('Retry missed questions','retry',''):''}</div><div>${reviews}</div></section>`;
+  const label={diagnostic:'Diagnostic',full:'Full rehearsal',paper1:'Paper 1 mock',paper2:'Paper 2 mock',retry:'Mistake review',due:'Scheduled review'}[session.mode]??'Topic practice';
+  study.history.push({at:Date.now(),label,right,total:questions.length});
+  study.history=study.history.slice(-50);
+  saveStudy();
+  full=null;
+  app.innerHTML=`<section class="session"><h2 tabindex="-1">${right} of ${questions.length} correct</h2><p>${answered} answered · ${questions.length-answered} skipped · Raw practice score</p>${Object.entries(breakdown).map(([paper,[good,total]])=>`<p>${paper} · ${good}/${total}</p>`).join('')}<div class="row">${button('Study plan','home')}${button('Open notebook','review')}${missed.size?button('Retry missed questions','retry',''):''}</div><div>${reviews}</div></section>`;
   app.querySelector('h2').focus();
 }
 app.addEventListener('change',event=>{
-  if(event.target.name!=='answer'||!session||session.ended)return;
+  const {target}=event;
+  if(target.id==='weeks'){study.weeks=Number(target.value);saveStudy();home();return}
+  if(event.target.name!=='answer' ||!session||session.ended)return;
   if(session.timed&&Date.now()>=session.deadline){finish();return}
   const q=session.questions[session.idx];
   session.answers[q.id]=q.options[Number(event.target.value)];
@@ -121,15 +231,32 @@ app.addEventListener('change',event=>{
   if(check)check.disabled=false;
   app.querySelector('[data-action="go'+session.idx+'"]').classList.remove('secondary');
 });
-app.addEventListener('click',event=>{
+app.addEventListener('input',event=>{
+  if(event.target.dataset.note===undefined)return;
+  study.notes[event.target.dataset.note]=event.target.value;
+  saveStudy();
+});
+app.addEventListener('click' ,event=>{
   const action=event.target.closest('button')?.dataset.action;
   if(!action)return;
-  if(action==='home'){home();return}
-  if(['diagnostic','drill1','drill2','paper1','paper2','retry'].includes(action)){start(action);return}
+  if(action==='home'||Object.hasOwn(names,action)){home(action==='home'?'plan':action);return}
+  if(action.startsWith('lesson-')){lesson(action.slice(7));return}
+  if(action.startsWith('read-')){
+    const code=action.slice(5);
+    if(!study.lessons.includes(code))study.lessons.push(code);
+    saveStudy();
+    lesson(code);
+    return;
+  }
+  if(['diagnostic','drill1','drill2','paper1','paper2','retry','due','full'].includes(action)||action.startsWith('topic-')){start(action);return}
   if(session.timed&&Date.now()>=session.deadline){finish();return}
   if(action==='exit'){if(confirm('Leave this session? Current answers will be discarded.'))home();return}
   if(action==='finish'){if(Object.keys(session.answers).length===session.questions.length||confirm('Finish with unanswered questions?'))finish();return}
   if(action==='check')session.checked[session.questions[session.idx].id]=true;
+  if(action==='flag'){
+    const id=session.questions[session.idx].id;
+    session.flags[id]=!session.flags[id];
+  }
   if(action==='prev')session.idx--;
   if(action==='next')session.idx++;
   if(action.startsWith('go'))session.idx=Number(action.slice(2));
