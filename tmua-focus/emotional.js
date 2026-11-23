@@ -65,15 +65,15 @@ const rolePlays={
   disagreement:'A partner claims a² = b² always implies a = b. Restate the claim fairly, offer a counterexample, and agree on a corrected statement.'
 };
 function emotionalPage(){
-  const sample=profile.id==='mine'?{}:{...exampleCheckIns,...sampleEmotional[profile.id]};
-  const saved=Object.keys(study.emotional).length;
+  const sample=demoProfiles.includes(profile)?{...exampleCheckIns,...sampleEmotional[profile.id]}:{};
+  const saved=new Set([...Object.keys(study.eqChoices),...Object.keys(study.emotional)]).size;
   return title('Social and emotional learning','Explore 20 coaching aspects. Open any aspect to see how it could influence study support. Check-ins are optional and can be edited.')+
-  `<p>${saved} of 20 aspects with a student check-in${profile.id==='mine'?'':' · Demo profiles include fictional examples'}</p>`+
+  `<p>${saved} of 20 aspects with a student check-in${demoProfiles.includes(profile)?' · Demo profiles include fictional examples':''}</p>`+
   emotionalGroups.map(([group,aspects])=>`<h2 class="section-title">${group}</h2><div class="grid">${aspects.map(([id,label,prompt,response,cta,action])=>{
-    const entry=study.emotional[id];
+    const entry=study.emotional[id]??study.eqChoices[id];
     return `<details id="eq-${id}" class="card"><summary>${label} <span class="muted">· ${entry?'Student check-in':sample[id]?'Fictional example':'Awaiting check-in'}</span></summary>
       ${entry?`<p>${esc(entry)}</p>`:sample[id]?`<p>${esc(sample[id])}</p>`:''}<p><strong>Coaching response</strong><br>${response}</p>
-      <form class="coach-form" data-emotional="${id}"><label>${prompt}<textarea name="reflection" maxlength="300">${esc(entry??'')}</textarea></label><div class="row"><button>Save check-in</button>${button(cta,action)}</div><p id="saved-${id}" role="status"></p></form>
+      <form class="coach-form" data-emotional="${id}"><label>${prompt}<textarea name="reflection" maxlength="300">${esc(study.emotional[id]??'')}</textarea></label><div class="row"><button>Save check-in</button>${button(cta,action)}</div><p id="saved-${id}" role="status"></p></form>
     </details>`;
   }).join('')}</div>`).join('')+
   '<p class="muted">An independent coaching view informed by the <a href="https://www.oecd.org/en/about/programmes/oecd-survey-on-social-and-emotional-skills.html">OECD social and emotional skills framework</a>.</p>';

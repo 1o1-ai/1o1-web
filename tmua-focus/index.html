@@ -10,8 +10,9 @@
 <body><header><div class="row between"><a class="brand" href="./">TMUA <span>Focus</span></a><a href="/">All projects</a></div></header>
 <main id="app"></main><footer>Progress is saved in this browser. · Independent practice for university applicants · <a href="https://esat-tmua.ac.uk/about-the-tests/tmua-test/" target="_blank" rel="noopener">Official UAT-UK test information</a></footer>
 <script src="course.js"></script>
-<script src="profiles.js?v=3"></script>
-<script src="emotional.js?v=1"></script>
+<script src="profiles.js?v=4"></script>
+<script src="emotional.js?v=2"></script>
+<script src="registration.js?v=1"></script>
 <script>
 const p1='Paper 1 · Applications';
 const p2='Paper 2 · Reasoning';
@@ -57,7 +58,7 @@ const app=document.querySelector('#app');
 const key='tmua-focus-v1';
 const profileKey='tmua-focus-active-profile';
 const empty=()=>({sessions:0,answered:0,right:0,missed:[]});
-const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},attempts:[],baseline:null,stuck:'',emotional:{},reasons:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
+const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},attempts:[],baseline:null,stuck:'',emotional:{},eqChoices:{},eqOnboarding:null,reasons:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
 let profile=ownProfile,progress,study,session=null,clock,full=null;
 function loadProfile(id){
   profile=profiles.find(item=>item.id===id)??ownProfile;
@@ -76,17 +77,22 @@ function loadProfile(id){
 function saveStudy(){
   try{localStorage.setItem('tmua-focus-profile-v1:'+profile.id,JSON.stringify({progress,study}))}catch{}
 }
+try{
+  const registered=JSON.parse(localStorage.getItem(registeredKey)??'[]');
+  if(Array.isArray(registered))profiles.push(...registered.filter(item=>typeof item?.id==='string'&&item.id.startsWith('student-')));
+}catch{}
 let activeId;
 try{activeId=localStorage.getItem(profileKey)}catch{}
 loadProfile(activeId);
 const formatDay=value=>new Date(value).toLocaleDateString(undefined,{month:'short',day:'numeric'});
 const esc=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char]);
 const button=(label,action,extra='secondary')=>'<button type="button" class="'+extra+'" data-action="'+action+'">'+label+'</button>';
-const names={plan:'Study plan',profile:'Student profile',emotional:'Social & emotional',baseline:'Learning Baseline',learn:'Learn',practice:'Practice',review:'Mistake notebook',resources:'Resources'};
-const navBar=page=>`<div class="row between profile-bar"><label>Student <select id="active-profile">${profiles.map(item=>`<option value="${item.id}" ${item.id===profile.id?'selected':''}>${esc(item.name)}${item.id==='mine'?'':' · demo'}</option>`).join('')}</select></label><span class="muted">${esc(profile.city)}</span></div><nav class="row course-nav" aria-label="Study sections">${Object.entries(names).map(([id,label])=>'<button class="secondary" data-action="'+id+'" '+(page===id?'aria-current="page"':'')+'>'+label+'</button>').join('')}</nav>`;
+const names={plan:'Study plan',onboarding:'Onboarding',profile:'Student profile',emotional:'Social & emotional',baseline:'Learning Baseline',learn:'Learn',practice:'Practice',review:'Mistake notebook',resources:'Resources'};
+const navBar=page=>`<div class="row between profile-bar"><label>Student <select id="active-profile">${profiles.map(item=>`<option value="${item.id}" ${item.id===profile.id?'selected':''}>${esc(item.name)}${demoProfiles.includes(item)?' · demo':''}</option>`).join('')}</select></label><div class="row"><span class="muted">${esc(profile.city)}</span>${button('Register student','register')}</div></div><nav class="row course-nav" aria-label="Study sections">${Object.entries(names).map(([id,label])=>'<button class="secondary" data-action="'+id+'" '+(page===id?'aria-current="page"':'')+'>'+label+'</button>').join('')}</nav>`;
 function coachingPanel(recommendation,checkIn=false){
   const {minutes,need,confidence,reflection}=study.coach;
   return `<section class="coach"><h2>Your next study session</h2><p class="question">${esc(recommendation.title)}</p><p>${esc(recommendation.reason)}</p>${button(recommendation.label,recommendation.action,'')}
+  ${eqCoachingTip()}
   ${checkIn?`<details class="section-title"><summary>Tell your coach how today is going</summary><form id="coach-checkin" class="coach-form"><label>Time available<select name="minutes">${[10,15,20,25,35,45].map(n=>`<option value="${n}" ${n===minutes?'selected':''}>${n} minutes</option>`).join('')}</select></label><label>What should we work on?<select name="need">${Object.entries(needs).map(([id,label])=>`<option value="${id}" ${id===need?'selected':''}>${label}</option>`).join('')}</select></label><label>How confident do you feel?<select name="confidence">${[1,2,3,4,5].map(n=>`<option value="${n}" ${n===confidence?'selected':''}>${n}/5${n===1?' · Unsure':n===5?' · Very confident':''}</option>`).join('')}</select></label><label>Personal reflection <textarea name="reflection" maxlength="500" placeholder="What happened in your last practice session?">${esc(reflection)}</textarea></label><button>Update my session</button></form></details>`:''}</section>`;
 }
 const title=(heading,body)=>`<h1 tabindex="-1">${heading}</h1><p class="study-copy muted">${body}</p>`;
@@ -112,15 +118,18 @@ function home(page='plan'){
     return `<section class="card"><p class="eyebrow">Week ${first}${last>first?'–'+last:''}</p><h3>${heading}</h3><p>${body}</p></section>`;
   }).join('');
   const pages={
+    register:page==='register'?registrationPage():'',
+    onboarding:page==='onboarding'?onboardingPage():'',
+    'eq-checkin':page==='eq-checkin'?eqCheckinPage():'',
     emotional:page==='emotional'?emotionalPage():'',
     baseline:study.baseline?baselineSummary()+baselineSetup():baselineSetup(),
-    plan:`<section class="hero"><p class="eyebrow">${esc(profile.name)} · ${profile.id==='mine'?'Your workspace':'Sample student'}</p><h1>Learn the maths. Practise the reasoning.</h1><p>Build a study plan, cover the syllabus and rehearse both papers before test day.</p><div class="row">${button(study.baseline?'View Learning Baseline':'Start Learning Baseline','baseline','light')}${button('Explore the syllabus','learn')}</div></section>
+    plan:`<section class="hero"><p class="eyebrow">${esc(profile.name)} · ${demoProfiles.includes(profile)?'Sample student':'Your workspace'}</p><h1>Learn the maths. Practise the reasoning.</h1><p>Build a study plan, cover the syllabus and rehearse both papers before test day.</p><div class="row">${button(study.baseline?'View Learning Baseline':'Start Learning Baseline','baseline','light')}${button('Explore the syllabus','learn')}</div></section>
     <div class="grid"><section class="card"><strong class="stat">${study.lessons.length}/${modules.length}</strong>Lessons read</section><section class="card"><strong class="stat">${dueIds().length}</strong>Mistakes ready to retry</section><section class="card"><strong class="stat">${progress.answered?Math.round(100*progress.right/progress.answered)+'%':'—'}</strong>Practice accuracy</section></div>
     ${coachingPanel(recommendation,true)}
     <h2 class="section-title">Preparation schedule</h2><label>Weeks available <select id="weeks">${[4,6,8,12].map(n=>`<option ${n===windowWeeks?'selected':''}>${n}</option>`).join('')}</select></label><div class="grid">${plan}</div>
     <h2>Recent practice</h2>${recent?'<ul>'+recent+'</ul>':'<p>Completed sessions will appear here.</p>'}`,
     profile:title(esc(profile.name),esc(profile.city+' · '+profile.course))+
-    `<p>${profile.id==='mine'?'Your practice and reflections are stored in this browser.':'Fictional student with sample results. Activities you complete here update this demo profile only.'}</p><div class="grid"><section class="card"><strong class="stat">${study.weeks}</strong>Weeks in study plan</section><section class="card"><strong class="stat">${study.coach.minutes}</strong>Minutes available today</section><section class="card"><strong class="stat">${study.coach.confidence}/5</strong>Confidence at check-in</section></div>
+    `<p>${demoProfiles.includes(profile)?'Fictional student with sample results. Activities you complete here update this demo profile only.':'Your practice and reflections are stored in this browser.'}</p><div class="grid"><section class="card"><strong class="stat">${study.weeks}</strong>Weeks in study plan</section><section class="card"><strong class="stat">${study.coach.minutes}</strong>Minutes available today</section><section class="card"><strong class="stat">${study.coach.confidence}/5</strong>Confidence at check-in</section></div>
     ${coachingPanel(recommendation,true)}
     ${study.baseline?baselineSummary():button('Take the Learning Baseline','baseline')}
     ${coachingInsight()}
@@ -312,7 +321,7 @@ function finish(){
   study.history=study.history.slice(-50);
   saveStudy();
   full=null;
-  app.innerHTML=`<section class="session"><h2 tabindex="-1">${right} of ${questions.length} correct</h2><p>${answered} answered · ${questions.length-answered} skipped · Raw practice score</p>${Object.entries(breakdown).map(([paper,[good,total]])=>`<p>${paper} · ${good}/${total}</p>`).join('')}<div class="row">${button('Study plan','home')}${button('Open notebook','review')}${missed.size?button('Retry missed questions','retry',''):''}</div>${coachingPanel(getRecommendation(),true)}${session.mode==='onboarding'?baselineSummary():''}<div>${reviews}</div></section>`;
+  app.innerHTML=`<section class="session"><h2 tabindex="-1">${right} of ${questions.length} correct</h2><p>${answered} answered · ${questions.length-answered} skipped · Raw practice score</p>${Object.entries(breakdown).map(([paper,[good,total]])=>`<p>${paper} · ${good}/${total}</p>`).join('')}<div class="row">${button('Study plan','home')}${button('Open notebook','review')}${missed.size?button('Retry missed questions','retry',''):''}</div>${coachingPanel(getRecommendation(),true)}${session.mode==='onboarding'?baselineSummary()+button('Continue onboarding','onboarding','') : ''}<div>${reviews}</div></section>`;
   app.querySelector('h2').focus();
 }
 app.addEventListener('change',event=>{
@@ -345,6 +354,39 @@ app.addEventListener('change',event=>{
   app.querySelector('[data-action="go'+session.idx+'"]').classList.remove('secondary');
 });
 app.addEventListener('submit',event=>{
+  if(event.target.id==='register-student'){
+    event.preventDefault();
+    const form=new FormData(event.target);
+    const name=String(form.get('name')??'').trim().slice(0,50);
+    const status=app.querySelector('#register-status');
+    if(!name){status.textContent='Enter a student name or nickname.';return}
+    const student={id:'student-'+crypto.randomUUID(),name,
+      city:String(form.get('city')??'').trim().slice(0,60)||'Personal workspace',
+      course:String(form.get('course')??'').trim().slice(0,65)||'TMUA preparation'};
+    try{localStorage.setItem(registeredKey,JSON.stringify([...profiles.filter(item=>item.id.startsWith('student-')),student]))}
+    catch{status.textContent='This browser could not save the profile. Check its storage settings and try again.';return}
+    profiles.push(student);
+    loadProfile(student.id);
+    try{localStorage.setItem(profileKey,student.id)}catch{}
+    home('onboarding');
+    app.querySelector('h1').focus();
+    return;
+  }
+  if(event.target.id==='eq-checkin-form'){
+    event.preventDefault();
+    const form=new FormData(event.target);
+    if(event.submitter?.value!=='skip'){
+      study.eqChoices=Object.fromEntries(Object.entries(eqOptions).flatMap(([id,options])=>{
+        const answer=form.get(id);
+        return options.includes(answer)?[[id,answer]]:[];
+      }));
+    }
+    study.eqOnboarding=Object.keys(study.eqChoices).length?'completed':'skipped';
+    saveStudy();
+    home('onboarding');
+    app.querySelector('h1').focus();
+    return;
+  }
   const aspect=event.target.dataset?.emotional;
   if(aspect){
     event.preventDefault();
@@ -386,7 +428,7 @@ app.addEventListener('input',event=>{
 app.addEventListener('click' ,event=>{
   const action=event.target.closest('button')?.dataset.action;
   if(!action)return;
-  if(action==='home'||Object.hasOwn(names,action)){home(action==='home'?'plan':action);return}
+  if(action==='home'||action==='register'||action==='eq-checkin'||Object.hasOwn(names,action)){home(action==='home'?'plan':action);return}
   if(action.startsWith('role-')){
     const id=action.slice(5);
     const prompt=rolePlays[id];
@@ -419,5 +461,7 @@ app.addEventListener('click' ,event=>{
   if(action.startsWith('go'))session.idx=Number(action.slice(2));
   render();
 });
-home(globalThis.location?.search.includes('view=emotional')?'emotional':'plan');
+const requestedView=new URLSearchParams(globalThis.location?.search).get('view');
+home(requestedView==='register'?'register':requestedView==='emotional'?'emotional':
+  profile.id.startsWith('student-')&&(!study.baseline||!study.eqOnboarding)?'onboarding':'plan');
 </script></body></html>

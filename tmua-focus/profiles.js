@@ -9,7 +9,7 @@ const needs = {general:'Balanced practice',concepts:'Understand the methods',rea
 const ownProfile={id:'mine',name:'My practice',city:'Personal workspace',course:'TMUA preparation',weeks:6,minutes:25,need:'general',confidence:3};
 const profiles=[ownProfile,...demoProfiles];
 function seedProfile(profile){
-  if(profile.id==='mine')return {progress:empty(),study:defaultStudy()};
+  if(!demoProfiles.includes(profile))return {progress:empty(),study:defaultStudy()};
   const state=defaultStudy();
   state.weeks=profile.weeks;
   Object.assign(state.coach,{minutes:profile.minutes,need:profile.need,confidence:profile.confidence,reflection:profile.note});
@@ -119,7 +119,7 @@ function initialBaselineRecommendation(){
     return {title:'Practise when to move on',reason:'The timer expired with '+(total-answered)+' questions unanswered. Try a short timed drill and flag questions when you stall.',action:'pace-'+topic,label:'Start a pacing drill'};
   if(fragileAttempts().length)
     return {title:'Check your reasoning on a fresh question',reason:'Your confidence ratings surfaced a guess or a confident mistake. Try a different question on the same topic.',action:'verify',label:'Start a confidence check'};
-  if(firstMiss!==undefined&&(study.stuck==='example'||reasoning[0]<reasoning[1]&&lower==='Arg'))
+  if(firstMiss!==undefined&&(study.stuck==='example'||study.eqChoices.help==='Show a worked example'||reasoning[0]<reasoning[1]&&lower==='Arg'))
     return {title:'Start with a worked example',reason:'Your baseline flagged a question in '+bank[firstMiss].topic+'. Compare your approach with a worked example, then retry the method.',action:'lesson-'+topic,label:'Open the lesson'};
   return {title:firstMiss===undefined?'Build on your baseline':'Practise '+bank[firstMiss].topic,reason:firstMiss===undefined?'You answered every baseline question correctly. Try a harder problem to check how well the method transfers.':(study.stuck==='check'?'Write each step and check it against the question before choosing an answer.':study.stuck==='move'?'Flag a question if you stall and return after the first pass.':'Try a short set in a topic where you missed a question. Open a hint if you get stuck.'),action:'coach-'+topic,label:'Start a guided drill'};
 }
