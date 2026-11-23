@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TMUA Focus</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f5ef;color:#182b27;font:16px/1.55 system-ui,sans-serif}header{border-bottom:1px solid #d6dfd6;background:#fdfdfa}header div,main,footer{max-width:1060px;margin:auto;padding:18px 24px}.brand{font-weight:800;color:#193a31;text-decoration:none;font-size:20px}.brand span{color:#497569}main{padding-top:32px;min-height:76vh}.hero{background:#163b33;color:#fff;padding:clamp(24px,6vw,62px);border-radius:24px;background-image:radial-gradient(ellipse at top right,#316855,transparent 65%)}h1,h2{font-family:Georgia,serif;line-height:1.12;margin:0 0 14px}h1{font-size:clamp(37px,7vw,68px);max-width:690px}h2{font-size:32px}p{margin:0 0 16px}.hero p{max-width:610px;color:#e0ebe5}.eyebrow{font-size:14px;font-weight:750;letter-spacing:.1em;text-transform:uppercase}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,285px),1fr));gap:14px;margin:20px 0}.card,.session{border:1px solid #d6dfd6;border-radius:18px;background:#fff;padding:24px}.session{max-width:800px;margin:auto}h3{margin:0 0 6px}button{font:inherit;font-weight:700;background:#17473b;color:#fff;padding:10px 15px;border:1px solid transparent;border-radius:10px;cursor:pointer}button:hover{filter:brightness(1.13)}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #4475c1;outline-offset:3px}button:disabled{opacity:.52;cursor:default}.light{background:#e4f4aa;color:#173529}.secondary{background:#f0f5ef;color:#173529;border-color:#ccdacf}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.between{justify-content:space-between}.muted,footer{color:#50635a}.question{font-size:22px;font-weight:650}.options{display:grid;gap:8px;border:0;padding:0;margin:0 0 16px}.option{display:flex;align-items:center;gap:10px;border:1px solid #d6dfd6;border-radius:9px;padding:10px;cursor:pointer}.option:has(input:checked){border-color:#397861;background:#edf5ed}input{accent-color:#17473b}.feedback{padding:14px;background:#eef5ef;border-radius:10px;margin:12px 0}.wrong{background:#fbefe2}.nav{margin:14px 0}.nav button{min-width:35px;padding:5px 9px}.nav .current{outline:2px solid #17473b;outline-offset:2px}.review{border-top:1px solid #d6dfd6;padding-top:12px;margin:14px 0}summary{cursor:pointer;font-weight:650}a{color:#245e4a}#timer{font-variant-numeric:tabular-nums;font-weight:750}
+</style></head>
+<body><header><div class="row between"><a class="brand" href="./">TMUA <span>Focus</span></a><a href="/">All projects</a></div></header>
+<main id="app"></main><footer>Independent practice for university applicants · <a href="https://esat-tmua.ac.uk/about-the-tests/tmua-test/" target="_blank" rel="noopener">Official UAT-UK test information</a></footer>
+<script>
+const p1='Paper 1 · Applications';
+const p2='Paper 2 · Reasoning';
+const bank=[];
+function add(paper,topic,prompt,correct,wrong,why){
+  const options=[...wrong];
+  options.splice((bank.length*3+1)%5,0,correct);
+  bank.push({id:bank.length,paper,topic,prompt,correct,options,why});
+}
+for(const n of [2,3,4,5,6]){
+  add(p1,'Algebra','The roots of x² − '+(2*n+1)+'x + '+n*(n+1)+' = 0 are a and b. Find a² + b².',
+    ''+(n*n+(n+1)**2),[''+(2*n+1)**2,''+(2*n+1),''+(2*n*(n+1)),''+(n*n+n)],
+    'Use a² + b² = (a + b)² − 2ab. The sum of the roots is '+(2*n+1)+' and their product is '+n*(n+1)+'.');
+  add(p1,'Functions','Let f(x) = x² − '+2*n+'x + '+(n*n+3)+'. For how many distinct real x does f(x) = '+(n*n+3)+'?',
+    '2',['0','1','3','Infinitely many'],'Subtract the constant and factor x(x − '+2*n+') = 0. Both roots are distinct.');
+  add(p1,'Sequences','An arithmetic sequence has third term '+(n+4)+' and seventh term '+(n+12)+'. Find the sum of its first '+n+' terms.',
+    ''+(n*(2*n-1)),[''+(n*n),''+(n*(2*n-1)+n),''+(n*(2*n-1)+2*n),''+(n*(2*n-1)+1)],
+    'Four steps add 8, so the common difference is 2. The first term is '+n+' and the last is '+(3*n-2)+'. The average is '+(2*n-1)+'.');
+  add(p1,'Coordinate geometry','A line meets the positive x-axis at x = '+2*n+' and the positive y-axis at y = '+(n+1)+'. Find the area enclosed with the axes.',
+    ''+(n*(n+1)),[''+(2*n*(n+1)),''+(n*n),''+(n+1),''+(n*(n+2))],
+    'The axes form the perpendicular sides of the triangle. Its area is half the product of the intercepts.');
+  add(p2,'Implications','For an integer k, let P mean “'+(2*n)+' divides k” and Q mean “'+n+' divides k”. Which claim is true?',
+    'P is sufficient for Q',['Q is sufficient for P','P is necessary for Q','P and Q are equivalent','Neither implies the other'],
+    'Every multiple of '+(2*n)+' is a multiple of '+n+'. Taking k = '+n+' shows the converse fails.');
+  add(p2,'Counterexamples','Which integer disproves the claim “If x² > '+n*n+', then x > '+n+'”?',
+    ''+(-n-1),[''+(-n),''+n,''+(n+1),'0'],
+    'A counterexample satisfies the hypothesis and fails the conclusion. The negative integer '+(-n-1)+' has absolute value greater than '+n+'.');
+  add(p2,'Negation','Which statement is the negation of “Every integer greater than '+n+' has property R”?',
+    'Some integer greater than '+n+' lacks R',['Every integer greater than '+n+' lacks R','Some integer at most '+n+' lacks R','Every integer at most '+n+' has R','Some integer greater than '+n+' has R'],
+    'Negating a universal statement requires one counterexample from the same domain.');
+  add(p2,'Proof and logic','A proof uses the fact that x > '+n+'. Which replacement is logically equivalent for real x?',
+    'x − '+n+' > 0',['x² > '+n*n,'|x| > '+n,'x ≥ '+n,'x + '+n+' > 0'],
+    'Subtracting the same number from both sides preserves a strict inequality and is reversible.');
+}
+const app=document.querySelector('#app');
+const key='tmua-focus-v1';
+const empty=()=>({sessions:0,answered:0,right:0,missed:[]});
+let progress=empty(),session=null,clock;
+try{progress=JSON.parse(localStorage.getItem(key))||empty()}catch{}
+const esc=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char]);
+const button=(label,action,extra='secondary')=>'<button class="'+extra+'" data-action="'+action+'">'+label+'</button>';
+function home(){
+  clearInterval(clock);
+  session=null;
+  app.innerHTML=`<section class="hero"><p class="eyebrow">University admissions practice</p><h1>Train for the TMUA.</h1><p>Practise mathematical reasoning, work against the clock, and revisit the mistakes that cost you marks.</p>${button('Start a 10-question diagnostic','diagnostic','light')}</section>
+  <div class="grid">
+  <section class="card"><h3>Paper 1</h3><p>Apply mathematics in unfamiliar situations. Practise algebra, functions, sequences and coordinate geometry.</p><div class="row">${button('Quick drill','drill1')}${button('Timed paper','paper1','')}</div></section>
+  <section class="card"><h3>Paper 2</h3><p>Check what follows from a claim. Practise implications, counterexamples, negation and proof.</p><div class="row">${button('Quick drill','drill2')}${button('Timed paper','paper2','')}</div></section>
+  <section class="card"><h3>Your practice</h3><p>${progress.sessions} sessions · ${progress.answered?Math.round(progress.right*100/progress.answered)+'% accuracy':'Accuracy appears after a session'}</p>${progress.missed.length?button('Retry '+progress.missed.length+' missed questions','retry'):''}<p class="muted">Progress is saved in this browser.</p></section></div>
+  <p class="muted">Starter bank of 40 original practice questions. Timed papers use 20 questions in 75 minutes each. Work without a calculator.</p>`;
+}
+function start(mode){
+  const first=bank.filter(q=>q.paper===p1),second=bank.filter(q=>q.paper===p2);
+  const take=(questions,count)=>Array.from({length:count},(_,i)=>questions[(i*7+progress.sessions)%questions.length]);
+  const timed=mode.startsWith('paper');
+  const side=mode.endsWith('1')?first:second;
+  const questions=mode==='retry'?progress.missed.map(id=>bank[id]):
+    mode==='diagnostic'?[...take(first,5),...take(second,5)]:take(side,timed?20:5);
+  if(!questions.length)return;
+  session={questions,timed,idx:0,answers:{},checked:{},deadline:Date.now()+75*60000,ended:false};
+  render();
+  if(timed){updateTimer();clock=setInterval(updateTimer,250)}
+}
+function updateTimer(){
+  const ms=session.deadline-Date.now();
+  if(ms<=0){finish();return}
+  const seconds=Math.ceil(ms/1000);
+  const timer=document.querySelector('#timer');
+  if(timer)timer.textContent=Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');
+}
+function render(){
+  const {questions,idx,answers,checked,timed}=session;
+  const q=questions[idx],chosen=answers[q.id],locked=checked[q.id];
+  const nav=questions.map((item,i)=>button(i+1,'go'+i,
+    (answers[item.id]===undefined?'secondary':'')+(idx===i?' current':''))).join('');
+  app.innerHTML=`<section class="session"><div class="row between"><p class="eyebrow">${q.paper}</p>${timed?'<span id="timer" aria-label="Time remaining"></span>':''}</div>
+  <h2 tabindex="-1">Question ${idx+1} of ${questions.length}</h2><p class="muted">${q.topic}</p>
+  <p class="question" id="question">${esc(q.prompt)}</p>
+  <fieldset class="options" aria-labelledby="question">${q.options.map((value,i)=>`<label class="option"><input type="radio" name="answer" value="${i}" ${chosen===value?'checked':''} ${locked?'disabled':''}> ${esc(value)}</label>`).join('')}</fieldset>
+  ${locked?`<div class="feedback ${chosen===q.correct?'':'wrong'}"><strong>${chosen===q.correct?'Correct':'Correct answer · '+esc(q.correct)}</strong><br>${esc(q.why)}</div>`:''}
+  <div class="row">${idx?button('Previous','prev'):''}${!timed&&!locked?'<button data-action="check" '+(chosen===undefined?'disabled':'')+'>Check answer</button>':''}${idx+1<questions.length?button('Next','next'):''}</div>
+  <div class="row nav" aria-label="Question navigation">${nav}</div>
+  <div class="row between">${button('Exit practice','exit')}${button('Finish and review','finish','')}</div></section>`;
+  app.querySelector('h2').focus();
+  if(timed)updateTimer();
+}
+function finish(){
+  if(session.ended)return;
+  session.ended=true;
+  clearInterval(clock);
+  const {questions,answers}=session;
+  let right=0,answered=0;
+  const missed=new Set(progress.missed);
+  const breakdown={};
+  const reviews=questions.map(q=>{
+    const answer=answers[q.id],correct=answer===q.correct;
+    if(answer!==undefined)answered++;
+    if(correct){right++;missed.delete(q.id)}else missed.add(q.id);
+    const stat=breakdown[q.paper]??=[0,0];
+    stat[0]+=Number(correct);stat[1]++;
+    return `<details class="review"><summary>${correct?'Correct':answer===undefined?'Unanswered':'Missed'} · ${esc(q.topic)} · ${esc(q.prompt)}</summary><p>Your answer: ${esc(answer??'Skipped')}<br>Correct answer: ${esc(q.correct)}</p><p>${esc(q.why)}</p></details>`;
+  }).join('');
+  progress={sessions:progress.sessions+1,answered:progress.answered+questions.length,right:progress.right+right,missed:[...missed]};
+  try{localStorage.setItem(key,JSON.stringify(progress))}catch{}
+  app.innerHTML=`<section class="session"><h2 tabindex="-1">${right} of ${questions.length} correct</h2><p>${answered} answered · ${questions.length-answered} skipped · Raw practice score</p>${Object.entries(breakdown).map(([paper,[good,total]])=>`<p>${paper} · ${good}/${total}</p>`).join('')}<div class="row">${button('Back to practice','home')}${missed.size?button('Retry missed questions','retry',''):''}</div><div>${reviews}</div></section>`;
+  app.querySelector('h2').focus();
+}
+app.addEventListener('change',event=>{
+  if(event.target.name!=='answer'||!session||session.ended)return;
+  if(session.timed&&Date.now()>=session.deadline){finish();return}
+  const q=session.questions[session.idx];
+  session.answers[q.id]=q.options[Number(event.target.value)];
+  const check=app.querySelector('[data-action="check"]');
+  if(check)check.disabled=false;
+  app.querySelector('[data-action="go'+session.idx+'"]').classList.remove('secondary');
+});
+app.addEventListener('click',event=>{
+  const action=event.target.closest('button')?.dataset.action;
+  if(!action)return;
+  if(action==='home'){home();return}
+  if(['diagnostic','drill1','drill2','paper1','paper2','retry'].includes(action)){start(action);return}
+  if(session.timed&&Date.now()>=session.deadline){finish();return}
+  if(action==='exit'){if(confirm('Leave this session? Current answers will be discarded.'))home();return}
+  if(action==='finish'){if(Object.keys(session.answers).length===session.questions.length||confirm('Finish with unanswered questions?'))finish();return}
+  if(action==='check')session.checked[session.questions[session.idx].id]=true;
+  if(action==='prev')session.idx--;
+  if(action==='next')session.idx++;
+  if(action.startsWith('go'))session.idx=Number(action.slice(2));
+  render();
+});
+home();
+</script></body></html>
