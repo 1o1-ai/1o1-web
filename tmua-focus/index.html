@@ -11,6 +11,7 @@
 <main id="app"></main><footer>Progress is saved in this browser. · Independent practice for university applicants · <a href="https://esat-tmua.ac.uk/about-the-tests/tmua-test/" target="_blank" rel="noopener">Official UAT-UK test information</a></footer>
 <script src="course.js"></script>
 <script src="profiles.js?v=3"></script>
+<script src="emotional.js?v=1"></script>
 <script>
 const p1='Paper 1 · Applications';
 const p2='Paper 2 · Reasoning';
@@ -56,7 +57,7 @@ const app=document.querySelector('#app');
 const key='tmua-focus-v1';
 const profileKey='tmua-focus-active-profile';
 const empty=()=>({sessions:0,answered:0,right:0,missed:[]});
-const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},attempts:[],baseline:null,stuck:'',reasons:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
+const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},attempts:[],baseline:null,stuck:'',emotional:{},reasons:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
 let profile=ownProfile,progress,study,session=null,clock,full=null;
 function loadProfile(id){
   profile=profiles.find(item=>item.id===id)??ownProfile;
@@ -80,8 +81,8 @@ try{activeId=localStorage.getItem(profileKey)}catch{}
 loadProfile(activeId);
 const formatDay=value=>new Date(value).toLocaleDateString(undefined,{month:'short',day:'numeric'});
 const esc=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char]);
-const button=(label,action,extra='secondary')=>'<button class="'+extra+'" data-action="'+action+'">'+label+'</button>';
-const names={plan:'Study plan',profile:'Student profile',baseline:'Learning Baseline',learn:'Learn',practice:'Practice',review:'Mistake notebook',resources:'Resources'};
+const button=(label,action,extra='secondary')=>'<button type="button" class="'+extra+'" data-action="'+action+'">'+label+'</button>';
+const names={plan:'Study plan',profile:'Student profile',emotional:'Social & emotional',baseline:'Learning Baseline',learn:'Learn',practice:'Practice',review:'Mistake notebook',resources:'Resources'};
 const navBar=page=>`<div class="row between profile-bar"><label>Student <select id="active-profile">${profiles.map(item=>`<option value="${item.id}" ${item.id===profile.id?'selected':''}>${esc(item.name)}${item.id==='mine'?'':' · demo'}</option>`).join('')}</select></label><span class="muted">${esc(profile.city)}</span></div><nav class="row course-nav" aria-label="Study sections">${Object.entries(names).map(([id,label])=>'<button class="secondary" data-action="'+id+'" '+(page===id?'aria-current="page"':'')+'>'+label+'</button>').join('')}</nav>`;
 function coachingPanel(recommendation,checkIn=false){
   const {minutes,need,confidence,reflection}=study.coach;
@@ -111,6 +112,7 @@ function home(page='plan'){
     return `<section class="card"><p class="eyebrow">Week ${first}${last>first?'–'+last:''}</p><h3>${heading}</h3><p>${body}</p></section>`;
   }).join('');
   const pages={
+    emotional:page==='emotional'?emotionalPage():'',
     baseline:study.baseline?baselineSummary()+baselineSetup():baselineSetup(),
     plan:`<section class="hero"><p class="eyebrow">${esc(profile.name)} · ${profile.id==='mine'?'Your workspace':'Sample student'}</p><h1>Learn the maths. Practise the reasoning.</h1><p>Build a study plan, cover the syllabus and rehearse both papers before test day.</p><div class="row">${button(study.baseline?'View Learning Baseline':'Start Learning Baseline','baseline','light')}${button('Explore the syllabus','learn')}</div></section>
     <div class="grid"><section class="card"><strong class="stat">${study.lessons.length}/${modules.length}</strong>Lessons read</section><section class="card"><strong class="stat">${dueIds().length}</strong>Mistakes ready to retry</section><section class="card"><strong class="stat">${progress.answered?Math.round(100*progress.right/progress.answered)+'%':'—'}</strong>Practice accuracy</section></div>
@@ -122,6 +124,7 @@ function home(page='plan'){
     ${coachingPanel(recommendation,true)}
     ${study.baseline?baselineSummary():button('Take the Learning Baseline','baseline')}
     ${coachingInsight()}
+    <section class="coach"><h2>Social and emotional learning</h2><p>Explore study habits, feedback, pressure and working with others.</p>${button('Open the coaching profile','emotional')}</section>
     <h2 class="section-title">Skill record</h2><div class="skill-grid">${modules.map(([code,name])=>{
       const stat=study.stats[code];
       return `<section class="skill"><h3>${name}</h3>${stat?.total?`<meter min="0" max="${stat.total}" value="${stat.right}" aria-label="${name} accuracy"></meter><p>${stat.right}/${stat.total} correct${stat.timed?' · '+Math.round(stat.seconds/stat.timed)+'s avg timed':''}</p>`:'<p>Awaiting first attempt</p>'}</section>`;
@@ -342,6 +345,19 @@ app.addEventListener('change',event=>{
   app.querySelector('[data-action="go'+session.idx+'"]').classList.remove('secondary');
 });
 app.addEventListener('submit',event=>{
+  const aspect=event.target.dataset?.emotional;
+  if(aspect){
+    event.preventDefault();
+    const reflection=String(new FormData(event.target).get('reflection')??'').trim().slice(0,300);
+    if(reflection)study.emotional[aspect]=reflection;
+    else delete study.emotional[aspect];
+    saveStudy();
+    home('emotional');
+    app.querySelector('#eq-'+aspect).open=true;
+    app.querySelector('#eq-'+aspect+' summary').focus();
+    app.querySelector('#saved-'+aspect).textContent=reflection?'Check-in saved.':'Check-in cleared.';
+    return;
+  }
   if(event.target.id==='baseline-setup'){
     event.preventDefault();
     const value=new FormData(event.target).get('stuck');
@@ -371,6 +387,15 @@ app.addEventListener('click' ,event=>{
   const action=event.target.closest('button')?.dataset.action;
   if(!action)return;
   if(action==='home'||Object.hasOwn(names,action)){home(action==='home'?'plan':action);return}
+  if(action.startsWith('role-')){
+    const id=action.slice(5);
+    const prompt=rolePlays[id];
+    if(prompt){
+      app.innerHTML=navBar('emotional')+`<article class="session"><h2 tabindex="-1">Study partner role-play</h2><p>${esc(prompt)}</p><form class="coach-form" data-emotional="${id}"><label>Your response<textarea name="reflection" maxlength="300">${esc(study.emotional[id]??'')}</textarea></label><div class="row"><button>Save response</button>${button('Return to coaching profile','emotional')}</div></form></article>`;
+      app.querySelector('h2').focus();
+    }
+    return;
+  }
   if(action.startsWith('lesson-')){lesson(action.slice(7));return}
   if(action.startsWith('read-')){
     const code=action.slice(5);
@@ -394,5 +419,5 @@ app.addEventListener('click' ,event=>{
   if(action.startsWith('go'))session.idx=Number(action.slice(2));
   render();
 });
-home();
+home(globalThis.location?.search.includes('view=emotional')?'emotional':'plan');
 </script></body></html>
