@@ -36,6 +36,8 @@ function seedProfile(profile){
 function getRecommendation(){
   const map=Object.fromEntries(modules.map(module=>[module[0],module[1]]));
   const {need,confidence,minutes}=study.coach;
+  const latest=study.attempts.slice(-12);
+  const recentMisses=[...new Map(latest.map(attempt=>[attempt.id,attempt])).values()].filter(attempt=>!attempt.correct);
   const attempted=Object.keys(study.stats).filter(code=>map[code]&&study.stats[code].total);
   if(!attempted.length && !dueIds().length){
     return {title:'Establish your baseline',reason:'Your diagnostic will show which topics to focus on first.',action:minutes<20?'mini':'diagnostic',label:minutes<20?'Start a short baseline':'Start the diagnostic'};
@@ -47,14 +49,45 @@ function getRecommendation(){
     const weakness=accuracy===null?0.25:1-accuracy;
     const pace=stat?.timed?Math.min(0.6,Math.max(0,stat.seconds/stat.timed/225-1)):0;
     const due=dueIds().filter(id=>bank[id].module===topic).length;
-    return weakness+due*0.12+(need==='timing'?pace*2:pace)+(need==='reasoning'&&['Arg','Prf','Err'].includes(topic)?0.45:0);
+    const explained=recentMisses.filter(attempt=>bank[attempt.id].module===topic&&study.reasons[attempt.id]).length;
+    return weakness+explained*0.2+due*0.12+(need==='timing'?pace*2:pace)+(need==='reasoning'&&['Arg','Prf','Err'].includes(topic)?0.45:0);
   }
   const stat=study.stats[code];
   const record=stat?.total?stat.right+'/'+stat.total+' correct':'No attempts yet';
   const pace=stat?.timed?' · '+Math.round(stat.seconds/stat.timed)+'s per answered question':'';
   const topic='Focus on '+map[code];
+  const reasons=recentMisses.map(attempt=>study.reasons[attempt.id]);
+  const rushed=latest.filter(attempt=>attempt.timed&&!attempt.answered).length;
+  if(rushed>=3||reasons.filter(reason=>reason==='pace').length>=2)
+    return {title:'Practise moving on under time pressure',reason:'You recorded several timing misses. Give each question one clear attempt, flag it if you stall, and return after the first pass.',action:'pace-'+code,label:'Start a pacing drill'};
+  const fragile=fragileAttempts();
+  if(fragile.length)
+    return {title:'Test how well the method sticks',reason:'You guessed or missed a question you felt sure about. Try another question on the same topic to check your reasoning.',action:'verify',label:'Start a confidence check'};
+  if(reasons.filter(reason=>reason==='concept'||reason==='logic').length>=2)
+    return {title:topic,reason:'Your recent mistake reviews point to gaps in the method or reasoning. Work through the example before another drill.',action:'lesson-'+code,label:'Review the method'};
+  if(reasons.filter(reason=>reason==='calculation').length>=2)
+    return {title:topic,reason:'You marked several calculation errors. Write each step, then check signs and substitute your result before choosing an answer.',action:'coach-'+code,label:'Practise checking your work'};
   if((confidence<=2||need==='concepts')&&!study.lessons.includes(code))return {title:topic,reason:record+pace+'. Start with the worked example, then try a short drill.',action:'lesson-'+code,label:'Open the lesson'};
   if(need==='timing'&&minutes>=12&&stat?.total&&stat.right/stat.total>=0.5)return {title:'Practise pacing in '+map[code],reason:record+pace+'. Use the timer to practise deciding when to move on.',action:'pace-'+code,label:'Start a timed drill'};
   if(dueIds().some(id=>bank[id].module===code))return {title:'Revisit '+map[code],reason:record+pace+'. A previous mistake in this topic is ready to retry.',action:'due-'+code,label:'Retry due questions'};
   return {title:topic,reason:record+pace+'. Try a short set and review your reasoning after each answer.',action:'coach-'+code,label:'Start a guided drill'};
+}
+
+const mistakeReasons={concept:'I misunderstood the method',logic:'I missed a condition or reasoning step',calculation:'I made a calculation or sign error',pace:'I ran out of time'};
+function fragileAttempts(){
+  const latest=new Map();
+  for(const attempt of study.attempts)latest.set(attempt.id,attempt);
+  return [...latest.values()].filter(attempt=>!attempt.confirmed&&(attempt.confidence==='guess'||(attempt.confidence==='sure'&&!attempt.correct)));
+}
+function coachingInsight(){
+  const attempts=study.attempts.slice(-24);
+  const rated=attempts.filter(attempt=>attempt.confidence);
+  const sure=rated.filter(attempt=>attempt.confidence==='sure');
+  const guesses=rated.filter(attempt=>attempt.confidence==='guess'&&attempt.correct);
+  const skipped=attempts.filter(attempt=>attempt.timed&&!attempt.answered);
+  const fragile=fragileAttempts();
+  return `<section class="coach"><h2>How you answer</h2>
+    <p class="muted">${attempts.length?'Based on your last '+attempts.length+' recorded questions.':'Rate your confidence during untimed practice to see patterns here.'}</p>
+    ${attempts.length?`<dl><dt>Confident answers correct</dt><dd>${sure.length?sure.filter(attempt=>attempt.correct).length+' of '+sure.length:'No confident ratings yet'}</dd><dt>Correct guesses</dt><dd>${guesses.length}</dd><dt>Questions skipped in timed practice</dt><dd>${skipped.length}</dd></dl>`:''}
+    ${fragile.length?button('Verify a guess or confident mistake','verify',''):''}</section>`;
 }

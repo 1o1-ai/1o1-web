@@ -10,7 +10,7 @@
 <body><header><div class="row between"><a class="brand" href="./">TMUA <span>Focus</span></a><a href="/">All projects</a></div></header>
 <main id="app"></main><footer>Progress is saved in this browser. · Independent practice for university applicants · <a href="https://esat-tmua.ac.uk/about-the-tests/tmua-test/" target="_blank" rel="noopener">Official UAT-UK test information</a></footer>
 <script src="course.js"></script>
-<script src="profiles.js?v=1"></script>
+<script src="profiles.js?v=2"></script>
 <script>
 const p1='Paper 1 · Applications';
 const p2='Paper 2 · Reasoning';
@@ -56,7 +56,7 @@ const app=document.querySelector('#app');
 const key='tmua-focus-v1';
 const profileKey='tmua-focus-active-profile';
 const empty=()=>({sessions:0,answered:0,right:0,missed:[]});
-const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
+const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},attempts:[],reasons:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
 let profile=ownProfile,progress,study,session=null,clock,full=null;
 function loadProfile(id){
   profile=profiles.find(item=>item.id===id)??ownProfile;
@@ -119,6 +119,7 @@ function home(page='plan'){
     profile:title(esc(profile.name),esc(profile.city+' · '+profile.course))+
     `<p>${profile.id==='mine'?'Your practice and reflections are stored in this browser.':'Fictional student with sample results. Activities you complete here update this demo profile only.'}</p><div class="grid"><section class="card"><strong class="stat">${study.weeks}</strong>Weeks in study plan</section><section class="card"><strong class="stat">${study.coach.minutes}</strong>Minutes available today</section><section class="card"><strong class="stat">${study.coach.confidence}/5</strong>Confidence at check-in</section></div>
     ${coachingPanel(recommendation,true)}
+    ${coachingInsight()}
     <h2 class="section-title">Skill record</h2><div class="skill-grid">${modules.map(([code,name])=>{
       const stat=study.stats[code];
       return `<section class="skill"><h3>${name}</h3>${stat?.total?`<meter min="0" max="${stat.total}" value="${stat.right}" aria-label="${name} accuracy"></meter><p>${stat.right}/${stat.total} correct${stat.timed?' · '+Math.round(stat.seconds/stat.timed)+'s avg timed':''}</p>`:'<p>Awaiting first attempt</p>'}</section>`;
@@ -159,6 +160,19 @@ function start(mode){
   let questions;
   if(mode==='retry')questions=missedIds().map(id=>bank[id]);
   else if(mode==='due')questions=dueIds().map(id=>bank[id]);
+  else if(mode==='verify'){
+    questions=[];
+    const topics=new Set();
+    for(const attempt of fragileAttempts().reverse()){
+      const source=bank[attempt.id];
+      if(topics.has(source.module))continue;
+      const candidates=bank.filter(q=>q.module===source.module&&q.id!==source.id&&q.hint)
+        .sort((a,b)=>(study.seen[a.id]??0)-(study.seen[b.id]??0));
+      questions.push(candidates[0]??source);
+      topics.add(source.module);
+      if(questions.length>=Math.max(2,Math.floor(study.coach.minutes/4)))break;
+    }
+  }
   else if(mode.startsWith('due-'))questions=dueIds().map(id=>bank[id]).filter(q=>q.module===mode.slice(4)).slice(0,Math.max(2,Math.floor(study.coach.minutes/4)));
   else if(mode==='diagnostic'||mode==='mini'){
     const codes=mode==='mini'?['MM1','MM4','MM6','M7','Arg','Err']:modules.map(([code])=>code);
@@ -174,7 +188,7 @@ function start(mode){
     full={next:selection(p2,20,progress.sessions),first:[],answers:{}};
   }else questions=selection(side,timed?20:5,progress.sessions*5);
   if(!questions.length)return;
-  session={questions,mode,timed,idx:0,answers:{},checked:{},flags:{},seconds:{},since:Date.now(),deadline:Date.now()+(mode.startsWith('pace-')?questions.length*225000:75*60000),ended:false};
+  session={questions,mode,timed,idx:0,answers:{},checked:{},flags:{},confidence:{},seconds:{},since:Date.now(),deadline:Date.now()+(mode.startsWith('pace-')?questions.length*225000:75*60000),ended:false};
   render();
   if(timed&&!session.ended){updateTimer();clock=setInterval(updateTimer,250)}
 }
@@ -201,6 +215,7 @@ function render(){
   <h2 tabindex="-1">Question ${idx+1} of ${questions.length}</h2><p class="muted">${q.topic}</p>
   <p class="question" id="question">${esc(q.prompt)}</p>
   <fieldset class="options" aria-labelledby="question">${q.options.map((value,i)=>`<label class="option"><input type="radio" name="answer" value="${i}" ${chosen===value?'checked':''} ${locked?'disabled':''}> ${esc(value)}</label>`).join('')}</fieldset>
+  ${!timed?`<p><label>How sure are you? <select id="answer-confidence" ${locked?'disabled':''}><option value="">Choose confidence</option>${[['guess','Guessing'],['unsure','Partly sure'],['sure','Confident']].map(([value,label])=>`<option value="${value}" ${session.confidence[q.id]===value?'selected':''}>${label}</option>`).join('')}</select></label></p>`:''}
   ${!timed&&!locked&&q.hint?`<details><summary>Show hint</summary><p>${esc(q.hint)}</p></details>`:''}
   ${locked?`<div class="feedback ${chosen===q.correct?'':'wrong'}"><strong>${chosen===q.correct?'Correct':'Correct answer · '+esc(q.correct)}</strong><br>${esc(q.why)}</div>`:''}
   <div class="row">${idx?button('Previous','prev'):''}${!timed&&!locked?'<button data-action="check" '+(chosen===undefined?'disabled':'')+'>Check answer</button>':''}${idx+1<questions.length?button('Next','next'):''}${button(flags[q.id]?'Remove flag':'Flag for review','flag',flags[q.id]?'bookmarked':'secondary')}</div>
@@ -221,7 +236,7 @@ function finish(){
     const next=full.next;
     full.next=null;
     const deadline=Math.min(session.deadline,Date.now())+75*60000;
-    session={questions:next,mode:'full',timed:true,idx:0,answers:{},checked:{},flags:{},seconds:{},since:Math.min(Date.now(),deadline),deadline,ended:false};
+    session={questions:next,mode:'full',timed:true,idx:0,answers:{},checked:{},flags:{},confidence:{},seconds:{},since:Math.min(Date.now(),deadline),deadline,ended:false};
     render();
     if(!session.ended)clock=setInterval(updateTimer,250);
     return;
@@ -240,6 +255,11 @@ function finish(){
     const topic=study.stats[q.module]??={right:0,total:0};
     topic.total++;
     study.seen[q.id]=Date.now();
+    if(session.mode==='verify'&&correct&&session.confidence[q.id]==='sure'){
+      study.attempts=study.attempts.map(attempt=>bank[attempt.id].module===q.module?{...attempt,confirmed:true}:attempt);
+    }
+    study.attempts.push({id:q.id,correct,answered:answer!==undefined,timed:session.timed,
+      confidence:answer!==undefined?(session.confidence[q.id]??''):''});
     if(answer!==undefined&&session.timed){
       topic.seconds=(topic.seconds??0)+(seconds[q.id]??0);
       topic.timed=(topic.timed??0)+1;
@@ -262,10 +282,11 @@ function finish(){
     }
     const stat=breakdown[q.paper]??=[0,0];
     stat[0]+=Number(correct);stat[1]++;
-    return `<details class="review"><summary>${correct?'Correct':answer===undefined?'Unanswered':'Missed'} · ${esc(q.topic)} · ${esc(q.prompt)}</summary><p>Your answer: ${esc(answer??'Skipped')}<br>Correct answer: ${esc(q.correct)}</p><p>${esc(q.why)}</p></details>`;
+    return `<details class="review"><summary>${correct?'Correct':answer===undefined?'Unanswered':'Missed'} · ${esc(q.topic)} · ${esc(q.prompt)}</summary><p>Your answer: ${esc(answer??'Skipped')}<br>Correct answer: ${esc(q.correct)}</p><p>${esc(q.why)}</p>${correct?'':`<label>What went wrong? <select data-reason="${q.id}"><option value="">Choose a reason</option>${Object.entries(mistakeReasons).map(([value,label])=>`<option value="${value}" ${study.reasons[q.id]===value?'selected':''}>${label}</option>`).join('')}</select></label>`}</details>`;
   }).join('');
   progress={sessions:progress.sessions+1,answered:progress.answered+questions.length,right:progress.right+right,missed:[...missed]};
-  const label={diagnostic:'Diagnostic',mini:'Short baseline',full:'Full rehearsal',paper1:'Paper 1 mock',paper2:'Paper 2 mock',retry:'Mistake review',due:'Scheduled review'}[session.mode]??(session.mode.startsWith('pace-')?'Timed topic drill':'Topic practice');
+  study.attempts=study.attempts.slice(-240);
+  const label={verify:'Confidence check',diagnostic:'Diagnostic',mini:'Short baseline',full:'Full rehearsal',paper1:'Paper 1 mock',paper2:'Paper 2 mock',retry:'Mistake review',due:'Scheduled review'}[session.mode]??(session.mode.startsWith('pace-')?'Timed topic drill':'Topic practice');
   study.history.push({at:Date.now(),label,right,total:questions.length});
   study.history=study.history.slice(-50);
   saveStudy();
@@ -275,6 +296,17 @@ function finish(){
 }
 app.addEventListener('change',event=>{
   const {target}=event;
+  if(target.id==='answer-confidence'){
+    session.confidence[session.questions[session.idx].id]=target.value;
+    return;
+  }
+  if(target.dataset?.reason!==undefined){
+    study.reasons[target.dataset.reason]=target.value;
+    saveStudy();
+    const panel=app.querySelector('.coach');
+    if(panel)panel.outerHTML=coachingPanel(getRecommendation(),true);
+    return;
+  }
   if(target.id==='active-profile'){
     loadProfile(target.value);
     try{localStorage.setItem(profileKey,profile.id)}catch{}
@@ -318,7 +350,7 @@ app.addEventListener('click' ,event=>{
     lesson(code);
     return;
   }
-  if(['diagnostic','drill1','drill2','paper1','paper2','retry','due','full'].includes(action)||action==='mini'||/^(topic|coach|pace|due)-/.test(action)){start(action);return}
+  if(['diagnostic','drill1','drill2','paper1','paper2','retry','due','full','verify'].includes(action)||action==='mini'||/^(topic|coach|pace|due)-/.test(action)){start(action);return}
   if(session.timed&&Date.now()>=session.deadline){finish();return}
   if(action==='exit'){if(confirm('Leave this session? Current answers will be discarded.'))home();return}
   if(action==='finish'){if(Object.keys(session.answers).length===session.questions.length||confirm('Finish with unanswered questions?'))finish();return}
