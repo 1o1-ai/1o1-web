@@ -34,13 +34,15 @@ function seedProfile(profile){
   return {progress:{sessions:1,answered,right,missed},study:state};
 }
 function getRecommendation(){
+  const baselineRecommendation=initialBaselineRecommendation();
+  if(baselineRecommendation)return baselineRecommendation;
   const map=Object.fromEntries(modules.map(module=>[module[0],module[1]]));
   const {need,confidence,minutes}=study.coach;
   const latest=study.attempts.slice(-12);
   const recentMisses=[...new Map(latest.map(attempt=>[attempt.id,attempt])).values()].filter(attempt=>!attempt.correct);
   const attempted=Object.keys(study.stats).filter(code=>map[code]&&study.stats[code].total);
   if(!attempted.length && !dueIds().length){
-    return {title:'Establish your baseline',reason:'Your diagnostic will show which topics to focus on first.',action:minutes<20?'mini':'diagnostic',label:minutes<20?'Start a short baseline':'Start the diagnostic'};
+    return {title:'Establish your baseline',reason:'Your diagnostic will show which topics to focus on first.',action:'baseline',label:'Open Learning Baseline'};
   }
   const code=Object.keys(map).sort((a,b)=>priority(b)-priority(a))[0];
   function priority(topic){
@@ -90,4 +92,34 @@ function coachingInsight(){
     <p class="muted">${attempts.length?'Based on your last '+attempts.length+' recorded questions.':'Rate your confidence during untimed practice to see patterns here.'}</p>
     ${attempts.length?`<dl><dt>Confident answers correct</dt><dd>${sure.length?sure.filter(attempt=>attempt.correct).length+' of '+sure.length:'No confident ratings yet'}</dd><dt>Correct guesses</dt><dd>${guesses.length}</dd><dt>Questions skipped in timed practice</dt><dd>${skipped.length}</dd></dl>`:''}
     ${fragile.length?button('Verify a guess or confident mistake','verify',''):''}</section>`;
+}
+
+const stuckOptions={example:'See a worked example',hint:'Get a small hint and try again',move:'Move on and come back',check:'Check my working step by step'};
+function baselineSetup(){
+  return title('Learning Baseline','Eight TMUA-style questions in 12 minutes. Work without a calculator. You can skip and return to questions, and rate your confidence before seeing any answers.')+
+    `<form id="baseline-setup" class="coach coach-form"><label>When you get stuck, what helps? <select name="stuck"><option value="">Skip this check-in</option>${Object.entries(stuckOptions).map(([value,label])=>`<option value="${value}" ${study.stuck===value?'selected':''}>${label}</option>`).join('')}</select></label><div class="row"><button name="intent" value="start">Start the 12-minute baseline</button><button class="secondary" name="intent" value="save">Save preference and return</button></div></form>`;
+}
+function baselineSummary(){
+  const result=study.baseline;
+  if(!result)return '';
+  const {right,total,applications,reasoning,answered,guesses,confidentMisses,rated,elapsed,expired}=result;
+  return `<section class="coach"><h2>Learning Baseline</h2><p><strong>${right}/${total} correct</strong> · ${total-answered} skipped · ${Math.floor(elapsed/60)}m ${elapsed%60}s${expired?' · Timer expired':''}</p>
+  <p>Applications ${applications[0]}/${applications[1]} · Reasoning ${reasoning[0]}/${reasoning[1]}</p>
+  <p>${rated?`${rated}/${answered} answers rated · ${guesses} correct guesses · ${confidentMisses} confident mistakes`:'No confidence ratings recorded.'}</p>
+  <p>${study.stuck?'When stuck, you prefer to '+esc(stuckOptions[study.stuck].toLowerCase())+'. ':''}This is a starting point for coaching. Recommendations update as you practise.</p>
+  ${button('Edit preference or retake','baseline')}</section>`;
+}
+function initialBaselineRecommendation(){
+  const result=study.baseline;
+  if(!result||study.sessionAfterBaseline!==progress.sessions)return;
+  const {applications,reasoning,answered,total,expired,firstMiss}=result;
+  const lower=reasoning[0]/reasoning[1]<applications[0]/applications[1]?'Arg':'MM1';
+  const topic=bank[firstMiss]?.module??lower;
+  if(expired&&total-answered>=2)
+    return {title:'Practise when to move on',reason:'The timer expired with '+(total-answered)+' questions unanswered. Try a short timed drill and flag questions when you stall.',action:'pace-'+topic,label:'Start a pacing drill'};
+  if(fragileAttempts().length)
+    return {title:'Check your reasoning on a fresh question',reason:'Your confidence ratings surfaced a guess or a confident mistake. Try a different question on the same topic.',action:'verify',label:'Start a confidence check'};
+  if(firstMiss!==undefined&&(study.stuck==='example'||reasoning[0]<reasoning[1]&&lower==='Arg'))
+    return {title:'Start with a worked example',reason:'Your baseline flagged a question in '+bank[firstMiss].topic+'. Compare your approach with a worked example, then retry the method.',action:'lesson-'+topic,label:'Open the lesson'};
+  return {title:firstMiss===undefined?'Build on your baseline':'Practise '+bank[firstMiss].topic,reason:firstMiss===undefined?'You answered every baseline question correctly. Try a harder problem to check how well the method transfers.':(study.stuck==='check'?'Write each step and check it against the question before choosing an answer.':study.stuck==='move'?'Flag a question if you stall and return after the first pass.':'Try a short set in a topic where you missed a question. Open a hint if you get stuck.'),action:'coach-'+topic,label:'Start a guided drill'};
 }

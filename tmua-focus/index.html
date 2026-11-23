@@ -10,7 +10,7 @@
 <body><header><div class="row between"><a class="brand" href="./">TMUA <span>Focus</span></a><a href="/">All projects</a></div></header>
 <main id="app"></main><footer>Progress is saved in this browser. · Independent practice for university applicants · <a href="https://esat-tmua.ac.uk/about-the-tests/tmua-test/" target="_blank" rel="noopener">Official UAT-UK test information</a></footer>
 <script src="course.js"></script>
-<script src="profiles.js?v=2"></script>
+<script src="profiles.js?v=3"></script>
 <script>
 const p1='Paper 1 · Applications';
 const p2='Paper 2 · Reasoning';
@@ -56,7 +56,7 @@ const app=document.querySelector('#app');
 const key='tmua-focus-v1';
 const profileKey='tmua-focus-active-profile';
 const empty=()=>({sessions:0,answered:0,right:0,missed:[]});
-const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},attempts:[],reasons:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
+const defaultStudy=()=>({lessons:[],stats:{},notes:{},due:{},history:[],weeks:6,cards:{},seen:{},attempts:[],baseline:null,stuck:'',reasons:{},coach:{minutes:25,need:'general',confidence:3,reflection:''}});
 let profile=ownProfile,progress,study,session=null,clock,full=null;
 function loadProfile(id){
   profile=profiles.find(item=>item.id===id)??ownProfile;
@@ -81,7 +81,7 @@ loadProfile(activeId);
 const formatDay=value=>new Date(value).toLocaleDateString(undefined,{month:'short',day:'numeric'});
 const esc=value=>String(value).replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[char]);
 const button=(label,action,extra='secondary')=>'<button class="'+extra+'" data-action="'+action+'">'+label+'</button>';
-const names={plan:'Study plan',profile:'Student profile',learn:'Learn',practice:'Practice',review:'Mistake notebook',resources:'Resources'};
+const names={plan:'Study plan',profile:'Student profile',baseline:'Learning Baseline',learn:'Learn',practice:'Practice',review:'Mistake notebook',resources:'Resources'};
 const navBar=page=>`<div class="row between profile-bar"><label>Student <select id="active-profile">${profiles.map(item=>`<option value="${item.id}" ${item.id===profile.id?'selected':''}>${esc(item.name)}${item.id==='mine'?'':' · demo'}</option>`).join('')}</select></label><span class="muted">${esc(profile.city)}</span></div><nav class="row course-nav" aria-label="Study sections">${Object.entries(names).map(([id,label])=>'<button class="secondary" data-action="'+id+'" '+(page===id?'aria-current="page"':'')+'>'+label+'</button>').join('')}</nav>`;
 function coachingPanel(recommendation,checkIn=false){
   const {minutes,need,confidence,reflection}=study.coach;
@@ -111,7 +111,8 @@ function home(page='plan'){
     return `<section class="card"><p class="eyebrow">Week ${first}${last>first?'–'+last:''}</p><h3>${heading}</h3><p>${body}</p></section>`;
   }).join('');
   const pages={
-    plan:`<section class="hero"><p class="eyebrow">${esc(profile.name)} · ${profile.id==='mine'?'Your workspace':'Sample student'}</p><h1>Learn the maths. Practise the reasoning.</h1><p>Build a study plan, cover the syllabus and rehearse both papers before test day.</p><div class="row">${button('Start an 18-question diagnostic','diagnostic','light')}${button('Explore the syllabus','learn')}</div></section>
+    baseline:study.baseline?baselineSummary()+baselineSetup():baselineSetup(),
+    plan:`<section class="hero"><p class="eyebrow">${esc(profile.name)} · ${profile.id==='mine'?'Your workspace':'Sample student'}</p><h1>Learn the maths. Practise the reasoning.</h1><p>Build a study plan, cover the syllabus and rehearse both papers before test day.</p><div class="row">${button(study.baseline?'View Learning Baseline':'Start Learning Baseline','baseline','light')}${button('Explore the syllabus','learn')}</div></section>
     <div class="grid"><section class="card"><strong class="stat">${study.lessons.length}/${modules.length}</strong>Lessons read</section><section class="card"><strong class="stat">${dueIds().length}</strong>Mistakes ready to retry</section><section class="card"><strong class="stat">${progress.answered?Math.round(100*progress.right/progress.answered)+'%':'—'}</strong>Practice accuracy</section></div>
     ${coachingPanel(recommendation,true)}
     <h2 class="section-title">Preparation schedule</h2><label>Weeks available <select id="weeks">${[4,6,8,12].map(n=>`<option ${n===windowWeeks?'selected':''}>${n}</option>`).join('')}</select></label><div class="grid">${plan}</div>
@@ -119,6 +120,7 @@ function home(page='plan'){
     profile:title(esc(profile.name),esc(profile.city+' · '+profile.course))+
     `<p>${profile.id==='mine'?'Your practice and reflections are stored in this browser.':'Fictional student with sample results. Activities you complete here update this demo profile only.'}</p><div class="grid"><section class="card"><strong class="stat">${study.weeks}</strong>Weeks in study plan</section><section class="card"><strong class="stat">${study.coach.minutes}</strong>Minutes available today</section><section class="card"><strong class="stat">${study.coach.confidence}/5</strong>Confidence at check-in</section></div>
     ${coachingPanel(recommendation,true)}
+    ${study.baseline?baselineSummary():button('Take the Learning Baseline','baseline')}
     ${coachingInsight()}
     <h2 class="section-title">Skill record</h2><div class="skill-grid">${modules.map(([code,name])=>{
       const stat=study.stats[code];
@@ -130,7 +132,7 @@ function home(page='plan'){
       return `<section class="card"><p class="eyebrow">${code} · ${study.lessons.includes(code)?'Read':'To study'}</p><h3>${name}</h3><p>${goal}</p>${stat?`<p>${stat.right}/${stat.total} correct in practice</p>`:''}${button('Open lesson','lesson-'+code)}</section>`;
     }).join('')}</div>`).join(''),
     practice:title('Practise for the test','Work without a calculator. The official test has two consecutive 75-minute papers of 20 questions each. There is no penalty for wrong answers.')+
-    `<div class="grid"><section class="card"><h3>Paper 1</h3><p>Apply school mathematics in unfamiliar settings.</p><div class="row">${button('Quick drill','drill1')}${button('75-minute mock','paper1','')}</div></section>
+    `<p>${button('Start an 18-question diagnostic','diagnostic')}</p><div class="grid"><section class="card"><h3>Paper 1</h3><p>Apply school mathematics in unfamiliar settings.</p><div class="row">${button('Quick drill','drill1')}${button('75-minute mock','paper1','')}</div></section>
     <section class="card"><h3>Paper 2</h3><p>Test mathematical arguments, proof steps and counterexamples.</p><div class="row">${button('Quick drill','drill2')}${button('75-minute mock','paper2','')}</div></section>
     <section class="card"><h3>Full rehearsal</h3><p>Both original practice papers back to back, 150 minutes total. Review solutions after both papers.</p>${button('Start full rehearsal','full','')}</section></div>
     <section class="card"><h3>Strategy for timed papers</h3><p>Use the first pass to answer questions where you have a clear route. Flag uncertain items. On the second pass, use sketches, sign checks and simple cases to rule out distractors. Leave time to answer every item.</p><p>Mocks reuse questions from the learning bank and report raw marks. Use the official past-paper archive for unfamiliar full papers and the Pearson player for interface practice.</p>${button('Open official resources','resources')}</section>`,
@@ -156,9 +158,15 @@ function start(mode){
   const rotated=(items,offset)=>[...items.slice(offset%items.length),...items.slice(0,offset%items.length)];
   const selection=(paper,count,offset)=>rotated(original.filter(q=>q.paper===paper),offset).slice(0,count);
   const side=mode.endsWith('1')?p1:p2;
-  const timed=mode.startsWith('paper')||mode.startsWith('pace-')||mode==='full';
+  const timed=mode.startsWith('paper')||mode.startsWith('pace-')||mode==='full'||mode==='onboarding';
   let questions;
-  if(mode==='retry')questions=missedIds().map(id=>bank[id]);
+  if(mode==='onboarding'){
+    questions=['MM1','Arg','MM8','Prf','MM4','Err','M7','Arg'].map((code,i)=>{
+      const options=original.filter(q=>q.module===code);
+      return options[(i===7?1:0)+(study.baseline?1:0)];
+    });
+  }
+  else if(mode==='retry')questions=missedIds().map(id=>bank[id]);
   else if(mode==='due')questions=dueIds().map(id=>bank[id]);
   else if(mode==='verify'){
     questions=[];
@@ -188,13 +196,14 @@ function start(mode){
     full={next:selection(p2,20,progress.sessions),first:[],answers:{}};
   }else questions=selection(side,timed?20:5,progress.sessions*5);
   if(!questions.length)return;
-  session={questions,mode,timed,idx:0,answers:{},checked:{},flags:{},confidence:{},seconds:{},since:Date.now(),deadline:Date.now()+(mode.startsWith('pace-')?questions.length*225000:75*60000),ended:false};
+  const started=Date.now();
+  session={started,questions,mode,timed,idx:0,answers:{},checked:{},flags:{},confidence:{},seconds:{},since:Date.now(),deadline:started+(mode==='onboarding'?12*60000:mode.startsWith('pace-')?questions.length*225000:75*60000),ended:false};
   render();
   if(timed&&!session.ended){updateTimer();clock=setInterval(updateTimer,250)}
 }
 function updateTimer(){
   const ms=session.deadline-Date.now();
-  if(ms<=0){finish();return}
+  if(ms<=0){session.expired=true;finish();return}
   const seconds=Math.ceil(ms/1000);
   const timer=document.querySelector('#timer');
   if(timer)timer.textContent=Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');
@@ -215,7 +224,7 @@ function render(){
   <h2 tabindex="-1">Question ${idx+1} of ${questions.length}</h2><p class="muted">${q.topic}</p>
   <p class="question" id="question">${esc(q.prompt)}</p>
   <fieldset class="options" aria-labelledby="question">${q.options.map((value,i)=>`<label class="option"><input type="radio" name="answer" value="${i}" ${chosen===value?'checked':''} ${locked?'disabled':''}> ${esc(value)}</label>`).join('')}</fieldset>
-  ${!timed?`<p><label>How sure are you? <select id="answer-confidence" ${locked?'disabled':''}><option value="">Choose confidence</option>${[['guess','Guessing'],['unsure','Partly sure'],['sure','Confident']].map(([value,label])=>`<option value="${value}" ${session.confidence[q.id]===value?'selected':''}>${label}</option>`).join('')}</select></label></p>`:''}
+  ${(!timed||session.mode==='onboarding')?`<p><label>How sure are you? <select id="answer-confidence" ${locked?'disabled':''}><option value="">Choose confidence</option>${[['guess','Guessing'],['unsure','Partly sure'],['sure','Confident']].map(([value,label])=>`<option value="${value}" ${session.confidence[q.id]===value?'selected':''}>${label}</option>`).join('')}</select></label></p>`:''}
   ${!timed&&!locked&&q.hint?`<details><summary>Show hint</summary><p>${esc(q.hint)}</p></details>`:''}
   ${locked?`<div class="feedback ${chosen===q.correct?'':'wrong'}"><strong>${chosen===q.correct?'Correct':'Correct answer · '+esc(q.correct)}</strong><br>${esc(q.why)}</div>`:''}
   <div class="row">${idx?button('Previous','prev'):''}${!timed&&!locked?'<button data-action="check" '+(chosen===undefined?'disabled':'')+'>Check answer</button>':''}${idx+1<questions.length?button('Next','next'):''}${button(flags[q.id]?'Remove flag':'Flag for review','flag',flags[q.id]?'bookmarked':'secondary')}</div>
@@ -286,17 +295,27 @@ function finish(){
   }).join('');
   progress={sessions:progress.sessions+1,answered:progress.answered+questions.length,right:progress.right+right,missed:[...missed]};
   study.attempts=study.attempts.slice(-240);
-  const label={verify:'Confidence check',diagnostic:'Diagnostic',mini:'Short baseline',full:'Full rehearsal',paper1:'Paper 1 mock',paper2:'Paper 2 mock',retry:'Mistake review',due:'Scheduled review'}[session.mode]??(session.mode.startsWith('pace-')?'Timed topic drill':'Topic practice');
+  if(session.mode==='onboarding'){
+    study.baseline={right,total:questions.length,answered,applications:breakdown[p1],reasoning:breakdown[p2],
+      elapsed:Math.floor((Math.min(Date.now(),session.deadline)-session.started)/1000),expired:Boolean(session.expired),
+      rated:questions.filter(q=>answers[q.id]!==undefined&&session.confidence[q.id]).length,
+      guesses:questions.filter(q=>answers[q.id]===q.correct&&session.confidence[q.id]==='guess').length,
+      confidentMisses:questions.filter(q=>answers[q.id]!==undefined&&answers[q.id]!==q.correct&&session.confidence[q.id]==='sure').length,
+      firstMiss:questions.find(q=>answers[q.id]!==q.correct)?.id};
+    study.sessionAfterBaseline=progress.sessions;
+  }
+  const label={onboarding:'Learning Baseline',verify:'Confidence check',diagnostic:'Diagnostic',mini:'Short baseline',full:'Full rehearsal',paper1:'Paper 1 mock',paper2:'Paper 2 mock',retry:'Mistake review',due:'Scheduled review'}[session.mode]??(session.mode.startsWith('pace-')?'Timed topic drill':'Topic practice');
   study.history.push({at:Date.now(),label,right,total:questions.length});
   study.history=study.history.slice(-50);
   saveStudy();
   full=null;
-  app.innerHTML=`<section class="session"><h2 tabindex="-1">${right} of ${questions.length} correct</h2><p>${answered} answered · ${questions.length-answered} skipped · Raw practice score</p>${Object.entries(breakdown).map(([paper,[good,total]])=>`<p>${paper} · ${good}/${total}</p>`).join('')}<div class="row">${button('Study plan','home')}${button('Open notebook','review')}${missed.size?button('Retry missed questions','retry',''):''}</div>${coachingPanel(getRecommendation(),true)}<div>${reviews}</div></section>`;
+  app.innerHTML=`<section class="session"><h2 tabindex="-1">${right} of ${questions.length} correct</h2><p>${answered} answered · ${questions.length-answered} skipped · Raw practice score</p>${Object.entries(breakdown).map(([paper,[good,total]])=>`<p>${paper} · ${good}/${total}</p>`).join('')}<div class="row">${button('Study plan','home')}${button('Open notebook','review')}${missed.size?button('Retry missed questions','retry',''):''}</div>${coachingPanel(getRecommendation(),true)}${session.mode==='onboarding'?baselineSummary():''}<div>${reviews}</div></section>`;
   app.querySelector('h2').focus();
 }
 app.addEventListener('change',event=>{
   const {target}=event;
   if(target.id==='answer-confidence'){
+    if(session.timed&&Date.now()>=session.deadline){session.expired=true;finish();return}
     session.confidence[session.questions[session.idx].id]=target.value;
     return;
   }
@@ -315,7 +334,7 @@ app.addEventListener('change',event=>{
   }
   if(target.id==='weeks'){study.weeks=Number(target.value);saveStudy();home();return}
   if(event.target.name!=='answer' ||!session||session.ended)return;
-  if(session.timed&&Date.now()>=session.deadline){finish();return}
+  if(session.timed&&Date.now()>=session.deadline){session.expired=true;finish();return}
   const q=session.questions[session.idx];
   session.answers[q.id]=q.options[Number(event.target.value)];
   const check=app.querySelector('[data-action="check"]');
@@ -323,10 +342,20 @@ app.addEventListener('change',event=>{
   app.querySelector('[data-action="go'+session.idx+'"]').classList.remove('secondary');
 });
 app.addEventListener('submit',event=>{
+  if(event.target.id==='baseline-setup'){
+    event.preventDefault();
+    const value=new FormData(event.target).get('stuck');
+    study.stuck=Object.hasOwn(stuckOptions,value)?value:'';
+    saveStudy();
+    if(event.submitter?.value==='save')home('plan');
+    else start('onboarding');
+    return;
+  }
   if(event.target.id!=='coach-checkin')return;
   event.preventDefault();
   const form=new FormData(event.target);
   const need=form.get('need');
+  study.sessionAfterBaseline=null;
   study.coach={minutes:Number(form.get('minutes')),need:Object.hasOwn(needs,need)?need:'general',
     confidence:Number(form.get('confidence')),reflection:String(form.get('reflection')??'').trim().slice(0,500)};
   saveStudy();
@@ -351,7 +380,7 @@ app.addEventListener('click' ,event=>{
     return;
   }
   if(['diagnostic','drill1','drill2','paper1','paper2','retry','due','full','verify'].includes(action)||action==='mini'||/^(topic|coach|pace|due)-/.test(action)){start(action);return}
-  if(session.timed&&Date.now()>=session.deadline){finish();return}
+  if(session.timed&&Date.now()>=session.deadline){session.expired=true;finish();return}
   if(action==='exit'){if(confirm('Leave this session? Current answers will be discarded.'))home();return}
   if(action==='finish'){if(Object.keys(session.answers).length===session.questions.length||confirm('Finish with unanswered questions?'))finish();return}
   if(action==='check')session.checked[session.questions[session.idx].id]=true;
