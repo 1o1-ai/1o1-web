@@ -212,7 +212,7 @@
     const combined = post.title + ' ' + fullText;
 
     // Correspondent Detection
-    let reporter = 'ডিজিটাল ইন্ডিয়ান গোল্ডেন ইন্ডিয়া ডেস্ক';
+    let reporter = 'নিজস্ব সংবাদদাতা';
     if (/সেখ আব্দুল আজিম|আব্দুল আজিম/.test(combined)) {
       reporter = 'সেখ আব্দুল আজিম';
     } else if (/পুলক চক্রবর্তী/.test(combined)) {
@@ -338,6 +338,7 @@
 
     return {
       ...post,
+      headline: post.id === 2506 ? 'অন্নপূর্ণা যোজনার টাকা এখনও পাননি? কী করবেন জানুন' : post.title,
       reporter,
       location,
       districtTag,
@@ -349,6 +350,7 @@
   }
 
   const ARTICLES = rawPosts.map(enrichArticle);
+  const FRONT_PAGE_STORIES = 5;
 
   // State
   let currentCategory = 'সব খবর';
@@ -391,7 +393,7 @@
 
     const mastheadCoin = document.getElementById('mastheadCoinStage');
     if (mastheadCoin) {
-      mastheadCoin.innerHTML = buildCoinSVG(theme, true);
+      mastheadCoin.innerHTML = buildCoinSVG(theme, false);
     }
     const footerCoin = document.getElementById('footerCoinStage');
     if (footerCoin) {
@@ -406,49 +408,14 @@
     });
   }
 
-  function initClockAndDate() {
-    const dateEl = document.getElementById('liveBnDate');
-    const clockEl = document.getElementById('liveBnClock');
-    function tick() {
-      const now = new Date();
-      if (dateEl) {
-        dateEl.textContent = now.toLocaleDateString('bn-IN', {
-          weekday: 'long',
-          day: 'numeric',
-          month: 'long',
-          year: 'numeric'
-        });
-      }
-      if (clockEl) {
-        clockEl.textContent = now.toLocaleTimeString('bn-IN', {
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit'
-        });
-      }
-    }
-    tick();
-    setInterval(tick, 1000);
+  function renderEditionDate() {
+    const date = document.getElementById('liveBnDate');
+    date.textContent = new Intl.DateTimeFormat('bn-IN', {
+      dateStyle: 'long',
+      timeZone: 'Asia/Kolkata'
+    }).format(new Date());
   }
 
-  // 4. Render Breaking News Ticker
-  function renderTicker() {
-    const track = document.getElementById('breakingTickerTrack');
-    if (!track) return;
-    const topItems = ARTICLES.slice(0, 12);
-    const html = [...topItems, ...topItems].map(art => `
-      <span class="ticker-item" data-article-id="${art.id}">
-        <span class="ticker-cat-pill">${art.location}</span>
-        <span>${art.title}</span>
-      </span>
-    `).join('');
-    track.innerHTML = html;
-    track.querySelectorAll('.ticker-item').forEach(item => {
-      item.addEventListener('click', () => openArticleModal(Number(item.dataset.articleId)));
-    });
-  }
-
-  // 5. Render Hero Bento Section
   function renderHero() {
     const leadContainer = document.getElementById('heroLeadContainer');
     const stackContainer = document.getElementById('heroStackContainer');
@@ -460,26 +427,25 @@
         <div class="hero-lead-media">
           <img src="${lead.image}" alt="${lead.title.replace(/"/g, '&quot;')}" fetchpriority="high" loading="eager" />
           <div class="hero-badges-overlay">
-            <span class="badge-exclusive">🔥 শীর্ষ প্রতিবেদন • EXCLUSIVE</span>
+            <span class="badge-exclusive">প্রধান খবর</span>
             <span class="badge-cat">${lead.location}</span>
           </div>
         </div>
         <div class="hero-lead-body">
           <div>
-            <h2 class="hero-lead-title">${lead.title}</h2>
+            <h2 class="hero-lead-title"><a class="story-link" href="?article=${lead.id}">${lead.headline}</a></h2>
             <p class="hero-lead-excerpt" style="margin-top:0.65rem;">${lead.excerpt}</p>
           </div>
           <div class="article-meta-row">
             <span class="reporter-tag">✍️ ${lead.reporter}</span>
             <span>📅 ${lead.formattedDateBn}</span>
-            <span class="read-more-pill">সম্পূর্ণ প্রতিবেদন পড়ুন →</span>
+            <span class="read-more-pill">সম্পূর্ণ প্রতিবেদন পড়ুন</span>
           </div>
         </div>
       </article>
     `;
-    leadContainer.querySelector('.hero-lead-card').addEventListener('click', () => openArticleModal(lead.id));
 
-    const stackItems = ARTICLES.slice(1, 5);
+    const stackItems = ARTICLES.slice(1, FRONT_PAGE_STORIES);
     stackContainer.innerHTML = stackItems.map(art => `
       <article class="hero-stack-card" data-article-id="${art.id}">
         <div class="stack-thumb">
@@ -491,17 +457,12 @@
             <span>•</span>
             <span>${art.formattedDateBn}</span>
           </div>
-          <h3 class="stack-title">${art.title}</h3>
-          <div class="stack-meta">
-            <span>✍️ ${art.reporter}</span>
-          </div>
+          <h3 class="stack-title"><a class="story-link" href="?article=${art.id}">${art.headline}</a></h3>
         </div>
       </article>
     `).join('');
 
-    stackContainer.querySelectorAll('.hero-stack-card').forEach(card => {
-      card.addEventListener('click', () => openArticleModal(Number(card.dataset.articleId)));
-    });
+
   }
 
   // 6. Render Category Tabs & District Pills
@@ -509,16 +470,8 @@
     const catBar = document.getElementById('categoryTabsBar');
     if (catBar) {
       catBar.innerHTML = CATEGORIES.map(cat => {
-        const count = cat === 'সব খবর'
-          ? ARTICLES.length
-          : ARTICLES.filter(a => a.beats.includes(cat)).length;
-        const activeClass = cat === currentCategory ? 'active' : '';
-        return `
-          <button class="cat-tab ${activeClass}" data-cat="${cat}" role="tab" aria-selected="${cat === currentCategory}">
-            <span>${cat}</span>
-            <span class="cat-count">${count}</span>
-          </button>
-        `;
+        const selected = cat === currentCategory;
+        return `<button type="button" class="cat-tab ${selected ? 'active' : ''}" data-cat="${cat}" aria-pressed="${selected}">${cat}</button>`;
       }).join('');
 
       catBar.querySelectorAll('.cat-tab').forEach(btn => {
@@ -527,6 +480,7 @@
           currentReporter = '';
           visibleCount = 12;
           renderFilters();
+          catBar.querySelector('.active')?.focus({ preventScroll: true });
           renderMainNewsGrid();
           document.getElementById('mainNewsSection')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
@@ -536,7 +490,7 @@
     const distBar = document.getElementById('districtPillsBar');
     if (distBar) {
       distBar.innerHTML = DISTRICTS.map(d => `
-        <button class="district-pill ${d === currentDistrict ? 'active' : ''}" data-dist="${d}">
+        <button type="button" class="district-pill ${d === currentDistrict ? 'active' : ''}" data-dist="${d}" aria-pressed="${d === currentDistrict}">
           ${d}
         </button>
       `).join('');
@@ -546,6 +500,7 @@
           currentDistrict = btn.dataset.dist;
           visibleCount = 12;
           renderFilters();
+          distBar.querySelector('.active')?.focus({ preventScroll: true });
           renderMainNewsGrid();
           document.getElementById('mainNewsSection')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
@@ -565,7 +520,7 @@
         </div>
         <div class="card-body">
           <div>
-            <h3 class="card-title">${art.title}</h3>
+            <h3 class="card-title"><a class="story-link" href="?article=${art.id}">${art.headline}</a></h3>
             <p class="card-excerpt" style="margin-top:0.5rem;">${art.excerpt}</p>
           </div>
           <div class="card-footer">
@@ -606,7 +561,8 @@
     const resetFilterBtn = document.getElementById('resetFiltersBtn');
     if (!grid) return;
 
-    const filtered = getFilteredArticles();
+    const isFiltered = currentCategory !== 'সব খবর' || currentDistrict !== 'সব এলাকা' || currentReporter !== '' || searchQuery.trim() !== '';
+    const filtered = isFiltered ? getFilteredArticles() : ARTICLES.slice(FRONT_PAGE_STORIES);
 
     if (titleEl) {
       if (currentReporter) {
@@ -616,15 +572,14 @@
       } else if (currentDistrict !== 'সব এলাকা') {
         titleEl.textContent = `${currentDistrict} — আঞ্চলিক সংবাদ`;
       } else {
-        titleEl.textContent = currentCategory === 'সব খবর' ? 'সর্বশেষ সংবাদ ও বিশেষ প্রতিবেদন' : `${currentCategory} বিভাগ`;
+        titleEl.textContent = currentCategory === 'সব খবর' ? 'সর্বশেষ সংবাদ' : `${currentCategory} বিভাগ`;
       }
     }
 
     if (subEl) {
-      subEl.textContent = `মোট ${filtered.length}টি যাচাইকৃত প্রতিবেদন পাওয়া গেছে`;
+      subEl.textContent = `${filtered.length.toLocaleString('bn-IN')}টি প্রতিবেদন`;
     }
 
-    const isFiltered = currentCategory !== 'সব খবর' || currentDistrict !== 'সব এলাকা' || currentReporter !== '' || searchQuery.trim() !== '';
     if (resetFilterBtn) {
       resetFilterBtn.style.display = isFiltered ? 'inline-flex' : 'none';
     }
@@ -641,9 +596,6 @@
       document.getElementById('emptyResetBtn')?.addEventListener('click', resetAllFilters);
     } else {
       grid.innerHTML = slice.map(createNewsCardHTML).join('');
-      grid.querySelectorAll('.news-card').forEach(card => {
-        card.addEventListener('click', () => openArticleModal(Number(card.dataset.articleId)));
-      });
     }
 
     if (loadMoreBtn) {
@@ -669,27 +621,18 @@
     if (hooghlyGrid) {
       const hooghlyStories = ARTICLES.filter(a => /হুগলি|ডানকুনি|চন্ডীতলা|চুঁচুড়া|উত্তরপাড়া|পুরশুড়া|হাওড়া/.test(a.location)).slice(0, 6);
       hooghlyGrid.innerHTML = hooghlyStories.map(createNewsCardHTML).join('');
-      hooghlyGrid.querySelectorAll('.news-card').forEach(c => {
-        c.addEventListener('click', () => openArticleModal(Number(c.dataset.articleId)));
-      });
     }
 
     const sportsGrid = document.getElementById('sportsArenaGrid');
     if (sportsGrid) {
       const sportsStories = ARTICLES.filter(a => a.beats.includes('খেলাধুলা')).slice(0, 6);
       sportsGrid.innerHTML = sportsStories.map(createNewsCardHTML).join('');
-      sportsGrid.querySelectorAll('.news-card').forEach(c => {
-        c.addEventListener('click', () => openArticleModal(Number(c.dataset.articleId)));
-      });
     }
 
     const cultureGrid = document.getElementById('cultureDeskGrid');
     if (cultureGrid) {
       const cultureStories = ARTICLES.filter(a => a.beats.includes('বিনোদন ও সংস্কৃতি') || a.beats.includes('স্বাস্থ্য ও সমাজ')).slice(0, 6);
       cultureGrid.innerHTML = cultureStories.map(createNewsCardHTML).join('');
-      cultureGrid.querySelectorAll('.news-card').forEach(c => {
-        c.addEventListener('click', () => openArticleModal(Number(c.dataset.articleId)));
-      });
     }
   }
 
@@ -709,15 +652,14 @@
         <span class="badge-exclusive">${art.primaryBeat}</span>
         <span class="badge-cat">📍 ${art.location}</span>
       </div>
-      <h1 class="reader-title">${art.title}</h1>
+      <h2 class="reader-title" id="readerTitle">${art.headline}</h2>
       <div class="reader-byline">
         <div>
-          <strong>✍️ প্রতিবেদক: ${art.reporter}</strong>
-          <div style="color:var(--text-muted); font-size:0.78rem;">ডিজিটাল ইন্ডিয়ান গোল্ডেন ইন্ডিয়া • ভেরিফায়েড ডিসপ্যাচ</div>
+          <strong>${art.reporter}</strong>
+          <div style="color:var(--text-muted); font-size:0.78rem;">ডিজিটাল ইন্ডিয়ান গোল্ডেন ইন্ডিয়া</div>
         </div>
         <div style="text-align:right;">
           <div>📅 ${art.formattedDateBn}</div>
-          <div style="color:var(--text-muted); font-size:0.76rem;">পাঠের সময়: ~২ মিনিট</div>
         </div>
       </div>
       <img class="reader-hero-img" src="${art.image}" alt="${art.title.replace(/"/g, '&quot;')}" />
@@ -729,9 +671,9 @@
           এই প্রতিবেদনটি শেয়ার করুন:
         </div>
         <div class="share-buttons">
-          <button class="tool-pill-btn" id="shareWaBtn">🟢 WhatsApp</button>
-          <button class="tool-pill-btn" id="shareFbBtn">🔵 Facebook</button>
-          <button class="tool-pill-btn" id="copyArtLinkBtn">🔗 লিঙ্ক কপি করুন</button>
+          <button class="tool-pill-btn" id="shareWaBtn">হোয়াটসঅ্যাপে শেয়ার</button>
+          <button class="tool-pill-btn" id="shareFbBtn">ফেসবুকে শেয়ার</button>
+          <button class="tool-pill-btn" id="copyArtLinkBtn">লিংক কপি করুন</button>
           <a class="tool-pill-btn" href="${art.origLink}" target="_blank" rel="noopener">🌐 মূল সূত্র</a>
         </div>
       </div>
@@ -740,12 +682,12 @@
           <h3 style="font-size:1.1rem; margin-bottom:1rem; font-family:var(--font-bn-serif);">আরও সম্পর্কিত প্রতিবেদন</h3>
           <div class="news-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
             ${related.map(r => `
-              <div class="news-card related-card-item" data-rel-id="${r.id}" style="box-shadow:none;">
+              <div class="news-card related-card-item" data-article-id="${r.id}" style="box-shadow:none;">
                 <div class="card-media" style="aspect-ratio:16/9;">
                   <img src="${r.image}" alt="${r.title.replace(/"/g, '&quot;')}" loading="lazy" />
                 </div>
                 <div class="card-body" style="padding:0.75rem;">
-                  <h4 style="font-size:0.92rem; line-height:1.35;">${r.title}</h4>
+                  <h4 style="font-size:0.92rem; line-height:1.35;"><a class="story-link" href="?article=${r.id}">${r.headline}</a></h4>
                 </div>
               </div>
             `).join('')}
@@ -761,13 +703,14 @@
     document.getElementById('shareFbBtn')?.addEventListener('click', () => {
       window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank');
     });
-    document.getElementById('copyArtLinkBtn')?.addEventListener('click', (e) => {
-      navigator.clipboard?.writeText(shareUrl);
-      e.currentTarget.textContent = '✅ কপি হয়েছে!';
-    });
-
-    bodyEl.querySelectorAll('.related-card-item').forEach(rc => {
-      rc.addEventListener('click', () => openArticleModal(Number(rc.dataset.relId)));
+    document.getElementById('copyArtLinkBtn')?.addEventListener('click', async (event) => {
+      const button = event.currentTarget;
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        button.textContent = 'লিংক কপি হয়েছে';
+      } catch {
+        button.textContent = 'লিংক কপি করা যায়নি';
+      }
     });
 
     const speakModalBtn = document.getElementById('modalSpeakBtn');
@@ -790,7 +733,7 @@
     const heroBtn = document.getElementById('playAudioBulletinBtn');
     if (heroBtn) {
       heroBtn.classList.remove('playing');
-      heroBtn.innerHTML = '🔊 আজকের শীর্ষ ৫ হেডলাইন শুনুন';
+      heroBtn.innerHTML = '🔊 শীর্ষ ৫টি খবর শুনুন';
     }
     const modalBtn = document.getElementById('modalSpeakBtn');
     if (modalBtn) {
@@ -907,8 +850,7 @@
     }
 
     setBrandEdition('teal');
-    initClockAndDate();
-    renderTicker();
+    renderEditionDate();
     renderHero();
     renderFilters();
     renderMainNewsGrid();
@@ -930,16 +872,21 @@
 
     // Search Input
     const searchInput = document.getElementById('newsSearchInput');
-    const searchClear = document.getElementById('searchClearBtn');
     searchInput?.addEventListener('input', () => {
       searchQuery = searchInput.value;
       visibleCount = 12;
       renderMainNewsGrid();
     });
-    searchClear?.addEventListener('click', () => {
-      if (searchInput) searchInput.value = '';
-      searchQuery = '';
-      renderMainNewsGrid();
+    document.getElementById('newsSearchForm')?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      document.getElementById('mainNewsSection')?.scrollIntoView({ block: 'start' });
+    });
+
+    document.body.addEventListener('click', (event) => {
+      const article = event.target.closest('[data-article-id]');
+      if (!article || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      openArticleModal(Number(article.dataset.articleId));
     });
 
     // Load More & Reset Filters
@@ -948,20 +895,6 @@
       renderMainNewsGrid();
     });
     document.getElementById('resetFiltersBtn')?.addEventListener('click', resetAllFilters);
-
-    // Trending Tag Chips
-    document.querySelectorAll('.tag-chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        const kw = chip.dataset.keyword || '';
-        if (searchInput) searchInput.value = kw;
-        searchQuery = kw;
-        currentCategory = 'সব খবর';
-        currentDistrict = 'সব এলাকা';
-        renderFilters();
-        renderMainNewsGrid();
-        document.getElementById('mainNewsSection')?.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
 
     // Correspondent Cards
     document.querySelectorAll('.reporter-card').forEach(rc => {
@@ -979,7 +912,7 @@
     const heroAudioBtn = document.getElementById('playAudioBulletinBtn');
     heroAudioBtn?.addEventListener('click', () => {
       const top5 = ARTICLES.slice(0, 5).map((a, idx) => `খবর ${idx + 1}: ${a.location} থেকে, ${a.title}`).join('। ');
-      const intro = `ডিজিটাল ইন্ডিয়ান গোল্ডেন ইন্ডিয়া সংবাদ বুলেটিনে আপনাদের স্বাগত। আজকের শীর্ষ খবরগুলি হলো— ${top5}। বিস্তারিত খবর পড়তে যেকোনো প্রতিবেদনে ক্লিক করুন।`;
+      const intro = `ডিজিটাল ইন্ডিয়ান গোল্ডেন ইন্ডিয়া সংবাদ বুলেটিনে আপনাদের স্বাগত। সর্বশেষ প্রকাশিত খবরগুলি হলো— ${top5}। বিস্তারিত খবর পড়তে যেকোনো প্রতিবেদনে ক্লিক করুন।`;
       toggleSpeakText(intro, heroAudioBtn, true);
     });
 
@@ -1038,18 +971,6 @@
           dlg.close();
         });
       });
-    });
-
-    // Citizen Tip Form Submission
-    const tipForm = document.getElementById('citizenTipForm');
-    tipForm?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const status = document.getElementById('tipFormStatus');
-      if (status) {
-        status.style.display = 'block';
-        status.textContent = '✅ ধন্যবাদ! আপনার সংবাদ ও তথ্য আমাদের সম্পাদনা কক্ষে জমা পড়েছে। আমাদের প্রতিনিধি দ্রুত আপনার সাথে যোগাযোগ করবেন।';
-      }
-      tipForm.reset();
     });
 
     // Deep-link support (?article=ID)
