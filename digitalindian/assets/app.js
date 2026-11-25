@@ -354,6 +354,7 @@
   const REEL_INTERVAL_MS = 6500;
   const REEL_FLIGHT_EVERY = 4;
   const REEL_FLIGHT_MS = 5200;
+  const REEL_LANDING_MS = 2400;
   const REEL_VIEW_KEY = 'digi.articleViews';
   const REEL_DEMO_VIEWS = [4_000_000, 3_000_000, 2_400_000, 1_800_000, 1_200_000];
   const compactViews = new Intl.NumberFormat('en', {
@@ -476,6 +477,9 @@
     const reporter = document.getElementById('reelReporterImage');
     const portrait = reporter.closest('.reel-portrait');
     const flightLogo = document.getElementById('reelFlightLogo');
+    const landingLogo = document.getElementById('reelLandingLogo');
+    const storyFrame = artwork.closest('.reel-story-frame');
+    const viewsBadge = document.getElementById('reelViews');
     const headline = document.getElementById('reelHeadline');
     const date = document.getElementById('reelDate');
     const viewCount = document.getElementById('reelViewCount');
@@ -494,10 +498,53 @@
     let playing = !reducedMotion.matches;
     let timer;
     let automaticTurns = 0;
-    let logoFlight;
+    let logoMotion;
+    let viewsMotion;
+
+    function highlightViews() {
+      viewsMotion?.cancel();
+      if (reducedMotion.matches) return;
+      viewsMotion = viewsBadge.animate([
+        { opacity: 0, scale: 0.68, filter: 'brightness(1)' },
+        { offset: 0.5, opacity: 1, scale: 1.13, filter: 'brightness(1.35)' },
+        { opacity: 1, scale: 1, filter: 'brightness(1)' }
+      ], { duration: 920, easing: 'ease-out' });
+    }
+
+    function clearLogoMotion() {
+      logoMotion?.cancel();
+      logoMotion = undefined;
+      flightLogo.hidden = true;
+      landingLogo.hidden = true;
+      storyFrame.classList.remove('is-logo-landing');
+    }
+
+    function danceLogo() {
+      if (flightLogo.hidden || reducedMotion.matches) return;
+
+      const arrivalWidth = flightLogo.offsetWidth;
+      viewsMotion?.cancel();
+      storyFrame.classList.add('is-logo-landing');
+      landingLogo.hidden = false;
+      const initialScale = arrivalWidth / landingLogo.offsetWidth;
+      flightLogo.hidden = true;
+      logoMotion.cancel();
+      logoMotion = landingLogo.animate([
+        { opacity: 1, transform: `scale(${initialScale}) rotate(0deg)` },
+        { offset: 0.2, opacity: 1, transform: 'scale(1.17) rotate(-11deg)', easing: 'ease-in-out' },
+        { offset: 0.43, opacity: 1, transform: 'scale(1.09) rotate(9deg)', easing: 'ease-in-out' },
+        { offset: 0.64, opacity: 1, transform: 'scale(1.16) rotate(-6deg)', easing: 'ease-in-out' },
+        { offset: 0.79, opacity: 1, transform: 'scale(1.08) rotate(4deg)', easing: 'ease-out' },
+        { opacity: 0, transform: 'scale(1.01) rotate(0deg)' }
+      ], { duration: REEL_LANDING_MS, fill: 'forwards' });
+      logoMotion.onfinish = () => {
+        clearLogoMotion();
+        highlightViews();
+      };
+    }
 
     function flyLogo() {
-      if (reducedMotion.matches || !flightLogo.naturalWidth) return;
+      if (reducedMotion.matches || !flightLogo.naturalWidth || !landingLogo.naturalWidth) return;
 
       const stage = section.getBoundingClientRect();
       const origin = portrait.getBoundingClientRect();
@@ -515,7 +562,7 @@
         { offset: 0.53, travel: 0.51, lift: 1, depth: 85, spin: 194, tilt: 23, scale: 1.12, opacity: 1 },
         { offset: 0.74, travel: 0.79, lift: 0.62, depth: 44, spin: 278, tilt: -12, scale: 1.06, opacity: 1 },
         { offset: 0.9, travel: 1, lift: 0, depth: 0, spin: 344, tilt: 0, scale: 1.02, opacity: 1 },
-        { offset: 1, travel: 1, lift: 0, depth: 0, spin: 360, tilt: 0, scale: 0.58, opacity: 0 }
+        { offset: 1, travel: 1, lift: 0, depth: 0, spin: 360, tilt: 0, scale: 1, opacity: 1 }
       ].map(({ offset, travel, lift, depth, spin, tilt, scale, opacity }) => {
         const x = startX + (endX - startX) * travel;
         const y = startY + (endY - startY) * travel - rise * lift;
@@ -527,14 +574,8 @@
       });
 
       flightLogo.hidden = false;
-      logoFlight = flightLogo.animate(keyframes, { duration: REEL_FLIGHT_MS });
-
-      const hideLogo = () => {
-        flightLogo.hidden = true;
-        logoFlight = undefined;
-      };
-      logoFlight.onfinish = hideLogo;
-      logoFlight.oncancel = hideLogo;
+      logoMotion = flightLogo.animate(keyframes, { duration: REEL_FLIGHT_MS, fill: 'forwards' });
+      logoMotion.onfinish = danceLogo;
     }
 
     function drawSlide(animate) {
@@ -556,6 +597,7 @@
       const views = actualViews || REEL_DEMO_VIEWS[ARTICLES.indexOf(story)];
       viewCount.textContent = `${compactViews.format(views)} ${views === 1 ? 'view' : 'views'}`;
       viewSource.textContent = actualViews ? 'এই ব্রাউজারে' : 'নমুনা';
+      highlightViews();
 
       if (animate && !reducedMotion.matches) {
         reporter.animate([
@@ -578,14 +620,14 @@
 
     function resetTimer() {
       clearInterval(timer);
-      logoFlight?.cancel();
+      clearLogoMotion();
       const label = playing ? 'রিল থামান' : 'রিল চালান';
       playback.setAttribute('aria-label', label);
       playback.title = label;
       playback.dataset.playing = String(playing);
       if (playing && stories.length > 1) {
         timer = setInterval(() => {
-          if (!document.hidden && !document.querySelector('dialog[open]') &&
+          if (!logoMotion && !document.hidden && !document.querySelector('dialog[open]') &&
               !artwork.matches(':hover') && !headline.matches(':hover, :focus')) {
             move(1);
             if (automaticTurns % REEL_FLIGHT_EVERY === 0) flyLogo();
