@@ -1232,6 +1232,7 @@ dialog.digi-modal::backdrop {
 .story-reel {
   isolation: isolate;
   position: relative;
+  perspective: 960px;
   display: grid;
   grid-template-columns: minmax(0, 0.63fr) minmax(0, 1fr) minmax(0, 1.37fr);
   align-items: center;
@@ -1242,9 +1243,10 @@ dialog.digi-modal::backdrop {
   border-radius: var(--radius-lg);
   color: #f1f8fa;
   background:
-    radial-gradient(ellipse at 80% 48%, #175065 0%, transparent 56%),
-    linear-gradient(125deg, #0c2b3a 0%, #071b29 64%);
-  box-shadow: var(--shadow-card);
+    radial-gradient(ellipse at 77% 66%, #206070 0%, transparent 52%),
+    radial-gradient(ellipse at 17% 28%, #235465 0%, transparent 47%),
+    linear-gradient(151deg, #0e2c3b 0%, #071822 71%);
+  box-shadow: inset 0 1px 0 #ffffff22, inset 0 -12px 38px #040d1677, var(--shadow-card);
 }
 
 .story-reel[hidden] { display: none; }
@@ -1254,8 +1256,8 @@ dialog.digi-modal::backdrop {
   z-index: -1;
   inset: 8% 19% 8% 12%;
   pointer-events: none;
-  background: linear-gradient(90deg, #558b9a 0%, #cba761 100%);
-  clip-path: polygon(0 28%, 100% 0, 100% 0.6%, 0 28.6%, 0 71.4%, 100% 99.4%, 100% 100%, 0 72%);
+  background: linear-gradient(105deg, #4e8c9b, #e9bd6a 53%, #5093a2);
+  clip-path: polygon(0 28%, 100% 0, 100% 1%, 0 29%, 0 70.7%, 100% 98.7%, 100% 100%, 0 72%);
   opacity: 0.72;
 }
 
@@ -1266,19 +1268,33 @@ dialog.digi-modal::backdrop {
 
 .reel-portrait, .reel-artwork {
   aspect-ratio: 1;
+  position: relative;
   border-radius: 50%;
   background: #102c3d;
   overflow: hidden;
+  perspective: 520px;
+}
+
+.reel-portrait::after, .reel-artwork::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 2px 5px #fff6d0b3, inset 0 -13px 24px #03141ca6;
 }
 
 .reel-portrait {
-  border: 3px solid #80a9ab;
-  box-shadow: 0 0 0 7px #0c2c3b, 0 0 0 8px #53828a;
+  border: 5px solid #83b7c2;
+  border-top-color: #c2e9e5;
+  border-bottom-color: #386f83;
+  box-shadow: 0 0 0 6px #193c4a, 0 0 0 7px #6c9aa1,
+    0 10px 0 4px #071f2b, 0 22px 28px #020d14bc;
 }
 
 .reel-reporter-label {
   position: absolute;
-  top: calc(100% + 0.8rem);
+  top: calc(100% + 1.1rem);
   inset-inline: -0.55rem;
   text-align: center;
   color: #cbe2e7;
@@ -1288,11 +1304,41 @@ dialog.digi-modal::backdrop {
 
 .reel-artwork {
   display: block;
-  border: 4px solid #d8b76d;
-  box-shadow: 0 0 0 7px #133b4b, 0 0 0 8px #50818c, 0 14px 32px #071823;
+  border: clamp(5px, 0.7vw, 9px) solid #d49a43;
+  border-top-color: #ffedb2;
+  border-left-color: #f5cc77;
+  border-bottom-color: #8c4a21;
+  box-shadow: 0 0 0 6px #24495b, 0 0 0 7px #79a7af,
+    0 12px 0 5px #091e2c, 0 28px 42px #030f18c9;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.reel-artwork:hover { border-color: #fff0b1; }
+.reel-artwork:hover {
+  transform: translateZ(12px);
+  border-color: #fff0b1;
+}
+
+.reel-flight-logo {
+  position: absolute;
+  inset: 0 auto auto 0;
+  z-index: 3;
+  width: clamp(58px, 10vw, 136px);
+  height: auto;
+  aspect-ratio: 1;
+  border: 2px solid #ffd28a;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 12px #ffde97, 0 0 30px #ff8500d9, 0 12px 30px #140806a6;
+}
+
+.reel-flight-logo[hidden] { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reel-flight-logo { display: none; }
+  .reel-artwork:hover { transform: none; }
+}
 
 .reel-portrait img, .reel-artwork img {
   width: 100%;

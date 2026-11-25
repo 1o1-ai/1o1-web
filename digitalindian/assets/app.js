@@ -352,6 +352,7 @@
   const ARTICLES = rawPosts.map(enrichArticle);
   const REEL_LENGTH = 5;
   const REEL_INTERVAL_MS = 6500;
+  const REEL_FLIGHT_EVERY = 4;
   const REEL_VIEW_KEY = 'digi.articleViews';
   const REEL_DEMO_VIEWS = [4_000_000, 3_000_000, 2_400_000, 1_800_000, 1_200_000];
   const compactViews = new Intl.NumberFormat('en', {
@@ -472,6 +473,8 @@
     const artwork = document.getElementById('reelArtwork');
     const image = document.getElementById('reelStoryImage');
     const reporter = document.getElementById('reelReporterImage');
+    const portrait = reporter.closest('.reel-portrait');
+    const flightLogo = document.getElementById('reelFlightLogo');
     const headline = document.getElementById('reelHeadline');
     const date = document.getElementById('reelDate');
     const viewCount = document.getElementById('reelViewCount');
@@ -489,6 +492,37 @@
     let index = 0;
     let playing = !reducedMotion.matches;
     let timer;
+    let automaticTurns = 0;
+    let logoFlight;
+
+    function flyLogo() {
+      if (reducedMotion.matches || !flightLogo.naturalWidth) return;
+
+      const stage = section.getBoundingClientRect();
+      const origin = portrait.getBoundingClientRect();
+      const destination = artwork.getBoundingClientRect();
+      const startX = origin.x + origin.width / 2 - stage.x;
+      const startY = origin.y + origin.height / 2 - stage.y;
+      const endX = destination.x + destination.width / 2 - stage.x;
+      const endY = destination.y + destination.height / 2 - stage.y;
+      const rise = Math.min(stage.height * 0.12, 64);
+
+      flightLogo.hidden = false;
+      logoFlight = flightLogo.animate([
+        { offset: 0, opacity: 0, transform: `translate3d(${startX}px,${startY}px,0) translate(-50%,-50%) rotateY(-64deg) scale(.45)` },
+        { offset: 0.16, opacity: 1, transform: `translate3d(${startX}px,${startY}px,0) translate(-50%,-50%) rotateY(-26deg) scale(.78)` },
+        { offset: 0.55, opacity: 1, transform: `translate3d(${(startX + endX) / 2}px,${(startY + endY) / 2 - rise}px,85px) translate(-50%,-50%) rotateY(16deg) rotateZ(10deg) scale(1.12)` },
+        { offset: 0.84, opacity: 1, transform: `translate3d(${endX}px,${endY}px,0) translate(-50%,-50%) rotateY(0) scale(1.05)` },
+        { offset: 1, opacity: 0, transform: `translate3d(${endX}px,${endY}px,0) translate(-50%,-50%) rotateY(0) scale(.58)` }
+      ], { duration: 1850, easing: 'ease-in-out' });
+
+      const hideLogo = () => {
+        flightLogo.hidden = true;
+        logoFlight = undefined;
+      };
+      logoFlight.onfinish = hideLogo;
+      logoFlight.oncancel = hideLogo;
+    }
 
     function drawSlide(animate) {
       const story = stories[index];
@@ -512,12 +546,12 @@
 
       if (animate && !reducedMotion.matches) {
         reporter.animate([
-          { opacity: 0.15, transform: 'rotate(-24deg) scale(1.12)' },
-          { opacity: 1, transform: 'rotate(0) scale(1)' }
+          { opacity: 0.15, transform: 'rotateY(-36deg) rotateZ(-16deg) scale(1.12)' },
+          { opacity: 1, transform: 'rotateY(0) rotateZ(0) scale(1)' }
         ], { duration: 650, easing: 'cubic-bezier(.2,.7,.2,1)' });
         image.animate([
-          { opacity: 0.2, transform: 'translateY(12%) scale(1.06)' },
-          { opacity: 1, transform: 'translateY(0) scale(1)' }
+          { opacity: 0.2, transform: 'translateY(10%) rotateX(14deg) scale(1.08)' },
+          { opacity: 1, transform: 'translateY(0) rotateX(0) scale(1)' }
         ], { duration: 550, easing: 'ease-out' });
       }
     }
@@ -531,6 +565,7 @@
 
     function resetTimer() {
       clearInterval(timer);
+      logoFlight?.cancel();
       const label = playing ? 'রিল থামান' : 'রিল চালান';
       playback.setAttribute('aria-label', label);
       playback.title = label;
@@ -540,6 +575,8 @@
           if (!document.hidden && !document.querySelector('dialog[open]') &&
               !artwork.matches(':hover') && !headline.matches(':hover, :focus')) {
             move(1);
+            if (automaticTurns % REEL_FLIGHT_EVERY === 0) flyLogo();
+            automaticTurns += 1;
           }
         }, REEL_INTERVAL_MS);
       }
