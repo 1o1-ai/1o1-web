@@ -353,6 +353,12 @@
   const REEL_LENGTH = 5;
   const REEL_INTERVAL_MS = 6500;
   const REEL_VIEW_KEY = 'digi.articleViews';
+  const REEL_DEMO_VIEWS = [4_000_000, 3_000_000, 2_400_000, 1_800_000, 1_200_000];
+  const compactViews = new Intl.NumberFormat('en', {
+    notation: 'compact',
+    maximumFractionDigits: 1
+  });
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   // State
   let currentCategory = 'সব খবর';
@@ -393,10 +399,10 @@
     activeBrandTheme = theme.id;
     document.documentElement.setAttribute('data-brand-edition', theme.id);
 
-    const mastheadCoin = document.getElementById('mastheadCoinStage');
-    if (mastheadCoin) {
-      mastheadCoin.innerHTML = buildCoinSVG(theme, false);
-    }
+    const mastheadEmblem = document.getElementById('mastheadCoinEmblem');
+    mastheadEmblem.innerHTML = buildCoinSVG(theme, false);
+    mastheadEmblem.hidden = theme.id === 'teal';
+    updateFireLogo();
     const footerCoin = document.getElementById('footerCoinStage');
     if (footerCoin) {
       footerCoin.innerHTML = buildCoinSVG(theme, false);
@@ -408,6 +414,18 @@
     document.querySelectorAll('.logo-Option-card').forEach(el => {
       el.classList.toggle('active', el.dataset.themeId === theme.id);
     });
+  }
+
+  function updateFireLogo() {
+    const video = document.getElementById('mastheadFireLogo');
+    video.hidden = activeBrandTheme !== 'teal';
+    if (video.hidden || reducedMotion.matches) {
+      video.pause();
+    } else {
+      video.play().catch(() => {
+        // The poster remains visible if autoplay is disabled by the browser.
+      });
+    }
   }
 
   function renderEditionDate() {
@@ -456,11 +474,17 @@
     const reporter = document.getElementById('reelReporterImage');
     const headline = document.getElementById('reelHeadline');
     const date = document.getElementById('reelDate');
+    const viewCount = document.getElementById('reelViewCount');
+    const viewSource = document.getElementById('reelViewSource');
     const playback = document.getElementById('reelPlayback');
     const position = document.getElementById('reelPosition');
     const announcement = document.getElementById('reelAnnouncement');
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const reporterPhotos = ['assets/reel/reporter-1.webp', 'assets/reel/reporter-2.webp'];
+    const reporterPhotos = [
+      ['assets/reel/reporter-1.webp', '45% 33%'],
+      ['assets/reel/reporter-2.webp', '45% 33%'],
+      ['assets/reel/reporter-3.webp', '55% 29%'],
+      ['assets/reel/reporter-4.webp', '100% 28%']
+    ];
     let nextReporter = 0;
     let index = 0;
     let playing = !reducedMotion.matches;
@@ -477,7 +501,14 @@
       date.textContent = `${story.primaryBeat} · ${story.formattedDateBn}`;
       position.textContent = `${(index + 1).toLocaleString('bn-IN')} / ${stories.length.toLocaleString('bn-IN')}`;
       image.src = story.image;
-      reporter.src = reporterPhotos[nextReporter];
+      const [photo, framing] = reporterPhotos[nextReporter];
+      reporter.src = photo;
+      reporter.style.objectPosition = framing;
+
+      const actualViews = Number(counts[story.id]) || 0;
+      const views = actualViews || REEL_DEMO_VIEWS[ARTICLES.indexOf(story)];
+      viewCount.textContent = `${compactViews.format(views)} ${views === 1 ? 'view' : 'views'}`;
+      viewSource.textContent = actualViews ? 'এই ব্রাউজারে' : 'নমুনা';
 
       if (animate && !reducedMotion.matches) {
         reporter.animate([
@@ -494,7 +525,7 @@
     function move(step, fromControl = false) {
       announcement.setAttribute('aria-live', fromControl ? 'polite' : 'off');
       index = (index + step + stories.length) % stories.length;
-      nextReporter = (nextReporter + 1) % reporterPhotos.length;
+      nextReporter = (nextReporter + step + reporterPhotos.length) % reporterPhotos.length;
       drawSlide(true);
     }
 
@@ -533,7 +564,7 @@
 
     drawSlide(false);
     resetTimer();
-    for (const src of [reporterPhotos[1], ...stories.slice(1).map(story => story.image)]) {
+    for (const src of [...reporterPhotos.slice(1).map(([photo]) => photo), ...stories.slice(1).map(story => story.image)]) {
       const preload = new Image();
       preload.src = src;
     }
@@ -925,6 +956,7 @@
     }
 
     setBrandEdition('teal');
+    reducedMotion.addEventListener('change', updateFireLogo);
     renderEditionDate();
     initializeStoryReel();
     renderFilters();

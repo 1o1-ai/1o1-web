@@ -187,9 +187,11 @@ img {
 }
 
 .coin-stage {
-  width: 62px;
-  height: 62px;
+  width: clamp(90px, 9vw, 118px);
+  height: auto;
+  aspect-ratio: 1;
   border: 0;
+  border-radius: 50%;
   background: transparent;
   flex-shrink: 0;
   position: relative;
@@ -206,6 +208,34 @@ img {
   width: 100%;
   height: 100%;
   overflow: visible;
+}
+
+#mastheadFireLogo:not([hidden]) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ffad50;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 7px #ffc973, 0 0 20px #ec6509bb, 0 0 36px #e63a054d;
+}
+
+.coin-stage:has(#mastheadFireLogo:not([hidden]))::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border: 1px solid #ffbe73;
+  border-right-color: transparent;
+  border-bottom-color: #f04416;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #ff7511b5;
+  pointer-events: none;
+  animation: fire-halo 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes fire-halo {
+  from { opacity: 0.48; transform: rotate(-14deg) scale(0.98); }
+  to { opacity: 0.96; transform: rotate(16deg) scale(1.06); }
 }
 
 /* Coin SVG Animations */
@@ -1183,7 +1213,7 @@ dialog.digi-modal::backdrop {
 
   .brand-coin-wrap { padding-right: 42px; }
 
-  .coin-stage { width: 43px; height: 43px; }
+  .coin-stage { width: clamp(60px, 18vw, 80px); }
 
   .brand-en-title { font-size: 0.64rem; letter-spacing: 0.075em; }
 
@@ -1296,6 +1326,33 @@ dialog.digi-modal::backdrop {
   color: #ffe0a0;
   text-decoration: underline;
   text-underline-offset: 0.16em;
+}
+
+.reel-views {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.65rem;
+  margin-top: 1rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #e69a47;
+  border-radius: 999px;
+  background: #462516;
+  box-shadow: 0 0 16px #ef71162e;
+  color: #fff4d8;
+  line-height: 1.3;
+}
+
+#reelViewCount {
+  font: 800 clamp(1.1rem, 2vw, 1.6rem) / 1.3 var(--font-en-sans);
+  font-variant-numeric: tabular-nums;
+}
+
+#reelViewSource {
+  padding-inline-start: 0.6rem;
+  border-inline-start: 1px solid #e69a4799;
+  color: #ffdb9c;
+  font-size: 0.9rem;
 }
 
 #reelDate {

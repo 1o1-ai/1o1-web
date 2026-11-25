@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/styles.css?v=reel-1" />
+  <link rel="stylesheet" href="assets/styles.css?v=fire-reel-1" />
 </head>
 <body>
 
@@ -148,7 +148,11 @@
   <header class="masthead">
     <div class="container masthead-inner">
       <div class="brand-coin-wrap">
-        <button class="coin-stage" id="mastheadCoinStage" type="button" aria-label="লোগো ও রং বদলান"></button>
+        <button class="coin-stage" id="mastheadCoinStage" type="button" aria-label="লোগো ও রং বদলান">
+          <video id="mastheadFireLogo" src="assets/reel/logo.mp4" poster="assets/reel/logo-poster.webp"
+            muted loop playsinline preload="none" aria-hidden="true"></video>
+          <span id="mastheadCoinEmblem" hidden aria-hidden="true"></span>
+        </button>
         <div class="brand-titles">
           <h1 class="brand-bn-title">ডিজিটাল ইন্ডিয়ান <span class="gold-word">গোল্ডেন ইন্ডিয়া</span></h1>
           <div class="brand-en-title" lang="en">Digital Indian Golden India</div>
@@ -187,6 +191,10 @@
         <h2 id="reelHeading">নির্বাচিত প্রতিবেদন</h2>
         <div id="reelAnnouncement" aria-live="off" aria-atomic="true">
           <h3><a id="reelHeadline"></a></h3>
+          <p id="reelViews" class="reel-views">
+            <strong id="reelViewCount" lang="en"></strong>
+            <span id="reelViewSource"></span>
+          </p>
           <p id="reelDate"></p>
         </div>
         <div class="reel-controls" role="group" aria-label="প্রতিবেদন রিল নিয়ন্ত্রণ">
@@ -457,6 +465,6 @@
 
   <!-- Load Verified 43-Article Dataset & Interactive Application -->
   <script src="assets/news-data.js"></script>
-  <script src="assets/app.js?v=reel-1"></script>
+  <script src="assets/app.js?v=fire-reel-1"></script>
 </body>
 </html>
