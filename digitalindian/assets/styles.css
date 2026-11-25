@@ -1302,6 +1302,8 @@ dialog.digi-modal::backdrop {
   line-height: 1.3;
 }
 
+.reel-story-frame { position: relative; }
+
 .reel-artwork {
   display: block;
   border: clamp(5px, 0.7vw, 9px) solid #d49a43;
@@ -1375,22 +1377,27 @@ dialog.digi-modal::backdrop {
 }
 
 .reel-views {
-  display: inline-flex;
-  flex-wrap: wrap;
+  position: absolute;
+  left: 50%;
+  bottom: 12%;
+  transform: translateX(-50%);
+  display: flex;
   align-items: center;
-  gap: 0.35rem 0.65rem;
-  margin-top: 1rem;
-  padding: 0.3rem 0.8rem;
-  border: 1px solid #e69a47;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0.44rem 1rem;
+  border: 1px solid #ecb265;
   border-radius: 999px;
-  background: #462516;
-  box-shadow: 0 0 16px #ef71162e;
+  background: #301b12f2;
+  box-shadow: 0 4px 18px #0e0908a6;
   color: #fff4d8;
-  line-height: 1.3;
+  line-height: 1.2;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 #reelViewCount {
-  font: 800 clamp(1.1rem, 2vw, 1.6rem) / 1.3 var(--font-en-sans);
+  font: 800 clamp(0.98rem, 2.15vw, 1.8rem) / 1.2 var(--font-en-sans);
   font-variant-numeric: tabular-nums;
 }
 
@@ -1467,10 +1474,20 @@ dialog.digi-modal::backdrop {
   }
   .reel-connection { inset: 11% 29% 57% 17%; }
   .reel-reporter { grid-area: 1 / 1; }
-  .reel-artwork { grid-area: 1 / 2; }
+  .reel-story-frame { grid-area: 1 / 2; }
   .reel-copy { grid-column: 1 / -1; }
   .reel-copy h3 { font-size: clamp(1.35rem, 5.5vw, 2.4rem); }
   .reel-controls { margin-top: 0.75rem; }
+  .reel-views {
+    flex-direction: column;
+    gap: 0.12rem;
+    padding: 0.28rem 0.62rem;
+  }
+  #reelViewSource {
+    padding: 0;
+    border: 0;
+    font-size: 0.72rem;
+  }
 }
 
 @media (max-width: 400px) {

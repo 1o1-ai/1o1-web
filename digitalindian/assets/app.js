@@ -353,6 +353,7 @@
   const REEL_LENGTH = 5;
   const REEL_INTERVAL_MS = 6500;
   const REEL_FLIGHT_EVERY = 4;
+  const REEL_FLIGHT_MS = 5200;
   const REEL_VIEW_KEY = 'digi.articleViews';
   const REEL_DEMO_VIEWS = [4_000_000, 3_000_000, 2_400_000, 1_800_000, 1_200_000];
   const compactViews = new Intl.NumberFormat('en', {
@@ -507,14 +508,26 @@
       const endY = destination.y + destination.height / 2 - stage.y;
       const rise = Math.min(stage.height * 0.12, 64);
 
+      const keyframes = [
+        { offset: 0, travel: 0, lift: 0, depth: 0, spin: 0, tilt: -48, scale: 0.48, opacity: 0 },
+        { offset: 0.12, travel: 0, lift: 0, depth: 0, spin: 28, tilt: -30, scale: 0.82, opacity: 1 },
+        { offset: 0.32, travel: 0.23, lift: 0.67, depth: 55, spin: 108, tilt: 5, scale: 1, opacity: 1 },
+        { offset: 0.53, travel: 0.51, lift: 1, depth: 85, spin: 194, tilt: 23, scale: 1.12, opacity: 1 },
+        { offset: 0.74, travel: 0.79, lift: 0.62, depth: 44, spin: 278, tilt: -12, scale: 1.06, opacity: 1 },
+        { offset: 0.9, travel: 1, lift: 0, depth: 0, spin: 344, tilt: 0, scale: 1.02, opacity: 1 },
+        { offset: 1, travel: 1, lift: 0, depth: 0, spin: 360, tilt: 0, scale: 0.58, opacity: 0 }
+      ].map(({ offset, travel, lift, depth, spin, tilt, scale, opacity }) => {
+        const x = startX + (endX - startX) * travel;
+        const y = startY + (endY - startY) * travel - rise * lift;
+        return {
+          offset,
+          opacity,
+          transform: `translate3d(${x}px, ${y}px, ${depth}px) translate(-50%, -50%) rotateZ(${spin}deg) rotateY(${tilt}deg) scale(${scale})`
+        };
+      });
+
       flightLogo.hidden = false;
-      logoFlight = flightLogo.animate([
-        { offset: 0, opacity: 0, transform: `translate3d(${startX}px,${startY}px,0) translate(-50%,-50%) rotateY(-64deg) scale(.45)` },
-        { offset: 0.16, opacity: 1, transform: `translate3d(${startX}px,${startY}px,0) translate(-50%,-50%) rotateY(-26deg) scale(.78)` },
-        { offset: 0.55, opacity: 1, transform: `translate3d(${(startX + endX) / 2}px,${(startY + endY) / 2 - rise}px,85px) translate(-50%,-50%) rotateY(16deg) rotateZ(10deg) scale(1.12)` },
-        { offset: 0.84, opacity: 1, transform: `translate3d(${endX}px,${endY}px,0) translate(-50%,-50%) rotateY(0) scale(1.05)` },
-        { offset: 1, opacity: 0, transform: `translate3d(${endX}px,${endY}px,0) translate(-50%,-50%) rotateY(0) scale(.58)` }
-      ], { duration: 1850, easing: 'ease-in-out' });
+      logoFlight = flightLogo.animate(keyframes, { duration: REEL_FLIGHT_MS });
 
       const hideLogo = () => {
         flightLogo.hidden = true;
