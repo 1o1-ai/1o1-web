@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/styles.css?v=editorial-1" />
+  <link rel="stylesheet" href="assets/styles.css?v=reel-1" />
 </head>
 <body>
 
@@ -175,20 +175,30 @@
   <!-- 5. Main Editorial Content -->
   <main class="container" id="main-content" tabindex="-1">
 
-    <!-- Hero Bento Grid -->
-    <section class="hero-section" aria-label="Top Featured Stories">
-      <div class="hero-bento">
-        <!-- Left: Big Lead Story -->
-        <div id="heroLeadContainer"></div>
-
-        <!-- Middle: Priority Dispatch Stack -->
-        <div class="hero-stack-col">
-          <div class="stack-col-header">
-            <h2>এক নজরে</h2>
-          </div>
-          <div id="heroStackContainer"></div>
+    <section class="story-reel" id="storyReel" aria-labelledby="reelHeading">
+      <div class="reel-connection" aria-hidden="true"></div>
+      <div class="reel-reporter">
+        <div class="reel-portrait">
+          <img id="reelReporterImage" src="assets/reel/reporter-1.webp" width="720" height="540" alt="মাইক্রোফোন হাতে সংবাদদাতা" />
+        </div>
+        <span class="reel-reporter-label">মাঠে আমাদের সংবাদদাতা</span>
+      </div>
+      <div class="reel-copy">
+        <h2 id="reelHeading">নির্বাচিত প্রতিবেদন</h2>
+        <div id="reelAnnouncement" aria-live="off" aria-atomic="true">
+          <h3><a id="reelHeadline"></a></h3>
+          <p id="reelDate"></p>
+        </div>
+        <div class="reel-controls" role="group" aria-label="প্রতিবেদন রিল নিয়ন্ত্রণ">
+          <button type="button" id="reelPrevious" aria-label="আগের প্রতিবেদন" title="আগের প্রতিবেদন">‹</button>
+          <button type="button" id="reelPlayback" aria-label="রিল থামান" title="রিল থামান" data-playing="true"></button>
+          <button type="button" id="reelNext" aria-label="পরের প্রতিবেদন" title="পরের প্রতিবেদন">›</button>
+          <span id="reelPosition" aria-hidden="true"></span>
         </div>
       </div>
+      <a class="reel-artwork" id="reelArtwork" tabindex="-1" aria-hidden="true">
+        <img id="reelStoryImage" alt="" width="600" height="600" fetchpriority="high" />
+      </a>
     </section>
 
     <!-- Primary Filterable News Feed Section -->
@@ -404,6 +414,10 @@
         <p style="font-size:0.9rem; color:var(--text-secondary);">
           যেকোনো লোগো সংস্করণে ক্লিক করলে সাথে সাথে পোর্টালের মাস্টহেড লোগো এবং থিমের রঙ পরিবর্তিত হবে:
         </p>
+        <details class="brand-animation">
+          <summary>অ্যানিমেটেড লোগো দেখুন</summary>
+          <video src="assets/reel/logo.mp4" controls playsinline preload="none" aria-label="ডিজিটাল ইন্ডিয়ান গোল্ডেন ইন্ডিয়ার অ্যানিমেটেড লোগো"></video>
+        </details>
         <div class="logo-suite-grid" id="logoSuiteModalGrid"></div>
       </div>
     </div>
@@ -443,6 +457,6 @@
 
   <!-- Load Verified 43-Article Dataset & Interactive Application -->
   <script src="assets/news-data.js"></script>
-  <script src="assets/app.js?v=editorial-1"></script>
+  <script src="assets/app.js?v=reel-1"></script>
 </body>
 </html>

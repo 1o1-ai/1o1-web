@@ -350,7 +350,9 @@
   }
 
   const ARTICLES = rawPosts.map(enrichArticle);
-  const FRONT_PAGE_STORIES = 5;
+  const REEL_LENGTH = 5;
+  const REEL_INTERVAL_MS = 6500;
+  const REEL_VIEW_KEY = 'digi.articleViews';
 
   // State
   let currentCategory = 'সব খবর';
@@ -416,53 +418,125 @@
     }).format(new Date());
   }
 
-  function renderHero() {
-    const leadContainer = document.getElementById('heroLeadContainer');
-    const stackContainer = document.getElementById('heroStackContainer');
-    if (!leadContainer || !stackContainer || ARTICLES.length === 0) return;
+  function readViewCounts() {
+    try {
+      return JSON.parse(localStorage.getItem(REEL_VIEW_KEY)) || {};
+    } catch {
+      return {};
+    }
+  }
 
-    const lead = ARTICLES[0];
-    leadContainer.innerHTML = `
-      <article class="hero-lead-card" data-article-id="${lead.id}">
-        <div class="hero-lead-media">
-          <img src="${lead.image}" alt="${lead.title.replace(/"/g, '&quot;')}" fetchpriority="high" loading="eager" />
-          <div class="hero-badges-overlay">
-            <span class="badge-exclusive">প্রধান খবর</span>
-            <span class="badge-cat">${lead.location}</span>
-          </div>
-        </div>
-        <div class="hero-lead-body">
-          <div>
-            <h2 class="hero-lead-title"><a class="story-link" href="?article=${lead.id}">${lead.headline}</a></h2>
-            <p class="hero-lead-excerpt" style="margin-top:0.65rem;">${lead.excerpt}</p>
-          </div>
-          <div class="article-meta-row">
-            <span class="reporter-tag">✍️ ${lead.reporter}</span>
-            <span>📅 ${lead.formattedDateBn}</span>
-            <span class="read-more-pill">সম্পূর্ণ প্রতিবেদন পড়ুন</span>
-          </div>
-        </div>
-      </article>
-    `;
+  function countArticleOpen(articleId) {
+    const counts = { ...readViewCounts() };
+    counts[articleId] = (Number(counts[articleId]) || 0) + 1;
+    try {
+      localStorage.setItem(REEL_VIEW_KEY, JSON.stringify(counts));
+    } catch {
+      // Reading and the featured reel still work when storage is unavailable.
+    }
+  }
 
-    const stackItems = ARTICLES.slice(1, FRONT_PAGE_STORIES);
-    stackContainer.innerHTML = stackItems.map(art => `
-      <article class="hero-stack-card" data-article-id="${art.id}">
-        <div class="stack-thumb">
-          <img src="${art.image}" alt="${art.title.replace(/"/g, '&quot;')}" loading="eager" />
-        </div>
-        <div class="stack-info">
-          <div class="stack-meta">
-            <span style="color:var(--brand-primary);font-weight:800;">${art.location}</span>
-            <span>•</span>
-            <span>${art.formattedDateBn}</span>
-          </div>
-          <h3 class="stack-title"><a class="story-link" href="?article=${art.id}">${art.headline}</a></h3>
-        </div>
-      </article>
-    `).join('');
+  function initializeStoryReel() {
+    const section = document.getElementById('storyReel');
+    if (!ARTICLES.length) {
+      section.hidden = true;
+      return;
+    }
 
+    const counts = readViewCounts();
+    const stories = [...ARTICLES].sort((a, b) =>
+      (Number(counts[b.id]) || 0) - (Number(counts[a.id]) || 0)
+    ).slice(0, REEL_LENGTH);
+    if (Number(counts[stories[0].id]) > 0) {
+      document.getElementById('reelHeading').textContent = 'এই ডিভাইসে বেশি পঠিত';
+    }
 
+    const artwork = document.getElementById('reelArtwork');
+    const image = document.getElementById('reelStoryImage');
+    const reporter = document.getElementById('reelReporterImage');
+    const headline = document.getElementById('reelHeadline');
+    const date = document.getElementById('reelDate');
+    const playback = document.getElementById('reelPlayback');
+    const position = document.getElementById('reelPosition');
+    const announcement = document.getElementById('reelAnnouncement');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const reporterPhotos = ['assets/reel/reporter-1.webp', 'assets/reel/reporter-2.webp'];
+    let nextReporter = 0;
+    let index = 0;
+    let playing = !reducedMotion.matches;
+    let timer;
+
+    function drawSlide(animate) {
+      const story = stories[index];
+      const href = `?article=${story.id}`;
+      for (const link of [headline, artwork]) {
+        link.href = href;
+        link.dataset.articleId = story.id;
+      }
+      headline.textContent = story.headline;
+      date.textContent = `${story.primaryBeat} · ${story.formattedDateBn}`;
+      position.textContent = `${(index + 1).toLocaleString('bn-IN')} / ${stories.length.toLocaleString('bn-IN')}`;
+      image.src = story.image;
+      reporter.src = reporterPhotos[nextReporter];
+
+      if (animate && !reducedMotion.matches) {
+        reporter.animate([
+          { opacity: 0.15, transform: 'rotate(-24deg) scale(1.12)' },
+          { opacity: 1, transform: 'rotate(0) scale(1)' }
+        ], { duration: 650, easing: 'cubic-bezier(.2,.7,.2,1)' });
+        image.animate([
+          { opacity: 0.2, transform: 'translateY(12%) scale(1.06)' },
+          { opacity: 1, transform: 'translateY(0) scale(1)' }
+        ], { duration: 550, easing: 'ease-out' });
+      }
+    }
+
+    function move(step, fromControl = false) {
+      announcement.setAttribute('aria-live', fromControl ? 'polite' : 'off');
+      index = (index + step + stories.length) % stories.length;
+      nextReporter = (nextReporter + 1) % reporterPhotos.length;
+      drawSlide(true);
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      const label = playing ? 'রিল থামান' : 'রিল চালান';
+      playback.setAttribute('aria-label', label);
+      playback.title = label;
+      playback.dataset.playing = String(playing);
+      if (playing && stories.length > 1) {
+        timer = setInterval(() => {
+          if (!document.hidden && !document.querySelector('dialog[open]') &&
+              !artwork.matches(':hover') && !headline.matches(':hover, :focus')) {
+            move(1);
+          }
+        }, REEL_INTERVAL_MS);
+      }
+    }
+
+    for (const [id, step] of [['reelPrevious', -1], ['reelNext', 1]]) {
+      document.getElementById(id).addEventListener('click', () => {
+        move(step, true);
+        resetTimer();
+      });
+    }
+    playback.addEventListener('click', () => {
+      playing = !playing;
+      resetTimer();
+    });
+    reducedMotion.addEventListener('change', event => {
+      if (event.matches) {
+        playing = false;
+        resetTimer();
+      }
+    });
+
+    drawSlide(false);
+    resetTimer();
+    for (const src of [reporterPhotos[1], ...stories.slice(1).map(story => story.image)]) {
+      const preload = new Image();
+      preload.src = src;
+    }
   }
 
   // 6. Render Category Tabs & District Pills
@@ -562,7 +636,7 @@
     if (!grid) return;
 
     const isFiltered = currentCategory !== 'সব খবর' || currentDistrict !== 'সব এলাকা' || currentReporter !== '' || searchQuery.trim() !== '';
-    const filtered = isFiltered ? getFilteredArticles() : ARTICLES.slice(FRONT_PAGE_STORIES);
+    const filtered = isFiltered ? getFilteredArticles() : ARTICLES;
 
     if (titleEl) {
       if (currentReporter) {
@@ -642,6 +716,7 @@
     const dialog = document.getElementById('articleReaderModal');
     if (!art || !dialog) return;
 
+    countArticleOpen(art.id);
     stopSpeech();
 
     const bodyEl = document.getElementById('readerModalBody');
@@ -851,7 +926,7 @@
 
     setBrandEdition('teal');
     renderEditionDate();
-    renderHero();
+    initializeStoryReel();
     renderFilters();
     renderMainNewsGrid();
     renderThematicSections();
@@ -959,6 +1034,7 @@
 
     // Close & Backdrop Light-Dismiss for all <dialog> elements
     document.querySelectorAll('dialog.digi-modal').forEach(dlg => {
+      dlg.addEventListener('close', () => dlg.querySelector('video')?.pause());
       dlg.addEventListener('click', (e) => {
         if (e.target === dlg) {
           stopSpeech();
