@@ -9,7 +9,7 @@ Static site for inflight Yogabrata projects on **yogabrata.com** (GitHub Pages).
 | **JSI — AI Infrastructure** | [`/jsi/`](https://yogabrata.com/jsi/) (In Flight) |
 | Elogix Americas | `/portal/elogix-americas/` |
 | AI-Caregiver | [1o1.ai](https://1o1.ai) |
-| 7RANGERS Hospital | `/sevenrangers/index.html` |
+| **Swootle** | [`/swootle/`](https://yogabrata.com/swootle/) |
 | **ATLAS** | [`/atlas/`](https://yogabrata.com/atlas/) |
 | **OrgBrain** | [`/orgbrain/`](https://yogabrata.com/orgbrain/) |
 

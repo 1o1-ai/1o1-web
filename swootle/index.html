@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Brahmexa and Swootle partnership proposal and interactive KYB review demo.">
+  <title>Brahmexa × Swootle | Partnership demo</title>
+  <link rel="stylesheet" href="demo.css">
+  <script src="demo.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a href="/">Yogabrata</a>
+    <a class="button secondary" href="Brahmexa-Swootle-Partnership.pptx" download>Download PowerPoint</a>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">Partnership proposal</p>
+      <h1 id="title">Brahmexa <span>×</span> Swootle</h1>
+      <p class="lede">Managed AI infrastructure for KYC and KYB workflows.</p>
+      <p class="summary">Explore how a proposed Brahmexa service could turn onboarding documents into evidence a Swootle reviewer can check and act on.</p>
+      <a class="button" href="#demo">Open case demo</a>
+    </section>
+
+    <section id="demo" aria-labelledby="demo-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">KYB exception review</p>
+          <h2 id="demo-title">Alder Quay Services Ltd.</h2>
+        </div>
+        <p class="mode">Synthetic case · Browser simulation</p>
+      </div>
+      <p class="summary">Inspect the submitted documents, run the comparison and record a reviewer action. This demo runs in your browser using sample data.</p>
+      <div class="case-grid">
+        <section class="panel" aria-labelledby="evidence-title">
+          <h3 id="evidence-title">Source documents</h3>
+          <details id="form">
+            <summary>Onboarding form <small>Page 1</small></summary>
+            <dl><dt>Company</dt><dd>Alder Quay Services Ltd.</dd><dt>Registration ID</dt><dd>DEMO-04721</dd><dt>Declared owner</dt><dd>Rowan Vale</dd><dt>Declared ownership</dt><dd data-ownership="form">30%</dd></dl>
+          </details>
+          <details id="registry">
+            <summary>Company registry extract <small>Page 1</small></summary>
+            <dl><dt>Registered entity</dt><dd>Alder Quay Services Ltd.</dd><dt>Registration ID</dt><dd>DEMO-04721</dd></dl>
+          </details>
+          <details id="declaration">
+            <summary>Ownership declaration <small>Page 1</small></summary>
+            <dl><dt>Owner</dt><dd>Rowan Vale</dd><dt>Stated ownership</dt><dd data-ownership="declaration">45%</dd><dt>Effective date</dt><dd>[Unreadable]</dd></dl>
+          </details>
+        </section>
+        <section class="panel" aria-labelledby="findings-title">
+          <div class="toolbar">
+            <h3 id="findings-title">Case findings</h3>
+            <button id="run" type="button">Run case review</button>
+          </div>
+          <p id="status" role="status">Ready to compare three documents.</p>
+          <div id="findings" hidden>
+            <article class="finding">
+              <p class="tag match">Match</p>
+              <h4>Entity details agree</h4>
+              <p>The company name and registration ID match across the submitted form and registry extract.</p>
+              <a href="#form">Form, page 1</a> · <a href="#registry">Registry, page 1</a>
+            </article>
+            <article class="finding">
+              <p class="tag exception">Discrepancy</p>
+              <h4>Ownership percentage differs</h4>
+              <p id="ownership-result"></p>
+              <a href="#form">Form, page 1</a> · <a href="#declaration">Declaration, page 1</a>
+            </article>
+            <article class="finding">
+              <p class="tag uncertain">Unable to determine</p>
+              <h4>Effective date unreadable</h4>
+              <p>The declaration lacks a legible date, so the reviewer cannot establish which ownership figure is current.</p>
+              <a href="#declaration">Declaration, page 1</a>
+            </article>
+            <form id="review">
+              <p><strong>Draft note</strong> Request a current, legible ownership declaration and reconcile the 30% and 45% figures.</p>
+              <label for="action">Reviewer action</label>
+              <div class="toolbar">
+                <select id="action" required>
+                  <option value="">Select an action</option>
+                  <option>Request updated documentation</option>
+                  <option>Escalate for a second review</option>
+                </select>
+                <button type="submit">Record action</button>
+              </div>
+              <p id="receipt" role="status"></p>
+            </form>
+            <button id="reset" class="secondary" type="button">Reset demo</button>
+          </div>
+        </section>
+      </div>
+      <noscript><p>Enable JavaScript to run the interactive comparison.</p></noscript>
+    </section>
+  </main>
+</body>
+</html>
