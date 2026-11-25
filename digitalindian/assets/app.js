@@ -1039,6 +1039,25 @@
   }
 
   // 13. Wire Up All DOM Events on Load
+  function initializeFacebookPanel() {
+    const timeline = document.getElementById('facebookTimeline');
+    const url = new URL(timeline.dataset.embedUrl);
+    let currentWidth;
+
+    function fitFeed() {
+      const width = Math.max(180, Math.min(500, timeline.clientWidth));
+      if (width === currentWidth) return;
+      currentWidth = width;
+      url.searchParams.set('width', width);
+      timeline.src = url.href;
+    }
+
+    fitFeed();
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(fitFeed).observe(timeline);
+    }
+  }
+
   function init() {
     // Populate Brand Edition Selector
     const sel = document.getElementById('brandEditionSelect');
@@ -1051,6 +1070,7 @@
     reducedMotion.addEventListener('change', updateFireLogo);
     renderEditionDate();
     initializeStoryReel();
+    initializeFacebookPanel();
     renderFilters();
     renderMainNewsGrid();
     renderThematicSections();

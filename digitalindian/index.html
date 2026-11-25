@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="assets/styles.css?v=logo-dance-1" />
+  <link rel="stylesheet" href="assets/styles.css?v=facebook-panel-1" />
 </head>
 <body>
 
@@ -179,41 +179,52 @@
   <!-- 5. Main Editorial Content -->
   <main class="container" id="main-content" tabindex="-1">
 
-    <section class="story-reel" id="storyReel" aria-labelledby="reelHeading">
-      <div class="reel-connection" aria-hidden="true"></div>
-      <img class="reel-flight-logo" id="reelFlightLogo" src="assets/reel/logo-poster.webp"
-        alt="" width="128" height="128" aria-hidden="true" hidden />
-      <div class="reel-reporter">
-        <div class="reel-portrait">
-          <img id="reelReporterImage" src="assets/reel/reporter-1.webp" width="720" height="540" alt="মাইক্রোফোন হাতে সংবাদদাতা" />
+    <div class="homepage-feature-grid">
+      <section class="story-reel" id="storyReel" aria-labelledby="reelHeading">
+        <div class="reel-connection" aria-hidden="true"></div>
+        <img class="reel-flight-logo" id="reelFlightLogo" src="assets/reel/logo-poster.webp"
+          alt="" width="128" height="128" aria-hidden="true" hidden />
+        <div class="reel-reporter">
+          <div class="reel-portrait">
+            <img id="reelReporterImage" src="assets/reel/reporter-1.webp" width="720" height="540" alt="মাইক্রোফোন হাতে সংবাদদাতা" />
+          </div>
+          <span class="reel-reporter-label">মাঠে আমাদের সংবাদদাতা</span>
         </div>
-        <span class="reel-reporter-label">মাঠে আমাদের সংবাদদাতা</span>
-      </div>
-      <div class="reel-copy">
-        <h2 id="reelHeading">নির্বাচিত প্রতিবেদন</h2>
-        <div id="reelAnnouncement" aria-live="off" aria-atomic="true">
-          <h3><a id="reelHeadline" aria-describedby="reelViews"></a></h3>
-          <p id="reelDate"></p>
+        <div class="reel-copy">
+          <h2 id="reelHeading">নির্বাচিত প্রতিবেদন</h2>
+          <div id="reelAnnouncement" aria-live="off" aria-atomic="true">
+            <h3><a id="reelHeadline" aria-describedby="reelViews"></a></h3>
+            <p id="reelDate"></p>
+          </div>
+          <div class="reel-controls" role="group" aria-label="প্রতিবেদন রিল নিয়ন্ত্রণ">
+            <button type="button" id="reelPrevious" aria-label="আগের প্রতিবেদন" title="আগের প্রতিবেদন">‹</button>
+            <button type="button" id="reelPlayback" aria-label="রিল থামান" title="রিল থামান" data-playing="true"></button>
+            <button type="button" id="reelNext" aria-label="পরের প্রতিবেদন" title="পরের প্রতিবেদন">›</button>
+            <span id="reelPosition" aria-hidden="true"></span>
+          </div>
         </div>
-        <div class="reel-controls" role="group" aria-label="প্রতিবেদন রিল নিয়ন্ত্রণ">
-          <button type="button" id="reelPrevious" aria-label="আগের প্রতিবেদন" title="আগের প্রতিবেদন">‹</button>
-          <button type="button" id="reelPlayback" aria-label="রিল থামান" title="রিল থামান" data-playing="true"></button>
-          <button type="button" id="reelNext" aria-label="পরের প্রতিবেদন" title="পরের প্রতিবেদন">›</button>
-          <span id="reelPosition" aria-hidden="true"></span>
+        <div class="reel-story-frame">
+          <a class="reel-artwork" id="reelArtwork" tabindex="-1" aria-hidden="true">
+            <img id="reelStoryImage" alt="" width="600" height="600" fetchpriority="high" />
+            <img class="reel-landing-logo" id="reelLandingLogo" src="assets/reel/logo-poster.webp"
+              alt="" width="270" height="272" hidden />
+          </a>
+          <p id="reelViews" class="reel-views">
+            <strong id="reelViewCount" lang="en"></strong>
+            <span id="reelViewSource"></span>
+          </p>
         </div>
-      </div>
-      <div class="reel-story-frame">
-        <a class="reel-artwork" id="reelArtwork" tabindex="-1" aria-hidden="true">
-          <img id="reelStoryImage" alt="" width="600" height="600" fetchpriority="high" />
-          <img class="reel-landing-logo" id="reelLandingLogo" src="assets/reel/logo-poster.webp"
-            alt="" width="270" height="272" hidden />
-        </a>
-        <p id="reelViews" class="reel-views">
-          <strong id="reelViewCount" lang="en"></strong>
-          <span id="reelViewSource"></span>
-        </p>
-      </div>
-    </section>
+      </section>
+      <aside class="facebook-panel" aria-labelledby="facebookHeading">
+        <div class="facebook-panel-header">
+          <h2 id="facebookHeading" lang="en">Facebook</h2>
+          <a href="https://www.facebook.com/digitalindiangoldenindianews" target="_blank" rel="noopener noreferrer">ফেসবুক পেজ খুলুন</a>
+        </div>
+        <iframe id="facebookTimeline" class="facebook-timeline" title="ডিজিটাল ইন্ডিয়ান গোল্ডেন ইন্ডিয়ার ফেসবুক পোস্ট"
+          data-embed-url="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fdigitalindiangoldenindianews&amp;tabs=timeline&amp;height=415&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=false"
+          width="280" height="415" loading="lazy" allow="encrypted-media; picture-in-picture; web-share"></iframe>
+      </aside>
+    </div>
 
     <!-- Primary Filterable News Feed Section -->
     <section class="news-section" id="mainNewsSection">
@@ -471,6 +482,6 @@
 
   <!-- Load Verified 43-Article Dataset & Interactive Application -->
   <script src="assets/news-data.js"></script>
-  <script src="assets/app.js?v=logo-dance-1"></script>
+  <script src="assets/app.js?v=facebook-panel-1"></script>
 </body>
 </html>

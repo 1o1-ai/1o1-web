@@ -1228,6 +1228,69 @@ dialog.digi-modal::backdrop {
   }
 }
 
+/* Homepage feature and Facebook timeline */
+.homepage-feature-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1rem, 1.8vw, 1.5rem);
+  margin-block: 1.5rem 0.25rem;
+}
+
+.facebook-panel {
+  min-width: 0;
+  width: min(100%, 540px);
+  padding: 0.9rem;
+  border: 1px solid var(--border-subtle);
+  border-top: 3px solid #1877f2;
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.facebook-panel-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem 0.65rem;
+  margin-bottom: 0.75rem;
+}
+
+.facebook-panel-header h2 {
+  font: 800 1rem / 1.3 var(--font-en-sans);
+}
+
+.facebook-panel-header a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.5rem;
+  background: #125ab9;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.facebook-panel-header a:hover { background: #0c4595; }
+
+.facebook-timeline {
+  display: block;
+  width: min(100%, 500px);
+  height: 415px;
+  margin-inline: auto;
+  border: 0;
+  border-radius: 0.45rem;
+  background: #fff;
+}
+
+@media (min-width: 1120px) {
+  .homepage-feature-grid {
+    grid-template-columns: minmax(0, 1fr) clamp(280px, 24vw, 328px);
+  }
+}
+
 /* Reporter and story reel */
 .story-reel {
   isolation: isolate;
@@ -1237,7 +1300,7 @@ dialog.digi-modal::backdrop {
   grid-template-columns: minmax(0, 0.63fr) minmax(0, 1fr) minmax(0, 1.37fr);
   align-items: center;
   gap: clamp(1rem, 3vw, 3rem);
-  margin-block: 1.5rem 0.25rem;
+  margin: 0;
   padding: clamp(1.3rem, 3.2vw, 3.25rem);
   border: 1px solid #356475;
   border-radius: var(--radius-lg);
@@ -1498,10 +1561,11 @@ dialog.digi-modal::backdrop {
 }
 
 @media (max-width: 400px) {
-  .story-reel { margin-top: 1rem; row-gap: 1.6rem; }
+  .homepage-feature-grid { margin-top: 1rem; }
+  .story-reel { row-gap: 1.6rem; }
   .reel-reporter-label { font-size: 0.72rem; }
 }
 
 @media print {
-  .story-reel { display: none; }
+  .homepage-feature-grid { display: none; }
 }
