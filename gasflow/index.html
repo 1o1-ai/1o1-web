@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GasFlow | Brahmexa</title>
+<style>
+:root{color-scheme:dark;--bg:#0b1420;--panel:#122131;--line:#2a4055;--text:#edf6ff;--dim:#aec0d3;--accent:#6ee6cf;--warn:#ffbf91}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#173954,transparent 55%),var(--bg);color:var(--text);font:16px/1.55 system-ui,sans-serif}main{max-width:1200px;margin:auto;padding:28px clamp(16px,4vw,56px) 48px}header,nav,.controls,.labels{display:flex;gap:16px;flex-wrap:wrap;align-items:center}header{justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:18px}a{color:var(--accent)}.muted,small{color:var(--dim)}.hero{padding:34px 0 22px}h1{font-size:clamp(2.5rem,7vw,5rem);line-height:1;letter-spacing:-.07em;margin:8px 0 14px}h2{margin:0 0 10px;font-size:1.15rem}.hero p{max-width:66ch;margin:0}.brand{color:var(--accent);font-weight:700;letter-spacing:.08em}.grid{display:grid;grid-template-columns:1fr 2fr;gap:16px}.card,details{border:1px solid var(--line);background:var(--panel);padding:20px;border-radius:14px}.controls{align-items:stretch;flex-direction:column;gap:12px}.controls label{display:flex;gap:9px;align-items:center}.controls label.slider{display:block}input[type=range]{display:block;width:100%;accent-color:var(--accent)}button,select{font:inherit;border:1px solid #51708a;background:#192e43;color:var(--text);border-radius:8px;padding:8px 12px}button{cursor:pointer}button.primary{background:var(--accent);color:#112622;border-color:transparent;font-weight:700}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:3px}button:disabled{opacity:.5;cursor:default}.table{overflow:auto}table{border-collapse:collapse;width:100%;min-width:575px;font-variant-numeric:tabular-nums}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line)}th{color:var(--dim);font-size:.85rem}tr.pick td{color:var(--accent)}.warn{color:var(--warn)}.result{border-left:3px solid var(--accent);padding-left:14px;margin:16px 0}.result strong{color:var(--accent)}details{margin-top:16px}summary{cursor:pointer;font-weight:700}ul{padding-left:21px}footer{margin-top:22px}.audit{white-space:pre-line;overflow-wrap:anywhere}.chart{display:grid;gap:8px;margin:16px 0}.bar{display:grid;grid-template-columns:minmax(96px,130px) 1fr 44px;gap:8px;align-items:center;font-size:.85rem}.track{background:#25394b;border-radius:5px;height:9px}.fill{background:var(--accent);height:100%;border-radius:5px}.bar:first-child .fill{background:var(--warn)}@media(max-width:820px){.grid{grid-template-columns:1fr}}
+</style>
+<main>
+<header><div class="brand">BRAHMEXA / ORGBRAIN</div><a href="/">Yogabrata projects</a></header>
+<section class="hero">
+<div class="muted">Industrial gas analytics · Interactive simulation</div>
+<h1>GasFlow</h1>
+<p>Recover a disrupted liquid nitrogen delivery plan. Compare supply risk, cost and schedule changes before committing a tanker.</p>
+</section>
+<div class="grid">
+<aside class="card"><h2>Disruption controls</h2>
+<div class="controls">
+<label><input type="checkbox" id="outage" checked> Primary loading point outage</label>
+<label><input type="checkbox" id="surge" checked> Demand surge at both customers</label>
+<label class="slider" for="delay">Tanker delay <strong id="delayValue"></strong><input type="range" id="delay" min="0" max="180" value="90" step="15"></label>
+<label class="slider" for="target">Maximum risk of a threshold breach <strong id="targetValue"></strong><input type="range" id="target" min="5" max="50" value="15" step="5"></label>
+<label><input type="checkbox" id="gate"> Apply confirmed early gate closure at Site A</label>
+<button type="button" id="refresh" class="primary">Verify Site A tank reading</button>
+<button type="button" id="reset">Replay original disruption</button>
+</div>
+<p id="reading" class="muted"></p>
+</aside>
+<section class="card" aria-labelledby="plans"><h2 id="plans">Compare dispatch plans</h2>
+<div class="table"><table><thead><tr><th>Plan</th><th>Added cost</th><th>Added km</th><th>Stops moved</th><th>Network risk</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="muted"><small>Network risk is the simulated chance that either tank reaches its reorder threshold before arrival.</small></p>
+<div id="chart" class="chart" aria-label="Risk by dispatch plan"></div>
+<div id="recommend" class="result" aria-live="polite"></div>
+<div id="evidence"></div>
+</section>
+</div>
+<details open><summary>Decision review and approval</summary>
+<p>Review the calculated recommendation, or record an override for later review. A confirmed gate closure can be applied above to replay the decision with that rule.</p>
+<label for="override">Override reason</label>
+<select id="override"><option value="">Select a reason</option><option>Customer gate closes early</option><option>Local tanker unavailable</option><option>Verify telemetry first</option></select>
+<button id="approve" type="button">Approve simulated plan</button>
+<button id="record" type="button">Record override</button>
+<p class="audit muted" id="audit" aria-live="polite">No decision recorded in this session.</p>
+</details>
+<details><summary>How this demo calculates the decision</summary>
+<p>The engine evaluates 400 fixed, repeatable scenarios across two customer tanks, two plants, and three dispatch choices. Scenarios share demand shocks across sites and vary current inventory, consumption and travel time. A simulated threshold breach occurs when projected inventory drops below the configured reorder reserve before arrival. Distance, cost, travel time and capacity are illustrative inputs.</p>
+<p>Rules reject any plan that violates the confirmed receiving window or depletes available plant inventory below its modeled reserve. Among plans meeting the risk limit, the engine prioritizes preserving confirmed stops and then minimizing additional cost. If no plan qualifies, it escalates to the dispatcher.</p>
+<p>Deployment concept: private OrgBrain inference on H200-class infrastructure, statistical validation with subject-matter experts, and a separate AES/SSH transport architecture. This browser demo runs its scenario model locally using synthetic data.</p>
+</details>
+<footer class="muted">Illustrative pilot for industrial gas distribution · Synthetic data · No live dispatch</footer>
+</main>
+<script>
+"use strict";
+const byId = id => document.getElementById(id);
+const scenarioCount = 400;
+const plans = [
+  {name:"Keep schedule", plant:"Primary", cost:0, km:0, moved:0, a:6.4, b:6.1, delay:1, outage:2.2, load:12},
+  {name:"Reroute via second plant", plant:"Secondary", cost:8800, km:48, moved:1, a:4.9, b:5.4, delay:.35, outage:0, load:12},
+  {name:"Send dedicated tanker", plant:"Secondary", cost:18500, km:105, moved:1, a:3.5, b:5.2, delay:.18, outage:0, load:12}
+];
+const rupees = new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0});
+let verified = false;
+let recommendation;
+let auditCount = 0;
+function unit(index, offset) {
+  return ((index * offset + 37) % 401) / 400;
+}
+function calculate(state, checked) {
+  return plans.map(plan => {
+    const arrivalA = plan.a + state.delay * plan.delay + (state.outage ? plan.outage : 0);
+    const arrivalB = plan.b + state.delay * plan.delay + (state.outage ? plan.outage : 0);
+    const stock = plan.plant === "Primary" ? (state.outage ? 18 : 24) : 23;
+    const rejected = stock - plan.load < 6 ? "Plant reserve breached" :
+      state.gate && arrivalA + .8 > 5.5 ? "Site A receiving window exceeded" : "";
+    let breaches = 0, siteA = 0, siteB = 0;
+    for (let i = 0; i < scenarioCount; i++) {
+      const shock = .80 + .40 * unit(i, 37);
+      const reliefA = checked ? 8.5 + unit(i, 139) * .45 : 5.0 + unit(i, 73) * 3.7;
+      const reliefB = 7.9 + unit(i, 179) * 2.1;
+      const late = .8 * unit(i, 89);
+      const failA = (arrivalA + late) * shock * (state.surge ? 1.24 : 1) > reliefA;
+      const failB = (arrivalB + late) * shock * (state.surge ? 1.13 : 1) > reliefB;
+      breaches += Number(failA || failB);
+      siteA += Number(failA);
+      siteB += Number(failB);
+    }
+    return {...plan, arrivalA, arrivalB, stock, rejected, risk:breaches / 4, siteA:siteA / 4, siteB:siteB / 4};
+  });
+}
+function choose(results, target) {
+  return results.filter(plan => !plan.rejected && plan.risk <= target)
+    .sort((left, right) => left.moved - right.moved || left.cost - right.cost)[0];
+}
+const percent = number => Number(number.toFixed(2)) + "%";
+function render() {
+  const state = {
+    outage: byId("outage").checked,
+    surge: byId("surge").checked,
+    delay: Number(byId("delay").value) / 60,
+    target: Number(byId("target").value),
+    gate: byId("gate").checked
+  };
+  const results = calculate(state, verified);
+  recommendation = choose(results, state.target);
+  const verifiedPlan = choose(calculate(state, true), state.target);
+  byId("delayValue").textContent = byId("delay").value + " min";
+  byId("targetValue").textContent = percent(state.target);
+  byId("reading").textContent = verified ? "Site A · fresh reading received. Forecast uncertainty narrowed." :
+    "Site A · reading is 4 hours old. Verify the level before relying on the forecast.";
+  byId("refresh").disabled = verified;
+  byId("rows").innerHTML = results.map(plan => '<tr class="' + (plan === recommendation ? "pick" : "") +
+    '"><td>' + plan.name + (plan === recommendation ? ' <small>· Recommended</small>' : '') +
+    '</td><td>' + rupees.format(plan.cost) + '</td><td>' + plan.km + '</td><td>' + plan.moved +
+    '</td><td>' + (plan.rejected ? '<span class="warn">' + plan.rejected + '</span>' : percent(plan.risk)) + '</td></tr>').join("");
+  byId("chart").innerHTML = results.filter(plan => !plan.rejected).map(plan =>
+    '<div class="bar"><span>' + plan.plant + ' · ' + (plan.name === "Send dedicated tanker" ? "dedicated" : "scheduled") +
+    '</span><div class="track"><div class="fill" style="width:' + plan.risk + '%"></div></div><span>' + percent(plan.risk) + '</span></div>').join("");
+  byId("recommend").innerHTML = recommendation ? '<strong>' + recommendation.name +
+    '</strong><br>Site A risk ' + percent(recommendation.siteA) + ' · Site B risk ' + percent(recommendation.siteB) +
+    ' · Site A arrival +' + recommendation.arrivalA.toFixed(1) + ' h' :
+    '<strong>Escalate to dispatch</strong><br>No evaluated plan meets the current risk limit and hard rules.';
+  byId("evidence").textContent = !verified && verifiedPlan?.name !== recommendation?.name
+    ? "In this replay, a fresh reading changes the preferred plan. Verify to reveal the reading and compare the cost."
+    : recommendation ? recommendation.plant + " plant has " + (recommendation.stock - recommendation.load) +
+      " t remaining after loading. The modeled reserve is 6 t." : "Review the receiving window or evaluate additional supply options.";
+  byId("approve").disabled = !recommendation;
+}
+for (const id of ["outage","surge","delay","target","gate"]) byId(id).addEventListener("input",render);
+byId("refresh").addEventListener("click", () => {verified = true; render();});
+byId("reset").addEventListener("click", () => {
+  byId("outage").checked = true;
+  byId("surge").checked = true;
+  byId("gate").checked = false;
+  byId("delay").value = "90";
+  byId("target").value = "15";
+  verified = false;
+  render();
+});
+function logDecision(action) {
+  auditCount++;
+  const audit = byId("audit");
+  const evidence = ["Rules v1","outage=" + byId("outage").checked,"surge=" + byId("surge").checked,
+    "delay=" + byId("delay").value + " min","limit=" + byId("target").value + "%",
+    "early gate=" + byId("gate").checked,"reading=" + (verified ? "verified" : "stale")].join(" · ");
+  audit.textContent = auditCount + ". " + action + " — " + evidence + (auditCount > 1 ? "\n" + audit.textContent : "");
+}
+byId("approve").addEventListener("click", () => {if (recommendation) logDecision("Approved " + recommendation.name);});
+byId("override").addEventListener("change", () => {byId("record").disabled = !byId("override").value;});
+byId("record").addEventListener("click", () => {
+  const reason = byId("override").value;
+  if (reason) logDecision("Override of " + (recommendation?.name ?? "escalation") + " · " + reason);
+});
+byId("record").disabled = true;
+render();
+</script>
+</html>
